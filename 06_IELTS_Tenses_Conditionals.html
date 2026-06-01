@@ -1,0 +1,483 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IELTS Grammar — Tenses & Conditionals · Band 7+ â€” ViATestPrep</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0e1f2c;--paper:#f3f7f4;--ocean:#0e6e6c;--ocean-d:#063e3d;--coral:#e6633e;--gold:#d09a1c;--line:#d2dfd5;--soft:#cfe7e2;--cream:#fbf2dc}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif}
+  h1,h2,h3,h4{font-family:'Fraunces',serif;letter-spacing:-.01em}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px}
+  .badge{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600}
+  .btn{display:inline-flex;gap:.5rem;padding:.6rem 1rem;border-radius:12px;font-weight:600;transition:transform .08s}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--ocean);color:#fff}
+  .btn-primary:hover{background:var(--ocean-d)}
+  .btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{background:#e8f0e9}
+  .chip{padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+  .progress-bar{height:8px;background:#dceae6;border-radius:999px;overflow:hidden}
+  .progress-fill{height:100%;background:linear-gradient(90deg,var(--ocean),#23c4ad);transition:width .4s}
+  .reveal{max-height:0;overflow:hidden;transition:max-height .5s ease}
+  .reveal.open{max-height:2400px}
+  .toolbar{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(8px);background:rgba(243,247,244,.85);border-bottom:1px solid var(--line)}
+  .nav-step{cursor:pointer}
+  .opt{cursor:pointer;border:1.5px solid var(--line);border-radius:12px;padding:.7rem .9rem;background:#fff;transition:all .12s;display:inline-flex;gap:.4rem;align-items:center;font-size:.9rem}
+  .opt:hover{border-color:var(--ocean);background:#e8f0e9}
+  .opt.correct{border-color:var(--ocean);background:#e8f0e9;color:var(--ocean-d)}
+  .opt.wrong{border-color:var(--coral);background:#fde2d6;text-decoration:line-through;color:var(--coral)}
+  .opt.disabled{pointer-events:none;opacity:.7}
+  .feedback{padding:.7rem 1rem;border-radius:12px;font-size:.92rem;line-height:1.5;border-left:4px solid}
+  .feedback.good{border-color:var(--ocean);background:#e8f0e9}
+  .feedback.bad{border-color:var(--coral);background:#fde2d6}
+  .feedback.tip{border-color:var(--gold);background:#fdf6e3}
+  .gameboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+  .qtype{cursor:pointer;transition:transform .15s, box-shadow .15s}
+  .qtype:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(14,110,108,.12)}
+  .timeline{display:grid;grid-template-columns:1fr 2px 1fr 2px 1fr;gap:.5rem;align-items:center}
+  .timeline-bar{background:linear-gradient(180deg,var(--ocean),var(--gold));border-radius:2px;height:120px;width:2px;justify-self:center}
+  .marker-yellow{background:linear-gradient(transparent 60%, #fde68a 60%)}
+  .marker-pink{background:linear-gradient(transparent 60%, #fbcfe8 60%)}
+  .marker-green{background:linear-gradient(transparent 60%, #bbf7d0 60%)}
+  .timer-pill{font-family:'Fraunces',serif;font-weight:800}
+  .legend-dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:.35rem}
+  .formula{display:inline-block;padding:.4rem .8rem;background:#cfe7e2;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:.85rem}
+  .ifthen{display:grid;grid-template-columns:auto auto;gap:.75rem;font-family:'JetBrains Mono',monospace;font-size:.85rem;align-items:center}
+  .ifthen .label{font-weight:700;color:var(--ocean)}
+  .ifthen .form{background:#cfe7e2;padding:.3rem .5rem;border-radius:6px}
+</style>
+<style>
+/* ===== ViATestPrep Protection ===== */
+html body,html body *{-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important}
+img,svg{-webkit-user-drag:none!important}
+@media print{body{display:none!important;visibility:hidden!important}}
+.vtp-wm{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9990;overflow:hidden}
+.vtp-wm::after{content:"ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential";position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-28deg);font-size:1.1rem;font-weight:800;color:rgba(91,42,134,0.05);white-space:nowrap;letter-spacing:.3em;pointer-events:none}
+.vtp-corner{position:fixed;bottom:14px;right:14px;z-index:9999;background:linear-gradient(135deg,#5b2a86,#3b0a64);color:#fff;padding:.3rem .8rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.05em;box-shadow:0 2px 14px rgba(91,42,134,.4);pointer-events:none;font-family:Inter,sans-serif}
+</style></head>
+<body>
+<div class="vtp-wm" aria-hidden="true"></div><div class="vtp-corner" aria-hidden="true">&#127891; ViATestPrep</div>
+
+<div class="toolbar">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-white" style="background:var(--ocean);font-family:'Fraunces',serif">TC</div>
+      <div>
+        <div class="text-sm uppercase tracking-widest text-stone-500">IELTS Grammar</div>
+        <div class="font-bold -mt-1">Tenses & Conditionals · Band 7+</div>
+      </div>
+    </div>
+    <div class="hidden md:flex items-center gap-4 text-sm">
+      <span class="nav-step" data-jump="mission">① Mindset</span>
+      <span class="nav-step" data-jump="groups">② 3 Tense Groups</span>
+      <span class="nav-step" data-jump="advanced">③ Advanced</span>
+      <span class="nav-step" data-jump="conditionals">④ Conditionals</span>
+      <span class="nav-step" data-jump="drills">⑤ Drills</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="text-right hidden sm:block"><div class="text-[11px] uppercase tracking-widest text-stone-500">Grammar XP</div><div class="font-bold timer-pill" style="color:var(--ocean)" id="xpDisplay">0 XP</div></div>
+      <div class="w-32 progress-bar"><div class="progress-fill" id="xpBar" style="width:0%"></div></div>
+    </div>
+  </div>
+</div>
+
+<main class="max-w-6xl mx-auto px-4 py-10">
+
+  <!-- HERO -->
+  <section id="mission" class="mb-12">
+    <div class="grid md:grid-cols-5 gap-6 items-center">
+      <div class="md:col-span-3">
+        <span class="chip" style="background:var(--soft);color:var(--ocean)">Bonus Lesson · Grammar</span>
+        <h1 class="text-4xl md:text-5xl mt-3 leading-tight">Forget 12 tense names. <span class="marker-yellow">Master 3 groups.</span></h1>
+        <p class="mt-4 text-stone-700 max-w-prose">Grammatical Range & Accuracy = 25% of your Speaking and Writing score. You don't need every tense — you need three groups, two advanced flashes (Past Perfect + Conditionals), and a proofreading habit that catches verb errors before submission.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <button class="btn btn-primary" onclick="document.getElementById('groups').scrollIntoView({behavior:'smooth'})">▶ Begin Training</button>
+        </div>
+      </div>
+      <div class="md:col-span-2">
+        <div class="card p-5">
+          <div class="text-xs uppercase tracking-widest text-stone-500 mb-2">Two Golden Rules</div>
+          <div class="space-y-2">
+            <div class="p-3 rounded-xl" style="background:#e8f0e9"><strong>Rule 1 — Accuracy first.</strong> Better to use Present Simple correctly than Past Perfect wrong.</div>
+            <div class="p-3 rounded-xl" style="background:#fdf6e3"><strong>Rule 2 — Proofread for verbs.</strong> 2-min final pass focused only on verbs catches 80% of errors.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 TENSE GROUPS -->
+  <section id="groups" class="mb-14">
+    <h2 class="text-3xl mb-2">② The 3 Tense Groups That Matter</h2>
+    <p class="text-stone-700 max-w-3xl">Tap each group. The example uses an actual IELTS context.</p>
+    <div class="grid md:grid-cols-3 gap-4 mt-6" id="groupCards"></div>
+
+    <!-- Tense diagnostic drill -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#cfe7e2;color:var(--ocean)">Diagnostic drill</span>
+        <h3 class="text-xl">Pick the Right Tense</h3>
+      </div>
+      <p class="text-sm text-stone-700">Real IELTS contexts. Which form fits?</p>
+      <div class="space-y-3 mt-3" id="tenseDrill"></div>
+    </div>
+  </section>
+
+  <!-- ADVANCED -->
+  <section id="advanced" class="mb-14">
+    <h2 class="text-3xl mb-2">③ The Two Advanced Flashes</h2>
+    <p class="text-stone-700 max-w-3xl">You don't need these every sentence. Used <strong>once correctly</strong>, each one signals Band 7+ to the examiner.</p>
+
+    <div class="grid md:grid-cols-2 gap-4 mt-6">
+      <div class="card p-5" style="background:linear-gradient(180deg,#cfe7e2 0%,#fff 70%)">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Flash 1</div>
+        <h3 class="text-xl mt-1">Past Perfect — The Flashback</h3>
+        <p class="text-sm text-stone-700 mt-2"><strong>One job:</strong> describe an action that happened <em>before</em> another past action.</p>
+        <div class="formula mt-3">had + past participle</div>
+        <div class="mt-3 text-sm space-y-2">
+          <div class="p-2 rounded-lg" style="background:#fde2d6"><strong>❌ Band 6:</strong> "I arrived at 8:05. The train left at 8:00."</div>
+          <div class="p-2 rounded-lg" style="background:#e8f0e9"><strong>✅ Band 7+:</strong> "When I arrived, the train <span class="marker-yellow">had already left</span>."</div>
+        </div>
+        <p class="text-xs text-stone-500 mt-2">Best place: Speaking Part 2 storytelling.</p>
+      </div>
+
+      <div class="card p-5" style="background:linear-gradient(180deg,#fdf6e3 0%,#fff 70%)">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Flash 2</div>
+        <h3 class="text-xl mt-1">Second Conditional — The "What if?"</h3>
+        <p class="text-sm text-stone-700 mt-2"><strong>One job:</strong> talk about hypothetical present/future situations.</p>
+        <div class="formula mt-3">If + past simple, would + base verb</div>
+        <div class="mt-3 text-sm space-y-2">
+          <div class="p-2 rounded-lg" style="background:#fde2d6"><strong>❌ Band 6:</strong> "I am not the president. I cannot make laws."</div>
+          <div class="p-2 rounded-lg" style="background:#e8f0e9"><strong>✅ Band 7+:</strong> "If I <span class="marker-yellow">were</span> the president, I <span class="marker-yellow">would make</span> healthcare free for everyone."</div>
+        </div>
+        <p class="text-xs text-stone-500 mt-2">Best place: Speaking Part 3 + Writing Task 2 solutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONDITIONALS -->
+  <section id="conditionals" class="mb-14">
+    <h2 class="text-3xl mb-2">④ The 4 Conditionals — Decoder</h2>
+    <p class="text-stone-700 max-w-3xl">Each conditional has a specific job. Tap to see its formula and where to use it in IELTS.</p>
+    <div class="gameboard mt-4" id="condCards"></div>
+
+    <!-- Conditional drill -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#fdf6e3;color:var(--gold)">Conditional drill</span>
+        <h3 class="text-xl">Which Conditional Is It?</h3>
+      </div>
+      <div class="space-y-3 mt-3" id="condDrill"></div>
+    </div>
+  </section>
+
+  <!-- DRILLS -->
+  <section id="drills" class="mb-14">
+    <h2 class="text-3xl mb-2">⑤ Sentence Upgrader</h2>
+    <p class="text-stone-700 max-w-3xl">A Band 5 sentence is shown. Pick the Band 7+ upgrade.</p>
+    <div class="space-y-4 mt-4" id="upgradeDrill"></div>
+  </section>
+
+  <!-- BOSS QUIZ -->
+  <section id="boss" class="mb-14">
+    <h2 class="text-3xl mb-2">⑥ Tense Mastery Quiz</h2>
+    <p class="text-stone-700 max-w-3xl">10 mixed questions across all three IELTS tasks. Real exam-style contexts. Score yourself.</p>
+    <div class="card p-6 mt-4">
+      <div class="space-y-4" id="bossQs"></div>
+      <div class="flex justify-between items-center mt-4">
+        <button class="btn btn-primary" id="bossSubmit">Submit & Score</button>
+        <span class="text-sm" id="bossScore">0/10</span>
+      </div>
+      <div id="bossFB" class="mt-3"></div>
+    </div>
+  </section>
+
+  <footer class="border-t border-line pt-6 pb-12 text-sm text-stone-500"><div>Tenses & Conditionals · Band 7+ Track</div><div style="text-align:center;font-size:.72rem;color:#aaa;margin-top:1.2rem;padding-bottom:.5rem">&copy; 2026 ViATestPrep &middot; All Rights Reserved &middot; Unauthorized reproduction prohibited</div></footer>
+</main>
+
+<script>
+const state={xp:0,max:200};
+function addXP(n,l){state.xp=Math.min(state.max,state.xp+n);document.getElementById('xpDisplay').textContent=state.xp+' XP';document.getElementById('xpBar').style.width=(state.xp/state.max*100)+'%';}
+document.querySelectorAll('.nav-step').forEach(s=>s.addEventListener('click',()=>document.getElementById(s.dataset.jump)?.scrollIntoView({behavior:'smooth'})));
+
+// ====== 3 GROUPS ======
+const groups = [
+  {n:1,name:"Foundation — Simple Tenses",icon:"🧱",color:"#cfe7e2",accent:"var(--ocean)",
+   tenses:[
+     {t:"Present Simple",use:"Facts, opinions, habits",ex:"\"Governments <span class='marker-yellow'>provide</span> public services.\" (Task 2)"},
+     {t:"Past Simple",use:"Completed past actions",ex:"\"Last year, I <span class='marker-yellow'>travelled</span> to Japan.\" (Speaking Part 2)"},
+     {t:"Future Simple",use:"Predictions, decisions",ex:"\"It is predicted that the number <span class='marker-yellow'>will reach</span> 700 by 2030.\" (Task 1)"},
+   ]},
+  {n:2,name:"Band Booster — Present Perfect",icon:"⚡",color:"#fdf6e3",accent:"var(--gold)",
+   tenses:[
+     {t:"Present Perfect",use:"Past action with present result, OR action started in past still ongoing",ex:"\"In recent years, social media <span class='marker-yellow'>has become</span> the dominant form of communication.\""},
+     {t:"⚠ Common error",use:"Don't use with finished time",ex:"❌ I have visited Japan in 2019. → ✅ I <span class='marker-pink'>visited</span> Japan in 2019."},
+     {t:"⚠ Common error",use:"DO use without time marker",ex:"✅ I <span class='marker-yellow'>have visited</span> Japan twice. (life experience)"},
+   ]},
+  {n:3,name:"Advanced — Complex Tenses",icon:"🎯",color:"#fde2d6",accent:"var(--coral)",
+   tenses:[
+     {t:"Past Continuous",use:"Background of past story",ex:"\"The sun <span class='marker-yellow'>was shining</span> when I arrived at the festival.\" (Speaking Part 2)"},
+     {t:"Past Perfect",use:"An action before another past action",ex:"\"When I got home, I <span class='marker-yellow'>had forgotten</span> my passport.\""},
+     {t:"Conditionals",use:"Hypothetical and unreal situations",ex:"\"If I <span class='marker-yellow'>were</span> the mayor, I <span class='marker-yellow'>would invest</span> in green spaces.\""},
+   ]},
+];
+const gEl = document.getElementById('groupCards');
+groups.forEach(g=>{
+  const c=document.createElement('div');
+  c.className='card p-5 qtype';
+  c.style.background = `linear-gradient(180deg, ${g.color} 0%, #fff 70%)`;
+  c.innerHTML = `
+    <div class="flex items-center gap-2">
+      <div class="w-10 h-10 rounded-lg flex items-center justify-center text-xl" style="background:${g.accent};color:#fff">${g.icon}</div>
+      <div class="font-bold">${g.n}. ${g.name}</div>
+    </div>
+    <div class="reveal mt-3 text-sm space-y-3">
+      ${g.tenses.map(t=>`
+        <div class="p-2 rounded-lg" style="background:#fff">
+          <div class="font-semibold">${t.t}</div>
+          <div class="text-xs uppercase tracking-widest text-stone-500 mt-1">${t.use}</div>
+          <div class="mt-1">${t.ex}</div>
+        </div>
+      `).join('')}
+    </div>
+    <div class="text-xs text-stone-500 mt-2">tap to expand</div>`;
+  c.addEventListener('click',()=>{
+    const r=c.querySelector('.reveal');
+    const wasOpen=r.classList.contains('open');
+    r.classList.toggle('open');
+    if(!wasOpen) addXP(2,'Group');
+  });
+  gEl.appendChild(c);
+});
+
+// ====== TENSE DRILL ======
+const tdItems = [
+  {q:"Task 1: \"The number of internet users ____ significantly between 1995 and 2010.\"", options:["has increased","increased","is increasing"], a:"increased", why:"Finished time period (1995–2010) → Past Simple. NOT Present Perfect (no continuing relevance to now)."},
+  {q:"Task 2: \"In recent years, social media ____ the dominant form of communication.\"", options:["became","has become","is becoming"], a:"has become", why:"'In recent years' = ongoing relevance → Present Perfect."},
+  {q:"Speaking P2: \"When I arrived at the wedding, the ceremony ____.\"", options:["already started","had already started","was already starting"], a:"had already started", why:"Action BEFORE 'arrived' (also past) → Past Perfect."},
+  {q:"Speaking P3: \"If I ____ the mayor, I ____ more in public parks.\"", options:["was / will invest","would be / invested","were / would invest"], a:"were / would invest", why:"2nd Conditional — 'were' (formal) + 'would + base verb'."},
+  {q:"Speaking P1: \"Q: What do you do at weekends? A: I usually ____ my family.\"", options:["am visiting","visit","have visited"], a:"visit", why:"Habit/routine → Present Simple."},
+];
+const tdEl = document.getElementById('tenseDrill');
+tdItems.forEach((it,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML=`<div class="text-sm mb-2">${i+1}. ${it.q}</div>
+    <div class="flex flex-wrap gap-2">${it.options.map(o=>`<button class='opt td-opt' data-v='${o}'>${o}</button>`).join('')}</div>
+    <div class='fb mt-2'></div>`;
+  tdEl.appendChild(wrap);
+  wrap.querySelectorAll('.td-opt').forEach(b=>b.addEventListener('click',()=>{
+    if (wrap.dataset.done) return;
+    wrap.dataset.done='1';
+    const ok = b.dataset.v===it.a;
+    if (ok) b.classList.add('correct'); else b.classList.add('wrong');
+    wrap.querySelectorAll('.td-opt').forEach(x=>{
+      if (x.dataset.v===it.a) x.classList.add('correct');
+      x.classList.add('disabled');
+    });
+    wrap.querySelector('.fb').innerHTML = `<div class='feedback ${ok?'good':'bad'}'>${ok?'✅':'❌'} ${it.why}</div>`;
+    addXP(ok?5:1,'Tense');
+  }));
+});
+
+// ====== CONDITIONALS ======
+const conds = [
+  {n:"0",name:"Zero — Facts",color:"#cfe7e2",accent:"var(--ocean)",
+   formula:"If + present simple, present simple",
+   use:"General truths, scientific facts",
+   ex:"If you heat water to 100°C, it <span class='marker-yellow'>boils</span>."},
+  {n:"1st",name:"First — Real Future",color:"#fdf6e3",accent:"var(--gold)",
+   formula:"If + present simple, will + base verb",
+   use:"Real future possibilities",
+   ex:"If governments invest more in education, students <span class='marker-yellow'>will get</span> better jobs."},
+  {n:"2nd",name:"Second — Hypothetical Present",color:"#fde2d6",accent:"var(--coral)",
+   formula:"If + past simple, would + base verb",
+   use:"Imaginary present/future · Speaking P3 · Writing T2 solutions",
+   ex:"If I <span class='marker-yellow'>had</span> a million dollars, I <span class='marker-yellow'>would travel</span> the world."},
+  {n:"3rd",name:"Third — Imaginary Past",color:"#cfe7e2",accent:"var(--ocean)",
+   formula:"If + past perfect, would have + past participle",
+   use:"Regrets, alternative pasts. High risk, high reward.",
+   ex:"If I <span class='marker-yellow'>had studied</span>, I <span class='marker-yellow'>would have passed</span> the exam."},
+];
+const ccEl = document.getElementById('condCards');
+conds.forEach(c=>{
+  const card=document.createElement('div');
+  card.className='card p-5 qtype';
+  card.style.background = `linear-gradient(180deg, ${c.color} 0%, #fff 70%)`;
+  card.innerHTML = `
+    <div class="flex items-center gap-2">
+      <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-white" style="background:${c.accent};font-family:'Fraunces',serif">${c.n}</div>
+      <div class="font-bold">${c.name}</div>
+    </div>
+    <div class="reveal mt-3 text-sm">
+      <div class="text-xs uppercase tracking-widest text-stone-500">Formula</div>
+      <div class="formula mt-1 text-xs">${c.formula}</div>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3">Use</div>
+      <p class="mt-1">${c.use}</p>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3">Example</div>
+      <p class="mt-1">${c.ex}</p>
+    </div>
+    <div class="text-xs text-stone-500 mt-2">tap to expand</div>`;
+  card.addEventListener('click',()=>{
+    const r=card.querySelector('.reveal');
+    const wasOpen=r.classList.contains('open');
+    r.classList.toggle('open');
+    if(!wasOpen) addXP(2,'Conditional');
+  });
+  ccEl.appendChild(card);
+});
+
+// ====== CONDITIONAL DRILL ======
+const cdItems = [
+  {q:"\"If you mix red and blue, you get purple.\"", options:["Zero","First","Second","Third"], a:"Zero", why:"General fact / scientific truth = Zero conditional."},
+  {q:"\"If it rains tomorrow, I'll take an umbrella.\"", options:["Zero","First","Second","Third"], a:"First", why:"Real future possibility = First conditional."},
+  {q:"\"If I were the mayor, I would invest in parks.\"", options:["Zero","First","Second","Third"], a:"Second", why:"Hypothetical present (you're NOT the mayor) = Second conditional."},
+  {q:"\"If I had studied harder, I would have passed.\"", options:["Zero","First","Second","Third"], a:"Third", why:"Imaginary past — looking back at what you DIDN'T do = Third conditional."},
+];
+const cdEl = document.getElementById('condDrill');
+cdItems.forEach((it,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML=`<div class="text-sm mb-2">${i+1}. ${it.q}</div>
+    <div class="flex flex-wrap gap-2">${it.options.map(o=>`<button class='opt cd-opt' data-v='${o}'>${o}</button>`).join('')}</div>
+    <div class='fb mt-2'></div>`;
+  cdEl.appendChild(wrap);
+  wrap.querySelectorAll('.cd-opt').forEach(b=>b.addEventListener('click',()=>{
+    if (wrap.dataset.done) return;
+    wrap.dataset.done='1';
+    const ok = b.dataset.v===it.a;
+    if (ok) b.classList.add('correct'); else b.classList.add('wrong');
+    wrap.querySelectorAll('.cd-opt').forEach(x=>{
+      if (x.dataset.v===it.a) x.classList.add('correct');
+      x.classList.add('disabled');
+    });
+    wrap.querySelector('.fb').innerHTML = `<div class='feedback ${ok?'good':'bad'}'>${ok?'✅':'❌'} ${it.why}</div>`;
+    addXP(ok?6:1,'Cond');
+  }));
+});
+
+// ====== UPGRADE DRILL ======
+const ups = [
+  {b6:"I went to the cinema. The film started before I arrived.",
+   options:[
+     {t:"When I arrived at the cinema, the film already started.",c:false,w:"Missing 'had' — Past Perfect requires 'had + past participle'."},
+     {t:"When I arrived at the cinema, the film had already started.",c:true,w:"✓ Past Perfect captures the timeline. Examiner sees range."},
+     {t:"When I had arrived at the cinema, the film had already started.",c:false,w:"Don't put both in Past Perfect — only the EARLIER action."},
+   ]},
+  {b6:"Governments should spend more on education. Students will get better jobs.",
+   options:[
+     {t:"If governments will spend more on education, students will get better jobs.",c:false,w:"Don't use 'will' in the IF clause — that's a classic error."},
+     {t:"If governments spend more on education, students will get better jobs.",c:true,w:"✓ First Conditional — real future possibility."},
+     {t:"If governments would spend more on education, students would get better jobs.",c:false,w:"That would shift to Second Conditional (hypothetical) — possible, but the original suggests it's a real proposal."},
+   ]},
+  {b6:"Technology changed our lives in the last 20 years.",
+   options:[
+     {t:"Technology has been changing our lives in the last 20 years significantly.",c:false,w:"Awkward word order, and continuous form is unusual here."},
+     {t:"Technology has changed our lives significantly in the last 20 years.",c:true,w:"✓ Present Perfect — change started in the past, still relevant."},
+     {t:"Technology had changed our lives in the last 20 years.",c:false,w:"Past Perfect needs another past anchor — there isn't one."},
+   ]},
+];
+const uEl = document.getElementById('upgradeDrill');
+ups.forEach((it,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-4';
+  wrap.innerHTML = `<div class="text-xs uppercase tracking-widest text-stone-500">Sentence ${i+1} · Band 5/6 original</div>
+    <div class="text-sm mt-1 mb-3 italic">"${it.b6}"</div>
+    <div class="space-y-2"></div>
+    <div class="fb mt-2"></div>`;
+  uEl.appendChild(wrap);
+  const optBox = wrap.querySelector('div.space-y-2');
+  it.options.forEach(o=>{
+    const div=document.createElement('div');
+    div.className='opt';
+    div.style.display='flex';
+    div.innerHTML = `<div class="text-sm">${o.t}</div>`;
+    div.addEventListener('click',()=>{
+      if (wrap.dataset.done) return;
+      if (o.c){
+        div.classList.add('correct');
+        optBox.querySelectorAll('.opt').forEach(x=>{if(!x.classList.contains('correct'))x.classList.add('disabled')});
+        wrap.querySelector('.fb').innerHTML = `<div class='feedback good'>✅ ${o.w}</div>`;
+        wrap.dataset.done='1';
+        addXP(8,'Upgrade');
+      } else {
+        div.classList.add('wrong');
+        wrap.querySelector('.fb').innerHTML = `<div class='feedback bad'>❌ ${o.w}</div>`;
+      }
+    });
+    optBox.appendChild(div);
+  });
+});
+
+// ====== BOSS QUIZ ======
+const bossQs = [
+  {q:"T1: The chart shows the consumption of coffee in 2015 ____ slightly.", options:["has fallen","fell","was falling"], a:"fell", why:"Specific past time (2015) → Past Simple."},
+  {q:"T1: Correct: \"The graph shown the number of students.\"", options:["shown","showed","shows"], a:"shows", why:"Passive participle 'shown' alone is wrong. Use 'shows' (Present Simple) for graph descriptions."},
+  {q:"T1: \"Use of renewable energy ____ 50% by 2050.\"", options:["will reach","reached","reaches"], a:"will reach", why:"Future projection → 'will + base verb'."},
+  {q:"T2: Correct: \"In recent years, the internet changed the way people communicate.\"", options:["changed","has changed","changes"], a:"has changed", why:"'In recent years' = ongoing relevance → Present Perfect."},
+  {q:"T2: \"If governments ____ more in public health, life expectancy ____ improve.\"", options:["invest / will","invested / would","would invest / will"], a:"invested / would", why:"Second Conditional for hypothetical: 'past simple, would + base'."},
+  {q:"T2: Correct: \"If the government would subsidise green tech, more companies will adopt it.\"", options:["would subsidise","subsidises","subsidised"], a:"subsidised", why:"Second Conditional — 'If + past simple, would + base'. Don't use 'would' in the if-clause."},
+  {q:"S1: \"Q: What are you busy with these days? A: I ____ for my exams at the moment.\"", options:["study","am studying","have studied"], a:"am studying", why:"'At the moment' → Present Continuous."},
+  {q:"S2: \"Before I got the job, I ____ for three months.\"", options:["searched","was searching","had been searching"], a:"had been searching", why:"Action before another past action (got the job), continuous → Past Perfect Continuous."},
+  {q:"S3: \"How will shopping be different in 20 years? Most people ____ all their shopping online.\"", options:["will be doing","are doing","have done"], a:"will be doing", why:"Future Continuous — habitual future action over a period."},
+  {q:"S2: Correct: \"When I received the award, I feeled incredibly proud.\"", options:["feeled","feel","felt"], a:"felt", why:"'Feel' is irregular: feel → felt → felt. Don't add -ed."},
+];
+const bossQsEl = document.getElementById('bossQs');
+bossQs.forEach((q,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML=`<div class="text-sm mb-2"><strong>Q${i+1}.</strong> ${q.q}</div>
+    <div class="flex flex-wrap gap-2 boss-q" data-i="${i}">${q.options.map(o=>`<button class='opt boss-opt' data-v='${o}'>${o}</button>`).join('')}</div>
+    <div class='fb mt-2'></div>`;
+  bossQsEl.appendChild(wrap);
+});
+bossQsEl.addEventListener('click',e=>{
+  const b = e.target.closest('.boss-opt');
+  if (!b) return;
+  const wrap = b.closest('.card');
+  if (wrap.dataset.picked) return;
+  wrap.dataset.picked = b.dataset.v;
+  wrap.querySelectorAll('.boss-opt').forEach(x=>{
+    if (x.dataset.v===b.dataset.v) x.style.background='#cfe7e2';
+    x.disabled=true;
+  });
+});
+document.getElementById('bossSubmit').addEventListener('click',()=>{
+  let score=0;
+  bossQsEl.querySelectorAll('.card').forEach((wrap,i)=>{
+    const q = bossQs[i];
+    const got = wrap.dataset.picked||'';
+    const ok = got === q.a;
+    wrap.querySelectorAll('.boss-opt').forEach(x=>{
+      x.classList.remove('correct','wrong');
+      if (x.dataset.v===q.a) x.classList.add('correct');
+      else if (x.dataset.v===got) x.classList.add('wrong');
+    });
+    wrap.querySelector('.fb').innerHTML = `<div class='feedback ${ok?'good':'bad'}'>${ok?'✅':'❌'} ${q.why}</div>`;
+    if (ok) score++;
+  });
+  document.getElementById('bossScore').textContent = `${score}/10`;
+  document.getElementById('bossFB').innerHTML = `<div class='feedback ${score>=8?'good':score>=6?'tip':'bad'}'><strong>${score}/10.</strong> ${score>=8?'Strong control. Re-do any misses tomorrow.':score>=6?'Solid base — review Past Perfect and Conditionals.':'Re-read the masterclass and re-take.'}</div>`;
+  addXP(score*5,'Boss');
+});
+</script>
+<script>
+(function(){
+  document.addEventListener('contextmenu',function(e){e.preventDefault();return false});
+  document.addEventListener('dragstart',function(e){e.preventDefault();return false});
+  document.addEventListener('keydown',function(e){
+    var k=e.key.toLowerCase();
+    if(e.key==='F12'||(e.ctrlKey&&!e.shiftKey&&(k==='u'||k==='s'||k==='p'||k==='a'))||(e.ctrlKey&&e.shiftKey&&(k==='i'||k==='j'||k==='c'||k==='k'))){
+      e.preventDefault();e.stopPropagation();return false;
+    }
+  });
+  window.addEventListener('beforeprint',function(){document.body.style.display='none'});
+  window.addEventListener('afterprint',function(){document.body.style.display=''});
+})();
+</script></body>
+</html>

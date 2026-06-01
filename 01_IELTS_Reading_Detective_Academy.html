@@ -1,0 +1,925 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IELTS Reading: Detective Academy — Band 7+ â€” ViATestPrep</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0f172a; --paper:#fdfcf7; --gold:#c8932a; --gold-soft:#f5e7c1;
+    --plum:#5b2a86; --plum-deep:#3b0a64; --rose:#e8456b; --teal:#0d8a7a;
+    --line:#e6dfce;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif}
+  h1,h2,h3,h4{font-family:'Fraunces',serif;letter-spacing:-.01em}
+  .ink{color:var(--ink)} .plum{color:var(--plum)} .gold{color:var(--gold)}
+  .bg-plum{background:var(--plum)} .bg-paper{background:var(--paper)}
+  .border-line{border-color:var(--line)}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+  .badge{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:12px;font-weight:600;transition:transform .08s ease, box-shadow .12s ease}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--plum);color:#fff}
+  .btn-primary:hover{background:var(--plum-deep)}
+  .btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{background:#f7f3e9}
+  .chip{padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+  .progress-bar{height:8px;background:#eee3c4;border-radius:999px;overflow:hidden}
+  .progress-fill{height:100%;background:linear-gradient(90deg,var(--gold),#e8b94a);transition:width .4s ease}
+  .pulse-gold{animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(200,147,42,.6)}50%{box-shadow:0 0 0 14px rgba(200,147,42,0)}}
+  .reveal{max-height:0;overflow:hidden;transition:max-height .5s ease}
+  .reveal.open{max-height:2000px}
+  .scribble{background-image:linear-gradient(transparent 60%, rgba(232,69,107,.25) 60%);padding:0 2px}
+  .grid-mono{background-image:radial-gradient(rgba(0,0,0,.06) 1px, transparent 1px);background-size:18px 18px}
+  .swatch{width:14px;height:14px;border-radius:4px;display:inline-block;margin-right:.4rem;vertical-align:middle}
+  .qtype{cursor:pointer;transition:transform .15s ease, box-shadow .15s ease}
+  .qtype:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(91,42,134,.12)}
+  .opt{cursor:pointer;border:1.5px solid var(--line);border-radius:12px;padding:.85rem 1rem;background:#fff;display:flex;gap:.75rem;align-items:flex-start;transition:all .12s ease}
+  .opt:hover{border-color:var(--plum);background:#fbf7ff}
+  .opt.correct{border-color:var(--teal);background:#e6f7f2}
+  .opt.wrong{border-color:var(--rose);background:#fde8ee;text-decoration:line-through;opacity:.85}
+  .opt.disabled{pointer-events:none;opacity:.7}
+  .opt .letter{flex:0 0 28px;height:28px;border-radius:8px;background:#f3eede;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Fraunces',serif}
+  .opt.correct .letter{background:var(--teal);color:#fff}
+  .opt.wrong .letter{background:var(--rose);color:#fff}
+  .feedback{padding:.85rem 1rem;border-radius:12px;font-size:.92rem;line-height:1.5;border-left:4px solid;background:#fff}
+  .feedback.good{border-color:var(--teal);background:#eef9f5}
+  .feedback.bad{border-color:var(--rose);background:#fdf0f3}
+  .feedback.tip{border-color:var(--gold);background:#fdf6e3}
+  .timer-pill{font-family:'Fraunces',serif;font-weight:800;letter-spacing:.04em}
+  .nav-step{cursor:pointer}
+  .nav-step.active{color:var(--plum);font-weight:700}
+  .glow{box-shadow:0 0 0 4px rgba(200,147,42,.18)}
+  .marker-yellow{background:linear-gradient(transparent 60%, #fde68a 60%)}
+  .marker-pink{background:linear-gradient(transparent 60%, #fbcfe8 60%)}
+  .marker-green{background:linear-gradient(transparent 60%, #bbf7d0 60%)}
+  .stamp{display:inline-block;border:2px dashed var(--gold);color:var(--gold);padding:.15rem .5rem;border-radius:6px;transform:rotate(-3deg);font-weight:800;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
+  .keycap{display:inline-block;border:1px solid #bbb;border-bottom-width:2px;padding:.05rem .35rem;border-radius:5px;background:#f3f3f3;font-family:monospace;font-size:.78rem}
+  .case-file{background:repeating-linear-gradient(0deg,#fff,#fff 28px,#f3eede 28px,#f3eede 29px);border:1px solid var(--line);border-radius:14px}
+  .ribbon{position:absolute;top:14px;right:-8px;background:var(--rose);color:#fff;font-size:.7rem;font-weight:700;padding:.25rem .6rem;border-radius:6px;transform:rotate(3deg)}
+  .gameboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+  .draggable{cursor:grab;user-select:none}
+  .draggable:active{cursor:grabbing}
+  .drop-target{border:2px dashed var(--line);border-radius:12px;min-height:62px;padding:.6rem;background:#fbf7ec;transition:all .12s}
+  .drop-target.over{border-color:var(--plum);background:#f3ecff}
+  .drop-target.filled{border-style:solid;border-color:var(--teal);background:#eafaf4}
+  .stat-card{background:linear-gradient(135deg,#fff,#fbf2dc);border:1px solid var(--line);border-radius:14px;padding:1rem}
+  details>summary{cursor:pointer;list-style:none}
+  details>summary::-webkit-details-marker{display:none}
+  details>summary::after{content:"+";float:right;font-weight:700;color:var(--plum)}
+  details[open]>summary::after{content:"–"}
+  .mini-pass{font-family:'Fraunces',serif;font-size:1.02rem;line-height:1.7}
+  .mini-pass p{margin-bottom:.7rem}
+  .toolbar{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(8px);background:rgba(253,252,247,.85);border-bottom:1px solid var(--line)}
+  .legend-dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:.35rem}
+  @media print{.no-print{display:none}}
+</style>
+<style>
+/* ===== ViATestPrep Protection ===== */
+html body,html body *{-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important}
+img,svg{-webkit-user-drag:none!important}
+@media print{body{display:none!important;visibility:hidden!important}}
+.vtp-wm{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9990;overflow:hidden}
+.vtp-wm::after{content:"ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential";position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-28deg);font-size:1.1rem;font-weight:800;color:rgba(91,42,134,0.05);white-space:nowrap;letter-spacing:.3em;pointer-events:none}
+.vtp-corner{position:fixed;bottom:14px;right:14px;z-index:9999;background:linear-gradient(135deg,#5b2a86,#3b0a64);color:#fff;padding:.3rem .8rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.05em;box-shadow:0 2px 14px rgba(91,42,134,.4);pointer-events:none;font-family:Inter,sans-serif}
+</style></head>
+<body>
+<div class="vtp-wm" aria-hidden="true"></div><div class="vtp-corner" aria-hidden="true">&#127891; ViATestPrep</div>
+
+<!-- TOP TOOLBAR -->
+<div class="toolbar">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl bg-plum text-white flex items-center justify-center font-bold" style="font-family:'Fraunces',serif">DA</div>
+      <div>
+        <div class="text-sm uppercase tracking-widest text-stone-500">IELTS Reading</div>
+        <div class="font-bold -mt-1">Detective Academy · Band 7+ Track</div>
+      </div>
+    </div>
+    <div class="hidden md:flex items-center gap-4 text-sm">
+      <span class="nav-step" data-jump="mission">① Mission</span>
+      <span class="nav-step" data-jump="toolkit">② Toolkit</span>
+      <span class="nav-step" data-jump="plan">③ Game Plan</span>
+      <span class="nav-step" data-jump="cases">④ Case Files</span>
+      <span class="nav-step" data-jump="drills">⑤ Drills</span>
+      <span class="nav-step" data-jump="boss">⑥ Boss Fight</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="text-right hidden sm:block">
+        <div class="text-[11px] uppercase tracking-widest text-stone-500">Detective XP</div>
+        <div class="font-bold gold timer-pill" id="xpDisplay">0 XP</div>
+      </div>
+      <div class="w-32 progress-bar"><div class="progress-fill" id="xpBar" style="width:0%"></div></div>
+    </div>
+  </div>
+</div>
+
+<main class="max-w-6xl mx-auto px-4 py-10">
+
+  <!-- HERO -->
+  <section id="mission" class="mb-12">
+    <div class="grid md:grid-cols-5 gap-6 items-center">
+      <div class="md:col-span-3">
+        <span class="chip" style="background:var(--gold-soft);color:var(--plum)">Lesson 01 · Reading</span>
+        <h1 class="text-4xl md:text-5xl mt-3 leading-tight">You are not here to <span class="scribble">read</span>. You are here to <span class="gold">hunt</span>.</h1>
+        <p class="mt-4 text-stone-600 max-w-prose">40 answers. 2,500 words. 60 minutes. That's <strong>90 seconds per answer</strong>. Today you stop being a passive reader and become a strategic detective. By the end of this lesson, you will own seven question-type playbooks, three timing laws, and one mistake-journal habit that turns a Band 6.5 into a Band 7+.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <button class="btn btn-primary" onclick="document.getElementById('toolkit').scrollIntoView({behavior:'smooth'})">▶ Begin Training</button>
+          <button class="btn btn-ghost" onclick="document.getElementById('boss').scrollIntoView({behavior:'smooth'})">Skip to Boss Fight</button>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="badge" style="background:#fdf0f3;color:var(--rose)">⏱ 60-min test</span>
+          <span class="badge" style="background:#eef9f5;color:var(--teal)">🎯 Band 7+ target</span>
+          <span class="badge" style="background:#fdf6e3;color:var(--gold)">🕵 Detective mindset</span>
+        </div>
+      </div>
+      <div class="md:col-span-2">
+        <div class="card p-5 grid-mono">
+          <div class="text-xs uppercase tracking-widest text-stone-500 mb-2">Mindset Shift</div>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="p-3 rounded-xl" style="background:#fdf0f3">
+              <div class="text-xs font-bold text-stone-500">❌ Myth</div>
+              <div class="text-sm mt-1">"I need to understand the whole passage."</div>
+            </div>
+            <div class="p-3 rounded-xl" style="background:#eef9f5">
+              <div class="text-xs font-bold text-stone-500">✅ Reality</div>
+              <div class="text-sm mt-1">Top scorers understand only <strong>50–60%</strong>. The questions are the map. The answers are buried treasure.</div>
+            </div>
+            <div class="p-3 rounded-xl col-span-2" style="background:#fdf6e3">
+              <div class="text-xs font-bold text-stone-500">⚡ Rule Zero</div>
+              <div class="text-sm mt-1">Always read the <strong>questions first</strong>. Let them guide your reading — never the other way around.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLKIT -->
+  <section id="toolkit" class="mb-14">
+    <div class="flex items-end justify-between mb-4">
+      <h2 class="text-3xl">② The Detective's Toolkit</h2>
+      <span class="badge" style="background:var(--gold-soft);color:var(--plum)">+10 XP per skill mastered</span>
+    </div>
+    <p class="text-stone-600 max-w-3xl">Two reading skills. That's it. Every other strategy in this course is built on these. Click each card to see the rule, then run the drill.</p>
+
+    <div class="grid md:grid-cols-2 gap-5 mt-6">
+      <!-- SKIMMING -->
+      <div class="card p-6">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center text-xl" style="background:#f3ecff;color:var(--plum)">🗺</div>
+          <div>
+            <h3 class="text-xl">Skim — Build the Map</h3>
+            <div class="text-xs text-stone-500 uppercase tracking-widest">2–3 minutes max</div>
+          </div>
+        </div>
+        <p class="text-sm text-stone-700">Skimming is <strong>not</strong> speed reading. It's strategic glancing. You read the title, the first paragraph carefully, the <em>first sentence</em> of every other paragraph, and the last paragraph. Goal: build a mental map of <em>where</em> different topics live — not understand them yet.</p>
+        <div class="feedback tip mt-4">
+          <strong>Goal:</strong> "Para A = history. Para B = problems. Para C = a Japanese study." That's it. Now you know where to hunt.
+        </div>
+        <!-- Drill: skim what to read -->
+        <div class="mt-5">
+          <div class="text-xs uppercase tracking-widest text-stone-500 mb-2">Quick drill — Tap what to skim</div>
+          <div class="flex flex-wrap gap-2" id="skimDrill"></div>
+          <div class="mt-3 text-sm text-stone-600" id="skimResult"></div>
+        </div>
+      </div>
+
+      <!-- SCANNING -->
+      <div class="card p-6">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center text-xl" style="background:#fdf0f3;color:var(--rose)">🔦</div>
+          <div>
+            <h3 class="text-xl">Scan — The Searchlight</h3>
+            <div class="text-xs text-stone-500 uppercase tracking-widest">Hunt for a single keyword</div>
+          </div>
+        </div>
+        <p class="text-sm text-stone-700">Scanning means letting your eyes <em>fly</em> across the text, ignoring full sentences, until you hit a keyword (or its synonym). When you find it — stop. Then read carefully around it for the answer.</p>
+        <div class="feedback tip mt-4">
+          <strong>Best keywords:</strong> proper nouns, dates, numbers, technical terms, italics — anything hard to paraphrase.
+        </div>
+
+        <!-- Drill: scan -->
+        <div class="mt-5">
+          <div class="text-xs uppercase tracking-widest text-stone-500 mb-2">Drill — Find <span class="marker-yellow font-bold">"1925"</span> in this paragraph (one click)</div>
+          <div id="scanText" class="text-sm leading-relaxed p-3 rounded-lg border border-line" style="background:#fbf7ec"></div>
+          <div class="mt-2 text-sm" id="scanResult"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME PLAN -->
+  <section id="plan" class="mb-14">
+    <h2 class="text-3xl mb-2">③ The Game Plan</h2>
+    <p class="text-stone-600 max-w-3xl">Same plan, every passage. Run the order, mind the clock.</p>
+
+    <div class="grid md:grid-cols-3 gap-4 mt-6">
+      <div class="stat-card">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Step 1 · 60 sec</div>
+        <div class="font-bold text-lg mt-1">Preview Questions</div>
+        <p class="text-sm text-stone-600 mt-1">Identify question <em>types</em>, not details. Note where easy keywords (dates, names) appear.</p>
+      </div>
+      <div class="stat-card">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Step 2 · 2–3 min</div>
+        <div class="font-bold text-lg mt-1">Skim the Passage</div>
+        <p class="text-sm text-stone-600 mt-1">Build the mental map. Don't worry about details.</p>
+      </div>
+      <div class="stat-card">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Step 3 · 14–19 min</div>
+        <div class="font-bold text-lg mt-1">Attack Strategically</div>
+        <p class="text-sm text-stone-600 mt-1">Locator questions first → in-order types next → Matching Headings <em>last</em>.</p>
+      </div>
+    </div>
+
+    <!-- The 18-20-22 rule -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="stamp">Law of the Clock</span>
+        <h3 class="text-xl">The 18–20–22 Rule</h3>
+      </div>
+      <p class="text-sm text-stone-700">Passages get harder. Don't spend equal time on each. Drag the slider to see how your minutes break down.</p>
+      <div class="mt-4">
+        <input id="totalTime" type="range" min="55" max="65" value="60" class="w-full">
+        <div class="flex justify-between text-xs text-stone-500 mt-1"><span>55</span><span>60 (target)</span><span>65</span></div>
+        <div class="grid grid-cols-3 gap-3 mt-4">
+          <div class="p-3 rounded-xl text-center" style="background:#eef9f5"><div class="text-xs uppercase tracking-widest text-stone-500">P1 · easy</div><div class="text-2xl font-bold timer-pill" id="t1">17m</div></div>
+          <div class="p-3 rounded-xl text-center" style="background:#fdf6e3"><div class="text-xs uppercase tracking-widest text-stone-500">P2 · medium</div><div class="text-2xl font-bold timer-pill" id="t2">20m</div></div>
+          <div class="p-3 rounded-xl text-center" style="background:#fdf0f3"><div class="text-xs uppercase tracking-widest text-stone-500">P3 · hard</div><div class="text-2xl font-bold timer-pill" id="t3">23m</div></div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-3 mt-5 text-sm">
+        <div class="feedback tip"><strong>Never blank.</strong> No penalty for guessing. If 90 seconds in you're stuck, write something and move on.</div>
+        <div class="feedback tip"><strong>Transfer trap.</strong> No extra time at the end. Write directly on the answer sheet as you go.</div>
+        <div class="feedback tip"><strong>The art of moving on.</strong> Band 7+ comes from getting all the easy and medium questions right — not from beating one hard one.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE FILES (QUESTION TYPES) -->
+  <section id="cases" class="mb-14">
+    <div class="flex items-end justify-between mb-4">
+      <h2 class="text-3xl">④ All 14 Case Files</h2>
+      <span class="badge" style="background:var(--gold-soft);color:var(--plum)">Tap each card to open</span>
+    </div>
+    <p class="text-stone-600 max-w-3xl">The IELTS Academic Reading paper draws from <strong>14 official question types</strong>. Every Band 7+ candidate has a specific, practiced strategy for each. Open each file: see the move, the trap, the rule, and a worked mini-example.</p>
+
+    <div class="flex flex-wrap gap-2 mt-4" id="caseFilters">
+      <button class="btn btn-ghost text-xs" data-filter="all">All 14</button>
+      <button class="btn btn-ghost text-xs" data-filter="choice">Selection</button>
+      <button class="btn btn-ghost text-xs" data-filter="match">Matching</button>
+      <button class="btn btn-ghost text-xs" data-filter="complete">Completion</button>
+      <button class="btn btn-ghost text-xs" data-filter="answer">Short Answer</button>
+    </div>
+
+    <div class="gameboard mt-6" id="caseFiles"></div>
+  </section>
+
+  <!-- DRILLS -->
+  <section id="drills" class="mb-14">
+    <h2 class="text-3xl mb-2">⑤ Live Drills</h2>
+    <p class="text-stone-600 max-w-3xl">Three short drills using the actual moves from the case files. Get instant feedback that explains <em>why</em> — not just right/wrong.</p>
+
+    <!-- Drill A: T/F/NG -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#fdf0f3;color:var(--rose)">Drill A · T / F / NG</span>
+        <h3 class="text-xl">The Logic Test — "Prove It"</h3>
+      </div>
+      <div class="case-file p-4 mt-2 mini-pass">
+        <p><strong>Passage extract:</strong> "The research project was hailed as a remarkable success by the scientific community when its findings were published in 2021. Although the team faced funding shortages mid-way, the lead researcher, Dr. Patel, attributed the eventual breakthrough to the diversity of the research group. The project's methods are now being adopted by three universities in Europe."</p>
+      </div>
+      <div class="space-y-3 mt-4" id="tfngDrill"></div>
+    </div>
+
+    <!-- Drill B: MCQ Elimination -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#f3ecff;color:var(--plum)">Drill B · MCQ</span>
+        <h3 class="text-xl">The Distractor Test — Elimination</h3>
+      </div>
+      <div class="case-file p-4 mt-2 mini-pass">
+        <p><strong>Passage extract:</strong> "Urban cycling is <em>often</em> a practical solution to congestion in mid-sized cities, although critics note that infrastructure costs can be substantial. In several Northern European cities, dedicated cycle lanes have been linked to a measurable reduction in commute times, but researchers caution that the gains depend heavily on local geography and weather."</p>
+      </div>
+      <div class="mt-4">
+        <p class="font-semibold mb-2">According to the passage, urban cycling is best described as:</p>
+        <div class="space-y-2" id="mcqDrill"></div>
+        <div id="mcqFeedback" class="mt-3"></div>
+      </div>
+    </div>
+
+    <!-- Drill C: Matching Headings -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#eef9f5;color:var(--teal)">Drill C · Matching Headings</span>
+        <h3 class="text-xl">The Reverse Strategy — Drag to Match</h3>
+      </div>
+      <p class="text-sm text-stone-600">Read each paragraph, summarise the main idea in your head, <em>then</em> drag the heading. Drag the heading chip into the box.</p>
+      <div class="grid md:grid-cols-3 gap-3 mt-3" id="headingsBank"></div>
+      <div class="mt-5 space-y-3" id="headingsParas"></div>
+      <div class="mt-3" id="headingsFeedback"></div>
+    </div>
+  </section>
+
+  <!-- BOSS FIGHT -->
+  <section id="boss" class="mb-14">
+    <div class="flex items-end justify-between mb-4">
+      <h2 class="text-3xl">⑥ Boss Fight — 5-Minute Mock</h2>
+      <span class="badge" style="background:var(--gold-soft);color:var(--plum)">5 mixed Qs · live timer</span>
+    </div>
+    <p class="text-stone-600 max-w-3xl">Five questions, five minutes, one passage. Mixed types. Earn your Detective Badge.</p>
+
+    <div class="card p-6 mt-6">
+      <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center gap-2">
+          <span class="chip" style="background:#fdf6e3;color:var(--gold)">Mock Passage</span>
+          <span class="text-xs text-stone-500">~280 words</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="timer-pill text-2xl gold" id="bossTimer">05:00</div>
+          <button class="btn btn-primary" id="bossStart">▶ Start</button>
+        </div>
+      </div>
+
+      <div class="case-file p-5 mini-pass" id="bossPassage">
+        <p><strong>The Lost Library of Sutton</strong></p>
+        <p>For more than a century, the small market town of Sutton in northern England was famous for an unlikely treasure: a private library assembled by the eccentric collector Hugh Marlow between 1893 and 1925. Marlow's collection, eventually numbering over 12,000 volumes, was renowned for its medieval manuscripts and early scientific texts.</p>
+        <p>The library's fame, however, was matched by its inaccessibility. Marlow rarely allowed visitors and refused to lend any item to outside scholars. After his death in 1928, the collection passed to a local trust, which opened the building to the public for limited hours but did little to catalogue or conserve its contents.</p>
+        <p>By the late 1970s, water damage and theft had taken a serious toll. A 1981 audit, led by the historian Dr. Eleanor Ash, revealed that as many as 3,000 volumes were missing or damaged beyond repair. Critics blamed inadequate funding, while the trust argued the building's location had always made conservation difficult.</p>
+        <p>In 2002, a digitisation project began. Although progress was initially slow, by 2018 over 8,000 volumes had been scanned and made publicly available online. The project drew funding from three universities and a private foundation. The lead archivist credited the project's success to the diversity of expertise on the team rather than to any single innovation.</p>
+      </div>
+
+      <div class="mt-5 space-y-4" id="bossQs"></div>
+      <div class="mt-5" id="bossResult"></div>
+    </div>
+  </section>
+
+  <!-- MISTAKE JOURNAL -->
+  <section id="journal" class="mb-14">
+    <h2 class="text-3xl mb-2">⑦ The Mistake Journal</h2>
+    <p class="text-stone-600 max-w-3xl">This is what separates the 8s from the 7s. Every wrong answer in practice gets logged with <em>why</em> it was wrong. Use this template every session.</p>
+
+    <div class="grid md:grid-cols-4 gap-4 mt-5">
+      <div class="card p-4"><div class="font-bold">1 · The Question</div><p class="text-sm text-stone-600 mt-1">Copy the question and the question type (T/F/NG, MCQ, etc.).</p></div>
+      <div class="card p-4"><div class="font-bold">2 · My Answer / Correct</div><p class="text-sm text-stone-600 mt-1">Side-by-side. Don't let yourself round it down to "silly mistake".</p></div>
+      <div class="card p-4"><div class="font-bold">3 · Why I Got It Wrong</div><p class="text-sm text-stone-600 mt-1">Misread question? Distractor trap? Missed a synonym? Used my own knowledge?</p></div>
+      <div class="card p-4"><div class="font-bold">4 · The Rule</div><p class="text-sm text-stone-600 mt-1">One-line rule that would have saved you. Re-read it before next practice.</p></div>
+    </div>
+
+    <details class="card p-5 mt-6">
+      <summary class="font-semibold">Worked example — click to open</summary>
+      <div class="mt-3 text-sm space-y-2">
+        <div><strong>Q:</strong> "The 1981 audit was led by Dr. Patel." (T/F/NG)</div>
+        <div><strong>My answer:</strong> NOT GIVEN · <strong>Correct:</strong> FALSE</div>
+        <div><strong>Why wrong:</strong> The passage names the auditor as Dr. Ash. I saw the year 1981 and a name and assumed the question was just "extra detail". I missed that the passage <em>actively contradicts</em> the statement.</div>
+        <div><strong>Rule:</strong> If the passage <em>actively corrects</em> the statement → FALSE. If it simply doesn't mention it → NOT GIVEN.</div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ACTION PLAN -->
+  <section id="plan-final" class="mb-14">
+    <h2 class="text-3xl mb-3">Your 7-Day Action Plan</h2>
+    <div class="grid md:grid-cols-7 gap-2 text-center text-xs">
+      <div class="p-3 rounded-xl card"><strong>Day 1</strong><div class="mt-1 text-stone-600">T/F/NG only — full sheet, untimed</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 2</strong><div class="mt-1 text-stone-600">Matching Headings — reverse method</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 3</strong><div class="mt-1 text-stone-600">Completion — predict word type</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 4</strong><div class="mt-1 text-stone-600">MCQ — elimination drill</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 5</strong><div class="mt-1 text-stone-600">Locating Info + Lists — piggyback</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 6</strong><div class="mt-1 text-stone-600">Full timed test (60 min)</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 7</strong><div class="mt-1 text-stone-600">Mistake journal review</div></div>
+    </div>
+  </section>
+
+  <footer class="border-t border-line pt-6 pb-12 text-sm text-stone-500 flex flex-wrap items-center justify-between gap-3">
+    <div>IELTS Reading · Detective Academy · Band 7+ Track</div>
+    <div class="flex items-center gap-2">
+      <span class="legend-dot" style="background:var(--plum)"></span>Strategy
+      <span class="legend-dot" style="background:var(--gold)"></span>Tip
+      <span class="legend-dot" style="background:var(--rose)"></span>Trap
+      <span class="legend-dot" style="background:var(--teal)"></span>Correct
+    </div>
+  <div style="text-align:center;font-size:.72rem;color:#aaa;margin-top:1.2rem;padding-bottom:.5rem">&copy; 2026 ViATestPrep &middot; All Rights Reserved &middot; Unauthorized reproduction prohibited</div></footer>
+</main>
+
+<script>
+// ====== STATE ======
+const state = { xp: 0, max: 200 };
+const xpDisp = document.getElementById('xpDisplay');
+const xpBar = document.getElementById('xpBar');
+function addXP(n, label){
+  state.xp = Math.min(state.max, state.xp + n);
+  xpDisp.textContent = state.xp + ' XP';
+  xpBar.style.width = (state.xp/state.max*100)+'%';
+  if (label){ flashToast(label, n); }
+}
+function flashToast(label, n){
+  const t = document.createElement('div');
+  t.textContent = (n>0?'+':'') + n + ' XP · ' + label;
+  t.style.cssText = 'position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#0f172a;color:#fff;padding:.6rem 1rem;border-radius:999px;z-index:50;font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,.18);font-size:.9rem;opacity:0;transition:opacity .25s';
+  document.body.appendChild(t);
+  requestAnimationFrame(()=>t.style.opacity=1);
+  setTimeout(()=>{t.style.opacity=0;setTimeout(()=>t.remove(),300)}, 1600);
+}
+
+// ====== NAV STEPS ======
+document.querySelectorAll('.nav-step').forEach(s=>{
+  s.addEventListener('click',()=>{
+    const id = s.dataset.jump;
+    document.getElementById(id)?.scrollIntoView({behavior:'smooth'});
+  });
+});
+
+// ====== SKIM DRILL ======
+const skimItems = [
+  {t:"Title & subtitle", good:true, why:"Topic in a nutshell."},
+  {t:"Every word of paragraph 4", good:false, why:"Reading every word kills your time. You're skimming, not studying."},
+  {t:"First paragraph", good:true, why:"Background and context."},
+  {t:"All footnotes", good:false, why:"Footnotes are rarely tested. Skip."},
+  {t:"First sentence of every other paragraph", good:true, why:"That's the topic sentence — your map markers."},
+  {t:"Last paragraph", good:true, why:"Often a summary or future prediction."},
+  {t:"Captions of all charts", good:false, why:"Tempting, but only revisit charts when a question points there."},
+];
+const skimDrill = document.getElementById('skimDrill');
+const skimResult = document.getElementById('skimResult');
+let skimScore = 0;
+skimItems.forEach((it,i)=>{
+  const b = document.createElement('button');
+  b.className = 'btn btn-ghost text-sm';
+  b.textContent = it.t;
+  b.onclick = ()=>{
+    if (b.dataset.done) return;
+    b.dataset.done = '1';
+    if (it.good){
+      b.style.background = '#eef9f5';
+      b.style.borderColor = 'var(--teal)';
+      b.innerHTML = '✓ ' + it.t;
+      skimScore++;
+      addXP(3, 'Skim move');
+    } else {
+      b.style.background = '#fdf0f3';
+      b.style.borderColor = 'var(--rose)';
+      b.style.textDecoration = 'line-through';
+    }
+    skimResult.innerHTML = `<span class="feedback ${it.good?'good':'bad'}" style="display:block">${it.good?'✅':'❌'} <strong>${it.t}</strong> — ${it.why}</span>`;
+  };
+  skimDrill.appendChild(b);
+});
+
+// ====== SCAN DRILL ======
+const scanText = `In the early decades of the 20th century, several private collectors assembled remarkable libraries. One of the most unusual was begun in 1893 by Hugh Marlow, a self-taught antiquarian who continued building the collection until 1925. By the time of its closure, the library held over twelve thousand volumes, including a famous Latin manuscript dated to the 14th century.`;
+const scanEl = document.getElementById('scanText');
+scanEl.innerHTML = scanText.replace(/(\b1925\b)/, '<span data-target="1" class="cursor-pointer">$1</span>');
+scanEl.addEventListener('click', e=>{
+  if (e.target.dataset.target){
+    e.target.classList.add('marker-yellow');
+    e.target.style.fontWeight = '700';
+    document.getElementById('scanResult').innerHTML =
+      '<span class="feedback good" style="display:block">✓ Found in 1 click. That\'s scanning. Notice you ignored every other sentence.</span>';
+    addXP(8,'Scan locked');
+    e.target.dataset.target = '';
+  } else if (e.target.tagName !== 'SPAN'){
+    document.getElementById('scanResult').innerHTML =
+      '<span class="feedback bad" style="display:block">✗ Don\'t read sentences — fly your eyes across looking only for "1925". Try again.</span>';
+  }
+});
+
+// ====== TIMING SLIDER ======
+const totalTime = document.getElementById('totalTime');
+function updateTimes(){
+  const tot = parseInt(totalTime.value,10);
+  // 18-20-22 baseline scaled to total
+  const ratios = [18/60, 20/60, 22/60];
+  const t1 = Math.round(tot*ratios[0]);
+  const t2 = Math.round(tot*ratios[1]);
+  const t3 = tot - t1 - t2;
+  document.getElementById('t1').textContent = t1+'m';
+  document.getElementById('t2').textContent = t2+'m';
+  document.getElementById('t3').textContent = t3+'m';
+}
+totalTime.addEventListener('input',updateTimes);
+updateTimes();
+
+// ====== CASE FILES — all 14 official IELTS Reading question types ======
+const caseFiles = [
+  {
+    no:1, name:"Multiple Choice", cat:"choice", color:"#f3ecff", accent:"var(--plum)",
+    move:"Read the question stem first — cover the options with your hand. Locate the section in the text. Form your own answer mentally. THEN uncover the options and eliminate one by one.",
+    trap:"Keyword Match. A wrong option uses identical words from the passage but flips the meaning (e.g., text says 'often' → option says 'always').",
+    rule:"Eliminate, don't pick. The correct answer is almost always a paraphrase, not a copy.",
+    example:"<strong>Text:</strong> 'Cycling is <em>often</em> a practical solution.' <br><strong>Trap option:</strong> 'Cycling is <em>always</em> practical.' (Wrong — extreme word.) <br><strong>Right option:</strong> 'Cycling is frequently a practical choice.' (Paraphrase.)"
+  },
+  {
+    no:2, name:"True / False / Not Given (Information)", cat:"choice", color:"#eef9f5", accent:"var(--teal)",
+    move:"For each statement, find the matching section. Ask: does the text state THIS, the OPPOSITE, or NEITHER? Underline the exact words that prove it.",
+    trap:"FALSE vs NOT GIVEN confusion. To be FALSE, the passage must <em>actively contradict</em> the statement. If there's simply no info — it's NOT GIVEN.",
+    rule:"In-order. Watch qualifiers: <em>all, only, every, always, never, mainly</em> — these are usually the deciding words.",
+    example:"<strong>Statement:</strong> 'The audit was led by Dr. Patel.' <br><strong>Text says:</strong> 'led by Dr. Ash.' → FALSE (active contradiction). <br><strong>Text says nothing about who led it</strong> → NOT GIVEN."
+  },
+  {
+    no:3, name:"Yes / No / Not Given (Writer's Views)", cat:"choice", color:"#eef9f5", accent:"var(--teal)",
+    move:"Same logic as T/F/NG, BUT you are testing the writer's <em>opinion</em> or <em>claim</em>, not facts. Look for opinion verbs: <em>argues, believes, contends, suggests, holds that…</em>",
+    trap:"Confusing what someone <em>else</em> in the passage thinks with what the writer thinks. Only the writer's view counts.",
+    rule:"YES = writer agrees; NO = writer disagrees; NOT GIVEN = writer doesn't express a view on this point.",
+    example:"<strong>Statement:</strong> 'Globalisation has had a positive impact on small economies.' <br><strong>Text:</strong> 'Many economists celebrate globalisation, <em>though I remain unconvinced</em>.' → NO (writer disagrees)."
+  },
+  {
+    no:4, name:"Matching Information", cat:"match", color:"#fdf0f3", accent:"var(--rose)",
+    move:"Question-Focused Scan. Underline the most unique keyword (name, date, term) in each statement. Scan the WHOLE passage for it. Read around the hit to confirm.",
+    trap:"NOT in order. The answer to Q3 might be in Para A; Q4 in Para F. Don't expect sequence.",
+    rule:"Piggyback method — find these answers naturally while doing in-order question types. Saves you a full re-read.",
+    example:"<strong>Statement:</strong> 'an example of a successful conservation effort' → Scan for 'conservation' / 'restoration' / a named project across all paragraphs."
+  },
+  {
+    no:5, name:"Matching Headings", cat:"match", color:"#f3ecff", accent:"var(--plum)",
+    move:"REVERSE method. <em>Ignore</em> the heading list at first. Read the paragraph, summarise it in your own 3–5 words, THEN go to the headings and match.",
+    trap:"Picking a heading because it shares one keyword with the paragraph — but only describes a sub-detail, not the main idea.",
+    rule:"Do this LAST. Start with the SHORTEST paragraph for a quick win. There are always more headings than paragraphs.",
+    example:"<strong>Paragraph:</strong> mostly about pollution from a factory, mentions cost in one sentence. <br><strong>Trap heading:</strong> 'Financial cost of the factory'. <br><strong>Right heading:</strong> 'Negative environmental effects of the factory'."
+  },
+  {
+    no:6, name:"Matching Features (e.g., named people)", cat:"match", color:"#fdf6e3", accent:"var(--gold)",
+    move:"Feature-First. Before reading any statement, scan and circle EVERY instance of each named feature (Dr. Evans, Dr. Carter…) in the text. Then attack one feature at a time.",
+    trap:"'Two names, one sentence' — when Dr. X agrees with Dr. Y's theory, the opinion belongs to Dr. Y (the originator), not Dr. X.",
+    rule:"Check the NB: 'may use any option more than once'. If yes, the same feature can answer multiple statements.",
+    example:"Look for reporting verbs: <em>argues, claims, suggests, found, believed, discovered</em> — they signal a researcher's view."
+  },
+  {
+    no:7, name:"Matching Sentence Endings", cat:"match", color:"#fdf6e3", accent:"var(--gold)",
+    move:"Read the sentence beginning and predict the grammatical shape of the ending (a clause? a noun? a result?). Locate the relevant text and find the meaning, then match.",
+    trap:"Choosing an ending because it sounds grammatical — without checking that it matches the meaning of the passage.",
+    rule:"More endings than beginnings. Always check that subject-verb agreement and tense work. Cross out endings as you use them.",
+    example:"<strong>Beginning:</strong> 'The committee abandoned the project because…' <br><strong>Right ending:</strong> '…funding was withdrawn unexpectedly.' (Reason → matches 'because')"
+  },
+  {
+    no:8, name:"Sentence Completion", cat:"complete", color:"#eef9f5", accent:"var(--teal)",
+    move:"Predict-Locate-Copy. Read the gapped sentence. Predict the missing word type (noun? verb? number?). Scan, locate, copy the EXACT word(s) — never change the form.",
+    trap:"Changing the word form. If text says 'developing', don't write 'development' — even if the gap reads better.",
+    rule:"In order. Honour the word limit ('NO MORE THAN TWO WORDS AND/OR A NUMBER').",
+    example:"<strong>Gap:</strong> 'The main cause was the lack of ____.' → Predict: noun. Locate the sentence. Copy exactly."
+  },
+  {
+    no:9, name:"Summary Completion", cat:"complete", color:"#eef9f5", accent:"var(--teal)",
+    move:"Two flavours: WITH a word bank (synonym test) or WITHOUT (text words only). Read the whole summary first to get the gist, then attack the gaps in order.",
+    trap:"Filling a gap with a word that fits grammatically but contradicts the passage's meaning. With a word bank, expect 1–2 distractors more than gaps.",
+    rule:"With bank → match by SYNONYM. Without bank → copy from the passage exactly.",
+    example:"<strong>Bank:</strong> [diverse, costly, abandoned, swift, gradual, isolated]. <br><strong>Text:</strong> 'progress was initially slow' → gap = 'gradual' (synonym, not 'slow' itself)."
+  },
+  {
+    no:10, name:"Note Completion", cat:"complete", color:"#eef9f5", accent:"var(--teal)",
+    move:"Use the structure of the notes (headings, bullet hierarchy) as a map. Each bullet's keywords lead you straight to the relevant chunk of text.",
+    trap:"Trying to make notes 'sound right' — adding articles or extra words. Notes are deliberately telegraphic.",
+    rule:"Copy exact words. Honour the limit. Match the grammar of the existing notes (no full sentences).",
+    example:"<strong>Notes:</strong> 'Causes: – ____ damage in 1970s' → scan 'damage', '1970s' → text says 'water damage' → answer = 'water'."
+  },
+  {
+    no:11, name:"Table Completion", cat:"complete", color:"#eef9f5", accent:"var(--teal)",
+    move:"Use rows + columns as your two-axis search grid. Each cell intersects two pieces of info — locate that intersection in the passage.",
+    trap:"Reading rows linearly without using the column header as a constraint. The column header tells you WHAT KIND of info is missing (year? quantity? name?).",
+    rule:"Information often appears chunked together in the passage. Once you find one cell, the next cell often follows nearby.",
+    example:"Column = 'Year discovered', Row = 'Site B' → scan for 'Site B' + a date nearby."
+  },
+  {
+    no:12, name:"Flow-chart Completion", cat:"complete", color:"#eef9f5", accent:"var(--teal)",
+    move:"A flow-chart describes a process. The passage will describe the same process step-by-step — just find that section and follow it. Steps are usually in order.",
+    trap:"Skipping a step. If a step in the chart is unclear, mark it and come back — answers stay in order.",
+    rule:"Verbs are often the missing words. Predict whether you need a verb, a noun, or both.",
+    example:"<strong>Step 3:</strong> 'Mixture is ____ for two hours.' → Predict: verb (passive). Text: 'heated for 120 minutes' → answer = 'heated'."
+  },
+  {
+    no:13, name:"Diagram Label Completion", cat:"complete", color:"#eef9f5", accent:"var(--teal)",
+    move:"Look at the diagram first. Identify what kind of object/process it shows. Then locate the descriptive paragraph in the text.",
+    trap:"Letting your real-world knowledge of the object override the text. The label MUST come from the passage.",
+    rule:"The text usually describes parts top-to-bottom or in spatial order. Words are taken exactly from the passage.",
+    example:"<strong>Diagram:</strong> a beetle's three body parts. <br><strong>Text:</strong> 'the thorax, located between the head and abdomen…' → label arrow on middle part = 'thorax'."
+  },
+  {
+    no:14, name:"Short-Answer Questions", cat:"answer", color:"#fdf0f3", accent:"var(--rose)",
+    move:"Read the question, predict the type of answer (a date? a place? a name?). Scan for keywords. Read the matched section. Copy 1–3 words EXACTLY from the text.",
+    trap:"Writing a full sentence or paraphrasing in your own words. Both lose the mark.",
+    rule:"In-order. Watch the word limit. Spelling counts — copy precisely.",
+    example:"<strong>Q:</strong> 'Which structure was decorated with animal images?' (NO MORE THAN 2 WORDS) → text: 'temple walls bore engravings of animals' → answer = 'temple walls'."
+  },
+];
+const cf = document.getElementById('caseFiles');
+const catLabels = {choice:"Selection", match:"Matching", complete:"Completion", answer:"Short Answer"};
+caseFiles.forEach(c=>{
+  const card = document.createElement('div');
+  card.className = 'card p-5 qtype relative';
+  card.dataset.cat = c.cat;
+  card.style.background = `linear-gradient(180deg, ${c.color} 0%, #fff 70%)`;
+  card.innerHTML = `
+    <div class="flex items-start justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center font-bold text-white" style="background:${c.accent};font-family:'Fraunces',serif">${c.no}</div>
+        <div>
+          <div class="font-bold text-base leading-tight">${c.name}</div>
+          <div class="text-[10px] uppercase tracking-widest text-stone-500 mt-0.5">${catLabels[c.cat]||""}</div>
+        </div>
+      </div>
+      <span class="text-xs text-stone-500" data-toggle>tap ↓</span>
+    </div>
+    <div class="reveal mt-3">
+      <div class="text-xs uppercase tracking-widest text-stone-500">The Move</div>
+      <div class="text-sm mt-1">${c.move}</div>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--rose)">The Trap</div>
+      <div class="text-sm mt-1">${c.trap}</div>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--gold)">The Rule</div>
+      <div class="text-sm mt-1">${c.rule}</div>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--plum)">Mini Example</div>
+      <div class="text-sm mt-1 p-2 rounded-lg" style="background:#fbf7ec;border-left:3px solid var(--gold)">${c.example}</div>
+    </div>
+  `;
+  card.addEventListener('click',(e)=>{
+    if (e.target.closest('button')) return;
+    const r = card.querySelector('.reveal');
+    const wasOpen = r.classList.contains('open');
+    r.classList.toggle('open');
+    if(!wasOpen){ addXP(2,'Case file opened'); }
+  });
+  cf.appendChild(card);
+});
+
+// Filters
+document.querySelectorAll('#caseFilters button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('#caseFilters button').forEach(x=>x.classList.remove('glow'));
+    b.classList.add('glow');
+    const f = b.dataset.filter;
+    document.querySelectorAll('#caseFiles .qtype').forEach(card=>{
+      card.style.display = (f==='all' || card.dataset.cat===f) ? '' : 'none';
+    });
+  });
+});
+
+// ====== T/F/NG DRILL ======
+const tfng = [
+  {q:"Dr. Patel discovered the breakthrough alone.", a:"FALSE", why:"The passage credits the breakthrough to the diversity of the research group — actively contradicting 'alone'."},
+  {q:"The project was funded entirely by the government.", a:"NOT GIVEN", why:"The passage mentions funding shortages but does not specify funding source — no information to confirm or deny."},
+  {q:"Three European universities are now using the project's methods.", a:"TRUE", why:"Direct paraphrase: 'now being adopted by three universities in Europe.'"},
+];
+const tfngEl = document.getElementById('tfngDrill');
+tfng.forEach((it,i)=>{
+  const wrap = document.createElement('div');
+  wrap.className = 'card p-4';
+  wrap.innerHTML = `
+    <div class="font-medium mb-2">${i+1}. ${it.q}</div>
+    <div class="flex flex-wrap gap-2">
+      ${["TRUE","FALSE","NOT GIVEN"].map(opt=>`<button class="btn btn-ghost tfng" data-opt="${opt}">${opt}</button>`).join('')}
+    </div>
+    <div class="fb mt-3"></div>
+  `;
+  tfngEl.appendChild(wrap);
+  wrap.querySelectorAll('.tfng').forEach(b=>{
+    b.addEventListener('click',()=>{
+      if (wrap.dataset.done) return;
+      wrap.dataset.done='1';
+      const correct = b.dataset.opt === it.a;
+      b.style.background = correct?'#eef9f5':'#fdf0f3';
+      b.style.borderColor = correct?'var(--teal)':'var(--rose)';
+      wrap.querySelectorAll('.tfng').forEach(x=>{
+        if (x.dataset.opt === it.a){ x.style.background='#eef9f5';x.style.borderColor='var(--teal)';x.innerHTML='✓ '+x.textContent; }
+        x.disabled = true;
+      });
+      wrap.querySelector('.fb').innerHTML = `<div class="feedback ${correct?'good':'bad'}">${correct?'✅ Correct.':'❌ Not quite.'} <strong>Answer: ${it.a}.</strong> ${it.why}</div>`;
+      addXP(correct?10:2, correct?'T/F/NG correct':'T/F/NG learning');
+    });
+  });
+});
+
+// ====== MCQ DRILL ======
+const mcq = {
+  options:[
+    {l:"A", t:"Always practical, regardless of context.", c:false, w:"Extreme word 'always'. Passage says 'often a practical solution'. Trap: keyword match with shifted meaning."},
+    {l:"B", t:"A practical option whose effectiveness depends on local conditions.", c:true, w:"This paraphrases the text faithfully — 'often practical' + 'gains depend heavily on local geography and weather'."},
+    {l:"C", t:"A failed solution to congestion.", c:false, w:"Directly contradicts the text. Passage describes 'measurable reduction in commute times'."},
+    {l:"D", t:"Cheaper than other transport infrastructure.", c:false, w:"True-but-wrong. Cost is mentioned, but the passage doesn't compare it to other infrastructure."},
+  ]
+};
+const mcqEl = document.getElementById('mcqDrill');
+const mcqFB = document.getElementById('mcqFeedback');
+let mcqDone = false;
+mcq.options.forEach(o=>{
+  const div = document.createElement('div');
+  div.className = 'opt';
+  div.innerHTML = `<div class="letter">${o.l}</div><div>${o.t}</div>`;
+  div.addEventListener('click',()=>{
+    if (mcqDone) return;
+    if (o.c){
+      div.classList.add('correct');
+      mcqEl.querySelectorAll('.opt').forEach(x=>{
+        if (!x.classList.contains('correct')) x.classList.add('disabled');
+      });
+      mcqFB.innerHTML = `<div class="feedback good">✅ Right. ${o.w}</div>`;
+      mcqDone = true;
+      addXP(15,'MCQ mastered');
+    } else {
+      div.classList.add('wrong');
+      mcqFB.innerHTML = `<div class="feedback bad"><strong>Eliminated ${o.l}.</strong> ${o.w}</div>`;
+      addXP(2,'MCQ elimination');
+    }
+  });
+  mcqEl.appendChild(div);
+});
+
+// ====== MATCHING HEADINGS DRAG-DROP ======
+const headings = [
+  {id:"h1", text:"i. The collector and the building of his library", correctFor:"p1"},
+  {id:"h2", text:"ii. Restricted access and limited stewardship", correctFor:"p2"},
+  {id:"h3", text:"iii. Decline and damage in the late 20th century", correctFor:"p3"},
+  {id:"h4", text:"iv. The architectural style of the library building", correctFor:null}, // distractor
+  {id:"h5", text:"v. A modern revival through digitisation", correctFor:"p4"},
+  {id:"h6", text:"vi. The political controversy surrounding the trust", correctFor:null}, // distractor
+];
+const paras = [
+  {id:"p1", text:"For more than a century, the small market town of Sutton was famous for an unlikely treasure: a private library assembled by Hugh Marlow between 1893 and 1925, eventually numbering over 12,000 volumes."},
+  {id:"p2", text:"Marlow rarely allowed visitors and refused to lend any item to outside scholars. After his death, the local trust opened the building for limited hours but did little to catalogue or conserve its contents."},
+  {id:"p3", text:"By the late 1970s, water damage and theft had taken a toll. A 1981 audit revealed up to 3,000 volumes were missing or damaged beyond repair."},
+  {id:"p4", text:"In 2002, a digitisation project began. By 2018 over 8,000 volumes were online, funded by three universities and a private foundation."},
+];
+const bank = document.getElementById('headingsBank');
+headings.forEach(h=>{
+  const chip = document.createElement('div');
+  chip.className = 'card p-3 draggable text-sm';
+  chip.draggable = true;
+  chip.dataset.id = h.id;
+  chip.textContent = h.text;
+  chip.addEventListener('dragstart', e=>{ e.dataTransfer.setData('text/plain', h.id); chip.style.opacity=.5; });
+  chip.addEventListener('dragend',()=>chip.style.opacity=1);
+  bank.appendChild(chip);
+});
+const headingsParas = document.getElementById('headingsParas');
+paras.forEach(p=>{
+  const row = document.createElement('div');
+  row.className = 'card p-4 grid md:grid-cols-3 gap-3 items-center';
+  row.innerHTML = `
+    <div class="md:col-span-2 text-sm">${p.text}</div>
+    <div class="drop-target text-sm" data-pid="${p.id}"><em>Drop heading here…</em></div>
+  `;
+  headingsParas.appendChild(row);
+  const dt = row.querySelector('.drop-target');
+  dt.addEventListener('dragover', e=>{ e.preventDefault(); dt.classList.add('over'); });
+  dt.addEventListener('dragleave',()=>dt.classList.remove('over'));
+  dt.addEventListener('drop', e=>{
+    e.preventDefault(); dt.classList.remove('over');
+    const id = e.dataTransfer.getData('text/plain');
+    const h = headings.find(x=>x.id===id);
+    if (!h) return;
+    const correct = h.correctFor === p.id;
+    dt.innerHTML = (correct?'✓ ':'⚠ ') + h.text;
+    dt.classList.add('filled');
+    if (!correct){
+      dt.style.borderColor = 'var(--rose)';
+      dt.style.background = '#fdf0f3';
+    }
+    document.getElementById('headingsFeedback').innerHTML =
+      `<div class="feedback ${correct?'good':'bad'}"><strong>${correct?'Match locked.':'Re-check this one.'}</strong> ${correct?'You correctly summarised the paragraph before matching.':'Re-read the paragraph and form a 3-word summary in your head before grabbing a heading.'}</div>`;
+    addXP(correct?12:2, correct?'Heading matched':'Heading miss');
+  });
+});
+
+// ====== BOSS FIGHT ======
+const bossQs = [
+  {type:"T/F/NG", q:"Hugh Marlow's library held more than 12,000 volumes by the time he stopped collecting.", a:"TRUE", why:"'numbering over 12,000 volumes' between 1893 and 1925."},
+  {type:"T/F/NG", q:"Dr. Eleanor Ash led the digitisation project of 2002.", a:"FALSE", why:"Dr. Ash led the 1981 AUDIT — actively contradicted by the text. Beware named-researcher mix-ups."},
+  {type:"T/F/NG", q:"The local trust admitted that the building's location was its main mistake.", a:"NOT GIVEN", why:"The trust 'argued the location had always made conservation difficult' — a defence, not an admission. Specific claim is absent."},
+  {type:"MCQ", q:"According to the passage, the digitisation project succeeded primarily because:",
+   options:[
+     {l:"A", t:"a single technological innovation was used.", c:false, w:"Distractor — 'innovation' appears in the text but is explicitly NOT credited."},
+     {l:"B", t:"the trust significantly increased its funding.", c:false, w:"Funding came from outside (universities + foundation), not the trust."},
+     {l:"C", t:"the team brought together varied expertise.", c:true, w:"'credited the project's success to the diversity of expertise on the team' — paraphrase."},
+     {l:"D", t:"the project began very early, in the 1970s.", c:false, w:"Contradicted — project began in 2002."},
+   ]},
+  {type:"COMPLETION", q:"Complete: \"By 2018 over ____ volumes had been scanned.\" (ONE NUMBER)", a:"8000", aliases:["8,000","eight thousand"], why:"Direct from the passage — '8,000 volumes had been scanned'."},
+];
+
+let bossSeconds = 300, bossInt = null, bossDone=false;
+const bossTimer = document.getElementById('bossTimer');
+const bossStart = document.getElementById('bossStart');
+const bossQsEl = document.getElementById('bossQs');
+const bossResult = document.getElementById('bossResult');
+
+bossQs.forEach((q,i)=>{
+  const div = document.createElement('div');
+  div.className = 'card p-4';
+  if (q.type === 'T/F/NG'){
+    div.innerHTML = `<div class="font-medium mb-2"><span class="chip" style="background:#fdf0f3;color:var(--rose)">T/F/NG</span> ${i+1}. ${q.q}</div>
+      <div class="flex flex-wrap gap-2">
+        ${["TRUE","FALSE","NOT GIVEN"].map(o=>`<button class="btn btn-ghost bossopt" data-i="${i}" data-v="${o}">${o}</button>`).join('')}
+      </div><div class="fb mt-2"></div>`;
+  } else if (q.type === 'MCQ'){
+    div.innerHTML = `<div class="font-medium mb-2"><span class="chip" style="background:#f3ecff;color:var(--plum)">MCQ</span> ${i+1}. ${q.q}</div>
+      <div class="space-y-2 bossmcq" data-i="${i}">
+        ${q.options.map(o=>`<div class="opt" data-i="${i}" data-l="${o.l}"><div class="letter">${o.l}</div><div>${o.t}</div></div>`).join('')}
+      </div><div class="fb mt-2"></div>`;
+  } else {
+    div.innerHTML = `<div class="font-medium mb-2"><span class="chip" style="background:#eef9f5;color:var(--teal)">Completion</span> ${i+1}. ${q.q}</div>
+      <input class="border border-line rounded-lg p-2 w-full" data-i="${i}" placeholder="Type your answer (no more than 2 words / a number)"/>
+      <div class="fb mt-2"></div>`;
+  }
+  bossQsEl.appendChild(div);
+});
+
+function lockBoss(){
+  bossDone = true;
+  // grade
+  let score = 0;
+  bossQs.forEach((q,i)=>{
+    const card = bossQsEl.children[i];
+    const fb = card.querySelector('.fb');
+    let correct=false, got='';
+    if (q.type==='T/F/NG'){
+      const sel = card.querySelector('.bossopt[data-picked="1"]');
+      got = sel?sel.dataset.v:'(blank)';
+      correct = sel && sel.dataset.v === q.a;
+    } else if (q.type==='MCQ'){
+      const sel = card.querySelector('.opt.correct');
+      const picked = card.querySelector('.opt[data-picked="1"]');
+      got = picked? picked.dataset.l : '(blank)';
+      correct = !!sel;
+    } else {
+      const inp = card.querySelector('input');
+      got = (inp.value||'').trim().toLowerCase();
+      const aliases = [(q.a||'').toLowerCase(), ...(q.aliases||[]).map(x=>x.toLowerCase())];
+      correct = aliases.includes(got.replace(/,/g,''));
+    }
+    if (correct) score++;
+    fb.innerHTML = `<div class="feedback ${correct?'good':'bad'}">${correct?'✅':'❌'} <strong>Answer: ${q.a}.</strong> ${q.why} <span class="text-stone-500">(You: ${got||'(blank)'})</span></div>`;
+  });
+  const pct = Math.round(score/bossQs.length*100);
+  let band = "Band 6.5";
+  if (pct>=80) band="Band 7.5+ ✨";
+  else if (pct>=60) band="Band 7";
+  else if (pct>=40) band="Band 6.5";
+  else band="Keep training, detective";
+  bossResult.innerHTML = `<div class="card p-5 text-center">
+    <div class="text-xs uppercase tracking-widest text-stone-500">Boss Result</div>
+    <div class="text-3xl font-bold mt-1 plum">${score} / ${bossQs.length}  ·  ${pct}%</div>
+    <div class="mt-1 timer-pill gold text-lg">${band}</div>
+    <div class="text-sm text-stone-600 mt-2">Now log every wrong answer in your Mistake Journal — that's the move that turns 7 → 7.5.</div>
+  </div>`;
+  addXP(score*10, 'Boss fight');
+}
+
+bossStart.addEventListener('click', ()=>{
+  if (bossInt) return;
+  bossInt = setInterval(()=>{
+    bossSeconds--;
+    const m = String(Math.floor(bossSeconds/60)).padStart(2,'0');
+    const s = String(bossSeconds%60).padStart(2,'0');
+    bossTimer.textContent = `${m}:${s}`;
+    if (bossSeconds<=0){
+      clearInterval(bossInt);
+      bossTimer.textContent = '00:00';
+      bossTimer.style.color = 'var(--rose)';
+      if (!bossDone) lockBoss();
+    }
+  }, 1000);
+  bossStart.textContent = '⏸ Submit';
+  bossStart.onclick = ()=>{
+    clearInterval(bossInt);
+    if (!bossDone) lockBoss();
+  };
+});
+
+// boss option listeners
+bossQsEl.addEventListener('click', e=>{
+  if (bossDone) return;
+  const tfng = e.target.closest('.bossopt');
+  if (tfng){
+    const i = +tfng.dataset.i;
+    bossQsEl.children[i].querySelectorAll('.bossopt').forEach(x=>{x.style.background='#fff';x.dataset.picked='0'});
+    tfng.style.background = '#f3ecff';
+    tfng.dataset.picked = '1';
+  }
+  const mcq = e.target.closest('.opt');
+  if (mcq && mcq.parentElement.classList.contains('bossmcq')){
+    const i = +mcq.dataset.i;
+    bossQsEl.children[i].querySelectorAll('.opt').forEach(x=>{x.classList.remove('correct','wrong');x.dataset.picked='0'});
+    const q = bossQs[i];
+    const o = q.options.find(x=>x.l===mcq.dataset.l);
+    mcq.dataset.picked = '1';
+    if (o.c) mcq.classList.add('correct'); else mcq.classList.add('wrong');
+  }
+});
+</script>
+<script>
+(function(){
+  document.addEventListener('contextmenu',function(e){e.preventDefault();return false});
+  document.addEventListener('dragstart',function(e){e.preventDefault();return false});
+  document.addEventListener('keydown',function(e){
+    var k=e.key.toLowerCase();
+    if(e.key==='F12'||(e.ctrlKey&&!e.shiftKey&&(k==='u'||k==='s'||k==='p'||k==='a'))||(e.ctrlKey&&e.shiftKey&&(k==='i'||k==='j'||k==='c'||k==='k'))){
+      e.preventDefault();e.stopPropagation();return false;
+    }
+  });
+  window.addEventListener('beforeprint',function(){document.body.style.display='none'});
+  window.addEventListener('afterprint',function(){document.body.style.display=''});
+})();
+</script></body>
+</html>

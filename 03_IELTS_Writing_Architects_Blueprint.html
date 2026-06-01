@@ -1,0 +1,1119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IELTS Writing: The Architect's Blueprint — Band 7+ â€” ViATestPrep</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0c1828; --paper:#f4f1ea; --blue:#1e3a8a; --blue-deep:#0f1f4a;
+    --terra:#c0531c; --gold:#b58a2c; --line:#d6cdb6; --soft:#e8e0c8;
+    --green:#1f7a4d;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif}
+  h1,h2,h3,h4{font-family:'Fraunces',serif;letter-spacing:-.01em}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px}
+  .blueprint{background:
+    linear-gradient(rgba(30,58,138,.06) 1px, transparent 1px) 0 0/24px 24px,
+    linear-gradient(90deg, rgba(30,58,138,.06) 1px, transparent 1px) 0 0/24px 24px,
+    #f8f6ee;
+    border:1px solid var(--blue);border-radius:14px}
+  .badge{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:12px;font-weight:600;transition:transform .08s ease}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--blue);color:#fff}
+  .btn-primary:hover{background:var(--blue-deep)}
+  .btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{background:#f7f3e9}
+  .btn-terra{background:var(--terra);color:#fff}
+  .chip{padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+  .progress-bar{height:8px;background:#dcd2b6;border-radius:999px;overflow:hidden}
+  .progress-fill{height:100%;background:linear-gradient(90deg,var(--blue),#3b62d5);transition:width .4s ease}
+  .reveal{max-height:0;overflow:hidden;transition:max-height .5s ease}
+  .reveal.open{max-height:2400px}
+  .opt{cursor:pointer;border:1.5px solid var(--line);border-radius:12px;padding:.85rem 1rem;background:#fff;display:flex;gap:.75rem;align-items:flex-start;transition:all .12s}
+  .opt:hover{border-color:var(--blue);background:#eef2fa}
+  .opt.correct{border-color:var(--green);background:#e6f5ee}
+  .opt.wrong{border-color:var(--terra);background:#fdeadf;text-decoration:line-through;opacity:.85}
+  .opt.disabled{pointer-events:none;opacity:.7}
+  .opt .letter{flex:0 0 28px;height:28px;border-radius:8px;background:#f1ecdb;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Fraunces',serif}
+  .opt.correct .letter{background:var(--green);color:#fff}
+  .opt.wrong .letter{background:var(--terra);color:#fff}
+  .feedback{padding:.85rem 1rem;border-radius:12px;font-size:.92rem;line-height:1.5;border-left:4px solid}
+  .feedback.good{border-color:var(--green);background:#eef9f3}
+  .feedback.bad{border-color:var(--terra);background:#fdf0e7}
+  .feedback.tip{border-color:var(--gold);background:#fdf6e3}
+  .toolbar{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(8px);background:rgba(244,241,234,.85);border-bottom:1px solid var(--line)}
+  .nav-step{cursor:pointer}
+  .stamp{display:inline-block;border:2px dashed var(--terra);color:var(--terra);padding:.15rem .5rem;border-radius:6px;transform:rotate(-3deg);font-weight:800;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
+  .qtype{cursor:pointer;transition:transform .15s, box-shadow .15s}
+  .qtype:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(30,58,138,.12)}
+  .gameboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+  details>summary{cursor:pointer;list-style:none}
+  details>summary::-webkit-details-marker{display:none}
+  details>summary::after{content:"+";float:right;font-weight:700;color:var(--blue)}
+  details[open]>summary::after{content:"–"}
+  .glow{box-shadow:0 0 0 4px rgba(30,58,138,.2)}
+  .pillar{background:linear-gradient(180deg,#fff,#f7f3e9);border:1px solid var(--line);border-radius:16px;padding:1.2rem;position:relative;overflow:hidden}
+  .pillar::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px}
+  .pillar.tr::before{background:var(--terra)}
+  .pillar.cc::before{background:var(--blue)}
+  .pillar.lr::before{background:var(--gold)}
+  .pillar.gra::before{background:var(--green)}
+  .timer-pill{font-family:'Fraunces',serif;font-weight:800;letter-spacing:.04em}
+  .draggable{cursor:grab;user-select:none}
+  .draggable:active{cursor:grabbing}
+  .drop-target{border:2px dashed var(--line);border-radius:12px;min-height:62px;padding:.6rem;background:#fbf7ec;transition:all .12s}
+  .drop-target.over{border-color:var(--blue);background:#eef2fa}
+  .drop-target.filled{border-style:solid}
+  .drop-target.right{border-color:var(--green);background:#eef9f3}
+  .drop-target.wrong{border-color:var(--terra);background:#fdeadf}
+  .marker-yellow{background:linear-gradient(transparent 60%, #fde68a 60%)}
+  .marker-pink{background:linear-gradient(transparent 60%, #fbcfe8 60%)}
+  .marker-green{background:linear-gradient(transparent 60%, #bbf7d0 60%)}
+  .marker-blue{background:linear-gradient(transparent 60%, #bfdbfe 60%)}
+  .blueprint-tag{display:inline-block;padding:.15rem .5rem;border-radius:4px;background:var(--blue);color:#fff;font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.05em}
+  .legend-dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:.35rem}
+  .ascii-chart{font-family:'JetBrains Mono',monospace;font-size:.78rem;line-height:1.3;white-space:pre;background:#fff;padding:1rem;border-radius:12px;border:1px solid var(--line);overflow-x:auto}
+</style>
+<style>
+/* ===== ViATestPrep Protection ===== */
+html body,html body *{-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important}
+img,svg{-webkit-user-drag:none!important}
+@media print{body{display:none!important;visibility:hidden!important}}
+.vtp-wm{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9990;overflow:hidden}
+.vtp-wm::after{content:"ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential";position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-28deg);font-size:1.1rem;font-weight:800;color:rgba(91,42,134,0.05);white-space:nowrap;letter-spacing:.3em;pointer-events:none}
+.vtp-corner{position:fixed;bottom:14px;right:14px;z-index:9999;background:linear-gradient(135deg,#5b2a86,#3b0a64);color:#fff;padding:.3rem .8rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.05em;box-shadow:0 2px 14px rgba(91,42,134,.4);pointer-events:none;font-family:Inter,sans-serif}
+</style></head>
+<body>
+<div class="vtp-wm" aria-hidden="true"></div><div class="vtp-corner" aria-hidden="true">&#127891; ViATestPrep</div>
+
+<!-- TOP TOOLBAR -->
+<div class="toolbar">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-white" style="background:var(--blue);font-family:'Fraunces',serif">AB</div>
+      <div>
+        <div class="text-sm uppercase tracking-widest text-stone-500">IELTS Writing</div>
+        <div class="font-bold -mt-1">The Architect's Blueprint · Band 7+</div>
+      </div>
+    </div>
+    <div class="hidden md:flex items-center gap-4 text-sm">
+      <span class="nav-step" data-jump="mission">① Mindset</span>
+      <span class="nav-step" data-jump="pillars">② 4 Pillars</span>
+      <span class="nav-step" data-jump="task1">③ Task 1</span>
+      <span class="nav-step" data-jump="task2">④ Task 2</span>
+      <span class="nav-step" data-jump="drills">⑤ Drills</span>
+      <span class="nav-step" data-jump="boss">⑥ Boss Build</span>
+      <span class="nav-step" data-jump="skeleton">📐 Skeleton</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="text-right hidden sm:block">
+        <div class="text-[11px] uppercase tracking-widest text-stone-500">Architect XP</div>
+        <div class="font-bold timer-pill" style="color:var(--blue)" id="xpDisplay">0 XP</div>
+      </div>
+      <div class="w-32 progress-bar"><div class="progress-fill" id="xpBar" style="width:0%"></div></div>
+    </div>
+  </div>
+</div>
+
+<main class="max-w-6xl mx-auto px-4 py-10">
+
+  <!-- HERO -->
+  <section id="mission" class="mb-12">
+    <div class="grid md:grid-cols-5 gap-6 items-center">
+      <div class="md:col-span-3">
+        <span class="chip" style="background:var(--soft);color:var(--blue)">Lesson 03 · Writing</span>
+        <h1 class="text-4xl md:text-5xl mt-3 leading-tight">You are not an artist. <span class="marker-blue">You are an architect.</span></h1>
+        <p class="mt-4 text-stone-700 max-w-prose">The IELTS Writing test is not a creative competition. Your essay is a <strong>structure</strong> — logical, strong, fit for purpose. Beautiful English fails when the blueprint is wrong. Today you stop "writing" and start <strong>building</strong>. Specs first. Bricks later.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <button class="btn btn-primary" onclick="document.getElementById('pillars').scrollIntoView({behavior:'smooth'})">▶ Open the blueprint</button>
+          <button class="btn btn-ghost" onclick="document.getElementById('boss').scrollIntoView({behavior:'smooth'})">Skip to Boss Build</button>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="badge" style="background:#fdf0e7;color:var(--terra)">⏱ 60 min · 2 tasks</span>
+          <span class="badge" style="background:#eef9f3;color:var(--green)">🎯 Band 7+ target</span>
+          <span class="badge" style="background:#fdf6e3;color:var(--gold)">📐 Structure-first</span>
+        </div>
+      </div>
+      <div class="md:col-span-2">
+        <div class="blueprint p-5">
+          <div class="text-xs uppercase tracking-widest text-stone-500 mb-2 mono">— SPEC —</div>
+          <div class="text-sm space-y-2">
+            <div><span class="blueprint-tag">T1</span> 150+ words · 20 min · Report a visual · No opinion</div>
+            <div><span class="blueprint-tag">T2</span> 250+ words · 40 min · Argumentative essay · Worth 2× Task 1</div>
+            <div class="mt-2 p-2 rounded-lg" style="background:#eef9f3"><strong>Order of attack:</strong> Always Task 2 first.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 PILLARS -->
+  <section id="pillars" class="mb-14">
+    <div class="flex items-end justify-between mb-4">
+      <h2 class="text-3xl">② The Four Pillars (= Your Score)</h2>
+      <span class="badge" style="background:var(--soft);color:var(--blue)">Each = 25%</span>
+    </div>
+    <p class="text-stone-700 max-w-3xl">Before you write a single word, know the four ways you're being judged. To hit 7+ you need <strong>balance</strong> across all four — not excellence in one.</p>
+
+    <div class="grid md:grid-cols-2 gap-4 mt-6">
+      <div class="pillar tr">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Pillar 1</div>
+        <h3 class="text-xl mt-1">Task Achievement / Task Response</h3>
+        <p class="text-sm text-stone-700 mt-2"><strong>Did you answer the question?</strong> The #1 reason candidates lose marks. Address every part of the prompt. Maintain a clear position throughout.</p>
+        <div class="text-xs mt-2 text-stone-600"><span class="stamp">Watch for</span> Multi-part prompts. "Discuss BOTH views AND give your opinion" = 3 things.</div>
+      </div>
+      <div class="pillar cc">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Pillar 2</div>
+        <h3 class="text-xl mt-1">Coherence & Cohesion</h3>
+        <p class="text-sm text-stone-700 mt-2"><strong>Is it logical and easy to follow?</strong> The skeleton. Clear paragraphs, one central idea each, smooth linking.</p>
+        <div class="text-xs mt-2 text-stone-600"><span class="stamp">Watch for</span> Mechanical linkers ("Firstly… Secondly… Thirdly…"). Examiners notice.</div>
+      </div>
+      <div class="pillar lr">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Pillar 3</div>
+        <h3 class="text-xl mt-1">Lexical Resource</h3>
+        <p class="text-sm text-stone-700 mt-2"><strong>Right words, not big words.</strong> Precision, collocations, paraphrasing. Don't reach for words you can't control.</p>
+        <div class="text-xs mt-2 text-stone-600"><span class="stamp">Watch for</span> Repeating the prompt's keywords. Paraphrase or pay the price.</div>
+      </div>
+      <div class="pillar gra">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Pillar 4</div>
+        <h3 class="text-xl mt-1">Grammatical Range & Accuracy</h3>
+        <p class="text-sm text-stone-700 mt-2"><strong>Range is what builds the skyscraper.</strong> Mix simple and complex sentences, conditionals, passives, relative clauses. Accurately.</p>
+        <div class="text-xs mt-2 text-stone-600"><span class="stamp">Watch for</span> Showing off complex grammar incorrectly costs more than playing safe.</div>
+      </div>
+    </div>
+
+    <!-- DRILL: ID the pillar -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#fdf6e3;color:var(--gold)">Pillar drill</span>
+        <h3 class="text-xl">Diagnose the Weakness</h3>
+      </div>
+      <p class="text-sm text-stone-700">Read each sentence. Click the pillar that's weakest. Train your editor's eye.</p>
+      <div class="space-y-3 mt-3" id="pillarDrill"></div>
+    </div>
+  </section>
+
+  <!-- TASK 1 -->
+  <section id="task1" class="mb-14">
+    <div class="flex items-end justify-between mb-4">
+      <h2 class="text-3xl">③ Task 1 — The Data Report (20 min · 150+ words)</h2>
+      <span class="badge" style="background:var(--soft);color:var(--blue)">Report. Don't interpret.</span>
+    </div>
+    <p class="text-stone-700 max-w-3xl">Your only job: be a human camera. Describe what you see. <strong>No opinions, no reasons, no interpretations.</strong></p>
+
+    <!-- Structure -->
+    <div class="grid md:grid-cols-4 gap-3 mt-6">
+      <div class="card p-4"><div class="blueprint-tag">P1</div><div class="font-bold mt-1">Introduction</div><p class="text-sm text-stone-700 mt-1">1 sentence. Paraphrase the title.</p></div>
+      <div class="card p-4 glow"><div class="blueprint-tag" style="background:var(--terra)">P2 · CRITICAL</div><div class="font-bold mt-1">Overview</div><p class="text-sm text-stone-700 mt-1">2 sentences. Big-picture trends. <strong>NO numbers.</strong></p></div>
+      <div class="card p-4"><div class="blueprint-tag">P3</div><div class="font-bold mt-1">Detail #1</div><p class="text-sm text-stone-700 mt-1">3–4 sentences. Group A data with numbers.</p></div>
+      <div class="card p-4"><div class="blueprint-tag">P4</div><div class="font-bold mt-1">Detail #2</div><p class="text-sm text-stone-700 mt-1">3–4 sentences. Group B data with comparisons.</p></div>
+    </div>
+
+    <div class="feedback tip mt-4"><strong>Pillar 2 secret:</strong> The OVERVIEW is what separates Band 6 from Band 7. Most candidates skip it or load it with numbers. Don't.</div>
+
+    <!-- 7 Visual types -->
+    <h3 class="text-2xl mt-8 mb-3">The 7 Task 1 Visual Types</h3>
+    <p class="text-stone-700 max-w-3xl">Each visual demands a slightly different approach. Tap each card.</p>
+    <div class="gameboard mt-4" id="t1Visuals"></div>
+
+    <!-- Language Bank -->
+    <div class="card p-6 mt-6">
+      <h3 class="text-xl mb-3">📚 The Language Bank — Trends & Comparison</h3>
+      <div class="grid md:grid-cols-3 gap-4 text-sm">
+        <div>
+          <div class="text-xs uppercase tracking-widest text-stone-500 mb-1">⬆ Up</div>
+          <div class="space-y-1">
+            <div class="badge" style="background:#eef9f3;color:var(--green)">rose / increased</div>
+            <div class="badge" style="background:#eef9f3;color:var(--green)">surged / soared</div>
+            <div class="badge" style="background:#eef9f3;color:var(--green)">climbed steadily</div>
+            <div class="badge" style="background:#eef9f3;color:var(--green)">a sharp rise</div>
+            <div class="badge" style="background:#eef9f3;color:var(--green)">a marginal increase</div>
+          </div>
+        </div>
+        <div>
+          <div class="text-xs uppercase tracking-widest text-stone-500 mb-1">⬇ Down</div>
+          <div class="space-y-1">
+            <div class="badge" style="background:#fdf0e7;color:var(--terra)">fell / declined</div>
+            <div class="badge" style="background:#fdf0e7;color:var(--terra)">plummeted / plunged</div>
+            <div class="badge" style="background:#fdf0e7;color:var(--terra)">dropped sharply</div>
+            <div class="badge" style="background:#fdf0e7;color:var(--terra)">a steady decrease</div>
+            <div class="badge" style="background:#fdf0e7;color:var(--terra)">dipped slightly</div>
+          </div>
+        </div>
+        <div>
+          <div class="text-xs uppercase tracking-widest text-stone-500 mb-1">↔ Flat / fluctuated</div>
+          <div class="space-y-1">
+            <div class="badge" style="background:#fdf6e3;color:var(--gold)">remained stable</div>
+            <div class="badge" style="background:#fdf6e3;color:var(--gold)">levelled off / plateaued</div>
+            <div class="badge" style="background:#fdf6e3;color:var(--gold)">fluctuated</div>
+            <div class="badge" style="background:#fdf6e3;color:var(--gold)">stood at</div>
+            <div class="badge" style="background:#fdf6e3;color:var(--gold)">peaked at / bottomed out at</div>
+          </div>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4 text-sm mt-4">
+        <div>
+          <div class="text-xs uppercase tracking-widest text-stone-500 mb-1">Comparison</div>
+          <div class="text-stone-700">significantly higher than · in contrast · whereas · while · followed a similar trend · slightly more than · double / triple · a fifth of</div>
+        </div>
+        <div>
+          <div class="text-xs uppercase tracking-widest text-stone-500 mb-1">Approximation</div>
+          <div class="text-stone-700">approximately · around · just over · just under · nearly · roughly · in the region of</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TASK 2 -->
+  <section id="task2" class="mb-14">
+    <div class="flex items-end justify-between mb-4">
+      <h2 class="text-3xl">④ Task 2 — The Argumentative Essay (40 min · 250+ words)</h2>
+      <span class="badge" style="background:var(--soft);color:var(--blue)">Worth 2/3 of your Writing score</span>
+    </div>
+    <p class="text-stone-700 max-w-3xl">The most important 40 minutes of your test. Always do Task 2 <strong>first</strong>. The first 10 minutes are for the plan — not the prose.</p>
+
+    <!-- 10-min plan -->
+    <div class="card p-6 mt-6">
+      <h3 class="text-xl mb-3">⏱ The Golden 10-Minute Plan</h3>
+      <div class="grid md:grid-cols-2 gap-3">
+        <div class="p-3 rounded-xl" style="background:#fdf0e7">
+          <div class="text-xs uppercase tracking-widest text-stone-600 font-bold">Minutes 0–2</div>
+          <div class="font-bold mt-1">Deconstruct the prompt</div>
+          <p class="text-sm text-stone-700 mt-1">Identify topic, task type (opinion / discussion / advantages / problem-solution / two-part), keywords.</p>
+        </div>
+        <div class="p-3 rounded-xl" style="background:#eef9f3">
+          <div class="text-xs uppercase tracking-widest text-stone-600 font-bold">Minutes 2–10</div>
+          <div class="font-bold mt-1">Build the blueprint</div>
+          <p class="text-sm text-stone-700 mt-1">4-paragraph outline. Each body para: 2–3 ideas with examples. Then write — fast.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bulletproof structure -->
+    <h3 class="text-2xl mt-8 mb-3">The Bulletproof 4-Paragraph Build</h3>
+    <div class="grid md:grid-cols-4 gap-3">
+      <div class="card p-4"><div class="blueprint-tag">P1</div><div class="font-bold mt-1">Introduction (~50 w)</div><p class="text-sm text-stone-700 mt-1">Paraphrase prompt → state thesis.</p></div>
+      <div class="card p-4"><div class="blueprint-tag">P2</div><div class="font-bold mt-1">Body 1 (~95 w)</div><p class="text-sm text-stone-700 mt-1">P-E-E-L: Point, Explain, Example, Link.</p></div>
+      <div class="card p-4"><div class="blueprint-tag">P3</div><div class="font-bold mt-1">Body 2 (~95 w)</div><p class="text-sm text-stone-700 mt-1">P-E-E-L again. Different idea.</p></div>
+      <div class="card p-4"><div class="blueprint-tag">P4</div><div class="font-bold mt-1">Conclusion (~40 w)</div><p class="text-sm text-stone-700 mt-1">Signal end → summarise → restate thesis.</p></div>
+    </div>
+
+    <!-- PEEL drill -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#eef2fa;color:var(--blue)">PEEL drill</span>
+        <h3 class="text-xl">Build a Body Paragraph — Drag the Pieces Into Order</h3>
+      </div>
+      <p class="text-sm text-stone-700">Topic: "Working from home benefits employees more than employers." Drag each sentence into the slot it belongs to.</p>
+      <div class="grid md:grid-cols-4 gap-3 mt-4" id="peelBank"></div>
+      <div class="grid md:grid-cols-4 gap-3 mt-4" id="peelSlots"></div>
+      <div class="mt-3" id="peelFB"></div>
+    </div>
+
+    <!-- 5 essay types -->
+    <h3 class="text-2xl mt-8 mb-3">The 5 Task 2 Essay Types</h3>
+    <p class="text-stone-700 max-w-3xl">Identifying the type is the first 60 seconds of your plan. Get it wrong and your essay is off-target before you've started.</p>
+    <div class="gameboard mt-4" id="t2Types"></div>
+
+    <!-- Type ID drill -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#fdf0e7;color:var(--terra)">Type-spotting drill</span>
+        <h3 class="text-xl">Identify the Essay Type in 10 Seconds</h3>
+      </div>
+      <p class="text-sm text-stone-700">Read each prompt. Click which type it is. The wrong identification leads to the wrong structure.</p>
+      <div class="space-y-3 mt-3" id="typeDrill"></div>
+    </div>
+  </section>
+
+  <!-- DRILLS -->
+  <section id="drills" class="mb-14">
+    <h2 class="text-3xl mb-2">⑤ Architect Drills</h2>
+    <p class="text-stone-700 max-w-3xl">Three short drills targeting your highest-leverage skills.</p>
+
+    <!-- Drill A: Paraphrase -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#eef2fa;color:var(--blue)">Drill A · Paraphrase</span>
+        <h3 class="text-xl">Rewrite the Prompt</h3>
+      </div>
+      <p class="text-sm text-stone-700">Pick the strongest paraphrase. Strongest = different vocabulary AND different sentence structure, while keeping the meaning.</p>
+      <div class="case mt-3 p-3 rounded-xl" style="background:#f7f3e9">
+        <strong>Original prompt:</strong> "Some people believe that universities should focus on providing academic skills, while others think they should also prepare students for the workplace."
+      </div>
+      <div class="space-y-2 mt-3" id="paraDrill"></div>
+      <div id="paraFB" class="mt-3"></div>
+    </div>
+
+    <!-- Drill B: Overview spotting -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#fdf0e7;color:var(--terra)">Drill B · Task 1 Overview</span>
+        <h3 class="text-xl">Which is the Band 7+ Overview?</h3>
+      </div>
+      <p class="text-sm text-stone-700">A line graph shows the proportion of people aged 65+ in USA, Sweden, Japan from 1980 to 2020.</p>
+      <div class="ascii-chart mt-2">% of population aged 65+
+        1980     2000     2020
+USA      15  →   16   →   19   (steady rise)
+Sweden   14  →   15   →   18   (gradual rise)
+Japan     9  →   17   →   25   (sharp rise — overtakes both)
+</div>
+      <div class="space-y-2 mt-3" id="overDrill"></div>
+      <div id="overFB" class="mt-3"></div>
+    </div>
+
+    <!-- Drill C: Cohesive devices -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#fdf6e3;color:var(--gold)">Drill C · Cohesion</span>
+        <h3 class="text-xl">Pick the Right Linker</h3>
+      </div>
+      <p class="text-sm text-stone-700">Mechanical linkers ("Firstly", "Secondly", "Thirdly") are a Band 6 tell. Pick something that fits the actual logic.</p>
+      <div class="space-y-3 mt-3" id="linkDrill"></div>
+    </div>
+  </section>
+
+  <!-- BOSS BUILD -->
+  <section id="boss" class="mb-14">
+    <div class="flex items-end justify-between mb-4">
+      <h2 class="text-3xl">⑥ Boss Build — Plan a Real Essay</h2>
+      <span class="badge" style="background:var(--soft);color:var(--blue)">10-min plan · live timer</span>
+    </div>
+    <p class="text-stone-700 max-w-3xl">Build a Task 2 plan in real time. The textareas auto-count words; the timer holds you to 10 minutes.</p>
+
+    <div class="card p-6 mt-6">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div>
+          <div class="text-xs uppercase tracking-widest text-stone-500">Prompt</div>
+          <div class="font-bold">"Some people argue that the best way to reduce traffic congestion is to make public transport free. Others believe building more roads is the solution. Discuss both views and give your own opinion."</div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="timer-pill text-2xl" style="color:var(--blue)" id="bossTimer">10:00</div>
+          <button class="btn btn-primary" id="bossStart">▶ Start</button>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4 mt-3">
+        <div>
+          <label class="text-xs uppercase tracking-widest text-stone-500">1. Type identified</label>
+          <select class="w-full p-2 border border-line rounded-lg bg-white" id="bossType">
+            <option>— pick one —</option>
+            <option>Opinion (Agree/Disagree)</option>
+            <option>Discussion (both views + opinion)</option>
+            <option>Advantages / Disadvantages</option>
+            <option>Problem / Solution</option>
+            <option>Two-part Question</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-xs uppercase tracking-widest text-stone-500">2. Thesis statement (1 sentence)</label>
+          <textarea class="w-full p-2 border border-line rounded-lg bg-white" rows="2" id="bossThesis" placeholder="In my view, ..."></textarea>
+        </div>
+        <div>
+          <label class="text-xs uppercase tracking-widest text-stone-500">3. Body 1 — POINT (free public transport view)</label>
+          <textarea class="w-full p-2 border border-line rounded-lg bg-white" rows="3" id="bossB1" placeholder="Topic sentence + 1 example..."></textarea>
+        </div>
+        <div>
+          <label class="text-xs uppercase tracking-widest text-stone-500">4. Body 2 — POINT (build more roads view)</label>
+          <textarea class="w-full p-2 border border-line rounded-lg bg-white" rows="3" id="bossB2" placeholder="Topic sentence + 1 example..."></textarea>
+        </div>
+        <div class="md:col-span-2">
+          <label class="text-xs uppercase tracking-widest text-stone-500">5. Conclusion (your final stance)</label>
+          <textarea class="w-full p-2 border border-line rounded-lg bg-white" rows="2" id="bossConc" placeholder="In conclusion, while both approaches have merit, ..."></textarea>
+        </div>
+      </div>
+
+      <div class="flex justify-between items-center mt-4 flex-wrap gap-2">
+        <div class="text-sm text-stone-600" id="bossWords">Total plan: 0 words</div>
+        <button class="btn btn-terra" id="bossSubmit">Submit Plan</button>
+      </div>
+
+      <div id="bossResult" class="mt-4"></div>
+    </div>
+  </section>
+
+  <!-- VISUAL SKELETON -->
+  <section id="skeleton" class="mb-14">
+    <div class="flex items-end justify-between mb-3">
+      <h2 class="text-3xl">📐 The Visual Essay Skeleton</h2>
+      <span class="badge" style="background:var(--soft);color:var(--blue)">Pick the essay type · click each block</span>
+    </div>
+    <p class="text-stone-700 max-w-3xl">A live blueprint — pick your essay type from the dropdown, and each block fills with what it needs to contain, the word count target, the grammar to use, and a sample sentence opener.</p>
+
+    <div class="card p-6 mt-4">
+      <div class="flex items-center gap-3 flex-wrap mb-4">
+        <label class="text-sm font-bold">Essay type:</label>
+        <select class="border border-line rounded-lg p-2 text-sm" id="skType">
+          <option value="opinion">Opinion (Agree / Disagree)</option>
+          <option value="discussion">Discussion (both views + opinion)</option>
+          <option value="advdis">Advantages / Disadvantages</option>
+          <option value="probsol">Problem / Solution</option>
+          <option value="twopart">Two-part Question</option>
+        </select>
+        <span class="text-xs text-stone-500 ml-auto">Total target: 250+ words · 40 min</span>
+      </div>
+
+      <!-- Skeleton visualisation -->
+      <div class="grid md:grid-cols-1 gap-3" id="skBlocks"></div>
+
+      <!-- Sentence-starter bank -->
+      <div class="mt-6">
+        <div class="text-xs uppercase tracking-widest text-stone-500 mb-2">Sentence Starter Bank</div>
+        <div class="grid md:grid-cols-3 gap-3 text-sm" id="skStarters"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTION PLAN -->
+  <section class="mb-14">
+    <h2 class="text-3xl mb-3">Your 7-Day Action Plan</h2>
+    <div class="grid md:grid-cols-7 gap-2 text-center text-xs">
+      <div class="p-3 rounded-xl card"><strong>Day 1</strong><div class="mt-1 text-stone-700">Paraphrase 10 prompts (only)</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 2</strong><div class="mt-1 text-stone-700">5× T2 plans (no full writing)</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 3</strong><div class="mt-1 text-stone-700">Write 1× T1 + Overview drill</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 4</strong><div class="mt-1 text-stone-700">Single PEEL paragraphs (10 min each)</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 5</strong><div class="mt-1 text-stone-700">Full T2 essay timed (40 min)</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 6</strong><div class="mt-1 text-stone-700">Full mock — both tasks (60 min)</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 7</strong><div class="mt-1 text-stone-700">Reverse-engineer a Band 8 essay</div></div>
+    </div>
+  </section>
+
+  <footer class="border-t border-line pt-6 pb-12 text-sm text-stone-500 flex flex-wrap items-center justify-between gap-3">
+    <div>IELTS Writing · The Architect's Blueprint · Band 7+ Track</div>
+    <div class="flex items-center gap-2">
+      <span class="legend-dot" style="background:var(--blue)"></span>Strategy
+      <span class="legend-dot" style="background:var(--gold)"></span>Tip
+      <span class="legend-dot" style="background:var(--terra)"></span>Trap
+      <span class="legend-dot" style="background:var(--green)"></span>Correct
+    </div>
+  <div style="text-align:center;font-size:.72rem;color:#aaa;margin-top:1.2rem;padding-bottom:.5rem">&copy; 2026 ViATestPrep &middot; All Rights Reserved &middot; Unauthorized reproduction prohibited</div></footer>
+</main>
+
+<script>
+// ====== STATE & XP ======
+const state = { xp:0, max:240 };
+function addXP(n,label){
+  state.xp = Math.min(state.max, state.xp+n);
+  document.getElementById('xpDisplay').textContent = state.xp+' XP';
+  document.getElementById('xpBar').style.width = (state.xp/state.max*100)+'%';
+  if (label){
+    const t=document.createElement('div');
+    t.textContent=(n>0?'+':'')+n+' XP · '+label;
+    t.style.cssText='position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#0c1828;color:#fff;padding:.6rem 1rem;border-radius:999px;z-index:50;font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,.18);font-size:.9rem;opacity:0;transition:opacity .25s';
+    document.body.appendChild(t);
+    requestAnimationFrame(()=>t.style.opacity=1);
+    setTimeout(()=>{t.style.opacity=0;setTimeout(()=>t.remove(),300)}, 1600);
+  }
+}
+document.querySelectorAll('.nav-step').forEach(s=>s.addEventListener('click',()=>document.getElementById(s.dataset.jump)?.scrollIntoView({behavior:'smooth'})));
+
+// ====== PILLAR DRILL ======
+const pillarItems = [
+  {s:"\"Firstly. Secondly. Thirdly. In addition. Finally. To conclude.\"", a:"cc", why:"Mechanical linkers — that's a Band 6 Cohesion tell. Vary connectors and let logic carry the flow."},
+  {s:"\"The graph illustrates the proportion of people. The graph illustrates many things. The graph is interesting.\"", a:"lr", why:"Repetition and weak vocabulary. 'Illustrates the proportion' is fine, but 'is interesting' shows poverty of lexis."},
+  {s:"\"Some people thinks the government should banned all cars in city centres because is too pollution.\"", a:"gra", why:"Subject-verb agreement, tense, missing article — multiple grammar slips."},
+  {s:"\"In some countries, public transport is improving. Public transport in cities. The buses are fast.\"", a:"tr", why:"Doesn't address a discussion or opinion question. No clear thesis or stance — Task Response failure."},
+];
+const pdEl = document.getElementById('pillarDrill');
+pillarItems.forEach((it,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML=`<div class="text-sm mb-2">"${it.s.replace(/^"|"$/g,'')}"</div>
+    <div class="flex flex-wrap gap-2">
+      <button class="btn btn-ghost text-xs pillar-opt" data-v="tr">TR — Task Response</button>
+      <button class="btn btn-ghost text-xs pillar-opt" data-v="cc">CC — Coherence/Cohesion</button>
+      <button class="btn btn-ghost text-xs pillar-opt" data-v="lr">LR — Lexical Resource</button>
+      <button class="btn btn-ghost text-xs pillar-opt" data-v="gra">GRA — Grammar</button>
+    </div>
+    <div class="fb mt-2"></div>`;
+  pdEl.appendChild(wrap);
+  wrap.querySelectorAll('.pillar-opt').forEach(b=>b.addEventListener('click',()=>{
+    if (wrap.dataset.done) return;
+    wrap.dataset.done='1';
+    const ok = b.dataset.v===it.a;
+    b.style.background = ok?'#eef9f3':'#fdf0e7';
+    b.style.borderColor = ok?'var(--green)':'var(--terra)';
+    wrap.querySelectorAll('.pillar-opt').forEach(x=>{
+      if (x.dataset.v===it.a){x.style.background='#eef9f3';x.style.borderColor='var(--green)';x.innerHTML='✓ '+x.textContent;}
+      x.disabled=true;
+    });
+    wrap.querySelector('.fb').innerHTML = `<div class="feedback ${ok?'good':'bad'}">${ok?'✅ Correct.':'❌ Re-look.'} ${it.why}</div>`;
+    addXP(ok?6:1,'Pillar diagnosis');
+  }));
+});
+
+// ====== TASK 1 VISUAL TYPES ======
+const t1V = [
+  {n:1,name:"Line Graph",icon:"📈",color:"#eef2fa",accent:"var(--blue)",
+   move:"Describe TRENDS over time. Group lines by behaviour (rising vs flat). Use sequencing language.",
+   trap:"Listing every data point. Group and summarise — only quote the most significant numbers.",
+   rule:"Tense follows the timeline. Past dates → past simple. Forecasts → future / 'is projected to'."},
+  {n:2,name:"Bar Chart",icon:"📊",color:"#fdf6e3",accent:"var(--gold)",
+   move:"Compare CATEGORIES. Group highest with highest, lowest with lowest. Use comparison language.",
+   trap:"Treating it like a line graph if it has a time axis. Always check the axes.",
+   rule:"Highlight the highest, lowest, and any reversal between groups."},
+  {n:3,name:"Pie Chart",icon:"🥧",color:"#fdf0e7",accent:"var(--terra)",
+   move:"Describe PROPORTIONS. Use 'a fifth, a quarter, the majority, the largest segment'.",
+   trap:"Forgetting that proportions add to 100%. Highlight the dominant slice and the smallest.",
+   rule:"If multiple pies, COMPARE same slices across charts (e.g., 1990 vs 2020)."},
+  {n:4,name:"Table",icon:"🔢",color:"#eef9f3",accent:"var(--green)",
+   move:"Pick the highest, lowest, biggest change. Don't try to describe every cell — group strategically.",
+   trap:"Reading row by row in your essay. Re-organise the info before you write.",
+   rule:"Tables hide patterns — circle the extremes before you build paragraphs."},
+  {n:5,name:"Process Diagram / Flow-chart",icon:"⚙",color:"#eef2fa",accent:"var(--blue)",
+   move:"Describe a PROCESS step-by-step in PRESENT SIMPLE PASSIVE. Use sequencers: first, then, after which, finally.",
+   trap:"Using past tense (it's a generic process, not a one-off event).",
+   rule:"Number of stages = your structural skeleton. Your overview names how many stages and where it begins/ends."},
+  {n:6,name:"Map (then & now)",icon:"🗺",color:"#fdf6e3",accent:"var(--gold)",
+   move:"Describe CHANGES: built, demolished, replaced, expanded, relocated, converted. Move spatially: north → south.",
+   trap:"Listing buildings without using direction language. Use compass + prepositions.",
+   rule:"Tense: was + past participle (the trees were replaced…). Don't speculate about reasons."},
+  {n:7,name:"Multiple / Mixed Visuals",icon:"🧩",color:"#fdf0e7",accent:"var(--terra)",
+   move:"LINK the two visuals — describe each, then connect their data in a comparison sentence.",
+   trap:"Treating them as two separate reports glued together. The link is what scores.",
+   rule:"Overview should mention BOTH visuals. Body 1 = visual A; Body 2 = visual B + connection."},
+];
+const t1El = document.getElementById('t1Visuals');
+t1V.forEach(c=>{
+  const card=document.createElement('div');
+  card.className='card p-5 qtype';
+  card.style.background = `linear-gradient(180deg, ${c.color} 0%, #fff 70%)`;
+  card.innerHTML = `
+    <div class="flex items-start justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center text-xl" style="background:${c.accent};color:#fff">${c.icon}</div>
+        <div>
+          <div class="font-bold">${c.n}. ${c.name}</div>
+          <div class="text-[10px] uppercase tracking-widest text-stone-500">Task 1 visual</div>
+        </div>
+      </div>
+      <span class="text-xs text-stone-500">tap ↓</span>
+    </div>
+    <div class="reveal mt-3 text-sm">
+      <div class="text-xs uppercase tracking-widest text-stone-500">The Move</div>
+      <p class="mt-1">${c.move}</p>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--terra)">The Trap</div>
+      <p class="mt-1">${c.trap}</p>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--gold)">The Rule</div>
+      <p class="mt-1">${c.rule}</p>
+    </div>`;
+  card.addEventListener('click',()=>{
+    const r=card.querySelector('.reveal');
+    const wasOpen = r.classList.contains('open');
+    r.classList.toggle('open');
+    if(!wasOpen) addXP(2,'Visual opened');
+  });
+  t1El.appendChild(card);
+});
+
+// ====== TASK 2 ESSAY TYPES ======
+const t2T = [
+  {n:1,name:"Opinion (Agree / Disagree)",icon:"⚖",color:"#eef2fa",accent:"var(--blue)",
+   move:"Take a CLEAR side. Two body paragraphs each developing one reason for your stance.",
+   trap:"'Sitting on the fence'. Wishy-washy thesis = capped at Band 6 for Task Response.",
+   rule:"Same opinion in intro AND conclusion. Different wording, same stance.",
+   structure:"Intro (paraphrase + thesis) → Body 1 (Reason 1 + example) → Body 2 (Reason 2 + example) → Conclusion (restate)."},
+  {n:2,name:"Discussion (Both views + opinion)",icon:"🗣",color:"#fdf6e3",accent:"var(--gold)",
+   move:"Discuss BOTH views FAIRLY. Then give your opinion clearly (in intro AND conclusion).",
+   trap:"Spending 80% on the view you agree with. Both views need similar word counts.",
+   rule:"Body 1 = view A (with example). Body 2 = view B (with example). State your lean in the intro.",
+   structure:"Intro (paraphrase both views + your stance) → Body 1 (View A) → Body 2 (View B) → Conclusion (restate stance)."},
+  {n:3,name:"Advantages / Disadvantages",icon:"➕",color:"#fdf0e7",accent:"var(--terra)",
+   move:"Two flavours: 'Discuss both' (balanced) OR 'Do advantages outweigh disadvantages?' (verdict required).",
+   trap:"Missing the 'outweigh' question — if the prompt asks it, you MUST answer in intro AND conclusion.",
+   rule:"Body 1 = 1–2 advantages. Body 2 = 1–2 disadvantages. Both with examples.",
+   structure:"Intro (paraphrase + stance if asked) → Body 1 (Advs + ex) → Body 2 (Disadvs + ex) → Conclusion."},
+  {n:4,name:"Problem / Solution",icon:"🛠",color:"#eef9f3",accent:"var(--green)",
+   move:"Read carefully — does the prompt say 'problem', 'cause', 'solution', or a combination? Match exactly.",
+   trap:"Solutions that don't directly address the problems you listed. Pair them.",
+   rule:"Body 1 = Problems/Causes. Body 2 = Solutions that LINK directly to those problems.",
+   structure:"Intro (paraphrase + state plan) → Body 1 (1–2 problems + ex) → Body 2 (matched solutions + ex) → Conclusion."},
+  {n:5,name:"Two-Part Question (Direct)",icon:"❓",color:"#eef2fa",accent:"var(--blue)",
+   move:"Two related questions. Answer BOTH directly. One paragraph per question.",
+   trap:"Only answering one question, or blending them together.",
+   rule:"Body 1 = answer Q1 fully. Body 2 = answer Q2 fully. Equal weight.",
+   structure:"Intro (paraphrase + briefly preview both answers) → Body 1 (Q1) → Body 2 (Q2) → Conclusion."},
+];
+const t2El = document.getElementById('t2Types');
+t2T.forEach(c=>{
+  const card=document.createElement('div');
+  card.className='card p-5 qtype';
+  card.style.background = `linear-gradient(180deg, ${c.color} 0%, #fff 70%)`;
+  card.innerHTML = `
+    <div class="flex items-start justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center text-xl" style="background:${c.accent};color:#fff">${c.icon}</div>
+        <div>
+          <div class="font-bold">${c.n}. ${c.name}</div>
+          <div class="text-[10px] uppercase tracking-widest text-stone-500">Task 2 essay</div>
+        </div>
+      </div>
+      <span class="text-xs text-stone-500">tap ↓</span>
+    </div>
+    <div class="reveal mt-3 text-sm">
+      <div class="text-xs uppercase tracking-widest text-stone-500">The Move</div>
+      <p class="mt-1">${c.move}</p>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--terra)">The Trap</div>
+      <p class="mt-1">${c.trap}</p>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--gold)">The Rule</div>
+      <p class="mt-1">${c.rule}</p>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--blue)">Structure</div>
+      <p class="mt-1 p-2 rounded-lg mono text-xs" style="background:#f7f3e9">${c.structure}</p>
+    </div>`;
+  card.addEventListener('click',()=>{
+    const r=card.querySelector('.reveal');
+    const wasOpen = r.classList.contains('open');
+    r.classList.toggle('open');
+    if(!wasOpen) addXP(2,'Essay type opened');
+  });
+  t2El.appendChild(card);
+});
+
+// ====== TYPE-SPOTTING DRILL ======
+const typeQs = [
+  {q:'"Some people believe that international tourism does more harm than good. To what extent do you agree or disagree?"', a:"Opinion (Agree/Disagree)"},
+  {q:'"Some argue that the government should provide free healthcare; others believe it should be private. Discuss both views and give your opinion."', a:"Discussion (both views + opinion)"},
+  {q:'"More people are choosing to live alone in many countries. Do the advantages of this trend outweigh the disadvantages?"', a:"Advantages / Disadvantages"},
+  {q:'"Many cities are facing increasing levels of air pollution. What are the causes of this, and what measures can be taken to address it?"', a:"Problem / Solution"},
+  {q:'"In many countries, the gap between rich and poor is widening. Why is this happening, and what could be done about it?"', a:"Problem / Solution"},
+  {q:'"Some say children should learn a foreign language at primary school. What are the benefits, and what are the challenges?"', a:"Two-part Question"},
+];
+const types = ["Opinion (Agree/Disagree)","Discussion (both views + opinion)","Advantages / Disadvantages","Problem / Solution","Two-part Question"];
+const typeEl = document.getElementById('typeDrill');
+typeQs.forEach((it,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML=`<div class="text-sm mb-2">${it.q}</div>
+    <div class="flex flex-wrap gap-2">${types.map(t=>`<button class="btn btn-ghost text-xs type-opt" data-v="${t}">${t}</button>`).join('')}</div>
+    <div class="fb mt-2"></div>`;
+  typeEl.appendChild(wrap);
+  wrap.querySelectorAll('.type-opt').forEach(b=>b.addEventListener('click',()=>{
+    if (wrap.dataset.done) return;
+    wrap.dataset.done='1';
+    const ok = b.dataset.v===it.a;
+    b.style.background = ok?'#eef9f3':'#fdf0e7';
+    b.style.borderColor = ok?'var(--green)':'var(--terra)';
+    wrap.querySelectorAll('.type-opt').forEach(x=>{
+      if (x.dataset.v===it.a){x.style.background='#eef9f3';x.style.borderColor='var(--green)';x.innerHTML='✓ '+x.textContent;}
+      x.disabled=true;
+    });
+    wrap.querySelector('.fb').innerHTML = `<div class="feedback ${ok?'good':'bad'}">${ok?'✅ Correct.':'❌ Look at the verbs:'} <strong>"${it.a}"</strong>. The verb in the prompt is the giveaway: 'discuss', 'agree/disagree', 'outweigh', 'causes/measures', 'why/what'.</div>`;
+    addXP(ok?8:1,'Type ID');
+  }));
+});
+
+// ====== PEEL DRAG-DROP ======
+const peelPieces = [
+  {id:"p", text:"Working from home offers employees significant benefits in terms of well-being.", tag:"P"},
+  {id:"e1", text:"Without a daily commute, workers gain back roughly an hour each day, which can be invested in sleep, exercise, or family time.", tag:"E"},
+  {id:"e2", text:"For instance, a 2022 survey by the UK Office for National Statistics found that remote workers reported 22% higher life-satisfaction scores than office-based peers.", tag:"E"},
+  {id:"l", text:"This well-being boost arguably benefits the employee more directly than any cost saving the employer might gain.", tag:"L"},
+];
+const peelOrder = ["P","E","E","L"];
+const bank = document.getElementById('peelBank');
+const slots = document.getElementById('peelSlots');
+const peelFB = document.getElementById('peelFB');
+let peelDone=0;
+[...peelPieces].sort(()=>Math.random()-.5).forEach(p=>{
+  const d = document.createElement('div');
+  d.className = 'card p-3 draggable text-sm';
+  d.draggable = true;
+  d.dataset.id = p.id;
+  d.dataset.tag = p.tag;
+  d.innerHTML = `<div class="text-[10px] uppercase tracking-widest text-stone-500">draggable</div>${p.text}`;
+  d.addEventListener('dragstart',e=>{e.dataTransfer.setData('text/plain',p.id);d.style.opacity=.5});
+  d.addEventListener('dragend',()=>d.style.opacity=1);
+  bank.appendChild(d);
+});
+peelOrder.forEach((tag,i)=>{
+  const dt = document.createElement('div');
+  dt.className='drop-target text-sm';
+  dt.dataset.idx = i;
+  dt.dataset.want = tag;
+  dt.innerHTML = `<div class="text-[10px] uppercase tracking-widest text-stone-500 mb-1">slot ${i+1} · expecting "${tag}"</div><em>drop here…</em>`;
+  dt.addEventListener('dragover',e=>{e.preventDefault();dt.classList.add('over')});
+  dt.addEventListener('dragleave',()=>dt.classList.remove('over'));
+  dt.addEventListener('drop',e=>{
+    e.preventDefault(); dt.classList.remove('over');
+    const id = e.dataTransfer.getData('text/plain');
+    const piece = peelPieces.find(p=>p.id===id);
+    if (!piece) return;
+    const ok = piece.tag === tag && (tag!=="E" || !dt.dataset.filled);
+    dt.classList.add('filled');
+    dt.classList.add(ok?'right':'wrong');
+    dt.dataset.filled='1';
+    dt.innerHTML = `<div class="text-[10px] uppercase tracking-widest text-stone-500 mb-1">${piece.tag} ${ok?'✓':'✗'}</div>${piece.text}`;
+    if (ok){ peelDone++; addXP(6,'PEEL piece');
+      if (peelDone===4) peelFB.innerHTML = `<div class="feedback good">✅ PEEL paragraph built. Notice: 'For instance' adds an example, 'This' links the example back to the point.</div>`;
+    } else {
+      peelFB.innerHTML = `<div class="feedback bad">⚠ Tag mismatch. P = topic sentence (the claim). E = explanation OR example. L = link back to the prompt.</div>`;
+    }
+  });
+  slots.appendChild(dt);
+});
+
+// ====== PARAPHRASE DRILL ======
+const paras = [
+  {l:"A", t:"Some people believe universities should focus on academic skills, but others think they should also prepare students for the workplace.", c:false, w:"Almost identical to the original — minimal paraphrasing. Band 6 territory."},
+  {l:"B", t:"While certain individuals contend that higher education should prioritise the cultivation of intellectual abilities, others maintain that it must equally equip graduates with practical career-ready competencies.", c:true, w:"Strong: synonyms (academic→intellectual, workplace→career-ready), structure changed (subordinate clause leading), formal register."},
+  {l:"C", t:"Universities are good for jobs and also for thinking smart, so it depends.", c:false, w:"Informal register and oversimplified — Lexical Resource is too low for Band 7."},
+  {l:"D", t:"Universities focus on academic skills, but they also prepare students for the workplace.", c:false, w:"Removes one whole 'side' of the debate — distorts meaning."},
+];
+const paraEl = document.getElementById('paraDrill');
+const paraFB = document.getElementById('paraFB');
+let paraDone=false;
+paras.forEach(o=>{
+  const div=document.createElement('div');
+  div.className='opt';
+  div.innerHTML=`<div class="letter">${o.l}</div><div>${o.t}</div>`;
+  div.addEventListener('click',()=>{
+    if (paraDone) return;
+    if (o.c){
+      div.classList.add('correct');
+      paraEl.querySelectorAll('.opt').forEach(x=>{if(!x.classList.contains('correct'))x.classList.add('disabled')});
+      paraFB.innerHTML = `<div class="feedback good">✅ ${o.w}</div>`;
+      paraDone=true;
+      addXP(15,'Paraphrase mastered');
+    } else {
+      div.classList.add('wrong');
+      paraFB.innerHTML = `<div class="feedback bad"><strong>Eliminated ${o.l}.</strong> ${o.w}</div>`;
+      addXP(2,'Paraphrase learning');
+    }
+  });
+  paraEl.appendChild(div);
+});
+
+// ====== OVERVIEW DRILL ======
+const overs = [
+  {l:"A", t:"In 1980 the USA had 15%, Sweden 14% and Japan 9%. By 2020 they had 19, 18 and 25%. Japan rose more than the others.", c:false, w:"Loaded with numbers — that's BODY content, not an overview. Overview = big-picture trends only."},
+  {l:"B", t:"Overall, the elderly population grew in all three countries over the period, with Japan's share rising most dramatically and overtaking the other two by 2020.", c:true, w:"No numbers, captures the headline trend AND the most striking feature. Textbook Band 7+ overview."},
+  {l:"C", t:"Japan's elderly population is interesting because it grew very fast.", c:false, w:"Vague and only mentions one country — misses the big picture across all three."},
+  {l:"D", t:"In conclusion, the data shows that ageing is a problem.", c:false, w:"Adds opinion ('a problem') — Task 1 must NOT interpret. Camera, not commentator."},
+];
+const overEl = document.getElementById('overDrill');
+const overFB = document.getElementById('overFB');
+let overDone=false;
+overs.forEach(o=>{
+  const div=document.createElement('div');
+  div.className='opt';
+  div.innerHTML=`<div class="letter">${o.l}</div><div>${o.t}</div>`;
+  div.addEventListener('click',()=>{
+    if (overDone) return;
+    if (o.c){
+      div.classList.add('correct');
+      overEl.querySelectorAll('.opt').forEach(x=>{if(!x.classList.contains('correct'))x.classList.add('disabled')});
+      overFB.innerHTML = `<div class="feedback good">✅ ${o.w}</div>`;
+      overDone=true; addXP(15,'Overview mastered');
+    } else {
+      div.classList.add('wrong');
+      overFB.innerHTML = `<div class="feedback bad"><strong>Eliminated ${o.l}.</strong> ${o.w}</div>`;
+      addXP(2,'Overview learning');
+    }
+  });
+  overEl.appendChild(div);
+});
+
+// ====== LINKER DRILL ======
+const linkers = [
+  {sentence:"The plan was popular with parents. ____, teachers were strongly against it.", options:["Furthermore","However","For example","In conclusion"], a:"However", why:"Two contrasting views — needs a contrast linker."},
+  {sentence:"Working from home reduces commuting time. ____, it can also lower stress.", options:["In contrast","However","Furthermore","Therefore"], a:"Furthermore", why:"Both clauses are POSITIVE. You're adding another point — additive linker."},
+  {sentence:"The factory was forced to close. ____, hundreds of workers lost their jobs.", options:["For instance","Although","As a result","On the other hand"], a:"As a result", why:"Cause → consequence relationship. Use a consequence linker."},
+  {sentence:"Many students struggle with maths. ____, the latest national survey found 40% below the expected standard.", options:["However","To illustrate","On the contrary","In conclusion"], a:"To illustrate", why:"You're giving evidence/example for the previous claim."},
+];
+const lnEl = document.getElementById('linkDrill');
+linkers.forEach((it,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML=`<div class="text-sm mb-2">${it.sentence.replace('____','<span class="marker-yellow font-bold">____</span>')}</div>
+    <div class="flex flex-wrap gap-2">${it.options.map(o=>`<button class="btn btn-ghost text-xs link-opt" data-v="${o}">${o}</button>`).join('')}</div>
+    <div class="fb mt-2"></div>`;
+  lnEl.appendChild(wrap);
+  wrap.querySelectorAll('.link-opt').forEach(b=>b.addEventListener('click',()=>{
+    if (wrap.dataset.done) return;
+    wrap.dataset.done='1';
+    const ok = b.dataset.v===it.a;
+    b.style.background = ok?'#eef9f3':'#fdf0e7';
+    b.style.borderColor = ok?'var(--green)':'var(--terra)';
+    wrap.querySelectorAll('.link-opt').forEach(x=>{
+      if (x.dataset.v===it.a){x.style.background='#eef9f3';x.style.borderColor='var(--green)';x.innerHTML='✓ '+x.textContent;}
+      x.disabled=true;
+    });
+    wrap.querySelector('.fb').innerHTML = `<div class="feedback ${ok?'good':'bad'}">${ok?'✅':'❌'} <strong>${it.a}.</strong> ${it.why}</div>`;
+    addXP(ok?5:1,'Linker');
+  }));
+});
+
+// ====== BOSS BUILD ======
+const bossTimer = document.getElementById('bossTimer');
+const bossStart = document.getElementById('bossStart');
+const bossSubmit = document.getElementById('bossSubmit');
+const bossWords = document.getElementById('bossWords');
+const bossResult = document.getElementById('bossResult');
+const bossInputs = ['bossThesis','bossB1','bossB2','bossConc'];
+
+function countWords(){
+  let total = 0;
+  bossInputs.forEach(id=>{
+    const v = document.getElementById(id).value.trim();
+    if (v) total += v.split(/\s+/).length;
+  });
+  bossWords.textContent = `Total plan: ${total} words`;
+}
+bossInputs.forEach(id=>document.getElementById(id).addEventListener('input',countWords));
+
+let bossSec = 600, bossInt = null;
+bossStart.addEventListener('click',()=>{
+  if (bossInt) return;
+  bossInt = setInterval(()=>{
+    bossSec--;
+    const m = String(Math.floor(bossSec/60)).padStart(2,'0');
+    const s = String(bossSec%60).padStart(2,'0');
+    bossTimer.textContent = `${m}:${s}`;
+    if (bossSec<=0){
+      clearInterval(bossInt);
+      bossTimer.textContent='00:00';
+      bossTimer.style.color='var(--terra)';
+    }
+  },1000);
+  bossStart.textContent='⏸ Pause';
+  bossStart.onclick=()=>{ clearInterval(bossInt); bossInt=null; bossStart.textContent='▶ Resume'; bossStart.onclick=arguments.callee.caller; };
+});
+
+// ====== VISUAL ESSAY SKELETON ======
+const skeletons = {
+  opinion: {
+    label: "Opinion (Agree / Disagree)",
+    blocks: [
+      {label:"INTRODUCTION", color:"#eef2fa", accent:"var(--blue)", words:"~50 words",
+       what:"1) Paraphrase the prompt (different vocabulary AND different structure). 2) State your CLEAR position — agree, disagree, or partially. 3) Outline the 2 reasons you'll develop.",
+       grammar:"Present Simple + a complex sentence",
+       starter:"\"It is widely accepted that… While some argue… in my view, … This essay will argue that…\"",
+       trap:"Wishy-washy thesis. 'Both sides have merit' caps you at Band 6 for Task Response."},
+      {label:"BODY 1 · Reason 1 + example", color:"#fdf6e3", accent:"var(--gold)", words:"~95 words",
+       what:"P-E-E-L: 1) Topic sentence stating Reason 1. 2) Explain WHY it's true. 3) Give a specific example. 4) Link back to your thesis.",
+       grammar:"Mix simple + complex; 1× passive ('It is argued that…'); 1× conditional",
+       starter:"\"The principal reason for my position is… To illustrate, … This clearly demonstrates that…\"",
+       trap:"Listing multiple ideas without developing any one fully."},
+      {label:"BODY 2 · Reason 2 + example", color:"#fdf6e3", accent:"var(--gold)", words:"~95 words",
+       what:"Same P-E-E-L pattern with a DIFFERENT reason. Don't repeat ideas from Body 1.",
+       grammar:"Show range — relative clause ('which is…'), present perfect, conditional",
+       starter:"\"A second compelling argument is… For instance, … Consequently, …\"",
+       trap:"Body 2 weaker than Body 1. Plan both before writing."},
+      {label:"CONCLUSION", color:"#fde2da", accent:"var(--terra)", words:"~40 words",
+       what:"1) Signal end. 2) Briefly summarise both reasons. 3) Restate your position in DIFFERENT words from intro.",
+       grammar:"Same tense as intro",
+       starter:"\"In conclusion, …\" / \"To sum up, …\" / \"Overall, …\"",
+       trap:"Adding a new idea. NO new content in conclusions."},
+    ]
+  },
+  discussion: {
+    label: "Discussion (both views + opinion)",
+    blocks: [
+      {label:"INTRODUCTION", color:"#eef2fa", accent:"var(--blue)", words:"~55 words",
+       what:"1) Paraphrase the topic. 2) Acknowledge BOTH views briefly. 3) State your own lean (the side you'll favour).",
+       grammar:"Concession structure ('While some… others…')",
+       starter:"\"While some maintain that… others contend that… In my view, the latter position is more compelling because…\"",
+       trap:"Forgetting to give YOUR opinion. Discussion essays still need a stance."},
+      {label:"BODY 1 · View A + example", color:"#fdf6e3", accent:"var(--gold)", words:"~90 words",
+       what:"Present View A FAIRLY. One main argument + supporting example. Don't dismiss it.",
+       grammar:"Reporting verbs: 'argue, contend, claim'",
+       starter:"\"On one hand, proponents of … argue that… A frequent example is…\"",
+       trap:"Spending 80% of essay on the side you agree with. Equal weight to both."},
+      {label:"BODY 2 · View B + example + your lean", color:"#fdf6e3", accent:"var(--gold)", words:"~110 words",
+       what:"Present View B with example. End with WHY you find it more (or less) convincing.",
+       grammar:"Comparative + concession",
+       starter:"\"On the other hand, others maintain that… For example, … This argument carries greater weight because…\"",
+       trap:"Burying your stance. Make it explicit at the end of Body 2."},
+      {label:"CONCLUSION", color:"#fde2da", accent:"var(--terra)", words:"~40 words",
+       what:"Restate both views briefly + your final lean.",
+       grammar:"Modal verb of probability ('it appears', 'it would seem')",
+       starter:"\"In conclusion, while both perspectives have merit, the evidence suggests…\"",
+       trap:"Sitting on the fence again. Be decisive."},
+    ]
+  },
+  advdis: {
+    label: "Advantages / Disadvantages",
+    blocks: [
+      {label:"INTRODUCTION", color:"#eef2fa", accent:"var(--blue)", words:"~50 words",
+       what:"1) Paraphrase. 2) Acknowledge both pros and cons. 3) IF the prompt asks 'do advantages outweigh disadvantages?' → state your verdict here.",
+       grammar:"Compound sentence with 'while' or 'although'",
+       starter:"\"While the trend of … offers several benefits, it also presents notable drawbacks. On balance, the advantages appear to outweigh…\"",
+       trap:"Missing the 'outweigh' question. If asked, you MUST answer it explicitly."},
+      {label:"BODY 1 · Advantages", color:"#eef9f3", accent:"var(--green)", words:"~95 words",
+       what:"1–2 advantages with full explanation + example. Don't list 5 superficially.",
+       grammar:"Cause-effect linkers: 'consequently, as a result'",
+       starter:"\"The most significant advantage is… This is largely because… For instance, …\"",
+       trap:"Listing 4 advantages with no examples. Quality > quantity."},
+      {label:"BODY 2 · Disadvantages", color:"#fde2da", accent:"var(--terra)", words:"~95 words",
+       what:"1–2 disadvantages with explanation + example. Roughly equal length to Body 1.",
+       grammar:"Contrast linkers: 'however, on the other hand'",
+       starter:"\"However, this trend is not without its drawbacks… A particularly pressing concern is…\"",
+       trap:"Disadvantages section much shorter — signals bias."},
+      {label:"CONCLUSION", color:"#fde2da", accent:"var(--terra)", words:"~35 words",
+       what:"Summarise + restate your verdict (if 'outweigh' was asked).",
+       grammar:"Comparative",
+       starter:"\"In conclusion, although there are clear concerns about…, the benefits ultimately outweigh the drawbacks.\"",
+       trap:"Forgetting the verdict. Re-read the prompt."},
+    ]
+  },
+  probsol: {
+    label: "Problem / Solution",
+    blocks: [
+      {label:"INTRODUCTION", color:"#eef2fa", accent:"var(--blue)", words:"~50 words",
+       what:"1) Paraphrase the problem. 2) Signal what the essay will cover (problems/causes + solutions).",
+       grammar:"Present Perfect for ongoing trends",
+       starter:"\"In recent years, … has become a pressing concern. This essay will examine the underlying causes and propose viable solutions.\"",
+       trap:"Vague intro. Identify the problem clearly in your first sentence."},
+      {label:"BODY 1 · Problems / Causes", color:"#fde2da", accent:"var(--terra)", words:"~95 words",
+       what:"1–2 specific problems or causes with explanation + example. Be concrete.",
+       grammar:"Causal language: 'stems from, is rooted in, is largely due to'",
+       starter:"\"The most pressing aspect of this issue is… This problem is largely due to…\"",
+       trap:"Generic problems with no specifics. 'Pollution is bad' is not enough."},
+      {label:"BODY 2 · Solutions", color:"#eef9f3", accent:"var(--green)", words:"~100 words",
+       what:"Solutions that DIRECTLY address the problems in Body 1. Pair them.",
+       grammar:"Modal verbs: 'should, ought to, could' + conditional ('If governments did X, …')",
+       starter:"\"To address these challenges, governments should… This would, in turn, …\"",
+       trap:"Solutions unrelated to the problems you listed. Pair them explicitly."},
+      {label:"CONCLUSION", color:"#fde2da", accent:"var(--terra)", words:"~35 words",
+       what:"Recap problem + main solution + a call-to-action sentence.",
+       grammar:"Future-oriented language",
+       starter:"\"In conclusion, while … remains a serious challenge, decisive action on … offers a realistic path forward.\"",
+       trap:"Adding a new solution at the end. Stick to what you developed."},
+    ]
+  },
+  twopart: {
+    label: "Two-part Question (Direct)",
+    blocks: [
+      {label:"INTRODUCTION", color:"#eef2fa", accent:"var(--blue)", words:"~50 words",
+       what:"Paraphrase the topic. Briefly preview your answers to BOTH questions.",
+       grammar:"Compound sentence",
+       starter:"\"In contemporary society, … This essay will first explore … and then consider …\"",
+       trap:"Generic intro that ignores the two specific questions."},
+      {label:"BODY 1 · Answer Q1 fully", color:"#fdf6e3", accent:"var(--gold)", words:"~95 words",
+       what:"Direct answer to Q1 + explanation + example. ~Half the body.",
+       grammar:"Topic sentence directly answering Q1",
+       starter:"\"Regarding the first question, … The most likely explanation is…\"",
+       trap:"Drifting into Q2 here. Stay focused."},
+      {label:"BODY 2 · Answer Q2 fully", color:"#fdf6e3", accent:"var(--gold)", words:"~95 words",
+       what:"Direct answer to Q2 + explanation + example. Equal length to Body 1.",
+       grammar:"Different sentence structures from Body 1",
+       starter:"\"As for the second question, … This is primarily because…\"",
+       trap:"Q2 shorter than Q1. Plan both first."},
+      {label:"CONCLUSION", color:"#fde2da", accent:"var(--terra)", words:"~35 words",
+       what:"Briefly recap your answers to BOTH questions.",
+       grammar:"Concise summary",
+       starter:"\"In conclusion, … and …\"",
+       trap:"Only summarising one of the two questions."},
+    ]
+  },
+};
+
+const skBlocksEl = document.getElementById('skBlocks');
+const skStartersEl = document.getElementById('skStarters');
+function renderSkeleton(){
+  const type = document.getElementById('skType').value;
+  const sk = skeletons[type];
+  skBlocksEl.innerHTML='';
+  sk.blocks.forEach((b,i)=>{
+    const card = document.createElement('div');
+    card.className = 'card qtype p-5';
+    card.style.background = `linear-gradient(180deg, ${b.color} 0%, #fff 80%)`;
+    card.style.borderLeft = `6px solid ${b.accent}`;
+    card.innerHTML = `
+      <div class="flex items-start justify-between gap-3 flex-wrap">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-white" style="background:${b.accent};font-family:'Fraunces',serif">${i+1}</div>
+          <div>
+            <div class="font-bold text-lg">${b.label}</div>
+            <div class="text-xs text-stone-500 mono mt-0.5">${b.words}</div>
+          </div>
+        </div>
+        <span class="text-xs text-stone-500">tap to expand ↓</span>
+      </div>
+      <div class="reveal mt-3 text-sm">
+        <div class="text-xs uppercase tracking-widest text-stone-500">What goes here</div>
+        <p class="mt-1">${b.what}</p>
+        <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--blue)">Grammar to flex</div>
+        <p class="mt-1">${b.grammar}</p>
+        <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--green)">Sentence opener</div>
+        <p class="mt-1 italic">${b.starter}</p>
+        <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--terra)">Common trap</div>
+        <p class="mt-1">${b.trap}</p>
+      </div>
+    `;
+    card.addEventListener('click',()=>{
+      const r = card.querySelector('.reveal');
+      r.classList.toggle('open');
+    });
+    skBlocksEl.appendChild(card);
+  });
+
+  // Starters bank
+  const starterPacks = [
+    {h:"Paraphrasing the prompt", lines:["It is widely held that…","In contemporary society, …","Many would argue that…","There is a growing consensus that…"]},
+    {h:"Stating your position", lines:["In my view, …","I firmly believe that…","From my perspective, …","I am inclined to agree with the view that…"]},
+    {h:"Topic sentences", lines:["The principal reason is that…","One compelling argument is that…","A particularly pressing concern is that…","The most significant advantage is that…"]},
+    {h:"Examples", lines:["For instance, …","To illustrate this point, …","A clear example of this is…","This can be seen in…"]},
+    {h:"Cause / effect", lines:["As a result, …","Consequently, …","This stems from…","Owing to this, …"]},
+    {h:"Concluding", lines:["In conclusion, …","Overall, the evidence suggests…","To sum up, …","Ultimately, …"]},
+  ];
+  skStartersEl.innerHTML='';
+  starterPacks.forEach(p=>{
+    const c = document.createElement('div');
+    c.className='card p-3';
+    c.innerHTML = `<div class="text-xs uppercase tracking-widest text-stone-500 font-bold mb-1">${p.h}</div>`+p.lines.map(l=>`<div class="text-stone-700">• ${l}</div>`).join('');
+    skStartersEl.appendChild(c);
+  });
+}
+document.getElementById('skType').addEventListener('change',renderSkeleton);
+renderSkeleton();
+
+bossSubmit.addEventListener('click',()=>{
+  const type = document.getElementById('bossType').value;
+  const thesis = document.getElementById('bossThesis').value.trim();
+  const b1 = document.getElementById('bossB1').value.trim();
+  const b2 = document.getElementById('bossB2').value.trim();
+  const conc = document.getElementById('bossConc').value.trim();
+  let scoreNotes = [];
+  // Type
+  const correctType = type === "Discussion (both views + opinion)";
+  scoreNotes.push(`<div class="feedback ${correctType?'good':'bad'}">Type: ${correctType?'✅ Correct — Discussion + Opinion (because the prompt says \\'discuss both views and give your own opinion\\')':'❌ The prompt says \\'discuss both views and give your own opinion\\' — that\\'s the Discussion type.'}</div>`);
+  // Thesis check
+  const thesisOk = thesis.length>15 && (thesis.toLowerCase().includes('view')||thesis.toLowerCase().includes('opinion')||thesis.toLowerCase().includes('agree')||thesis.toLowerCase().includes('believe')||thesis.toLowerCase().includes('argue')||thesis.toLowerCase().includes('think'));
+  scoreNotes.push(`<div class="feedback ${thesisOk?'good':'tip'}">Thesis: ${thesisOk?'✅ Has a stance.':'⚠ Make sure your thesis takes a clear position. \\'In my view\\' / \\'I firmly believe\\' / \\'I lean towards…\\' — a Discussion essay still needs YOUR opinion.'}</div>`);
+  // Body 1 + Body 2 difference
+  const b1Ok = b1.length>30; const b2Ok = b2.length>30;
+  scoreNotes.push(`<div class="feedback ${b1Ok&&b2Ok?'good':'tip'}">Bodies: ${b1Ok&&b2Ok?'✅ Both views developed.':'⚠ Each body paragraph needs roughly equal weight (~95 words). One side dominates → Task Response drops.'}</div>`);
+  // Conclusion presence
+  const concOk = conc.length>20;
+  scoreNotes.push(`<div class="feedback ${concOk?'good':'tip'}">Conclusion: ${concOk?'✅ Present.':'⚠ Restate your stance in different words. Don\\'t introduce new ideas.'}</div>`);
+  // Word count target
+  countWords();
+  const total = parseInt(bossWords.textContent.match(/\d+/)[0],10);
+  scoreNotes.push(`<div class="feedback ${total>=80?'good':'tip'}">Plan length: ${total} words. ${total>=80?'Good density — that\\'s plenty to expand into 250+ words.':'Plan is thin — aim for ~100 words across all fields. The plan IS the essay\\'s skeleton.'}</div>`);
+  bossResult.innerHTML = `<div class="card p-4 space-y-2">${scoreNotes.join('')}</div>`;
+  addXP(20,'Plan submitted');
+});
+countWords();
+</script>
+<script>
+(function(){
+  document.addEventListener('contextmenu',function(e){e.preventDefault();return false});
+  document.addEventListener('dragstart',function(e){e.preventDefault();return false});
+  document.addEventListener('keydown',function(e){
+    var k=e.key.toLowerCase();
+    if(e.key==='F12'||(e.ctrlKey&&!e.shiftKey&&(k==='u'||k==='s'||k==='p'||k==='a'))||(e.ctrlKey&&e.shiftKey&&(k==='i'||k==='j'||k==='c'||k==='k'))){
+      e.preventDefault();e.stopPropagation();return false;
+    }
+  });
+  window.addEventListener('beforeprint',function(){document.body.style.display='none'});
+  window.addEventListener('afterprint',function(){document.body.style.display=''});
+})();
+</script></body>
+</html>

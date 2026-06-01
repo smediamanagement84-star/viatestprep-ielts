@@ -1,0 +1,1354 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IELTS Speaking: The Confident Performer — Band 7+ â€” ViATestPrep</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1a0e0e; --paper:#fbf6ee; --burgundy:#7a1f2b; --burgundy-deep:#4f0c16;
+    --gold:#caa14a; --gold-soft:#f1e2b6; --teal:#1f7a6a; --line:#e2d9c2;
+    --cream:#f8f0d8; --shadow:#2a0d10;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif}
+  h1,h2,h3,h4{font-family:'Fraunces',serif;letter-spacing:-.01em}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px}
+  .badge{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:12px;font-weight:600;transition:transform .08s ease}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--burgundy);color:#fff}
+  .btn-primary:hover{background:var(--burgundy-deep)}
+  .btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{background:#f7eede}
+  .btn-gold{background:var(--gold);color:#fff}
+  .chip{padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+  .progress-bar{height:8px;background:#ead7b1;border-radius:999px;overflow:hidden}
+  .progress-fill{height:100%;background:linear-gradient(90deg,var(--burgundy),#b3344a);transition:width .4s ease}
+  .reveal{max-height:0;overflow:hidden;transition:max-height .5s ease}
+  .reveal.open{max-height:2400px}
+  .opt{cursor:pointer;border:1.5px solid var(--line);border-radius:12px;padding:.85rem 1rem;background:#fff;display:flex;gap:.75rem;align-items:flex-start;transition:all .12s}
+  .opt:hover{border-color:var(--burgundy);background:#fdf3ee}
+  .opt.correct{border-color:var(--teal);background:#e6f5ee}
+  .opt.wrong{border-color:var(--burgundy);background:#fde2e8;text-decoration:line-through;opacity:.85}
+  .opt.disabled{pointer-events:none;opacity:.7}
+  .opt .letter{flex:0 0 28px;height:28px;border-radius:8px;background:#f1e2b6;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Fraunces',serif}
+  .opt.correct .letter{background:var(--teal);color:#fff}
+  .opt.wrong .letter{background:var(--burgundy);color:#fff}
+  .feedback{padding:.85rem 1rem;border-radius:12px;font-size:.92rem;line-height:1.5;border-left:4px solid}
+  .feedback.good{border-color:var(--teal);background:#eef9f3}
+  .feedback.bad{border-color:var(--burgundy);background:#fde8eb}
+  .feedback.tip{border-color:var(--gold);background:#fdf6e3}
+  .toolbar{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(8px);background:rgba(251,246,238,.85);border-bottom:1px solid var(--line)}
+  .nav-step{cursor:pointer}
+  .stage{background:linear-gradient(180deg,#7a1f2b 0%,#4f0c16 100%);color:#fff;border-radius:24px;padding:2rem;position:relative;overflow:hidden}
+  .stage::before{content:"";position:absolute;top:0;left:0;right:0;height:60px;background:repeating-linear-gradient(135deg,#9c2e3d,#9c2e3d 30px,#7a1f2b 30px,#7a1f2b 60px);border-bottom:3px solid var(--gold)}
+  .curtain{background:repeating-linear-gradient(90deg,#9c2e3d 0,#9c2e3d 14px,#7a1f2b 14px,#7a1f2b 28px);border-radius:8px}
+  .timer-pill{font-family:'Fraunces',serif;font-weight:800;letter-spacing:.04em}
+  .stamp{display:inline-block;border:2px dashed var(--burgundy);color:var(--burgundy);padding:.15rem .5rem;border-radius:6px;transform:rotate(-3deg);font-weight:800;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
+  .qtype{cursor:pointer;transition:transform .15s, box-shadow .15s}
+  .qtype:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(122,31,43,.12)}
+  .gameboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+  details>summary{cursor:pointer;list-style:none}
+  details>summary::-webkit-details-marker{display:none}
+  details>summary::after{content:"+";float:right;font-weight:700;color:var(--burgundy)}
+  details[open]>summary::after{content:"–"}
+  .glow{box-shadow:0 0 0 4px rgba(202,161,74,.3)}
+  .marker-yellow{background:linear-gradient(transparent 60%, #fde68a 60%)}
+  .marker-pink{background:linear-gradient(transparent 60%, #fbcfe8 60%)}
+  .marker-green{background:linear-gradient(transparent 60%, #bbf7d0 60%)}
+  .pillar{background:linear-gradient(180deg,#fff,#f7eede);border:1px solid var(--line);border-radius:16px;padding:1.2rem;position:relative;overflow:hidden}
+  .pillar::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px}
+  .pillar.fc::before{background:var(--burgundy)}
+  .pillar.lr::before{background:var(--gold)}
+  .pillar.gra::before{background:var(--teal)}
+  .pillar.pro::before{background:var(--shadow)}
+  .cue-card{background:#fff;border:2px solid var(--gold);border-radius:14px;padding:1.5rem;box-shadow:6px 6px 0 var(--gold-soft)}
+  .ribbon{position:absolute;top:14px;right:-8px;background:var(--gold);color:#fff;font-size:.7rem;font-weight:700;padding:.25rem .6rem;border-radius:6px;transform:rotate(3deg)}
+  .legend-dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:.35rem}
+  .star{display:inline-block;color:var(--gold)}
+  .live-mic{display:inline-flex;align-items:center;gap:.4rem;padding:.3rem .7rem;background:#fde2e8;border-radius:999px;font-size:.78rem;font-weight:700;color:var(--burgundy)}
+  .live-mic .dot{width:8px;height:8px;background:var(--burgundy);border-radius:50%;animation:pulse 1.4s infinite}
+  @keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+  .draggable{cursor:grab;user-select:none}
+  .draggable:active{cursor:grabbing}
+  .drop-target{border:2px dashed var(--line);border-radius:12px;min-height:62px;padding:.6rem;background:#fbf7ec;transition:all .12s}
+  .drop-target.over{border-color:var(--burgundy);background:#fde8eb}
+  .drop-target.right{border-color:var(--teal);background:#eef9f3}
+  .drop-target.wrong{border-color:var(--burgundy);background:#fde8eb}
+</style>
+<style>
+/* ===== ViATestPrep Protection ===== */
+html body,html body *{-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important}
+img,svg{-webkit-user-drag:none!important}
+@media print{body{display:none!important;visibility:hidden!important}}
+.vtp-wm{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9990;overflow:hidden}
+.vtp-wm::after{content:"ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential";position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-28deg);font-size:1.1rem;font-weight:800;color:rgba(91,42,134,0.05);white-space:nowrap;letter-spacing:.3em;pointer-events:none}
+.vtp-corner{position:fixed;bottom:14px;right:14px;z-index:9999;background:linear-gradient(135deg,#5b2a86,#3b0a64);color:#fff;padding:.3rem .8rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.05em;box-shadow:0 2px 14px rgba(91,42,134,.4);pointer-events:none;font-family:Inter,sans-serif}
+</style></head>
+<body>
+<div class="vtp-wm" aria-hidden="true"></div><div class="vtp-corner" aria-hidden="true">&#127891; ViATestPrep</div>
+
+<!-- TOP TOOLBAR -->
+<div class="toolbar">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-white" style="background:var(--burgundy);font-family:'Fraunces',serif">CP</div>
+      <div>
+        <div class="text-sm uppercase tracking-widest text-stone-500">IELTS Speaking</div>
+        <div class="font-bold -mt-1">The Confident Performer · Band 7+</div>
+      </div>
+    </div>
+    <div class="hidden md:flex items-center gap-4 text-sm">
+      <span class="nav-step" data-jump="mission">① Mindset</span>
+      <span class="nav-step" data-jump="pillars">② 4 Pillars</span>
+      <span class="nav-step" data-jump="act1">③ Part 1</span>
+      <span class="nav-step" data-jump="act2">④ Part 2</span>
+      <span class="nav-step" data-jump="act3">⑤ Part 3</span>
+      <span class="nav-step" data-jump="boss">⑥ Boss Stage</span>
+      <span class="nav-step" data-jump="liveTalk">🎤 Live</span>
+      <span class="nav-step" data-jump="interview">🎙 Interview</span>
+      <span class="nav-step" data-jump="rapidfire">⚡ Rapid Fire</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="text-right hidden sm:block">
+        <div class="text-[11px] uppercase tracking-widest text-stone-500">Performer XP</div>
+        <div class="font-bold timer-pill" style="color:var(--burgundy)" id="xpDisplay">0 XP</div>
+      </div>
+      <div class="w-32 progress-bar"><div class="progress-fill" id="xpBar" style="width:0%"></div></div>
+    </div>
+  </div>
+</div>
+
+<main class="max-w-6xl mx-auto px-4 py-10">
+
+  <!-- HERO -->
+  <section id="mission" class="mb-12">
+    <div class="grid md:grid-cols-5 gap-6 items-center">
+      <div class="md:col-span-3">
+        <span class="chip" style="background:var(--gold-soft);color:var(--burgundy)">Lesson 04 · Speaking</span>
+        <h1 class="text-4xl md:text-5xl mt-3 leading-tight">The examiner is your <span class="marker-yellow">audience.</span> The next 14 minutes are your <span style="color:var(--burgundy)">performance.</span></h1>
+        <p class="mt-4 text-stone-700 max-w-prose">Forget perfect accents. Forget million-dollar words. The Speaking test rewards <strong>structured thinking, lexical precision, grammatical flexibility, and unshakable confidence</strong>. You don't need talent — you need a script. Here it is.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <button class="btn btn-primary" onclick="document.getElementById('pillars').scrollIntoView({behavior:'smooth'})">▶ Take the Stage</button>
+          <button class="btn btn-ghost" onclick="document.getElementById('boss').scrollIntoView({behavior:'smooth'})">Skip to Boss Stage</button>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="badge" style="background:#fde2e8;color:var(--burgundy)">⏱ 11–14 min · 3 acts</span>
+          <span class="badge" style="background:#eef9f3;color:var(--teal)">🎯 Band 7+ target</span>
+          <span class="badge" style="background:#fdf6e3;color:var(--gold)">🎭 Performance mode</span>
+        </div>
+      </div>
+      <div class="md:col-span-2">
+        <div class="stage pt-12">
+          <div class="text-xs uppercase tracking-widest text-amber-200 mb-2">— THE PLAYBILL —</div>
+          <div class="space-y-2 text-sm">
+            <div class="flex items-center gap-2"><span class="badge" style="background:var(--gold);color:#000">Act 1</span> Warm-Up · 4–5 min · Q&A about you</div>
+            <div class="flex items-center gap-2"><span class="badge" style="background:var(--gold);color:#000">Act 2</span> Long Turn · 3–4 min · Cue card · 2-min monologue</div>
+            <div class="flex items-center gap-2"><span class="badge" style="background:var(--gold);color:#000">Act 3</span> Deep Dive · 4–5 min · Abstract discussion</div>
+          </div>
+          <div class="mt-3 text-xs uppercase tracking-widest text-amber-200">Tools · Answer+1 · P.P.F. · A.R.E.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 PILLARS -->
+  <section id="pillars" class="mb-14">
+    <h2 class="text-3xl mb-2">② The Four Pillars (= Your Score)</h2>
+    <p class="text-stone-700 max-w-3xl">25% each. The examiner has a checklist. Give them evidence on every line.</p>
+
+    <div class="grid md:grid-cols-2 gap-4 mt-6">
+      <div class="pillar fc">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Pillar 1</div>
+        <h3 class="text-xl mt-1">Fluency & Coherence</h3>
+        <p class="text-sm text-stone-700 mt-2"><strong>The flow.</strong> Smooth speech without unnatural hesitation. A few thinking pauses are fine ("Well, that's interesting…"); long silent gaps are not.</p>
+        <div class="text-xs mt-2 text-stone-600"><span class="stamp">Watch for</span> "Um, um, um." Use thinking phrases instead.</div>
+      </div>
+      <div class="pillar lr">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Pillar 2</div>
+        <h3 class="text-xl mt-1">Lexical Resource</h3>
+        <p class="text-sm text-stone-700 mt-2"><strong>Precision, not pomp.</strong> Replace "things" with "equipment / belongings / possessions". Use natural collocations: <em>heavy traffic, highly effective, deeply concerned</em>.</p>
+        <div class="text-xs mt-2 text-stone-600"><span class="stamp">Watch for</span> Repeating "good", "bad", "interesting". Range = score.</div>
+      </div>
+      <div class="pillar gra">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Pillar 3</div>
+        <h3 class="text-xl mt-1">Grammatical Range & Accuracy</h3>
+        <p class="text-sm text-stone-700 mt-2"><strong>Mix complexity.</strong> Conditionals ("If I had…"), relative clauses ("which is something I…"), perfect tenses, passives.</p>
+        <div class="text-xs mt-2 text-stone-600"><span class="stamp">Watch for</span> Speaking only in simple present. Showcase tenses naturally.</div>
+      </div>
+      <div class="pillar pro">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Pillar 4</div>
+        <h3 class="text-xl mt-1">Pronunciation</h3>
+        <p class="text-sm text-stone-700 mt-2"><strong>NOT about your accent.</strong> About being clear. Word stress (im<u>POR</u>tant ≠ <u>IM</u>portant), sentence stress, intonation (rising/falling).</p>
+        <div class="text-xs mt-2 text-stone-600"><span class="stamp">Watch for</span> Robotic flat delivery. Add melody — pitch up at choices, down at conclusions.</div>
+      </div>
+    </div>
+
+    <!-- Pronunciation drill: stress -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#fdf6e3;color:var(--gold)">Pronunciation drill</span>
+        <h3 class="text-xl">Click the Stressed Syllable</h3>
+      </div>
+      <p class="text-sm text-stone-700">Word stress on the wrong syllable changes meaning. Tap the syllable you'd say loudest.</p>
+      <div class="space-y-3 mt-3" id="stressDrill"></div>
+    </div>
+  </section>
+
+  <!-- ACT 1: PART 1 -->
+  <section id="act1" class="mb-14">
+    <div class="flex items-end justify-between mb-3">
+      <h2 class="text-3xl">③ Act 1 · Part 1 — The Warm-Up (4–5 min)</h2>
+      <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">Friendly · direct · conversational</span>
+    </div>
+    <p class="text-stone-700 max-w-3xl">12 short questions about familiar topics. Goal: first impressions. Trap: 1-word answers OR 30-second monologues.</p>
+
+    <div class="card p-6 mt-4">
+      <h3 class="text-xl mb-2">🎯 The Answer-Plus-One Rule</h3>
+      <p class="text-sm text-stone-700">Give a direct answer. Then add ONE extra sentence — a reason, an example, or a detail. That's it.</p>
+      <div class="grid md:grid-cols-2 gap-3 mt-4">
+        <div class="p-3 rounded-xl" style="background:#fde2e8">
+          <div class="text-xs uppercase tracking-widest text-stone-600 font-bold">❌ Band 6 · "Yes/no"</div>
+          <div class="text-sm mt-1">Q: "Do you enjoy cooking?" <br>A: <em>"Yes, I do."</em></div>
+        </div>
+        <div class="p-3 rounded-xl" style="background:#eef9f3">
+          <div class="text-xs uppercase tracking-widest text-stone-600 font-bold">✅ Band 7+ · Answer+1</div>
+          <div class="text-sm mt-1">A: <em>"Yes, I absolutely love it. I find it's a really creative way to <strong>unwind</strong> after a long day at work."</em> <span class="text-stone-500">(answer + reason + collocation 'unwind')</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Topic categories -->
+    <h3 class="text-2xl mt-8 mb-2">The Predictable Part 1 Topics</h3>
+    <p class="text-stone-700 max-w-3xl">IELTS uses ~20 recurring topics. Tap one to see sample questions and a Band 7+ phrase bank.</p>
+    <div class="gameboard mt-4" id="part1Topics"></div>
+
+    <!-- Drill: Answer+1 -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#fde2e8;color:var(--burgundy)">Answer+1 drill</span>
+        <h3 class="text-xl">Pick the Best Answer</h3>
+      </div>
+      <p class="text-sm text-stone-700">Each is a real-style Part 1 question. Pick the strongest answer.</p>
+      <div class="space-y-4 mt-3" id="answerPlusDrill"></div>
+    </div>
+  </section>
+
+  <!-- ACT 2: PART 2 -->
+  <section id="act2" class="mb-14">
+    <div class="flex items-end justify-between mb-3">
+      <h2 class="text-3xl">④ Act 2 · Part 2 — The Long Turn (3–4 min)</h2>
+      <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">2-min monologue · 1-min prep</span>
+    </div>
+    <p class="text-stone-700 max-w-3xl">Your solo performance. The 1-minute preparation is sacred. Don't write sentences — use the <strong>P.P.F. method</strong>.</p>
+
+    <!-- PPF -->
+    <div class="card p-6 mt-4">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="chip" style="background:var(--gold-soft);color:var(--burgundy)">The P.P.F. Method</span>
+        <h3 class="text-xl">Past · Present · Future = built-in tense range</h3>
+      </div>
+      <p class="text-sm text-stone-700">Cover the three time frames during your 2-minute talk. You'll naturally showcase past, present, and future tenses → instant Grammar Range win.</p>
+      <div class="grid md:grid-cols-3 gap-3 mt-3">
+        <div class="p-4 rounded-xl" style="background:#fde2e8">
+          <div class="text-xs uppercase tracking-widest text-stone-600 font-bold">P · PAST</div>
+          <div class="text-sm mt-1">What happened? Where? When? Specific actions and feelings. <em>Tenses: past simple, past continuous, past perfect.</em></div>
+        </div>
+        <div class="p-4 rounded-xl" style="background:#fdf6e3">
+          <div class="text-xs uppercase tracking-widest text-stone-600 font-bold">P · PRESENT</div>
+          <div class="text-sm mt-1">Why does it matter NOW? What's the lasting effect? <em>Tenses: present simple, present perfect.</em></div>
+        </div>
+        <div class="p-4 rounded-xl" style="background:#eef9f3">
+          <div class="text-xs uppercase tracking-widest text-stone-600 font-bold">F · FUTURE</div>
+          <div class="text-sm mt-1">What might happen next? Plans, hopes, predictions. <em>Tenses: future simple, "going to", conditionals ("if I had the chance").</em></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cue card categories -->
+    <h3 class="text-2xl mt-8 mb-2">Part 2 Cue Card Categories</h3>
+    <p class="text-stone-700 max-w-3xl">Almost every cue card falls into one of these 6 buckets. Master the buckets — not 100 individual cards.</p>
+    <div class="gameboard mt-4" id="part2Cards"></div>
+
+    <!-- Live PPF drill -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#fdf6e3;color:var(--gold)">Live drill</span>
+        <h3 class="text-xl">The 1-Minute Plan</h3>
+        <button class="btn btn-gold text-xs ml-auto" id="cueRandom">🎴 Random card</button>
+      </div>
+      <p class="text-sm text-stone-700">A real cue card. Hit START, fill in 4 P.P.F. notes in 60 seconds. Your structure auto-shows you which tenses you should be using.</p>
+
+      <div class="grid md:grid-cols-2 gap-4 mt-4">
+        <div class="cue-card relative">
+          <div class="ribbon">Cue Card</div>
+          <h4 class="text-xl mb-2" id="cueTitle">Describe a memorable trip you took.</h4>
+          <div class="text-sm text-stone-700">You should say:</div>
+          <ul class="text-sm text-stone-700 mt-1 space-y-1" id="cueBullets">
+            <li>• where you went</li>
+            <li>• when you went</li>
+            <li>• what you did there</li>
+            <li>• and explain why it was memorable.</li>
+          </ul>
+        </div>
+
+        <div class="card p-4">
+          <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center gap-2">
+              <span class="live-mic"><span class="dot"></span> 60-sec prep</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="timer-pill text-2xl" style="color:var(--burgundy)" id="cueTimer">01:00</div>
+              <button class="btn btn-primary text-sm" id="cueStart">▶ Start</button>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <input class="w-full p-2 border border-line rounded-lg bg-white text-sm" id="cueIntro" placeholder="INTRO — What/Where/When (3–5 words)" />
+            <input class="w-full p-2 border border-line rounded-lg bg-white text-sm" id="cuePast" placeholder="PAST — What happened (verbs in past tense)" />
+            <input class="w-full p-2 border border-line rounded-lg bg-white text-sm" id="cuePresent" placeholder="PRESENT — Why memorable now" />
+            <input class="w-full p-2 border border-line rounded-lg bg-white text-sm" id="cueFuture" placeholder="FUTURE — Plan to repeat / next steps" />
+          </div>
+          <div class="mt-3 text-xs text-stone-600" id="cueFB"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT 3: PART 3 -->
+  <section id="act3" class="mb-14">
+    <div class="flex items-end justify-between mb-3">
+      <h2 class="text-3xl">⑤ Act 3 · Part 3 — The Deep Dive (4–5 min)</h2>
+      <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">Abstract · societal · analytical</span>
+    </div>
+    <p class="text-stone-700 max-w-3xl">Discuss abstract issues related to your Part 2 topic. The trap: giving only personal opinions. The move: <strong>A.R.E. — Answer, Reason, Example</strong>. Move from "I" to "people in general".</p>
+
+    <!-- ARE -->
+    <div class="card p-6 mt-4">
+      <div class="grid md:grid-cols-3 gap-3">
+        <div class="p-4 rounded-xl" style="background:#fde2e8">
+          <div class="text-xs uppercase tracking-widest text-stone-600 font-bold">A · ANSWER</div>
+          <div class="text-sm mt-1">Direct answer to the question. State it clearly.</div>
+        </div>
+        <div class="p-4 rounded-xl" style="background:#fdf6e3">
+          <div class="text-xs uppercase tracking-widest text-stone-600 font-bold">R · REASON</div>
+          <div class="text-sm mt-1">Why? Use: "This is mainly because…", "The main reason for this is…"</div>
+        </div>
+        <div class="p-4 rounded-xl" style="background:#eef9f3">
+          <div class="text-xs uppercase tracking-widest text-stone-600 font-bold">E · EXAMPLE</div>
+          <div class="text-sm mt-1">Move from "I" → "Many people". "For example, in many countries…"</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question types -->
+    <h3 class="text-2xl mt-8 mb-2">The 6 Part 3 Question Patterns</h3>
+    <p class="text-stone-700 max-w-3xl">Recognise the pattern; you already know the structure of your answer.</p>
+    <div class="gameboard mt-4" id="part3Patterns"></div>
+
+    <!-- ARE drill -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#eef9f3;color:var(--teal)">A.R.E. drill</span>
+        <h3 class="text-xl">Build the Best Answer — Drag Answer / Reason / Example into Order</h3>
+      </div>
+      <p class="text-sm text-stone-700">Question: "Why is international tourism so popular these days?"</p>
+      <div class="grid md:grid-cols-3 gap-3 mt-3" id="areBank"></div>
+      <div class="grid md:grid-cols-3 gap-3 mt-3" id="areSlots"></div>
+      <div class="mt-3" id="areFB"></div>
+    </div>
+
+    <!-- Hedging language -->
+    <div class="card p-6 mt-6">
+      <h3 class="text-xl mb-2">📚 Hedging & Speculation Phrases</h3>
+      <p class="text-sm text-stone-700">Part 3 wants speculation, not certainty. Sprinkle these naturally.</p>
+      <div class="grid md:grid-cols-3 gap-3 mt-3 text-sm">
+        <div class="p-3 rounded-xl card">
+          <div class="text-xs uppercase tracking-widest text-stone-500 mb-1">Cautious opinion</div>
+          <div>"It seems to me that…"<br>"I'd argue that…"<br>"From my perspective…"<br>"To my mind…"</div>
+        </div>
+        <div class="p-3 rounded-xl card">
+          <div class="text-xs uppercase tracking-widest text-stone-500 mb-1">Speculation</div>
+          <div>"It's likely that…"<br>"It might well be the case that…"<br>"There's a strong chance…"<br>"Conceivably, this could…"</div>
+        </div>
+        <div class="p-3 rounded-xl card">
+          <div class="text-xs uppercase tracking-widest text-stone-500 mb-1">Generalising</div>
+          <div>"Generally speaking…"<br>"By and large…"<br>"For the most part…"<br>"In many countries…"</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOSS STAGE -->
+  <section id="boss" class="mb-14">
+    <div class="flex items-end justify-between mb-4">
+      <h2 class="text-3xl">⑥ Boss Stage — Full Mock</h2>
+      <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">Self-record · self-grade</span>
+    </div>
+    <p class="text-stone-700 max-w-3xl">Three mini-rounds. Use your phone's voice recorder. Then self-grade against the rubric below.</p>
+
+    <div class="card p-6 mt-6">
+      <h3 class="text-xl mb-2">Round 1 · Part 1 questions (Answer+1)</h3>
+      <ol class="text-sm space-y-1 list-decimal list-inside text-stone-700">
+        <li>Where are you from?</li>
+        <li>Do you work or are you a student?</li>
+        <li>What do you usually do at weekends?</li>
+        <li>Do you enjoy cooking? Why / why not?</li>
+        <li>How often do you read books?</li>
+      </ol>
+
+      <h3 class="text-xl mt-5 mb-2">Round 2 · Part 2 cue card</h3>
+      <div class="cue-card relative">
+        <div class="ribbon">Cue Card</div>
+        <p class="font-semibold">Describe a skill that you would like to learn in the future.</p>
+        <p class="text-sm text-stone-700 mt-1">You should say: what the skill is · why you want to learn it · how you plan to learn it · and explain how this skill will help you.</p>
+      </div>
+
+      <h3 class="text-xl mt-5 mb-2">Round 3 · Part 3 (A.R.E. answers)</h3>
+      <ol class="text-sm space-y-1 list-decimal list-inside text-stone-700">
+        <li>Why do many adults choose to learn new skills?</li>
+        <li>Is it better to learn a skill from a teacher or by yourself?</li>
+        <li>How will the way people learn skills change in the future?</li>
+      </ol>
+
+      <!-- Rubric -->
+      <h3 class="text-xl mt-6 mb-2">Self-Grading Rubric</h3>
+      <p class="text-sm text-stone-700">Listen back. For each pillar, click the band you honestly think you delivered. Be tough — the score climbs faster when you are.</p>
+      <div class="grid md:grid-cols-2 gap-3 mt-3" id="rubric"></div>
+      <button class="btn btn-primary mt-4" id="rubricSubmit">Calculate Estimate</button>
+      <div id="rubricResult" class="mt-3"></div>
+    </div>
+  </section>
+
+  <!-- BAND 6 VS BAND 7+ MODEL ANSWERS -->
+  <section id="models" class="mb-14">
+    <div class="flex items-end justify-between mb-3">
+      <h2 class="text-3xl">🎬 Model Answers · Band 6 vs Band 7+</h2>
+      <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">Side-by-side · for classroom comparison</span>
+    </div>
+    <p class="text-stone-700 max-w-3xl">Same question, two answers. Read both aloud to your students. Ask them to spot what changed. Click to highlight the upgrades.</p>
+
+    <div class="space-y-5 mt-5" id="modelPairs"></div>
+  </section>
+
+  <!-- ERROR SPOTTING -->
+  <section id="errors" class="mb-14">
+    <div class="flex items-end justify-between mb-3">
+      <h2 class="text-3xl">🔍 Common Errors · Spot & Fix</h2>
+      <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">Real Band 6 transcripts</span>
+    </div>
+    <p class="text-stone-700 max-w-3xl">Each line is something a real Band 6 student said in a mock test. Click the word/phrase that's wrong. Then read the fix.</p>
+    <div class="space-y-3 mt-4" id="errorDrill"></div>
+  </section>
+
+  <!-- LIVE 2-MIN CUE CARD (for in-class) -->
+  <section id="liveTalk" class="mb-14">
+    <div class="flex items-end justify-between mb-3">
+      <h2 class="text-3xl">🎤 Live Cue-Card Stage · 2-Minute Talk</h2>
+      <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">Project this · pick a student · hit START</span>
+    </div>
+    <p class="text-stone-700 max-w-3xl">Designed for classroom use. Pick a card, give the student 1 minute to plan, then run the 2-minute talk timer. Visual countdown so students can pace themselves.</p>
+
+    <div class="card p-6 mt-4">
+      <div class="flex items-center justify-between gap-3 flex-wrap mb-4">
+        <button class="btn btn-gold" id="liveCardSwap">🎴 New random cue card</button>
+        <div class="flex items-center gap-2">
+          <button class="btn btn-ghost text-sm" id="livePrep">▶ 1-min Prep</button>
+          <button class="btn btn-primary" id="liveTalk2">▶ 2-min Talk</button>
+          <button class="btn btn-ghost text-sm" id="liveStop">■ Stop</button>
+        </div>
+      </div>
+
+      <div class="cue-card relative">
+        <div class="ribbon" id="liveRibbon">PREP — 1 min</div>
+        <h4 class="text-2xl mb-2" id="liveTitle">Describe a memorable trip you took.</h4>
+        <ul class="text-base text-stone-700 mt-2 space-y-1" id="liveBullets">
+          <li>• where you went</li>
+          <li>• when you went</li>
+          <li>• what you did there</li>
+          <li>• and explain why it was memorable.</li>
+        </ul>
+        <div class="mt-6 flex items-center gap-4">
+          <div class="text-7xl timer-pill" style="color:var(--burgundy)" id="liveTimer">01:00</div>
+          <div class="flex-1">
+            <div class="progress-bar" style="height:14px"><div class="progress-fill" id="liveBar" style="width:100%"></div></div>
+            <div class="text-xs uppercase tracking-widest text-stone-500 mt-1" id="livePhase">Prep phase · jot 4 P.P.F. notes</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-2 mt-4 text-sm" id="liveTenseHints">
+        <div class="p-2 rounded-lg" style="background:#fde2e8"><strong>0–30s:</strong> Intro + PAST (where, when, what)</div>
+        <div class="p-2 rounded-lg" style="background:#fdf6e3"><strong>30s–1m:</strong> PAST details (what you did, felt)</div>
+        <div class="p-2 rounded-lg" style="background:#fdf6e3"><strong>1m–1m30:</strong> PRESENT (why memorable now)</div>
+        <div class="p-2 rounded-lg" style="background:#eef9f3"><strong>1m30–2m:</strong> FUTURE (plan to revisit?)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE INTERVIEW SIMULATOR -->
+  <section id="interview" class="mb-14">
+    <div class="flex items-end justify-between mb-3">
+      <h2 class="text-3xl">🎙 Live Interview Simulator</h2>
+      <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">Examiner speaks · You record</span>
+    </div>
+    <p class="text-stone-700 max-w-3xl">A real-feel simulation. The examiner (browser TTS) asks each question aloud. You record your answer (mic permission required), then play it back to self-assess. No data leaves your browser.</p>
+
+    <div class="card p-6 mt-4">
+      <div class="flex items-center gap-3 flex-wrap mb-4">
+        <select class="border border-line rounded-lg p-2 text-sm" id="ivPart">
+          <option value="1">Part 1 — Familiar topics</option>
+          <option value="2">Part 2 — Cue card (long turn)</option>
+          <option value="3">Part 3 — Discussion</option>
+        </select>
+        <button class="btn btn-primary" id="ivStart">▶ Start interview</button>
+        <button class="btn btn-ghost" id="ivNext">Next question →</button>
+        <button class="btn btn-ghost" id="ivStop">⏹ End</button>
+      </div>
+
+      <div class="cue-card relative" style="background:linear-gradient(180deg,#fff,var(--cream))">
+        <div class="ribbon">Examiner</div>
+        <div class="text-xs uppercase tracking-widest text-stone-500" id="ivTag">Press Start to begin</div>
+        <p class="text-xl mt-2" id="ivQuestion">Click ▶ Start interview to begin. The examiner will ask in sequence. After each question, click 🎙 Record, speak your answer, click ⏹ to stop, then ▶ Play to listen back.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4 mt-4">
+        <div class="card p-4">
+          <div class="text-xs uppercase tracking-widest text-stone-500">Recorder</div>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <button class="btn btn-primary" id="recStart">🎙 Record</button>
+            <button class="btn btn-ghost" id="recStop" disabled>⏹ Stop</button>
+            <button class="btn btn-ghost" id="recPlay" disabled>▶ Play</button>
+            <button class="btn btn-ghost" id="recDownload" disabled>⬇ Download</button>
+          </div>
+          <div class="mt-2 text-sm" id="recStatus">Microphone idle.</div>
+          <div class="mt-2 text-xs timer-pill" style="color:var(--burgundy)" id="recTimer">00:00</div>
+          <audio id="recPlayer" controls style="width:100%;margin-top:.5rem;display:none"></audio>
+        </div>
+
+        <div class="card p-4">
+          <div class="text-xs uppercase tracking-widest text-stone-500">Self-grade after listening back</div>
+          <div class="space-y-2 mt-2 text-sm">
+            <label class="flex items-center gap-2"><input type="checkbox" class="iv-check"> Smooth flow (few unnatural pauses)</label>
+            <label class="flex items-center gap-2"><input type="checkbox" class="iv-check"> Used precise vocabulary or a collocation</label>
+            <label class="flex items-center gap-2"><input type="checkbox" class="iv-check"> Mixed simple + complex grammar</label>
+            <label class="flex items-center gap-2"><input type="checkbox" class="iv-check"> Clear pronunciation, varied intonation</label>
+            <label class="flex items-center gap-2"><input type="checkbox" class="iv-check"> Used Answer+1 (Part 1) / P.P.F. (Part 2) / A.R.E. (Part 3)</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RAPID FIRE -->
+  <section id="rapidfire" class="mb-14">
+    <div class="flex items-end justify-between mb-3">
+      <h2 class="text-3xl">⚡ Rapid Fire — Part 1 Drill</h2>
+      <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">10 questions · 30 sec each · examiner speaks</span>
+    </div>
+    <p class="text-stone-700 max-w-3xl">10 random Part 1 questions, asked aloud by the examiner. 30 seconds per answer with auto-advance. Trains fluency under pressure. Project on screen for class drills.</p>
+
+    <div class="card p-6 mt-4">
+      <div class="flex items-center justify-between flex-wrap gap-3 mb-4">
+        <div class="flex items-center gap-3">
+          <button class="btn btn-primary" id="rfStart">▶ Start drill</button>
+          <button class="btn btn-ghost" id="rfStop">⏹ Stop</button>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="timer-pill text-2xl" style="color:var(--burgundy)" id="rfTimer">00:30</div>
+          <div class="text-sm" id="rfCount">0 / 10</div>
+        </div>
+      </div>
+
+      <div class="cue-card" style="background:linear-gradient(180deg,#fff,var(--cream))">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Examiner</div>
+        <p class="text-xl mt-2" id="rfQuestion">Click "Start drill" to begin.</p>
+      </div>
+
+      <div class="mt-4 progress-bar"><div class="progress-fill" id="rfBar" style="width:0%"></div></div>
+    </div>
+  </section>
+
+  <!-- THINKING PHRASES -->
+  <section class="mb-14">
+    <h2 class="text-3xl mb-2">🛟 Thinking Phrases — When Your Mind Goes Blank</h2>
+    <p class="text-stone-700 max-w-3xl">Silence kills Fluency. Replace "um, um" with these. Use one. Buy 2 seconds of thinking time. Carry on.</p>
+    <div class="grid md:grid-cols-3 gap-3 mt-4 text-sm">
+      <div class="card p-3"><strong>Buying time:</strong><br>"That's a really interesting question."<br>"Let me think about that for a moment."<br>"Hmm, I haven't thought about it that way before, but…"</div>
+      <div class="card p-3"><strong>Reframing:</strong><br>"To put it another way…"<br>"What I mean to say is…"<br>"Or rather, …"</div>
+      <div class="card p-3"><strong>Self-correcting:</strong><br>"Sorry, I meant…"<br>"Actually, let me rephrase that."<br>"I'd say more accurately that…"</div>
+    </div>
+  </section>
+
+  <!-- ACTION PLAN -->
+  <section class="mb-14">
+    <h2 class="text-3xl mb-3">Your 7-Day Action Plan</h2>
+    <div class="grid md:grid-cols-7 gap-2 text-center text-xs">
+      <div class="p-3 rounded-xl card"><strong>Day 1</strong><div class="mt-1 text-stone-700">Record Part 1 — Answer+1 on 10 Qs</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 2</strong><div class="mt-1 text-stone-700">P.P.F. plans on 5 cue cards (no speaking)</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 3</strong><div class="mt-1 text-stone-700">2 cue cards full 2-min talks (recorded)</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 4</strong><div class="mt-1 text-stone-700">A.R.E. on 8 Part 3 questions</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 5</strong><div class="mt-1 text-stone-700">Topic vocab — make 3 mind maps</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 6</strong><div class="mt-1 text-stone-700">Full mock (14 min) — record + grade</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 7</strong><div class="mt-1 text-stone-700">Mistake journal review + redo weakest part</div></div>
+    </div>
+  </section>
+
+  <footer class="border-t border-line pt-6 pb-12 text-sm text-stone-500 flex flex-wrap items-center justify-between gap-3">
+    <div>IELTS Speaking · The Confident Performer · Band 7+ Track</div>
+    <div class="flex items-center gap-2">
+      <span class="legend-dot" style="background:var(--burgundy)"></span>Strategy
+      <span class="legend-dot" style="background:var(--gold)"></span>Tip
+      <span class="legend-dot" style="background:var(--shadow)"></span>Trap
+      <span class="legend-dot" style="background:var(--teal)"></span>Correct
+    </div>
+  <div style="text-align:center;font-size:.72rem;color:#aaa;margin-top:1.2rem;padding-bottom:.5rem">&copy; 2026 ViATestPrep &middot; All Rights Reserved &middot; Unauthorized reproduction prohibited</div></footer>
+</main>
+
+<script>
+// ====== STATE & XP ======
+const state = { xp:0, max:240 };
+function addXP(n,label){
+  state.xp = Math.min(state.max, state.xp+n);
+  document.getElementById('xpDisplay').textContent = state.xp+' XP';
+  document.getElementById('xpBar').style.width = (state.xp/state.max*100)+'%';
+  if (label){
+    const t=document.createElement('div');
+    t.textContent=(n>0?'+':'')+n+' XP · '+label;
+    t.style.cssText='position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1a0e0e;color:#fff;padding:.6rem 1rem;border-radius:999px;z-index:50;font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,.18);font-size:.9rem;opacity:0;transition:opacity .25s';
+    document.body.appendChild(t);
+    requestAnimationFrame(()=>t.style.opacity=1);
+    setTimeout(()=>{t.style.opacity=0;setTimeout(()=>t.remove(),300)}, 1600);
+  }
+}
+document.querySelectorAll('.nav-step').forEach(s=>s.addEventListener('click',()=>document.getElementById(s.dataset.jump)?.scrollIntoView({behavior:'smooth'})));
+
+// ====== TTS ENGINE ======
+const ttsState = { voice:null };
+function pickVoice(){
+  const voices = speechSynthesis.getVoices();
+  ttsState.voice = voices.find(v=>/en-GB/i.test(v.lang) && /female|kate|moira|samantha/i.test(v.name))
+    || voices.find(v=>/en-GB/i.test(v.lang))
+    || voices.find(v=>/en-US/i.test(v.lang) && /female|samantha|ava/i.test(v.name))
+    || voices.find(v=>/en/i.test(v.lang)) || voices[0];
+}
+if (typeof speechSynthesis !== 'undefined'){ speechSynthesis.onvoiceschanged = pickVoice; pickVoice(); }
+function speak(text, rate=0.92, onEnd){
+  if (!('speechSynthesis' in window)){ alert('Audio needs a modern browser.'); return; }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.rate = rate; u.pitch = 1.0;
+  if (ttsState.voice) u.voice = ttsState.voice;
+  if (onEnd) u.onend = onEnd;
+  speechSynthesis.speak(u);
+}
+
+// ====== STRESS DRILL ======
+const stress = [
+  {word:"important", syllables:["im","por","tant"], stressed:1, tip:"im-POR-tant — stress on syllable 2."},
+  {word:"photograph", syllables:["pho","to","graph"], stressed:0, tip:"PHO-to-graph — stress on 1. Compare 'photographer' (pho-TOG-ra-pher)."},
+  {word:"interesting", syllables:["in","ter","est","ing"], stressed:0, tip:"IN-tres-ting — stress on 1. Often pronounced as 3 syllables."},
+  {word:"economy", syllables:["e","con","o","my"], stressed:1, tip:"e-CON-o-my — stress on 2. Compare 'economic' (ec-o-NOM-ic)."},
+];
+const stEl = document.getElementById('stressDrill');
+stress.forEach((it,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML=`<div class="text-sm mb-2 mono">${i+1}. ${it.word}</div>
+    <div class="flex flex-wrap gap-2">${it.syllables.map((s,j)=>`<button class="btn btn-ghost text-sm stress-opt" data-i="${j}">${s}</button>`).join('')}</div>
+    <div class="fb mt-2"></div>`;
+  stEl.appendChild(wrap);
+  wrap.querySelectorAll('.stress-opt').forEach(b=>b.addEventListener('click',()=>{
+    if (wrap.dataset.done) return;
+    wrap.dataset.done='1';
+    const ok = +b.dataset.i===it.stressed;
+    b.style.background = ok?'#eef9f3':'#fde2e8';
+    b.style.borderColor = ok?'var(--teal)':'var(--burgundy)';
+    wrap.querySelectorAll('.stress-opt').forEach((x,j)=>{
+      if (j===it.stressed){x.style.background='#eef9f3';x.style.borderColor='var(--teal)';x.innerHTML='<strong>'+x.textContent.toUpperCase()+'</strong>';}
+      x.disabled=true;
+    });
+    wrap.querySelector('.fb').innerHTML = `<div class="feedback ${ok?'good':'bad'}">${ok?'✅':'❌'} ${it.tip}</div>`;
+    addXP(ok?5:1,'Stress');
+  }));
+});
+
+// ====== PART 1 TOPICS ======
+const p1Topics = [
+  {n:"Hometown",icon:"🏘",color:"#fde2e8",accent:"var(--burgundy)",
+   qs:["Where are you from?","Do you like your hometown?","Has your hometown changed much?","Would you recommend it as a place to visit?"],
+   bank:"sprawling, bustling, picturesque, run-down, off the beaten track, a stone's throw from, has a lot to offer, charming"},
+  {n:"Work / Studies",icon:"💼",color:"#fdf6e3",accent:"var(--gold)",
+   qs:["Do you work or are you a student?","Why did you choose this field?","What do you find most challenging?","Do you plan to change careers?"],
+   bank:"specialise in, demanding, rewarding, dive into, broaden my horizons, pursue a career in, be drawn to, fast-paced"},
+  {n:"Hobbies & Free Time",icon:"🎨",color:"#eef9f3",accent:"var(--teal)",
+   qs:["What do you do in your free time?","How often do you do this?","Did you do this as a child?","Would you encourage others to try it?"],
+   bank:"unwind, get into, dabble in, my go-to activity, take up, immerse myself in, a creative outlet, switch off"},
+  {n:"Food & Cooking",icon:"🍜",color:"#fde2e8",accent:"var(--burgundy)",
+   qs:["Do you enjoy cooking?","What's a typical meal in your country?","Do you eat out often?","Has your diet changed recently?"],
+   bank:"have a sweet tooth, mouth-watering, a quick bite, hearty, home-cooked, eat on the go, picky eater, be partial to"},
+  {n:"Travel",icon:"✈",color:"#fdf6e3",accent:"var(--gold)",
+   qs:["Do you like travelling?","Where would you most like to go?","Do you prefer travelling alone or with others?","How has travel changed in your country?"],
+   bank:"a once-in-a-lifetime trip, off the beaten track, get away from it all, embark on, seasoned traveller, soak up the culture, on a tight budget"},
+  {n:"Music",icon:"🎵",color:"#eef9f3",accent:"var(--teal)",
+   qs:["What kind of music do you like?","Do you play an instrument?","Has your music taste changed?","Do you listen to music while studying?"],
+   bank:"upbeat, mellow, catchy, takes me back, grew up listening to, an acquired taste, lyrics resonate, lift my mood"},
+  {n:"Technology",icon:"📱",color:"#fde2e8",accent:"var(--burgundy)",
+   qs:["How often do you use your phone?","Do you prefer texting or calling?","Has technology made life easier?","Would you say you spend too much time online?"],
+   bank:"be glued to, scroll mindlessly, productivity tool, a double-edged sword, tech-savvy, keep up with, digital detox, on the go"},
+  {n:"Books & Reading",icon:"📚",color:"#fdf6e3",accent:"var(--gold)",
+   qs:["How often do you read?","What kind of books do you enjoy?","Did you read more as a child?","Do you prefer paper books or e-books?"],
+   bank:"page-turner, get hooked on, escapism, a real eye-opener, lose myself in, dog-eared, well-thumbed, devour a book"},
+  {n:"Weather",icon:"☀",color:"#eef9f3",accent:"var(--teal)",
+   qs:["What's the weather like in your country?","What's your favourite season?","Does the weather affect your mood?","Has the climate changed recently?"],
+   bank:"scorching, mild, dreary, biting cold, unpredictable, a heatwave, brighten up, four seasons in one day"},
+  {n:"Friends & Family",icon:"👥",color:"#fde2e8",accent:"var(--burgundy)",
+   qs:["Do you have a large family?","Are you closer to friends or family?","How often do you see your friends?","What makes a good friend?"],
+   bank:"close-knit, drift apart, see eye to eye, a shoulder to cry on, get along with, hit it off, distant relatives, catch up"},
+];
+const p1El = document.getElementById('part1Topics');
+p1Topics.forEach(t=>{
+  const card=document.createElement('div');
+  card.className='card p-5 qtype';
+  card.style.background = `linear-gradient(180deg, ${t.color} 0%, #fff 70%)`;
+  card.innerHTML = `
+    <div class="flex items-start justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center text-xl" style="background:${t.accent};color:#fff">${t.icon}</div>
+        <div class="font-bold">${t.n}</div>
+      </div>
+      <span class="text-xs text-stone-500">tap ↓</span>
+    </div>
+    <div class="reveal mt-3 text-sm">
+      <div class="text-xs uppercase tracking-widest text-stone-500">Sample questions</div>
+      <ul class="mt-1 space-y-1 list-disc list-inside text-stone-700">${t.qs.map(q=>`<li>${q}</li>`).join('')}</ul>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--gold)">Band 7+ phrase bank</div>
+      <div class="text-stone-700 mt-1">${t.bank}</div>
+    </div>
+  `;
+  card.addEventListener('click',()=>{
+    const r=card.querySelector('.reveal');
+    const wasOpen=r.classList.contains('open');
+    r.classList.toggle('open');
+    if(!wasOpen) addXP(2,'Topic opened');
+  });
+  p1El.appendChild(card);
+});
+
+// ====== ANSWER+1 DRILL ======
+const aPlus = [
+  {q:"Do you enjoy reading?", options:[
+    {l:"A",t:"Yes.",c:false,w:"Single word. Fluency suffers. Add at least one more sentence."},
+    {l:"B",t:"Yes I read every day. I read books. I like books.",c:false,w:"Repetitive. 'Books' three times = Lexical Resource hit. Vary the language."},
+    {l:"C",t:"Yes, I'm an avid reader, actually. I find getting lost in a good novel is one of the best ways to unwind in the evening.",c:true,w:"Answer + collocation ('avid reader', 'unwind') + reason. Textbook Answer+1."},
+    {l:"D",t:"Reading is a very important activity in modern society and brings many benefits to the individual including expanding their vocabulary and...",c:false,w:"Lecturing — Part 1 wants conversational, not essay-like. Save the analysis for Part 3."},
+  ]},
+  {q:"How often do you cook at home?", options:[
+    {l:"A",t:"Sometimes.",c:false,w:"Vague + bare. Examiner gets nothing to assess."},
+    {l:"B",t:"To be honest, not as often as I'd like — usually three or four times a week. When I do cook, I tend to go for something quick like a stir-fry.",c:true,w:"Hedging ('to be honest'), specific frequency, collocation ('go for'), example. Strong."},
+    {l:"C",t:"Cooking? Yes, every day, all day, I love cooking, cooking is wonderful.",c:false,w:"Repetitive and exaggerated. Doesn't sound natural."},
+    {l:"D",t:"I don't really cook. Cooking is a useless skill in modern times.",c:false,w:"Opinion is fine, but it's an unsupported one-liner. Where's the +1?"},
+  ]},
+];
+const aPEl = document.getElementById('answerPlusDrill');
+aPlus.forEach((it,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML = `<div class="text-sm mb-2"><strong>Q${i+1}.</strong> ${it.q}</div><div class="space-y-2"></div><div class="fb mt-2"></div>`;
+  aPEl.appendChild(wrap);
+  const optBox = wrap.querySelector('div.space-y-2');
+  it.options.forEach(o=>{
+    const div=document.createElement('div');
+    div.className='opt';
+    div.innerHTML=`<div class="letter">${o.l}</div><div>${o.t}</div>`;
+    div.addEventListener('click',()=>{
+      if (wrap.dataset.done) return;
+      if (o.c){
+        div.classList.add('correct');
+        optBox.querySelectorAll('.opt').forEach(x=>{if(!x.classList.contains('correct'))x.classList.add('disabled')});
+        wrap.querySelector('.fb').innerHTML = `<div class="feedback good">✅ ${o.w}</div>`;
+        wrap.dataset.done='1';
+        addXP(10,'Answer+1');
+      } else {
+        div.classList.add('wrong');
+        wrap.querySelector('.fb').innerHTML = `<div class="feedback bad"><strong>Eliminated ${o.l}.</strong> ${o.w}</div>`;
+        addXP(2,'Learning');
+      }
+    });
+    optBox.appendChild(div);
+  });
+});
+
+// ====== PART 2 CARDS ======
+const p2 = [
+  {n:1,name:"A Person",icon:"👤",color:"#fde2e8",accent:"var(--burgundy)",
+   examples:"Family member · Best friend · Person you admire · Role model · Famous person · Childhood neighbour · Inspiring teacher",
+   move:"Use vivid adjectives ('outgoing, fiercely loyal, soft-spoken'). Anchor with one specific anecdote.",
+   trap:"Listing facts ('she is 40, has 2 kids') — boring. Tell a small story instead."},
+  {n:2,name:"A Place",icon:"📍",color:"#fdf6e3",accent:"var(--gold)",
+   examples:"City you've visited · Childhood home · Favourite shop · A park · A historic building · A foreign country",
+   move:"Engage all five senses. Smells, sounds, light. Use prepositions of place liberally.",
+   trap:"Describing only what you saw. Add what you felt — the place becomes memorable."},
+  {n:3,name:"An Object",icon:"📦",color:"#eef9f3",accent:"var(--teal)",
+   examples:"A gift you received · A useful gadget · An old photo · A piece of clothing · Something you'd take if you moved",
+   move:"Sentimental value > monetary. Tie it to a person or moment.",
+   trap:"Describing physical features only. The 'why it matters' is the heart of your answer."},
+  {n:4,name:"An Event / Experience",icon:"🎉",color:"#fde2e8",accent:"var(--burgundy)",
+   examples:"A wedding · A festival · An achievement · A trip · A time you helped someone · A surprise",
+   move:"Use the P.P.F. method aggressively — past action, present significance, future repetition.",
+   trap:"Skipping the 'how you felt' part. Emotion words score Lexical Resource."},
+  {n:5,name:"An Activity / Skill",icon:"🎯",color:"#fdf6e3",accent:"var(--gold)",
+   examples:"A hobby · A sport · A skill you'd like to learn · An activity you do with family",
+   move:"Cover process: how it began, how you do it now, where it might lead.",
+   trap:"Listing only what the activity IS. Spend equal time on why it matters to you."},
+  {n:6,name:"A Time When… (situation)",icon:"⏳",color:"#eef9f3",accent:"var(--teal)",
+   examples:"…you were late · …you made a difficult decision · …you helped a stranger · …you felt proud",
+   move:"Set the scene first (when, where, who). Build to a climax. Reflect.",
+   trap:"Telling the events flatly. Use sequencers: 'Just as I…', 'Suddenly…', 'In the end…'."},
+];
+const p2El = document.getElementById('part2Cards');
+p2.forEach(c=>{
+  const card=document.createElement('div');
+  card.className='card p-5 qtype';
+  card.style.background = `linear-gradient(180deg, ${c.color} 0%, #fff 70%)`;
+  card.innerHTML = `
+    <div class="flex items-start justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center text-xl" style="background:${c.accent};color:#fff">${c.icon}</div>
+        <div class="font-bold">${c.n}. ${c.name}</div>
+      </div>
+      <span class="text-xs text-stone-500">tap ↓</span>
+    </div>
+    <div class="reveal mt-3 text-sm">
+      <div class="text-xs uppercase tracking-widest text-stone-500">Common cards</div>
+      <p class="mt-1">${c.examples}</p>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--teal)">The Move</div>
+      <p class="mt-1">${c.move}</p>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--burgundy)">The Trap</div>
+      <p class="mt-1">${c.trap}</p>
+    </div>
+  `;
+  card.addEventListener('click',()=>{
+    const r=card.querySelector('.reveal');
+    const wasOpen=r.classList.contains('open');
+    r.classList.toggle('open');
+    if(!wasOpen) addXP(2,'Card opened');
+  });
+  p2El.appendChild(card);
+});
+
+// ====== CUE CARD TIMER ======
+const cueTitle = document.getElementById('cueTitle');
+const cueBullets = document.getElementById('cueBullets');
+const cueTimer = document.getElementById('cueTimer');
+const cueStart = document.getElementById('cueStart');
+const cueRandom = document.getElementById('cueRandom');
+const cueFB = document.getElementById('cueFB');
+
+const cards = [
+  {title:"Describe a memorable trip you took.", bullets:["where you went","when you went","what you did there","and explain why it was memorable."]},
+  {title:"Describe a person who has had a strong influence on you.", bullets:["who they are","how you know them","what they have done","and explain their influence on you."]},
+  {title:"Describe a skill you would like to learn.", bullets:["what the skill is","why you want to learn it","how you plan to learn it","and explain how it would help you."]},
+  {title:"Describe a place you have visited that has impressed you.", bullets:["where it is","when you went","what you did there","and explain why it impressed you."]},
+  {title:"Describe a book that you have enjoyed.", bullets:["what the book is about","when you read it","why you enjoyed it","and explain whether you would recommend it."]},
+];
+cueRandom.addEventListener('click',()=>{
+  const c = cards[Math.floor(Math.random()*cards.length)];
+  cueTitle.textContent = c.title;
+  cueBullets.innerHTML = c.bullets.map(b=>`<li>• ${b}</li>`).join('');
+  document.getElementById('cueIntro').value='';
+  document.getElementById('cuePast').value='';
+  document.getElementById('cuePresent').value='';
+  document.getElementById('cueFuture').value='';
+  cueFB.innerHTML='';
+});
+let cueSec = 60, cueInt=null;
+cueStart.addEventListener('click',()=>{
+  if (cueInt) return;
+  cueSec=60; cueTimer.style.color='var(--burgundy)';
+  cueInt = setInterval(()=>{
+    cueSec--;
+    cueTimer.textContent = `00:${String(cueSec).padStart(2,'0')}`;
+    if (cueSec<=0){
+      clearInterval(cueInt); cueInt=null;
+      cueTimer.style.color='var(--teal)';
+      // Grade
+      const filled = ['cueIntro','cuePast','cuePresent','cueFuture'].filter(id=>document.getElementById(id).value.trim().length>2).length;
+      cueFB.innerHTML = `<div class="feedback ${filled===4?'good':'tip'}">⏰ Time! Filled ${filled}/4 P.P.F. notes. ${filled===4?'Strong plan — you should easily fill 2 minutes with this.':'Aim for all 4. Each gap = a tense range you might miss.'}</div>`;
+      addXP(filled*5,'P.P.F.');
+      cueStart.textContent='▶ Restart';
+    }
+  },1000);
+});
+
+// ====== PART 3 PATTERNS ======
+const p3 = [
+  {n:1,name:"Comparison",icon:"⚖",color:"#fde2e8",accent:"var(--burgundy)",
+   trigger:"\"Compare X with Y.\" / \"How is X different from Y today?\"",
+   move:"Two short paragraphs in your head: X then Y. Use comparison phrases ('whereas', 'in contrast').",
+   sample:"\"Compare modern travel with travel in the past.\""},
+  {n:2,name:"Opinion",icon:"💭",color:"#fdf6e3",accent:"var(--gold)",
+   trigger:"\"Do you think...?\" / \"Some people argue X. What's your view?\"",
+   move:"A.R.E. structure. Hedge: 'It seems to me…' rather than 'definitely'.",
+   sample:"\"Do you think governments should fund space exploration?\""},
+  {n:3,name:"Future Predictions",icon:"🔮",color:"#eef9f3",accent:"var(--teal)",
+   trigger:"\"Will X change in the future?\" / \"How will X look in 50 years?\"",
+   move:"Use modal verbs of probability: 'might', 'may well', 'is likely to'. Conditional structures shine here.",
+   sample:"\"How will the way people travel change in the future?\""},
+  {n:4,name:"Cause / Effect",icon:"🧩",color:"#fde2e8",accent:"var(--burgundy)",
+   trigger:"\"Why is X popular?\" / \"What has caused X to increase?\"",
+   move:"Identify 2 causes with examples. Use 'this is largely due to', 'one of the main drivers'.",
+   sample:"\"Why has international tourism grown so rapidly?\""},
+  {n:5,name:"Hypothetical",icon:"🎲",color:"#fdf6e3",accent:"var(--gold)",
+   trigger:"\"What if...?\" / \"How would things be different if...?\"",
+   move:"Second / third conditional ('If we had…, we would…'). This is your chance to flex grammar range.",
+   sample:"\"What if international travel became free for everyone?\""},
+  {n:6,name:"Advantages / Solutions",icon:"🛠",color:"#eef9f3",accent:"var(--teal)",
+   trigger:"\"What are the benefits of X?\" / \"What can be done to address X?\"",
+   move:"Two clear benefits / solutions, each with an example. Don't list 5 — develop 2 well.",
+   sample:"\"What can governments do to encourage healthier eating?\""},
+];
+const p3El = document.getElementById('part3Patterns');
+p3.forEach(c=>{
+  const card=document.createElement('div');
+  card.className='card p-5 qtype';
+  card.style.background = `linear-gradient(180deg, ${c.color} 0%, #fff 70%)`;
+  card.innerHTML = `
+    <div class="flex items-start justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center text-xl" style="background:${c.accent};color:#fff">${c.icon}</div>
+        <div class="font-bold">${c.n}. ${c.name}</div>
+      </div>
+      <span class="text-xs text-stone-500">tap ↓</span>
+    </div>
+    <div class="reveal mt-3 text-sm">
+      <div class="text-xs uppercase tracking-widest text-stone-500">Trigger phrases</div>
+      <p class="mt-1">${c.trigger}</p>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--teal)">The Move</div>
+      <p class="mt-1">${c.move}</p>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--gold)">Sample question</div>
+      <p class="mt-1 italic">${c.sample}</p>
+    </div>
+  `;
+  card.addEventListener('click',()=>{
+    const r=card.querySelector('.reveal');
+    const wasOpen=r.classList.contains('open');
+    r.classList.toggle('open');
+    if(!wasOpen) addXP(2,'Pattern opened');
+  });
+  p3El.appendChild(card);
+});
+
+// ====== ARE DRAG-DROP ======
+const arePieces = [
+  {id:"a", text:"I'd say the main reason international tourism has exploded is that it's become genuinely accessible to ordinary people.", tag:"A"},
+  {id:"r", text:"This is largely due to the rise of budget airlines and the internet, which have stripped away both the cost and the complexity of organising a trip.", tag:"R"},
+  {id:"e", text:"For example, a university student today can book a weekend in another European country for less than a typical concert ticket — something that would have been unthinkable for their parents' generation.", tag:"E"},
+];
+const areOrder = ["A","R","E"];
+const areBank = document.getElementById('areBank');
+const areSlots = document.getElementById('areSlots');
+const areFB = document.getElementById('areFB');
+let areDone=0;
+[...arePieces].sort(()=>Math.random()-.5).forEach(p=>{
+  const d = document.createElement('div');
+  d.className = 'card p-3 draggable text-sm';
+  d.draggable = true;
+  d.dataset.id = p.id;
+  d.dataset.tag = p.tag;
+  d.innerHTML = `<div class="text-[10px] uppercase tracking-widest text-stone-500">drag</div>${p.text}`;
+  d.addEventListener('dragstart',e=>{e.dataTransfer.setData('text/plain',p.id);d.style.opacity=.5});
+  d.addEventListener('dragend',()=>d.style.opacity=1);
+  areBank.appendChild(d);
+});
+areOrder.forEach((tag,i)=>{
+  const dt = document.createElement('div');
+  dt.className='drop-target text-sm';
+  dt.dataset.want = tag;
+  dt.innerHTML = `<div class="text-[10px] uppercase tracking-widest text-stone-500 mb-1">${i+1} · expecting "${tag}"</div><em>drop here…</em>`;
+  dt.addEventListener('dragover',e=>{e.preventDefault();dt.classList.add('over')});
+  dt.addEventListener('dragleave',()=>dt.classList.remove('over'));
+  dt.addEventListener('drop',e=>{
+    e.preventDefault(); dt.classList.remove('over');
+    const id = e.dataTransfer.getData('text/plain');
+    const piece = arePieces.find(p=>p.id===id);
+    if (!piece) return;
+    const ok = piece.tag === tag;
+    dt.classList.add(ok?'right':'wrong');
+    dt.innerHTML = `<div class="text-[10px] uppercase tracking-widest text-stone-500 mb-1">${piece.tag} ${ok?'✓':'✗'}</div>${piece.text}`;
+    if (ok){ areDone++; addXP(8,'A.R.E. piece');
+      if (areDone===3) areFB.innerHTML = `<div class="feedback good">✅ A.R.E. answer locked. Notice the 'I → ordinary people / a university student' progression — Part 3 wants generality, not personal anecdote.</div>`;
+    } else {
+      areFB.innerHTML = `<div class="feedback bad">⚠ Tag mismatch. A = direct claim. R = explanation. E = a generalised example (not 'me').</div>`;
+    }
+  });
+  areSlots.appendChild(dt);
+});
+
+// ====== RUBRIC ======
+const pillars = [
+  {key:"fc", name:"Fluency & Coherence", q:"Did you speak smoothly with only natural pauses?"},
+  {key:"lr", name:"Lexical Resource", q:"Did you use varied vocabulary, collocations, and idiomatic phrases?"},
+  {key:"gra", name:"Grammar Range & Accuracy", q:"Did you mix simple, complex, conditional, and perfect tenses without major errors?"},
+  {key:"pro", name:"Pronunciation", q:"Was your speech clear, with correct word stress and natural intonation?"},
+];
+const rubricEl = document.getElementById('rubric');
+const rubricResult = document.getElementById('rubricResult');
+const grades = {};
+pillars.forEach(p=>{
+  const wrap = document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML = `<div class="text-xs uppercase tracking-widest text-stone-500">${p.name}</div>
+    <div class="text-sm mt-1">${p.q}</div>
+    <div class="flex flex-wrap gap-2 mt-2">
+      ${[6,6.5,7,7.5,8].map(b=>`<button class="btn btn-ghost text-xs rubric-opt" data-key="${p.key}" data-band="${b}">${b}</button>`).join('')}
+    </div>`;
+  rubricEl.appendChild(wrap);
+});
+rubricEl.addEventListener('click',e=>{
+  const b = e.target.closest('.rubric-opt');
+  if (!b) return;
+  const key = b.dataset.key;
+  grades[key] = parseFloat(b.dataset.band);
+  const wrap = b.closest('.card');
+  wrap.querySelectorAll('.rubric-opt').forEach(x=>{x.classList.remove('glow');x.style.background='#fff';x.style.borderColor='var(--line)';});
+  b.classList.add('glow');
+  b.style.background = '#fdf6e3';
+});
+// ====== MODEL ANSWERS (Band 6 vs 7+) ======
+const modelPairs = [
+  {q:"Do you enjoy spending time outdoors?",
+   b6:"Yes, I like outdoors. The weather is good and I like nature. I go to park sometimes.",
+   b7:"Absolutely — I'd say being outside is one of my favourite ways to <span class='marker-yellow'>unwind</span>. Whenever the weather permits, I tend to head to a nearby park or go for a long walk along the river. There's something <span class='marker-pink'>genuinely restorative</span> about getting away from screens for an hour or two.",
+   notes:["✓ Collocation 'unwind'","✓ 'Whenever the weather permits' — adverbial clause","✓ 'Genuinely restorative' — strong adjective + adverb pair","✓ Anchored example (river walk) — adds detail without rambling"]},
+  {q:"How important is technology in your daily life?",
+   b6:"Technology is very important. I use my phone every day. It is good for many things.",
+   b7:"To be honest, it's become almost <span class='marker-yellow'>indispensable</span>. From the moment I wake up — checking my schedule and the news — to winding down with a podcast at night, I'm <span class='marker-pink'>relying on it constantly</span>. That said, I do try to switch off occasionally, otherwise it can feel a bit overwhelming.",
+   notes:["✓ Hedging 'to be honest'","✓ 'Indispensable' — precise adjective","✓ 'From the moment… to…' — parallel structure","✓ Concession ('That said') — shows balanced thinking"]},
+  {q:"Why do people enjoy travelling abroad? (Part 3)",
+   b6:"People travel because they want to see new things and have fun. Also it is good for relaxing.",
+   b7:"I'd argue the appeal is largely about <span class='marker-yellow'>broadening one's perspective</span>. Encountering an unfamiliar culture — its food, its rhythms, the way strangers interact — tends to <span class='marker-pink'>shake people out of</span> the routines they've fallen into back home. For instance, even a short trip can prompt people to question habits they'd never previously examined.",
+   notes:["✓ A.R.E. structure (Answer → Reason → Example)","✓ 'I'd argue' — Part 3 hedging","✓ Idiom: 'shake out of routines'","✓ Generalisation ('people') — moved away from 'I'"]},
+];
+const mpEl = document.getElementById('modelPairs');
+modelPairs.forEach((m,i)=>{
+  const wrap = document.createElement('div');
+  wrap.className = 'card p-5';
+  wrap.innerHTML = `
+    <div class="text-xs uppercase tracking-widest text-stone-500">Question ${i+1}</div>
+    <div class="font-semibold mt-1">${m.q}</div>
+    <div class="grid md:grid-cols-2 gap-3 mt-4">
+      <div class="p-4 rounded-xl" style="background:#fde2e8;border:1px solid var(--burgundy)">
+        <div class="text-xs uppercase tracking-widest font-bold" style="color:var(--burgundy)">❌ Band 6</div>
+        <p class="mt-2 text-sm">${m.b6}</p>
+      </div>
+      <div class="p-4 rounded-xl" style="background:#eef9f3;border:1px solid var(--teal)">
+        <div class="text-xs uppercase tracking-widest font-bold" style="color:var(--teal)">✅ Band 7+</div>
+        <p class="mt-2 text-sm">${m.b7}</p>
+      </div>
+    </div>
+    <button class="btn btn-ghost text-xs mt-3 reveal-notes">▼ Show what changed</button>
+    <div class="reveal mt-2"><ul class="text-sm space-y-1 text-stone-700">${m.notes.map(n=>`<li>${n}</li>`).join('')}</ul></div>
+  `;
+  mpEl.appendChild(wrap);
+  const rev = wrap.querySelector('.reveal');
+  wrap.querySelector('.reveal-notes').addEventListener('click',()=>{
+    rev.classList.toggle('open');
+    addXP(3,'Compared answers');
+  });
+});
+
+// ====== ERROR SPOTTING DRILL ======
+const errors = [
+  {sentence:"I am liking very much the food in my country.", wrong:"am liking", fix:"'Like' is a stative verb — use simple present: <strong>I really like</strong>.", category:"Grammar — stative verb"},
+  {sentence:"My family have lots of persons.", wrong:"persons", fix:"Use <strong>members</strong> or <strong>people</strong>. 'Persons' is rare and formal/legal.", category:"Lexical — wrong word choice"},
+  {sentence:"I am living here since five years.", wrong:"since five years", fix:"With duration use <strong>for</strong>: <em>I've been living here for five years</em>. 'Since' = a point in time.", category:"Grammar — for/since + perfect tense"},
+  {sentence:"In my country, the people they are very friendly.", wrong:"the people they", fix:"Drop the duplicate subject: <strong>the people are very friendly</strong>.", category:"Grammar — double subject"},
+  {sentence:"I think technology is so much important these days.", wrong:"so much important", fix:"<strong>so important</strong> or <strong>incredibly important</strong>. 'So much' modifies verbs/uncountables, not adjectives.", category:"Grammar — adverb-adjective pairing"},
+  {sentence:"Nowadays, peoples prefer travelling by plane.", wrong:"peoples", fix:"<strong>people</strong> is already plural. Use 'peoples' only when meaning ethnic groups.", category:"Lexical — pluralisation"},
+];
+const errEl = document.getElementById('errorDrill');
+errors.forEach((e,i)=>{
+  const tokens = e.sentence.split(/(\s+|[.,!?])/);
+  const wrap = document.createElement('div');
+  wrap.className = 'card p-3';
+  let html = `<div class="text-xs uppercase tracking-widest text-stone-500">${i+1} · ${e.category}</div><div class="text-base mt-2 leading-relaxed">`;
+  tokens.forEach(tok=>{
+    const trimmed = tok.trim();
+    if (!trimmed){ html += tok; return; }
+    const isWrong = e.wrong.toLowerCase().includes(trimmed.toLowerCase()) && trimmed.length>1;
+    html += `<span class="error-tok ${isWrong?'is-wrong':''}" data-w="${isWrong?'1':'0'}" style="cursor:pointer;padding:1px 3px;border-radius:4px">${tok}</span>`;
+  });
+  html += `</div><div class="fb mt-2"></div>`;
+  wrap.innerHTML = html;
+  errEl.appendChild(wrap);
+  wrap.querySelectorAll('.error-tok').forEach(t=>{
+    t.addEventListener('click',()=>{
+      if (wrap.dataset.done) return;
+      const ok = t.dataset.w==='1';
+      if (ok){
+        // Mark all wrong tokens
+        wrap.querySelectorAll('.error-tok').forEach(x=>{
+          if (x.dataset.w==='1'){x.style.background='#fde2e8';x.style.textDecoration='line-through';x.style.color='var(--burgundy)';}
+        });
+        wrap.querySelector('.fb').innerHTML = `<div class="feedback good">✅ Correct. ${e.fix}</div>`;
+        wrap.dataset.done='1';
+        addXP(8,'Error spotted');
+      } else {
+        t.style.background='#fdf6e3';
+        wrap.querySelector('.fb').innerHTML = `<div class="feedback tip">Not the error — try again. Hint: <em>${e.category}</em>.</div>`;
+      }
+    });
+  });
+});
+
+// ====== LIVE 2-MIN CUE CARD ======
+const liveCards = [
+  {title:"Describe a memorable trip you took.", bullets:["where you went","when you went","what you did there","and explain why it was memorable."]},
+  {title:"Describe a person who has had a strong influence on you.", bullets:["who they are","how you know them","what they have done","and explain their influence on you."]},
+  {title:"Describe a skill you would like to learn.", bullets:["what the skill is","why you want to learn it","how you plan to learn it","and explain how it would help you."]},
+  {title:"Describe a place you have visited that has impressed you.", bullets:["where it is","when you went","what you did there","and explain why it impressed you."]},
+  {title:"Describe a book that you have enjoyed.", bullets:["what the book is about","when you read it","why you enjoyed it","and explain whether you would recommend it."]},
+  {title:"Describe a time when you helped someone.", bullets:["who the person was","what the situation was","what you did to help","and explain how you felt afterwards."]},
+  {title:"Describe an item of technology you find useful.", bullets:["what it is","when and why you use it","how you learned to use it","and explain why it's useful for you."]},
+  {title:"Describe a meal you really enjoyed.", bullets:["what the meal was","where you had it","who you were with","and explain why you enjoyed it."]},
+];
+const liveTitle = document.getElementById('liveTitle');
+const liveBullets = document.getElementById('liveBullets');
+const liveTimer = document.getElementById('liveTimer');
+const liveBar = document.getElementById('liveBar');
+const livePhase = document.getElementById('livePhase');
+const liveRibbon = document.getElementById('liveRibbon');
+let liveInt = null, liveSec = 0, liveTotal = 60;
+
+document.getElementById('liveCardSwap').addEventListener('click',()=>{
+  const c = liveCards[Math.floor(Math.random()*liveCards.length)];
+  liveTitle.textContent = c.title;
+  liveBullets.innerHTML = c.bullets.map(b=>`<li>• ${b}</li>`).join('');
+});
+
+function liveStop(){
+  if (liveInt){ clearInterval(liveInt); liveInt=null; }
+}
+document.getElementById('liveStop').addEventListener('click',()=>{
+  liveStop();
+  liveTimer.textContent = '00:00';
+  liveBar.style.width = '0%';
+  livePhase.textContent = 'Stopped.';
+});
+function startTimer(seconds, phaseLabel, ribbonLabel, color){
+  liveStop();
+  liveSec = seconds; liveTotal = seconds;
+  liveRibbon.textContent = ribbonLabel;
+  liveTimer.style.color = color;
+  liveBar.style.background = `linear-gradient(90deg, ${color}, #b3344a)`;
+  livePhase.textContent = phaseLabel;
+  const tick = ()=>{
+    const m = String(Math.floor(liveSec/60)).padStart(2,'0');
+    const s = String(liveSec%60).padStart(2,'0');
+    liveTimer.textContent = `${m}:${s}`;
+    liveBar.style.width = `${(liveSec/liveTotal*100)}%`;
+    if (liveSec<=0){ clearInterval(liveInt); liveInt=null; livePhase.textContent='⏰ Time!';
+      const beep = document.createElement('div');
+      beep.textContent='⏰ Time! Stop talking.';
+      beep.style.cssText='position:fixed;top:30%;left:50%;transform:translate(-50%,-50%);background:var(--burgundy);color:#fff;padding:1.5rem 2.5rem;border-radius:18px;font-size:1.5rem;font-weight:800;z-index:60;box-shadow:0 12px 40px rgba(0,0,0,.25)';
+      document.body.appendChild(beep);
+      setTimeout(()=>beep.remove(),2500);
+      return;
+    }
+    liveSec--;
+  };
+  tick();
+  liveInt = setInterval(tick, 1000);
+}
+document.getElementById('livePrep').addEventListener('click',()=>{
+  startTimer(60, 'Prep phase · jot 4 P.P.F. notes', 'PREP — 1 min', 'var(--gold)');
+});
+document.getElementById('liveTalk2').addEventListener('click',()=>{
+  startTimer(120, 'Talk phase · target 2 min · cover Past, Present, Future', 'TALK — 2 min', 'var(--burgundy)');
+});
+
+document.getElementById('rubricSubmit').addEventListener('click',()=>{
+  if (Object.keys(grades).length<4){
+    rubricResult.innerHTML = `<div class="feedback tip">Pick a band for all four pillars first.</div>`;
+    return;
+  }
+  const avg = (grades.fc+grades.lr+grades.gra+grades.pro)/4;
+  const rounded = Math.round(avg*2)/2; // nearest 0.5
+  rubricResult.innerHTML = `<div class="card p-4 text-center">
+    <div class="text-xs uppercase tracking-widest text-stone-500">Estimated Speaking Band</div>
+    <div class="text-4xl font-bold" style="color:var(--burgundy);font-family:'Fraunces',serif">${rounded.toFixed(1)}</div>
+    <div class="mt-2 text-sm text-stone-700">Now identify your <strong>weakest pillar</strong> — that's tomorrow's drill.</div>
+  </div>`;
+  addXP(20,'Self-graded');
+});
+
+// ====== LIVE INTERVIEW SIMULATOR ======
+const ivBank = {
+  '1': [
+    "Where are you from?",
+    "Do you work or are you a student?",
+    "What do you usually do at the weekends?",
+    "Do you enjoy cooking? Why or why not?",
+    "How often do you read books?",
+    "What kind of music do you like?",
+    "Have you ever travelled abroad?",
+    "Do you prefer mornings or evenings?",
+  ],
+  '2': [
+    "Now I'd like you to talk about a topic. You'll have one minute to prepare. Then you should speak for one to two minutes. The topic is: Describe a memorable trip you took. You should say where you went, when you went, what you did there, and explain why it was memorable.",
+    "Describe a person who has had a strong influence on you. You should say who they are, how you know them, what they have done, and explain their influence on you.",
+    "Describe a skill you would like to learn. You should say what the skill is, why you want to learn it, how you plan to learn it, and explain how it will help you.",
+  ],
+  '3': [
+    "Why do you think people enjoy international travel?",
+    "How has the way people travel changed over the past few decades?",
+    "Some say tourism damages local cultures. Do you agree?",
+    "How might travel change in the future?",
+    "Do you think governments should regulate tourism?",
+    "Are there any disadvantages to over-tourism in certain destinations?",
+  ],
+};
+let ivQueue = [], ivIndex = 0;
+const ivQuestion = document.getElementById('ivQuestion');
+const ivTag = document.getElementById('ivTag');
+
+document.getElementById('ivStart').addEventListener('click',()=>{
+  const part = document.getElementById('ivPart').value;
+  ivQueue = [...ivBank[part]].sort(()=>Math.random()-0.5);
+  ivIndex = 0;
+  askIv();
+});
+document.getElementById('ivNext').addEventListener('click',()=>{
+  if (ivQueue.length===0) return;
+  ivIndex = (ivIndex+1) % ivQueue.length;
+  askIv();
+});
+document.getElementById('ivStop').addEventListener('click',()=>{
+  speechSynthesis.cancel();
+  ivTag.textContent = 'Interview ended.';
+  ivQuestion.textContent = 'Press Start to begin a new interview.';
+});
+function askIv(){
+  const part = document.getElementById('ivPart').value;
+  const q = ivQueue[ivIndex];
+  ivTag.textContent = `Part ${part} · Question ${ivIndex+1} of ${ivQueue.length}`;
+  ivQuestion.textContent = q;
+  speak(q, 0.92);
+}
+
+// ====== RECORDER ======
+let mediaRecorder, recChunks=[], recStream, recBlobUrl=null, recInt=null, recSec=0;
+const recStatus = document.getElementById('recStatus');
+const recTimer = document.getElementById('recTimer');
+const recPlayer = document.getElementById('recPlayer');
+function fmtSec(s){ return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'); }
+
+document.getElementById('recStart').addEventListener('click', async ()=>{
+  try{
+    recStream = await navigator.mediaDevices.getUserMedia({audio:true});
+    mediaRecorder = new MediaRecorder(recStream);
+    recChunks = [];
+    mediaRecorder.ondataavailable = e=>{ if (e.data.size>0) recChunks.push(e.data); };
+    mediaRecorder.onstop = ()=>{
+      const blob = new Blob(recChunks, {type:'audio/webm'});
+      if (recBlobUrl) URL.revokeObjectURL(recBlobUrl);
+      recBlobUrl = URL.createObjectURL(blob);
+      recPlayer.src = recBlobUrl;
+      recPlayer.style.display = 'block';
+      document.getElementById('recPlay').disabled = false;
+      document.getElementById('recDownload').disabled = false;
+      recStream.getTracks().forEach(t=>t.stop());
+      recStatus.innerHTML = `<span style="color:var(--teal)">✓ Saved.</span> Click ▶ Play to listen back.`;
+    };
+    mediaRecorder.start();
+    document.getElementById('recStart').disabled = true;
+    document.getElementById('recStop').disabled = false;
+    recStatus.innerHTML = `<span style="color:var(--burgundy)">● Recording…</span>`;
+    recSec = 0;
+    recInt = setInterval(()=>{ recSec++; recTimer.textContent = fmtSec(recSec); },1000);
+  }catch(err){
+    recStatus.innerHTML = `<span style="color:var(--burgundy)">✗ ${err.message}. Allow microphone access.</span>`;
+  }
+});
+document.getElementById('recStop').addEventListener('click',()=>{
+  if (mediaRecorder && mediaRecorder.state==='recording'){
+    mediaRecorder.stop();
+    document.getElementById('recStart').disabled = false;
+    document.getElementById('recStop').disabled = true;
+    if (recInt){ clearInterval(recInt); recInt=null; }
+  }
+});
+document.getElementById('recPlay').addEventListener('click',()=>{
+  if (recBlobUrl){ recPlayer.play(); }
+});
+document.getElementById('recDownload').addEventListener('click',()=>{
+  if (!recBlobUrl) return;
+  const a = document.createElement('a');
+  a.href = recBlobUrl;
+  a.download = 'ielts_speaking_'+new Date().toISOString().slice(0,16).replace(/:/g,'-')+'.webm';
+  a.click();
+});
+
+// ====== RAPID FIRE ======
+const rfBank = [
+  "Where do you live now?","Do you live in a house or an apartment?","What's your favourite room?","Tell me about your hometown.",
+  "What do you do?","Why did you choose this work or study?","What do you find most challenging about it?","What do you do in your free time?",
+  "Do you enjoy cooking?","What's your favourite meal?","Do you eat out often?","Have you ever cooked for friends?",
+  "Do you like reading?","What's the last book you enjoyed?","Did you read more as a child?","Do you prefer paper or e-books?",
+  "What kind of music do you like?","Do you play any instruments?","Has your taste in music changed?","Do you listen to music while studying?",
+  "Do you like travelling?","Where would you most like to visit?","Do you prefer travelling alone or with others?","What's your favourite season for travel?",
+];
+let rfQueue=[], rfI=0, rfInt=null, rfSec=30;
+document.getElementById('rfStart').addEventListener('click',()=>{
+  rfQueue = [...rfBank].sort(()=>Math.random()-0.5).slice(0,10);
+  rfI = 0;
+  rfNext();
+});
+document.getElementById('rfStop').addEventListener('click',()=>{
+  if (rfInt){ clearInterval(rfInt); rfInt=null; }
+  speechSynthesis.cancel();
+  document.getElementById('rfQuestion').textContent='Drill stopped.';
+});
+function rfNext(){
+  if (rfI>=rfQueue.length){
+    document.getElementById('rfQuestion').textContent='⏰ All 10 questions done — that\'s 5 minutes of fluency under pressure. Listen back if you recorded, then identify your weakest answer.';
+    document.getElementById('rfCount').textContent='10 / 10 ✅';
+    if (rfInt){ clearInterval(rfInt); rfInt=null; }
+    return;
+  }
+  const q = rfQueue[rfI];
+  document.getElementById('rfQuestion').textContent = q;
+  document.getElementById('rfCount').textContent = `${rfI+1} / 10`;
+  speak(q, 0.92);
+  rfI++;
+  rfSec = 30;
+  document.getElementById('rfTimer').textContent = '00:30';
+  document.getElementById('rfBar').style.width = '100%';
+  if (rfInt) clearInterval(rfInt);
+  rfInt = setInterval(()=>{
+    rfSec--;
+    document.getElementById('rfTimer').textContent = '00:'+String(Math.max(0,rfSec)).padStart(2,'0');
+    document.getElementById('rfBar').style.width = (rfSec/30*100)+'%';
+    if (rfSec<=0){ clearInterval(rfInt); rfNext(); }
+  },1000);
+}
+</script>
+<script>
+(function(){
+  document.addEventListener('contextmenu',function(e){e.preventDefault();return false});
+  document.addEventListener('dragstart',function(e){e.preventDefault();return false});
+  document.addEventListener('keydown',function(e){
+    var k=e.key.toLowerCase();
+    if(e.key==='F12'||(e.ctrlKey&&!e.shiftKey&&(k==='u'||k==='s'||k==='p'||k==='a'))||(e.ctrlKey&&e.shiftKey&&(k==='i'||k==='j'||k==='c'||k==='k'))){
+      e.preventDefault();e.stopPropagation();return false;
+    }
+  });
+  window.addEventListener('beforeprint',function(){document.body.style.display='none'});
+  window.addEventListener('afterprint',function(){document.body.style.display=''});
+})();
+</script></body>
+</html>

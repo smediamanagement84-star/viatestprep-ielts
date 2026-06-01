@@ -1,0 +1,510 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IELTS Cohesive Devices — The Weaver's Workshop â€” ViATestPrep</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#181a2c;--paper:#f7f4ed;--purple:#5b3b8a;--purple-d:#321e57;--rose:#d24d6a;--gold:#c9941b;--teal:#1c8073;--line:#dfd6c0;--soft:#ece2cf;--cream:#f5ecd6;}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif}
+  h1,h2,h3,h4{font-family:'Fraunces',serif;letter-spacing:-.01em}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px}
+  .badge{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600}
+  .btn{display:inline-flex;gap:.5rem;padding:.6rem 1rem;border-radius:12px;font-weight:600;transition:transform .08s}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--purple);color:#fff}
+  .btn-primary:hover{background:var(--purple-d)}
+  .btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{background:#f5ecd6}
+  .chip{padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+  .progress-bar{height:8px;background:#e6dec0;border-radius:999px;overflow:hidden}
+  .progress-fill{height:100%;background:linear-gradient(90deg,var(--purple),#8c5fc9);transition:width .4s}
+  .reveal{max-height:0;overflow:hidden;transition:max-height .5s ease}
+  .reveal.open{max-height:2000px}
+  .toolbar{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(8px);background:rgba(247,244,237,.85);border-bottom:1px solid var(--line)}
+  .nav-step{cursor:pointer}
+  .opt{cursor:pointer;border:1.5px solid var(--line);border-radius:12px;padding:.6rem .9rem;background:#fff;transition:all .12s;display:inline-flex;gap:.4rem;align-items:center}
+  .opt:hover{border-color:var(--purple);background:#f3eafe}
+  .opt.correct{border-color:var(--teal);background:#e6f4ee;color:var(--teal)}
+  .opt.wrong{border-color:var(--rose);background:#fde2e8;color:var(--rose);text-decoration:line-through}
+  .opt.disabled{pointer-events:none;opacity:.7}
+  .feedback{padding:.7rem 1rem;border-radius:12px;font-size:.92rem;line-height:1.5;border-left:4px solid}
+  .feedback.good{border-color:var(--teal);background:#eef9f3}
+  .feedback.bad{border-color:var(--rose);background:#fde2e8}
+  .feedback.tip{border-color:var(--gold);background:#fdf6e3}
+  .gameboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+  .qtype{cursor:pointer;transition:transform .15s, box-shadow .15s}
+  .qtype:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(91,59,138,.12)}
+  .marker-yellow{background:linear-gradient(transparent 60%, #fde68a 60%)}
+  .marker-pink{background:linear-gradient(transparent 60%, #fbcfe8 60%)}
+  .marker-green{background:linear-gradient(transparent 60%, #bbf7d0 60%)}
+  .gap{display:inline-block;min-width:120px;padding:.1rem .5rem;border-bottom:2px solid var(--purple);font-weight:700;color:var(--purple);background:#f3eafe;border-radius:6px;margin:0 2px}
+  .gap.filled{background:#eef9f3;border-color:var(--teal);color:var(--teal)}
+  .gap.wrong{background:#fde2e8;border-color:var(--rose);color:var(--rose)}
+  .timer-pill{font-family:'Fraunces',serif;font-weight:800}
+  .stamp{display:inline-block;border:2px dashed var(--rose);color:var(--rose);padding:.15rem .5rem;border-radius:6px;transform:rotate(-3deg);font-weight:800;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
+  .legend-dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:.35rem}
+  .essay-text{font-family:'Fraunces',serif;line-height:1.85;font-size:1.02rem}
+</style>
+<style>
+/* ===== ViATestPrep Protection ===== */
+html body,html body *{-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important}
+img,svg{-webkit-user-drag:none!important}
+@media print{body{display:none!important;visibility:hidden!important}}
+.vtp-wm{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9990;overflow:hidden}
+.vtp-wm::after{content:"ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential";position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-28deg);font-size:1.1rem;font-weight:800;color:rgba(91,42,134,0.05);white-space:nowrap;letter-spacing:.3em;pointer-events:none}
+.vtp-corner{position:fixed;bottom:14px;right:14px;z-index:9999;background:linear-gradient(135deg,#5b2a86,#3b0a64);color:#fff;padding:.3rem .8rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.05em;box-shadow:0 2px 14px rgba(91,42,134,.4);pointer-events:none;font-family:Inter,sans-serif}
+</style></head>
+<body>
+<div class="vtp-wm" aria-hidden="true"></div><div class="vtp-corner" aria-hidden="true">&#127891; ViATestPrep</div>
+
+<div class="toolbar">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-white" style="background:var(--purple);font-family:'Fraunces',serif">CD</div>
+      <div>
+        <div class="text-sm uppercase tracking-widest text-stone-500">IELTS Writing</div>
+        <div class="font-bold -mt-1">Cohesive Devices · The Weaver's Workshop</div>
+      </div>
+    </div>
+    <div class="hidden md:flex items-center gap-4 text-sm">
+      <span class="nav-step" data-jump="mission">① Mindset</span>
+      <span class="nav-step" data-jump="toolkit">② 6 Toolkits</span>
+      <span class="nav-step" data-jump="advanced">③ Advanced</span>
+      <span class="nav-step" data-jump="drills">④ Drills</span>
+      <span class="nav-step" data-jump="boss">⑤ Boss Essay</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="text-right hidden sm:block"><div class="text-[11px] uppercase tracking-widest text-stone-500">Weaver XP</div><div class="font-bold timer-pill" style="color:var(--purple)" id="xpDisplay">0 XP</div></div>
+      <div class="w-32 progress-bar"><div class="progress-fill" id="xpBar" style="width:0%"></div></div>
+    </div>
+  </div>
+</div>
+
+<main class="max-w-6xl mx-auto px-4 py-10">
+
+  <!-- HERO -->
+  <section id="mission" class="mb-12">
+    <div class="grid md:grid-cols-5 gap-6 items-center">
+      <div class="md:col-span-3">
+        <span class="chip" style="background:var(--soft);color:var(--purple)">Bonus Lesson · Cohesion</span>
+        <h1 class="text-4xl md:text-5xl mt-3 leading-tight">Beautiful sentences fail when the <span class="marker-yellow">glue is missing.</span></h1>
+        <p class="mt-4 text-stone-700 max-w-prose">Cohesion is 12.5% of your total Writing band. It's the <strong>glue</strong> that turns a list of ideas into an argument. The biggest Band 6 mistake? Mechanical "Firstly… Secondly… Thirdly…" linkers. Today you'll learn the linkers AND the advanced moves above them.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <button class="btn btn-primary" onclick="document.getElementById('toolkit').scrollIntoView({behavior:'smooth'})">▶ Open the toolkit</button>
+          <button class="btn btn-ghost" onclick="document.getElementById('boss').scrollIntoView({behavior:'smooth'})">Skip to Boss Essay</button>
+        </div>
+      </div>
+      <div class="md:col-span-2">
+        <div class="card p-5">
+          <div class="text-xs uppercase tracking-widest text-stone-500 mb-2">The Two Levels</div>
+          <div class="space-y-2">
+            <div class="p-3 rounded-xl" style="background:#fde2e8"><strong class="text-rose-700">Level 1</strong> · Linking words (Furthermore, However…). 95% of students stop here.</div>
+            <div class="p-3 rounded-xl" style="background:#eef9f3"><strong class="text-emerald-700">Level 2</strong> · Pronoun referencing · "this + summary noun" · synonym chains. <strong>This is where 7.5+ lives.</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 TOOLKITS -->
+  <section id="toolkit" class="mb-14">
+    <h2 class="text-3xl mb-2">② The 6 Linker Toolkits — by Function</h2>
+    <p class="text-stone-700 max-w-3xl">Don't memorise lists. Learn one or two from each <em>function</em>. Tap each toolkit.</p>
+    <div class="gameboard mt-4" id="toolkits"></div>
+  </section>
+
+  <!-- ADVANCED -->
+  <section id="advanced" class="mb-14">
+    <h2 class="text-3xl mb-2">③ Three Advanced Moves (Band 7.5+)</h2>
+    <p class="text-stone-700 max-w-3xl">These are what separate Band 7 from Band 7.5. The examiner won't see "Furthermore" — they'll see invisible glue.</p>
+
+    <div class="grid md:grid-cols-3 gap-4 mt-6">
+      <div class="card p-5">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Move 1</div>
+        <h3 class="text-xl mt-1">Pronoun Referencing</h3>
+        <p class="text-sm text-stone-700 mt-2">Use <em>it, they, this, these</em> to refer back. Avoid repeating the noun.</p>
+        <div class="mt-3 text-sm space-y-2">
+          <div class="p-2 rounded-lg" style="background:#fde2e8"><strong>❌</strong> Electric cars are popular. Electric cars reduce pollution.</div>
+          <div class="p-2 rounded-lg" style="background:#eef9f3"><strong>✅</strong> Electric cars are popular. <span class="marker-yellow">They</span> reduce pollution.</div>
+        </div>
+      </div>
+      <div class="card p-5">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Move 2</div>
+        <h3 class="text-xl mt-1">"This + Summary Noun"</h3>
+        <p class="text-sm text-stone-700 mt-2">Never leave "this" lonely. Add a noun that summarises the previous idea.</p>
+        <div class="mt-3 text-sm space-y-2">
+          <div class="p-2 rounded-lg" style="background:#fde2e8"><strong>❌</strong> Temperatures are rising. <em>This</em> is concerning.</div>
+          <div class="p-2 rounded-lg" style="background:#eef9f3"><strong>✅</strong> Temperatures are rising. <span class="marker-yellow">This trend</span> is concerning for scientists.</div>
+        </div>
+      </div>
+      <div class="card p-5">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Move 3</div>
+        <h3 class="text-xl mt-1">Synonym Chains</h3>
+        <p class="text-sm text-stone-700 mt-2">Replace repeated keywords with synonyms — links thematically AND boosts Lexical Resource.</p>
+        <div class="mt-3 text-sm space-y-2">
+          <div class="p-2 rounded-lg" style="background:#fde2e8"><strong>❌</strong> The problem is pollution. This problem is caused by traffic.</div>
+          <div class="p-2 rounded-lg" style="background:#eef9f3"><strong>✅</strong> The problem is pollution. <span class="marker-yellow">This environmental issue</span> is largely caused by heavy traffic.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- This+Noun drill -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#fdf6e3;color:var(--gold)">"This + Noun" drill</span>
+        <h3 class="text-xl">Pick the Right Summary Noun</h3>
+      </div>
+      <div class="space-y-3" id="thisDrill"></div>
+    </div>
+  </section>
+
+  <!-- DRILLS -->
+  <section id="drills" class="mb-14">
+    <h2 class="text-3xl mb-2">④ Live Drills</h2>
+
+    <!-- Function ID -->
+    <div class="card p-6 mt-4">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#f3eafe;color:var(--purple)">Drill A · Function ID</span>
+        <h3 class="text-xl">What's This Linker DOING?</h3>
+      </div>
+      <p class="text-sm text-stone-700">Click the function each linker performs. Knowing the function = picking the right linker every time.</p>
+      <div class="space-y-3 mt-3" id="funcDrill"></div>
+    </div>
+
+    <!-- Linker swap -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#fde2e8;color:var(--rose)">Drill B · Pick the Linker</span>
+        <h3 class="text-xl">Click the Best Connector for Each Gap</h3>
+      </div>
+      <div class="space-y-3 mt-3" id="linkDrill"></div>
+    </div>
+
+    <!-- Mechanical detector -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="chip" style="background:#fdf6e3;color:var(--gold)">Drill C · Mechanical Detector</span>
+        <h3 class="text-xl">Spot the Robotic Cohesion</h3>
+      </div>
+      <p class="text-sm text-stone-700">Two paragraphs. Same content. Click the one that sounds <em>natural</em> (Band 7+) — not mechanical (Band 6).</p>
+      <div class="grid md:grid-cols-2 gap-3 mt-3" id="mechDrill"></div>
+      <div id="mechFB" class="mt-3"></div>
+    </div>
+  </section>
+
+  <!-- BOSS ESSAY -->
+  <section id="boss" class="mb-14">
+    <div class="flex items-end justify-between mb-3">
+      <h2 class="text-3xl">⑤ Boss Essay — Fill 8 Cohesion Gaps</h2>
+      <span class="badge" style="background:var(--soft);color:var(--purple)">From the original masterclass · AI essay</span>
+    </div>
+    <p class="text-stone-700 max-w-3xl">A Band 8 essay with 8 cohesion gaps. Click each gap, pick the linker, get instant feedback explaining why.</p>
+
+    <div class="card p-6 mt-4">
+      <div class="essay-text" id="bossEssay"></div>
+      <div class="mt-5 flex flex-wrap gap-2 items-center">
+        <button class="btn btn-primary" id="bossSubmit">Submit & Score</button>
+        <button class="btn btn-ghost" id="bossReset">↺ Reset</button>
+        <span class="text-sm text-stone-600" id="bossScore">0/8 correct</span>
+      </div>
+      <div id="bossFB" class="mt-3"></div>
+    </div>
+  </section>
+
+  <!-- ACTION PLAN -->
+  <section class="mb-12">
+    <h2 class="text-3xl mb-3">5-Day Action Plan</h2>
+    <div class="grid md:grid-cols-5 gap-2 text-center text-xs">
+      <div class="p-3 rounded-xl card"><strong>Day 1</strong><div class="mt-1 text-stone-700">Highlight audit on your last essay</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 2</strong><div class="mt-1 text-stone-700">Master 2 contrast linkers + 2 cause linkers</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 3</strong><div class="mt-1 text-stone-700">Rewrite a paragraph with 3 "this + noun" links</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 4</strong><div class="mt-1 text-stone-700">Synonym-chain practice on 5 keywords</div></div>
+      <div class="p-3 rounded-xl card"><strong>Day 5</strong><div class="mt-1 text-stone-700">Full essay — flag every linker before submitting</div></div>
+    </div>
+  </section>
+
+  <footer class="border-t border-line pt-6 pb-12 text-sm text-stone-500 flex justify-between"><div>Cohesive Devices · Weaver's Workshop</div><div><span class="legend-dot" style="background:var(--purple)"></span>Strategy <span class="legend-dot" style="background:var(--gold)"></span>Tip <span class="legend-dot" style="background:var(--rose)"></span>Trap <span class="legend-dot" style="background:var(--teal)"></span>Correct</div><div style="text-align:center;font-size:.72rem;color:#aaa;margin-top:1.2rem;padding-bottom:.5rem">&copy; 2026 ViATestPrep &middot; All Rights Reserved &middot; Unauthorized reproduction prohibited</div></footer>
+</main>
+
+<script>
+const state = { xp:0, max:200 };
+function addXP(n,label){
+  state.xp = Math.min(state.max, state.xp+n);
+  document.getElementById('xpDisplay').textContent = state.xp+' XP';
+  document.getElementById('xpBar').style.width = (state.xp/state.max*100)+'%';
+}
+document.querySelectorAll('.nav-step').forEach(s=>s.addEventListener('click',()=>document.getElementById(s.dataset.jump)?.scrollIntoView({behavior:'smooth'})));
+
+// ====== TOOLKITS ======
+const tk = [
+  {n:1,name:"Add a Similar Idea",icon:"➕",color:"#f3eafe",accent:"var(--purple)",
+   words:["In addition","Furthermore","Moreover","Also","Additionally","What's more"],
+   example:"Governments should fund public health initiatives. <span class='marker-yellow'>Furthermore</span>, they ought to ensure schools educate children on healthy lifestyles.",
+   trap:"Don't start every sentence with one. Sprinkle, don't spam."},
+  {n:2,name:"Show Contrast",icon:"⚖",color:"#fde2e8",accent:"var(--rose)",
+   words:["However","On the other hand","In contrast","Nevertheless","Although","Even though","Whereas","Despite"],
+   example:"Some people see technology as beneficial. <span class='marker-yellow'>However</span>, others argue it leads to social isolation.",
+   trap:"'On the other hand' needs 'On one hand' earlier — or a clearly stated first view."},
+  {n:3,name:"Give an Example",icon:"💡",color:"#fdf6e3",accent:"var(--gold)",
+   words:["For example","For instance","To illustrate","Such as","Specifically","In particular","A case in point"],
+   example:"Many industries have been transformed by automation. <span class='marker-yellow'>For instance</span>, robots now perform complex manufacturing tasks.",
+   trap:"Don't use 'For example' twice in one paragraph. Vary it."},
+  {n:4,name:"Show Result / Consequence",icon:"➡",color:"#eef9f3",accent:"var(--teal)",
+   words:["Therefore","As a result","Consequently","Hence","Thus","For this reason","Accordingly"],
+   example:"Burning fossil fuels releases CO₂. <span class='marker-yellow'>As a result</span>, global temperatures have risen.",
+   trap:"'Hence' and 'Thus' are formal — don't sprinkle in conversational essays."},
+  {n:5,name:"Sequence Ideas",icon:"📋",color:"#f3eafe",accent:"var(--purple)",
+   words:["Firstly","Initially","To begin with","Next","Subsequently","Finally","Lastly"],
+   example:"<span class='marker-yellow'>Initially</span>, the raw materials are sorted. <span class='marker-yellow'>After this</span>, they are transported to the plant.",
+   trap:"<strong>Avoid the rigid 'Firstly… Secondly… Thirdly…' pattern</strong> in essays — it screams Band 6. Mix it up."},
+  {n:6,name:"Conclude",icon:"🏁",color:"#fde2e8",accent:"var(--rose)",
+   words:["In conclusion","To sum up","Overall","All in all","To conclude","In summary","Ultimately"],
+   example:"<span class='marker-yellow'>In conclusion</span>, while there are valid arguments on both sides, the benefits ultimately outweigh the drawbacks.",
+   trap:"'In conclusion' is fine but predictable. Mix with 'Overall' or 'Ultimately' for variety."},
+];
+const tkEl = document.getElementById('toolkits');
+tk.forEach(t=>{
+  const c = document.createElement('div');
+  c.className='card p-5 qtype';
+  c.style.background = `linear-gradient(180deg, ${t.color} 0%, #fff 70%)`;
+  c.innerHTML = `
+    <div class="flex items-start justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center text-xl" style="background:${t.accent};color:#fff">${t.icon}</div>
+        <div class="font-bold">${t.n}. ${t.name}</div>
+      </div>
+      <span class="text-xs text-stone-500">tap ↓</span>
+    </div>
+    <div class="reveal mt-3 text-sm">
+      <div class="text-xs uppercase tracking-widest text-stone-500">Words</div>
+      <div class="flex flex-wrap gap-1 mt-1">${t.words.map(w=>`<span class='badge' style='background:#fff;border:1px solid var(--line)'>${w}</span>`).join('')}</div>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--teal)">Example</div>
+      <p class="mt-1">${t.example}</p>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--rose)">Trap</div>
+      <p class="mt-1">${t.trap}</p>
+    </div>
+  `;
+  c.addEventListener('click',()=>{
+    const r=c.querySelector('.reveal');
+    const wasOpen=r.classList.contains('open');
+    r.classList.toggle('open');
+    if(!wasOpen) addXP(2,'Toolkit');
+  });
+  tkEl.appendChild(c);
+});
+
+// ====== "THIS + NOUN" DRILL ======
+const thisItems = [
+  {sent:"Many countries have introduced strict carbon-emission targets. <strong>This ____</strong> aims to slow climate change.", options:["policy","problem","invention","building"], a:"policy", why:"The previous sentence describes a government action — 'policy' summarises it precisely."},
+  {sent:"Studies show students who sleep eight hours perform better on tests. <strong>This ____</strong> has shaped new school timetables.", options:["finding","mistake","silence","decoration"], a:"finding", why:"A research result is best summarised as a 'finding'."},
+  {sent:"Several cities have banned single-use plastics. <strong>This ____</strong> has been welcomed by environmentalists.", options:["measure","creature","story","menu"], a:"measure", why:"A government action like a ban is a 'measure' (or 'step', 'initiative')."},
+  {sent:"Average global temperatures rose by 1.1°C between 1900 and 2020. <strong>This ____</strong> alarms climate scientists.", options:["trend","melody","recipe","colour"], a:"trend", why:"A change over time is a 'trend' (or 'shift', 'pattern')."},
+];
+const thEl = document.getElementById('thisDrill');
+thisItems.forEach((it,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML = `<div class="text-sm">${i+1}. ${it.sent}</div>
+    <div class="flex flex-wrap gap-2 mt-2">${it.options.map(o=>`<button class='opt this-opt' data-v='${o}'>${o}</button>`).join('')}</div>
+    <div class='fb mt-2'></div>`;
+  thEl.appendChild(wrap);
+  wrap.querySelectorAll('.this-opt').forEach(b=>b.addEventListener('click',()=>{
+    if (wrap.dataset.done) return;
+    wrap.dataset.done='1';
+    const ok = b.dataset.v===it.a;
+    if (ok) b.classList.add('correct'); else b.classList.add('wrong');
+    wrap.querySelectorAll('.this-opt').forEach(x=>{
+      if (x.dataset.v===it.a) x.classList.add('correct');
+      x.classList.add('disabled');
+    });
+    wrap.querySelector('.fb').innerHTML = `<div class='feedback ${ok?'good':'bad'}'>${ok?'✅':'❌'} <strong>${it.a}.</strong> ${it.why}</div>`;
+    addXP(ok?6:1,'This+noun');
+  }));
+});
+
+// ====== FUNCTION ID ======
+const funcs = [
+  {linker:"For instance", a:"Example", options:["Example","Contrast","Result","Sequence","Conclude"]},
+  {linker:"Nevertheless", a:"Contrast", options:["Add","Contrast","Result","Example","Sequence"]},
+  {linker:"Consequently", a:"Result", options:["Add","Result","Contrast","Example","Conclude"]},
+  {linker:"Moreover", a:"Add", options:["Add","Contrast","Example","Sequence","Result"]},
+  {linker:"To sum up", a:"Conclude", options:["Sequence","Conclude","Result","Add","Contrast"]},
+  {linker:"Subsequently", a:"Sequence", options:["Result","Sequence","Add","Conclude","Contrast"]},
+];
+const fdEl = document.getElementById('funcDrill');
+funcs.forEach((f,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML = `<div class="text-sm mono mb-2">${i+1}. <strong style="color:var(--purple)">${f.linker}</strong></div>
+    <div class="flex flex-wrap gap-2">${f.options.map(o=>`<button class='opt fn-opt' data-v='${o}'>${o}</button>`).join('')}</div>
+    <div class='fb mt-2'></div>`;
+  fdEl.appendChild(wrap);
+  wrap.querySelectorAll('.fn-opt').forEach(b=>b.addEventListener('click',()=>{
+    if (wrap.dataset.done) return;
+    wrap.dataset.done='1';
+    const ok = b.dataset.v===f.a;
+    if (ok) b.classList.add('correct'); else b.classList.add('wrong');
+    wrap.querySelectorAll('.fn-opt').forEach(x=>{
+      if (x.dataset.v===f.a) x.classList.add('correct');
+      x.classList.add('disabled');
+    });
+    wrap.querySelector('.fb').innerHTML = `<div class='feedback ${ok?'good':'bad'}'>${ok?'✅':'❌'} <strong>${f.linker}</strong> = ${f.a}.</div>`;
+    addXP(ok?4:1,'Function');
+  }));
+});
+
+// ====== PICK THE LINKER ======
+const lnks = [
+  {sent:"The plan was popular with parents. ____, teachers were strongly against it.", options:["Furthermore","However","For instance","Therefore"], a:"However"},
+  {sent:"Working from home reduces commute time. ____, it can also lower stress.", options:["In contrast","Furthermore","Therefore","For example"], a:"Furthermore"},
+  {sent:"The factory was forced to close. ____, hundreds lost their jobs.", options:["For instance","Although","As a result","On the other hand"], a:"As a result"},
+  {sent:"Many students struggle with maths. ____, a national survey found 40% below standard.", options:["However","To illustrate","On the contrary","In conclusion"], a:"To illustrate"},
+  {sent:"____, while both views have merit, the disadvantages outweigh the benefits.", options:["For example","To begin with","In conclusion","On the other hand"], a:"In conclusion"},
+];
+const lnEl = document.getElementById('linkDrill');
+lnks.forEach((it,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML = `<div class="text-sm mb-2">${i+1}. ${it.sent.replace('____','<span class="gap"></span>')}</div>
+    <div class="flex flex-wrap gap-2">${it.options.map(o=>`<button class='opt link-opt' data-v='${o}'>${o}</button>`).join('')}</div>
+    <div class='fb mt-2'></div>`;
+  lnEl.appendChild(wrap);
+  wrap.querySelectorAll('.link-opt').forEach(b=>b.addEventListener('click',()=>{
+    if (wrap.dataset.done) return;
+    wrap.dataset.done='1';
+    const ok = b.dataset.v===it.a;
+    const gap = wrap.querySelector('.gap');
+    gap.textContent = b.dataset.v;
+    gap.classList.add(ok?'filled':'wrong');
+    if (ok) b.classList.add('correct'); else b.classList.add('wrong');
+    wrap.querySelectorAll('.link-opt').forEach(x=>{
+      if (x.dataset.v===it.a) x.classList.add('correct');
+      x.classList.add('disabled');
+    });
+    wrap.querySelector('.fb').innerHTML = `<div class='feedback ${ok?'good':'bad'}'>${ok?'✅':'❌'} ${ok?'Right linker for the logic.':'Try again — what relationship are the two clauses in?'}</div>`;
+    addXP(ok?5:1,'Link');
+  }));
+});
+
+// ====== MECHANICAL DETECTOR ======
+const mechBox = document.getElementById('mechDrill');
+const mechFB = document.getElementById('mechFB');
+const mechs = [
+  {label:"Paragraph A",text:"Firstly, smartphones are very useful. Secondly, smartphones save time. Thirdly, smartphones connect people. Fourthly, smartphones provide information. Finally, smartphones are essential.",mechanical:true},
+  {label:"Paragraph B",text:"Smartphones have become indispensable. Beyond their obvious convenience, they save people significant time on everyday tasks — from banking to navigation. They also keep us connected, allowing us to share moments with family across the globe in seconds. For all these reasons, life without one is increasingly difficult to imagine.",mechanical:false},
+];
+let mechDone=false;
+mechs.forEach(m=>{
+  const c=document.createElement('div');
+  c.className='card p-4 cursor-pointer';
+  c.innerHTML = `<div class="text-xs uppercase tracking-widest text-stone-500">${m.label}</div><p class="text-sm mt-2">${m.text}</p>`;
+  c.addEventListener('click',()=>{
+    if (mechDone) return;
+    mechDone=true;
+    if (m.mechanical){
+      c.style.borderColor='var(--rose)';c.style.background='#fde2e8';
+      mechFB.innerHTML = `<div class='feedback bad'>❌ This is the mechanical one. 'Firstly… Secondly… Thirdly… Fourthly… Finally…' caps you at Band 6 for Cohesion. The other paragraph uses pronoun referencing ('they'), summary nouns ('these reasons'), and varied structure.</div>`;
+      addXP(2,'Mech learning');
+    } else {
+      c.style.borderColor='var(--teal)';c.style.background='#eef9f3';
+      mechFB.innerHTML = `<div class='feedback good'>✅ Right. Notice: 'Beyond their obvious convenience…', 'They also…', 'For all these reasons…' — invisible glue. That's Band 7+ cohesion.</div>`;
+      addXP(15,'Mech mastered');
+    }
+  });
+  mechBox.appendChild(c);
+});
+
+// ====== BOSS ESSAY (8 gaps) ======
+const bossEssay = document.getElementById('bossEssay');
+const gaps = [
+  {a:"In fact",alts:["Indeed"],ctx:"Strengthens / confirms previous statement (AI is real)."},
+  {a:"However",alts:["Yet"],ctx:"Sets up contrast — 'powerful BUT challenging'."},
+  {a:"For instance",alts:["For example"],ctx:"Introducing an example (medicine field)."},
+  {a:"As a result",alts:["Consequently","Therefore"],ctx:"Cause → effect (AI diagnoses → earlier treatments)."},
+  {a:"Furthermore",alts:["Moreover","In addition"],ctx:"Adding another positive application."},
+  {a:"On the other hand",alts:["However","Nevertheless"],ctx:"Pivot from positives to negatives."},
+  {a:"Specifically",alts:["In particular"],ctx:"Narrowing down the type of jobs at risk."},
+  {a:"In conclusion",alts:["To sum up","Ultimately","Overall"],ctx:"Summing up the essay."},
+];
+const essayHTML = `
+<p>Artificial intelligence is no longer the stuff of science fiction; <span class="gap" data-i="0"></span>, it is a powerful force actively reshaping our world. <span class="gap" data-i="1"></span>, its rapid development presents a dual reality, one filled with promise and peril.</p>
+<p><strong>The Promise.</strong> The positive applications of AI are staggering. <span class="gap" data-i="2"></span>, in the field of medicine, AI algorithms can now diagnose diseases from medical scans with accuracy surpassing human experts. <span class="gap" data-i="3"></span>, this could lead to earlier diagnoses and more effective treatments. <span class="gap" data-i="4"></span>, in scientific research, AI can analyse colossal datasets in days that would take humans years.</p>
+<p><strong>The Peril.</strong> <span class="gap" data-i="5"></span>, AI presents formidable challenges. The most pressing is mass job displacement. <span class="gap" data-i="6"></span>, jobs that are routine and data-driven are at greatest risk of becoming obsolete.</p>
+<p><span class="gap" data-i="7"></span>, the trajectory of AI is not predetermined; the choices we make today — as individuals, corporations, and a global community — will define our relationship with this transformative technology for generations to come.</p>
+`;
+bossEssay.innerHTML = essayHTML;
+const allOptions = ["In fact","However","For instance","As a result","Furthermore","On the other hand","Specifically","In conclusion","Therefore","To sum up","Moreover","For example"];
+let selectedGap = null;
+const optMenu = document.createElement('div');
+optMenu.style.cssText = 'position:fixed;background:#fff;border:1px solid var(--line);border-radius:12px;padding:.5rem;display:none;z-index:50;box-shadow:0 12px 30px rgba(0,0,0,.15);max-width:300px';
+optMenu.innerHTML = allOptions.map(o=>`<button class="btn btn-ghost text-xs m-1" data-v="${o}">${o}</button>`).join('');
+document.body.appendChild(optMenu);
+
+bossEssay.querySelectorAll('.gap').forEach(g=>{
+  g.addEventListener('click',e=>{
+    e.stopPropagation();
+    selectedGap = g;
+    const r = g.getBoundingClientRect();
+    optMenu.style.display='block';
+    optMenu.style.left = Math.min(window.innerWidth-320, r.left) + 'px';
+    optMenu.style.top = (r.bottom + window.scrollY + 6) + 'px';
+  });
+});
+document.addEventListener('click',(e)=>{
+  if (!optMenu.contains(e.target) && !e.target.classList.contains('gap')) optMenu.style.display='none';
+});
+optMenu.addEventListener('click',e=>{
+  const b = e.target.closest('button');
+  if (!b || !selectedGap) return;
+  selectedGap.textContent = b.dataset.v;
+  selectedGap.dataset.val = b.dataset.v;
+  selectedGap.classList.add('filled');
+  optMenu.style.display='none';
+});
+
+document.getElementById('bossSubmit').addEventListener('click',()=>{
+  let score=0;
+  bossEssay.querySelectorAll('.gap').forEach(g=>{
+    const i = +g.dataset.i;
+    const need = gaps[i];
+    const got = g.dataset.val||'';
+    const ok = got===need.a || (need.alts||[]).includes(got);
+    g.classList.remove('filled','wrong');
+    g.classList.add(ok?'filled':'wrong');
+    if (ok) score++;
+  });
+  document.getElementById('bossScore').textContent = `${score}/8 correct`;
+  let msg='';
+  gaps.forEach((g,i)=>{ msg += `<div class='text-xs mt-1'><strong>Gap ${i+1}:</strong> ${g.a}${g.alts?.length?' / '+g.alts.join(' / '):''} — <em>${g.ctx}</em></div>`;});
+  document.getElementById('bossFB').innerHTML = `<div class='feedback ${score>=6?'good':score>=4?'tip':'bad'}'><strong>Score: ${score}/8.</strong> ${score>=6?'Strong cohesion control.':score>=4?'Solid base — review the misses below.':'Re-read the toolkit then retry.'}</div>${msg}`;
+  addXP(score*5,'Boss essay');
+});
+document.getElementById('bossReset').addEventListener('click',()=>{
+  bossEssay.querySelectorAll('.gap').forEach(g=>{
+    g.textContent=''; g.dataset.val=''; g.classList.remove('filled','wrong');
+  });
+  document.getElementById('bossScore').textContent='0/8 correct';
+  document.getElementById('bossFB').innerHTML='';
+});
+</script>
+<script>
+(function(){
+  document.addEventListener('contextmenu',function(e){e.preventDefault();return false});
+  document.addEventListener('dragstart',function(e){e.preventDefault();return false});
+  document.addEventListener('keydown',function(e){
+    var k=e.key.toLowerCase();
+    if(e.key==='F12'||(e.ctrlKey&&!e.shiftKey&&(k==='u'||k==='s'||k==='p'||k==='a'))||(e.ctrlKey&&e.shiftKey&&(k==='i'||k==='j'||k==='c'||k==='k'))){
+      e.preventDefault();e.stopPropagation();return false;
+    }
+  });
+  window.addEventListener('beforeprint',function(){document.body.style.display='none'});
+  window.addEventListener('afterprint',function(){document.body.style.display=''});
+})();
+</script></body>
+</html>

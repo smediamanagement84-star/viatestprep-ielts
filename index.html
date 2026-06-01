@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ViATestPrep — IELTS Learning Hub</title>
+<meta name="description" content="ViATestPrep's complete IELTS preparation suite. Master Reading, Listening, Writing, Speaking, Grammar, and Vocabulary with interactive lessons designed for Band 7+."/>
+<meta name="copyright" content="© 2026 ViATestPrep. All Rights Reserved."/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum:#5b2a86;--plum-d:#3b0a64;--plum-light:#f3ecff;
+    --gold:#c8932a;--gold-soft:#fdf6e3;
+    --teal:#0d8a7a;--rose:#e8456b;
+    --ink:#0f172a;--paper:#fdfcf7;--line:#e6dfce;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--ink);color:#fff;font-family:'Inter',sans-serif;min-height:100vh}
+  h1,h2,h3{font-family:'Fraunces',serif}
+
+  /* ---- HERO ---- */
+  .hero{
+    min-height:100vh;
+    background:radial-gradient(ellipse 80% 60% at 50% -10%, rgba(91,42,134,.55) 0%, transparent 70%),
+               radial-gradient(ellipse 50% 40% at 80% 80%, rgba(13,138,122,.25) 0%, transparent 60%),
+               var(--ink);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:4rem 1.5rem 6rem;text-align:center;position:relative;overflow:hidden;
+  }
+  .hero::before{
+    content:'';position:absolute;inset:0;
+    background:repeating-linear-gradient(-30deg,transparent,transparent 120px,rgba(255,255,255,.012) 120px,rgba(255,255,255,.012) 121px);
+  }
+  .logo-mark{
+    width:72px;height:72px;border-radius:20px;
+    background:linear-gradient(135deg,var(--plum),var(--plum-d));
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif;font-size:1.9rem;font-weight:800;color:#fff;
+    box-shadow:0 0 0 6px rgba(91,42,134,.25),0 20px 60px rgba(91,42,134,.5);
+    margin:0 auto 1.5rem;position:relative;z-index:1;
+  }
+  .brand-name{font-size:1rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.4rem;position:relative;z-index:1}
+  .hero h1{font-size:clamp(2.4rem,6vw,4rem);line-height:1.12;position:relative;z-index:1;max-width:720px;background:linear-gradient(135deg,#fff 40%,rgba(200,147,42,.8));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .hero p{margin-top:1.2rem;color:rgba(255,255,255,.6);font-size:1.05rem;max-width:540px;line-height:1.65;position:relative;z-index:1}
+  .hero-badges{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1.5rem;position:relative;z-index:1}
+  .badge{padding:.3rem .8rem;border-radius:999px;font-size:.75rem;font-weight:600;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:rgba(255,255,255,.75)}
+  .scroll-hint{position:absolute;bottom:1.8rem;left:50%;transform:translateX(-50%);z-index:1;color:rgba(255,255,255,.3);font-size:.8rem;display:flex;flex-direction:column;align-items:center;gap:.4rem;animation:bob 2s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+
+  /* ---- MODULES GRID ---- */
+  .modules{background:var(--paper);color:var(--ink);padding:5rem 1.5rem 6rem}
+  .modules-inner{max-width:1100px;margin:0 auto}
+  .section-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--plum);margin-bottom:.6rem}
+  .modules h2{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:.5rem}
+  .modules > .modules-inner > p{color:#64748b;max-width:520px;line-height:1.6;margin-bottom:3rem}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.2rem}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:20px;
+    padding:1.5rem;text-decoration:none;color:var(--ink);
+    display:block;position:relative;overflow:hidden;
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(91,42,134,.13)}
+  .card::before{content:'';position:absolute;inset:0;border-radius:20px;opacity:0;transition:opacity .18s;background:linear-gradient(135deg,var(--plum-light),#fff)}
+  .card:hover::before{opacity:1}
+  .card-inner{position:relative;z-index:1}
+  .num{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#94a3b8;margin-bottom:.6rem}
+  .icon{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:.9rem}
+  .card h3{font-size:1.12rem;margin-bottom:.4rem;line-height:1.3}
+  .card p{font-size:.85rem;color:#64748b;line-height:1.55}
+  .go-arrow{display:inline-flex;align-items:center;gap:.4rem;margin-top:.9rem;font-size:.8rem;font-weight:600;color:var(--plum)}
+
+  /* ---- FOOTER ---- */
+  .footer{background:var(--ink);color:rgba(255,255,255,.4);text-align:center;padding:2.5rem 1rem;font-size:.8rem;line-height:1.8}
+  .footer strong{color:rgba(255,255,255,.7)}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="logo-mark">V</div>
+  <div class="brand-name">ViATestPrep</div>
+  <h1>Your Complete IELTS Preparation Hub</h1>
+  <p>10 interactive modules covering every IELTS skill — Reading, Listening, Writing, Speaking, Grammar, and Vocabulary. Built for Band 7+ results.</p>
+  <div class="hero-badges">
+    <span class="badge">🎯 Band 7+ Track</span>
+    <span class="badge">⚡ Interactive Drills</span>
+    <span class="badge">🏆 XP & Progress Tracking</span>
+    <span class="badge">📖 All 4 Skills</span>
+  </div>
+  <div class="scroll-hint">
+    <span>Explore modules</span>
+    <span>↓</span>
+  </div>
+</section>
+
+<!-- MODULES -->
+<section class="modules">
+  <div class="modules-inner">
+    <div class="section-label">Course Modules</div>
+    <h2>10 Lessons. Band 7+ Ready.</h2>
+    <p>Click any module to begin. Each lesson includes strategy guides, live drills, and a boss-fight mock test.</p>
+
+    <div class="grid">
+
+      <a href="01_IELTS_Reading_Detective_Academy.html" class="card">
+        <div class="card-inner">
+          <div class="num">Module 01 · Reading</div>
+          <div class="icon" style="background:#f3ecff">🕵️</div>
+          <h3>Detective Academy</h3>
+          <p>Master all 14 reading question types with case-file strategies, skim/scan drills, and a timed boss fight.</p>
+          <div class="go-arrow">Start lesson →</div>
+        </div>
+      </a>
+
+      <a href="02_IELTS_Listening_Sound_Hunter.html" class="card">
+        <div class="card-inner">
+          <div class="num">Module 02 · Listening</div>
+          <div class="icon" style="background:#fdf0f3">🎧</div>
+          <h3>Sound Hunter</h3>
+          <p>Section-by-section strategies, spelling traps, distraction techniques, and prediction drills.</p>
+          <div class="go-arrow">Start lesson →</div>
+        </div>
+      </a>
+
+      <a href="03_IELTS_Writing_Architects_Blueprint.html" class="card">
+        <div class="card-inner">
+          <div class="num">Module 03 · Writing</div>
+          <div class="icon" style="background:#eef9f5">✍️</div>
+          <h3>Architect's Blueprint</h3>
+          <p>Task 1 and Task 2 structure blueprints, band-descriptor scoring, and live essay planning tools.</p>
+          <div class="go-arrow">Start lesson →</div>
+        </div>
+      </a>
+
+      <a href="04_IELTS_Speaking_Confident_Performer.html" class="card">
+        <div class="card-inner">
+          <div class="num">Module 04 · Speaking</div>
+          <div class="icon" style="background:#fdf6e3">🎤</div>
+          <h3>Confident Performer</h3>
+          <p>Part 1, 2 & 3 frameworks, fluency drills, filler reduction techniques, and pronunciation tips.</p>
+          <div class="go-arrow">Start lesson →</div>
+        </div>
+      </a>
+
+      <a href="05_IELTS_Cohesive_Devices_Weaver.html" class="card">
+        <div class="card-inner">
+          <div class="num">Module 05 · Grammar</div>
+          <div class="icon" style="background:#f3ecff">🧵</div>
+          <h3>Cohesive Devices Weaver</h3>
+          <p>All cohesive device categories with drag-and-place drills and before/after paragraph rewrites.</p>
+          <div class="go-arrow">Start lesson →</div>
+        </div>
+      </a>
+
+      <a href="06_IELTS_Tenses_Conditionals.html" class="card">
+        <div class="card-inner">
+          <div class="num">Module 06 · Grammar</div>
+          <div class="icon" style="background:#fdf0f3">⏱️</div>
+          <h3>Tenses &amp; Conditionals</h3>
+          <p>Perfect tense control, conditional structures, and timed transformation drills for writing accuracy.</p>
+          <div class="go-arrow">Start lesson →</div>
+        </div>
+      </a>
+
+      <a href="07_IELTS_Punctuation_Signals.html" class="card">
+        <div class="card-inner">
+          <div class="num">Module 07 · Grammar</div>
+          <div class="icon" style="background:#eef9f5">✏️</div>
+          <h3>Punctuation Signals</h3>
+          <p>Commas, semicolons, colons and apostrophes — with interactive fix-the-error exercises.</p>
+          <div class="go-arrow">Start lesson →</div>
+        </div>
+      </a>
+
+      <a href="08_IELTS_Voice_Speech.html" class="card">
+        <div class="card-inner">
+          <div class="num">Module 08 · Grammar</div>
+          <div class="icon" style="background:#fdf6e3">🔄</div>
+          <h3>Active &amp; Passive Voice</h3>
+          <p>When to use passive in academic writing, transformation drills, and writing task integration.</p>
+          <div class="go-arrow">Start lesson →</div>
+        </div>
+      </a>
+
+      <a href="09_IELTS_Sentence_Mastery.html" class="card">
+        <div class="card-inner">
+          <div class="num">Module 09 · Grammar</div>
+          <div class="icon" style="background:#f3ecff">🏗️</div>
+          <h3>Sentence Mastery</h3>
+          <p>Simple, compound and complex sentence structures with clause-building and combining exercises.</p>
+          <div class="go-arrow">Start lesson →</div>
+        </div>
+      </a>
+
+      <a href="10_IELTS_Vocabulary_Accelerator.html" class="card">
+        <div class="card-inner">
+          <div class="num">Module 10 · Vocabulary</div>
+          <div class="icon" style="background:#fdf0f3">🚀</div>
+          <h3>Vocabulary Accelerator</h3>
+          <p>Collocations, topic word banks, paraphrase drills, and band-7 synonym upgrades.</p>
+          <div class="go-arrow">Start lesson →</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <strong>ViATestPrep</strong><br>
+  © 2026 ViATestPrep · All Rights Reserved<br>
+  These materials are the exclusive intellectual property of ViATestPrep.<br>
+  Unauthorized reproduction, distribution, or sharing is strictly prohibited.
+</footer>
+
+</body>
+</html>

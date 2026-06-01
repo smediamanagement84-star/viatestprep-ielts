@@ -1,0 +1,335 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IELTS Sentence Mastery — Simple to Compound-Complex â€” ViATestPrep</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0d1422;--paper:#f6f1ea;--green:#1d6e3d;--green-d:#0d4a26;--rose:#c43e57;--gold:#bf9326;--blue:#235994;--line:#e0d5bf;--soft:#d6e8de}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif}
+  h1,h2,h3,h4{font-family:'Fraunces',serif}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px}
+  .badge{display:inline-flex;gap:.4rem;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600}
+  .btn{display:inline-flex;gap:.5rem;padding:.6rem 1rem;border-radius:12px;font-weight:600}
+  .btn-primary{background:var(--green);color:#fff}
+  .btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{background:#d6e8de}
+  .chip{padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+  .progress-bar{height:8px;background:#dceae6;border-radius:999px;overflow:hidden}
+  .progress-fill{height:100%;background:linear-gradient(90deg,var(--green),#3aa66a)}
+  .reveal{max-height:0;overflow:hidden;transition:max-height .5s}
+  .reveal.open{max-height:2400px}
+  .opt{cursor:pointer;border:1.5px solid var(--line);border-radius:12px;padding:.7rem .9rem;background:#fff;transition:all .12s;font-size:.9rem}
+  .opt:hover{border-color:var(--green);background:#d6e8de}
+  .opt.correct{border-color:var(--green);background:#e6f4ee;color:var(--green-d)}
+  .opt.wrong{border-color:var(--rose);background:#fde2e8;text-decoration:line-through}
+  .opt.disabled{pointer-events:none;opacity:.7}
+  .feedback{padding:.7rem 1rem;border-radius:12px;font-size:.92rem;line-height:1.5;border-left:4px solid}
+  .feedback.good{border-color:var(--green);background:#eef9f3}
+  .feedback.bad{border-color:var(--rose);background:#fde2e8}
+  .feedback.tip{border-color:var(--gold);background:#fdf6e3}
+  .toolbar{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(8px);background:rgba(246,241,234,.85);border-bottom:1px solid var(--line)}
+  .nav-step{cursor:pointer}
+  .gameboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+  .qtype{cursor:pointer;transition:transform .15s,box-shadow .15s}
+  .qtype:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(29,110,61,.12)}
+  .clause-ind{padding:.1rem .3rem;border-radius:4px;background:#d6e8de;color:var(--green-d);font-weight:700}
+  .clause-dep{padding:.1rem .3rem;border-radius:4px;background:#fdf6e3;color:var(--gold);font-weight:700}
+  .conj{padding:.1rem .3rem;border-radius:4px;background:#fde2e8;color:var(--rose);font-weight:700}
+  .timer-pill{font-family:'Fraunces',serif;font-weight:800}
+  .marker-yellow{background:linear-gradient(transparent 60%, #fde68a 60%)}
+</style>
+<style>
+/* ===== ViATestPrep Protection ===== */
+html body,html body *{-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important}
+img,svg{-webkit-user-drag:none!important}
+@media print{body{display:none!important;visibility:hidden!important}}
+.vtp-wm{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9990;overflow:hidden}
+.vtp-wm::after{content:"ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential";position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-28deg);font-size:1.1rem;font-weight:800;color:rgba(91,42,134,0.05);white-space:nowrap;letter-spacing:.3em;pointer-events:none}
+.vtp-corner{position:fixed;bottom:14px;right:14px;z-index:9999;background:linear-gradient(135deg,#5b2a86,#3b0a64);color:#fff;padding:.3rem .8rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.05em;box-shadow:0 2px 14px rgba(91,42,134,.4);pointer-events:none;font-family:Inter,sans-serif}
+</style></head>
+<body>
+<div class="vtp-wm" aria-hidden="true"></div><div class="vtp-corner" aria-hidden="true">&#127891; ViATestPrep</div>
+
+<div class="toolbar">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-white" style="background:var(--green);font-family:'Fraunces',serif">SM</div>
+      <div><div class="text-sm uppercase tracking-widest text-stone-500">IELTS Grammar</div><div class="font-bold -mt-1">Sentence Mastery · Simple to Compound-Complex</div></div>
+    </div>
+    <div class="hidden md:flex items-center gap-4 text-sm">
+      <span class="nav-step" data-jump="clauses">① Clauses</span>
+      <span class="nav-step" data-jump="types">② 4 Sentence Types</span>
+      <span class="nav-step" data-jump="connectives">③ Connectives</span>
+      <span class="nav-step" data-jump="drills">④ Drills</span>
+      <span class="nav-step" data-jump="boss">⑤ Boss Rewrite</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="text-right hidden sm:block"><div class="text-[11px] uppercase tracking-widest text-stone-500">Sentence XP</div><div class="font-bold timer-pill" style="color:var(--green)" id="xpDisplay">0 XP</div></div>
+      <div class="w-32 progress-bar"><div class="progress-fill" id="xpBar" style="width:0%"></div></div>
+    </div>
+  </div>
+</div>
+
+<main class="max-w-6xl mx-auto px-4 py-10">
+
+  <section class="mb-10">
+    <span class="chip" style="background:var(--soft);color:var(--green-d)">Bonus · Sentence Structure</span>
+    <h1 class="text-4xl md:text-5xl mt-3">A Band 6 essay is full of <span class="marker-yellow">simple sentences.</span> A Band 7+ mixes all four types.</h1>
+    <p class="mt-3 text-stone-700 max-w-3xl">Sentence variety = Grammatical Range. Today you'll master 4 sentence types, the punctuation that goes with each, and the connectives that join clauses cleanly.</p>
+  </section>
+
+  <!-- CLAUSES -->
+  <section id="clauses" class="mb-14">
+    <h2 class="text-3xl mb-2">① Clauses — The Building Blocks</h2>
+    <div class="grid md:grid-cols-2 gap-4 mt-4">
+      <div class="card p-5">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Independent Clause</div>
+        <h3 class="text-xl mt-1">A complete thought</h3>
+        <p class="text-sm text-stone-700 mt-2">Has a subject + verb. Can stand alone as a sentence.</p>
+        <div class="p-3 mt-3 rounded-lg" style="background:#d6e8de"><span class="clause-ind">The government invested in renewable energy.</span></div>
+      </div>
+      <div class="card p-5">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Dependent Clause</div>
+        <h3 class="text-xl mt-1">An incomplete thought</h3>
+        <p class="text-sm text-stone-700 mt-2">Begins with a subordinator (because, although, when, if…) or a relative pronoun (who, which, that). Cannot stand alone.</p>
+        <div class="p-3 mt-3 rounded-lg" style="background:#fdf6e3"><span class="clause-dep">because the country wanted to reduce its carbon footprint.</span></div>
+      </div>
+    </div>
+    <div class="card p-5 mt-4">
+      <div class="text-xs uppercase tracking-widest text-stone-500">Combined</div>
+      <p class="text-sm mt-2"><span class="clause-ind">The government invested in renewable energy</span> <span class="clause-dep">because the country wanted to reduce its carbon footprint.</span></p>
+    </div>
+  </section>
+
+  <!-- 4 TYPES -->
+  <section id="types" class="mb-14">
+    <h2 class="text-3xl mb-2">② The 4 Sentence Types</h2>
+    <p class="text-stone-700 max-w-3xl">A Band 7+ essay has all four. Tap each card.</p>
+    <div class="gameboard mt-4" id="typeCards"></div>
+
+    <div class="card p-6 mt-5">
+      <div class="flex items-center gap-3 mb-3"><span class="chip" style="background:var(--soft);color:var(--green-d)">Identify drill</span><h3 class="text-xl">What type is each sentence?</h3></div>
+      <div class="space-y-3" id="idDrill"></div>
+    </div>
+  </section>
+
+  <!-- CONNECTIVES -->
+  <section id="connectives" class="mb-14">
+    <h2 class="text-3xl mb-2">③ Connectives by Function</h2>
+    <p class="text-stone-700 max-w-3xl">The right connector for the right relationship. Tap each.</p>
+    <div class="gameboard mt-4" id="connCards"></div>
+  </section>
+
+  <!-- DRILLS -->
+  <section id="drills" class="mb-14">
+    <h2 class="text-3xl mb-2">④ Combine the Sentences</h2>
+    <p class="text-stone-700 max-w-3xl">Each pair starts as two simple sentences. Pick the strongest combined version.</p>
+    <div class="space-y-4 mt-4" id="combineDrill"></div>
+  </section>
+
+  <!-- BOSS -->
+  <section id="boss" class="mb-14">
+    <h2 class="text-3xl mb-2">⑤ Boss Rewrite — The Ocean Paragraph</h2>
+    <p class="text-stone-700 max-w-3xl">Same task as your masterclass: rewrite a stack of simple sentences using sentence variety. Click each option.</p>
+    <div class="card p-6 mt-4">
+      <div class="text-xs uppercase tracking-widest text-stone-500">Original (10 simple sentences)</div>
+      <p class="text-sm mt-2 italic text-stone-600">"Oceans are a huge body of salt water. They cover about 71 percent of the Earth's surface. The ocean contains most of the water on our planet. The water is salty. Many kinds of animals live in the ocean. The blue whale is the largest animal on Earth. Tiny organisms called plankton also live in the water. Life exists in all parts of the ocean. Plants live near the surface. They require sunlight to survive."</p>
+      <div class="mt-4">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Choose the strongest rewrite of the FIRST four sentences</div>
+        <div class="space-y-2 mt-2" id="b1"></div><div class="fb mt-2" id="b1fb"></div>
+      </div>
+      <div class="mt-4">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Choose the strongest rewrite of the NEXT three sentences</div>
+        <div class="space-y-2 mt-2" id="b2"></div><div class="fb mt-2" id="b2fb"></div>
+      </div>
+      <div class="mt-4">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Choose the strongest rewrite of the LAST three sentences</div>
+        <div class="space-y-2 mt-2" id="b3"></div><div class="fb mt-2" id="b3fb"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+const state={xp:0,max:200};function addXP(n){state.xp=Math.min(state.max,state.xp+n);document.getElementById('xpDisplay').textContent=state.xp+' XP';document.getElementById('xpBar').style.width=(state.xp/state.max*100)+'%';}
+document.querySelectorAll('.nav-step').forEach(s=>s.addEventListener('click',()=>document.getElementById(s.dataset.jump)?.scrollIntoView({behavior:'smooth'})));
+
+// 4 TYPES
+const types = [
+  {n:1,name:"Simple Sentence",color:"#d6e8de",accent:"var(--green)",
+   def:"One independent clause. Subject + verb.",
+   ex:"<span class='clause-ind'>The IELTS exam requires thorough preparation.</span>",
+   when:"Use for emphasis or to break up a paragraph of complex sentences."},
+  {n:2,name:"Compound Sentence",color:"#fdf6e3",accent:"var(--gold)",
+   def:"Two independent clauses joined by a FANBOYS conjunction (For, And, Nor, But, Or, Yet, So) — comma BEFORE FANBOYS.",
+   ex:"<span class='clause-ind'>The reading section is challenging</span><span class='conj'>, but</span> <span class='clause-ind'>the listening section is even more difficult.</span>",
+   when:"Two equal-weight ideas, often contrasting or sequential."},
+  {n:3,name:"Complex Sentence",color:"#fde2e8",accent:"var(--rose)",
+   def:"One independent + one (or more) dependent clause(s). Joined by subordinators (although, because, when, if…) or relative pronouns (who, which, that).",
+   ex:"<span class='clause-dep'>Although many students fear the writing section</span>, <span class='clause-ind'>it can be mastered with proper techniques.</span>",
+   when:"Show cause/effect, contrast, time, or condition."},
+  {n:4,name:"Compound-Complex",color:"#dde6f5",accent:"var(--blue)",
+   def:"Two+ independent clauses + at least one dependent clause. Highest grammatical range.",
+   ex:"<span class='clause-dep'>When candidates understand the assessment criteria</span>, <span class='clause-ind'>they can target their preparation more effectively</span><span class='conj'>, and</span> <span class='clause-ind'>they usually achieve higher scores.</span>",
+   when:"Use sparingly. One or two of these in your essay = clear Band 7+ signal."},
+];
+const tEl = document.getElementById('typeCards');
+types.forEach(t=>{
+  const c=document.createElement('div');
+  c.className='card p-5 qtype';
+  c.style.background = `linear-gradient(180deg, ${t.color} 0%, #fff 70%)`;
+  c.innerHTML = `<div class="flex items-center gap-2"><div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-white" style="background:${t.accent};font-family:'Fraunces',serif">${t.n}</div><div class="font-bold">${t.name}</div></div>
+    <div class="reveal mt-3 text-sm">
+      <div class="text-xs uppercase tracking-widest text-stone-500">Definition</div><p class="mt-1">${t.def}</p>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3">Example</div><p class="mt-1">${t.ex}</p>
+      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3">When to use</div><p class="mt-1">${t.when}</p>
+    </div><div class="text-xs text-stone-500 mt-2">tap ↓</div>`;
+  c.addEventListener('click',()=>{const r=c.querySelector('.reveal');const wO=r.classList.contains('open');r.classList.toggle('open');if(!wO)addXP(2);});
+  tEl.appendChild(c);
+});
+
+// ID DRILL
+const idItems = [
+  {s:"The IELTS exam tests four language skills.", a:"Simple"},
+  {s:"Many students fear the writing section, but it can be mastered with practice.", a:"Compound"},
+  {s:"Although technology has made life easier, it has also created new problems.", a:"Complex"},
+  {s:"When students study consistently, they perform better, and they feel more confident.", a:"Compound-Complex"},
+  {s:"The chart shows trends, and these trends reveal a major shift.", a:"Compound"},
+];
+const idEl = document.getElementById('idDrill');
+const idOpts = ["Simple","Compound","Complex","Compound-Complex"];
+idItems.forEach((it,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML=`<div class="text-sm mb-2">${i+1}. "${it.s}"</div><div class="flex flex-wrap gap-2">${idOpts.map(o=>`<button class='opt id-opt' data-v='${o}'>${o}</button>`).join('')}</div><div class='fb mt-2'></div>`;
+  idEl.appendChild(wrap);
+  wrap.querySelectorAll('.id-opt').forEach(b=>b.addEventListener('click',()=>{
+    if (wrap.dataset.done) return; wrap.dataset.done='1';
+    const ok = b.dataset.v===it.a;
+    if (ok) b.classList.add('correct'); else b.classList.add('wrong');
+    wrap.querySelectorAll('.id-opt').forEach(x=>{if (x.dataset.v===it.a) x.classList.add('correct'); x.classList.add('disabled');});
+    wrap.querySelector('.fb').innerHTML=`<div class='feedback ${ok?'good':'bad'}'>${ok?'✅':'❌'} <strong>${it.a}.</strong></div>`;
+    addXP(ok?5:1);
+  }));
+});
+
+// CONNECTIVES
+const conn = [
+  {fn:"Addition",icon:"➕",words:["Furthermore","Moreover","In addition","Additionally"],ex:"The recycling programme is effective. Moreover, it has created jobs."},
+  {fn:"Contrast",icon:"⚖",words:["However","Nevertheless","On the other hand","Conversely"],ex:"The journey was tiring. The scenery, however, was breathtaking."},
+  {fn:"Cause / Effect",icon:"➡",words:["Therefore","Consequently","As a result","Thus"],ex:"He missed his alarm; consequently, he was late."},
+  {fn:"Example",icon:"💡",words:["For instance","For example","Such as","Namely"],ex:"Many countries invest in renewables, for instance, solar and wind."},
+  {fn:"Sequence",icon:"📋",words:["Firstly","Subsequently","Next","Finally"],ex:"The campaign launched. Subsequently, sales rose by 20%."},
+  {fn:"Concession",icon:"🛑",words:["Although","Despite","In spite of","While"],ex:"Despite feeling tired, she went to the gym."},
+];
+const cEl = document.getElementById('connCards');
+conn.forEach(c=>{
+  const card=document.createElement('div');
+  card.className='card p-5';
+  card.innerHTML = `<div class="flex items-center gap-2"><div class="w-10 h-10 rounded-lg flex items-center justify-center text-xl" style="background:var(--green);color:#fff">${c.icon}</div><div class="font-bold">${c.fn}</div></div>
+    <div class="flex flex-wrap gap-1 mt-3">${c.words.map(w=>`<span class='badge' style='background:#fff;border:1px solid var(--line)'>${w}</span>`).join('')}</div>
+    <div class="feedback tip mt-3 text-sm">${c.ex}</div>`;
+  cEl.appendChild(card);
+});
+
+// COMBINE DRILL
+const combine = [
+  {a:"Two simple sentences: 'IELTS preparation is hard. Most students need 6 months.'", options:[
+    {t:"IELTS preparation is hard most students need 6 months.",c:false,w:"Run-on. Missing punctuation."},
+    {t:"IELTS preparation is hard, and most students need 6 months.",c:false,w:"Compound — okay, but no real logical link, just additive."},
+    {t:"Because IELTS preparation is demanding, most students need around six months to be ready.",c:true,w:"Complex sentence with cause/effect connector. Best variety + clearest logic."},
+  ]},
+  {a:"Two simple sentences: 'Many students fear writing. They underestimate the structure rules.'", options:[
+    {t:"Many students fear writing, they underestimate the structure rules.",c:false,w:"Comma splice. Two independent clauses joined by just a comma."},
+    {t:"Many students fear writing because they underestimate how much structure matters.",c:true,w:"Complex sentence with 'because' — cause/effect logic explicit."},
+    {t:"Many students fear writing. They underestimate the structure rules.",c:false,w:"Two simple sentences — fine, but no upgrade in grammar range."},
+  ]},
+];
+const cdEl = document.getElementById('combineDrill');
+combine.forEach((it,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-4';
+  wrap.innerHTML = `<div class="text-xs uppercase tracking-widest text-stone-500">Pair ${i+1}</div><div class="text-sm mt-1 italic">${it.a}</div><div class="space-y-2 mt-3"></div><div class="fb mt-2"></div>`;
+  cdEl.appendChild(wrap);
+  const box = wrap.querySelector('div.space-y-2');
+  it.options.forEach(o=>{
+    const div=document.createElement('div');
+    div.className='opt';
+    div.innerHTML=`<div class="text-sm">${o.t}</div>`;
+    div.addEventListener('click',()=>{
+      if (wrap.dataset.done) return;
+      if (o.c){
+        div.classList.add('correct');
+        box.querySelectorAll('.opt').forEach(x=>{if(!x.classList.contains('correct')) x.classList.add('disabled')});
+        wrap.querySelector('.fb').innerHTML = `<div class='feedback good'>✅ ${o.w}</div>`;
+        wrap.dataset.done='1';addXP(8);
+      } else {
+        div.classList.add('wrong');
+        wrap.querySelector('.fb').innerHTML = `<div class='feedback bad'>❌ ${o.w}</div>`;addXP(1);
+      }
+    });
+    box.appendChild(div);
+  });
+});
+
+// BOSS
+const bosses = [
+  {id:'b1',options:[
+    {t:"Oceans are huge salt-water bodies covering about 71% of the Earth's surface, and they contain most of the planet's water, which is salty.",c:true,w:"Compound-complex with relative clause ('which is salty')."},
+    {t:"Oceans are huge. They cover 71% of the Earth. They have most of the water. The water is salty.",c:false,w:"Four simple sentences = Band 6 grammar range."},
+    {t:"Oceans cover 71% but they are salty.",c:false,w:"Loses information and uses an illogical 'but'."},
+  ]},
+  {id:'b2',options:[
+    {t:"The ocean is home to many animals, the blue whale and plankton live there.",c:false,w:"Comma splice between two independent clauses."},
+    {t:"A wide variety of life inhabits the ocean, ranging from the blue whale — Earth's largest animal — to microscopic plankton.",c:true,w:"Complex sentence using 'ranging from… to…' to subordinate the examples."},
+    {t:"Animals live in the ocean. The blue whale is largest. Plankton are tiny.",c:false,w:"Three simples in a row — no variety."},
+  ]},
+  {id:'b3',options:[
+    {t:"Life exists everywhere in the ocean, although plants are confined to the surface because they need sunlight to survive.",c:true,w:"Complex sentence chaining concession ('although') with cause ('because')."},
+    {t:"Life is everywhere. Plants need sunlight. They live near the surface.",c:false,w:"Three simples — no logical connection visible."},
+    {t:"Life is everywhere in the ocean and plants live near the surface and need sunlight.",c:false,w:"'And… and…' overuse, no contrast or cause shown."},
+  ]},
+];
+bosses.forEach(b=>{
+  const box = document.getElementById(b.id);
+  const fb = document.getElementById(b.id+'fb');
+  b.options.forEach(o=>{
+    const d=document.createElement('div');
+    d.className='opt';
+    d.innerHTML=`<div class="text-sm">${o.t}</div>`;
+    d.addEventListener('click',()=>{
+      if (box.dataset.done) return;
+      if (o.c){
+        d.classList.add('correct');
+        box.querySelectorAll('.opt').forEach(x=>{if(!x.classList.contains('correct'))x.classList.add('disabled')});
+        fb.innerHTML = `<div class='feedback good'>✅ ${o.w}</div>`;
+        box.dataset.done='1';addXP(10);
+      } else {
+        d.classList.add('wrong');
+        fb.innerHTML = `<div class='feedback bad'>❌ ${o.w}</div>`;addXP(1);
+      }
+    });
+    box.appendChild(d);
+  });
+});
+</script>
+<script>
+(function(){
+  document.addEventListener('contextmenu',function(e){e.preventDefault();return false});
+  document.addEventListener('dragstart',function(e){e.preventDefault();return false});
+  document.addEventListener('keydown',function(e){
+    var k=e.key.toLowerCase();
+    if(e.key==='F12'||(e.ctrlKey&&!e.shiftKey&&(k==='u'||k==='s'||k==='p'||k==='a'))||(e.ctrlKey&&e.shiftKey&&(k==='i'||k==='j'||k==='c'||k==='k'))){
+      e.preventDefault();e.stopPropagation();return false;
+    }
+  });
+  window.addEventListener('beforeprint',function(){document.body.style.display='none'});
+  window.addEventListener('afterprint',function(){document.body.style.display=''});
+})();
+</script></body>
+</html>

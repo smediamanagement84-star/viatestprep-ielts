@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IELTS Voice & Speech — Active/Passive · Direct/Reported â€” ViATestPrep</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0f1a2a;--paper:#f4f6fa;--blue:#1d3a73;--blue-d:#0e2050;--rose:#c8395a;--gold:#bf942b;--teal:#157f60;--line:#d2dae5;--soft:#dde6f5}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif}
+  h1,h2,h3,h4{font-family:'Fraunces',serif;letter-spacing:-.01em}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px}
+  .badge{display:inline-flex;gap:.4rem;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600}
+  .btn{display:inline-flex;gap:.5rem;padding:.6rem 1rem;border-radius:12px;font-weight:600;transition:transform .08s}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--blue);color:#fff}
+  .btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{background:#dde6f5}
+  .chip{padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+  .progress-bar{height:8px;background:#dceae6;border-radius:999px;overflow:hidden}
+  .progress-fill{height:100%;background:linear-gradient(90deg,var(--blue),#3463bf)}
+  .reveal{max-height:0;overflow:hidden;transition:max-height .5s ease}
+  .reveal.open{max-height:2400px}
+  .opt{cursor:pointer;border:1.5px solid var(--line);border-radius:12px;padding:.7rem .9rem;background:#fff;transition:all .12s;font-size:.9rem}
+  .opt:hover{border-color:var(--blue);background:#dde6f5}
+  .opt.correct{border-color:var(--teal);background:#e6f4ee;color:var(--teal)}
+  .opt.wrong{border-color:var(--rose);background:#fde2e8;text-decoration:line-through}
+  .opt.disabled{pointer-events:none;opacity:.7}
+  .feedback{padding:.7rem 1rem;border-radius:12px;font-size:.92rem;line-height:1.5;border-left:4px solid}
+  .feedback.good{border-color:var(--teal);background:#eef9f3}
+  .feedback.bad{border-color:var(--rose);background:#fde2e8}
+  .feedback.tip{border-color:var(--gold);background:#fdf6e3}
+  .toolbar{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(8px);background:rgba(244,246,250,.85);border-bottom:1px solid var(--line)}
+  .nav-step{cursor:pointer}
+  table.tense-tbl{border-collapse:collapse;width:100%;font-size:.85rem}
+  table.tense-tbl th,table.tense-tbl td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}
+  table.tense-tbl th{background:#dde6f5;font-weight:700}
+  .arrow{display:inline-block;color:var(--blue);font-weight:800;margin:0 .3rem}
+  .timer-pill{font-family:'Fraunces',serif;font-weight:800}
+  .marker-yellow{background:linear-gradient(transparent 60%, #fde68a 60%)}
+  .marker-pink{background:linear-gradient(transparent 60%, #fbcfe8 60%)}
+  .legend-dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:.35rem}
+</style>
+<style>
+/* ===== ViATestPrep Protection ===== */
+html body,html body *{-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important}
+img,svg{-webkit-user-drag:none!important}
+@media print{body{display:none!important;visibility:hidden!important}}
+.vtp-wm{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9990;overflow:hidden}
+.vtp-wm::after{content:"ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential";position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-28deg);font-size:1.1rem;font-weight:800;color:rgba(91,42,134,0.05);white-space:nowrap;letter-spacing:.3em;pointer-events:none}
+.vtp-corner{position:fixed;bottom:14px;right:14px;z-index:9999;background:linear-gradient(135deg,#5b2a86,#3b0a64);color:#fff;padding:.3rem .8rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.05em;box-shadow:0 2px 14px rgba(91,42,134,.4);pointer-events:none;font-family:Inter,sans-serif}
+</style></head>
+<body>
+<div class="vtp-wm" aria-hidden="true"></div><div class="vtp-corner" aria-hidden="true">&#127891; ViATestPrep</div>
+
+<div class="toolbar">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-white" style="background:var(--blue);font-family:'Fraunces',serif">VS</div>
+      <div><div class="text-sm uppercase tracking-widest text-stone-500">IELTS Grammar</div><div class="font-bold -mt-1">Voice & Speech · Active/Passive · Direct/Reported</div></div>
+    </div>
+    <div class="hidden md:flex items-center gap-4 text-sm">
+      <span class="nav-step" data-jump="voice">① Voice</span>
+      <span class="nav-step" data-jump="speech">② Speech</span>
+      <span class="nav-step" data-jump="backshift">③ Backshift</span>
+      <span class="nav-step" data-jump="usage">④ IELTS Usage</span>
+      <span class="nav-step" data-jump="boss">⑤ Boss</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="text-right hidden sm:block"><div class="text-[11px] uppercase tracking-widest text-stone-500">Grammar XP</div><div class="font-bold timer-pill" style="color:var(--blue)" id="xpDisplay">0 XP</div></div>
+      <div class="w-32 progress-bar"><div class="progress-fill" id="xpBar" style="width:0%"></div></div>
+    </div>
+  </div>
+</div>
+
+<main class="max-w-6xl mx-auto px-4 py-10">
+
+  <section class="mb-10">
+    <span class="chip" style="background:var(--soft);color:var(--blue)">Bonus · Voice & Speech</span>
+    <h1 class="text-4xl md:text-5xl mt-3">Two grammar moves that separate <span class="marker-yellow">Band 6 from Band 7+</span></h1>
+    <p class="mt-3 text-stone-700 max-w-3xl">Active vs Passive Voice. Direct vs Reported Speech. Both are tested across all four IELTS skills — most prominently in Writing Task 1 (process descriptions) and Speaking Part 2 (storytelling).</p>
+  </section>
+
+  <!-- VOICE -->
+  <section id="voice" class="mb-14">
+    <h2 class="text-3xl mb-2">① Active vs Passive Voice</h2>
+    <p class="text-stone-700 max-w-3xl">In <strong>active</strong>, the subject performs the action. In <strong>passive</strong>, the subject receives it. Use both — that's range.</p>
+
+    <div class="grid md:grid-cols-2 gap-4 mt-4">
+      <div class="card p-5">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Active</div>
+        <div class="text-lg mt-1 mono">Subject + Verb + Object</div>
+        <p class="text-sm text-stone-700 mt-2">Direct, clear, forceful. Default for Speaking and most of Writing Task 2.</p>
+        <div class="p-3 mt-3 rounded-lg" style="background:#dde6f5">The chef <span class="marker-yellow">prepares</span> the meal.</div>
+      </div>
+      <div class="card p-5">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Passive</div>
+        <div class="text-lg mt-1 mono">Object + be (tense) + past participle (+ by + agent)</div>
+        <p class="text-sm text-stone-700 mt-2">Formal, academic. Use when the action matters more than the doer.</p>
+        <div class="p-3 mt-3 rounded-lg" style="background:#fdf6e3">The meal <span class="marker-yellow">is prepared</span> by the chef.</div>
+      </div>
+    </div>
+
+    <div class="card p-6 mt-5">
+      <div class="text-xs uppercase tracking-widest text-stone-500">When to switch to PASSIVE</div>
+      <ul class="text-sm mt-2 space-y-1 list-disc list-inside text-stone-700">
+        <li>Writing Task 1 process diagrams: "The materials <em>are sorted</em>." (Doer doesn't matter.)</li>
+        <li>Reporting data objectively: "An increase <em>was observed</em> in 2018."</li>
+        <li>Formal tone: "It <em>is believed</em> that…" instead of "I believe that…"</li>
+        <li>Hiding the doer when unknown or irrelevant.</li>
+      </ul>
+    </div>
+
+    <!-- Voice drill -->
+    <div class="card p-6 mt-5">
+      <div class="flex items-center gap-3 mb-3"><span class="chip" style="background:var(--soft);color:var(--blue)">Voice drill</span><h3 class="text-xl">Convert Active → Passive</h3></div>
+      <div class="space-y-3" id="voiceDrill"></div>
+    </div>
+  </section>
+
+  <!-- SPEECH -->
+  <section id="speech" class="mb-14">
+    <h2 class="text-3xl mb-2">② Direct vs Reported Speech</h2>
+    <p class="text-stone-700 max-w-3xl">Direct = exact words in quotes. Reported = paraphrasing what was said. Reported is what you'll use most in IELTS — Speaking Part 2 stories, Writing Task 2 ("Some people argue…").</p>
+
+    <div class="grid md:grid-cols-2 gap-4 mt-4">
+      <div class="card p-5">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Direct</div>
+        <p class="text-sm text-stone-700 mt-2">Exact words in quotation marks.</p>
+        <div class="p-3 mt-3 rounded-lg" style="background:#dde6f5">She said, <span class="marker-yellow">"I will be there by 8 PM."</span></div>
+      </div>
+      <div class="card p-5">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Reported</div>
+        <p class="text-sm text-stone-700 mt-2">Paraphrased — tense backshifts, pronouns and times shift.</p>
+        <div class="p-3 mt-3 rounded-lg" style="background:#fdf6e3">She said that <span class="marker-yellow">she would be there by 8 PM.</span></div>
+      </div>
+    </div>
+
+    <div class="card p-6 mt-5">
+      <div class="text-xs uppercase tracking-widest text-stone-500">3 things change when you go from Direct → Reported</div>
+      <div class="grid md:grid-cols-3 gap-3 mt-3 text-sm">
+        <div class="p-3 rounded-lg" style="background:#dde6f5"><strong>1. Tense backshifts</strong> one step into the past (see table below).</div>
+        <div class="p-3 rounded-lg" style="background:#fdf6e3"><strong>2. Pronouns shift</strong>: "I" → "he/she". "We" → "they".</div>
+        <div class="p-3 rounded-lg" style="background:#eef9f3"><strong>3. Time/place markers shift</strong>: "today" → "that day". "tomorrow" → "the next day". "here" → "there".</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACKSHIFT TABLE -->
+  <section id="backshift" class="mb-14">
+    <h2 class="text-3xl mb-2">③ The Tense Backshift Reference</h2>
+    <p class="text-stone-700 max-w-3xl">Memorise this table. It's the single most useful page for reported speech.</p>
+    <div class="card p-4 mt-4 overflow-auto">
+      <table class="tense-tbl">
+        <thead><tr><th>Direct</th><th>→</th><th>Reported</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td>Present Simple</td><td>→</td><td>Past Simple</td><td>"I work" → "He said he worked"</td></tr>
+          <tr><td>Present Continuous</td><td>→</td><td>Past Continuous</td><td>"I am reading" → "She said she was reading"</td></tr>
+          <tr><td>Past Simple</td><td>→</td><td>Past Perfect</td><td>"We lived" → "They said they had lived"</td></tr>
+          <tr><td>Present Perfect</td><td>→</td><td>Past Perfect</td><td>"I have been" → "He said he had been"</td></tr>
+          <tr><td>Past Continuous</td><td>→</td><td>Past Perfect Continuous</td><td>"I was walking" → "He said he had been walking"</td></tr>
+          <tr><td>Past Perfect</td><td>→</td><td>Past Perfect (no change)</td><td>"I had eaten" → "She said she had eaten"</td></tr>
+          <tr><td>will</td><td>→</td><td>would</td><td>"I will be there" → "She said she would be there"</td></tr>
+          <tr><td>can</td><td>→</td><td>could</td><td>"I can swim" → "He said he could swim"</td></tr>
+          <tr><td>may</td><td>→</td><td>might</td><td>"I may be late" → "She said she might be late"</td></tr>
+          <tr><td>must</td><td>→</td><td>had to</td><td>"You must finish" → "He said I had to finish"</td></tr>
+          <tr><td>should / could / might / would / ought to</td><td>→</td><td>(no change)</td><td>"You should see a doctor" → "She said I should see a doctor"</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="feedback tip mt-4"><strong>Backshift NOT needed when:</strong> reporting verb is in present ("She SAYS…"), the statement is a universal truth, or the situation is still currently true.</div>
+
+    <!-- Speech drill -->
+    <div class="card p-6 mt-5">
+      <div class="flex items-center gap-3 mb-3"><span class="chip" style="background:#fdf6e3;color:var(--gold)">Speech drill</span><h3 class="text-xl">Convert Direct → Reported</h3></div>
+      <div class="space-y-3" id="speechDrill"></div>
+    </div>
+  </section>
+
+  <!-- USAGE BY TASK -->
+  <section id="usage" class="mb-14">
+    <h2 class="text-3xl mb-2">④ Where to Use Each in IELTS</h2>
+    <div class="grid md:grid-cols-2 gap-4 mt-4" id="usageGrid"></div>
+  </section>
+
+  <!-- BOSS QUIZ -->
+  <section id="boss" class="mb-14">
+    <h2 class="text-3xl mb-2">⑤ Mastery Quiz — 10 Mixed</h2>
+    <div class="card p-6 mt-4">
+      <div class="space-y-4" id="bossQs"></div>
+      <div class="flex justify-between items-center mt-4">
+        <button class="btn btn-primary" id="bossSubmit">Submit & Score</button>
+        <span class="text-sm" id="bossScore">0/10</span>
+      </div>
+      <div id="bossFB" class="mt-3"></div>
+    </div>
+  </section>
+</main>
+
+<script>
+const state={xp:0,max:200};function addXP(n){state.xp=Math.min(state.max,state.xp+n);document.getElementById('xpDisplay').textContent=state.xp+' XP';document.getElementById('xpBar').style.width=(state.xp/state.max*100)+'%';}
+document.querySelectorAll('.nav-step').forEach(s=>s.addEventListener('click',()=>document.getElementById(s.dataset.jump)?.scrollIntoView({behavior:'smooth'})));
+
+// VOICE DRILL
+const voice = [
+  {a:"The government has implemented new policies.", options:["New policies have been implemented by the government.","New policies are implemented by the government.","New policies were implemented by the government."], correct:"New policies have been implemented by the government.", why:"Present Perfect active → Present Perfect passive: 'has implemented' → 'has been implemented'."},
+  {a:"The company is developing innovative technology.", options:["Innovative technology was developed by the company.","Innovative technology is being developed by the company.","Innovative technology has been developed by the company."], correct:"Innovative technology is being developed by the company.", why:"Present Continuous active → Present Continuous passive: 'is being + past participle'."},
+  {a:"A famous architect designed this iconic building.", options:["This iconic building is designed by a famous architect.","This iconic building was designed by a famous architect.","This iconic building has been designed by a famous architect."], correct:"This iconic building was designed by a famous architect.", why:"Past Simple active → Past Simple passive: 'was/were + past participle'."},
+];
+const vEl = document.getElementById('voiceDrill');
+voice.forEach((it,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML=`<div class="text-sm mb-2"><strong>Active:</strong> ${it.a}</div><div class="space-y-2">${it.options.map(o=>`<div class='opt v-opt' data-v="${o}">${o}</div>`).join('')}</div><div class='fb mt-2'></div>`;
+  vEl.appendChild(wrap);
+  wrap.querySelectorAll('.v-opt').forEach(b=>b.addEventListener('click',()=>{
+    if (wrap.dataset.done) return; wrap.dataset.done='1';
+    const ok = b.dataset.v===it.correct;
+    if (ok) b.classList.add('correct'); else b.classList.add('wrong');
+    wrap.querySelectorAll('.v-opt').forEach(x=>{if (x.dataset.v===it.correct) x.classList.add('correct'); x.classList.add('disabled');});
+    wrap.querySelector('.fb').innerHTML=`<div class='feedback ${ok?'good':'bad'}'>${ok?'✅':'❌'} ${it.why}</div>`;
+    addXP(ok?6:1);
+  }));
+});
+
+// SPEECH DRILL
+const speech = [
+  {a:'The lecturer said, "You must submit your assignments by the end of the week."', options:["The lecturer said that we must submit our assignments by the end of the week.","The lecturer said that we had to submit our assignments by the end of the week.","The lecturer said that we should submit our assignments by the end of the week."], correct:"The lecturer said that we had to submit our assignments by the end of the week.", why:"'must' → 'had to' in reported speech (obligation)."},
+  {a:'The student remarked, "I am finding the listening test quite challenging."', options:["The student remarked that he was finding the listening test quite challenging.","The student remarked that he is finding the listening test quite challenging.","The student remarked that he had found the listening test quite challenging."], correct:"The student remarked that he was finding the listening test quite challenging.", why:"Present Continuous → Past Continuous: 'am finding' → 'was finding'."},
+  {a:'She asked her friend, "Have you finished reading the book?"', options:["She asked her friend if she had finished reading the book.","She asked her friend if she has finished reading the book.","She asked her friend that she had finished reading the book."], correct:"She asked her friend if she had finished reading the book.", why:"Yes/No question → 'if' + Past Perfect (Present Perfect backshifts)."},
+];
+const sEl = document.getElementById('speechDrill');
+speech.forEach((it,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML=`<div class="text-sm mb-2"><strong>Direct:</strong> ${it.a}</div><div class="space-y-2">${it.options.map(o=>`<div class='opt s-opt' data-v="${o}">${o}</div>`).join('')}</div><div class='fb mt-2'></div>`;
+  sEl.appendChild(wrap);
+  wrap.querySelectorAll('.s-opt').forEach(b=>b.addEventListener('click',()=>{
+    if (wrap.dataset.done) return; wrap.dataset.done='1';
+    const ok = b.dataset.v===it.correct;
+    if (ok) b.classList.add('correct'); else b.classList.add('wrong');
+    wrap.querySelectorAll('.s-opt').forEach(x=>{if (x.dataset.v===it.correct) x.classList.add('correct'); x.classList.add('disabled');});
+    wrap.querySelector('.fb').innerHTML=`<div class='feedback ${ok?'good':'bad'}'>${ok?'✅':'❌'} ${it.why}</div>`;
+    addXP(ok?6:1);
+  }));
+});
+
+// USAGE GRID
+const usage = [
+  {task:"Writing Task 1 (Academic)", voice:"PASSIVE", speech:"Reported", note:"Process descriptions: 'The samples are heated.' Data: 'An increase was recorded.'"},
+  {task:"Writing Task 1 (General)", voice:"Active (formal: passive)", speech:"Mixed", note:"Informal letter = active. Formal letter = some passive: 'I am writing to inquire…'"},
+  {task:"Writing Task 2 Essay", voice:"Mix of both", speech:"Reported", note:"'It is argued that…' (passive for academic tone). 'Many believe that…' (reported for opinions)."},
+  {task:"Speaking Part 2 (Storytelling)", voice:"Active mostly", speech:"Reported", note:"'My friend told me that…' shows grammar range. Direct speech for dramatic effect."},
+  {task:"Speaking Part 3", voice:"Active", speech:"Reported", note:"'Some people argue that…' to introduce others' views; balances your own opinion."},
+  {task:"Reading & Listening", voice:"Recognise both", speech:"Recognise both", note:"Questions paraphrase by switching active↔passive and direct↔reported. Spotting this = matching points."},
+];
+const uEl = document.getElementById('usageGrid');
+usage.forEach(u=>{
+  const c=document.createElement('div');
+  c.className='card p-4';
+  c.innerHTML = `<div class="font-bold">${u.task}</div>
+    <div class="flex gap-2 mt-2"><span class="badge" style="background:var(--soft);color:var(--blue)">Voice: ${u.voice}</span><span class="badge" style="background:#fdf6e3;color:var(--gold)">Speech: ${u.speech}</span></div>
+    <p class="text-sm text-stone-700 mt-2">${u.note}</p>`;
+  uEl.appendChild(c);
+});
+
+// BOSS
+const boss = [
+  {q:"Convert: 'The committee will announce the results tomorrow.'", options:["The results will be announced by the committee tomorrow.","The results are announced by the committee tomorrow.","The results have been announced tomorrow."], a:"The results will be announced by the committee tomorrow.", why:"Future Simple active → 'will be + past participle'."},
+  {q:"Convert: 'Researchers are studying climate change.'", options:["Climate change is studied by researchers.","Climate change is being studied by researchers.","Climate change has been studied by researchers."], a:"Climate change is being studied by researchers.", why:"Present Continuous active → 'is/are being + past participle'."},
+  {q:"Convert: He said, 'I have lost my wallet.'", options:["He said he has lost his wallet.","He said he had lost his wallet.","He said he lost his wallet."], a:"He said he had lost his wallet.", why:"Present Perfect → Past Perfect."},
+  {q:"Convert: She told me, 'I will see you tomorrow.'", options:["She told me she will see me the next day.","She told me she would see me the next day.","She told me she would see me tomorrow."], a:"She told me she would see me the next day.", why:"'will'→'would' AND 'tomorrow'→'the next day'."},
+  {q:"Which is most appropriate for Task 1 process diagram?", options:["The factory makes the products.","The products are made in the factory.","The products were made in the factory."], a:"The products are made in the factory.", why:"Process descriptions use Present Simple Passive — focus on action, not doer."},
+  {q:"Which sounds most academic for Task 2?", options:["I think globalization is good.","Globalization is good, in my opinion.","It is widely believed that globalization brings significant benefits."], a:"It is widely believed that globalization brings significant benefits.", why:"Passive impersonal construction = formal, academic register."},
+  {q:"Convert: 'Where is the post office?' (the tourist asked)", options:["The tourist asked where is the post office.","The tourist asked where the post office was.","The tourist asked where the post office is."], a:"The tourist asked where the post office was.", why:"Wh-questions → no 'if', word order changes (no inversion), tense backshifts."},
+  {q:"Which converts correctly to passive: 'The students completed the exercises.'", options:["The exercises were completed by the students.","The exercises are completed by the students.","The exercises have been completed by the students."], a:"The exercises were completed by the students.", why:"Past Simple active → Past Simple passive: 'was/were + past participle'."},
+  {q:"Spot the error: 'He said me that he was tired.'", options:["No error","Should be 'he told me'","Should be 'he said to me'"], a:"Should be 'he told me'", why:"'Said' takes no indirect object. Use 'told + person' or 'said + (no person)'."},
+  {q:"Convert direct→reported: '\"I'm here now,\" she said.'", options:["She said she's here now.","She said she was there then.","She said she was here now."], a:"She said she was there then.", why:"Present → Past, 'here' → 'there', 'now' → 'then'. All three shift."},
+];
+const bossQsEl = document.getElementById('bossQs');
+boss.forEach((q,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML=`<div class="text-sm mb-2"><strong>Q${i+1}.</strong> ${q.q}</div><div class="space-y-2 b-q">${q.options.map(o=>`<div class='opt b-opt' data-v="${o}">${o}</div>`).join('')}</div><div class='fb mt-2'></div>`;
+  bossQsEl.appendChild(wrap);
+});
+bossQsEl.addEventListener('click',e=>{
+  const b=e.target.closest('.b-opt');if (!b) return;
+  const wrap = b.closest('.card');if (wrap.dataset.picked) return;
+  wrap.dataset.picked=b.dataset.v;
+  wrap.querySelectorAll('.b-opt').forEach(x=>{if (x.dataset.v===b.dataset.v) x.style.background='#dde6f5';x.classList.add('disabled');});
+});
+document.getElementById('bossSubmit').addEventListener('click',()=>{
+  let score=0;
+  bossQsEl.querySelectorAll('.card').forEach((wrap,i)=>{
+    const q=boss[i];const got=wrap.dataset.picked||'';const ok=got===q.a;
+    wrap.querySelectorAll('.b-opt').forEach(x=>{
+      x.classList.remove('correct','wrong');
+      if (x.dataset.v===q.a) x.classList.add('correct');
+      else if (x.dataset.v===got) x.classList.add('wrong');
+    });
+    wrap.querySelector('.fb').innerHTML=`<div class='feedback ${ok?'good':'bad'}'>${ok?'✅':'❌'} ${q.why}</div>`;
+    if (ok) score++;
+  });
+  document.getElementById('bossScore').textContent=`${score}/10`;
+  document.getElementById('bossFB').innerHTML = `<div class='feedback ${score>=8?'good':score>=6?'tip':'bad'}'><strong>${score}/10.</strong> ${score>=8?'Strong control. Use these in your next essay.':score>=6?'Solid base — review the table.':'Re-read the masterclass before retrying.'}</div>`;
+  addXP(score*5);
+});
+</script>
+<script>
+(function(){
+  document.addEventListener('contextmenu',function(e){e.preventDefault();return false});
+  document.addEventListener('dragstart',function(e){e.preventDefault();return false});
+  document.addEventListener('keydown',function(e){
+    var k=e.key.toLowerCase();
+    if(e.key==='F12'||(e.ctrlKey&&!e.shiftKey&&(k==='u'||k==='s'||k==='p'||k==='a'))||(e.ctrlKey&&e.shiftKey&&(k==='i'||k==='j'||k==='c'||k==='k'))){
+      e.preventDefault();e.stopPropagation();return false;
+    }
+  });
+  window.addEventListener('beforeprint',function(){document.body.style.display='none'});
+  window.addEventListener('afterprint',function(){document.body.style.display=''});
+})();
+</script></body>
+</html>

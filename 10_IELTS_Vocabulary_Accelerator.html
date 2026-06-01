@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IELTS Vocabulary Accelerator — Power-Up System â€” ViATestPrep</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#1a1024;--paper:#fbf6f3;--purple:#7536a8;--purple-d:#4a1f70;--coral:#d35a4f;--gold:#ce941b;--teal:#1a766a;--line:#e6d8e2;--soft:#ecdef5}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif}
+  h1,h2,h3,h4{font-family:'Fraunces',serif}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px}
+  .badge{display:inline-flex;gap:.4rem;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600}
+  .btn{display:inline-flex;gap:.5rem;padding:.6rem 1rem;border-radius:12px;font-weight:600}
+  .btn-primary{background:var(--purple);color:#fff}
+  .btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{background:#ecdef5}
+  .chip{padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+  .progress-bar{height:8px;background:#e7d7e0;border-radius:999px;overflow:hidden}
+  .progress-fill{height:100%;background:linear-gradient(90deg,var(--purple),#a96cd9)}
+  .reveal{max-height:0;overflow:hidden;transition:max-height .5s}
+  .reveal.open{max-height:2400px}
+  .opt{cursor:pointer;border:1.5px solid var(--line);border-radius:12px;padding:.7rem .9rem;background:#fff;transition:all .12s;font-size:.9rem;display:inline-flex;gap:.4rem;align-items:center}
+  .opt:hover{border-color:var(--purple);background:#ecdef5}
+  .opt.correct{border-color:var(--teal);background:#e6f4ee;color:var(--teal)}
+  .opt.wrong{border-color:var(--coral);background:#fde2da;text-decoration:line-through}
+  .opt.disabled{pointer-events:none;opacity:.7}
+  .feedback{padding:.7rem 1rem;border-radius:12px;font-size:.92rem;line-height:1.5;border-left:4px solid}
+  .feedback.good{border-color:var(--teal);background:#eef9f3}
+  .feedback.bad{border-color:var(--coral);background:#fde2da}
+  .feedback.tip{border-color:var(--gold);background:#fdf6e3}
+  .toolbar{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(8px);background:rgba(251,246,243,.85);border-bottom:1px solid var(--line)}
+  .nav-step{cursor:pointer}
+  .gameboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+  .qtype{cursor:pointer;transition:transform .15s,box-shadow .15s}
+  .qtype:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(117,54,168,.12)}
+  .timer-pill{font-family:'Fraunces',serif;font-weight:800}
+  .marker-yellow{background:linear-gradient(transparent 60%, #fde68a 60%)}
+  .marker-pink{background:linear-gradient(transparent 60%, #fbcfe8 60%)}
+  .word-card{background:linear-gradient(180deg,#ecdef5,#fff);border:2px solid var(--purple);border-radius:14px;padding:1rem;position:relative}
+  .word-card .pos{position:absolute;top:8px;right:10px;font-family:monospace;font-size:.65rem;color:var(--purple);font-weight:700}
+  .gap{display:inline-block;min-width:120px;padding:.1rem .4rem;background:#ecdef5;border-bottom:2px solid var(--purple);font-weight:700;border-radius:6px;color:var(--purple);cursor:pointer}
+  .gap.filled{background:#eef9f3;border-color:var(--teal);color:var(--teal)}
+  .gap.wrong{background:#fde2da;border-color:var(--coral)}
+</style>
+<style>
+/* ===== ViATestPrep Protection ===== */
+html body,html body *{-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important}
+img,svg{-webkit-user-drag:none!important}
+@media print{body{display:none!important;visibility:hidden!important}}
+.vtp-wm{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9990;overflow:hidden}
+.vtp-wm::after{content:"ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential";position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-28deg);font-size:1.1rem;font-weight:800;color:rgba(91,42,134,0.05);white-space:nowrap;letter-spacing:.3em;pointer-events:none}
+.vtp-corner{position:fixed;bottom:14px;right:14px;z-index:9999;background:linear-gradient(135deg,#5b2a86,#3b0a64);color:#fff;padding:.3rem .8rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.05em;box-shadow:0 2px 14px rgba(91,42,134,.4);pointer-events:none;font-family:Inter,sans-serif}
+</style></head>
+<body>
+<div class="vtp-wm" aria-hidden="true"></div><div class="vtp-corner" aria-hidden="true">&#127891; ViATestPrep</div>
+
+<div class="toolbar">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-white" style="background:var(--purple);font-family:'Fraunces',serif">VA</div>
+      <div><div class="text-sm uppercase tracking-widest text-stone-500">IELTS Vocabulary</div><div class="font-bold -mt-1">Accelerator · Power-Up System</div></div>
+    </div>
+    <div class="hidden md:flex items-center gap-4 text-sm">
+      <span class="nav-step" data-jump="why">① Why</span>
+      <span class="nav-step" data-jump="system">② System</span>
+      <span class="nav-step" data-jump="topics">③ Topic Banks</span>
+      <span class="nav-step" data-jump="drills">④ Drills</span>
+      <span class="nav-step" data-jump="boss">⑤ Boss Upgrade</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="text-right hidden sm:block"><div class="text-[11px] uppercase tracking-widest text-stone-500">Lex XP</div><div class="font-bold timer-pill" style="color:var(--purple)" id="xpDisplay">0 XP</div></div>
+      <div class="w-32 progress-bar"><div class="progress-fill" id="xpBar" style="width:0%"></div></div>
+    </div>
+  </div>
+</div>
+
+<main class="max-w-6xl mx-auto px-4 py-10">
+
+  <section id="why" class="mb-10">
+    <span class="chip" style="background:var(--soft);color:var(--purple)">Bonus · Vocabulary</span>
+    <h1 class="text-4xl md:text-5xl mt-3">Stop memorising lists. <span class="marker-yellow">Power-Up every word.</span></h1>
+    <p class="mt-3 text-stone-700 max-w-3xl">Lexical Resource = 25% of Writing & Speaking. Word lists fail because they don't teach you to <strong>use</strong> the word. Today: a 3-step system that stays in your head.</p>
+
+    <div class="grid md:grid-cols-2 gap-3 mt-6">
+      <div class="card p-4"><div class="text-xs uppercase tracking-widest text-stone-500">Band 6</div><p class="mt-1 italic">"It is important to solve the bad problems of pollution."</p></div>
+      <div class="card p-4"><div class="text-xs uppercase tracking-widest text-stone-500">Band 7.5+</div><p class="mt-1 italic">"It is <span class="marker-yellow">vital</span> to <span class="marker-yellow">address</span> the <span class="marker-yellow">detrimental effects</span> of pollution."</p></div>
+    </div>
+  </section>
+
+  <!-- SYSTEM -->
+  <section id="system" class="mb-14">
+    <h2 class="text-3xl mb-2">② The 'Power-Up' System</h2>
+    <p class="text-stone-700 max-w-3xl">For every new word you decide to learn, capture <strong>three things</strong>. Not just the meaning.</p>
+    <div class="grid md:grid-cols-3 gap-4 mt-4">
+      <div class="card p-5">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Step 1</div>
+        <h3 class="text-xl mt-1">Word Family</h3>
+        <p class="text-sm text-stone-700 mt-2">All forms: noun, verb, adjective, adverb. Lets you flex sentence structure.</p>
+        <div class="p-3 mt-3 rounded-lg" style="background:#ecdef5">benefit (n) · benefit (v) · beneficial (adj) · beneficially (adv)</div>
+      </div>
+      <div class="card p-5">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Step 2</div>
+        <h3 class="text-xl mt-1">Synonyms + Collocations</h3>
+        <p class="text-sm text-stone-700 mt-2">Synonyms = swap words. Collocations = "word teams" that always travel together.</p>
+        <div class="p-3 mt-3 rounded-lg" style="background:#fdf6e3"><strong>Syn:</strong> advantage, merit, upside · <strong>Colloc:</strong> significant benefit, reap the benefits, considerable benefit</div>
+      </div>
+      <div class="card p-5">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Step 3</div>
+        <h3 class="text-xl mt-1">IELTS Context</h3>
+        <p class="text-sm text-stone-700 mt-2">Build 1 Task 2 sentence + 1 Speaking sentence using the new family.</p>
+        <div class="p-3 mt-3 rounded-lg" style="background:#eef9f3"><em>"The considerable benefits of integrating technology into education cannot be overlooked."</em></div>
+      </div>
+    </div>
+
+    <!-- COLLOCATION DRILL -->
+    <div class="card p-6 mt-6">
+      <div class="flex items-center gap-3 mb-3"><span class="chip" style="background:var(--soft);color:var(--purple)">Drill · Collocations</span><h3 class="text-xl">Pick the Word Team</h3></div>
+      <div class="space-y-3" id="collocDrill"></div>
+    </div>
+  </section>
+
+  <!-- TOPIC BANKS -->
+  <section id="topics" class="mb-14">
+    <h2 class="text-3xl mb-2">③ Topic Vocabulary Banks</h2>
+    <p class="text-stone-700 max-w-3xl">IELTS recycles ~10 topics. Tap each for a Band 7+ phrase pack — synonyms, collocations, and a model sentence.</p>
+    <div class="gameboard mt-4" id="topicCards"></div>
+  </section>
+
+  <!-- DRILLS -->
+  <section id="drills" class="mb-14">
+    <h2 class="text-3xl mb-2">④ Live Drills</h2>
+
+    <div class="card p-6 mt-4">
+      <div class="flex items-center gap-3 mb-3"><span class="chip" style="background:#fdf6e3;color:var(--gold)">Word Family</span><h3 class="text-xl">Pick the Right Form</h3></div>
+      <div class="space-y-3" id="famDrill"></div>
+    </div>
+
+    <div class="card p-6 mt-4">
+      <div class="flex items-center gap-3 mb-3"><span class="chip" style="background:#fde2da;color:var(--coral)">Synonym Swap</span><h3 class="text-xl">Replace the Weak Word</h3></div>
+      <div class="space-y-3" id="synDrill"></div>
+    </div>
+  </section>
+
+  <!-- BOSS -->
+  <section id="boss" class="mb-14">
+    <h2 class="text-3xl mb-2">⑤ Boss Upgrade — Band 6 → 7.5+</h2>
+    <p class="text-stone-700 max-w-3xl">Click each gap, choose the Band 7.5+ replacement. Score yourself.</p>
+    <div class="card p-6 mt-4">
+      <p class="text-base leading-relaxed" id="bossText"></p>
+      <div class="flex justify-between items-center mt-4 flex-wrap gap-2">
+        <button class="btn btn-primary" id="bossSubmit">Submit & Score</button>
+        <button class="btn btn-ghost" id="bossReset">↺ Reset</button>
+        <span class="text-sm" id="bossScore">0/8</span>
+      </div>
+      <div id="bossFB" class="mt-3"></div>
+    </div>
+  </section>
+</main>
+
+<script>
+const state={xp:0,max:200};function addXP(n){state.xp=Math.min(state.max,state.xp+n);document.getElementById('xpDisplay').textContent=state.xp+' XP';document.getElementById('xpBar').style.width=(state.xp/state.max*100)+'%';}
+document.querySelectorAll('.nav-step').forEach(s=>s.addEventListener('click',()=>document.getElementById(s.dataset.jump)?.scrollIntoView({behavior:'smooth'})));
+
+// COLLOCATION DRILL
+const colloc = [
+  {q:"Do you ___ your homework?", options:["make","do"], a:"do", why:"'Do homework' — fixed collocation."},
+  {q:"Heavy ___ ", options:["rain","wind"], a:"rain", why:"'Heavy rain', not 'strong rain' — fixed in English."},
+  {q:"___ a crime", options:["commit","perform"], a:"commit", why:"'Commit a crime' — 'perform' sounds awkward."},
+  {q:"Excruciating ___", options:["pain","happiness"], a:"pain", why:"'Excruciating' = extreme pain only."},
+  {q:"___ food (e.g., burger)", options:["fast","quick"], a:"fast", why:"'Fast food' — 'quick food' isn't natural English."},
+  {q:"An ___ reader", options:["interested","avid"], a:"avid", why:"'Avid reader' — far stronger collocation than 'interested reader'."},
+];
+const cdEl = document.getElementById('collocDrill');
+colloc.forEach((it,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML=`<div class="text-sm mb-2 mono">${i+1}. ${it.q}</div><div class="flex flex-wrap gap-2">${it.options.map(o=>`<button class='opt c-opt' data-v='${o}'>${o}</button>`).join('')}</div><div class='fb mt-2'></div>`;
+  cdEl.appendChild(wrap);
+  wrap.querySelectorAll('.c-opt').forEach(b=>b.addEventListener('click',()=>{
+    if (wrap.dataset.done) return; wrap.dataset.done='1';
+    const ok = b.dataset.v===it.a;
+    if (ok) b.classList.add('correct'); else b.classList.add('wrong');
+    wrap.querySelectorAll('.c-opt').forEach(x=>{if (x.dataset.v===it.a) x.classList.add('correct'); x.classList.add('disabled');});
+    wrap.querySelector('.fb').innerHTML=`<div class='feedback ${ok?'good':'bad'}'>${ok?'✅':'❌'} ${it.why}</div>`;
+    addXP(ok?5:1);
+  }));
+});
+
+// TOPIC BANKS
+const topics = [
+  {n:"Education",icon:"🎓",
+   pack:`<div class='text-sm space-y-2'>
+     <div><strong>Synonyms for 'student':</strong> learner, pupil, undergraduate, scholar</div>
+     <div><strong>Strong adjectives:</strong> rigorous curriculum · well-rounded education · cutting-edge research · diligent pupil</div>
+     <div><strong>Collocations:</strong> pursue a degree · acquire knowledge · develop critical thinking · narrow the achievement gap</div>
+     <div class='p-2 rounded-lg' style='background:#fdf6e3'><em>"A rigorous curriculum coupled with extracurricular activities helps students develop into well-rounded individuals."</em></div>
+   </div>`},
+  {n:"Technology",icon:"📱",
+   pack:`<div class='text-sm space-y-2'>
+     <div><strong>Adjectives:</strong> cutting-edge · revolutionary · disruptive · ubiquitous · obsolete · groundbreaking</div>
+     <div><strong>Verbs:</strong> revolutionise · disrupt · streamline · automate · digitise</div>
+     <div><strong>Collocations:</strong> the digital age · technological advancement · widespread adoption · over-reliance on technology · digital divide</div>
+     <div class='p-2 rounded-lg' style='background:#fdf6e3'><em>"While the digital age has streamlined daily tasks, the over-reliance on smartphones has raised concerns about social isolation."</em></div>
+   </div>`},
+  {n:"Environment",icon:"🌍",
+   pack:`<div class='text-sm space-y-2'>
+     <div><strong>Adjectives:</strong> detrimental · sustainable · renewable · biodegradable · eco-friendly</div>
+     <div><strong>Verbs:</strong> mitigate · combat · curb · pollute · deplete · conserve · safeguard</div>
+     <div><strong>Collocations:</strong> carbon footprint · climate change · greenhouse gas emissions · finite resources · environmental degradation</div>
+     <div class='p-2 rounded-lg' style='background:#fdf6e3'><em>"Governments must take decisive action to mitigate the detrimental effects of greenhouse gas emissions."</em></div>
+   </div>`},
+  {n:"Health",icon:"🏥",
+   pack:`<div class='text-sm space-y-2'>
+     <div><strong>Adjectives:</strong> sedentary lifestyle · chronic illness · preventive care · nutritious diet · holistic approach</div>
+     <div><strong>Verbs:</strong> alleviate · diagnose · prescribe · prevent · treat · undergo</div>
+     <div><strong>Collocations:</strong> mental wellbeing · life expectancy · public health initiatives · access to healthcare · obesity epidemic</div>
+     <div class='p-2 rounded-lg' style='background:#fdf6e3'><em>"A nutritious diet, combined with regular exercise, can dramatically reduce the risk of chronic illness."</em></div>
+   </div>`},
+  {n:"Work / Employment",icon:"💼",
+   pack:`<div class='text-sm space-y-2'>
+     <div><strong>Adjectives:</strong> lucrative · demanding · monotonous · fulfilling · entry-level · senior</div>
+     <div><strong>Verbs:</strong> pursue a career · climb the corporate ladder · land a job · be made redundant · secure employment</div>
+     <div><strong>Collocations:</strong> work-life balance · job satisfaction · disposable income · career progression · gig economy</div>
+     <div class='p-2 rounded-lg' style='background:#fdf6e3'><em>"Many young professionals prioritise work-life balance over a lucrative but demanding career."</em></div>
+   </div>`},
+  {n:"City / Urbanisation",icon:"🏙",
+   pack:`<div class='text-sm space-y-2'>
+     <div><strong>Adjectives:</strong> bustling · sprawling · densely populated · cosmopolitan · run-down · gentrified</div>
+     <div><strong>Verbs:</strong> migrate · relocate · expand · regenerate · alleviate congestion</div>
+     <div><strong>Collocations:</strong> urban sprawl · public infrastructure · traffic congestion · cost of living · rural-to-urban migration</div>
+     <div class='p-2 rounded-lg' style='background:#fdf6e3'><em>"Rural-to-urban migration has led to severe traffic congestion in densely populated metropolitan areas."</em></div>
+   </div>`},
+  {n:"Government / Politics",icon:"🏛",
+   pack:`<div class='text-sm space-y-2'>
+     <div><strong>Adjectives:</strong> bureaucratic · authoritarian · democratic · transparent · corrupt · accountable</div>
+     <div><strong>Verbs:</strong> implement · enforce · subsidise · legislate · advocate · regulate</div>
+     <div><strong>Collocations:</strong> public policy · taxpayer-funded · regulatory framework · civil liberties · public spending</div>
+     <div class='p-2 rounded-lg' style='background:#fdf6e3'><em>"Governments should implement a robust regulatory framework before introducing new technologies."</em></div>
+   </div>`},
+  {n:"Culture / Media",icon:"🎭",
+   pack:`<div class='text-sm space-y-2'>
+     <div><strong>Adjectives:</strong> mainstream · indigenous · culturally-rich · biased · sensationalised · authentic</div>
+     <div><strong>Verbs:</strong> preserve heritage · shape opinion · go viral · undermine values · embrace diversity</div>
+     <div><strong>Collocations:</strong> cultural identity · mass media · echo chamber · cultural assimilation · social cohesion</div>
+     <div class='p-2 rounded-lg' style='background:#fdf6e3'><em>"Mass media plays a pivotal role in shaping public opinion, often creating echo chambers."</em></div>
+   </div>`},
+  {n:"Travel / Tourism",icon:"✈",
+   pack:`<div class='text-sm space-y-2'>
+     <div><strong>Adjectives:</strong> off the beaten track · breathtaking · seasoned · authentic · overcrowded</div>
+     <div><strong>Verbs:</strong> embark on · soak up · venture into · explore · revitalise local economies</div>
+     <div><strong>Collocations:</strong> cultural exchange · over-tourism · once-in-a-lifetime experience · sustainable tourism · economic boost</div>
+     <div class='p-2 rounded-lg' style='background:#fdf6e3'><em>"While tourism can revitalise local economies, over-tourism risks eroding the very cultures travellers come to experience."</em></div>
+   </div>`},
+  {n:"Family / Society",icon:"👨‍👩‍👧",
+   pack:`<div class='text-sm space-y-2'>
+     <div><strong>Adjectives:</strong> close-knit · nuclear · extended · dysfunctional · multi-generational</div>
+     <div><strong>Verbs:</strong> raise children · nurture · alienate · bond · drift apart · provide for</div>
+     <div><strong>Collocations:</strong> family ties · domestic responsibilities · gender roles · ageing population · parental supervision</div>
+     <div class='p-2 rounded-lg' style='background:#fdf6e3'><em>"In many countries, the rise of nuclear families has weakened traditional family ties between generations."</em></div>
+   </div>`},
+];
+const tEl = document.getElementById('topicCards');
+topics.forEach(t=>{
+  const c=document.createElement('div');
+  c.className='card p-5 qtype';
+  c.innerHTML = `<div class="flex items-center gap-2"><div class="w-10 h-10 rounded-lg flex items-center justify-center text-xl" style="background:var(--purple);color:#fff">${t.icon}</div><div class="font-bold">${t.n}</div></div>
+    <div class="reveal mt-3">${t.pack}</div><div class="text-xs text-stone-500 mt-2">tap to expand</div>`;
+  c.addEventListener('click',()=>{const r=c.querySelector('.reveal');const wO=r.classList.contains('open');r.classList.toggle('open');if(!wO)addXP(2);});
+  tEl.appendChild(c);
+});
+
+// FAMILY DRILL
+const fams = [
+  {sent:"Education is an ___ factor in development.", options:["important","importance","importantly"], a:"important", why:"Modifying a noun ('factor') → adjective."},
+  {sent:"The ___ of regular exercise should not be underestimated.", options:["important","importance","importantly"], a:"importance", why:"After 'The', and acting as the subject → noun."},
+  {sent:"___, the study's findings confirm the hypothesis.", options:["Important","Importance","Importantly"], a:"Importantly", why:"Modifying the whole sentence → adverb."},
+  {sent:"Exercise has many ___ on health.", options:["benefit","benefits","beneficial"], a:"benefits", why:"After 'many' → plural noun."},
+  {sent:"Society ___ greatly from technological progress.", options:["benefit","benefits","beneficial"], a:"benefits", why:"3rd-person singular subject ('society') + present simple verb."},
+];
+const fEl = document.getElementById('famDrill');
+fams.forEach((it,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML=`<div class="text-sm mb-2">${i+1}. ${it.sent}</div><div class="flex flex-wrap gap-2">${it.options.map(o=>`<button class='opt f-opt' data-v='${o}'>${o}</button>`).join('')}</div><div class='fb mt-2'></div>`;
+  fEl.appendChild(wrap);
+  wrap.querySelectorAll('.f-opt').forEach(b=>b.addEventListener('click',()=>{
+    if (wrap.dataset.done) return; wrap.dataset.done='1';
+    const ok = b.dataset.v===it.a;
+    if (ok) b.classList.add('correct'); else b.classList.add('wrong');
+    wrap.querySelectorAll('.f-opt').forEach(x=>{if (x.dataset.v===it.a) x.classList.add('correct'); x.classList.add('disabled');});
+    wrap.querySelector('.fb').innerHTML=`<div class='feedback ${ok?'good':'bad'}'>${ok?'✅':'❌'} ${it.why}</div>`;
+    addXP(ok?5:1);
+  }));
+});
+
+// SYNONYM SWAP DRILL
+const syns = [
+  {sent:"This is a very ___ problem.", weak:"big", options:["pressing","huge","large","fat"], a:"pressing", why:"'Pressing issue' is a Band 7+ collocation. 'Big' is fine but not academic."},
+  {sent:"The new policy will ___ the city.", weak:"change", options:["transform","modify","alter","switch"], a:"transform", why:"'Transform' implies dramatic change — fits a sweeping policy."},
+  {sent:"It is very ___ to address climate change.", weak:"important", options:["vital","big","much","plenty"], a:"vital", why:"'Vital' is more precise and academic than 'important'."},
+  {sent:"This has a ___ effect on wildlife.", weak:"bad", options:["detrimental","ugly","sad","cheap"], a:"detrimental", why:"'Detrimental effect' = standard academic collocation."},
+];
+const synEl = document.getElementById('synDrill');
+syns.forEach((it,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='card p-3';
+  wrap.innerHTML=`<div class="text-sm mb-2">${i+1}. <em>Original (weak):</em> "${it.sent.replace('___',it.weak)}"<br><em>Upgrade ___ to:</em></div><div class="flex flex-wrap gap-2">${it.options.map(o=>`<button class='opt syn-opt' data-v='${o}'>${o}</button>`).join('')}</div><div class='fb mt-2'></div>`;
+  synEl.appendChild(wrap);
+  wrap.querySelectorAll('.syn-opt').forEach(b=>b.addEventListener('click',()=>{
+    if (wrap.dataset.done) return; wrap.dataset.done='1';
+    const ok = b.dataset.v===it.a;
+    if (ok) b.classList.add('correct'); else b.classList.add('wrong');
+    wrap.querySelectorAll('.syn-opt').forEach(x=>{if (x.dataset.v===it.a) x.classList.add('correct'); x.classList.add('disabled');});
+    wrap.querySelector('.fb').innerHTML=`<div class='feedback ${ok?'good':'bad'}'>${ok?'✅':'❌'} ${it.why}</div>`;
+    addXP(ok?5:1);
+  }));
+});
+
+// BOSS UPGRADE
+const bossOriginal = [
+  {label:"good thing",options:["a significant benefit","a big plus","an okay thing"],a:"a significant benefit",why:"Academic collocation."},
+  {label:"good job",options:["lucrative career opportunities","nice job","good employment"],a:"lucrative career opportunities",why:"'Lucrative' = high-paying; precise collocation."},
+  {label:"makes life good",options:["a higher quality of life","a better good life","a happier life thing"],a:"a higher quality of life",why:"Standard topic-specific phrase."},
+  {label:"bad thing",options:["a major drawback","a big bad","a horrible point"],a:"a major drawback",why:"'Drawback' is the academic term for disadvantage."},
+  {label:"big problem",options:["a pressing issue","a huge problem","a fat problem"],a:"a pressing issue",why:"'Pressing issue' = urgent + formal."},
+  {label:"bad",options:["detrimental","horrible","ugly"],a:"detrimental",why:"'Detrimental effect/impact' = standard collocation."},
+  {label:"need to fix",options:["must devise a viable solution to","need to fix this","gotta sort out"],a:"must devise a viable solution to",why:"Formal verb phrase + correct register."},
+  {label:"important",options:["vital","very important","mega important"],a:"vital",why:"Precise alternative for 'important' in academic writing."},
+];
+const bossText = document.getElementById('bossText');
+bossText.innerHTML = `A <span class="gap" data-i="0">[good thing]</span> about urbanisation is the availability of <span class="gap" data-i="1">[good job]</span>. Many individuals relocate to cities to secure these, which can lead to <span class="gap" data-i="2">[makes life good]</span>. However, <span class="gap" data-i="3">[bad thing]</span> is traffic congestion, which has become <span class="gap" data-i="4">[big problem]</span> for city dwellers. The <span class="gap" data-i="5">[bad]</span> environmental impact of housing sprawl means we <span class="gap" data-i="6">[need to fix]</span> this challenge. It is therefore <span class="gap" data-i="7">[important]</span> that planners take action.`;
+const optMenu = document.createElement('div');
+optMenu.style.cssText='position:fixed;background:#fff;border:1px solid var(--line);border-radius:12px;padding:.4rem;display:none;z-index:50;box-shadow:0 12px 30px rgba(0,0,0,.15);max-width:360px';
+let selectedGap=null;
+function openMenu(g){
+  selectedGap=g;
+  const i = +g.dataset.i;
+  const need = bossOriginal[i];
+  optMenu.innerHTML = need.options.map(o=>`<button class="btn btn-ghost text-xs m-1" data-v="${o}">${o}</button>`).join('');
+  const r = g.getBoundingClientRect();
+  optMenu.style.display='block';
+  optMenu.style.left = Math.min(window.innerWidth-380, r.left)+'px';
+  optMenu.style.top = (r.bottom+window.scrollY+6)+'px';
+}
+document.body.appendChild(optMenu);
+bossText.querySelectorAll('.gap').forEach(g=>g.addEventListener('click',e=>{e.stopPropagation();openMenu(g);}));
+document.addEventListener('click',e=>{if (!optMenu.contains(e.target) && !e.target.classList.contains('gap')) optMenu.style.display='none';});
+optMenu.addEventListener('click',e=>{
+  const b=e.target.closest('button');if (!b||!selectedGap) return;
+  selectedGap.textContent=b.dataset.v;selectedGap.dataset.val=b.dataset.v;selectedGap.classList.add('filled');
+  optMenu.style.display='none';
+});
+document.getElementById('bossSubmit').addEventListener('click',()=>{
+  let score=0;
+  bossText.querySelectorAll('.gap').forEach(g=>{
+    const i=+g.dataset.i;const need=bossOriginal[i];const got=g.dataset.val||'';
+    const ok=got===need.a;
+    g.classList.remove('filled','wrong');g.classList.add(ok?'filled':'wrong');
+    if (ok) score++;
+  });
+  document.getElementById('bossScore').textContent=`${score}/8`;
+  let msg='';bossOriginal.forEach((g,i)=>{msg+=`<div class='text-xs mt-1'><strong>${i+1}:</strong> "${g.a}" — ${g.why}</div>`;});
+  document.getElementById('bossFB').innerHTML = `<div class='feedback ${score>=6?'good':score>=4?'tip':'bad'}'><strong>${score}/8.</strong> ${score>=6?'Strong lexical control. Apply this in your next essay.':score>=4?'Solid base.':'Re-read the topic banks before retrying.'}</div>${msg}`;
+  addXP(score*5);
+});
+document.getElementById('bossReset').addEventListener('click',()=>{
+  bossText.querySelectorAll('.gap').forEach((g,i)=>{g.textContent=`[${bossOriginal[i].label}]`;g.dataset.val='';g.classList.remove('filled','wrong')});
+  document.getElementById('bossScore').textContent='0/8';document.getElementById('bossFB').innerHTML='';
+});
+</script>
+<script>
+(function(){
+  document.addEventListener('contextmenu',function(e){e.preventDefault();return false});
+  document.addEventListener('dragstart',function(e){e.preventDefault();return false});
+  document.addEventListener('keydown',function(e){
+    var k=e.key.toLowerCase();
+    if(e.key==='F12'||(e.ctrlKey&&!e.shiftKey&&(k==='u'||k==='s'||k==='p'||k==='a'))||(e.ctrlKey&&e.shiftKey&&(k==='i'||k==='j'||k==='c'||k==='k'))){
+      e.preventDefault();e.stopPropagation();return false;
+    }
+  });
+  window.addEventListener('beforeprint',function(){document.body.style.display='none'});
+  window.addEventListener('afterprint',function(){document.body.style.display=''});
+})();
+</script></body>
+</html>

@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IELTS Mock Test Tracker — Teacher's Dashboard â€” ViATestPrep</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#101820;--paper:#f4f5f8;--navy:#173360;--navy-d:#0a1d3d;--coral:#d24d4d;--gold:#c9921c;--green:#1c7a4f;--amber:#e0931c;--line:#d8dde6;--soft:#dde5f0}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif}
+  h1,h2,h3,h4{font-family:'Fraunces',serif}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px}
+  .badge{display:inline-flex;gap:.4rem;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600}
+  .btn{display:inline-flex;gap:.5rem;padding:.5rem .9rem;border-radius:10px;font-weight:600;font-size:.9rem;cursor:pointer;border:none}
+  .btn-primary{background:var(--navy);color:#fff}
+  .btn-primary:hover{background:var(--navy-d)}
+  .btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{background:#dde5f0}
+  .btn-danger{background:var(--coral);color:#fff;font-size:.78rem;padding:.3rem .55rem}
+  .btn-success{background:var(--green);color:#fff}
+  .chip{padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+  .input{padding:.45rem .6rem;border:1px solid var(--line);border-radius:8px;font-size:.9rem;font-family:inherit;background:#fff}
+  .input:focus{outline:2px solid var(--navy);outline-offset:-1px}
+  .stat-card{background:linear-gradient(135deg,#fff,#dde5f0);border:1px solid var(--line);border-radius:14px;padding:1rem}
+  table{border-collapse:collapse;width:100%;font-size:.88rem}
+  th,td{border:1px solid var(--line);padding:.45rem .6rem;text-align:left;vertical-align:middle}
+  th{background:#dde5f0;font-weight:700;position:sticky;top:0;z-index:1}
+  td.score-cell{text-align:center;width:64px}
+  td.overall{font-weight:800;text-align:center;background:#fdf6e3}
+  .band-pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;font-weight:700;font-size:.78rem;color:#fff}
+  .b-90{background:#1a4a8a}
+  .b-80{background:#1c7a4f}
+  .b-70{background:#3aa66a}
+  .b-65{background:#c9921c}
+  .b-60{background:#e0931c}
+  .b-55{background:#d24d4d}
+  .b-low{background:#7a1c1c}
+  .toolbar{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(8px);background:rgba(244,245,248,.85);border-bottom:1px solid var(--line)}
+  .nav-step{cursor:pointer}
+  .module-cell input{width:50px;text-align:center;border:1px solid var(--line);border-radius:6px;padding:.2rem;font-size:.85rem}
+  .delta-up{color:var(--green);font-weight:700}
+  .delta-down{color:var(--coral);font-weight:700}
+  .delta-flat{color:var(--gold);font-weight:700}
+</style>
+<style>
+.vtp-corner{position:fixed;bottom:14px;right:14px;z-index:9999;background:linear-gradient(135deg,#173360,#0a1d3d);color:#fff;padding:.3rem .8rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.05em;box-shadow:0 2px 14px rgba(23,51,96,.4);pointer-events:none;font-family:Inter,sans-serif}
+</style></head>
+<body>
+<div class="vtp-corner" aria-hidden="true">&#127891; ViATestPrep</div>
+
+<div class="toolbar">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-white" style="background:var(--navy);font-family:'Fraunces',serif">MT</div>
+      <div><div class="text-sm uppercase tracking-widest text-stone-500">IELTS Teacher Tools</div><div class="font-bold -mt-1">Mock Test Tracker · Class Dashboard</div></div>
+    </div>
+    <div class="flex items-center gap-2">
+      <button class="btn btn-ghost" id="exportCsv">⬇ Export CSV</button>
+      <button class="btn btn-ghost" id="importCsv">⬆ Import CSV</button>
+      <button class="btn btn-primary" id="addRow">+ Add row</button>
+    </div>
+  </div>
+</div>
+
+<main class="max-w-7xl mx-auto px-4 py-8">
+
+  <section class="mb-6">
+    <h1 class="text-3xl">Class Mock Test Tracker</h1>
+    <p class="text-stone-700 max-w-3xl mt-2">Log every mock test. Each row = one student × one date. Type the four module band scores; the overall is calculated for you (mean of L+R+W+S, rounded to nearest 0.5). All data saved in your browser — no upload, no signup.</p>
+  </section>
+
+  <!-- KPI cards -->
+  <section class="grid md:grid-cols-4 gap-3 mb-6" id="kpis">
+    <div class="stat-card"><div class="text-xs uppercase tracking-widest text-stone-500">Total tests</div><div class="text-3xl font-bold mt-1" id="kTotal">0</div></div>
+    <div class="stat-card"><div class="text-xs uppercase tracking-widest text-stone-500">Class average</div><div class="text-3xl font-bold mt-1" id="kAvg">—</div></div>
+    <div class="stat-card"><div class="text-xs uppercase tracking-widest text-stone-500">Strongest module</div><div class="text-2xl font-bold mt-1" id="kStrong">—</div></div>
+    <div class="stat-card"><div class="text-xs uppercase tracking-widest text-stone-500">Weakest module</div><div class="text-2xl font-bold mt-1" id="kWeak">—</div></div>
+  </section>
+
+  <!-- Filters -->
+  <div class="card p-4 mb-4 flex flex-wrap gap-3 items-center">
+    <input class="input flex-1 min-w-[180px]" id="searchInput" placeholder="🔍 Search by name…" />
+    <select class="input" id="sortBy">
+      <option value="recent">Sort: Most recent first</option>
+      <option value="name">Sort: Name A–Z</option>
+      <option value="overall-high">Sort: Overall (high→low)</option>
+      <option value="overall-low">Sort: Overall (low→high)</option>
+    </select>
+    <button class="btn btn-ghost" id="seedDemo">Load demo data</button>
+    <button class="btn btn-ghost" id="clearAll">↺ Clear all</button>
+  </div>
+
+  <!-- Table -->
+  <div class="card overflow-auto">
+    <table id="tbl">
+      <thead>
+        <tr>
+          <th>Student</th>
+          <th>Test date</th>
+          <th>Module / Form</th>
+          <th class="text-center">L</th>
+          <th class="text-center">R</th>
+          <th class="text-center">W</th>
+          <th class="text-center">S</th>
+          <th class="text-center">Overall</th>
+          <th class="text-center">Δ vs prev</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <p class="text-xs text-stone-500 mt-4">All scores are saved automatically in your browser (localStorage). Use Export CSV to back up or share.</p>
+
+  <input type="file" id="fileImport" accept=".csv" style="display:none">
+</main>
+
+<script>
+const KEY = 'ielts_mock_tracker_v1';
+let rows = [];
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(rows)); }catch(e){} }
+function load(){ try{ const r=localStorage.getItem(KEY); if (r) rows = JSON.parse(r); }catch(e){ rows = []; } }
+load();
+
+function bandClass(b){
+  if (!b||isNaN(b)) return '';
+  if (b>=9) return 'b-90';
+  if (b>=8) return 'b-80';
+  if (b>=7) return 'b-70';
+  if (b>=6.5) return 'b-65';
+  if (b>=6) return 'b-60';
+  if (b>=5.5) return 'b-55';
+  return 'b-low';
+}
+function calcOverall(r){
+  const vals = [r.L,r.R,r.W,r.S].filter(v=>v!==null && v!==undefined && v!=='' && !isNaN(parseFloat(v))).map(parseFloat);
+  if (vals.length===0) return null;
+  const avg = vals.reduce((a,b)=>a+b,0)/vals.length;
+  return Math.round(avg*2)/2;
+}
+function fmt(b){ return b===null||b===undefined||b===''?'—':parseFloat(b).toFixed(1); }
+
+function render(){
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const sortBy = document.getElementById('sortBy').value;
+  let view = rows.map((r,i)=>({...r,_i:i}));
+  if (search) view = view.filter(r=>(r.name||'').toLowerCase().includes(search));
+  if (sortBy==='recent') view.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  if (sortBy==='name') view.sort((a,b)=>(a.name||'').localeCompare(b.name||''));
+  if (sortBy==='overall-high') view.sort((a,b)=>(calcOverall(b)||0)-(calcOverall(a)||0));
+  if (sortBy==='overall-low') view.sort((a,b)=>(calcOverall(a)||10)-(calcOverall(b)||10));
+
+  const tbody = document.getElementById('tbody');
+  tbody.innerHTML='';
+  view.forEach(r=>{
+    const tr = document.createElement('tr');
+    tr.dataset.i = r._i;
+    const overall = calcOverall(r);
+    // delta vs previous test for same student
+    let delta = '';
+    const studentTests = rows.filter(x=>x.name===r.name && (x.date||'')<(r.date||'')).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+    if (studentTests.length>0){
+      const prev = calcOverall(studentTests[0]);
+      if (prev!==null && overall!==null){
+        const d = overall-prev;
+        if (d>0) delta = `<span class='delta-up'>▲ ${d.toFixed(1)}</span>`;
+        else if (d<0) delta = `<span class='delta-down'>▼ ${Math.abs(d).toFixed(1)}</span>`;
+        else delta = `<span class='delta-flat'>→ 0</span>`;
+      }
+    }
+    tr.innerHTML = `
+      <td><input class="input w-full" data-k="name" value="${r.name||''}" placeholder="Name"></td>
+      <td><input class="input w-full" type="date" data-k="date" value="${r.date||''}"></td>
+      <td><select class="input w-full" data-k="form">
+        <option ${r.form==='Academic'?'selected':''}>Academic</option>
+        <option ${r.form==='General'?'selected':''}>General</option>
+      </select></td>
+      <td class="module-cell"><input data-k="L" type="number" min="0" max="9" step="0.5" value="${r.L||''}"></td>
+      <td class="module-cell"><input data-k="R" type="number" min="0" max="9" step="0.5" value="${r.R||''}"></td>
+      <td class="module-cell"><input data-k="W" type="number" min="0" max="9" step="0.5" value="${r.W||''}"></td>
+      <td class="module-cell"><input data-k="S" type="number" min="0" max="9" step="0.5" value="${r.S||''}"></td>
+      <td class="overall">${overall===null?'—':`<span class="band-pill ${bandClass(overall)}">${overall.toFixed(1)}</span>`}</td>
+      <td class="text-center text-sm">${delta||'—'}</td>
+      <td><button class="btn btn-danger" data-action="delete">✕</button></td>
+    `;
+    tbody.appendChild(tr);
+  });
+  renderKpis();
+  save();
+}
+
+function renderKpis(){
+  document.getElementById('kTotal').textContent = rows.length;
+  if (rows.length===0){
+    document.getElementById('kAvg').textContent='—';
+    document.getElementById('kStrong').textContent='—';
+    document.getElementById('kWeak').textContent='—';
+    return;
+  }
+  const overallAll = rows.map(calcOverall).filter(v=>v!==null);
+  const avg = overallAll.length>0 ? (overallAll.reduce((a,b)=>a+b,0)/overallAll.length) : null;
+  document.getElementById('kAvg').textContent = avg===null?'—':avg.toFixed(2);
+  // strongest / weakest module
+  const mods = ['L','R','W','S'];
+  const modLabels = {L:'Listening',R:'Reading',W:'Writing',S:'Speaking'};
+  const modAvgs = mods.map(m=>{
+    const vals = rows.map(r=>parseFloat(r[m])).filter(v=>!isNaN(v));
+    return {m, avg: vals.length===0?null:vals.reduce((a,b)=>a+b,0)/vals.length};
+  }).filter(x=>x.avg!==null);
+  if (modAvgs.length>0){
+    modAvgs.sort((a,b)=>b.avg-a.avg);
+    document.getElementById('kStrong').textContent = `${modLabels[modAvgs[0].m]} (${modAvgs[0].avg.toFixed(2)})`;
+    const last = modAvgs[modAvgs.length-1];
+    document.getElementById('kWeak').textContent = `${modLabels[last.m]} (${last.avg.toFixed(2)})`;
+  }
+}
+
+document.getElementById('addRow').addEventListener('click',()=>{
+  rows.push({name:'',date:new Date().toISOString().slice(0,10),form:'Academic',L:'',R:'',W:'',S:''});
+  render();
+});
+document.getElementById('clearAll').addEventListener('click',()=>{
+  if (confirm('Clear all rows?')){rows=[];render();}
+});
+document.getElementById('seedDemo').addEventListener('click',()=>{
+  rows = [
+    {name:'Aisha Khan',date:'2026-04-12',form:'Academic',L:6.5,R:6,W:5.5,S:6.5},
+    {name:'Aisha Khan',date:'2026-04-19',form:'Academic',L:7,R:6.5,W:6,S:7},
+    {name:'Aisha Khan',date:'2026-04-26',form:'Academic',L:7.5,R:7,W:6.5,S:7},
+    {name:'Rohan Mehta',date:'2026-04-12',form:'Academic',L:6,R:5.5,W:5.5,S:6},
+    {name:'Rohan Mehta',date:'2026-04-19',form:'Academic',L:6.5,R:6,W:6,S:6},
+    {name:'Rohan Mehta',date:'2026-04-26',form:'Academic',L:6.5,R:6.5,W:6,S:6.5},
+    {name:'Layla Hussain',date:'2026-04-12',form:'Academic',L:7,R:7.5,W:6.5,S:7},
+    {name:'Layla Hussain',date:'2026-04-19',form:'Academic',L:7.5,R:8,W:7,S:7},
+    {name:'Layla Hussain',date:'2026-04-26',form:'Academic',L:8,R:8,W:7,S:7.5},
+    {name:'Hassan Ali',date:'2026-04-19',form:'General',L:5.5,R:5,W:5,S:5.5},
+    {name:'Hassan Ali',date:'2026-04-26',form:'General',L:6,R:5.5,W:5.5,S:6},
+  ];
+  render();
+});
+
+document.getElementById('searchInput').addEventListener('input',render);
+document.getElementById('sortBy').addEventListener('change',render);
+
+document.getElementById('tbody').addEventListener('input',e=>{
+  const tr = e.target.closest('tr'); if (!tr) return;
+  const i = +tr.dataset.i;
+  const k = e.target.dataset.k;
+  rows[i][k] = e.target.value;
+  // re-render only the overall + delta cells
+  const overall = calcOverall(rows[i]);
+  tr.querySelector('.overall').innerHTML = overall===null?'—':`<span class="band-pill ${bandClass(overall)}">${overall.toFixed(1)}</span>`;
+  save();
+  renderKpis();
+});
+document.getElementById('tbody').addEventListener('change',e=>{
+  if (e.target.dataset.k==='name' || e.target.dataset.k==='date'){
+    render();
+  }
+});
+document.getElementById('tbody').addEventListener('click',e=>{
+  const btn = e.target.closest('[data-action="delete"]');
+  if (!btn) return;
+  const tr = btn.closest('tr');
+  const i = +tr.dataset.i;
+  rows.splice(i,1); render();
+});
+
+// Export CSV
+document.getElementById('exportCsv').addEventListener('click',()=>{
+  const head = ['Name','Date','Form','Listening','Reading','Writing','Speaking','Overall'];
+  const lines = [head.join(',')];
+  rows.forEach(r=>{
+    const o = calcOverall(r);
+    lines.push([r.name||'',r.date||'',r.form||'',r.L||'',r.R||'',r.W||'',r.S||'',o===null?'':o].map(v=>`"${String(v).replace(/"/g,'""')}"`).join(','));
+  });
+  const blob = new Blob([lines.join('\n')],{type:'text/csv'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = `ielts_mock_tracker_${new Date().toISOString().slice(0,10)}.csv`;
+  a.click(); URL.revokeObjectURL(url);
+});
+// Import CSV
+document.getElementById('importCsv').addEventListener('click',()=>document.getElementById('fileImport').click());
+document.getElementById('fileImport').addEventListener('change',e=>{
+  const f = e.target.files[0]; if (!f) return;
+  const reader = new FileReader();
+  reader.onload = ev=>{
+    const text = ev.target.result;
+    const lines = text.split(/\r?\n/).filter(Boolean);
+    const head = lines.shift();
+    const newRows = [];
+    lines.forEach(line=>{
+      const cells = line.match(/("([^"]|"")*"|[^,]+)(?=,|$)/g) || [];
+      const clean = cells.map(c=>c.replace(/^"|"$/g,'').replace(/""/g,'"'));
+      newRows.push({
+        name: clean[0]||'', date: clean[1]||'', form: clean[2]||'Academic',
+        L: clean[3]||'', R: clean[4]||'', W: clean[5]||'', S: clean[6]||''
+      });
+    });
+    if (newRows.length>0){
+      if (confirm(`Import ${newRows.length} rows? (replaces existing)`)){
+        rows = newRows; render();
+      }
+    }
+  };
+  reader.readAsText(f);
+});
+
+render();
+</script>
+<p style="text-align:center;font-size:.72rem;color:#aaa;padding:1rem 0">&copy; 2026 ViATestPrep &middot; All Rights Reserved</p></body>
+</html>
