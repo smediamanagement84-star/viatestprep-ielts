@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IELTS Orientation — Class 01 · Welcome</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0d1a2c;--paper:#f4f3ed;--navy:#143a6b;--navy-d:#082043;--gold:#c08b2f;--terra:#c0531c;--teal:#1f7a6a;--green:#1f7a4d;--purple:#5b3b8a;--line:#dcd5c0;--soft:#e9e1c8}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif}
+  h1,h2,h3,h4{font-family:'Fraunces',serif;letter-spacing:-.01em}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px}
+  .badge{display:inline-flex;align-items:center;gap:.3rem;padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+  .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem .9rem;border-radius:10px;font-weight:600;font-size:.85rem;cursor:pointer;border:none;transition:transform .08s}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--navy);color:#fff}
+  .btn-primary:hover{background:var(--navy-d)}
+  .btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{background:var(--soft)}
+  .btn-gold{background:var(--gold);color:#fff}
+  .chip{padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+  .toolbar{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(8px);background:rgba(244,243,237,.9);border-bottom:1px solid var(--line)}
+  .nav-step{cursor:pointer;font-size:.85rem}
+  .progress-bar{height:8px;background:#dcd5c0;border-radius:999px;overflow:hidden}
+  .progress-fill{height:100%;background:linear-gradient(90deg,var(--navy),#3b62d5);transition:width .4s}
+  .stat-card{background:linear-gradient(135deg,#fff,var(--soft));border:1px solid var(--line);border-radius:14px;padding:1rem}
+  .marker-yellow{background:linear-gradient(transparent 60%, #fde68a 60%)}
+  .marker-pink{background:linear-gradient(transparent 60%, #fbcfe8 60%)}
+  .marker-blue{background:linear-gradient(transparent 60%, #bfdbfe 60%)}
+  .marker-green{background:linear-gradient(transparent 60%, #bbf7d0 60%)}
+  .gameboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.85rem}
+  .case-card{cursor:pointer;transition:transform .15s, box-shadow .15s;padding:1rem;border-radius:14px;border:1px solid var(--line);background:#fff;min-height:130px;display:flex;flex-direction:column}
+  .case-card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(20,58,107,.18)}
+  .num-circle{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:'Fraunces',serif;font-size:.95rem;flex-shrink:0}
+  .preview{font-size:.7rem;color:var(--navy);font-weight:700;text-transform:uppercase;margin-top:auto}
+  .modal-backdrop{position:fixed;inset:0;background:rgba(13,26,44,.6);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;z-index:100;padding:2rem 1rem;overflow-y:auto}
+  .modal-backdrop.open{display:flex}
+  .modal-box{background:var(--paper);border-radius:18px;max-width:880px;width:100%;box-shadow:0 24px 80px rgba(0,0,0,.4);position:relative;margin:auto;animation:popIn .25s ease-out}
+  @keyframes popIn{from{transform:scale(.92);opacity:0}to{transform:scale(1);opacity:1}}
+  .modal-head{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--line);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;border-radius:18px 18px 0 0;z-index:5}
+  .modal-body{padding:1.4rem;max-height:75vh;overflow-y:auto}
+  .modal-close{background:#fdeadf;border:none;width:34px;height:34px;border-radius:50%;font-size:1.2rem;cursor:pointer;color:var(--terra);font-weight:800;display:flex;align-items:center;justify-content:center}
+  .modal-close:hover{background:var(--terra);color:#fff}
+  body.modal-open{overflow:hidden}
+  /* Band ladder */
+  .band-row{display:flex;align-items:center;gap:.6rem;padding:.5rem .8rem;border-radius:10px;margin-bottom:.4rem;border:1px solid var(--line);background:#fff}
+  .band-pill{width:54px;text-align:center;padding:.4rem;border-radius:8px;font-weight:800;font-family:'Fraunces',serif;color:#fff;font-size:1.05rem}
+  /* Timeline */
+  .timeline-slot{flex:0 0 auto;padding:.6rem 1rem;border-radius:10px;color:#fff;font-weight:600;font-size:.85rem;display:flex;flex-direction:column;align-items:center;min-width:90px}
+  .timeline-slot small{opacity:.8;font-weight:500;font-size:.7rem;margin-top:.1rem}
+  /* Quiz */
+  .opt{cursor:pointer;border:1.5px solid var(--line);border-radius:10px;padding:.7rem .9rem;background:#fff;transition:all .12s;font-size:.9rem;display:flex;gap:.5rem;align-items:flex-start}
+  .opt:hover{border-color:var(--navy);background:var(--soft)}
+  .opt.correct{border-color:var(--green);background:#e6f4ee;color:var(--green)}
+  .opt.wrong{border-color:var(--terra);background:#fdeadf;text-decoration:line-through}
+  .opt.disabled{pointer-events:none;opacity:.7}
+  .opt .letter{flex:0 0 24px;height:24px;border-radius:6px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Fraunces',serif;font-size:.75rem}
+  .opt.correct .letter{background:var(--green);color:#fff}
+  .opt.wrong .letter{background:var(--terra);color:#fff}
+  .feedback{padding:.7rem 1rem;border-radius:10px;font-size:.88rem;line-height:1.5;border-left:4px solid;margin-top:.5rem}
+  .feedback.good{border-color:var(--green);background:#eef9f3}
+  .feedback.bad{border-color:var(--terra);background:#fdeadf}
+  .feedback.tip{border-color:var(--gold);background:#fdf6e3}
+  .myth-card{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;margin-bottom:.5rem}
+  @media (max-width:640px){.myth-card{grid-template-columns:1fr}}
+  .myth-card>div{padding:.7rem .9rem;border-radius:10px;font-size:.85rem;line-height:1.5}
+  .myth-false{background:#fdeadf;border-left:3px solid var(--terra)}
+  .myth-true{background:#eef9f3;border-left:3px solid var(--green)}
+  details>summary{cursor:pointer;list-style:none}
+  details>summary::-webkit-details-marker{display:none}
+  .timer-pill{font-family:'Fraunces',serif;font-weight:800}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3 flex-wrap">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-white" style="background:var(--navy);font-family:'Fraunces',serif">01</div>
+      <div>
+        <div class="text-xs uppercase tracking-widest text-stone-500">IELTS · Orientation</div>
+        <div class="font-bold -mt-1 text-sm">Class 01 · Welcome & The Basics</div>
+      </div>
+    </div>
+    <div class="hidden md:flex items-center gap-3 text-stone-700">
+      <span class="nav-step" data-jump="welcome">① Welcome</span>
+      <span class="nav-step" data-jump="what">② What is IELTS</span>
+      <span class="nav-step" data-jump="versions">③ Academic vs GT</span>
+      <span class="nav-step" data-jump="format">④ Format</span>
+      <span class="nav-step" data-jump="scoring">⑤ Scoring</span>
+      <span class="nav-step" data-jump="skills">⑥ 4 Skills</span>
+      <span class="nav-step" data-jump="day">⑦ Test Day</span>
+      <span class="nav-step" data-jump="myths">⑧ Myths</span>
+      <span class="nav-step" data-jump="roadmap">⑨ Roadmap</span>
+      <span class="nav-step" data-jump="quiz">⑩ Quiz</span>
+    </div>
+  </div>
+</div>
+
+<main class="max-w-6xl mx-auto px-4 py-8">
+
+  <!-- WELCOME -->
+  <section id="welcome" class="mb-10">
+    <div class="grid md:grid-cols-5 gap-6 items-center">
+      <div class="md:col-span-3">
+        <span class="chip" style="background:var(--soft);color:var(--navy)">Class 01 · Orientation</span>
+        <h1 class="text-3xl md:text-5xl mt-3 leading-tight">Welcome to <span class="marker-yellow">IELTS.</span></h1>
+        <p class="mt-3 text-stone-700">The first class. Before we start practising, you need to know what you've signed up for: what the test is, how it's scored, what makes a 7+, and what the test day looks like. By the end of this hour, you'll be able to explain the IELTS test to a friend who's never heard of it.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="badge" style="background:#eef9f3;color:var(--green)">⏱ ~60-min class</span>
+          <span class="badge" style="background:#fdf6e3;color:var(--gold)">📚 No prep required</span>
+          <span class="badge" style="background:#fdeadf;color:var(--terra)">🧠 Quiz at the end</span>
+        </div>
+      </div>
+      <div class="md:col-span-2">
+        <div class="card p-4">
+          <div class="text-xs uppercase tracking-widest text-stone-500 mb-2">What you'll know by the end</div>
+          <ul class="space-y-1.5 text-sm">
+            <li class="flex gap-2"><span style="color:var(--green)">✓</span> The difference between Academic and General Training</li>
+            <li class="flex gap-2"><span style="color:var(--green)">✓</span> Exact test format, timings and order</li>
+            <li class="flex gap-2"><span style="color:var(--green)">✓</span> How the 0–9 band scoring works</li>
+            <li class="flex gap-2"><span style="color:var(--green)">✓</span> What a Band 7 actually means in plain English</li>
+            <li class="flex gap-2"><span style="color:var(--green)">✓</span> What to bring on test day</li>
+            <li class="flex gap-2"><span style="color:var(--green)">✓</span> The 5 biggest myths about IELTS — busted</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IS IELTS -->
+  <section id="what" class="mb-10">
+    <h2 class="text-2xl mb-3">② What is IELTS?</h2>
+    <p class="text-stone-700 max-w-3xl text-sm">IELTS — the <strong>International English Language Testing System</strong> — is one of the most widely accepted English-proficiency tests in the world. It is jointly run by three organisations and accepted by over 11,000 institutions worldwide.</p>
+
+    <div class="grid md:grid-cols-4 gap-3 mt-4">
+      <div class="stat-card"><div class="text-xs uppercase tracking-widest text-stone-500">Run by</div><div class="font-bold mt-1">British Council · IDP · Cambridge Assessment English</div></div>
+      <div class="stat-card"><div class="text-xs uppercase tracking-widest text-stone-500">Accepted in</div><div class="font-bold mt-1">140+ countries</div><div class="text-xs text-stone-500">11,000+ institutions</div></div>
+      <div class="stat-card"><div class="text-xs uppercase tracking-widest text-stone-500">Total length</div><div class="font-bold mt-1">2h 45min</div><div class="text-xs text-stone-500">All 4 skills tested</div></div>
+      <div class="stat-card"><div class="text-xs uppercase tracking-widest text-stone-500">Result validity</div><div class="font-bold mt-1">2 years</div><div class="text-xs text-stone-500">From the test date</div></div>
+    </div>
+
+    <div class="card p-5 mt-4">
+      <h3 class="font-bold mb-2">Who takes IELTS and why?</h3>
+      <div class="grid md:grid-cols-3 gap-3 text-sm">
+        <div class="p-3 rounded-lg" style="background:#eef2fa"><strong>🎓 Studying abroad</strong><div class="text-stone-700 mt-1">Most universities in the UK, Australia, Canada, NZ and many in the US require an IELTS Academic score.</div></div>
+        <div class="p-3 rounded-lg" style="background:#fdf6e3"><strong>🌍 Immigration</strong><div class="text-stone-700 mt-1">Canada, Australia, NZ, UK use IELTS for skilled-worker visas and permanent residency applications.</div></div>
+        <div class="p-3 rounded-lg" style="background:#eef9f3"><strong>💼 Work / Professional</strong><div class="text-stone-700 mt-1">Doctors, nurses, engineers and teachers often need IELTS to register with professional bodies abroad.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMIC VS GT -->
+  <section id="versions" class="mb-10">
+    <h2 class="text-2xl mb-3">③ Academic or General Training?</h2>
+    <p class="text-stone-700 max-w-3xl text-sm">Two versions of IELTS exist. The <strong>Listening</strong> and <strong>Speaking</strong> sections are identical. <strong>Reading</strong> and <strong>Writing</strong> differ.</p>
+
+    <div class="grid md:grid-cols-2 gap-4 mt-4">
+      <div class="card p-5" style="border-left:6px solid var(--navy)">
+        <div class="chip" style="background:#eef2fa;color:var(--navy)">Academic</div>
+        <h3 class="text-xl mt-2 font-bold">IELTS Academic</h3>
+        <p class="text-sm text-stone-700 mt-2"><strong>Take this if you want to:</strong></p>
+        <ul class="text-sm mt-1 space-y-1 text-stone-700 list-disc list-inside">
+          <li>Study at a university (any level)</li>
+          <li>Register as a professional (doctor, nurse, engineer)</li>
+          <li>Join graduate or postgraduate programs</li>
+        </ul>
+        <p class="text-sm text-stone-700 mt-3"><strong>What's different:</strong></p>
+        <ul class="text-sm mt-1 space-y-1 text-stone-700 list-disc list-inside">
+          <li><strong>Reading:</strong> 3 academic passages (journals, articles, textbooks)</li>
+          <li><strong>Writing Task 1:</strong> Describe a chart, graph, map or process</li>
+          <li><strong>Writing Task 2:</strong> Academic essay</li>
+        </ul>
+      </div>
+      <div class="card p-5" style="border-left:6px solid var(--gold)">
+        <div class="chip" style="background:#fdf6e3;color:var(--gold)">General Training</div>
+        <h3 class="text-xl mt-2 font-bold">IELTS General Training</h3>
+        <p class="text-sm text-stone-700 mt-2"><strong>Take this if you want to:</strong></p>
+        <ul class="text-sm mt-1 space-y-1 text-stone-700 list-disc list-inside">
+          <li>Migrate to Australia, Canada, NZ or UK</li>
+          <li>Work in an English-speaking country (non-professional)</li>
+          <li>Do secondary education or training abroad</li>
+        </ul>
+        <p class="text-sm text-stone-700 mt-3"><strong>What's different:</strong></p>
+        <ul class="text-sm mt-1 space-y-1 text-stone-700 list-disc list-inside">
+          <li><strong>Reading:</strong> Notices, ads, workplace docs (easier register)</li>
+          <li><strong>Writing Task 1:</strong> Write a letter (formal / semi-formal / informal)</li>
+          <li><strong>Writing Task 2:</strong> Essay (slightly easier topics)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feedback tip mt-3 text-sm">💡 <strong>Quick rule of thumb:</strong> University = Academic. Visa / migration = General Training. If you're unsure, always check the official requirement of the institution/country you're applying to.</div>
+  </section>
+
+  <!-- FORMAT -->
+  <section id="format" class="mb-10">
+    <h2 class="text-2xl mb-3">④ The Test Format — 2h 45min</h2>
+    <p class="text-stone-700 max-w-3xl text-sm">All four sections happen on the same day. Listening, Reading, and Writing run back-to-back without a break. Speaking is often the same day (afternoon) or up to 7 days before/after.</p>
+
+    <!-- Visual timeline -->
+    <div class="card p-4 mt-4 overflow-x-auto">
+      <div class="flex items-stretch gap-2 min-w-fit">
+        <div class="timeline-slot" style="background:var(--navy)">🎧 Listening<small>30 min + 10 transfer</small></div>
+        <div class="timeline-slot" style="background:var(--gold)">📖 Reading<small>60 min</small></div>
+        <div class="timeline-slot" style="background:var(--terra)">✍ Writing<small>60 min (T1: 20 + T2: 40)</small></div>
+        <div class="timeline-slot" style="background:var(--teal)">🎙 Speaking<small>11–14 min</small></div>
+      </div>
+      <div class="text-xs text-stone-500 mt-2 text-center">Reading + Writing happen back-to-back with no break. Bring focus stamina.</div>
+    </div>
+
+    <!-- Format details -->
+    <div class="gameboard mt-4" id="formatCards"></div>
+  </section>
+
+  <!-- SCORING -->
+  <section id="scoring" class="mb-10">
+    <h2 class="text-2xl mb-3">⑤ How Scoring Works — The 0–9 Band Scale</h2>
+    <p class="text-stone-700 max-w-3xl text-sm">IELTS doesn't give pass/fail. You get a <strong>band score from 0 to 9</strong> for each of the four skills, plus an overall band (the average, rounded to the nearest 0.5). Each whole band represents a clear level of English ability.</p>
+
+    <div class="card p-4 mt-4">
+      <div id="bandLadder"></div>
+    </div>
+
+    <div class="card p-5 mt-4">
+      <h3 class="font-bold mb-2">How the Overall Band is Calculated</h3>
+      <p class="text-sm text-stone-700">Your four scores are averaged. The result is rounded to the nearest <strong>0.5</strong>.</p>
+      <div class="mt-3 p-3 rounded-lg text-sm" style="background:var(--soft)">
+        <strong>Example:</strong> L 7.5 · R 7.0 · W 6.0 · S 7.0 = average 6.875 → <strong>rounded to Band 7.0</strong>.
+      </div>
+      <p class="text-sm text-stone-700 mt-2">.25 rounds up to the next half; .75 rounds up to the next whole. So 6.125 = 6.0, but 6.25 = 6.5.</p>
+    </div>
+
+    <div class="card p-5 mt-4">
+      <h3 class="font-bold mb-2">What Band Do You Need?</h3>
+      <div class="grid md:grid-cols-2 gap-3 text-sm">
+        <div class="p-3 rounded-lg" style="background:#eef2fa"><strong>🎓 University (undergraduate):</strong> usually 6.0–6.5 overall, with no skill below 5.5 or 6.0.</div>
+        <div class="p-3 rounded-lg" style="background:#fdf6e3"><strong>🎓 University (postgraduate):</strong> usually 6.5–7.0 overall, often with 6.5 in Writing.</div>
+        <div class="p-3 rounded-lg" style="background:#eef9f3"><strong>🌍 Skilled migration (Canada/Australia):</strong> usually 6.0–7.0 per skill.</div>
+        <div class="p-3 rounded-lg" style="background:#fdeadf"><strong>💼 Medical / nursing registration:</strong> often 7.0 or 7.5 in each skill — the highest bar.</div>
+      </div>
+      <div class="feedback tip mt-3">💡 Always check your exact target. Different programs and visa categories have different rules. The Band 7+ Track in this course aims to get you safely past the highest commonly required threshold.</div>
+    </div>
+  </section>
+
+  <!-- 4 SKILLS -->
+  <section id="skills" class="mb-10">
+    <h2 class="text-2xl mb-3">⑥ The Four Skills — Quick Overview</h2>
+    <p class="text-stone-700 max-w-3xl text-sm">Tap any card for a quick orientation. We'll go deep on each one in later classes.</p>
+    <div class="gameboard mt-4" id="skillCards"></div>
+  </section>
+
+  <!-- TEST DAY -->
+  <section id="day" class="mb-10">
+    <h2 class="text-2xl mb-3">⑦ Test Day — What to Expect</h2>
+
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="card p-5">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Before you go</div>
+        <h3 class="font-bold mt-1">What to bring</h3>
+        <ul class="text-sm mt-2 space-y-1 text-stone-700 list-disc list-inside">
+          <li><strong>Original passport</strong> (or national ID, depending on country) — same one used at booking</li>
+          <li>Confirmation email/letter (some centres)</li>
+          <li>Pencils + an eraser (provided in many centres, bring your own as backup)</li>
+          <li>A clear water bottle (no label)</li>
+        </ul>
+        <p class="text-sm text-stone-700 mt-3"><strong>What NOT to bring:</strong> phones, smartwatches, books, notes, calculator, food, coloured pens. All these stay in lockers.</p>
+      </div>
+
+      <div class="card p-5">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Timeline</div>
+        <h3 class="font-bold mt-1">A typical morning</h3>
+        <ol class="text-sm mt-2 space-y-2 text-stone-700">
+          <li><strong>~30 min before:</strong> arrive, register, photo + fingerprint, locker for belongings.</li>
+          <li><strong>Listening (30 min + 10 transfer):</strong> headphones, played once.</li>
+          <li><strong>Reading (60 min):</strong> three passages, 40 questions, no extra transfer time.</li>
+          <li><strong>Writing (60 min):</strong> Task 1 (20 min), Task 2 (40 min).</li>
+          <li><strong>Speaking (11–14 min):</strong> face-to-face with an examiner, often same-day afternoon or another day within a week.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="card p-5 mt-4">
+      <h3 class="font-bold mb-2">📅 Results & Re-takes</h3>
+      <div class="grid md:grid-cols-3 gap-3 text-sm">
+        <div class="p-3 rounded-lg" style="background:#eef2fa"><strong>Paper-based:</strong> results in 13 days.</div>
+        <div class="p-3 rounded-lg" style="background:#eef9f3"><strong>Computer-based:</strong> results in 3–5 days.</div>
+        <div class="p-3 rounded-lg" style="background:#fdf6e3"><strong>Re-take:</strong> no waiting period. You can also retake just ONE skill (IELTS One Skill Retake) within 60 days, in many countries.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MYTHS -->
+  <section id="myths" class="mb-10">
+    <h2 class="text-2xl mb-3">⑧ 6 Myths — Busted</h2>
+    <div id="mythList"></div>
+  </section>
+
+  <!-- PREP ROADMAP -->
+  <section id="roadmap" class="mb-10">
+    <h2 class="text-2xl mb-3">⑨ Your 8-Week Prep Roadmap</h2>
+    <p class="text-stone-700 max-w-3xl text-sm">A realistic plan for someone starting from around Band 5.5–6 and targeting Band 7+. Adjust to your level.</p>
+
+    <div class="grid md:grid-cols-4 gap-2 text-center text-xs mt-4">
+      <div class="card p-3"><strong>Week 1</strong><div class="text-stone-700 mt-1">Orientation + diagnostic mock</div></div>
+      <div class="card p-3"><strong>Week 2</strong><div class="text-stone-700 mt-1">Reading techniques (skim, scan, Q-types 1–7)</div></div>
+      <div class="card p-3"><strong>Week 3</strong><div class="text-stone-700 mt-1">Reading techniques (Q-types 8–14)</div></div>
+      <div class="card p-3"><strong>Week 4</strong><div class="text-stone-700 mt-1">Listening 1 + 2 (form, map, monologue)</div></div>
+      <div class="card p-3"><strong>Week 5</strong><div class="text-stone-700 mt-1">Listening 3 + 4 (distractor, lecture)</div></div>
+      <div class="card p-3"><strong>Week 6</strong><div class="text-stone-700 mt-1">Writing Task 1 + Task 2 essay types</div></div>
+      <div class="card p-3"><strong>Week 7</strong><div class="text-stone-700 mt-1">Speaking parts 1, 2, 3 + recordings</div></div>
+      <div class="card p-3"><strong>Week 8</strong><div class="text-stone-700 mt-1">Full mock tests + mistake-journal review</div></div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz" class="mb-10">
+    <div class="flex items-end justify-between mb-3">
+      <h2 class="text-2xl">⑩ End-of-Class Quiz · 10 Questions</h2>
+      <div class="flex items-center gap-3">
+        <div class="text-sm" id="quizScore">0 / 10</div>
+        <div class="progress-bar w-32"><div class="progress-fill" id="quizProg" style="width:0%"></div></div>
+      </div>
+    </div>
+    <p class="text-stone-700 text-sm">Quick check on what you've learned. No timer — go at your pace.</p>
+    <div class="space-y-3 mt-4" id="quizContainer"></div>
+    <div id="quizResult" class="mt-4"></div>
+  </section>
+
+  <footer class="border-t border-line pt-5 pb-10 text-xs text-stone-500"><div>IELTS Orientation · Class 01 · Welcome & The Basics</div></footer>
+</main>
+
+<!-- MODAL -->
+<div class="modal-backdrop" id="modal"><div class="modal-box"><div class="modal-head"><div class="flex items-center gap-3" id="mHead"></div><button class="modal-close" id="mClose">✕</button></div><div class="modal-body" id="mBody"></div></div></div>
+
+<script>
+document.querySelectorAll('.nav-step').forEach(s=>s.addEventListener('click',()=>document.getElementById(s.dataset.jump)?.scrollIntoView({behavior:'smooth'})));
+
+// ====== MODAL ======
+const modal=document.getElementById('modal');
+function openModal(headHtml,bodyHtml){
+  document.getElementById('mHead').innerHTML=headHtml;
+  document.getElementById('mBody').innerHTML=bodyHtml;
+  modal.classList.add('open');document.body.classList.add('modal-open');
+  document.getElementById('mBody').scrollTop=0;
+}
+function closeModal(){modal.classList.remove('open');document.body.classList.remove('modal-open');}
+document.getElementById('mClose').addEventListener('click',closeModal);
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
+document.addEventListener('keydown',e=>{if(modal.classList.contains('open')&&e.key==='Escape')closeModal();});
+
+// ====== FORMAT CARDS ======
+const formatCards=[
+  {n:1,name:"🎧 Listening",accent:"var(--navy)",time:"30 min + 10 min transfer",qs:"40 Qs · 4 sections",detail:"<strong>Plays ONCE</strong> through headphones. 4 sections of increasing difficulty:<br>• <strong>Section 1:</strong> Two-person conversation (everyday, e.g. booking a gym)<br>• <strong>Section 2:</strong> Monologue (e.g. tour guide)<br>• <strong>Section 3:</strong> Up to 4 speakers in academic discussion<br>• <strong>Section 4:</strong> Academic lecture<br><br>Question types: multiple choice, matching, plan/map labelling, form/note/sentence completion, short-answer.<br><br><strong>You get 10 extra minutes</strong> at the end to transfer answers to the answer sheet (paper-based only)."},
+  {n:2,name:"📖 Reading",accent:"var(--gold)",time:"60 min",qs:"40 Qs · 3 passages",detail:"Three long passages (~700–950 words each). For Academic: journal articles, academic texts, factual extracts. For General Training: shorter, more practical texts.<br><br>14 official question types including T/F/NG, Y/N/NG, Matching Headings, Matching Information, MCQ, Sentence Completion, Summary Completion, Diagram Labelling, Short Answer.<br><br><strong>No extra transfer time</strong> — write your answers directly on the answer sheet as you go.<br><br>Pacing rule: ~17 min on Passage 1, ~20 min on Passage 2, ~22–23 min on Passage 3 (the 18–20–22 rule)."},
+  {n:3,name:"✍ Writing",accent:"var(--terra)",time:"60 min",qs:"2 tasks",detail:"<strong>Task 1 (20 min, 150+ words):</strong><br>• Academic: describe a chart, graph, table, map or process<br>• General Training: write a letter (formal, semi-formal or informal)<br><br><strong>Task 2 (40 min, 250+ words):</strong> Essay responding to a prompt. 5 main types:<br>• Opinion (agree/disagree)<br>• Discussion (both views + opinion)<br>• Advantages / Disadvantages<br>• Problem / Solution<br>• Two-part question<br><br><strong>Task 2 is worth twice as much as Task 1.</strong> Always do Task 2 first."},
+  {n:4,name:"🎙 Speaking",accent:"var(--teal)",time:"11–14 min",qs:"3 parts · face-to-face",detail:"One-to-one conversation with a certified examiner. Recorded for quality assurance.<br><br><strong>Part 1 (4–5 min):</strong> Friendly Q&A about familiar topics (home, work, hobbies, food, music)<br><strong>Part 2 (3–4 min):</strong> Cue card — 1 min to prepare, then 1–2 min monologue on a given topic<br><strong>Part 3 (4–5 min):</strong> Abstract discussion related to Part 2 — opinions, comparisons, predictions<br><br>Scored on 4 criteria: Fluency & Coherence, Lexical Resource, Grammatical Range & Accuracy, Pronunciation."}
+];
+function renderFormatCards(){
+  const el=document.getElementById('formatCards');
+  formatCards.forEach(c=>{
+    const card=document.createElement('div');
+    card.className='case-card';
+    card.style.background=`linear-gradient(180deg, ${c.accent}22 0%, #fff 70%)`;
+    card.innerHTML=`<div class="flex items-center gap-2"><div class="num-circle" style="background:${c.accent}">${c.n}</div><div class="font-bold leading-tight">${c.name}</div></div><div class="text-xs text-stone-700 mt-1">${c.time}</div><div class="text-xs text-stone-500">${c.qs}</div><div class="preview" style="color:${c.accent}">▶ Tap to expand</div>`;
+    card.addEventListener('click',()=>{
+      openModal(`<div class="num-circle" style="background:${c.accent};width:36px;height:36px">${c.n}</div><div><div class="font-bold text-lg">${c.name}</div><div class="text-[10px] uppercase tracking-widest text-stone-500">${c.time} · ${c.qs}</div></div>`,
+        `<div class="text-sm leading-relaxed">${c.detail}</div>`);
+    });
+    el.appendChild(card);
+  });
+}
+renderFormatCards();
+
+// ====== BAND LADDER ======
+const bands=[
+  {b:"9",color:"#1a4a8a",label:"Expert",desc:"Native-like. Total command. Fluent, precise, completely understood."},
+  {b:"8",color:"#1c7a4f",label:"Very Good",desc:"Fully operational. Occasional minor errors. Handles complex argument."},
+  {b:"7",color:"#3aa66a",label:"Good",desc:"Operational command. Errors in unfamiliar situations. Detailed reasoning fine."},
+  {b:"6",color:"#c9921c",label:"Competent",desc:"Effective despite errors. Understands fairly complex language in familiar contexts."},
+  {b:"5",color:"#e0931c",label:"Modest",desc:"Partial command. Frequent mistakes. Gets the basic meaning across."},
+  {b:"4",color:"#d24d4d",label:"Limited",desc:"Basic competence in familiar situations only. Problems with complex language."},
+  {b:"3",color:"#a83b1f",label:"Extremely Limited",desc:"Conveys + understands only general meaning in very familiar situations."},
+  {b:"2",color:"#7a1c1c",label:"Intermittent",desc:"Real communication is extremely difficult. Only basic words and short phrases."},
+  {b:"1",color:"#5a1010",label:"Non-User",desc:"Just a few isolated words."},
+  {b:"0",color:"#333333",label:"Did not attempt",desc:"No assessable information provided."}
+];
+function renderBands(){
+  const el=document.getElementById('bandLadder');
+  bands.forEach(b=>{
+    const row=document.createElement('div');
+    row.className='band-row';
+    row.innerHTML=`<div class="band-pill" style="background:${b.color}">${b.b}</div><div class="flex-1"><div class="font-bold">${b.label}</div><div class="text-xs text-stone-600">${b.desc}</div></div>`;
+    el.appendChild(row);
+  });
+}
+renderBands();
+
+// ====== SKILL CARDS ======
+const skills=[
+  {n:1,name:"🎧 Listening",accent:"var(--navy)",intro:"Hunt for answers in audio. Plays once.",detail:"What makes IELTS Listening hard isn't the English — it's the SPEED of decision-making. You have to:<br>• Predict answers during the 30-sec pauses<br>• Spot synonyms (audio rarely uses the same words as the question)<br>• Catch distractors (speakers correct themselves mid-sentence)<br>• Handle spelling and plurals perfectly<br><br><strong>The single biggest mistake:</strong> wasting the pause time. Use it to underline keywords and predict answer types."},
+  {n:2,name:"📖 Reading",accent:"var(--gold)",intro:"Treasure hunt, not comprehension.",detail:"You DON'T need to understand 100% of the text. Top scorers understand 50–60% and still get 9.0. The skill is:<br>• Skimming for the structure (2–3 min per passage)<br>• Scanning for specific keywords<br>• Recognising paraphrases (the answer rarely uses the same words as the question)<br>• Pacing — 90 seconds per question, no more<br><br><strong>The single biggest mistake:</strong> reading the passage first. Always read the questions first."},
+  {n:3,name:"✍ Writing",accent:"var(--terra)",intro:"Architect, not artist.",detail:"Examiners want a STRUCTURE — not creative writing. The 4 marking pillars (each 25%):<br>• <strong>Task Response:</strong> did you answer every part of the question?<br>• <strong>Coherence & Cohesion:</strong> logical paragraphs, smooth links<br>• <strong>Lexical Resource:</strong> precise vocabulary, collocations, paraphrasing<br>• <strong>Grammatical Range & Accuracy:</strong> mix of simple + complex structures, mostly correct<br><br><strong>The single biggest mistake:</strong> writing without a plan. Spend the first 10 of your 40 minutes planning Task 2."},
+  {n:4,name:"🎙 Speaking",accent:"var(--teal)",intro:"Performance, not perfection.",detail:"The examiner is your audience. You don't need a 'perfect' accent — you need to be clear and engaging. The 4 criteria (each 25%):<br>• <strong>Fluency & Coherence:</strong> smooth flow, few unnatural pauses<br>• <strong>Lexical Resource:</strong> precise words, natural collocations, idiom<br>• <strong>Grammatical Range & Accuracy:</strong> mix of tenses, conditionals, relative clauses<br>• <strong>Pronunciation:</strong> clear, with natural word/sentence stress and intonation<br><br><strong>The single biggest mistake:</strong> one-word answers in Part 1, or rambling in Part 2."}
+];
+function renderSkills(){
+  const el=document.getElementById('skillCards');
+  skills.forEach(s=>{
+    const card=document.createElement('div');
+    card.className='case-card';
+    card.style.background=`linear-gradient(180deg, ${s.accent}22 0%, #fff 70%)`;
+    card.innerHTML=`<div class="flex items-center gap-2"><div class="num-circle" style="background:${s.accent}">${s.n}</div><div class="font-bold leading-tight">${s.name}</div></div><div class="text-xs text-stone-700 mt-2">${s.intro}</div><div class="preview" style="color:${s.accent}">▶ Tap for details</div>`;
+    card.addEventListener('click',()=>{
+      openModal(`<div class="num-circle" style="background:${s.accent};width:36px;height:36px">${s.n}</div><div><div class="font-bold text-lg">${s.name}</div><div class="text-[10px] uppercase tracking-widest text-stone-500">Skill overview</div></div>`,
+        `<div class="text-sm leading-relaxed">${s.detail}</div>`);
+    });
+    el.appendChild(card);
+  });
+}
+renderSkills();
+
+// ====== MYTHS ======
+const myths=[
+  {false:"You need to have an American or British accent to score Band 7+.",true:"Any accent is fine. Examiners are trained on accents from all over the world. What matters is being CLEAR — using correct word stress, sentence stress, and intonation. Indian, Nigerian, Filipino, Eastern European accents all routinely score 8+ in Speaking."},
+  {false:"You should use as many 'big' words as possible to impress the examiner.",true:"Wrong. Using a 'big' word incorrectly LOSES marks. The rule is: <strong>precision over showing off</strong>. 'A pressing issue' is better than 'a humongous problemo'. Use words you actually control."},
+  {false:"There's a hidden 'right answer' for opinion essays.",true:"There is no hidden right answer. Examiners assess HOW you write — your structure, vocabulary, grammar, cohesion — not WHAT you write. You can agree, disagree, partially agree, or sit on the fence (carefully). What matters is that you make your position clear and support it."},
+  {false:"You should write lots of words to score higher.",true:"No — writing past the limit doesn't help. Task 1 = 150+ words. Task 2 = 250+ words. Aim for 170 and 290. Anything beyond ~330 in Task 2 and you're risking errors without gaining marks."},
+  {false:"You can prepare for IELTS in 1 week.",true:"Almost never. Most candidates need 6–12 weeks of consistent practice to add 0.5–1.0 to their starting band. The exception is candidates who are already strong English users (Band 7+) who just need to learn the test format — they can prep in 2 weeks."},
+  {false:"The IELTS examiner is trying to trick you.",true:"They're not. They're trained to assess you against published criteria. They WANT you to do well. The 'tricks' in IELTS questions are designed to test specific skills (e.g., recognising paraphrase, spotting qualifiers like 'always') — they're not personal."}
+];
+function renderMyths(){
+  const el=document.getElementById('mythList');
+  myths.forEach((m,i)=>{
+    const row=document.createElement('div');
+    row.className='myth-card';
+    row.innerHTML=`<div class="myth-false"><strong>❌ Myth ${i+1}:</strong> ${m.false}</div><div class="myth-true"><strong>✅ Truth:</strong> ${m.true}</div>`;
+    el.appendChild(row);
+  });
+}
+renderMyths();
+
+// ====== QUIZ ======
+const quiz=[
+  {q:"What does IELTS stand for?",options:["International English Language Testing System","International English Learning Test Standard","Institutional English Language Test Society","Interactive English Learning & Testing Series"],a:0,why:"International English Language Testing System — the I, E, L, T, S each match a word."},
+  {q:"Which of these is NOT one of the three organisations that runs IELTS?",options:["British Council","IDP","Cambridge Assessment English","Oxford University Press"],a:3,why:"IELTS is jointly run by British Council, IDP and Cambridge Assessment English. Oxford University Press is a different publisher."},
+  {q:"For migration to Canada or Australia, which IELTS version should you take?",options:["Academic","General Training","Both at the same time","Either — it doesn't matter"],a:1,why:"Migration usually requires General Training. Academic is for university admission and professional registration."},
+  {q:"How long is the IELTS test in total (Listening + Reading + Writing)?",options:["1 hour","2 hours","2 hours 45 minutes","3 hours 30 minutes"],a:2,why:"30 min Listening + 10 min transfer + 60 min Reading + 60 min Writing = 2h 45min. Speaking (11–14 min) is on top, often the same afternoon."},
+  {q:"How long is the IELTS Speaking test?",options:["5–7 minutes","8–10 minutes","11–14 minutes","20 minutes"],a:2,why:"Speaking is 11–14 minutes across 3 parts."},
+  {q:"How is the Overall Band Score calculated?",options:["Lowest of the four skills","Average of the four skills, rounded to the nearest 0.5","Sum of all four skills divided by 10","Weighted average favouring Writing"],a:1,why:"Average of L, R, W and S, rounded to the nearest 0.5. Example: 7.5 + 7 + 6 + 7 = 6.875 → 7.0."},
+  {q:"How long are IELTS results valid for?",options:["6 months","1 year","2 years","5 years"],a:2,why:"IELTS scores are valid for 2 years from the test date. Many institutions require results from within this window."},
+  {q:"Which writing task is worth more marks?",options:["Task 1","Task 2","They're worth the same","It depends on the version"],a:1,why:"Task 2 is worth twice as much as Task 1. Always do Task 2 first."},
+  {q:"In IELTS Listening, how many times does the audio play?",options:["Once","Twice","Three times","As many times as you want"],a:0,why:"The audio plays ONCE only. There is no rewind. This is why preparation during the pauses is critical."},
+  {q:"Which of these is a MYTH about IELTS?",options:["The audio for Listening plays only once","You need a British accent to score Band 7+","Task 2 is worth more than Task 1","Speaking is face-to-face with an examiner"],a:1,why:"Any accent is fine — examiners are trained to assess speakers from all over the world. The other three statements are all true."},
+];
+function renderQuiz(){
+  const el=document.getElementById('quizContainer');
+  quiz.forEach((q,i)=>{
+    const wrap=document.createElement('div');
+    wrap.className='card p-4';
+    wrap.dataset.idx=i;
+    wrap.innerHTML=`<div class="font-medium text-sm mb-2"><strong>Q${i+1}.</strong> ${q.q}</div>
+      <div class="space-y-2">${q.options.map((o,j)=>`<div class="opt q-opt" data-i="${i}" data-j="${j}"><div class="letter">${String.fromCharCode(65+j)}</div><div>${o}</div></div>`).join('')}</div>
+      <div class="fb"></div>`;
+    el.appendChild(wrap);
+  });
+  let score=0;
+  el.addEventListener('click',e=>{
+    const o=e.target.closest('.q-opt');
+    if(!o) return;
+    const wrap=o.closest('.card');
+    if (wrap.dataset.done) return;
+    const i=+o.dataset.i, j=+o.dataset.j;
+    const q=quiz[i];
+    const ok=j===q.a;
+    wrap.dataset.done='1';
+    if (ok){o.classList.add('correct');score++;}
+    else o.classList.add('wrong');
+    wrap.querySelectorAll('.q-opt').forEach((x,k)=>{
+      if (k===q.a) x.classList.add('correct');
+      x.classList.add('disabled');
+    });
+    wrap.querySelector('.fb').innerHTML=`<div class="feedback ${ok?'good':'bad'}">${ok?'✅':'❌'} <strong>${String.fromCharCode(65+q.a)}.</strong> ${q.why}</div>`;
+    document.getElementById('quizScore').textContent=`${score} / 10`;
+    document.getElementById('quizProg').style.width=(document.querySelectorAll('[data-done="1"]').length*10)+'%';
+    if (document.querySelectorAll('[data-done="1"]').length===10){
+      let band="Keep learning";
+      if (score>=9) band="🎉 Excellent — you're orientation-ready!";
+      else if (score>=7) band="✓ Solid — review the misses below.";
+      else if (score>=5) band="○ OK — re-read sections 2–5 and try again.";
+      else band="◌ Re-watch this class. The basics are the foundation.";
+      document.getElementById('quizResult').innerHTML=`<div class="card p-4 text-center"><div class="text-xs uppercase tracking-widest text-stone-500">Final Score</div><div class="text-3xl font-bold mt-1" style="color:var(--navy)">${score} / 10</div><div class="text-sm mt-2">${band}</div></div>`;
+    }
+  });
+}
+renderQuiz();
+</script>
+</body>
+</html>

@@ -1,1149 +1,1102 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>IELTS Listening: Sound Hunter — Band 7+ â€” ViATestPrep</title>
+<title>IELTS Listening: Sound Hunter — Band 7+</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#0a1628; --paper:#f6f8fb; --signal:#0d8a7a; --alert:#e8580d;
-    --deep:#0b3b54; --deep2:#072a3d; --soft:#cfe7e2; --line:#dde7ee;
-    --gold:#e2a93f;
-  }
+  :root{--ink:#0a1628;--paper:#f6f8fb;--signal:#0d8a7a;--alert:#e8580d;--deep:#0b3b54;--deep2:#072a3d;--soft:#cfe7e2;--line:#dde7ee;--gold:#e2a93f;--purple:#5b3b8a}
   *{box-sizing:border-box}
   html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif}
   h1,h2,h3,h4{font-family:'Fraunces',serif;letter-spacing:-.01em}
   .mono{font-family:'JetBrains Mono',monospace}
-  .card{background:#fff;border:1px solid var(--line);border-radius:18px}
-  .badge{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600}
-  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:12px;font-weight:600;transition:transform .08s ease}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px}
+  .badge{display:inline-flex;align-items:center;gap:.3rem;padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+  .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem .85rem;border-radius:10px;font-weight:600;font-size:.85rem;cursor:pointer;border:none;transition:transform .08s}
   .btn:active{transform:translateY(1px)}
   .btn-primary{background:var(--deep);color:#fff}
   .btn-primary:hover{background:var(--deep2)}
   .btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
   .btn-ghost:hover{background:#eef5f3}
   .btn-alert{background:var(--alert);color:#fff}
-  .chip{padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+  .btn-signal{background:var(--signal);color:#fff}
+  .btn-gold{background:var(--gold);color:#fff}
+  .chip{padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
   .progress-bar{height:8px;background:#dceae6;border-radius:999px;overflow:hidden}
-  .progress-fill{height:100%;background:linear-gradient(90deg,var(--signal),#23c4ad);transition:width .4s ease}
-  .reveal{max-height:0;overflow:hidden;transition:max-height .5s ease}
-  .reveal.open{max-height:2400px}
-  .opt{cursor:pointer;border:1.5px solid var(--line);border-radius:12px;padding:.85rem 1rem;background:#fff;display:flex;gap:.75rem;align-items:flex-start;transition:all .12s ease}
-  .opt:hover{border-color:var(--deep);background:#eef5f3}
-  .opt.correct{border-color:var(--signal);background:#e6f7f2}
-  .opt.wrong{border-color:var(--alert);background:#fde8da;text-decoration:line-through;opacity:.85}
+  .progress-fill{height:100%;background:linear-gradient(90deg,var(--signal),#23c4ad);transition:width .4s}
+  .toolbar{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(8px);background:rgba(246,248,251,.92);border-bottom:1px solid var(--line)}
+  .nav-step{cursor:pointer;font-size:.85rem;white-space:nowrap}
+  .opt{cursor:pointer;border:1.5px solid var(--line);border-radius:10px;padding:.6rem .85rem;background:#fff;transition:all .12s;font-size:.88rem;display:inline-flex;gap:.4rem;align-items:center}
+  .opt:hover{border-color:var(--deep);background:var(--soft)}
+  .opt.correct{border-color:var(--signal);background:#e6f4ee;color:var(--signal)}
+  .opt.wrong{border-color:var(--alert);background:#fde2d6;text-decoration:line-through}
   .opt.disabled{pointer-events:none;opacity:.7}
-  .opt .letter{flex:0 0 28px;height:28px;border-radius:8px;background:#eef5f3;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Fraunces',serif}
+  .opt .letter{flex:0 0 22px;height:22px;border-radius:5px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Fraunces',serif;font-size:.7rem}
   .opt.correct .letter{background:var(--signal);color:#fff}
   .opt.wrong .letter{background:var(--alert);color:#fff}
-  .feedback{padding:.85rem 1rem;border-radius:12px;font-size:.92rem;line-height:1.5;border-left:4px solid}
+  .feedback{padding:.7rem .9rem;border-radius:10px;font-size:.86rem;line-height:1.5;border-left:4px solid;margin-top:.5rem}
   .feedback.good{border-color:var(--signal);background:#eef9f5}
-  .feedback.bad{border-color:var(--alert);background:#fdf0e7}
+  .feedback.bad{border-color:var(--alert);background:#fde2d6}
   .feedback.tip{border-color:var(--gold);background:#fdf6e3}
-  .toolbar{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(8px);background:rgba(246,248,251,.85);border-bottom:1px solid var(--line)}
-  .nav-step{cursor:pointer}
-  .signal-bars{display:inline-flex;align-items:flex-end;gap:2px;height:18px}
-  .signal-bars span{width:3px;background:var(--signal);border-radius:1px;animation:signal 1.2s infinite ease-in-out}
-  .signal-bars span:nth-child(1){height:30%;animation-delay:.0s}
-  .signal-bars span:nth-child(2){height:55%;animation-delay:.15s}
-  .signal-bars span:nth-child(3){height:80%;animation-delay:.3s}
-  .signal-bars span:nth-child(4){height:100%;animation-delay:.45s}
-  @keyframes signal{0%,100%{transform:scaleY(.6);opacity:.7}50%{transform:scaleY(1);opacity:1}}
-  .timer-pill{font-family:'Fraunces',serif;font-weight:800;letter-spacing:.04em}
-  .qtype{cursor:pointer;transition:transform .15s ease, box-shadow .15s ease}
-  .qtype:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(11,59,84,.12)}
-  .gameboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-  .stamp{display:inline-block;border:2px dashed var(--alert);color:var(--alert);padding:.15rem .5rem;border-radius:6px;transform:rotate(-3deg);font-weight:800;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
+  .signal-bars{display:inline-flex;align-items:flex-end;gap:2px;height:14px}
+  .signal-bars span{width:3px;background:var(--signal);border-radius:1px}
+  .signal-bars.playing span{animation:signal 1s infinite ease-in-out}
+  .signal-bars span:nth-child(1){height:30%;animation-delay:0s}
+  .signal-bars span:nth-child(2){height:55%;animation-delay:.1s}
+  .signal-bars span:nth-child(3){height:80%;animation-delay:.2s}
+  .signal-bars span:nth-child(4){height:100%;animation-delay:.3s}
+  @keyframes signal{0%,100%{transform:scaleY(.6);opacity:.6}50%{transform:scaleY(1);opacity:1}}
+  .num-circle{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:'Fraunces',serif;font-size:.85rem;flex-shrink:0}
+  .gameboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.85rem}
+  .case-card{cursor:pointer;transition:transform .15s, box-shadow .15s;padding:1rem;border-radius:14px;border:1px solid var(--line);background:#fff;min-height:130px;display:flex;flex-direction:column}
+  .case-card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(11,59,84,.18)}
+  .preview{font-size:.7rem;color:var(--deep);font-weight:700;text-transform:uppercase;margin-top:auto}
+  .modal-backdrop{position:fixed;inset:0;background:rgba(10,22,40,.6);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;z-index:100;padding:2rem 1rem;overflow-y:auto}
+  .modal-backdrop.open{display:flex}
+  .modal-box{background:var(--paper);border-radius:18px;max-width:900px;width:100%;box-shadow:0 24px 80px rgba(0,0,0,.4);position:relative;margin:auto;animation:popIn .25s ease-out}
+  @keyframes popIn{from{transform:scale(.92);opacity:0}to{transform:scale(1);opacity:1}}
+  .modal-head{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--line);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;border-radius:18px 18px 0 0;z-index:5}
+  .modal-body{padding:1.4rem;max-height:78vh;overflow-y:auto}
+  .modal-close{background:#fde2d6;border:none;width:34px;height:34px;border-radius:50%;font-size:1.2rem;cursor:pointer;color:var(--alert);font-weight:800;display:flex;align-items:center;justify-content:center}
+  .modal-close:hover{background:var(--alert);color:#fff}
+  body.modal-open{overflow:hidden}
+  .timer-pill{font-family:'Fraunces',serif;font-weight:800}
+  .stamp{display:inline-block;border:2px dashed var(--alert);color:var(--alert);padding:.15rem .5rem;border-radius:6px;transform:rotate(-3deg);font-weight:800;font-size:.7rem;text-transform:uppercase}
+  .pulse{animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(13,138,122,.5)}50%{box-shadow:0 0 0 12px rgba(13,138,122,0)}}
   .marker-yellow{background:linear-gradient(transparent 60%, #fde68a 60%)}
   .marker-pink{background:linear-gradient(transparent 60%, #fbcfe8 60%)}
-  .marker-green{background:linear-gradient(transparent 60%, #bbf7d0 60%)}
-  .case-file{background:repeating-linear-gradient(0deg,#fff,#fff 28px,#eef5f3 28px,#eef5f3 29px);border:1px solid var(--line);border-radius:14px}
-  .stat-card{background:linear-gradient(135deg,#fff,#eef9f5);border:1px solid var(--line);border-radius:14px;padding:1rem}
-  .pause-card{background:linear-gradient(135deg,#fdf6e3,#fff);border:2px dashed var(--gold);border-radius:14px;padding:1rem}
+  .stat{background:linear-gradient(135deg,#fff,var(--soft));border:1px solid var(--line);border-radius:12px;padding:.9rem}
+  .pillar{background:linear-gradient(180deg,#fff,#eef5f3);border:1px solid var(--line);border-radius:12px;padding:1rem;position:relative;overflow:hidden}
+  .pillar::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--deep)}
+  .pillar.p2::before{background:var(--gold)}
+  .pillar.p3::before{background:var(--alert)}
+  .pillar.p4::before{background:var(--purple)}
+  .play-btn{background:var(--deep);color:#fff;border:none;padding:.45rem .9rem;border-radius:8px;font-weight:600;cursor:pointer;font-size:.85rem;display:inline-flex;align-items:center;gap:.4rem}
+  .play-btn:hover{background:var(--deep2)}
+  .play-btn.playing{background:var(--signal)}
+  .speed-pill{display:inline-flex;align-items:center;gap:.25rem;background:#fff;border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;font-size:.75rem}
+  .map-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;background:#eef5f3;padding:6px;border-radius:10px;border:1px solid var(--line)}
+  .map-cell{aspect-ratio:1/1;background:#fff;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:600;color:var(--deep);font-size:.9rem}
+  .map-cell.you{background:var(--gold);color:#fff}
+  .map-cell.target{background:var(--signal);color:#fff;animation:pulse 1.5s infinite}
+  .keycap{display:inline-block;padding:.05rem .4rem;border:1px solid #bbb;border-bottom-width:2px;border-radius:4px;background:#f3f3f3;font-family:monospace;font-size:.75rem}
   details>summary{cursor:pointer;list-style:none}
   details>summary::-webkit-details-marker{display:none}
-  details>summary::after{content:"+";float:right;font-weight:700;color:var(--deep)}
+  details>summary::after{content:"+";float:right;color:var(--deep);font-weight:700}
   details[open]>summary::after{content:"–"}
-  .glow{box-shadow:0 0 0 4px rgba(13,138,122,.18)}
-  .legend-dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:.35rem}
-  .map-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;background:#eef5f3;padding:8px;border-radius:12px;border:1px solid var(--line)}
-  .map-cell{aspect-ratio:1/1;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--deep);position:relative;font-size:.85rem}
-  .map-cell.you{background:var(--gold);color:#fff}
-  .map-cell.target{background:var(--signal);color:#fff;animation:signal 1.4s infinite}
-  .audio-bar{height:50px;background:linear-gradient(180deg,#0b3b54,#072a3d);border-radius:12px;overflow:hidden;position:relative}
-  .audio-wave{position:absolute;inset:0;display:flex;align-items:center;gap:2px;padding:0 10px}
-  .audio-wave span{flex:1;background:#23c4ad;height:30%;border-radius:1px;opacity:.6}
-  .playing .audio-wave span{animation:wave 1.5s infinite ease-in-out}
-  @keyframes wave{0%,100%{height:30%}50%{height:80%}}
+  input[type="text"],input[type="number"]{padding:.45rem .6rem;border:1.5px solid var(--line);border-radius:8px;font-size:.88rem;font-family:inherit;background:#fff}
+  input:focus{outline:2px solid var(--deep);border-color:var(--deep);outline-offset:-1px}
 </style>
-<style>
-/* ===== ViATestPrep Protection ===== */
-html body,html body *{-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important}
-img,svg{-webkit-user-drag:none!important}
-@media print{body{display:none!important;visibility:hidden!important}}
-.vtp-wm{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9990;overflow:hidden}
-.vtp-wm::after{content:"ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential";position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-28deg);font-size:1.1rem;font-weight:800;color:rgba(91,42,134,0.05);white-space:nowrap;letter-spacing:.3em;pointer-events:none}
-.vtp-corner{position:fixed;bottom:14px;right:14px;z-index:9999;background:linear-gradient(135deg,#5b2a86,#3b0a64);color:#fff;padding:.3rem .8rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.05em;box-shadow:0 2px 14px rgba(91,42,134,.4);pointer-events:none;font-family:Inter,sans-serif}
-</style></head>
+</head>
 <body>
-<div class="vtp-wm" aria-hidden="true"></div><div class="vtp-corner" aria-hidden="true">&#127891; ViATestPrep</div>
 
-<!-- TOP TOOLBAR -->
 <div class="toolbar">
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
     <div class="flex items-center gap-3">
       <div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-white" style="background:var(--deep);font-family:'Fraunces',serif">SH</div>
-      <div>
-        <div class="text-sm uppercase tracking-widest text-stone-500">IELTS Listening</div>
-        <div class="font-bold -mt-1">Sound Hunter · Band 7+ Track</div>
-      </div>
+      <div><div class="text-xs uppercase tracking-widest text-stone-500">IELTS Listening</div><div class="font-bold -mt-1 text-sm">Sound Hunter · Band 7+ Track</div></div>
     </div>
-    <div class="hidden md:flex items-center gap-4 text-sm">
-      <span class="nav-step" data-jump="mission">① Mindset</span>
-      <span class="nav-step" data-jump="pause">② The Pause</span>
-      <span class="nav-step" data-jump="sections">③ 4 Sections</span>
-      <span class="nav-step" data-jump="cases">④ 10 Q-types</span>
-      <span class="nav-step" data-jump="drills">⑤ Drills</span>
-      <span class="nav-step" data-jump="audio">🎧 Audio</span>
-      <span class="nav-step" data-jump="boss">⑥ Boss Fight</span>
+    <div class="hidden lg:flex items-center gap-3 text-stone-700 text-xs">
+      <span class="nav-step" data-jump="mindset">① Mindset</span>
+      <span class="nav-step" data-jump="pillars">② Pillars</span>
+      <span class="nav-step" data-jump="pause">③ Pause</span>
+      <span class="nav-step" data-jump="sections">④ Sections</span>
+      <span class="nav-step" data-jump="qtypes">⑤ Q-Types</span>
+      <span class="nav-step" data-jump="labs">⑥ Labs</span>
+      <span class="nav-step" data-jump="map">⑦ Map</span>
+      <span class="nav-step" data-jump="audio">⑧ Audio Mocks</span>
+      <span class="nav-step" data-jump="boss">⑨ Boss Fight</span>
     </div>
-    <div class="flex items-center gap-3">
-      <div class="text-right hidden sm:block">
-        <div class="text-[11px] uppercase tracking-widest text-stone-500">Hunter XP</div>
-        <div class="font-bold timer-pill" style="color:var(--signal)" id="xpDisplay">0 XP</div>
-      </div>
-      <div class="w-32 progress-bar"><div class="progress-fill" id="xpBar" style="width:0%"></div></div>
+    <div class="flex items-center gap-2 flex-wrap">
+      <button class="btn btn-ghost text-xs" id="stopAudio" title="Stop audio">⏹</button>
+      <div class="speed-pill"><span>Speed:</span><select id="speedSel" class="bg-transparent border-none"><option value="0.65">0.65× (very slow)</option><option value="0.78" selected>0.78× (clear)</option><option value="0.9">0.9× (test-pace)</option><option value="1">1× (fast)</option></select></div>
+      <div class="speed-pill"><span>Voice:</span><select id="voiceSel" class="bg-transparent border-none" style="max-width:140px"></select></div>
+      <div class="hidden md:block"><div class="text-[10px] uppercase tracking-widest text-stone-500">XP</div><div class="font-bold timer-pill" style="color:var(--signal)" id="xpDisplay">0</div></div>
+      <div class="w-24 progress-bar"><div class="progress-fill" id="xpBar" style="width:0%"></div></div>
     </div>
   </div>
 </div>
 
-<main class="max-w-6xl mx-auto px-4 py-10">
+<main class="max-w-6xl mx-auto px-4 py-8">
 
-  <!-- HERO -->
-  <section id="mission" class="mb-12">
+  <!-- AUDIO SETUP BANNER -->
+  <section id="audioSetup" class="mb-6 card p-4" style="background:linear-gradient(135deg,#eef9f5,#fff);border-left:6px solid var(--signal)">
+    <div class="flex items-start justify-between flex-wrap gap-3">
+      <div class="flex items-start gap-3">
+        <div class="text-2xl">🎧</div>
+        <div>
+          <div class="font-bold text-base">Audio quality check — do this BEFORE class starts</div>
+          <div class="text-sm text-stone-700 mt-1">Browser audio quality depends on which voices your computer has installed. Pick the best one below, then click <strong>Test voice</strong>. Cycle through until you find the clearest.</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <select id="voicePicker" class="border border-line rounded-lg p-2 text-sm bg-white" style="min-width:240px;max-width:340px"></select>
+        <button class="btn btn-primary" id="testVoice">▶ Test voice</button>
+        <button class="btn btn-ghost text-xs" id="cycleVoice">↻ Next voice</button>
+      </div>
+    </div>
+    <div class="mt-3 text-sm" id="voiceQuality"></div>
+    <details class="mt-2"><summary class="text-xs font-bold cursor-pointer">📖 How to get the clearest audio (browser tips)</summary>
+      <div class="mt-2 text-xs text-stone-700 grid md:grid-cols-3 gap-2">
+        <div class="p-2 rounded" style="background:#fdf6e3"><strong>🥇 Best:</strong> Microsoft Edge. Has free "Microsoft Online Natural" Neural voices (clearest TTS available in any browser).</div>
+        <div class="p-2 rounded" style="background:#eef9f5"><strong>🥈 Good:</strong> Chrome (look for "Google UK English" voices) or Safari on Mac (Apple "Premium" voices).</div>
+        <div class="p-2 rounded" style="background:#fde2d6"><strong>⚠ Avoid:</strong> Firefox uses your OS default voice — usually mediocre. Switch to Edge for class.</div>
+      </div>
+    </details>
+  </section>
+
+  <!-- MINDSET -->
+  <section id="mindset" class="mb-10">
     <div class="grid md:grid-cols-5 gap-6 items-center">
       <div class="md:col-span-3">
-        <span class="chip" style="background:var(--soft);color:var(--deep)">Lesson 02 · Listening</span>
-        <h1 class="text-4xl md:text-5xl mt-3 leading-tight">It plays <span class="marker-yellow">once</span>. There is no rewind. <span style="color:var(--signal)">Hunt every word.</span></h1>
-        <p class="mt-4 text-stone-700 max-w-prose">30 minutes. 40 questions. 4 sections. The audio runs once. Band 7+ candidates aren't just "good at English" — they're masters of <strong>prediction, focus, and trap-spotting</strong>. Today you become an active hunter, not a passive listener.</p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <button class="btn btn-primary" onclick="document.getElementById('pause').scrollIntoView({behavior:'smooth'})">▶ Begin Training</button>
-          <button class="btn btn-ghost" onclick="document.getElementById('boss').scrollIntoView({behavior:'smooth'})">Skip to Boss Fight</button>
-        </div>
-        <div class="mt-6 flex flex-wrap gap-2">
-          <span class="badge" style="background:#fdf0e7;color:var(--alert)">⏱ 30 min · plays once</span>
-          <span class="badge" style="background:#eef9f5;color:var(--signal)">🎯 Band 7+ target</span>
-          <span class="badge" style="background:#fdf6e3;color:var(--gold)">🎧 Active hunter</span>
+        <span class="chip" style="background:var(--soft);color:var(--deep)">Class 02 · Listening</span>
+        <h1 class="text-3xl md:text-5xl mt-3 leading-tight">Plays <span class="marker-yellow">once</span>. No rewind. <span style="color:var(--signal)">Hunt every word.</span></h1>
+        <p class="mt-3 text-stone-700 text-sm">30 minutes. 40 questions. 4 sections. <strong>Plays once only.</strong> Band 7+ candidates aren't just "good at English" — they are masters of <strong>prediction, paraphrase, distractors and signposts</strong>. This class teaches you all four.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="badge" style="background:#fde2d6;color:var(--alert)">⏱ Plays once</span>
+          <span class="badge" style="background:#eef9f5;color:var(--signal)">🎯 Band 7+ track</span>
+          <span class="badge" style="background:#fdf6e3;color:var(--gold)">🎧 13 audio drills</span>
         </div>
       </div>
       <div class="md:col-span-2">
-        <div class="card p-5">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="signal-bars"><span></span><span></span><span></span><span></span></span>
-            <div class="text-xs uppercase tracking-widest text-stone-500">Mindset Shift</div>
+        <div class="card p-4">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="signal-bars playing"><span></span><span></span><span></span><span></span></span>
+            <div class="text-xs uppercase tracking-widest text-stone-500">Mindset shift</div>
           </div>
-          <div class="space-y-3">
-            <div class="p-3 rounded-xl" style="background:#fdf0e7">
-              <div class="text-xs font-bold text-stone-500">❌ Passive listener</div>
-              <div class="text-sm mt-1">"I'll just listen carefully and write down what I hear."</div>
-            </div>
-            <div class="p-3 rounded-xl" style="background:#eef9f5">
-              <div class="text-xs font-bold text-stone-500">✅ Active hunter</div>
-              <div class="text-sm mt-1">"I've already <strong>predicted</strong> what's coming. I'm waiting for keywords. I know the traps."</div>
-            </div>
+          <div class="space-y-2">
+            <div class="p-3 rounded-lg" style="background:#fde2d6"><div class="text-xs font-bold text-stone-500">❌ Passive listener</div><div class="text-sm mt-1">"I'll just listen carefully and write what I hear."</div></div>
+            <div class="p-3 rounded-lg" style="background:#eef9f5"><div class="text-xs font-bold text-stone-500">✅ Active hunter</div><div class="text-sm mt-1">"I've predicted what's coming. I'm waiting for keywords. I know the traps."</div></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- THE PAUSE -->
-  <section id="pause" class="mb-14">
-    <div class="flex items-end justify-between mb-4">
-      <h2 class="text-3xl">② The Golden Rule — The Power of the Pause</h2>
-      <span class="badge" style="background:var(--soft);color:var(--deep)">Most under-used 30 sec in the test</span>
-    </div>
-    <p class="text-stone-700 max-w-3xl">The most crucial moment of the Listening test is when there's <em>no audio playing</em>. You'll get short pauses ("you now have 30 seconds to look at questions 1 to 5"). Wasting them is the single biggest mistake a Band 6 candidate makes. Band 7+ candidates use the pause to <strong>predict</strong>.</p>
+  <!-- 4 PILLARS -->
+  <section id="pillars" class="mb-10">
+    <h2 class="text-2xl mb-3">② The 4 Pillars of a Band 7+ Listener</h2>
+    <p class="text-stone-700 text-sm max-w-3xl">Every world-class listening score comes from these four behaviours. Tap each pillar.</p>
+    <div class="grid md:grid-cols-2 gap-3 mt-4" id="pillarCards"></div>
+  </section>
 
-    <div class="grid md:grid-cols-3 gap-4 mt-6">
-      <div class="pause-card">
-        <div class="text-xs uppercase tracking-widest text-stone-600 font-bold">Pause Move 1</div>
-        <div class="font-bold mt-1">Underline keywords</div>
-        <p class="text-sm text-stone-700 mt-1">Names, places, numbers, nouns. These are signposts you'll hear in the audio.</p>
-      </div>
-      <div class="pause-card">
-        <div class="text-xs uppercase tracking-widest text-stone-600 font-bold">Pause Move 2</div>
-        <div class="font-bold mt-1">Predict answer type</div>
-        <p class="text-sm text-stone-700 mt-1">Is it a number? A name? A noun? A verb? A date? Predict the grammatical shape of the gap.</p>
-      </div>
-      <div class="pause-card">
-        <div class="text-xs uppercase tracking-widest text-stone-600 font-bold">Pause Move 3</div>
-        <div class="font-bold mt-1">Predict synonyms</div>
-        <p class="text-sm text-stone-700 mt-1">Audio rarely uses the same word as the question. "Yearly" → "annually". "Disadvantages" → "drawbacks, problems".</p>
-      </div>
+  <!-- PAUSE -->
+  <section id="pause" class="mb-10">
+    <h2 class="text-2xl mb-3">③ The Golden 30-Second Pause</h2>
+    <p class="text-stone-700 text-sm max-w-3xl">The most crucial moments in the test are when there's <em>no audio playing</em>. Before each set of questions, you get short pauses. Wasting these is the single biggest Band 6 mistake.</p>
+
+    <div class="grid md:grid-cols-3 gap-3 mt-4">
+      <div class="card p-4" style="background:#fdf6e3"><div class="text-xs uppercase tracking-widest text-stone-600 font-bold">Move 1</div><div class="font-bold mt-1">Underline keywords</div><p class="text-sm text-stone-700 mt-1">Names, places, numbers, nouns. These are your signposts in the audio.</p></div>
+      <div class="card p-4" style="background:#fdf6e3"><div class="text-xs uppercase tracking-widest text-stone-600 font-bold">Move 2</div><div class="font-bold mt-1">Predict answer type</div><p class="text-sm text-stone-700 mt-1">Noun? Verb? Number? Name? Date? Predict the grammatical shape of the gap.</p></div>
+      <div class="card p-4" style="background:#fdf6e3"><div class="text-xs uppercase tracking-widest text-stone-600 font-bold">Move 3</div><div class="font-bold mt-1">Predict synonyms</div><p class="text-sm text-stone-700 mt-1">Audio almost never uses the same words as the question. "Yearly" → "annually". "Disadvantages" → "drawbacks".</p></div>
     </div>
 
-    <!-- PREDICTION DRILL -->
-    <div class="card p-6 mt-6">
-      <div class="flex items-center gap-3 mb-3">
-        <span class="chip" style="background:#fdf6e3;color:var(--gold)">Live drill</span>
-        <h3 class="text-xl">Pause Drill — Predict the Answer Type</h3>
-      </div>
-      <p class="text-sm text-stone-700">For each gapped question, click the <em>type</em> of word you expect to hear. Train this until it's automatic.</p>
-      <div class="space-y-3 mt-4" id="predictDrill"></div>
-    </div>
-
-    <!-- SYNONYM DRILL -->
-    <div class="card p-6 mt-6">
-      <div class="flex items-center gap-3 mb-3">
-        <span class="chip" style="background:var(--soft);color:var(--deep)">Synonym tuning</span>
-        <h3 class="text-xl">Match the Question Word → Audio Synonym</h3>
-      </div>
-      <p class="text-sm text-stone-700">Click each pair of matching words. The question word is on the left; the word the audio actually says is on the right.</p>
-      <div class="grid md:grid-cols-2 gap-3 mt-4" id="synDrill"></div>
-      <div class="mt-3" id="synFB"></div>
+    <!-- PREDICT DRILL -->
+    <div class="card p-5 mt-4">
+      <div class="flex items-center gap-3 mb-3"><span class="chip" style="background:#fdf6e3;color:var(--gold)">Predict drill</span><h3 class="text-lg font-bold">Predict the Answer Type</h3></div>
+      <p class="text-sm text-stone-700">For each gapped question, click the <em>type</em> of word you'd expect to hear.</p>
+      <div class="space-y-3 mt-3" id="predictDrill"></div>
     </div>
   </section>
 
-  <!-- 4 SECTIONS -->
-  <section id="sections" class="mb-14">
-    <h2 class="text-3xl mb-2">③ The Four Sections — Tactical Breakdown</h2>
-    <p class="text-stone-700 max-w-3xl">Difficulty climbs section by section. Adapt your strategy. Click a section to expand the playbook.</p>
-
-    <div class="grid md:grid-cols-2 gap-4 mt-6" id="sectionList"></div>
+  <!-- SECTIONS -->
+  <section id="sections" class="mb-10">
+    <h2 class="text-2xl mb-3">④ The 4 Sections — Tactical Breakdown</h2>
+    <p class="text-stone-700 text-sm max-w-3xl">Difficulty climbs section by section. Adapt your strategy. Tap each.</p>
+    <div class="gameboard mt-4" id="sectionCards"></div>
   </section>
 
-  <!-- ALL 10 QUESTION TYPES -->
-  <section id="cases" class="mb-14">
-    <div class="flex items-end justify-between mb-4">
-      <h2 class="text-3xl">④ All 10 Question Types</h2>
-      <span class="badge" style="background:var(--soft);color:var(--deep)">Tap each to open</span>
-    </div>
-    <p class="text-stone-700 max-w-3xl">IELTS Listening uses <strong>10 official question types</strong>. Each has its own move, trap, and rule. Filter by family below.</p>
-
-    <div class="flex flex-wrap gap-2 mt-4" id="caseFilters">
-      <button class="btn btn-ghost text-xs" data-filter="all">All 10</button>
-      <button class="btn btn-ghost text-xs" data-filter="choice">Selection</button>
-      <button class="btn btn-ghost text-xs" data-filter="match">Matching</button>
-      <button class="btn btn-ghost text-xs" data-filter="complete">Completion</button>
-      <button class="btn btn-ghost text-xs" data-filter="map">Map / Diagram</button>
-    </div>
-
-    <div class="gameboard mt-6" id="caseFiles"></div>
+  <!-- QUESTION TYPES -->
+  <section id="qtypes" class="mb-10">
+    <h2 class="text-2xl mb-3">⑤ All 10 Question Types</h2>
+    <p class="text-stone-700 text-sm max-w-3xl">IELTS Listening uses 10 official question types. Each has its own move, trap and rule.</p>
+    <div class="gameboard mt-4" id="qtypeCards"></div>
   </section>
 
-  <!-- DRILLS -->
-  <section id="drills" class="mb-14">
-    <h2 class="text-3xl mb-2">⑤ Live Drills</h2>
-    <p class="text-stone-700 max-w-3xl">Three drills modelled on the actual test traps.</p>
+  <!-- LABS -->
+  <section id="labs" class="mb-10">
+    <h2 class="text-2xl mb-3">⑥ The 6 Listening Labs</h2>
+    <p class="text-stone-700 text-sm max-w-3xl">Each lab targets one of the highest-leverage micro-skills. Open the lab, hit ▶ to hear the audio (browser TTS), then answer.</p>
+    <div class="feedback tip mt-3 text-xs"><strong>How the labs work:</strong> The audio plays the IELTS-style sentence. You can't see the audio script — you have to listen. After you answer, the script + explanation appear. This mirrors a real IELTS Section 1/2 micro-task. Click ▶ multiple times if you need to re-hear (real IELTS plays only once, but training wheels are fine while learning).</div>
+    <div class="gameboard mt-4" id="labCards"></div>
+  </section>
 
-    <!-- DRILL: Distractor (Section 3 specialty) -->
-    <div class="card p-6 mt-6">
-      <div class="flex items-center gap-3 mb-3">
-        <span class="chip" style="background:#fdf0e7;color:var(--alert)">Drill A · Distractor</span>
-        <h3 class="text-xl">The Section 3 Trap — "Wait, actually…"</h3>
-      </div>
-      <p class="text-sm text-stone-700">In Section 3, the first answer you hear is often a trap. Read the simulated transcript. What's the FINAL answer the speakers agree on?</p>
-      <div class="case-file p-4 mt-3 text-sm" style="line-height:1.7">
-        <div><strong>Tutor:</strong> So, what topic did you choose for your dissertation?</div>
-        <div><strong>Student:</strong> I was thinking <span class="marker-pink">renewable energy in the UK</span>.</div>
-        <div><strong>Tutor:</strong> That's a huge area. Quite broad, isn't it?</div>
-        <div><strong>Student:</strong> Hmm, yeah. <span class="marker-yellow">Maybe I should narrow it to wind farms specifically</span>.</div>
-        <div><strong>Tutor:</strong> Better. Although wind farms have been done a lot…</div>
-        <div><strong>Student:</strong> Oh, true. Actually, I just read something about <span class="marker-green">offshore wind farms in Scotland</span> — I think I'll go with that.</div>
-        <div><strong>Tutor:</strong> Excellent choice.</div>
-      </div>
-      <div class="mt-4">
-        <p class="font-semibold mb-2">What is the student's FINAL topic?</p>
-        <div class="space-y-2" id="distractorDrill"></div>
-        <div id="distractorFB" class="mt-3"></div>
-      </div>
-    </div>
+  <!-- MAP -->
+  <section id="map" class="mb-10">
+    <h2 class="text-2xl mb-3">⑦ Map Navigation Lab</h2>
+    <p class="text-stone-700 text-sm max-w-3xl">In Section 2 maps, orient yourself first (entrance, compass, landmarks), then follow prepositions exactly: <em>past, opposite, between, on the corner of, next to</em>. Wrong clicks don't move you — they tell you what was expected.</p>
 
-    <!-- DRILL: Map -->
-    <div class="card p-6 mt-6">
-      <div class="flex items-center gap-3 mb-3">
-        <span class="chip" style="background:#eef9f5;color:var(--signal)">Drill B · Map</span>
-        <h3 class="text-xl">Map Navigation — Listen Like a GPS</h3>
-      </div>
-      <p class="text-sm text-stone-700">Click ▶ Play audio to <em>hear</em> the transcript, then click direction arrows in order. Wrong clicks don't move you — they tell you what was expected.</p>
-
-      <div class="grid md:grid-cols-2 gap-4 mt-3">
+    <div class="card p-5 mt-4">
+      <div class="grid md:grid-cols-2 gap-4">
         <div>
           <div class="map-grid" id="mapGrid"></div>
           <div class="text-xs text-stone-500 mt-2">🟡 You · 🚪 Entrance · 📚 Library · ☕ Café (target)</div>
-          <div class="mt-3 p-2 rounded-lg text-center font-bold" style="background:var(--soft);color:var(--deep)" id="mapStep">Step 1 of 6 — listen, then click East</div>
+          <div class="mt-3 p-3 rounded-lg text-center" style="background:var(--soft);color:var(--deep)">
+            <div class="text-xs uppercase tracking-widest" id="mapStepNum">Step 1 of 6</div>
+            <div class="text-2xl font-bold mt-1" id="mapStep" style="font-family:'Fraunces',serif">▶ Click East</div>
+          </div>
         </div>
         <div>
-          <div class="case-file p-4 text-sm" style="line-height:1.7">
+          <div class="card p-4 text-sm" style="background:#eef5f3" id="mapTranscript">
             <div class="flex items-center justify-between mb-2">
               <strong>Speaker (transcript):</strong>
-              <button class="btn btn-primary text-xs" data-tts="From the entrance, walk two squares east. Then go three squares north. Then one square east. You have arrived at the cafe.">▶ Play audio</button>
+              <button class="play-btn text-xs" data-tts="Right, from the main entrance, walk two squares to the east. Then go three squares north. After that, one square to the east. You have arrived at the café.">▶ Play</button>
             </div>
-            <p class="mt-2">"From the entrance, walk <strong>two squares east</strong>. Then go <strong>three squares north</strong>. Then <strong>one square east</strong>. You've arrived at the café."</p>
+            <p>"From the main entrance, walk <strong>two squares east</strong>. Then go <strong>three squares north</strong>. After that, <strong>one square east</strong>. You've arrived at the café."</p>
+            <div class="text-xs text-stone-500 mt-2">📋 Sequence: <strong>E → E → N → N → N → E</strong></div>
           </div>
           <div class="flex flex-wrap gap-2 mt-3" id="mapBtns">
-            <button class="btn btn-ghost text-sm" data-dir="N">⬆ North</button>
-            <button class="btn btn-ghost text-sm" data-dir="S">⬇ South</button>
-            <button class="btn btn-ghost text-sm" data-dir="E">➡ East</button>
-            <button class="btn btn-ghost text-sm" data-dir="W">⬅ West</button>
-            <button class="btn btn-ghost text-sm" id="mapReset">↺ Reset</button>
+            <button class="btn btn-ghost" data-dir="N">⬆ North</button>
+            <button class="btn btn-ghost" data-dir="S">⬇ South</button>
+            <button class="btn btn-ghost" data-dir="E">➡ East</button>
+            <button class="btn btn-ghost" data-dir="W">⬅ West</button>
+            <button class="btn btn-ghost" id="mapReset">↺ Reset</button>
           </div>
-          <div class="mt-3" id="mapFB"></div>
-          <div class="mt-2 text-xs text-stone-500" id="mapTrail">Path so far: —</div>
+          <div class="mt-3 text-sm" id="mapFB"></div>
+          <div class="mt-1 text-xs text-stone-500" id="mapTrail">Path: —</div>
         </div>
       </div>
-    </div>
-
-    <!-- DRILL: Spelling -->
-    <div class="card p-6 mt-6">
-      <div class="flex items-center gap-3 mb-3">
-        <span class="chip" style="background:#fdf6e3;color:var(--gold)">Drill C · Spelling</span>
-        <h3 class="text-xl">Section 1 — Catch the Spelling</h3>
-      </div>
-      <p class="text-sm text-stone-700">Section 1 tests precision. Type exactly what's spelled out. A single letter off = zero marks.</p>
-      <div class="space-y-3 mt-4" id="spellDrill"></div>
     </div>
   </section>
 
-  <!-- AUDIO DRILLS -->
-  <section id="audio" class="mb-14">
-    <div class="flex items-end justify-between mb-3">
-      <h2 class="text-3xl">🎧 Audio Drills — Real Listening</h2>
-      <span class="badge" style="background:var(--soft);color:var(--deep)">Browser TTS · works in Chrome / Edge / Safari</span>
-    </div>
-    <p class="text-stone-700 max-w-3xl">Click ▶ Play to <em>hear</em> each transcript spoken aloud. Try to answer WITHOUT reading the transcript first. Adjust speed if you need it slower.</p>
-    <div class="card p-4 mt-4 flex flex-wrap items-center gap-3">
-      <strong class="text-sm">Audio speed:</strong>
-      <button class="btn btn-ghost text-xs speed-btn" data-rate="0.75">0.75× (slow)</button>
-      <button class="btn btn-primary text-xs speed-btn" data-rate="0.92" data-default>1.0× (normal)</button>
-      <button class="btn btn-ghost text-xs speed-btn" data-rate="1.15">1.15× (fast)</button>
-      <button class="btn btn-ghost text-xs" id="stopAudio">⏹ Stop</button>
-      <span class="text-xs text-stone-500">⚠ First click may be silent — click again. Voices load asynchronously.</span>
+  <!-- AUDIO MOCKS -->
+  <section id="audio" class="mb-10">
+    <h2 class="text-2xl mb-3">⑧ Audio Mini-Tests — One Per Section</h2>
+    <p class="text-stone-700 text-sm max-w-3xl">Four full audio mini-tests with original IELTS-style transcripts. Click ▶ to hear, then answer without looking at the transcript first.</p>
+
+    <div class="card p-4 mt-3 flex items-center gap-3 flex-wrap">
+      <strong class="text-sm">🎧 Tips before you start:</strong>
+      <span class="text-sm text-stone-700">Set speed to <strong>1×</strong> for realistic pace · use <strong>headphones</strong> if you can · <strong>cover the transcript</strong> on first listen.</span>
     </div>
 
-    <div class="space-y-5 mt-5" id="audioDrills"></div>
+    <div class="space-y-5 mt-4" id="audioMocks"></div>
 
     <div class="card p-5 mt-5">
-      <div class="text-xs uppercase tracking-widest text-stone-500">Want real IELTS audio?</div>
-      <p class="text-sm mt-1">For practice with real exam-quality voices: <strong>British Council</strong> (takeielts.britishcouncil.org), <strong>IELTS.org practice tests</strong>, <strong>Cambridge IELTS books 11–18</strong> (CDs/MP3s), and <strong>BBC Learning English</strong> (free podcasts). Use the audio drills here to warm up; use real exam audio for full mocks.</p>
+      <h3 class="font-bold mb-1">📥 Want real exam audio?</h3>
+      <p class="text-sm text-stone-700">The drills here use browser text-to-speech to teach the strategies. For real exam-quality audio: <strong>Cambridge IELTS books 16–19</strong> (CDs/MP3s), <strong>British Council</strong> free practice tests (takeielts.britishcouncil.org), <strong>IELTS.org</strong> free sample tests, and <strong>BBC Learning English</strong> 6-Minute English podcasts.</p>
     </div>
   </section>
 
   <!-- BOSS FIGHT -->
-  <section id="boss" class="mb-14">
-    <div class="flex items-end justify-between mb-4">
-      <h2 class="text-3xl">⑥ Boss Fight — Mock Section 3</h2>
-      <span class="badge" style="background:var(--soft);color:var(--deep)">5 mixed Qs · 4-min audio simulation</span>
+  <section id="boss" class="mb-10">
+    <div class="flex items-end justify-between mb-3 flex-wrap gap-2">
+      <h2 class="text-2xl">⑨ Boss Fight · Section 3 Mock</h2>
+      <span class="badge" style="background:var(--soft);color:var(--deep)">5 Qs · ~4-min audio · live timer</span>
     </div>
-    <p class="text-stone-700 max-w-3xl">A simulated transcript of an academic discussion. Read it ONCE (timer locks the page after 4 minutes). Then answer all 5 questions.</p>
+    <p class="text-stone-700 text-sm max-w-3xl">A full Section 3 simulation — most distractor-heavy section. Hit ▶ Start, listen ONCE, answer all 5 questions, get a band estimate.</p>
 
-    <div class="card p-6 mt-6">
+    <div class="card p-5 mt-4">
       <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
         <div class="flex items-center gap-2">
-          <span class="chip" style="background:#fdf0e7;color:var(--alert)">Mock S3 · Distractor-heavy</span>
+          <span class="chip" style="background:#fde2d6;color:var(--alert)">Section 3 · Distractor-heavy</span>
           <span class="signal-bars" id="bossSignal"><span></span><span></span><span></span><span></span></span>
         </div>
-        <div class="flex items-center gap-3">
-          <div class="timer-pill text-2xl" style="color:var(--signal)" id="bossTimer">04:00</div>
-          <button class="btn btn-primary" id="bossStart">▶ Start audio</button>
-        </div>
+        <div class="flex items-center gap-3"><div class="timer-pill text-2xl" style="color:var(--signal)" id="bossTimer">04:00</div><button class="btn btn-primary" id="bossStart">▶ Start</button></div>
       </div>
 
-      <div class="audio-bar mb-4" id="bossAudio">
-        <div class="audio-wave">
-          <span></span><span></span><span></span><span></span><span></span>
-          <span></span><span></span><span></span><span></span><span></span>
-          <span></span><span></span><span></span><span></span><span></span>
-          <span></span><span></span><span></span><span></span><span></span>
-          <span></span><span></span><span></span><span></span><span></span>
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
-      </div>
+      <details class="mb-3"><summary class="text-sm font-bold">📜 Show transcript (after listening)</summary>
+        <div class="card p-4 mt-2 text-sm" style="line-height:1.7" id="bossPassage"></div>
+      </details>
 
-      <div class="text-right mb-2">
-        <button class="btn btn-ghost text-xs" id="bossPlayAudio">▶ Play transcript audio</button>
-      </div>
-
-      <div class="case-file p-5 text-sm" id="bossPassage" style="line-height:1.8;display:none">
-        <p><strong>Tutor:</strong> Alright Maya, let's review your group project plan. You've been looking at urban food waste, is that right?</p>
-        <p><strong>Maya:</strong> Yes. We were going to compare three cities — Berlin, Madrid and Toronto — for their composting programmes.</p>
-        <p><strong>Tutor:</strong> Three is ambitious. Have you got the data?</p>
-        <p><strong>Maya:</strong> We had Madrid and Toronto sorted. The Berlin data was harder than expected, so we're switching to <strong>Vienna</strong> instead.</p>
-        <p><strong>Tutor:</strong> Good. And the methodology — still surveys?</p>
-        <p><strong>Maya:</strong> We thought so, but we couldn't get enough responses, so we shifted to <strong>analysing existing municipal reports</strong>.</p>
-        <p><strong>Tutor:</strong> Sensible. What's your main finding so far?</p>
-        <p><strong>Maya:</strong> The biggest factor isn't policy — it's <strong>education campaigns</strong>. Cities that ran public awareness drives saw 40% more household participation.</p>
-        <p><strong>Tutor:</strong> Interesting. When are you presenting?</p>
-        <p><strong>Maya:</strong> Originally the <strong>14th</strong>, but the panel moved it to the <strong>21st of November</strong>.</p>
-        <p><strong>Tutor:</strong> Lots of moving parts. One last thing — what's your recommendation?</p>
-        <p><strong>Maya:</strong> Cities should invest in <strong>community-level campaigns</strong> before changing legislation. Top-down policy alone doesn't shift behaviour.</p>
-      </div>
-
-      <div class="mt-5 space-y-4" id="bossQs"></div>
+      <div class="space-y-4" id="bossQs"></div>
       <div class="mt-5" id="bossResult"></div>
     </div>
   </section>
 
-  <!-- UNFORGIVABLE SINS -->
-  <section class="mb-14">
-    <h2 class="text-3xl mb-2">The Four Unforgivable Sins</h2>
-    <p class="text-stone-700 max-w-3xl">Band 7+ candidates do not lose silly marks. Here's the kill list.</p>
-    <div class="grid md:grid-cols-2 gap-4 mt-5">
-      <div class="card p-4">
-        <div class="flex items-center gap-2 mb-1"><span class="stamp">Sin 1</span> <strong>Ignoring instructions</strong></div>
-        <p class="text-sm text-stone-700">"NO MORE THAN TWO WORDS." You write three. Mark lost — even if technically correct.</p>
-      </div>
-      <div class="card p-4">
-        <div class="flex items-center gap-2 mb-1"><span class="stamp">Sin 2</span> <strong>Spelling & plurals</strong></div>
-        <p class="text-sm text-stone-700">"Reasons" ≠ "reason". A spelling slip is a wrong answer. Be precise.</p>
-      </div>
-      <div class="card p-4">
-        <div class="flex items-center gap-2 mb-1"><span class="stamp">Sin 3</span> <strong>Losing focus</strong></div>
-        <p class="text-sm text-stone-700">If you miss one, instantly forget it and refocus. The audio doesn't wait.</p>
-      </div>
-      <div class="card p-4">
-        <div class="flex items-center gap-2 mb-1"><span class="stamp">Sin 4</span> <strong>Messy handwriting</strong></div>
-        <p class="text-sm text-stone-700">Use the 10-minute transfer window to write neatly. Unreadable = wrong.</p>
-      </div>
+  <!-- 4 SINS -->
+  <section class="mb-10">
+    <h2 class="text-2xl mb-3">⑩ The 4 Unforgivable Sins</h2>
+    <p class="text-stone-700 text-sm max-w-3xl">Band 7+ candidates don't lose silly marks. Here's the kill list.</p>
+    <div class="grid md:grid-cols-2 gap-3 mt-4">
+      <div class="card p-4"><div class="flex items-center gap-2 mb-1"><span class="stamp">Sin 1</span><strong>Ignoring instructions</strong></div><p class="text-sm text-stone-700">"NO MORE THAN TWO WORDS." You write three. Mark lost — even if technically correct.</p></div>
+      <div class="card p-4"><div class="flex items-center gap-2 mb-1"><span class="stamp">Sin 2</span><strong>Spelling & plurals</strong></div><p class="text-sm text-stone-700">"Reasons" ≠ "reason". A spelling slip is a wrong answer. Be precise.</p></div>
+      <div class="card p-4"><div class="flex items-center gap-2 mb-1"><span class="stamp">Sin 3</span><strong>Losing focus</strong></div><p class="text-sm text-stone-700">If you miss one, forget it instantly and refocus. The audio doesn't wait.</p></div>
+      <div class="card p-4"><div class="flex items-center gap-2 mb-1"><span class="stamp">Sin 4</span><strong>Messy handwriting</strong></div><p class="text-sm text-stone-700">Use the 10-min transfer window (paper) to write neatly. Unreadable = wrong.</p></div>
     </div>
   </section>
 
   <!-- MISTAKE JOURNAL -->
-  <section class="mb-14">
-    <h2 class="text-3xl mb-2">The Listening Mistake Journal</h2>
-    <p class="text-stone-700 max-w-3xl">Every wrong answer in practice gets logged. Don't move on without identifying which sin caused it.</p>
-    <div class="grid md:grid-cols-4 gap-4 mt-5">
-      <div class="card p-4"><div class="font-bold">1 · The Question</div><p class="text-sm text-stone-700 mt-1">Question + section number + question type.</p></div>
-      <div class="card p-4"><div class="font-bold">2 · My Answer / Correct</div><p class="text-sm text-stone-700 mt-1">Side-by-side. No rounding to 'silly mistake'.</p></div>
-      <div class="card p-4"><div class="font-bold">3 · Why I Got It Wrong</div><p class="text-sm text-stone-700 mt-1">Distractor? Spelling? Synonym? Word limit? Lost focus?</p></div>
-      <div class="card p-4"><div class="font-bold">4 · The Rule</div><p class="text-sm text-stone-700 mt-1">One-line rule for next time. Read before next session.</p></div>
+  <section class="mb-10">
+    <h2 class="text-2xl mb-2">📓 The Mistake Journal Template</h2>
+    <p class="text-stone-700 text-sm max-w-3xl">Every wrong answer in practice gets logged. Don't move on without identifying which sin caused it.</p>
+    <div class="grid md:grid-cols-4 gap-3 mt-4">
+      <div class="card p-3"><div class="font-bold">1 · The Question</div><p class="text-sm text-stone-700 mt-1">Question + section + question type.</p></div>
+      <div class="card p-3"><div class="font-bold">2 · My vs Correct</div><p class="text-sm text-stone-700 mt-1">Side-by-side. No "silly mistake" excuse.</p></div>
+      <div class="card p-3"><div class="font-bold">3 · Why I Got It Wrong</div><p class="text-sm text-stone-700 mt-1">Distractor? Spelling? Synonym? Word limit? Lost focus?</p></div>
+      <div class="card p-3"><div class="font-bold">4 · The Rule</div><p class="text-sm text-stone-700 mt-1">One-line rule for next time. Read before next session.</p></div>
     </div>
   </section>
 
   <!-- ACTION PLAN -->
-  <section class="mb-14">
-    <h2 class="text-3xl mb-3">Your 7-Day Action Plan</h2>
+  <section class="mb-10">
+    <h2 class="text-2xl mb-3">7-Day Action Plan</h2>
     <div class="grid md:grid-cols-7 gap-2 text-center text-xs">
-      <div class="p-3 rounded-xl card"><strong>Day 1</strong><div class="mt-1 text-stone-700">Prediction drills (no audio yet)</div></div>
-      <div class="p-3 rounded-xl card"><strong>Day 2</strong><div class="mt-1 text-stone-700">Section 1 — spelling & numbers</div></div>
-      <div class="p-3 rounded-xl card"><strong>Day 3</strong><div class="mt-1 text-stone-700">Section 2 — maps & monologue</div></div>
-      <div class="p-3 rounded-xl card"><strong>Day 4</strong><div class="mt-1 text-stone-700">Section 3 — distractor drills</div></div>
-      <div class="p-3 rounded-xl card"><strong>Day 5</strong><div class="mt-1 text-stone-700">Section 4 — signposting & speed</div></div>
-      <div class="p-3 rounded-xl card"><strong>Day 6</strong><div class="mt-1 text-stone-700">Full timed test (30 min)</div></div>
-      <div class="p-3 rounded-xl card"><strong>Day 7</strong><div class="mt-1 text-stone-700">Transcription practice — one section</div></div>
+      <div class="card p-3"><strong>Day 1</strong><div class="text-stone-700 mt-1">Prediction drills (no audio)</div></div>
+      <div class="card p-3"><strong>Day 2</strong><div class="text-stone-700 mt-1">Section 1 — spelling + numbers</div></div>
+      <div class="card p-3"><strong>Day 3</strong><div class="text-stone-700 mt-1">Section 2 — maps + monologue</div></div>
+      <div class="card p-3"><strong>Day 4</strong><div class="text-stone-700 mt-1">Section 3 — distractor drills</div></div>
+      <div class="card p-3"><strong>Day 5</strong><div class="text-stone-700 mt-1">Section 4 — signposts + speed</div></div>
+      <div class="card p-3"><strong>Day 6</strong><div class="text-stone-700 mt-1">Full timed test (30 min)</div></div>
+      <div class="card p-3"><strong>Day 7</strong><div class="text-stone-700 mt-1">Transcription drill — one section</div></div>
     </div>
   </section>
 
-  <footer class="border-t border-line pt-6 pb-12 text-sm text-stone-500 flex flex-wrap items-center justify-between gap-3">
-    <div>IELTS Listening · Sound Hunter · Band 7+ Track</div>
-    <div class="flex items-center gap-2">
-      <span class="legend-dot" style="background:var(--deep)"></span>Strategy
-      <span class="legend-dot" style="background:var(--gold)"></span>Tip
-      <span class="legend-dot" style="background:var(--alert)"></span>Trap
-      <span class="legend-dot" style="background:var(--signal)"></span>Correct
-    </div>
-  <div style="text-align:center;font-size:.72rem;color:#aaa;margin-top:1.2rem;padding-bottom:.5rem">&copy; 2026 ViATestPrep &middot; All Rights Reserved &middot; Unauthorized reproduction prohibited</div></footer>
+  <footer class="border-t border-line pt-5 pb-10 text-xs text-stone-500"><div>IELTS Listening · Sound Hunter · Band 7+ Track</div></footer>
 </main>
 
+<!-- MODAL -->
+<div class="modal-backdrop" id="modal"><div class="modal-box"><div class="modal-head"><div class="flex items-center gap-3" id="mHead"></div><button class="modal-close" id="mClose">✕</button></div><div class="modal-body" id="mBody"></div></div></div>
+
 <script>
-// ====== STATE & XP ======
-const state = { xp:0, max:200 };
-function addXP(n,label){
-  state.xp = Math.min(state.max, state.xp+n);
-  document.getElementById('xpDisplay').textContent = state.xp+' XP';
-  document.getElementById('xpBar').style.width = (state.xp/state.max*100)+'%';
-  if (label){
-    const t=document.createElement('div');
-    t.textContent=(n>0?'+':'')+n+' XP · '+label;
-    t.style.cssText='position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#0a1628;color:#fff;padding:.6rem 1rem;border-radius:999px;z-index:50;font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,.18);font-size:.9rem;opacity:0;transition:opacity .25s';
-    document.body.appendChild(t);
-    requestAnimationFrame(()=>t.style.opacity=1);
-    setTimeout(()=>{t.style.opacity=0;setTimeout(()=>t.remove(),300)}, 1600);
-  }
-}
+// ===== STATE =====
+const state={xp:0,max:400};
+function addXP(n){state.xp=Math.min(state.max,state.xp+n);document.getElementById('xpDisplay').textContent=state.xp;document.getElementById('xpBar').style.width=(state.xp/state.max*100)+'%';}
 document.querySelectorAll('.nav-step').forEach(s=>s.addEventListener('click',()=>document.getElementById(s.dataset.jump)?.scrollIntoView({behavior:'smooth'})));
 
-// ====== PREDICTION DRILL ======
-const predicts = [
-  {q:"The price of the ticket is £____.", types:["Number","Noun","Verb","Name"], ans:"Number"},
-  {q:"The lecture starts at ____.", types:["Time","Noun","Adjective","Place"], ans:"Time"},
-  {q:"The address is 24 ____ Road.", types:["Number","Adjective","Name","Verb"], ans:"Name"},
-  {q:"The main problem with the camera was the ____.", types:["Verb","Noun","Number","Person"], ans:"Noun"},
-  {q:"The course is held ____ a week.", types:["Frequency (e.g., twice)","Place","Person","Adjective"], ans:"Frequency (e.g., twice)"},
+// ===== TTS ENGINE — aggressive voice quality optimisation =====
+const tts={voice:null,rate:0.78,pitch:1.0,allVoices:[]};
+
+function scoreVoice(v){
+  const n=(v.name||'').toLowerCase();
+  const lang=(v.lang||'').toLowerCase();
+  let s=0;
+
+  // Tier 1: Neural / Natural voices (clearest, most human-like)
+  if(/neural|natural|wavenet|studio|premium|enhanced/i.test(n)) s+=300;
+  if(/microsoft.*online/i.test(n)) s+=250;  // Edge Online Neural voices
+  if(/(sonia|libby|ryan|aria|jenny|guy|natasha|liam|emma|olivia|ethan).*online/i.test(n)) s+=200;
+
+  // Tier 2: Known good high-quality named voices
+  if(/(samantha|karen|moira|fiona|kate|tessa|allison|ava|susan|kathy|kimberly|joanna|salli|matthew|justin|ivy|kendra|kim|kevin|joey|nicole|amy|brian)/i.test(n)) s+=80;
+  if(/google.*(uk|english)/i.test(n)) s+=120;
+
+  // Accent preference for IELTS
+  if(/en-gb|en_gb/i.test(lang)) s+=70;
+  else if(/en-au|en-nz/i.test(lang)) s+=60;
+  else if(/en-us|en_us/i.test(lang)) s+=50;
+  else if(/en-ie|en-za/i.test(lang)) s+=45;
+  else if(/en-in/i.test(lang)) s+=30;
+  else if(/^en/i.test(lang)) s+=20;
+  else s-=500;  // non-English
+
+  // Female voices often clearer in TTS engines
+  if(/(female|woman|samantha|kate|sonia|libby|aria|jenny|emma|olivia|natasha|karen|moira|fiona|allison|ava|kim|amy|nicole)/i.test(n)) s+=10;
+
+  // Penalise known-bad voices
+  if(/eloquence|whisper|kid|junior|albert|bahh|bells|cellos|deranged|hysterical|princess|pipe|trinoids|whisper|zarvox|good news|bad news/i.test(n)) s-=400;
+  if(/robot|fred|junior|ralph/i.test(n)) s-=200;
+  if(/^microsoft (david|mark|zira|hazel|james|catherine|richard|linda|heather|george|susan)/i.test(n) && !/online/i.test(n)) s-=80;  // older offline MS voices
+
+  return s;
+}
+
+function rankedVoices(){
+  if(!('speechSynthesis' in window)) return [];
+  const all=speechSynthesis.getVoices();
+  return [...all]
+    .map(v=>({v,score:scoreVoice(v)}))
+    .filter(x=>x.score>-100)  // Drop truly awful voices entirely
+    .sort((a,b)=>b.score-a.score)
+    .map(x=>x.v);
+}
+
+function describeQuality(v){
+  if(!v) return {label:"No voice", color:"#999", desc:"No audio voice detected."};
+  const s=scoreVoice(v);
+  if(s>=250) return {label:"⭐⭐⭐ Excellent (Neural)", color:"var(--signal)", desc:"This is one of the best voices available. Crystal clear."};
+  if(s>=120) return {label:"⭐⭐ Very Good", color:"var(--signal)", desc:"High quality voice. Should sound clear and natural."};
+  if(s>=60) return {label:"⭐ Good", color:"var(--gold)", desc:"Decent quality. Try other voices for better clarity if needed."};
+  if(s>=0) return {label:"○ Basic", color:"var(--gold)", desc:"Workable but robotic. Switch to Edge browser for much better voices."};
+  return {label:"⚠ Low quality", color:"var(--alert)", desc:"This voice is robotic. Try a different voice from the dropdown above."};
+}
+
+function updateQualityIndicator(){
+  const q=describeQuality(tts.voice);
+  const el=document.getElementById('voiceQuality');
+  if(!el)return;
+  el.innerHTML=`<span class="badge" style="background:${q.color};color:#fff">${q.label}</span> <span class="text-stone-700">${q.desc}</span> <span class="text-xs text-stone-500">· Voice: <strong>${tts.voice?tts.voice.name:'none'}</strong> (${tts.voice?tts.voice.lang:''})</span>`;
+}
+
+function populateVoiceList(){
+  const ranked=rankedVoices();
+  tts.allVoices=ranked;
+  if(ranked.length===0){
+    setTimeout(populateVoiceList,500); // Retry — voices load async
+    return;
+  }
+  tts.voice=ranked[0]; // Auto-select best voice
+
+  const picker=document.getElementById('voicePicker');
+  if(picker){
+    picker.innerHTML=ranked.map((v,i)=>{
+      const q=describeQuality(v);
+      const cleanName=v.name.replace(/microsoft\s+/i,'').replace(/\s+\(.*?\)/,'').slice(0,38);
+      return `<option value="${i}">${q.label.split(' ')[0]}  ${cleanName} · ${v.lang}</option>`;
+    }).join('');
+  }
+  // Legacy small selector in toolbar
+  const legacy=document.getElementById('voiceSel');
+  if(legacy){
+    legacy.innerHTML=ranked.slice(0,15).map((v,i)=>`<option value="${i}">${v.name.replace(/microsoft\s+/i,'').slice(0,20)}</option>`).join('');
+  }
+  updateQualityIndicator();
+}
+
+if('speechSynthesis' in window){
+  speechSynthesis.onvoiceschanged=populateVoiceList;
+  populateVoiceList();
+}
+
+document.getElementById('voicePicker').addEventListener('change',e=>{
+  const i=+e.target.value;
+  tts.voice=tts.allVoices[i];
+  updateQualityIndicator();
+  // Auto-test on change
+  speakRaw("This is a sample of the IELTS listening voice. Listen carefully — the audio plays only once.");
+});
+
+document.getElementById('cycleVoice').addEventListener('click',()=>{
+  const picker=document.getElementById('voicePicker');
+  let i=+picker.value;
+  i=(i+1) % tts.allVoices.length;
+  picker.value=i;
+  tts.voice=tts.allVoices[i];
+  updateQualityIndicator();
+  speakRaw("Sample. The course commences in early September. The number is double four three nine one.");
+});
+
+document.getElementById('testVoice').addEventListener('click',()=>{
+  speakRaw("Receptionist: Good morning, Cedarwood Fitness Centre. Caller: Hi, I'd like to enquire about membership. That's W-H-I-T-F-I-E-L-D.");
+});
+
+let activePlayBtn=null;
+
+// Speak ONE chunk of text — used internally
+function speakRaw(text){
+  if(!('speechSynthesis' in window)){alert('Audio needs a modern browser.');return;}
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.rate=tts.rate;u.pitch=tts.pitch;u.volume=1;
+  if(tts.voice) u.voice=tts.voice;
+  speechSynthesis.speak(u);
+}
+
+// Speak a long passage broken into sentences with pauses for clarity
+function speak(text,onEnd){
+  if(!('speechSynthesis' in window)){alert('Audio needs a modern browser.');return;}
+  speechSynthesis.cancel();
+  // Break into sentences AND clauses for maximum clarity
+  const sentences=text.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[text];
+  let idx=0;
+  function next(){
+    if(idx>=sentences.length){
+      if(activePlayBtn){activePlayBtn.classList.remove('playing');activePlayBtn.textContent='▶ Play';activePlayBtn=null;}
+      if(onEnd)onEnd();
+      return;
+    }
+    const u=new SpeechSynthesisUtterance(sentences[idx].trim());
+    u.rate=tts.rate;u.pitch=tts.pitch;u.volume=1;
+    if(tts.voice) u.voice=tts.voice;
+    u.onend=()=>{idx++;setTimeout(next,280);}; // 280ms pause between sentences for clarity
+    u.onerror=()=>{idx++;setTimeout(next,280);};
+    speechSynthesis.speak(u);
+  }
+  next();
+}
+
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-tts]');
+  if(!b) return;
+  if(activePlayBtn===b){speechSynthesis.cancel();b.classList.remove('playing');b.textContent='▶ Play';activePlayBtn=null;return;}
+  if(activePlayBtn){activePlayBtn.classList.remove('playing');activePlayBtn.textContent='▶ Play';}
+  activePlayBtn=b;b.classList.add('playing');b.textContent='⏸ Stop';
+  speak(b.dataset.tts);
+});
+document.getElementById('speedSel').addEventListener('change',e=>{tts.rate=parseFloat(e.target.value);});
+document.getElementById('stopAudio').addEventListener('click',()=>{speechSynthesis.cancel();if(activePlayBtn){activePlayBtn.classList.remove('playing');activePlayBtn.textContent='▶ Play';activePlayBtn=null;}});
+
+// ===== MODAL =====
+const modal=document.getElementById('modal');
+function openModal(headHtml,bodyHtml){
+  document.getElementById('mHead').innerHTML=headHtml;
+  document.getElementById('mBody').innerHTML=bodyHtml;
+  modal.classList.add('open');document.body.classList.add('modal-open');
+  document.getElementById('mBody').scrollTop=0;
+}
+function closeModal(){speechSynthesis.cancel();modal.classList.remove('open');document.body.classList.remove('modal-open');}
+document.getElementById('mClose').addEventListener('click',closeModal);
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
+document.addEventListener('keydown',e=>{if(modal.classList.contains('open')&&e.key==='Escape')closeModal();});
+
+// ===== 4 PILLARS =====
+const pillars=[
+  {n:1,cls:"",name:"Predict — before the audio plays",icon:"🔮",
+   text:"Use every silent pause to mark up the questions. Underline keywords. Predict the part of speech of each gap. Predict 1–2 synonyms the audio might use.",
+   tip:"Research shows that active prediction during pauses correlates with a +0.5 band gain — more than any other single behaviour."},
+  {n:2,cls:"p2",name:"Listen for paraphrase, not exact words",icon:"🔁",
+   text:"The audio paraphrases the question 90%+ of the time. If the question says 'yearly', the audio says 'annually'. If it says 'cheap', the audio says 'affordable'. Train your ear for meaning, not surface words.",
+   tip:"Make a personal IELTS synonym list. Every time you encounter a new question word → audio word pair, log it."},
+  {n:3,cls:"p3",name:"Catch the distractor (Section 3 specialty)",icon:"🪤",
+   text:"In Section 3 especially, the FIRST answer you hear is often wrong. Speakers correct themselves with signal phrases: 'actually…', 'wait…', 'I originally thought…', 'having said that…'. Always wait for confirmation.",
+   tip:"Don't write your answer until the speakers have moved past the topic. The LAST agreed-upon answer is the right one."},
+  {n:4,cls:"p4",name:"Track the signposts (Section 4 specialty)",icon:"📍",
+   text:"In Section 4 lectures, signposting language tells you when the topic is shifting. 'Firstly…', 'another major factor…', 'in contrast…', 'to summarise…' — each one signals an answer is coming.",
+   tip:"Listen for the signpost, then write the next 5–10 words you hear. That's almost always the answer."}
 ];
-const pdEl = document.getElementById('predictDrill');
+const pillarsEl=document.getElementById('pillarCards');
+pillars.forEach(p=>{
+  const c=document.createElement('div');
+  c.className=`pillar ${p.cls}`;
+  c.innerHTML=`<div class="flex items-center gap-2"><div class="text-2xl">${p.icon}</div><div class="font-bold">${p.n}. ${p.name}</div></div><p class="text-sm text-stone-700 mt-2">${p.text}</p><div class="feedback tip mt-2">${p.tip}</div>`;
+  pillarsEl.appendChild(c);
+});
+
+// ===== PREDICT DRILL =====
+const predicts=[
+  {q:"The price of the ticket is £____.",types:["Number","Noun","Verb","Name"],a:"Number"},
+  {q:"The lecture starts at ____.",types:["Time","Noun","Adjective","Place"],a:"Time"},
+  {q:"The address is 24 ____ Road.",types:["Number","Adjective","Name","Verb"],a:"Name"},
+  {q:"The main problem with the camera was the ____.",types:["Verb","Noun","Number","Person"],a:"Noun"},
+  {q:"The course is held ____ a week.",types:["Frequency (twice, three times)","Place","Person","Adjective"],a:"Frequency (twice, three times)"},
+  {q:"To register, students need to ____ the office.",types:["Verb","Noun","Number","Place"],a:"Verb"},
+  {q:"The meeting room is on the ____ floor.",types:["Ordinal (first, second...)","Verb","Adjective","Person"],a:"Ordinal (first, second...)"}
+];
+const pdEl=document.getElementById('predictDrill');
 predicts.forEach((p,i)=>{
-  const wrap = document.createElement('div');
-  wrap.className='card p-3';
-  wrap.innerHTML = `<div class="font-medium mb-2 mono text-sm">${i+1}. ${p.q}</div>
-    <div class="flex flex-wrap gap-2">${p.types.map(t=>`<button class="btn btn-ghost text-xs predict-opt" data-v="${t}">${t}</button>`).join('')}</div>
-    <div class="fb mt-2"></div>`;
-  pdEl.appendChild(wrap);
-  wrap.querySelectorAll('.predict-opt').forEach(b=>b.addEventListener('click',()=>{
-    if (wrap.dataset.done) return;
-    wrap.dataset.done='1';
-    const ok = b.dataset.v===p.ans;
-    b.style.background = ok?'#eef9f5':'#fdf0e7';
-    b.style.borderColor = ok?'var(--signal)':'var(--alert)';
-    wrap.querySelectorAll('.predict-opt').forEach(x=>{
-      if (x.dataset.v===p.ans){x.style.background='#eef9f5';x.style.borderColor='var(--signal)';x.innerHTML='✓ '+x.textContent;}
-      x.disabled=true;
-    });
-    wrap.querySelector('.fb').innerHTML = `<div class="feedback ${ok?'good':'bad'}">${ok?'✅ Correct.':'❌ Re-look.'} Predicting answer type before the audio plays cuts your reaction time.</div>`;
-    addXP(ok?6:1, 'Prediction');
+  const w=document.createElement('div');
+  w.className='card p-3';
+  w.innerHTML=`<div class="text-sm mono mb-2">${i+1}. ${p.q}</div><div class="flex flex-wrap gap-2">${p.types.map(t=>`<button class="opt p-opt" data-v="${t}">${t}</button>`).join('')}</div><div class="fb"></div>`;
+  pdEl.appendChild(w);
+  w.querySelectorAll('.p-opt').forEach(b=>b.addEventListener('click',()=>{
+    if(w.dataset.done) return; w.dataset.done='1';
+    const ok=b.dataset.v===p.a;
+    if(ok)b.classList.add('correct');else b.classList.add('wrong');
+    w.querySelectorAll('.p-opt').forEach(x=>{if(x.dataset.v===p.a)x.classList.add('correct');x.classList.add('disabled');});
+    w.querySelector('.fb').innerHTML=`<div class="feedback ${ok?'good':'bad'}">${ok?'✅':'❌'} <strong>${p.a}.</strong> Predicting the answer type before the audio plays cuts reaction time in half.</div>`;
+    addXP(ok?5:1);
   }));
 });
 
-// ====== SYNONYM DRILL ======
-const synPairs = [
-  {q:"yearly", a:"annually"},
-  {q:"disadvantages", a:"drawbacks"},
-  {q:"buy", a:"purchase"},
-  {q:"begin", a:"commence"},
-  {q:"end", a:"conclude"},
-  {q:"important", a:"crucial"},
-];
-const synEl = document.getElementById('synDrill');
-const synFB = document.getElementById('synFB');
-const lefts=[], rights=[];
-synPairs.forEach(p=>lefts.push({k:p.q,m:p.a}));
-synPairs.forEach(p=>rights.push({k:p.a,m:p.q}));
-// shuffle right
-rights.sort(()=>Math.random()-.5);
-function makeChip(text, side){
-  const d=document.createElement('button');
-  d.className='btn btn-ghost text-sm';
-  d.textContent=text;
-  d.dataset.side=side;
-  d.dataset.k=text;
-  return d;
-}
-const leftCol = document.createElement('div'); leftCol.className='space-y-2';
-const rightCol = document.createElement('div'); leftCol.className='space-y-2';
-const synGrid = synEl;
-const lDiv = document.createElement('div'); lDiv.className='space-y-2 syn-col';
-const rDiv = document.createElement('div'); rDiv.className='space-y-2 syn-col';
-lefts.forEach(o=>lDiv.appendChild(makeChip(o.k,'L')));
-rights.forEach(o=>rDiv.appendChild(makeChip(o.k,'R')));
-synGrid.appendChild(lDiv); synGrid.appendChild(rDiv);
-let pickL=null, pickR=null, synScore=0;
-synGrid.addEventListener('click', e=>{
-  const b = e.target.closest('button');
-  if (!b||b.disabled) return;
-  if (b.dataset.side==='L'){
-    if (pickL) pickL.classList.remove('glow');
-    pickL=b; b.classList.add('glow');
-  } else {
-    if (pickR) pickR.classList.remove('glow');
-    pickR=b; b.classList.add('glow');
-  }
-  if (pickL && pickR){
-    const match = synPairs.some(p=>p.q===pickL.dataset.k && p.a===pickR.dataset.k);
-    if (match){
-      pickL.disabled=true; pickR.disabled=true;
-      pickL.style.background='#eef9f5'; pickR.style.background='#eef9f5';
-      pickL.classList.remove('glow'); pickR.classList.remove('glow');
-      pickL.innerHTML='✓ '+pickL.textContent;
-      pickR.innerHTML='✓ '+pickR.textContent;
-      synScore++;
-      addXP(4,'Synonym pair');
-      synFB.innerHTML = `<div class="feedback good">Matched ${synScore}/${synPairs.length}.</div>`;
-      pickL=null; pickR=null;
-    } else {
-      pickL.classList.remove('glow'); pickR.classList.remove('glow');
-      synFB.innerHTML = `<div class="feedback bad">Not synonyms — try again. Tip: think about the meaning, not the spelling.</div>`;
-      pickL=null; pickR=null;
-    }
-  }
-});
-
-// ====== 4 SECTIONS ======
-const sections = [
-  {n:1, name:"Section 1 — The Warm-Up", ctx:"Two speakers, everyday situation (booking, joining, ordering).",
-   challenge:"Spelling, phone numbers, prices, addresses. Easy marks — easy to lose.",
-   move:"Utter precision. Use the pause to predict EXACTLY what's missing — letters? digits? a price?",
-   color:"#eef9f5", accent:"var(--signal)"},
-  {n:2, name:"Section 2 — The Guide (Monologue)", ctx:"One speaker giving info (tour guide, radio host).",
-   challenge:"Maps & diagrams. Staying oriented while the speaker walks you through space.",
-   move:"For maps: orient first (entrance + compass + landmarks). Then follow prepositions like a GPS: 'past', 'opposite', 'between', 'on the corner of'.",
-   color:"#fdf6e3", accent:"var(--gold)"},
-  {n:3, name:"Section 3 — The Academic Gauntlet", ctx:"Up to 4 speakers (students + tutor) discussing an academic topic.",
-   challenge:"Distractors. The first answer is often a trap. Speakers correct each other.",
+// ===== 4 SECTIONS =====
+const sections=[
+  {n:1,name:"Section 1 · The Warm-Up",color:"#eef9f5",accent:"var(--signal)",icon:"☕",
+   ctx:"Two speakers, everyday situation (booking a hotel, joining a gym, calling for info).",
+   challenge:"PRECISION. Spelling names, writing phone numbers, prices, addresses. Easy marks — easy to lose to careless spelling.",
+   move:"Use the pause to predict EXACTLY what's missing — letters? digits? a price?",
+   examples:"Form completion · Note completion · Multiple choice · Short-answer",
+   tip:"Section 1 always has 1–2 spellings and 1–2 numbers. Be ready for both."},
+  {n:2,name:"Section 2 · The Guide",color:"#fdf6e3",accent:"var(--gold)",icon:"🗺",
+   ctx:"One speaker giving information (tour guide, radio host, instructor).",
+   challenge:"MAPS & DIAGRAMS. Staying oriented while the speaker walks through space.",
+   move:"Orient first (entrance + compass + landmarks). Then follow prepositions like a GPS: past, opposite, between, on the corner of, next to.",
+   examples:"Map / plan labelling · Multiple choice · Matching · Form completion",
+   tip:"Mishearing one preposition flips the whole answer. Underline every preposition you hear."},
+  {n:3,name:"Section 3 · The Academic Gauntlet",color:"#fde2d6",accent:"var(--alert)",icon:"🪤",
+   ctx:"Up to 4 speakers (students + tutor) discussing an academic project.",
+   challenge:"DISTRACTORS. The first answer is often a trap. Speakers correct each other.",
    move:"Listen for: 'But...', 'However...', 'Oh wait, actually...', 'I thought so too, but then I realised...'. The FINAL agreed answer is the right one.",
-   color:"#fdf0e7", accent:"var(--alert)"},
-  {n:4, name:"Section 4 — University Lecture", ctx:"One speaker, university lecture style. No mid-section pause.",
-   challenge:"Speed and density. You only get ONE look at Q31–40 at the very start.",
-   move:"Relentless signposting. Listen for 'firstly', 'another major factor', 'in contrast', 'to summarise'. Underline keywords aggressively in the pause.",
-   color:"#eef5f3", accent:"var(--deep)"},
+   examples:"Multiple choice · Matching · Sentence completion · Flow-chart",
+   tip:"This is where scores are won and lost. If you only practise one section under pressure, make it Section 3."},
+  {n:4,name:"Section 4 · The Lecture",color:"#f3eafe",accent:"var(--purple)",icon:"🎓",
+   ctx:"One speaker, university lecture style. No pause in the middle.",
+   challenge:"SPEED & DENSITY. You only get ONE look at Q31–40 at the very start.",
+   move:"Track signposts: 'firstly', 'another major factor', 'in contrast', 'to summarise'. Each signposts an answer coming.",
+   examples:"Note completion · Summary completion · Sentence completion",
+   tip:"During the long Section 4 pause at the start, aggressively underline every keyword. You won't get another preview."}
 ];
-const slEl = document.getElementById('sectionList');
+const sectEl=document.getElementById('sectionCards');
 sections.forEach(s=>{
-  const c = document.createElement('div');
-  c.className='card p-5 qtype';
-  c.style.background = `linear-gradient(180deg, ${s.color} 0%, #fff 70%)`;
-  c.innerHTML = `
-    <div class="flex items-start justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <div class="w-8 h-8 rounded-lg flex items-center justify-center font-bold text-white" style="background:${s.accent};font-family:'Fraunces',serif">${s.n}</div>
-        <div class="font-bold">${s.name}</div>
-      </div>
-      <span class="text-xs text-stone-500">tap ↓</span>
-    </div>
-    <div class="reveal mt-3 text-sm">
-      <div class="text-xs uppercase tracking-widest text-stone-500">Context</div>
-      <p class="mt-1">${s.ctx}</p>
-      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--alert)">Challenge</div>
-      <p class="mt-1">${s.challenge}</p>
-      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--signal)">Band 7+ Move</div>
-      <p class="mt-1">${s.move}</p>
-    </div>
-  `;
+  const c=document.createElement('div');
+  c.className='case-card';
+  c.style.background=`linear-gradient(180deg, ${s.color} 0%, #fff 70%)`;
+  c.innerHTML=`<div class="flex items-center gap-2"><div class="num-circle" style="background:${s.accent}">${s.icon}</div><div><div class="font-bold leading-tight">${s.n}. ${s.name.split(' · ')[1]}</div><div class="text-[10px] uppercase tracking-widest text-stone-500">${s.examples.split('·')[0].trim()} & more</div></div></div><div class="text-xs text-stone-600 mt-2">${s.ctx}</div><div class="preview" style="color:${s.accent}">▶ Open strategy</div>`;
   c.addEventListener('click',()=>{
-    const r=c.querySelector('.reveal');
-    const wasOpen = r.classList.contains('open');
-    r.classList.toggle('open');
-    if(!wasOpen) addXP(2,'Section opened');
+    openModal(`<div class="num-circle" style="background:${s.accent};width:36px;height:36px">${s.icon}</div><div><div class="font-bold text-lg">${s.name}</div><div class="text-[10px] uppercase tracking-widest text-stone-500">Section ${s.n}</div></div>`,
+    `<div class="text-xs uppercase tracking-widest text-stone-500">Context</div><p class="mt-1 text-sm">${s.ctx}</p>
+<div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--alert)">Challenge</div><p class="mt-1 text-sm">${s.challenge}</p>
+<div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--signal)">Band 7+ Move</div><p class="mt-1 text-sm">${s.move}</p>
+<div class="text-xs uppercase tracking-widest text-stone-500 mt-3">Question types you'll see</div><p class="mt-1 text-sm">${s.examples}</p>
+<div class="feedback tip mt-3">${s.tip}</div>`);
+    addXP(2);
   });
-  slEl.appendChild(c);
+  sectEl.appendChild(c);
 });
 
-// ====== 10 QUESTION TYPES ======
-const cases = [
-  {no:1,name:"Multiple Choice",cat:"choice",color:"#f3eef9",accent:"var(--deep)",
-   move:"Read the stem and ALL options in the pause. Underline keywords in stems and key differences between options. As you listen, eliminate.",
-   trap:"The first option you hear may be a distractor — speakers often change their mind. Wait for confirmation.",
-   rule:"For 'Choose TWO' questions, watch the word limit on options carefully — both must apply.",
-   example:"<strong>Stem:</strong> What did Maya change about her project? <br><strong>Listen for:</strong> 'we were going to… but we switched to…' — the second part is the answer."},
-  {no:2,name:"Matching",cat:"match",color:"#eef9f5",accent:"var(--signal)",
-   move:"Read the list of items (e.g., people, courses) AND the box of options in the pause. Predict synonyms for each option.",
-   trap:"Speakers may discuss multiple options before assigning the right one. Wait for the speaker to commit.",
-   rule:"Cross out options you've used (unless 'may use any letter more than once' is specified).",
-   example:"<strong>Items:</strong> 3 students. <strong>Options:</strong> A–F project topics. <br>Each student commits to one — listen for 'I'll go with…'"},
-  {no:3,name:"Plan / Map / Diagram Labelling",cat:"map",color:"#fdf6e3",accent:"var(--gold)",
-   move:"In the pause, find the entrance, compass (N/S/E/W), and labelled landmarks. Make sure you know where 'you' start.",
-   trap:"Mishearing prepositions: 'past' vs 'before', 'opposite' vs 'next to'. They flip the answer.",
+// ===== 10 QUESTION TYPES =====
+const qtypes=[
+  {n:1,name:"Multiple Choice",cat:"Selection",color:"#f3eafe",accent:"var(--purple)",
+   move:"Read stem AND options in the pause. Underline KEY differences between options. As you listen, eliminate.",
+   trap:"The first option you hear may be a distractor. Speakers change their minds.",
+   rule:"For 'Choose TWO' — both must apply. Read the instruction every time.",
+   eg:"<strong>Audio:</strong> 'I was going to do urban gardens, but the data was hard to find. So I switched to vertical farming.'<br><strong>Q:</strong> What is the student's final topic? <strong>Answer:</strong> vertical farming."},
+  {n:2,name:"Matching",cat:"Matching",color:"#eef9f5",accent:"var(--signal)",
+   move:"Read the items AND the box of options in the pause. Predict synonyms for each option.",
+   trap:"Speakers discuss multiple options before assigning the right one. Wait for the commitment phrase.",
+   rule:"Cross out used options unless NB says 'may use any letter more than once'.",
+   eg:"<strong>Items:</strong> 3 students. <strong>Options:</strong> A–F project topics. Each student commits with: 'I'll go with…', 'I've decided to…'."},
+  {n:3,name:"Plan / Map / Diagram Labelling",cat:"Map / Diagram",color:"#fdf6e3",accent:"var(--gold)",
+   move:"In the pause: find the entrance, the compass (N/S/E/W), and any labelled landmarks. Know where YOU start.",
+   trap:"Mishearing one preposition: 'past' vs 'before', 'opposite' vs 'next to'. These flip the answer.",
    rule:"Prepositions are the answer-keys. Underline them as you hear them.",
-   example:"<strong>Speaker:</strong> 'Go past the library and the café is on your left, opposite the bank.' → Locate 'library' first, then move forward, then check left."},
-  {no:4,name:"Form Completion",cat:"complete",color:"#eef5f3",accent:"var(--deep)",
-   move:"Treat the form as a script. Each field tells you what type of answer is coming (Name → letters; Phone → digits; Date → day/month).",
-   trap:"Letters that sound similar: M/N, B/V, P/B, S/F. Spell-check yourself in the moment.",
-   rule:"Pluralise carefully. 'Reasons' ≠ 'reason'. The audio's pronunciation usually tells you.",
-   example:"<strong>Field:</strong> Surname → spelled letter by letter in the audio."},
-  {no:5,name:"Note Completion",cat:"complete",color:"#eef5f3",accent:"var(--deep)",
-   move:"Use the bullet hierarchy as your map. Speakers move through topics in the same order as the notes.",
-   trap:"Filling gaps with words that sound right but exceed the word limit ('NO MORE THAN 2 WORDS').",
+   eg:"<strong>Audio:</strong> 'Go past the library and the café is on your left, opposite the bank.' Locate library first, then move forward, then check left."},
+  {n:4,name:"Form Completion",cat:"Completion",color:"#eef5f3",accent:"var(--deep)",
+   move:"Treat the form as a script. Each field tells you the type: Name → letters; Phone → digits; Date → day/month.",
+   trap:"Similar-sounding letters: M/N, B/V, P/B, S/F. Mis-spell once = 0 marks.",
+   rule:"Pluralise carefully. 'Reasons' ≠ 'reason'. The audio's pronunciation tells you.",
+   eg:"<strong>Audio:</strong> 'That's L-A-N-G-F-O-R-D.' <strong>Answer:</strong> Langford."},
+  {n:5,name:"Note Completion",cat:"Completion",color:"#eef5f3",accent:"var(--deep)",
+   move:"Use the bullet hierarchy as a map. Speakers move through topics in the same order as the notes.",
+   trap:"Filling gaps with words that sound right but exceed the limit ('NO MORE THAN 2 WORDS').",
    rule:"Notes are telegraphic — never write full sentences.",
-   example:"<strong>Notes:</strong> 'Causes: – ____ damage' → audio 'water damage' → answer: 'water'."},
-  {no:6,name:"Table Completion",cat:"complete",color:"#eef5f3",accent:"var(--deep)",
-   move:"Use rows + columns as a 2-axis search grid. The column header tells you what TYPE of answer (year? quantity? name?).",
-   trap:"Answering before the speaker finishes the row — they sometimes correct themselves mid-row.",
-   rule:"Rows usually fill in order. If you miss one cell, mark it and move on.",
-   example:"Row = 'Tour B', Column = 'Duration' → audio 'Tour B lasts 90 minutes' → answer: '90 minutes'."},
-  {no:7,name:"Flow-chart Completion",cat:"complete",color:"#eef5f3",accent:"var(--deep)",
-   move:"A flow-chart describes a process — speakers go step by step. Predict whether each gap needs a verb, noun, or both.",
-   trap:"Skipping ahead. If a step seems blurry, mark it and keep listening — answers usually stay in order.",
-   rule:"Verbs are common answers. Often passive form ('mixture is heated').",
-   example:"<strong>Step:</strong> 'Liquid is then ____ for 2 hours.' → audio 'cooled' → answer: 'cooled'."},
-  {no:8,name:"Summary Completion",cat:"complete",color:"#eef5f3",accent:"var(--deep)",
-   move:"Read the whole summary in the pause to get the gist, then track gaps in order.",
-   trap:"With a word bank: more options than gaps — distractors are designed to sound plausible.",
+   eg:"<strong>Notes:</strong> 'Causes: — ____ damage' → <strong>Audio:</strong> 'water damage' → <strong>Answer:</strong> water."},
+  {n:6,name:"Table Completion",cat:"Completion",color:"#eef5f3",accent:"var(--deep)",
+   move:"Use rows + columns as a 2-axis search grid. Column header tells you what TYPE of answer (year? quantity? name?).",
+   trap:"Answering before the speaker finishes the row — they sometimes correct mid-row.",
+   rule:"Rows usually fill in order. If you miss one cell, mark it and keep going.",
+   eg:"<strong>Row:</strong> 'Tour B', <strong>Column:</strong> 'Duration' → <strong>Audio:</strong> 'Tour B lasts 90 minutes' → <strong>Answer:</strong> 90 minutes."},
+  {n:7,name:"Flow-chart Completion",cat:"Completion",color:"#eef5f3",accent:"var(--deep)",
+   move:"A flow-chart = a process. Speakers go step by step. Predict whether each gap needs a verb, noun, or both.",
+   trap:"Skipping ahead. If a step seems blurry, mark it — answers usually stay in order.",
+   rule:"Verbs are common answers. Often passive ('mixture is heated').",
+   eg:"<strong>Step:</strong> 'Liquid is then ____ for 2 hours.' → <strong>Audio:</strong> 'cooled' → <strong>Answer:</strong> cooled."},
+  {n:8,name:"Summary Completion",cat:"Completion",color:"#eef5f3",accent:"var(--deep)",
+   move:"Read the whole summary in the pause for context, then track gaps in order.",
+   trap:"With a word bank: more options than gaps. Distractors sound plausible.",
    rule:"Match by SYNONYM, not by sound. Audio paraphrases the summary.",
-   example:"<strong>Summary:</strong> 'Progress was ____.' Bank: [swift, abandoned, gradual]. Audio: 'slow at first' → answer: 'gradual'."},
-  {no:9,name:"Sentence Completion",cat:"complete",color:"#eef5f3",accent:"var(--deep)",
-   move:"Predict the missing word's grammatical role. Underline keywords around the gap as paraphrasing signposts.",
-   trap:"Writing what 'sounds right' grammatically but exceeds the word limit.",
-   rule:"Copy exact words from the audio. Don't paraphrase — never change form.",
-   example:"<strong>Sentence:</strong> 'The team was praised for its ____.' (NO MORE THAN 1 WORD) → audio 'innovation' → answer: 'innovation'."},
-  {no:10,name:"Short-Answer Questions",cat:"choice",color:"#fdf0e7",accent:"var(--alert)",
-   move:"Predict the answer type. Listen for the keyword, then capture 1–3 words exactly as spoken.",
+   eg:"<strong>Summary:</strong> 'Progress was ____.' <strong>Bank:</strong> [swift, abandoned, gradual]. <strong>Audio:</strong> 'slow at first' → <strong>Answer:</strong> gradual."},
+  {n:9,name:"Sentence Completion",cat:"Completion",color:"#eef5f3",accent:"var(--deep)",
+   move:"Predict the missing word's role (noun? verb? number?). Underline keywords around the gap as signposts.",
+   trap:"Writing what 'sounds right' but exceeds the word limit.",
+   rule:"Copy exact words from the audio. Never paraphrase.",
+   eg:"<strong>Sentence:</strong> 'The team was praised for its ____.' (1 word) → <strong>Audio:</strong> 'innovation' → <strong>Answer:</strong> innovation."},
+  {n:10,name:"Short-Answer Questions",cat:"Selection",color:"#fde2d6",accent:"var(--alert)",
+   move:"Predict the answer type. Listen for the keyword, capture 1–3 words exactly as spoken.",
    trap:"Writing a full sentence. The mark is for the answer, not for grammar.",
    rule:"Watch the limit. 'NO MORE THAN TWO WORDS AND/OR A NUMBER' is absolute.",
-   example:"<strong>Q:</strong> 'What did Maya have problems with?' → audio 'getting enough survey responses' → answer: 'survey responses' (2 words)."},
+   eg:"<strong>Q:</strong> 'What did Maya have problems with?' → <strong>Audio:</strong> 'getting enough survey responses' → <strong>Answer:</strong> survey responses."}
 ];
-const cf = document.getElementById('caseFiles');
-const catLabels = {choice:"Selection", match:"Matching", complete:"Completion", map:"Map / Diagram"};
-cases.forEach(c=>{
-  const card=document.createElement('div');
-  card.className='card p-5 qtype';
-  card.dataset.cat = c.cat;
-  card.style.background = `linear-gradient(180deg, ${c.color} 0%, #fff 70%)`;
-  card.innerHTML = `
-    <div class="flex items-start justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <div class="w-8 h-8 rounded-lg flex items-center justify-center font-bold text-white" style="background:${c.accent};font-family:'Fraunces',serif">${c.no}</div>
-        <div>
-          <div class="font-bold text-base leading-tight">${c.name}</div>
-          <div class="text-[10px] uppercase tracking-widest text-stone-500 mt-0.5">${catLabels[c.cat]||""}</div>
-        </div>
-      </div>
-      <span class="text-xs text-stone-500">tap ↓</span>
-    </div>
-    <div class="reveal mt-3">
-      <div class="text-xs uppercase tracking-widest text-stone-500">The Move</div>
-      <div class="text-sm mt-1">${c.move}</div>
-      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--alert)">The Trap</div>
-      <div class="text-sm mt-1">${c.trap}</div>
-      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--gold)">The Rule</div>
-      <div class="text-sm mt-1">${c.rule}</div>
-      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--deep)">Mini Example</div>
-      <div class="text-sm mt-1 p-2 rounded-lg" style="background:#eef5f3;border-left:3px solid var(--gold)">${c.example}</div>
-    </div>
-  `;
-  card.addEventListener('click',(e)=>{
-    if (e.target.closest('button')) return;
-    const r = card.querySelector('.reveal');
-    const wasOpen = r.classList.contains('open');
-    r.classList.toggle('open');
-    if(!wasOpen) addXP(2,'Case opened');
+const qEl=document.getElementById('qtypeCards');
+qtypes.forEach(q=>{
+  const c=document.createElement('div');
+  c.className='case-card';
+  c.style.background=`linear-gradient(180deg, ${q.color} 0%, #fff 70%)`;
+  c.innerHTML=`<div class="flex items-center gap-2"><div class="num-circle" style="background:${q.accent}">${q.n}</div><div><div class="font-bold leading-tight text-sm">${q.name}</div><div class="text-[10px] uppercase tracking-widest text-stone-500">${q.cat}</div></div></div><div class="preview" style="color:${q.accent}">▶ Open strategy</div>`;
+  c.addEventListener('click',()=>{
+    openModal(`<div class="num-circle" style="background:${q.accent};width:36px;height:36px">${q.n}</div><div><div class="font-bold text-lg">${q.name}</div><div class="text-[10px] uppercase tracking-widest text-stone-500">${q.cat}</div></div>`,
+    `<div class="text-xs uppercase tracking-widest text-stone-500">The Move</div><p class="mt-1 text-sm">${q.move}</p>
+<div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--alert)">Trap</div><p class="mt-1 text-sm">${q.trap}</p>
+<div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--gold)">Rule</div><p class="mt-1 text-sm">${q.rule}</p>
+<div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--signal)">Mini example</div><div class="feedback tip mt-1">${q.eg}</div>`);
+    addXP(2);
   });
-  cf.appendChild(card);
-});
-document.querySelectorAll('#caseFilters button').forEach(b=>{
-  b.addEventListener('click',()=>{
-    document.querySelectorAll('#caseFilters button').forEach(x=>x.classList.remove('glow'));
-    b.classList.add('glow');
-    const f = b.dataset.filter;
-    document.querySelectorAll('#caseFiles .qtype').forEach(card=>{
-      card.style.display = (f==='all'||card.dataset.cat===f)?'':'none';
-    });
-  });
+  qEl.appendChild(c);
 });
 
-// ====== DISTRACTOR DRILL ======
-const distractor = {
-  options:[
-    {l:"A", t:"Renewable energy in the UK", c:false, w:"First mention — the tutor calls it 'too broad' and the student narrows it. Trap."},
-    {l:"B", t:"Wind farms in general", c:false, w:"The student suggests this BUT the tutor says wind farms 'have been done a lot'. Distractor."},
-    {l:"C", t:"Offshore wind farms in Scotland", c:true, w:"Final, agreed-upon topic. Triggered by 'actually, I just read…' — the classic Section 3 pivot."},
-    {l:"D", t:"Wind farms in Scotland generally", c:false, w:"Close but missing the qualifier 'offshore'. Always capture every modifier."},
-  ]
-};
-const dEl = document.getElementById('distractorDrill');
-const dFB = document.getElementById('distractorFB');
-let dDone=false;
-distractor.options.forEach(o=>{
-  const div=document.createElement('div');
-  div.className='opt';
-  div.innerHTML=`<div class="letter">${o.l}</div><div>${o.t}</div>`;
-  div.addEventListener('click',()=>{
-    if (dDone) return;
-    if (o.c){
-      div.classList.add('correct');
-      dEl.querySelectorAll('.opt').forEach(x=>{if(!x.classList.contains('correct'))x.classList.add('disabled')});
-      dFB.innerHTML = `<div class="feedback good">✅ ${o.w}</div>`;
-      dDone=true;
-      addXP(15,'Distractor mastered');
+// ===== LABS (6 of them) =====
+const labs=[
+  {n:1,name:"Number Lab",icon:"🔢",accent:"var(--signal)",
+   intro:"13 vs 30. 14 vs 40. Phone numbers with 'double'. Decimal prices. The five number traps that cost band points.",
+   items:[
+     {audio:"Three nine seven five double oh four two.", q:"Type the phone number (digits only):", a:"39750042", aliases:["3975 00 42","3 9 7 5 0 0 4 2"], why:"'Double oh' = 00. So 3975 then 00 42 = 39750042."},
+     {audio:"That's thirteen, not thirty.", q:"Type the number you heard FIRST:", a:"13", aliases:["thirteen"], why:"Stress: thir-TEEN ends with stress on the second syllable. THIR-ty has stress on the first."},
+     {audio:"Fourteen pounds fifty.", q:"Write the price (format: £X.XX):", a:"£14.50", aliases:["14.50","14.5","fourteen pounds fifty","£14.5"], why:"Fourteen (£14) + fifty pence = £14.50."},
+     {audio:"The fourteenth of March, two thousand and nineteen.", q:"Write the date (format: DD Month YYYY):", a:"14 march 2019", aliases:["14/3/2019","14 march 19","14 mar 2019","14th march 2019","14th of march 2019"], why:"'The fourteenth of March' = 14 March. 'Two thousand and nineteen' = 2019."},
+     {audio:"Half past two in the afternoon.", q:"Write the time (format: H:MM am/pm):", a:"2:30 pm", aliases:["2.30pm","14:30","2:30pm","2:30 p.m.","2.30 pm","half past two"], why:"'Half past two' = 2:30. 'Afternoon' = pm."}
+   ]},
+  {n:2,name:"Spelling Lab",icon:"🔤",accent:"var(--gold)",
+   intro:"M/N. B/V. P/B. Double letters. Common confusions that cost a full mark per slip.",
+   items:[
+     {audio:"L-A-N-G-F-O-R-D.", q:"Type the surname:", a:"langford", aliases:["Langford"], why:"L–A–N–G–F–O–R–D. Watch the 'N' — easy to confuse with M."},
+     {audio:"M-C-K-E-N-Z-I-E.", q:"Type the surname:", a:"mckenzie", aliases:["McKenzie","Mckenzie"], why:"Mc-Kenzie. Common Scottish surname — the K is silent in speech but written."},
+     {audio:"W-I-L-L-I-A-M-S.", q:"Type the surname:", a:"williams", aliases:["Williams"], why:"Double L. A common spelling trap — don't write 'Wiliams'."},
+     {audio:"Twenty-three Belmont Crescent.", q:"Type the full address:", a:"23 belmont crescent", aliases:["23 Belmont Crescent","twenty-three belmont crescent"], why:"'Twenty-three' = 23. 'Crescent' is a road type — common in UK addresses."},
+     {audio:"That's S-T-E-P-H-E-N. With a P-H, not V.", q:"Type the first name:", a:"stephen", aliases:["Stephen"], why:"'Stephen' (P-H) vs 'Steven' (V) — both pronounced the same. The speaker confirmed the spelling."}
+   ]},
+  {n:3,name:"Synonym Lab",icon:"🔁",accent:"var(--alert)",
+   intro:"Question says one word; audio says another. Train your ear for meaning, not surface vocabulary.",
+   items:[
+     {audio:"The annual conference attracts visitors from over thirty countries.", q:"The question word was: 'yearly'. What did the audio say instead?", a:"annual", aliases:["annually"], why:"'Yearly' → 'annual / annually'. Classic IELTS synonym."},
+     {audio:"One drawback of the system is its complexity.", q:"The question word was: 'disadvantage'. What did the audio say instead?", a:"drawback", why:"'Disadvantage' → 'drawback'. Listen for: 'downside', 'negative aspect', 'limitation'."},
+     {audio:"The course commences in early September.", q:"The question word was: 'begins'. What did the audio say instead?", a:"commences", aliases:["commence"], why:"'Begin / start' → 'commence'. Common in formal Section 2 contexts."},
+     {audio:"Participants must purchase their own equipment.", q:"The question word was: 'buy'. What did the audio say instead?", a:"purchase", why:"'Buy' → 'purchase'. Watch also for: 'acquire', 'obtain'."},
+     {audio:"This research is widely regarded as groundbreaking.", q:"The question word was: 'considered'. What did the audio say instead?", a:"regarded", aliases:["regarded as"], why:"'Considered' → 'regarded'. Watch also for: 'viewed as', 'seen as'."}
+   ]},
+  {n:4,name:"Distractor Lab (Section 3 specialty)",icon:"🪤",accent:"var(--purple)",
+   intro:"The classic Section 3 trick: the first answer is wrong. Train yourself to wait for the speaker's commitment.",
+   items:[
+     {audio:"Originally we were going to focus on social media, but after the literature review, we decided to look at smartphone addiction instead.", q:"What is the team's FINAL focus?",
+      options:["social media","smartphone addiction","literature review","none of the above"],a:"smartphone addiction",why:"Trap signal: 'Originally… but… decided to… instead'. Always the SECOND choice."},
+     {audio:"I thought I'd interview teachers, then I considered surveys, but in the end I went with focus groups.", q:"Which method did the speaker FINALLY choose?",
+      options:["interviewing teachers","surveys","focus groups","all three"],a:"focus groups",why:"Trap signal: '…then I considered… but in the end…'. Three options listed; the LAST commits."},
+     {audio:"Maya suggested doing the report in pairs, but James pointed out that the assignment specifies individual work.", q:"How will the report be done?",
+      options:["in pairs","individually","in groups","they haven't decided"],a:"individually",why:"Trap: Maya's suggestion is corrected by James citing the assignment rules. 'Specifies' = the deciding word."},
+     {audio:"I was going to argue that climate change is the cause, but actually, the data suggests urban planning is the real factor.", q:"What does the speaker conclude is the REAL cause?",
+      options:["climate change","urban planning","data analysis","both"],a:"urban planning",why:"Trap signal: 'I was going to… but actually…'. 'Actually' is one of the strongest distractor signals in IELTS."}
+   ]},
+  {n:5,name:"Signpost Spotter (Section 4)",icon:"📍",accent:"var(--deep)",
+   intro:"In Section 4 lectures, signposts tell you when an answer is coming. Identify the type of signpost = predict the type of info.",
+   items:[
+     {audio:"Firstly, let's consider the historical context.", q:"What type of signpost did the speaker use?",
+      options:["sequence","contrast","cause/effect","conclusion"],a:"sequence",why:"'Firstly' signals the FIRST item in a list — expect another (secondly, finally) coming up."},
+     {audio:"However, more recent research has challenged this view.", q:"What type of signpost did the speaker use?",
+      options:["addition","contrast","example","conclusion"],a:"contrast",why:"'However' signals a CONTRAST — the next sentence will disagree with or qualify what came before."},
+     {audio:"As a result, scientists began to question the original hypothesis.", q:"What type of signpost did the speaker use?",
+      options:["sequence","example","cause/effect","conclusion"],a:"cause/effect",why:"'As a result' signals an EFFECT or CONSEQUENCE of what was just said."},
+     {audio:"For instance, the 1985 study in Brazil showed a similar pattern.", q:"What type of signpost did the speaker use?",
+      options:["contrast","example","cause/effect","conclusion"],a:"example",why:"'For instance' signals an EXAMPLE — listen for specific names, dates, or numbers next."},
+     {audio:"To summarise, the three key findings can be grouped together.", q:"What type of signpost did the speaker use?",
+      options:["sequence","addition","contrast","conclusion"],a:"conclusion",why:"'To summarise' signals a WRAP-UP. Lecture is ending — last chance for answers."}
+   ]},
+  {n:6,name:"Plural Detector",icon:"➕",accent:"var(--alert)",
+   intro:"Missing one 's' = full mark lost. Train your ear for the final consonant.",
+   items:[
+     {audio:"The main reason for the change was the high cost.", q:"Did the speaker use SINGULAR or PLURAL for 'reason'?", options:["singular","plural"],a:"singular",why:"'The main reason' — singular. If you write 'reasons', you lose the mark."},
+     {audio:"There are several reasons why this approach has failed.", q:"Did the speaker use SINGULAR or PLURAL for 'reason'?", options:["singular","plural"],a:"plural",why:"'Several reasons' — plural. The -s is essential."},
+     {audio:"The participant arrived at half past nine.", q:"How many people arrived?", options:["one","more than one"],a:"one",why:"'The participant' — singular. Listen for the article 'the' + noun ending."},
+     {audio:"The participants completed three different tasks.", q:"How many tasks did they complete?", options:["one","three"],a:"three",why:"'Three different tasks' — plural with explicit number. Both 'tasks' and 'participants' have -s."},
+     {audio:"The benefit of this method is its low cost.", q:"How many benefits?", options:["one","more than one"],a:"one",why:"'The benefit' — singular. Writing 'benefits' loses the mark."}
+   ]}
+];
+
+const labEl=document.getElementById('labCards');
+labs.forEach(L=>{
+  const c=document.createElement('div');
+  c.className='case-card';
+  c.style.background=`linear-gradient(180deg, ${L.accent}22 0%, #fff 70%)`;
+  c.innerHTML=`<div class="flex items-center gap-2"><div class="num-circle" style="background:${L.accent}">${L.icon}</div><div class="font-bold leading-tight">${L.n}. ${L.name}</div></div><div class="text-xs text-stone-600 mt-2">${L.intro}</div><div class="preview" style="color:${L.accent}">▶ Open lab</div>`;
+  c.addEventListener('click',()=>openLab(L));
+  labEl.appendChild(c);
+});
+
+function openLab(L){
+  let body=`<div class="feedback tip">${L.intro}</div>`;
+  L.items.forEach((it,i)=>{
+    if(it.options){
+      body+=`<div class="card p-3 mt-3" data-lab-i="${i}">
+        <div class="flex items-center justify-between gap-2 flex-wrap mb-2">
+          <div class="text-xs uppercase tracking-widest text-stone-500">Q${i+1}</div>
+          <button class="play-btn" data-tts="${it.audio.replace(/"/g,'&quot;')}">▶ Play audio</button>
+        </div>
+        <div class="text-sm font-medium mb-2">${it.q}</div>
+        <div class="flex flex-wrap gap-2">${it.options.map(o=>`<button class="opt lab-mcq" data-v="${o}">${o}</button>`).join('')}</div>
+        <div class="fb"></div>
+      </div>`;
     } else {
-      div.classList.add('wrong');
-      dFB.innerHTML = `<div class="feedback bad"><strong>Eliminated ${o.l}.</strong> ${o.w}</div>`;
-      addXP(2,'Distractor learning');
+      body+=`<div class="card p-3 mt-3" data-lab-i="${i}">
+        <div class="flex items-center justify-between gap-2 flex-wrap mb-2">
+          <div class="text-xs uppercase tracking-widest text-stone-500">Q${i+1}</div>
+          <button class="play-btn" data-tts="${it.audio.replace(/"/g,'&quot;')}">▶ Play audio</button>
+        </div>
+        <div class="text-sm font-medium mb-2">${it.q}</div>
+        <div class="flex gap-2 flex-wrap"><input type="text" class="lab-input" placeholder="Type answer..."><button class="btn btn-primary lab-check text-xs">Check</button></div>
+        <div class="fb"></div>
+      </div>`;
     }
   });
-  dEl.appendChild(div);
-});
+  openModal(`<div class="num-circle" style="background:${L.accent};width:36px;height:36px">${L.icon}</div><div><div class="font-bold text-lg">${L.n}. ${L.name}</div><div class="text-[10px] uppercase tracking-widest text-stone-500">Listening lab</div></div>`,body);
+  const mb=document.getElementById('mBody');
+  mb.querySelectorAll('.lab-mcq').forEach(b=>{
+    b.addEventListener('click',()=>{
+      const wrap=b.closest('[data-lab-i]');
+      if(wrap.dataset.done)return;
+      const i=+wrap.dataset.labI;
+      const item=L.items[i];
+      const ok=b.dataset.v===item.a;
+      wrap.dataset.done='1';
+      if(ok)b.classList.add('correct');else b.classList.add('wrong');
+      wrap.querySelectorAll('.lab-mcq').forEach(x=>{if(x.dataset.v===item.a)x.classList.add('correct');x.classList.add('disabled');});
+      wrap.querySelector('.fb').innerHTML=`<div class="feedback ${ok?'good':'bad'}">${ok?'✅':'❌'} <strong>Answer: ${item.a}.</strong> ${item.why}</div>`;
+      addXP(ok?6:2);
+    });
+  });
+  mb.querySelectorAll('.lab-check').forEach(b=>{
+    b.addEventListener('click',()=>{
+      const wrap=b.closest('[data-lab-i]');
+      if(wrap.dataset.done)return;
+      const i=+wrap.dataset.labI;
+      const item=L.items[i];
+      const v=wrap.querySelector('.lab-input').value.trim().toLowerCase().replace(/[\s,]/g,'');
+      const aliases=[item.a.toLowerCase().replace(/[\s,]/g,''),...(item.aliases||[]).map(x=>x.toLowerCase().replace(/[\s,]/g,''))];
+      const ok=aliases.some(a=>a===v);
+      wrap.dataset.done='1';
+      wrap.querySelector('.fb').innerHTML=`<div class="feedback ${ok?'good':'bad'}">${ok?'✅':'❌'} <strong>Answer: ${item.a}.</strong> ${item.why}</div>`;
+      addXP(ok?6:2);
+    });
+  });
+}
 
-// ====== TTS ENGINE (Web Speech API) ======
-const ttsState = { voice: null };
-function pickVoice(){
-  const voices = speechSynthesis.getVoices();
-  // Prefer a clear British or American English voice
-  ttsState.voice = voices.find(v=>/en-GB/i.test(v.lang) && /female|samantha|kate|moira/i.test(v.name))
-    || voices.find(v=>/en-GB/i.test(v.lang))
-    || voices.find(v=>/en-US/i.test(v.lang) && /female|samantha|ava/i.test(v.name))
-    || voices.find(v=>/en/i.test(v.lang))
-    || voices[0];
-}
-if (typeof speechSynthesis !== 'undefined'){
-  speechSynthesis.onvoiceschanged = pickVoice;
-  pickVoice();
-}
-function speak(text, rate=0.92){
-  if (!('speechSynthesis' in window)){ alert('Audio playback needs Chrome, Edge, Safari or Firefox.'); return; }
-  speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  u.rate = rate; u.pitch = 1.0;
-  if (ttsState.voice) u.voice = ttsState.voice;
-  speechSynthesis.speak(u);
-}
-// Wire any element with [data-tts] to play its text
-document.addEventListener('click', e=>{
-  const b = e.target.closest('[data-tts]');
-  if (b){ speak(b.dataset.tts); }
-});
-
-// ====== MAP DRILL (rebuilt — wrong clicks don't move) ======
-const mapEl = document.getElementById('mapGrid');
-const mapFB = document.getElementById('mapFB');
-const mapStep = document.getElementById('mapStep');
-const mapTrail = document.getElementById('mapTrail');
-let pos = {x:0,y:4};
-const target = {x:3,y:1};
-const path = ['E','E','N','N','N','E'];
-const dirNames = {N:'North ⬆', S:'South ⬇', E:'East ➡', W:'West ⬅'};
-let pathIdx = 0;
-let trail = [];
+// ===== MAP DRILL =====
+const mapEl=document.getElementById('mapGrid');
+const mapFB=document.getElementById('mapFB');
+const mapStep=document.getElementById('mapStep');
+const mapTrail=document.getElementById('mapTrail');
+let mapPos={x:0,y:4};
+const mapTarget={x:3,y:1};
+const mapPath=['E','E','N','N','N','E'];
+const dirNames={N:'North ⬆',S:'South ⬇',E:'East ➡',W:'West ⬅'};
+let mapIdx=0,mapTrailArr=[];
 function renderMap(){
   mapEl.innerHTML='';
-  for (let y=0;y<5;y++){
-    for (let x=0;x<5;x++){
-      const c = document.createElement('div');
+  for(let y=0;y<5;y++){
+    for(let x=0;x<5;x++){
+      const c=document.createElement('div');
       c.className='map-cell';
-      if (x===pos.x&&y===pos.y) c.classList.add('you'),c.textContent='🟡';
-      else if (x===target.x&&y===target.y) c.classList.add('target'),c.textContent='☕';
-      else if (x===0&&y===4) c.textContent='🚪';
-      else if (x===2&&y===2) c.textContent='📚';
+      if(x===mapPos.x&&y===mapPos.y){c.classList.add('you');c.textContent='🟡';}
+      else if(x===mapTarget.x&&y===mapTarget.y){c.classList.add('target');c.textContent='☕';}
+      else if(x===0&&y===4)c.textContent='🚪';
+      else if(x===2&&y===2)c.textContent='📚';
       else c.textContent='';
       mapEl.appendChild(c);
     }
   }
 }
-function updateStepLabel(){
-  if (pathIdx >= path.length){
-    mapStep.textContent = '🎉 Café reached!';
-    mapStep.style.background = '#eef9f5';
-    mapStep.style.color = 'var(--signal)';
-  } else {
-    mapStep.textContent = `Step ${pathIdx+1} of ${path.length} — listen, then click ${dirNames[path[pathIdx]]}`;
+const mapStepNum=document.getElementById('mapStepNum');
+function highlightExpected(){
+  // Visually highlight the expected direction button so user can't miss it
+  document.querySelectorAll('#mapBtns [data-dir]').forEach(b=>{
+    b.classList.remove('pulse');
+    b.style.background='';
+    b.style.color='';
+    b.style.border='';
+  });
+  if(mapIdx<mapPath.length){
+    const exp=mapPath[mapIdx];
+    const btn=document.querySelector(`#mapBtns [data-dir="${exp}"]`);
+    if(btn){
+      btn.classList.add('pulse');
+      btn.style.background='var(--signal)';
+      btn.style.color='#fff';
+      btn.style.border='1px solid var(--signal)';
+    }
   }
 }
-renderMap(); updateStepLabel();
-document.getElementById('mapBtns').addEventListener('click', e=>{
-  if (e.target.id==='mapReset'){
-    pos={x:0,y:4}; pathIdx=0; trail=[]; mapFB.innerHTML='';
-    mapTrail.textContent='Path so far: —';
-    mapStep.style.background='var(--soft)'; mapStep.style.color='var(--deep)';
-    renderMap(); updateStepLabel(); return;
-  }
-  const dir = e.target.dataset.dir;
-  if (!dir || pathIdx>=path.length) return;
-  const expected = path[pathIdx];
-  if (dir===expected){
-    // Apply movement only on correct
-    if (dir==='N'&&pos.y>0)pos.y--;
-    else if (dir==='S'&&pos.y<4)pos.y++;
-    else if (dir==='E'&&pos.x<4)pos.x++;
-    else if (dir==='W'&&pos.x>0)pos.x--;
-    pathIdx++;
-    trail.push(dir);
-    mapTrail.textContent = 'Path so far: ' + trail.join(' → ');
-    if (pos.x===target.x && pos.y===target.y){
-      mapFB.innerHTML=`<div class="feedback good">✅ Café reached! Six steps, all correct. That's how IELTS Section 2 maps work.</div>`;
-      addXP(20,'Map navigation');
-    } else {
-      mapFB.innerHTML=`<div class="feedback good">✓ Step ${pathIdx} correct (${dirNames[dir]}) — keep going.</div>`;
-      addXP(3,'Map step');
-    }
-    renderMap(); updateStepLabel();
+function updateStep(){
+  if(mapIdx>=mapPath.length){
+    mapStep.textContent='🎉 Café reached!';
+    mapStepNum.textContent='Complete';
+    mapStep.parentElement.style.background='#eef9f5';
+    document.querySelectorAll('#mapBtns [data-dir]').forEach(b=>{b.classList.remove('pulse');b.style.background='';b.style.color='';b.style.border='';});
   } else {
-    // Don't move position — just explain
-    mapFB.innerHTML=`<div class="feedback bad">⚠ Not yet. The transcript says: <strong>"two squares east, then three squares north, then one square east"</strong>. You're on step ${pathIdx+1} — the next move should be <strong>${dirNames[expected]}</strong>.</div>`;
+    mapStep.textContent='▶ Click '+dirNames[mapPath[mapIdx]];
+    mapStepNum.textContent=`Step ${mapIdx+1} of ${mapPath.length}`;
+    highlightExpected();
+  }
+}
+renderMap();updateStep();
+document.getElementById('mapBtns').addEventListener('click',e=>{
+  const btn=e.target.closest('button');
+  if(!btn)return;
+  if(btn.id==='mapReset'){
+    mapPos={x:0,y:4};mapIdx=0;mapTrailArr=[];
+    mapFB.innerHTML='';mapTrail.textContent='Path: —';
+    mapStep.parentElement.style.background='var(--soft)';
+    renderMap();updateStep();return;
+  }
+  const dir=btn.dataset.dir;
+  if(!dir||mapIdx>=mapPath.length)return;
+  const expected=mapPath[mapIdx];
+  if(dir===expected){
+    if(dir==='N'&&mapPos.y>0)mapPos.y--;
+    else if(dir==='S'&&mapPos.y<4)mapPos.y++;
+    else if(dir==='E'&&mapPos.x<4)mapPos.x++;
+    else if(dir==='W'&&mapPos.x>0)mapPos.x--;
+    mapIdx++;mapTrailArr.push(dir);
+    mapTrail.textContent='Path: '+mapTrailArr.join(' → ');
+    if(mapPos.x===mapTarget.x&&mapPos.y===mapTarget.y){
+      mapFB.innerHTML=`<div class="feedback good">✅ Café reached! 6 steps, all correct. That's Section 2 map mastery.</div>`;
+      addXP(20);
+    } else {
+      mapFB.innerHTML=`<div class="feedback good">✓ Step ${mapIdx} correct (${dirNames[dir]}) — keep going.</div>`;
+      addXP(3);
+    }
+    renderMap();updateStep();
+  } else {
+    // Wrong click — show clearly what was expected, don't move position
+    mapFB.innerHTML=`<div class="feedback bad">⚠ Not this step. The audio says <strong>two east FIRST, then three north, then one east</strong>. You're currently on <strong>step ${mapIdx+1} of 6</strong> — the next correct move is <strong>${dirNames[expected]}</strong> (highlighted in green above).</div>`;
   }
 });
 
-// ====== SPELLING DRILL ======
-const spell = [
-  {clue:"Surname (audio: \"That's L-A-N-G-F-O-R-D\")", a:"langford"},
-  {clue:"House number and street (audio: \"Twenty-four Belmont Crescent\")", a:"24 belmont crescent"},
-  {clue:"Phone (audio: \"oh-seven-double-three-one-two-eight-five-four-six\")", a:"07331285346", aliases:["073312 85346","0733-1285346"]},
+// ===== AUDIO MOCKS =====
+const mocks=[
+  {section:1,name:"Section 1 · Gym booking form",accent:"var(--signal)",
+   transcript:"Receptionist: Good morning, Cedarwood Fitness Centre, how can I help? Caller: Hi, I'd like to enquire about membership. Receptionist: Certainly. Could I take your name? Caller: It's Daniel Whitfield. That's W-H-I-T-F-I-E-L-D. Receptionist: Thank you. And a contact number? Caller: Yes, it's oh-seven-eight-two-five-double-four-three-nine-one. Receptionist: Lovely. Now, our standard membership is forty-eight pounds per month, but if you sign up for a full year, it's just five hundred pounds. Caller: I'll go with the annual one then. Receptionist: Excellent. The next induction session is on Tuesday the fifteenth of October at six thirty pm.",
+   qs:[
+     {q:"Caller's surname:",a:"whitfield",aliases:["Whitfield"],why:"Spelled out: W-H-I-T-F-I-E-L-D."},
+     {q:"Caller's phone (digits only, no spaces):",a:"07825443391",aliases:["07825 443391","078254 43391"],why:"'oh-seven-eight-two-five' = 07825, 'double-four' = 44, 'three-nine-one' = 391 → 07825443391."},
+     {q:"Annual membership price (number only):",a:"500",aliases:["£500","500 pounds","five hundred"],why:"'just five hundred pounds' for the full year."},
+     {q:"Date of induction session (format: DD/MM):",a:"15/10",aliases:["15 october","15th october","15/10","15-10"],why:"'Tuesday the fifteenth of October' = 15/10."},
+     {q:"Time of induction (format: H:MM am/pm):",a:"6:30 pm",aliases:["6.30pm","18:30","6:30pm","6:30 p.m."],why:"'six thirty pm' = 6:30 pm or 18:30."}
+   ]},
+  {section:2,name:"Section 2 · Heritage Trail monologue",accent:"var(--gold)",
+   transcript:"Welcome to the Eastdale Heritage Trail. The walk takes about ninety minutes in total and covers three main sites. The first is the Old Mill, which was built in eighteen forty-two. Note that the mill is closed on Mondays for maintenance. From the mill, follow the gravel path north for about ten minutes to reach the Memorial Garden, which was opened in nineteen ninety-nine. The garden is free to enter at all times. Finally, the trail ends at the Lighthouse Café, where guided tours of the lighthouse itself start at two thirty every afternoon. Photography is allowed everywhere except inside the chapel.",
+   qs:[
+     {q:"Duration of the walk (number, in minutes):",a:"90",aliases:["ninety","90 minutes"],why:"'about ninety minutes' total."},
+     {q:"Year the Old Mill was built:",a:"1842",aliases:["eighteen forty-two"],why:"'built in eighteen forty-two' = 1842."},
+     {q:"Day the mill is closed:",a:"monday",aliases:["mondays"],why:"'closed on Mondays'."},
+     {q:"Time guided tours start (format: H:MM am/pm):",a:"2:30 pm",aliases:["2.30pm","14:30","2:30pm","2:30 p.m."],why:"'guided tours start at two thirty every afternoon'."},
+     {q:"Where is photography NOT allowed?",a:"chapel",aliases:["the chapel","inside the chapel"],why:"'except inside the chapel' — the one place forbidden."}
+   ]},
+  {section:3,name:"Section 3 · Project discussion (distractor-heavy)",accent:"var(--alert)",
+   transcript:"Tutor: So Aisha, tell me about your dissertation focus. Aisha: I was going to write about urban gardens, but the data was difficult to access, so I've switched to vertical farming. Tutor: Sensible move. And the geographic scope? Aisha: Originally I planned to compare Singapore and Tokyo, but my supervisor suggested I add Berlin to bring in a European angle. Tutor: Three cities is ambitious. What's your main methodology? Aisha: I thought interviews would work, then I considered surveys, but in the end I went with case studies of three commercial farms. Tutor: Wise choice. What about your timeline? Aisha: I was hoping to submit in May, but with three case studies I'll need until early July. Tutor: Realistic. And one final question — what's your tentative conclusion? Aisha: My early finding is that scalability, not technology, is the biggest barrier to vertical farming becoming mainstream.",
+   qs:[
+     {q:"FINAL topic:",a:"vertical farming",aliases:["vertical farms"],why:"'I've switched to vertical farming' — replaces urban gardens distractor."},
+     {q:"How many cities will Aisha cover?",a:"3",aliases:["three"],why:"Singapore + Tokyo + Berlin (added by supervisor) = 3."},
+     {q:"FINAL methodology:",a:"case studies",aliases:["case study"],why:"'…in the end I went with case studies'. Interviews and surveys are distractors."},
+     {q:"Submission month:",a:"july",aliases:["july"],why:"'I'll need until early July' — corrects the earlier May target."},
+     {q:"Aisha's main finding — the biggest barrier is:",a:"scalability",why:"'scalability, not technology, is the biggest barrier' — the contrast 'not technology' tells you which is the answer."}
+   ]},
+  {section:4,name:"Section 4 · Lecture excerpt (signposts)",accent:"var(--purple)",
+   transcript:"Today's lecture examines three approaches to coral reef restoration. Firstly, coral fragmentation, in which small pieces of healthy coral are broken off and replanted on damaged reefs. This is the most affordable approach and has been used since the nineteen seventies. Secondly, larval propagation, which involves collecting coral spawn during annual spawning events and rearing the larvae in tanks before releasing them. This approach was pioneered by Dr Kira Patel in two thousand and eight. Thirdly, and most controversially, assisted evolution — where corals are selectively bred for heat tolerance. Critics argue this risks unintended ecological consequences. To summarise, while fragmentation remains the cheapest, assisted evolution has the greatest long-term potential.",
+   qs:[
+     {q:"How many approaches are discussed?",a:"3",aliases:["three"],why:"'examines three approaches' — and we hear firstly, secondly, thirdly."},
+     {q:"The FIRST approach is coral _______. (ONE WORD)",a:"fragmentation",why:"'Firstly, coral fragmentation'."},
+     {q:"The SECOND approach was pioneered by:",a:"dr kira patel",aliases:["Dr Kira Patel","Kira Patel","dr patel"],why:"'pioneered by Dr Kira Patel'."},
+     {q:"The MOST CONTROVERSIAL approach is:",a:"assisted evolution",why:"'Thirdly, and most controversially, assisted evolution'."},
+     {q:"Which approach has the GREATEST long-term potential, according to the speaker?",a:"assisted evolution",why:"In the summary: 'assisted evolution has the greatest long-term potential'."}
+   ]}
 ];
-const sdEl = document.getElementById('spellDrill');
-spell.forEach((s,i)=>{
-  const wrap=document.createElement('div');
-  wrap.className='card p-3';
-  wrap.innerHTML=`<div class="text-sm mb-2"><strong>Q${i+1}.</strong> ${s.clue}</div>
-    <input class="border border-line rounded-lg p-2 w-full" placeholder="Type exactly as you'd write on the answer sheet">
-    <button class="btn btn-ghost text-xs mt-2 spell-check">Check</button>
-    <div class="fb mt-2"></div>`;
-  sdEl.appendChild(wrap);
-  wrap.querySelector('.spell-check').addEventListener('click',()=>{
-    if (wrap.dataset.done) return;
-    const v = wrap.querySelector('input').value.trim().toLowerCase().replace(/[\s-]/g,'');
-    const aliases = [s.a.replace(/\s/g,''), ...(s.aliases||[]).map(x=>x.replace(/[\s-]/g,''))];
-    const ok = aliases.includes(v);
-    wrap.dataset.done='1';
-    wrap.querySelector('.fb').innerHTML = `<div class="feedback ${ok?'good':'bad'}">${ok?'✅ Correct.':'❌ Off — answer: '+s.a+'.'} A single letter wrong = full mark lost.</div>`;
-    addXP(ok?8:2,'Spelling');
+const mocksEl=document.getElementById('audioMocks');
+mocks.forEach((m,mi)=>{
+  const c=document.createElement('div');
+  c.className='card p-5';
+  c.style.borderLeft=`6px solid ${m.accent}`;
+  c.innerHTML=`<div class="flex items-center justify-between flex-wrap gap-2 mb-3">
+    <div class="flex items-center gap-2"><div class="num-circle" style="background:${m.accent}">${m.section}</div><div class="font-bold">${m.name}</div></div>
+    <div class="flex gap-2"><button class="play-btn" data-tts="${m.transcript.replace(/"/g,'&quot;')}">▶ Play audio</button><button class="btn btn-ghost text-xs" data-toggle-tx="${mi}">📜 Show transcript</button></div>
+  </div>
+  <div class="text-sm italic mt-2" style="display:none;background:#eef5f3;padding:.7rem;border-radius:8px" id="tx-${mi}">"${m.transcript}"</div>
+  <div class="space-y-2 mt-3" id="qs-${mi}"></div>`;
+  mocksEl.appendChild(c);
+  const qb=c.querySelector(`#qs-${mi}`);
+  m.qs.forEach((q,qi)=>{
+    const w=document.createElement('div');
+    w.className='card p-3';
+    w.innerHTML=`<div class="text-sm font-medium mb-2"><strong>Q${qi+1}.</strong> ${q.q}</div><div class="flex gap-2 flex-wrap"><input type="text" placeholder="Type answer..." style="flex:1"><button class="btn btn-primary mock-check text-xs">Check</button></div><div class="fb"></div>`;
+    qb.appendChild(w);
+    w.querySelector('.mock-check').addEventListener('click',()=>{
+      if(w.dataset.done)return;
+      w.dataset.done='1';
+      const v=w.querySelector('input').value.trim().toLowerCase().replace(/[\s,]/g,'');
+      const al=[q.a.toLowerCase().replace(/[\s,]/g,''),...(q.aliases||[]).map(x=>x.toLowerCase().replace(/[\s,]/g,''))];
+      const ok=al.some(a=>a===v);
+      w.querySelector('.fb').innerHTML=`<div class="feedback ${ok?'good':'bad'}">${ok?'✅':'❌'} <strong>Answer: ${q.a}.</strong> ${q.why}</div>`;
+      addXP(ok?5:2);
+    });
   });
 });
-
-// ====== BOSS FIGHT ======
-const bossPause = document.getElementById('bossPassage');
-const bossAudio = document.getElementById('bossAudio');
-const bossTimer = document.getElementById('bossTimer');
-const bossStart = document.getElementById('bossStart');
-const bossQsEl = document.getElementById('bossQs');
-const bossResult = document.getElementById('bossResult');
-
-const bossQs = [
-  {type:"MCQ", q:"Which city did Maya's group switch TO?", options:[
-    {l:"A",t:"Berlin",c:false,w:"Original choice — switched away from."},
-    {l:"B",t:"Vienna",c:true,w:"'switching to Vienna instead'."},
-    {l:"C",t:"Toronto",c:false,w:"Already in the original three — not a switch."},
-    {l:"D",t:"Madrid",c:false,w:"Original three — not a switch."},
-  ]},
-  {type:"MCQ", q:"What method did the group end up using?", options:[
-    {l:"A",t:"Surveys",c:false,w:"Original plan — abandoned because of low response."},
-    {l:"B",t:"Interviews",c:false,w:"Not mentioned. Distractor — would have been a logical pivot but isn't what was said."},
-    {l:"C",t:"Analysis of municipal reports",c:true,w:"'we shifted to analysing existing municipal reports'."},
-    {l:"D",t:"Online polls",c:false,w:"Not mentioned."},
-  ]},
-  {type:"COMPLETION", q:"Cities that ran public ____ campaigns saw 40% more participation. (ONE WORD)", a:"awareness", aliases:["education"], why:"Audio: 'public awareness drives' / 'education campaigns'."},
-  {type:"COMPLETION", q:"The presentation date is the ____ of November. (NUMBER)", a:"21st", aliases:["21","21 st"], why:"'panel moved it to the 21st of November.' First number was 14th — distractor."},
-  {type:"MCQ", q:"What is Maya's main recommendation?", options:[
-    {l:"A",t:"Top-down legislation",c:false,w:"Explicitly rejected: 'top-down policy alone doesn't shift behaviour'."},
-    {l:"B",t:"Community-level campaigns first",c:true,w:"'invest in community-level campaigns before changing legislation'."},
-    {l:"C",t:"More research",c:false,w:"Not mentioned."},
-    {l:"D",t:"Higher fines",c:false,w:"Not mentioned."},
-  ]},
-];
-
-bossQs.forEach((q,i)=>{
-  const div = document.createElement('div');
-  div.className='card p-4';
-  if (q.type==='MCQ'){
-    div.innerHTML=`<div class="font-medium mb-2"><span class="chip" style="background:#f3eef9;color:var(--deep)">MCQ</span> ${i+1}. ${q.q}</div>
-      <div class="space-y-2 bossmcq" data-i="${i}">
-        ${q.options.map(o=>`<div class="opt" data-i="${i}" data-l="${o.l}"><div class="letter">${o.l}</div><div>${o.t}</div></div>`).join('')}
-      </div><div class="fb mt-2"></div>`;
-  } else {
-    div.innerHTML=`<div class="font-medium mb-2"><span class="chip" style="background:#eef5f3;color:var(--deep)">Completion</span> ${i+1}. ${q.q}</div>
-      <input class="border border-line rounded-lg p-2 w-full" data-i="${i}" placeholder="Type your answer (mind the word limit)">
-      <div class="fb mt-2"></div>`;
-  }
-  bossQsEl.appendChild(div);
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-toggle-tx]');
+  if(!b)return;
+  const tx=document.getElementById('tx-'+b.dataset.toggleTx);
+  tx.style.display = tx.style.display==='none'?'block':'none';
 });
 
-let bossSec = 240, bossInt=null, bossDone=false;
+// ===== BOSS FIGHT =====
+const bossTranscript="Tutor: Alright Maya, let's review your group project plan. You've been looking at urban food waste, is that right? Maya: Yes. We were going to compare three cities — Berlin, Madrid and Toronto — for their composting programmes. Tutor: Three is ambitious. Have you got the data? Maya: We had Madrid and Toronto sorted. The Berlin data was harder than expected, so we're switching to Vienna instead. Tutor: Good. And the methodology — still surveys? Maya: We thought so, but we couldn't get enough responses, so we shifted to analysing existing municipal reports. Tutor: Sensible. What's your main finding so far? Maya: The biggest factor isn't policy — it's education campaigns. Cities that ran public awareness drives saw forty percent more household participation. Tutor: Interesting. When are you presenting? Maya: Originally the fourteenth, but the panel moved it to the twenty-first of November. Tutor: One last thing — what's your recommendation? Maya: Cities should invest in community-level campaigns before changing legislation. Top-down policy alone doesn't shift behaviour.";
+document.getElementById('bossPassage').innerHTML=`<p>${bossTranscript.replace(/(Tutor:|Maya:)/g,'<br><strong>$1</strong>')}</p>`;
+const bossQs=[
+  {type:"MCQ",q:"Which city did Maya's group switch TO?",options:[
+    {l:"A",t:"Berlin",c:false,w:"Original — switched AWAY from."},
+    {l:"B",t:"Vienna",c:true,w:"'switching to Vienna instead'."},
+    {l:"C",t:"Toronto",c:false,w:"Already in the original three."},
+    {l:"D",t:"Madrid",c:false,w:"Already in the original three."}
+  ]},
+  {type:"MCQ",q:"What method did the group end up using?",options:[
+    {l:"A",t:"Surveys",c:false,w:"Original plan — abandoned."},
+    {l:"B",t:"Interviews",c:false,w:"Not mentioned."},
+    {l:"C",t:"Analysis of municipal reports",c:true,w:"'we shifted to analysing existing municipal reports'."},
+    {l:"D",t:"Online polls",c:false,w:"Not mentioned."}
+  ]},
+  {type:"COMP",q:"Cities that ran public ____ campaigns saw 40% more participation. (ONE WORD)",a:"awareness",aliases:["education"],why:"'public awareness drives' / 'education campaigns' — both phrasings used."},
+  {type:"COMP",q:"The presentation date is the ____ of November.",a:"21st",aliases:["21","twenty-first"],why:"'moved it to the twenty-first of November'. 14th was a distractor."},
+  {type:"MCQ",q:"Maya's main recommendation:",options:[
+    {l:"A",t:"Top-down legislation first",c:false,w:"Explicitly rejected: 'top-down policy alone doesn't shift behaviour'."},
+    {l:"B",t:"Community-level campaigns first",c:true,w:"'invest in community-level campaigns before changing legislation'."},
+    {l:"C",t:"More research",c:false,w:"Not mentioned."},
+    {l:"D",t:"Higher fines",c:false,w:"Not mentioned."}
+  ]}
+];
+const bossQsEl=document.getElementById('bossQs');
+bossQs.forEach((q,i)=>{
+  const w=document.createElement('div');
+  w.className='card p-3';
+  if(q.type==='MCQ'){
+    w.innerHTML=`<div class="text-sm font-medium mb-2"><span class="chip" style="background:#f3eafe;color:var(--purple)">MCQ</span> ${i+1}. ${q.q}</div>
+      <div class="space-y-1 boss-mcq" data-i="${i}">${q.options.map(o=>`<div class="opt" data-i="${i}" data-l="${o.l}"><div class="letter">${o.l}</div><div>${o.t}</div></div>`).join('')}</div>
+      <div class="fb"></div>`;
+  } else {
+    w.innerHTML=`<div class="text-sm font-medium mb-2"><span class="chip" style="background:#eef9f5;color:var(--signal)">Completion</span> ${i+1}. ${q.q}</div>
+      <input type="text" placeholder="Type answer..." style="width:100%" data-i="${i}">
+      <div class="fb"></div>`;
+  }
+  bossQsEl.appendChild(w);
+});
+let bossSec=240,bossInt=null,bossDone=false;
 function lockBoss(){
   bossDone=true;
   let score=0;
   bossQs.forEach((q,i)=>{
-    const card = bossQsEl.children[i];
-    const fb = card.querySelector('.fb');
-    let correct=false, got='';
-    if (q.type==='MCQ'){
-      const sel = card.querySelector('.opt.correct');
-      const picked = card.querySelector('.opt[data-picked="1"]');
-      got = picked?picked.dataset.l:'(blank)';
-      correct = !!sel;
-      const right = q.options.find(o=>o.c);
-      fb.innerHTML = `<div class="feedback ${correct?'good':'bad'}">${correct?'✅':'❌'} <strong>Answer: ${right.l}.</strong> ${right.w} <span class="text-stone-500">(You: ${got})</span></div>`;
+    const card=bossQsEl.children[i];
+    const fb=card.querySelector('.fb');
+    let ok=false,got='';
+    if(q.type==='MCQ'){
+      const sel=card.querySelector('.opt.correct');
+      const pick=card.querySelector('.opt[data-picked="1"]');
+      got=pick?pick.dataset.l:'(blank)';
+      ok=!!sel;
+      const right=q.options.find(o=>o.c);
+      fb.innerHTML=`<div class="feedback ${ok?'good':'bad'}">${ok?'✅':'❌'} <strong>Answer: ${right.l}.</strong> ${right.w} <span style="color:#888">(You: ${got})</span></div>`;
     } else {
-      const inp = card.querySelector('input');
-      got = (inp.value||'').trim().toLowerCase();
-      const aliases = [(q.a||'').toLowerCase(), ...(q.aliases||[]).map(x=>x.toLowerCase())];
-      correct = aliases.some(a=>got===a);
-      fb.innerHTML = `<div class="feedback ${correct?'good':'bad'}">${correct?'✅':'❌'} <strong>Answer: ${q.a}.</strong> ${q.why} <span class="text-stone-500">(You: ${got||'(blank)'})</span></div>`;
+      const inp=card.querySelector('input');
+      got=(inp.value||'').trim().toLowerCase();
+      const al=[(q.a||'').toLowerCase(),...(q.aliases||[]).map(x=>x.toLowerCase())];
+      ok=al.includes(got.replace(/,/g,''));
+      fb.innerHTML=`<div class="feedback ${ok?'good':'bad'}">${ok?'✅':'❌'} <strong>Answer: ${q.a}.</strong> ${q.why} <span style="color:#888">(You: ${got||'(blank)'})</span></div>`;
     }
-    if (correct) score++;
+    if(ok)score++;
   });
-  const pct = Math.round(score/bossQs.length*100);
-  let band = "Keep training";
-  if (pct>=80) band="Band 7.5+ ✨";
-  else if (pct>=60) band="Band 7";
-  else if (pct>=40) band="Band 6.5";
-  bossResult.innerHTML = `<div class="card p-5 text-center">
+  const pct=Math.round(score/bossQs.length*100);
+  let band="Keep training";
+  if(pct>=80)band="Band 7.5+ ✨";
+  else if(pct>=60)band="Band 7";
+  else if(pct>=40)band="Band 6.5";
+  document.getElementById('bossResult').innerHTML=`<div class="card p-4 text-center" style="background:linear-gradient(135deg,#fff,${pct>=60?'#eef9f5':'#fde2d6'})">
     <div class="text-xs uppercase tracking-widest text-stone-500">Section 3 Boss Result</div>
-    <div class="text-3xl font-bold mt-1" style="color:var(--deep)">${score} / ${bossQs.length}  ·  ${pct}%</div>
+    <div class="text-3xl font-bold mt-1" style="color:var(--deep)">${score} / ${bossQs.length} · ${pct}%</div>
     <div class="mt-1 timer-pill text-lg" style="color:var(--gold)">${band}</div>
     <div class="text-sm text-stone-700 mt-2">Distractors are won by waiting for the SECOND statement, not the first.</div>
   </div>`;
-  addXP(score*10,'Boss');
+  addXP(score*10);
 }
-
-bossStart.addEventListener('click',()=>{
-  if (bossInt) return;
-  bossPause.style.display='block';
-  bossAudio.classList.add('playing');
-  bossInt = setInterval(()=>{
+document.getElementById('bossStart').addEventListener('click',()=>{
+  if(bossInt)return;
+  document.getElementById('bossSignal').classList.add('playing');
+  speak(bossTranscript);
+  bossInt=setInterval(()=>{
     bossSec--;
-    const m = String(Math.floor(bossSec/60)).padStart(2,'0');
-    const s = String(bossSec%60).padStart(2,'0');
-    bossTimer.textContent = `${m}:${s}`;
-    if (bossSec<=0){
-      clearInterval(bossInt);
-      bossTimer.textContent='00:00';
-      bossTimer.style.color='var(--alert)';
-      bossAudio.classList.remove('playing');
-      if (!bossDone) lockBoss();
-    }
+    const m=String(Math.floor(bossSec/60)).padStart(2,'0');
+    const s=String(bossSec%60).padStart(2,'0');
+    document.getElementById('bossTimer').textContent=`${m}:${s}`;
+    if(bossSec<=0){clearInterval(bossInt);document.getElementById('bossTimer').textContent='00:00';document.getElementById('bossTimer').style.color='var(--alert)';document.getElementById('bossSignal').classList.remove('playing');if(!bossDone)lockBoss();}
   },1000);
-  bossStart.textContent='Submit';
-  bossStart.onclick=()=>{
-    clearInterval(bossInt);
-    bossAudio.classList.remove('playing');
-    if (!bossDone) lockBoss();
-  };
+  document.getElementById('bossStart').textContent='Submit';
+  document.getElementById('bossStart').onclick=()=>{clearInterval(bossInt);document.getElementById('bossSignal').classList.remove('playing');if(!bossDone)lockBoss();};
 });
-
-// ====== AUDIO SPEED CONTROL ======
-let currentRate = 0.92;
-document.querySelectorAll('.speed-btn').forEach(b=>b.addEventListener('click',()=>{
-  document.querySelectorAll('.speed-btn').forEach(x=>{x.classList.remove('btn-primary');x.classList.add('btn-ghost');});
-  b.classList.remove('btn-ghost'); b.classList.add('btn-primary');
-  currentRate = parseFloat(b.dataset.rate);
-}));
-document.getElementById('stopAudio')?.addEventListener('click',()=>speechSynthesis.cancel());
-
-// Override the global TTS click handler to use the rate
-document.addEventListener('click', e=>{
-  const b = e.target.closest('[data-tts]');
-  if (b){ speak(b.dataset.tts, currentRate); }
-}, true);
-
-// ====== AUDIO DRILLS ======
-const audioDrills = [
-  {
-    section:"Section 1 · Form Completion",
-    color:"#fdf6e3", accent:"var(--gold)",
-    transcript:"Receptionist: Good morning, Riverside Sports Centre, how can I help? Caller: Hi, I'd like to book the badminton court for Saturday. Receptionist: Certainly. Could I take your name? Caller: Yes, it's Daniel Whitfield. That's W-H-I-T-F-I-E-L-D. Receptionist: And a contact number? Caller: It's oh-seven-seven-eight-double-three-four-two-six-zero-one. Receptionist: The court is forty-five pounds for two hours.",
-    questions:[
-      {q:"Caller's surname:", a:"whitfield", aliases:["Whitfield"], why:"Spelled out as W-H-I-T-F-I-E-L-D."},
-      {q:"Caller's phone (digits only, no spaces):", a:"07783342601", aliases:["077833 42601"], why:"'oh-seven-seven-eight-double-three' = 07783, then 'four-two-six-zero-one' = 42601."},
-      {q:"Cost (number only):", a:"45", aliases:["45 pounds","£45"], why:"'forty-five pounds for two hours'."},
-    ]
-  },
-  {
-    section:"Section 2 · Monologue",
-    color:"#cfe7e2", accent:"var(--signal)",
-    transcript:"Welcome to the Eastdale Heritage Trail. The walk takes about ninety minutes and covers three main sites. The first is the Old Mill, built in eighteen forty-two. Note that the mill is closed on Mondays. From there, follow the path north for about ten minutes to reach the Memorial Garden, which was opened in nineteen ninety-nine. Finally, the trail ends at the Lighthouse Café, where guided tours start at two thirty every afternoon.",
-    questions:[
-      {q:"How long does the walk take? (number, in minutes)", a:"90", aliases:["ninety","90 minutes"], why:"'about ninety minutes'."},
-      {q:"Year the Old Mill was built:", a:"1842", aliases:["eighteen forty-two"], why:"'built in eighteen forty-two' = 1842."},
-      {q:"Which day is the mill closed?", a:"monday", aliases:["mondays"], why:"'closed on Mondays'."},
-      {q:"What time do guided tours start? (e.g., 2:30)", a:"2:30", aliases:["2.30","two thirty","14:30"], why:"'guided tours start at two thirty'."},
-    ]
-  },
-  {
-    section:"Section 3 · Academic Discussion (distractor)",
-    color:"#fdf0e7", accent:"var(--alert)",
-    transcript:"Tutor: So, Liam, what topic did you settle on? Liam: Originally I wanted to do urban gardens, but the data was hard to find. So I switched to vertical farming. Tutor: Smart move. And the methodology — surveys? Liam: I thought so, but I couldn't get enough responses, so I'm now doing case studies of three commercial farms. Tutor: Excellent. When are you presenting? Liam: Originally the eleventh, but it was moved to the eighteenth of June.",
-    questions:[
-      {q:"What is Liam's FINAL topic?", options:["urban gardens","vertical farming","commercial farms","data collection"], a:"vertical farming", why:"First answer (urban gardens) is a distractor — Liam switched."},
-      {q:"What is his FINAL methodology?", options:["surveys","interviews","case studies","online polls"], a:"case studies", why:"'I'm now doing case studies' — surveys was the original abandoned plan."},
-      {q:"What is the FINAL presentation date? (DD)", a:"18", aliases:["18th","eighteenth"], why:"'moved to the eighteenth of June' — 11th was the original."},
-    ]
-  },
-  {
-    section:"Section 4 · University Lecture",
-    color:"#dde6f5", accent:"var(--deep)",
-    transcript:"Today's lecture examines coral reef restoration. Three approaches dominate the field. Firstly, coral fragmentation, where small pieces of healthy coral are broken off and replanted on damaged reefs. Secondly, larval propagation, which involves collecting coral spawn and rearing the larvae in tanks. Thirdly, and most controversially, assisted evolution, where corals are selectively bred for heat tolerance. Each approach has different costs. Coral fragmentation is the cheapest, while assisted evolution remains the most expensive due to its laboratory requirements.",
-    questions:[
-      {q:"How many approaches to reef restoration are discussed?", a:"3", aliases:["three"], why:"'Three approaches dominate the field'."},
-      {q:"The SECOND approach is _______ propagation. (ONE WORD)", a:"larval", why:"'larval propagation, which involves collecting coral spawn'."},
-      {q:"The MOST CONTROVERSIAL approach is:", options:["coral fragmentation","larval propagation","assisted evolution"], a:"assisted evolution", why:"'Thirdly, and most controversially, assisted evolution'."},
-      {q:"The CHEAPEST approach is:", options:["coral fragmentation","larval propagation","assisted evolution"], a:"coral fragmentation", why:"'Coral fragmentation is the cheapest'."},
-    ]
-  },
-];
-
-const adEl = document.getElementById('audioDrills');
-audioDrills.forEach((d,i)=>{
-  const wrap = document.createElement('div');
-  wrap.className = 'card p-5';
-  wrap.style.background = `linear-gradient(180deg, ${d.color} 0%, #fff 70%)`;
-  wrap.innerHTML = `
-    <div class="flex items-center justify-between flex-wrap gap-2">
-      <div class="flex items-center gap-2">
-        <div class="w-9 h-9 rounded-lg flex items-center justify-center font-bold text-white" style="background:${d.accent};font-family:'Fraunces',serif">${i+1}</div>
-        <div class="font-bold">${d.section}</div>
-      </div>
-      <div class="flex gap-2">
-        <button class="btn btn-primary text-sm" data-tts="${d.transcript.replace(/"/g,'&quot;')}">▶ Play audio</button>
-        <button class="btn btn-ghost text-sm" data-toggle-script="${i}">📜 Show transcript</button>
-      </div>
-    </div>
-    <div class="reveal mt-3 p-3 rounded-lg text-sm italic" style="background:#fff;border:1px solid var(--line)" id="tx-${i}">"${d.transcript}"</div>
-    <div class="mt-4 space-y-3" id="ad-${i}"></div>
-  `;
-  adEl.appendChild(wrap);
-
-  const qBox = wrap.querySelector(`#ad-${i}`);
-  d.questions.forEach((q,j)=>{
-    const qDiv = document.createElement('div');
-    qDiv.className = 'card p-3';
-    if (q.options){
-      qDiv.innerHTML = `<div class="text-sm mb-2"><strong>Q${j+1}.</strong> ${q.q}</div>
-        <div class="flex flex-wrap gap-2">${q.options.map(o=>`<button class="btn btn-ghost text-xs ad-mcq" data-v="${o}">${o}</button>`).join('')}</div>
-        <div class="fb mt-2"></div>`;
-    } else {
-      qDiv.innerHTML = `<div class="text-sm mb-2"><strong>Q${j+1}.</strong> ${q.q}</div>
-        <div class="flex gap-2">
-          <input class="border border-line rounded-lg p-2 flex-1" placeholder="Type your answer">
-          <button class="btn btn-ghost text-sm ad-check">Check</button>
-        </div>
-        <div class="fb mt-2"></div>`;
-    }
-    qBox.appendChild(qDiv);
-    if (q.options){
-      qDiv.querySelectorAll('.ad-mcq').forEach(b=>b.addEventListener('click',()=>{
-        if (qDiv.dataset.done) return; qDiv.dataset.done='1';
-        const ok = b.dataset.v===q.a;
-        b.style.background = ok?'#eef9f5':'#fdf0e7';
-        b.style.borderColor = ok?'var(--signal)':'var(--alert)';
-        qDiv.querySelectorAll('.ad-mcq').forEach(x=>{
-          if (x.dataset.v===q.a){x.style.background='#eef9f5';x.style.borderColor='var(--signal)';x.innerHTML='✓ '+x.textContent;}
-          x.disabled=true;
-        });
-        qDiv.querySelector('.fb').innerHTML = `<div class="feedback ${ok?'good':'bad'}">${ok?'✅':'❌'} <strong>Answer: ${q.a}.</strong> ${q.why}</div>`;
-        addXP(ok?8:2,'Audio drill');
-      }));
-    } else {
-      qDiv.querySelector('.ad-check').addEventListener('click',()=>{
-        if (qDiv.dataset.done) return; qDiv.dataset.done='1';
-        const v = qDiv.querySelector('input').value.trim().toLowerCase().replace(/[\s,]/g,'');
-        const aliases = [(q.a||'').toLowerCase().replace(/\s/g,''), ...(q.aliases||[]).map(x=>x.toLowerCase().replace(/[\s,]/g,''))];
-        const ok = aliases.some(a=>a===v);
-        qDiv.querySelector('.fb').innerHTML = `<div class="feedback ${ok?'good':'bad'}">${ok?'✅':'❌'} <strong>Answer: ${q.a}.</strong> ${q.why}</div>`;
-        addXP(ok?8:2,'Audio drill');
-      });
-    }
-  });
-});
-
-document.addEventListener('click',e=>{
-  const b = e.target.closest('[data-toggle-script]');
-  if (!b) return;
-  const i = b.dataset.toggleScript;
-  const tx = document.getElementById('tx-'+i);
-  tx.classList.toggle('open');
-});
-
-// Boss fight: play whole transcript
-document.getElementById('bossPlayAudio')?.addEventListener('click',()=>{
-  const text = "Tutor: Alright Maya, let's review your group project plan. You've been looking at urban food waste, is that right? Maya: Yes. We were going to compare three cities — Berlin, Madrid and Toronto — for their composting programmes. Tutor: Three is ambitious. Have you got the data? Maya: We had Madrid and Toronto sorted. The Berlin data was harder than expected, so we're switching to Vienna instead. Tutor: Good. And the methodology — still surveys? Maya: We thought so, but we couldn't get enough responses, so we shifted to analysing existing municipal reports. Tutor: Sensible. What's your main finding so far? Maya: The biggest factor isn't policy — it's education campaigns. Cities that ran public awareness drives saw forty percent more household participation. Tutor: Interesting. When are you presenting? Maya: Originally the fourteenth, but the panel moved it to the twenty-first of November. Tutor: Lots of moving parts. One last thing — what's your recommendation? Maya: Cities should invest in community-level campaigns before changing legislation. Top-down policy alone doesn't shift behaviour.";
-  speak(text, currentRate);
-});
-
-// boss option clicks
 bossQsEl.addEventListener('click',e=>{
-  if (bossDone) return;
-  const opt = e.target.closest('.opt');
-  if (opt && opt.parentElement.classList.contains('bossmcq')){
-    const i = +opt.dataset.i;
+  if(bossDone)return;
+  const o=e.target.closest('.opt');
+  if(o&&o.parentElement.classList.contains('boss-mcq')){
+    const i=+o.dataset.i;
     bossQsEl.children[i].querySelectorAll('.opt').forEach(x=>{x.classList.remove('correct','wrong');x.dataset.picked='0';});
-    const q = bossQs[i];
-    const o = q.options.find(x=>x.l===opt.dataset.l);
-    opt.dataset.picked='1';
-    if (o.c) opt.classList.add('correct'); else opt.classList.add('wrong');
+    const q=bossQs[i];
+    const opt=q.options.find(x=>x.l===o.dataset.l);
+    o.dataset.picked='1';
+    if(opt.c)o.classList.add('correct');else o.classList.add('wrong');
   }
 });
 </script>
-<script>
-(function(){
-  document.addEventListener('contextmenu',function(e){e.preventDefault();return false});
-  document.addEventListener('dragstart',function(e){e.preventDefault();return false});
-  document.addEventListener('keydown',function(e){
-    var k=e.key.toLowerCase();
-    if(e.key==='F12'||(e.ctrlKey&&!e.shiftKey&&(k==='u'||k==='s'||k==='p'||k==='a'))||(e.ctrlKey&&e.shiftKey&&(k==='i'||k==='j'||k==='c'||k==='k'))){
-      e.preventDefault();e.stopPropagation();return false;
-    }
-  });
-  window.addEventListener('beforeprint',function(){document.body.style.display='none'});
-  window.addEventListener('afterprint',function(){document.body.style.display=''});
-})();
-</script></body>
+</body>
 </html>

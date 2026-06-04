@@ -1,265 +1,525 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>IELTS Punctuation — Signals of a Clear Writer â€” ViATestPrep</title>
+<title>IELTS Punctuation — Signals of a Clear Writer</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
-  :root{--ink:#1d1714;--paper:#fbf6ed;--rust:#a83b1f;--rust-d:#6b1f0a;--gold:#cd9426;--teal:#1f7768;--line:#e3d6bb;--soft:#f5e7c1}
+  :root{--ink:#1d1714;--paper:#fbf6ed;--rust:#a83b1f;--rust-d:#6b1f0a;--gold:#cd9426;--teal:#1f7768;--blue:#1d3a73;--purple:#5b3b8a;--line:#e3d6bb;--soft:#f5e7c1}
   *{box-sizing:border-box}
   html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif}
   h1,h2,h3,h4{font-family:'Fraunces',serif;letter-spacing:-.01em}
   .mono{font-family:'JetBrains Mono',monospace}
-  .card{background:#fff;border:1px solid var(--line);border-radius:18px}
-  .badge{display:inline-flex;gap:.4rem;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600}
-  .btn{display:inline-flex;gap:.5rem;padding:.6rem 1rem;border-radius:12px;font-weight:600;transition:transform .08s}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px}
+  .badge{display:inline-flex;gap:.3rem;padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+  .btn{display:inline-flex;gap:.4rem;padding:.5rem .85rem;border-radius:10px;font-weight:600;font-size:.85rem;cursor:pointer;border:none;transition:transform .08s}
   .btn:active{transform:translateY(1px)}
   .btn-primary{background:var(--rust);color:#fff}
+  .btn-primary:hover{background:var(--rust-d)}
   .btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
   .btn-ghost:hover{background:#fdf6e3}
-  .chip{padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+  .chip{padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
   .progress-bar{height:8px;background:#e6dec0;border-radius:999px;overflow:hidden}
-  .progress-fill{height:100%;background:linear-gradient(90deg,var(--rust),#e8723f)}
-  .reveal{max-height:0;overflow:hidden;transition:max-height .5s ease}
-  .reveal.open{max-height:2000px}
-  .opt{cursor:pointer;border:1.5px solid var(--line);border-radius:12px;padding:.7rem .9rem;background:#fff;transition:all .12s;font-size:.9rem}
+  .progress-fill{height:100%;background:linear-gradient(90deg,var(--rust),#e8723f);transition:width .4s}
+  .toolbar{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(8px);background:rgba(251,246,237,.92);border-bottom:1px solid var(--line)}
+  .nav-step{cursor:pointer;font-size:.85rem;white-space:nowrap}
+  .opt{cursor:pointer;border:1.5px solid var(--line);border-radius:10px;padding:.7rem .9rem;background:#fff;transition:all .12s;font-size:.9rem;display:inline-flex;gap:.4rem;align-items:center}
   .opt:hover{border-color:var(--rust);background:#fdeee5}
   .opt.correct{border-color:var(--teal);background:#e6f4ee;color:var(--teal)}
   .opt.wrong{border-color:var(--rust);background:#fde2da;text-decoration:line-through}
   .opt.disabled{pointer-events:none;opacity:.7}
-  .feedback{padding:.7rem 1rem;border-radius:12px;font-size:.92rem;line-height:1.5;border-left:4px solid}
+  .feedback{padding:.7rem .9rem;border-radius:10px;font-size:.88rem;line-height:1.5;border-left:4px solid;margin-top:.5rem}
   .feedback.good{border-color:var(--teal);background:#eef9f3}
   .feedback.bad{border-color:var(--rust);background:#fdeee5}
   .feedback.tip{border-color:var(--gold);background:#fdf6e3}
-  .toolbar{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(8px);background:rgba(251,246,237,.85);border-bottom:1px solid var(--line)}
-  .nav-step{cursor:pointer}
-  .gameboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-  .qtype{cursor:pointer;transition:transform .15s, box-shadow .15s}
-  .qtype:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(168,59,31,.12)}
-  .marker-yellow{background:linear-gradient(transparent 60%, #fde68a 60%)}
-  .punct{display:inline-block;background:var(--rust);color:#fff;padding:0 .35rem;border-radius:6px;font-weight:800;font-family:'Fraunces',serif;margin:0 1px}
+  .punct{display:inline-block;background:var(--rust);color:#fff;padding:0 .45rem;border-radius:6px;font-weight:800;font-family:'Fraunces',serif;margin:0 1px;font-size:1.05rem}
+  .gameboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.8rem}
+  .punct-card{cursor:pointer;transition:transform .15s, box-shadow .15s;padding:1rem;border-radius:14px;border:1px solid var(--line);background:#fff;min-height:120px;display:flex;flex-direction:column;align-items:center;text-align:center}
+  .punct-card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(168,59,31,.18)}
+  .punct-card .sym{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:900;line-height:1;color:var(--rust)}
+  .punct-card .name{font-weight:700;margin-top:.4rem;font-size:.9rem}
+  .punct-card .role{font-size:.7rem;color:var(--rust);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-top:auto}
+  .modal-backdrop{position:fixed;inset:0;background:rgba(29,23,20,.6);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;z-index:100;padding:2rem 1rem;overflow-y:auto}
+  .modal-backdrop.open{display:flex}
+  .modal-box{background:var(--paper);border-radius:18px;max-width:880px;width:100%;box-shadow:0 24px 80px rgba(0,0,0,.4);position:relative;margin:auto;animation:popIn .25s ease-out}
+  @keyframes popIn{from{transform:scale(.92);opacity:0}to{transform:scale(1);opacity:1}}
+  .modal-head{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--line);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;border-radius:18px 18px 0 0;z-index:5}
+  .modal-body{padding:1.4rem;max-height:75vh;overflow-y:auto}
+  .modal-close{background:#fdeee5;border:none;width:34px;height:34px;border-radius:50%;font-size:1.2rem;cursor:pointer;color:var(--rust);font-weight:800;display:flex;align-items:center;justify-content:center}
+  .modal-close:hover{background:var(--rust);color:#fff}
+  body.modal-open{overflow:hidden}
   .timer-pill{font-family:'Fraunces',serif;font-weight:800}
+  .marker-yellow{background:linear-gradient(transparent 60%, #fde68a 60%)}
+  .marker-pink{background:linear-gradient(transparent 60%, #fbcfe8 60%)}
   .essay{font-family:'Fraunces',serif;line-height:1.85;font-size:1.02rem}
   .gap{display:inline-block;min-width:42px;padding:.05rem .35rem;border:2px solid var(--rust);border-radius:6px;background:#fdeee5;font-weight:800;color:var(--rust);text-align:center;cursor:pointer}
   .gap.filled{background:#eef9f3;border-color:var(--teal);color:var(--teal)}
   .gap.wrong{background:#fde2da}
+  .ex-row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:.6rem}
+  @media (max-width:640px){.ex-row{grid-template-columns:1fr}}
+  .ex-bad{background:#fdeee5;padding:.6rem .8rem;border-radius:8px;border-left:3px solid var(--rust);font-size:.85rem}
+  .ex-good{background:#eef9f3;padding:.6rem .8rem;border-radius:8px;border-left:3px solid var(--teal);font-size:.85rem}
+  details>summary{cursor:pointer;list-style:none}
+  details>summary::-webkit-details-marker{display:none}
+  details>summary::after{content:"+";float:right;color:var(--rust);font-weight:700}
+  details[open]>summary::after{content:"–"}
+  .num-circle{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:'Fraunces',serif;font-size:.85rem;flex-shrink:0}
 </style>
-<style>
-/* ===== ViATestPrep Protection ===== */
-html body,html body *{-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important}
-img,svg{-webkit-user-drag:none!important}
-@media print{body{display:none!important;visibility:hidden!important}}
-.vtp-wm{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9990;overflow:hidden}
-.vtp-wm::after{content:"ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential";position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-28deg);font-size:1.1rem;font-weight:800;color:rgba(91,42,134,0.05);white-space:nowrap;letter-spacing:.3em;pointer-events:none}
-.vtp-corner{position:fixed;bottom:14px;right:14px;z-index:9999;background:linear-gradient(135deg,#5b2a86,#3b0a64);color:#fff;padding:.3rem .8rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.05em;box-shadow:0 2px 14px rgba(91,42,134,.4);pointer-events:none;font-family:Inter,sans-serif}
-</style></head>
+</head>
 <body>
-<div class="vtp-wm" aria-hidden="true"></div><div class="vtp-corner" aria-hidden="true">&#127891; ViATestPrep</div>
 
 <div class="toolbar">
-  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3 flex-wrap">
     <div class="flex items-center gap-3">
       <div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-white" style="background:var(--rust);font-family:'Fraunces',serif">PS</div>
-      <div><div class="text-sm uppercase tracking-widest text-stone-500">IELTS Grammar</div><div class="font-bold -mt-1">Punctuation · Signals of a Clear Writer</div></div>
+      <div><div class="text-xs uppercase tracking-widest text-stone-500">IELTS Grammar</div><div class="font-bold -mt-1 text-sm">Punctuation · Signals of a Clear Writer</div></div>
     </div>
-    <div class="hidden md:flex items-center gap-4 text-sm">
+    <div class="hidden lg:flex items-center gap-3 text-stone-700 text-xs">
       <span class="nav-step" data-jump="why">① Why</span>
-      <span class="nav-step" data-jump="marks">② 3 Marks</span>
-      <span class="nav-step" data-jump="comma">③ Comma's 4 Jobs</span>
-      <span class="nav-step" data-jump="drills">④ Drills</span>
-      <span class="nav-step" data-jump="boss">⑤ Boss Puzzle</span>
+      <span class="nav-step" data-jump="marks">② All Marks</span>
+      <span class="nav-step" data-jump="comma">③ Comma 4 Jobs</span>
+      <span class="nav-step" data-jump="apost">④ Apostrophe</span>
+      <span class="nav-step" data-jump="drills">⑤ Drills</span>
+      <span class="nav-step" data-jump="boss">⑥ Boss Puzzle</span>
     </div>
-    <div class="flex items-center gap-3">
-      <div class="text-right hidden sm:block"><div class="text-[11px] uppercase tracking-widest text-stone-500">Editor XP</div><div class="font-bold timer-pill" style="color:var(--rust)" id="xpDisplay">0 XP</div></div>
-      <div class="w-32 progress-bar"><div class="progress-fill" id="xpBar" style="width:0%"></div></div>
+    <div class="flex items-center gap-2">
+      <div class="hidden md:block"><div class="text-[10px] uppercase tracking-widest text-stone-500">XP</div><div class="font-bold timer-pill" style="color:var(--rust)" id="xpDisplay">0</div></div>
+      <div class="w-24 progress-bar"><div class="progress-fill" id="xpBar" style="width:0%"></div></div>
     </div>
   </div>
 </div>
 
-<main class="max-w-6xl mx-auto px-4 py-10">
+<main class="max-w-6xl mx-auto px-4 py-8">
 
-  <section id="why" class="mb-12">
+  <!-- WHY -->
+  <section id="why" class="mb-10">
     <span class="chip" style="background:var(--soft);color:var(--rust)">Bonus · Punctuation</span>
-    <h1 class="text-4xl md:text-5xl mt-3">A single comma can <span class="marker-yellow">change everything.</span></h1>
-    <p class="mt-3 text-stone-700 max-w-3xl">Punctuation is the silent half of grammar — and it counts toward your <strong>Grammatical Range & Accuracy</strong> band. Today: master 3 marks, the comma's 4 jobs, and the semicolon as a Band 7.5 secret weapon.</p>
-    <div class="grid md:grid-cols-2 gap-3 mt-6">
+    <h1 class="text-3xl md:text-4xl mt-3">A single mark can <span class="marker-yellow">change everything.</span></h1>
+    <p class="mt-3 text-stone-700 max-w-3xl text-sm">Punctuation is the silent half of grammar — and counts toward your <strong>Grammatical Range &amp; Accuracy</strong> band. Today: master all the marks IELTS examiners actually care about — full stop, comma, semicolon, colon, apostrophe, quotes, dash, parentheses, hyphen, question mark.</p>
+    <div class="grid md:grid-cols-2 gap-3 mt-5">
       <div class="card p-4"><div class="text-xs uppercase tracking-widest text-stone-500">Without commas</div><p class="mt-1 italic">"A woman without her man is nothing."</p></div>
       <div class="card p-4"><div class="text-xs uppercase tracking-widest text-stone-500">With commas — meaning flips</div><p class="mt-1 italic">"A woman: without her, man is nothing."</p></div>
     </div>
   </section>
 
-  <section id="marks" class="mb-14">
-    <h2 class="text-3xl mb-2">② The 3 Marks That Matter</h2>
-    <div class="gameboard mt-4" id="markCards"></div>
+  <!-- ALL MARKS -->
+  <section id="marks" class="mb-10">
+    <div class="flex items-end justify-between mb-3 flex-wrap gap-2">
+      <h2 class="text-2xl">② All 10 Punctuation Marks</h2>
+      <span class="badge" style="background:var(--soft);color:var(--rust)">Tap any mark to open</span>
+    </div>
+    <p class="text-stone-700 text-sm max-w-3xl">Each mark has its own rules and traps. Tap a card to see the role, the IELTS-relevant rules, examples (wrong vs right), and the common mistake to avoid.</p>
+    <div class="gameboard mt-4" id="marksGrid"></div>
   </section>
 
-  <section id="comma" class="mb-14">
-    <h2 class="text-3xl mb-2">③ The Comma's 4 Jobs</h2>
-    <p class="text-stone-700 max-w-3xl">Most students only know Job 1 (lists). Mastering all four = clear path to Band 7+.</p>
-    <div class="grid md:grid-cols-2 gap-4 mt-4" id="commaCards"></div>
+  <!-- COMMA DEEP DIVE -->
+  <section id="comma" class="mb-10">
+    <h2 class="text-2xl mb-2">③ The Comma's 4 Jobs (Deep Dive)</h2>
+    <p class="text-stone-700 text-sm max-w-3xl">Most students only know Job 1 (lists). Mastering all four = clear path to Band 7+ Coherence and Cohesion.</p>
+    <div class="grid md:grid-cols-2 gap-3 mt-4" id="commaCards"></div>
   </section>
 
-  <section id="drills" class="mb-14">
-    <h2 class="text-3xl mb-2">④ Punctuation Drills</h2>
-    <div class="card p-6 mt-4">
-      <div class="flex items-center gap-3 mb-3"><span class="chip" style="background:var(--soft);color:var(--rust)">Drill A · Spot the error</span><h3 class="text-xl">Run-on, comma splice, or correct?</h3></div>
+  <!-- APOSTROPHE DEEP DIVE -->
+  <section id="apost" class="mb-10">
+    <h2 class="text-2xl mb-2">④ The Apostrophe — 2 Jobs</h2>
+    <p class="text-stone-700 text-sm max-w-3xl">The mark students misuse most often. The fix takes 5 minutes — and saves a band point in any essay where apostrophes appear.</p>
+    <div class="grid md:grid-cols-2 gap-3 mt-4">
+      <div class="card p-4">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Job 1</div>
+        <h3 class="text-xl mt-1 font-bold">Possession</h3>
+        <p class="text-sm text-stone-700 mt-1">Show that something belongs to someone or something.</p>
+        <div class="ex-row mt-2">
+          <div class="ex-bad"><strong>❌ Wrong:</strong> the students results</div>
+          <div class="ex-good"><strong>✅ Right:</strong> the student<span class="punct">'</span>s results</div>
+        </div>
+        <div class="ex-row mt-2">
+          <div class="ex-bad"><strong>❌ Wrong:</strong> the womens organisation</div>
+          <div class="ex-good"><strong>✅ Right:</strong> the women<span class="punct">'</span>s organisation</div>
+        </div>
+        <div class="feedback tip mt-3 text-xs"><strong>Plural nouns ending in -s:</strong> add ONLY the apostrophe → "the students<span class="punct">'</span> results" (= results of multiple students).</div>
+      </div>
+      <div class="card p-4">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Job 2</div>
+        <h3 class="text-xl mt-1 font-bold">Contractions</h3>
+        <p class="text-sm text-stone-700 mt-1">Mark omitted letters when shortening: <em>it is → it's</em>, <em>do not → don't</em>.</p>
+        <div class="ex-row mt-2">
+          <div class="ex-bad"><strong>⚠ Avoid in academic writing:</strong> it<span class="punct">'</span>s, don<span class="punct">'</span>t, won<span class="punct">'</span>t</div>
+          <div class="ex-good"><strong>✅ Use full forms:</strong> it is, do not, will not</div>
+        </div>
+        <div class="feedback tip mt-3 text-xs"><strong>IELTS rule:</strong> Avoid contractions in Writing Task 2. They're conversational, not academic.</div>
+      </div>
+    </div>
+    <!-- The biggest trap -->
+    <div class="card p-4 mt-4" style="background:#fdf6e3;border-left:5px solid var(--gold)">
+      <div class="flex items-center gap-2 mb-2"><span style="font-size:1.6rem">⚠</span><h3 class="text-lg font-bold">The Biggest Apostrophe Trap: <em>it's</em> vs <em>its</em></h3></div>
+      <div class="ex-row">
+        <div class="ex-bad"><strong>it<span class="punct">'</span>s</strong> = contraction of "it is" or "it has". <em>It's raining = It IS raining.</em></div>
+        <div class="ex-good"><strong>its</strong> (no apostrophe) = possessive. <em>The dog wagged its tail = the tail belonging to the dog.</em></div>
+      </div>
+      <p class="text-xs text-stone-700 mt-2"><strong>Quick test:</strong> If you can replace it with "it is" or "it has", use <em>it's</em>. Otherwise, use <em>its</em>.</p>
+    </div>
+  </section>
+
+  <!-- DRILLS -->
+  <section id="drills" class="mb-10">
+    <h2 class="text-2xl mb-2">⑤ Punctuation Drills</h2>
+
+    <!-- Drill A: spot the error -->
+    <div class="card p-5 mt-4">
+      <div class="flex items-center gap-3 mb-3"><span class="chip" style="background:var(--soft);color:var(--rust)">Drill A · Spot the error</span><h3 class="text-lg font-bold">Run-on, comma splice, or correct?</h3></div>
       <div class="space-y-3" id="errDrill"></div>
     </div>
-    <div class="card p-6 mt-4">
-      <div class="flex items-center gap-3 mb-3"><span class="chip" style="background:#fdf6e3;color:var(--gold)">Drill B · Pick the punctuation</span><h3 class="text-xl">What goes in the gap?</h3></div>
+
+    <!-- Drill B: pick the right mark -->
+    <div class="card p-5 mt-4">
+      <div class="flex items-center gap-3 mb-3"><span class="chip" style="background:#fdf6e3;color:var(--gold)">Drill B · Pick the punctuation</span><h3 class="text-lg font-bold">What goes in the gap?</h3></div>
       <div class="space-y-3" id="pickDrill"></div>
+    </div>
+
+    <!-- Drill C: apostrophe -->
+    <div class="card p-5 mt-4">
+      <div class="flex items-center gap-3 mb-3"><span class="chip" style="background:#eef9f3;color:var(--teal)">Drill C · Apostrophe</span><h3 class="text-lg font-bold">Add OR remove the apostrophe</h3></div>
+      <div class="space-y-3" id="apostDrill"></div>
+    </div>
+
+    <!-- Drill D: quotation marks -->
+    <div class="card p-5 mt-4">
+      <div class="flex items-center gap-3 mb-3"><span class="chip" style="background:#f3eafe;color:var(--purple)">Drill D · Quotation marks</span><h3 class="text-lg font-bold">Where do the quote marks go?</h3></div>
+      <div class="space-y-3" id="quoteDrill"></div>
     </div>
   </section>
 
-  <section id="boss" class="mb-14">
-    <h2 class="text-3xl mb-2">⑤ Boss Puzzle — The AI Paragraph</h2>
-    <p class="text-stone-700 max-w-3xl">The unpunctuated paragraph from your masterclass. Click each gap, choose the punctuation. Score yourself.</p>
-    <div class="card p-6 mt-4">
+  <!-- BOSS PUZZLE -->
+  <section id="boss" class="mb-10">
+    <h2 class="text-2xl mb-2">⑥ Boss Puzzle — Punctuate the AI Paragraph</h2>
+    <p class="text-stone-700 text-sm max-w-3xl">A paragraph with 12 punctuation gaps. Click each gap, pick the punctuation, score yourself.</p>
+    <div class="card p-5 mt-4">
       <div class="essay" id="bossText"></div>
       <div class="flex justify-between items-center mt-4 flex-wrap gap-2">
         <button class="btn btn-primary" id="bossSubmit">Submit & Score</button>
         <button class="btn btn-ghost" id="bossReset">↺ Reset</button>
-        <span class="text-sm" id="bossScore">0/9</span>
+        <span class="text-sm" id="bossScore">0/12</span>
       </div>
       <div id="bossFB" class="mt-3"></div>
     </div>
   </section>
+
+  <!-- IELTS USAGE ADVICE -->
+  <section class="mb-10">
+    <h2 class="text-2xl mb-2">⑦ IELTS Use-Rules — Quick Reference</h2>
+    <div class="card p-5 mt-3">
+      <div class="grid md:grid-cols-2 gap-4 text-sm">
+        <div>
+          <div class="font-bold mb-1">✅ Use freely in Writing Task 2</div>
+          <ul class="space-y-1 text-stone-700 list-disc list-inside">
+            <li><strong>Full stop</strong> — ends every complete idea</li>
+            <li><strong>Comma</strong> — all 4 jobs (lists, intros, FANBOYS, non-essential info)</li>
+            <li><strong>Semicolon</strong> — once or twice per essay, max</li>
+            <li><strong>Colon</strong> — to introduce a list or explanation</li>
+            <li><strong>Question mark</strong> — only for rhetorical questions in intros</li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-bold mb-1">⚠ Use sparingly or avoid</div>
+          <ul class="space-y-1 text-stone-700 list-disc list-inside">
+            <li><strong>Exclamation mark</strong> — never in academic writing</li>
+            <li><strong>Contractions</strong> (don't, can't) — never</li>
+            <li><strong>Parentheses</strong> — use commas or dashes instead</li>
+            <li><strong>Ellipsis</strong> (…) — never in your essay</li>
+            <li><strong>Hyphenated compounds</strong> — use sparingly, always be sure</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-line pt-5 pb-10 text-xs text-stone-500"><div>IELTS Punctuation · Signals of a Clear Writer</div></footer>
 </main>
 
+<!-- MODAL -->
+<div class="modal-backdrop" id="modal"><div class="modal-box"><div class="modal-head"><div class="flex items-center gap-3" id="mHead"></div><button class="modal-close" id="mClose">✕</button></div><div class="modal-body" id="mBody"></div></div></div>
+
 <script>
-const state={xp:0,max:200};function addXP(n){state.xp=Math.min(state.max,state.xp+n);document.getElementById('xpDisplay').textContent=state.xp+' XP';document.getElementById('xpBar').style.width=(state.xp/state.max*100)+'%';}
+const state={xp:0,max:300};
+function addXP(n){state.xp=Math.min(state.max,state.xp+n);document.getElementById('xpDisplay').textContent=state.xp;document.getElementById('xpBar').style.width=(state.xp/state.max*100)+'%';}
 document.querySelectorAll('.nav-step').forEach(s=>s.addEventListener('click',()=>document.getElementById(s.dataset.jump)?.scrollIntoView({behavior:'smooth'})));
 
-const marks = [
-  {n:".",name:"Full Stop — The King",color:"#fdeee5",accent:"var(--rust)",
-   role:"Ends a complete thought (independent clause).",
-   trap:"Run-on sentence — joining two independent clauses without proper punctuation.",
-   ex:"❌ Many governments invest in green energy this is crucial. <br>✅ Many governments invest in green energy. This is crucial."},
-  {n:",",name:"Comma — The Multi-Tool",color:"#fdf6e3",accent:"var(--gold)",
-   role:"Lists, intros, FANBOYS, extra info — see Job cards below.",
-   trap:"Comma splice — comma alone CAN'T join two independent clauses.",
-   ex:"❌ Tech is fast, it isolates us. <br>✅ Tech is fast, but it isolates us."},
-  {n:";",name:"Semicolon — The Secret Weapon",color:"#eef9f3",accent:"var(--teal)",
-   role:"Connects two closely related independent clauses. Stronger than a full stop, more sophisticated.",
-   trap:"Both sides MUST be complete sentences. If either is a fragment — wrong.",
-   ex:"✅ University education is becoming expensive; many graduates carry significant debt."},
+// ===== MODAL =====
+const modal=document.getElementById('modal');
+function openModal(headHtml,bodyHtml){
+  document.getElementById('mHead').innerHTML=headHtml;
+  document.getElementById('mBody').innerHTML=bodyHtml;
+  modal.classList.add('open');document.body.classList.add('modal-open');
+  document.getElementById('mBody').scrollTop=0;
+}
+function closeModal(){modal.classList.remove('open');document.body.classList.remove('modal-open');}
+document.getElementById('mClose').addEventListener('click',closeModal);
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
+document.addEventListener('keydown',e=>{if(modal.classList.contains('open')&&e.key==='Escape')closeModal();});
+
+// ===== ALL 10 MARKS =====
+const marks=[
+  {sym:".",name:"Full Stop",role:"End a thought",accent:"var(--rust)",
+   what:"Ends a complete sentence (an independent clause). Signals the reader you've finished one idea and are moving to the next.",
+   rule:"Use a full stop after EVERY complete sentence. Anything else risks a run-on.",
+   examples:[
+     {bad:"Many governments are investing in green energy this is a crucial step.", good:"Many governments are investing in green energy. This is a crucial step."},
+     {bad:"AI is transforming the workplace it has also created new jobs.", good:"AI is transforming the workplace. It has also created new jobs."}
+   ],
+   trap:"Run-on sentence: joining two independent clauses with no punctuation. Always use a full stop, a semicolon, or a comma + FANBOYS conjunction."},
+
+  {sym:",",name:"Comma",role:"Multi-tool",accent:"var(--rust)",
+   what:"The most versatile punctuation mark. Has 4 distinct jobs: (1) separating list items, (2) after an introductory phrase, (3) before a FANBOYS conjunction, (4) enclosing non-essential information.",
+   rule:"See the dedicated 'Comma's 4 Jobs' section below for full details.",
+   examples:[
+     {bad:"To save energy, cities should fund public transport build cycle lanes and introduce charges.", good:"To save energy, cities should fund public transport, build cycle lanes, and introduce charges."},
+     {bad:"Technology has made communication instantaneous, it has also led to social isolation.", good:"Technology has made communication instantaneous, but it has also led to social isolation."}
+   ],
+   trap:"Comma splice — using a comma alone to join two independent clauses. You need a FANBOYS conjunction or a semicolon instead."},
+
+  {sym:";",name:"Semicolon",role:"Link related ideas",accent:"var(--gold)",
+   what:"Connects two closely related independent clauses without a conjunction. Stronger than a full stop, more sophisticated. Signals that the second sentence directly explains, results from, or contrasts the first.",
+   rule:"Both sides of the semicolon MUST be complete sentences that could stand alone. If either side is a fragment — wrong.",
+   examples:[
+     {bad:"University education is expensive; many graduates now.", good:"University education is becoming expensive; many graduates carry significant debt."},
+     {bad:"Cycling reduces emissions; particularly in cities.", good:"Cycling reduces emissions; it is particularly effective in dense cities."}
+   ],
+   trap:"Using a semicolon to introduce a list — that's the colon's job, not the semicolon's."},
+
+  {sym:":",name:"Colon",role:"Introduce / explain",accent:"var(--teal)",
+   what:"Introduces a list, an explanation, an example, or a quotation. The clause BEFORE the colon must be complete.",
+   rule:"Don't use a colon after a verb or preposition. 'The chart shows: coffee, tea, juice' = WRONG. 'The chart shows three drinks: coffee, tea, juice' = RIGHT.",
+   examples:[
+     {bad:"The chart shows: coffee, tea, and juice.", good:"The chart shows three drinks: coffee, tea, and juice."},
+     {bad:"There are many reasons such as: cost, time, and effort.", good:"There are many reasons: cost, time, and effort."}
+   ],
+   trap:"Capitalising the first word after a colon. In British English, the word after a colon is usually LOWERCASE — unless it starts a full sentence or is a proper noun."},
+
+  {sym:"'",name:"Apostrophe",role:"Possession / contraction",accent:"var(--teal)",
+   what:"Two jobs: (1) show possession ('the student's book' = the book belonging to the student), and (2) mark contractions ('don't', 'it's' — though avoid contractions in academic writing).",
+   rule:"For singular possession: <em>noun + 's</em>. For plural possession ending in -s: <em>noun + '</em> only. 'It's' = it is. 'Its' = belonging to it.",
+   examples:[
+     {bad:"the students results", good:"the student's results <em>(one student)</em><br>the students' results <em>(many students)</em>"},
+     {bad:"Its raining today.", good:"It's raining today. <em>(it is raining)</em>"},
+     {bad:"The country's lost it's way.", good:"The country has lost its way. <em>(possessive — no apostrophe)</em>"}
+   ],
+   trap:"Confusing <em>it's</em> (= it is) with <em>its</em> (= belonging to it). And: don't use apostrophes for plurals. 'CDs' not 'CD's'."},
+
+  {sym:'"',name:"Quotation Marks",role:"Direct speech / titles",accent:"var(--purple)",
+   what:"Enclose direct quotations, the titles of short works (articles, songs, chapters), and words being discussed AS words.",
+   rule:"British English uses single quotes ('…') more commonly; American uses double (\"…\"). Be consistent within a single piece of writing. Punctuation usually goes INSIDE the closing quote.",
+   examples:[
+     {bad:"The author argues that pollution is the main problem.", good:"The author argues that pollution is 'the main problem of our age'."},
+     {bad:"He said \"Hello.\".", good:"He said, \"Hello.\""}
+   ],
+   trap:"Using quote marks for emphasis. 'Fresh' bread does NOT mean fresh bread — it usually implies sarcasm. Use italics or bold for emphasis, not quotation marks."},
+
+  {sym:"?",name:"Question Mark",role:"Direct questions",accent:"var(--blue)",
+   what:"Ends a direct question. Don't use one for indirect (reported) questions.",
+   rule:"Direct: 'Why is this happening?' — use ?. Indirect: 'I wonder why this is happening.' — use .",
+   examples:[
+     {bad:"I asked him why he was late?", good:"I asked him why he was late."},
+     {bad:"Should governments invest in education? Or in healthcare. Both are important?", good:"Should governments invest in education or in healthcare? Both are clearly important."}
+   ],
+   trap:"Overusing rhetorical questions in essays. ONE per essay (in the intro) at most — more than that and it sounds informal."},
+
+  {sym:"—",name:"Dash (em dash)",role:"Emphasis / aside",accent:"var(--rust)",
+   what:"Adds emphasis or encloses a parenthetical thought, more strongly than commas. A pair of dashes can replace parentheses or a comma pair to highlight extra information.",
+   rule:"Use sparingly in IELTS — once per essay is plenty. Two dashes together act like brackets: 'The plan — though ambitious — was approved.'",
+   examples:[
+     {bad:"The decision, which surprised everyone, was reversed within a week.", good:"The decision — which surprised everyone — was reversed within a week. <em>(more emphatic)</em>"},
+     {bad:"Many students struggle with writing they find it stressful.", good:"Many students struggle with writing — they find it deeply stressful."}
+   ],
+   trap:"Using a hyphen (-) instead of an em dash (—). They look similar but are different marks with different uses."},
+
+  {sym:"( )",name:"Parentheses",role:"Supplementary info",accent:"var(--gold)",
+   what:"Enclose extra information that adds detail but isn't essential to the main sentence. The sentence must still work if you remove what's in the brackets.",
+   rule:"Use SPARINGLY in IELTS academic writing. Prefer commas or dashes for non-essential information. Reserve parentheses for citations or dates.",
+   examples:[
+     {bad:"Smith says (2021) that pollution rises every year.", good:"Smith (2021) argues that pollution rises every year."},
+     {bad:"Many countries (especially the UK and Germany) have introduced strict policies.", good:"Many countries — especially the UK and Germany — have introduced strict policies. <em>(better in academic prose)</em>"}
+   ],
+   trap:"Overusing parentheses. They give a chatty, informal feel. For Band 7+ Task 2, prefer commas and dashes."},
+
+  {sym:"-",name:"Hyphen",role:"Join compound words",accent:"var(--gold)",
+   what:"Joins two or more words to form a compound modifier or compound noun. Different from a dash — shorter, no spaces around it.",
+   rule:"Hyphenate compound adjectives BEFORE a noun: 'a well-known author'. After the noun, usually no hyphen: 'the author is well known'. Numbers: 'twenty-one', 'forty-five'.",
+   examples:[
+     {bad:"a long term solution", good:"a long-term solution"},
+     {bad:"21st century technology", good:"21st-century technology <em>(when used as a modifier before a noun)</em>"},
+     {bad:"the high-cost is unsustainable", good:"the high cost is unsustainable <em>(no hyphen needed — not modifying a following noun)</em>"}
+   ],
+   trap:"Hyphenating adverbs ending in -ly: 'highly-effective' is WRONG. Adverbs ending in -ly never take a hyphen. Write 'highly effective'."},
 ];
-const mEl = document.getElementById('markCards');
+
+const marksEl=document.getElementById('marksGrid');
 marks.forEach(m=>{
   const c=document.createElement('div');
-  c.className='card p-5 qtype';
-  c.style.background = `linear-gradient(180deg, ${m.color} 0%, #fff 70%)`;
-  c.innerHTML = `<div class="flex items-center gap-2"><span class="punct text-2xl" style="background:${m.accent}">${m.n}</span><div class="font-bold">${m.name}</div></div>
-    <div class="reveal mt-3 text-sm">
-      <div class="text-xs uppercase tracking-widest text-stone-500">Role</div><p class="mt-1">${m.role}</p>
-      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--rust)">Trap</div><p class="mt-1">${m.trap}</p>
-      <div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--teal)">Example</div><p class="mt-1">${m.ex}</p>
-    </div><div class="text-xs text-stone-500 mt-2">tap ↓</div>`;
-  c.addEventListener('click',()=>{const r=c.querySelector('.reveal');const wO=r.classList.contains('open');r.classList.toggle('open');if(!wO)addXP(2);});
-  mEl.appendChild(c);
+  c.className='punct-card';
+  c.innerHTML=`<div class="sym">${m.sym}</div><div class="name">${m.name}</div><div class="role">${m.role}</div>`;
+  c.addEventListener('click',()=>{
+    let html=`<div class="text-xs uppercase tracking-widest text-stone-500">What it does</div><p class="mt-1 text-sm">${m.what}</p>
+<div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--teal)">Rule</div><p class="mt-1 text-sm">${m.rule}</p>
+<div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--rust)">Examples</div>`;
+    m.examples.forEach(ex=>{
+      html+=`<div class="ex-row mt-2"><div class="ex-bad"><strong>❌ Wrong:</strong> ${ex.bad}</div><div class="ex-good"><strong>✅ Right:</strong> ${ex.good}</div></div>`;
+    });
+    html+=`<div class="feedback tip mt-3"><strong>Trap:</strong> ${m.trap}</div>`;
+    openModal(`<div class="num-circle" style="background:${m.accent};width:42px;height:42px;font-size:1.4rem">${m.sym}</div><div><div class="font-bold text-lg">${m.name}</div><div class="text-[10px] uppercase tracking-widest text-stone-500">${m.role}</div></div>`,html);
+    addXP(3);
+  });
+  marksEl.appendChild(c);
 });
 
-const commas = [
-  {n:1,name:"Job 1 — Making Lists",
-   ex:"To tackle traffic, cities should improve public transport<span class='punct'>,</span> build cycle lanes<span class='punct'>,</span> and introduce congestion charges.",
-   tip:"3+ items in a series. Use comma between each."},
-  {n:2,name:"Job 2 — After an Introductory Phrase",
-   ex:"In recent years<span class='punct'>,</span> remote working has become widespread. <br>Although there are benefits<span class='punct'>,</span> negative impacts cannot be ignored.",
-   tip:"When the sentence opens with an intro phrase or dependent clause — comma, then main clause."},
-  {n:3,name:"Job 3 — Before FANBOYS",
-   ex:"Technology has made communication instantaneous<span class='punct'>,</span> but it has also led to a decline in face-to-face interaction.",
-   tip:"FANBOYS = For, And, Nor, But, Or, Yet, So. Use comma BEFORE one when joining two independent clauses."},
-  {n:4,name:"Job 4 — Extra (Non-Essential) Info",
-   ex:"The internet<span class='punct'>,</span> which now connects billions worldwide<span class='punct'>,</span> has fundamentally changed how we access information.",
-   tip:"Test: remove the words between the commas. If the sentence still works, the commas were correct."},
+// ===== COMMA's 4 JOBS =====
+const commaJobs=[
+  {n:1,name:"Lists",ex:"To tackle traffic, cities should improve public transport<span class='punct'>,</span> build cycle lanes<span class='punct'>,</span> and introduce charges.",tip:"3+ items in a series. Comma between each. The 'Oxford comma' before the final 'and' is optional in British English but recommended for clarity."},
+  {n:2,name:"After an introductory phrase",ex:"In recent years<span class='punct'>,</span> remote working has become widespread.<br>Although there are benefits<span class='punct'>,</span> there are also drawbacks.",tip:"When the sentence opens with an intro phrase OR a dependent clause, use a comma to separate it from the main clause."},
+  {n:3,name:"Before FANBOYS",ex:"Technology has made communication faster<span class='punct'>,</span> but it has also led to a decline in face-to-face interaction.",tip:"FANBOYS = For, And, Nor, But, Or, Yet, So. Comma BEFORE one when joining two complete independent clauses."},
+  {n:4,name:"Extra (non-essential) info",ex:"The internet<span class='punct'>,</span> which now connects billions worldwide<span class='punct'>,</span> has changed how we access information.",tip:"Remove what's between the commas — if the sentence still works, your commas were correct."},
 ];
-const cmEl = document.getElementById('commaCards');
-commas.forEach(c=>{
-  const card=document.createElement('div');
-  card.className='card p-5';
-  card.innerHTML = `<div class="text-xs uppercase tracking-widest text-stone-500">Comma</div><h3 class="text-xl mt-1">${c.name}</h3>
-    <p class="text-sm mt-2">${c.ex}</p>
-    <div class="feedback tip mt-3 text-sm"><strong>How:</strong> ${c.tip}</div>`;
-  cmEl.appendChild(card);
+const cmEl=document.getElementById('commaCards');
+commaJobs.forEach(j=>{
+  const c=document.createElement('div');
+  c.className='card p-4';
+  c.innerHTML=`<div class="text-xs uppercase tracking-widest text-stone-500">Comma Job ${j.n}</div><h3 class="text-lg font-bold mt-1">${j.name}</h3><p class="text-sm mt-2">${j.ex}</p><div class="feedback tip mt-3 text-sm"><strong>How:</strong> ${j.tip}</div>`;
+  cmEl.appendChild(c);
 });
 
-const errs = [
+// ===== DRILL A: Spot the error =====
+const errs=[
   {s:"Many governments are investing in green energy this is a crucial step.", a:"Run-on", why:"Two independent clauses joined with no punctuation. Add a full stop or semicolon."},
-  {s:"Technology has made communication faster, it has also created loneliness.", a:"Comma splice", why:"Comma alone can't join two independent clauses. Add a FANBOYS conjunction (… , but it has…) or use a semicolon."},
-  {s:"The internet, which connects billions of people, has changed how we work.", a:"Correct", why:"Pair of commas correctly enclose non-essential info."},
+  {s:"Technology has made communication faster, it has also created loneliness.", a:"Comma splice", why:"Comma alone can't join two independent clauses. Add a FANBOYS conjunction (... , but it has also...) or use a semicolon."},
+  {s:"The internet, which connects billions of people, has changed how we work.", a:"Correct", why:"Pair of commas correctly enclose non-essential information."},
   {s:"To save energy cities should fund public transport build cycle lanes and introduce charges.", a:"Run-on", why:"Missing commas after the intro phrase AND between list items."},
+  {s:"The chart shows the consumption of three drinks: coffee, tea, and juice.", a:"Correct", why:"Colon introduces the list correctly. The clause before the colon is complete."},
+  {s:"Its raining heavily today, the streets are flooded.", a:"Comma splice", why:"Comma splice — needs FANBOYS or semicolon. Also: 'Its' should be 'It's' (= it is)."},
 ];
-const eOpts = ["Run-on","Comma splice","Correct"];
-const eEl = document.getElementById('errDrill');
+const eOpts=["Run-on","Comma splice","Correct"];
+const eEl=document.getElementById('errDrill');
 errs.forEach((it,i)=>{
-  const wrap=document.createElement('div');
-  wrap.className='card p-3';
-  wrap.innerHTML=`<div class="text-sm mb-2 italic">"${it.s}"</div><div class="flex flex-wrap gap-2">${eOpts.map(o=>`<button class='opt err-opt' data-v='${o}'>${o}</button>`).join('')}</div><div class='fb mt-2'></div>`;
-  eEl.appendChild(wrap);
-  wrap.querySelectorAll('.err-opt').forEach(b=>b.addEventListener('click',()=>{
-    if (wrap.dataset.done) return; wrap.dataset.done='1';
-    const ok = b.dataset.v===it.a;
-    if (ok) b.classList.add('correct'); else b.classList.add('wrong');
-    wrap.querySelectorAll('.err-opt').forEach(x=>{if (x.dataset.v===it.a) x.classList.add('correct'); x.classList.add('disabled');});
-    wrap.querySelector('.fb').innerHTML=`<div class='feedback ${ok?'good':'bad'}'>${ok?'✅':'❌'} <strong>${it.a}.</strong> ${it.why}</div>`;
+  const w=document.createElement('div');
+  w.className='card p-3';
+  w.innerHTML=`<div class="text-sm mb-2 italic">"${it.s}"</div><div class="flex flex-wrap gap-2">${eOpts.map(o=>`<button class="opt err-opt" data-v="${o}">${o}</button>`).join('')}</div><div class="fb"></div>`;
+  eEl.appendChild(w);
+  w.querySelectorAll('.err-opt').forEach(b=>b.addEventListener('click',()=>{
+    if(w.dataset.done) return; w.dataset.done='1';
+    const ok=b.dataset.v===it.a;
+    if(ok)b.classList.add('correct');else b.classList.add('wrong');
+    w.querySelectorAll('.err-opt').forEach(x=>{if(x.dataset.v===it.a)x.classList.add('correct');x.classList.add('disabled');});
+    w.querySelector('.fb').innerHTML=`<div class="feedback ${ok?'good':'bad'}">${ok?'✅':'❌'} <strong>${it.a}.</strong> ${it.why}</div>`;
     addXP(ok?5:1);
   }));
 });
 
-const picks = [
-  {s:"University tuition is rising ___ many graduates now carry heavy debt.", options:[". (full stop)","; (semicolon)",", (comma)"," nothing"], a:"; (semicolon)", why:"Two closely related independent clauses — semicolon adds sophistication."},
-  {s:"In recent years ___ remote work has become widespread.", options:[". (full stop)","; (semicolon)",", (comma)"," : (colon)"], a:", (comma)", why:"Comma after introductory phrase."},
-  {s:"Technology is fast ___ but it can isolate us.", options:[". (full stop)","; (semicolon)",", (comma)"," nothing"], a:", (comma)", why:"Comma BEFORE FANBOYS conjunction joining two independent clauses."},
+// ===== DRILL B: Pick the punctuation =====
+const picks=[
+  {s:"University tuition is rising ___ many graduates now carry heavy debt.", options:[". (full stop)","; (semicolon)",", (comma)"," (nothing)"], a:"; (semicolon)", why:"Two closely-related independent clauses — semicolon adds sophistication."},
+  {s:"In recent years ___ remote work has become widespread.", options:[". (full stop)","; (semicolon)",", (comma)",": (colon)"], a:", (comma)", why:"Comma after an introductory phrase."},
+  {s:"Technology is fast ___ but it can isolate us.", options:[". (full stop)","; (semicolon)",", (comma)"," (nothing)"], a:", (comma)", why:"Comma BEFORE the FANBOYS conjunction joining two independent clauses."},
   {s:"The chart shows three drinks ___ coffee, tea, and juice.", options:[". (full stop)",", (comma)","; (semicolon)",": (colon)"], a:": (colon)", why:"Colon introduces a list that follows a complete clause."},
+  {s:"The author ___ Smith, has won three awards.", options:["; (semicolon)",", (comma)",": (colon)"," (nothing)"], a:", (comma)", why:"Comma — 'Smith' is non-essential info, so it gets enclosed in commas (one before, one after)."},
+  {s:"He said ___ Hello.", options:[", \" (comma + open quote)","; (semicolon)",": (colon)","- (dash)"], a:", \" (comma + open quote)", why:"Comma + opening quote mark introduces direct speech."},
+  {s:"This is a long ___ term solution.", options:["- (hyphen)","— (em dash)",", (comma)"," (nothing)"], a:"- (hyphen)", why:"Hyphen joins 'long-term' into a compound modifier before the noun 'solution'."},
 ];
-const pEl = document.getElementById('pickDrill');
+const pEl=document.getElementById('pickDrill');
 picks.forEach((it,i)=>{
-  const wrap=document.createElement('div');
-  wrap.className='card p-3';
-  wrap.innerHTML=`<div class="text-sm mb-2">${it.s}</div><div class="flex flex-wrap gap-2">${it.options.map(o=>`<button class='opt p-opt' data-v='${o}'>${o}</button>`).join('')}</div><div class='fb mt-2'></div>`;
-  pEl.appendChild(wrap);
-  wrap.querySelectorAll('.p-opt').forEach(b=>b.addEventListener('click',()=>{
-    if (wrap.dataset.done) return; wrap.dataset.done='1';
-    const ok = b.dataset.v===it.a;
-    if (ok) b.classList.add('correct'); else b.classList.add('wrong');
-    wrap.querySelectorAll('.p-opt').forEach(x=>{if (x.dataset.v===it.a) x.classList.add('correct'); x.classList.add('disabled');});
-    wrap.querySelector('.fb').innerHTML=`<div class='feedback ${ok?'good':'bad'}'>${ok?'✅':'❌'} ${it.why}</div>`;
+  const w=document.createElement('div');
+  w.className='card p-3';
+  w.innerHTML=`<div class="text-sm mb-2">${it.s}</div><div class="flex flex-wrap gap-2">${it.options.map(o=>`<button class="opt p-opt" data-v="${o}">${o}</button>`).join('')}</div><div class="fb"></div>`;
+  pEl.appendChild(w);
+  w.querySelectorAll('.p-opt').forEach(b=>b.addEventListener('click',()=>{
+    if(w.dataset.done) return; w.dataset.done='1';
+    const ok=b.dataset.v===it.a;
+    if(ok)b.classList.add('correct');else b.classList.add('wrong');
+    w.querySelectorAll('.p-opt').forEach(x=>{if(x.dataset.v===it.a)x.classList.add('correct');x.classList.add('disabled');});
+    w.querySelector('.fb').innerHTML=`<div class="feedback ${ok?'good':'bad'}">${ok?'✅':'❌'} ${it.why}</div>`;
     addXP(ok?5:1);
   }));
 });
 
-// BOSS
-const bossOptions = [".",",",";",":"];
-const gaps = [
-  {a:";",ctx:"Connects two closely-related ideas (benefits + examples)."},
-  {a:",",ctx:"Comma after 'For example'."},
+// ===== DRILL C: Apostrophe =====
+const apostQs=[
+  {s:"The students results were posted yesterday. (one student)", options:["student's","students'","students","studentsʼ"], a:"student's", why:"Singular possession: noun + 's. 'The student's results' = the results of one student."},
+  {s:"The students results were posted yesterday. (many students)", options:["student's","students'","students","studentss'"], a:"students'", why:"Plural ending in -s: add ONLY the apostrophe after the s."},
+  {s:"___ raining today. We should stay indoors.", options:["Its","It's","Its'","Its is"], a:"It's", why:"'It's' = contraction of 'it is'. (Though in IELTS Task 2, you'd write 'It is raining' — no contractions.)"},
+  {s:"The dog wagged ___ tail.", options:["it's","its","its'","it is"], a:"its", why:"'Its' (no apostrophe) is the possessive form. The tail belongs to the dog."},
+  {s:"He bought three CDs at the shop.", options:["CDs (correct)","CD's","CDs'","C.D's"], a:"CDs (correct)", why:"Plurals do NOT need an apostrophe. 'CDs' is correct. 'CD's' would mean 'belonging to the CD'."},
+  {s:"The womens organisation meets monthly.", options:["women's","womens'","womenʼs","womens (no change)"], a:"women's", why:"'Women' is already plural (no -s). For plural nouns NOT ending in -s, add 's. So: 'women's organisation'."},
+];
+const aEl=document.getElementById('apostDrill');
+apostQs.forEach((it,i)=>{
+  const w=document.createElement('div');
+  w.className='card p-3';
+  w.innerHTML=`<div class="text-sm mb-2">${it.s}</div><div class="flex flex-wrap gap-2">${it.options.map(o=>`<button class="opt a-opt" data-v="${o}">${o}</button>`).join('')}</div><div class="fb"></div>`;
+  aEl.appendChild(w);
+  w.querySelectorAll('.a-opt').forEach(b=>b.addEventListener('click',()=>{
+    if(w.dataset.done) return; w.dataset.done='1';
+    const ok=b.dataset.v===it.a;
+    if(ok)b.classList.add('correct');else b.classList.add('wrong');
+    w.querySelectorAll('.a-opt').forEach(x=>{if(x.dataset.v===it.a)x.classList.add('correct');x.classList.add('disabled');});
+    w.querySelector('.fb').innerHTML=`<div class="feedback ${ok?'good':'bad'}">${ok?'✅':'❌'} <strong>${it.a}.</strong> ${it.why}</div>`;
+    addXP(ok?5:1);
+  }));
+});
+
+// ===== DRILL D: Quotation marks =====
+const quoteQs=[
+  {s:"She said ___ I will not be attending tomorrow.", options:[", \"…\" (comma + double quotes)","; \"…\"",": \"…\""," — \"…\""], a:", \"…\" (comma + double quotes)", why:"Comma + opening quote introduces direct speech. Punctuation usually goes INSIDE the closing quote."},
+  {s:"The article ___ The Future of AI ___ was published in 2023.", options:["\" … \" (around the title)","( … ) (parentheses)","— … — (em dashes)","' … ' (apostrophes)"], a:"\" … \" (around the title)", why:"Quote marks enclose the titles of short works like articles, songs, and chapters."},
+  {s:"He told me he was tired ___", options:[". (full stop)","? (question mark)","! (exclamation)","\" (close quote)"], a:". (full stop)", why:"Indirect (reported) speech. No quote marks, no question mark — even if the original was a question."},
+],
+qEl=document.getElementById('quoteDrill');
+quoteQs.forEach((it,i)=>{
+  const w=document.createElement('div');
+  w.className='card p-3';
+  w.innerHTML=`<div class="text-sm mb-2">${it.s}</div><div class="flex flex-wrap gap-2">${it.options.map(o=>`<button class="opt q-opt" data-v="${o}">${o}</button>`).join('')}</div><div class="fb"></div>`;
+  qEl.appendChild(w);
+  w.querySelectorAll('.q-opt').forEach(b=>b.addEventListener('click',()=>{
+    if(w.dataset.done) return; w.dataset.done='1';
+    const ok=b.dataset.v===it.a;
+    if(ok)b.classList.add('correct');else b.classList.add('wrong');
+    w.querySelectorAll('.q-opt').forEach(x=>{if(x.dataset.v===it.a)x.classList.add('correct');x.classList.add('disabled');});
+    w.querySelector('.fb').innerHTML=`<div class="feedback ${ok?'good':'bad'}">${ok?'✅':'❌'} ${it.why}</div>`;
+    addXP(ok?5:1);
+  }));
+});
+
+// ===== BOSS PUZZLE =====
+const bossOptions=[".",",",";",":","'",'"',"-","?"];
+const gaps=[
+  {a:";",ctx:"Connects two closely-related independent clauses (benefits vs examples)."},
+  {a:",",ctx:"Comma after the introductory connector 'For example'."},
   {a:",",ctx:"Comma in a list of 3+ items."},
   {a:",",ctx:"Comma in a list of 3+ items."},
   {a:".",ctx:"Full stop ends a complete thought before 'However'."},
   {a:",",ctx:"Comma after the introductory connector 'However'."},
-  {a:".",ctx:"Full stop closes the sentence."},
-  {a:",",ctx:"Comma before a FANBOYS-equivalent connector ('as') joining two clauses."},
+  {a:":",ctx:"Colon introduces an explanation of 'one main concern'."},
+  {a:"'",ctx:"Apostrophe for possession: 'the world's economies'."},
+  {a:",",ctx:"Comma before the FANBOYS conjunction 'but' joining two independent clauses."},
+  {a:".",ctx:"Full stop ends the sentence."},
+  {a:".",ctx:"Full stop after 'workers'."},
   {a:".",ctx:"Final full stop."},
 ];
-const bossText = document.getElementById('bossText');
-bossText.innerHTML = `<p>Artificial intelligence offers remarkable benefits to the modern world<span class="gap" data-i="0"></span> for example<span class="gap" data-i="1"></span> it can perform complex calculations<span class="gap" data-i="2"></span> analyze vast datasets<span class="gap" data-i="3"></span> and automate repetitive tasks<span class="gap" data-i="4"></span> However<span class="gap" data-i="5"></span> the rise of AI is not without its challenges<span class="gap" data-i="6"></span> Job displacement is a significant concern<span class="gap" data-i="7"></span> as many roles could be made redundant by intelligent systems<span class="gap" data-i="8"></span></p>`;
+const bossText=document.getElementById('bossText');
+bossText.innerHTML=`<p>Artificial intelligence offers remarkable benefits to the modern world<span class="gap" data-i="0"></span> for example<span class="gap" data-i="1"></span> it can perform complex calculations<span class="gap" data-i="2"></span> analyse vast datasets<span class="gap" data-i="3"></span> and automate repetitive tasks<span class="gap" data-i="4"></span> However<span class="gap" data-i="5"></span> the rise of AI is not without its challenges<span class="gap" data-i="6"></span> the world<span class="gap" data-i="7"></span>s economies face the threat of mass job displacement<span class="gap" data-i="8"></span> but governments are starting to respond<span class="gap" data-i="9"></span> Training programmes are being expanded to help redundant workers<span class="gap" data-i="10"></span> The next decade will reveal whether these measures prove sufficient<span class="gap" data-i="11"></span></p>`;
 let selectedGap=null;
-const optMenu = document.createElement('div');
+const optMenu=document.createElement('div');
 optMenu.style.cssText='position:fixed;background:#fff;border:1px solid var(--line);border-radius:12px;padding:.4rem;display:none;z-index:50;box-shadow:0 12px 30px rgba(0,0,0,.15)';
-optMenu.innerHTML = bossOptions.map(o=>`<button class="btn btn-ghost text-sm m-1" data-v="${o}">${o}</button>`).join('');
+optMenu.innerHTML=bossOptions.map(o=>`<button class="btn btn-ghost text-sm m-1" data-v="${o}">${o}</button>`).join('');
 document.body.appendChild(optMenu);
 bossText.querySelectorAll('.gap').forEach(g=>g.addEventListener('click',e=>{
   e.stopPropagation();selectedGap=g;
   const r=g.getBoundingClientRect();
   optMenu.style.display='block';
-  optMenu.style.left = Math.min(window.innerWidth-300, r.left)+'px';
-  optMenu.style.top = (r.bottom+window.scrollY+6)+'px';
+  optMenu.style.left=Math.min(window.innerWidth-300,r.left)+'px';
+  optMenu.style.top=(r.bottom+window.scrollY+6)+'px';
 }));
-document.addEventListener('click',e=>{if (!optMenu.contains(e.target) && !e.target.classList.contains('gap')) optMenu.style.display='none';});
+document.addEventListener('click',e=>{if(!optMenu.contains(e.target)&&!e.target.classList.contains('gap'))optMenu.style.display='none';});
 optMenu.addEventListener('click',e=>{
-  const b=e.target.closest('button');if (!b||!selectedGap) return;
+  const b=e.target.closest('button');if(!b||!selectedGap)return;
   selectedGap.textContent=b.dataset.v;selectedGap.dataset.val=b.dataset.v;selectedGap.classList.add('filled');
   optMenu.style.display='none';
 });
@@ -269,30 +529,17 @@ document.getElementById('bossSubmit').addEventListener('click',()=>{
     const i=+g.dataset.i;const need=gaps[i];const got=g.dataset.val||'';
     const ok=got===need.a;
     g.classList.remove('filled','wrong');g.classList.add(ok?'filled':'wrong');
-    if (ok) score++;
+    if(ok)score++;
   });
-  document.getElementById('bossScore').textContent=`${score}/9`;
-  let msg='';gaps.forEach((g,i)=>{msg+=`<div class='text-xs mt-1'><strong>Gap ${i+1}:</strong> "${g.a}" — ${g.ctx}</div>`;});
-  document.getElementById('bossFB').innerHTML = `<div class='feedback ${score>=7?'good':score>=5?'tip':'bad'}'><strong>${score}/9.</strong> ${score>=7?'Strong control.':score>=5?'Solid base — review the misses.':'Re-read the masterclass and retry.'}</div>${msg}`;
+  document.getElementById('bossScore').textContent=`${score}/12`;
+  let msg='';gaps.forEach((g,i)=>{msg+=`<div class="text-xs mt-1"><strong>Gap ${i+1}:</strong> "${g.a}" — ${g.ctx}</div>`;});
+  document.getElementById('bossFB').innerHTML=`<div class="feedback ${score>=10?'good':score>=7?'tip':'bad'}"><strong>${score}/12.</strong> ${score>=10?'Excellent punctuation control.':score>=7?'Solid — review the misses.':'Re-read the marks then retry.'}</div>${msg}`;
   addXP(score*4);
 });
 document.getElementById('bossReset').addEventListener('click',()=>{
   bossText.querySelectorAll('.gap').forEach(g=>{g.textContent='';g.dataset.val='';g.classList.remove('filled','wrong')});
-  document.getElementById('bossScore').textContent='0/9';document.getElementById('bossFB').innerHTML='';
+  document.getElementById('bossScore').textContent='0/12';document.getElementById('bossFB').innerHTML='';
 });
 </script>
-<script>
-(function(){
-  document.addEventListener('contextmenu',function(e){e.preventDefault();return false});
-  document.addEventListener('dragstart',function(e){e.preventDefault();return false});
-  document.addEventListener('keydown',function(e){
-    var k=e.key.toLowerCase();
-    if(e.key==='F12'||(e.ctrlKey&&!e.shiftKey&&(k==='u'||k==='s'||k==='p'||k==='a'))||(e.ctrlKey&&e.shiftKey&&(k==='i'||k==='j'||k==='c'||k==='k'))){
-      e.preventDefault();e.stopPropagation();return false;
-    }
-  });
-  window.addEventListener('beforeprint',function(){document.body.style.display='none'});
-  window.addEventListener('afterprint',function(){document.body.style.display=''});
-})();
-</script></body>
+</body>
 </html>

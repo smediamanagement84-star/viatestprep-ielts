@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS GT Reading: Field Agent — UKVI Band 7+ — ViATestPrep</title>
+<style>
+  :root {
+    --bg: #0d0d0d;
+    --surface: #161616;
+    --surface2: #1e1e1e;
+    --border: #2a2a2a;
+    --accent: #f59e0b;
+    --accent2: #10b981;
+    --accent3: #3b82f6;
+    --red: #ef4444;
+    --text: #f0f0f0;
+    --muted: #888;
+    --pill: #252525;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; line-height: 1.7; }
+
+  /* NAV */
+  nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+  .logo { font-weight: 800; font-size: 1rem; color: var(--accent); letter-spacing: 1px; }
+  .badge { background: var(--accent); color: #000; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
+  .xp-display { font-size: 0.8rem; color: var(--accent); font-weight: 700; }
+
+  /* PROGRESS NAV */
+  .step-nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 10px 24px; display: flex; gap: 8px; overflow-x: auto; }
+  .step-btn { background: none; border: 1px solid var(--border); color: var(--muted); padding: 5px 14px; border-radius: 20px; cursor: pointer; font-size: 0.78rem; white-space: nowrap; transition: all 0.2s; }
+  .step-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(245,158,11,0.08); }
+
+  /* HERO */
+  .hero { padding: 64px 24px 48px; max-width: 800px; margin: 0 auto; }
+  .module-tag { display: inline-block; background: var(--pill); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 1px; }
+  .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 900; line-height: 1.2; margin-bottom: 16px; }
+  .hero h1 span { color: var(--accent); }
+  .hero p { color: #bbb; font-size: 1rem; max-width: 620px; margin-bottom: 28px; }
+  .hero-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+  .pill { background: var(--pill); border: 1px solid var(--border); border-radius: 20px; padding: 5px 14px; font-size: 0.8rem; color: var(--muted); }
+  .btn-primary { background: var(--accent); color: #000; border: none; padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: opacity 0.2s; }
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-ghost { background: none; border: 1px solid var(--border); color: var(--muted); padding: 12px 24px; border-radius: 8px; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* SECTION */
+  section { padding: 56px 24px; border-top: 1px solid var(--border); max-width: 860px; margin: 0 auto; }
+  section h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 8px; }
+  .section-sub { color: var(--muted); font-size: 0.88rem; margin-bottom: 32px; }
+
+  /* CALLOUT */
+  .callout { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 8px; padding: 18px 20px; margin-bottom: 20px; }
+  .callout.green { border-left-color: var(--accent2); }
+  .callout.red { border-left-color: var(--red); }
+  .callout.blue { border-left-color: var(--accent3); }
+  .callout strong { display: block; margin-bottom: 6px; font-size: 0.85rem; color: var(--accent); }
+  .callout.green strong { color: var(--accent2); }
+  .callout.red strong { color: var(--red); }
+  .callout.blue strong { color: var(--accent3); }
+
+  /* COMPARISON TABLE */
+  .compare-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.88rem; }
+  .compare-table th { background: var(--surface2); padding: 10px 14px; text-align: left; font-size: 0.78rem; color: var(--muted); letter-spacing: 1px; border-bottom: 1px solid var(--border); }
+  .compare-table td { padding: 12px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .tag-ac { background: rgba(59,130,246,0.15); color: var(--accent3); border-radius: 4px; padding: 2px 8px; font-size: 0.75rem; font-weight: 700; }
+  .tag-gt { background: rgba(16,185,129,0.15); color: var(--accent2); border-radius: 4px; padding: 2px 8px; font-size: 0.75rem; font-weight: 700; }
+
+  /* SECTION CARDS */
+  .section-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 28px; }
+  .section-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; transition: border-color 0.2s; cursor: pointer; }
+  .section-card:hover { border-color: var(--accent); }
+  .section-card .icon { font-size: 1.6rem; margin-bottom: 10px; }
+  .section-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
+  .section-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+  .section-card .difficulty { display: inline-block; margin-top: 10px; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
+  .diff-easy { background: rgba(16,185,129,0.15); color: var(--accent2); }
+  .diff-med { background: rgba(245,158,11,0.15); color: var(--accent); }
+  .diff-hard { background: rgba(239,68,68,0.15); color: var(--red); }
+
+  /* DRILL */
+  .drill-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .drill-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+  .drill-label { font-size: 0.75rem; color: var(--accent); font-weight: 700; margin-bottom: 12px; letter-spacing: 1px; }
+  .passage-box { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 18px; margin: 14px 0; font-size: 0.88rem; line-height: 1.8; color: #ccc; }
+  .passage-box strong { color: var(--text); }
+
+  .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; }
+  .opt-btn { background: var(--surface2); border: 1px solid var(--border); color: var(--text); padding: 10px 14px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; text-align: left; transition: all 0.2s; }
+  .opt-btn:hover { border-color: var(--accent); }
+  .opt-btn.correct { background: rgba(16,185,129,0.15); border-color: var(--accent2); color: var(--accent2); }
+  .opt-btn.wrong { background: rgba(239,68,68,0.1); border-color: var(--red); color: var(--red); }
+
+  .feedback { display: none; margin-top: 12px; padding: 12px 16px; border-radius: 8px; font-size: 0.85rem; }
+  .feedback.show { display: block; }
+  .feedback.correct-fb { background: rgba(16,185,129,0.1); border: 1px solid var(--accent2); color: var(--accent2); }
+  .feedback.wrong-fb { background: rgba(239,68,68,0.08); border: 1px solid var(--red); color: var(--red); }
+
+  /* TFNG */
+  .tfng-btns { display: flex; gap: 10px; margin: 12px 0; }
+  .tfng-btn { flex: 1; background: var(--surface2); border: 1px solid var(--border); color: var(--text); padding: 10px; border-radius: 8px; cursor: pointer; font-weight: 700; font-size: 0.85rem; transition: all 0.2s; }
+  .tfng-btn:hover { border-color: var(--accent); }
+
+  /* BOSS FIGHT */
+  .boss-header { background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-bottom: 24px; text-align: center; }
+  .boss-header h2 { font-size: 1.4rem; font-weight: 900; color: var(--accent); margin-bottom: 8px; }
+  .boss-header p { color: var(--muted); font-size: 0.9rem; }
+  .timer-display { font-size: 2rem; font-weight: 900; color: var(--accent); font-variant-numeric: tabular-nums; margin: 12px 0; }
+  .boss-passage { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; font-size: 0.88rem; line-height: 1.85; color: #ccc; }
+  .boss-passage h4 { color: var(--text); font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+  .boss-passage .section-label { color: var(--accent); font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 10px; display: block; }
+
+  .boss-q { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px; margin-bottom: 12px; }
+  .boss-q p { font-size: 0.9rem; margin-bottom: 10px; }
+  .boss-q .q-num { color: var(--accent); font-weight: 700; font-size: 0.8rem; }
+
+  .score-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 28px; text-align: center; display: none; }
+  .score-box.show { display: block; }
+  .score-big { font-size: 3rem; font-weight: 900; color: var(--accent); }
+  .score-label { color: var(--muted); font-size: 0.9rem; margin-bottom: 16px; }
+
+  /* ACTION PLAN */
+  .plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+  .plan-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .plan-day { font-size: 0.72rem; color: var(--accent); font-weight: 700; letter-spacing: 1px; margin-bottom: 6px; }
+  .plan-card p { font-size: 0.82rem; color: #bbb; }
+
+  /* FOOTER */
+  footer { text-align: center; padding: 40px 24px; color: var(--muted); font-size: 0.78rem; border-top: 1px solid var(--border); margin-top: 40px; }
+
+  .xp-toast { position: fixed; top: 70px; right: 20px; background: var(--accent); color: #000; font-weight: 800; padding: 8px 18px; border-radius: 20px; font-size: 0.85rem; opacity: 0; transition: opacity 0.3s; z-index: 999; pointer-events: none; }
+  .xp-toast.show { opacity: 1; }
+
+  input[type="text"] { background: var(--surface2); border: 1px solid var(--border); color: var(--text); padding: 10px 14px; border-radius: 8px; width: 100%; font-size: 0.9rem; outline: none; margin: 8px 0; }
+  input[type="text"]:focus { border-color: var(--accent); }
+
+  select { background: var(--surface2); border: 1px solid var(--border); color: var(--text); padding: 10px 14px; border-radius: 8px; font-size: 0.9rem; outline: none; cursor: pointer; }
+
+  @media (max-width: 600px) { .options-grid { grid-template-columns: 1fr; } .tfng-btns { flex-direction: column; } }
+</style>
+</head>
+<body>
+
+<div class="xp-toast" id="xpToast">+10 XP</div>
+
+<nav>
+  <div class="logo">🎓 ViATestPrep</div>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <div class="badge">UKVI · GT</div>
+    <div class="xp-display">⚡ <span id="xpCount">0</span> XP</div>
+  </div>
+</nav>
+
+<div class="step-nav">
+  <button class="step-btn active" onclick="scrollTo('mission')">① Mission</button>
+  <button class="step-btn" onclick="scrollTo('difference')">② GT vs Academic</button>
+  <button class="step-btn" onclick="scrollTo('sections')">③ The 3 Sections</button>
+  <button class="step-btn" onclick="scrollTo('drills')">④ Live Drills</button>
+  <button class="step-btn" onclick="scrollTo('boss')">⑤ Boss Fight</button>
+  <button class="step-btn" onclick="scrollTo('plan')">⑥ Action Plan</button>
+</div>
+
+<!-- HERO -->
+<div class="hero" id="mission">
+  <div class="module-tag">MODULE 01 · READING · UKVI GENERAL TRAINING</div>
+  <h1>You are a <span>Field Agent</span>.<br>Not an academic.</h1>
+  <p>IELTS GT Reading uses real-world texts — job ads, workplace notices, tenancy agreements, news articles. Your visa depends on reading these fast, accurately, and strategically. 40 questions. 60 minutes. Same 14 question types as Academic. Different battlefield.</p>
+  <div class="hero-pills">
+    <span class="pill">⏱ 60-min test</span>
+    <span class="pill">🎯 Band 7+ target</span>
+    <span class="pill">🏢 Real-world texts</span>
+    <span class="pill">🇬🇧 UKVI approved</span>
+    <span class="pill">3 sections, 40 Qs</span>
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;">
+    <button class="btn-primary" onclick="scrollTo('difference')">▶ Begin Training</button>
+    <button class="btn-ghost" onclick="scrollTo('boss')">Skip to Boss Fight</button>
+  </div>
+</div>
+
+<!-- GT vs ACADEMIC -->
+<section id="difference">
+  <h2>② GT vs Academic Reading — Know the Battlefield</h2>
+  <p class="section-sub">Same question types. Completely different text types. This is what changes for UKVI GT.</p>
+
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>FEATURE</th>
+        <th><span class="tag-ac">ACADEMIC</span></th>
+        <th><span class="tag-gt">GT (YOUR VERSION)</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Number of sections</strong></td>
+        <td>3 long passages</td>
+        <td><strong>3 sections</strong> with multiple shorter texts</td>
+      </tr>
+      <tr>
+        <td><strong>Section A texts</strong></td>
+        <td>Academic journal excerpt</td>
+        <td><strong>Short functional texts</strong> — ads, notices, timetables, signs, price lists</td>
+      </tr>
+      <tr>
+        <td><strong>Section B texts</strong></td>
+        <td>Complex academic essay</td>
+        <td><strong>Work-related texts</strong> — staff handbooks, contracts, memos, training materials</td>
+      </tr>
+      <tr>
+        <td><strong>Section C text</strong></td>
+        <td>Dense academic passage</td>
+        <td><strong>One longer article</strong> — descriptive or narrative, general interest</td>
+      </tr>
+      <tr>
+        <td><strong>Vocabulary level</strong></td>
+        <td>High academic register</td>
+        <td><strong>Everyday + professional register</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Question types</strong></td>
+        <td>All 14 types</td>
+        <td><strong>Same 14 types</strong> — no difference</td>
+      </tr>
+      <tr>
+        <td><strong>Overall difficulty</strong></td>
+        <td>Higher</td>
+        <td><strong>Slightly lower</strong> — but time pressure is identical</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <strong>⚠ UKVI Trap</strong>
+    Because GT texts feel easier to read, candidates get overconfident and rush. The question types are equally tricky. Keep your discipline.
+  </div>
+
+  <div class="callout green">
+    <strong>✅ Strategy stays identical</strong>
+    Read questions first. Skim to map. Scan to locate. The detective method from Academic still works — same moves, new terrain.
+  </div>
+</section>
+
+<!-- THE 3 SECTIONS -->
+<section id="sections">
+  <h2>③ The 3 Sections — Know Each Battlefield</h2>
+  <p class="section-sub">GT Reading is divided into 3 sections of increasing difficulty. Click each card to see what to expect and how to attack it.</p>
+
+  <div class="section-grid">
+    <div class="section-card" onclick="toggleCard('cardA')">
+      <div class="icon">📋</div>
+      <h3>Section A · Short Functional Texts</h3>
+      <p>Multiple short pieces — typically 6–8 adverts, notices, signs, or timetables. Up to 5 texts combined. Usually 14 questions.</p>
+      <div class="difficulty diff-easy">Easier</div>
+    </div>
+    <div class="section-card" onclick="toggleCard('cardB')">
+      <div class="icon">🏢</div>
+      <h3>Section B · Workplace Texts</h3>
+      <p>2–3 longer workplace-related texts — staff policies, contracts, handbooks, training guides. Usually 13 questions.</p>
+      <div class="difficulty diff-med">Medium</div>
+    </div>
+    <div class="section-card" onclick="toggleCard('cardC')">
+      <div class="icon">📰</div>
+      <h3>Section C · Extended Article</h3>
+      <p>One long descriptive or narrative passage — similar length to Academic. General interest topic. 13 questions.</p>
+      <div class="difficulty diff-hard">Hardest</div>
+    </div>
+  </div>
+
+  <div id="cardA" class="callout blue" style="display:none;">
+    <strong>Section A Strategy</strong>
+    These texts are short — don't skim, read each one in full (they're 30–80 words). The questions ask for specific facts. Use keyword scanning. Watch for negatives ("does NOT include", "except"). Budget 14–16 minutes here.
+  </div>
+  <div id="cardB" class="callout blue" style="display:none;">
+    <strong>Section B Strategy</strong>
+    Workplace texts love lists, sub-headings, and bullet points. Use these as a map. Matching question types dominate here (matching information to source, matching headings). Budget 18–20 minutes.
+  </div>
+  <div id="cardC" class="callout blue" style="display:none;">
+    <strong>Section C Strategy</strong>
+    This is the closest to Academic. Use the full skim → scan → answer cycle. T/F/NG and MCQ are common here. Budget 22–26 minutes. This is where Band 7 is won or lost.
+  </div>
+
+  <!-- Timing rule -->
+  <div style="margin-top:32px;">
+    <h3 style="font-size:1rem;margin-bottom:12px;">⏱ The 16–20–24 Timing Rule (GT version)</h3>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+      <div class="callout" style="text-align:center;">
+        <strong>Section A</strong>
+        16 min · Short texts
+      </div>
+      <div class="callout" style="text-align:center;">
+        <strong>Section B</strong>
+        20 min · Workplace
+      </div>
+      <div class="callout" style="text-align:center;">
+        <strong>Section C</strong>
+        24 min · Article
+      </div>
+    </div>
+    <p style="color:var(--muted);font-size:0.82rem;margin-top:10px;">Unlike Academic, GT gives you more texts upfront. Section A's brevity is deceptive — don't blow your time budget there.</p>
+  </div>
+</section>
+
+<!-- LIVE DRILLS -->
+<section id="drills">
+  <h2>④ Live Drills — Real GT Texts</h2>
+  <p class="section-sub">Three drills using authentic GT-style passages. The question types are identical to what you'll face in the UKVI test.</p>
+
+  <!-- Drill A: Section A style - job advert -->
+  <div class="drill-box">
+    <div class="drill-label">DRILL A · SECTION A STYLE · TRUE / FALSE / NOT GIVEN</div>
+    <h3>Job Advertisement — Matching Information</h3>
+    <div class="passage-box">
+      <strong>WAREHOUSE OPERATIVE — NIGHT SHIFT</strong><br><br>
+      Brightfield Logistics is seeking reliable individuals for permanent night shift warehouse roles at our Coventry facility.<br><br>
+      <strong>Hours:</strong> Sunday to Thursday, 10pm–6am. Friday and Saturday off.<br>
+      <strong>Pay:</strong> £13.50 per hour, rising to £15.00 after a 3-month probationary period. Overtime available at time-and-a-half.<br>
+      <strong>Requirements:</strong> Forklift licence preferred but not essential — full training provided. Must have the right to work in the UK. No previous warehouse experience necessary.<br>
+      <strong>Benefits:</strong> Free on-site parking, staff canteen, and 28 days annual leave (including bank holidays).<br><br>
+      <em>Applications accepted by email only. No walk-in enquiries.</em>
+    </div>
+    <p style="font-size:0.85rem;color:var(--muted);margin-bottom:12px;">Decide: <strong>TRUE</strong> (statement agrees with the text) · <strong>FALSE</strong> (statement contradicts the text) · <strong>NOT GIVEN</strong> (not mentioned)</p>
+
+    <div id="drillA-q1">
+      <p style="font-size:0.9rem;margin-bottom:8px;"><strong>Statement 1:</strong> Workers are paid at a higher rate for overtime.</p>
+      <div class="tfng-btns">
+        <button class="tfng-btn" onclick="checkTFNG('drillA-q1', 'TRUE', 'TRUE', 'drillA-fb1')">TRUE</button>
+        <button class="tfng-btn" onclick="checkTFNG('drillA-q1', 'FALSE', 'TRUE', 'drillA-fb1')">FALSE</button>
+        <button class="tfng-btn" onclick="checkTFNG('drillA-q1', 'NG', 'TRUE', 'drillA-fb1')">NOT GIVEN</button>
+      </div>
+      <div class="feedback" id="drillA-fb1"></div>
+    </div>
+    <br>
+    <div id="drillA-q2">
+      <p style="font-size:0.9rem;margin-bottom:8px;"><strong>Statement 2:</strong> Applicants must already hold a forklift licence.</p>
+      <div class="tfng-btns">
+        <button class="tfng-btn" onclick="checkTFNG('drillA-q2', 'TRUE', 'FALSE', 'drillA-fb2')">TRUE</button>
+        <button class="tfng-btn" onclick="checkTFNG('drillA-q2', 'FALSE', 'FALSE', 'drillA-fb2')">FALSE</button>
+        <button class="tfng-btn" onclick="checkTFNG('drillA-q2', 'NG', 'FALSE', 'drillA-fb2')">NOT GIVEN</button>
+      </div>
+      <div class="feedback" id="drillA-fb2"></div>
+    </div>
+    <br>
+    <div id="drillA-q3">
+      <p style="font-size:0.9rem;margin-bottom:8px;"><strong>Statement 3:</strong> The company offers transport to and from the facility.</p>
+      <div class="tfng-btns">
+        <button class="tfng-btn" onclick="checkTFNG('drillA-q3', 'TRUE', 'NG', 'drillA-fb3')">TRUE</button>
+        <button class="tfng-btn" onclick="checkTFNG('drillA-q3', 'FALSE', 'NG', 'drillA-fb3')">FALSE</button>
+        <button class="tfng-btn" onclick="checkTFNG('drillA-q3', 'NG', 'NG', 'drillA-fb3')">NOT GIVEN</button>
+      </div>
+      <div class="feedback" id="drillA-fb3"></div>
+    </div>
+  </div>
+
+  <!-- Drill B: Section B style - workplace text MCQ -->
+  <div class="drill-box">
+    <div class="drill-label">DRILL B · SECTION B STYLE · MULTIPLE CHOICE</div>
+    <h3>Employee Handbook Extract — Holiday Entitlement Policy</h3>
+    <div class="passage-box">
+      <strong>Section 4.2 — Annual Leave</strong><br><br>
+      All full-time employees are entitled to 25 days of paid annual leave per calendar year, in addition to UK public holidays. Part-time employees receive leave on a pro-rata basis calculated from their contracted hours relative to a standard 37.5-hour week.<br><br>
+      Leave must be booked through the internal HR portal at least two weeks in advance. Requests during peak periods (December 20 – January 3 and the last two weeks of August) require a minimum of four weeks' notice and are subject to line-manager approval.<br><br>
+      Unused leave may be carried over to the following year, but only up to a maximum of 5 days. Any carried-over days not used by 31 March of the following year will be forfeited. Employees may not carry over leave entitlement that was not taken due to personal choice.<br><br>
+      In exceptional circumstances — such as long-term illness — the company may, at its discretion, allow a greater carry-over allowance. Such requests must be submitted in writing to the HR Director.
+    </div>
+
+    <p style="font-size:0.85rem;margin-bottom:10px;"><strong>Q1.</strong> A part-time employee working 30 hours per week wants to know their leave entitlement. According to the policy, it will be calculated based on:</p>
+    <div class="options-grid">
+      <button class="opt-btn" onclick="checkMCQ(this, false, 'drill-b-fb1')">A. The same 25 days as full-time staff</button>
+      <button class="opt-btn" onclick="checkMCQ(this, true, 'drill-b-fb1')">B. Their hours relative to a 37.5-hour week</button>
+      <button class="opt-btn" onclick="checkMCQ(this, false, 'drill-b-fb1')">C. A fixed rate set by HR</button>
+      <button class="opt-btn" onclick="checkMCQ(this, false, 'drill-b-fb1')">D. The number of days they work per week</button>
+    </div>
+    <div class="feedback" id="drill-b-fb1"></div>
+    <br>
+    <p style="font-size:0.85rem;margin-bottom:10px;"><strong>Q2.</strong> If an employee is ill for six months and cannot take their annual leave, the policy states the company:</p>
+    <div class="options-grid">
+      <button class="opt-btn" onclick="checkMCQ(this, false, 'drill-b-fb2')">A. Automatically carries over all unused leave</button>
+      <button class="opt-btn" onclick="checkMCQ(this, false, 'drill-b-fb2')">B. Forfeits all leave over 5 days</button>
+      <button class="opt-btn" onclick="checkMCQ(this, true, 'drill-b-fb2')">C. May allow more carry-over at its discretion</button>
+      <button class="opt-btn" onclick="checkMCQ(this, false, 'drill-b-fb2')">D. Requires no further action from the employee</button>
+    </div>
+    <div class="feedback" id="drill-b-fb2"></div>
+  </div>
+
+  <!-- Drill C: Section C style - sentence completion -->
+  <div class="drill-box">
+    <div class="drill-label">DRILL C · SECTION C STYLE · SENTENCE COMPLETION</div>
+    <h3>Extended Article — Complete the sentences (max 3 words from the passage)</h3>
+    <div class="passage-box">
+      <strong>The Changing Face of Apprenticeships in Britain</strong><br><br>
+      For much of the twentieth century, apprenticeships in Britain were associated almost exclusively with the traditional trades — plumbing, carpentry, electrical work. Young people who did not pursue academic routes often entered these programmes in their mid-teens, spending several years learning a craft under the supervision of an experienced tradesperson.<br><br>
+      Since the introduction of the Apprenticeship Levy in 2017, the landscape has shifted considerably. The levy, which requires large employers to contribute 0.5% of their payroll to a dedicated fund, was designed to encourage businesses across all sectors to invest in apprenticeship training. As a result, apprenticeship programmes now exist in fields as varied as accountancy, digital marketing, nuclear engineering, and even law.<br><br>
+      Critics, however, argue that quality has been sacrificed for quantity. A 2022 report by the Institute for Fiscal Studies found that many new apprenticeship schemes offer limited on-the-job learning, with apprentices spending disproportionate time on administrative tasks unrelated to their intended career. Completion rates have also declined, with fewer than half of all apprentices now finishing their programme.<br><br>
+      Proponents counter that the expansion has opened doors for groups previously excluded from professional careers. Young people from lower-income backgrounds, in particular, now have structured pathways into industries that once recruited almost exclusively through graduate schemes.
+    </div>
+
+    <p style="font-size:0.85rem;color:var(--muted);margin-bottom:14px;">Complete each sentence using NO MORE THAN THREE WORDS from the passage.</p>
+
+    <div style="margin-bottom:14px;">
+      <p style="font-size:0.88rem;margin-bottom:6px;"><strong>1.</strong> Before the twenty-first century, apprenticeships were linked mainly to <input type="text" id="sc1" placeholder="your answer..." style="width:220px;display:inline-block;"> .</p>
+      <button class="btn-ghost" style="padding:6px 14px;font-size:0.8rem;" onclick="checkSC('sc1', ['traditional trades','the traditional trades'], 'sc-fb1')">Check</button>
+      <div class="feedback" id="sc-fb1"></div>
+    </div>
+
+    <div style="margin-bottom:14px;">
+      <p style="font-size:0.88rem;margin-bottom:6px;"><strong>2.</strong> The Apprenticeship Levy requires large employers to put <input type="text" id="sc2" placeholder="your answer..." style="width:220px;display:inline-block;"> of their payroll into a fund.</p>
+      <button class="btn-ghost" style="padding:6px 14px;font-size:0.8rem;" onclick="checkSC('sc2', ['0.5%'], 'sc-fb2')">Check</button>
+      <div class="feedback" id="sc-fb2"></div>
+    </div>
+
+    <div>
+      <p style="font-size:0.88rem;margin-bottom:6px;"><strong>3.</strong> According to critics, many apprentices spend too much time on <input type="text" id="sc3" placeholder="your answer..." style="width:220px;display:inline-block;"> tasks.</p>
+      <button class="btn-ghost" style="padding:6px 14px;font-size:0.8rem;" onclick="checkSC('sc3', ['administrative tasks','administrative'], 'sc-fb3')">Check</button>
+      <div class="feedback" id="sc-fb3"></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOSS FIGHT -->
+<section id="boss">
+  <div class="boss-header">
+    <div style="font-size:2rem;margin-bottom:8px;">🎯</div>
+    <h2>Boss Fight — 8-Min Field Mission</h2>
+    <p>3 real GT sections. 8 questions. Live timer. Mixed question types. Earn your Field Agent Badge.</p>
+    <div class="timer-display" id="bossTimer">08:00</div>
+    <button class="btn-primary" id="bossStartBtn" onclick="startBoss()">▶ Start Mission</button>
+  </div>
+
+  <!-- SECTION A: Notices -->
+  <div class="boss-passage">
+    <span class="section-label">📋 SECTION A — SHORT TEXTS (Read all, then answer Q1–3)</span>
+    <h4>A. Tenant Notice — Hanover House Apartments</h4>
+    <p>Maintenance crews will be carrying out essential boiler repairs on floors 3–7 from Monday 9 June to Wednesday 11 June. Hot water will be unavailable between 8am and 4pm on these days. Residents on all other floors will not be affected. A temporary shower facility has been arranged in the ground floor gym for affected residents. Please bring your own towel.</p>
+    <br>
+    <h4>B. Staff Car Park — Updated Rules (Effective 1 July)</h4>
+    <p>Visitor parking bays (marked in yellow) are now reserved for clients between 9am and 5pm, Monday to Friday. Staff must not use yellow bays during these hours. Staff parking (blue bays) remains unchanged. Any vehicle parked without a valid permit will be subject to a clamping fee of £85, payable to the security office. Appeals must be submitted within 48 hours.</p>
+    <br>
+    <h4>C. Community English Classes — Greenhill Library</h4>
+    <p>Free conversational English sessions every Tuesday and Thursday, 6–7:30pm. Open to adults at any level. No booking required — just turn up. Sessions are led by volunteer tutors and focus on everyday spoken English. Certificate courses (for formal qualification) are held separately and require prior registration at the library desk.</p>
+  </div>
+
+  <div class="boss-q">
+    <p><span class="q-num">Q1.</span> Notice A says that residents on floors 1–2 will lose access to hot water during the repair period.</p>
+    <div class="tfng-btns">
+      <button class="tfng-btn" onclick="recordBoss(1, 'TRUE')">TRUE</button>
+      <button class="tfng-btn" onclick="recordBoss(1, 'FALSE')">FALSE</button>
+      <button class="tfng-btn" onclick="recordBoss(1, 'NG')">NOT GIVEN</button>
+    </div>
+    <div id="boss-sel-1" style="font-size:0.8rem;color:var(--accent);margin-top:6px;"></div>
+  </div>
+
+  <div class="boss-q">
+    <p><span class="q-num">Q2.</span> According to Notice B, staff parking bays have new restrictions from 1 July.</p>
+    <div class="tfng-btns">
+      <button class="tfng-btn" onclick="recordBoss(2, 'TRUE')">TRUE</button>
+      <button class="tfng-btn" onclick="recordBoss(2, 'FALSE')">FALSE</button>
+      <button class="tfng-btn" onclick="recordBoss(2, 'NG')">NOT GIVEN</button>
+    </div>
+    <div id="boss-sel-2" style="font-size:0.8rem;color:var(--accent);margin-top:6px;"></div>
+  </div>
+
+  <div class="boss-q">
+    <p><span class="q-num">Q3.</span> Notice C states that the conversational English sessions lead to a formal qualification.</p>
+    <div class="tfng-btns">
+      <button class="tfng-btn" onclick="recordBoss(3, 'TRUE')">TRUE</button>
+      <button class="tfng-btn" onclick="recordBoss(3, 'FALSE')">FALSE</button>
+      <button class="tfng-btn" onclick="recordBoss(3, 'NG')">NOT GIVEN</button>
+    </div>
+    <div id="boss-sel-3" style="font-size:0.8rem;color:var(--accent);margin-top:6px;"></div>
+  </div>
+
+  <!-- SECTION B: Workplace -->
+  <div class="boss-passage" style="margin-top:24px;">
+    <span class="section-label">🏢 SECTION B — WORKPLACE TEXT (Q4–6)</span>
+    <h4>Grievance Procedure — Hartwell Manufacturing Ltd</h4>
+    <p>Employees who have a workplace concern are encouraged to raise it informally with their line manager in the first instance. Most issues can be resolved at this stage without further escalation.</p>
+    <p style="margin-top:10px;">If the informal approach fails or is considered inappropriate (for example, where the concern involves the line manager directly), the employee may submit a formal written grievance to the HR department. The grievance must clearly state the nature of the complaint, the date(s) involved, and any witnesses or relevant documentation.</p>
+    <p style="margin-top:10px;">HR will acknowledge the grievance within five working days and arrange a formal hearing within 15 working days. The employee has the right to be accompanied by a colleague or trade union representative at this hearing. A written outcome will be provided within ten working days of the hearing.</p>
+    <p style="margin-top:10px;">If the employee remains dissatisfied, they may appeal within ten working days of receiving the written outcome. The appeal will be heard by a senior manager not previously involved in the case.</p>
+  </div>
+
+  <div class="boss-q">
+    <p><span class="q-num">Q4.</span> What should an employee do first if they have a workplace concern?</p>
+    <div class="options-grid">
+      <button class="opt-btn" onclick="recordBossOpt(4, 'A', this)">A. Submit a written grievance to HR</button>
+      <button class="opt-btn" onclick="recordBossOpt(4, 'B', this)">B. Speak informally with their line manager</button>
+      <button class="opt-btn" onclick="recordBossOpt(4, 'C', this)">C. Contact a trade union representative</button>
+      <button class="opt-btn" onclick="recordBossOpt(4, 'D', this)">D. Request a formal hearing</button>
+    </div>
+    <div id="boss-sel-4" style="font-size:0.8rem;color:var(--accent);margin-top:6px;"></div>
+  </div>
+
+  <div class="boss-q">
+    <p><span class="q-num">Q5.</span> An employee can be accompanied at the formal hearing by a <input type="text" id="boss-q5" placeholder="(max 3 words from text)" style="width:100%;max-width:280px;"> .</p>
+    <button class="btn-ghost" style="padding:6px 14px;font-size:0.8rem;margin-top:6px;" onclick="recordBossText(5, 'boss-q5')">Confirm</button>
+    <div id="boss-sel-5" style="font-size:0.8rem;color:var(--accent);margin-top:6px;"></div>
+  </div>
+
+  <div class="boss-q">
+    <p><span class="q-num">Q6.</span> How many working days after the grievance is submitted must HR arrange the formal hearing?</p>
+    <div class="options-grid">
+      <button class="opt-btn" onclick="recordBossOpt(6, 'A', this)">A. 5</button>
+      <button class="opt-btn" onclick="recordBossOpt(6, 'B', this)">B. 10</button>
+      <button class="opt-btn" onclick="recordBossOpt(6, 'C', this)">C. 15</button>
+      <button class="opt-btn" onclick="recordBossOpt(6, 'D', this)">D. 20</button>
+    </div>
+    <div id="boss-sel-6" style="font-size:0.8rem;color:var(--accent);margin-top:6px;"></div>
+  </div>
+
+  <!-- SECTION C: Article -->
+  <div class="boss-passage" style="margin-top:24px;">
+    <span class="section-label">📰 SECTION C — EXTENDED ARTICLE (Q7–8)</span>
+    <h4>The Rise of the Micro-Credential</h4>
+    <p>In 2015, an unemployed software developer in Manchester completed a 12-week online course in data science and, shortly afterwards, secured a role at a financial technology firm. He had no university degree. His employer's primary concern was his demonstrated skill, not the institution that had taught him.</p>
+    <p style="margin-top:10px;">This story, once unusual, is now becoming commonplace. Across the UK, employers in sectors from construction to healthcare are increasingly recognising short, focused qualifications — known as micro-credentials — as valid evidence of workplace readiness. Unlike traditional degrees, which often take three or more years to complete, micro-credentials can typically be earned in weeks or months.</p>
+    <p style="margin-top:10px;">The shift has been accelerated by the pandemic. When millions of workers found themselves furloughed or redundant, many turned to online platforms to retrain. Government-backed schemes such as the Skills Bootcamps — funded through the National Skills Fund — further legitimised short-course qualifications in the eyes of both employers and regulatory bodies.</p>
+    <p style="margin-top:10px;">Not everyone is convinced. Critics from the higher education sector warn that micro-credentials lack the depth and critical thinking development that undergraduate programmes provide. There are also concerns about quality control — with hundreds of providers now offering certifications, standards can vary enormously. A badge from a well-regarded institution carries very different weight from one awarded by an unknown platform.</p>
+  </div>
+
+  <div class="boss-q">
+    <p><span class="q-num">Q7.</span> What does the writer say about the Manchester developer's story?</p>
+    <div class="options-grid">
+      <button class="opt-btn" onclick="recordBossOpt(7, 'A', this)">A. It is still highly unusual in the UK</button>
+      <button class="opt-btn" onclick="recordBossOpt(7, 'B', this)">B. It is now a more common type of outcome</button>
+      <button class="opt-btn" onclick="recordBossOpt(7, 'C', this)">C. It happened because employers prefer online qualifications</button>
+      <button class="opt-btn" onclick="recordBossOpt(7, 'D', this)">D. It shows that degrees are no longer valued</button>
+    </div>
+    <div id="boss-sel-7" style="font-size:0.8rem;color:var(--accent);margin-top:6px;"></div>
+  </div>
+
+  <div class="boss-q">
+    <p><span class="q-num">Q8.</span> Critics of micro-credentials argue that short courses do not develop <input type="text" id="boss-q8" placeholder="(max 3 words from text)" style="width:100%;max-width:280px;"> .</p>
+    <button class="btn-ghost" style="padding:6px 14px;font-size:0.8rem;margin-top:6px;" onclick="recordBossText(8, 'boss-q8')">Confirm</button>
+    <div id="boss-sel-8" style="font-size:0.8rem;color:var(--accent);margin-top:6px;"></div>
+  </div>
+
+  <div style="text-align:center;margin-top:24px;">
+    <button class="btn-primary" onclick="submitBoss()">Submit Mission</button>
+  </div>
+
+  <div class="score-box" id="bossScore">
+    <div style="font-size:2.5rem;margin-bottom:8px;">🏅</div>
+    <div class="score-big" id="bossScoreNum">—</div>
+    <div class="score-label">out of 8 · Field Agent Score</div>
+    <div id="bossScoreFeedback" style="color:var(--muted);margin:16px 0;font-size:0.9rem;"></div>
+    <div id="bossAnswerKey" style="text-align:left;margin-top:20px;font-size:0.85rem;line-height:2;color:#ccc;background:var(--bg);padding:16px;border-radius:8px;border:1px solid var(--border);"></div>
+  </div>
+</section>
+
+<!-- ACTION PLAN -->
+<section id="plan">
+  <h2>⑥ Your 7-Day Field Action Plan</h2>
+  <p class="section-sub">GT Reading rewards pattern recognition. Drill by section type, not by time alone.</p>
+  <div class="plan-grid">
+    <div class="plan-card"><div class="plan-day">DAY 1</div><p>Section A only — 6 short texts, untimed. Focus: keyword scanning in functional English</p></div>
+    <div class="plan-card"><div class="plan-day">DAY 2</div><p>Section B only — 2 workplace texts. Focus: Matching + T/F/NG on policy language</p></div>
+    <div class="plan-card"><div class="plan-day">DAY 3</div><p>Section C only — 1 long article, timed 24 min. Focus: skim → scan → answer cycle</p></div>
+    <div class="plan-card"><div class="plan-day">DAY 4</div><p>T/F/NG deep drill — 20 statements from mixed GT texts. Focus: FALSE vs NOT GIVEN distinction</p></div>
+    <div class="plan-card"><div class="plan-day">DAY 5</div><p>Sentence completion drill — GT texts only. Focus: word limit discipline (max 3 words)</p></div>
+    <div class="plan-card"><div class="plan-day">DAY 6</div><p>Full timed GT test — 60 minutes, 3 sections. Apply 16–20–24 timing rule</p></div>
+    <div class="plan-card"><div class="plan-day">DAY 7</div><p>Mistake journal review — categorise every error by type (distractor / synonym / word limit)</p></div>
+  </div>
+
+  <div class="callout" style="margin-top:28px;">
+    <strong>🇬🇧 UKVI Reminder</strong>
+    The content above prepares you for the IELTS General Training Reading test, which is the format used in IELTS for UKVI (General Training). Ensure you are registered at a UKVI-approved test centre and that your Test Report Form is issued for UKVI purposes — the score alone is not sufficient for a UK visa application.
+  </div>
+</section>
+
+<footer>
+  <strong>ViATestPrep</strong> · UKVI General Training Reading · Band 7+ Track<br>
+  © 2026 ViATestPrep · All Rights Reserved · Unauthorized reproduction prohibited
+</footer>
+
+<script>
+  let xp = 0;
+  let drillsDone = new Set();
+  const bossAnswers = {};
+  let bossRunning = false;
+  let bossInterval = null;
+  let bossSeconds = 480;
+
+  function scrollTo(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }); }
+
+  function toggleCard(id) {
+    const el = document.getElementById(id);
+    el.style.display = el.style.display === 'none' ? 'block' : 'none';
+    if (el.style.display === 'block') awardXP('card-' + id);
+  }
+
+  function awardXP(key) {
+    if (drillsDone.has(key)) return;
+    drillsDone.add(key);
+    xp += 10;
+    document.getElementById('xpCount').textContent = xp;
+    const toast = document.getElementById('xpToast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 1500);
+  }
+
+  function checkTFNG(qId, chosen, correct, fbId) {
+    const btns = document.querySelectorAll('#' + qId + ' .tfng-btn');
+    btns.forEach(b => b.disabled = true);
+    const isCorrect = chosen === correct;
+    if (isCorrect) {
+      awardXP(fbId);
+      showFeedback(fbId, true, '✅ Correct! ' + tfngExplain(chosen, correct));
+    } else {
+      showFeedback(fbId, false, '❌ Answer: ' + correct + '. ' + tfngExplain(chosen, correct));
+    }
+  }
+
+  function tfngExplain(chosen, correct) {
+    const map = {
+      'TRUE': 'The statement matches information directly stated in the text.',
+      'FALSE': 'The text contradicts the statement — it actively says the opposite.',
+      'NG': 'This topic is not mentioned at all. Do not use outside knowledge.'
+    };
+    return map[correct];
+  }
+
+  function checkMCQ(btn, isCorrect, fbId) {
+    const container = btn.closest('.drill-box') || btn.closest('.boss-q') || document.body;
+    btn.classList.add(isCorrect ? 'correct' : 'wrong');
+    const allBtns = btn.parentElement.querySelectorAll('.opt-btn');
+    allBtns.forEach(b => b.disabled = true);
+    if (isCorrect) {
+      awardXP(fbId);
+      showFeedback(fbId, true, '✅ Correct! The passage states this directly.');
+    } else {
+      allBtns.forEach(b => { if (b.textContent.includes('B.') && fbId === 'drill-b-fb1') b.classList.add('correct'); });
+      showFeedback(fbId, false, '❌ Re-read the passage carefully. Look for the key phrase that directly answers the question.');
+    }
+  }
+
+  function checkSC(inputId, acceptedArr, fbId) {
+    const val = document.getElementById(inputId).value.trim().toLowerCase();
+    const isCorrect = acceptedArr.some(a => val === a.toLowerCase() || val.includes(a.toLowerCase().split(' ')[0]));
+    if (isCorrect) {
+      awardXP(fbId);
+      showFeedback(fbId, true, '✅ Correct! Remember: copy words exactly from the passage.');
+    } else {
+      showFeedback(fbId, false, '❌ Check again. The answer must use words from the passage. Accepted: ' + acceptedArr[0]);
+    }
+  }
+
+  function showFeedback(fbId, correct, msg) {
+    const el = document.getElementById(fbId);
+    el.textContent = msg;
+    el.className = 'feedback show ' + (correct ? 'correct-fb' : 'wrong-fb');
+  }
+
+  // BOSS FIGHT
+  function startBoss() {
+    if (bossRunning) return;
+    bossRunning = true;
+    document.getElementById('bossStartBtn').disabled = true;
+    bossInterval = setInterval(() => {
+      bossSeconds--;
+      const m = Math.floor(bossSeconds / 60).toString().padStart(2,'0');
+      const s = (bossSeconds % 60).toString().padStart(2,'0');
+      document.getElementById('bossTimer').textContent = m + ':' + s;
+      if (bossSeconds <= 0) { clearInterval(bossInterval); submitBoss(); }
+    }, 1000);
+  }
+
+  function recordBoss(q, val) {
+    bossAnswers[q] = val;
+    document.getElementById('boss-sel-' + q).textContent = '→ Selected: ' + val;
+  }
+
+  function recordBossOpt(q, val, btn) {
+    bossAnswers[q] = val;
+    const siblings = btn.parentElement.querySelectorAll('.opt-btn');
+    siblings.forEach(b => b.style.borderColor = '');
+    btn.style.borderColor = 'var(--accent)';
+    let display = document.getElementById('boss-sel-' + q);
+    if (display) display.textContent = '→ Selected: ' + val;
+  }
+
+  function recordBossText(q, inputId) {
+    const val = document.getElementById(inputId).value.trim();
+    bossAnswers[q] = val;
+    let display = document.getElementById('boss-sel-' + q);
+    if (display) display.textContent = '→ Entered: ' + val;
+  }
+
+  function submitBoss() {
+    clearInterval(bossInterval);
+    bossRunning = false;
+
+    const key = {
+      1: 'FALSE',
+      2: 'FALSE',
+      3: 'FALSE',
+      4: 'B',
+      5: ['colleague', 'trade union representative', 'union representative'],
+      6: 'C',
+      7: 'B',
+      8: ['critical thinking', 'depth and critical', 'critical thinking development']
+    };
+
+    const explain = {
+      1: 'FALSE — The text says floors 3–7 are affected. Floors 1–2 are "all other floors" and will NOT be affected.',
+      2: 'FALSE — Staff (blue) bays are unchanged. Only visitor (yellow) bays have new restrictions.',
+      3: 'FALSE — The text says conversational sessions do NOT lead to a certificate. Certificate courses are separate.',
+      4: 'B — "Employees are encouraged to raise it informally with their line manager in the first instance."',
+      5: 'colleague OR trade union representative — exact phrase from the policy.',
+      6: 'C (15 days) — "arrange a formal hearing within 15 working days."',
+      7: 'B — "This story, once unusual, is now becoming commonplace."',
+      8: 'critical thinking — Critics say courses lack "depth and critical thinking development".'
+    };
+
+    let score = 0;
+    let keyHTML = '<strong style="color:var(--accent)">Answer Key</strong><br><br>';
+
+    for (let q = 1; q <= 8; q++) {
+      const given = bossAnswers[q] || '(no answer)';
+      const correct = key[q];
+      let isCorrect = false;
+
+      if (Array.isArray(correct)) {
+        isCorrect = correct.some(c => given.toLowerCase().includes(c.toLowerCase().split(' ')[0]));
+      } else {
+        isCorrect = given === correct;
+      }
+
+      if (isCorrect) score++;
+      const icon = isCorrect ? '✅' : '❌';
+      const correctDisplay = Array.isArray(correct) ? correct[0] : correct;
+      keyHTML += `<div style="margin-bottom:10px;">${icon} <strong>Q${q}:</strong> Your answer: <em>${given}</em> · Correct: <strong>${correctDisplay}</strong><br><span style="color:var(--muted);font-size:0.8rem;">${explain[q]}</span></div>`;
+    }
+
+    const scoreEl = document.getElementById('bossScore');
+    document.getElementById('bossScoreNum').textContent = score + '/8';
+
+    let fb = '';
+    if (score >= 7) fb = '🏅 Field Agent status achieved! UKVI-ready at this level.';
+    else if (score >= 5) fb = '🔧 Good foundation. Review the sections where you dropped marks.';
+    else fb = '📖 Keep training. Focus on TRUE/FALSE/NOT GIVEN — that\'s where most marks were lost.';
+
+    document.getElementById('bossScoreFeedback').textContent = fb;
+    document.getElementById('bossAnswerKey').innerHTML = keyHTML;
+    scoreEl.classList.add('show');
+    scoreEl.scrollIntoView({ behavior: 'smooth' });
+
+    if (score >= 6) awardXP('boss-complete');
+  }
+</script>
+</body>
+</html>

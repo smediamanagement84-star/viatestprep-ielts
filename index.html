@@ -12,6 +12,7 @@
     --plum:#5b2a86;--plum-d:#3b0a64;--plum-light:#f3ecff;
     --gold:#c8932a;--gold-soft:#fdf6e3;
     --teal:#0d8a7a;--rose:#e8456b;
+    --ukvi:#1a4a8a;--ukvi-light:#e8f0fb;
     --ink:#0f172a;--paper:#fdfcf7;--line:#e6dfce;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -51,6 +52,7 @@
   .modules{background:var(--paper);color:var(--ink);padding:5rem 1.5rem 6rem}
   .modules-inner{max-width:1100px;margin:0 auto}
   .section-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--plum);margin-bottom:.6rem}
+  .section-label.ukvi-label{color:var(--ukvi)}
   .modules h2{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:.5rem}
   .modules > .modules-inner > p{color:#64748b;max-width:520px;line-height:1.6;margin-bottom:3rem}
 
@@ -64,12 +66,28 @@
   .card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(91,42,134,.13)}
   .card::before{content:'';position:absolute;inset:0;border-radius:20px;opacity:0;transition:opacity .18s;background:linear-gradient(135deg,var(--plum-light),#fff)}
   .card:hover::before{opacity:1}
+  .card.ukvi-card:hover{box-shadow:0 16px 48px rgba(26,74,138,.15)}
+  .card.ukvi-card::before{background:linear-gradient(135deg,var(--ukvi-light),#fff)}
   .card-inner{position:relative;z-index:1}
   .num{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#94a3b8;margin-bottom:.6rem}
+  .num.ukvi-num{color:var(--ukvi);opacity:.8}
   .icon{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:.9rem}
   .card h3{font-size:1.12rem;margin-bottom:.4rem;line-height:1.3}
   .card p{font-size:.85rem;color:#64748b;line-height:1.55}
   .go-arrow{display:inline-flex;align-items:center;gap:.4rem;margin-top:.9rem;font-size:.8rem;font-weight:600;color:var(--plum)}
+  .go-arrow.ukvi-arrow{color:var(--ukvi)}
+
+  /* ---- DIVIDER ---- */
+  .section-divider{margin:4rem 0 3rem;border:none;border-top:1px solid var(--line)}
+  .ukvi-intro{margin-bottom:2rem}
+  .ukvi-intro h2{font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:.4rem}
+  .ukvi-intro p{color:#64748b;max-width:520px;line-height:1.6}
+  .ukvi-tag{display:inline-block;padding:.2rem .7rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--ukvi-light);color:var(--ukvi);border:1px solid rgba(26,74,138,.2);margin-bottom:.5rem}
+
+  /* ---- TOOLS SECTION ---- */
+  .tools-intro{margin:4rem 0 2rem}
+  .tools-intro h2{font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:.4rem}
+  .tools-intro p{color:#64748b;max-width:520px;line-height:1.6}
 
   /* ---- FOOTER ---- */
   .footer{background:var(--ink);color:rgba(255,255,255,.4);text-align:center;padding:2.5rem 1rem;font-size:.8rem;line-height:1.8}
@@ -83,12 +101,13 @@
   <div class="logo-mark">V</div>
   <div class="brand-name">ViATestPrep</div>
   <h1>Your Complete IELTS Preparation Hub</h1>
-  <p>10 interactive modules covering every IELTS skill — Reading, Listening, Writing, Speaking, Grammar, and Vocabulary. Built for Band 7+ results.</p>
+  <p>15 interactive modules covering every IELTS skill — Reading, Listening, Writing, Speaking, Grammar, Vocabulary, and UKVI. Built for Band 7+ results.</p>
   <div class="hero-badges">
     <span class="badge">🎯 Band 7+ Track</span>
     <span class="badge">⚡ Interactive Drills</span>
-    <span class="badge">🏆 XP & Progress Tracking</span>
+    <span class="badge">🏆 XP &amp; Progress Tracking</span>
     <span class="badge">📖 All 4 Skills</span>
+    <span class="badge">🇬🇧 UKVI Modules</span>
   </div>
   <div class="scroll-hint">
     <span>Explore modules</span>
@@ -99,11 +118,22 @@
 <!-- MODULES -->
 <section class="modules">
   <div class="modules-inner">
-    <div class="section-label">Course Modules</div>
-    <h2>10 Lessons. Band 7+ Ready.</h2>
-    <p>Click any module to begin. Each lesson includes strategy guides, live drills, and a boss-fight mock test.</p>
+
+    <div class="section-label">Start Here</div>
+    <h2>Orientation &amp; Core Modules</h2>
+    <p>Begin with Class 01, then work through each skill module at your own pace. Every lesson includes strategy guides, live drills, and a boss-fight mock test.</p>
 
     <div class="grid">
+
+      <a href="00_IELTS_Orientation_Class_01.html" class="card">
+        <div class="card-inner">
+          <div class="num">Class 01 · Orientation</div>
+          <div class="icon" style="background:#fdf6e3">🧭</div>
+          <h3>Welcome &amp; The Basics</h3>
+          <p>What IELTS is, Academic vs General Training, test format, scoring, test day prep, and 6 myths busted. Start here.</p>
+          <div class="go-arrow">Start here →</div>
+        </div>
+      </a>
 
       <a href="01_IELTS_Reading_Detective_Academy.html" class="card">
         <div class="card-inner">
@@ -140,7 +170,7 @@
           <div class="num">Module 04 · Speaking</div>
           <div class="icon" style="background:#fdf6e3">🎤</div>
           <h3>Confident Performer</h3>
-          <p>Part 1, 2 & 3 frameworks, fluency drills, filler reduction techniques, and pronunciation tips.</p>
+          <p>Part 1, 2 &amp; 3 frameworks, fluency drills, filler reduction techniques, and pronunciation tips.</p>
           <div class="go-arrow">Start lesson →</div>
         </div>
       </a>
@@ -206,6 +236,81 @@
       </a>
 
     </div>
+
+    <!-- UKVI SECTION -->
+    <hr class="section-divider"/>
+    <div class="ukvi-intro">
+      <div class="section-label ukvi-label">UKVI · General Training</div>
+      <h2>UKVI Specialist Modules</h2>
+      <p>Targeted modules for the UK Visas and Immigration (UKVI) IELTS — General Training Reading and Writing Task 1.</p>
+    </div>
+
+    <div class="grid">
+
+      <a href="UKVI_GT_Reading_Module.html" class="card ukvi-card">
+        <div class="card-inner">
+          <div class="num ukvi-num">UKVI · General Training Reading</div>
+          <div class="icon" style="background:#e8f0fb">🇬🇧</div>
+          <h3>GT Reading Module</h3>
+          <p>Notices, advertisements, workplace documents and multi-text strategies built for the General Training Reading format.</p>
+          <div class="go-arrow ukvi-arrow">Start lesson →</div>
+        </div>
+      </a>
+
+      <a href="UKVI_GT_Writing_Task1_Module.html" class="card ukvi-card">
+        <div class="card-inner">
+          <div class="num ukvi-num">UKVI · General Training Writing</div>
+          <div class="icon" style="background:#e8f0fb">✉️</div>
+          <h3>GT Writing Task 1 — Letter</h3>
+          <p>Formal, semi-formal and informal letter frameworks, tone control, and opening/closing formula drills.</p>
+          <div class="go-arrow ukvi-arrow">Start lesson →</div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- TOOLS & WORKSHEETS -->
+    <hr class="section-divider"/>
+    <div class="tools-intro">
+      <div class="section-label">Tools &amp; Practice</div>
+      <h2>Worksheets &amp; Trackers</h2>
+      <p>Supplementary tools to reinforce what you learn in class.</p>
+    </div>
+
+    <div class="grid">
+
+      <a href="11_IELTS_Mock_Test_Tracker.html" class="card">
+        <div class="card-inner">
+          <div class="num">Tool · Teacher Dashboard</div>
+          <div class="icon" style="background:#eef9f5">📊</div>
+          <h3>Mock Test Tracker</h3>
+          <p>Log every mock test for every student. Auto-calculates overall band. Export to CSV. No signup needed.</p>
+          <div class="go-arrow">Open tracker →</div>
+        </div>
+      </a>
+
+      <a href="12_IELTS_Paraphrase_Worksheet_50.html" class="card">
+        <div class="card-inner">
+          <div class="num">Worksheet · Vocabulary</div>
+          <div class="icon" style="background:#fdf6e3">🔁</div>
+          <h3>Paraphrase Worksheet — 50 Drills</h3>
+          <p>50 paraphrase exercises covering academic vocabulary, collocations, and sentence-level rewrites for band 7+.</p>
+          <div class="go-arrow">Start drills →</div>
+        </div>
+      </a>
+
+      <a href="14_IELTS_Smart_Class_Reel.html" class="card">
+        <div class="card-inner">
+          <div class="num">Tool · Class Resource</div>
+          <div class="icon" style="background:#f3ecff">🎬</div>
+          <h3>Smart Class Reel</h3>
+          <p>Quick-reference class reel with key rules, band descriptors, and revision points for in-class use.</p>
+          <div class="go-arrow">Open reel →</div>
+        </div>
+      </a>
+
+    </div>
+
   </div>
 </section>
 

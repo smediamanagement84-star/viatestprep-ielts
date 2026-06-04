@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS GT Writing Task 1: Letter Architect — UKVI Band 7+ — ViATestPrep</title>
+<style>
+  :root {
+    --bg: #0d0d0d;
+    --surface: #161616;
+    --surface2: #1e1e1e;
+    --border: #2a2a2a;
+    --accent: #f59e0b;
+    --accent2: #10b981;
+    --accent3: #3b82f6;
+    --red: #ef4444;
+    --text: #f0f0f0;
+    --muted: #888;
+    --pill: #252525;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; line-height: 1.7; }
+
+  nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+  .logo { font-weight: 800; font-size: 1rem; color: var(--accent); letter-spacing: 1px; }
+  .badge { background: var(--accent); color: #000; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
+  .xp-display { font-size: 0.8rem; color: var(--accent); font-weight: 700; }
+
+  .step-nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 10px 24px; display: flex; gap: 8px; overflow-x: auto; }
+  .step-btn { background: none; border: 1px solid var(--border); color: var(--muted); padding: 5px 14px; border-radius: 20px; cursor: pointer; font-size: 0.78rem; white-space: nowrap; transition: all 0.2s; }
+  .step-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(245,158,11,0.08); }
+
+  .hero { padding: 64px 24px 48px; max-width: 800px; margin: 0 auto; }
+  .module-tag { display: inline-block; background: var(--pill); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 1px; }
+  .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 900; line-height: 1.2; margin-bottom: 16px; }
+  .hero h1 span { color: var(--accent); }
+  .hero p { color: #bbb; font-size: 1rem; max-width: 620px; margin-bottom: 28px; }
+  .hero-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+  .pill { background: var(--pill); border: 1px solid var(--border); border-radius: 20px; padding: 5px 14px; font-size: 0.8rem; color: var(--muted); }
+  .btn-primary { background: var(--accent); color: #000; border: none; padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: opacity 0.2s; }
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-ghost { background: none; border: 1px solid var(--border); color: var(--muted); padding: 12px 24px; border-radius: 8px; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .btn-sm { background: none; border: 1px solid var(--border); color: var(--muted); padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 0.8rem; transition: all 0.2s; }
+  .btn-sm:hover { border-color: var(--accent); color: var(--accent); }
+
+  section { padding: 56px 24px; border-top: 1px solid var(--border); max-width: 860px; margin: 0 auto; }
+  section h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 8px; }
+  .section-sub { color: var(--muted); font-size: 0.88rem; margin-bottom: 32px; }
+
+  .callout { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 8px; padding: 18px 20px; margin-bottom: 20px; }
+  .callout.green { border-left-color: var(--accent2); }
+  .callout.red { border-left-color: var(--red); }
+  .callout.blue { border-left-color: var(--accent3); }
+  .callout strong { display: block; margin-bottom: 6px; font-size: 0.85rem; color: var(--accent); }
+  .callout.green strong { color: var(--accent2); }
+  .callout.red strong { color: var(--red); }
+  .callout.blue strong { color: var(--accent3); }
+
+  /* LETTER TYPE CARDS */
+  .letter-tabs { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
+  .letter-tab { background: var(--surface); border: 2px solid var(--border); border-radius: 10px; padding: 14px 20px; cursor: pointer; transition: all 0.2s; min-width: 180px; }
+  .letter-tab:hover { border-color: var(--accent); }
+  .letter-tab.active-tab { border-color: var(--accent); background: rgba(245,158,11,0.08); }
+  .letter-tab h3 { font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; }
+  .letter-tab p { font-size: 0.75rem; color: var(--muted); }
+  .letter-tab .lt-icon { font-size: 1.4rem; margin-bottom: 6px; }
+
+  .letter-content { display: none; }
+  .letter-content.active-lc { display: block; }
+
+  /* STRUCTURE BLUEPRINT */
+  .blueprint { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin: 20px 0; }
+  .bp-row { display: grid; grid-template-columns: 140px 1fr; border-bottom: 1px solid var(--border); }
+  .bp-row:last-child { border-bottom: none; }
+  .bp-label { background: var(--surface2); padding: 14px 16px; font-size: 0.78rem; font-weight: 700; color: var(--accent); display: flex; align-items: flex-start; }
+  .bp-content { padding: 14px 18px; font-size: 0.85rem; color: #ccc; }
+  .bp-content strong { color: var(--text); }
+
+  /* TONE COMPARE */
+  .tone-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 16px 0; }
+  .tone-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .tone-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 10px; }
+  .tone-formal { color: var(--accent3); }
+  .tone-semi { color: var(--accent); }
+  .tone-informal { color: var(--accent2); }
+  .tone-example { font-size: 0.8rem; color: #bbb; font-style: italic; line-height: 1.6; }
+
+  /* PHRASE BANK */
+  .phrase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin: 16px 0; }
+  .phrase-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .phrase-card h4 { font-size: 0.82rem; font-weight: 700; margin-bottom: 10px; color: var(--accent); }
+  .phrase-item { font-size: 0.8rem; color: #bbb; padding: 4px 0; border-bottom: 1px solid var(--border); }
+  .phrase-item:last-child { border-bottom: none; }
+  .phrase-item em { color: var(--text); font-style: normal; }
+
+  /* DRILL */
+  .drill-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .drill-label { font-size: 0.75rem; color: var(--accent); font-weight: 700; margin-bottom: 12px; letter-spacing: 1px; }
+  .prompt-box { background: var(--bg); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 8px; padding: 16px 20px; margin: 14px 0; font-size: 0.88rem; line-height: 1.7; color: #ccc; }
+  .prompt-box strong { color: var(--accent); }
+
+  .options-list { display: flex; flex-direction: column; gap: 10px; margin: 14px 0; }
+  .opt-btn { background: var(--surface2); border: 1px solid var(--border); color: var(--text); padding: 12px 16px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; text-align: left; transition: all 0.2s; }
+  .opt-btn:hover { border-color: var(--accent); }
+  .opt-btn.correct { background: rgba(16,185,129,0.15); border-color: var(--accent2); color: var(--accent2); }
+  .opt-btn.wrong { background: rgba(239,68,68,0.1); border-color: var(--red); color: var(--red); }
+
+  .feedback { display: none; margin-top: 12px; padding: 12px 16px; border-radius: 8px; font-size: 0.85rem; }
+  .feedback.show { display: block; }
+  .feedback.correct-fb { background: rgba(16,185,129,0.1); border: 1px solid var(--accent2); color: var(--accent2); }
+  .feedback.wrong-fb { background: rgba(239,68,68,0.08); border: 1px solid var(--red); color: var(--red); }
+
+  /* LIVE LETTER BUILDER */
+  .letter-frame { background: #fafafa; border-radius: 12px; padding: 28px 32px; color: #222; font-family: 'Georgia', serif; font-size: 0.9rem; line-height: 1.9; border: 1px solid #ddd; margin: 20px 0; min-height: 300px; white-space: pre-wrap; }
+  .letter-frame em { color: #999; font-style: italic; }
+
+  textarea { background: var(--surface2); border: 1px solid var(--border); color: var(--text); padding: 14px; border-radius: 8px; width: 100%; font-size: 0.88rem; outline: none; resize: vertical; font-family: inherit; line-height: 1.7; }
+  textarea:focus { border-color: var(--accent); }
+  .word-count { font-size: 0.78rem; color: var(--muted); text-align: right; margin-top: 4px; }
+
+  /* BOSS FIGHT */
+  .boss-header { background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-bottom: 24px; text-align: center; }
+  .boss-header h2 { font-size: 1.4rem; font-weight: 900; color: var(--accent); margin-bottom: 8px; }
+  .timer-display { font-size: 2rem; font-weight: 900; color: var(--accent); font-variant-numeric: tabular-nums; margin: 12px 0; }
+
+  .band-check { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 12px; }
+  .band-check h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
+  .band-check p { font-size: 0.82rem; color: var(--muted); margin-bottom: 10px; }
+  .check-btns { display: flex; gap: 10px; }
+  .check-btn { flex: 1; background: var(--surface2); border: 1px solid var(--border); color: var(--muted); padding: 8px; border-radius: 6px; cursor: pointer; font-size: 0.8rem; transition: all 0.2s; }
+  .check-btn.sel-yes { background: rgba(16,185,129,0.15); border-color: var(--accent2); color: var(--accent2); }
+  .check-btn.sel-no { background: rgba(239,68,68,0.1); border-color: var(--red); color: var(--red); }
+
+  .plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+  .plan-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .plan-day { font-size: 0.72rem; color: var(--accent); font-weight: 700; letter-spacing: 1px; margin-bottom: 6px; }
+  .plan-card p { font-size: 0.82rem; color: #bbb; }
+
+  .xp-toast { position: fixed; top: 70px; right: 20px; background: var(--accent); color: #000; font-weight: 800; padding: 8px 18px; border-radius: 20px; font-size: 0.85rem; opacity: 0; transition: opacity 0.3s; z-index: 999; pointer-events: none; }
+  .xp-toast.show { opacity: 1; }
+
+  footer { text-align: center; padding: 40px 24px; color: var(--muted); font-size: 0.78rem; border-top: 1px solid var(--border); margin-top: 40px; }
+
+  @media (max-width: 640px) { .tone-grid { grid-template-columns: 1fr; } .bp-row { grid-template-columns: 100px 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="xp-toast" id="xpToast">+10 XP</div>
+
+<nav>
+  <div class="logo">🎓 ViATestPrep</div>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <div class="badge">UKVI · GT</div>
+    <div class="xp-display">⚡ <span id="xpCount">0</span> XP</div>
+  </div>
+</nav>
+
+<div class="step-nav">
+  <button class="step-btn active" onclick="scrollTo('mission')">① Mission</button>
+  <button class="step-btn" onclick="scrollTo('difference')">② GT vs Academic</button>
+  <button class="step-btn" onclick="scrollTo('letterTypes')">③ 3 Letter Types</button>
+  <button class="step-btn" onclick="scrollTo('phraseBank')">④ Phrase Bank</button>
+  <button class="step-btn" onclick="scrollTo('drills')">⑤ Live Drills</button>
+  <button class="step-btn" onclick="scrollTo('boss')">⑥ Boss Build</button>
+  <button class="step-btn" onclick="scrollTo('plan')">⑦ Action Plan</button>
+</div>
+
+<!-- HERO -->
+<div class="hero" id="mission">
+  <div class="module-tag">MODULE 03 · WRITING TASK 1 · UKVI GENERAL TRAINING</div>
+  <h1>You are not describing a graph.<br>You are <span>writing a letter.</span></h1>
+  <p>IELTS GT Writing Task 1 is entirely different from Academic. No graphs. No charts. Just a letter — formal, semi-formal, or informal — in 20 minutes, 150+ words. This is where your Skilled Worker visa application starts. Get the tone wrong and lose marks immediately.</p>
+  <div class="hero-pills">
+    <span class="pill">⏱ 20 min · Task 1</span>
+    <span class="pill">✉ 150+ words</span>
+    <span class="pill">🎯 Band 7+ target</span>
+    <span class="pill">🇬🇧 UKVI Skilled Worker</span>
+    <span class="pill">3 bullet points · 3 paragraphs</span>
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;">
+    <button class="btn-primary" onclick="scrollTo('difference')">▶ Open the Blueprint</button>
+    <button class="btn-ghost" onclick="scrollTo('boss')">Skip to Boss Build</button>
+  </div>
+</div>
+
+<!-- GT vs ACADEMIC -->
+<section id="difference">
+  <h2>② GT Task 1 vs Academic Task 1 — A Complete Swap</h2>
+  <p class="section-sub">This is not a minor adjustment. The entire task changes. Here's what your students need to unlearn.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
+    <div class="callout red">
+      <strong>❌ Academic Task 1 (NOT for UKVI GT)</strong>
+      Describe a graph, chart, table, pie chart, or diagram. Report data. No opinions. Formal register only. Paraphrase the title. Write an overview.
+    </div>
+    <div class="callout green">
+      <strong>✅ GT Task 1 (UKVI Skilled Worker)</strong>
+      Write a letter. You are given 3 bullet points — address all three. Choose your tone based on who you're writing to. You CAN use "I". Sign off correctly.
+    </div>
+  </div>
+
+  <div class="callout blue">
+    <strong>📐 The Spec (same timing, different task)</strong>
+    20 minutes · Minimum 150 words · 3 bullet points in the prompt, each must become a paragraph · Tone determined by recipient · Task 2 still worth double — do Task 2 first.
+  </div>
+
+  <div class="callout">
+    <strong>⚠ The #1 Mistake GT Students Make</strong>
+    Writing a formal letter when the prompt calls for informal — or vice versa. Tone mismatch is a Task Achievement failure. Identify the register in the first 30 seconds. It's always signalled in the prompt.
+  </div>
+</section>
+
+<!-- 3 LETTER TYPES -->
+<section id="letterTypes">
+  <h2>③ The 3 Letter Types — Blueprints & Worked Examples</h2>
+  <p class="section-sub">Every GT Task 1 prompt is one of three types. Tap each to open the full blueprint, tone guide, and a worked example relevant to Skilled Worker visa scenarios.</p>
+
+  <div class="letter-tabs">
+    <div class="letter-tab active-tab" onclick="showLetter('formal')">
+      <div class="lt-icon">🏛</div>
+      <h3>Formal Letter</h3>
+      <p>Official body, unknown recipient</p>
+    </div>
+    <div class="letter-tab" onclick="showLetter('semi')">
+      <div class="lt-icon">🏢</div>
+      <h3>Semi-Formal Letter</h3>
+      <p>Manager, landlord, colleague</p>
+    </div>
+    <div class="letter-tab" onclick="showLetter('informal')">
+      <div class="lt-icon">💬</div>
+      <h3>Informal Letter</h3>
+      <p>Friend, family member</p>
+    </div>
+  </div>
+
+  <!-- FORMAL -->
+  <div class="letter-content active-lc" id="lc-formal">
+    <div class="callout blue">
+      <strong>🏛 When is it formal?</strong>
+      Writing to: a government office, a council, a utility company, a hospital, a company (general), an employer you don't know, a university. Prompt signals: "write to the manager of…", "write to the local council", "write to the company".
+    </div>
+
+    <div class="blueprint">
+      <div class="bp-row">
+        <div class="bp-label">SALUTATION</div>
+        <div class="bp-content"><strong>"Dear Sir or Madam,"</strong> — use when name unknown. <strong>"Dear Mr/Ms [Name],"</strong> — use only if the prompt gives a name.</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">OPENING LINE</div>
+        <div class="bp-content">State your purpose immediately. <strong>"I am writing to…"</strong> (complain / request / enquire about / draw attention to). Never start with "I received your…" without context.</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">BODY ×3</div>
+        <div class="bp-content">One paragraph per bullet point. Each paragraph: topic sentence → detail → link or consequence. Never mix bullets in one paragraph.</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">CLOSING LINE</div>
+        <div class="bp-content"><strong>"I look forward to hearing from you."</strong> or <strong>"I trust this matter will be resolved promptly."</strong></div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">SIGN-OFF</div>
+        <div class="bp-content"><strong>"Yours faithfully,"</strong> — always when you used "Dear Sir or Madam". <strong>"Yours sincerely,"</strong> — only when you used the person's name.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;">
+      <h3 style="font-size:1rem;margin-bottom:10px;">📋 Worked Example — Skilled Worker Scenario</h3>
+      <div class="prompt-box">
+        <strong>Prompt:</strong> You recently moved to a new city for work and are having problems with your rental flat. Write a letter to your landlord in which you:<br>
+        • explain what the problems are<br>
+        • describe how these problems are affecting you<br>
+        • say what you would like the landlord to do
+      </div>
+      <div class="letter-frame">Dear Sir or Madam,
+
+I am writing to bring to your attention several ongoing issues with the property at 14B Hanover Road, which I have been renting since 1 April of this year.
+
+The most pressing problem is a significant damp patch on the bedroom ceiling, which has expanded considerably over the past three weeks. Additionally, the boiler has been producing only intermittent hot water since I moved in, and two of the kitchen cupboards have broken hinges that prevent them from closing securely.
+
+These issues are having a direct impact on my daily life. The damp has already damaged some of my clothing, and the unreliable hot water supply makes it difficult for me to prepare adequately for work each morning. As a result, I have been unable to fully settle into the property.
+
+I would respectfully request that a qualified maintenance team be arranged to inspect and repair all three issues within the next ten working days. I would also appreciate confirmation of any proposed dates so that I can make myself available.
+
+I look forward to hearing from you.
+
+Yours faithfully,
+A. Patel
+      </div>
+      <p style="font-size:0.8rem;color:var(--muted);">Word count: ~185 · All 3 bullets covered · Formal register maintained · Correct sign-off ("Yours faithfully" because "Dear Sir or Madam" was used)</p>
+    </div>
+  </div>
+
+  <!-- SEMI-FORMAL -->
+  <div class="letter-content" id="lc-semi">
+    <div class="callout blue">
+      <strong>🏢 When is it semi-formal?</strong>
+      Writing to: your manager, HR department, a landlord you know, a colleague in a senior position, a doctor. Prompt signals: "write to your manager", "write to your supervisor", "write to your employer". Most Skilled Worker visa scenarios fall here.
+    </div>
+
+    <div class="blueprint">
+      <div class="bp-row">
+        <div class="bp-label">SALUTATION</div>
+        <div class="bp-content"><strong>"Dear Mr/Ms [Name],"</strong> — if prompt gives a name. <strong>"Dear [First Name],"</strong> — only if you are clearly on first-name terms. When in doubt, use title + surname.</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">OPENING LINE</div>
+        <div class="bp-content">A brief context-setter. <strong>"I am writing regarding…"</strong> or <strong>"I wanted to bring to your attention…"</strong>. Warmer than formal but still professional.</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">BODY ×3</div>
+        <div class="bp-content">One paragraph per bullet. More natural flow than formal — you can use contractions sparingly (I've, I'd). Keep professional vocabulary.</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">CLOSING LINE</div>
+        <div class="bp-content"><strong>"I would appreciate your guidance on this matter."</strong> or <strong>"Please let me know if you require any further information."</strong></div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">SIGN-OFF</div>
+        <div class="bp-content"><strong>"Kind regards,"</strong> or <strong>"Best regards,"</strong> — both appropriate. Avoid "Yours faithfully/sincerely" — too stiff for semi-formal.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;">
+      <h3 style="font-size:1rem;margin-bottom:10px;">📋 Worked Example — Skilled Worker Scenario</h3>
+      <div class="prompt-box">
+        <strong>Prompt:</strong> You have recently started a new job in the UK and would like to request some changes to your working arrangement. Write a letter to your manager in which you:<br>
+        • explain why you are making the request<br>
+        • describe the changes you would like<br>
+        • explain how these changes will benefit both you and the company
+      </div>
+      <div class="letter-frame">Dear Ms Johnson,
+
+I am writing to request a discussion about a potential adjustment to my current working arrangement, which I hope you will consider.
+
+As you are aware, I relocated from abroad specifically for this role and am still in the process of settling into the area. My daughter's school hours end at 3:30pm, and I am currently relying on costly emergency childcare while I identify a longer-term solution. This situation is placing a considerable strain on my family finances during an already challenging transition.
+
+I would like to request a shift in my working hours to 7:30am–3:30pm, four days per week, with the fifth day worked remotely from home. I am confident I can maintain my full productivity under this arrangement, as the majority of my work is carried out independently.
+
+I believe this adjustment would benefit the team by ensuring my focus remains fully on my work responsibilities. I am happy to trial this arrangement for an agreed period and review it together with you thereafter.
+
+Please let me know if you would be open to meeting to discuss this further.
+
+Kind regards,
+Tariq Hussain
+      </div>
+      <p style="font-size:0.8rem;color:var(--muted);">Word count: ~195 · Warm but professional tone · All 3 bullets addressed · "Kind regards" appropriate for semi-formal</p>
+    </div>
+  </div>
+
+  <!-- INFORMAL -->
+  <div class="letter-content" id="lc-informal">
+    <div class="callout blue">
+      <strong>💬 When is it informal?</strong>
+      Writing to: a friend, a family member, a neighbour you know well. Prompt signals: "write to a friend", "write to your cousin", "write to a friend who is planning to visit". Informal is less common in Skilled Worker scenarios but does appear.
+    </div>
+
+    <div class="blueprint">
+      <div class="bp-row">
+        <div class="bp-label">SALUTATION</div>
+        <div class="bp-content"><strong>"Dear [First Name],"</strong> always. E.g., "Dear Sarah," — never use a surname in an informal letter.</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">OPENING LINE</div>
+        <div class="bp-content">A friendly opener. <strong>"How are you? I hope everything is going well."</strong> or <strong>"It was so good to hear from you!"</strong> — natural and warm.</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">BODY ×3</div>
+        <div class="bp-content">Conversational. Contractions fine (I've, we're, that's). Can use colloquial phrases, rhetorical questions. Still one bullet per paragraph — don't miss any.</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">CLOSING LINE</div>
+        <div class="bp-content"><strong>"Anyway, do write back soon!"</strong> or <strong>"Looking forward to catching up."</strong> Friendly and natural.</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">SIGN-OFF</div>
+        <div class="bp-content"><strong>"Lots of love,"</strong> / <strong>"Best wishes,"</strong> / <strong>"Take care,"</strong> — pick one that suits the relationship. Never "Yours faithfully/sincerely".</div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;">
+      <h3 style="font-size:1rem;margin-bottom:10px;">📋 Worked Example — Friend Scenario</h3>
+      <div class="prompt-box">
+        <strong>Prompt:</strong> A friend from your home country is planning to visit you in the UK, where you now live and work. Write a letter in which you:<br>
+        • explain why you are pleased they are coming<br>
+        • suggest some things you could do together<br>
+        • give some advice about what to bring or prepare for
+      </div>
+      <div class="letter-frame">Dear Priya,
+
+I can't tell you how excited I was when I got your message! It's been such a long time and I've really missed having you around, so the news that you're finally coming over has honestly made my week.
+
+There's so much I want us to do while you're here. I'm thinking we could spend a day in London — maybe the South Bank, Borough Market, and a boat ride on the Thames. If the weather holds up, I'd also love to take a day trip to the Cotswolds, which is absolutely stunning. And of course, we absolutely have to find a proper Sunday roast somewhere!
+
+One thing I should warn you about — the weather in England is… unpredictable, to put it kindly! Pack layers, a waterproof jacket, and comfortable walking shoes. Also, if you're planning to use your phone, it might be worth getting a UK SIM card at the airport; it'll save you a lot on roaming charges.
+
+Anyway, I'm counting down the days already! Do let me know your final dates as soon as you can so I can book some time off work.
+
+Lots of love,
+Meena
+      </div>
+      <p style="font-size:0.8rem;color:var(--muted);">Word count: ~210 · Warm, conversational tone · Contractions used naturally · All 3 bullets covered · "Lots of love" appropriate for close friend</p>
+    </div>
+  </div>
+</section>
+
+<!-- PHRASE BANK -->
+<section id="phraseBank">
+  <h2>④ The Letter Phrase Bank — Skilled Worker Edition</h2>
+  <p class="section-sub">Ready-to-use phrases organised by function. Memorise one set per category. Flexibility beats memorising whole templates.</p>
+
+  <div class="phrase-grid">
+    <div class="phrase-card">
+      <h4>🏛 Formal Openings</h4>
+      <div class="phrase-item"><em>I am writing to draw your attention to…</em></div>
+      <div class="phrase-item"><em>I am writing with regard to…</em></div>
+      <div class="phrase-item"><em>I am writing to enquire about…</em></div>
+      <div class="phrase-item"><em>I wish to formally complain about…</em></div>
+    </div>
+    <div class="phrase-card">
+      <h4>🏢 Semi-Formal Openings</h4>
+      <div class="phrase-item"><em>I wanted to bring to your attention…</em></div>
+      <div class="phrase-item"><em>I am writing regarding a matter I'd like your advice on…</em></div>
+      <div class="phrase-item"><em>I hope you don't mind me getting in touch about…</em></div>
+      <div class="phrase-item"><em>I'm writing to let you know about a change I'd like to discuss…</em></div>
+    </div>
+    <div class="phrase-card">
+      <h4>💬 Informal Openings</h4>
+      <div class="phrase-item"><em>How are you? It feels like ages since we last spoke!</em></div>
+      <div class="phrase-item"><em>I was so happy to get your message!</em></div>
+      <div class="phrase-item"><em>I hope everything is going well with you and the family.</em></div>
+      <div class="phrase-item"><em>Sorry I've been a bit out of touch lately — things have been so busy!</em></div>
+    </div>
+    <div class="phrase-card">
+      <h4>🔗 Paragraph Transitions</h4>
+      <div class="phrase-item"><em>Regarding the second matter…</em> (formal)</div>
+      <div class="phrase-item"><em>In addition to this…</em> (all registers)</div>
+      <div class="phrase-item"><em>On another note…</em> (semi/informal)</div>
+      <div class="phrase-item"><em>There is also the question of…</em> (formal)</div>
+    </div>
+    <div class="phrase-card">
+      <h4>📢 Making Requests</h4>
+      <div class="phrase-item"><em>I would be grateful if you could…</em> (formal)</div>
+      <div class="phrase-item"><em>I would appreciate it if…</em> (semi-formal)</div>
+      <div class="phrase-item"><em>Could you possibly…?</em> (semi-formal)</div>
+      <div class="phrase-item"><em>Would you be able to…?</em> (all registers)</div>
+    </div>
+    <div class="phrase-card">
+      <h4>🏁 Closings by Register</h4>
+      <div class="phrase-item"><em>I look forward to your prompt response.</em> (formal)</div>
+      <div class="phrase-item"><em>Please don't hesitate to contact me if you need anything further.</em> (semi)</div>
+      <div class="phrase-item"><em>Anyway, write back soon — I miss you!</em> (informal)</div>
+      <div class="phrase-item"><em>I trust this matter will receive your urgent attention.</em> (formal)</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>⚡ The Sign-off Rule — Never Get This Wrong</strong>
+    <strong>Dear Sir or Madam → Yours faithfully</strong> · <strong>Dear Mr/Ms [Name] → Yours sincerely</strong> · <strong>Dear [First Name] → Best wishes / Kind regards / Lots of love</strong>
+  </div>
+</section>
+
+<!-- DRILLS -->
+<section id="drills">
+  <h2>⑤ Live Drills</h2>
+  <p class="section-sub">Three targeted drills. Each one tests a different skill that separates Band 6 from Band 7+.</p>
+
+  <!-- Drill A: Identify register -->
+  <div class="drill-box">
+    <div class="drill-label">DRILL A · IDENTIFY THE REGISTER · +10 XP</div>
+    <h3>Spot the Letter Type in 30 Seconds</h3>
+    <p style="font-size:0.85rem;color:var(--muted);margin:10px 0 14px;">Read each prompt. Click the correct register. Getting this wrong in the real test means writing the wrong type of letter.</p>
+
+    <div style="margin-bottom:20px;">
+      <div class="prompt-box"><strong>Prompt 1:</strong> "You have been overcharged on your electricity bill. Write a letter to the energy company in which you explain the problem, describe the impact on you, and request what action you would like taken."</div>
+      <div class="options-list">
+        <button class="opt-btn" onclick="checkReg(this, true, 'reg-fb1')">🏛 Formal</button>
+        <button class="opt-btn" onclick="checkReg(this, false, 'reg-fb1')">🏢 Semi-Formal</button>
+        <button class="opt-btn" onclick="checkReg(this, false, 'reg-fb1')">💬 Informal</button>
+      </div>
+      <div class="feedback" id="reg-fb1"></div>
+    </div>
+
+    <div style="margin-bottom:20px;">
+      <div class="prompt-box"><strong>Prompt 2:</strong> "Your manager has asked you to help with a work project that falls outside your contracted hours. Write a letter to your manager in which you acknowledge the request, explain your concerns, and suggest a solution."</div>
+      <div class="options-list">
+        <button class="opt-btn" onclick="checkReg(this, false, 'reg-fb2')">🏛 Formal</button>
+        <button class="opt-btn" onclick="checkReg(this, true, 'reg-fb2')">🏢 Semi-Formal</button>
+        <button class="opt-btn" onclick="checkReg(this, false, 'reg-fb2')">💬 Informal</button>
+      </div>
+      <div class="feedback" id="reg-fb2"></div>
+    </div>
+
+    <div>
+      <div class="prompt-box"><strong>Prompt 3:</strong> "A friend in your home country has just heard that you have settled into your new life in the UK. Write a letter in which you describe where you are living, talk about your new job, and invite them to visit."</div>
+      <div class="options-list">
+        <button class="opt-btn" onclick="checkReg(this, false, 'reg-fb3')">🏛 Formal</button>
+        <button class="opt-btn" onclick="checkReg(this, false, 'reg-fb3')">🏢 Semi-Formal</button>
+        <button class="opt-btn" onclick="checkReg(this, true, 'reg-fb3')">💬 Informal</button>
+      </div>
+      <div class="feedback" id="reg-fb3"></div>
+    </div>
+  </div>
+
+  <!-- Drill B: Pick the Band 7 sentence -->
+  <div class="drill-box">
+    <div class="drill-label">DRILL B · CHOOSE THE BAND 7+ SENTENCE · +10 XP per question</div>
+    <h3>Same idea. Three different quality levels. Pick the 7+.</h3>
+    <p style="font-size:0.85rem;color:var(--muted);margin:10px 0 14px;">Context: formal complaint letter to a landlord about a broken heating system.</p>
+
+    <div style="margin-bottom:20px;">
+      <p style="font-size:0.88rem;margin-bottom:10px;"><strong>Opening sentence options:</strong></p>
+      <div class="options-list">
+        <button class="opt-btn" onclick="checkBand(this, false, 'band-fb1')">A. "I write this letter because I am having a problem with my heating."</button>
+        <button class="opt-btn" onclick="checkBand(this, false, 'band-fb1')">B. "The heating is broken and this is very bad for me so I am writing to you."</button>
+        <button class="opt-btn" onclick="checkBand(this, true, 'band-fb1')">C. "I am writing to draw your attention to a significant maintenance issue at my rented property that requires urgent attention."</button>
+      </div>
+      <div class="feedback" id="band-fb1"></div>
+    </div>
+
+    <div>
+      <p style="font-size:0.88rem;margin-bottom:10px;"><strong>Closing request options:</strong></p>
+      <div class="options-list">
+        <button class="opt-btn" onclick="checkBand(this, false, 'band-fb2')">A. "Please fix it as soon as possible because I am very cold."</button>
+        <button class="opt-btn" onclick="checkBand(this, true, 'band-fb2')">B. "I would be grateful if you could arrange for a qualified engineer to inspect and repair the heating system within five working days."</button>
+        <button class="opt-btn" onclick="checkBand(this, false, 'band-fb2')">C. "I hope that you can do something to help me with this situation that has been going on."</button>
+      </div>
+      <div class="feedback" id="band-fb2"></div>
+    </div>
+  </div>
+
+  <!-- Drill C: Fix the tone error -->
+  <div class="drill-box">
+    <div class="drill-label">DRILL C · SPOT THE TONE ERROR · +10 XP</div>
+    <h3>Find the sentence that doesn't match the register</h3>
+    <p style="font-size:0.85rem;color:var(--muted);margin:10px 0;">This is a formal letter to an HR department. One sentence is wrong. Find it.</p>
+    <div class="prompt-box" style="line-height:2.2;">
+      Dear Sir or Madam,<br><br>
+      I am writing to formally request a reference letter in support of my application for a position at Hartwell Engineering.<br><br>
+      I worked in your organisation's accounts department from March 2022 to November 2024. During this period, I was responsible for monthly financial reporting and managed a team of three junior analysts. My performance reviews during this time were consistently rated as 'exceeding expectations'.<br><br>
+      <span id="tone-sentence" style="cursor:pointer;text-decoration:underline;text-decoration-style:dotted;color:#ccc;" onclick="checkToneError()">Hey, it would be really awesome if you could write me a reference by next Friday if possible? 😊</span><br><br>
+      I look forward to your response and thank you in advance for your time and consideration.<br><br>
+      Yours faithfully,<br>
+      K. Okafor
+    </div>
+    <button class="btn-ghost" style="padding:8px 16px;font-size:0.82rem;" onclick="checkToneError()">Click the wrong sentence above — or click here to reveal</button>
+    <div class="feedback" id="tone-fb"></div>
+  </div>
+</section>
+
+<!-- BOSS BUILD -->
+<section id="boss">
+  <div class="boss-header">
+    <div style="font-size:2rem;margin-bottom:8px;">✉</div>
+    <h2>Boss Build — Write a Real Letter in 20 Minutes</h2>
+    <p>One prompt. A live timer. Your job: write a complete, register-appropriate letter of 150+ words covering all 3 bullet points.</p>
+    <div class="timer-display" id="bossTimer">20:00</div>
+    <button class="btn-primary" id="bossStartBtn" onclick="startBoss()">▶ Start the Clock</button>
+  </div>
+
+  <div class="prompt-box" style="margin-bottom:20px;">
+    <strong>📋 Task 1 Prompt — Skilled Worker Scenario</strong><br><br>
+    You recently started a new job in the UK. Your employer has asked all staff to move to a new office building in a different part of the city. You have some concerns about this move. Write a letter to your HR manager in which you:<br><br>
+    • <strong>explain why the new location creates difficulties for you personally</strong><br>
+    • <strong>describe the impact this could have on your work performance</strong><br>
+    • <strong>suggest one or two possible solutions you would like HR to consider</strong><br><br>
+    Write at least <strong>150 words</strong> in an appropriate style.
+  </div>
+
+  <div style="margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;">
+    <label style="font-size:0.82rem;color:var(--muted);">Your letter:</label>
+    <div class="word-count" id="bossWC">0 words</div>
+  </div>
+  <textarea id="bossLetter" rows="18" placeholder="Dear Ms/Mr [Name],&#10;&#10;I am writing regarding..." oninput="updateWC()"></textarea>
+
+  <div style="margin-top:20px;">
+    <h3 style="font-size:1rem;margin-bottom:12px;">📐 Band Descriptor Self-Check</h3>
+    <p style="font-size:0.82rem;color:var(--muted);margin-bottom:14px;">After writing, rate yourself honestly on each criterion. This is how your examiner will mark you.</p>
+
+    <div class="band-check">
+      <h4>Task Achievement</h4>
+      <p>Did you cover ALL 3 bullet points? Is the register consistent throughout? Did you write 150+ words?</p>
+      <div class="check-btns">
+        <button class="check-btn" onclick="selfCheck(this, true)">✅ Yes, all 3 covered</button>
+        <button class="check-btn" onclick="selfCheck(this, false)">❌ Missed one or more</button>
+      </div>
+    </div>
+
+    <div class="band-check">
+      <h4>Coherence & Cohesion</h4>
+      <p>Is each bullet point a separate paragraph? Did you use linking phrases between paragraphs?</p>
+      <div class="check-btns">
+        <button class="check-btn" onclick="selfCheck(this, true)">✅ Clear paragraphing</button>
+        <button class="check-btn" onclick="selfCheck(this, false)">❌ Paragraphs unclear</button>
+      </div>
+    </div>
+
+    <div class="band-check">
+      <h4>Lexical Resource</h4>
+      <p>Did you use professional vocabulary? Did you avoid repeating the same words? Appropriate collocations?</p>
+      <div class="check-btns">
+        <button class="check-btn" onclick="selfCheck(this, true)">✅ Good variety</button>
+        <button class="check-btn" onclick="selfCheck(this, false)">❌ Too repetitive</button>
+      </div>
+    </div>
+
+    <div class="band-check">
+      <h4>Grammar & Register</h4>
+      <p>Did you use the correct sign-off for semi-formal? Any grammar errors you noticed? Mix of sentence types?</p>
+      <div class="check-btns">
+        <button class="check-btn" onclick="selfCheck(this, true)">✅ Consistent & accurate</button>
+        <button class="check-btn" onclick="selfCheck(this, false)">❌ Some errors / inconsistency</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout green" style="margin-top:24px;">
+    <strong>📋 Model Answer Reference — Key Points This Letter Should Hit</strong>
+    Register: Semi-formal (HR manager) · Salutation: "Dear Ms/Mr [Name]" · Sign-off: "Kind regards" or "Best regards" · Bullet 1: Personal difficulty (e.g., childcare, longer commute, additional cost) · Bullet 2: Work impact (e.g., fatigue, reduced productivity, morale) · Bullet 3: Solutions (e.g., hybrid working, flexible hours, transport allowance) · Never use "Dear Sir or Madam" — you know the department you're writing to.
+  </div>
+</section>
+
+<!-- ACTION PLAN -->
+<section id="plan">
+  <h2>⑦ Your 7-Day Action Plan</h2>
+  <p class="section-sub">GT Task 1 rewards practice in all three registers. Rotate — don't just drill formal.</p>
+  <div class="plan-grid">
+    <div class="plan-card"><div class="plan-day">DAY 1</div><p>Formal only — 2 complaint letters. Focus: "Yours faithfully" trigger + precise vocabulary</p></div>
+    <div class="plan-card"><div class="plan-day">DAY 2</div><p>Semi-formal — 2 request letters to a manager or HR. Focus: tone balance + bullet coverage</p></div>
+    <div class="plan-card"><div class="plan-day">DAY 3</div><p>Informal — 1 letter to a friend. Focus: contractions, rhetorical questions, warm closings</p></div>
+    <div class="plan-card"><div class="plan-day">DAY 4</div><p>Register drill — 10 prompts, classify only. No writing. Focus: identifying tone in 30 seconds</p></div>
+    <div class="plan-card"><div class="plan-day">DAY 5</div><p>Opening & closing sentences only — write 3 sets of each for all 3 registers. Memorise patterns.</p></div>
+    <div class="plan-card"><div class="plan-day">DAY 6</div><p>Full timed Task 1 + Task 2 mock — 20 min letter, then 40 min essay. Simulate real conditions.</p></div>
+    <div class="plan-card"><div class="plan-day">DAY 7</div><p>Peer review session — swap letters with another student. Check: all 3 bullets, register, sign-off.</p></div>
+  </div>
+
+  <div class="callout" style="margin-top:28px;">
+    <strong>🇬🇧 UKVI Reminder — Task 2 Still Matters</strong>
+    Task 1 (this letter) is worth 1/3 of your Writing score. Task 2 (the essay) is worth 2/3. Always write Task 2 first. If you run out of time, Task 1 is recoverable. Task 2 is not.
+  </div>
+</section>
+
+<footer>
+  <strong>ViATestPrep</strong> · UKVI General Training Writing Task 1 · Band 7+ Track<br>
+  © 2026 ViATestPrep · All Rights Reserved · Unauthorized reproduction prohibited
+</footer>
+
+<script>
+  let xp = 0;
+  let drillsDone = new Set();
+  let bossRunning = false;
+  let bossInterval = null;
+  let bossSeconds = 1200;
+
+  function scrollTo(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }); }
+
+  function awardXP(key) {
+    if (drillsDone.has(key)) return;
+    drillsDone.add(key);
+    xp += 10;
+    document.getElementById('xpCount').textContent = xp;
+    const toast = document.getElementById('xpToast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 1500);
+  }
+
+  function showLetter(type) {
+    document.querySelectorAll('.letter-content').forEach(el => el.classList.remove('active-lc'));
+    document.querySelectorAll('.letter-tab').forEach(el => el.classList.remove('active-tab'));
+    document.getElementById('lc-' + type).classList.add('active-lc');
+    event.currentTarget.classList.add('active-tab');
+    awardXP('lt-' + type);
+  }
+
+  function checkReg(btn, isCorrect, fbId) {
+    const siblings = btn.parentElement.querySelectorAll('.opt-btn');
+    siblings.forEach(b => b.disabled = true);
+    btn.classList.add(isCorrect ? 'correct' : 'wrong');
+    if (isCorrect) {
+      awardXP(fbId);
+      showFeedback(fbId, true, '✅ Correct! The recipient type determines the register. You identified this in time.');
+    } else {
+      showFeedback(fbId, false, '❌ Check the prompt again. Look at who you are writing TO — that is the signal.');
+    }
+  }
+
+  function checkBand(btn, isCorrect, fbId) {
+    const siblings = btn.parentElement.querySelectorAll('.opt-btn');
+    siblings.forEach(b => b.disabled = true);
+    btn.classList.add(isCorrect ? 'correct' : 'wrong');
+    if (isCorrect) {
+      awardXP(fbId);
+      showFeedback(fbId, true, '✅ Band 7+ sentence. Precise vocabulary, complete structure, no filler phrases.');
+    } else {
+      showFeedback(fbId, false, '❌ This sentence lacks precision or has structural weaknesses. Look for the option with the strongest vocabulary and clearest grammar.');
+    }
+  }
+
+  function checkToneError() {
+    awardXP('tone-error');
+    showFeedback('tone-fb', false, '❌ Found it! "Hey, it would be really awesome if you could write me a reference by next Friday if possible? 😊" is far too informal for a formal letter. It uses slang ("awesome"), an emoji, and a casual question structure. Replace with: "I would be most grateful if you could provide a written reference at your earliest convenience."');
+    document.getElementById('tone-fb').className = 'feedback show wrong-fb';
+  }
+
+  function checkBandSentence() {}
+
+  function selfCheck(btn, isGood) {
+    const siblings = btn.parentElement.querySelectorAll('.check-btn');
+    siblings.forEach(b => { b.classList.remove('sel-yes', 'sel-no'); });
+    btn.classList.add(isGood ? 'sel-yes' : 'sel-no');
+    if (isGood) awardXP('self-' + Math.random());
+  }
+
+  function showFeedback(fbId, correct, msg) {
+    const el = document.getElementById(fbId);
+    el.textContent = msg;
+    el.className = 'feedback show ' + (correct ? 'correct-fb' : 'wrong-fb');
+  }
+
+  function updateWC() {
+    const text = document.getElementById('bossLetter').value.trim();
+    const count = text ? text.split(/\s+/).filter(w => w).length : 0;
+    const wc = document.getElementById('bossWC');
+    wc.textContent = count + ' words';
+    wc.style.color = count >= 150 ? 'var(--accent2)' : count >= 120 ? 'var(--accent)' : 'var(--red)';
+    if (count >= 150) awardXP('150-words');
+  }
+
+  function startBoss() {
+    if (bossRunning) return;
+    bossRunning = true;
+    document.getElementById('bossStartBtn').disabled = true;
+    bossInterval = setInterval(() => {
+      bossSeconds--;
+      const m = Math.floor(bossSeconds / 60).toString().padStart(2,'0');
+      const s = (bossSeconds % 60).toString().padStart(2,'0');
+      document.getElementById('bossTimer').textContent = m + ':' + s;
+      if (bossSeconds <= 60) document.getElementById('bossTimer').style.color = 'var(--red)';
+      if (bossSeconds <= 0) { clearInterval(bossInterval); document.getElementById('bossTimer').textContent = 'TIME'; }
+    }, 1000);
+  }
+</script>
+</body>
+</html>
