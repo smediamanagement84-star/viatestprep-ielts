@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Writing Task 2: Essay Master — UKVI Band 7+ — ViATestPrep</title>
+<style>
+  :root {
+    --bg: #0d0d0d;
+    --surface: #161616;
+    --surface2: #1e1e1e;
+    --border: #2a2a2a;
+    --accent: #f59e0b;
+    --accent2: #10b981;
+    --accent3: #3b82f6;
+    --red: #ef4444;
+    --text: #f0f0f0;
+    --muted: #888;
+    --pill: #252525;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; line-height: 1.7; }
+
+  nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+  .logo { font-weight: 800; font-size: 1rem; color: var(--accent); letter-spacing: 1px; cursor: pointer; }
+  .badge { background: var(--accent); color: #000; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
+  .xp-display { font-size: 0.8rem; color: var(--accent); font-weight: 700; }
+
+  .step-nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 10px 24px; display: flex; gap: 8px; overflow-x: auto; }
+  .step-btn { background: none; border: 1px solid var(--border); color: var(--muted); padding: 5px 14px; border-radius: 20px; cursor: pointer; font-size: 0.78rem; white-space: nowrap; transition: all 0.2s; }
+  .step-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(245,158,11,0.08); }
+
+  .hero { padding: 64px 24px 48px; max-width: 800px; margin: 0 auto; }
+  .module-tag { display: inline-block; background: var(--pill); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 1px; }
+  .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 900; line-height: 1.2; margin-bottom: 16px; }
+  .hero h1 span { color: var(--accent); }
+  .hero p { color: #bbb; font-size: 1rem; max-width: 620px; margin-bottom: 28px; }
+  .hero-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+  .pill { background: var(--pill); border: 1px solid var(--border); border-radius: 20px; padding: 5px 14px; font-size: 0.8rem; color: var(--muted); }
+  .btn-primary { background: var(--accent); color: #000; border: none; padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: opacity 0.2s; }
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-ghost { background: none; border: 1px solid var(--border); color: var(--muted); padding: 12px 24px; border-radius: 8px; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .btn-sm { background: none; border: 1px solid var(--border); color: var(--muted); padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 0.8rem; transition: all 0.2s; }
+  .btn-sm:hover { border-color: var(--accent); color: var(--accent); }
+
+  section { padding: 56px 24px; border-top: 1px solid var(--border); max-width: 860px; margin: 0 auto; }
+  section h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 8px; }
+  .section-sub { color: var(--muted); font-size: 0.88rem; margin-bottom: 32px; }
+
+  .callout { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 8px; padding: 18px 20px; margin-bottom: 20px; }
+  .callout.green { border-left-color: var(--accent2); }
+  .callout.red { border-left-color: var(--red); }
+  .callout.blue { border-left-color: var(--accent3); }
+  .callout strong { display: block; margin-bottom: 6px; font-size: 0.85rem; color: var(--accent); }
+  .callout.green strong { color: var(--accent2); }
+  .callout.red strong { color: var(--red); }
+  .callout.blue strong { color: var(--accent3); }
+
+  /* ESSAY TYPE CARDS */
+  .essay-tabs { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
+  .essay-tab { background: var(--surface); border: 2px solid var(--border); border-radius: 10px; padding: 14px 20px; cursor: pointer; transition: all 0.2s; min-width: 150px; flex: 1; }
+  .essay-tab:hover { border-color: var(--accent); }
+  .essay-tab.active-tab { border-color: var(--accent); background: rgba(245,158,11,0.08); }
+  .essay-tab h3 { font-size: 0.88rem; font-weight: 700; margin-bottom: 4px; }
+  .essay-tab p { font-size: 0.72rem; color: var(--muted); }
+  .essay-tab .et-icon { font-size: 1.4rem; margin-bottom: 6px; }
+
+  .essay-content { display: none; }
+  .essay-content.active-ec { display: block; }
+
+  /* STRUCTURE BLUEPRINT */
+  .blueprint { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin: 20px 0; }
+  .bp-row { display: grid; grid-template-columns: 150px 1fr; border-bottom: 1px solid var(--border); }
+  .bp-row:last-child { border-bottom: none; }
+  .bp-label { background: var(--surface2); padding: 14px 16px; font-size: 0.78rem; font-weight: 700; color: var(--accent); display: flex; align-items: flex-start; }
+  .bp-content { padding: 14px 18px; font-size: 0.85rem; color: #ccc; }
+  .bp-content strong { color: var(--text); }
+
+  /* PHRASE BANK */
+  .phrase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin: 16px 0; }
+  .phrase-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .phrase-card h4 { font-size: 0.82rem; font-weight: 700; margin-bottom: 10px; color: var(--accent); }
+  .phrase-item { font-size: 0.8rem; color: #bbb; padding: 4px 0; border-bottom: 1px solid var(--border); }
+  .phrase-item:last-child { border-bottom: none; }
+  .phrase-item em { color: var(--text); font-style: normal; }
+
+  /* DRILL */
+  .drill-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .drill-label { font-size: 0.75rem; color: var(--accent); font-weight: 700; margin-bottom: 12px; letter-spacing: 1px; }
+  .prompt-box { background: var(--bg); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 8px; padding: 16px 20px; margin: 14px 0; font-size: 0.88rem; line-height: 1.7; color: #ccc; }
+  .prompt-box strong { color: var(--accent); }
+
+  .options-list { display: flex; flex-direction: column; gap: 10px; margin: 14px 0; }
+  .opt-btn { background: var(--surface2); border: 1px solid var(--border); color: var(--text); padding: 12px 16px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; text-align: left; transition: all 0.2s; }
+  .opt-btn:hover { border-color: var(--accent); }
+  .opt-btn.correct { background: rgba(16,185,129,0.15); border-color: var(--accent2); color: var(--accent2); }
+  .opt-btn.wrong { background: rgba(239,68,68,0.1); border-color: var(--red); color: var(--red); }
+
+  .feedback { display: none; margin-top: 12px; padding: 12px 16px; border-radius: 8px; font-size: 0.85rem; }
+  .feedback.show { display: block; }
+  .feedback.correct-fb { background: rgba(16,185,129,0.1); border: 1px solid var(--accent2); color: var(--accent2); }
+  .feedback.wrong-fb { background: rgba(239,68,68,0.08); border: 1px solid var(--red); color: var(--red); }
+
+  /* BOSS BUILD */
+  .boss-header { background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-bottom: 24px; text-align: center; }
+  .boss-header h2 { font-size: 1.4rem; font-weight: 900; color: var(--accent); margin-bottom: 8px; }
+  .timer-display { font-size: 2rem; font-weight: 900; color: var(--accent); font-variant-numeric: tabular-nums; margin: 12px 0; }
+
+  .band-check { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 12px; }
+  .band-check h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
+  .band-check p { font-size: 0.82rem; color: var(--muted); margin-bottom: 10px; }
+  .check-btns { display: flex; gap: 10px; }
+  .check-btn { flex: 1; background: var(--surface2); border: 1px solid var(--border); color: var(--muted); padding: 8px; border-radius: 6px; cursor: pointer; font-size: 0.8rem; transition: all 0.2s; }
+  .check-btn.sel-yes { background: rgba(16,185,129,0.15); border-color: var(--accent2); color: var(--accent2); }
+  .check-btn.sel-no { background: rgba(239,68,68,0.1); border-color: var(--red); color: var(--red); }
+
+  textarea { background: var(--surface2); border: 1px solid var(--border); color: var(--text); padding: 14px; border-radius: 8px; width: 100%; font-size: 0.88rem; outline: none; resize: vertical; font-family: inherit; line-height: 1.7; }
+  textarea:focus { border-color: var(--accent); }
+  .word-count { font-size: 0.78rem; color: var(--muted); text-align: right; margin-top: 4px; }
+
+  .plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+  .plan-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .plan-day { font-size: 0.72rem; color: var(--accent); font-weight: 700; letter-spacing: 1px; margin-bottom: 6px; }
+  .plan-card p { font-size: 0.82rem; color: #bbb; }
+
+  .xp-toast { position: fixed; top: 70px; right: 20px; background: var(--accent); color: #000; font-weight: 800; padding: 8px 18px; border-radius: 20px; font-size: 0.85rem; opacity: 0; transition: opacity 0.3s; z-index: 999; pointer-events: none; }
+  .xp-toast.show { opacity: 1; }
+
+  footer { text-align: center; padding: 40px 24px; color: var(--muted); font-size: 0.78rem; border-top: 1px solid var(--border); margin-top: 40px; }
+
+  @media (max-width: 640px) { .bp-row { grid-template-columns: 100px 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="xp-toast" id="xpToast">+10 XP</div>
+
+<nav>
+  <div class="logo" onclick="location.href='index.html'">🎓 ViATestPrep</div>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <div class="badge">UKVI · Writing Task 2</div>
+    <div class="xp-display">⚡ <span id="xpCount">0</span> XP</div>
+  </div>
+</nav>
+
+<div class="step-nav">
+  <button class="step-btn active" onclick="scrollToId('mission')">① Mission</button>
+  <button class="step-btn" onclick="scrollToId('criteria')">② Marking Criteria</button>
+  <button class="step-btn" onclick="scrollToId('ac-vs-gt')">③ Academic vs GT</button>
+  <button class="step-btn" onclick="scrollToId('essayTypes')">④ 5 Essay Types</button>
+  <button class="step-btn" onclick="scrollToId('blueprint')">⑤ Essay Blueprint</button>
+  <button class="step-btn" onclick="scrollToId('phraseBank')">⑥ Phrase Bank</button>
+  <button class="step-btn" onclick="scrollToId('drills')">⑦ Live Drills</button>
+  <button class="step-btn" onclick="scrollToId('boss')">⑧ Boss Build</button>
+  <button class="step-btn" onclick="scrollToId('plan')">⑨ Action Plan</button>
+</div>
+
+<!-- HERO -->
+<div class="hero" id="mission">
+  <div class="module-tag">MODULE 04 · WRITING TASK 2 · UKVI ACADEMIC & GT</div>
+  <h1>You are not just writing.<br>You are <span>defending a thesis.</span></h1>
+  <p>IELTS Writing Task 2 accounts for **2/3 of your total writing score**. You have 40 minutes to write a structured, academic-style essay of **250+ words**. Whether you are taking Academic or General Training, the grading criteria are identical and extremely rigorous. A Band 7+ requires strict structure, logical paragraphing, and precise lexical control.</p>
+  <div class="hero-pills">
+    <span class="pill">⏱ 40 min · Task 2</span>
+    <span class="pill">✍ 250+ words</span>
+    <span class="pill">🎯 Band 7+ target</span>
+    <span class="pill">⚖ 2/3 of Writing Score</span>
+    <span class="pill">4 Paragraph Formula</span>
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;">
+    <button class="btn-primary" onclick="scrollToId('essayTypes')">▶ Explore Essay Types</button>
+    <button class="btn-ghost" onclick="scrollToId('boss')">Skip to Boss Build</button>
+  </div>
+</div>
+
+<!-- MARKING CRITERIA -->
+<section id="criteria">
+  <h2>② The 4 Pillars of Band 7+ Writing</h2>
+  <p class="section-sub">Your essay is evaluated on four distinct criteria. To score Band 7 or above, you must hit all four marks.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
+    <div class="callout blue">
+      <strong>🎯 Task Response (25%)</strong>
+      - Fully address all parts of the prompt.
+      - Present a clear, consistent position throughout the essay.
+      - Support your main ideas with relevant explanations and examples. Avoid generalisations.
+    </div>
+    <div class="callout green">
+      <strong>🔗 Coherence & Cohesion (25%)</strong>
+      - Organise your ideas logically across exactly 4 paragraphs.
+      - Use a range of cohesive devices (transitions, pronouns) naturally.
+      - Ensure each paragraph has a single, clear central topic.
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
+    <div class="callout">
+      <strong>📚 Lexical Resource (25%)</strong>
+      - Use less common vocabulary and precise collocations.
+      - Paraphrase key terms from the prompt accurately.
+      - Maintain academic tone and register (no slang, no informal contractions like *don't* or *can't*).
+    </div>
+    <div class="callout green">
+      <strong>📐 Grammatical Range & Accuracy (25%)</strong>
+      - Use a mix of simple, compound, and complex sentences.
+      - Aim for error-free sentences (at least 50% should be completely error-free).
+      - Maintain accurate tense control and correct punctuation.
+    </div>
+  </div>
+</section>
+
+<!-- ACADEMIC VS GT -->
+<section id="ac-vs-gt">
+  <h2>③ Academic vs General Training Essay — The Facts</h2>
+  <p class="section-sub">Many students and teachers confuse these two. Let's look at what is identical and what actually differs.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
+    <div class="callout green">
+      <strong>✅ 100% Identical Elements</strong>
+      - **Timing & Length:** Both require a minimum of 250 words in 40 minutes.
+      - **Essay Formats:** Both use the same 5 question types (Opinion, Discussion, Advantage/Disadvantage, Problem/Solution, Two-Part).
+      - **Marking Criteria:** Both are graded on the exact same 4 descriptors (Task Response, Coherence/Cohesion, Lexical Resource, Grammar).
+      - **Standard vs UKVI:** The actual test paper for IELTS for UKVI is identical to standard IELTS. The differences are purely administrative security rules at the test center.
+    </div>
+    <div class="callout blue">
+      <strong>🔍 The Core Difference: Topic Nature</strong>
+      - **Academic Essays:** Deal with more abstract, academic, or global debates (e.g., genetic research, space travel, national economic policies, history preservation, artificial intelligence).
+      - **General Training Essays:** Focus on everyday social issues, work, family, education, or personal hobbies (e.g., shopping habits, recycling in neighborhoods, child-rearing methods, television viewing, remote working).
+      - **Vocabulary Depth:** Academic topics require a slightly higher register of specialized terminology to score Band 7+.
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>💡 Teacher Guidance — How to Prepare Your Students</strong>
+    - **Teach the Same Structure:** The 4-Paragraph Blueprint and transition bank apply equally to both.
+    - **Vary the Prompts:** Ensure Academic students practice on abstract themes (technology, urbanization) and GT students practice on local themes (community, family life).
+    - **No Informal Tone in GT:** Warn GT students that even though the topic is an everyday subject, the essay must be written in a formal academic tone (no contractions, no casual slang).
+  </div>
+</section>
+
+<!-- 5 ESSAY TYPES -->
+<section id="essayTypes">
+  <h2>④ The 5 Essay Types — Blueprints & Worked Examples</h2>
+  <p class="section-sub">Every Writing Task 2 prompt falls into one of five categories. Tap each to open its specific structural requirements and a worked prompt.</p>
+
+  <div class="essay-tabs">
+    <div class="essay-tab active-tab" onclick="showEssay('opinion')">
+      <div class="et-icon">💬</div>
+      <h3>Opinion</h3>
+      <p>Agree or Disagree</p>
+    </div>
+    <div class="essay-tab" onclick="showEssay('discussion')">
+      <div class="et-icon">⚖</div>
+      <h3>Discussion</h3>
+      <p>Discuss both views</p>
+    </div>
+    <div class="essay-tab" onclick="showEssay('adv-dis')">
+      <div class="et-icon">🔄</div>
+      <h3>Adv vs Disadv</h3>
+      <p>Do benefits outweigh?</p>
+    </div>
+    <div class="essay-tab" onclick="showEssay('prob-sol')">
+      <div class="et-icon">🛠</div>
+      <h3>Problem/Solution</h3>
+      <p>Causes and solutions</p>
+    </div>
+    <div class="essay-tab" onclick="showEssay('two-part')">
+      <div class="et-icon">❓</div>
+      <h3>Two-Part</h3>
+      <p>Direct questions</p>
+    </div>
+  </div>
+
+  <!-- OPINION -->
+  <div class="essay-content active-ec" id="ec-opinion">
+    <div class="callout blue">
+      <strong>💬 Opinion Essay (Agree/Disagree)</strong>
+      This essay asks you to state your position clearly and defend it. You can either completely agree, completely disagree, or take a balanced view. 
+      <strong>Prompt Signal:</strong> "To what extent do you agree or disagree?" or "Do you agree or disagree?"
+    </div>
+    <div class="blueprint">
+      <div class="bp-row">
+        <div class="bp-label">INTRO</div>
+        <div class="bp-content">Paraphrase the prompt + **Thesis Statement** (state clearly whether you agree or disagree and outline your two reasons).</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">BODY 1</div>
+        <div class="bp-content">Focus on your first main point supporting your stance (Topic sentence → Explanation → Example).</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">BODY 2</div>
+        <div class="bp-content">Focus on your second main point supporting your stance (Topic sentence → Explanation → Example).</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">CONCLUSION</div>
+        <div class="bp-content">Restate your thesis statement in different words + Summary of body points + Final closing recommendation or thought.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="essay-content" id="ec-discussion">
+    <div class="callout blue">
+      <strong>⚖ Discussion Essay (Discuss Both Views)</strong>
+      You must discuss **both** opinions presented in the prompt and give your own personal opinion. Each view must get a dedicated body paragraph.
+      <strong>Prompt Signal:</strong> "Discuss both views and give your opinion."
+    </div>
+    <div class="blueprint">
+      <div class="bp-row">
+        <div class="bp-label">INTRO</div>
+        <div class="bp-content">Paraphrase both sides + **Thesis Statement** (state your own view on the topic).</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">BODY 1</div>
+        <div class="bp-content">Discuss View A. Explain why people hold this opinion, even if you disagree with it.</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">BODY 2</div>
+        <div class="bp-content">Discuss View B. Explain why people support this view and align this explanation with your own opinion.</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">CONCLUSION</div>
+        <div class="bp-content">Restate your opinion clearly + Summary of the core reasons for each side.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADV VS DISADV -->
+  <div class="essay-content" id="ec-adv-dis">
+    <div class="callout blue">
+      <strong>🔄 Advantages vs Disadvantages</strong>
+      You must discuss the positive aspects and the negative aspects of a development, and state whether one side outweighs the other.
+      <strong>Prompt Signal:</strong> "Do the advantages outweigh the disadvantages?" or "What are the advantages and disadvantages?"
+    </div>
+    <div class="blueprint">
+      <div class="bp-row">
+        <div class="bp-label">INTRO</div>
+        <div class="bp-content">Paraphrase the prompt + **Thesis Statement** (clearly state whether the advantages outweigh the disadvantages or vice versa).</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">BODY 1</div>
+        <div class="bp-content">Discuss the advantages/benefits (Topic sentence → Detail → Example).</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">BODY 2</div>
+        <div class="bp-content">Discuss the disadvantages/drawbacks (Topic sentence → Detail → Example).</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">CONCLUSION</div>
+        <div class="bp-content">Summarize the main benefits and drawbacks + Final verdict (confirming which side outweighs).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROBLEM / SOLUTION -->
+  <div class="essay-content" id="ec-prob-sol">
+    <div class="callout blue">
+      <strong>🛠 Problem & Solution Essay</strong>
+      Identify the main causes of a particular global issue and propose realistic, detailed solutions to address it.
+      <strong>Prompt Signal:</strong> "What are the causes of this and what solutions can be proposed?"
+    </div>
+    <div class="blueprint">
+      <div class="bp-row">
+        <div class="bp-label">INTRO</div>
+        <div class="bp-content">Paraphrase the prompt + **Thesis Statement** (outline the primary cause and state that solutions exist).</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">BODY 1</div>
+        <div class="bp-content">Focus on the causes/origins of the problem (usually 2 distinct causes).</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">BODY 2</div>
+        <div class="bp-content">Focus on the solutions (each solution should directly address a cause discussed in Body 1).</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">CONCLUSION</div>
+        <div class="bp-content">Summarize the core causes and solutions + A warning/hopeful final sentence about the future.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TWO-PART -->
+  <div class="essay-content" id="ec-two-part">
+    <div class="callout blue">
+      <strong>❓ Two-Part (Direct Question) Essay</strong>
+      The prompt asks two distinct, direct questions. You must address each question in its own body paragraph.
+      <strong>Prompt Signal:</strong> Two distinct question marks in the prompt.
+    </div>
+    <div class="blueprint">
+      <div class="bp-row">
+        <div class="bp-label">INTRO</div>
+        <div class="bp-content">Paraphrase the prompt + **Thesis Statement** (briefly answer both questions in a single, complex sentence).</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">BODY 1</div>
+        <div class="bp-content">Answer Question 1 in full detail (Topic sentence → Explanation → Example).</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">BODY 2</div>
+        <div class="bp-content">Answer Question 2 in full detail (Topic sentence → Explanation → Example).</div>
+      </div>
+      <div class="bp-row">
+        <div class="bp-label">CONCLUSION</div>
+        <div class="bp-content">Restate the answers to both questions in different words + Summarising sentence.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESSAY BLUEPRINT -->
+<section id="blueprint">
+  <h2>⑤ The 4-Paragraph Essay Blueprint</h2>
+  <p class="section-sub">Regardless of the essay type, a structured 4-paragraph layout ensures clarity and scores maximum points in Coherence & Cohesion.</p>
+
+  <div class="blueprint">
+    <div class="bp-row">
+      <div class="bp-label">INTRODUCTION<br>(~40-50 words)</div>
+      <div class="bp-content">
+        <strong>1. Paraphrase Prompt:</strong> Rephrase the question using synonyms and varied sentence structures.<br>
+        <strong>2. Thesis Statement:</strong> Present your clear point of view and state the two key sub-points you will discuss.
+      </div>
+    </div>
+    <div class="bp-row">
+      <div class="bp-label">BODY PARAGRAPH 1<br>(~90-100 words)</div>
+      <div class="bp-content">
+        <strong>1. Topic Sentence:</strong> Introduce the first supporting point clearly.<br>
+        <strong>2. Explanation:</strong> Develop the point by explaining *how* and *why* it is true.<br>
+        <strong>3. Example:</strong> Provide a specific, realistic example (e.g., studies, government statistics, or historic events) to support your explanation.
+      </div>
+    </div>
+    <div class="bp-row">
+      <div class="bp-label">BODY PARAGRAPH 2<br>(~90-100 words)</div>
+      <div class="bp-content">
+        <strong>1. Topic Sentence:</strong> Introduce the second supporting point clearly.<br>
+        <strong>2. Explanation:</strong> Expand and justify this point in depth.<br>
+        <strong>3. Example:</strong> Provide a relevant, illustrative example to ground the point.
+      </div>
+    </div>
+    <div class="bp-row">
+      <div class="bp-label">CONCLUSION<br>(~30-40 words)</div>
+      <div class="bp-content">
+        <strong>1. Restatement of Thesis:</strong> Rephrase your main opinion using fresh vocabulary.<br>
+        <strong>2. Summary of main points:</strong> Briefly recap your two main body points.<br>
+        <strong>3. Final Thought:</strong> Offer a prediction, recommendation, or warning. Do not introduce new arguments here.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHRASE BANK -->
+<section id="phraseBank">
+  <h2>⑥ The Essay Phrase Bank — Academic & GT</h2>
+  <p class="section-sub">A curated list of formal phrases and transitional structures to build cohesion. Avoid informal phrases like *in a nutshell* or *by the way*.</p>
+
+  <div class="phrase-grid">
+    <div class="phrase-card">
+      <h4>🏛 Introducing the Topic</h4>
+      <div class="phrase-item"><em>It is widely argued that…</em></div>
+      <div class="phrase-item"><em>An increasing number of experts suggest that…</em></div>
+      <div class="phrase-item"><em>A key debate in contemporary society concerns…</em></div>
+      <div class="phrase-item"><em>The issue of [topic] has become a controversial subject…</em></div>
+    </div>
+    <div class="phrase-card">
+      <h4>💡 Stating Your Stance</h4>
+      <div class="phrase-item"><em>I strongly agree with this assertion because…</em></div>
+      <div class="phrase-item"><em>I hold the view that the drawbacks outweigh the benefits…</em></div>
+      <div class="phrase-item"><em>This essay argues that while some disadvantages exist, the advantages are far more significant…</em></div>
+      <div class="phrase-item"><em>I contend that this development is highly beneficial…</em></div>
+    </div>
+    <div class="phrase-card">
+      <h4>🔗 Presenting Points</h4>
+      <div class="phrase-item"><em>Primary among these factors is that…</em></div>
+      <div class="phrase-item"><em>Another compelling argument in favour of this is…</em></div>
+      <div class="phrase-item"><em>Turning to the negative consequences, it is clear that…</em></div>
+      <div class="phrase-item"><em>Furthermore, it is important to consider that…</em></div>
+    </div>
+    <div class="phrase-card">
+      <h4>🔍 Providing Examples</h4>
+      <div class="phrase-item"><em>A clear illustration of this is…</em></div>
+      <div class="phrase-item"><em>For instance, a recent study conducted by [Entity] revealed that…</em></div>
+      <div class="phrase-item"><em>This is exemplified by the policy implemented in [Country], which…</em></div>
+      <div class="phrase-item"><em>To illustrate this, statistics from the UK government show that…</em></div>
+    </div>
+    <div class="phrase-card">
+      <h4>⚖ Presenting Concessions</h4>
+      <div class="phrase-item"><em>Admittedly, there are valid arguments on the opposing side…</em></div>
+      <div class="phrase-item"><em>Despite these obvious benefits, a major drawback remains…</em></div>
+      <div class="phrase-item"><em>Nevertheless, it can be argued that…</em></div>
+      <div class="phrase-item"><em>Although this view has some merit, it is overshadowed by…</em></div>
+    </div>
+    <div class="phrase-card">
+      <h4>🏁 Drawing Conclusions</h4>
+      <div class="phrase-item"><em>In conclusion, while there are minor disadvantages, it is apparent that…</em></div>
+      <div class="phrase-item"><em>To summarise, I believe that the main cause is…</em></div>
+      <div class="phrase-item"><em>Consequently, it is recommended that governments take steps to…</em></div>
+      <div class="phrase-item"><em>Ultimately, if these measures are not implemented, it is likely that…</em></div>
+    </div>
+  </div>
+
+  <div class="callout blue">
+    <strong>⚡ Academic Vocabulary Rule</strong>
+    Never use contractions (*don't*, *won't*, *it's*) in Writing Task 2. Write them out fully (*do not*, *will not*, *it is*). Also, avoid using generic words like *good*, *bad*, or *nice*. Opt for *beneficial*, *detrimental*, or *satisfactory*.
+  </div>
+</section>
+
+<!-- DRILLS -->
+<section id="drills">
+  <h2>⑦ Live Drills — Test Your Instincts</h2>
+  <p class="section-sub">Practice identifying registers, spotting tone mismatches, and picking Band 7+ sentences.</p>
+
+  <!-- Drill A: Identify the Essay Type -->
+  <div class="drill-box">
+    <div class="drill-label">DRILL A · IDENTIFY THE ESSAY TYPE · +10 XP</div>
+    <h3>Identify the Essay Type in 30 Seconds</h3>
+    <p style="font-size:0.85rem;color:var(--muted);margin:10px 0 14px;">Read each prompt. Click the correct essay type. Selecting the wrong type results in a severe penalty in Task Response.</p>
+
+    <div style="margin-bottom:20px;">
+      <div class="prompt-box"><strong>Prompt 1:</strong> "Many companies are increasingly hiring remote workers from overseas. Do the advantages of this trend outweigh the disadvantages?"</div>
+      <div class="options-list">
+        <button class="opt-btn" onclick="checkDrillAnswer(this, false, 'type-fb1')">💬 Opinion (Agree/Disagree)</button>
+        <button class="opt-btn" onclick="checkDrillAnswer(this, false, 'type-fb1')">⚖ Discussion (Both views)</button>
+        <button class="opt-btn" onclick="checkDrillAnswer(this, true, 'type-fb1')">🔄 Advantages vs Disadvantages</button>
+      </div>
+      <div class="feedback" id="type-fb1"></div>
+    </div>
+
+    <div style="margin-bottom:20px;">
+      <div class="prompt-box"><strong>Prompt 2:</strong> "Some people believe that university education should be free for everyone. Others argue that students should pay for their own education. Discuss both views and give your opinion."</div>
+      <div class="options-list">
+        <button class="opt-btn" onclick="checkDrillAnswer(this, false, 'type-fb2')">💬 Opinion</button>
+        <button class="opt-btn" onclick="checkDrillAnswer(this, true, 'type-fb2')">⚖ Discussion (Both views)</button>
+        <button class="opt-btn" onclick="checkDrillAnswer(this, false, 'type-fb2')">🛠 Problem/Solution</button>
+      </div>
+      <div class="feedback" id="type-fb2"></div>
+    </div>
+  </div>
+
+  <!-- Drill B: Pick the Band 7+ Thesis Statement -->
+  <div class="drill-box">
+    <div class="drill-label">DRILL B · PICK THE THESIS STATEMENT · +10 XP</div>
+    <h3>Find the Band 7+ Thesis Statement</h3>
+    <p style="font-size:0.85rem;color:var(--muted);margin:10px 0 14px;">Prompt: *In many cities, traffic congestion is a serious problem. What are the causes of this and what solutions can be proposed?*</p>
+
+    <div>
+      <div class="options-list">
+        <button class="opt-btn" onclick="checkDrillAnswer(this, false, 'thesis-fb')">A. "Traffic is a big issue in cities and there are many things that make it happen and also things to fix it."</button>
+        <button class="opt-btn" onclick="checkDrillAnswer(this, true, 'thesis-fb')">B. "This essay will argue that the primary cause of traffic congestion is the lack of efficient public transport, which can be addressed by investing in subway infrastructure and subsidising bus fares."</button>
+        <button class="opt-btn" onclick="checkDrillAnswer(this, false, 'thesis-fb')">C. "Congestion is caused by cars. I will write about the causes and solutions in my essay below."</button>
+      </div>
+      <div class="feedback" id="thesis-fb"></div>
+    </div>
+  </div>
+
+  <!-- Drill C: Spot the Coherence/Tone Error -->
+  <div class="drill-box">
+    <div class="drill-label">DRILL C · SPOT THE TONE ERROR · +10 XP</div>
+    <h3>Find the informal sentence that ruins the academic register</h3>
+    <p style="font-size:0.85rem;color:var(--muted);margin:10px 0 14px;">One sentence in this body paragraph is too informal and lacks proper cohesive structure. Click it to earn your XP.</p>
+
+    <div class="prompt-box" style="line-height: 2;">
+      It is undeniable that remote working arrangements offer substantial benefits to companies. First and foremost, businesses can reduce their overhead costs, such as office rental fees and electricity bills, since fewer employees are present in the workplace. <span id="informal-sentence" style="cursor:pointer;text-decoration:underline;text-decoration-style:dotted;color:#ccc;" onclick="checkToneError()">Also, it's pretty clear that employees love this because they don't have to waste time commuting.</span> Consequently, this arrangement can boost worker productivity and job satisfaction, creating a win-win scenario for both employers and staff.
+    </div>
+    <div class="feedback" id="tone-fb"></div>
+  </div>
+</section>
+
+<!-- BOSS BUILD -->
+<section id="boss">
+  <div class="boss-header">
+    <div style="font-size:2rem;margin-bottom:8px;">🎯</div>
+    <h2>Boss Build — Write a Complete Essay in 40 Minutes</h2>
+    <p>A realistic UKVI Writing Task 2 prompt. Time yourself, write at least 250 words, and check your work against the criteria.</p>
+    <div class="timer-display" id="bossTimer">40:00</div>
+    <button class="btn-primary" id="bossStartBtn" onclick="startBoss()">▶ Start the Clock</button>
+  </div>
+
+  <div class="prompt-box" style="margin-bottom:20px;">
+    <strong>📋 Task 2 Prompt — UKVI Career Scenario</strong><br><br>
+    In today's globalised economy, it is common for highly skilled professionals (such as doctors, engineers, and software developers) to relocate from their home countries to work in developed nations like the UK.
+    <br><br>
+    <strong>Do the advantages of this trend outweigh the disadvantages for the countries they leave?</strong>
+    <br><br>
+    Write at least <strong>250 words</strong> in an appropriate academic style. Support your arguments with reasons and examples.
+  </div>
+
+  <div style="margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;">
+    <label style="font-size:0.82rem;color:var(--muted);">Your essay:</label>
+    <div class="word-count" id="bossWC">0 words</div>
+  </div>
+  <textarea id="bossEssay" rows="22" placeholder="Write your essay here..." oninput="updateWC()"></textarea>
+
+  <div style="margin-top:20px;">
+    <h3 style="font-size:1rem;margin-bottom:12px;">📐 Band Descriptor Self-Check</h3>
+    <p style="font-size:0.82rem;color:var(--muted);margin-bottom:14px;">After writing, rate your essay objectively against the examiner requirements.</p>
+
+    <div class="band-check">
+      <h4>Task Response</h4>
+      <p>Did you write at least 250 words? Did you state a clear opinion on whether the advantages outweigh the disadvantages for the *countries they leave*?</p>
+      <div class="check-btns">
+        <button class="check-btn" onclick="selfCheck(this, true)">✅ Yes, fully addressed</button>
+        <button class="check-btn" onclick="selfCheck(this, false)">❌ Under length / incomplete opinion</button>
+      </div>
+    </div>
+
+    <div class="band-check">
+      <h4>Coherence & Cohesion</h4>
+      <p>Is your essay structured into exactly 4 paragraphs (Intro, Body 1, Body 2, Conclusion)? Did you use clear transitions like *firstly*, *on the other hand*, *consequently*, or *in conclusion*?</p>
+      <div class="check-btns">
+        <button class="check-btn" onclick="selfCheck(this, true)">✅ Structured and cohesive</button>
+        <button class="check-btn" onclick="selfCheck(this, false)">❌ Poor paragraphing / repetitive linkers</button>
+      </div>
+    </div>
+
+    <div class="band-check">
+      <h4>Lexical Resource</h4>
+      <p>Did you use terms like *brain drain*, *human capital*, *depletion*, *remittance*, *relocate*, or *developed nations*? Did you avoid informal words and contractions?</p>
+      <div class="check-btns">
+        <button class="check-btn" onclick="selfCheck(this, true)">✅ Rich, academic vocabulary used</button>
+        <button class="check-btn" onclick="selfCheck(this, false)">❌ Simplistic or informal language</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTION PLAN -->
+<section id="plan">
+  <h2>⑨ Your 7-Day Action Plan</h2>
+  <p class="section-sub">Writing Task 2 is won through deliberate practice of planning and drafting, not just writing blindly.</p>
+
+  <div class="plan-grid">
+    <div class="plan-card"><div class="plan-day">DAY 1</div><p>Prompt Analysis: Read 10 random prompts and identify their Essay Type and required parameters.</p></div>
+    <div class="plan-card"><div class="plan-day">DAY 2</div><p>Idea Generation: Brainstorm and draft 5 Intro paragraphs. Must include a clear Thesis Statement.</p></div>
+    <div class="plan-card"><div class="plan-day">DAY 3</div><p>Body Paragraph Practice: Write 3 Body paragraphs focusing on the Topic Sentence → Explain → Example structure.</p></div>
+    <div class="plan-card"><div class="plan-day">DAY 4</div><p>Cohesion Drill: Rewrite old paragraphs using advanced transitions and pronoun referencing.</p></div>
+    <div class="plan-card"><div class="plan-day">DAY 5</div><p>Conclusion Practice: Practice writing brief, impactful conclusions without adding new details.</p></div>
+    <div class="plan-card"><div class="plan-day">DAY 6</div><p>Full Mock Test: Write a complete essay under timed conditions (40 minutes, 250+ words).</p></div>
+    <div class="plan-card"><div class="plan-day">DAY 7</div><p>Proofreading & Review: Review your essay for grammatical slip-ups, contractions, and word choices.</p></div>
+  </div>
+</section>
+
+<footer>
+  <strong>ViATestPrep</strong> · UKVI Academic & General Training Writing Task 2 · Band 7+ Track<br>
+  © 2026 ViATestPrep · All Rights Reserved · Unauthorized reproduction prohibited
+</footer>
+
+<script>
+  let xp = 0;
+  let drillsDone = new Set();
+  let bossRunning = false;
+  let bossInterval = null;
+  let bossSeconds = 2400; // 40 minutes
+
+  function scrollToId(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function awardXP(key) {
+    if (drillsDone.has(key)) return;
+    drillsDone.add(key);
+    xp += 10;
+    document.getElementById('xpCount').textContent = xp;
+    const toast = document.getElementById('xpToast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 1500);
+  }
+
+  function showEssay(type) {
+    document.querySelectorAll('.essay-content').forEach(el => el.classList.remove('active-ec'));
+    document.querySelectorAll('.essay-tab').forEach(el => el.classList.remove('active-tab'));
+    document.getElementById('ec-' + type).classList.add('active-ec');
+    event.currentTarget.classList.add('active-tab');
+    awardXP('et-' + type);
+  }
+
+  function checkDrillAnswer(btn, isCorrect, fbId) {
+    const siblings = btn.parentElement.querySelectorAll('.opt-btn');
+    siblings.forEach(b => b.disabled = true);
+    btn.classList.add(isCorrect ? 'correct' : 'wrong');
+    if (isCorrect) {
+      awardXP(fbId);
+      showFeedback(fbId, true, '✅ Correct! You successfully identified the correct structural response.');
+    } else {
+      showFeedback(fbId, false, '❌ Incorrect. Review the prompt parameters and look for the key words.');
+    }
+  }
+
+  function checkToneError() {
+    const text = document.getElementById('informal-sentence');
+    text.style.color = 'var(--red)';
+    text.style.textDecoration = 'line-through';
+    awardXP('tone-error');
+    showFeedback('tone-fb', false, '❌ Correct! "Also, it\'s pretty clear that employees love this because they don\'t have to waste time commuting." contains multiple register issues: contractions ("it\'s", "don\'t"), informal wording ("pretty clear", "love this", "waste time"), and conversational connectors ("Also"). In an academic essay, write: "Furthermore, it is apparent that remote employment improves work-life balance by eliminating the daily commute."');
+    document.getElementById('tone-fb').className = 'feedback show wrong-fb';
+  }
+
+  function selfCheck(btn, isGood) {
+    const siblings = btn.parentElement.querySelectorAll('.check-btn');
+    siblings.forEach(b => { b.classList.remove('sel-yes', 'sel-no'); });
+    btn.style.borderColor = isGood ? 'var(--accent2)' : 'var(--red)';
+    btn.classList.add(isGood ? 'sel-yes' : 'sel-no');
+    if (isGood) awardXP('self-' + Math.random());
+  }
+
+  function showFeedback(fbId, correct, msg) {
+    const el = document.getElementById(fbId);
+    el.textContent = msg;
+    el.className = 'feedback show ' + (correct ? 'correct-fb' : 'wrong-fb');
+  }
+
+  function updateWC() {
+    const text = document.getElementById('bossEssay').value.trim();
+    const count = text ? text.split(/\s+/).filter(w => w).length : 0;
+    const wc = document.getElementById('bossWC');
+    wc.textContent = count + ' words';
+    wc.style.color = count >= 250 ? 'var(--accent2)' : count >= 200 ? 'var(--accent)' : 'var(--red)';
+    if (count >= 250) awardXP('250-words');
+  }
+
+  function startBoss() {
+    if (bossRunning) return;
+    bossRunning = true;
+    document.getElementById('bossStartBtn').disabled = true;
+    bossInterval = setInterval(() => {
+      bossSeconds--;
+      const m = Math.floor(bossSeconds / 60).toString().padStart(2,'0');
+      const s = (bossSeconds % 60).toString().padStart(2,'0');
+      document.getElementById('bossTimer').textContent = m + ':' + s;
+      if (bossSeconds <= 300) document.getElementById('bossTimer').style.color = 'var(--red)';
+      if (bossSeconds <= 0) { clearInterval(bossInterval); document.getElementById('bossTimer').textContent = 'TIME'; }
+    }, 1000);
+  }
+</script>
+</body>
+</html>
