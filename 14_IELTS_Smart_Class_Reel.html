@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Smart IELTS Classes — Reel</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800;900&family=Inter:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;color:#fff;overflow:hidden;flex-direction:column;padding:1rem}
+  h1,h2,h3{font-family:'Fraunces',serif;letter-spacing:-.02em;font-weight:900}
+
+  /* PHONE FRAME (vertical reel) */
+  .phone-frame{width:min(420px, 90vw); aspect-ratio: 9 / 16; background:#000; border-radius:38px; padding:8px; box-shadow:0 30px 80px rgba(0,0,0,.6), 0 0 0 4px #1a1a22; position:relative}
+  .phone-frame::before{content:"";position:absolute;top:14px;left:50%;transform:translateX(-50%);width:80px;height:24px;background:#000;border-radius:14px;z-index:30}
+  .reel{width:100%;height:100%;border-radius:32px;overflow:hidden;position:relative;background:#000}
+
+  .slide{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2.5rem 1.6rem;opacity:0;transition:opacity .55s ease}
+  .slide.active{opacity:1;z-index:5}
+  .slide-num{position:absolute;top:48px;right:20px;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;opacity:.5;font-weight:700}
+
+  /* Gradients */
+  .bg1{background:linear-gradient(160deg,#0a0a0f 0%,#15151f 60%,#1a1a2e 100%)}
+  .bg2{background:linear-gradient(160deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%)}
+  .bg3{background:linear-gradient(160deg,#3a0a64 0%,#5b2a86 50%,#7a3da8 100%)}
+  .bg4{background:linear-gradient(160deg,#072a3d 0%,#0b3b54 50%,#0d8a7a 100%)}
+  .bg5{background:linear-gradient(160deg,#3b0a1c 0%,#7a1f2b 50%,#c08b2f 100%)}
+  .bg6{background:linear-gradient(160deg,#0c1828 0%,#1e3a8a 50%,#3b62d5 100%)}
+  .bg7{background:linear-gradient(160deg,#0a0a0f 0%,#1f1a2e 100%)}
+  .bg8{background:linear-gradient(160deg,#c08b2f 0%,#f3c969 50%,#fffbe5 100%);color:#1a1a2e}
+  .bg9{background:linear-gradient(160deg,#0a0a0f 0%,#000 100%)}
+
+  /* Hook slide */
+  .strike{text-decoration:line-through;text-decoration-color:#ef4444;text-decoration-thickness:4px;opacity:.6}
+  .hook-big{font-size:2.2rem;line-height:1.05;text-align:center;font-weight:900}
+
+  /* Module card mockup */
+  .module-mock{background:rgba(255,255,255,.08);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:1rem;width:100%;margin-top:1.2rem}
+  .mock-bar{height:10px;background:rgba(255,255,255,.18);border-radius:4px;margin-bottom:6px}
+  .mock-bar.short{width:55%}
+  .mock-bar.med{width:78%}
+  .mini-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}
+  .mini-card{aspect-ratio:1/.85;background:rgba(255,255,255,.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem}
+
+  /* Stat counter */
+  .stat-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:1.2rem}
+  .stat{background:rgba(255,255,255,.12);border-radius:10px;padding:.5rem .8rem;text-align:center;backdrop-filter:blur(4px);min-width:80px}
+  .stat .num{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;display:block;line-height:1}
+  .stat .lbl{font-size:.6rem;text-transform:uppercase;letter-spacing:.08em;opacity:.85;margin-top:2px;display:block}
+
+  /* Animations */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes scaleIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+  @keyframes slideR{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:translateX(0)}}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  @keyframes wave{0%,100%{height:30%}50%{height:90%}}
+  @keyframes glowText{0%,100%{text-shadow:0 0 10px rgba(255,255,255,.3)}50%{text-shadow:0 0 30px rgba(255,255,255,.8)}}
+
+  .slide.active .anim1{animation:fadeUp .6s ease-out .1s both}
+  .slide.active .anim2{animation:fadeUp .6s ease-out .35s both}
+  .slide.active .anim3{animation:fadeUp .6s ease-out .6s both}
+  .slide.active .anim4{animation:fadeUp .6s ease-out .85s both}
+  .slide.active .scale1{animation:scaleIn .55s ease-out .15s both}
+  .slide.active .scale2{animation:scaleIn .55s ease-out .45s both}
+
+  /* Audio waves */
+  .waves{display:flex;align-items:center;gap:3px;height:50px}
+  .waves span{width:5px;background:#0d8a7a;border-radius:3px;animation:wave 1.2s infinite ease-in-out}
+  .waves span:nth-child(1){animation-delay:0s;height:30%}
+  .waves span:nth-child(2){animation-delay:.1s;height:60%}
+  .waves span:nth-child(3){animation-delay:.2s;height:80%}
+  .waves span:nth-child(4){animation-delay:.3s;height:100%}
+  .waves span:nth-child(5){animation-delay:.4s;height:60%}
+  .waves span:nth-child(6){animation-delay:.5s;height:40%}
+  .waves span:nth-child(7){animation-delay:.6s;height:80%}
+  .waves span:nth-child(8){animation-delay:.7s;height:50%}
+  .waves span:nth-child(9){animation-delay:.8s;height:70%}
+
+  /* Logo card final */
+  .cta-logo{display:inline-flex;align-items:center;gap:.7rem;padding:1rem 1.4rem;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.25);border-radius:18px;backdrop-filter:blur(8px)}
+
+  /* Module list ticks */
+  .tick-line{display:flex;align-items:center;gap:.5rem;font-size:.85rem;font-weight:600;margin:.25rem 0;text-align:left}
+  .tick-line::before{content:"✓";color:#10b981;font-weight:900;flex-shrink:0;width:18px;height:18px;background:rgba(16,185,129,.15);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.7rem}
+
+  /* Progress dots */
+  .progress{position:absolute;top:16px;left:50%;transform:translateX(-50%);display:flex;gap:4px;z-index:20}
+  .progress .dot{width:28px;height:3px;background:rgba(255,255,255,.25);border-radius:2px;overflow:hidden;position:relative}
+  .progress .dot.done{background:#fff}
+  .progress .dot.active::after{content:"";position:absolute;left:0;top:0;height:100%;background:#fff;animation:fillBar 4s linear forwards}
+  @keyframes fillBar{from{width:0%}to{width:100%}}
+
+  /* Controls */
+  .controls{margin-top:1rem;display:flex;gap:.6rem}
+  .control-btn{padding:.6rem 1.1rem;border-radius:10px;border:none;background:#1f1f2a;color:#fff;font-weight:600;font-size:.85rem;cursor:pointer;font-family:inherit}
+  .control-btn:hover{background:#2a2a38}
+  .info-text{text-align:center;max-width:520px;margin-top:1.5rem;color:#aaa;font-size:.78rem;line-height:1.5}
+
+  /* Tag */
+  .tag{display:inline-block;padding:.25rem .65rem;border-radius:999px;font-size:.6rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;background:rgba(255,255,255,.15);backdrop-filter:blur(4px)}
+  .tag.gold{background:#fbbf24;color:#1a1a2e}
+
+  /* Burst */
+  .burst{position:relative;display:inline-block}
+  .burst::before{content:"";position:absolute;inset:-12px -16px;background:radial-gradient(circle,rgba(251,191,36,.5) 0%,transparent 70%);border-radius:50%;z-index:-1;animation:pulse 1.8s infinite}
+
+  /* Big number */
+  .big-num{font-family:'Fraunces',serif;font-weight:900;font-size:5rem;line-height:.9;color:#fff;text-shadow:0 4px 20px rgba(0,0,0,.4)}
+
+  .module-title{font-family:'Fraunces',serif;font-weight:900;font-size:2rem;line-height:1.05;text-align:center}
+</style>
+</head>
+<body>
+
+<div class="phone-frame">
+  <div class="reel">
+
+    <!-- PROGRESS BARS -->
+    <div class="progress" id="progressBars"></div>
+
+    <!-- SLIDE 1 — HOOK -->
+    <div class="slide bg1 active" data-i="0">
+      <span class="slide-num">01 / 09</span>
+      <div class="tag anim1" style="background:#ef4444">⚠ Hot take</div>
+      <h1 class="hook-big anim2" style="margin-top:1.2rem">Most IELTS classes still use this 👇</h1>
+      <div class="anim3" style="margin-top:1.5rem;background:#2a2a38;padding:1rem;border-radius:12px;width:100%;text-align:center;border:2px dashed #555">
+        <div style="font-size:2.4rem">📚</div>
+        <div style="font-size:.95rem;margin-top:.4rem;opacity:.85" class="strike">Same Cambridge book from 2018.<br>Same boring PDF worksheets.<br>Same dry teacher monologue.</div>
+      </div>
+      <div class="anim4" style="margin-top:1.2rem;font-size:.85rem;opacity:.7;text-align:center">No wonder students lose interest in week 2.</div>
+    </div>
+
+    <!-- SLIDE 2 — PIVOT -->
+    <div class="slide bg7" data-i="1">
+      <span class="slide-num">02 / 09</span>
+      <div class="anim1" style="font-size:1rem;opacity:.7;text-transform:uppercase;letter-spacing:.2em;text-align:center">We do it differently.</div>
+      <h1 class="anim2" style="font-size:3.2rem;line-height:.95;text-align:center;margin-top:.7rem">Smart<br><span style="background:linear-gradient(90deg,#fbbf24,#f59e0b);-webkit-background-clip:text;background-clip:text;color:transparent">IELTS</span><br>Classes.</h1>
+      <div class="anim3" style="margin-top:1.4rem;text-align:center;font-size:.95rem;line-height:1.45;opacity:.85">14 interactive modules.<br>50+ original drills.<br>4 audio mini-tests.<br>One mission: <strong>Band 7+</strong>.</div>
+      <div class="stat-row anim4" style="margin-top:1.4rem">
+        <div class="stat"><span class="num">14</span><span class="lbl">Modules</span></div>
+        <div class="stat"><span class="num">100+</span><span class="lbl">Drills</span></div>
+        <div class="stat"><span class="num">∞</span><span class="lbl">Practice</span></div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 — READING -->
+    <div class="slide bg3" data-i="2">
+      <span class="slide-num">03 / 09</span>
+      <div class="anim1 tag gold">📖 Reading</div>
+      <h2 class="module-title anim2" style="margin-top:.8rem">Detective<br>Academy</h2>
+      <div class="anim3" style="margin-top:.6rem;text-align:center;font-size:.85rem;line-height:1.5;opacity:.95"><strong>14 question types</strong>. Each with a real IELTS-style passage, the strategy, the trap, and a walkthrough.</div>
+      <div class="module-mock scale2">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem">
+          <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;opacity:.85">Case Files</div>
+          <div style="font-size:.65rem;background:rgba(251,191,36,.25);padding:.15rem .5rem;border-radius:999px;font-weight:700">14 types</div>
+        </div>
+        <div class="mini-cards">
+          <div class="mini-card" style="background:rgba(251,191,36,.25)">MCQ</div>
+          <div class="mini-card">T/F/NG</div>
+          <div class="mini-card">Y/N/NG</div>
+          <div class="mini-card">Match</div>
+          <div class="mini-card">Head.</div>
+          <div class="mini-card">Feat.</div>
+          <div class="mini-card">Compl.</div>
+          <div class="mini-card">Diag.</div>
+          <div class="mini-card">+6</div>
+        </div>
+      </div>
+      <div class="anim4" style="margin-top:.9rem;font-size:.75rem;opacity:.85;text-align:center">⚡ Tap any card → real passage + walkthrough opens.</div>
+    </div>
+
+    <!-- SLIDE 4 — LISTENING -->
+    <div class="slide bg4" data-i="3">
+      <span class="slide-num">04 / 09</span>
+      <div class="anim1 tag" style="background:rgba(255,255,255,.15)">🎧 Listening</div>
+      <h2 class="module-title anim2" style="margin-top:.8rem">Sound<br>Hunter</h2>
+      <div class="anim3" style="margin-top:.6rem;text-align:center;font-size:.85rem;line-height:1.5">Live audio drills. Built-in TTS. Distractor traps. <strong>Map navigation</strong>. Section-3 boss fight.</div>
+      <div class="module-mock scale2">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div>
+            <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;opacity:.7">Now playing</div>
+            <div style="font-size:.85rem;font-weight:700;margin-top:2px">Section 3 · Distractor</div>
+          </div>
+          <div style="background:#0d8a7a;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem">▶</div>
+        </div>
+        <div class="waves" style="margin-top:.7rem"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div style="font-size:.7rem;margin-top:.6rem;opacity:.8;font-style:italic">"…originally we were going to do social media, but actually we switched to <strong>vertical farming</strong>…"</div>
+      </div>
+      <div class="anim4 stat-row">
+        <div class="stat"><span class="num">6</span><span class="lbl">Labs</span></div>
+        <div class="stat"><span class="num">4</span><span class="lbl">Mini-tests</span></div>
+        <div class="stat"><span class="num">TTS</span><span class="lbl">Audio</span></div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5 — WRITING -->
+    <div class="slide bg5" data-i="4">
+      <span class="slide-num">05 / 09</span>
+      <div class="anim1 tag" style="background:rgba(255,255,255,.18)">✍ Writing</div>
+      <h2 class="module-title anim2" style="margin-top:.8rem">Architect's<br>Blueprint</h2>
+      <div class="anim3" style="margin-top:.6rem;text-align:center;font-size:.85rem;line-height:1.45">5 essay types · 5 model essays · 8 sentence drills · live skeleton builder.</div>
+      <div class="module-mock scale2">
+        <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;opacity:.85;margin-bottom:.4rem">Essay Skeleton</div>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="background:rgba(255,255,255,.18);padding:.4rem .6rem;border-radius:6px;font-size:.7rem;border-left:3px solid #fbbf24"><strong>Intro</strong> · ~50w · Paraphrase + Thesis</div>
+          <div style="background:rgba(255,255,255,.12);padding:.4rem .6rem;border-radius:6px;font-size:.7rem;border-left:3px solid rgba(255,255,255,.4)"><strong>Body 1</strong> · ~95w · P-E-E-L</div>
+          <div style="background:rgba(255,255,255,.12);padding:.4rem .6rem;border-radius:6px;font-size:.7rem;border-left:3px solid rgba(255,255,255,.4)"><strong>Body 2</strong> · ~95w · P-E-E-L</div>
+          <div style="background:rgba(255,255,255,.18);padding:.4rem .6rem;border-radius:6px;font-size:.7rem;border-left:3px solid #fbbf24"><strong>Conclusion</strong> · ~40w · Restate stance</div>
+        </div>
+      </div>
+      <div class="anim4" style="margin-top:.8rem;font-size:.78rem;opacity:.95;text-align:center">📐 Pick the essay type → blueprint auto-builds.</div>
+    </div>
+
+    <!-- SLIDE 6 — SPEAKING -->
+    <div class="slide bg6" data-i="5">
+      <span class="slide-num">06 / 09</span>
+      <div class="anim1 tag" style="background:rgba(255,255,255,.18)">🎙 Speaking</div>
+      <h2 class="module-title anim2" style="margin-top:.8rem">Confident<br>Performer</h2>
+      <div class="anim3" style="margin-top:.6rem;text-align:center;font-size:.85rem;line-height:1.45">Live interview simulator · TTS examiner · in-browser mic recording · self-grading rubric.</div>
+      <div class="module-mock scale2">
+        <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.6rem">
+          <div style="width:38px;height:38px;border-radius:50%;background:#ef4444;display:flex;align-items:center;justify-content:center;font-size:1.2rem;animation:pulse 1.5s infinite">🎙</div>
+          <div>
+            <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;opacity:.7">Recording · 00:24</div>
+            <div style="font-size:.78rem;font-weight:700">Part 1 · Question 3 of 8</div>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,.15);padding:.6rem;border-radius:8px;font-size:.72rem;font-style:italic">Examiner: "Do you enjoy cooking?"</div>
+        <div style="display:flex;gap:4px;margin-top:.5rem;align-items:center"><div class="waves" style="height:24px"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+      </div>
+      <div class="anim4 stat-row" style="margin-top:.7rem">
+        <div class="stat"><span class="num">3</span><span class="lbl">Parts</span></div>
+        <div class="stat"><span class="num">⚡</span><span class="lbl">Rapid Fire</span></div>
+        <div class="stat"><span class="num">🎙</span><span class="lbl">Record</span></div>
+      </div>
+    </div>
+
+    <!-- SLIDE 7 — RESOURCES -->
+    <div class="slide bg2" data-i="6">
+      <span class="slide-num">07 / 09</span>
+      <div class="anim1 tag gold">+ MORE</div>
+      <h2 class="anim2" style="font-size:1.7rem;margin-top:.7rem;text-align:center">Plus 10 more<br>resources nobody else has.</h2>
+      <div class="anim3" style="margin-top:1.2rem;width:100%">
+        <div class="tick-line">14 Reading question types · with real examples</div>
+        <div class="tick-line">50-prompt paraphrase worksheet</div>
+        <div class="tick-line">Sentence-combining DOCX (33 exercises)</div>
+        <div class="tick-line">Cohesive Devices: 8-gap AI essay drill</div>
+        <div class="tick-line">Grammar: Tenses + Conditionals masterclass</div>
+        <div class="tick-line">Punctuation, Voice & Speech, Sentences</div>
+        <div class="tick-line">Vocabulary Accelerator · 10 topic banks</div>
+        <div class="tick-line">Mock Test Tracker · live class dashboard</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 8 — WHY -->
+    <div class="slide bg8" data-i="7">
+      <span class="slide-num">08 / 09</span>
+      <div class="anim1 tag" style="background:#1a1a2e;color:#fbbf24">⭐ Why us</div>
+      <div class="anim2" style="margin-top:1rem">
+        <div class="big-num" style="color:#1a1a2e">100%</div>
+        <div style="font-size:1rem;font-weight:800;margin-top:.4rem;text-align:center;color:#1a1a2e">Original. Interactive. Built for class.</div>
+      </div>
+      <div class="anim3" style="margin-top:1.2rem;background:#1a1a2e;color:#fff;padding:1rem;border-radius:14px;text-align:center;font-size:.9rem;line-height:1.45">
+        <strong style="font-size:1.05rem;display:block;margin-bottom:.3rem">No other agency has this.</strong>
+        We built every drill, modal, worksheet and audio prompt from scratch.
+      </div>
+      <div class="anim4" style="margin-top:.9rem;font-size:.85rem;font-weight:700;text-align:center;color:#1a1a2e">Because Band 7+ deserves better tools.</div>
+    </div>
+
+    <!-- SLIDE 9 — CTA -->
+    <div class="slide bg9" data-i="8">
+      <span class="slide-num">09 / 09</span>
+      <div class="anim1" style="font-size:.85rem;text-transform:uppercase;letter-spacing:.25em;opacity:.65;text-align:center">Book your spot</div>
+      <h1 class="anim2 burst" style="font-size:3.5rem;text-align:center;margin-top:1rem;line-height:.95">Smart<br>Classes.<br><span style="background:linear-gradient(90deg,#fbbf24,#f59e0b);-webkit-background-clip:text;background-clip:text;color:transparent">Real Results.</span></h1>
+      <div class="anim3" style="margin-top:1.4rem;text-align:center;font-size:.95rem;line-height:1.4">Free trial class.<br>Limited seats this batch.</div>
+      <div class="anim4 cta-logo" style="margin-top:1.4rem">
+        <div style="font-size:1.5rem">🎯</div>
+        <div>
+          <div style="font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;opacity:.7">DM us</div>
+          <div style="font-size:1rem;font-weight:800">@your_handle</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="controls">
+  <button class="control-btn" id="playBtn">⏸ Pause</button>
+  <button class="control-btn" id="restartBtn">↻ Restart</button>
+  <button class="control-btn" id="recordBtn">⏺ Record mode</button>
+  <button class="control-btn" id="prevBtn">←</button>
+  <button class="control-btn" id="nextBtn">→</button>
+</div>
+
+<div class="info-text">
+  <strong>To record this as an MP4 reel:</strong><br>
+  <strong>Windows:</strong> Win+G → Game Bar → 🎥 → screen-record this browser window → Stop when reel finishes (slide 9).<br>
+  <strong>Mac:</strong> Cmd+Shift+5 → "Record Selected Portion" → drag around the phone frame → Record.<br>
+  Click "Record mode" to hide controls for a cleaner capture.
+</div>
+
+<script>
+const slides=document.querySelectorAll('.slide');
+const progressEl=document.getElementById('progressBars');
+const SLIDE_MS=4000;
+let cur=0,paused=false,timer=null;
+
+// Build progress bars
+slides.forEach((_,i)=>{const d=document.createElement('div');d.className='dot';progressEl.appendChild(d);});
+
+function show(i){
+  slides.forEach((s,j)=>{
+    s.classList.toggle('active',j===i);
+  });
+  progressEl.querySelectorAll('.dot').forEach((d,j)=>{
+    d.classList.remove('active','done');
+    if(j<i) d.classList.add('done');
+    if(j===i) d.classList.add('active');
+  });
+}
+function next(){
+  if(paused) return;
+  cur=(cur+1)%slides.length;
+  show(cur);
+  if(cur===slides.length-1){
+    // hold on CTA slide longer
+    clearTimeout(timer);
+    timer=setTimeout(()=>{paused=true;document.getElementById('playBtn').textContent='▶ Play';},6000);
+    return;
+  }
+  timer=setTimeout(next,SLIDE_MS);
+}
+show(0);
+timer=setTimeout(next,SLIDE_MS);
+
+document.getElementById('playBtn').addEventListener('click',e=>{
+  paused=!paused;
+  e.target.textContent=paused?'▶ Play':'⏸ Pause';
+  if(!paused){timer=setTimeout(next,SLIDE_MS);}
+  else{clearTimeout(timer);}
+});
+document.getElementById('restartBtn').addEventListener('click',()=>{
+  cur=0;show(0);paused=false;
+  document.getElementById('playBtn').textContent='⏸ Pause';
+  clearTimeout(timer);timer=setTimeout(next,SLIDE_MS);
+});
+document.getElementById('nextBtn').addEventListener('click',()=>{
+  clearTimeout(timer);cur=(cur+1)%slides.length;show(cur);
+  if(!paused) timer=setTimeout(next,SLIDE_MS);
+});
+document.getElementById('prevBtn').addEventListener('click',()=>{
+  clearTimeout(timer);cur=(cur-1+slides.length)%slides.length;show(cur);
+  if(!paused) timer=setTimeout(next,SLIDE_MS);
+});
+document.getElementById('recordBtn').addEventListener('click',e=>{
+  const ctrls=document.querySelector('.controls');
+  const info=document.querySelector('.info-text');
+  if(ctrls.style.display==='none'){
+    ctrls.style.display='flex';info.style.display='block';e.target.textContent='⏺ Record mode';
+  } else {
+    ctrls.style.display='none';info.style.display='none';
+  }
+});
+</script>
+</body>
+</html>
