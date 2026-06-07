@@ -81,6 +81,29 @@
   details>summary{cursor:pointer;list-style:none}
   details>summary::-webkit-details-marker{display:none}
   .formula{display:inline-block;padding:.3rem .6rem;background:#eef2fa;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:.8rem}
+
+  /* ── WRITING TEMPLATES ── */
+  .tpl-tab{cursor:pointer;padding:.35rem .8rem;border-radius:999px;font-size:.78rem;font-weight:600;border:1.5px solid var(--line);background:#fff;transition:all .15s;white-space:nowrap}
+  .tpl-tab:hover{border-color:var(--blue);color:var(--blue)}
+  .tpl-tab.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .tpl-section{margin-bottom:.9rem}
+  .tpl-section-label{font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;padding:.2rem .6rem;border-radius:4px;display:inline-block;margin-bottom:.5rem}
+  .tpl-row{display:flex;flex-direction:column;gap:.45rem}
+  .tpl-field{display:flex;flex-direction:column;gap:.25rem}
+  .tpl-hint{font-size:.72rem;color:var(--blue);font-weight:600;padding:0 .2rem}
+  .tpl-input{width:100%;padding:.55rem .75rem;border-radius:8px;border:1.5px solid var(--line);background:#fafaf7;font-family:'Inter',sans-serif;font-size:.88rem;color:var(--ink);resize:vertical;min-height:52px;transition:border-color .15s,background .15s;line-height:1.55}
+  .tpl-input:focus{outline:none;border-color:var(--blue);background:#fff}
+  .tpl-input.starter{background:linear-gradient(90deg,#eef2fa 0 36%,#fafaf7 36%)}
+  .tpl-starter-prefix{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--blue);font-weight:700;background:#eef2fa;padding:.4rem .7rem;border-radius:6px 0 0 6px;border:1.5px solid var(--line);border-right:none;white-space:nowrap;display:flex;align-items:center}
+  .tpl-starter-row{display:flex;align-items:stretch}
+  .tpl-starter-row .tpl-input{border-radius:0 8px 8px 0;border-left:none}
+  .tpl-meta{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:1rem;padding:.7rem .9rem;background:#f7f3e9;border-radius:10px;border:1px solid var(--line)}
+  .tpl-meta .badge{font-size:.72rem}
+  .tpl-word-count{font-family:'JetBrains Mono',monospace;font-size:.8rem;padding:.3rem .7rem;border-radius:999px;background:#eef2fa;color:var(--blue);font-weight:700}
+  .tpl-actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.2rem}
+  .divider-label{display:flex;align-items:center;gap:.5rem;margin:.6rem 0 .4rem;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#9ca3af}
+  .divider-label::before,.divider-label::after{content:'';flex:1;height:1px;background:var(--line)}
+
 </style>
 </head>
 <body>
@@ -99,6 +122,7 @@
       <span class="nav-step" data-jump="skeleton">⑤ Skeleton</span>
       <span class="nav-step" data-jump="drills">⑥ Sentence Drills</span>
       <span class="nav-step" data-jump="boss">⑦ Boss Build</span>
+      <span class="nav-step" data-jump="templates">⑧ Templates</span>
     </div>
     <div class="flex items-center gap-3">
       <div class="text-right hidden sm:block"><div class="text-[11px] uppercase tracking-widest text-stone-500">Architect XP</div><div class="font-bold timer-pill" style="color:var(--blue)" id="xpDisplay">0 XP</div></div>
@@ -212,6 +236,19 @@
       <div class="flex justify-between items-center mt-3 flex-wrap gap-2"><div class="text-sm text-stone-600" id="bossWords">0 words</div><button class="btn btn-terra" id="bossSubmit">Submit Plan</button></div>
       <div id="bossResult" class="mt-3"></div>
     </div>
+  </section>
+
+
+  <!-- WRITING TEMPLATES -->
+  <section id="templates" class="mb-10">
+    <h2 class="text-2xl mb-1">⑧ Student Writing Templates</h2>
+    <p class="text-stone-700 max-w-3xl text-sm mb-4">Pick a template, fill in the highlighted slots with your own ideas. Every grey box is a sentence you need to write — the prompt inside tells you exactly what to include. Tap <strong>Clear</strong> to reset.</p>
+
+    <!-- Tab bar -->
+    <div class="flex flex-wrap gap-2 mb-4" id="tplTabBar"></div>
+
+    <!-- Template card -->
+    <div class="card p-5" id="tplCard"></div>
   </section>
 
   <!-- ACTION PLAN -->
@@ -691,6 +728,373 @@ document.getElementById('bossSubmit').addEventListener('click',()=>{
   addXP(20);
 });
 countWords();
+
+// ====== WRITING TEMPLATES ======
+const tplData = [
+  {
+    id:'t2_opinion', label:'Opinion', icon:'💭', accent:'var(--blue)',
+    badge:'Task 2 · Opinion / Agree-Disagree', words:'250–280 words', time:'40 min',
+    tip:'State your position clearly in the introduction. Every body paragraph must support YOUR side.',
+    sections:[
+      { label:'Introduction', color:'#eef2fa', textColor:'var(--blue)',
+        fields:[
+          { hint:'Paraphrase the question topic (different words, same meaning)', starter:'In recent years, / It is widely argued that / The question of whether', rows:2 },
+          { hint:'State your clear position — agree, disagree, or partly agree', starter:'I firmly believe that / In my view, / This essay will argue that', rows:2 }
+        ]
+      },
+      { label:'Body Paragraph 1 — Main Reason', color:'#eef9f3', textColor:'var(--green)',
+        fields:[
+          { hint:'Topic sentence — your FIRST reason (most important)', starter:'The primary reason for this view is that / First and foremost,', rows:2 },
+          { hint:'Explain / develop your reason in detail', starter:'This means that / In other words, / Specifically,', rows:2 },
+          { hint:'Give a specific example or evidence', starter:'For instance, / For example, / A clear illustration of this is', rows:2 },
+          { hint:'Link sentence — connect back to your argument', starter:'This demonstrates that / Therefore, it is clear that', rows:1 }
+        ]
+      },
+      { label:'Body Paragraph 2 — Second Reason', color:'#eef9f3', textColor:'var(--green)',
+        fields:[
+          { hint:'Topic sentence — your SECOND reason', starter:'Furthermore, / Another significant reason is that / In addition,', rows:2 },
+          { hint:'Explain / develop this reason', starter:'This is because / As a result, / Consequently,', rows:2 },
+          { hint:'Example or evidence', starter:'For example, / To illustrate, / Studies have shown that', rows:2 },
+          { hint:'Link sentence', starter:'This further supports the idea that / Hence,', rows:1 }
+        ]
+      },
+      { label:'Concession Paragraph (optional Band 7+)', color:'#fdf6e3', textColor:'var(--gold)',
+        fields:[
+          { hint:'Acknowledge the opposing view briefly', starter:'Admittedly, / It is true that / While some argue that', rows:2 },
+          { hint:'Refute it — explain why your view is still stronger', starter:'However, / Nevertheless, / Despite this, the evidence suggests that', rows:2 }
+        ]
+      },
+      { label:'Conclusion', color:'#fdeadf', textColor:'var(--terra)',
+        fields:[
+          { hint:'Restate your position (paraphrase — do NOT copy your introduction)', starter:'In conclusion, / To sum up, / Overall,', rows:2 },
+          { hint:'Summarise your two main reasons briefly', starter:'...because [reason 1] and [reason 2].', rows:2 }
+        ]
+      }
+    ]
+  },
+  {
+    id:'t2_discussion', label:'Discussion', icon:'⚖️', accent:'var(--gold)',
+    badge:'Task 2 · Discuss Both Views + Opinion', words:'260–290 words', time:'40 min',
+    tip:'You MUST discuss BOTH sides before giving your own opinion in the conclusion — not just the side you agree with.',
+    sections:[
+      { label:'Introduction', color:'#eef2fa', textColor:'var(--blue)',
+        fields:[
+          { hint:'Introduce the topic / debate (paraphrase the prompt)', starter:'There is ongoing debate about / People hold different views on whether / It is often argued that', rows:2 },
+          { hint:'State that both views will be discussed + your position', starter:'While some believe [View A], others argue [View B]. This essay will discuss both perspectives before concluding that...', rows:2 }
+        ]
+      },
+      { label:'Body Paragraph 1 — View A (first side)', color:'#fdf6e3', textColor:'var(--gold)',
+        fields:[
+          { hint:'Topic sentence — introduce the FIRST viewpoint', starter:'On one hand, those who believe [View A] argue that / Proponents of this view suggest that', rows:2 },
+          { hint:'Explain the reasoning behind this view', starter:'This is because / The main justification is that / They point out that', rows:2 },
+          { hint:'Example supporting this view', starter:'For example, / For instance, / Evidence for this can be seen in', rows:2 }
+        ]
+      },
+      { label:'Body Paragraph 2 — View B (other side)', color:'#fdeadf', textColor:'var(--terra)',
+        fields:[
+          { hint:'Topic sentence — introduce the SECOND viewpoint', starter:'On the other hand, others contend that / However, an opposing perspective holds that', rows:2 },
+          { hint:'Explain the reasoning behind this view', starter:'This view is based on the idea that / Supporters of this position argue that', rows:2 },
+          { hint:'Example supporting this view', starter:'For instance, / To illustrate, / A compelling example is', rows:2 }
+        ]
+      },
+      { label:'Conclusion — Your Opinion', color:'#eef9f3', textColor:'var(--green)',
+        fields:[
+          { hint:'Summarise both views', starter:'In conclusion, while [View A] has merit, / Although both sides have validity,', rows:2 },
+          { hint:'Give YOUR clear final opinion', starter:'I believe that [your view] because / In my view, the [first/second] argument is more convincing because', rows:2 }
+        ]
+      }
+    ]
+  },
+  {
+    id:'t2_advdis', label:'Adv / Dis', icon:'➕➖', accent:'var(--terra)',
+    badge:'Task 2 · Advantages & Disadvantages', words:'255–285 words', time:'40 min',
+    tip:'Be balanced — give equal space to advantages AND disadvantages unless the question asks "outweigh".',
+    sections:[
+      { label:'Introduction', color:'#eef2fa', textColor:'var(--blue)',
+        fields:[
+          { hint:'Introduce the topic (paraphrase the question)', starter:'In recent decades, / The growing prevalence of / With the rise of', rows:2 },
+          { hint:'State that you will examine both advantages and disadvantages', starter:'This essay will examine the main benefits and drawbacks of this development.', rows:1 }
+        ]
+      },
+      { label:'Body Paragraph 1 — Advantages', color:'#eef9f3', textColor:'var(--green)',
+        fields:[
+          { hint:'Topic sentence — introduce main advantage(s)', starter:'There are several notable advantages to / The most significant benefit of this is that', rows:2 },
+          { hint:'Explain the first advantage in detail', starter:'Firstly, / To begin with, / The primary benefit is that', rows:2 },
+          { hint:'Example or evidence', starter:'For example, / For instance, / Research suggests that', rows:2 },
+          { hint:'Add a second advantage (optional)', starter:'Furthermore, / In addition, / Another benefit is that', rows:2 }
+        ]
+      },
+      { label:'Body Paragraph 2 — Disadvantages', color:'#fdeadf', textColor:'var(--terra)',
+        fields:[
+          { hint:'Topic sentence — introduce main disadvantage(s)', starter:'However, there are also significant drawbacks. / Despite these benefits, there are notable disadvantages.', rows:2 },
+          { hint:'Explain the first disadvantage in detail', starter:'The most serious concern is that / A major drawback is that / One significant problem is', rows:2 },
+          { hint:'Example or evidence', starter:'For instance, / Studies have found that / A clear example can be seen in', rows:2 },
+          { hint:'Add a second disadvantage (optional)', starter:'Moreover, / Additionally, / Another disadvantage is that', rows:2 }
+        ]
+      },
+      { label:'Conclusion', color:'#fdf6e3', textColor:'var(--gold)',
+        fields:[
+          { hint:'Weigh up both sides (do advantages outweigh disadvantages or vice versa?)', starter:'In conclusion, while [topic] has clear advantages such as [X], the disadvantages — particularly [Y] — cannot be overlooked.', rows:2 },
+          { hint:'Final stance', starter:'Overall, I believe the benefits/drawbacks outweigh the drawbacks/benefits because...', rows:2 }
+        ]
+      }
+    ]
+  },
+  {
+    id:'t2_probsol', label:'Problem/Solution', icon:'🔧', accent:'var(--green)',
+    badge:'Task 2 · Problem & Solution', words:'255–280 words', time:'40 min',
+    tip:'Use cause-effect language for problems (leads to, results in, causes) and purpose language for solutions (in order to, so that, to address this).',
+    sections:[
+      { label:'Introduction', color:'#eef2fa', textColor:'var(--blue)',
+        fields:[
+          { hint:'Introduce the problem and its significance', starter:'One of the most pressing issues facing society today is / In many parts of the world, [problem] has become a serious concern.', rows:2 },
+          { hint:'State this essay will discuss causes/problems and solutions', starter:'This essay will examine the main causes of this issue and propose effective solutions.', rows:1 }
+        ]
+      },
+      { label:'Body Paragraph 1 — Problems / Causes', color:'#fdeadf', textColor:'var(--terra)',
+        fields:[
+          { hint:'Topic sentence — state the main problems or causes', starter:'There are several key reasons why this problem has developed. / The issue stems primarily from', rows:2 },
+          { hint:'Explain Problem/Cause 1 in detail', starter:'Firstly, / The most significant cause is / One major contributing factor is', rows:2 },
+          { hint:'Explain Problem/Cause 2', starter:'Furthermore, / In addition, / Another important factor is', rows:2 },
+          { hint:'Show the consequence — what does this lead to?', starter:'As a result, / Consequently, / This leads to / This results in', rows:2 }
+        ]
+      },
+      { label:'Body Paragraph 2 — Solutions', color:'#eef9f3', textColor:'var(--green)',
+        fields:[
+          { hint:'Topic sentence — introduce the solutions', starter:'Several measures could be taken to address this problem. / There are effective steps that governments and individuals can take.', rows:2 },
+          { hint:'Solution 1 — what, who, how?', starter:'First and foremost, / The most effective solution would be for [governments/schools/individuals] to / One key measure is', rows:2 },
+          { hint:'Why this solution works', starter:'This would help to / This could significantly reduce / In this way,', rows:2 },
+          { hint:'Solution 2', starter:'In addition, / Another important step is / Furthermore,', rows:2 }
+        ]
+      },
+      { label:'Conclusion', color:'#eef2fa', textColor:'var(--blue)',
+        fields:[
+          { hint:'Summarise the problems and solutions briefly', starter:'In conclusion, although [problem] poses serious challenges, these can be addressed through [solution 1] and [solution 2].', rows:2 },
+          { hint:'Final recommendation or prediction', starter:'If such measures are implemented, / With concerted effort, it is possible that', rows:2 }
+        ]
+      }
+    ]
+  },
+  {
+    id:'t2_twopart', label:'Two-Part Q', icon:'❓❓', accent:'var(--blue)',
+    badge:'Task 2 · Two-Part Question', words:'260–290 words', time:'40 min',
+    tip:'You MUST answer BOTH questions fully. Give each question roughly equal space — one body paragraph each.',
+    sections:[
+      { label:'Introduction', color:'#eef2fa', textColor:'var(--blue)',
+        fields:[
+          { hint:'Paraphrase the topic', starter:'The issue of [topic] has become increasingly prominent in recent years.', rows:2 },
+          { hint:'State that you will answer both questions', starter:'This essay will address both why [question 1 topic] and what [question 2 topic].', rows:1 }
+        ]
+      },
+      { label:'Body Paragraph 1 — Answer to Question 1', color:'#fdf6e3', textColor:'var(--gold)',
+        fields:[
+          { hint:'Topic sentence answering Question 1 directly', starter:'There are several reasons why / To begin with, the main cause of this is / Regarding the first question,', rows:2 },
+          { hint:'Explain your answer in detail', starter:'This is largely because / One key factor is / The primary explanation is that', rows:2 },
+          { hint:'Support with an example', starter:'For example, / For instance, / This can be seen in', rows:2 }
+        ]
+      },
+      { label:'Body Paragraph 2 — Answer to Question 2', color:'#eef9f3', textColor:'var(--green)',
+        fields:[
+          { hint:'Topic sentence answering Question 2 directly', starter:'Turning to the second question, / In terms of [Q2 topic], / As for [Q2], the most important consideration is', rows:2 },
+          { hint:'Explain your answer', starter:'This would involve / The most effective approach is to / A key consideration here is', rows:2 },
+          { hint:'Support with an example', starter:'For example, / For instance, / A relevant example is', rows:2 }
+        ]
+      },
+      { label:'Conclusion', color:'#fdeadf', textColor:'var(--terra)',
+        fields:[
+          { hint:'Summarise your answers to both questions', starter:'In conclusion, [Q1 answer summary] and [Q2 answer summary].', rows:2 },
+          { hint:'Closing thought (optional)', starter:'Ultimately, / It is clear that / Only by addressing both aspects can we...', rows:1 }
+        ]
+      }
+    ]
+  },
+  {
+    id:'t1_report', label:'Task 1 Report', icon:'📊', accent:'var(--gold)',
+    badge:'Task 1 · Academic Report (any visual)', words:'150–185 words', time:'20 min',
+    tip:'NO opinion. NO reasons/explanations for data. Report only what you SEE. Always write an Overview — this is worth the most marks.',
+    sections:[
+      { label:'Introduction — Paraphrase the rubric', color:'#eef2fa', textColor:'var(--blue)',
+        fields:[
+          { hint:'Paraphrase what the visual shows — change the wording completely', starter:'The [bar chart / line graph / diagram / table / pie chart / map] illustrates / compares / shows', rows:1 },
+          { hint:'Mention: what, where, when (if applicable)', starter:'...the [topic] in [country/context] [over the period / in the year]...', rows:1 }
+        ]
+      },
+      { label:'Overview — The 2 most important features', color:'#fdf6e3', textColor:'var(--gold)',
+        fields:[
+          { hint:'State the most striking overall trend or comparison (NOT specific data)', starter:'Overall, it is clear that / In general, / The most notable feature is that', rows:2 },
+          { hint:'State a second key observation', starter:'Furthermore, / It is also evident that / Another key trend is that', rows:2 }
+        ]
+      },
+      { label:'Body Paragraph 1 — Key details (Group 1 / Time period 1)', color:'#eef9f3', textColor:'var(--green)',
+        fields:[
+          { hint:'Topic sentence introducing this group or time period', starter:'Looking at [category/period] in more detail, / Regarding [X],', rows:1 },
+          { hint:'Describe the data — use specific figures in brackets (X%)', starter:'[Category] accounted for / stood at / rose sharply from [X] to [Y] / reached a peak of', rows:2 },
+          { hint:'Compare or contrast within this group', starter:'In contrast, / By comparison, / While [A] increased, [B] remained relatively stable at', rows:2 }
+        ]
+      },
+      { label:'Body Paragraph 2 — Key details (Group 2 / Time period 2)', color:'#fdeadf', textColor:'var(--terra)',
+        fields:[
+          { hint:'Topic sentence for second group or period', starter:'Turning to [second category/period], / With regard to [X],', rows:1 },
+          { hint:'Describe the specific data', starter:'[Category] experienced a [dramatic/gradual/slight] [increase/decrease/fluctuation], [rising/falling] to', rows:2 },
+          { hint:'Highlight anything notable — highest, lowest, exception', starter:'Notably, / It is worth noting that / The most significant figure is that', rows:2 }
+        ]
+      }
+    ]
+  }
+];
+
+let activeTpl = 0;
+const tplInputValues = {}; // store field values per template id
+
+function saveTplValues(id) {
+  const inputs = document.querySelectorAll('.tpl-input');
+  tplInputValues[id] = Array.from(inputs).map(el => el.value);
+}
+
+function restoreTplValues(id) {
+  if (!tplInputValues[id]) return;
+  const inputs = document.querySelectorAll('.tpl-input');
+  tplInputValues[id].forEach((v, i) => { if (inputs[i]) inputs[i].value = v; });
+}
+
+function countTplWords() {
+  const inputs = document.querySelectorAll('.tpl-input');
+  let total = 0;
+  inputs.forEach(el => {
+    const txt = el.value.trim();
+    if (txt) total += txt.split(/\s+/).filter(Boolean).length;
+  });
+  const el = document.getElementById('tplWordCount');
+  if (el) {
+    el.textContent = total + ' words written';
+    el.style.background = total >= 150 ? '#eef9f3' : '#eef2fa';
+    el.style.color = total >= 150 ? 'var(--green)' : 'var(--blue)';
+  }
+}
+
+function renderTplTabs() {
+  const bar = document.getElementById('tplTabBar');
+  if (!bar) return;
+  bar.innerHTML = tplData.map((t, i) =>
+    `<button class="tpl-tab${i === activeTpl ? ' active' : ''}" onclick="switchTpl(${i})">${t.icon} ${t.label}</button>`
+  ).join('');
+}
+
+function switchTpl(i) {
+  // Save current before switching
+  saveTplValues(tplData[activeTpl].id);
+  activeTpl = i;
+  renderTplTabs();
+  renderTplCard();
+  restoreTplValues(tplData[i].id);
+  updateTplWordCount();
+  addXP(3);
+}
+
+function updateTplWordCount() {
+  setTimeout(countTplWords, 50);
+}
+
+function renderTplCard() {
+  const t = tplData[activeTpl];
+  const card = document.getElementById('tplCard');
+  if (!card) return;
+
+  let html = `
+    <div class="tpl-meta">
+      <span class="badge" style="background:#eef2fa;color:var(--blue)">${t.badge}</span>
+      <span class="badge" style="background:#eef9f3;color:var(--green)">⏱ ${t.time}</span>
+      <span class="badge" style="background:#fdf6e3;color:var(--gold)">✏️ ${t.words}</span>
+      <span class="tpl-word-count" id="tplWordCount">0 words written</span>
+    </div>
+    <div class="feedback tip mb-4" style="font-size:.82rem"><strong>💡 Strategy tip:</strong> ${t.tip}</div>
+  `;
+
+  t.sections.forEach(sec => {
+    html += `
+      <div class="tpl-section">
+        <div class="tpl-section-label" style="background:${sec.color};color:${sec.textColor}">${sec.label}</div>
+        <div class="tpl-row">
+    `;
+    sec.fields.forEach((f, fi) => {
+      const fid = `${t.id}_${sec.label.replace(/\W+/g,'_')}_${fi}`;
+      html += `
+        <div class="tpl-field">
+          <div class="tpl-hint">→ ${f.hint}</div>
+          <div class="tpl-starter-row">
+            <div class="tpl-starter-prefix">${f.starter.split('/')[0].trim()}</div>
+            <textarea class="tpl-input" id="${fid}" rows="${f.rows || 2}"
+              placeholder="Write your sentence here..."
+              oninput="countTplWords()"
+            ></textarea>
+          </div>
+        </div>
+      `;
+    });
+    html += `</div></div>`;
+  });
+
+  html += `
+    <div class="tpl-actions">
+      <button class="btn btn-primary" onclick="copyTplAsText()">📋 Copy as text</button>
+      <button class="btn btn-ghost" onclick="clearTpl()">🗑 Clear</button>
+      <button class="btn btn-ghost" onclick="printTpl()">🖨 Print blank</button>
+    </div>
+  `;
+
+  card.innerHTML = html;
+  // attach word counter to all textareas
+  document.querySelectorAll('.tpl-input').forEach(el => {
+    el.addEventListener('input', countTplWords);
+  });
+}
+
+function clearTpl() {
+  if (!confirm('Clear all your text for this template?')) return;
+  document.querySelectorAll('.tpl-input').forEach(el => el.value = '');
+  delete tplInputValues[tplData[activeTpl].id];
+  countTplWords();
+}
+
+function copyTplAsText() {
+  const t = tplData[activeTpl];
+  let text = `${t.badge}\n${'='.repeat(50)}\n\n`;
+  t.sections.forEach(sec => {
+    text += `[${sec.label}]\n`;
+    const inputs = document.querySelectorAll(`[id^="${t.id}_${sec.label.replace(/\W+/g,'_')}"]`);
+    inputs.forEach((el, i) => {
+      if (el.value.trim()) text += el.value.trim() + ' ';
+    });
+    text += '\n\n';
+  });
+  navigator.clipboard.writeText(text.trim()).then(() => {
+    const btn = event.target;
+    const orig = btn.textContent;
+    btn.textContent = '✅ Copied!';
+    setTimeout(() => btn.textContent = orig, 1800);
+  }).catch(() => alert('Copy failed — try selecting the text manually.'));
+}
+
+function printTpl() {
+  const t = tplData[activeTpl];
+  const win = window.open('', '_blank');
+  let body = `<h2 style="font-family:serif">${t.badge} — Student Template</h2><p style="color:#666;font-size:12px">Name: _________________________ Date: ______________ Target band: ______</p><hr>`;
+  t.sections.forEach(sec => {
+    body += `<h3 style="font-family:serif;margin-top:18px;margin-bottom:4px">${sec.label}</h3>`;
+    sec.fields.forEach(f => {
+      body += `<p style="font-size:11px;color:#1e3a8a;margin:4px 0"><em>${f.hint}</em></p>`;
+      body += `<div style="border:1px solid #ccc;border-radius:4px;min-height:48px;margin-bottom:8px;padding:6px;font-size:12px;color:#999">${f.starter.split('/')[0].trim()} _______________________________________________</div>`;
+    });
+  });
+  win.document.write(`<!DOCTYPE html><html><head><title>${t.label} Template</title><style>body{font-family:Inter,sans-serif;max-width:700px;margin:20px auto;padding:20px}@media print{body{margin:0}}</style></head><body>${body}<script>window.onload=()=>window.print()<\/script></body></html>`);
+  win.document.close();
+  addXP(5);
+}
+
+// Init templates
+renderTplTabs();
+renderTplCard();
+
 </script>
 </body>
 </html>
