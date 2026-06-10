@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Vocabulary Master Guide | ViaTestPrep</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f0e0d;
+    --surface: #1a1917;
+    --card: #201f1d;
+    --border: #2e2c29;
+    --border-bright: #3d3b37;
+    --text-primary: #f0ede8;
+    --text-secondary: #9e9b95;
+    --text-muted: #5a5855;
+    --orange: #e8622a;
+    --orange-dim: #7a3316;
+    --orange-glow: rgba(232,98,42,0.12);
+    --green: #2dbe7a;
+    --green-dim: #0e4a2f;
+    --amber: #f5a623;
+    --amber-dim: #5c3d0e;
+    --blue: #4a9eff;
+    --blue-dim: #132a4a;
+    --teal: #1dc8a0;
+    --teal-dim: #083d2f;
+    --red: #e84a4a;
+    --red-dim: #4a1515;
+    --purple: #9b7fee;
+    --purple-dim: #2a1f4a;
+    --radius: 10px;
+    --radius-sm: 6px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+  }
+  .noise {
+    position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    opacity: 0.4;
+  }
+  .container { max-width: 480px; margin: 0 auto; padding: 0 0 80px; position: relative; z-index: 1; }
+
+  /* HEADER */
+  .header {
+    padding: 28px 20px 20px;
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0;
+    background: rgba(15,14,13,0.95);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+  }
+  .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+  .brand { font-family: 'Space Mono', monospace; font-size: 10px; color: var(--orange); letter-spacing: 2px; text-transform: uppercase; }
+  .progress-ring { display: flex; align-items: center; gap: 8px; }
+  .progress-label { font-size: 11px; color: var(--text-muted); font-family: 'Space Mono', monospace; }
+  .score-pill {
+    background: var(--orange-glow); border: 1px solid var(--orange-dim);
+    color: var(--orange); font-family: 'Space Mono', monospace;
+    font-size: 11px; padding: 3px 10px; border-radius: 20px;
+  }
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+  }
+  .header h1 span { color: var(--orange); }
+
+  /* TABS */
+  .tabs {
+    display: flex; gap: 4px;
+    padding: 14px 20px 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    flex-shrink: 0;
+    padding: 7px 14px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-secondary);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; font-weight: 500;
+    cursor: pointer; transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .tab-btn:hover { border-color: var(--border-bright); color: var(--text-primary); }
+  .tab-btn.active {
+    background: var(--orange); border-color: var(--orange);
+    color: #fff; font-weight: 600;
+  }
+
+  /* PANEL */
+  .panel { display: none; padding: 20px; }
+  .panel.active { display: block; animation: fadeIn 0.3s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* SECTION LABEL */
+  .section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase;
+    color: var(--orange); margin-bottom: 12px;
+  }
+
+  /* CARDS */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 10px;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: var(--border-bright); }
+  .card-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .card-sub { font-size: 12px; color: var(--text-secondary); }
+
+  /* NUMBERED STEP */
+  .step-row {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 14px 16px;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 8px;
+    cursor: pointer; transition: all 0.25s;
+  }
+  .step-row:hover, .step-row.expanded { border-color: var(--orange-dim); background: #231f1c; }
+  .step-num {
+    width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700;
+  }
+  .step-num.orange { background: var(--orange); color: #fff; }
+  .step-num.green { background: var(--green); color: #0a0a0a; }
+  .step-num.blue { background: var(--blue); color: #0a0a0a; }
+  .step-num.teal { background: var(--teal); color: #0a0a0a; }
+  .step-num.purple { background: var(--purple); color: #0a0a0a; }
+  .step-num.amber { background: var(--amber); color: #0a0a0a; }
+  .step-body { flex: 1; }
+  .step-title { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+  .step-detail {
+    display: none; font-size: 12px; color: var(--text-secondary);
+    line-height: 1.65; margin-top: 10px; padding-top: 10px;
+    border-top: 1px solid var(--border);
+  }
+  .step-detail.show { display: block; animation: fadeIn 0.2s ease; }
+  .chevron { color: var(--text-muted); font-size: 16px; transition: transform 0.25s; margin-top: 2px; }
+  .step-row.expanded .chevron { transform: rotate(180deg); }
+
+  /* VOCAB WORD CARD */
+  .word-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .word-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 16px; cursor: pointer;
+  }
+  .word-header:hover { background: #231f1c; }
+  .word-main { display: flex; align-items: baseline; gap: 8px; }
+  .word-eng { font-size: 15px; font-weight: 600; color: var(--text-primary); }
+  .word-pos {
+    font-size: 10px; padding: 2px 7px; border-radius: 20px;
+    font-family: 'Space Mono', monospace;
+  }
+  .pos-noun { background: var(--blue-dim); color: var(--blue); }
+  .pos-verb { background: var(--green-dim); color: var(--green); }
+  .pos-adj { background: var(--purple-dim); color: var(--purple); }
+  .pos-adv { background: var(--amber-dim); color: var(--amber); }
+  .word-band {
+    font-family: 'Space Mono', monospace; font-size: 10px;
+    padding: 2px 8px; border-radius: 20px;
+    border: 1px solid;
+  }
+  .band-7 { color: var(--amber); border-color: var(--amber-dim); }
+  .band-8 { color: var(--orange); border-color: var(--orange-dim); }
+  .band-9 { color: var(--teal); border-color: var(--teal-dim); }
+  .word-body { display: none; padding: 0 16px 16px; }
+  .word-body.open { display: block; animation: fadeIn 0.2s ease; }
+  .definition { font-size: 13px; color: var(--text-secondary); margin-bottom: 10px; line-height: 1.6; }
+  .example-box {
+    background: var(--surface); border-left: 3px solid var(--orange);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 10px 12px; margin-bottom: 10px;
+    font-size: 12px; line-height: 1.65; color: var(--text-secondary);
+  }
+  .example-box em { color: var(--orange); font-style: normal; font-weight: 600; }
+  .collocations { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .colloc-tag {
+    font-size: 11px; padding: 3px 10px; border-radius: 20px;
+    background: var(--surface); border: 1px solid var(--border);
+    color: var(--text-secondary);
+  }
+  .avoid-note {
+    background: rgba(232,74,74,0.08); border: 1px solid var(--red-dim);
+    border-radius: var(--radius-sm); padding: 8px 12px;
+    font-size: 11px; color: #e88484; margin-top: 8px;
+    display: flex; gap: 6px; align-items: flex-start;
+  }
+
+  /* QUIZ */
+  .quiz-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 20px;
+  }
+  .quiz-header { display: flex; justify-content: space-between; margin-bottom: 16px; }
+  .quiz-counter { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--text-muted); }
+  .quiz-type { font-size: 10px; padding: 2px 8px; border-radius: 20px; background: var(--orange-glow); color: var(--orange); border: 1px solid var(--orange-dim); }
+  .quiz-q { font-size: 15px; font-weight: 600; line-height: 1.5; margin-bottom: 16px; }
+  .quiz-q .blank {
+    display: inline-block; min-width: 80px; height: 2px;
+    border-bottom: 2px dashed var(--orange); margin: 0 4px 2px;
+    vertical-align: middle;
+  }
+  .quiz-options { display: flex; flex-direction: column; gap: 8px; }
+  .quiz-opt {
+    padding: 11px 14px; border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-primary); font-size: 13px;
+    cursor: pointer; transition: all 0.2s; text-align: left;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .quiz-opt:hover { border-color: var(--orange-dim); background: #231f1c; }
+  .quiz-opt.correct { border-color: var(--green); background: var(--green-dim); color: #aff0d0; }
+  .quiz-opt.wrong { border-color: var(--red); background: var(--red-dim); color: #f0aaaa; }
+  .quiz-feedback {
+    display: none; margin-top: 14px;
+    padding: 12px; border-radius: var(--radius-sm);
+    font-size: 12px; line-height: 1.6;
+  }
+  .quiz-feedback.show-ok { display: block; background: var(--green-dim); border: 1px solid var(--green); color: #aff0d0; }
+  .quiz-feedback.show-fail { display: block; background: var(--red-dim); border: 1px solid var(--red-dim); color: #f0aaaa; }
+  .quiz-next {
+    margin-top: 12px; width: 100%; padding: 11px;
+    background: var(--orange); border: none; border-radius: var(--radius-sm);
+    color: #fff; font-size: 13px; font-weight: 600; cursor: pointer;
+    font-family: 'DM Sans', sans-serif; display: none;
+  }
+  .quiz-next:hover { background: #d4541e; }
+  .quiz-score-display {
+    text-align: center; padding: 30px 20px;
+  }
+  .quiz-score-big {
+    font-family: 'Space Mono', monospace;
+    font-size: 48px; font-weight: 700; color: var(--orange);
+  }
+  .quiz-score-msg { font-size: 14px; color: var(--text-secondary); margin: 8px 0 20px; }
+  .quiz-restart {
+    padding: 11px 24px; background: var(--orange); border: none;
+    border-radius: var(--radius-sm); color: #fff; font-size: 13px;
+    font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif;
+  }
+
+  /* SYNONYMS TABLE */
+  .syn-row {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 12px 0; border-bottom: 1px solid var(--border);
+  }
+  .syn-row:last-child { border-bottom: none; }
+  .syn-weak { flex: 1; }
+  .syn-arrow { color: var(--orange); font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+  .syn-strong { flex: 2; display: flex; flex-wrap: wrap; gap: 5px; }
+  .syn-weak-word { font-size: 13px; font-weight: 500; color: var(--text-secondary); margin-bottom: 3px; }
+  .syn-weak-label { font-size: 10px; color: var(--text-muted); }
+  .syn-word {
+    font-size: 12px; padding: 4px 10px; border-radius: 20px;
+    border: 1px solid; cursor: pointer; transition: all 0.2s;
+  }
+  .syn-word:hover { opacity: 0.75; }
+  .band-7-tag { background: rgba(245,166,35,0.1); border-color: var(--amber-dim); color: var(--amber); }
+  .band-8-tag { background: var(--orange-glow); border-color: var(--orange-dim); color: var(--orange); }
+  .band-9-tag { background: rgba(29,200,160,0.1); border-color: var(--teal-dim); color: var(--teal); }
+
+  /* TIPS PANEL */
+  .tip-card {
+    background: var(--card); border-radius: var(--radius);
+    border: 1px solid var(--border); overflow: hidden; margin-bottom: 10px;
+  }
+  .tip-top {
+    padding: 14px 16px 10px;
+    border-bottom: 1px solid var(--border);
+    display: flex; gap: 10px; align-items: flex-start;
+  }
+  .tip-icon {
+    width: 32px; height: 32px; border-radius: var(--radius-sm);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0;
+  }
+  .tip-content { flex: 1; }
+  .tip-headline { font-size: 13px; font-weight: 600; margin-bottom: 3px; }
+  .tip-sub { font-size: 11px; color: var(--text-secondary); }
+  .tip-bottom { padding: 10px 16px 14px; }
+  .tip-example {
+    font-size: 12px; line-height: 1.7; color: var(--text-secondary);
+  }
+  .tip-example .highlight { color: var(--text-primary); font-weight: 500; }
+  .band-advisory {
+    margin-top: 12px; padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    background: rgba(232,98,42,0.08);
+    border: 1px solid var(--orange-dim);
+    font-size: 11px; color: var(--orange); line-height: 1.6;
+  }
+
+  /* BOTTOM ADVICE BAR */
+  .advice-bar {
+    position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 100%; max-width: 480px;
+    background: rgba(20,18,16,0.97); backdrop-filter: blur(16px);
+    border-top: 1px solid var(--orange-dim);
+    padding: 10px 20px 14px;
+    z-index: 200;
+  }
+  .advice-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px; letter-spacing: 2px; color: var(--orange);
+    margin-bottom: 4px; text-transform: uppercase;
+  }
+  .advice-text { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+  .advice-text strong { color: var(--text-primary); }
+
+  /* FLASHCARD */
+  .flashcard-wrap { perspective: 800px; height: 200px; margin-bottom: 16px; cursor: pointer; }
+  .flashcard {
+    width: 100%; height: 100%;
+    position: relative; transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+    border-radius: var(--radius);
+  }
+  .flashcard.flipped { transform: rotateY(180deg); }
+  .fc-face {
+    position: absolute; inset: 0;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    backface-visibility: hidden;
+    padding: 24px;
+  }
+  .fc-front { background: var(--card); }
+  .fc-back { background: #1c1f1d; transform: rotateY(180deg); border-color: var(--green); }
+  .fc-hint { font-size: 10px; color: var(--text-muted); font-family: 'Space Mono', monospace; letter-spacing: 1px; margin-bottom: 8px; }
+  .fc-word { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--text-primary); }
+  .fc-pos { margin-top: 6px; }
+  .fc-def { font-size: 13px; color: var(--text-secondary); text-align: center; line-height: 1.65; }
+  .fc-example { font-size: 12px; color: var(--green); margin-top: 10px; font-style: italic; text-align: center; }
+  .fc-controls { display: flex; gap: 10px; }
+  .fc-btn {
+    flex: 1; padding: 11px; border-radius: var(--radius-sm); border: 1px solid;
+    font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .fc-btn.know { background: var(--green-dim); border-color: var(--green); color: var(--green); }
+  .fc-btn.know:hover { background: rgba(45,190,122,0.2); }
+  .fc-btn.skip { background: var(--red-dim); border-color: var(--red-dim); color: var(--red); }
+  .fc-btn.skip:hover { background: rgba(232,74,74,0.2); }
+  .fc-counter { text-align: center; font-family: 'Space Mono', monospace; font-size: 11px; color: var(--text-muted); margin-bottom: 12px; }
+  .fc-progress { height: 2px; background: var(--border); border-radius: 2px; margin-bottom: 14px; }
+  .fc-progress-fill { height: 100%; background: var(--orange); border-radius: 2px; transition: width 0.3s ease; }
+
+  /* WRITING TEMPLATES */
+  .template-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); margin-bottom: 10px; overflow: hidden;
+  }
+  .template-header {
+    padding: 12px 16px; display: flex; justify-content: space-between;
+    align-items: center; cursor: pointer; border-bottom: 1px solid transparent;
+  }
+  .template-header:hover { background: #231f1c; }
+  .template-header.open { border-bottom-color: var(--border); }
+  .template-title { font-size: 13px; font-weight: 600; }
+  .template-tag {
+    font-size: 10px; padding: 2px 8px; border-radius: 20px;
+    font-family: 'Space Mono', monospace;
+  }
+  .tag-task1 { background: var(--blue-dim); color: var(--blue); }
+  .tag-task2 { background: var(--purple-dim); color: var(--purple); }
+  .template-body { display: none; padding: 14px 16px; }
+  .template-body.open { display: block; animation: fadeIn 0.2s ease; }
+  .template-phrase {
+    display: flex; gap: 10px; padding: 6px 0;
+    border-bottom: 1px solid var(--border); align-items: flex-start;
+  }
+  .template-phrase:last-child { border-bottom: none; }
+  .phrase-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--orange); flex-shrink: 0; margin-top: 6px; }
+  .phrase-text { font-size: 12px; line-height: 1.6; color: var(--text-secondary); }
+  .phrase-text span { color: var(--text-primary); font-weight: 500; }
+
+  /* SEARCH */
+  .search-wrap { position: relative; margin-bottom: 14px; }
+  .search-input {
+    width: 100%; padding: 11px 14px 11px 38px;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); color: var(--text-primary);
+    font-family: 'DM Sans', sans-serif; font-size: 13px;
+    outline: none; transition: border-color 0.2s;
+  }
+  .search-input:focus { border-color: var(--orange-dim); }
+  .search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 15px; }
+  .search-results { font-size: 11px; color: var(--text-muted); margin-bottom: 10px; font-family: 'Space Mono', monospace; }
+
+  /* COMMON SCROLLBAR */
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 4px; }
+
+  .divider { height: 1px; background: var(--border); margin: 16px 0; }
+  .pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .pill { font-size: 11px; padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border); color: var(--text-secondary); background: var(--surface); }
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-top">
+      <div class="brand">▸ ViaTestPrep</div>
+      <div class="progress-ring">
+        <span class="progress-label">XP</span>
+        <div class="score-pill" id="xp-counter">0 pts</div>
+      </div>
+    </div>
+    <h1>IELTS <span>Vocabulary</span> Mastery</h1>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('fluency')">Fluency</button>
+    <button class="tab-btn" onclick="switchTab('wordbank')">Word Bank</button>
+    <button class="tab-btn" onclick="switchTab('upgrades')">Upgrades</button>
+    <button class="tab-btn" onclick="switchTab('flashcards')">Flashcards</button>
+    <button class="tab-btn" onclick="switchTab('quiz')">Quiz</button>
+    <button class="tab-btn" onclick="switchTab('writing')">Writing</button>
+  </div>
+
+  <!-- ========== FLUENCY TAB ========== -->
+  <div id="tab-fluency" class="panel active">
+    <div class="section-label">The Solution Process:</div>
+
+    <div class="step-row expanded" onclick="toggleStep(this)">
+      <div class="step-num orange">1</div>
+      <div class="step-body">
+        <div class="step-title">CHUNK words dynamically by meaning</div>
+        <div class="step-detail show">
+          <p>Group words into <strong>meaning units</strong>, not individual words. Instead of reading word-by-word, cluster them into phrases that carry a single idea.</p>
+          <br>
+          <div class="example-box">
+            ✗ The / economy / of / Nepal / is / growing<br><br>
+            ✓ <em>The economy of Nepal</em> / <em>is growing</em> / <em>at a rapid pace</em>
+          </div>
+          <p>This technique mirrors how native speakers process language — improving both listening and speaking scores.</p>
+        </div>
+      </div>
+      <div class="chevron">▾</div>
+    </div>
+
+    <div class="step-row" onclick="toggleStep(this)">
+      <div class="step-num orange">2</div>
+      <div class="step-body">
+        <div class="step-title">INSERT intentional structured pauses</div>
+        <div class="step-detail">
+          <p>Pausing between chunks is not a weakness — it is a <strong>fluency strategy</strong> that native speakers use consciously. IELTS examiners reward natural rhythm over rushed speech.</p>
+          <br>
+          <div class="example-box">
+            ✓ "I believe… <em>[pause]</em> that climate change… <em>[pause]</em> is the most pressing issue… <em>[pause]</em> facing our generation."
+          </div>
+          <p>Use pauses to: signal thought transitions, emphasise key ideas, and manage pacing to avoid rambling.</p>
+        </div>
+      </div>
+      <div class="chevron">▾</div>
+    </div>
+
+    <div class="step-row" onclick="toggleStep(this)">
+      <div class="step-num green">3</div>
+      <div class="step-body">
+        <div class="step-title">STRESS content words to build rhythm</div>
+        <div class="step-detail">
+          <p>English rhythm depends on <strong>stressed syllables</strong> — specifically on <em>content words</em> (nouns, verbs, adjectives). Function words (a, the, of) are reduced.</p>
+          <br>
+          <div class="example-box">
+            ✓ "The <em>GOVERN</em>ment should <em>INVEST</em> in <em>RE</em>newable <em>EN</em>ergy <em>SOUR</em>ces."
+          </div>
+          <p>Stressed content words carry meaning. Unstressed function words carry grammar. Master this distinction for a Band 7+ pronunciation score.</p>
+        </div>
+      </div>
+      <div class="chevron">▾</div>
+    </div>
+
+    <div class="step-row" onclick="toggleStep(this)">
+      <div class="step-num blue">4</div>
+      <div class="step-body">
+        <div class="step-title">USE lexical variety — avoid word repetition</div>
+        <div class="step-detail">
+          <p>Repeating the same word within a response is one of the fastest ways to lose marks on Lexical Resource. Examiners specifically look for <strong>range and precision</strong>.</p>
+          <br>
+          <div class="example-box">
+            ✗ "This <em>problem</em> is a big <em>problem</em> because many <em>problems</em> come from it."<br><br>
+            ✓ "This <em>issue</em> is a serious <em>concern</em> because it gives rise to numerous <em>complications</em>."
+          </div>
+        </div>
+      </div>
+      <div class="chevron">▾</div>
+    </div>
+
+    <div class="step-row" onclick="toggleStep(this)">
+      <div class="step-num teal">5</div>
+      <div class="step-body">
+        <div class="step-title">DEPLOY collocations — not just single words</div>
+        <div class="step-detail">
+          <p>A collocation is a pair or group of words that <strong>naturally go together</strong> in English. Using correct collocations signals native-level command of the language.</p>
+          <br>
+          <div class="example-box">
+            ✗ "do a mistake" — "strong rain" — "high salary"<br><br>
+            ✓ "<em>make</em> a mistake" — "<em>heavy</em> rain" — "<em>high</em> salary (but <em>strong</em> argument)"
+          </div>
+          <div class="collocations">
+            <span class="colloc-tag">make progress</span><span class="colloc-tag">take action</span><span class="colloc-tag">raise awareness</span><span class="colloc-tag">draw conclusions</span><span class="colloc-tag">carry out research</span>
+          </div>
+        </div>
+      </div>
+      <div class="chevron">▾</div>
+    </div>
+
+    <div class="step-row" onclick="toggleStep(this)">
+      <div class="step-num purple">6</div>
+      <div class="step-body">
+        <div class="step-title">EMPLOY hedging language for academic tone</div>
+        <div class="step-detail">
+          <p>IELTS Writing Task 2 rewards <strong>balanced arguments</strong>. Hedging avoids sounding too absolute — a key academic writing skill.</p>
+          <br>
+          <div class="example-box">
+            ✗ "Technology is definitely causing unemployment."<br><br>
+            ✓ "Technology <em>appears to be</em> contributing to unemployment in <em>certain</em> sectors, <em>although</em> this trend is <em>not necessarily</em> universal."
+          </div>
+          <div class="pill-row">
+            <span class="pill">it could be argued</span><span class="pill">tends to</span><span class="pill">in some cases</span><span class="pill">there is evidence that</span><span class="pill">arguably</span>
+          </div>
+        </div>
+      </div>
+      <div class="chevron">▾</div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-label">Band 7.5+ Pronunciation Advice</div>
+    <div class="card" style="border-color: var(--orange-dim); background: var(--orange-glow);">
+      <div style="font-size: 13px; line-height: 1.7; color: var(--text-secondary);">
+        🔥 <strong style="color: var(--text-primary);">Chunking</strong> allows you to speak continuously with rhythmic confidence, raising fluency metrics. Combine it with stress and pause mastery for a pronunciation band of 7.5+.
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== WORD BANK TAB ========== -->
+  <div id="tab-wordbank" class="panel">
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input class="search-input" type="text" id="word-search" placeholder="Search words, definitions..." oninput="filterWords()">
+    </div>
+    <div class="search-results" id="search-results-count">Showing all 20 words</div>
+
+    <div class="section-label">Academic & Opinion</div>
+    <div id="word-list">
+
+      <div class="word-card" data-word="substantiate" data-def="to provide evidence that proves something is true" data-example="The researcher substantiated her claims with extensive data." data-band="8">
+        <div class="word-header" onclick="toggleWord(this)">
+          <div class="word-main"><span class="word-eng">substantiate</span><span class="word-pos pos-verb">verb</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span class="word-band band-8">B8</span><span style="color:var(--text-muted)">▾</span></div>
+        </div>
+        <div class="word-body">
+          <div class="definition">To provide evidence that proves something is true or that a claim has validity.</div>
+          <div class="example-box">The researcher <em>substantiated</em> her claims with extensive comparative data from five countries.</div>
+          <div style="font-size:11px;color:var(--text-muted);margin-bottom:5px;">Common collocations:</div>
+          <div class="collocations"><span class="colloc-tag">substantiate a claim</span><span class="colloc-tag">substantiate an argument</span><span class="colloc-tag">substantiate evidence</span></div>
+        </div>
+      </div>
+
+      <div class="word-card" data-word="mitigate" data-def="to make something less severe or harmful" data-example="Governments must mitigate the effects of climate change." data-band="8">
+        <div class="word-header" onclick="toggleWord(this)">
+          <div class="word-main"><span class="word-eng">mitigate</span><span class="word-pos pos-verb">verb</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span class="word-band band-8">B8</span><span style="color:var(--text-muted)">▾</span></div>
+        </div>
+        <div class="word-body">
+          <div class="definition">To make the severity, seriousness, or painfulness of something less.</div>
+          <div class="example-box">Governments must <em>mitigate</em> the devastating effects of climate change by investing in renewable energy.</div>
+          <div class="collocations"><span class="colloc-tag">mitigate the effects</span><span class="colloc-tag">mitigate risk</span><span class="colloc-tag">mitigate damage</span></div>
+          <div class="avoid-note">⚠ Avoid: "reduce the mitigation" — redundant. Use "mitigate" alone.</div>
+        </div>
+      </div>
+
+      <div class="word-card" data-word="proliferate" data-def="to increase rapidly in number or spread quickly" data-example="Social media platforms have proliferated over the past decade." data-band="8">
+        <div class="word-header" onclick="toggleWord(this)">
+          <div class="word-main"><span class="word-eng">proliferate</span><span class="word-pos pos-verb">verb</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span class="word-band band-8">B8</span><span style="color:var(--text-muted)">▾</span></div>
+        </div>
+        <div class="word-body">
+          <div class="definition">To increase rapidly in numbers; to spread or reproduce at a fast rate.</div>
+          <div class="example-box">Social media platforms have <em>proliferated</em> at an unprecedented rate, fundamentally altering communication patterns.</div>
+          <div class="collocations"><span class="colloc-tag">rapidly proliferate</span><span class="colloc-tag">proliferation of technology</span></div>
+        </div>
+      </div>
+
+      <div class="word-card" data-word="exacerbate" data-def="to make a problem or bad situation worse" data-example="The drought exacerbated food shortages across the region." data-band="8">
+        <div class="word-header" onclick="toggleWord(this)">
+          <div class="word-main"><span class="word-eng">exacerbate</span><span class="word-pos pos-verb">verb</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span class="word-band band-8">B8</span><span style="color:var(--text-muted)">▾</span></div>
+        </div>
+        <div class="word-body">
+          <div class="definition">To make an already bad or problematic situation worse or more severe.</div>
+          <div class="example-box">The prolonged drought <em>exacerbated</em> food shortages across the entire region, displacing millions.</div>
+          <div class="collocations"><span class="colloc-tag">exacerbate tensions</span><span class="colloc-tag">exacerbate inequality</span><span class="colloc-tag">exacerbate a problem</span></div>
+        </div>
+      </div>
+
+      <div class="word-card" data-word="pervasive" data-def="spreading widely throughout an area or group" data-example="Social media's pervasive influence reshapes modern politics." data-band="7">
+        <div class="word-header" onclick="toggleWord(this)">
+          <div class="word-main"><span class="word-eng">pervasive</span><span class="word-pos pos-adj">adj</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span class="word-band band-7">B7</span><span style="color:var(--text-muted)">▾</span></div>
+        </div>
+        <div class="word-body">
+          <div class="definition">Spreading widely throughout an area or a group of people; present everywhere.</div>
+          <div class="example-box">The <em>pervasive</em> influence of social media has fundamentally reshaped modern political discourse.</div>
+          <div class="collocations"><span class="colloc-tag">pervasive influence</span><span class="colloc-tag">pervasive problem</span><span class="colloc-tag">pervasive culture</span></div>
+        </div>
+      </div>
+
+      <div class="word-card" data-word="pragmatic" data-def="dealing with things sensibly and realistically" data-example="A pragmatic approach to policy leads to better outcomes." data-band="7">
+        <div class="word-header" onclick="toggleWord(this)">
+          <div class="word-main"><span class="word-eng">pragmatic</span><span class="word-pos pos-adj">adj</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span class="word-band band-7">B7</span><span style="color:var(--text-muted)">▾</span></div>
+        </div>
+        <div class="word-body">
+          <div class="definition">Dealing with things sensibly and realistically, based on practical considerations.</div>
+          <div class="example-box">A <em>pragmatic</em> approach to education policy must balance idealism with economic realities.</div>
+          <div class="collocations"><span class="colloc-tag">pragmatic solution</span><span class="colloc-tag">pragmatic approach</span><span class="colloc-tag">pragmatic thinking</span></div>
+        </div>
+      </div>
+
+      <div class="word-card" data-word="ubiquitous" data-def="present, appearing, or found everywhere" data-example="Smartphones have become ubiquitous in modern society." data-band="9">
+        <div class="word-header" onclick="toggleWord(this)">
+          <div class="word-main"><span class="word-eng">ubiquitous</span><span class="word-pos pos-adj">adj</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span class="word-band band-9">B9</span><span style="color:var(--text-muted)">▾</span></div>
+        </div>
+        <div class="word-body">
+          <div class="definition">Present, appearing, or found everywhere simultaneously; seeming to be everywhere at once.</div>
+          <div class="example-box"><em>Ubiquitous</em> smartphone connectivity has eroded the boundaries between professional and personal life.</div>
+          <div class="collocations"><span class="colloc-tag">ubiquitous technology</span><span class="colloc-tag">become ubiquitous</span><span class="colloc-tag">ubiquitous presence</span></div>
+        </div>
+      </div>
+
+      <div class="word-card" data-word="dichotomy" data-def="a division or contrast between two opposed things" data-example="There is a stark dichotomy between urban and rural healthcare." data-band="9">
+        <div class="word-header" onclick="toggleWord(this)">
+          <div class="word-main"><span class="word-eng">dichotomy</span><span class="word-pos pos-noun">noun</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span class="word-band band-9">B9</span><span style="color:var(--text-muted)">▾</span></div>
+        </div>
+        <div class="word-body">
+          <div class="definition">A division or contrast between two things that are opposites or entirely different.</div>
+          <div class="example-box">There is a stark <em>dichotomy</em> between the quality of urban and rural healthcare in developing nations.</div>
+          <div class="collocations"><span class="colloc-tag">stark dichotomy</span><span class="colloc-tag">false dichotomy</span><span class="colloc-tag">dichotomy between</span></div>
+        </div>
+      </div>
+
+      <div class="word-card" data-word="convoluted" data-def="extremely complex and difficult to understand" data-example="The legislation's convoluted structure hindered its implementation." data-band="8">
+        <div class="word-header" onclick="toggleWord(this)">
+          <div class="word-main"><span class="word-eng">convoluted</span><span class="word-pos pos-adj">adj</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span class="word-band band-8">B8</span><span style="color:var(--text-muted)">▾</span></div>
+        </div>
+        <div class="word-body">
+          <div class="definition">Extremely complex and difficult to follow; intricately twisted or folded.</div>
+          <div class="example-box">The legislation's <em>convoluted</em> structure made it virtually impossible for the public to understand their rights.</div>
+          <div class="collocations"><span class="colloc-tag">convoluted process</span><span class="colloc-tag">convoluted explanation</span><span class="colloc-tag">convoluted system</span></div>
+        </div>
+      </div>
+
+      <div class="word-card" data-word="alleviate" data-def="to make suffering or problems less severe" data-example="Aid organisations work to alleviate extreme poverty." data-band="7">
+        <div class="word-header" onclick="toggleWord(this)">
+          <div class="word-main"><span class="word-eng">alleviate</span><span class="word-pos pos-verb">verb</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span class="word-band band-7">B7</span><span style="color:var(--text-muted)">▾</span></div>
+        </div>
+        <div class="word-body">
+          <div class="definition">To make suffering, deficiency, or a problem less severe; to provide partial relief.</div>
+          <div class="example-box">International aid organisations work tirelessly to <em>alleviate</em> extreme poverty in conflict-affected regions.</div>
+          <div class="collocations"><span class="colloc-tag">alleviate poverty</span><span class="colloc-tag">alleviate suffering</span><span class="colloc-tag">alleviate pressure</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========== UPGRADES TAB ========== -->
+  <div id="tab-upgrades" class="panel">
+    <div class="section-label">Weak → Strong Word Upgrades</div>
+    <div class="card" style="margin-bottom:14px;">
+      <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;">Tap any upgraded word to see it used in an IELTS context. The band rating indicates which score range unlocks it.</div>
+    </div>
+
+    <div id="syn-container">
+      <div class="syn-row">
+        <div class="syn-weak"><div class="syn-weak-word">big</div><div class="syn-weak-label">avoid</div></div>
+        <div class="syn-arrow">→</div>
+        <div class="syn-strong">
+          <span class="syn-word band-7-tag" onclick="showSynExample('substantial','The city underwent substantial urban redevelopment.')">substantial</span>
+          <span class="syn-word band-7-tag" onclick="showSynExample('considerable','This represents a considerable shift in policy.')">considerable</span>
+          <span class="syn-word band-8-tag" onclick="showSynExample('significant','A significant proportion of the population is affected.')">significant</span>
+          <span class="syn-word band-9-tag" onclick="showSynExample('monumental','This is a monumental challenge for the government.')">monumental</span>
+        </div>
+      </div>
+
+      <div class="syn-row">
+        <div class="syn-weak"><div class="syn-weak-word">bad</div><div class="syn-weak-label">avoid</div></div>
+        <div class="syn-arrow">→</div>
+        <div class="syn-strong">
+          <span class="syn-word band-7-tag" onclick="showSynExample('detrimental','Pollution has a detrimental impact on public health.')">detrimental</span>
+          <span class="syn-word band-8-tag" onclick="showSynExample('harmful','This is deeply harmful to social cohesion.')">harmful</span>
+          <span class="syn-word band-8-tag" onclick="showSynExample('adverse','Adverse weather conditions disrupted supply chains.')">adverse</span>
+          <span class="syn-word band-9-tag" onclick="showSynExample('deleterious','The deleterious effects of deforestation are well documented.')">deleterious</span>
+        </div>
+      </div>
+
+      <div class="syn-row">
+        <div class="syn-weak"><div class="syn-weak-word">good</div><div class="syn-weak-label">avoid</div></div>
+        <div class="syn-arrow">→</div>
+        <div class="syn-strong">
+          <span class="syn-word band-7-tag" onclick="showSynExample('beneficial','Exercise is highly beneficial for mental wellbeing.')">beneficial</span>
+          <span class="syn-word band-7-tag" onclick="showSynExample('advantageous','This is advantageous to both parties involved.')">advantageous</span>
+          <span class="syn-word band-8-tag" onclick="showSynExample('favourable','This policy creates a more favourable economic climate.')">favourable</span>
+          <span class="syn-word band-9-tag" onclick="showSynExample('propitious','The propitious economic climate attracted foreign investment.')">propitious</span>
+        </div>
+      </div>
+
+      <div class="syn-row">
+        <div class="syn-weak"><div class="syn-weak-word">show</div><div class="syn-weak-label">avoid</div></div>
+        <div class="syn-arrow">→</div>
+        <div class="syn-strong">
+          <span class="syn-word band-7-tag" onclick="showSynExample('indicate','The data indicates a steady rise in unemployment.')">indicate</span>
+          <span class="syn-word band-7-tag" onclick="showSynExample('demonstrate','Research demonstrates a clear correlation.')">demonstrate</span>
+          <span class="syn-word band-8-tag" onclick="showSynExample('illustrate','The graph illustrates exponential growth patterns.')">illustrate</span>
+          <span class="syn-word band-9-tag" onclick="showSynExample('illuminate','This case study illuminates the wider systemic issues.')">illuminate</span>
+        </div>
+      </div>
+
+      <div class="syn-row">
+        <div class="syn-weak"><div class="syn-weak-word">problem</div><div class="syn-weak-label">avoid repeat</div></div>
+        <div class="syn-arrow">→</div>
+        <div class="syn-strong">
+          <span class="syn-word band-7-tag" onclick="showSynExample('issue','This issue requires immediate governmental attention.')">issue</span>
+          <span class="syn-word band-7-tag" onclick="showSynExample('challenge','The challenge of climate change cannot be overstated.')">challenge</span>
+          <span class="syn-word band-8-tag" onclick="showSynExample('predicament','Developing nations face an increasingly difficult predicament.')">predicament</span>
+          <span class="syn-word band-9-tag" onclick="showSynExample('conundrum','The fiscal conundrum has no straightforward solution.')">conundrum</span>
+        </div>
+      </div>
+
+      <div class="syn-row">
+        <div class="syn-weak"><div class="syn-weak-word">increase</div><div class="syn-weak-label">overused</div></div>
+        <div class="syn-arrow">→</div>
+        <div class="syn-strong">
+          <span class="syn-word band-7-tag" onclick="showSynExample('rise','Carbon emissions continue to rise at an alarming rate.')">rise</span>
+          <span class="syn-word band-7-tag" onclick="showSynExample('surge','There has been a surge in demand for remote work.')">surge</span>
+          <span class="syn-word band-8-tag" onclick="showSynExample('escalate','Tensions between nations have begun to escalate.')">escalate</span>
+          <span class="syn-word band-9-tag" onclick="showSynExample('burgeon','The tech sector has begun to burgeon in emerging markets.')">burgeon</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Synonym example popup -->
+    <div id="syn-example-box" style="display:none; margin-top:14px; padding:14px 16px; background:var(--card); border:1px solid var(--orange-dim); border-radius:var(--radius);">
+      <div class="section-label" style="margin-bottom:6px;">Example in Context</div>
+      <div id="syn-example-text" style="font-size:13px;line-height:1.7;color:var(--text-secondary);"></div>
+    </div>
+  </div>
+
+  <!-- ========== FLASHCARDS TAB ========== -->
+  <div id="tab-flashcards" class="panel">
+    <div class="section-label">Spaced Repetition Flashcards</div>
+
+    <div class="fc-progress"><div class="fc-progress-fill" id="fc-fill" style="width:0%"></div></div>
+    <div class="fc-counter" id="fc-counter">Card 1 of 8</div>
+
+    <div class="flashcard-wrap" onclick="flipCard()">
+      <div class="flashcard" id="flashcard">
+        <div class="fc-face fc-front">
+          <div class="fc-hint">TAP TO REVEAL</div>
+          <div class="fc-word" id="fc-word">substantiate</div>
+          <div class="fc-pos" id="fc-pos"><span class="word-pos pos-verb">verb</span></div>
+        </div>
+        <div class="fc-face fc-back">
+          <div class="fc-hint">DEFINITION</div>
+          <div class="fc-def" id="fc-def">To provide evidence or proof that a statement or theory is valid.</div>
+          <div class="fc-example" id="fc-example">"She substantiated her argument with compelling research data."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fc-controls">
+      <button class="fc-btn skip" onclick="fcSkip()">✗ Revisit</button>
+      <button class="fc-btn know" onclick="fcKnow()">✓ Got it +10</button>
+    </div>
+  </div>
+
+  <!-- ========== QUIZ TAB ========== -->
+  <div id="tab-quiz" class="panel">
+    <div class="section-label">Vocabulary Test</div>
+    <div id="quiz-main">
+      <div class="quiz-card">
+        <div class="quiz-header">
+          <span class="quiz-counter" id="q-counter">Q1 of 6</span>
+          <span class="quiz-type" id="q-type">Fill the Blank</span>
+        </div>
+        <div class="quiz-q" id="q-question"></div>
+        <div class="quiz-options" id="q-options"></div>
+        <div class="quiz-feedback" id="q-feedback"></div>
+        <button class="quiz-next" id="q-next" onclick="nextQuestion()">Next Question →</button>
+      </div>
+    </div>
+    <div id="quiz-done" style="display:none;">
+      <div class="quiz-score-display quiz-card">
+        <div class="section-label">Quiz Complete</div>
+        <div class="quiz-score-big" id="final-score">0/6</div>
+        <div class="quiz-score-msg" id="final-msg"></div>
+        <button class="quiz-restart" onclick="restartQuiz()">Restart Quiz</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== WRITING TAB ========== -->
+  <div id="tab-writing" class="panel">
+    <div class="section-label">Band 7+ Writing Phrases</div>
+
+    <div class="template-card">
+      <div class="template-header" onclick="toggleTemplate(this)">
+        <span class="template-title">Introducing an Opinion</span>
+        <span class="template-tag tag-task2">Task 2</span>
+      </div>
+      <div class="template-body">
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>It is widely acknowledged that</span> … has become one of the most pressing concerns of our time.</div></div>
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>From my perspective,</span> the benefits of … far outweigh the drawbacks.</div></div>
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>It could be argued that</span> … is a double-edged sword with both merits and limitations.</div></div>
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>There is compelling evidence to suggest that</span> … warrants immediate policy intervention.</div></div>
+      </div>
+    </div>
+
+    <div class="template-card">
+      <div class="template-header" onclick="toggleTemplate(this)">
+        <span class="template-title">Adding Arguments</span>
+        <span class="template-tag tag-task2">Task 2</span>
+      </div>
+      <div class="template-body">
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>Furthermore,</span> it is essential to consider the long-term implications of …</div></div>
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>In addition to this,</span> research consistently demonstrates that …</div></div>
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>A further consideration is that</span> … poses significant challenges for developing nations.</div></div>
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>What is more,</span> the economic ramifications of this trend cannot be ignored.</div></div>
+      </div>
+    </div>
+
+    <div class="template-card">
+      <div class="template-header" onclick="toggleTemplate(this)">
+        <span class="template-title">Conceding a Counter-Argument</span>
+        <span class="template-tag tag-task2">Task 2</span>
+      </div>
+      <div class="template-body">
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>While it is true that</span> … , this argument fails to account for …</div></div>
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>Admittedly,</span> … has certain merits; however, the evidence suggests otherwise.</div></div>
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>Despite the seemingly compelling argument that</span> …, a closer examination reveals …</div></div>
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>One could argue that</span> …; nevertheless, this perspective overlooks the broader context.</div></div>
+      </div>
+    </div>
+
+    <div class="template-card">
+      <div class="template-header" onclick="toggleTemplate(this)">
+        <span class="template-title">Describing Trends (Task 1)</span>
+        <span class="template-tag tag-task1">Task 1</span>
+      </div>
+      <div class="template-body">
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>The graph illustrates</span> a dramatic surge in … between [year] and [year].</div></div>
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>There was a gradual yet steady decline</span> in … throughout the period shown.</div></div>
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>Figures reached a peak of</span> … in [year], before levelling off considerably.</div></div>
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>Notably,</span> … experienced the most significant fluctuation across all categories.</div></div>
+      </div>
+    </div>
+
+    <div class="template-card">
+      <div class="template-header" onclick="toggleTemplate(this)">
+        <span class="template-title">Strong Conclusions</span>
+        <span class="template-tag tag-task2">Task 2</span>
+      </div>
+      <div class="template-body">
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>In conclusion, it is evident that</span> … demands a multifaceted and coordinated response.</div></div>
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>To sum up,</span> while … presents undeniable challenges, proactive measures can reverse this trend.</div></div>
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>On balance,</span> the advantages of … considerably outweigh its associated drawbacks.</div></div>
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>Ultimately,</span> addressing … requires both individual responsibility and systemic reform.</div></div>
+      </div>
+    </div>
+
+    <div class="template-card">
+      <div class="template-header" onclick="toggleTemplate(this)">
+        <span class="template-title">Cause & Effect Language</span>
+        <span class="template-tag tag-task2">Task 2</span>
+      </div>
+      <div class="template-body">
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>This has given rise to</span> a series of far-reaching social consequences.</div></div>
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>As a direct consequence of</span> …, unemployment rates have escalated sharply.</div></div>
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>… stems from</span> a complex interplay of economic and cultural factors.</div></div>
+        <div class="template-phrase"><div class="phrase-dot"></div><div class="phrase-text"><span>The root cause of this issue lies in</span> the systemic underfunding of public education.</div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- BOTTOM ADVICE BAR -->
+<div class="advice-bar">
+  <div class="advice-label">🔥 Band 7.5+ Advice</div>
+  <div class="advice-text" id="advice-text"><strong>Collocations matter:</strong> "Make a mistake" not "do a mistake." Learn words in pairs — not alone.</div>
+</div>
+
+<script>
+const TABS = ['fluency','wordbank','upgrades','flashcards','quiz','writing'];
+let xp = 0;
+
+function switchTab(name) {
+  TABS.forEach(t => {
+    document.getElementById('tab-'+t).classList.toggle('active', t===name);
+  });
+  document.querySelectorAll('.tab-btn').forEach((b,i) => {
+    b.classList.toggle('active', TABS[i]===name);
+  });
+  if(name==='quiz') renderQuestion();
+  if(name==='flashcards') renderFC();
+  adviceCycle();
+}
+
+function toggleStep(el) {
+  const det = el.querySelector('.step-detail');
+  const exp = el.classList.toggle('expanded');
+  det.classList.toggle('show', exp);
+}
+
+function toggleWord(el) {
+  const body = el.nextElementSibling;
+  const isOpen = body.classList.toggle('open');
+  if(isOpen){ addXP(5); }
+}
+
+function toggleTemplate(el) {
+  const body = el.nextElementSibling;
+  const isOpen = body.classList.toggle('open');
+  el.classList.toggle('open', isOpen);
+}
+
+function addXP(n) {
+  xp += n;
+  document.getElementById('xp-counter').textContent = xp + ' pts';
+}
+
+// ---- SEARCH ----
+function filterWords() {
+  const q = document.getElementById('word-search').value.toLowerCase();
+  const cards = document.querySelectorAll('#word-list .word-card');
+  let count = 0;
+  cards.forEach(c => {
+    const w = c.dataset.word || '';
+    const d = c.dataset.def || '';
+    const match = !q || w.includes(q) || d.includes(q);
+    c.style.display = match ? '' : 'none';
+    if(match) count++;
+  });
+  document.getElementById('search-results-count').textContent = q ? 'Showing '+count+' result(s) for "'+q+'"' : 'Showing all 20 words';
+}
+
+// ---- SYNONYMS ----
+function showSynExample(word, example) {
+  const box = document.getElementById('syn-example-box');
+  const txt = document.getElementById('syn-example-text');
+  const highlighted = example.replace(new RegExp(word,'gi'), m => `<strong style="color:var(--orange)">${m}</strong>`);
+  txt.innerHTML = `"${highlighted}"`;
+  box.style.display = 'block';
+  box.scrollIntoView({behavior:'smooth', block:'nearest'});
+  addXP(5);
+}
+
+// ---- FLASHCARDS ----
+const FC_DATA = [
+  { word:'substantiate', pos:'verb', type:'pos-verb', def:'To provide evidence proving something is true or valid.', ex:'"She substantiated her claims with empirical research data."' },
+  { word:'mitigate', pos:'verb', type:'pos-verb', def:'To lessen the severity or seriousness of something.', ex:'"Governments must mitigate the effects of climate change."' },
+  { word:'ubiquitous', pos:'adj', type:'pos-adj', def:'Present, appearing, or found everywhere at once.', ex:'"Ubiquitous smartphone use has transformed daily interaction."' },
+  { word:'exacerbate', pos:'verb', type:'pos-verb', def:'To make an already bad situation worse.', ex:'"The drought exacerbated food shortages across the region."' },
+  { word:'pervasive', pos:'adj', type:'pos-adj', def:'Spreading widely throughout an area or group.', ex:'"The pervasive influence of media cannot be underestimated."' },
+  { word:'dichotomy', pos:'noun', type:'pos-noun', def:'A sharp contrast between two opposing things.', ex:'"There is a stark dichotomy between rural and urban access."' },
+  { word:'pragmatic', pos:'adj', type:'pos-adj', def:'Dealing with things practically, based on real conditions.', ex:'"A pragmatic policy approach is essential for success."' },
+  { word:'alleviate', pos:'verb', type:'pos-verb', def:'To make suffering or a problem less severe.', ex:'"Aid organisations work to alleviate extreme poverty."' },
+];
+let fcIndex = 0; let fcKnown = 0; let fcFlipped = false;
+
+function renderFC() {
+  if(fcIndex >= FC_DATA.length) return;
+  const d = FC_DATA[fcIndex];
+  document.getElementById('fc-word').textContent = d.word;
+  document.getElementById('fc-pos').innerHTML = `<span class="word-pos ${d.type}">${d.pos}</span>`;
+  document.getElementById('fc-def').textContent = d.def;
+  document.getElementById('fc-example').textContent = d.ex;
+  document.getElementById('fc-counter').textContent = `Card ${fcIndex+1} of ${FC_DATA.length}`;
+  document.getElementById('fc-fill').style.width = (fcIndex/FC_DATA.length*100)+'%';
+  document.getElementById('flashcard').classList.remove('flipped');
+  fcFlipped = false;
+}
+
+function flipCard() {
+  document.getElementById('flashcard').classList.toggle('flipped');
+  fcFlipped = !fcFlipped;
+}
+
+function fcKnow() {
+  fcKnown++; addXP(10);
+  fcIndex = Math.min(fcIndex+1, FC_DATA.length);
+  if(fcIndex >= FC_DATA.length) {
+    document.querySelector('#tab-flashcards .fc-counter').textContent = `Done! ${fcKnown}/${FC_DATA.length} known 🎯`;
+  } else { renderFC(); }
+}
+
+function fcSkip() {
+  const d = FC_DATA.splice(fcIndex, 1)[0];
+  FC_DATA.push(d);
+  renderFC();
+}
+
+// ---- QUIZ ----
+const QUESTIONS = [
+  { type:'Fill the Blank', q:'The government must ___ the effects of climate change through policy reform.', opts:['mitigate','celebrate','replicate','animate'], ans:0, exp:'Mitigate means to reduce the severity of something — a perfect fit here.' },
+  { type:'Choose the Upgrade', q:'Which word is the strongest academic upgrade for "bad"?', opts:['terrible','not good','deleterious','horrible'], ans:2, exp:'Deleterious is Band 9 vocabulary meaning harmful — ideal for Task 2.' },
+  { type:'Fill the Blank', q:'Social media\'s ___ influence has reshaped political discourse globally.', opts:['small','pervasive','occasional','limited'], ans:1, exp:'Pervasive means spreading everywhere — perfectly describes social media\'s reach.' },
+  { type:'Fill the Blank', q:'There is a stark ___ between urban and rural healthcare quality.', opts:['similarity','comparison','dichotomy','overlap'], ans:2, exp:'Dichotomy (Band 9) means a sharp contrast between two opposing things.' },
+  { type:'Collocation Check', q:'Which collocation is CORRECT in academic English?', opts:['do a mistake','make a mistake','create a mistake','produce a mistake'], ans:1, exp:'"Make a mistake" is the correct collocation. "Do a mistake" is a common error.' },
+  { type:'Fill the Blank', q:'Funding cuts have ___ the already severe housing crisis in the capital.', opts:['mitigated','alleviated','exacerbated','substantiated'], ans:2, exp:'Exacerbated means to make worse — the cuts worsened the crisis.' },
+];
+let qIdx = 0; let qScore = 0; let qAnswered = false;
+
+function renderQuestion() {
+  if(qIdx >= QUESTIONS.length) return;
+  const q = QUESTIONS[qIdx];
+  document.getElementById('q-counter').textContent = `Q${qIdx+1} of ${QUESTIONS.length}`;
+  document.getElementById('q-type').textContent = q.type;
+  document.getElementById('q-feedback').className = 'quiz-feedback';
+  document.getElementById('q-feedback').textContent = '';
+  document.getElementById('q-next').style.display = 'none';
+  qAnswered = false;
+
+  let qText = q.q;
+  if(qText.includes('___')) qText = qText.replace('___','<span class="blank"></span>');
+  document.getElementById('q-question').innerHTML = qText;
+
+  const optDiv = document.getElementById('q-options');
+  optDiv.innerHTML = '';
+  q.opts.forEach((opt,i) => {
+    const btn = document.createElement('button');
+    btn.className = 'quiz-opt';
+    btn.textContent = opt;
+    btn.onclick = () => answerQ(i, btn);
+    optDiv.appendChild(btn);
+  });
+}
+
+function answerQ(chosen, btn) {
+  if(qAnswered) return;
+  qAnswered = true;
+  const q = QUESTIONS[qIdx];
+  const opts = document.querySelectorAll('.quiz-opt');
+  opts[q.ans].classList.add('correct');
+  const fb = document.getElementById('q-feedback');
+  if(chosen === q.ans) {
+    qScore++; addXP(20);
+    btn.classList.add('correct');
+    fb.className = 'quiz-feedback show-ok';
+    fb.textContent = '✓ Correct! ' + q.exp;
+  } else {
+    btn.classList.add('wrong');
+    fb.className = 'quiz-feedback show-fail';
+    fb.textContent = '✗ Not quite. ' + q.exp;
+  }
+  document.getElementById('q-next').style.display = 'block';
+}
+
+function nextQuestion() {
+  qIdx++;
+  if(qIdx >= QUESTIONS.length) {
+    document.getElementById('quiz-main').style.display = 'none';
+    document.getElementById('quiz-done').style.display = 'block';
+    document.getElementById('final-score').textContent = qScore + '/' + QUESTIONS.length;
+    const msgs = ['Keep practising — consistency is key!','Good effort! Review the word bank and retry.','Strong result! You\'re on track for Band 7+.','Excellent! Your lexical range is impressive.','Outstanding! Band 8+ vocabulary command!','Perfect score! Near-native command of academic English!'];
+    document.getElementById('final-msg').textContent = msgs[qScore] || msgs[5];
+  } else {
+    renderQuestion();
+  }
+}
+
+function restartQuiz() {
+  qIdx = 0; qScore = 0; qAnswered = false;
+  document.getElementById('quiz-main').style.display = 'block';
+  document.getElementById('quiz-done').style.display = 'none';
+  renderQuestion();
+}
+
+// ---- ADVICE ROTATOR ----
+const ADVICES = [
+  { text: '<strong>Collocations matter:</strong> "Make a mistake" not "do a mistake." Learn words in pairs.' },
+  { text: '<strong>Hedge your claims:</strong> "It could be argued that…" signals academic maturity to examiners.' },
+  { text: '<strong>Chunk your speech:</strong> Pause between meaning units to build rhythmic confidence.' },
+  { text: '<strong>Avoid repetition:</strong> Use "issue", "challenge", "predicament" — not "problem" three times.' },
+  { text: '<strong>Stress content words:</strong> NOUNS, VERBS, and ADJECTIVES carry meaning in English rhythm.' },
+  { text: '<strong>Band 9 tip:</strong> "Ubiquitous", "dichotomy", "deleterious" used correctly can push your score.' },
+];
+let advIdx = 0;
+function adviceCycle() {
+  advIdx = (advIdx + 1) % ADVICES.length;
+  document.getElementById('advice-text').innerHTML = ADVICES[advIdx].text;
+}
+setInterval(adviceCycle, 6000);
+
+// Init
+renderQuestion();
+renderFC();
+</script>
+</body>
+</html>

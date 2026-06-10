@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>IELTS Writing: Architect's Blueprint + Charts + Paraphrase Worksheet</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,800;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--ink:#0c1828;--paper:#f4f1ea;--blue:#1e3a8a;--blue-d:#0f1f4a;--terra:#c0531c;--gold:#b58a2c;--line:#d6cdb6;--soft:#e8e0c8;--green:#1f7a4d;--purple:#5b3b8a}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif}
+h1,h2,h3,h4{font-family:'Fraunces',serif;letter-spacing:-.01em}
+.mono{font-family:'JetBrains Mono',monospace}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px}
+.blueprint{background:linear-gradient(rgba(30,58,138,.06)1px,transparent 1px)0 0/24px 24px,linear-gradient(90deg,rgba(30,58,138,.06)1px,transparent 1px)0 0/24px 24px,#f8f6ee;border:1px solid var(--blue);border-radius:14px}
+.badge{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem .95rem;border-radius:10px;font-weight:600;transition:transform .08s ease;cursor:pointer;border:none;font-size:.9rem}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-d)}
+.btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{background:#f7f3e9}
+.btn-terra{background:var(--terra);color:#fff}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-active{background:var(--blue);color:#fff;border:1.5px solid var(--blue)}
+.chip{padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.progress-bar{height:8px;background:#dcd2b6;border-radius:999px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--blue),#3b62d5);transition:width .4s ease}
+.opt{cursor:pointer;border:1.5px solid var(--line);border-radius:10px;padding:.75rem .9rem;background:#fff;transition:all .12s;font-size:.9rem}
+.opt:hover{border-color:var(--blue);background:#eef2fa}
+.opt.correct{border-color:var(--green);background:#e6f5ee;color:var(--green)}
+.opt.wrong{border-color:var(--terra);background:#fdeadf;text-decoration:line-through;opacity:.85}
+.opt.disabled{pointer-events:none;opacity:.7}
+.feedback{padding:.7rem 1rem;border-radius:10px;font-size:.88rem;line-height:1.5;border-left:4px solid;margin-top:.5rem}
+.feedback.good{border-color:var(--green);background:#eef9f3}
+.feedback.bad{border-color:var(--terra);background:#fdeadf}
+.feedback.tip{border-color:var(--gold);background:#fdf6e3}
+.toolbar{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%)blur(8px);background:rgba(244,241,234,.85);border-bottom:1px solid var(--line)}
+.nav-step{cursor:pointer}
+.marker-yellow{background:linear-gradient(transparent 60%,#fde68a 60%)}
+.marker-blue{background:linear-gradient(transparent 60%,#bfdbfe 60%)}
+.pillar{background:linear-gradient(180deg,#fff,#f7f3e9);border:1px solid var(--line);border-radius:14px;padding:1rem;position:relative;overflow:hidden}
+.pillar::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px}
+.pillar.tr::before{background:var(--terra)}
+.pillar.cc::before{background:var(--blue)}
+.pillar.lr::before{background:var(--gold)}
+.pillar.gra::before{background:var(--green)}
+.blueprint-tag{display:inline-block;padding:.15rem .5rem;border-radius:4px;background:var(--blue);color:#fff;font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.05em}
+.gameboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.85rem}
+.case-card{cursor:pointer;transition:transform .15s,box-shadow .15s;padding:1rem;border-radius:14px;border:1px solid var(--line);background:#fff;min-height:130px;display:flex;flex-direction:column}
+.case-card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(30,58,138,.18)}
+.case-card .num{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:'Fraunces',serif}
+.case-card .preview{font-size:.7rem;font-weight:700;text-transform:uppercase;margin-top:auto}
+.modal-backdrop{position:fixed;inset:0;background:rgba(12,24,40,.6);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;z-index:100;padding:2rem 1rem;overflow-y:auto}
+.modal-backdrop.open{display:flex}
+.modal-box{background:var(--paper);border-radius:18px;max-width:900px;width:100%;box-shadow:0 24px 80px rgba(0,0,0,.4);position:relative;margin:auto;animation:popIn .25s ease-out}
+@keyframes popIn{from{transform:scale(.92);opacity:0}to{transform:scale(1);opacity:1}}
+.modal-head{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--line);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;border-radius:18px 18px 0 0;z-index:5}
+.modal-body{padding:1.4rem;max-height:82vh;overflow-y:auto}
+.modal-close{background:#fdeadf;border:none;width:34px;height:34px;border-radius:50%;font-size:1.2rem;cursor:pointer;color:var(--terra);font-weight:800;display:flex;align-items:center;justify-content:center}
+.modal-close:hover{background:var(--terra);color:#fff}
+body.modal-open{overflow:hidden}
+.model-essay{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1rem;font-family:'Fraunces',serif;line-height:1.75;font-size:.95rem}
+.model-essay p{margin-bottom:.7rem}
+.annot-paraphrase{background:#fde68a;padding:0 2px;border-radius:3px;cursor:help;border-bottom:1px dotted var(--gold)}
+.annot-thesis{background:#bfdbfe;padding:0 2px;border-radius:3px;cursor:help;border-bottom:1px dotted var(--blue)}
+.annot-topic{background:#bbf7d0;padding:0 2px;border-radius:3px;cursor:help;border-bottom:1px dotted var(--green)}
+.annot-cohesion{background:#fbcfe8;padding:0 2px;border-radius:3px;cursor:help;border-bottom:1px dotted var(--terra)}
+.annot-lexis{background:#e9d5ff;padding:0 2px;border-radius:3px;cursor:help;border-bottom:1px dotted var(--blue)}
+.annot-legend{display:flex;flex-wrap:wrap;gap:.5rem;font-size:.75rem;margin-bottom:.6rem}
+.legend-item{display:inline-flex;align-items:center;gap:.25rem;padding:.15rem .5rem;border-radius:999px;font-weight:600}
+/* chart styles */
+.chart-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem;margin:1rem 0}
+.chart-title{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin-bottom:.6rem;font-family:'JetBrains Mono',monospace}
+.chart-source{font-size:.65rem;color:#9ca3af;margin-top:.3rem;font-style:italic}
+svg.chart{width:100%;overflow:visible}
+.bar{transition:opacity .2s}
+.bar:hover{opacity:.8}
+/* skeleton */
+.pillar-sk{background:linear-gradient(180deg,#fff,#f7f3e9);border:1px solid var(--line);border-radius:14px;padding:1rem;position:relative;overflow:hidden;cursor:pointer;transition:box-shadow .2s}
+.pillar-sk:hover{box-shadow:0 6px 20px rgba(30,58,138,.14)}
+.pillar-sk .reveal{display:none}
+/* paraphrase worksheet */
+.pw-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.1rem;margin-bottom:.8rem}
+.pw-textarea{width:100%;min-height:56px;padding:.55rem .7rem;border:1.5px solid var(--line);border-radius:8px;background:#fafaf7;font-family:'Inter',sans-serif;font-size:.88rem;resize:vertical}
+.pw-textarea:focus{outline:2px solid var(--blue);outline-offset:-1px;border-color:var(--blue)}
+.hint-box{background:#fdf6e3;border-left:3px solid var(--gold);padding:.5rem .7rem;border-radius:6px;font-size:.8rem;margin-top:.4rem;display:none}
+.sample-box{background:#eef9f3;border-left:3px solid var(--green);padding:.55rem .75rem;border-radius:6px;font-size:.84rem;margin-top:.35rem;line-height:1.55;display:none}
+.sample-notes{background:#f7f3e9;font-size:.74rem;color:#555;padding:.35rem .55rem;border-radius:5px;margin-top:.25rem;line-height:1.45}
+.num-circle{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:'Fraunces',serif;font-size:.85rem;flex-shrink:0}
+.pw-progress-bar{height:5px;background:#dcd2b6;border-radius:999px;overflow:hidden;width:130px}
+.pw-progress-fill{height:100%;background:linear-gradient(90deg,var(--blue),#3b62d5);transition:width .4s}
+/* type filter tabs */
+.type-tab{cursor:pointer;padding:.3rem .8rem;border-radius:999px;font-size:.75rem;font-weight:600;border:1.5px solid var(--line);background:#fff;transition:all .15s;white-space:nowrap}
+.type-tab:hover{border-color:var(--blue);color:var(--blue)}
+.type-tab.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+/* tpl */
+.tpl-tab{cursor:pointer;padding:.35rem .8rem;border-radius:999px;font-size:.78rem;font-weight:600;border:1.5px solid var(--line);background:#fff;transition:all .15s;white-space:nowrap}
+.tpl-tab:hover{border-color:var(--blue);color:var(--blue)}
+.tpl-tab.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.tpl-input{width:100%;padding:.55rem .75rem;border-radius:8px;border:1.5px solid var(--line);background:#fafaf7;font-family:'Inter',sans-serif;font-size:.88rem;color:var(--ink);resize:vertical;min-height:52px;transition:border-color .15s,background .15s;line-height:1.55}
+.tpl-input:focus{outline:none;border-color:var(--blue);background:#fff}
+/* responsive */
+@media(max-width:640px){.gameboard{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<!-- TOOLBAR -->
+<div class="toolbar">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4 flex-wrap">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-white text-sm" style="background:var(--blue);font-family:'Fraunces',serif">AB</div>
+      <div><div class="text-xs uppercase tracking-widest text-stone-500">IELTS Writing</div><div class="font-bold -mt-1 text-sm">Architect's Blueprint · Band 7+</div></div>
+    </div>
+    <div class="hidden md:flex items-center gap-4 text-sm font-medium flex-wrap">
+      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="mindset">① Mindset</span>
+      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="pillars">② Pillars</span>
+      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="task1">③ Task 1 + Charts</span>
+      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="essays">④ Essay Types</span>
+      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="skeleton">⑤ Skeleton</span>
+      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="drills">⑥ Drills</span>
+      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="paraphrase">⑦ Paraphrase WS</span>
+      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="templates">⑧ Templates</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="text-right hidden sm:block"><div class="text-[11px] uppercase tracking-widest text-stone-500">XP</div><div class="font-bold text-lg" style="color:var(--blue);font-family:'Fraunces',serif" id="xpDisplay">0</div></div>
+      <div class="w-28 progress-bar"><div class="progress-fill" id="xpBar" style="width:0%"></div></div>
+    </div>
+  </div>
+</div>
+
+<main class="max-w-6xl mx-auto px-4 py-8">
+
+<!-- ① MINDSET -->
+<section id="mindset" class="mb-10">
+  <div class="grid md:grid-cols-5 gap-6 items-center">
+    <div class="md:col-span-3">
+      <span class="chip" style="background:var(--soft);color:var(--blue)">Lesson 03 · Writing</span>
+      <h1 class="text-3xl md:text-4xl mt-3 leading-tight">You're not an artist. <span class="marker-blue">You're an architect.</span></h1>
+      <p class="mt-3 text-stone-700">Beautiful English fails when the blueprint is wrong. Structure first, language second.</p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        <span class="badge" style="background:#fdeadf;color:var(--terra)">⏱ 60 min · 2 tasks</span>
+        <span class="badge" style="background:#eef9f3;color:var(--green)">🎯 Band 7+ target</span>
+        <span class="badge" style="background:#fdf6e3;color:var(--gold)">📐 Structure-first</span>
+        <span class="badge" style="background:#eef2fa;color:var(--blue)">📊 Live charts included</span>
+      </div>
+    </div>
+    <div class="md:col-span-2">
+      <div class="blueprint p-4">
+        <div class="text-xs uppercase tracking-widest text-stone-500 mb-2 mono">— SPEC —</div>
+        <div class="text-sm space-y-1.5">
+          <div><span class="blueprint-tag">T1</span> 150+ words · 20 min · Report a visual · No opinion</div>
+          <div><span class="blueprint-tag">T2</span> 250+ words · 40 min · Essay · Worth 2× T1</div>
+          <div class="mt-2 p-2 rounded-lg font-bold" style="background:#eef9f3;color:var(--green)">✓ Always write Task 2 first.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ② PILLARS -->
+<section id="pillars" class="mb-10">
+  <h2 class="text-2xl mb-3">② The 4 Pillars (25% each)</h2>
+  <div class="grid md:grid-cols-4 gap-3">
+    <div class="pillar tr"><div class="text-xs uppercase tracking-widest text-stone-500">TR</div><div class="font-bold mt-1">Task Response</div><p class="text-xs text-stone-700 mt-1">Did you answer the question — every part?</p></div>
+    <div class="pillar cc"><div class="text-xs uppercase tracking-widest text-stone-500">CC</div><div class="font-bold mt-1">Coherence &amp; Cohesion</div><p class="text-xs text-stone-700 mt-1">Logical paragraphs, smooth linking.</p></div>
+    <div class="pillar lr"><div class="text-xs uppercase tracking-widest text-stone-500">LR</div><div class="font-bold mt-1">Lexical Resource</div><p class="text-xs text-stone-700 mt-1">Right words. Collocations. Paraphrase.</p></div>
+    <div class="pillar gra"><div class="text-xs uppercase tracking-widest text-stone-500">GRA</div><div class="font-bold mt-1">Grammar Range &amp; Accuracy</div><p class="text-xs text-stone-700 mt-1">Mix simple + complex without errors.</p></div>
+  </div>
+</section>
+
+<!-- ③ TASK 1 + CHARTS -->
+<section id="task1" class="mb-10">
+  <h2 class="text-2xl mb-1">③ Task 1 — The Data Report <span class="text-base font-normal text-stone-500 ml-2">+ Live Practice Charts</span></h2>
+  <p class="text-stone-700 max-w-3xl text-sm mb-4">20 min · 150+ words · Report what you see — no opinions. Tap any visual type for strategy, then study the interactive sample chart below it.</p>
+  <div class="gameboard" id="task1Visuals"></div>
+
+  <!-- LIVE CHARTS SECTION -->
+  <div class="mt-8">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="text-xs uppercase tracking-widest font-bold" style="color:var(--blue)">📊 Practice Charts — Describe These</div>
+      <div class="text-xs text-stone-500">Select a chart type to practise</div>
+    </div>
+    <div class="flex flex-wrap gap-2 mb-5" id="chartTabs"></div>
+    <div id="chartDisplay"></div>
+  </div>
+</section>
+
+<!-- ④ ESSAY TYPES -->
+<section id="essays" class="mb-10">
+  <h2 class="text-2xl mb-2">④ Task 2 — The 5 Essay Types</h2>
+  <p class="text-stone-700 max-w-3xl text-sm">Tap any card. Full strategy + paragraph blueprint + annotated Band 7+ model essay inside.</p>
+  <div class="gameboard mt-4" id="essayTypes"></div>
+</section>
+
+<!-- ⑤ SKELETON -->
+<section id="skeleton" class="mb-10">
+  <h2 class="text-2xl mb-2">⑤ Visual Essay Skeleton</h2>
+  <p class="text-stone-700 max-w-3xl text-sm mb-4">Pick the essay type. Tap each block to reveal what goes inside it.</p>
+  <div class="card p-5">
+    <div class="flex items-center gap-3 flex-wrap mb-4">
+      <label class="text-sm font-bold">Essay type:</label>
+      <select class="border border-line rounded-lg p-2 text-sm" id="skType" style="background:#fff">
+        <option value="opinion">Opinion (Agree / Disagree)</option>
+        <option value="discussion">Discussion (both views + opinion)</option>
+        <option value="advdis">Advantages / Disadvantages</option>
+        <option value="probsol">Problem / Solution</option>
+        <option value="twopart">Two-part Question</option>
+      </select>
+    </div>
+    <div class="grid gap-3" id="skBlocks"></div>
+    <div class="mt-5">
+      <div class="text-xs uppercase tracking-widest text-stone-500 mb-2">Sentence Starter Bank</div>
+      <div class="grid md:grid-cols-3 gap-3 text-sm" id="skStarters"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ DRILLS -->
+<section id="drills" class="mb-10">
+  <h2 class="text-2xl mb-2">⑥ Sentence-Making Drills</h2>
+  <p class="text-stone-700 max-w-3xl text-sm">Eight targeted drills. Tap to open each one.</p>
+  <div class="gameboard mt-4" id="drillCards"></div>
+</section>
+
+<!-- ⑦ PARAPHRASE WORKSHEET -->
+<section id="paraphrase" class="mb-10">
+  <h2 class="text-2xl mb-1">⑦ Paraphrase Worksheet <span class="text-base font-normal text-stone-500 ml-2">50 real IELTS prompts</span></h2>
+  <p class="text-stone-700 max-w-3xl text-sm mb-4">Paraphrasing is the first move of every Task 2 essay. Change <strong>vocabulary AND structure</strong> — not just synonyms. Write your paraphrase, tap <strong>Hint</strong> for clues, <strong>Reveal</strong> for two Band 7+ sample versions.</p>
+
+  <div class="card p-4 mb-5">
+    <details>
+      <summary class="cursor-pointer font-bold text-sm">📘 The 3-step paraphrase method — expand</summary>
+      <div class="mt-3 grid md:grid-cols-3 gap-3 text-sm">
+        <div class="p-3 rounded-lg" style="background:#eef2fa"><div class="font-bold">1. Swap key words</div><p class="text-stone-700 mt-1"><em>people → individuals · think → argue · important → vital · big → significant</em></p></div>
+        <div class="p-3 rounded-lg" style="background:#fdf6e3"><div class="font-bold">2. Reshape the sentence</div><p class="text-stone-700 mt-1">Turn "Some people think X" into "It is often argued that X" or use a subordinator: While / Although / Despite the fact that…</p></div>
+        <div class="p-3 rounded-lg" style="background:#eef9f3"><div class="font-bold">3. Keep the meaning</div><p class="text-stone-700 mt-1">Never add new ideas or drop viewpoints. If the prompt has two sides — keep both in your paraphrase.</p></div>
+      </div>
+    </details>
+  </div>
+
+  <!-- Filter + progress bar -->
+  <div class="flex flex-wrap gap-2 items-center mb-4">
+    <span class="text-sm font-bold text-stone-700 mr-1">Filter:</span>
+    <button class="type-tab on" data-type="all">All 50</button>
+    <button class="type-tab" data-type="opinion">⚖ Opinion</button>
+    <button class="type-tab" data-type="discussion">🗣 Discussion</button>
+    <button class="type-tab" data-type="advdis">➕ Adv/Disadv</button>
+    <button class="type-tab" data-type="probsol">🛠 Prob/Sol</button>
+    <button class="type-tab" data-type="twopart">❓ Two-part</button>
+    <div class="ml-auto flex items-center gap-2">
+      <span class="text-xs text-stone-500">Done: <span id="pwDone">0</span>/50</span>
+      <div class="pw-progress-bar"><div class="pw-progress-fill" id="pwFill" style="width:0%"></div></div>
+    </div>
+  </div>
+
+  <div id="pwSheet"></div>
+</section>
+
+<!-- ⑧ TEMPLATES -->
+<section id="templates" class="mb-10">
+  <h2 class="text-2xl mb-1">⑧ Student Writing Templates</h2>
+  <p class="text-stone-700 max-w-3xl text-sm mb-4">Pick a template. Fill in the highlighted slots. Every grey box is one sentence — the hint tells you exactly what to put there.</p>
+  <div class="flex flex-wrap gap-2 mb-4" id="tplTabBar"></div>
+  <div class="card p-5" id="tplCard"></div>
+</section>
+
+<!-- 7-DAY PLAN -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-3">7-Day Action Plan</h2>
+  <div class="grid md:grid-cols-7 gap-2 text-center text-xs">
+    <div class="card p-3"><strong>Day 1</strong><div class="text-stone-700 mt-1">Paraphrase 10 prompts from Worksheet</div></div>
+    <div class="card p-3"><strong>Day 2</strong><div class="text-stone-700 mt-1">5× T2 plans (no writing, just skeletons)</div></div>
+    <div class="card p-3"><strong>Day 3</strong><div class="text-stone-700 mt-1">Write 1× T1 using a chart from this module</div></div>
+    <div class="card p-3"><strong>Day 4</strong><div class="text-stone-700 mt-1">PEEL paragraphs (10 min each × 3)</div></div>
+    <div class="card p-3"><strong>Day 5</strong><div class="text-stone-700 mt-1">Full T2 essay (40 min)</div></div>
+    <div class="card p-3"><strong>Day 6</strong><div class="text-stone-700 mt-1">Full mock (60 min T1 + T2)</div></div>
+    <div class="card p-3"><strong>Day 7</strong><div class="text-stone-700 mt-1">Reverse-engineer a Band 8 essay</div></div>
+  </div>
+</section>
+
+<footer class="border-t pt-5 pb-10 text-sm text-stone-500" style="border-color:var(--line)">IELTS Writing · Architect's Blueprint · Band 7+ Track · ViaTestPrep</footer>
+</main>
+
+<!-- MODAL -->
+<div class="modal-backdrop" id="modal">
+  <div class="modal-box">
+    <div class="modal-head"><div class="flex items-center gap-3" id="mHead"></div><button class="modal-close" id="mClose">✕</button></div>
+    <div class="modal-body" id="mBody"></div>
+  </div>
+</div>
+<script>
+// ====== STATE ======
+const state={xp:0,max:500,pwDone:0};
+function addXP(n){state.xp=Math.min(state.max,state.xp+n);document.getElementById('xpDisplay').textContent=state.xp;document.getElementById('xpBar').style.width=(state.xp/state.max*100)+'%';}
+document.querySelectorAll('.nav-step').forEach(s=>s.addEventListener('click',()=>document.getElementById(s.dataset.jump)?.scrollIntoView({behavior:'smooth'})));
+
+// ====== MODAL ======
+const modal=document.getElementById('modal');
+function openModal(h,b){document.getElementById('mHead').innerHTML=h;document.getElementById('mBody').innerHTML=b;modal.classList.add('open');document.body.classList.add('modal-open');document.getElementById('mBody').scrollTop=0;}
+function closeModal(){modal.classList.remove('open');document.body.classList.remove('modal-open');}
+document.getElementById('mClose').addEventListener('click',closeModal);
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
+document.addEventListener('keydown',e=>{if(modal.classList.contains('open')&&e.key==='Escape')closeModal();});
+
+// ====== TASK 1 CARDS ======
+const t1V=[
+{n:1,name:"Line Graph",icon:"📈",accent:"var(--blue)",move:"Describe TRENDS over time. Group lines by behaviour (rising vs flat). Never list every data point.",trap:"Treating every point as equally important. Pick the KEY trend per line.",rule:"Past dates → past simple. Predictions → 'is projected to'. Current → present perfect."},
+{n:2,name:"Bar Chart",icon:"📊",accent:"var(--gold)",move:"Compare CATEGORIES. Group highest with highest, lowest with lowest. Don't write row by row.",trap:"Treating it like a line graph if it has no time axis — bars compare, lines trend.",rule:"Highlight highest, lowest, any reversal. Approximate values: 'approximately 45%'."},
+{n:3,name:"Pie Chart",icon:"🥧",accent:"var(--terra)",move:"Describe PROPORTIONS using fractions and percentage language: a fifth, a quarter, over half.",trap:"Forgetting proportions must add to 100%. Don't list all slices — group similar ones.",rule:"If two pies: COMPARE the same slices across charts. Use 'whereas' and 'compared with'."},
+{n:4,name:"Table",icon:"🔢",accent:"var(--green)",move:"Pick the highest, lowest, biggest change. Strategically group before writing.",trap:"Reading row by row in your essay — re-organise by pattern, not layout.",rule:"Tables hide patterns — identify extremes and exceptions BEFORE writing your first word."},
+{n:5,name:"Process Diagram",icon:"⚙️",accent:"var(--blue)",move:"PRESENT SIMPLE PASSIVE throughout. Sequencers: first, then, after which, subsequently, finally.",trap:"Using past tense — a process is generic, not a one-off event.",rule:"Number of stages = skeleton of your body paragraphs."},
+{n:6,name:"Map",icon:"🗺️",accent:"var(--gold)",move:"Describe CHANGES: was built, was demolished, was replaced, was extended. Move spatially (north, south, to the east of).",trap:"Listing changes without using spatial language (next to, to the north, in the centre).",rule:"Past simple passive only. Do NOT speculate about why changes happened."},
+{n:7,name:"Multiple Visuals",icon:"🧩",accent:"var(--terra)",move:"Describe each visual clearly, then LINK their data in the overview.",trap:"Treating them as two separate essays glued together.",rule:"Overview MUST mention BOTH visuals. Look for a connection between the datasets."}
+];
+document.getElementById('task1Visuals').innerHTML=t1V.map(c=>`<div class="case-card" style="background:linear-gradient(180deg,${c.accent}20,#fff 70%)" onclick="openT1Modal(${c.n-1})"><div class="flex items-center gap-2"><div class="num" style="background:${c.accent}">${c.icon}</div><div class="font-bold">${c.n}. ${c.name}</div></div><div class="preview mt-2" style="color:${c.accent}">▶ Tap for strategy</div></div>`).join('');
+function openT1Modal(i){
+  const c=t1V[i];
+  openModal(
+    `<div class="num" style="background:${c.accent};width:36px;height:36px">${c.icon}</div><div><div class="font-bold text-lg">${c.n}. ${c.name}</div><div class="text-[10px] uppercase tracking-widest text-stone-500">Task 1 visual type</div></div>`,
+    `<div class="text-xs uppercase tracking-widest text-stone-500">The Move</div><p class="mt-1 text-sm">${c.move}</p><div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--terra)">Trap</div><p class="mt-1 text-sm">${c.trap}</p><div class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--gold)">Rule</div><p class="mt-1 text-sm">${c.rule}</p><div class="feedback tip mt-4">💡 Practise on the chart below — scroll down to the <strong>Practice Charts</strong> section and select <strong>${c.name}</strong>.</div>`
+  );
+  addXP(2);
+}
+
+// ====== CHARTS ======
+const charts=[
+{
+  id:'line',label:'📈 Line Graph',
+  title:'International Student Enrolment at Three Universities (2010–2023)',
+  source:'Source: University Admissions Data (fictional practice data)',
+  desc:'This line graph shows the number of international students (in thousands) enrolled at Greenfield, Harton, and Mila Universities between 2010 and 2023.',
+  keypoints:['Greenfield rose steadily from 4k to 14k, the highest of the three.','Harton grew moderately from 2k to 8k.','Mila remained largely flat at around 3k throughout.','Overall, all three universities saw an upward trend.'],
+  render:()=>{
+    const W=560,H=260,pad={t:30,r:20,b:50,l:50};
+    const iW=W-pad.l-pad.r,iH=H-pad.t-pad.b;
+    const years=[2010,2012,2014,2016,2018,2020,2022,2023];
+    const data={Greenfield:[4,5,6,8,10,11,13,14],Harton:[2,2.5,3,4,5.5,6.5,7.5,8],Mila:[3,3.1,2.9,3.2,3.0,3.3,3.1,3.2]};
+    const colors={Greenfield:'#1e3a8a',Harton:'#b58a2c',Mila:'#c0531c'};
+    const xScale=i=>pad.l+i*(iW/(years.length-1));
+    const yScale=v=>pad.t+iH-(v/16)*iH;
+    const path=pts=>pts.map((v,i)=>`${i?'L':'M'}${xScale(i)},${yScale(v)}`).join(' ');
+    let svg=`<svg class="chart" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
+    // grid
+    [0,4,8,12,16].forEach(v=>{const y=yScale(v);svg+=`<line x1="${pad.l}" y1="${y}" x2="${W-pad.r}" y2="${y}" stroke="#e5e0d0" stroke-width="1"/>`;svg+=`<text x="${pad.l-6}" y="${y+4}" font-size="10" fill="#9ca3af" text-anchor="end">${v}k</text>`;});
+    years.forEach((yr,i)=>{svg+=`<text x="${xScale(i)}" y="${H-8}" font-size="10" fill="#9ca3af" text-anchor="middle">${yr}</text>`;});
+    Object.entries(data).forEach(([name,pts])=>{svg+=`<path d="${path(pts)}" fill="none" stroke="${colors[name]}" stroke-width="2.5" stroke-linejoin="round"/>`;pts.forEach((v,i)=>{svg+=`<circle cx="${xScale(i)}" cy="${yScale(v)}" r="3.5" fill="${colors[name]}"/>`;});});
+    // legend
+    let lx=pad.l;Object.entries(colors).forEach(([name,col])=>{svg+=`<rect x="${lx}" y="${pad.t-18}" width="14" height="10" rx="3" fill="${col}"/>`;svg+=`<text x="${lx+18}" y="${pad.t-9}" font-size="11" fill="#374151">${name}</text>`;lx+=name.length*7+28;});
+    svg+=`</svg>`;return svg;
+  }
+},
+{
+  id:'bar',label:'📊 Bar Chart',
+  title:'Average Weekly Screen Time by Age Group (Hours) — 2023',
+  source:'Source: Global Digital Habits Survey (fictional practice data)',
+  desc:'This bar chart compares the average weekly screen time (in hours) across five age groups in 2023.',
+  keypoints:['The 18–24 age group recorded the highest screen time at 42 hours per week.','The 65+ group had the lowest at 18 hours.','Screen time generally decreased with age above 25.','A notable exception: the 25–34 group (38h) was close to the youngest group.'],
+  render:()=>{
+    const cats=['Under 18','18–24','25–34','35–44','45–64','65+'];
+    const vals=[35,42,38,28,22,18];
+    const colors=['#3b62d5','#1e3a8a','#1e3a8a','#b58a2c','#c0531c','#1f7a4d'];
+    const W=540,H=260,pad={t:30,r:20,b:55,l:50};
+    const iW=W-pad.l-pad.r,iH=H-pad.t-pad.b;
+    const bw=(iW/cats.length)*0.6,gap=(iW/cats.length)*0.4;
+    const xOff=i=>pad.l+i*(iW/cats.length)+gap/2;
+    const yScale=v=>pad.t+iH-(v/50)*iH;
+    let svg=`<svg class="chart" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
+    [0,10,20,30,40,50].forEach(v=>{const y=yScale(v);svg+=`<line x1="${pad.l}" y1="${y}" x2="${W-pad.r}" y2="${y}" stroke="#e5e0d0" stroke-width="1"/>`;svg+=`<text x="${pad.l-6}" y="${y+4}" font-size="10" fill="#9ca3af" text-anchor="end">${v}</text>`;});
+    cats.forEach((c,i)=>{const x=xOff(i),h=(vals[i]/50)*iH,y=pad.t+iH-h;svg+=`<rect class="bar" x="${x}" y="${y}" width="${bw}" height="${h}" rx="4" fill="${colors[i]}"/>`;svg+=`<text x="${x+bw/2}" y="${y-5}" font-size="10" fill="${colors[i]}" text-anchor="middle" font-weight="700">${vals[i]}h</text>`;svg+=`<text x="${x+bw/2}" y="${H-8}" font-size="10" fill="#6b7280" text-anchor="middle">${c}</text>`;});
+    svg+=`<text x="${pad.l}" y="${pad.t-12}" font-size="10" fill="#9ca3af">Hours/week</text>`;
+    svg+=`</svg>`;return svg;
+  }
+},
+{
+  id:'pie',label:'🥧 Pie Chart',
+  title:'Household Energy Consumption by Source — UK 2023',
+  source:'Source: National Energy Survey (fictional practice data)',
+  desc:'This pie chart illustrates the proportion of household energy consumed by different sources in the UK in 2023.',
+  keypoints:['Natural gas constituted the largest share at 46%.','Electricity accounted for 29%, making the two dominant sources over three-quarters combined.','Renewables at 12% and oil at 8% were considerably smaller.','Coal represented only 5%, the smallest category.'],
+  render:()=>{
+    const slices=[
+      {label:'Natural Gas',pct:46,color:'#1e3a8a'},
+      {label:'Electricity',pct:29,color:'#3b62d5'},
+      {label:'Renewables',pct:12,color:'#1f7a4d'},
+      {label:'Oil',pct:8,color:'#b58a2c'},
+      {label:'Coal',pct:5,color:'#c0531c'}
+    ];
+    const W=520,H=270,cx=160,cy=135,r=110;
+    let svg=`<svg class="chart" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
+    let angle=-Math.PI/2;
+    slices.forEach(s=>{
+      const a=s.pct/100*Math.PI*2;
+      const x1=cx+r*Math.cos(angle),y1=cy+r*Math.sin(angle);
+      const x2=cx+r*Math.cos(angle+a),y2=cy+r*Math.sin(angle+a);
+      const mid=angle+a/2;
+      const lx=cx+(r+20)*Math.cos(mid),ly=cy+(r+20)*Math.sin(mid);
+      svg+=`<path d="M${cx},${cy} L${x1},${y1} A${r},${r} 0 ${a>Math.PI?1:0} 1 ${x2},${y2} Z" fill="${s.color}" stroke="#f4f1ea" stroke-width="2"/>`;
+      if(s.pct>=8){svg+=`<text x="${lx}" y="${ly+4}" font-size="11" font-weight="700" fill="#fff" text-anchor="middle" dominant-baseline="central" style="pointer-events:none">${s.pct}%</text>`;}
+      angle+=a;
+    });
+    // legend
+    let ly2=30;slices.forEach(s=>{svg+=`<rect x="310" y="${ly2-8}" width="14" height="14" rx="3" fill="${s.color}"/>`;svg+=`<text x="330" y="${ly2+3}" font-size="12" fill="#374151">${s.label} (${s.pct}%)</text>`;ly2+=26;});
+    svg+=`</svg>`;return svg;
+  }
+},
+{
+  id:'table',label:'🔢 Table',
+  title:'Unemployment Rate (%) by Country and Year',
+  source:'Source: International Labour Statistics (fictional practice data)',
+  desc:'This table shows the unemployment rates (%) across five countries in 2010, 2015, and 2022.',
+  keypoints:['Spain had the highest rate throughout, peaking at 24.8% in 2015.','Germany consistently had the lowest, falling to 3.0% by 2022.','All countries showed improvement by 2022 compared to 2015.','Nepal showed a slight increase from 2015 to 2022, the only country to do so.'],
+  render:()=>{
+    const rows=[
+      {c:'Spain',y10:20.1,y15:24.8,y22:12.9},
+      {c:'USA',y10:9.6,y15:5.3,y22:3.5},
+      {c:'Germany',y10:7.0,y15:4.6,y22:3.0},
+      {c:'Japan',y10:5.1,y15:3.4,y22:2.6},
+      {c:'Nepal',y10:2.8,y15:3.0,y22:3.1}
+    ];
+    const maxVal=25;
+    const cols=['Country','2010','2015','2022'];
+    const W=540,rowH=44,H=rowH*(rows.length+1.5),pad=16;
+    const colW=[130,100,100,100];
+    const barW=85;
+    let svg=`<svg class="chart" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
+    // header
+    svg+=`<rect x="0" y="0" width="${W}" height="${rowH}" rx="8" fill="#1e3a8a"/>`;
+    let hx=pad;cols.forEach((c,i)=>{svg+=`<text x="${hx+colW[i]/2}" y="${rowH/2+4}" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">${c}</text>`;hx+=colW[i];});
+    const colors=['#1e3a8a','#b58a2c','#1f7a4d'];
+    const years=['y10','y15','y22'];
+    rows.forEach((row,ri)=>{
+      const y=rowH*(ri+1);
+      svg+=`<rect x="0" y="${y}" width="${W}" height="${rowH}" fill="${ri%2?'#fff':'#f8f6ee'}" rx="0"/>`;
+      svg+=`<text x="${pad+colW[0]/2}" y="${y+rowH/2+4}" font-size="12" fill="#374151" font-weight="600" text-anchor="middle">${row.c}</text>`;
+      years.forEach((yk,yi)=>{
+        const val=row[yk];
+        const bw=(val/maxVal)*barW;
+        const bx=pad+colW[0]+colW[1]*yi+8;
+        const by=y+8;
+        svg+=`<rect x="${bx}" y="${by}" width="${bw}" height="${rowH-18}" rx="3" fill="${colors[yi]}" opacity="0.85"/>`;
+        svg+=`<text x="${bx+bw+4}" y="${y+rowH/2+4}" font-size="11" fill="${colors[yi]}" font-weight="700">${val}%</text>`;
+      });
+    });
+    svg+=`</svg>`;return svg;
+  }
+},
+{
+  id:'process',label:'⚙️ Process',
+  title:'The Water Purification Process',
+  source:'Source: Municipal Water Treatment Guidelines (fictional practice data)',
+  desc:'This diagram illustrates the stages involved in purifying water for public consumption.',
+  keypoints:['There are 6 main stages from raw water intake to distribution.','The process uses both physical filtering and chemical treatment.','Sedimentation and filtration both remove particles at different scales.','Chlorination is the final treatment stage before water reaches consumers.'],
+  render:()=>{
+    const steps=[
+      {n:1,label:'Raw Water\nIntake',icon:'🌊',color:'#1e3a8a'},
+      {n:2,label:'Screening\n& Aeration',icon:'💨',color:'#3b62d5'},
+      {n:3,label:'Coagulation\n& Flocculation',icon:'🔬',color:'#1f7a4d'},
+      {n:4,label:'Sedimentation',icon:'⬇️',color:'#b58a2c'},
+      {n:5,label:'Sand\nFiltration',icon:'🪨',color:'#c0531c'},
+      {n:6,label:'Chlorination\n& Distribution',icon:'🚰',color:'#1e3a8a'}
+    ];
+    const W=560,H=160,bw=70,bh=80,gap=24,startX=10;
+    let svg=`<svg class="chart" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
+    steps.forEach((s,i)=>{
+      const x=startX+i*(bw+gap);
+      svg+=`<rect x="${x}" y="20" width="${bw}" height="${bh}" rx="10" fill="${s.color}"/>`;
+      const lines=s.label.split('\n');
+      lines.forEach((line,li)=>{svg+=`<text x="${x+bw/2}" y="${72+li*14}" font-size="10" fill="#fff" text-anchor="middle" font-weight="600">${line}</text>`;});
+      svg+=`<text x="${x+bw/2}" y="45" font-size="18" text-anchor="middle">${s.icon}</text>`;
+      svg+=`<rect x="${x+bw/2-8}" y="5" width="16" height="16" rx="4" fill="${s.color}"/>`;
+      svg+=`<text x="${x+bw/2}" y="17" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">${s.n}</text>`;
+      if(i<steps.length-1){const ax=x+bw+4,ay=60;svg+=`<polygon points="${ax},${ay-6} ${ax+gap-8},${ay} ${ax},${ay+6}" fill="${s.color}" opacity=".6"/>`;}
+    });
+    svg+=`<text x="${W/2}" y="${H-5}" font-size="10" fill="#9ca3af" text-anchor="middle">Present Simple Passive: "Water is screened → is treated → is filtered → is distributed"</text>`;
+    svg+=`</svg>`;return svg;
+  }
+},
+{
+  id:'map',label:'🗺️ Map',
+  title:'Town Centre Development — Millbrook: 2000 vs 2024',
+  source:'Source: Local Development Authority (fictional practice data)',
+  desc:'These maps show how Millbrook town centre changed between 2000 and 2024.',
+  keypoints:['A new shopping centre was built in the north, replacing a park.','The old hospital was demolished and replaced with residential housing.','The market square was extended and pedestrianised.','A car park was added to the south-east corner.'],
+  render:()=>{
+    const W=540,H=250;
+    let svg=`<svg class="chart" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
+    // 2000 map
+    svg+=`<rect x="10" y="10" width="240" height="220" rx="8" fill="#f0ede0" stroke="#d6cdb6"/>`;
+    svg+=`<text x="130" y="30" font-size="12" fill="#1e3a8a" font-weight="700" text-anchor="middle">2000</text>`;
+    // park
+    svg+=`<rect x="30" y="40" width="80" height="60" rx="6" fill="#bbf7d0"/>`;
+    svg+=`<text x="70" y="73" font-size="10" fill="#1f7a4d" text-anchor="middle">Park</text>`;
+    // hospital
+    svg+=`<rect x="150" y="40" width="80" height="60" rx="6" fill="#bfdbfe"/>`;
+    svg+=`<text x="190" y="73" font-size="10" fill="#1e3a8a" text-anchor="middle">Hospital</text>`;
+    // market
+    svg+=`<rect x="50" y="130" width="60" height="50" rx="6" fill="#fde68a"/>`;
+    svg+=`<text x="80" y="158" font-size="10" fill="#b58a2c" text-anchor="middle">Market</text>`;
+    // road
+    svg+=`<rect x="30" y="120" width="200" height="8" fill="#e5e7eb"/>`;
+    svg+=`<text x="130" y="235" font-size="9" fill="#9ca3af" text-anchor="middle">High Street</text>`;
+
+    // 2024 map
+    svg+=`<rect x="290" y="10" width="240" height="220" rx="8" fill="#f0ede0" stroke="#d6cdb6"/>`;
+    svg+=`<text x="410" y="30" font-size="12" fill="#c0531c" font-weight="700" text-anchor="middle">2024</text>`;
+    // shopping centre (replaced park)
+    svg+=`<rect x="310" y="40" width="80" height="60" rx="6" fill="#1e3a8a"/>`;
+    svg+=`<text x="350" y="66" font-size="10" fill="#fff" text-anchor="middle">Shopping</text>`;
+    svg+=`<text x="350" y="78" font-size="10" fill="#fff" text-anchor="middle">Centre</text>`;
+    svg+=`<text x="350" y="38" font-size="9" fill="#c0531c" text-anchor="middle" font-weight="700">NEW</text>`;
+    // residential (replaced hospital)
+    svg+=`<rect x="430" y="40" width="80" height="60" rx="6" fill="#fde68a"/>`;
+    svg+=`<text x="470" y="66" font-size="10" fill="#92400e" text-anchor="middle">Residential</text>`;
+    svg+=`<text x="470" y="78" font-size="10" fill="#92400e" text-anchor="middle">Housing</text>`;
+    svg+=`<text x="470" y="38" font-size="9" fill="#c0531c" text-anchor="middle" font-weight="700">NEW</text>`;
+    // extended market
+    svg+=`<rect x="310" y="130" width="90" height="50" rx="6" fill="#fde68a"/>`;
+    svg+=`<text x="355" y="158" font-size="10" fill="#b58a2c" text-anchor="middle">Market (ext.)</text>`;
+    // car park
+    svg+=`<rect x="430" y="150" width="60" height="40" rx="6" fill="#d1d5db"/>`;
+    svg+=`<text x="460" y="173" font-size="10" fill="#374151" text-anchor="middle">Car Park</text>`;
+    svg+=`<text x="460" y="148" font-size="9" fill="#c0531c" text-anchor="middle" font-weight="700">NEW</text>`;
+    // road
+    svg+=`<rect x="310" y="120" width="200" height="8" fill="#e5e7eb"/>`;
+    svg+=`<text x="410" y="235" font-size="9" fill="#9ca3af" text-anchor="middle">High Street (pedestrianised)</text>`;
+
+    // legend
+    svg+=`<text x="${W/2}" y="${H-2}" font-size="9" fill="#9ca3af" text-anchor="middle">Past simple passive: "The park was demolished." "A shopping centre was built."</text>`;
+    svg+=`</svg>`;return svg;
+  }
+},
+{
+  id:'multi',label:'🧩 Multiple Visuals',
+  title:'Coffee Production & Consumption — Top 5 Nations (2022)',
+  source:'Source: International Coffee Organization (fictional practice data)',
+  desc:'These two charts show the top coffee-producing and consuming nations in 2022 (million tonnes).',
+  keypoints:['Brazil dominated production at 3.8Mt, far ahead of Vietnam (1.9Mt).','The USA was the largest consumer at 2.4Mt, despite producing relatively little.','Brazil and Ethiopia appear in both charts — producers who also consume significantly.','There is a clear disconnect: major producers are not always major consumers.'],
+  render:()=>{
+    const W=560,H=270,pad={t:30,r:20,b:40,l:50};
+    const countries=['Brazil','Vietnam','Colombia','Indonesia','Ethiopia'];
+    const prod=[3.8,1.9,0.9,0.7,0.5];
+    const cons=[1.6,0.3,0.4,0.3,0.4];
+    const bw=28,gap=60,startX=80;
+    let svg=`<svg class="chart" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
+    svg+=`<text x="140" y="18" font-size="11" font-weight="700" fill="#1e3a8a" text-anchor="middle">Production</text>`;
+    svg+=`<text x="420" y="18" font-size="11" font-weight="700" fill="#c0531c" text-anchor="middle">Consumption</text>`;
+    const iH=H-pad.t-pad.b;
+    const yS=v=>pad.t+iH-(v/4.5)*iH;
+    [0,1,2,3,4].forEach(v=>{const y=yS(v);svg+=`<line x1="60" y1="${y}" x2="260" y2="${y}" stroke="#e5e0d0" stroke-width="1"/>`;svg+=`<text x="56" y="${y+4}" font-size="10" fill="#9ca3af" text-anchor="end">${v}</text>`;});
+    countries.forEach((c,i)=>{
+      const x=80+i*38;
+      const ph=(prod[i]/4.5)*iH;svg+=`<rect x="${x}" y="${pad.t+iH-ph}" width="${bw}" height="${ph}" rx="4" fill="#1e3a8a" class="bar"/>`;
+      svg+=`<text x="${x+bw/2}" y="${H-8}" font-size="9" fill="#6b7280" text-anchor="middle">${c.slice(0,3)}</text>`;
+      svg+=`<text x="${x+bw/2}" y="${pad.t+iH-ph-4}" font-size="9" fill="#1e3a8a" font-weight="700" text-anchor="middle">${prod[i]}</text>`;
+    });
+    const iH2=H-pad.t-pad.b;const yS2=v=>pad.t+iH2-(v/3)*iH2;
+    [0,1,2,3].forEach(v=>{const y=yS2(v);svg+=`<line x1="340" y1="${y}" x2="540" y2="${y}" stroke="#e5e0d0" stroke-width="1"/>`;svg+=`<text x="336" y="${y+4}" font-size="10" fill="#9ca3af" text-anchor="end">${v}</text>`;});
+    const cons2=[2.4,1.6,0.9,0.6,0.4];
+    const consC=['USA','Brazil','Germany','Japan','Ethiopia'];
+    consC.forEach((c,i)=>{
+      const x=360+i*38;
+      const ph2=(cons2[i]/3)*iH2;svg+=`<rect x="${x}" y="${pad.t+iH2-ph2}" width="${bw}" height="${ph2}" rx="4" fill="#c0531c" class="bar"/>`;
+      svg+=`<text x="${x+bw/2}" y="${H-8}" font-size="9" fill="#6b7280" text-anchor="middle">${c.slice(0,3)}</text>`;
+      svg+=`<text x="${x+bw/2}" y="${pad.t+iH2-ph2-4}" font-size="9" fill="#c0531c" font-weight="700" text-anchor="middle">${cons2[i]}</text>`;
+    });
+    svg+=`<text x="${W/2}" y="${H-1}" font-size="9" fill="#9ca3af" text-anchor="middle">Unit: million tonnes · Tip: link both charts in your overview</text>`;
+    svg+=`</svg>`;return svg;
+  }
+}
+];
+// Render chart tabs
+const ctEl=document.getElementById('chartTabs');
+charts.forEach((ch,i)=>{
+  const btn=document.createElement('button');
+  btn.className='type-tab'+(i===0?' on':'');
+  btn.textContent=ch.label;
+  btn.onclick=()=>{document.querySelectorAll('#chartTabs .type-tab').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderChart(i);addXP(3);};
+  ctEl.appendChild(btn);
+});
+function renderChart(i){
+  const ch=charts[i];
+  document.getElementById('chartDisplay').innerHTML=`
+    <div class="chart-wrap">
+      <div class="chart-title">${ch.title}</div>
+      ${ch.render()}
+      <div class="chart-source">${ch.source}</div>
+    </div>
+    <div class="card p-4 mt-3">
+      <div class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--blue)">About this chart</div>
+      <p class="text-sm text-stone-700 mb-3">${ch.desc}</p>
+      <div class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--green)">Key Points to Describe</div>
+      <ul class="space-y-1">${ch.keypoints.map(k=>`<li class="text-sm text-stone-700 flex gap-2"><span style="color:var(--green)">▸</span>${k}</li>`).join('')}</ul>
+      <div class="feedback tip mt-3">✏️ <strong>Practice task:</strong> Write a 150-word description of this chart. Use the key points above as your skeleton. Spend 3 minutes planning before you write.</div>
+    </div>`;
+}
+renderChart(0);
+// ====== ESSAY TYPES ======
+const essayTypes=[
+{n:1,name:"Opinion (Agree / Disagree)",icon:"⚖️",accent:"var(--blue)",triggers:"\"To what extent do you agree or disagree?\" / \"Do you agree?\" / \"What is your opinion?\"",move:"Take a CLEAR side. Two body paragraphs each with one reason for your stance.",trap:"Sitting on the fence. A wishy-washy thesis caps you at Band 6 for Task Response.",rule:"Same opinion in intro AND conclusion — different words, same stance.",structure:[{p:"Intro (~50w)",what:"Paraphrase + clear thesis + preview 2 reasons"},{p:"Body 1 (~95w)",what:"P-E-E-L: Topic = reason 1 + explanation + example + link"},{p:"Body 2 (~95w)",what:"P-E-E-L: Different reason 2 + example + link"},{p:"Conclusion (~40w)",what:"Signal end + summarise + restate position in new words"}],
+prompt:"\"Some people believe that universities should focus only on academic subjects, while others think they should also prepare students for future careers. To what extent do you agree or disagree?\"",
+essay:`<p><span class="annot-paraphrase" title="Paraphrase">In today's competitive job market</span>, <span class="annot-paraphrase" title="Paraphrase — vocabulary + structure changed">people disagree about whether universities should teach only academic subjects or also train students for real jobs</span>. <span class="annot-thesis" title="Clear thesis">In my view, while academic study should stay at the centre, universities also need to prepare students for the workplace.</span></p><p><span class="annot-topic" title="Topic sentence — first reason">The main reason for this view is that modern jobs require far more than academic knowledge.</span> Employers often say that <span class="annot-lexis" title="Collocation">graduates lack basic work skills</span> — such as communication, teamwork and digital literacy — even when their grades are excellent. A 2022 survey by the UK CBI found that nearly two-thirds of employers <span class="annot-lexis" title="Strong collocation">struggled to fill entry-level positions</span> because graduates did not know how a normal office functions. <span class="annot-cohesion" title="Result linker">As a result</span>, if universities ignore this gap, their students are left <span class="annot-lexis" title="Collocation">at a real disadvantage</span>.</p><p><span class="annot-topic" title="Topic sentence — second reason">A second compelling reason is that career training need not replace academic study.</span> <span class="annot-cohesion" title="Building on previous">In fact</span>, the two can <span class="annot-lexis" title="Collocation">support each other</span>. Internships, final-year projects and industry partnerships let students apply what they learn in class to real problems, which deepens understanding rather than diminishing it. <span class="annot-cohesion" title="Example linker">A clear illustration of this is</span> Finland's engineering programmes, where work placements have been linked to both higher graduate employment and stronger academic results.</p><p><span class="annot-cohesion" title="Conclusion signal">In conclusion</span>, although the traditional academic role of universities must be protected, <span class="annot-thesis" title="Thesis restated in new words">I firmly believe that adding career preparation makes higher education stronger, not weaker</span>, and helps produce graduates who are genuinely ready to contribute to society.</p>`
+},
+{n:2,name:"Discussion (Both Views + Opinion)",icon:"🗣️",accent:"var(--gold)",triggers:"\"Discuss both views and give your opinion.\" / \"Discuss both these views.\"",move:"Discuss BOTH views FAIRLY. State your opinion clearly in the intro AND conclusion.",trap:"Spending 80% on your preferred view. Both must have similar word counts.",rule:"Body 1 = View A (with example). Body 2 = View B (with example). State your lean in intro.",structure:[{p:"Intro (~55w)",what:"Paraphrase both views + state your stance"},{p:"Body 1 (~90w)",what:"View A — fair presentation + supporting example"},{p:"Body 2 (~110w)",what:"View B + example + WHY you lean here"},{p:"Conclusion (~40w)",what:"Restate both views briefly + your final stance"}],
+prompt:"\"Some people believe that public art should be funded by the government, while others argue this money would be better spent on essential services. Discuss both views and give your opinion.\"",
+essay:`<p><span class="annot-paraphrase" title="Paraphrase">People disagree about whether limited public money should be spent on the arts or saved for more important services like healthcare and education.</span> While both sides have a point, <span class="annot-thesis" title="Stance stated upfront">I lean towards spending on essential services, though I do not think arts funding should be cut entirely.</span></p><p><span class="annot-topic" title="View A — presented fairly">People who support arts funding argue that culture is a fundamental part of civilised society, not a luxury that can be abandoned.</span> Without state support, they say, large-scale artistic projects — public sculptures, free concerts, open museums — could not happen, because the private market alone is unlikely to fund them. <span class="annot-cohesion" title="Example linker">A well-known example is</span> Spain's investment in Bilbao, where the Guggenheim Museum is widely credited with <span class="annot-lexis" title="Collocation">bringing new life to the local economy</span>.</p><p><span class="annot-topic" title="View B + writer's lean">On the other hand, critics argue that when resources are limited, essential services must come first — and in my view this argument is stronger.</span> Overcrowded hospitals and under-resourced schools have <span class="annot-lexis" title="Precise phrase">a far more urgent claim</span> on public funds than sculptures or exhibitions. <span class="annot-cohesion" title="Adding point">Furthermore</span>, the arts do not rely solely on government funding; private donations, ticket income and corporate sponsorship have <span class="annot-lexis" title="Collocation">long sustained</span> a wide range of cultural activity. <span class="annot-cohesion" title="Mid-paragraph conclusion">It is therefore reasonable to say</span> that public art deserves only a modest share of state spending.</p><p><span class="annot-cohesion" title="Conclusion signal">In conclusion</span>, although both positions carry weight, <span class="annot-thesis" title="Final stance">the stronger argument is that essential public services must take priority, while the arts can also be sustained through alternative funding sources.</span></p>`
+},
+{n:3,name:"Advantages / Disadvantages",icon:"➕",accent:"var(--terra)",triggers:"\"Discuss the advantages and disadvantages.\" / \"Do the advantages outweigh the disadvantages?\"",move:"Two flavours: 'Discuss both' (balanced) OR 'outweigh' (verdict required in intro + conclusion).",trap:"Missing the 'outweigh' question entirely — this destroys your Task Response score.",rule:"Body 1 = 1–2 advantages + example. Body 2 = 1–2 disadvantages + example.",structure:[{p:"Intro (~50w)",what:"Paraphrase + stance/verdict if 'outweigh' asked"},{p:"Body 1 (~95w)",what:"Advantages + examples"},{p:"Body 2 (~95w)",what:"Disadvantages + examples"},{p:"Conclusion (~35w)",what:"Restate verdict (if asked)"}],
+prompt:"\"More and more people are choosing to work from home rather than commuting to an office. Do the advantages of this trend outweigh the disadvantages?\"",
+essay:`<p><span class="annot-paraphrase" title="Paraphrase">In recent years, many workers have abandoned the daily commute in favour of working from home.</span> While this trend brings real challenges, <span class="annot-thesis" title="Clear verdict">In my view, the advantages clearly outweigh the disadvantages, provided remote work is well managed.</span></p><p><span class="annot-topic" title="First advantage">The most significant benefit of working from home is the dramatic improvement it brings to employees' quality of life.</span> Without a long commute, workers <span class="annot-lexis" title="Collocation">save an average of an hour daily</span>, which can be redirected to sleep, exercise or family time. <span class="annot-cohesion" title="Adding another benefit">Furthermore</span>, employees gain far greater <span class="annot-lexis" title="Collocation">control over their working environment</span>, which frequently boosts productivity. <span class="annot-cohesion" title="Example">For example</span>, a 2022 ONS survey found that remote workers reported significantly higher job satisfaction than office-based peers.</p><p><span class="annot-topic" title="Main disadvantage">However, the trend does carry real costs, the most significant of which is the weakening of workplace culture.</span> Without daily face-to-face contact, newer employees may struggle to <span class="annot-lexis" title="Collocation">build professional relationships</span>, and informal mentoring can disappear. <span class="annot-cohesion" title="Another point">There is also</span> the risk that the boundary between work and personal life becomes blurred, leading to <span class="annot-lexis" title="Collocation">longer hours and eventual burnout</span>.</p><p><span class="annot-cohesion" title="Conclusion">In conclusion</span>, although working from home creates challenges around culture and overwork, <span class="annot-thesis" title="Verdict restated">these are manageable, while the gains in flexibility and well-being are substantial</span>. The advantages, therefore, clearly outweigh the drawbacks.</p>`
+},
+{n:4,name:"Problem / Solution",icon:"🛠️",accent:"var(--green)",triggers:"\"What are the causes/problems?\" + \"What can be done?\" / \"Suggest possible solutions.\"",move:"Read carefully — is it problems, causes, solutions, or a combination? Pair body paragraphs.",trap:"Solutions that don't match the problems listed. Always link Body 2 back to Body 1.",rule:"Body 1 = Problems / Causes. Body 2 = Solutions matched directly to those problems.",structure:[{p:"Intro (~50w)",what:"Paraphrase + state essay covers problems + solutions"},{p:"Body 1 (~95w)",what:"1–2 specific problems/causes + example"},{p:"Body 2 (~100w)",what:"Matched solutions + example"},{p:"Conclusion (~35w)",what:"Summarise + forward-looking statement"}],
+prompt:"\"Air pollution in major cities is becoming an increasingly serious problem. What are the causes, and what measures can governments take?\"",
+essay:`<p><span class="annot-paraphrase" title="Paraphrase">Air quality in many large cities has deteriorated significantly over recent decades, creating a growing threat to public health.</span> This essay will examine the primary causes of this trend and propose practical steps that governments can take to address it.</p><p><span class="annot-topic" title="Main causes">The principal cause of urban air pollution is the rapid growth in private vehicle use, combined with poorly regulated industrial activity.</span> As cities expand, more residents depend on cars for daily travel, releasing <span class="annot-lexis" title="Precise phrase">harmful gases and fine particulate matter</span> into the atmosphere. <span class="annot-cohesion" title="Adding cause">In addition</span>, many older factories operate without adequate emission controls. <span class="annot-cohesion" title="Example">For instance</span>, studies of New Delhi show that roughly 40% of the city's smog originates from a combination of road traffic and unregulated industry.</p><p><span class="annot-topic" title="Solutions">To address these problems, governments should act on both transport and industrial emissions simultaneously.</span> Investment in <span class="annot-lexis" title="Collocation">reliable public transport</span>, combined with congestion charges and restrictions on high-emission vehicles, can <span class="annot-lexis" title="Collocation">sharply reduce traffic pollution</span>. <span class="annot-cohesion" title="Linking solutions">At the same time</span>, stricter industrial regulations and financial incentives for cleaner technology would reduce factory emissions. <span class="annot-cohesion" title="Example">For instance</span>, London's Ultra Low Emission Zone has already produced measurably cleaner air in central areas within three years of introduction.</p><p><span class="annot-cohesion" title="Conclusion">In conclusion</span>, while urban air pollution stems from vehicle use and industrial activity, <span class="annot-thesis" title="Final point">decisive government intervention on both fronts offers a clear path toward healthier, cleaner cities</span>.</p>`
+},
+{n:5,name:"Two-part Question",icon:"❓",accent:"var(--blue)",triggers:"Two related direct questions, e.g. \"Why...? And is this positive or negative?\" / \"What are...? Do you think...?\"",move:"Answer BOTH questions directly. One body paragraph per question. Equal word count.",trap:"Only answering one question, or blending both into one muddled body paragraph.",rule:"Body 1 = full answer to Q1 + example. Body 2 = full answer to Q2 + example.",structure:[{p:"Intro (~50w)",what:"Paraphrase + preview both answers briefly"},{p:"Body 1 (~95w)",what:"Direct answer to Q1 + explanation + example"},{p:"Body 2 (~95w)",what:"Direct answer to Q2 + explanation + example"},{p:"Conclusion (~35w)",what:"Recap answers to BOTH questions"}],
+prompt:"\"Many young people today spend a great deal of time on social media. Why is this the case, and is it a positive or negative development?\"",
+essay:`<p><span class="annot-paraphrase" title="Paraphrase">For a growing number of teenagers and young adults, social media has become an almost constant presence in daily life.</span> This essay will examine the main reasons behind this trend and argue that, on balance, it represents a negative development.</p><p><span class="annot-topic" title="Answer to Q1: Why?">The most obvious reason is that these platforms are deliberately engineered to maximise engagement.</span> Their algorithms are designed to <span class="annot-lexis" title="Collocation">keep users scrolling</span>, feeding personalised content that activates the brain's reward system. <span class="annot-cohesion" title="Adding reason">In addition</span>, social media has become the primary channel through which teenagers maintain friendships, meaning that <span class="annot-lexis" title="Phrase">stepping away carries a real social cost</span>. <span class="annot-cohesion" title="Example">For example</span>, a 2023 Pew Research study found that nearly half of US teenagers described themselves as online "almost constantly".</p><p><span class="annot-topic" title="Answer to Q2: Positive or negative?">Although social media does offer certain benefits — such as wider social connection and exposure to diverse perspectives — the harmful effects are, in my view, more significant.</span> Heavy use has been clearly linked to <span class="annot-lexis" title="Precise lexis">rising rates of anxiety, depression and disrupted sleep</span> among adolescents. <span class="annot-cohesion" title="Adding point">Furthermore</span>, the carefully edited content that fills these apps can <span class="annot-lexis" title="Collocation">undermine body image and self-esteem</span>, especially among young women. The costs, therefore, outweigh the benefits.</p><p><span class="annot-cohesion" title="Conclusion">In conclusion</span>, young people's heavy use of social media results from addictive design and genuine social pressure, but <span class="annot-thesis" title="Final stance">the documented harm to mental health makes this, overall, a negative development</span>.</p>`
+}
+];
+document.getElementById('essayTypes').innerHTML=essayTypes.map((c,i)=>`<div class="case-card" style="background:linear-gradient(180deg,${c.accent}20,#fff 70%)" onclick="openEssayModal(${i})"><div class="flex items-center gap-2"><div class="num" style="background:${c.accent}">${c.icon}</div><div><div class="font-bold leading-tight">${c.n}. ${c.name}</div></div></div><div class="text-xs text-stone-600 mt-2 italic">${c.triggers.slice(0,60)}…</div><div class="preview mt-auto" style="color:${c.accent}">▶ Strategy + model essay</div></div>`).join('');
+function openEssayModal(i){
+  const c=essayTypes[i];
+  const body=`<p class="text-xs uppercase tracking-widest text-stone-500">Triggers</p><p class="mt-1 text-sm italic">${c.triggers}</p>
+  <p class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--terra)">Trap</p><p class="mt-1 text-sm">${c.trap}</p>
+  <p class="text-xs uppercase tracking-widest text-stone-500 mt-3" style="color:var(--gold)">Rule</p><p class="mt-1 text-sm">${c.rule}</p>
+  <p class="text-xs uppercase tracking-widest text-stone-500 mt-4" style="color:var(--blue)">Paragraph Structure</p>
+  <div class="grid md:grid-cols-4 gap-2 mt-2">${c.structure.map(s=>`<div class="card p-2"><div class="blueprint-tag">${s.p}</div><div class="text-xs mt-1">${s.what}</div></div>`).join('')}</div>
+  <p class="text-xs uppercase tracking-widest text-stone-500 mt-5" style="color:var(--green)">Band 7+ Model Essay</p>
+  <div class="text-sm mt-1 p-2 rounded-lg italic" style="background:#fdf6e3"><strong>Prompt:</strong> ${c.prompt}</div>
+  <div class="annot-legend mt-3">
+    <span class="legend-item" style="background:#fde68a">Paraphrasing</span>
+    <span class="legend-item" style="background:#bfdbfe">Thesis</span>
+    <span class="legend-item" style="background:#bbf7d0">Topic sentence</span>
+    <span class="legend-item" style="background:#fbcfe8">Cohesion device</span>
+    <span class="legend-item" style="background:#e9d5ff">Lexical resource</span>
+  </div>
+  <div class="model-essay mt-2">${c.essay}</div>
+  <div class="feedback tip mt-3"><strong>Copy the structure, not the words.</strong> Paraphrase → Thesis → Topic sentence → Explanation → Example → Link → Conclusion. These are the moves.</div>`;
+  openModal(`<div class="num" style="background:${c.accent};width:36px;height:36px">${c.icon}</div><div><div class="font-bold text-lg">${c.n}. ${c.name}</div><div class="text-[10px] uppercase tracking-widest text-stone-500">Task 2 essay type</div></div>`,body);
+  addXP(5);
+}
+// ====== SKELETON ======
+const skeletons={
+opinion:[
+{label:"INTRO",color:"#eef2fa",accent:"var(--blue)",words:"~50 words",what:"1) Paraphrase prompt. 2) State CLEAR position. 3) Preview 2 reasons.",grammar:"Present Simple + complex sentence with subordinate clause",starter:"\"It is widely accepted that… I firmly believe that… This essay will argue that…\"",trap:"'Both sides have some merit' = capped at Band 6 for Task Response."},
+{label:"BODY 1",color:"#fdf6e3",accent:"var(--gold)",words:"~95 words",what:"P-E-E-L: Topic = reason 1 + explanation + specific example + link to thesis",grammar:"1× passive + 1× conditional + 1× relative clause",starter:"\"The principal reason is… To illustrate, … This demonstrates that…\"",trap:"Listing 3 reasons without developing any of them."},
+{label:"BODY 2",color:"#fdf6e3",accent:"var(--gold)",words:"~95 words",what:"P-E-E-L: A DIFFERENT reason 2 + explanation + example + link",grammar:"Relative clause + present perfect + cohesive linker",starter:"\"A second compelling argument is… For instance, … Consequently, …\"",trap:"Body 2 weaker or shorter than Body 1."},
+{label:"CONCLUSION",color:"#fdeadf",accent:"var(--terra)",words:"~40 words",what:"Signal end + summarise + restate position in different words. No new ideas.",grammar:"Same tense as intro",starter:"\"In conclusion, … / Overall, it is evident that…\"",trap:"Introducing a new argument in the conclusion."}
+],
+discussion:[
+{label:"INTRO",color:"#eef2fa",accent:"var(--blue)",words:"~55 words",what:"Paraphrase + acknowledge both views + state YOUR lean clearly",grammar:"Concession structure ('While some… others…')",starter:"\"While some maintain that… others contend that… In my view, however,…\"",trap:"Forgetting to state your own opinion in the introduction."},
+{label:"BODY 1 (View A)",color:"#fdf6e3",accent:"var(--gold)",words:"~90 words",what:"Present View A FAIRLY with example — even if you disagree with it",grammar:"Reporting verbs: argue, contend, maintain, claim",starter:"\"On one hand, proponents argue that… A notable example is…\"",trap:"Dismissing or underdeveloping the side you disagree with."},
+{label:"BODY 2 (View B + your lean)",color:"#fdf6e3",accent:"var(--gold)",words:"~110 words",what:"Present View B + example + WHY you find it more convincing",grammar:"Comparative + concession structure",starter:"\"On the other hand… This argument carries greater weight because…\"",trap:"Burying your own stance in the last sentence."},
+{label:"CONCLUSION",color:"#fdeadf",accent:"var(--terra)",words:"~40 words",what:"Acknowledge both views briefly + restate final lean",grammar:"Modal of probability",starter:"\"In conclusion, while both views have merit, the evidence suggests that…\"",trap:"Giving a different opinion in the conclusion from the introduction."}
+],
+advdis:[
+{label:"INTRO",color:"#eef2fa",accent:"var(--blue)",words:"~50 words",what:"Paraphrase + acknowledge pros/cons exist + verdict if 'outweigh' asked",grammar:"Compound sentence with 'while' / 'although'",starter:"\"While this trend clearly brings benefits, it also presents significant drawbacks. On balance,…\"",trap:"Missing the 'outweigh' verdict if the question explicitly asks for it."},
+{label:"BODY 1 (Advantages)",color:"#eef9f3",accent:"var(--green)",words:"~95 words",what:"1–2 advantages with full P-E-E-L development + example",grammar:"Cause-effect linkers: consequently, as a result, this leads to",starter:"\"The most significant advantage is… This is because… For example,…\"",trap:"Listing 4 advantages with no examples for any of them."},
+{label:"BODY 2 (Disadvantages)",color:"#fdeadf",accent:"var(--terra)",words:"~95 words",what:"1–2 disadvantages + example. Must be approximately equal to Body 1.",grammar:"Contrast linkers: however, nonetheless, despite this",starter:"\"However, this trend is not without its drawbacks. The most notable is…\"",trap:"Disadvantages much shorter than Advantages — signals poor planning."},
+{label:"CONCLUSION",color:"#fdeadf",accent:"var(--terra)",words:"~35 words",what:"Summarise + restate verdict (if 'outweigh' was asked)",grammar:"Comparative structures",starter:"\"In conclusion, although there are valid concerns, the advantages of … outweigh the drawbacks.\"",trap:"Changing your verdict in the conclusion."}
+],
+probsol:[
+{label:"INTRO",color:"#eef2fa",accent:"var(--blue)",words:"~50 words",what:"Paraphrase the problem + signal what the essay covers (problems + solutions)",grammar:"Present Perfect for ongoing trends: 'has become', 'has increased'",starter:"\"In recent years, … has become an increasingly pressing concern. This essay will examine the causes and propose solutions.\"",trap:"Vague introduction that could apply to any topic."},
+{label:"BODY 1 (Problems/Causes)",color:"#fdeadf",accent:"var(--terra)",words:"~95 words",what:"1–2 specific problems or causes + concrete example",grammar:"Causal language: stems from, is rooted in, is largely due to",starter:"\"The most significant cause of this problem is… This is compounded by… For instance,…\"",trap:"Generic causes with no specific evidence or examples."},
+{label:"BODY 2 (Solutions)",color:"#eef9f3",accent:"var(--green)",words:"~100 words",what:"Solutions that DIRECTLY address each problem named in Body 1",grammar:"Modal verbs (should, must, could) + second conditional",starter:"\"To address these challenges, governments should… This would… For instance,…\"",trap:"Proposing solutions that have no connection to the problems you listed."},
+{label:"CONCLUSION",color:"#fdeadf",accent:"var(--terra)",words:"~35 words",what:"Recap problem + main solution + forward-looking statement",grammar:"Future-oriented language",starter:"\"In conclusion, while … remains a serious challenge, coordinated action offers a viable path forward.\"",trap:"Adding a new solution in the conclusion."}
+],
+twopart:[
+{label:"INTRO",color:"#eef2fa",accent:"var(--blue)",words:"~50 words",what:"Paraphrase + briefly preview your answers to BOTH questions",grammar:"Compound sentence",starter:"\"This essay will first explore … before examining …\"",trap:"Generic introduction that doesn't acknowledge there are two separate questions."},
+{label:"BODY 1 (Q1)",color:"#fdf6e3",accent:"var(--gold)",words:"~95 words",what:"Direct answer to Q1 + full P-E-E-L development + example",grammar:"Topic sentence that directly answers Q1",starter:"\"Regarding the first question, the most likely explanation is… For example,…\"",trap:"Drifting into Q2 before finishing Q1."},
+{label:"BODY 2 (Q2)",color:"#fdf6e3",accent:"var(--gold)",words:"~95 words",what:"Direct answer to Q2 + explanation + example. Must be equal to Body 1.",grammar:"Different grammatical structures from Body 1 — show range",starter:"\"As for the second question, … This is primarily because… A clear example is…\"",trap:"Q2 body paragraph significantly shorter than Q1."},
+{label:"CONCLUSION",color:"#fdeadf",accent:"var(--terra)",words:"~35 words",what:"Concise recap of your answers to BOTH questions",grammar:"Short, direct summary",starter:"\"In conclusion, … while …\"",trap:"Only summarising one of the two questions."}
+]
+};
+function renderSkeleton(){
+  const type=document.getElementById('skType').value;const sk=skeletons[type];const el=document.getElementById('skBlocks');el.innerHTML='';
+  sk.forEach((b,i)=>{
+    const c=document.createElement('div');c.className='pillar-sk';c.style.borderLeft=`6px solid ${b.accent}`;c.style.background=`linear-gradient(180deg,${b.color},#fff 80%)`;
+    c.innerHTML=`<div class="flex items-start justify-between gap-2 cursor-pointer" onclick="this.parentElement.querySelector('.reveal').style.display=this.parentElement.querySelector('.reveal').style.display==='none'?'block':'none'">
+      <div class="flex items-center gap-2"><div class="num" style="background:${b.accent};width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700">${i+1}</div>
+      <div><div class="font-bold">${b.label}</div><div class="text-xs text-stone-500 mono">${b.words}</div></div></div>
+      <span class="text-xs text-stone-400 mt-1">tap ↓</span></div>
+      <div class="reveal mt-3" style="display:none">
+        <div class="text-xs uppercase tracking-widest text-stone-500">What goes here</div><p class="mt-1 text-sm">${b.what}</p>
+        <div class="text-xs uppercase tracking-widest text-stone-500 mt-2" style="color:var(--blue)">Grammar to flex</div><p class="mt-1 text-sm">${b.grammar}</p>
+        <div class="text-xs uppercase tracking-widest text-stone-500 mt-2" style="color:var(--green)">Sentence opener</div><p class="mt-1 text-sm italic">${b.starter}</p>
+        <div class="text-xs uppercase tracking-widest text-stone-500 mt-2" style="color:var(--terra)">Trap</div><p class="mt-1 text-sm">${b.trap}</p>
+      </div>`;
+    el.appendChild(c);
+  });
+  const starters=[
+    {h:"Paraphrasing prompts",l:["It is widely held that…","In contemporary society,…","Many would argue that…","There is a growing consensus that…"]},
+    {h:"Stating position",l:["In my view,…","I firmly believe that…","I am inclined to agree that…","From my perspective,…"]},
+    {h:"Topic sentences",l:["The principal reason is that…","One compelling argument is…","A particularly pressing concern is…","The most significant benefit is…"]},
+    {h:"Examples",l:["For instance,…","To illustrate,…","A clear example of this is…","This can be seen in…"]},
+    {h:"Cause / effect",l:["As a result,…","Consequently,…","This stems from…","Owing to this,…"]},
+    {h:"Concluding",l:["In conclusion,…","Overall, the evidence suggests…","Ultimately,…","On balance,…"]}
+  ];
+  document.getElementById('skStarters').innerHTML=starters.map(p=>`<div class="card p-3"><div class="text-xs uppercase tracking-widest text-stone-500 font-bold mb-1">${p.h}</div>${p.l.map(x=>`<div class="text-stone-700 text-sm">• ${x}</div>`).join('')}</div>`).join('');
+}
+document.getElementById('skType').addEventListener('change',renderSkeleton);renderSkeleton();
+// ====== DRILLS ======
+const drills=[
+{n:1,name:"Paraphrase the Prompt",icon:"🔄",accent:"var(--blue)",intro:"The strongest paraphrase changes BOTH vocabulary AND structure — not just synonyms.",items:[{prompt:"\"Some people believe universities should focus on academic skills, while others think they should also prepare students for the workplace.\"",options:[{t:"Some people think universities should focus on academic skills, while others think they should prepare students for the workplace too.",c:false,w:"Almost identical — minimal change. This is Band 6 at best."},{t:"While certain individuals contend that higher education should prioritise the cultivation of intellectual abilities, others maintain it must equally equip graduates with practical career-ready competencies.",c:true,w:"✓ Synonyms (academic→intellectual; workplace→career-ready), inverted structure, formal register."},{t:"Universities are for jobs and thinking, so it depends.",c:false,w:"Informal + oversimplified. Loses meaning."},{t:"Universities focus on academic skills but also prepare students for the workplace.",c:false,w:"Drops one viewpoint — distorts the original meaning."}]}]},
+{n:2,name:"Build a Topic Sentence",icon:"🏛️",accent:"var(--gold)",intro:"A topic sentence states the paragraph's main claim — clearly, without examples yet.",items:[{prompt:"You're defending 'governments should fund the arts'. Which is the strongest topic sentence?",options:[{t:"In 1995, the Spanish government funded a museum in Bilbao.",c:false,w:"This is an EXAMPLE — save it for sentence 2 or 3 of the paragraph."},{t:"The arts are important to people.",c:false,w:"Too vague. No clear academic claim."},{t:"The principal reason governments should fund the arts is that culture is a fundamental dimension of any civilised society, not a luxury.",c:true,w:"✓ Clear claim, signals the argument, sets up the example to follow."},{t:"Some say arts are vital, but others disagree.",c:false,w:"Restates the debate — doesn't take a position."}]}]},
+{n:3,name:"Pick the Strongest Example",icon:"💡",accent:"var(--green)",intro:"Strong examples are specific, recent and verifiable — not vague generalisations.",items:[{prompt:"You've claimed remote work boosts well-being. Which example most strengthens this claim?",options:[{t:"Many people say they like working from home.",c:false,w:"Vague — no source, no statistics."},{t:"My friend's brother works from home and is happy.",c:false,w:"Anecdotal. Avoid 'my friend / family member' examples."},{t:"A 2022 UK ONS survey found that remote workers reported 22% higher life-satisfaction scores than office-based peers.",c:true,w:"✓ Specific date, named institution, concrete figure. Textbook Band 7+."},{t:"Remote work is generally considered beneficial by experts.",c:false,w:"Weasel words ('generally', 'experts') — adds no concrete evidence."}]}]},
+{n:4,name:"Combine into a Complex Sentence",icon:"🧩",accent:"var(--terra)",intro:"Joining simple sentences with subordinators shows grammatical range.",items:[{prompt:"Combine: 'The factory closed. Workers lost jobs. The government provided no support.'",options:[{t:"The factory closed. Workers lost jobs. The government provided no support.",c:false,w:"Three simple sentences — no upgrade. Band 6."},{t:"The factory closed and workers lost jobs and the government provided no support.",c:false,w:"'And… and…' is repetitive coordination. Not complex enough."},{t:"When the factory closed, workers lost their livelihoods, yet the government, despite repeated appeals, provided no meaningful support.",c:true,w:"✓ Subordinator ('When'), coordinator ('yet'), parenthetical ('despite repeated appeals'). Complex grammar."},{t:"Because the factory closed and workers lost their jobs, the government didn't help.",c:false,w:"Causal logic is distorted — closure didn't cause government inaction."}]}]},
+{n:5,name:"Pick the Right Linker",icon:"🔗",accent:"var(--blue)",intro:"The connector must match the LOGIC between clauses — not just sound academic.",items:[{prompt:"\"Working from home reduces commute time. ____, it can also lower stress.\"",options:[{t:"In contrast",c:false,w:"Both clauses are POSITIVE — no contrast."},{t:"However",c:false,w:"'However' signals contrast; both clauses agree."},{t:"Furthermore",c:true,w:"✓ Additive: adds a second benefit to the first."},{t:"Therefore",c:false,w:"Cause-effect — reduced commute doesn't directly cause lower stress."}]},{prompt:"\"The plan was popular with parents. ____, teachers strongly opposed it.\"",options:[{t:"Furthermore",c:false,w:"The clauses CONTRAST — not additive."},{t:"However",c:true,w:"✓ Two contrasting positions — needs a contrast linker."},{t:"For example",c:false,w:"This is not an example."},{t:"In conclusion",c:false,w:"This is mid-paragraph — not a conclusion."}]}]},
+{n:6,name:"Upgrade to Hedging Language",icon:"🛡️",accent:"var(--gold)",intro:"Academic English avoids absolute claims. Hedge with: tend to, may, appears to, is likely to, in many cases…",items:[{prompt:"Replace: \"Social media always damages teenagers' mental health.\"",options:[{t:"Social media always damages teenagers' mental health.",c:false,w:"'Always' is too absolute — Band 6 register."},{t:"Heavy use of social media has been linked to declining mental health among many adolescents.",c:true,w:"✓ Hedged with 'has been linked to' and 'many'. Uses precise academic vocabulary."},{t:"Social media is bad for kids.",c:false,w:"Informal ('kids', 'bad')."},{t:"It is a fact that social media destroys teenagers.",c:false,w:"'It is a fact' is itself unhedged, and 'destroys' is hyperbole."}]}]},
+{n:7,name:"Build a Second Conditional",icon:"❓",accent:"var(--terra)",intro:"For solutions/proposals: 'If + past simple, would + base verb' — hypothetical effects.",items:[{prompt:"Express this idea as a 2nd conditional: 'governments should fund cycling → fewer cars'",options:[{t:"If governments will fund cycling, there will be fewer cars.",c:false,w:"Don't use 'will' in the IF clause. Classic error."},{t:"If governments fund cycling, there are fewer cars.",c:false,w:"That's first conditional — missing 'will' in the main clause."},{t:"If governments funded cycling infrastructure, there would be fewer cars on the roads.",c:true,w:"✓ Textbook 2nd conditional: If + past simple, would + base verb."},{t:"If governments had funded cycling, there would have been fewer cars.",c:false,w:"That's 3rd conditional — about an imaginary PAST, not a future hypothesis."}]}]},
+{n:8,name:"Add a Relative Clause",icon:"🔄",accent:"var(--green)",intro:"Relative clauses ('which / who / that…') pack more information into one sentence.",items:[{prompt:"Add a non-defining relative clause to: 'The Bilbao Guggenheim opened in 1997.'",options:[{t:"The Bilbao Guggenheim opened in 1997.",c:false,w:"No upgrade — a simple sentence."},{t:"The Bilbao Guggenheim, which is widely credited with revitalising the city's economy, opened in 1997.",c:true,w:"✓ Non-defining relative clause, enclosed in commas. The sentence still works without it."},{t:"The Bilbao Guggenheim, that is widely credited with revitalising the city, opened in 1997.",c:false,w:"'That' cannot introduce a non-defining relative clause — use 'which'."},{t:"The Bilbao Guggenheim opened in 1997 it is widely credited with revitalising the city.",c:false,w:"Run-on sentence — missing connector."}]}]}
+];
+function renderDrills(){
+  document.getElementById('drillCards').innerHTML=drills.map((d,di)=>`<div class="case-card" style="background:linear-gradient(180deg,${d.accent}20,#fff 70%)" onclick="openDrillModal(${di})"><div class="flex items-center gap-2"><div class="num" style="background:${d.accent}">${d.icon}</div><div class="font-bold">${d.n}. ${d.name}</div></div><div class="text-xs text-stone-600 mt-2">${d.intro.slice(0,70)}…</div><div class="preview mt-auto" style="color:${d.accent}">▶ Practice drill</div></div>`).join('');
+}
+function openDrillModal(di){
+  const d=drills[di];let body=`<p class="text-sm mb-4 p-3 rounded-lg" style="background:#eef2fa">${d.intro}</p>`;
+  d.items.forEach((item,qi)=>{
+    body+=`<div class="mb-5"><p class="font-bold text-sm mb-3">${item.prompt}</p><div class="grid gap-2" id="drill${di}_${qi}">`;
+    item.options.forEach((opt,oi)=>{body+=`<div class="opt" onclick="checkDrill(${di},${qi},${oi})">${opt.t}</div>`;});
+    body+=`</div><div id="drillFb${di}_${qi}"></div></div>`;
+  });
+  openModal(`<div class="num" style="background:${d.accent};width:36px;height:36px">${d.icon}</div><div><div class="font-bold text-lg">Drill ${d.n}: ${d.name}</div></div>`,body);
+  addXP(3);
+}
+function checkDrill(di,qi,oi){
+  const d=drills[di];const item=d.items[qi];
+  const container=document.getElementById(`drill${di}_${qi}`);
+  const fb=document.getElementById(`drillFb${di}_${qi}`);
+  if(fb.innerHTML)return;
+  const opts=item.options;
+  [...container.children].forEach((el,i)=>{
+    el.classList.add('disabled');
+    if(opts[i].c)el.classList.add('correct');
+    else if(i===oi)el.classList.add('wrong');
+  });
+  const chose=opts[oi];
+  fb.innerHTML=`<div class="feedback ${chose.c?'good':'bad'}">${chose.c?'✓':'✗'} ${chose.w}</div>`;
+  if(chose.c)addXP(10);
+}
+renderDrills();
+// ====== PARAPHRASE WORKSHEET — 50 prompts ======
+const typeColors={opinion:"var(--blue)",discussion:"var(--gold)",advdis:"var(--terra)",probsol:"var(--green)",twopart:"var(--purple)"};
+const typeLabels={opinion:"⚖️ Opinion",discussion:"🗣️ Discussion",advdis:"➕ Adv/Disadv",probsol:"🛠️ Prob/Sol",twopart:"❓ Two-part"};
+const pwPrompts=[
+// OPINION (1-10)
+{n:1,type:"opinion",prompt:"Some people believe that the government should be responsible for solving environmental problems. To what extent do you agree or disagree?",hint:"Swap: government → public authorities; responsible → accountable; environmental problems → ecological issues. Try: 'It is often argued that…'",samples:[{t:"It is often argued that responsibility for tackling ecological issues should rest with the state rather than individuals or corporations. To what extent do you agree?",why:"Swaps 'government'→'the state', 'solving environmental problems'→'tackling ecological issues', opens with 'It is often argued that'."},
+{t:"Many maintain that public authorities bear the primary duty of addressing the ecological challenges facing the modern world. Do you agree or disagree?",why:"Uses 'maintain', 'public authorities', 'ecological challenges'; converts 'responsible' into 'bear the primary duty'."}]},
+{n:2,type:"opinion",prompt:"Some people think schools should focus more on practical subjects like cooking and money management rather than traditional academic subjects. Do you agree or disagree?",hint:"Swap: schools → educational institutions; practical → hands-on / life-skills; traditional academic → classical disciplines.",samples:[{t:"It is sometimes argued that educational institutions ought to prioritise life-skills subjects such as cookery and personal finance over classical academic disciplines. Do you agree?",why:"'Schools'→'educational institutions'; 'focus more on'→'prioritise'; 'cooking and money management'→'cookery and personal finance'."},
+{t:"Some hold the view that schools should allocate more time to hands-on courses, such as cooking and budgeting, at the expense of conventional academic study. To what extent do you agree?",why:"'Practical'→'hands-on'; 'money management'→'budgeting'; 'traditional'→'conventional'."}]},
+{n:3,type:"opinion",prompt:"Some say that university tuition should be free for all students. To what extent do you agree?",hint:"Swap: university → higher education; tuition → fees; free → no cost / state-funded. Try: 'It is sometimes claimed that…'",samples:[{t:"It is sometimes claimed that higher education should be made available to all students at no cost to the individual. To what extent do you agree?",why:"'University tuition'→'higher education'; 'free'→'at no cost to the individual'."},
+{t:"Some argue that fees for university courses ought to be abolished, making tertiary education accessible to all, regardless of financial background. Do you agree?",why:"'Tuition'→'fees for university courses'; 'free'→'abolished'; adds 'regardless of financial background' for precision."}]},
+{n:4,type:"opinion",prompt:"Some believe that all forms of public transport should be free of charge. Do you agree or disagree?",hint:"Swap: public transport → mass-transit systems; free of charge → without cost / fully subsidised.",samples:[{t:"It is sometimes suggested that all mass-transit systems ought to be fully subsidised, permitting passengers to travel free of charge. To what extent do you agree?",why:"'Public transport'→'mass-transit systems'; 'free of charge'→'fully subsidised, permitting passengers to travel free'."},
+{t:"Some hold the view that every mode of public transport — including buses, trains and metro services — should be made available without charge to users. Do you agree?",why:"Specifies the transport modes for concreteness; converts 'free of charge' into 'without charge to users'."}]},
+{n:5,type:"opinion",prompt:"It is sometimes said that paying high taxes is the duty of every citizen. To what extent do you agree?",hint:"Swap: high taxes → substantial taxation; duty → obligation / civic responsibility; every citizen → all members of society.",samples:[{t:"There is a view that contributing substantially to the tax system is a civic obligation of every member of society. To what extent do you agree?",why:"'Paying high taxes'→'contributing substantially to the tax system'; 'duty'→'civic obligation'."},
+{t:"Some argue that bearing a significant tax burden represents a moral and social responsibility shared equally by all citizens. Do you agree with this view?",why:"'High taxes'→'a significant tax burden'; 'duty'→'moral and social responsibility shared equally'."}]},
+{n:6,type:"opinion",prompt:"Some people think that competitive sport in schools does more harm than good. Do you agree or disagree?",hint:"Swap: competitive sport → competitive athletics; does more harm than good → has negative rather than positive effects.",samples:[{t:"It is sometimes argued that competitive athletics in school settings has negative rather than positive effects on young people's development. To what extent do you agree?",why:"'Competitive sport'→'competitive athletics'; 'in schools'→'in school settings'."},
+{t:"There is a view that organised competitive sports in schools ultimately cause more damage than benefit. Do you agree with this position?",why:"'Does more harm than good'→'cause more damage than benefit'; uses 'organised competitive sports' for specificity."}]},
+{n:7,type:"opinion",prompt:"Some people argue that the best leaders are those who have grown up in challenging circumstances. To what extent do you agree?",hint:"Swap: leaders → individuals in positions of authority; challenging circumstances → adverse / difficult backgrounds.",samples:[{t:"There is a view that the most effective individuals in positions of authority are those who have been raised in difficult or adverse circumstances. To what extent do you agree?",why:"'Best leaders'→'most effective individuals in positions of authority'; 'challenging circumstances'→'difficult or adverse circumstances'."},
+{t:"It is sometimes claimed that outstanding leadership qualities are best forged through a childhood marked by hardship and adversity. Do you agree?",why:"Restructures as a passive noun phrase: 'qualities forged through hardship'; 'challenging circumstances'→'hardship and adversity'."}]},
+{n:8,type:"opinion",prompt:"Some say that smoking in public places should be completely banned. Do you agree?",hint:"Swap: smoking → tobacco use; public places → shared public spaces; completely banned → outlawed / entirely prohibited.",samples:[{t:"There is a view that the use of tobacco products ought to be entirely prohibited in all shared public spaces. Do you agree with this view?",why:"'Smoking'→'use of tobacco products'; 'public places'→'shared public spaces'; 'completely banned'→'entirely prohibited'."},
+{t:"It is sometimes argued that smoking should be outlawed across every public area, without exception. To what extent do you agree?",why:"'Public places'→'every public area'; 'completely banned'→'outlawed'; adds 'without exception' for emphasis."}]},
+{n:9,type:"opinion",prompt:"Some people think that the only way to reduce traffic accidents is by introducing harsher punishments for dangerous drivers. To what extent do you agree?",hint:"Swap: traffic accidents → road collisions; harsher punishments → stricter penalties; dangerous drivers → reckless motorists.",samples:[{t:"It is sometimes argued that the sole effective measure for reducing road collisions is the introduction of stricter penalties for reckless motorists. To what extent do you agree?",why:"'Traffic accidents'→'road collisions'; 'harsher punishments'→'stricter penalties'; 'dangerous drivers'→'reckless motorists'."},
+{t:"There is a view that tougher sentences for irresponsible drivers represent the only realistic strategy for lowering the rate of road incidents. Do you agree?",why:"'Harsher punishments'→'tougher sentences'; 'dangerous drivers'→'irresponsible drivers'; 'traffic accidents'→'road incidents'."}]},
+{n:10,type:"opinion",prompt:"Some believe that wealthy nations have a moral obligation to share their resources with poorer countries. Do you agree or disagree?",hint:"Swap: wealthy nations → affluent countries; moral obligation → ethical duty; resources → wealth and aid; poorer countries → developing nations.",samples:[{t:"There is a view that affluent countries bear an ethical duty to share their wealth and development aid with less prosperous nations. To what extent do you agree?",why:"'Wealthy nations'→'affluent countries'; 'moral obligation'→'ethical duty'; 'resources'→'wealth and development aid'."},
+{t:"It is sometimes argued that prosperous states are morally bound to provide financial and material assistance to the world's developing nations. Do you agree?",why:"'Wealthy nations'→'prosperous states'; 'share resources'→'provide financial and material assistance'."}]},
+// DISCUSSION (11-20)
+{n:11,type:"discussion",prompt:"Some people think that the best way to improve public health is to introduce a sugar tax. Others believe education is more effective. Discuss both views and give your opinion.",hint:"Swap: improve public health → enhance population well-being; sugar tax → levy on sugary products; education → awareness campaigns.",samples:[{t:"While some believe that the most effective method of enhancing population well-being is to impose a levy on sugary products, others maintain that public awareness campaigns yield better results. Discuss both views and give your opinion.",why:"Uses 'While some… others…'; 'improving public health'→'enhancing population well-being'; 'sugar tax'→'levy on sugary products'."},
+{t:"Opinion is divided between those who favour a tax on sugar as the primary tool for improving national health and those who advocate education-based approaches instead. Discuss both views.",why:"Opens with 'Opinion is divided between'; condenses both positions into one sentence; uses 'advocate' for variety."}]},
+{n:12,type:"discussion",prompt:"Some say that learning a foreign language should be compulsory in primary school. Others believe it should be optional. Discuss both views.",hint:"Swap: foreign language → second language; compulsory → mandatory; primary school → elementary education; optional → a matter of choice.",samples:[{t:"While some argue that second-language acquisition should be a mandatory part of elementary education, others maintain it should remain a personal choice. Discuss both views.",why:"'Foreign language'→'second-language acquisition'; 'compulsory'→'mandatory'; 'primary school'→'elementary education'; 'optional'→'personal choice'."},
+{t:"There is debate over whether young learners should be obliged to study a foreign language or whether the decision should be left to families and students themselves. Discuss both views.",why:"Reframes 'compulsory vs optional' as 'obliged vs decision left to families'; adds specificity."}]},
+{n:13,type:"discussion",prompt:"Some people argue that animals should not be kept in zoos. Others believe zoos play an important role in conservation. Discuss both views and give your opinion.",hint:"Swap: kept in zoos → held in captivity; play an important role → make a vital contribution; conservation → species preservation.",samples:[{t:"While some hold that wild creatures ought not to be held in captivity, others maintain that zoological parks make a vital contribution to species preservation. Discuss both views and give your opinion.",why:"'Animals kept in zoos'→'wild creatures held in captivity'; 'conservation'→'species preservation'."},
+{t:"There is disagreement over whether keeping animals in zoos is ethically justifiable, or whether such institutions serve a critical role in safeguarding endangered species. Discuss both views.",why:"Introduces 'ethically justifiable' and 'safeguarding endangered species' as upgraded vocabulary."}]},
+{n:14,type:"discussion",prompt:"Some people think that art classes are essential in school. Others feel that this time is better spent on academic subjects. Discuss both views.",hint:"Swap: art classes → creative subjects / the arts; essential → indispensable; academic subjects → core academic disciplines.",samples:[{t:"While some consider creative and cultural subjects to be indispensable in schools, others feel classroom time would be better devoted to core academic disciplines. Discuss both views.",why:"'Art classes'→'creative and cultural subjects'; 'essential'→'indispensable'; 'academic'→'core academic disciplines'."},
+{t:"Opinion is divided over whether the arts deserve a permanent place on the school curriculum or whether those hours should instead be dedicated to traditional academic study. Discuss both views.",why:"'Art classes'→'the arts'; 'essential'→'deserve a permanent place'; 'time'→'those hours'."}]},
+{n:15,type:"discussion",prompt:"Some say technology has improved the way we work. Others argue it has made our work more stressful. Discuss both views and give your opinion.",hint:"Swap: technology → digital tools / modern innovation; improved → transformed for the better; stressful → demanding / a source of pressure.",samples:[{t:"While some argue that modern technology has transformed working life for the better, others contend it has made the workplace significantly more demanding. Discuss both views and give your opinion.",why:"'Technology'→'modern technology'; 'improved'→'transformed for the better'; 'stressful'→'demanding'."},
+{t:"There is debate over the net impact of digital innovation on working life — with some pointing to gains in efficiency and others highlighting rising pressure and burnout. Discuss both views.",why:"Opens with 'There is debate over'; uses 'net impact', 'gains in efficiency', 'burnout' as upgraded lexis."}]},
+{n:16,type:"discussion",prompt:"Some believe museums should be free to enter, while others argue visitors should pay. Discuss both views.",hint:"Swap: museums → cultural institutions; free to enter → admission-free; pay → contribute / be charged an entry fee.",samples:[{t:"While some hold that cultural institutions should be admission-free, others maintain that visitors ought to contribute a modest entry fee. Discuss both views.",why:"'Museums'→'cultural institutions'; 'free to enter'→'admission-free'; 'pay'→'contribute a modest entry fee'."},
+{t:"There is disagreement over whether museums ought to remain open to all without charge or whether an entry fee should be introduced to help sustain their operations. Discuss both views.",why:"Adds the reason for charging ('help sustain their operations'), which shows analytical depth."}]},
+{n:17,type:"discussion",prompt:"Some people think the most important factor in choosing a job is salary. Others say job satisfaction matters more. Discuss both views.",hint:"Swap: most important factor → key consideration; choosing a job → selecting a career; salary → financial reward; job satisfaction → fulfilment at work.",samples:[{t:"While some believe that financial reward is the key consideration when selecting a career, others maintain that personal fulfilment at work carries greater weight. Discuss both views.",why:"'Most important factor'→'key consideration'; 'salary'→'financial reward'; 'job satisfaction'→'personal fulfilment'."},
+{t:"Opinion is divided over what should take priority in a career decision — level of remuneration or a sense of personal meaning and satisfaction. Discuss both views.",why:"Compresses into a single sentence using 'remuneration' and 'personal meaning and satisfaction'."}]},
+{n:18,type:"discussion",prompt:"Some say it is better to live in a small town. Others prefer life in a big city. Discuss both views and give your opinion.",hint:"Swap: small town → rural or suburban community; big city → metropolitan area / urban centre.",samples:[{t:"While some hold that a quieter life in a rural or suburban community is preferable, others would rather reside in a large metropolitan area. Discuss both views and give your opinion.",why:"'Small town'→'rural or suburban community'; 'big city'→'large metropolitan area'."},
+{t:"There is debate over whether an individual's quality of life is better served by residing in a smaller, close-knit community or in a large, dynamic urban centre. Discuss both views.",why:"Adds 'close-knit' and 'dynamic' as evaluative adjectives that show lexical resource."}]},
+{n:19,type:"discussion",prompt:"Some people argue that children should grow up with siblings. Others believe being an only child is preferable. Discuss both views.",hint:"Swap: grow up with siblings → be raised alongside brothers and sisters; only child → without siblings / sole child.",samples:[{t:"While some maintain that children ought to be raised alongside brothers and sisters, others believe that growing up as a sole child offers distinct advantages. Discuss both views.",why:"'Siblings'→'brothers and sisters'; 'only child'→'sole child'; adds 'distinct advantages'."},
+{t:"There is disagreement over whether it is more beneficial for children to share their upbringing with siblings or to be raised on their own. Discuss both views.",why:"'Only child'→'raised on their own'; 'grow up with'→'share their upbringing with'."}]},
+{n:20,type:"discussion",prompt:"Some say books are the best way to learn. Others claim that direct experience is more valuable. Discuss both views.",hint:"Swap: books → reading / printed material; direct experience → first-hand / hands-on learning.",samples:[{t:"While some hold that reading remains the most effective method of acquiring knowledge, others claim that hands-on experience is of greater educational value. Discuss both views.",why:"'Books'→'reading'; 'best way to learn'→'most effective method of acquiring knowledge'; 'direct experience'→'hands-on experience'."},
+{t:"There is debate over whether knowledge is most effectively gained through formal study and reading or through practical, real-world experience. Discuss both views.",why:"'Books'→'formal study and reading'; 'direct experience'→'practical, real-world experience'."}]},
+// ADV/DIS (21-30)
+{n:21,type:"advdis",prompt:"Some people think that online shopping has more advantages than disadvantages. Do you agree?",hint:"Swap: online shopping → e-commerce / digital retail; advantages → benefits; disadvantages → drawbacks.",samples:[{t:"It is often argued that e-commerce offers more benefits than drawbacks to the modern consumer. To what extent do you agree with this view?",why:"'Online shopping'→'e-commerce'; 'advantages'→'benefits'; 'disadvantages'→'drawbacks'."},
+{t:"There is a view that the rise of digital retail has brought more positive than negative consequences for consumers and businesses alike. Do you agree?",why:"'Online shopping'→'rise of digital retail'; 'advantages/disadvantages'→'positive/negative consequences'."}]},
+{n:22,type:"advdis",prompt:"Discuss the advantages and disadvantages of living abroad for an extended period of time.",hint:"Swap: living abroad → residing overseas / expatriate life; extended period → prolonged time.",samples:[{t:"Residing overseas for a prolonged period offers a range of benefits, yet it also carries significant challenges that must be carefully considered.",why:"'Living abroad'→'residing overseas'; 'extended period'→'prolonged period'; restructured as a balanced statement."},
+{t:"The experience of living in a foreign country for an extended time brings both considerable opportunities and notable difficulties for the individuals concerned.",why:"'Living abroad'→'living in a foreign country'; 'advantages and disadvantages'→'opportunities and difficulties'."}]},
+{n:23,type:"advdis",prompt:"Some people think that social media has more drawbacks than benefits for society. To what extent do you agree?",hint:"Swap: social media → online networking platforms; drawbacks → negative consequences; benefits → positive effects.",samples:[{t:"It is sometimes argued that online networking platforms bring more negative consequences than positive effects to modern society. To what extent do you agree?",why:"'Social media'→'online networking platforms'; 'drawbacks'→'negative consequences'; 'benefits'→'positive effects'."},
+{t:"There is a view that the proliferation of social networking applications has had a more damaging than beneficial impact on communities and individuals. Do you agree?",why:"'Social media'→'proliferation of social networking applications'; 'drawbacks'→'damaging impact'; 'benefits'→'beneficial impact'."}]},
+{n:24,type:"advdis",prompt:"Do the advantages of studying in a foreign country outweigh the disadvantages?",hint:"Swap: studying in a foreign country → pursuing education overseas; advantages → benefits; outweigh → outweigh.",samples:[{t:"It is sometimes argued that the benefits of pursuing higher education overseas are greater than the associated drawbacks. To what extent do you agree?",why:"'Studying in a foreign country'→'pursuing higher education overseas'; 'advantages'→'benefits'."},
+{t:"There is debate over whether completing one's studies abroad brings more positive than negative outcomes for the individual. Do the advantages outweigh the disadvantages?",why:"'Studying in a foreign country'→'completing one's studies abroad'; 'advantages'→'positive outcomes'."}]},
+{n:25,type:"advdis",prompt:"Some say that the growth of fast food has had a negative impact on people's health and family life. Discuss the advantages and disadvantages.",hint:"Swap: growth of fast food → expansion of the fast-food industry; negative impact → adverse effects; health → well-being.",samples:[{t:"The rapid expansion of the fast-food industry has been associated with both convenience and controversy, particularly regarding its effects on public well-being and family dynamics.",why:"'Growth'→'rapid expansion'; 'negative impact'→'controversy'; 'health'→'public well-being'; 'family life'→'family dynamics'."},
+{t:"While the proliferation of fast-food chains has offered convenience and affordability, critics argue that it has contributed to declining nutritional standards and weakened family meal traditions.",why:"Opens with a balanced 'While' structure; 'growth'→'proliferation'; 'negative impact on health'→'declining nutritional standards'."}]},
+{n:26,type:"advdis",prompt:"Do the advantages of using smartphones in the classroom outweigh the disadvantages?",hint:"Swap: smartphones → mobile devices / handheld technology; classroom → educational settings.",samples:[{t:"It is sometimes argued that the benefits of integrating mobile devices into educational settings outweigh the associated risks. To what extent do you agree?",why:"'Smartphones'→'mobile devices'; 'classroom'→'educational settings'; 'disadvantages'→'risks'."},
+{t:"There is debate over whether allowing students access to handheld technology in lessons ultimately brings more advantages than drawbacks. Do you agree?",why:"'Smartphones'→'handheld technology'; 'classroom'→'in lessons'; more informal phrasing."}]},
+{n:27,type:"advdis",prompt:"Some people believe that working from home has more benefits than drawbacks. Discuss.",hint:"Swap: working from home → remote work / teleworking; benefits → advantages; drawbacks → challenges.",samples:[{t:"There is a widespread view that the benefits of remote work outweigh the challenges it presents for both employees and employers. Discuss the advantages and disadvantages.",why:"'Working from home'→'remote work'; 'benefits'→'the benefits it presents for both employees and employers'; adds stakeholder perspective."},
+{t:"The growing practice of teleworking is seen by many as more advantageous than problematic, though this view is not universally shared. Discuss both sides.",why:"'Working from home'→'teleworking'; 'benefits'→'advantageous'; 'drawbacks'→'problematic'."}]},
+{n:28,type:"advdis",prompt:"Discuss the advantages and disadvantages of living in a large city.",hint:"Swap: large city → major urban centre / metropolis; advantages → benefits / merits.",samples:[{t:"Life in a major urban centre brings both significant opportunities and considerable challenges for its residents. Discuss the advantages and disadvantages.",why:"'Large city'→'major urban centre'; advantages/disadvantages restated as 'opportunities and challenges'."},
+{t:"Residing in a metropolis offers a range of benefits, from career opportunities to cultural access, yet it also presents notable difficulties. Discuss.",why:"'Living in a large city'→'residing in a metropolis'; specifies benefits (career, culture) to show engagement with the topic."}]},
+{n:29,type:"advdis",prompt:"Some argue that car ownership has more advantages than disadvantages. Discuss.",hint:"Swap: car ownership → owning a private vehicle; advantages → benefits; disadvantages → drawbacks.",samples:[{t:"There is a view that the benefits of owning a private vehicle outweigh its associated drawbacks for the majority of individuals. Discuss both sides.",why:"'Car ownership'→'owning a private vehicle'; 'advantages'→'benefits'; 'disadvantages'→'drawbacks'."},
+{t:"While many consider a privately-owned car to be a valuable asset, others point to its financial and environmental costs as significant downsides. Discuss.",why:"Reframes as a balance between 'valuable asset' (advantage) and 'financial and environmental costs' (disadvantage)."}]},
+{n:30,type:"advdis",prompt:"Do the advantages of space exploration outweigh the disadvantages?",hint:"Swap: space exploration → space research / the exploration of outer space; advantages → benefits; disadvantages → drawbacks.",samples:[{t:"It is sometimes argued that the benefits of investing in space research are greater than the associated costs and risks. To what extent do you agree?",why:"'Space exploration'→'space research'; 'advantages'→'benefits'; 'disadvantages'→'costs and risks'."},
+{t:"There is debate over whether the scientific, technological and economic gains from exploring outer space justify the enormous expense and risk involved. Discuss.",why:"Breaks 'advantages' into subcategories (scientific, technological, economic); 'disadvantages'→'expense and risk'."}]},
+// PROBLEM/SOLUTION (31-40)
+{n:31,type:"probsol",prompt:"Traffic congestion in cities is a growing problem. What are the causes and what solutions can governments propose?",hint:"Swap: traffic congestion → gridlock / urban traffic jams; growing problem → increasingly serious challenge; governments propose → authorities implement.",samples:[{t:"Urban gridlock has become an increasingly serious challenge for city planners. This essay will examine the primary causes of this trend and suggest practical measures that authorities could implement.",why:"'Traffic congestion'→'urban gridlock'; 'growing problem'→'increasingly serious challenge'; 'governments'→'authorities'."},
+{t:"The worsening problem of traffic jams in major cities is placing growing pressure on residents, businesses and public health. This essay will explore its causes and recommend solutions.",why:"Expands to include the impact ('pressure on residents, businesses and public health') before the essay plan."}]},
+{n:32,type:"probsol",prompt:"Many older people are unable to use modern technology. What problems does this cause and what can be done?",hint:"Swap: older people → elderly individuals / senior citizens; modern technology → digital devices; problems → difficulties / consequences.",samples:[{t:"The inability of many elderly individuals to operate digital devices effectively creates a range of social and practical difficulties. This essay will examine these consequences and suggest remedies.",why:"'Older people'→'elderly individuals'; 'modern technology'→'digital devices'; 'problems'→'difficulties'."},
+{t:"A significant proportion of senior citizens remain unable to engage with contemporary digital technology, generating both personal and societal challenges. This essay will identify these and propose workable solutions.",why:"'Older people'→'senior citizens'; 'modern technology'→'contemporary digital technology'; 'what can be done'→'propose workable solutions'."}]},
+{n:33,type:"probsol",prompt:"Obesity rates are rising worldwide. What are the causes of this and what steps can be taken to address it?",hint:"Swap: obesity rates rising → the growing incidence of obesity; worldwide → globally / across all nations; steps → measures.",samples:[{t:"The growing incidence of obesity among adults and children globally has become one of the most pressing public health concerns of our time. This essay will investigate its causes and propose effective countermeasures.",why:"'Obesity rates rising'→'growing incidence of obesity'; 'worldwide'→'globally'; 'steps'→'countermeasures'."},
+{t:"Excess weight has reached epidemic proportions across all nations, posing a serious threat to individual and public health. This essay will analyse the root causes and suggest practical responses.",why:"'Obesity'→'excess weight'; 'rising rates'→'reached epidemic proportions'; 'address it'→'practical responses'."}]},
+{n:34,type:"probsol",prompt:"Many young people struggle to find affordable housing. What are the causes and what solutions can governments offer?",hint:"Swap: young people → younger generations; affordable housing → reasonably priced accommodation; governments offer → authorities implement.",samples:[{t:"Younger generations in many countries face increasing difficulty securing reasonably priced accommodation. This essay will examine the underlying causes and propose steps that authorities could take.",why:"'Young people'→'younger generations'; 'affordable housing'→'reasonably priced accommodation'; 'governments'→'authorities'."},
+{t:"The lack of housing within the financial reach of young adults has become a widespread crisis in both urban and rural areas. This essay will explore its causes and recommend policy responses.",why:"Expands to specify urban and rural areas; 'affordable'→'within the financial reach of'; 'solutions'→'policy responses'."}]},
+{n:35,type:"probsol",prompt:"Rising levels of youth unemployment are a serious global issue. What are the causes and how can governments tackle them?",hint:"Swap: youth unemployment → young people out of work; serious global issue → pressing worldwide challenge; tackle → address / combat.",samples:[{t:"The increasing number of young people out of work represents a pressing worldwide challenge with significant economic and social consequences. This essay will analyse the causes and suggest how governments might combat them.",why:"'Youth unemployment'→'young people out of work'; 'serious global issue'→'pressing worldwide challenge'; 'tackle'→'combat'."},
+{t:"Unemployment among young adults has reached alarming levels in many parts of the world, with far-reaching consequences for society. This essay will examine why this is happening and what policy measures can address it.",why:"'Rising levels'→'reached alarming levels'; 'youth unemployment'→'unemployment among young adults'."}]},
+{n:36,type:"probsol",prompt:"The overuse of plastics is causing damage to the natural environment. What problems does this create and what solutions are available?",hint:"Swap: overuse of plastics → excessive reliance on plastic products; natural environment → ecosystems / wildlife and habitats; damage → harm / destruction.",samples:[{t:"Excessive reliance on plastic products is inflicting severe harm on ecosystems and wildlife worldwide. This essay will examine the specific problems this generates and explore viable solutions.",why:"'Overuse of plastics'→'excessive reliance on plastic products'; 'natural environment'→'ecosystems and wildlife'; 'damage'→'severe harm'."},
+{t:"The ubiquity of single-use plastics in everyday life has created a global environmental crisis, threatening marine life, soil quality and human health. This essay will identify the key problems and propose remedies.",why:"Specifies the environmental impacts (marine life, soil, health) to demonstrate engagement with the topic."}]},
+{n:37,type:"probsol",prompt:"Levels of stress and mental health problems are increasing among working adults. What are the causes and what can employers do?",hint:"Swap: stress → anxiety and pressure; mental health problems → psychological disorders; working adults → the working-age population; employers → companies / organisations.",samples:[{t:"The rising incidence of anxiety, pressure and psychological disorders among the working-age population has become a significant concern. This essay will examine the causes and suggest what companies can do to help.",why:"'Stress'→'anxiety and pressure'; 'mental health problems'→'psychological disorders'; 'working adults'→'working-age population'."},
+{t:"Psychological well-being has deteriorated significantly among employed adults in recent decades. This essay will explore the root causes of this trend and propose concrete measures that organisations could adopt.",why:"'Stress and mental health problems'→'psychological well-being has deteriorated'; 'employers'→'organisations'."}]},
+{n:38,type:"probsol",prompt:"Cybercrime is an increasingly serious problem in many countries. What are the causes and what can individuals and governments do?",hint:"Swap: cybercrime → online criminal activity / digital crime; serious problem → growing threat; individuals and governments → citizens and authorities.",samples:[{t:"Online criminal activity has emerged as a growing threat to individuals, businesses and governments worldwide. This essay will examine its underlying causes and propose measures that both citizens and authorities can adopt.",why:"'Cybercrime'→'online criminal activity'; 'serious problem'→'growing threat'; 'individuals and governments'→'citizens and authorities'."},
+{t:"The rapid growth of digital crime poses an escalating challenge to national security and personal privacy globally. This essay will explore why this is happening and what steps different stakeholders can take.",why:"'Cybercrime'→'digital crime'; uses 'national security', 'personal privacy' and 'stakeholders' as upgraded vocabulary."}]},
+{n:39,type:"probsol",prompt:"Many species of animals are becoming endangered. What are the causes and what can be done to protect them?",hint:"Swap: species → animal populations; endangered → facing extinction; protect → safeguard / preserve.",samples:[{t:"An increasing number of animal populations are facing the threat of extinction. This essay will examine the principal causes of this crisis and propose measures to safeguard these vulnerable species.",why:"'Species'→'animal populations'; 'endangered'→'facing the threat of extinction'; 'protect'→'safeguard'."},
+{t:"The alarming rate at which wildlife is disappearing from the planet has made the preservation of biodiversity one of the most urgent environmental priorities of our era. This essay will analyse causes and solutions.",why:"'Many species are endangered'→'wildlife is disappearing'; 'protect'→'preservation of biodiversity'."}]},
+{n:40,type:"probsol",prompt:"Language loss is a growing global concern. Why are many languages dying out and what can be done to preserve them?",hint:"Swap: language loss → linguistic decline; dying out → becoming extinct / falling out of use; preserve → safeguard / revitalise.",samples:[{t:"The accelerating decline of many of the world's languages is a growing concern for linguists and cultural organisations alike. This essay will examine the reasons why many tongues are falling out of use and suggest ways to revitalise them.",why:"'Language loss'→'decline of languages'; 'dying out'→'falling out of use'; 'preserve'→'revitalise'."},
+{t:"Linguistic diversity is under serious threat, with hundreds of languages facing extinction each decade. This essay will explore the root causes of this trend and propose strategies for their preservation.",why:"'Language loss'→'linguistic diversity is under threat'; 'dying out'→'facing extinction each decade'; 'preserve'→'preservation'."}]},
+// TWO-PART (41-50)
+{n:41,type:"twopart",prompt:"Some young people are choosing not to have children. Why is this the case, and is it a positive or negative development?",hint:"Swap: young people → younger generations; choosing not to → opting against; positive or negative → beneficial or detrimental.",samples:[{t:"An increasing number of younger adults are opting against parenthood. This essay will examine the key reasons behind this trend and argue whether it constitutes a beneficial or detrimental development.",why:"'Young people'→'younger adults'; 'choosing not to have children'→'opting against parenthood'; 'positive or negative'→'beneficial or detrimental'."},
+{t:"The decision among many younger generations to remain childless has become more common in recent decades. This essay will explore the causes of this trend and evaluate its overall impact on society.",why:"'Choosing not to have children'→'remain childless'; 'positive or negative development'→'evaluate its overall impact'."}]},
+{n:42,type:"twopart",prompt:"More and more people are moving from rural areas to cities. Why is this happening and what are the effects on both cities and rural areas?",hint:"Swap: rural areas → the countryside; cities → urban centres; moving → migrating / relocating.",samples:[{t:"The migration of large numbers of people from the countryside to urban centres is a widely observed global trend. This essay will examine the driving forces behind this movement and assess its consequences for both origin and destination communities.",why:"'Moving'→'migration'; 'rural areas'→'countryside'; 'cities'→'urban centres'; 'effects'→'consequences'."},
+{t:"Urbanisation — the relocation of populations from rural to urban environments — continues to accelerate. This essay will investigate why this is occurring and explore its impact on both expanding cities and declining rural communities.",why:"Names the phenomenon as 'urbanisation'; adds 'expanding cities and declining rural communities' for analytical depth."}]},
+{n:43,type:"twopart",prompt:"More and more people are working longer hours. Why is this happening, and what are the effects on individuals and society?",hint:"Swap: working longer hours → extending their working day; effects → consequences / impact.",samples:[{t:"A growing number of employees are extending their working day beyond traditional hours. This essay will explore why this trend is occurring and examine its consequences for personal well-being and broader society.",why:"'Working longer hours'→'extending their working day beyond traditional hours'; 'effects'→'consequences for personal well-being'."},
+{t:"The phenomenon of increasing working hours has become widespread in many economies. This essay will investigate the factors driving this trend and assess its impact on individuals and the wider community.",why:"'More and more people are working longer hours'→'increasing working hours has become widespread'; 'society'→'the wider community'."}]},
+{n:44,type:"twopart",prompt:"People are increasingly using social media to stay informed about news and current events. Why is this and what are the consequences?",hint:"Swap: using social media → turning to social networking platforms; stay informed → keep up to date; current events → ongoing news.",samples:[{t:"More and more individuals are turning to social networking platforms to keep up to date with ongoing news and events. This essay will explore the reasons for this shift and assess its broader consequences.",why:"'Social media'→'social networking platforms'; 'stay informed'→'keep up to date'; 'current events'→'ongoing news'."},
+{t:"The growing reliance on social media as a primary news source reflects a significant shift in media consumption habits. This essay will examine why this is happening and consider its implications for journalism and public understanding.",why:"Adds 'journalism and public understanding' to the consequences question — shows analytical thinking."}]},
+{n:45,type:"twopart",prompt:"People are living longer than they did in the past. What are the reasons for this and what are the effects on society?",hint:"Swap: living longer → longer life expectancy / increased longevity; reasons → causes; effects → consequences / implications.",samples:[{t:"Average life expectancy has increased significantly in most parts of the world over recent decades. This essay will examine the primary reasons for this development and consider its wide-ranging implications for society.",why:"'Living longer'→'average life expectancy has increased'; 'reasons'→'primary reasons'; 'effects'→'implications'."},
+{t:"Increased longevity — people living well into their eighties and beyond — is now a defining feature of modern societies. This essay will explore what has driven this trend and assess its consequences.",why:"'Living longer'→'increased longevity'; specifies 'well into their eighties and beyond' for concreteness."}]},
+{n:46,type:"twopart",prompt:"Nowadays, many children spend too much time indoors. Why might this be and what are the possible effects on their development?",hint:"Swap: spend too much time indoors → are increasingly confined to indoor environments; development → physical and cognitive development.",samples:[{t:"It is increasingly common for children to spend the majority of their leisure time in indoor settings. This essay will explore the reasons behind this trend and consider its potential effects on children's physical and cognitive development.",why:"'Spend too much time indoors'→'spend the majority of their leisure time in indoor settings'; 'development'→'physical and cognitive development'."},
+{t:"A growing number of young people are leading largely sedentary, indoor lives. This essay will examine what drives this trend and what developmental consequences it may carry.",why:"'Spend too much time indoors'→'leading largely sedentary, indoor lives'; 'effects on development'→'developmental consequences'."}]},
+{n:47,type:"twopart",prompt:"Many businesses now conduct their activities online. What are the reasons for this and what are the consequences for employment?",hint:"Swap: conduct activities online → operate digitally; reasons → driving forces; consequences for employment → impact on the labour market.",samples:[{t:"An increasing number of companies are choosing to operate primarily through digital channels. This essay will explore the driving forces behind this shift and consider its impact on the labour market.",why:"'Conduct activities online'→'operate primarily through digital channels'; 'consequences for employment'→'impact on the labour market'."},
+{t:"The transition of business operations to online platforms has accelerated markedly in recent years. This essay will examine why this is happening and assess its implications for workers and the broader economy.",why:"'Businesses now conduct activities online'→'business operations to online platforms'; 'consequences for employment'→'implications for workers and the broader economy'."}]},
+{n:48,type:"twopart",prompt:"In many countries, the average household size is decreasing. Why is this happening, and what are the effects on society?",hint:"Swap: average household size → number of people per household; decreasing → declining / shrinking; effects → consequences.",samples:[{t:"The number of people per household has been declining steadily in many parts of the world. This essay will investigate the causes of this trend and assess its consequences for communities and economies.",why:"'Average household size is decreasing'→'number of people per household has been declining'; 'effects'→'consequences for communities and economies'."},
+{t:"Smaller households — often single-person or childless couple arrangements — have become the norm in numerous countries. This essay will explore why this shift is occurring and what its broader social implications might be.",why:"Specifies the types of small households ('single-person or childless couple'); 'effects'→'broader social implications'."}]},
+{n:49,type:"twopart",prompt:"In some countries, a growing number of people are choosing to adopt a vegetarian or vegan diet. Why is this the case, and do you think it is a positive or negative development?",hint:"Swap: vegetarian or vegan diet → plant-based diet; positive or negative → beneficial or detrimental; growing number → an increasing proportion.",samples:[{t:"An increasing proportion of the population in several countries is adopting a plant-based diet, rejecting meat and animal products. This essay will explore the motivations for this shift and evaluate whether it is a beneficial or detrimental development.",why:"'Vegetarian or vegan'→'plant-based diet'; 'growing number'→'increasing proportion'; 'positive or negative'→'beneficial or detrimental'."},
+{t:"The trend towards meat-free and animal-product-free diets has accelerated markedly in many nations. This essay will examine what is driving this change and whether it represents a positive development for individuals and the planet.",why:"'Vegetarian or vegan diet'→'meat-free and animal-product-free diets'; adds 'for individuals and the planet' to the evaluation."}]},
+{n:50,type:"twopart",prompt:"Many governments are investing in space exploration. Why do governments do this, and do you think it is a worthwhile use of public money?",hint:"Swap: governments investing → states allocating resources; space exploration → space research; worthwhile use → justifiable expenditure.",samples:[{t:"Numerous governments around the world are committing significant public resources to space research and exploration programmes. This essay will examine the motivations behind this investment and assess whether it constitutes a justifiable use of public money.",why:"'Governments investing'→'committing public resources'; 'space exploration'→'space research and exploration'; 'worthwhile'→'justifiable'."},
+{t:"State-funded space programmes continue to attract enormous investment, despite ongoing debates about competing priorities. This essay will explore why nations choose to fund space exploration and argue whether this represents a sound use of taxpayers' money.",why:"'Many governments'→'state-funded'; 'worthwhile use of public money'→'sound use of taxpayers' money'; adds 'despite ongoing debates' for balance."}]}
+];
+let pwFilter='all';
+function renderPW(){
+  const visible=pwFilter==='all'?pwPrompts:pwPrompts.filter(p=>p.type===pwFilter);
+  document.getElementById('pwSheet').innerHTML=visible.map(p=>`
+<div class="pw-card" id="pwcard${p.n}" data-type="${p.type}">
+  <div class="flex items-start gap-3 mb-2">
+    <div class="num-circle" style="background:${typeColors[p.type]}">${p.n}</div>
+    <div class="flex-1">
+      <div class="flex items-center gap-2 mb-1 flex-wrap">
+        <span class="text-xs font-bold px-2 py-0.5 rounded-full" style="background:${typeColors[p.type]}22;color:${typeColors[p.type]}">${typeLabels[p.type]}</span>
+      </div>
+      <p class="text-sm font-medium leading-snug">${p.prompt}</p>
+    </div>
+  </div>
+  <textarea class="pw-textarea" id="pwtxt${p.n}" placeholder="Write your paraphrase here…" oninput="pwCheck(${p.n})"></textarea>
+  <div class="flex gap-2 mt-2 flex-wrap">
+    <button class="btn btn-ghost text-xs py-1.5" onclick="toggleHint(${p.n})">💡 Hint</button>
+    <button class="btn btn-gold text-xs py-1.5" id="pwRevBtn${p.n}" onclick="revealSamples(${p.n})" disabled>👁 Reveal samples</button>
+    <button class="btn btn-ghost text-xs py-1.5" onclick="clearPW(${p.n})">✕ Clear</button>
+  </div>
+  <div class="hint-box" id="hint${p.n}">💡 <strong>Hint:</strong> ${p.hint}</div>
+  <div id="samples${p.n}"></div>
+</div>`).join('');
+}
+function pwCheck(n){
+  const txt=document.getElementById('pwtxt'+n).value.trim();
+  const btn=document.getElementById('pwRevBtn'+n);
+  if(txt.length>30){btn.disabled=false;}
+  else{btn.disabled=true;}
+}
+function toggleHint(n){const h=document.getElementById('hint'+n);h.style.display=h.style.display==='block'?'none':'block';}
+function revealSamples(n){
+  const p=pwPrompts.find(x=>x.n===n);
+  const el=document.getElementById('samples'+n);
+  if(el.innerHTML)return;
+  el.innerHTML=p.samples.map((s,i)=>`<div class="sample-box" style="display:block"><strong>Sample ${i+1}:</strong> ${s.t}<div class="sample-notes">📝 ${s.why}</div></div>`).join('');
+  // count done
+  state.pwDone++;
+  document.getElementById('pwDone').textContent=state.pwDone;
+  document.getElementById('pwFill').style.width=(state.pwDone/50*100)+'%';
+  addXP(8);
+}
+function clearPW(n){
+  document.getElementById('pwtxt'+n).value='';
+  document.getElementById('hint'+n).style.display='none';
+  document.getElementById('samples'+n).innerHTML='';
+  document.getElementById('pwRevBtn'+n).disabled=true;
+}
+document.querySelectorAll('.type-tab').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.type-tab').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+    pwFilter=btn.dataset.type;
+    renderPW();
+  });
+});
+renderPW();
+// ====== TEMPLATES ======
+const tplData=[
+{name:"Opinion Essay",shortName:"Opinion",color:"var(--blue)",fields:[
+{label:"INTRO",hint:"Paraphrase the prompt, state your clear position, and preview two reasons.",starter:"In recent years, [topic] has become a matter of considerable debate. While some argue that [opposing view], I firmly believe that [your position] for two key reasons.",wc:"~50 words"},
+{label:"BODY 1 — Main Reason",hint:"State your FIRST reason (topic sentence), explain it, give a specific example, and link back to your thesis.",starter:"The principal reason for this view is that [first reason]. This is because [explanation]. For instance, [specific example with data if possible]. This demonstrates that [link to thesis].",wc:"~95 words"},
+{label:"BODY 2 — Second Reason",hint:"State a DIFFERENT second reason (topic sentence), explain it, give a specific example, and link back.",starter:"A further compelling argument is that [second reason]. To illustrate, [example]. Consequently, [effect or implication]. This reinforces the view that [restate position].",wc:"~95 words"},
+{label:"CONCLUSION",hint:"Signal the end, summarise both reasons, and restate your position in different words. No new ideas.",starter:"In conclusion, while [acknowledge opposing view briefly], [restate your position] — primarily because [reason 1] and [reason 2].",wc:"~40 words"}
+]},
+{name:"Discussion Essay",shortName:"Discussion",color:"var(--gold)",fields:[
+{label:"INTRO",hint:"Paraphrase both views. State YOUR lean. Signal you will discuss both.",starter:"While some contend that [View A], others maintain that [View B]. In my view, [your lean], though both perspectives merit consideration.",wc:"~55 words"},
+{label:"BODY 1 — View A",hint:"Present View A FAIRLY with a supporting example — even if you disagree with it.",starter:"On one hand, proponents of [View A] argue that [reason]. This is supported by [example]. As a result, [outcome].",wc:"~90 words"},
+{label:"BODY 2 — View B (your lean)",hint:"Present View B with example, then explain WHY you find it more convincing.",starter:"On the other hand, those who favour [View B] point out that [reason]. [Example]. This argument carries greater weight because [your reasoning].",wc:"~110 words"},
+{label:"CONCLUSION",hint:"Briefly acknowledge both views, then restate your final position.",starter:"In conclusion, while [View A] has some merit, [View B] is ultimately more persuasive, as [key reason].",wc:"~40 words"}
+]},
+{name:"Adv/Disadv Essay",shortName:"Adv/Dis",color:"var(--terra)",fields:[
+{label:"INTRO",hint:"Paraphrase the topic. If 'outweigh' is asked, state your verdict here.",starter:"The [topic] has brought both significant [advantages] and notable [disadvantages]. On balance, I believe [verdict — if outweigh asked].",wc:"~50 words"},
+{label:"BODY 1 — Advantages",hint:"Describe 1–2 advantages with full explanation and example. P-E-E-L structure.",starter:"The most significant advantage is that [advantage 1]. This is because [explanation]. For example, [evidence]. Furthermore, [advantage 2 if needed].",wc:"~95 words"},
+{label:"BODY 2 — Disadvantages",hint:"Describe 1–2 disadvantages with example. Make this approximately equal in length to Body 1.",starter:"However, this trend is not without its drawbacks. The most notable concern is [disadvantage]. This can lead to [consequence]. In addition, [second disadvantage if needed].",wc:"~95 words"},
+{label:"CONCLUSION",hint:"Summarise. If 'outweigh' was asked, restate your verdict in different words.",starter:"In conclusion, although [disadvantage summary], the [advantages] are more significant because [key reason]. The benefits therefore [outweigh/do not outweigh] the drawbacks.",wc:"~35 words"}
+]},
+{name:"Problem/Solution",shortName:"Prob/Sol",color:"var(--green)",fields:[
+{label:"INTRO",hint:"Paraphrase the problem. Signal the essay will cover both causes/problems and solutions.",starter:"In recent years, [problem] has become an increasingly pressing concern. This essay will examine the primary causes of this issue and propose practical solutions.",wc:"~50 words"},
+{label:"BODY 1 — Problems/Causes",hint:"Identify 1–2 specific causes or problems. Use causal language. Give a concrete example.",starter:"The most significant cause of [problem] is [cause 1]. This stems from [explanation]. For instance, [example]. Compounding this is [cause 2 if applicable].",wc:"~95 words"},
+{label:"BODY 2 — Solutions",hint:"Propose solutions that DIRECTLY match the problems in Body 1. Use modal verbs. Give an example.",starter:"To address [problem], governments should [solution 1]. This would [effect]. Additionally, [organisation or individuals] could [solution 2], as demonstrated by [example].",wc:"~100 words"},
+{label:"CONCLUSION",hint:"Recap the main problem and solution. Add a forward-looking statement.",starter:"In conclusion, while [problem] remains a serious challenge, [main solution] offers the most viable path forward. With coordinated action, [desired outcome] can be achieved.",wc:"~35 words"}
+]},
+{name:"Two-part Q",shortName:"Two-part",color:"var(--purple)",fields:[
+{label:"INTRO",hint:"Paraphrase the topic. Briefly signal you will answer BOTH questions.",starter:"[Paraphrase of the topic]. This essay will first explore [Q1 topic] before examining [Q2 topic].",wc:"~50 words"},
+{label:"BODY 1 — Question 1",hint:"Answer Q1 directly in the topic sentence. Then explain and give an example.",starter:"Regarding the first question, [direct answer to Q1]. This is primarily because [explanation]. For example, [evidence].",wc:"~95 words"},
+{label:"BODY 2 — Question 2",hint:"Answer Q2 directly in the topic sentence. Make this paragraph approximately equal to Body 1.",starter:"As for the second question, [direct answer to Q2]. A key reason for this is [explanation]. A clear illustration is [example].",wc:"~95 words"},
+{label:"CONCLUSION",hint:"Recap your answers to BOTH questions concisely.",starter:"In conclusion, [answer to Q1 in brief], while [answer to Q2 in brief].",wc:"~35 words"}
+]}
+];
+let activeTpl=0;
+function renderTplTabs(){document.getElementById('tplTabBar').innerHTML=tplData.map((t,i)=>`<button class="tpl-tab${i===0?' active':''}" onclick="switchTpl(${i})">${t.shortName}</button>`).join('');}
+function renderTplCard(){
+  const t=tplData[activeTpl];
+  document.getElementById('tplCard').innerHTML=`<div class="flex items-center gap-3 mb-4 p-3 rounded-xl" style="background:${t.color}14;border:1px solid ${t.color}44"><div class="font-bold" style="color:${t.color}">${t.name}</div><div class="text-xs text-stone-500 ml-auto">Fill every box. Then count your total words.</div></div>`+t.fields.map((f,fi)=>`<div class="mb-4"><div class="flex items-center gap-2 mb-1"><div class="text-xs font-bold uppercase tracking-widest px-2 py-0.5 rounded" style="background:${t.color};color:#fff">${f.label}</div><div class="text-xs text-stone-400">${f.wc}</div></div><div class="text-xs italic text-stone-500 mb-1">${f.hint}</div><textarea class="tpl-input" id="tplinput${activeTpl}_${fi}" rows="3" placeholder="${f.starter}" oninput="updateTplWC()"></textarea></div>`).join('')+`<div class="flex gap-3 mt-4 flex-wrap items-center"><div class="text-sm text-stone-500">Total words: <strong id="tplWC">0</strong></div><button class="btn btn-ghost text-sm" onclick="clearTpl()">✕ Clear all</button></div>`;
+  updateTplWC();
+}
+function switchTpl(i){activeTpl=i;document.querySelectorAll('.tpl-tab').forEach((b,j)=>b.classList.toggle('active',j===i));renderTplCard();addXP(2);}
+function updateTplWC(){let total=0;document.querySelectorAll('[id^="tplinput"]').forEach(el=>{total+=el.value.trim().split(/\s+/).filter(Boolean).length;});const wc=document.getElementById('tplWC');if(wc)wc.textContent=total;}
+function clearTpl(){document.querySelectorAll('[id^="tplinput"]').forEach(el=>el.value='');updateTplWC();}
+renderTplTabs();renderTplCard();
+</script>
+</body>
+</html>

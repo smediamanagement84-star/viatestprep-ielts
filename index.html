@@ -13,6 +13,7 @@
     --gold:#c8932a;--gold-soft:#fdf6e3;
     --teal:#0d8a7a;--rose:#e8456b;
     --ukvi:#1a4a8a;--ukvi-light:#e8f0fb;
+    --pte:#e8622a;--pte-light:#fdf2ed;
     --ink:#0f172a;--paper:#fdfcf7;--line:#e6dfce;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -84,6 +85,16 @@
   .ukvi-intro p{color:#64748b;max-width:520px;line-height:1.6}
   .ukvi-tag{display:inline-block;padding:.2rem .7rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--ukvi-light);color:var(--ukvi);border:1px solid rgba(26,74,138,.2);margin-bottom:.5rem}
 
+  /* ---- PTE SECTION ---- */
+  .pte-intro{margin-bottom:2rem}
+  .pte-intro h2{font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:.4rem}
+  .pte-intro p{color:#64748b;max-width:520px;line-height:1.6}
+  .pte-tag{display:inline-block;padding:.2rem .7rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--pte-light);color:var(--pte);border:1px solid rgba(232,98,42,.2);margin-bottom:.5rem}
+  .card.pte-card:hover{box-shadow:0 16px 48px rgba(232,98,42,.15)}
+  .card.pte-card::before{background:linear-gradient(135deg,var(--pte-light),#fff)}
+  .num.pte-num{color:var(--pte);opacity:.8}
+  .go-arrow.pte-arrow{color:var(--pte)}
+
   /* ---- FOOTER ---- */
   .footer{background:var(--ink);color:rgba(255,255,255,.4);text-align:center;padding:2.5rem 1rem;font-size:.8rem;line-height:1.8}
   .footer strong{color:rgba(255,255,255,.7)}
@@ -151,12 +162,12 @@
         </div>
       </a>
 
-      <a href="03_IELTS_Writing_Architects_Blueprint.html" class="card">
+      <a href="03_IELTS_Writing_Architects_Blueprint_v2.html" class="card">
         <div class="card-inner">
-          <div class="num">Module 03 · Writing</div>
-          <div class="icon" style="background:#eef9f5">✍️</div>
+          <div class="num">Module 03 · Writing (v2)</div>
+          <div class="icon" style="background:#eef9f3">✍️</div>
           <h3>Architect's Blueprint</h3>
-          <p>Task 1 and Task 2 structure blueprints, band-descriptor scoring, and live essay planning tools.</p>
+          <p>Task 1, Task 2 structures, live charts, paraphrase worksheet, interactive sample essays, and templates.</p>
           <div class="go-arrow">Start lesson →</div>
         </div>
       </a>
@@ -231,6 +242,16 @@
         </div>
       </a>
 
+      <a href="ielts-vocabulary-guide.html" class="card">
+        <div class="card-inner">
+          <div class="num">Vocabulary · Master Guide</div>
+          <div class="icon" style="background:#fdf2ed">📖</div>
+          <h3>Vocabulary Mastery</h3>
+          <p>Interactive spaced-repetition flashcards, topic word banks, upgrades, and mock quizzes for Band 7.5+.</p>
+          <div class="go-arrow">Start guide →</div>
+        </div>
+      </a>
+
     </div>
 
     <!-- UKVI SECTION -->
@@ -270,6 +291,29 @@
           <h3>GT &amp; Academic Task 2 — Essay</h3>
           <p>Thesis development, 4-paragraph planning, formal vocabulary guidelines, and interactive essay building tools.</p>
           <div class="go-arrow ukvi-arrow">Start lesson →</div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- PTE SECTION -->
+    <hr class="section-divider"/>
+    <div class="pte-intro">
+      <div class="pte-tag">PTE Academic</div>
+      <div class="section-label pte-label">PTE · Pearson Test of English</div>
+      <h2>PTE Specialist Modules</h2>
+      <p>Comprehensive study materials and strategies built for the Pearson Test of English (PTE) Academic format.</p>
+    </div>
+
+    <div class="grid">
+
+      <a href="pte-master-guide.html" class="card pte-card">
+        <div class="card-inner">
+          <div class="num pte-num">PTE Academic · Master Guide</div>
+          <div class="icon" style="background:#fdf2ed">⚡</div>
+          <h3>PTE Academic Master Guide</h3>
+          <p>Score 80+ in PTE Academic. Complete guide to Speaking, Writing, Reading, and Listening with interactive templates and quizzes.</p>
+          <div class="go-arrow pte-arrow">Start guide →</div>
         </div>
       </a>
 
