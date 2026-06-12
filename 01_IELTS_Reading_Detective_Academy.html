@@ -222,46 +222,116 @@
 
     <!-- DRILL A: T/F/NG -->
     <div class="card p-6 mb-8 bg-white">
-      <div class="flex items-center gap-3 mb-4"><span class="chip" style="background:#fdf0f3;color:var(--rose)">Drill A · T / F / NG</span><h3 class="text-xl">The Logic Test — "Prove It"</h3></div>
+      <div class="flex items-center gap-3 mb-4"><span class="chip" style="background:#fdf0f3;color:var(--rose)">Drill A · T / F / NG</span><h3 class="text-xl">The Logic Test — "Prove It" (20 Questions)</h3></div>
+      
+      <!-- Tab selectors -->
+      <div class="flex gap-2 mb-4 border-b border-line pb-2">
+        <button class="btn btn-primary text-xs px-3 py-1.5" id="tfngTab1Btn" onclick="switchTab('tfng', 1)">Passage 1: Sleep Cycles (1-10)</button>
+        <button class="btn btn-ghost text-xs px-3 py-1.5" id="tfngTab2Btn" onclick="switchTab('tfng', 2)">Passage 2: Deep-Sea Vents (11-20)</button>
+      </div>
+
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="case-file p-5 mini-pass bg-[#fbf7ec]">
-          <h4 class="font-bold mb-2">The Architecture of Sleep</h4>
-          <p class="text-sm text-stone-700 leading-relaxed">Scientific understanding of sleep was revolutionized in the mid-20th century by the introduction of Electroencephalography (EEG), which allowed researchers to observe brain activity in real-time. Instead of being a uniform state of inactivity, sleep was discovered to be a highly structured cycle. Typically, a healthy adult transitions through four to five distinct cycles per night, each lasting approximately 90 minutes. These cycles are divided into two main categories: Non-Rapid Eye Movement (NREM) and Rapid Eye Movement (REM) sleep. NREM sleep is further split into three stages, with Stage 3 representing deep slow-wave sleep, characterized by low-frequency delta waves. Studies show that this deep stage is crucial for physical restoration, hormone regulation, and memory consolidation, although it constitutes only about 20 to 25 percent of a person's total nightly rest. In contrast, REM sleep, where vivid dreaming occurs, is marked by high-frequency brain activity mirroring wakefulness. Despite extensive research, the exact evolutionary purpose of REM sleep remains a subject of ongoing debate, though it is widely believed to play a critical role in emotional processing and cognitive development.</p>
+        <div>
+          <!-- Tab 1 Passage -->
+          <div class="case-file p-5 mini-pass bg-[#fbf7ec]" id="tfngPassage1">
+            <h4 class="font-bold mb-2">The Architecture of Sleep</h4>
+            <p class="text-sm text-stone-700 leading-relaxed">Scientific understanding of sleep was revolutionized in the mid-20th century by the introduction of Electroencephalography (EEG), which allowed researchers to observe brain activity in real-time. Instead of being a uniform state of inactivity, sleep was discovered to be a highly structured cycle. Typically, a healthy adult transitions through four to five distinct cycles per night, each lasting approximately 90 minutes. These cycles are divided into two main categories: Non-Rapid Eye Movement (NREM) and Rapid Eye Movement (REM) sleep. NREM sleep is further split into three stages, with Stage 3 representing deep slow-wave sleep, characterized by low-frequency delta waves. Studies show that this deep stage is crucial for physical restoration, hormone regulation, and memory consolidation, although it constitutes only about 20 to 25 percent of a person's total nightly rest. In contrast, REM sleep, where vivid dreaming occurs, is marked by high-frequency brain activity mirroring wakefulness. Despite extensive research, the exact evolutionary purpose of REM sleep remains a subject of ongoing debate, though it is widely believed to play a critical role in emotional processing and cognitive development.</p>
+          </div>
+          <!-- Tab 2 Passage -->
+          <div class="case-file p-5 mini-pass bg-[#fbf7ec] hidden" id="tfngPassage2">
+            <h4 class="font-bold mb-2">Mysteries of Deep-Sea Hydrothermal Vents</h4>
+            <p class="text-sm text-stone-700 leading-relaxed">Hydrothermal vents are underwater fissures found primarily along mid-ocean ridges in the deep ocean, where tectonic plates pull apart. First discovered in 1977 near the Galapagos Rift in the Pacific Ocean, these deep-sea vents spew superheated, mineral-rich water from beneath the Earth's crust into the cold ocean depths. At depths exceeding 2,500 meters, no sunlight penetrates, creating a zone of total darkness and immense pressure. Despite these extreme conditions, vents support highly complex ecosystems teeming with unique life forms. Unlike surface ecosystems that depend on sunlight for photosynthesis, deep-sea vent communities rely on chemosynthesis. Specialized bacteria oxidize toxic hydrogen sulfide dissolved in the vent fluids, converting it into organic matter. This chemosynthetic process forms the foundation of the local food chain. Among the most remarkable vent species are giant tubeworms, which can grow up to two meters long. These creatures lack mouths, guts, or digestive tracts, surviving instead through a symbiotic relationship with billions of bacteria residing inside their bodies. While hydrothermal vents provide vital chemical energy, they are unstable geological features. They can shut down abruptly if volcanic conduits close, causing the local ecosystem to starve and die, while new vents ignite elsewhere.</p>
+          </div>
         </div>
-        <div class="space-y-4" id="tfngDrillExpanded">
-          <!-- Dynamically populated via JS -->
+        <div>
+          <!-- Tab 1 Questions -->
+          <div class="space-y-4" id="tfngDrillExpandedTab1">
+            <!-- Dynamically populated via JS -->
+          </div>
+          <!-- Tab 2 Questions -->
+          <div class="space-y-4 hidden" id="tfngDrillExpandedTab2">
+            <!-- Dynamically populated via JS -->
+          </div>
         </div>
       </div>
     </div>
 
     <!-- DRILL B: MCQ -->
     <div class="card p-6 mb-8 bg-white">
-      <div class="flex items-center gap-3 mb-4"><span class="chip" style="background:#f3ecff;color:var(--plum)">Drill B · MCQ</span><h3 class="text-xl">The Distractor Test — Elimination</h3></div>
+      <div class="flex items-center gap-3 mb-4"><span class="chip" style="background:#f3ecff;color:var(--plum)">Drill B · MCQ</span><h3 class="text-xl">The Distractor Test — Elimination (20 Questions)</h3></div>
+      
+      <!-- Tab selectors -->
+      <div class="flex gap-2 mb-4 border-b border-line pb-2">
+        <button class="btn btn-primary text-xs px-3 py-1.5" id="mcqTab1Btn" onclick="switchTab('mcq', 1)">Passage 1: Vertical Farming (1-10)</button>
+        <button class="btn btn-ghost text-xs px-3 py-1.5" id="mcqTab2Btn" onclick="switchTab('mcq', 2)">Passage 2: History of Writing (11-20)</button>
+      </div>
+
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="case-file p-5 mini-pass bg-[#fbf7ec]">
-          <h4 class="font-bold mb-2">The Rise of Vertical Farming</h4>
-          <p class="text-sm text-stone-700 leading-relaxed">As global populations swell and climate change threatens traditional farming, vertical agriculture has emerged as a promising alternative. Unlike conventional farming, which depends on expansive land areas and is highly vulnerable to seasonal weather disruptions, vertical farming stacks crops inside controlled indoor environments. This system utilizes hydroponics or aeroponics—techniques that suspend roots in nutrient-rich water or mist instead of soil. Proponents point out that indoor farms produce crops year-round, generating yields up to ten times greater per square meter than traditional fields, while consuming 95% less water. However, the system faces severe criticism over its high operating costs. Generating the necessary heat and artificial light requires immense electricity, causing some economists to argue that vertical farming is currently only profitable for high-value specialty greens rather than staple grains. Furthermore, the carbon footprint of these facilities can exceed that of traditional farms if they are powered by fossil-fuel grids, a factor that opponents say compromises their environmental credentials.</p>
+        <div>
+          <!-- Tab 1 Passage -->
+          <div class="case-file p-5 mini-pass bg-[#fbf7ec]" id="mcqPassage1">
+            <h4 class="font-bold mb-2">The Rise of Vertical Farming</h4>
+            <p class="text-sm text-stone-700 leading-relaxed">As global populations swell and climate change threatens traditional farming, vertical agriculture has emerged as a promising alternative. Unlike conventional farming, which depends on expansive land areas and is highly vulnerable to seasonal weather disruptions, vertical farming stacks crops inside controlled indoor environments. This system utilizes hydroponics or aeroponics—techniques that suspend roots in nutrient-rich water or mist instead of soil. Proponents point out that indoor farms produce crops year-round, generating yields up to ten times greater per square meter than traditional fields, while consuming 95% less water. However, the system faces severe criticism over its high operating costs. Generating the necessary heat and artificial light requires immense electricity, causing some economists to argue that vertical farming is currently only profitable for high-value specialty greens rather than staple grains. Furthermore, the carbon footprint of these facilities can exceed that of traditional farms if they are powered by fossil-fuel grids, a factor that opponents say compromises their environmental credentials.</p>
+          </div>
+          <!-- Tab 2 Passage -->
+          <div class="case-file p-5 mini-pass bg-[#fbf7ec] hidden" id="mcqPassage2">
+            <h4 class="font-bold mb-2">The History of Writing Systems</h4>
+            <p class="text-sm text-stone-700 leading-relaxed">The development of writing is one of the most critical milestones in human history, marking the transition from prehistory to recorded history. The earliest known writing system, cuneiform, emerged in Mesopotamia (modern-day Iraq) around 3200 BCE. Developed by the Sumerians, cuneiform began as a system of pictographs—simple drawings representing physical objects like sheep, wheat, or jars. Over centuries, these drawings were simplified into abstract wedge-shaped symbols impressed onto wet clay tablets using a stylus. Initially, cuneiform was used strictly for administrative tasks, such as recording tax collections, agricultural yields, and trade transactions. However, as the script evolved, it was adapted to record literature, laws, and historical narratives, including the famous Epic of Gilgamesh. A major breakthrough occurred when writing transitioned from logographic (symbols representing words) to phonographic (symbols representing spoken sounds). This phonetic transition reduced the number of characters required, making writing easier to learn and disseminate. In Egypt, hieroglyphic writing developed independently around the same time, combining logographic, syllabic, and alphabetic elements. By 1050 BCE, the Phoenicians simplified phonetic writing further into a 22-letter alphabet representing only consonant sounds. This Phoenician alphabet was eventually spread by merchants across the Mediterranean, serving as the ancestor of the Greek, Roman, and Cyrillic scripts.</p>
+          </div>
         </div>
-        <div class="space-y-6" id="mcqDrillExpanded">
-          <!-- Dynamically populated via JS -->
+        <div>
+          <!-- Tab 1 Questions -->
+          <div class="space-y-6" id="mcqDrillExpandedTab1">
+            <!-- Dynamically populated via JS -->
+          </div>
+          <!-- Tab 2 Questions -->
+          <div class="space-y-6 hidden" id="mcqDrillExpandedTab2">
+            <!-- Dynamically populated via JS -->
+          </div>
         </div>
       </div>
     </div>
 
     <!-- DRILL C: MATCHING INFORMATION -->
     <div class="card p-6 bg-white">
-      <div class="flex items-center gap-3 mb-4"><span class="chip" style="background:#fdf6e3;color:var(--gold)">Drill C · Matching Info</span><h3 class="text-xl">The Searchlight Test — Paragraph Match</h3></div>
+      <div class="flex items-center gap-3 mb-4"><span class="chip" style="background:#fdf6e3;color:var(--gold)">Drill C · Matching Info</span><h3 class="text-xl">The Searchlight Test — Paragraph Match (16 Questions)</h3></div>
+      
+      <!-- Tab selectors -->
+      <div class="flex gap-2 mb-4 border-b border-line pb-2">
+        <button class="btn btn-primary text-xs px-3 py-1.5" id="matchingTab1Btn" onclick="switchTab('matching', 1)">Passage 1: Biomimicry (1-8)</button>
+        <button class="btn btn-ghost text-xs px-3 py-1.5" id="matchingTab2Btn" onclick="switchTab('matching', 2)">Passage 2: Mapmaking History (9-16)</button>
+      </div>
+
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="case-file p-5 mini-pass bg-[#fbf7ec] overflow-y-auto max-h-[500px]">
-          <h4 class="font-bold mb-2">Biomimicry in Modern Design</h4>
-          <p class="text-sm text-stone-700 leading-relaxed mb-3"><strong>Paragraph A:</strong> For billions of years, nature has solved complex survival challenges through evolutionary adaptation. Biomimicry—the practice of copying designs and systems found in nature to solve human engineering problems—is revolutionizing modern architecture. Designers are realizing that nature's structures are highly efficient, waste-free, and perfectly adapted to their surroundings.</p>
-          <p class="text-sm text-stone-700 leading-relaxed mb-3"><strong>Paragraph B:</strong> One of the most famous examples of biomimicry is the Eastgate Centre in Harare, Zimbabwe. The building has no conventional air conditioning system, yet it remains cool even in extreme African heat. Its architect, Mick Pearce, modeled the ventilation system on the structure of local termite mounds, which utilize complex networks of chimneys to regulate temperature naturally.</p>
-          <p class="text-sm text-stone-700 leading-relaxed mb-3"><strong>Paragraph C:</strong> Another breakthrough occurred in Japan, where engineers redesigning the Shinkansen bullet train faced a noise problem. When exiting tunnels at high speed, the train created a loud atmospheric boom due to compressed air. By redesigning the nose of the train to mimic the beak of the kingfisher bird—which enters water smoothly to hunt fish—engineers successfully eliminated the boom while reducing electricity usage by 15%.</p>
-          <p class="text-sm text-stone-700 leading-relaxed mb-3"><strong>Paragraph D:</strong> While the potential of biomimicry is vast, replicating nature's organic structures presents significant manufacturing challenges. Modern construction methods, which favor straight lines and uniform components, struggle with the irregular, complex curves common in biology. However, advancements in 3D printing and flexible concrete are beginning to bridge this gap.</p>
-          <p class="text-sm text-stone-700 leading-relaxed"><strong>Paragraph E:</strong> Beyond structural performance, biomimicry offers massive ecological benefits. By adopting natural principles, buildings can move from being major consumers of resources to active contributors to the environment. Some experimental designs incorporate algae-filled facades that capture carbon dioxide and generate biofuels, transforming waste into energy.</p>
+        <div>
+          <!-- Tab 1 Passage -->
+          <div class="case-file p-5 mini-pass bg-[#fbf7ec] overflow-y-auto max-h-[500px]" id="matchingPassage1">
+            <h4 class="font-bold mb-2">Biomimicry in Modern Design</h4>
+            <p class="text-sm text-stone-700 leading-relaxed mb-3"><strong>Paragraph A:</strong> For billions of years, nature has solved complex survival challenges through evolutionary adaptation. Biomimicry—the practice of copying designs and systems found in nature to solve human engineering problems—is revolutionizing modern architecture. Designers are realizing that nature's structures are highly efficient, waste-free, and perfectly adapted to their surroundings.</p>
+            <p class="text-sm text-stone-700 leading-relaxed mb-3"><strong>Paragraph B:</strong> One of the most famous examples of biomimicry is the Eastgate Centre in Harare, Zimbabwe. The building has no conventional air conditioning system, yet it remains cool even in extreme African heat. Its architect, Mick Pearce, modeled the ventilation system on the structure of local termite mounds, which utilize complex networks of chimneys to regulate temperature naturally.</p>
+            <p class="text-sm text-stone-700 leading-relaxed mb-3"><strong>Paragraph C:</strong> Another breakthrough occurred in Japan, where engineers redesigning the Shinkansen bullet train faced a noise problem. When exiting tunnels at high speed, the train created a loud atmospheric boom due to compressed air. By redesigning the nose of the train to mimic the beak of the kingfisher bird—which enters water smoothly to hunt fish—engineers successfully eliminated the boom while reducing electricity usage by 15%.</p>
+            <p class="text-sm text-stone-700 leading-relaxed mb-3"><strong>Paragraph D:</strong> While the potential of biomimicry is vast, replicating nature's organic structures presents significant manufacturing challenges. Modern construction methods, which favor straight lines and uniform components, struggle with the irregular, complex curves common in biology. However, advancements in 3D printing and flexible concrete are beginning to bridge this gap.</p>
+            <p class="text-sm text-stone-700 leading-relaxed"><strong>Paragraph E:</strong> Beyond structural performance, biomimicry offers massive ecological benefits. By adopting natural principles, buildings can move from being major consumers of resources to active contributors to the environment. Some experimental designs incorporate algae-filled facades that capture carbon dioxide and generate biofuels, transforming waste into energy.</p>
+          </div>
+          <!-- Tab 2 Passage -->
+          <div class="case-file p-5 mini-pass bg-[#fbf7ec] overflow-y-auto max-h-[500px] hidden" id="matchingPassage2">
+            <h4 class="font-bold mb-2">The History and Impact of Mapmaking</h4>
+            <p class="text-sm text-stone-700 leading-relaxed mb-3"><strong>Paragraph A:</strong> Mapmaking, or cartography, is an ancient discipline that reflects humanity's urge to understand and organize spatial relationships. The earliest surviving maps were not drawn on paper but carved into stone or clay. A famous example is the Babylonian Map of the World, a clay tablet dating from the sixth century BCE, which depicts the world as a flat disc surrounded by water, with Babylon at the center.</p>
+            <p class="text-sm text-stone-700 leading-relaxed mb-3"><strong>Paragraph B:</strong> A scientific revolution in mapmaking occurred in Alexandria in the second century CE. The Greek scholar Ptolemy compiled a massive work titled *Geographia*, introducing the concept of latitude and longitude coordinates and developing projection systems to display a curved sphere on a flat surface. Though his maps contained massive geographical errors, Ptolemy's mathematical approach laid the foundation for scientific cartography.</p>
+            <p class="text-sm text-stone-700 leading-relaxed mb-3"><strong>Paragraph C:</strong> During the Age of Discovery in the 15th and 16th centuries, mapmaking became a vital tool for maritime navigation and imperial expansion. As European explorers charted new coastlines in the Americas and Africa, maps transformed from symbolic art into precise tools of power. Mapmaking centers in Lisbon, Antwerp, and Amsterdam kept new charts secret to maintain commercial advantages.</p>
+            <p class="text-sm text-stone-700 leading-relaxed mb-3"><strong>Paragraph D:</strong> A major breakthrough came in 1569 when Gerardus Mercator introduced his famous map projection. The Mercator projection was a revolutionary tool for navigators because it allowed them to draw a straight line of constant compass bearing. However, this projection severely distorts the size of landmasses, exaggerating areas far from the equator (such as Greenland) while shrinking equatorial continents like Africa.</p>
+            <p class="text-sm text-stone-700 leading-relaxed"><strong>Paragraph E:</strong> Today, mapmaking has entered a digital era powered by global positioning satellites (GPS) and geographic information systems (GIS). Instead of relying on hand-drawn measurements, modern cartographers analyze immense volumes of real-time spatial data. This technology has democratized maps, turning them from exclusive imperial tools into interactive guides available on personal mobile devices.</p>
+          </div>
         </div>
-        <div class="space-y-4" id="matchingDrillExpanded">
-          <!-- Dynamically populated via JS -->
+        <div>
+          <!-- Tab 1 Questions -->
+          <div class="space-y-4" id="matchingDrillExpandedTab1">
+            <!-- Dynamically populated via JS -->
+          </div>
+          <!-- Tab 2 Questions -->
+          <div class="space-y-4 hidden" id="matchingDrillExpandedTab2">
+            <!-- Dynamically populated via JS -->
+          </div>
         </div>
       </div>
     </div>
@@ -675,117 +745,143 @@ document.querySelectorAll('#caseFilters button').forEach(b=>{
   });
 });
 
-// ====== T/F/NG DRILL (EXPANDED) ======
-const tfngData = [
-  {
-    q: "The development of EEG enabled scientists to track brain activity during sleep.",
-    a: "TRUE",
-    keyword: "EEG / track brain activity",
-    paraphrase: "EEG ... allowed researchers to observe brain activity in real-time",
-    why: "TRUE: 'Track' directly maps to 'observe' and 'during sleep' is mapped to 'brain activity in real-time' which was discovered to be a structured cycle."
-  },
-  {
-    q: "A single sleep cycle generally takes less than an hour to complete.",
-    a: "FALSE",
-    keyword: "sleep cycle / less than an hour",
-    paraphrase: "each lasting approximately 90 minutes",
-    why: "FALSE: The text says each cycle lasts about 90 minutes. 90 minutes is more than an hour, directly contradicting 'less than an hour'."
-  },
-  {
-    q: "Deep sleep accounts for the majority of an adult's sleep duration.",
-    a: "FALSE",
-    keyword: "Deep sleep / majority of sleep",
-    paraphrase: "it constitutes only about 20 to 25 percent of a person's total nightly rest",
-    why: "FALSE: The text states that deep sleep constitutes only 20 to 25 percent, which is a minority, not the majority."
-  },
-  {
-    q: "The research team used wireless sensors to collect data from participants.",
-    a: "NOT GIVEN",
-    keyword: "wireless sensors",
-    paraphrase: "No mention in text",
-    why: "NOT GIVEN: The text mentions the introduction of EEG to observe brain activity, but it does not specify whether the sensors were wireless or wired."
-  },
-  {
-    q: "There is unanimous agreement on why REM sleep evolved in humans.",
-    a: "FALSE",
-    keyword: "unanimous agreement",
-    paraphrase: "the exact evolutionary purpose of REM sleep remains a subject of ongoing debate",
-    why: "FALSE: The text states it remains a subject of ongoing debate, which directly contradicts the idea of unanimous agreement."
+// ====== TAB SWITCHING UTILITY ======
+window.switchTab = function(type, tabNum) {
+  const btn1 = document.getElementById(`${type}Tab1Btn`);
+  const btn2 = document.getElementById(`${type}Tab2Btn`);
+  if (tabNum === 1) {
+    btn1.className = 'btn btn-primary text-xs px-3 py-1.5';
+    btn2.className = 'btn btn-ghost text-xs px-3 py-1.5';
+  } else {
+    btn1.className = 'btn btn-ghost text-xs px-3 py-1.5';
+    btn2.className = 'btn btn-primary text-xs px-3 py-1.5';
   }
+
+  const pass1 = document.getElementById(`${type}Passage1`);
+  const pass2 = document.getElementById(`${type}Passage2`);
+  if (pass1 && pass2) {
+    if (tabNum === 1) {
+      pass1.classList.remove('hidden');
+      pass2.classList.add('hidden');
+    } else {
+      pass1.classList.add('hidden');
+      pass2.classList.remove('hidden');
+    }
+  }
+
+  const q1 = document.getElementById(`${type}DrillExpandedTab1`);
+  const q2 = document.getElementById(`${type}DrillExpandedTab2`);
+  if (q1 && q2) {
+    if (tabNum === 1) {
+      q1.classList.remove('hidden');
+      q2.classList.add('hidden');
+    } else {
+      q1.classList.add('hidden');
+      q2.classList.remove('hidden');
+    }
+  }
+};
+
+// ====== DRILL A: T/F/NG DATA ======
+const tfngTab1Data = [
+  { q: "The development of EEG enabled scientists to track brain activity during sleep.", a: "TRUE", keyword: "EEG / track brain activity", paraphrase: "EEG ... allowed researchers to observe brain activity in real-time", why: "TRUE: 'Track' maps to 'observe' and 'during sleep' is supported by tracking it 'in real-time' as a cycle." },
+  { q: "A single sleep cycle generally takes less than an hour to complete.", a: "FALSE", keyword: "sleep cycle / less than an hour", paraphrase: "each lasting approximately 90 minutes", why: "FALSE: The text says each cycle lasts about 90 minutes. 90 minutes is more than an hour, directly contradicting 'less than an hour'." },
+  { q: "Deep sleep accounts for the majority of an adult's sleep duration.", a: "FALSE", keyword: "Deep sleep / majority of sleep", paraphrase: "it constitutes only about 20 to 25 percent of a person's total nightly rest", why: "FALSE: Deep sleep constitutes only 20 to 25 percent, which is a minority, not the majority." },
+  { q: "The research team used wireless sensors to collect data from participants.", a: "NOT GIVEN", keyword: "wireless sensors", paraphrase: "No mention in text", why: "NOT GIVEN: The text mentions EEG to observe brain activity, but does not specify whether the sensors were wireless or wired." },
+  { q: "There is unanimous agreement on why REM sleep evolved in humans.", a: "FALSE", keyword: "unanimous agreement", paraphrase: "the exact evolutionary purpose of REM sleep remains a subject of ongoing debate", why: "FALSE: The text states it remains a subject of ongoing debate, which contradicts the idea of unanimous agreement." },
+  { q: "Studies suggest that REM sleep is essential for emotional processing.", a: "TRUE", keyword: "essential / emotional processing", paraphrase: "widely believed to play a critical role in emotional processing", why: "TRUE: 'Essential' is a paraphrase of 'play a critical role', which is widely believed." },
+  { q: "Stage 3 sleep is characterized by high-frequency brain waves.", a: "FALSE", keyword: "Stage 3 / high-frequency waves", paraphrase: "Stage 3 representing deep slow-wave sleep, characterized by low-frequency delta waves", why: "FALSE: The text states Stage 3 uses 'low-frequency delta waves', which contradicts 'high-frequency'." },
+  { q: "Adults spend more than half of their sleep time in REM sleep.", a: "FALSE", keyword: "more than half / REM sleep", paraphrase: "deep stage [Stage 3 NREM] constitutes ... 20 to 25 percent ... In contrast, REM sleep...", why: "FALSE: The text implies REM sleep is the counterpart to NREM, but does not say it takes up more than half. In fact, NREM stages 1-3 make up the large majority of sleep." },
+  { q: "Vivid dreams can occur during REM sleep.", a: "TRUE", keyword: "Vivid dreams / REM sleep", paraphrase: "REM sleep, where vivid dreaming occurs", why: "TRUE: The text explicitly states that vivid dreaming occurs during REM sleep." },
+  { q: "The duration of each sleep cycle increases as the night progresses.", a: "NOT GIVEN", keyword: "cycle increases / night progresses", paraphrase: "No mention in text", why: "NOT GIVEN: The text states that cycles last approximately 90 minutes, but does not discuss whether their length changes over the course of the night." }
 ];
 
-const tfngContainer = document.getElementById('tfngDrillExpanded');
-tfngData.forEach((item, index) => {
-  const card = document.createElement('div');
-  card.className = 'card p-4 bg-gray-50 border border-stone-200 rounded-xl';
-  card.innerHTML = `
-    <div class="font-medium text-sm mb-2 text-stone-850"><strong>Q${index + 1}.</strong> ${item.q}</div>
-    <div class="flex gap-2">
-      ${["TRUE", "FALSE", "NOT GIVEN"].map(option => `
-        <button class="btn btn-ghost text-xs px-3 py-1.5 tfng-btn" data-val="${option}">${option}</button>
-      `).join('')}
-    </div>
-    <div class="feedback-area mt-3"></div>
-  `;
-  tfngContainer.appendChild(card);
+const tfngTab2Data = [
+  { q: "Hydrothermal vents were first discovered in the Atlantic Ocean.", a: "FALSE", keyword: "discovered / Atlantic Ocean", paraphrase: "First discovered in 1977 near the Galapagos Rift in the Pacific Ocean", why: "FALSE: The passage explicitly states they were first discovered in the Pacific Ocean, which directly contradicts Atlantic Ocean." },
+  { q: "Superheated water released from the vents contains high amounts of minerals.", a: "TRUE", keyword: "superheated water / minerals", paraphrase: "spew superheated, mineral-rich water", why: "TRUE: 'Mineral-rich' is a direct match for containing high amounts of minerals." },
+  { q: "No sunlight is able to reach the depths where hydrothermal vents are located.", a: "TRUE", keyword: "No sunlight / depths", paraphrase: "At depths exceeding 2,500 meters, no sunlight penetrates", why: "TRUE: The text states that at these depths (exceeding 2,500m), no sunlight penetrates." },
+  { q: "Photosynthesis is the primary energy source for deep-sea vent ecosystems.", a: "FALSE", keyword: "Photosynthesis / primary source", paraphrase: "Unlike surface ecosystems that depend on sunlight for photosynthesis, deep-sea vent communities rely on chemosynthesis", why: "FALSE: The text states they rely on chemosynthesis, not photosynthesis." },
+  { q: "Hydrogen sulfide is a vital chemical compound for chemosynthetic bacteria.", a: "TRUE", keyword: "Hydrogen sulfide / vital", paraphrase: "Specialized bacteria oxidize toxic hydrogen sulfide ... converting it into organic matter", why: "TRUE: The bacteria oxidize hydrogen sulfide to convert it into food, making it vital for their survival." },
+  { q: "Giant tubeworms digest food using a highly specialized stomach.", a: "FALSE", keyword: "tubeworms / stomach", paraphrase: "These creatures lack mouths, guts, or digestive tracts", why: "FALSE: The text states they lack mouths, guts, or digestive tracts, meaning they have no stomach." },
+  { q: "Hydrothermal vents can remain active indefinitely without changing location.", a: "FALSE", keyword: "active indefinitely / same location", paraphrase: "unstable geological features. They can shut down abruptly", why: "FALSE: The text states vents are unstable and shut down abruptly, contradicting 'active indefinitely'." },
+  { q: "Tectonic plate movement plays a role in the creation of vents.", a: "TRUE", keyword: "Tectonic plate / creation", paraphrase: "found primarily along mid-ocean ridges ... where tectonic plates pull apart", why: "TRUE: The text confirms they form along ridges where tectonic plates pull apart." },
+  { q: "Vents are more common in the Pacific Ocean than in any other ocean.", a: "NOT GIVEN", keyword: "more common / Pacific Ocean", paraphrase: "No comparison in text", why: "NOT GIVEN: The text mentions they were first discovered in the Pacific Ocean, but does not compare the frequency of vents across different oceans." },
+  { q: "Deep-sea ecosystems will eventually perish if their local vent stops flowing.", a: "TRUE", keyword: "ecosystems perish / vent stops", paraphrase: "shut down abruptly ... causing the local ecosystem to starve and die", why: "TRUE: The text states that when a vent shuts down, the local ecosystem starves and dies." }
+];
 
-  const buttons = card.querySelectorAll('.tfng-btn');
-  const feedbackArea = card.querySelector('.feedback-area');
+function initTFNGDrill(data, containerId) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = ''; // clear
+  data.forEach((item, index) => {
+    const qNum = containerId.endsWith('Tab1') ? index + 1 : index + 11;
+    const card = document.createElement('div');
+    card.className = 'card p-4 bg-gray-50 border border-stone-200 rounded-xl';
+    card.innerHTML = `
+      <div class="font-medium text-sm mb-2 text-stone-850"><strong>Q${qNum}.</strong> ${item.q}</div>
+      <div class="flex gap-2">
+        ${["TRUE", "FALSE", "NOT GIVEN"].map(option => `
+          <button class="btn btn-ghost text-xs px-3 py-1.5 tfng-btn" data-val="${option}">${option}</button>
+        `).join('')}
+      </div>
+      <div class="feedback-area mt-3"></div>
+    `;
+    container.appendChild(card);
 
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      if (card.dataset.completed) return;
-      card.dataset.completed = 'true';
+    const buttons = card.querySelectorAll('.tfng-btn');
+    const feedbackArea = card.querySelector('.feedback-area');
 
-      const chosen = button.dataset.val;
-      const isCorrect = chosen === item.a;
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        if (card.dataset.completed) return;
+        card.dataset.completed = 'true';
 
-      // Color chosen and correct buttons
-      buttons.forEach(btn => {
-        btn.disabled = true;
-        if (btn.dataset.val === item.a) {
-          btn.style.background = '#eef9f5';
-          btn.style.borderColor = 'var(--teal)';
-          btn.style.color = 'var(--teal)';
-          btn.innerHTML = '✓ ' + btn.dataset.val;
-        } else if (btn.dataset.val === chosen && !isCorrect) {
-          btn.style.background = '#fdf0f3';
-          btn.style.borderColor = 'var(--rose)';
-          btn.style.color = 'var(--rose)';
-          btn.innerHTML = '✗ ' + btn.dataset.val;
-        }
-      });
+        const chosen = button.dataset.val;
+        const isCorrect = chosen === item.a;
 
-      // Render Feedback & Synonym Map
-      feedbackArea.innerHTML = `
-        <div class="feedback ${isCorrect ? 'good' : 'bad'} p-3 rounded-lg text-xs leading-relaxed border-l-4">
-          <div class="font-bold text-sm mb-1">${isCorrect ? '✅ Correct!' : '❌ Incorrect.'} Answer: ${item.a}</div>
-          <p class="mb-2 text-stone-600">${item.why}</p>
-          <div class="border-t border-stone-200 pt-2 mt-2">
-            <div class="text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-1">Detective Synonym Map:</div>
-            <table class="w-full text-[11px] text-stone-700 border-collapse">
-              <tr class="bg-stone-100 text-stone-600">
-                <th class="p-1.5 border border-stone-200 text-left font-bold w-1/3">Question Keyword</th>
-                <th class="p-1.5 border border-stone-200 text-left font-bold w-2/3">Passage Paraphrase</th>
-              </tr>
-              <tr>
-                <td class="p-1.5 border border-stone-200 font-semibold">${item.keyword}</td>
-                <td class="p-1.5 border border-stone-200 italic">${item.paraphrase}</td>
-              </tr>
-            </table>
+        buttons.forEach(btn => {
+          btn.disabled = true;
+          if (btn.dataset.val === item.a) {
+            btn.style.background = '#eef9f5';
+            btn.style.borderColor = 'var(--teal)';
+            btn.style.color = 'var(--teal)';
+            btn.innerHTML = '✓ ' + btn.dataset.val;
+          } else if (btn.dataset.val === chosen && !isCorrect) {
+            btn.style.background = '#fdf0f3';
+            btn.style.borderColor = 'var(--rose)';
+            btn.style.color = 'var(--rose)';
+            btn.innerHTML = '✗ ' + btn.dataset.val;
+          }
+        });
+
+        feedbackArea.innerHTML = `
+          <div class="feedback ${isCorrect ? 'good' : 'bad'} p-3 rounded-lg text-xs leading-relaxed border-l-4">
+            <div class="font-bold text-sm mb-1">${isCorrect ? '✅ Correct!' : '❌ Incorrect.'} Answer: ${item.a}</div>
+            <p class="mb-2 text-stone-600">${item.why}</p>
+            <div class="border-t border-stone-200 pt-2 mt-2">
+              <div class="text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-1">Detective Synonym Map:</div>
+              <table class="w-full text-[11px] text-stone-700 border-collapse">
+                <tr class="bg-stone-100 text-stone-600">
+                  <th class="p-1.5 border border-stone-200 text-left font-bold w-1/3">Question Keyword</th>
+                  <th class="p-1.5 border border-stone-200 text-left font-bold w-2/3">Passage Paraphrase</th>
+                </tr>
+                <tr>
+                  <td class="p-1.5 border border-stone-200 font-semibold">${item.keyword}</td>
+                  <td class="p-1.5 border border-stone-200 italic">${item.paraphrase}</td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-      `;
-
-      addXP(isCorrect ? 10 : 2);
+        `;
+        addXP(isCorrect ? 10 : 2);
+      });
     });
   });
-});
+}
 
-// ====== MCQ DRILL (EXPANDED) ======
-const mcqData = [
+// ====== DRILL B: MCQ DATA ======
+const mcqTab1Data = [
   {
-    q: "What is a major advantage of vertical farming over traditional farming?",
+    q: "What makes vertical farming different from traditional farming?",
     options: [
       { l: "A", t: "It requires less electrical power.", c: false, w: "Incorrect. The text actually notes it requires 'immense electricity' due to heating and artificial light requirements." },
       { l: "B", t: "It relies on seasonal weather patterns.", c: false, w: "Incorrect. The text states that vertical farming is 'unlike conventional farming' because it stacks crops inside 'controlled indoor environments' to avoid weather disruptions." },
@@ -803,184 +899,346 @@ const mcqData = [
     ]
   },
   {
-    q: "Some economists believe that vertical farming is currently:",
+    q: "Proponents highlight that vertical farming is highly efficient because it:",
     options: [
-      { l: "A", t: "the only viable way to feed the world's population.", c: false, w: "Incorrect. This is an extreme statement and is not supported by the economists' arguments in the text." },
-      { l: "B", t: "too expensive to be used for growing basic food staples.", c: true, w: "Correct! The text states economists argue it is 'currently only profitable for high-value specialty greens rather than staple grains'." },
-      { l: "C", t: "more environmentally friendly than any other method.", c: false, w: "Incorrect. The text notes that its high carbon footprint can exceed traditional farming, suggesting it isn't always environmentally friendly." },
-      { l: "D", t: "causing a drop in the price of specialty vegetables.", c: false, w: "Incorrect. Price drops are not discussed in the text." }
+      { l: "A", t: "uses soil-less cultivation to grow large grains.", c: false, w: "Incorrect. The text says it is currently profitable for greens, 'rather than staple grains'." },
+      { l: "B", t: "increases yields while maintaining high water levels.", c: false, w: "Incorrect. It reduces water consumption rather than maintaining high levels." },
+      { l: "C", t: "exceeds traditional crops in taste and nutrition.", c: false, w: "Incorrect. The text does not discuss taste or nutritional comparisons." },
+      { l: "D", t: "saves water significantly and produces crops continuously.", c: true, w: "Correct! The passage says indoor farms 'produce crops year-round ... while consuming 95% less water'." }
     ]
   },
   {
-    q: "The author warns that vertical farming can have a negative environmental impact if:",
+    q: "What is a major financial challenge faced by vertical farming?",
     options: [
-      { l: "A", t: "crops are transported over long distances.", c: false, w: "Incorrect. Transportation of crops is not discussed in this passage." },
-      { l: "B", t: "water recycling systems fail.", c: false, w: "Incorrect. Water system failure is not mentioned in the text." },
-      { l: "C", t: "the energy source for the facility is not renewable.", c: true, w: "Correct! The text warns that the carbon footprint 'can exceed that of traditional farms if they are powered by fossil-fuel grids'." },
-      { l: "D", t: "non-organic nutrients are added to the water.", c: false, w: "Incorrect. The organic nature of nutrients is not discussed in the text." }
+      { l: "A", t: "the high cost of electricity for heat and light.", c: true, w: "Correct! The text states that generating heat and artificial light requires 'immense electricity', leading to high operating costs." },
+      { l: "B", t: "purchasing expensive soil mixtures.", c: false, w: "Incorrect. Vertical farming is soil-less, so it doesn't buy soil." },
+      { l: "C", t: "importing nutrients from other countries.", c: false, w: "Incorrect. Nutrient sourcing is not discussed in the text." },
+      { l: "D", t: "government taxation on indoor farms.", c: false, w: "Incorrect. Taxes are not mentioned in the text." }
+    ]
+  },
+  {
+    q: "Economists and critics argue that vertical farming's environmental benefits are undermined if:",
+    options: [
+      { l: "A", t: "it is located in small mid-sized cities.", c: false, w: "Incorrect. Location is not cited as undermining environmental benefits." },
+      { l: "B", t: "the plants are not grown organically.", c: false, w: "Incorrect. Organic credentials are not the main critique here." },
+      { l: "C", t: "the facilities rely on non-renewable energy grids.", c: true, w: "Correct! The text warns that the carbon footprint 'can exceed that of traditional farms if they are powered by fossil-fuel grids'." },
+      { l: "D", t: "hydroponic water is released back into the environment.", c: false, w: "Incorrect. Water release is not criticized in the text." }
+    ]
+  },
+  {
+    q: "Which of the following crops is currently profitable in vertical farms?",
+    options: [
+      { l: "A", t: "staple wheat crops.", c: false, w: "Incorrect. The text says it is profitable for greens, not staple grains like wheat." },
+      { l: "B", t: "high-value specialty greens.", c: true, w: "Correct! The text explicitly mentions it is 'currently only profitable for high-value specialty greens'." },
+      { l: "C", t: "tropical fruit crops.", c: false, w: "Incorrect. Fruits are not mentioned in the text." },
+      { l: "D", t: "high-demand root vegetables.", c: false, w: "Incorrect. Root vegetables are not discussed." }
+    ]
+  },
+  {
+    q: "Critics raise concerns that vertical farming:",
+    options: [
+      { l: "A", t: "cannot grow crops in winter months.", c: false, w: "Incorrect. The text says crops are produced 'year-round'." },
+      { l: "B", t: "has a high carbon footprint if powered by fossil fuels.", c: true, w: "Correct! The passage notes that its carbon footprint can exceed traditional farms if powered by fossil-fuel grids." },
+      { l: "C", t: "uses too many chemical pesticides.", c: false, w: "Incorrect. Pesticide use is not mentioned in the text." },
+      { l: "D", t: "harms local soil structures.", c: false, w: "Incorrect. It is soil-less, so it doesn't affect local soil." }
+    ]
+  },
+  {
+    q: "How much water does vertical farming save compared to traditional farming?",
+    options: [
+      { l: "A", t: "50%", c: false, w: "Incorrect. The saving is much higher." },
+      { l: "B", t: "75%", c: false, w: "Incorrect. The saving is higher." },
+      { l: "C", t: "90%", c: false, w: "Incorrect. Close, but the text specifies 95%." },
+      { l: "D", t: "95%", c: true, w: "Correct! The text explicitly mentions 'consuming 95% less water'." }
+    ]
+  },
+  {
+    q: "Why is vertical farming less vulnerable to seasonal disruptions?",
+    options: [
+      { l: "A", t: "It operates inside controlled environments.", c: true, w: "Correct! The text explains that vertical farming is less vulnerable because it 'stacks crops inside controlled indoor environments'." },
+      { l: "B", t: "It relies on local geothermal heating.", c: false, w: "Incorrect. It relies on standard electricity, not geothermal heat." },
+      { l: "C", t: "It utilizes heavy seasonal rain harvesting.", c: false, w: "Incorrect. Rain harvesting is not mentioned." },
+      { l: "D", t: "It grows crops that are genetically resistant to cold.", c: false, w: "Incorrect. Cold resistance is not discussed." }
+    ]
+  },
+  {
+    q: "Economists suggest that growing staple grains in vertical farms is currently:",
+    options: [
+      { l: "A", t: "highly encouraged by governments.", c: false, w: "Incorrect. Government encouragement is not mentioned." },
+      { l: "B", t: "not financially profitable.", c: true, w: "Correct! The text notes it is only profitable for high-value greens 'rather than staple grains'." },
+      { l: "C", t: "the cheapest option available.", c: false, w: "Incorrect. It is actually too expensive." },
+      { l: "D", t: "restricted due to environmental laws.", c: false, w: "Incorrect. Environmental restrictions are not discussed." }
     ]
   }
 ];
 
-const mcqContainer = document.getElementById('mcqDrillExpanded');
-mcqData.forEach((qItem, qIndex) => {
-  const card = document.createElement('div');
-  card.className = 'card p-4 bg-gray-50 border border-stone-200 rounded-xl';
-  card.innerHTML = `
-    <div class="font-medium text-sm mb-2 text-stone-850"><strong>Q${qIndex + 1}.</strong> ${qItem.q}</div>
-    <div class="space-y-2 options-list">
-      ${qItem.options.map(opt => `
-        <div class="opt mcq-opt text-xs py-2 px-3 border border-stone-200 rounded-lg cursor-pointer bg-white flex gap-2 items-center hover:border-plum hover:bg-[#fbf7ff]" data-l="${opt.l}">
-          <div class="letter w-6 h-6 rounded-md bg-stone-100 flex items-center justify-center font-bold font-serif text-[11px]">${opt.l}</div>
-          <div>${opt.t}</div>
-        </div>
-      `).join('')}
-    </div>
-    <div class="feedback-area mt-3"></div>
-  `;
-  mcqContainer.appendChild(card);
-
-  const optElements = card.querySelectorAll('.mcq-opt');
-  const feedbackArea = card.querySelector('.feedback-area');
-  let qCompleted = false;
-
-  optElements.forEach(optEl => {
-    optEl.addEventListener('click', () => {
-      if (qCompleted) return;
-
-      const chosenLetter = optEl.dataset.l;
-      const option = qItem.options.find(o => o.l === chosenLetter);
-
-      if (option.c) {
-        // Correct Answer
-        qCompleted = true;
-        optElements.forEach(el => {
-          el.classList.add('disabled');
-          if (el.dataset.l === chosenLetter) {
-            el.classList.add('correct');
-            el.querySelector('.letter').style.background = 'var(--teal)';
-            el.querySelector('.letter').style.color = '#fff';
-          }
-        });
-        feedbackArea.innerHTML = `
-          <div class="feedback good p-3 rounded-lg text-xs leading-relaxed border-l-4 border-teal-500">
-            <strong>✅ Correct!</strong> ${option.w}
-          </div>
-        `;
-        addXP(15);
-      } else {
-        // Incorrect Answer
-        optEl.classList.add('wrong');
-        optEl.querySelector('.letter').style.background = 'var(--rose)';
-        optEl.querySelector('.letter').style.color = '#fff';
-        feedbackArea.innerHTML = `
-          <div class="feedback bad p-3 rounded-lg text-xs leading-relaxed border-l-4 border-rose-500">
-            <strong>❌ Distractor Eliminated (${chosenLetter}):</strong> ${option.w}
-          </div>
-        `;
-        addXP(2);
-      }
-    });
-  });
-});
-
-// ====== DRILL C: MATCHING INFORMATION (EXPANDED) ======
-const matchingData = [
+const mcqTab2Data = [
   {
-    q: "a description of how a bird's physical structure helped solve a transportation issue",
-    a: "C",
-    keyword: "bird's physical structure / transportation issue",
-    matchText: "redesigning the nose of the train to mimic the beak of the kingfisher bird... successfully eliminated the boom",
-    why: "Paragraph C describes how engineers copied the kingfisher's beak (bird's physical structure) to resolve the bullet train's loud boom (transportation issue)."
+    q: "The transition from prehistory to recorded history was defined by:",
+    options: [
+      { l: "A", t: "the invention of agricultural farming.", c: false, w: "Incorrect. Agriculture is not discussed as defining this transition." },
+      { l: "B", t: "the development of writing systems.", c: true, w: "Correct! The text states that the development of writing marked 'the transition from prehistory to recorded history'." },
+      { l: "C", t: "the establishment of Sumerian cities.", c: false, w: "Incorrect. City establishment is not mentioned." },
+      { l: "D", t: "the creation of early clay tablets.", c: false, w: "Incorrect. While clay tablets were used, the general 'development of writing' is what defined the transition." }
+    ]
   },
   {
-    q: "a mention of building designs that can generate energy from waste",
-    a: "E",
-    keyword: "generate energy from waste",
-    matchText: "experimental designs incorporate algae-filled facades that capture carbon dioxide and generate biofuels, transforming waste into energy",
-    why: "Paragraph E discusses designs using algae to capture CO2 and create biofuels, explicitly described as 'transforming waste into energy'."
+    q: "Where did the earliest known writing system originate?",
+    options: [
+      { l: "A", t: "Ancient Egypt", c: false, w: "Incorrect. Egypt developed writing independently, but cuneiform in Mesopotamia is cited as the earliest." },
+      { l: "B", t: "Rome", c: false, w: "Incorrect. Roman script came much later." },
+      { l: "C", t: "Mesopotamia", c: true, w: "Correct! The text states cuneiform emerged in Mesopotamia around 3200 BCE." },
+      { l: "D", t: "Greece", c: false, w: "Incorrect. Greek script was derived later." }
+    ]
   },
   {
-    q: "an explanation of the difficulties in constructing complex natural shapes",
-    a: "D",
-    keyword: "difficulties in constructing complex shapes",
-    matchText: "replicating nature's organic structures presents significant manufacturing challenges. Modern construction methods... struggle with the irregular, complex curves",
-    why: "Paragraph D outlines the 'manufacturing challenges' and 'struggle' related to replicating nature's organic structures and curves in modern building construction."
+    q: "Sumerian cuneiform originally consisted of:",
+    options: [
+      { l: "A", t: "simple drawings representing objects.", c: true, w: "Correct! Cuneiform 'began as a system of pictographs—simple drawings representing physical objects'." },
+      { l: "B", t: "abstract wedge-shaped characters.", c: false, w: "Incorrect. Abstract characters came later as the drawings were simplified over centuries." },
+      { l: "C", t: "alphabetic letters representing sounds.", c: false, w: "Incorrect. Phonographic writing was a later breakthrough." },
+      { l: "D", t: "literature inscribed on stone walls.", c: false, w: "Incorrect. It was recorded on clay tablets, not stone walls." }
+    ]
   },
   {
-    q: "a reference to a temperature regulation system inspired by insects",
-    a: "B",
-    keyword: "temperature regulation / inspired by insects",
-    matchText: "modeled the ventilation system on the structure of local termite mounds, which utilize complex networks of chimneys to regulate temperature",
-    why: "Paragraph B explains how the Eastgate Centre's cooling/ventilation system was modeled after termite mounds (insects) to regulate temperature without air conditioning."
+    q: "How were cuneiform symbols physically recorded?",
+    options: [
+      { l: "A", t: "by carving into marble blocks.", c: false, w: "Incorrect. It was recorded on clay." },
+      { l: "B", t: "using ink brushes on papyrus sheets.", c: false, w: "Incorrect. Papyrus was Egyptian, not Sumerian cuneiform." },
+      { l: "C", t: "by painting on cave walls.", c: false, w: "Incorrect. Cuneiform was recorded on portable tablets." },
+      { l: "D", t: "by pressing a stylus into wet clay.", c: true, w: "Correct! The symbols were 'impressed onto wet clay tablets using a stylus'." }
+    ]
+  },
+  {
+    q: "In its earliest stages, cuneiform was primarily used for:",
+    options: [
+      { l: "A", t: "recording royal literature and poetry.", c: false, w: "Incorrect. Literature like Gilgamesh came later as the script evolved." },
+      { l: "B", t: "administrative and trade records.", c: true, w: "Correct! It was 'used strictly for administrative tasks, such as recording tax collections, agricultural yields, and trade transactions'." },
+      { l: "C", t: "communicating between different empires.", c: false, w: "Incorrect. Diplomatic communication is not discussed." },
+      { l: "D", t: "religious ceremonies.", c: false, w: "Incorrect. It was administrative." }
+    ]
+  },
+  {
+    q: "The Epic of Gilgamesh is mentioned as an example of cuneiform used for:",
+    options: [
+      { l: "A", t: "tax collections.", c: false, w: "Incorrect. Gilgamesh is a literary story." },
+      { l: "B", t: "astronomical recordings.", c: false, w: "Incorrect. Astronomy is not mentioned." },
+      { l: "C", t: "literature and narratives.", c: true, w: "Correct! The text states it was 'adapted to record literature, laws, and historical narratives, including the famous Epic of Gilgamesh'." },
+      { l: "D", t: "military reports.", c: false, w: "Incorrect. It was literary." }
+    ]
+  },
+  {
+    q: "What was the main benefit of transitioning from logographic to phonographic writing?",
+    options: [
+      { l: "A", t: "It made writing easier to learn by reducing characters.", c: true, w: "Correct! The phonetic transition 'reduced the number of characters required, making writing easier to learn and disseminate'." },
+      { l: "B", t: "It allowed for colored ink drawings.", c: false, w: "Incorrect. Colors are not discussed." },
+      { l: "C", t: "It made tablets lighter to carry.", c: false, w: "Incorrect. The material remained clay." },
+      { l: "D", t: "It helped Sumerians speak Greek.", c: false, w: "Incorrect. Greek is unrelated." }
+    ]
+  },
+  {
+    q: "Egyptian hieroglyphic writing was unique because it:",
+    options: [
+      { l: "A", t: "was written entirely in vowels.", c: false, w: "Incorrect. Hieroglyphs are not vowels only." },
+      { l: "B", t: "was the first phonetic alphabet.", c: false, w: "Incorrect. Phoenician was the first simplified alphabet." },
+      { l: "C", t: "combined logographic, syllabic, and alphabetic elements.", c: true, w: "Correct! The text confirms Egypt's writing combined 'logographic, syllabic, and alphabetic elements'." },
+      { l: "D", t: "did not use symbols representing physical objects.", c: false, w: "Incorrect. Hieroglyphs are highly symbolic pictographs." }
+    ]
+  },
+  {
+    q: "How did the Phoenicians simplify phonetic writing?",
+    options: [
+      { l: "A", t: "by introducing spaces between words.", c: false, w: "Incorrect. Spaces are not mentioned." },
+      { l: "B", t: "by creating a 22-letter consonant alphabet.", c: true, w: "Correct! The text says the Phoenicians 'simplified phonetic writing further into a 22-letter alphabet representing only consonant sounds'." },
+      { l: "C", t: "by translating Egyptian hieroglyphs.", c: false, w: "Incorrect. Translation is not discussed." },
+      { l: "D", t: "by replacing clay with papyrus.", c: false, w: "Incorrect. The alphabet itself was the simplification, not the material." }
+    ]
+  },
+  {
+    q: "The Phoenician alphabet was spread across the Mediterranean primarily by:",
+    options: [
+      { l: "A", t: "merchants and traders.", c: true, w: "Correct! The Phoenician alphabet 'was eventually spread by merchants across the Mediterranean'." },
+      { l: "B", t: "invading military forces.", c: false, w: "Incorrect. The spread was commercial, not military." },
+      { l: "C", t: "Greek explorers.", c: false, w: "Incorrect. Greeks adopted it later, but merchants spread it first." },
+      { l: "D", t: "religious missionaries.", c: false, w: "Incorrect. It was spread by trade." }
+    ]
   }
 ];
 
-const matchingContainer = document.getElementById('matchingDrillExpanded');
-matchingData.forEach((item, index) => {
-  const card = document.createElement('div');
-  card.className = 'card p-4 bg-gray-50 border border-stone-200 rounded-xl';
-  card.innerHTML = `
-    <div class="font-medium text-sm mb-2 text-stone-850"><strong>Q${index + 1}.</strong> Find paragraph containing: <br><span class="italic text-stone-600">"${item.q}"</span></div>
-    <div class="flex gap-2">
-      ${["A", "B", "C", "D", "E"].map(p => `
-        <button class="btn btn-ghost text-xs px-3 py-1.5 match-btn font-bold" data-val="${p}">Paragraph ${p}</button>
-      `).join('')}
-    </div>
-    <div class="feedback-area mt-3"></div>
-  `;
-  matchingContainer.appendChild(card);
+function initMCQDrill(data, containerId) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = '';
+  data.forEach((qItem, qIndex) => {
+    const qNum = containerId.endsWith('Tab1') ? qIndex + 1 : qIndex + 11;
+    const card = document.createElement('div');
+    card.className = 'card p-4 bg-gray-50 border border-stone-200 rounded-xl';
+    card.innerHTML = `
+      <div class="font-medium text-sm mb-2 text-stone-850"><strong>Q${qNum}.</strong> ${qItem.q}</div>
+      <div class="space-y-2 options-list">
+        ${qItem.options.map(opt => `
+          <div class="opt mcq-opt text-xs py-2 px-3 border border-stone-200 rounded-lg cursor-pointer bg-white flex gap-2 items-center hover:border-plum hover:bg-[#fbf7ff]" data-l="${opt.l}">
+            <div class="letter w-6 h-6 rounded-md bg-stone-100 flex items-center justify-center font-bold font-serif text-[11px]">${opt.l}</div>
+            <div class="option-text">${opt.t}</div>
+          </div>
+        `).join('')}
+      </div>
+      <div class="feedback-area mt-3"></div>
+    `;
+    container.appendChild(card);
 
-  const buttons = card.querySelectorAll('.match-btn');
-  const feedbackArea = card.querySelector('.feedback-area');
+    const optElements = card.querySelectorAll('.mcq-opt');
+    const feedbackArea = card.querySelector('.feedback-area');
+    let qCompleted = false;
 
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      if (card.dataset.completed) return;
-      card.dataset.completed = 'true';
+    optElements.forEach(optEl => {
+      optEl.addEventListener('click', () => {
+        if (qCompleted) return;
 
-      const chosen = button.dataset.val;
-      const isCorrect = chosen === item.a;
+        const chosenLetter = optEl.dataset.l;
+        const option = qItem.options.find(o => o.l === chosenLetter);
 
-      buttons.forEach(btn => {
-        btn.disabled = true;
-        if (btn.dataset.val === item.a) {
-          btn.style.background = '#eef9f5';
-          btn.style.borderColor = 'var(--teal)';
-          btn.style.color = 'var(--teal)';
-          btn.innerHTML = '✓ Para ' + btn.dataset.val;
-        } else if (btn.dataset.val === chosen && !isCorrect) {
-          btn.style.background = '#fdf0f3';
-          btn.style.borderColor = 'var(--rose)';
-          btn.style.color = 'var(--rose)';
-          btn.innerHTML = '✗ Para ' + btn.dataset.val;
+        if (option.c) {
+          qCompleted = true;
+          optElements.forEach(el => {
+            el.classList.add('disabled');
+            if (el.dataset.l === chosenLetter) {
+              el.classList.add('correct');
+              el.querySelector('.letter').style.background = 'var(--teal)';
+              el.querySelector('.letter').style.color = '#fff';
+            }
+          });
+          feedbackArea.innerHTML = `
+            <div class="feedback good p-3 rounded-lg text-xs leading-relaxed border-l-4 border-teal-500">
+              <strong>✅ Correct!</strong> ${option.w}
+            </div>
+          `;
+          addXP(15);
+        } else {
+          optEl.classList.add('wrong');
+          optEl.querySelector('.letter').style.background = 'var(--rose)';
+          optEl.querySelector('.letter').style.color = '#fff';
+          feedbackArea.innerHTML = `
+            <div class="feedback bad p-3 rounded-lg text-xs leading-relaxed border-l-4 border-rose-500">
+              <strong>❌ Distractor Eliminated (${chosenLetter}):</strong> ${option.w}
+            </div>
+          `;
+          addXP(2);
         }
       });
-
-      feedbackArea.innerHTML = `
-        <div class="feedback ${isCorrect ? 'good' : 'bad'} p-3 rounded-lg text-xs leading-relaxed border-l-4">
-          <div class="font-bold text-sm mb-1">${isCorrect ? '✅ Correct Paragraph Match!' : '❌ Incorrect Paragraph.'} Answer: Paragraph ${item.a}</div>
-          <p class="mb-2 text-stone-600">${item.why}</p>
-          <div class="border-t border-stone-200 pt-2 mt-2">
-            <div class="text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-1">Detective Synonym Map:</div>
-            <table class="w-full text-[11px] text-stone-700 border-collapse">
-              <tr class="bg-stone-100 text-stone-600">
-                <th class="p-1.5 border border-stone-200 text-left font-bold w-1/3">Question Keyword</th>
-                <th class="p-1.5 border border-stone-200 text-left font-bold w-2/3">Matching Text in Paragraph ${item.a}</th>
-              </tr>
-              <tr>
-                <td class="p-1.5 border border-stone-200 font-semibold">${item.keyword}</td>
-                <td class="p-1.5 border border-stone-200 italic">${item.matchText}</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      `;
-
-      addXP(isCorrect ? 10 : 2);
     });
   });
-});
+}
+
+// ====== DRILL C: MATCHING DATA ======
+const matchingTab1Data = [
+  { q: "a description of how a bird's physical structure helped solve a transportation issue", a: "C", keyword: "bird's physical structure / transportation issue", matchText: "redesigning the nose of the train to mimic the beak of the kingfisher bird... successfully eliminated the boom", why: "Paragraph C describes how engineers copied the kingfisher's beak (bird's physical structure) to resolve the bullet train's loud boom (transportation issue)." },
+  { q: "a mention of building designs that can generate energy from waste", a: "E", keyword: "generate energy from waste", matchText: "experimental designs incorporate algae-filled facades that capture carbon dioxide and generate biofuels, transforming waste into energy", why: "Paragraph E discusses designs using algae to capture CO2 and create biofuels, described as 'transforming waste into energy'." },
+  { q: "an explanation of the difficulties in constructing complex natural shapes", a: "D", keyword: "difficulties in constructing complex shapes", matchText: "replicating nature's organic structures presents significant manufacturing challenges. Modern construction methods... struggle with the irregular, complex curves", why: "Paragraph D outlines the manufacturing challenges and struggle related to replicating nature's organic structures and curves in modern building construction." },
+  { q: "a reference to a temperature regulation system inspired by insects", a: "B", keyword: "temperature regulation / inspired by insects", matchText: "modeled the ventilation system on the structure of local termite mounds, which utilize complex networks of chimneys to regulate temperature", why: "Paragraph B explains how the Eastgate Centre's cooling/ventilation system was modeled after termite mounds (insects) to regulate temperature without air conditioning." },
+  { q: "an explanation of how biomimicry is inspired by natural efficiency", a: "A", keyword: "inspired by natural efficiency", matchText: "nature has solved complex survival challenges ... Designers are realizing that nature's structures are highly efficient, waste-free", why: "Paragraph A explains that biomimicry utilizes nature's highly efficient, waste-free structures to solve human engineering challenges." },
+  { q: "a mention of newer technologies helping to create biological shapes in building", a: "D", keyword: "technologies / biological shapes", matchText: "advancements in 3D printing and flexible concrete are beginning to bridge this gap", why: "Paragraph D notes that modern advancements in 3D printing and concrete help bridge the gap in manufacturing complex organic shapes." },
+  { q: "a description of a train part designed to decrease energy use", a: "C", keyword: "train part / decrease energy use", matchText: "redesigning the nose of the train ... successfully eliminated the boom while reducing electricity usage by 15%", why: "Paragraph C outlines that redesigning the train nose to match the kingfisher's beak reduced electricity usage by 15%." },
+  { q: "a vision of architecture moving towards environmental contribution", a: "E", keyword: "environmental contribution", matchText: "buildings can move from being major consumers of resources to active contributors to the environment", why: "Paragraph E describes how biomimicry allows future buildings to transform from resource consumers to active environmental contributors." }
+];
+
+const matchingTab2Data = [
+  { q: "a reference to coordinates being introduced to cartography", a: "B", keyword: "coordinates / cartography", matchText: "introducing the concept of latitude and longitude coordinates", why: "Paragraph B explains that Ptolemy introduced coordinates (latitude and longitude) to mapmaking." },
+  { q: "a mention of maps being kept hidden for economic reasons", a: "C", keyword: "maps kept secret / economic reasons", matchText: "Mapmaking centers in Lisbon, Antwerp, and Amsterdam kept new charts secret to maintain commercial advantages", why: "Paragraph C notes that mapmaking centers kept charts secret to protect their commercial advantages." },
+  { q: "a criticism of geographical size distortions in a famous map style", a: "D", keyword: "size distortions / famous map style", matchText: "Mercator projection ... severely distorts the size of landmasses, exaggerating areas far from the equator", why: "Paragraph D critiques the famous Mercator projection for severely distorting the size of landmasses." },
+  { q: "an explanation of how maps have become accessible to everyday people", a: "E", keyword: "accessible / everyday people", matchText: "democratized maps, turning them ... into interactive guides available on personal mobile devices", why: "Paragraph E explains that digital technology has democratized maps, making them interactive guides on mobile devices for everyone." },
+  { q: "a description of the earliest map formats carved in solid materials", a: "A", keyword: "earliest map formats / solid materials", matchText: "earliest surviving maps were not drawn on paper but carved into stone or clay", why: "Paragraph A states that the oldest surviving maps were carved into stone or clay." },
+  { q: "how explorers used maps to navigate and claim power", a: "C", keyword: "navigate / claim power", matchText: "mapmaking became a vital tool for maritime navigation and imperial expansion ... precise tools of power", why: "Paragraph C explains that cartography became a precise tool of power and navigation for explorers during the Age of Discovery." },
+  { q: "how modern mapping relies on satellite technology and data analysis", a: "E", keyword: "satellite technology / data analysis", matchText: "digital era powered by global positioning satellites (GPS) ... cartographers analyze immense volumes of real-time spatial data", why: "Paragraph E describes modern digital cartography relying on GPS and GIS data analysis." },
+  { q: "the ancient map depicting Babylon at the center of the world", a: "A", keyword: "Babylon / center of the world", matchText: "Babylonian Map of the World ... depicts the world as a flat disc ... with Babylon at the center", why: "Paragraph A outlines the Babylonian Map of the World, which placed Babylon at the center of a flat disc." }
+];
+
+function initMatchingDrill(data, containerId) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = '';
+  data.forEach((item, index) => {
+    const qNum = containerId.endsWith('Tab1') ? index + 1 : index + 9;
+    const card = document.createElement('div');
+    card.className = 'card p-4 bg-gray-50 border border-stone-200 rounded-xl';
+    card.innerHTML = `
+      <div class="font-medium text-sm mb-2 text-stone-850"><strong>Q${qNum}.</strong> Find paragraph containing: <br><span class="italic text-stone-600">"${item.q}"</span></div>
+      <div class="flex flex-wrap gap-2">
+        ${["A", "B", "C", "D", "E"].map(p => `
+          <button class="btn btn-ghost text-xs px-3 py-1.5 match-btn font-bold" data-val="${p}">Paragraph ${p}</button>
+        `).join('')}
+      </div>
+      <div class="feedback-area mt-3"></div>
+    `;
+    container.appendChild(card);
+
+    const buttons = card.querySelectorAll('.match-btn');
+    const feedbackArea = card.querySelector('.feedback-area');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        if (card.dataset.completed) return;
+        card.dataset.completed = 'true';
+
+        const chosen = button.dataset.val;
+        const isCorrect = chosen === item.a;
+
+        buttons.forEach(btn => {
+          btn.disabled = true;
+          if (btn.dataset.val === item.a) {
+            btn.style.background = '#eef9f5';
+            btn.style.borderColor = 'var(--teal)';
+            btn.style.color = 'var(--teal)';
+            btn.innerHTML = '✓ Para ' + btn.dataset.val;
+          } else if (btn.dataset.val === chosen && !isCorrect) {
+            btn.style.background = '#fdf0f3';
+            btn.style.borderColor = 'var(--rose)';
+            btn.style.color = 'var(--rose)';
+            btn.innerHTML = '✗ Para ' + btn.dataset.val;
+          }
+        });
+
+        feedbackArea.innerHTML = `
+          <div class="feedback ${isCorrect ? 'good' : 'bad'} p-3 rounded-lg text-xs leading-relaxed border-l-4">
+            <div class="font-bold text-sm mb-1">${isCorrect ? '✅ Correct Paragraph Match!' : '❌ Incorrect Paragraph.'} Answer: Paragraph ${item.a}</div>
+            <p class="mb-2 text-stone-600">${item.why}</p>
+            <div class="border-t border-stone-200 pt-2 mt-2">
+              <div class="text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-1">Detective Synonym Map:</div>
+              <table class="w-full text-[11px] text-stone-700 border-collapse">
+                <tr class="bg-stone-100 text-stone-600">
+                  <th class="p-1.5 border border-stone-200 text-left font-bold w-1/3">Question Keyword</th>
+                  <th class="p-1.5 border border-stone-200 text-left font-bold w-2/3">Matching Text in Paragraph ${item.a}</th>
+                </tr>
+                <tr>
+                  <td class="p-1.5 border border-stone-200 font-semibold">${item.keyword}</td>
+                  <td class="p-1.5 border border-stone-200 italic">${item.matchText}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        `;
+        addXP(isCorrect ? 10 : 2);
+      });
+    });
+  });
+}
+
+// ====== DRILLS INITIALIZER ======
+function initAllExpandedDrills() {
+  initTFNGDrill(tfngTab1Data, 'tfngDrillExpandedTab1');
+  initTFNGDrill(tfngTab2Data, 'tfngDrillExpandedTab2');
+  
+  initMCQDrill(mcqTab1Data, 'mcqDrillExpandedTab1');
+  initMCQDrill(mcqTab2Data, 'mcqDrillExpandedTab2');
+  
+  initMatchingDrill(matchingTab1Data, 'matchingDrillExpandedTab1');
+  initMatchingDrill(matchingTab2Data, 'matchingDrillExpandedTab2');
+}
+
+// Run initializer on load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAllExpandedDrills);
+} else {
+  initAllExpandedDrills();
+}
 
 // ====== BOSS FIGHT ======
 const bossQs = [
