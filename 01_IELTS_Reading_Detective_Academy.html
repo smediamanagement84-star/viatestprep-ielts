@@ -87,6 +87,7 @@
   .case-card-compact .preview-tag{font-size:.7rem;color:var(--plum);font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-top:auto}
   body.modal-open{overflow:hidden}
 </style>
+  <script src="security.js"></script>
 </head>
 <body>
 
@@ -204,7 +205,7 @@
     <p class="text-stone-600 max-w-3xl">The IELTS Academic Reading paper draws from <strong>14 official question types</strong>. Each card opens to show: the strategy (Move), the common trap, the rule, AND a full IELTS-style passage with the real question, answer, and step-by-step walkthrough.</p>
 
     <div class="flex flex-wrap gap-2 mt-4" id="caseFilters">
-      <button class="btn btn-ghost text-xs" data-filter="all">All 14</button>
+      <button class="btn btn-ghost text-xs glow" data-filter="all">All 14</button>
       <button class="btn btn-ghost text-xs" data-filter="choice">Selection</button>
       <button class="btn btn-ghost text-xs" data-filter="match">Matching</button>
       <button class="btn btn-ghost text-xs" data-filter="complete">Completion</button>
@@ -217,23 +218,52 @@
   <!-- DRILLS -->
   <section id="drills" class="mb-14">
     <h2 class="text-3xl mb-2">⑤ Live Drills</h2>
+    <p class="text-stone-600 max-w-3xl mb-6">Master the three most challenging reading question types with dedicated passages. Click options to reveal detailed Synonym Maps and Distractor Elimination explanations.</p>
 
-    <div class="card p-6 mt-6">
-      <div class="flex items-center gap-3 mb-3"><span class="chip" style="background:#fdf0f3;color:var(--rose)">Drill A · T / F / NG</span><h3 class="text-xl">The Logic Test — "Prove It"</h3></div>
-      <div class="case-file p-4 mt-2 mini-pass">
-        <p><strong>Passage:</strong> "The research project was hailed as a remarkable success by the scientific community when its findings were published in 2021. Although the team faced funding shortages mid-way, the lead researcher, Dr. Patel, attributed the breakthrough to the diversity of the research group. The project's methods are now being adopted by three universities in Europe."</p>
+    <!-- DRILL A: T/F/NG -->
+    <div class="card p-6 mb-8 bg-white">
+      <div class="flex items-center gap-3 mb-4"><span class="chip" style="background:#fdf0f3;color:var(--rose)">Drill A · T / F / NG</span><h3 class="text-xl">The Logic Test — "Prove It"</h3></div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="case-file p-5 mini-pass bg-[#fbf7ec]">
+          <h4 class="font-bold mb-2">The Architecture of Sleep</h4>
+          <p class="text-sm text-stone-700 leading-relaxed">Scientific understanding of sleep was revolutionized in the mid-20th century by the introduction of Electroencephalography (EEG), which allowed researchers to observe brain activity in real-time. Instead of being a uniform state of inactivity, sleep was discovered to be a highly structured cycle. Typically, a healthy adult transitions through four to five distinct cycles per night, each lasting approximately 90 minutes. These cycles are divided into two main categories: Non-Rapid Eye Movement (NREM) and Rapid Eye Movement (REM) sleep. NREM sleep is further split into three stages, with Stage 3 representing deep slow-wave sleep, characterized by low-frequency delta waves. Studies show that this deep stage is crucial for physical restoration, hormone regulation, and memory consolidation, although it constitutes only about 20 to 25 percent of a person's total nightly rest. In contrast, REM sleep, where vivid dreaming occurs, is marked by high-frequency brain activity mirroring wakefulness. Despite extensive research, the exact evolutionary purpose of REM sleep remains a subject of ongoing debate, though it is widely believed to play a critical role in emotional processing and cognitive development.</p>
+        </div>
+        <div class="space-y-4" id="tfngDrillExpanded">
+          <!-- Dynamically populated via JS -->
+        </div>
       </div>
-      <div class="space-y-3 mt-4" id="tfngDrill"></div>
     </div>
 
-    <div class="card p-6 mt-6">
-      <div class="flex items-center gap-3 mb-3"><span class="chip" style="background:#f3ecff;color:var(--plum)">Drill B · MCQ</span><h3 class="text-xl">The Distractor Test — Elimination</h3></div>
-      <div class="case-file p-4 mt-2 mini-pass">
-        <p>"Urban cycling is <em>often</em> a practical solution to congestion in mid-sized cities, although critics note that infrastructure costs can be substantial. In several Northern European cities, dedicated cycle lanes have been linked to a measurable reduction in commute times, but researchers caution that the gains depend heavily on local geography and weather."</p>
+    <!-- DRILL B: MCQ -->
+    <div class="card p-6 mb-8 bg-white">
+      <div class="flex items-center gap-3 mb-4"><span class="chip" style="background:#f3ecff;color:var(--plum)">Drill B · MCQ</span><h3 class="text-xl">The Distractor Test — Elimination</h3></div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="case-file p-5 mini-pass bg-[#fbf7ec]">
+          <h4 class="font-bold mb-2">The Rise of Vertical Farming</h4>
+          <p class="text-sm text-stone-700 leading-relaxed">As global populations swell and climate change threatens traditional farming, vertical agriculture has emerged as a promising alternative. Unlike conventional farming, which depends on expansive land areas and is highly vulnerable to seasonal weather disruptions, vertical farming stacks crops inside controlled indoor environments. This system utilizes hydroponics or aeroponics—techniques that suspend roots in nutrient-rich water or mist instead of soil. Proponents point out that indoor farms produce crops year-round, generating yields up to ten times greater per square meter than traditional fields, while consuming 95% less water. However, the system faces severe criticism over its high operating costs. Generating the necessary heat and artificial light requires immense electricity, causing some economists to argue that vertical farming is currently only profitable for high-value specialty greens rather than staple grains. Furthermore, the carbon footprint of these facilities can exceed that of traditional farms if they are powered by fossil-fuel grids, a factor that opponents say compromises their environmental credentials.</p>
+        </div>
+        <div class="space-y-6" id="mcqDrillExpanded">
+          <!-- Dynamically populated via JS -->
+        </div>
       </div>
-      <p class="font-semibold mt-3 mb-2">According to the passage, urban cycling is best described as:</p>
-      <div class="space-y-2" id="mcqDrill"></div>
-      <div id="mcqFeedback" class="mt-3"></div>
+    </div>
+
+    <!-- DRILL C: MATCHING INFORMATION -->
+    <div class="card p-6 bg-white">
+      <div class="flex items-center gap-3 mb-4"><span class="chip" style="background:#fdf6e3;color:var(--gold)">Drill C · Matching Info</span><h3 class="text-xl">The Searchlight Test — Paragraph Match</h3></div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="case-file p-5 mini-pass bg-[#fbf7ec] overflow-y-auto max-h-[500px]">
+          <h4 class="font-bold mb-2">Biomimicry in Modern Design</h4>
+          <p class="text-sm text-stone-700 leading-relaxed mb-3"><strong>Paragraph A:</strong> For billions of years, nature has solved complex survival challenges through evolutionary adaptation. Biomimicry—the practice of copying designs and systems found in nature to solve human engineering problems—is revolutionizing modern architecture. Designers are realizing that nature's structures are highly efficient, waste-free, and perfectly adapted to their surroundings.</p>
+          <p class="text-sm text-stone-700 leading-relaxed mb-3"><strong>Paragraph B:</strong> One of the most famous examples of biomimicry is the Eastgate Centre in Harare, Zimbabwe. The building has no conventional air conditioning system, yet it remains cool even in extreme African heat. Its architect, Mick Pearce, modeled the ventilation system on the structure of local termite mounds, which utilize complex networks of chimneys to regulate temperature naturally.</p>
+          <p class="text-sm text-stone-700 leading-relaxed mb-3"><strong>Paragraph C:</strong> Another breakthrough occurred in Japan, where engineers redesigning the Shinkansen bullet train faced a noise problem. When exiting tunnels at high speed, the train created a loud atmospheric boom due to compressed air. By redesigning the nose of the train to mimic the beak of the kingfisher bird—which enters water smoothly to hunt fish—engineers successfully eliminated the boom while reducing electricity usage by 15%.</p>
+          <p class="text-sm text-stone-700 leading-relaxed mb-3"><strong>Paragraph D:</strong> While the potential of biomimicry is vast, replicating nature's organic structures presents significant manufacturing challenges. Modern construction methods, which favor straight lines and uniform components, struggle with the irregular, complex curves common in biology. However, advancements in 3D printing and flexible concrete are beginning to bridge this gap.</p>
+          <p class="text-sm text-stone-700 leading-relaxed"><strong>Paragraph E:</strong> Beyond structural performance, biomimicry offers massive ecological benefits. By adopting natural principles, buildings can move from being major consumers of resources to active contributors to the environment. Some experimental designs incorporate algae-filled facades that capture carbon dioxide and generate biofuels, transforming waste into energy.</p>
+        </div>
+        <div class="space-y-4" id="matchingDrillExpanded">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </div>
     </div>
   </section>
 
@@ -645,62 +675,311 @@ document.querySelectorAll('#caseFilters button').forEach(b=>{
   });
 });
 
-// ====== T/F/NG DRILL ======
-const tfng = [
-  {q:"Dr. Patel discovered the breakthrough alone.", a:"FALSE", why:"The passage credits the breakthrough to the diversity of the research group — actively contradicting 'alone'."},
-  {q:"The project was funded entirely by the government.", a:"NOT GIVEN", why:"The passage mentions funding shortages but does not specify funding source."},
-  {q:"Three European universities are now using the project's methods.", a:"TRUE", why:"Direct paraphrase: 'now being adopted by three universities in Europe.'"},
+// ====== T/F/NG DRILL (EXPANDED) ======
+const tfngData = [
+  {
+    q: "The development of EEG enabled scientists to track brain activity during sleep.",
+    a: "TRUE",
+    keyword: "EEG / track brain activity",
+    paraphrase: "EEG ... allowed researchers to observe brain activity in real-time",
+    why: "TRUE: 'Track' directly maps to 'observe' and 'during sleep' is mapped to 'brain activity in real-time' which was discovered to be a structured cycle."
+  },
+  {
+    q: "A single sleep cycle generally takes less than an hour to complete.",
+    a: "FALSE",
+    keyword: "sleep cycle / less than an hour",
+    paraphrase: "each lasting approximately 90 minutes",
+    why: "FALSE: The text says each cycle lasts about 90 minutes. 90 minutes is more than an hour, directly contradicting 'less than an hour'."
+  },
+  {
+    q: "Deep sleep accounts for the majority of an adult's sleep duration.",
+    a: "FALSE",
+    keyword: "Deep sleep / majority of sleep",
+    paraphrase: "it constitutes only about 20 to 25 percent of a person's total nightly rest",
+    why: "FALSE: The text states that deep sleep constitutes only 20 to 25 percent, which is a minority, not the majority."
+  },
+  {
+    q: "The research team used wireless sensors to collect data from participants.",
+    a: "NOT GIVEN",
+    keyword: "wireless sensors",
+    paraphrase: "No mention in text",
+    why: "NOT GIVEN: The text mentions the introduction of EEG to observe brain activity, but it does not specify whether the sensors were wireless or wired."
+  },
+  {
+    q: "There is unanimous agreement on why REM sleep evolved in humans.",
+    a: "FALSE",
+    keyword: "unanimous agreement",
+    paraphrase: "the exact evolutionary purpose of REM sleep remains a subject of ongoing debate",
+    why: "FALSE: The text states it remains a subject of ongoing debate, which directly contradicts the idea of unanimous agreement."
+  }
 ];
-const tfngEl = document.getElementById('tfngDrill');
-tfng.forEach((it,i)=>{
-  const wrap=document.createElement('div');
-  wrap.className='card p-4';
-  wrap.innerHTML=`<div class="font-medium mb-2">${i+1}. ${it.q}</div>
-    <div class="flex flex-wrap gap-2">${["TRUE","FALSE","NOT GIVEN"].map(opt=>`<button class="btn btn-ghost tfng" data-opt="${opt}">${opt}</button>`).join('')}</div>
-    <div class="fb mt-3"></div>`;
-  tfngEl.appendChild(wrap);
-  wrap.querySelectorAll('.tfng').forEach(b=>b.addEventListener('click',()=>{
-    if (wrap.dataset.done) return; wrap.dataset.done='1';
-    const correct = b.dataset.opt === it.a;
-    b.style.background = correct?'#eef9f5':'#fdf0f3';
-    b.style.borderColor = correct?'var(--teal)':'var(--rose)';
-    wrap.querySelectorAll('.tfng').forEach(x=>{
-      if (x.dataset.opt === it.a){x.style.background='#eef9f5';x.style.borderColor='var(--teal)';x.innerHTML='✓ '+x.textContent;}
-      x.disabled=true;
+
+const tfngContainer = document.getElementById('tfngDrillExpanded');
+tfngData.forEach((item, index) => {
+  const card = document.createElement('div');
+  card.className = 'card p-4 bg-gray-50 border border-stone-200 rounded-xl';
+  card.innerHTML = `
+    <div class="font-medium text-sm mb-2 text-stone-850"><strong>Q${index + 1}.</strong> ${item.q}</div>
+    <div class="flex gap-2">
+      ${["TRUE", "FALSE", "NOT GIVEN"].map(option => `
+        <button class="btn btn-ghost text-xs px-3 py-1.5 tfng-btn" data-val="${option}">${option}</button>
+      `).join('')}
+    </div>
+    <div class="feedback-area mt-3"></div>
+  `;
+  tfngContainer.appendChild(card);
+
+  const buttons = card.querySelectorAll('.tfng-btn');
+  const feedbackArea = card.querySelector('.feedback-area');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      if (card.dataset.completed) return;
+      card.dataset.completed = 'true';
+
+      const chosen = button.dataset.val;
+      const isCorrect = chosen === item.a;
+
+      // Color chosen and correct buttons
+      buttons.forEach(btn => {
+        btn.disabled = true;
+        if (btn.dataset.val === item.a) {
+          btn.style.background = '#eef9f5';
+          btn.style.borderColor = 'var(--teal)';
+          btn.style.color = 'var(--teal)';
+          btn.innerHTML = '✓ ' + btn.dataset.val;
+        } else if (btn.dataset.val === chosen && !isCorrect) {
+          btn.style.background = '#fdf0f3';
+          btn.style.borderColor = 'var(--rose)';
+          btn.style.color = 'var(--rose)';
+          btn.innerHTML = '✗ ' + btn.dataset.val;
+        }
+      });
+
+      // Render Feedback & Synonym Map
+      feedbackArea.innerHTML = `
+        <div class="feedback ${isCorrect ? 'good' : 'bad'} p-3 rounded-lg text-xs leading-relaxed border-l-4">
+          <div class="font-bold text-sm mb-1">${isCorrect ? '✅ Correct!' : '❌ Incorrect.'} Answer: ${item.a}</div>
+          <p class="mb-2 text-stone-600">${item.why}</p>
+          <div class="border-t border-stone-200 pt-2 mt-2">
+            <div class="text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-1">Detective Synonym Map:</div>
+            <table class="w-full text-[11px] text-stone-700 border-collapse">
+              <tr class="bg-stone-100 text-stone-600">
+                <th class="p-1.5 border border-stone-200 text-left font-bold w-1/3">Question Keyword</th>
+                <th class="p-1.5 border border-stone-200 text-left font-bold w-2/3">Passage Paraphrase</th>
+              </tr>
+              <tr>
+                <td class="p-1.5 border border-stone-200 font-semibold">${item.keyword}</td>
+                <td class="p-1.5 border border-stone-200 italic">${item.paraphrase}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      `;
+
+      addXP(isCorrect ? 10 : 2);
     });
-    wrap.querySelector('.fb').innerHTML=`<div class="feedback ${correct?'good':'bad'}">${correct?'✅ Correct.':'❌ Not quite.'} <strong>Answer: ${it.a}.</strong> ${it.why}</div>`;
-    addXP(correct?10:2);
-  }));
+  });
 });
 
-// ====== MCQ DRILL ======
-const mcq = {options:[
-  {l:"A", t:"Always practical, regardless of context.", c:false, w:"Extreme word 'always'. Trap: keyword match with shifted meaning."},
-  {l:"B", t:"A practical option whose effectiveness depends on local conditions.", c:true, w:"Paraphrases 'often practical' + 'depends heavily on local geography and weather'."},
-  {l:"C", t:"A failed solution to congestion.", c:false, w:"Directly contradicts the text."},
-  {l:"D", t:"Cheaper than other transport infrastructure.", c:false, w:"True-but-wrong. Cost is mentioned but not compared to other infrastructure."}
-]};
-const mcqEl=document.getElementById('mcqDrill');
-const mcqFB=document.getElementById('mcqFeedback');
-let mcqDone=false;
-mcq.options.forEach(o=>{
-  const div=document.createElement('div');
-  div.className='opt';
-  div.innerHTML=`<div class="letter">${o.l}</div><div>${o.t}</div>`;
-  div.addEventListener('click',()=>{
-    if (mcqDone) return;
-    if (o.c){
-      div.classList.add('correct');
-      mcqEl.querySelectorAll('.opt').forEach(x=>{if(!x.classList.contains('correct'))x.classList.add('disabled')});
-      mcqFB.innerHTML=`<div class="feedback good">✅ Right. ${o.w}</div>`;
-      mcqDone=true; addXP(15);
-    } else {
-      div.classList.add('wrong');
-      mcqFB.innerHTML=`<div class="feedback bad"><strong>Eliminated ${o.l}.</strong> ${o.w}</div>`;
-      addXP(2);
-    }
+// ====== MCQ DRILL (EXPANDED) ======
+const mcqData = [
+  {
+    q: "What is a major advantage of vertical farming over traditional farming?",
+    options: [
+      { l: "A", t: "It requires less electrical power.", c: false, w: "Incorrect. The text actually notes it requires 'immense electricity' due to heating and artificial light requirements." },
+      { l: "B", t: "It relies on seasonal weather patterns.", c: false, w: "Incorrect. The text states that vertical farming is 'unlike conventional farming' because it stacks crops inside 'controlled indoor environments' to avoid weather disruptions." },
+      { l: "C", t: "It provides predictable crop production throughout the year.", c: true, w: "Correct! The text says indoor farms 'produce crops year-round', which directly translates to predictable crop production." },
+      { l: "D", t: "It is cheaper to set up and operate.", c: false, w: "Incorrect. The passage specifically criticizes the system for its 'high operating costs'." }
+    ]
+  },
+  {
+    q: "According to the passage, soil is replaced in vertical farming by using:",
+    options: [
+      { l: "A", t: "organic compost mixtures.", c: false, w: "Incorrect. Compost is not mentioned anywhere in the passage." },
+      { l: "B", t: "water or mist containing nutrients.", c: true, w: "Correct! The text explains that vertical farming utilizes 'hydroponics or aeroponics—techniques that suspend roots in nutrient-rich water or mist instead of soil'." },
+      { l: "C", t: "high-density clay substrates.", c: false, w: "Incorrect. Clay substrates are not mentioned in the text." },
+      { l: "D", t: "synthetic soil substitutes.", c: false, w: "Incorrect. The passage states it uses soil-less techniques like water (hydroponics) or mist (aeroponics) rather than a soil substitute." }
+    ]
+  },
+  {
+    q: "Some economists believe that vertical farming is currently:",
+    options: [
+      { l: "A", t: "the only viable way to feed the world's population.", c: false, w: "Incorrect. This is an extreme statement and is not supported by the economists' arguments in the text." },
+      { l: "B", t: "too expensive to be used for growing basic food staples.", c: true, w: "Correct! The text states economists argue it is 'currently only profitable for high-value specialty greens rather than staple grains'." },
+      { l: "C", t: "more environmentally friendly than any other method.", c: false, w: "Incorrect. The text notes that its high carbon footprint can exceed traditional farming, suggesting it isn't always environmentally friendly." },
+      { l: "D", t: "causing a drop in the price of specialty vegetables.", c: false, w: "Incorrect. Price drops are not discussed in the text." }
+    ]
+  },
+  {
+    q: "The author warns that vertical farming can have a negative environmental impact if:",
+    options: [
+      { l: "A", t: "crops are transported over long distances.", c: false, w: "Incorrect. Transportation of crops is not discussed in this passage." },
+      { l: "B", t: "water recycling systems fail.", c: false, w: "Incorrect. Water system failure is not mentioned in the text." },
+      { l: "C", t: "the energy source for the facility is not renewable.", c: true, w: "Correct! The text warns that the carbon footprint 'can exceed that of traditional farms if they are powered by fossil-fuel grids'." },
+      { l: "D", t: "non-organic nutrients are added to the water.", c: false, w: "Incorrect. The organic nature of nutrients is not discussed in the text." }
+    ]
+  }
+];
+
+const mcqContainer = document.getElementById('mcqDrillExpanded');
+mcqData.forEach((qItem, qIndex) => {
+  const card = document.createElement('div');
+  card.className = 'card p-4 bg-gray-50 border border-stone-200 rounded-xl';
+  card.innerHTML = `
+    <div class="font-medium text-sm mb-2 text-stone-850"><strong>Q${qIndex + 1}.</strong> ${qItem.q}</div>
+    <div class="space-y-2 options-list">
+      ${qItem.options.map(opt => `
+        <div class="opt mcq-opt text-xs py-2 px-3 border border-stone-200 rounded-lg cursor-pointer bg-white flex gap-2 items-center hover:border-plum hover:bg-[#fbf7ff]" data-l="${opt.l}">
+          <div class="letter w-6 h-6 rounded-md bg-stone-100 flex items-center justify-center font-bold font-serif text-[11px]">${opt.l}</div>
+          <div>${opt.t}</div>
+        </div>
+      `).join('')}
+    </div>
+    <div class="feedback-area mt-3"></div>
+  `;
+  mcqContainer.appendChild(card);
+
+  const optElements = card.querySelectorAll('.mcq-opt');
+  const feedbackArea = card.querySelector('.feedback-area');
+  let qCompleted = false;
+
+  optElements.forEach(optEl => {
+    optEl.addEventListener('click', () => {
+      if (qCompleted) return;
+
+      const chosenLetter = optEl.dataset.l;
+      const option = qItem.options.find(o => o.l === chosenLetter);
+
+      if (option.c) {
+        // Correct Answer
+        qCompleted = true;
+        optElements.forEach(el => {
+          el.classList.add('disabled');
+          if (el.dataset.l === chosenLetter) {
+            el.classList.add('correct');
+            el.querySelector('.letter').style.background = 'var(--teal)';
+            el.querySelector('.letter').style.color = '#fff';
+          }
+        });
+        feedbackArea.innerHTML = `
+          <div class="feedback good p-3 rounded-lg text-xs leading-relaxed border-l-4 border-teal-500">
+            <strong>✅ Correct!</strong> ${option.w}
+          </div>
+        `;
+        addXP(15);
+      } else {
+        // Incorrect Answer
+        optEl.classList.add('wrong');
+        optEl.querySelector('.letter').style.background = 'var(--rose)';
+        optEl.querySelector('.letter').style.color = '#fff';
+        feedbackArea.innerHTML = `
+          <div class="feedback bad p-3 rounded-lg text-xs leading-relaxed border-l-4 border-rose-500">
+            <strong>❌ Distractor Eliminated (${chosenLetter}):</strong> ${option.w}
+          </div>
+        `;
+        addXP(2);
+      }
+    });
   });
-  mcqEl.appendChild(div);
+});
+
+// ====== DRILL C: MATCHING INFORMATION (EXPANDED) ======
+const matchingData = [
+  {
+    q: "a description of how a bird's physical structure helped solve a transportation issue",
+    a: "C",
+    keyword: "bird's physical structure / transportation issue",
+    matchText: "redesigning the nose of the train to mimic the beak of the kingfisher bird... successfully eliminated the boom",
+    why: "Paragraph C describes how engineers copied the kingfisher's beak (bird's physical structure) to resolve the bullet train's loud boom (transportation issue)."
+  },
+  {
+    q: "a mention of building designs that can generate energy from waste",
+    a: "E",
+    keyword: "generate energy from waste",
+    matchText: "experimental designs incorporate algae-filled facades that capture carbon dioxide and generate biofuels, transforming waste into energy",
+    why: "Paragraph E discusses designs using algae to capture CO2 and create biofuels, explicitly described as 'transforming waste into energy'."
+  },
+  {
+    q: "an explanation of the difficulties in constructing complex natural shapes",
+    a: "D",
+    keyword: "difficulties in constructing complex shapes",
+    matchText: "replicating nature's organic structures presents significant manufacturing challenges. Modern construction methods... struggle with the irregular, complex curves",
+    why: "Paragraph D outlines the 'manufacturing challenges' and 'struggle' related to replicating nature's organic structures and curves in modern building construction."
+  },
+  {
+    q: "a reference to a temperature regulation system inspired by insects",
+    a: "B",
+    keyword: "temperature regulation / inspired by insects",
+    matchText: "modeled the ventilation system on the structure of local termite mounds, which utilize complex networks of chimneys to regulate temperature",
+    why: "Paragraph B explains how the Eastgate Centre's cooling/ventilation system was modeled after termite mounds (insects) to regulate temperature without air conditioning."
+  }
+];
+
+const matchingContainer = document.getElementById('matchingDrillExpanded');
+matchingData.forEach((item, index) => {
+  const card = document.createElement('div');
+  card.className = 'card p-4 bg-gray-50 border border-stone-200 rounded-xl';
+  card.innerHTML = `
+    <div class="font-medium text-sm mb-2 text-stone-850"><strong>Q${index + 1}.</strong> Find paragraph containing: <br><span class="italic text-stone-600">"${item.q}"</span></div>
+    <div class="flex gap-2">
+      ${["A", "B", "C", "D", "E"].map(p => `
+        <button class="btn btn-ghost text-xs px-3 py-1.5 match-btn font-bold" data-val="${p}">Paragraph ${p}</button>
+      `).join('')}
+    </div>
+    <div class="feedback-area mt-3"></div>
+  `;
+  matchingContainer.appendChild(card);
+
+  const buttons = card.querySelectorAll('.match-btn');
+  const feedbackArea = card.querySelector('.feedback-area');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      if (card.dataset.completed) return;
+      card.dataset.completed = 'true';
+
+      const chosen = button.dataset.val;
+      const isCorrect = chosen === item.a;
+
+      buttons.forEach(btn => {
+        btn.disabled = true;
+        if (btn.dataset.val === item.a) {
+          btn.style.background = '#eef9f5';
+          btn.style.borderColor = 'var(--teal)';
+          btn.style.color = 'var(--teal)';
+          btn.innerHTML = '✓ Para ' + btn.dataset.val;
+        } else if (btn.dataset.val === chosen && !isCorrect) {
+          btn.style.background = '#fdf0f3';
+          btn.style.borderColor = 'var(--rose)';
+          btn.style.color = 'var(--rose)';
+          btn.innerHTML = '✗ Para ' + btn.dataset.val;
+        }
+      });
+
+      feedbackArea.innerHTML = `
+        <div class="feedback ${isCorrect ? 'good' : 'bad'} p-3 rounded-lg text-xs leading-relaxed border-l-4">
+          <div class="font-bold text-sm mb-1">${isCorrect ? '✅ Correct Paragraph Match!' : '❌ Incorrect Paragraph.'} Answer: Paragraph ${item.a}</div>
+          <p class="mb-2 text-stone-600">${item.why}</p>
+          <div class="border-t border-stone-200 pt-2 mt-2">
+            <div class="text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-1">Detective Synonym Map:</div>
+            <table class="w-full text-[11px] text-stone-700 border-collapse">
+              <tr class="bg-stone-100 text-stone-600">
+                <th class="p-1.5 border border-stone-200 text-left font-bold w-1/3">Question Keyword</th>
+                <th class="p-1.5 border border-stone-200 text-left font-bold w-2/3">Matching Text in Paragraph ${item.a}</th>
+              </tr>
+              <tr>
+                <td class="p-1.5 border border-stone-200 font-semibold">${item.keyword}</td>
+                <td class="p-1.5 border border-stone-200 italic">${item.matchText}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      `;
+
+      addXP(isCorrect ? 10 : 2);
+    });
+  });
 });
 
 // ====== BOSS FIGHT ======
