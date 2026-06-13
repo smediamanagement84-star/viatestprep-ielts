@@ -99,10 +99,70 @@
   .footer{background:var(--ink);color:rgba(255,255,255,.4);text-align:center;padding:2.5rem 1rem;font-size:.8rem;line-height:1.8}
   .footer strong{color:rgba(255,255,255,.7)}
 
+  /* DARK MODE FOR INDEX */
+  .dark {
+    --paper: #0f172a;
+    --ink: #cbd5e1;
+    --line: #334155;
+    --plum-light: #1e1b4b; /* deep indigo/purple */
+    --ukvi-light: #0f172a;
+    --pte-light: #0f172a;
+  }
+  
+  .dark .modules {
+    background: #0f172a !important;
+    color: #cbd5e1 !important;
+  }
+  
+  .dark .card {
+    background: #1e293b !important;
+    border-color: #334155 !important;
+    color: #cbd5e1 !important;
+  }
+  
+  .dark .card::before {
+    background: linear-gradient(135deg, #1e1b4b, #1e293b) !important;
+  }
+  
+  .dark .card p {
+    color: #94a3b8 !important;
+  }
+  
+  .dark .card.ukvi-card::before {
+    background: linear-gradient(135deg, #0f172a, #1e3a8a) !important;
+  }
+  
+  .dark .card.pte-card::before {
+    background: linear-gradient(135deg, #0f172a, #7c2d12) !important;
+  }
+
+  .dark .icon {
+    background: #334155 !important;
+    color: #fff !important;
+  }
+  
+  .dark .go-arrow {
+    color: var(--gold) !important;
+  }
+
+  .dark #darkModeToggle {
+    background: rgba(255,255,255,0.15) !important;
+    border-color: rgba(255,255,255,0.3) !important;
+  }
+
+  #darkModeToggle:hover {
+    transform: scale(1.05);
+    background: rgba(255,255,255,0.2) !important;
+  }
+  .dark #darkModeToggle:hover {
+    background: rgba(255,255,255,0.25) !important;
+  }
 </style>
   <script src="security.js"></script>
 </head>
 <body>
+
+<button id="darkModeToggle" style="position:fixed;top:1.5rem;right:1.5rem;z-index:999;width:3rem;height:3rem;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);transition:all 0.2s" aria-label="Toggle Dark Mode">🌙</button>
 
 <!-- HERO -->
 <section class="hero">
@@ -330,6 +390,28 @@
   These materials are the exclusive intellectual property of ViATestPrep.<br>
   Unauthorized reproduction, distribution, or sharing is strictly prohibited.
 </footer>
+
+<script>
+const toggleBtn = document.getElementById('darkModeToggle');
+function updateTheme() {
+  if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+    toggleBtn.textContent = '☀️';
+  } else {
+    document.documentElement.classList.remove('dark');
+    toggleBtn.textContent = '🌙';
+  }
+}
+toggleBtn.addEventListener('click', () => {
+  if (document.documentElement.classList.contains('dark')) {
+    localStorage.setItem('theme', 'light');
+  } else {
+    localStorage.setItem('theme', 'dark');
+  }
+  updateTheme();
+});
+updateTheme();
+</script>
 
 </body>
 </html>

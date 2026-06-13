@@ -86,6 +86,251 @@
   .case-card-compact .num-circle{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:'Fraunces',serif}
   .case-card-compact .preview-tag{font-size:.7rem;color:var(--plum);font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-top:auto}
   body.modal-open{overflow:hidden}
+
+  /* DARK MODE SYSTEM */
+  .dark {
+    --ink: #cbd5e1;       /* slate-300 */
+    --paper: #0f172a;     /* slate-900 */
+    --line: #334155;      /* slate-700 */
+    --gold-soft: #3f2e0a;  /* deep gold tone */
+  }
+  
+  .dark body {
+    background-color: #0f172a !important;
+    color: #cbd5e1 !important;
+  }
+
+  .dark .toolbar {
+    background: rgba(15, 23, 42, 0.85) !important;
+    border-bottom-color: #334155 !important;
+  }
+
+  .dark .card,
+  .dark .stat-card {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    color: #cbd5e1 !important;
+  }
+
+  .dark .bg-white {
+    background-color: #1e293b !important;
+  }
+
+  .dark .bg-gray-50,
+  .dark .bg-stone-50 {
+    background-color: #1e293b !important;
+  }
+
+  .dark .bg-stone-100 {
+    background-color: #334155 !important;
+  }
+
+  .dark .bg-\[\#fbf7ec\] {
+    background-color: #1e293b !important;
+  }
+
+  .dark .case-file {
+    background: repeating-linear-gradient(0deg, #1e293b, #1e293b 28px, #334155 28px, #334155 29px) !important;
+    border-color: #334155 !important;
+    color: #cbd5e1 !important;
+  }
+
+  .dark .mini-pass p, 
+  .dark .text-stone-700, 
+  .dark .text-stone-650 {
+    color: #cbd5e1 !important;
+  }
+
+  .dark .text-stone-600 {
+    color: #94a3b8 !important; /* slate-400 */
+  }
+
+  .dark .text-stone-500,
+  .dark .text-stone-400 {
+    color: #64748b !important; /* slate-500 */
+  }
+
+  .dark .opt {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    color: #cbd5e1 !important;
+  }
+
+  .dark .opt:hover {
+    border-color: var(--plum) !important;
+    background-color: #2e1065 !important; /* purple tint */
+  }
+
+  .dark .opt .letter {
+    background-color: #334155 !important;
+    color: #cbd5e1 !important;
+  }
+
+  .dark .opt.correct {
+    border-color: var(--teal) !important;
+    background: #064e3b !important;
+  }
+  .dark .opt.wrong {
+    border-color: var(--rose) !important;
+    background: #881337 !important;
+  }
+
+  .dark .opt.correct .letter {
+    background-color: var(--teal) !important;
+    color: #fff !important;
+  }
+
+  .dark .opt.wrong .letter {
+    background-color: var(--rose) !important;
+    color: #fff !important;
+  }
+
+  .dark .feedback {
+    background-color: #1e293b !important;
+    color: #cbd5e1 !important;
+  }
+  
+  .dark .feedback.good {
+    border-color: var(--teal) !important;
+    background-color: #064e3b !important; /* deep green */
+  }
+
+  .dark .feedback.bad {
+    border-color: var(--rose) !important;
+    background-color: #881337 !important; /* deep rose */
+  }
+
+  .dark .feedback.tip {
+    border-color: var(--gold) !important;
+    background-color: #451a03 !important; /* deep gold/brown */
+  }
+
+  .dark .btn-ghost {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    color: #cbd5e1 !important;
+  }
+
+  .dark .btn-ghost:hover {
+    background-color: #334155 !important;
+  }
+
+  .dark .progress-bar {
+    background-color: #334155 !important;
+  }
+
+  .dark .real-passage {
+    background-color: #1e293b !important;
+    border-left-color: var(--plum) !important;
+    color: #cbd5e1 !important;
+  }
+
+  .dark .real-q {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    color: #cbd5e1 !important;
+  }
+
+  .dark .real-walk {
+    background-color: #1e293b !important;
+    border-left-color: var(--gold) !important;
+    color: #cbd5e1 !important;
+  }
+
+  .dark .modal-box {
+    background-color: #0f172a !important;
+    color: #cbd5e1 !important;
+    border: 1px solid #334155 !important;
+  }
+
+  .dark .modal-head {
+    background-color: #0f172a !important;
+    border-bottom-color: #334155 !important;
+  }
+
+  .dark table tr.bg-stone-100 {
+    background-color: #334155 !important;
+  }
+  
+  .dark table td, 
+  .dark table th {
+    border-color: #334155 !important;
+    color: #cbd5e1 !important;
+  }
+
+  .dark .border-stone-200,
+  .dark .border-line {
+    border-color: #334155 !important;
+  }
+
+  /* Badge and Chip Dark Customizations */
+  .dark .badge[style*="background:#fdf0f3"],
+  .dark .badge[style*="background: rgb(253, 240, 243)"] {
+    background: #881337 !important;
+    color: #fda4af !important;
+  }
+  .dark .badge[style*="background:#eef9f5"],
+  .dark .badge[style*="background: rgb(238, 249, 245)"] {
+    background: #064e3b !important;
+    color: #34d399 !important;
+  }
+  .dark .badge[style*="background:#fdf6e3"],
+  .dark .badge[style*="background: rgb(253, 246, 227)"] {
+    background: #451a03 !important;
+    color: #fbbf24 !important;
+  }
+
+  .dark .chip[style*="color:var(--plum)"] {
+    color: #e9d5ff !important;
+  }
+  .dark .chip[style*="background:#fdf0f3"] {
+    background: #881337 !important;
+    color: #fda4af !important;
+  }
+  .dark .chip[style*="background:#f3ecff"] {
+    background: #3b0a64 !important;
+    color: #e9d5ff !important;
+  }
+  .dark .chip[style*="background:#eef9f5"] {
+    background: #064e3b !important;
+    color: #34d399 !important;
+  }
+
+  /* Highlight states via CSS classes instead of inline styles */
+  .correct-highlight {
+    background: #eef9f5 !important;
+    border-color: var(--teal) !important;
+    color: var(--teal) !important;
+  }
+  .wrong-highlight {
+    background: #fdf0f3 !important;
+    border-color: var(--rose) !important;
+    color: var(--rose) !important;
+  }
+  .dark .correct-highlight {
+    background: #064e3b !important;
+    border-color: var(--teal) !important;
+    color: #34d399 !important;
+  }
+  .dark .wrong-highlight {
+    background: #881337 !important;
+    border-color: var(--rose) !important;
+    color: #fda4af !important;
+  }
+
+  .bossopt-picked {
+    background: #f3ecff !important;
+  }
+  .dark .bossopt-picked {
+    background: #3b0a64 !important;
+    color: #e9d5ff !important;
+  }
+
+  .dark input {
+    background-color: #1e293b !important;
+    color: #cbd5e1 !important;
+    border-color: #334155 !important;
+  }
 </style>
   <script src="security.js"></script>
 </head>
@@ -109,6 +354,7 @@
       <span class="nav-step" data-jump="boss">⑥ Boss Fight</span>
     </div>
     <div class="flex items-center gap-3">
+      <button id="darkModeToggle" class="w-8 h-8 rounded-lg border border-line bg-white hover:bg-stone-100 flex items-center justify-center text-sm transition" aria-label="Toggle Dark Mode">🌙</button>
       <div class="text-right hidden sm:block">
         <div class="text-[11px] uppercase tracking-widest text-stone-500">Detective XP</div>
         <div class="font-bold timer-pill" style="color:var(--gold)" id="xpDisplay">0 XP</div>
@@ -841,14 +1087,10 @@ function initTFNGDrill(data, containerId) {
         buttons.forEach(btn => {
           btn.disabled = true;
           if (btn.dataset.val === item.a) {
-            btn.style.background = '#eef9f5';
-            btn.style.borderColor = 'var(--teal)';
-            btn.style.color = 'var(--teal)';
+            btn.classList.add('correct-highlight');
             btn.innerHTML = '✓ ' + btn.dataset.val;
           } else if (btn.dataset.val === chosen && !isCorrect) {
-            btn.style.background = '#fdf0f3';
-            btn.style.borderColor = 'var(--rose)';
-            btn.style.color = 'var(--rose)';
+            btn.classList.add('wrong-highlight');
             btn.innerHTML = '✗ ' + btn.dataset.val;
           }
         });
@@ -1184,14 +1426,10 @@ function initMatchingDrill(data, containerId) {
         buttons.forEach(btn => {
           btn.disabled = true;
           if (btn.dataset.val === item.a) {
-            btn.style.background = '#eef9f5';
-            btn.style.borderColor = 'var(--teal)';
-            btn.style.color = 'var(--teal)';
+            btn.classList.add('correct-highlight');
             btn.innerHTML = '✓ Para ' + btn.dataset.val;
           } else if (btn.dataset.val === chosen && !isCorrect) {
-            btn.style.background = '#fdf0f3';
-            btn.style.borderColor = 'var(--rose)';
-            btn.style.color = 'var(--rose)';
+            btn.classList.add('wrong-highlight');
             btn.innerHTML = '✗ Para ' + btn.dataset.val;
           }
         });
@@ -1331,8 +1569,11 @@ bossQsEl.addEventListener('click',e=>{
   const tfng=e.target.closest('.bossopt');
   if (tfng){
     const i=+tfng.dataset.i;
-    bossQsEl.children[i].querySelectorAll('.bossopt').forEach(x=>{x.style.background='#fff';x.dataset.picked='0';});
-    tfng.style.background='#f3ecff'; tfng.dataset.picked='1';
+    bossQsEl.children[i].querySelectorAll('.bossopt').forEach(x=>{
+      x.classList.remove('bossopt-picked');
+      x.dataset.picked='0';
+    });
+    tfng.classList.add('bossopt-picked'); tfng.dataset.picked='1';
   }
   const mcq=e.target.closest('.opt');
   if (mcq && mcq.parentElement.classList.contains('bossmcq')){
@@ -1344,6 +1585,27 @@ bossQsEl.addEventListener('click',e=>{
     if (o.c) mcq.classList.add('correct'); else mcq.classList.add('wrong');
   }
 });
+
+// Dark mode toggle logic
+const toggleBtn = document.getElementById('darkModeToggle');
+function updateTheme() {
+  if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+    toggleBtn.textContent = '☀️';
+  } else {
+    document.documentElement.classList.remove('dark');
+    toggleBtn.textContent = '🌙';
+  }
+}
+toggleBtn.addEventListener('click', () => {
+  if (document.documentElement.classList.contains('dark')) {
+    localStorage.setItem('theme', 'light');
+  } else {
+    localStorage.setItem('theme', 'dark');
+  }
+  updateTheme();
+});
+updateTheme();
 </script>
 </body>
 </html>
