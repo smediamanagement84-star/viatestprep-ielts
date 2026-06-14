@@ -376,6 +376,7 @@
         <div class="mt-6 flex flex-wrap gap-3">
           <button class="btn btn-primary" onclick="document.getElementById('toolkit').scrollIntoView({behavior:'smooth'})">▶ Begin Training</button>
           <button class="btn btn-ghost" onclick="document.getElementById('boss').scrollIntoView({behavior:'smooth'})">Skip to Boss Fight</button>
+          <a href="index.html" class="btn btn-ghost text-xs px-3 py-1.5 flex items-center gap-1">← Back to Hub</a>
         </div>
         <div class="mt-6 flex flex-wrap gap-2">
           <span class="badge" style="background:#fdf0f3;color:var(--rose)">⏱ 60-min test</span>
@@ -421,6 +422,10 @@
         <div class="feedback tip mt-4"><strong>Best keywords:</strong> proper nouns, dates, numbers, technical terms.</div>
       </div>
     </div>
+    <div class="mt-6 flex justify-between items-center flex-wrap gap-2">
+      <button class="btn btn-primary text-xs" onclick="document.getElementById('plan').scrollIntoView({behavior:'smooth'})">Next: Game Plan →</button>
+      <a href="index.html" class="btn btn-ghost text-xs px-3 py-1.5 flex items-center gap-1">← Back to Hub</a>
+    </div>
   </section>
 
   <!-- GAME PLAN -->
@@ -439,6 +444,10 @@
         <div class="p-3 rounded-xl text-center" style="background:#fdf6e3"><div class="text-xs uppercase tracking-widest text-stone-500">P2 · medium</div><div class="text-2xl font-bold timer-pill">20m</div></div>
         <div class="p-3 rounded-xl text-center" style="background:#fdf0f3"><div class="text-xs uppercase tracking-widest text-stone-500">P3 · hard</div><div class="text-2xl font-bold timer-pill">23m</div></div>
       </div>
+    </div>
+    <div class="mt-6 flex justify-between items-center flex-wrap gap-2">
+      <button class="btn btn-primary text-xs" onclick="document.getElementById('cases').scrollIntoView({behavior:'smooth'})">Next: Case Files →</button>
+      <a href="index.html" class="btn btn-ghost text-xs px-3 py-1.5 flex items-center gap-1">← Back to Hub</a>
     </div>
   </section>
 
@@ -459,6 +468,10 @@
     </div>
 
     <div class="gameboard mt-6" id="caseFiles"></div>
+    <div class="mt-6 flex justify-between items-center flex-wrap gap-2">
+      <button class="btn btn-primary text-xs" onclick="document.getElementById('drills').scrollIntoView({behavior:'smooth'})">Next: Live Drills →</button>
+      <a href="index.html" class="btn btn-ghost text-xs px-3 py-1.5 flex items-center gap-1">← Back to Hub</a>
+    </div>
   </section>
 
   <!-- DRILLS -->
@@ -581,6 +594,10 @@
         </div>
       </div>
     </div>
+    <div class="mt-6 flex justify-between items-center flex-wrap gap-2">
+      <button class="btn btn-primary text-xs" onclick="document.getElementById('boss').scrollIntoView({behavior:'smooth'})">Next: Boss Fight →</button>
+      <a href="index.html" class="btn btn-ghost text-xs px-3 py-1.5 flex items-center gap-1">← Back to Hub</a>
+    </div>
   </section>
 
   <!-- BOSS FIGHT -->
@@ -603,6 +620,10 @@
       </div>
       <div class="mt-5 space-y-4" id="bossQs"></div>
       <div class="mt-5" id="bossResult"></div>
+    </div>
+    <div class="mt-6 flex justify-between items-center flex-wrap gap-2">
+      <span class="text-stone-500 text-xs">Well done completing the Boss Fight!</span>
+      <a href="index.html" class="btn btn-ghost text-xs px-3 py-1.5 flex items-center gap-1">← Back to Hub</a>
     </div>
   </section>
 
