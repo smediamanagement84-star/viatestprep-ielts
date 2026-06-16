@@ -1,183 +1,904 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>ViATestPrep — IELTS &amp; PTE Preparation Hub</title>
 <meta name="description" content="ViATestPrep's complete IELTS and PTE preparation suite. Master Reading, Listening, Writing, Speaking, Grammar, and Vocabulary with interactive lessons designed for Band 7+ and 79+ targets."/>
 <meta name="copyright" content="© 2026 ViATestPrep. All Rights Reserved."/>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --plum:#5b2a86;--plum-d:#3b0a64;--plum-light:#f3ecff;
-    --gold:#c8932a;--gold-soft:#fdf6e3;
-    --teal:#0d8a7a;--rose:#e8456b;
-    --ukvi:#1a4a8a;--ukvi-light:#e8f0fb;
-    --pte:#e8622a;--pte-light:#fdf2ed;
-    --ink:#0f172a;--paper:#fdfcf7;--line:#e6dfce;
+  :root {
+    --primary: 268, 52%, 48%; /* #5b2a86 */
+    --primary-raw: 91, 42, 134;
+    --gold: 40, 65%, 48%; /* #c8932a */
+    --teal: 172, 83%, 30%; /* #0d8a7a */
+    --rose: 347, 79%, 59%; /* #e8456b */
+    --ukvi: 215, 68%, 32%; /* #1a4a8a */
+    --pte: 17, 81%, 54%; /* #e8622a */
+    
+    /* Sleek Dark Mode Defaults */
+    --bg-main: #070913;
+    --bg-modules: #0a0c16;
+    --bg-card: rgba(17, 20, 38, 0.65);
+    --bg-card-hover: rgba(25, 30, 56, 0.85);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(255, 255, 255, 0.18);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --glass-navbar: rgba(7, 9, 19, 0.75);
+    --input-bg: rgba(13, 16, 30, 0.7);
+    --card-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.7);
+    --accent-glow: rgba(91, 42, 134, 0.25);
+    --divider-color: rgba(255, 255, 255, 0.08);
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html,body{background:var(--ink);color:#fff;font-family:'Inter',sans-serif;min-height:100vh}
-  h1,h2,h3{font-family:'Fraunces',serif}
 
-  /* ---- HERO ---- */
-  .hero{
-    min-height:100vh;
-    background:radial-gradient(ellipse 80% 60% at 50% -10%, rgba(91,42,134,.55) 0%, transparent 70%),
-               radial-gradient(ellipse 50% 40% at 80% 80%, rgba(13,138,122,.25) 0%, transparent 60%),
-               var(--ink);
-    display:flex;flex-direction:column;align-items:center;justify-content:center;
-    padding:4rem 1.5rem 6rem;text-align:center;position:relative;overflow:hidden;
+  /* Premium Light Mode */
+  .light {
+    --bg-main: #faf9f6;
+    --bg-modules: #f5f3ec;
+    --bg-card: rgba(255, 255, 255, 0.85);
+    --bg-card-hover: rgba(255, 255, 255, 0.98);
+    --border-color: rgba(15, 23, 42, 0.08);
+    --border-hover: rgba(15, 23, 42, 0.16);
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --glass-navbar: rgba(250, 249, 246, 0.8);
+    --input-bg: rgba(255, 255, 255, 0.9);
+    --card-shadow: 0 12px 30px -10px rgba(91, 42, 134, 0.08);
+    --accent-glow: rgba(91, 42, 134, 0.05);
+    --divider-color: rgba(15, 23, 42, 0.08);
   }
-  .hero::before{
-    content:'';position:absolute;inset:0;
-    background:repeating-linear-gradient(-30deg,transparent,transparent 120px,rgba(255,255,255,.012) 120px,rgba(255,255,255,.012) 121px);
+
+  /* Reset & Core Styling */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-  .logo-mark{
-    width:72px;height:72px;border-radius:20px;
-    background:linear-gradient(135deg,var(--plum),var(--plum-d));
-    display:flex;align-items:center;justify-content:center;
-    font-family:'Fraunces',serif;font-size:1.9rem;font-weight:800;color:#fff;
-    box-shadow:0 0 0 6px rgba(91,42,134,.25),0 20px 60px rgba(91,42,134,.5);
-    margin:0 auto 1.5rem;position:relative;z-index:1;
+  html {
+    scroll-behavior: smooth;
   }
-  .brand-name{font-size:1rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.4rem;position:relative;z-index:1}
-  .hero h1{font-size:clamp(2.5rem,6.2vw,4.4rem);line-height:1.15;position:relative;z-index:1;max-width:850px;color:#ffffff;font-weight:800}
-  .gold-coral-gradient{background:linear-gradient(135deg,#ffe599 0%,#c8932a 50%,#e8456b 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 25px rgba(200,147,42,0.35))}
-  .hero p{margin-top:1.2rem;color:rgba(255,255,255,.6);font-size:1.05rem;max-width:540px;line-height:1.65;position:relative;z-index:1}
-  .hero-badges{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1.5rem;position:relative;z-index:1}
-  .badge{padding:.3rem .8rem;border-radius:999px;font-size:.75rem;font-weight:600;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:rgba(255,255,255,.75)}
-  .scroll-hint{position:absolute;bottom:1.8rem;left:50%;transform:translateX(-50%);z-index:1;color:rgba(255,255,255,.3);font-size:.8rem;display:flex;flex-direction:column;align-items:center;gap:.4rem;animation:bob 2s ease-in-out infinite}
-  @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
-
-  /* ---- MODULES GRID ---- */
-  .modules{background:var(--paper);color:var(--ink);padding:5rem 1.5rem 6rem}
-  .modules-inner{max-width:1100px;margin:0 auto}
-  .section-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--plum);margin-bottom:.6rem}
-  .section-label.ukvi-label{color:var(--ukvi)}
-  .modules h2{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:.5rem}
-  .modules > .modules-inner > p{color:#64748b;max-width:520px;line-height:1.6;margin-bottom:3rem}
-
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.2rem}
-  .card{
-    background:#fff;border:1px solid var(--line);border-radius:20px;
-    padding:1.5rem;text-decoration:none;color:var(--ink);
-    display:block;position:relative;overflow:hidden;
-    transition:transform .18s ease,box-shadow .18s ease;
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    transition: background-color 0.4s ease, color 0.4s ease;
   }
-  .card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(91,42,134,.13)}
-  .card::before{content:'';position:absolute;inset:0;border-radius:20px;opacity:0;transition:opacity .18s;background:linear-gradient(135deg,var(--plum-light),#fff)}
-  .card:hover::before{opacity:1}
-  .card.ukvi-card:hover{box-shadow:0 16px 48px rgba(26,74,138,.15)}
-  .card.ukvi-card::before{background:linear-gradient(135deg,var(--ukvi-light),#fff)}
-  .card-inner{position:relative;z-index:1}
-  .num{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#94a3b8;margin-bottom:.6rem}
-  .num.ukvi-num{color:var(--ukvi);opacity:.8}
-  .icon{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:.9rem}
-  .card h3{font-size:1.12rem;margin-bottom:.4rem;line-height:1.3}
-  .card p{font-size:.85rem;color:#64748b;line-height:1.55}
-  .go-arrow{display:inline-flex;align-items:center;gap:.4rem;margin-top:.9rem;font-size:.8rem;font-weight:600;color:var(--plum)}
-  .go-arrow.ukvi-arrow{color:var(--ukvi)}
+  h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+  }
 
-  /* ---- DIVIDER ---- */
-  .section-divider{margin:4rem 0 3rem;border:none;border-top:1px solid var(--line)}
-  .ukvi-intro{margin-bottom:2rem}
-  .ukvi-intro h2{font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:.4rem}
-  .ukvi-intro p{color:#64748b;max-width:520px;line-height:1.6}
-  .ukvi-tag{display:inline-block;padding:.2rem .7rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--ukvi-light);color:var(--ukvi);border:1px solid rgba(26,74,138,.2);margin-bottom:.5rem}
+  /* Ambient Animated Glow Blobs */
+  .glow-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.16;
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity 0.4s ease;
+  }
+  .light .glow-blob {
+    opacity: 0.08;
+  }
+  .blob-1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, hsl(var(--primary)) 0%, transparent 70%);
+    top: -150px;
+    right: -100px;
+    animation: float-blob-1 18s infinite alternate ease-in-out;
+  }
+  .blob-2 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, hsl(var(--teal)) 0%, transparent 70%);
+    bottom: 25%;
+    left: -200px;
+    animation: float-blob-2 22s infinite alternate ease-in-out;
+  }
+  @keyframes float-blob-1 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-100px, 120px) scale(1.15); }
+  }
+  @keyframes float-blob-2 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(120px, -150px) scale(1.1); }
+  }
 
-  /* ---- PTE SECTION ---- */
-  .pte-intro{margin-bottom:2rem}
-  .pte-intro h2{font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:.4rem}
-  .pte-intro p{color:#64748b;max-width:520px;line-height:1.6}
-  .pte-tag{display:inline-block;padding:.2rem .7rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--pte-light);color:var(--pte);border:1px solid rgba(232,98,42,.2);margin-bottom:.5rem}
-  .card.pte-card:hover{box-shadow:0 16px 48px rgba(232,98,42,.15)}
-  .card.pte-card::before{background:linear-gradient(135deg,var(--pte-light),#fff)}
-  .num.pte-num{color:var(--pte);opacity:.8}
-  .go-arrow.pte-arrow{color:var(--pte)}
+  /* Premium Glassmorphic Header / Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4.8rem;
+    background: var(--glass-navbar);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+    transition: background 0.4s, border-color 0.4s;
+  }
+  @media (max-width: 991px) {
+    .navbar {
+      padding: 0 1.5rem;
+      flex-direction: column;
+      height: auto;
+      gap: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      position: relative;
+    }
+  }
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .nav-logo-mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, hsl(var(--primary)), #3b0a64);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(91,42,134,0.45);
+    animation: logo-pulse 3s infinite;
+  }
+  @keyframes logo-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(91,42,134,0.6); }
+    70% { box-shadow: 0 0 0 12px rgba(91,42,134,0); }
+    100% { box-shadow: 0 0 0 0 rgba(91,42,134,0); }
+  }
+  .nav-brand {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    background: linear-gradient(to right, var(--text-main), hsl(var(--primary)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
 
-  /* ---- FOOTER ---- */
-  .footer{background:var(--ink);color:rgba(255,255,255,.4);text-align:center;padding:2.5rem 1rem;font-size:.8rem;line-height:1.8}
-  .footer strong{color:rgba(255,255,255,.7)}
+  .nav-center {
+    display: flex;
+    gap: 0.3rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.25rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+  }
+  .light .nav-center {
+    background: rgba(0, 0, 0, 0.03);
+  }
+  @media (max-width: 768px) {
+    .nav-center {
+      width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+      justify-content: flex-start;
+      border-radius: 12px;
+    }
+  }
+  .nav-tab {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .nav-tab:hover {
+    color: var(--text-main);
+  }
+  .nav-tab.active {
+    color: #fff;
+    background: hsl(var(--primary));
+    box-shadow: 0 4px 15px rgba(91,42,134,0.35);
+  }
+  .light .nav-tab.active {
+    color: #fff;
+    background: hsl(var(--primary));
+  }
 
-  /* DARK MODE FOR INDEX */
-  .dark {
-    --paper: #0f172a;
-    --ink: #cbd5e1;
-    --line: #334155;
-    --plum-light: #1e1b4b; /* deep indigo/purple */
-    --ukvi-light: #0f172a;
-    --pte-light: #0f172a;
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  @media (max-width: 991px) {
+    .nav-right {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  .search-wrapper {
+    position: relative;
+  }
+  @media (max-width: 991px) {
+    .search-wrapper {
+      flex-grow: 1;
+      max-width: 400px;
+    }
+  }
+  .search-input {
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 0.55rem 1rem 0.55rem 2.6rem;
+    font-size: 0.85rem;
+    color: var(--text-main);
+    outline: none;
+    width: 190px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .search-input:focus {
+    width: 260px;
+    border-color: hsl(var(--primary));
+    box-shadow: 0 0 15px rgba(91,42,134,0.25);
+  }
+  @media (max-width: 991px) {
+    .search-input {
+      width: 100%;
+    }
+    .search-input:focus {
+      width: 100%;
+    }
+  }
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+    display: flex;
+    align-items: center;
   }
   
-  .dark .modules {
-    background: #0f172a !important;
-    color: #cbd5e1 !important;
+  .lock-status-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--text-main);
+    transition: all 0.2s;
+  }
+  .lock-status-btn:hover {
+    transform: translateY(-1px);
+    border-color: hsl(var(--primary));
+    box-shadow: 0 4px 12px rgba(91,42,134,0.1);
+  }
+  .lock-status-btn.unlocked {
+    color: #10b981;
+    border-color: rgba(16, 185, 129, 0.3);
+  }
+  .lock-status-btn.unlocked:hover {
+    border-color: #10b981;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
   }
   
-  .dark .card {
-    background: #1e293b !important;
-    border-color: #334155 !important;
-    color: #cbd5e1 !important;
+  .theme-toggle-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.25s ease;
   }
-  
-  .dark .card::before {
-    background: linear-gradient(135deg, #1e1b4b, #1e293b) !important;
-  }
-  
-  .dark .card p {
-    color: #94a3b8 !important;
-  }
-  
-  .dark .card.ukvi-card::before {
-    background: linear-gradient(135deg, #0f172a, #1e3a8a) !important;
-  }
-  
-  .dark .card.pte-card::before {
-    background: linear-gradient(135deg, #0f172a, #7c2d12) !important;
+  .theme-toggle-btn:hover {
+    transform: scale(1.06) rotate(15deg);
+    border-color: hsl(var(--primary));
   }
 
-  .dark .icon {
-    background: #334155 !important;
-    color: #fff !important;
+  /* ---- HERO SECTION ---- */
+  .hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 9rem 1.5rem 4rem;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+  @media (max-width: 991px) {
+    .hero {
+      padding-top: 5rem;
+      min-height: auto;
+    }
+  }
+  .brand-tagline {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: hsl(var(--primary));
+    margin-bottom: 1.2rem;
+    animation: fade-down 0.8s ease-out;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 6vw, 4.4rem);
+    line-height: 1.12;
+    max-width: 920px;
+    color: var(--text-main);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    animation: fade-up 0.8s ease-out;
+  }
+  .gold-coral-gradient {
+    background: linear-gradient(135deg, #ffe599 0%, #c8932a 50%, #e8456b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 30px rgba(200,147,42,0.25));
+  }
+  .hero p {
+    margin-top: 1.6rem;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 580px;
+    line-height: 1.65;
+    animation: fade-up 1s ease-out;
+  }
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+    margin-top: 2.2rem;
+    animation: fade-up 1.2s ease-out;
+  }
+  .badge {
+    padding: 0.45rem 1.1rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    color: var(--text-main);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   }
   
-  .dark .go-arrow {
-    color: var(--gold) !important;
+  .instagram-btn-wrapper {
+    margin-top: 2.8rem;
+    animation: fade-up 1.4s ease-out;
   }
-
-  .dark #darkModeToggle {
-    background: rgba(255,255,255,0.15) !important;
-    border-color: rgba(255,255,255,0.3) !important;
-  }
-
-  #darkModeToggle:hover {
-    transform: scale(1.05);
-    background: rgba(255,255,255,0.2) !important;
-  }
-  .dark #darkModeToggle:hover {
-    background: rgba(255,255,255,0.25) !important;
-  }
-  
   .instagram-hero-btn {
-    transition: all 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    background: linear-gradient(135deg, #e1306c, #c13584, #833ab4);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.95rem 2.2rem;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(225,48,108,0.35);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .instagram-hero-btn:hover {
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 12px 25px rgba(225,48,108,0.4) !important;
-    opacity: 0.95;
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(225,48,108,0.55);
+  }
+  
+  .scroll-hint {
+    margin-top: 5rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    opacity: 0.65;
+    animation: bob 2s ease-in-out infinite;
+  }
+  @keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fade-down {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ---- TARGET SCORE CALCULATOR WIDGET ---- */
+  .calculator-section {
+    max-width: 1100px;
+    margin: 0 auto 4rem;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 10;
+  }
+  @media (max-width: 768px) {
+    .calculator-section {
+      padding: 0 1rem;
+    }
+  }
+  .calc-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 2.2rem;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: var(--card-shadow);
+    display: grid;
+    grid-template-columns: 1.1fr 1.3fr;
+    gap: 2.5rem;
+    align-items: center;
+    transition: border-color 0.3s;
+  }
+  @media(max-width: 768px) {
+    .calc-card { grid-template-columns: 1fr; gap: 1.8rem; padding: 1.8rem; }
+  }
+  .calc-left h3 {
+    font-size: 1.45rem;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 800;
+  }
+  .calc-left p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+  .calc-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .calc-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: hsl(var(--primary));
+  }
+  .calc-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .calc-btn {
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.65rem 1.2rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .calc-btn:hover {
+    border-color: hsl(var(--primary));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .calc-btn.active {
+    background: hsl(var(--primary));
+    border-color: hsl(var(--primary));
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(91, 42, 134, 0.4);
+  }
+  .calc-feedback {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    min-height: 38px;
+    line-height: 1.6;
+    padding-top: 0.8rem;
+    border-top: 1px dashed var(--divider-color);
+    display: flex;
+    align-items: center;
+  }
+
+  /* ---- MODULES SECTION ---- */
+  .modules {
+    background-color: var(--bg-modules);
+    padding: 6rem 2rem;
+    border-top: 1px solid var(--border-color);
+    position: relative;
+    z-index: 10;
+    transition: background-color 0.4s ease;
+  }
+  @media (max-width: 768px) {
+    .modules {
+      padding: 4rem 1rem;
+    }
+  }
+  .modules-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .section-header {
+    margin-bottom: 3.5rem;
+  }
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: hsl(var(--primary));
+    margin-bottom: 0.6rem;
+  }
+  
+  .modules h2 {
+    font-size: clamp(1.9rem, 4.2vw, 2.6rem);
+    margin-bottom: 0.6rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .section-desc {
+    color: var(--text-muted);
+    max-width: 580px;
+    line-height: 1.65;
+    font-size: 0.98rem;
+  }
+
+  .grid-container {
+    margin-bottom: 4rem;
+  }
+  .grid-container.hidden {
+    display: none;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.6rem;
+  }
+  @media (max-width: 576px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* ---- CARD COMPONENT ---- */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 2rem;
+    text-decoration: none;
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: var(--card-shadow);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  /* Gradient border glow overlay */
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    padding: 1.2px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  .light .card::before {
+    background: linear-gradient(135deg, rgba(15,23,42,0.12), rgba(15,23,42,0.02));
+  }
+  .card:hover {
+    transform: translateY(-6px) scale(1.01);
+    background: var(--bg-card-hover);
+    border-color: var(--border-hover);
+    box-shadow: 0 20px 40px -15px rgba(var(--primary-raw), 0.22);
+  }
+  .light .card:hover {
+    box-shadow: 0 20px 40px -15px rgba(var(--primary-raw), 0.12);
+  }
+  
+  /* UKVI theme card overrides */
+  .card.ukvi-card:hover {
+    box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.22);
+  }
+  .light .card.ukvi-card:hover {
+    box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.12);
+  }
+  
+  /* PTE theme card overrides */
+  .card.pte-card:hover {
+    box-shadow: 0 20px 40px -15px rgba(249, 115, 22, 0.22);
+  }
+  .light .card.pte-card:hover {
+    box-shadow: 0 20px 40px -15px rgba(249, 115, 22, 0.12);
+  }
+
+  /* Recommended Glow Effect */
+  .card.recommended-glow {
+    animation: card-glow-pulse 2.5s infinite;
+    border-color: hsl(var(--primary));
+  }
+  .card.recommended-glow.ukvi-card {
+    border-color: #3b82f6;
+    animation: card-glow-pulse-ukvi 2.5s infinite;
+  }
+  .card.recommended-glow.pte-card {
+    border-color: #f97316;
+    animation: card-glow-pulse-pte 2.5s infinite;
+  }
+  @keyframes card-glow-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(91, 42, 134, 0.3); }
+    50% { box-shadow: 0 0 22px 6px rgba(91, 42, 134, 0.5); }
+  }
+  @keyframes card-glow-pulse-ukvi {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.3); }
+    50% { box-shadow: 0 0 22px 6px rgba(37, 99, 235, 0.5); }
+  }
+  @keyframes card-glow-pulse-pte {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.3); }
+    50% { box-shadow: 0 0 22px 6px rgba(249, 115, 22, 0.5); }
+  }
+
+  /* Card Inner Elements */
+  .card-top {
+    margin-bottom: 1.5rem;
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+  }
+  .card-tag {
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    background: rgba(91, 42, 134, 0.1);
+    color: hsl(var(--primary));
+    border: 1px solid rgba(91, 42, 134, 0.18);
+  }
+  .card.ukvi-card .card-tag {
+    background: rgba(37, 99, 235, 0.08);
+    color: #3b82f6;
+    border-color: rgba(37, 99, 235, 0.16);
+  }
+  .card.pte-card .card-tag {
+    background: rgba(249, 115, 22, 0.08);
+    color: #f97316;
+    border-color: rgba(249, 115, 22, 0.16);
+  }
+  .card.free-card .card-tag {
+    background: rgba(200, 147, 42, 0.08);
+    color: #d97706;
+    border-color: rgba(200, 147, 42, 0.16);
+  }
+  
+  .card-meta {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .card-icon-wrapper {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    margin-bottom: 1.1rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .light .card-icon-wrapper {
+    background: rgba(0, 0, 0, 0.03);
+  }
+  .card:hover .card-icon-wrapper {
+    transform: scale(1.1) rotate(6deg);
+    border-color: hsl(var(--primary));
+    background: rgba(91, 42, 134, 0.1);
+  }
+  .card.ukvi-card:hover .card-icon-wrapper {
+    border-color: #3b82f6;
+    background: rgba(37, 99, 235, 0.1);
+  }
+  .card.pte-card:hover .card-icon-wrapper {
+    border-color: #f97316;
+    background: rgba(249, 115, 22, 0.1);
+  }
+
+  .card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+  }
+  .card p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  .card-bottom {
+    margin-top: 1.5rem;
+  }
+  .go-arrow {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: hsl(var(--primary));
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .card.ukvi-card .go-arrow { color: #3b82f6; }
+  .card.pte-card .go-arrow { color: #f97316; }
+  .card.free-card .go-arrow { color: #d97706; }
+  
+  .go-arrow span {
+    transition: transform 0.2s;
+  }
+  .card:hover .go-arrow span {
+    transform: translateX(4px);
+  }
+
+  /* ---- SECTION DIVIDERS ---- */
+  .section-divider {
+    margin: 4.5rem 0 3rem;
+    border: none;
+    border-top: 1px solid var(--divider-color);
+  }
+
+  /* ---- FOOTER ---- */
+  .footer {
+    background-color: var(--bg-main);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 4.5rem 2rem 4rem;
+    font-size: 0.85rem;
+    line-height: 1.8;
+    border-top: 1px solid var(--border-color);
+    position: relative;
+    z-index: 10;
+    transition: background-color 0.4s ease;
+  }
+  .footer strong {
+    color: var(--text-main);
+    font-weight: 700;
+  }
+  .footer-insta {
+    margin: 1.2rem 0;
+  }
+  .footer-insta a {
+    color: #e1306c;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: text-shadow 0.2s;
+  }
+  .footer-insta a:hover {
+    text-shadow: 0 0 10px rgba(225,48,108,0.35);
+  }
+  .footer-lock-test {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--divider-color);
+  }
+  .footer-lock-test button {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    text-decoration: underline;
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .footer-lock-test button:hover {
+    color: var(--text-main);
+  }
+
+  /* Transitions & Classes for Searching & Recommendation highlighting */
+  .card.filtered-out {
+    display: none !important;
+  }
+  .card.dimmed {
+    opacity: 0.3;
+    filter: blur(1.5px) grayscale(50%);
   }
 </style>
   <script src="security.js"></script>
 </head>
 <body>
 
-<button id="darkModeToggle" style="position:fixed;top:1.5rem;right:1.5rem;z-index:999;width:3rem;height:3rem;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);transition:all 0.2s" aria-label="Toggle Dark Mode">🌙</button>
+<!-- Ambient Glow Blobs -->
+<div class="glow-blob blob-1"></div>
+<div class="glow-blob blob-2"></div>
+
+<!-- Top Sticky Glassmorphic Navbar -->
+<header class="navbar">
+  <div class="nav-left">
+    <div class="nav-logo-mark">V</div>
+    <a href="#" class="nav-brand">ViATestPrep</a>
+  </div>
+  
+  <nav class="nav-center">
+    <button class="nav-tab active" onclick="filterCategory('all', this)">All Modules</button>
+    <button class="nav-tab" onclick="filterCategory('core', this)">IELTS Core</button>
+    <button class="nav-tab" onclick="filterCategory('ukvi', this)">UKVI Specialist</button>
+    <button class="nav-tab" onclick="filterCategory('pte', this)">PTE Academic</button>
+    <button class="nav-tab" onclick="filterCategory('grammar', this)">Grammar</button>
+    <button class="nav-tab" onclick="filterCategory('free', this)">Free PDF</button>
+  </nav>
+  
+  <div class="nav-right">
+    <div class="search-wrapper">
+      <span class="search-icon">
+        <svg style="width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </span>
+      <input type="text" id="moduleSearch" class="search-input" placeholder="Search modules..." oninput="handleSearch(this.value)"/>
+    </div>
+    
+    <button id="lockStatusBtn" class="lock-status-btn" onclick="toggleLockState()">
+      <span id="lockIcon"></span>
+      <span id="lockLabel">Loading...</span>
+    </button>
+    
+    <button id="darkModeToggle" class="theme-toggle-btn" aria-label="Toggle Theme">🌙</button>
+  </div>
+</header>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="logo-mark">V</div>
-  <div class="brand-name">ViATestPrep</div>
+  <div class="brand-tagline">ViATestPrep Portal</div>
   <h1>Your Complete <span class="gold-coral-gradient">IELTS &amp; PTE</span> Preparation Hub</h1>
   <p>16 interactive modules covering every IELTS &amp; PTE skill — Reading, Listening, Writing, Speaking, Grammar, Vocabulary, and UKVI. Built for Band 7+ and 79+ targets.</p>
   <div class="hero-badges">
@@ -187,8 +908,8 @@
     <span class="badge">📖 All 4 Skills</span>
     <span class="badge">🇬🇧 UKVI Modules</span>
   </div>
-  <div style="margin-top:2.2rem; position:relative; z-index:1;">
-    <a href="https://www.instagram.com/viatestprep/" target="_blank" class="instagram-hero-btn" style="display:inline-flex; align-items:center; gap:0.5rem; background:linear-gradient(135deg, #e1306c, #c13584, #833ab4); color:#fff; text-decoration:none; padding:0.75rem 1.6rem; border-radius:30px; font-size:0.85rem; font-weight:700; box-shadow:0 8px 20px rgba(225,48,108,0.25);">
+  <div class="instagram-btn-wrapper">
+    <a href="https://www.instagram.com/viatestprep/" target="_blank" class="instagram-hero-btn">
       <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
       Message us on Instagram to Enroll
     </a>
@@ -199,214 +920,341 @@
   </div>
 </section>
 
-<!-- MODULES -->
-<section class="modules">
+<!-- STUDY PLAN TRACK / TARGET BAND CALCULATOR WIDGET -->
+<section class="calculator-section">
+  <div class="calc-card">
+    <div class="calc-left">
+      <h3>🎯 Recommended Study Track</h3>
+      <p>Select your preparation target goal. Our recommendation engine will instantly highlight and prioritize the critical modules needed for your score.</p>
+    </div>
+    <div class="calc-right">
+      <span class="calc-label">Select Your Target Score</span>
+      <div class="calc-options">
+        <button class="calc-btn" onclick="recommendTrack('ielts-7.0', this)">IELTS 7.0</button>
+        <button class="calc-btn" onclick="recommendTrack('ielts-7.5', this)">IELTS 7.5+</button>
+        <button class="calc-btn" onclick="recommendTrack('pte-65', this)">PTE 65</button>
+        <button class="calc-btn" onclick="recommendTrack('pte-79', this)">PTE 79+</button>
+        <button class="calc-btn" onclick="recommendTrack('ukvi', this)">UKVI GT Track</button>
+        <button class="calc-btn" onclick="recommendTrack('clear', this)">Clear Target</button>
+      </div>
+      <div id="calcFeedback" class="calc-feedback">
+        Select a score target above to get customized recommendations.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODULES GRID -->
+<section class="modules" id="modulesSection">
   <div class="modules-inner">
 
-    <div class="section-label">Start Here</div>
-    <h2>Orientation &amp; Core Modules</h2>
-    <p>Begin with Class 01, then work through each skill module at your own pace. Every lesson includes strategy guides, live drills, and a boss-fight mock test.</p>
+    <!-- Start Here / Orientation Grid -->
+    <div class="grid-container" id="container-orientation">
+      <div class="section-header">
+        <div class="section-label">Start Here</div>
+        <h2>Orientation &amp; Core Modules</h2>
+        <p class="section-desc">Begin with Class 01, then work through each skill module at your own pace. Every lesson includes strategy guides, live drills, and a boss-fight mock test.</p>
+      </div>
 
-    <div class="grid">
+      <div class="grid">
+        <!-- Free Resource Card -->
+        <a href="free-essay-template.html" class="card free-card" data-tags="free,core" data-recommended="ielts-7.0,ielts-7.5,ukvi">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">🎁 FREE PDF TEMPLATE</span>
+              <span class="card-meta">⏱️ 1 hr · 🟢 Easy</span>
+            </div>
+            <div class="card-icon-wrapper">📝</div>
+            <h3>Agree/Disagree Essay Template</h3>
+            <p>Get instant access to our Band 8+ essay template. Structurally optimized, print-friendly, and completely free to save as PDF.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Get free template <span>→</span></div>
+          </div>
+        </a>
 
-      <!-- Free Resource Card -->
-      <a href="free-essay-template.html" class="card" style="border-color:var(--gold);background:var(--gold-soft)">
-        <div class="card-inner">
-          <span class="inline-block bg-amber-100 text-amber-805 text-[9px] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider mb-2 dark:bg-amber-950 dark:text-amber-300" style="color:#78350f">
-            🎁 FREE PDF TEMPLATE
-          </span>
-          <div class="icon" style="background:#ffe599">📝</div>
-          <h3>Agree/Disagree Essay Template</h3>
-          <p>Get instant access to our Band 8+ essay template. Structurally optimized, print-friendly, and completely free to save as PDF.</p>
-          <div class="go-arrow" style="color:var(--gold)">Get free template →</div>
-        </div>
-      </a>
+        <!-- Class 01 Orientation -->
+        <a href="00_IELTS_Orientation_Class_01.html" class="card" data-tags="core" data-recommended="ielts-7.0,ielts-7.5,ukvi">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">Class 01 · Orientation</span>
+              <span class="card-meta">⏱️ 2 hrs · 🟢 Easy</span>
+            </div>
+            <div class="card-icon-wrapper">🧭</div>
+            <h3>Welcome &amp; The Basics</h3>
+            <p>What IELTS is, Academic vs General Training, test format, scoring, test day prep, and 6 myths busted. Start here.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Start here <span>→</span></div>
+          </div>
+        </a>
 
-      <a href="00_IELTS_Orientation_Class_01.html" class="card">
-        <div class="card-inner">
-          <div class="num">Class 01 · Orientation</div>
-          <div class="icon" style="background:#fdf6e3">🧭</div>
-          <h3>Welcome &amp; The Basics</h3>
-          <p>What IELTS is, Academic vs General Training, test format, scoring, test day prep, and 6 myths busted. Start here.</p>
-          <div class="go-arrow">Start here →</div>
-        </div>
-      </a>
+        <!-- Module 01 Reading -->
+        <a href="01_IELTS_Reading_Detective_Academy.html" class="card" data-tags="core,reading" data-recommended="ielts-7.0,ielts-7.5,ukvi">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">Module 01 · Reading</span>
+              <span class="card-meta">⏱️ 8 hrs · 🔴 Hard</span>
+            </div>
+            <div class="card-icon-wrapper">🕵️</div>
+            <h3>Detective Academy</h3>
+            <p>Master all 14 reading question types with case-file strategies, skim/scan drills, and a timed boss fight.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Start lesson <span>→</span></div>
+          </div>
+        </a>
 
-      <a href="01_IELTS_Reading_Detective_Academy.html" class="card">
-        <div class="card-inner">
-          <div class="num">Module 01 · Reading</div>
-          <div class="icon" style="background:#f3ecff">🕵️</div>
-          <h3>Detective Academy</h3>
-          <p>Master all 14 reading question types with case-file strategies, skim/scan drills, and a timed boss fight.</p>
-          <div class="go-arrow">Start lesson →</div>
-        </div>
-      </a>
+        <!-- Module 02 Listening -->
+        <a href="02_IELTS_Listening_Sound_Hunter.html" class="card" data-tags="core,listening" data-recommended="ielts-7.0,ielts-7.5,ukvi">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">Module 02 · Listening</span>
+              <span class="card-meta">⏱️ 6 hrs · 🟡 Medium</span>
+            </div>
+            <div class="card-icon-wrapper">🎧</div>
+            <h3>Sound Hunter</h3>
+            <p>Section-by-section strategies, spelling traps, distraction techniques, and prediction drills.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Start lesson <span>→</span></div>
+          </div>
+        </a>
 
-      <a href="02_IELTS_Listening_Sound_Hunter.html" class="card">
-        <div class="card-inner">
-          <div class="num">Module 02 · Listening</div>
-          <div class="icon" style="background:#fdf0f3">🎧</div>
-          <h3>Sound Hunter</h3>
-          <p>Section-by-section strategies, spelling traps, distraction techniques, and prediction drills.</p>
-          <div class="go-arrow">Start lesson →</div>
-        </div>
-      </a>
+        <!-- Module 03 Writing -->
+        <a href="03_IELTS_Writing_Architects_Blueprint_v2.html" class="card" data-tags="core,writing" data-recommended="ielts-7.0,ielts-7.5,ukvi">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">Module 03 · Writing (v2)</span>
+              <span class="card-meta">⏱️ 10 hrs · 🔴 Hard</span>
+            </div>
+            <div class="card-icon-wrapper">✍️</div>
+            <h3>Architect's Blueprint</h3>
+            <p>Task 1, Task 2 structures, live charts, paraphrase worksheet, interactive sample essays, and templates.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Start lesson <span>→</span></div>
+          </div>
+        </a>
 
-      <a href="03_IELTS_Writing_Architects_Blueprint_v2.html" class="card">
-        <div class="card-inner">
-          <div class="num">Module 03 · Writing (v2)</div>
-          <div class="icon" style="background:#eef9f3">✍️</div>
-          <h3>Architect's Blueprint</h3>
-          <p>Task 1, Task 2 structures, live charts, paraphrase worksheet, interactive sample essays, and templates.</p>
-          <div class="go-arrow">Start lesson →</div>
-        </div>
-      </a>
+        <!-- Module 04 Speaking -->
+        <a href="04_IELTS_Speaking_Confident_Performer.html" class="card" data-tags="core,speaking" data-recommended="ielts-7.0,ielts-7.5,ukvi">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">Module 04 · Speaking</span>
+              <span class="card-meta">⏱️ 8 hrs · 🟡 Medium</span>
+            </div>
+            <div class="card-icon-wrapper">🎤</div>
+            <h3>Confident Performer</h3>
+            <p>Part 1, 2 &amp; 3 frameworks, fluency drills, filler reduction techniques, and pronunciation tips.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Start lesson <span>→</span></div>
+          </div>
+        </a>
 
-      <a href="04_IELTS_Speaking_Confident_Performer.html" class="card">
-        <div class="card-inner">
-          <div class="num">Module 04 · Speaking</div>
-          <div class="icon" style="background:#fdf6e3">🎤</div>
-          <h3>Confident Performer</h3>
-          <p>Part 1, 2 &amp; 3 frameworks, fluency drills, filler reduction techniques, and pronunciation tips.</p>
-          <div class="go-arrow">Start lesson →</div>
-        </div>
-      </a>
+        <!-- Module 05 Cohesive Devices -->
+        <a href="05_IELTS_Cohesive_Devices_Weaver.html" class="card" data-tags="grammar" data-recommended="ielts-7.0,ielts-7.5,pte-65,pte-79">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">Module 05 · Grammar</span>
+              <span class="card-meta">⏱️ 4 hrs · 🟢 Easy</span>
+            </div>
+            <div class="card-icon-wrapper">🧵</div>
+            <h3>Cohesive Devices Weaver</h3>
+            <p>All cohesive device categories with drag-and-place drills and before/after paragraph rewrites.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Start lesson <span>→</span></div>
+          </div>
+        </a>
 
-      <a href="05_IELTS_Cohesive_Devices_Weaver.html" class="card">
-        <div class="card-inner">
-          <div class="num">Module 05 · Grammar</div>
-          <div class="icon" style="background:#f3ecff">🧵</div>
-          <h3>Cohesive Devices Weaver</h3>
-          <p>All cohesive device categories with drag-and-place drills and before/after paragraph rewrites.</p>
-          <div class="go-arrow">Start lesson →</div>
-        </div>
-      </a>
+        <!-- Module 06 Tenses -->
+        <a href="06_IELTS_Tenses_Conditionals.html" class="card" data-tags="grammar" data-recommended="ielts-7.0,ielts-7.5,pte-65,pte-79">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">Module 06 · Grammar</span>
+              <span class="card-meta">⏱️ 5 hrs · 🟡 Medium</span>
+            </div>
+            <div class="card-icon-wrapper">⏱️</div>
+            <h3>Tenses &amp; Conditionals</h3>
+            <p>Perfect tense control, conditional structures, and timed transformation drills for writing accuracy.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Start lesson <span>→</span></div>
+          </div>
+        </a>
 
-      <a href="06_IELTS_Tenses_Conditionals.html" class="card">
-        <div class="card-inner">
-          <div class="num">Module 06 · Grammar</div>
-          <div class="icon" style="background:#fdf0f3">⏱️</div>
-          <h3>Tenses &amp; Conditionals</h3>
-          <p>Perfect tense control, conditional structures, and timed transformation drills for writing accuracy.</p>
-          <div class="go-arrow">Start lesson →</div>
-        </div>
-      </a>
+        <!-- Module 07 Punctuation -->
+        <a href="07_IELTS_Punctuation_Signals.html" class="card" data-tags="grammar" data-recommended="ielts-7.0,ielts-7.5,pte-65,pte-79">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">Module 07 · Grammar</span>
+              <span class="card-meta">⏱️ 3 hrs · 🟢 Easy</span>
+            </div>
+            <div class="card-icon-wrapper">✏️</div>
+            <h3>Punctuation Signals</h3>
+            <p>Commas, semicolons, colons and apostrophes — with interactive fix-the-error exercises.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Start lesson <span>→</span></div>
+          </div>
+        </a>
 
-      <a href="07_IELTS_Punctuation_Signals.html" class="card">
-        <div class="card-inner">
-          <div class="num">Module 07 · Grammar</div>
-          <div class="icon" style="background:#eef9f5">✏️</div>
-          <h3>Punctuation Signals</h3>
-          <p>Commas, semicolons, colons and apostrophes — with interactive fix-the-error exercises.</p>
-          <div class="go-arrow">Start lesson →</div>
-        </div>
-      </a>
+        <!-- Module 08 Voice & Speech -->
+        <a href="08_IELTS_Voice_Speech.html" class="card" data-tags="grammar" data-recommended="ielts-7.0,ielts-7.5,pte-65,pte-79">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">Module 08 · Grammar</span>
+              <span class="card-meta">⏱️ 4 hrs · 🟡 Medium</span>
+            </div>
+            <div class="card-icon-wrapper">🔄</div>
+            <h3>Active &amp; Passive Voice</h3>
+            <p>When to use passive in academic writing, transformation drills, and writing task integration.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Start lesson <span>→</span></div>
+          </div>
+        </a>
 
-      <a href="08_IELTS_Voice_Speech.html" class="card">
-        <div class="card-inner">
-          <div class="num">Module 08 · Grammar</div>
-          <div class="icon" style="background:#fdf6e3">🔄</div>
-          <h3>Active &amp; Passive Voice</h3>
-          <p>When to use passive in academic writing, transformation drills, and writing task integration.</p>
-          <div class="go-arrow">Start lesson →</div>
-        </div>
-      </a>
+        <!-- Module 09 Sentence Mastery -->
+        <a href="09_IELTS_Sentence_Mastery.html" class="card" data-tags="grammar" data-recommended="ielts-7.0,ielts-7.5,pte-65,pte-79">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">Module 09 · Grammar</span>
+              <span class="card-meta">⏱️ 6 hrs · 🔴 Hard</span>
+            </div>
+            <div class="card-icon-wrapper">🏗️</div>
+            <h3>Sentence Mastery</h3>
+            <p>Simple, compound and complex sentence structures with clause-building and combining exercises.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Start lesson <span>→</span></div>
+          </div>
+        </a>
 
-      <a href="09_IELTS_Sentence_Mastery.html" class="card">
-        <div class="card-inner">
-          <div class="num">Module 09 · Grammar</div>
-          <div class="icon" style="background:#f3ecff">🏗️</div>
-          <h3>Sentence Mastery</h3>
-          <p>Simple, compound and complex sentence structures with clause-building and combining exercises.</p>
-          <div class="go-arrow">Start lesson →</div>
-        </div>
-      </a>
+        <!-- Module 10 Vocabulary Accelerator -->
+        <a href="10_IELTS_Vocabulary_Accelerator.html" class="card" data-tags="grammar,vocabulary" data-recommended="ielts-7.0,ielts-7.5,pte-65,pte-79">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">Module 10 · Vocabulary</span>
+              <span class="card-meta">⏱️ 5 hrs · 🟡 Medium</span>
+            </div>
+            <div class="card-icon-wrapper">🚀</div>
+            <h3>Vocabulary Accelerator</h3>
+            <p>Collocations, topic word banks, paraphrase drills, and band-7 synonym upgrades.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Start lesson <span>→</span></div>
+          </div>
+        </a>
 
-      <a href="10_IELTS_Vocabulary_Accelerator.html" class="card">
-        <div class="card-inner">
-          <div class="num">Module 10 · Vocabulary</div>
-          <div class="icon" style="background:#fdf0f3">🚀</div>
-          <h3>Vocabulary Accelerator</h3>
-          <p>Collocations, topic word banks, paraphrase drills, and band-7 synonym upgrades.</p>
-          <div class="go-arrow">Start lesson →</div>
-        </div>
-      </a>
-
-      <a href="ielts-vocabulary-guide.html" class="card">
-        <div class="card-inner">
-          <div class="num">Vocabulary · Master Guide</div>
-          <div class="icon" style="background:#fdf2ed">📖</div>
-          <h3>Vocabulary Mastery</h3>
-          <p>Interactive spaced-repetition flashcards, topic word banks, upgrades, and mock quizzes for Band 7.5+.</p>
-          <div class="go-arrow">Start guide →</div>
-        </div>
-      </a>
-
+        <!-- Vocabulary Master Guide -->
+        <a href="ielts-vocabulary-guide.html" class="card" data-tags="vocabulary" data-recommended="ielts-7.0,ielts-7.5,pte-65,pte-79">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">Vocabulary · Master Guide</span>
+              <span class="card-meta">⏱️ 12 hrs · 🔴 Hard</span>
+            </div>
+            <div class="card-icon-wrapper">📖</div>
+            <h3>Vocabulary Mastery</h3>
+            <p>Interactive spaced-repetition flashcards, topic word banks, upgrades, and mock quizzes for Band 7.5+.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Start guide <span>→</span></div>
+          </div>
+        </a>
+      </div>
     </div>
 
-    <!-- UKVI SECTION -->
-    <hr class="section-divider"/>
-    <div class="ukvi-intro">
-      <div class="section-label ukvi-label">UKVI · Academic &amp; General Training</div>
-      <h2>UKVI Specialist Modules</h2>
-      <p>Targeted modules for the UK Visas and Immigration (UKVI) IELTS — Reading, Writing Task 1, and Writing Task 2 Essay.</p>
+    <hr class="section-divider" id="divider-ukvi"/>
+
+    <!-- UKVI SPECIALIST MODULES -->
+    <div class="grid-container" id="container-ukvi">
+      <div class="section-header">
+        <div class="section-label ukvi-label">UKVI · Academic &amp; General Training</div>
+        <h2>UKVI Specialist Modules</h2>
+        <p class="section-desc">Targeted modules for the UK Visas and Immigration (UKVI) IELTS — Reading, Writing Task 1, and Writing Task 2 Essay.</p>
+      </div>
+
+      <div class="grid">
+        <!-- GT Reading -->
+        <a href="UKVI_GT_Reading_Module.html" class="card ukvi-card" data-tags="ukvi,reading" data-recommended="ukvi">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">UKVI · GT Reading</span>
+              <span class="card-meta">⏱️ 7 hrs · 🟡 Medium</span>
+            </div>
+            <div class="card-icon-wrapper">🇬🇧</div>
+            <h3>GT Reading Module</h3>
+            <p>Notices, advertisements, workplace documents and multi-text strategies built for the General Training Reading format.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Start lesson <span>→</span></div>
+          </div>
+        </a>
+
+        <!-- GT Writing Task 1 -->
+        <a href="UKVI_GT_Writing_Task1_Module.html" class="card ukvi-card" data-tags="ukvi,writing" data-recommended="ukvi">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">UKVI · GT Writing</span>
+              <span class="card-meta">⏱️ 6 hrs · 🟡 Medium</span>
+            </div>
+            <div class="card-icon-wrapper">✉️</div>
+            <h3>GT Writing Task 1 — Letter</h3>
+            <p>Formal, semi-formal and informal letter frameworks, tone control, and opening/closing formula drills.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Start lesson <span>→</span></div>
+          </div>
+        </a>
+
+        <!-- GT & Academic Task 2 -->
+        <a href="UKVI_Writing_Task2_Essay_Module.html" class="card ukvi-card" data-tags="ukvi,writing" data-recommended="ukvi">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">UKVI · GT &amp; Academic</span>
+              <span class="card-meta">⏱️ 8 hrs · 🔴 Hard</span>
+            </div>
+            <div class="card-icon-wrapper">📝</div>
+            <h3>GT &amp; Academic Task 2 — Essay</h3>
+            <p>Thesis development, 4-paragraph planning, formal vocabulary guidelines, and interactive essay building tools.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Start lesson <span>→</span></div>
+          </div>
+        </a>
+      </div>
     </div>
 
-    <div class="grid">
+    <hr class="section-divider" id="divider-pte"/>
 
-      <a href="UKVI_GT_Reading_Module.html" class="card ukvi-card">
-        <div class="card-inner">
-          <div class="num ukvi-num">UKVI · General Training Reading</div>
-          <div class="icon" style="background:#e8f0fb">🇬🇧</div>
-          <h3>GT Reading Module</h3>
-          <p>Notices, advertisements, workplace documents and multi-text strategies built for the General Training Reading format.</p>
-          <div class="go-arrow ukvi-arrow">Start lesson →</div>
-        </div>
-      </a>
+    <!-- PTE SPECIALIST MODULES -->
+    <div class="grid-container" id="container-pte">
+      <div class="section-header">
+        <div class="section-label pte-label">PTE · Pearson Test of English</div>
+        <h2>PTE Specialist Modules</h2>
+        <p class="section-desc">Comprehensive study materials and strategies built for the Pearson Test of English (PTE) Academic format.</p>
+      </div>
 
-      <a href="UKVI_GT_Writing_Task1_Module.html" class="card ukvi-card">
-        <div class="card-inner">
-          <div class="num ukvi-num">UKVI · General Training Writing</div>
-          <div class="icon" style="background:#e8f0fb">✉️</div>
-          <h3>GT Writing Task 1 — Letter</h3>
-          <p>Formal, semi-formal and informal letter frameworks, tone control, and opening/closing formula drills.</p>
-          <div class="go-arrow ukvi-arrow">Start lesson →</div>
-        </div>
-      </a>
-
-      <a href="UKVI_Writing_Task2_Essay_Module.html" class="card ukvi-card">
-        <div class="card-inner">
-          <div class="num ukvi-num">UKVI · Academic &amp; General Writing</div>
-          <div class="icon" style="background:#e8f0fb">📝</div>
-          <h3>GT &amp; Academic Task 2 — Essay</h3>
-          <p>Thesis development, 4-paragraph planning, formal vocabulary guidelines, and interactive essay building tools.</p>
-          <div class="go-arrow ukvi-arrow">Start lesson →</div>
-        </div>
-      </a>
-
-    </div>
-
-    <!-- PTE SECTION -->
-    <hr class="section-divider"/>
-    <div class="pte-intro">
-      <div class="pte-tag">PTE Academic</div>
-      <div class="section-label pte-label">PTE · Pearson Test of English</div>
-      <h2>PTE Specialist Modules</h2>
-      <p>Comprehensive study materials and strategies built for the Pearson Test of English (PTE) Academic format.</p>
-    </div>
-
-    <div class="grid">
-
-      <a href="pte-master-guide.html" class="card pte-card">
-        <div class="card-inner">
-          <div class="num pte-num">PTE Academic · Master Guide</div>
-          <div class="icon" style="background:#fdf2ed">⚡</div>
-          <h3>PTE Academic Master Guide</h3>
-          <p>Score 80+ in PTE Academic. Complete guide to Speaking, Writing, Reading, and Listening with interactive templates and quizzes.</p>
-          <div class="go-arrow pte-arrow">Start guide →</div>
-        </div>
-      </a>
-
+      <div class="grid">
+        <!-- PTE Master Guide -->
+        <a href="pte-master-guide.html" class="card pte-card" data-tags="pte" data-recommended="pte-65,pte-79">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">PTE Academic · Guide</span>
+              <span class="card-meta">⏱️ 15 hrs · 🔴 Hard</span>
+            </div>
+            <div class="card-icon-wrapper">⚡</div>
+            <h3>PTE Academic Master Guide</h3>
+            <p>Score 80+ in PTE Academic. Complete guide to Speaking, Writing, Reading, and Listening with interactive templates and quizzes.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Start guide <span>→</span></div>
+          </div>
+        </a>
+      </div>
     </div>
 
   </div>
@@ -418,29 +1266,39 @@
   © 2026 ViATestPrep · All Rights Reserved<br>
   These materials are the exclusive intellectual property of ViATestPrep.<br>
   Unauthorized reproduction, distribution, or sharing is strictly prohibited.<br>
-  <div style="margin-top: 0.8rem; margin-bottom: 0.5rem;">
-    <a href="https://www.instagram.com/viatestprep/" target="_blank" style="color:#e1306c; text-decoration:none; font-weight:600; display:inline-flex; align-items:center; gap:0.25rem;">
+  
+  <div class="footer-insta">
+    <a href="https://www.instagram.com/viatestprep/" target="_blank">
       📸 Follow us on Instagram @viatestprep
     </a>
   </div>
-  <div class="mt-4 text-xs text-stone-500 pt-4 border-t border-slate-800" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed rgba(255,255,255,0.1);">
-    <button onclick="localStorage.removeItem('viatestprep_unlocked'); alert('Premium resources locked. Click on any lesson module to test the password prompt overlay!'); location.reload();" style="color:#94a3b8;background:transparent;border:none;text-decoration:underline;cursor:pointer;font-size:0.75rem;">
+  
+  <div class="footer-lock-test">
+    <button onclick="localStorage.removeItem('viatestprep_unlocked'); alert('Premium resources locked. Click on any lesson module to test the password prompt overlay!'); location.reload();">
       🔒 Lock Premium Resources (Test Experience)
     </button>
   </div>
 </footer>
 
 <script>
+// ====== Theme Management ======
 const toggleBtn = document.getElementById('darkModeToggle');
+
 function updateTheme() {
-  if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  const currentTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  
+  if (currentTheme === 'dark' || (!currentTheme && prefersDark)) {
     document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
     toggleBtn.textContent = '☀️';
   } else {
+    document.documentElement.classList.add('light');
     document.documentElement.classList.remove('dark');
     toggleBtn.textContent = '🌙';
   }
 }
+
 toggleBtn.addEventListener('click', () => {
   if (document.documentElement.classList.contains('dark')) {
     localStorage.setItem('theme', 'light');
@@ -449,7 +1307,166 @@ toggleBtn.addEventListener('click', () => {
   }
   updateTheme();
 });
+
+// Run theme update initially
 updateTheme();
+
+// ====== Passcode Access Lock Status ======
+function checkLockStatus() {
+  const isUnlocked = localStorage.getItem('viatestprep_unlocked') === 'true';
+  const lockIcon = document.getElementById('lockIcon');
+  const lockLabel = document.getElementById('lockLabel');
+  const btn = document.getElementById('lockStatusBtn');
+  
+  if (isUnlocked) {
+    btn.className = "lock-status-btn unlocked";
+    lockIcon.innerHTML = `<svg style="width:12px;height:12px;fill:currentColor" viewBox="0 0 24 24"><path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v1.9H6c-1.1 0-2 .9-2 2 v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6-5c1.66 0 3 1.34 3 3v2H9V6c0-1.66 1.34-3 3-3zm6 17H6V10h12v10z"/></svg>`;
+    lockLabel.textContent = "Premium Unlocked";
+  } else {
+    btn.className = "lock-status-btn";
+    lockIcon.innerHTML = `<svg style="width:12px;height:12px;fill:currentColor" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>`;
+    lockLabel.textContent = "Premium Locked";
+  }
+}
+
+function toggleLockState() {
+  const isUnlocked = localStorage.getItem('viatestprep_unlocked') === 'true';
+  if (isUnlocked) {
+    if (confirm("Do you want to lock premium resources to test the access lock overlay?")) {
+      localStorage.removeItem('viatestprep_unlocked');
+      location.reload();
+    }
+  } else {
+    alert("Please click any lesson module card to trigger the access passcode entry overlay!");
+  }
+}
+
+// Initial status check
+checkLockStatus();
+
+// ====== Search & Filter Engine ======
+let currentActiveCategory = 'all';
+let currentSearchQuery = '';
+
+const allCards = document.querySelectorAll('.card');
+const gridContainers = document.querySelectorAll('.grid-container');
+const dividers = [
+  { el: document.getElementById('divider-ukvi'), targetContainer: 'container-ukvi' },
+  { el: document.getElementById('divider-pte'), targetContainer: 'container-pte' }
+];
+
+function filterCategory(category, tabBtn) {
+  // Update active tab style
+  if (tabBtn) {
+    document.querySelectorAll('.nav-tab').forEach(btn => btn.classList.remove('active'));
+    tabBtn.classList.add('active');
+  }
+  
+  currentActiveCategory = category;
+  applyFilters();
+}
+
+function handleSearch(query) {
+  currentSearchQuery = query.toLowerCase().trim();
+  applyFilters();
+}
+
+function applyFilters() {
+  allCards.forEach(card => {
+    const tags = card.getAttribute('data-tags').split(',');
+    const title = card.querySelector('h3').textContent.toLowerCase();
+    const desc = card.querySelector('p').textContent.toLowerCase();
+    
+    // Category check
+    const matchesCategory = (currentActiveCategory === 'all') || tags.includes(currentActiveCategory);
+    
+    // Search check
+    const matchesSearch = !currentSearchQuery || 
+                          title.includes(currentSearchQuery) || 
+                          desc.includes(currentSearchQuery) || 
+                          tags.some(tag => tag.includes(currentSearchQuery));
+                          
+    if (matchesCategory && matchesSearch) {
+      card.classList.remove('filtered-out');
+    } else {
+      card.classList.add('filtered-out');
+    }
+  });
+
+  // Handle visibility of container sections (hide if no cards are visible)
+  gridContainers.forEach(container => {
+    const visibleCards = container.querySelectorAll('.card:not(.filtered-out)');
+    if (visibleCards.length === 0) {
+      container.classList.add('hidden');
+    } else {
+      container.classList.remove('hidden');
+    }
+  });
+
+  // Handle dividers visibility
+  dividers.forEach(divObj => {
+    const targetEl = document.getElementById(divObj.targetContainer);
+    if (targetEl && targetEl.classList.contains('hidden')) {
+      divObj.el.style.display = 'none';
+    } else {
+      divObj.el.style.display = 'block';
+    }
+  });
+}
+
+// ====== Recommendation Engine ======
+function recommendTrack(trackKey, btn) {
+  // Update active state on recommendation buttons
+  document.querySelectorAll('.calc-btn').forEach(b => b.classList.remove('active'));
+  
+  const feedback = document.getElementById('calcFeedback');
+  
+  if (trackKey === 'clear') {
+    allCards.forEach(card => {
+      card.classList.remove('dimmed');
+      card.classList.remove('recommended-glow');
+    });
+    feedback.textContent = "Select a score target above to get customized recommendations.";
+    return;
+  }
+  
+  if (btn) btn.classList.add('active');
+  
+  let label = '';
+  switch(trackKey) {
+    case 'ielts-7.0':
+      label = "Recommended for <strong>IELTS Band 7.0</strong>: Focus on Core Modules, Essential Vocabulary, and foundational Grammar.";
+      break;
+    case 'ielts-7.5':
+      label = "Recommended for <strong>IELTS Band 7.5+</strong>: Focus on advanced Reading, Writing v2 templates, Speaking, and advanced Sentence structures.";
+      break;
+    case 'pte-65':
+      label = "Recommended for <strong>PTE 65</strong>: Focus on PTE Master Guide, key Grammar topics, and Vocabulary Accelerator.";
+      break;
+    case 'pte-79':
+      label = "Recommended for <strong>PTE 79+</strong>: Focus on PTE Master Guide (Speaking/Writing section) and advanced Grammar templates.";
+      break;
+    case 'ukvi':
+      label = "Recommended for <strong>UKVI General Training</strong>: Prioritize UKVI Specialist Modules (GT Letter, GT Reading) alongside the Core Orientation.";
+      break;
+  }
+  
+  feedback.innerHTML = `💡 ${label}`;
+  
+  // Update cards classes to highlight recommendations
+  allCards.forEach(card => {
+    const recommendedList = card.getAttribute('data-recommended').split(',');
+    const isRecommended = recommendedList.includes(trackKey);
+    
+    if (isRecommended) {
+      card.classList.remove('dimmed');
+      card.classList.add('recommended-glow');
+    } else {
+      card.classList.add('dimmed');
+      card.classList.remove('recommended-glow');
+    }
+  });
+}
 </script>
 
 </body>
