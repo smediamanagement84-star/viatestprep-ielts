@@ -854,8 +854,72 @@
     opacity: 0.3;
     filter: blur(1.5px) grayscale(50%);
   }
+  /* ---- CALC FEEDBACK PREMIUM STYLING ---- */
+  .calc-feedback {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    padding: 1.1rem 1.3rem;
+    border-radius: 14px;
+    border: 1px solid rgba(91, 42, 134, 0.2);
+    background: linear-gradient(135deg, rgba(91, 42, 134, 0.1) 0%, rgba(13, 138, 122, 0.05) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    min-height: 56px;
+    color: var(--text-main);
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+  .light .calc-feedback {
+    background: linear-gradient(135deg, rgba(91, 42, 134, 0.06) 0%, rgba(13, 138, 122, 0.03) 100%);
+    border-color: rgba(91, 42, 134, 0.15);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+  }
+  .calc-feedback-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+  }
+  .calc-feedback-text strong {
+    color: hsl(var(--primary));
+    font-weight: 700;
+  }
+  .calc-feedback-text small {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+    letter-spacing: 0.02em;
+  }
+
+  /* ---- FOOTER INSTAGRAM CTA ---- */
+  .footer-insta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    background: linear-gradient(135deg, #e1306c, #c13584, #833ab4);
+    color: #fff !important;
+    text-decoration: none !important;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    box-shadow: 0 8px 22px rgba(225, 48, 108, 0.32);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    margin: 1.8rem auto 0.5rem;
+  }
+  .footer-insta-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 14px 30px rgba(225, 48, 108, 0.55);
+  }
+  .footer-insta-note {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+  }
 </style>
-  <script src="security.js"></script>
 </head>
 <body>
 
@@ -870,13 +934,13 @@
     <a href="#" class="nav-brand">ViATestPrep</a>
   </div>
   
-  <nav class="nav-center">
-    <button class="nav-tab active" onclick="filterCategory('all', this)">All Modules</button>
-    <button class="nav-tab" onclick="filterCategory('core', this)">IELTS Core</button>
-    <button class="nav-tab" onclick="filterCategory('ukvi', this)">UKVI Specialist</button>
-    <button class="nav-tab" onclick="filterCategory('pte', this)">PTE Academic</button>
-    <button class="nav-tab" onclick="filterCategory('grammar', this)">Grammar</button>
-    <button class="nav-tab" onclick="filterCategory('free', this)">Free PDF</button>
+  <nav class="nav-center" id="navTabs">
+    <button class="nav-tab active" data-filter="all">All Modules</button>
+    <button class="nav-tab" data-filter="core">IELTS Core</button>
+    <button class="nav-tab" data-filter="ukvi">UKVI Specialist</button>
+    <button class="nav-tab" data-filter="pte">PTE Academic</button>
+    <button class="nav-tab" data-filter="grammar">Grammar</button>
+    <button class="nav-tab" data-filter="free">Free PDF</button>
   </nav>
   
   <div class="nav-right">
@@ -884,10 +948,10 @@
       <span class="search-icon">
         <svg style="width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
       </span>
-      <input type="text" id="moduleSearch" class="search-input" placeholder="Search modules..." oninput="handleSearch(this.value)"/>
+      <input type="text" id="moduleSearch" class="search-input" placeholder="Search modules..."/>
     </div>
     
-    <button id="lockStatusBtn" class="lock-status-btn" onclick="toggleLockState()">
+    <button id="lockStatusBtn" class="lock-status-btn">
       <span id="lockIcon"></span>
       <span id="lockLabel">Loading...</span>
     </button>
@@ -929,16 +993,19 @@
     </div>
     <div class="calc-right">
       <span class="calc-label">Select Your Target Score</span>
-      <div class="calc-options">
-        <button class="calc-btn" onclick="recommendTrack('ielts-7.0', this)">IELTS 7.0</button>
-        <button class="calc-btn" onclick="recommendTrack('ielts-7.5', this)">IELTS 7.5+</button>
-        <button class="calc-btn" onclick="recommendTrack('pte-65', this)">PTE 65</button>
-        <button class="calc-btn" onclick="recommendTrack('pte-79', this)">PTE 79+</button>
-        <button class="calc-btn" onclick="recommendTrack('ukvi', this)">UKVI GT Track</button>
-        <button class="calc-btn" onclick="recommendTrack('clear', this)">Clear Target</button>
+      <div class="calc-options" id="calcOptions">
+        <button class="calc-btn" data-track="ielts-7.0">IELTS 7.0</button>
+        <button class="calc-btn" data-track="ielts-7.5">IELTS 7.5+</button>
+        <button class="calc-btn" data-track="pte-65">PTE 65</button>
+        <button class="calc-btn" data-track="pte-79">PTE 79+</button>
+        <button class="calc-btn" data-track="ukvi">UKVI GT Track</button>
+        <button class="calc-btn" data-track="clear">✕ Clear</button>
       </div>
       <div id="calcFeedback" class="calc-feedback">
-        Select a score target above to get customized recommendations.
+        <span class="calc-feedback-icon">🎯</span>
+        <div class="calc-feedback-text">Select a score target above to get customized recommendations.
+          <small>We'll highlight the best modules for your goal.</small>
+        </div>
       </div>
     </div>
   </div>
@@ -1268,13 +1335,15 @@
   Unauthorized reproduction, distribution, or sharing is strictly prohibited.<br>
   
   <div class="footer-insta">
-    <a href="https://www.instagram.com/viatestprep/" target="_blank">
-      📸 Follow us on Instagram @viatestprep
+    <a href="https://www.instagram.com/viatestprep/" target="_blank" class="footer-insta-btn">
+      <svg style="width:18px;height:18px;fill:currentColor;flex-shrink:0" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      Follow @viatestprep · DM to Enroll
     </a>
+    <p class="footer-insta-note">Message us on Instagram to get your access passcode 🔑</p>
   </div>
   
   <div class="footer-lock-test">
-    <button onclick="localStorage.removeItem('viatestprep_unlocked'); alert('Premium resources locked. Click on any lesson module to test the password prompt overlay!'); location.reload();">
+    <button id="lockTestBtn">
       🔒 Lock Premium Resources (Test Experience)
     </button>
   </div>
@@ -1426,33 +1495,39 @@ function recommendTrack(trackKey, btn) {
       card.classList.remove('dimmed');
       card.classList.remove('recommended-glow');
     });
-    feedback.textContent = "Select a score target above to get customized recommendations.";
+    feedback.innerHTML = `<span class="calc-feedback-icon">🎯</span><div class="calc-feedback-text">Select a score target above to get customized recommendations.<small>We'll highlight the best modules for your goal.</small></div>`;
     return;
   }
   
   if (btn) btn.classList.add('active');
   
-  let label = '';
+  let emoji = '✨';
+  let title = '';
+  let subtitle = '';
   switch(trackKey) {
     case 'ielts-7.0':
-      label = "Recommended for <strong>IELTS Band 7.0</strong>: Focus on Core Modules, Essential Vocabulary, and foundational Grammar.";
+      emoji = '📚'; title = 'IELTS Band 7.0 Track';
+      subtitle = 'Focus on Core Modules, Essential Vocabulary, and foundational Grammar.';
       break;
     case 'ielts-7.5':
-      label = "Recommended for <strong>IELTS Band 7.5+</strong>: Focus on advanced Reading, Writing v2 templates, Speaking, and advanced Sentence structures.";
+      emoji = '🚀'; title = 'IELTS Band 7.5+ Track';
+      subtitle = 'Advanced Reading, Writing v2 templates, Speaking, and Sentence Mastery.';
       break;
     case 'pte-65':
-      label = "Recommended for <strong>PTE 65</strong>: Focus on PTE Master Guide, key Grammar topics, and Vocabulary Accelerator.";
+      emoji = '⚡'; title = 'PTE Academic 65 Track';
+      subtitle = 'PTE Master Guide, key Grammar topics, and Vocabulary Accelerator.';
       break;
     case 'pte-79':
-      label = "Recommended for <strong>PTE 79+</strong>: Focus on PTE Master Guide (Speaking/Writing section) and advanced Grammar templates.";
+      emoji = '🏆'; title = 'PTE Academic 79+ Track';
+      subtitle = 'Full PTE Master Guide with advanced Speaking/Writing templates and drills.';
       break;
     case 'ukvi':
-      label = "Recommended for <strong>UKVI General Training</strong>: Prioritize UKVI Specialist Modules (GT Letter, GT Reading) alongside the Core Orientation.";
+      emoji = '🇬🇧'; title = 'UKVI General Training Track';
+      subtitle = 'Prioritize UKVI Specialist Modules (GT Letter, GT Reading) + Core Orientation.';
       break;
   }
   
-  feedback.innerHTML = `💡 ${label}`;
-  
+  feedback.innerHTML = `<span class="calc-feedback-icon">${emoji}</span><div class="calc-feedback-text"><strong>${title}</strong><small>${subtitle}</small></div>`;
   // Update cards classes to highlight recommendations
   allCards.forEach(card => {
     const recommendedList = card.getAttribute('data-recommended').split(',');
@@ -1467,7 +1542,41 @@ function recommendTrack(trackKey, btn) {
     }
   });
 }
+
+// ====== Wire Up Event Listeners (replaces inline onclick) ======
+// Nav filter tabs
+document.querySelectorAll('#navTabs .nav-tab').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    filterCategory(this.dataset.filter, this);
+  });
+});
+
+// Calc recommendation buttons
+document.querySelectorAll('#calcOptions .calc-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    recommendTrack(this.dataset.track, this);
+  });
+});
+
+// Search input
+document.getElementById('moduleSearch').addEventListener('input', function() {
+  handleSearch(this.value);
+});
+
+// Lock status button
+document.getElementById('lockStatusBtn').addEventListener('click', toggleLockState);
+
+// Lock test button in footer
+document.getElementById('lockTestBtn').addEventListener('click', function() {
+  localStorage.removeItem('viatestprep_unlocked');
+  alert('Premium resources locked. Click any lesson module to test the overlay!');
+  location.reload();
+});
+
 </script>
+
+<!-- Security script at end of body to avoid blocking DOM interactions -->
+<script src="security.js"></script>
 
 </body>
 </html>
