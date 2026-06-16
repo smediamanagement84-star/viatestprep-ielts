@@ -524,7 +524,6 @@ img,svg{-webkit-user-drag:none!important}
             <button class="btn btn-primary" id="recStart">🎙 Record</button>
             <button class="btn btn-ghost" id="recStop" disabled>⏹ Stop</button>
             <button class="btn btn-ghost" id="recPlay" disabled>▶ Play</button>
-            <button class="btn btn-ghost" id="recDownload" disabled>⬇ Download</button>
           </div>
           <div class="mt-2 text-sm" id="recStatus">Microphone idle.</div>
           <div class="mt-2 text-xs timer-pill" style="color:var(--burgundy)" id="recTimer">00:00</div>
@@ -1262,7 +1261,6 @@ document.getElementById('recStart').addEventListener('click', async ()=>{
       recPlayer.src = recBlobUrl;
       recPlayer.style.display = 'block';
       document.getElementById('recPlay').disabled = false;
-      document.getElementById('recDownload').disabled = false;
       recStream.getTracks().forEach(t=>t.stop());
       recStatus.innerHTML = `<span style="color:var(--teal)">✓ Saved.</span> Click ▶ Play to listen back.`;
     };
@@ -1286,13 +1284,6 @@ document.getElementById('recStop').addEventListener('click',()=>{
 });
 document.getElementById('recPlay').addEventListener('click',()=>{
   if (recBlobUrl){ recPlayer.play(); }
-});
-document.getElementById('recDownload').addEventListener('click',()=>{
-  if (!recBlobUrl) return;
-  const a = document.createElement('a');
-  a.href = recBlobUrl;
-  a.download = 'ielts_speaking_'+new Date().toISOString().slice(0,16).replace(/:/g,'-')+'.webm';
-  a.click();
 });
 
 // ====== RAPID FIRE ======

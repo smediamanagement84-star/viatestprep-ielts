@@ -306,6 +306,26 @@
               <option value="none">No concessions are offered</option>
             </select>
           </div>
+
+          <div style="margin-bottom:12px;">
+            <label style="font-size:0.8rem; display:block; margin-bottom:4px;">3. The flat-rate cost of a single journey:</label>
+            <select id="gt-skim-q3" style="width:100%;">
+              <option value="">Select...</option>
+              <option value="2.00">£2.00</option>
+              <option value="3.50">£3.50</option>
+              <option value="15.00">£15.00</option>
+            </select>
+          </div>
+
+          <div style="margin-bottom:12px;">
+            <label style="font-size:0.8rem; display:block; margin-bottom:4px;">4. Payment terms for shuttle tickets:</label>
+            <select id="gt-skim-q4" style="width:100%;">
+              <option value="">Select...</option>
+              <option value="cash">Only cash accepted on board</option>
+              <option value="nocash">No cash accepted (app or kiosk)</option>
+              <option value="free">All travel is free of charge</option>
+            </select>
+          </div>
           
           <button class="btn-primary" onclick="submitGTSkim()" style="width:100%; padding:8px; font-size:0.85rem;">Confirm Sweep Answers</button>
         </div>
@@ -776,27 +796,31 @@
     if (gtSkimCompleted) return;
     const q1 = document.getElementById('gt-skim-q1').value;
     const q2 = document.getElementById('gt-skim-q2').value;
+    const q3 = document.getElementById('gt-skim-q3').value;
+    const q4 = document.getElementById('gt-skim-q4').value;
 
-    if (!q1 || !q2) {
-      alert('Please answer both questions!');
+    if (!q1 || !q2 || !q3 || !q4) {
+      alert('Please answer all questions!');
       return;
     }
 
     gtSkimCompleted = true;
-    const isCorrect = (q1 === '15' && q2 === 'all');
+    const isCorrect = (q1 === '15' && q2 === 'all' && q3 === '3.50' && q4 === 'nocash');
     const feedback = document.getElementById('gt-skim-feedback');
 
     if (isCorrect) {
-      feedback.textContent = '✅ Correct! Under strict 10s time limit, you successfully extracted key parameters: Peak shuttles run every 15 minutes, and concession fares apply to students under 25 and senior citizens over 60.';
+      feedback.textContent = '✅ Correct! Under strict 10s time limit, you successfully extracted all key parameters: Peak shuttles run every 15 minutes, concession fares apply to students/seniors, a flat-rate single is £3.50, and no cash is accepted.';
       feedback.className = 'feedback show correct-fb';
       awardXP('gt-skim-complete');
     } else {
-      feedback.textContent = '❌ Incorrect. Correct mapping: Peak shuttles run every 15 minutes (under "Frequency"), and concession ticket eligibility is for "students under 25 and senior citizens over 60" (under "Discounts").';
+      feedback.textContent = '❌ Incorrect. Correct mapping: 15-minute frequency, concession for students/seniors, £3.50 flat rate, and no cash accepted on board.';
       feedback.className = 'feedback show wrong-fb';
     }
 
     document.getElementById('gt-skim-q1').disabled = true;
     document.getElementById('gt-skim-q2').disabled = true;
+    document.getElementById('gt-skim-q3').disabled = true;
+    document.getElementById('gt-skim-q4').disabled = true;
   }
 
   // Scanning Drill
@@ -812,6 +836,18 @@
       target: "valid proof",
       answer: "suitable proof",
       expl: "<strong>Synonym Map:</strong> 'valid proof' translates to 'suitable proof'."
+    },
+    {
+      passage: "Under exceptional conditions such as unexpected events, the supervisor may authorize an extension of the deadline.",
+      target: "unforeseen circumstances",
+      answer: "unexpected events",
+      expl: "<strong>Synonym Map:</strong> 'unforeseen circumstances' translates to 'unexpected events'."
+    },
+    {
+      passage: "All personnel are required to wear identification badges while on the factory floor for safety compliance.",
+      target: "staff members",
+      answer: "personnel",
+      expl: "<strong>Synonym Map:</strong> 'staff members' translates to 'personnel' (the collective staff of an organization)."
     }
   ];
 

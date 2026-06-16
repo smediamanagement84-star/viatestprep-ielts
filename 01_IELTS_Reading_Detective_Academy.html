@@ -499,6 +499,28 @@
                     <option value="D">Para D</option>
                   </select>
                 </div>
+
+                <div class="flex items-center justify-between text-xs bg-stone-50 dark:bg-stone-850 p-2 rounded border border-line">
+                  <span class="flex-1 pr-2">4. Diverse ecological survival strategies (prey/escape):</span>
+                  <select id="skim-q4" class="border border-line rounded px-1.5 py-0.5 bg-white text-stone-800 dark:bg-stone-900 dark:text-stone-300">
+                    <option value="">Select...</option>
+                    <option value="A">Para A</option>
+                    <option value="B">Para B</option>
+                    <option value="C">Para C</option>
+                    <option value="D">Para D</option>
+                  </select>
+                </div>
+
+                <div class="flex items-center justify-between text-xs bg-stone-50 dark:bg-stone-850 p-2 rounded border border-line">
+                  <span class="flex-1 pr-2">5. Bioluminescence distribution in bathypelagic zone:</span>
+                  <select id="skim-q5" class="border border-line rounded px-1.5 py-0.5 bg-white text-stone-800 dark:bg-stone-900 dark:text-stone-300">
+                    <option value="">Select...</option>
+                    <option value="A">Para A</option>
+                    <option value="B">Para B</option>
+                    <option value="C">Para C</option>
+                    <option value="D">Para D</option>
+                  </select>
+                </div>
               </div>
 
               <button class="btn btn-primary w-full text-xs py-2 justify-center mt-2" onclick="submitSkimmingDrill()">Submit Map</button>
@@ -1646,35 +1668,42 @@ function submitSkimmingDrill() {
   const q1 = document.getElementById('skim-q1').value;
   const q2 = document.getElementById('skim-q2').value;
   const q3 = document.getElementById('skim-q3').value;
+  const q4 = document.getElementById('skim-q4').value;
+  const q5 = document.getElementById('skim-q5').value;
   
-  if (!q1 || !q2 || !q3) {
+  if (!q1 || !q2 || !q3 || !q4 || !q5) {
     alert('Please answer all questions!');
     return;
   }
   
   skimDrillCompleted = true;
-  const isCorrect = (q1 === 'B' && q2 === 'D' && q3 === 'A');
+  const isCorrect = (q1 === 'B' && q2 === 'D' && q3 === 'A' && q4 === 'C' && q5 === 'A');
   const feedback = document.getElementById('skim-feedback');
   
   if (isCorrect) {
-    feedback.innerHTML = `<div class="feedback good">✅ <strong>Perfect Map!</strong> You've successfully built the structure map. Under pressure, you identified that:<br>
-      • Para A introduces historical records (milky seas description).<br>
-      • Para B details the physical chemical mechanism (luciferin oxidation).<br>
+    feedback.innerHTML = `<div class="feedback good">✅ <strong>Perfect Map!</strong> You've successfully built the structure map under pressure. You correctly identified that:<br>
+      • Para A introduces historical records and distribution in bathypelagic zone.<br>
+      • Para B details the chemical mechanism.<br>
+      • Para C details ecological survival strategies (prey attraction/ink clouds).<br>
       • Para D highlights modern clinical applications (tracking cancer cells).<br>
       <strong>Earned +15 XP!</strong></div>`;
     addXP(15);
   } else {
     feedback.innerHTML = `<div class="feedback bad">❌ <strong>Map Incomplete/Incorrect.</strong> The correct mapping is:<br>
-      1. Chemical Mechanism = <strong>Paragraph B</strong> (oxidation of chemical luciferin)<br>
-      2. Modern Applications = <strong>Paragraph D</strong> (tracking cancer cells)<br>
-      3. Historical Records = <strong>Paragraph A</strong> (ancient maritime logs of milky seas)<br>
-      Review the topic sentences and try again in your next lesson.</div>`;
+      1. Chemical Mechanism = <strong>Paragraph B</strong><br>
+      2. Modern Applications = <strong>Paragraph D</strong><br>
+      3. Historical Records = <strong>Paragraph A</strong><br>
+      4. Ecological Strategies = <strong>Paragraph C</strong><br>
+      5. Bathypelagic Distribution = <strong>Paragraph A</strong><br>
+      Review the topic sentences and try again.</div>`;
   }
   
   // Disable dropdowns
   document.getElementById('skim-q1').disabled = true;
   document.getElementById('skim-q2').disabled = true;
   document.getElementById('skim-q3').disabled = true;
+  document.getElementById('skim-q4').disabled = true;
+  document.getElementById('skim-q5').disabled = true;
 }
 
 // Scanning Drill Logic
@@ -1690,6 +1719,18 @@ const scanDrillData = [
     target: "deliberate deception",
     answer: "intentional fraud",
     expl: "<strong>Synonym Map:</strong> 'deliberate deception' translates to 'intentional fraud' (willful act of lying/deceiving)."
+  },
+  {
+    passage: "The system audit revealed that while some database glitches caused accidental mistakes, the main issue was improper network protocols.",
+    target: "unintentional errors",
+    answer: "accidental mistakes",
+    expl: "<strong>Synonym Map:</strong> 'unintentional errors' translates to 'accidental mistakes'."
+  },
+  {
+    passage: "The transition to sustainable energy has sparked massive shifts in global trade patterns, altering the economic balance between regions.",
+    target: "profound changes",
+    answer: "massive shifts",
+    expl: "<strong>Synonym Map:</strong> 'profound changes' translates to 'massive shifts'."
   }
 ];
 

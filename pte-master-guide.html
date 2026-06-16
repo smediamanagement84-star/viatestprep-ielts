@@ -201,7 +201,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
     <div class="g-brand" style="margin-bottom: 0;">▸ ViaTestPrep · PTE Academic Master Guide</div>
     <a href="index.html" class="back-btn">← Back to Hub</a>
   </div>
-  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;"><div class="g-title">Score <span>80+</span> in PTE Academic</div><button onclick="downloadGuide()" style="display:inline-flex;align-items:center;gap:7px;padding:7px 16px;background:var(--orange);border:none;border-radius:var(--r-sm);color:#fff;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:background .2s;" onmouseover="this.style.background='#d4541e'" onmouseout="this.style.background='var(--orange)'">⬇ Download Guide</button></div>
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;"><div class="g-title">Score <span>80+</span> in PTE Academic</div></div>
 </div>
 
 <!-- SKILL NAVIGATION -->
@@ -1195,21 +1195,6 @@ setInterval(() => {
   tipIdx = (tipIdx + 1) % TIPS.length;
   document.getElementById('advice-text').innerHTML = TIPS[tipIdx];
 }, 6000);
-</script>
-
-<script>
-function downloadGuide() {
-  const html = document.documentElement.outerHTML;
-  const blob = new Blob([html], {type: 'text/html'});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'PTE-Master-Guide-ViaTestPrep.html';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-}
 </script>
 </body>
 </html>
