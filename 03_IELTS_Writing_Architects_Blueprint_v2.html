@@ -111,6 +111,7 @@ svg.chart{width:100%;overflow:visible}
 <div class="toolbar">
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4 flex-wrap">
     <div class="flex items-center gap-3">
+      <a href="index.html" class="btn btn-ghost text-xs px-2.5 py-1.5 flex items-center gap-1 mr-2" style="text-decoration: none;">← Back</a>
       <div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-white text-sm" style="background:var(--blue);font-family:'Fraunces',serif">AB</div>
       <div><div class="text-xs uppercase tracking-widest text-stone-500">IELTS Writing</div><div class="font-bold -mt-1 text-sm">Architect's Blueprint · Band 7+</div></div>
     </div>
@@ -852,6 +853,133 @@ const pwPrompts=[
 {n:50,type:"twopart",prompt:"Many governments are investing in space exploration. Why do governments do this, and do you think it is a worthwhile use of public money?",hint:"Swap: governments investing → states allocating resources; space exploration → space research; worthwhile use → justifiable expenditure.",samples:[{t:"Numerous governments around the world are committing significant public resources to space research and exploration programmes. This essay will examine the motivations behind this investment and assess whether it constitutes a justifiable use of public money.",why:"'Governments investing'→'committing public resources'; 'space exploration'→'space research and exploration'; 'worthwhile'→'justifiable'."},
 {t:"State-funded space programmes continue to attract enormous investment, despite ongoing debates about competing priorities. This essay will explore why nations choose to fund space exploration and argue whether this represents a sound use of taxpayers' money.",why:"'Many governments'→'state-funded'; 'worthwhile use of public money'→'sound use of taxpayers' money'; adds 'despite ongoing debates' for balance."}]}
 ];
+// ====== PARAPHRASE CHECKER ======
+function checkParaphraseText(inputText, promptText) {
+  const result = {
+    isValid: true,
+    score: 0,
+    lengthFeedback: "",
+    vocabFeedback: "",
+    structureFeedback: "",
+    tips: []
+  };
+
+  const cleanText = (str) => {
+    return str
+      .toLowerCase()
+      .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  };
+
+  const userClean = cleanText(inputText);
+  const promptClean = cleanText(promptText);
+
+  if (!userClean || userClean.length < 15) {
+    result.isValid = false;
+    result.tips.push("Your paraphrase is too short. Try to write a complete sentence of at least 15-20 characters.");
+    return result;
+  }
+
+  const userWords = userClean.split(" ");
+  const promptWords = promptClean.split(" ");
+
+  const stopWords = new Set([
+    "the", "a", "an", "is", "are", "was", "were", "be", "been", "being",
+    "to", "of", "in", "on", "at", "for", "with", "by", "about", "against",
+    "between", "into", "through", "during", "before", "after", "above", "below",
+    "up", "down", "from", "further", "then", "once", "here", "there", "when",
+    "where", "why", "how", "all", "any", "both", "each", "few", "more", "most",
+    "other", "some", "such", "no", "nor", "not", "only", "own", "same", "so",
+    "than", "too", "very", "s", "t", "can", "will", "just", "should", "now",
+    "i", "you", "he", "she", "it", "we", "they", "them", "their", "his", "her",
+    "us", "our", "agree", "disagree", "extent"
+  ]);
+
+  const promptContentWords = promptWords.filter(w => w.length > 2 && !stopWords.has(w));
+  const uniquePromptContentWords = Array.from(new Set(promptContentWords));
+
+  const copiedWords = [];
+  uniquePromptContentWords.forEach(w => {
+    if (userWords.includes(w)) {
+      copiedWords.push(w);
+    }
+  });
+
+  const overlapPct = uniquePromptContentWords.length > 0 
+    ? (copiedWords.length / uniquePromptContentWords.length) * 100 
+    : 0;
+
+  const structureWords = [
+    "while", "although", "whereas", "despite", "however", "though", "compared",
+    "in contrast", "nevertheless", "on the other hand", "conversely", "meanwhile",
+    "even though", "but", "yet", "by comparison"
+  ];
+  let hasStructureWord = false;
+  let matchedStructureWord = "";
+  for (let word of structureWords) {
+    if (userClean.includes(word)) {
+      hasStructureWord = true;
+      matchedStructureWord = word;
+      break;
+    }
+  }
+
+  const reportingPhrases = [
+    "it is often argued", "it is sometimes argued", "it is widely believed",
+    "many maintain", "many argue", "some argue", "some believe", "proponents claim",
+    "critics suggest", "it is claimed", "there is a view that", "opinion is divided"
+  ];
+  let hasReportingPhrase = false;
+  let matchedReportingPhrase = "";
+  for (let phrase of reportingPhrases) {
+    if (userClean.includes(phrase)) {
+      hasReportingPhrase = true;
+      matchedReportingPhrase = phrase;
+      break;
+    }
+  }
+
+  let score = 30; // base score for writing something
+
+  // 1. Length feedback
+  if (userWords.length >= 10 && userWords.length <= 35) {
+    score += 20;
+    result.lengthFeedback = "✅ Optimal length (about " + userWords.length + " words).";
+  } else if (userWords.length < 10) {
+    score += 5;
+    result.lengthFeedback = "⚠️ A bit short. Try to write a full introduction sentence (~15-25 words).";
+  } else {
+    score += 10;
+    result.lengthFeedback = "⚠️ A bit long. Aim for a concise paraphrase of 15-25 words.";
+  }
+
+  // 2. Vocabulary feedback
+  if (overlapPct > 65) {
+    result.vocabFeedback = "❌ Too similar to the prompt (copied key words).";
+    result.tips.push("Try to use synonyms for: " + copiedWords.map(w => `'${w}'`).join(", "));
+  } else if (overlapPct > 45) {
+    score += 15;
+    result.vocabFeedback = "⚠️ Moderate vocabulary change. Some prompt words were reused.";
+    result.tips.push("Can you swap these words for synonyms? " + copiedWords.map(w => `'${w}'`).join(", "));
+  } else {
+    score += 30;
+    result.vocabFeedback = "✅ Excellent vocabulary change! You replaced most key words.";
+  }
+
+  // 3. Structure feedback
+  if (hasStructureWord || hasReportingPhrase) {
+    score += 20;
+    let match = matchedStructureWord || matchedReportingPhrase;
+    result.structureFeedback = "✅ Good sentence structure! You used a complex transition or reporting phrase ('" + match + "').";
+  } else {
+    result.structureFeedback = "⚠️ Simple sentence structure. Try starting with a subordinate clause (e.g. 'While some people argue that...') or a reporting passive (e.g. 'It is often argued that...').";
+  }
+
+  result.score = Math.min(100, score);
+  return result;
+}
+
 let pwFilter='all';
 function renderPW(){
   const visible=pwFilter==='all'?pwPrompts:pwPrompts.filter(p=>p.type===pwFilter);
@@ -869,18 +997,49 @@ function renderPW(){
   <textarea class="pw-textarea" id="pwtxt${p.n}" placeholder="Write your paraphrase here…" oninput="pwCheck(${p.n})"></textarea>
   <div class="flex gap-2 mt-2 flex-wrap">
     <button class="btn btn-ghost text-xs py-1.5" onclick="toggleHint(${p.n})">💡 Hint</button>
-    <button class="btn btn-gold text-xs py-1.5" id="pwRevBtn${p.n}" onclick="revealSamples(${p.n})" disabled>👁 Reveal samples</button>
+    <button class="btn btn-ghost text-xs py-1.5" style="border-color:var(--green);color:var(--green)" id="pwChkBtn${p.n}" onclick="runChecker(${p.n})">🔍 Check Answer</button>
+    <button class="btn btn-gold text-xs py-1.5" id="pwRevBtn${p.n}" onclick="revealSamples(${p.n})">👁 Reveal samples</button>
     <button class="btn btn-ghost text-xs py-1.5" onclick="clearPW(${p.n})">✕ Clear</button>
   </div>
   <div class="hint-box" id="hint${p.n}">💡 <strong>Hint:</strong> ${p.hint}</div>
+  <div id="checker${p.n}"></div>
   <div id="samples${p.n}"></div>
 </div>`).join('');
 }
 function pwCheck(n){
-  const txt=document.getElementById('pwtxt'+n).value.trim();
-  const btn=document.getElementById('pwRevBtn'+n);
-  if(txt.length>30){btn.disabled=false;}
-  else{btn.disabled=true;}
+  // No longer locking/unlocking the reveal button
+}
+function runChecker(n){
+  const p=pwPrompts.find(x=>x.n===n);
+  const text=document.getElementById('pwtxt'+n).value.trim();
+  const ch=document.getElementById('checker'+n);
+  const result=checkParaphraseText(text, p.prompt);
+  
+  if(!result.isValid){
+    ch.innerHTML=`<div class="p-3 rounded-lg border mt-2" style="background:#fdeadf; border-color:var(--terra); color:var(--terra); font-size:0.82rem;">${result.tips[0]}</div>`;
+  } else {
+    ch.innerHTML=`
+      <div class="p-3 rounded-lg border mt-2" style="background:#f8f9fa; border-color:#dcd2b6; font-size:0.82rem;">
+        <div class="flex justify-between items-center mb-2">
+          <strong class="text-xs uppercase tracking-widest text-stone-600">Paraphrase Analysis</strong>
+          <span class="text-xs font-bold px-2 py-0.5 rounded-full" style="background:var(--blue)22; color:var(--blue)">Score: ${result.score}/100</span>
+        </div>
+        <div class="text-xs space-y-1 text-stone-700">
+          <div>${result.lengthFeedback}</div>
+          <div>${result.vocabFeedback}</div>
+          <div>${result.structureFeedback}</div>
+        </div>
+        ${result.tips.length > 0 ? `
+        <div class="mt-2 text-xs border-t pt-2" style="border-color:#e5e0d0">
+          <strong style="color:var(--terra)">💡 Tips:</strong>
+          <ul class="list-disc pl-4 mt-1 space-y-0.5">
+            ${result.tips.map(t => `<li>${t}</li>`).join('')}
+          </ul>
+        </div>` : ''}
+      </div>
+    `;
+  }
+  ch.style.display='block';
 }
 function toggleHint(n){const h=document.getElementById('hint'+n);h.style.display=h.style.display==='block'?'none':'block';}
 function revealSamples(n){
@@ -898,7 +1057,11 @@ function clearPW(n){
   document.getElementById('pwtxt'+n).value='';
   document.getElementById('hint'+n).style.display='none';
   document.getElementById('samples'+n).innerHTML='';
-  document.getElementById('pwRevBtn'+n).disabled=true;
+  const ch = document.getElementById('checker'+n);
+  if (ch) {
+    ch.innerHTML='';
+    ch.style.display='none';
+  }
 }
 document.querySelectorAll('.type-tab').forEach(btn=>{
   btn.addEventListener('click',()=>{

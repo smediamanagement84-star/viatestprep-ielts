@@ -23,7 +23,7 @@
 
   /* NAV */
   nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
-  .logo { font-weight: 800; font-size: 1rem; color: var(--accent); letter-spacing: 1px; }
+  .logo { font-weight: 800; font-size: 1rem; color: var(--accent); letter-spacing: 1px; cursor: pointer; }
   .badge { background: var(--accent); color: #000; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
   .xp-display { font-size: 0.8rem; color: var(--accent); font-weight: 700; }
 
@@ -139,6 +139,15 @@
   select { background: var(--surface2); border: 1px solid var(--border); color: var(--text); padding: 10px 14px; border-radius: 8px; font-size: 0.9rem; outline: none; cursor: pointer; }
 
   @media (max-width: 600px) { .options-grid { grid-template-columns: 1fr; } .tfng-btns { flex-direction: column; } }
+  .back-btn { text-decoration: none; font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--border); border-radius: 6px; color: var(--muted); transition: all 0.2s; display: inline-flex; align-items: center; }
+  .back-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(245,158,11,0.08); }
+
+  /* Skim & Scan Lab Styles */
+  .blur-text { filter: blur(5px); transition: filter 0.3s ease; user-select: none; pointer-events: none; }
+  .scan-word { cursor: pointer; transition: background-color 0.12s; border-radius: 4px; padding: 0 2px; }
+  .scan-word:hover { background-color: var(--accent); color: #000; }
+  .scan-word.selected-wrong { background-color: var(--red) !important; color: #fff !important; text-decoration: line-through; }
+  .scan-word.selected-right { background-color: var(--accent2) !important; color: #000 !important; font-weight: bold; }
 </style>
   <script src="security.js"></script>
 </head>
@@ -147,7 +156,10 @@
 <div class="xp-toast" id="xpToast">+10 XP</div>
 
 <nav>
-  <div class="logo">🎓 ViATestPrep</div>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <a href="index.html" class="back-btn">← Back to Hub</a>
+    <div class="logo" onclick="location.href='index.html'">🎓 ViATestPrep</div>
+  </div>
   <div style="display:flex;align-items:center;gap:12px;">
     <div class="badge">UKVI · GT</div>
     <div class="xp-display">⚡ <span id="xpCount">0</span> XP</div>
@@ -155,12 +167,13 @@
 </nav>
 
 <div class="step-nav">
-  <button class="step-btn active" onclick="scrollTo('mission')">① Mission</button>
-  <button class="step-btn" onclick="scrollTo('difference')">② GT vs Academic</button>
-  <button class="step-btn" onclick="scrollTo('sections')">③ The 3 Sections</button>
-  <button class="step-btn" onclick="scrollTo('drills')">④ Live Drills</button>
-  <button class="step-btn" onclick="scrollTo('boss')">⑤ Boss Fight</button>
-  <button class="step-btn" onclick="scrollTo('plan')">⑥ Action Plan</button>
+  <button class="step-btn active" onclick="scrollToId('mission')">① Mission</button>
+  <button class="step-btn" onclick="scrollToId('difference')">② GT vs Academic</button>
+  <button class="step-btn" onclick="scrollToId('skill-lab')">⚡ Skill Lab</button>
+  <button class="step-btn" onclick="scrollToId('sections')">③ The 3 Sections</button>
+  <button class="step-btn" onclick="scrollToId('drills')">④ Live Drills</button>
+  <button class="step-btn" onclick="scrollToId('boss')">⑤ Boss Fight</button>
+  <button class="step-btn" onclick="scrollToId('plan')">⑥ Action Plan</button>
 </div>
 
 <!-- HERO -->
@@ -176,8 +189,8 @@
     <span class="pill">3 sections, 40 Qs</span>
   </div>
   <div style="display:flex;gap:12px;flex-wrap:wrap;">
-    <button class="btn-primary" onclick="scrollTo('difference')">▶ Begin Training</button>
-    <button class="btn-ghost" onclick="scrollTo('boss')">Skip to Boss Fight</button>
+    <button class="btn-primary" onclick="scrollToId('difference')">▶ Begin Training</button>
+    <button class="btn-ghost" onclick="scrollToId('boss')">Skip to Boss Fight</button>
   </div>
 </div>
 
@@ -241,6 +254,82 @@
   <div class="callout green">
     <strong>✅ Strategy stays identical</strong>
     Read questions first. Skim to map. Scan to locate. The detective method from Academic still works — same moves, new terrain.
+  </div>
+</section>
+
+<!-- SKILL LAB -->
+<section id="skill-lab" style="border-top: 1px solid var(--border);">
+  <h2>⚡ Field Agent Skill Lab — Skim & Scan Trainer</h2>
+  <p class="section-sub">Train your eyes to scan functional documents and policies under strict time constraints. Earn +15 XP for each completed simulation.</p>
+
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+    <!-- Skim Lab Card -->
+    <div class="drill-box" style="margin-bottom:0; display:flex; flex-direction:column; justify-content:space-between;" id="gt-skim-card">
+      <div>
+        <div class="drill-label">GT SKIMMING · 10-SECOND AD SWEEP</div>
+        <h3>Coventry Commuter Shuttle Notice</h3>
+        <p style="font-size:0.8rem; color:var(--muted); margin-bottom:12px;">Goal: Skim the advertisement under a 10-second timer to find essential functional details. The ad will blur when time runs out.</p>
+        
+        <div class="passage-box transition-all duration-300" id="gt-skim-passage" style="font-size:0.85rem; line-height:1.6;">
+          <strong>COVENTRY EAST COMMUTER EXP-SHUTTLE</strong><br>
+          <em>Service Update - Effective August 15</em><br><br>
+          <strong>Frequency:</strong> Peak hours (6:30am - 9:00am, 4:00pm - 6:30pm) shuttles run every 15 minutes. Off-peak shuttles operate at 45-minute intervals. No weekend service.<br><br>
+          <strong>Fares:</strong> Single journey flat-rate is £3.50. Weekly pass is £15.00.<br>
+          <strong>Discounts:</strong> Concession tickets (students under 25 and senior citizens over 60) are priced at £2.00 per single journey. Under-5s travel free of charge.<br>
+          <strong>Terms:</strong> Standard tickets are purchasable via the smart-app or at terminal kiosks. No cash accepted on board.
+        </div>
+      </div>
+      
+      <div>
+        <button class="btn-primary" id="btn-start-gt-skim" onclick="startGTSkimming()" style="width:100%; padding:10px; font-size:0.85rem;">▶ Start 10s Sweep</button>
+        
+        <!-- Questions -->
+        <div id="gt-skim-questions" style="display:none; margin-top:16px;">
+          <p style="font-size:0.85rem; font-weight:bold; margin-bottom:10px; color:var(--accent);">Select the correct details from your skim:</p>
+          
+          <div style="margin-bottom:10px;">
+            <label style="font-size:0.8rem; display:block; margin-bottom:4px;">1. Shuttle frequency during peak hours:</label>
+            <select id="gt-skim-q1" style="width:100%;">
+              <option value="">Select...</option>
+              <option value="10">Every 10 minutes</option>
+              <option value="15">Every 15 minutes</option>
+              <option value="45">Every 45 minutes</option>
+            </select>
+          </div>
+          
+          <div style="margin-bottom:12px;">
+            <label style="font-size:0.8rem; display:block; margin-bottom:4px;">2. Who qualifies for concession tickets?</label>
+            <select id="gt-skim-q2" style="width:100%;">
+              <option value="">Select...</option>
+              <option value="all">Students under 25 and senior citizens over 60</option>
+              <option value="children">Only children under 18</option>
+              <option value="none">No concessions are offered</option>
+            </select>
+          </div>
+          
+          <button class="btn-primary" onclick="submitGTSkim()" style="width:100%; padding:8px; font-size:0.85rem;">Confirm Sweep Answers</button>
+        </div>
+        <div id="gt-skim-feedback" style="margin-top:12px;"></div>
+      </div>
+    </div>
+
+    <!-- Scan Lab Card -->
+    <div class="drill-box" style="margin-bottom:0; display:flex; flex-direction:column; justify-content:space-between;" id="gt-scan-card">
+      <div>
+        <div class="drill-label" id="gt-scan-label">GT SCANNING · POLICY TARGET LOCK (1 of 2)</div>
+        <h3>Workplace Expense Policy Scan</h3>
+        <p style="font-size:0.8rem; color:var(--muted); margin-bottom:12px;" id="gt-scan-prompt">Prompt: Click Start to initialize the target sweep...</p>
+        
+        <div class="passage-box" id="gt-scan-passage-words" style="line-height:1.7; font-size:0.88rem;">
+          <span style="color:var(--muted); font-style:italic;">Click Start to load policy text...</span>
+        </div>
+      </div>
+      
+      <div>
+        <button class="btn-primary" id="btn-start-gt-scan" onclick="startGTScanning()" style="width:100%; padding:10px; font-size:0.85rem;">▶ Start Target Lock</button>
+        <div id="gt-scan-feedback" style="margin-top:12px;"></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -584,7 +673,7 @@
   let bossInterval = null;
   let bossSeconds = 480;
 
-  function scrollTo(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }); }
+  function scrollToId(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }); }
 
   function toggleCard(id) {
     const el = document.getElementById(id);
@@ -652,6 +741,156 @@
     const el = document.getElementById(fbId);
     el.textContent = msg;
     el.className = 'feedback show ' + (correct ? 'correct-fb' : 'wrong-fb');
+  }
+
+  // ====== GT FIELD AGENT SKILL LAB ======
+  let gtSkimTimerVal = 10;
+  let gtSkimInterval = null;
+  let gtSkimStarted = false;
+  let gtSkimCompleted = false;
+
+  // Ensure it starts blurred
+  document.addEventListener('DOMContentLoaded', () => {
+    const p = document.getElementById('gt-skim-passage');
+    if (p) p.classList.add('blur-text');
+  });
+
+  function startGTSkimming() {
+    if (gtSkimStarted) return;
+    gtSkimStarted = true;
+    document.getElementById('btn-start-gt-skim').style.display = 'none';
+    const passage = document.getElementById('gt-skim-passage');
+    passage.classList.remove('blur-text');
+
+    gtSkimInterval = setInterval(() => {
+      gtSkimTimerVal--;
+      if (gtSkimTimerVal <= 0) {
+        clearInterval(gtSkimInterval);
+        passage.classList.add('blur-text');
+        document.getElementById('gt-skim-questions').style.display = 'block';
+      }
+    }, 1000);
+  }
+
+  function submitGTSkim() {
+    if (gtSkimCompleted) return;
+    const q1 = document.getElementById('gt-skim-q1').value;
+    const q2 = document.getElementById('gt-skim-q2').value;
+
+    if (!q1 || !q2) {
+      alert('Please answer both questions!');
+      return;
+    }
+
+    gtSkimCompleted = true;
+    const isCorrect = (q1 === '15' && q2 === 'all');
+    const feedback = document.getElementById('gt-skim-feedback');
+
+    if (isCorrect) {
+      feedback.textContent = '✅ Correct! Under strict 10s time limit, you successfully extracted key parameters: Peak shuttles run every 15 minutes, and concession fares apply to students under 25 and senior citizens over 60.';
+      feedback.className = 'feedback show correct-fb';
+      awardXP('gt-skim-complete');
+    } else {
+      feedback.textContent = '❌ Incorrect. Correct mapping: Peak shuttles run every 15 minutes (under "Frequency"), and concession ticket eligibility is for "students under 25 and senior citizens over 60" (under "Discounts").';
+      feedback.className = 'feedback show wrong-fb';
+    }
+
+    document.getElementById('gt-skim-q1').disabled = true;
+    document.getElementById('gt-skim-q2').disabled = true;
+  }
+
+  // Scanning Drill
+  const gtScanDrillData = [
+    {
+      passage: "Employees must submit original receipt copies to HR. Claims submitted without receipts will result in automatic refusal, while valid claims will be reimbursed in the next payroll cycle.",
+      target: "immediate rejection",
+      answer: "automatic refusal",
+      expl: "<strong>Synonym Map:</strong> 'immediate rejection' translates to 'automatic refusal' in corporate policy language."
+    },
+    {
+      passage: "In order to claim reimbursement for client dinners, employees must present a valid receipt. Credit card slips are not accepted as suitable proof of payment.",
+      target: "valid proof",
+      answer: "suitable proof",
+      expl: "<strong>Synonym Map:</strong> 'valid proof' translates to 'suitable proof'."
+    }
+  ];
+
+  let currentGTScanIndex = 0;
+  let gtScanCompleted = false;
+
+  function startGTScanning() {
+    document.getElementById('btn-start-gt-scan').style.display = 'none';
+    loadGTScanTarget();
+  }
+
+  function loadGTScanTarget() {
+    const data = gtScanDrillData[currentGTScanIndex];
+    document.getElementById('gt-scan-label').textContent = `GT SCANNING · POLICY TARGET LOCK (${currentGTScanIndex + 1} of ${gtScanDrillData.length})`;
+    document.getElementById('gt-scan-prompt').innerHTML = `Prompt: Scan the policy text and <strong>click on the phrase</strong> that means <strong>"${data.target}"</strong>.`;
+
+    const container = document.getElementById('gt-scan-passage-words');
+    container.innerHTML = '';
+
+    const words = data.passage.split(' ');
+    words.forEach((w, idx) => {
+      const span = document.createElement('span');
+      span.className = 'scan-word';
+      span.textContent = w + ' ';
+      span.dataset.idx = idx;
+
+      span.addEventListener('click', () => handleGTWordClick(span, w, data));
+      container.appendChild(span);
+    });
+
+    document.getElementById('gt-scan-feedback').innerHTML = '';
+    document.getElementById('gt-scan-feedback').className = 'feedback';
+  }
+
+  function handleGTWordClick(span, word, data) {
+    if (gtScanCompleted) return;
+
+    const cleanWord = word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").toLowerCase();
+    const cleanAnswerParts = data.answer.toLowerCase().split(' ');
+
+    const isPart = cleanAnswerParts.includes(cleanWord);
+
+    if (isPart) {
+      const container = document.getElementById('gt-scan-passage-words');
+      const spans = container.querySelectorAll('.scan-word');
+      spans.forEach(s => {
+        const sw = s.textContent.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").trim().toLowerCase();
+        if (cleanAnswerParts.includes(sw)) {
+          s.classList.add('selected-right');
+        }
+      });
+
+      const feedback = document.getElementById('gt-scan-feedback');
+      feedback.innerHTML = `✅ <strong>Target Locked!</strong> You spotted "${data.answer}".<br>${data.expl}`;
+      feedback.className = 'feedback show correct-fb';
+
+      gtScanCompleted = true;
+
+      setTimeout(() => {
+        currentGTScanIndex++;
+        if (currentGTScanIndex < gtScanDrillData.length) {
+          gtScanCompleted = false;
+          loadGTScanTarget();
+        } else {
+          feedback.innerHTML += `<br><br>🎉 <strong>Scanning Simulation Completed!</strong> Excellent visual speed and keyword lock-on.<br><strong>Earned +15 XP!</strong>`;
+          awardXP('gt-scan-complete');
+          document.getElementById('gt-scan-label').textContent = 'Simulation Completed!';
+        }
+      }, 2500);
+
+    } else {
+      span.classList.add('selected-wrong');
+      const feedback = document.getElementById('gt-scan-feedback');
+      feedback.innerHTML = `❌ <strong>Wrong Target.</strong> "${cleanWord}" is not a synonym for "${data.target}". Keep scanning!`;
+      feedback.className = 'feedback show wrong-fb';
+      setTimeout(() => {
+        span.classList.remove('selected-wrong');
+      }, 1000);
+    }
   }
 
   // BOSS FIGHT

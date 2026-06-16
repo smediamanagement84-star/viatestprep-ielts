@@ -15,8 +15,8 @@
       -webkit-user-drag: none !important;
     }
     
-    /* Allow selection only for input/textarea elements so students can type answers */
-    input, textarea, [contenteditable="true"] {
+    /* Allow selection only for input/textarea/button/a elements so students can type answers and click naturally */
+    input, textarea, button, a, [contenteditable="true"] {
       -webkit-user-select: text !important;
       -moz-user-select: text !important;
       -ms-user-select: text !important;

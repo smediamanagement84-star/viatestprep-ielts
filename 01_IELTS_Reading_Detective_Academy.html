@@ -331,6 +331,14 @@
     color: #cbd5e1 !important;
     border-color: #334155 !important;
   }
+
+  /* Skim & Scan Lab Styles */
+  .blur-text { filter: blur(5px); transition: filter 0.3s ease; user-select: none; pointer-events: none; }
+  .scan-word { cursor: pointer; transition: background-color 0.12s; border-radius: 4px; padding: 0 2px; }
+  .scan-word:hover { background-color: var(--gold-soft); color: var(--ink); }
+  .dark .scan-word:hover { background-color: #58400f; color: #fff; }
+  .scan-word.selected-wrong { background-color: var(--rose) !important; color: #fff !important; text-decoration: line-through; }
+  .scan-word.selected-right { background-color: var(--teal) !important; color: #fff !important; font-weight: bold; }
 </style>
   <script src="security.js"></script>
 </head>
@@ -339,6 +347,7 @@
 <div class="toolbar">
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
     <div class="flex items-center gap-3">
+      <a href="index.html" class="btn btn-ghost text-xs px-2.5 py-1.5 flex items-center gap-1 mr-2" style="text-decoration: none;">← Back</a>
       <div class="w-9 h-9 rounded-xl bg-plum text-white flex items-center justify-center font-bold" style="font-family:'Fraunces',serif;background:var(--plum)">DA</div>
       <div>
         <div class="text-sm uppercase tracking-widest text-stone-500">IELTS Reading</div>
@@ -422,7 +431,108 @@
         <div class="feedback tip mt-4"><strong>Best keywords:</strong> proper nouns, dates, numbers, technical terms.</div>
       </div>
     </div>
-    <div class="mt-6 flex justify-between items-center flex-wrap gap-2">
+    <!-- Interactive Eye-Training Lab -->
+    <div class="mt-10 border-t border-line pt-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="stamp">Academy Lab</span>
+        <h3 class="text-2xl">Detective Eye-Training Lab</h3>
+      </div>
+      <p class="text-sm text-stone-600 dark:text-stone-300 mb-6">Put skimming and scanning into action. Complete these two micro-drills to train your eyes and earn extra XP.</p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Drill 1: Skimming Map Builder -->
+        <div class="card p-6 flex flex-col justify-between" id="skim-drill-card">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="chip" style="background:var(--gold-soft);color:var(--plum)">Drill 1: Skimming Map Builder</span>
+              <span class="timer-pill text-sm px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-850" id="skim-timer">15s</span>
+            </div>
+            <h4 class="font-bold text-lg mb-2">The Bioluminescence Mystery</h4>
+            <p class="text-xs text-stone-500 mb-3">Goal: Build a structural map. You have 15 seconds to skim the paragraphs before they are blurred. Then, match the topic to the correct paragraph.</p>
+            
+            <!-- Passage Container -->
+            <div class="case-file p-4 text-xs space-y-3 max-h-60 overflow-y-auto transition-all duration-300" id="skim-passage">
+              <p id="skim-p-a"><strong>Paragraph A:</strong> Bioluminescence, the production of cold light by living organisms, is widely distributed across marine fauna, particularly in the bathypelagic zone. Historically, the earliest documented record of this phenomenon dates back to ancient maritime logs, where sailors described vast, glowing 'milky seas' that stretched for miles, a spectacle that baffled early oceanographers who lacked the tools to examine deep-ocean microbiology.</p>
+              <p id="skim-p-b"><strong>Paragraph B:</strong> At its core, the physical mechanism of light emission relies on a chemical reaction. A light-emitting pigment, luciferin, is oxidized in the presence of the enzyme luciferase. This enzymatic catalysis releases energy almost entirely as visible light rather than thermal radiation, making it an incredibly efficient process that operates without raising the organism's body temperature.</p>
+              <p id="skim-p-c"><strong>Paragraph C:</strong> Ecologically, organisms utilize this glowing ability for diverse survival strategies. Marine creatures like the anglerfish use glowing lures to attract prey into their jaws, while others, such as certain species of squid, discharge clouds of glowing ink to confuse predators and facilitate a rapid escape into the surrounding darkness.</p>
+              <p id="skim-p-d"><strong>Paragraph D:</strong> In modern science, bioluminescent genes have found crucial clinical and industrial applications. By inserting the luciferase gene into bacteria or cancer cells, researchers can visually track infection pathways and tumor growth inside living tissue. This imaging breakthrough has transformed modern oncology and gene expression monitoring.</p>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <button class="btn btn-primary w-full text-xs py-2 justify-center" id="btn-start-skim" onclick="startSkimmingDrill()">▶ Start 15s Skim</button>
+            
+            <!-- Questions (hidden until timer ends) -->
+            <div id="skim-questions" class="hidden space-y-3 mt-4">
+              <div class="text-xs font-bold text-stone-600 dark:text-stone-300 mb-1">Match the topics to the correct paragraphs:</div>
+              
+              <div class="flex flex-col gap-2">
+                <div class="flex items-center justify-between text-xs bg-stone-50 dark:bg-stone-850 p-2 rounded border border-line">
+                  <span class="flex-1 pr-2">1. The chemical mechanism of light emission:</span>
+                  <select id="skim-q1" class="border border-line rounded px-1.5 py-0.5 bg-white text-stone-800 dark:bg-stone-900 dark:text-stone-300">
+                    <option value="">Select...</option>
+                    <option value="A">Para A</option>
+                    <option value="B">Para B</option>
+                    <option value="C">Para C</option>
+                    <option value="D">Para D</option>
+                  </select>
+                </div>
+                
+                <div class="flex items-center justify-between text-xs bg-stone-50 dark:bg-stone-850 p-2 rounded border border-line">
+                  <span class="flex-1 pr-2">2. Modern applications in science and oncology:</span>
+                  <select id="skim-q2" class="border border-line rounded px-1.5 py-0.5 bg-white text-stone-800 dark:bg-stone-900 dark:text-stone-300">
+                    <option value="">Select...</option>
+                    <option value="A">Para A</option>
+                    <option value="B">Para B</option>
+                    <option value="C">Para C</option>
+                    <option value="D">Para D</option>
+                  </select>
+                </div>
+
+                <div class="flex items-center justify-between text-xs bg-stone-50 dark:bg-stone-850 p-2 rounded border border-line">
+                  <span class="flex-1 pr-2">3. Historical records and milky seas:</span>
+                  <select id="skim-q3" class="border border-line rounded px-1.5 py-0.5 bg-white text-stone-800 dark:bg-stone-900 dark:text-stone-300">
+                    <option value="">Select...</option>
+                    <option value="A">Para A</option>
+                    <option value="B">Para B</option>
+                    <option value="C">Para C</option>
+                    <option value="D">Para D</option>
+                  </select>
+                </div>
+              </div>
+
+              <button class="btn btn-primary w-full text-xs py-2 justify-center mt-2" onclick="submitSkimmingDrill()">Submit Map</button>
+            </div>
+            
+            <div id="skim-feedback" class="mt-3"></div>
+          </div>
+        </div>
+
+        <!-- Drill 2: Scanning Target Lock -->
+        <div class="card p-6 flex flex-col justify-between" id="scan-drill-card">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="chip" style="background:#fdf0f3;color:var(--rose)">Drill 2: Synonym Target Lock</span>
+              <span class="timer-pill text-xs px-2 py-0.5 rounded bg-rose-50 text-rose-600 dark:bg-rose-950 dark:text-rose-300" id="scan-target-desc">Target 1 of 2</span>
+            </div>
+            <h4 class="font-bold text-lg mb-2">The Searchlight Sweep</h4>
+            <p class="text-xs text-stone-500 mb-3" id="scan-instructions">Prompt: Click Start to load the challenge text...</p>
+            
+            <!-- Clickable Passage Container -->
+            <div class="case-file p-4 text-sm leading-relaxed" id="scan-passage-words">
+              <span class="text-stone-400 italic">Click Start to load the target sweep...</span>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <button class="btn btn-primary w-full text-xs py-2 justify-center" id="btn-start-scan" onclick="startScanningDrill()">▶ Start Scanning</button>
+            <div id="scan-feedback" class="mt-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 flex justify-between items-center flex-wrap gap-2">
       <button class="btn btn-primary text-xs" onclick="document.getElementById('plan').scrollIntoView({behavior:'smooth'})">Next: Game Plan →</button>
       <a href="index.html" class="btn btn-ghost text-xs px-3 py-1.5 flex items-center gap-1">← Back to Hub</a>
     </div>
@@ -1497,6 +1607,165 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initAllExpandedDrills);
 } else {
   initAllExpandedDrills();
+}
+
+// ====== DETECTIVE EYE-TRAINING LAB ======
+let skimTimerVal = 15;
+let skimTimerInterval = null;
+let skimDrillStarted = false;
+let skimDrillCompleted = false;
+
+// Ensure it starts blurred
+document.addEventListener('DOMContentLoaded', () => {
+  const p = document.getElementById('skim-passage');
+  if (p) p.classList.add('blur-text');
+});
+
+function startSkimmingDrill() {
+  if (skimDrillStarted) return;
+  skimDrillStarted = true;
+  document.getElementById('btn-start-skim').classList.add('hidden');
+  const passage = document.getElementById('skim-passage');
+  passage.classList.remove('blur-text');
+  
+  skimTimerInterval = setInterval(() => {
+    skimTimerVal--;
+    document.getElementById('skim-timer').textContent = skimTimerVal + 's';
+    if (skimTimerVal <= 0) {
+      clearInterval(skimTimerInterval);
+      passage.classList.add('blur-text');
+      document.getElementById('skim-timer').textContent = 'Time Up!';
+      document.getElementById('skim-timer').classList.add('text-rose-600');
+      document.getElementById('skim-questions').classList.remove('hidden');
+    }
+  }, 1000);
+}
+
+function submitSkimmingDrill() {
+  if (skimDrillCompleted) return;
+  const q1 = document.getElementById('skim-q1').value;
+  const q2 = document.getElementById('skim-q2').value;
+  const q3 = document.getElementById('skim-q3').value;
+  
+  if (!q1 || !q2 || !q3) {
+    alert('Please answer all questions!');
+    return;
+  }
+  
+  skimDrillCompleted = true;
+  const isCorrect = (q1 === 'B' && q2 === 'D' && q3 === 'A');
+  const feedback = document.getElementById('skim-feedback');
+  
+  if (isCorrect) {
+    feedback.innerHTML = `<div class="feedback good">✅ <strong>Perfect Map!</strong> You've successfully built the structure map. Under pressure, you identified that:<br>
+      • Para A introduces historical records (milky seas description).<br>
+      • Para B details the physical chemical mechanism (luciferin oxidation).<br>
+      • Para D highlights modern clinical applications (tracking cancer cells).<br>
+      <strong>Earned +15 XP!</strong></div>`;
+    addXP(15);
+  } else {
+    feedback.innerHTML = `<div class="feedback bad">❌ <strong>Map Incomplete/Incorrect.</strong> The correct mapping is:<br>
+      1. Chemical Mechanism = <strong>Paragraph B</strong> (oxidation of chemical luciferin)<br>
+      2. Modern Applications = <strong>Paragraph D</strong> (tracking cancer cells)<br>
+      3. Historical Records = <strong>Paragraph A</strong> (ancient maritime logs of milky seas)<br>
+      Review the topic sentences and try again in your next lesson.</div>`;
+  }
+  
+  // Disable dropdowns
+  document.getElementById('skim-q1').disabled = true;
+  document.getElementById('skim-q2').disabled = true;
+  document.getElementById('skim-q3').disabled = true;
+}
+
+// Scanning Drill Logic
+const scanDrillData = [
+  {
+    passage: "Historically, researchers credit the sudden popularity of penicillin to a series of fortuitous findings in Alexander Fleming's laboratory, rather than a planned pathway of clinical inquiry.",
+    target: "accidental discoveries",
+    answer: "fortuitous findings",
+    expl: "<strong>Synonym Map:</strong> 'accidental discoveries' translates to 'fortuitous findings' (unexpected, chance discoveries)."
+  },
+  {
+    passage: "The committee concluded that while clerical mistakes were inevitable, the inclusion of falsified signatures constituted intentional fraud rather than simple negligence.",
+    target: "deliberate deception",
+    answer: "intentional fraud",
+    expl: "<strong>Synonym Map:</strong> 'deliberate deception' translates to 'intentional fraud' (willful act of lying/deceiving)."
+  }
+];
+
+let currentScanIndex = 0;
+let scanDrillCompleted = false;
+
+function startScanningDrill() {
+  document.getElementById('btn-start-scan').classList.add('hidden');
+  loadScanTarget();
+}
+
+function loadScanTarget() {
+  const data = scanDrillData[currentScanIndex];
+  document.getElementById('scan-target-desc').textContent = `Target ${currentScanIndex + 1} of ${scanDrillData.length}`;
+  document.getElementById('scan-instructions').innerHTML = `Prompt: Scan the text below and <strong>click on the phrase</strong> that means <strong>"${data.target}"</strong>.`;
+  
+  const container = document.getElementById('scan-passage-words');
+  container.innerHTML = '';
+  
+  const words = data.passage.split(' ');
+  words.forEach((w, idx) => {
+    const span = document.createElement('span');
+    span.className = 'scan-word';
+    span.textContent = w + ' ';
+    span.dataset.idx = idx;
+    
+    span.addEventListener('click', () => handleWordClick(span, w, data));
+    container.appendChild(span);
+  });
+  
+  document.getElementById('scan-feedback').innerHTML = '';
+}
+
+function handleWordClick(span, word, data) {
+  if (scanDrillCompleted) return;
+  
+  const cleanWord = word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").toLowerCase();
+  const cleanAnswerParts = data.answer.toLowerCase().split(' ');
+  
+  const isPart = cleanAnswerParts.includes(cleanWord);
+  
+  if (isPart) {
+    const container = document.getElementById('scan-passage-words');
+    const spans = container.querySelectorAll('.scan-word');
+    spans.forEach(s => {
+      const sw = s.textContent.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").trim().toLowerCase();
+      if (cleanAnswerParts.includes(sw)) {
+        s.classList.add('selected-right');
+      }
+    });
+    
+    const feedback = document.getElementById('scan-feedback');
+    feedback.innerHTML = `<div class="feedback good">✅ <strong>Target Locked!</strong> You spotted "${data.answer}".<br>${data.expl}</div>`;
+    
+    scanDrillCompleted = true;
+    
+    setTimeout(() => {
+      currentScanIndex++;
+      if (currentScanIndex < scanDrillData.length) {
+        scanDrillCompleted = false;
+        loadScanTarget();
+      } else {
+        feedback.innerHTML += `<div class="feedback tip mt-2">🎉 <strong>Scanning Lab Completed!</strong> You have successfully trained your visual searchlight on synonyms.<br><strong>Earned +15 XP!</strong></div>`;
+        addXP(15);
+        document.getElementById('scan-target-desc').textContent = 'Completed!';
+      }
+    }, 2500);
+    
+  } else {
+    span.classList.add('selected-wrong');
+    const feedback = document.getElementById('scan-feedback');
+    feedback.innerHTML = `<div class="feedback bad">❌ <strong>Wrong Target.</strong> "${cleanWord}" is not the synonym for "${data.target}". Keep scanning!</div>`;
+    setTimeout(() => {
+      span.classList.remove('selected-wrong');
+    }, 1000);
+  }
 }
 
 // ====== BOSS FIGHT ======

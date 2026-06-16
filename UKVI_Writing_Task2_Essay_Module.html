@@ -130,6 +130,8 @@
   footer { text-align: center; padding: 40px 24px; color: var(--muted); font-size: 0.78rem; border-top: 1px solid var(--border); margin-top: 40px; }
 
   @media (max-width: 640px) { .bp-row { grid-template-columns: 100px 1fr; } }
+  .back-btn { text-decoration: none; font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--border); border-radius: 6px; color: var(--muted); transition: all 0.2s; display: inline-flex; align-items: center; }
+  .back-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(245,158,11,0.08); }
 </style>
   <script src="security.js"></script>
 </head>
@@ -138,7 +140,10 @@
 <div class="xp-toast" id="xpToast">+10 XP</div>
 
 <nav>
-  <div class="logo" onclick="location.href='index.html'">🎓 ViATestPrep</div>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <a href="index.html" class="back-btn">← Back to Hub</a>
+    <div class="logo" onclick="location.href='index.html'">🎓 ViATestPrep</div>
+  </div>
   <div style="display:flex;align-items:center;gap:12px;">
     <div class="badge">UKVI · Writing Task 2</div>
     <div class="xp-display">⚡ <span id="xpCount">0</span> XP</div>
@@ -246,27 +251,27 @@
   <p class="section-sub">Every Writing Task 2 prompt falls into one of five categories. Tap each to open its specific structural requirements and a worked prompt.</p>
 
   <div class="essay-tabs">
-    <div class="essay-tab active-tab" onclick="showEssay('opinion')">
+    <div class="essay-tab active-tab" onclick="showEssay('opinion', this)">
       <div class="et-icon">💬</div>
       <h3>Opinion</h3>
       <p>Agree or Disagree</p>
     </div>
-    <div class="essay-tab" onclick="showEssay('discussion')">
+    <div class="essay-tab" onclick="showEssay('discussion', this)">
       <div class="et-icon">⚖</div>
       <h3>Discussion</h3>
       <p>Discuss both views</p>
     </div>
-    <div class="essay-tab" onclick="showEssay('adv-dis')">
+    <div class="essay-tab" onclick="showEssay('adv-dis', this)">
       <div class="et-icon">🔄</div>
       <h3>Adv vs Disadv</h3>
       <p>Do benefits outweigh?</p>
     </div>
-    <div class="essay-tab" onclick="showEssay('prob-sol')">
+    <div class="essay-tab" onclick="showEssay('prob-sol', this)">
       <div class="et-icon">🛠</div>
       <h3>Problem/Solution</h3>
       <p>Causes and solutions</p>
     </div>
-    <div class="essay-tab" onclick="showEssay('two-part')">
+    <div class="essay-tab" onclick="showEssay('two-part', this)">
       <div class="et-icon">❓</div>
       <h3>Two-Part</h3>
       <p>Direct questions</p>
@@ -666,11 +671,15 @@
     setTimeout(() => toast.classList.remove('show'), 1500);
   }
 
-  function showEssay(type) {
+  function showEssay(type, btn) {
     document.querySelectorAll('.essay-content').forEach(el => el.classList.remove('active-ec'));
     document.querySelectorAll('.essay-tab').forEach(el => el.classList.remove('active-tab'));
     document.getElementById('ec-' + type).classList.add('active-ec');
-    event.currentTarget.classList.add('active-tab');
+    if (btn) {
+      btn.classList.add('active-tab');
+    } else if (window.event && window.event.currentTarget) {
+      window.event.currentTarget.classList.add('active-tab');
+    }
     awardXP('et-' + type);
   }
 

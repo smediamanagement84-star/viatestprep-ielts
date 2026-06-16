@@ -707,6 +707,133 @@ const prompts = [
   }
 ];
 
+// ====== PARAPHRASE CHECKER ======
+function checkParaphraseText(inputText, promptText) {
+  const result = {
+    isValid: true,
+    score: 0,
+    lengthFeedback: "",
+    vocabFeedback: "",
+    structureFeedback: "",
+    tips: []
+  };
+
+  const cleanText = (str) => {
+    return str
+      .toLowerCase()
+      .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  };
+
+  const userClean = cleanText(inputText);
+  const promptClean = cleanText(promptText);
+
+  if (!userClean || userClean.length < 15) {
+    result.isValid = false;
+    result.tips.push("Your paraphrase is too short. Try to write a complete sentence of at least 15-20 characters.");
+    return result;
+  }
+
+  const userWords = userClean.split(" ");
+  const promptWords = promptClean.split(" ");
+
+  const stopWords = new Set([
+    "the", "a", "an", "is", "are", "was", "were", "be", "been", "being",
+    "to", "of", "in", "on", "at", "for", "with", "by", "about", "against",
+    "between", "into", "through", "during", "before", "after", "above", "below",
+    "up", "down", "from", "further", "then", "once", "here", "there", "when",
+    "where", "why", "how", "all", "any", "both", "each", "few", "more", "most",
+    "other", "some", "such", "no", "nor", "not", "only", "own", "same", "so",
+    "than", "too", "very", "s", "t", "can", "will", "just", "should", "now",
+    "i", "you", "he", "she", "it", "we", "they", "them", "their", "his", "her",
+    "us", "our", "agree", "disagree", "extent"
+  ]);
+
+  const promptContentWords = promptWords.filter(w => w.length > 2 && !stopWords.has(w));
+  const uniquePromptContentWords = Array.from(new Set(promptContentWords));
+
+  const copiedWords = [];
+  uniquePromptContentWords.forEach(w => {
+    if (userWords.includes(w)) {
+      copiedWords.push(w);
+    }
+  });
+
+  const overlapPct = uniquePromptContentWords.length > 0 
+    ? (copiedWords.length / uniquePromptContentWords.length) * 100 
+    : 0;
+
+  const structureWords = [
+    "while", "although", "whereas", "despite", "however", "though", "compared",
+    "in contrast", "nevertheless", "on the other hand", "conversely", "meanwhile",
+    "even though", "but", "yet", "by comparison"
+  ];
+  let hasStructureWord = false;
+  let matchedStructureWord = "";
+  for (let word of structureWords) {
+    if (userClean.includes(word)) {
+      hasStructureWord = true;
+      matchedStructureWord = word;
+      break;
+    }
+  }
+
+  const reportingPhrases = [
+    "it is often argued", "it is sometimes argued", "it is widely believed",
+    "many maintain", "many argue", "some argue", "some believe", "proponents claim",
+    "critics suggest", "it is claimed", "there is a view that", "opinion is divided"
+  ];
+  let hasReportingPhrase = false;
+  let matchedReportingPhrase = "";
+  for (let phrase of reportingPhrases) {
+    if (userClean.includes(phrase)) {
+      hasReportingPhrase = true;
+      matchedReportingPhrase = phrase;
+      break;
+    }
+  }
+
+  let score = 30; // base score for writing something
+
+  // 1. Length feedback
+  if (userWords.length >= 10 && userWords.length <= 35) {
+    score += 20;
+    result.lengthFeedback = "✅ Optimal length (about " + userWords.length + " words).";
+  } else if (userWords.length < 10) {
+    score += 5;
+    result.lengthFeedback = "⚠️ A bit short. Try to write a full introduction sentence (~15-25 words).";
+  } else {
+    score += 10;
+    result.lengthFeedback = "⚠️ A bit long. Aim for a concise paraphrase of 15-25 words.";
+  }
+
+  // 2. Vocabulary feedback
+  if (overlapPct > 65) {
+    result.vocabFeedback = "❌ Too similar to the prompt (copied key words).";
+    result.tips.push("Try to use synonyms for: " + copiedWords.map(w => `'${w}'`).join(", "));
+  } else if (overlapPct > 45) {
+    score += 15;
+    result.vocabFeedback = "⚠️ Moderate vocabulary change. Some prompt words were reused.";
+    result.tips.push("Can you swap these words for synonyms? " + copiedWords.map(w => `'${w}'`).join(", "));
+  } else {
+    score += 30;
+    result.vocabFeedback = "✅ Excellent vocabulary change! You replaced most key words.";
+  }
+
+  // 3. Structure feedback
+  if (hasStructureWord || hasReportingPhrase) {
+    score += 20;
+    let match = matchedStructureWord || matchedReportingPhrase;
+    result.structureFeedback = "✅ Good sentence structure! You used a complex transition or reporting phrase ('" + match + "').";
+  } else {
+    result.structureFeedback = "⚠️ Simple sentence structure. Try starting with a subordinate clause (e.g. 'While some people argue that...') or a reporting passive (e.g. 'It is often argued that...').";
+  }
+
+  result.score = Math.min(100, score);
+  return result;
+}
+
 // ====== RENDER ======
 const ws=document.getElementById('worksheet');
 function render(filter='all'){
@@ -728,12 +855,14 @@ function render(filter='all'){
       <textarea data-paraphrase placeholder="Rewrite the prompt in your own words..."></textarea>
       <div class="flex flex-wrap gap-2 mt-2 no-print">
         <button class="btn btn-ghost text-xs" data-action="hint">💡 Hint</button>
+        <button class="btn btn-ghost text-xs" data-action="check" style="border-color:var(--green);color:var(--green)">🔍 Check Answer</button>
         <button class="btn btn-gold text-xs" data-action="reveal">👁 Reveal samples</button>
         <button class="btn btn-ghost text-xs" data-action="done">✓ Mark done</button>
       </div>
       <div class="hidden hint-content">
         <div class="hint-box"><strong>Hint:</strong> ${p.hint}</div>
       </div>
+      <div class="hidden checker-content"></div>
       <div class="hidden samples-content">
         ${p.samples.map((s,i)=>`<div class="sample-box"><strong>Sample ${i+1}:</strong> ${s.t}</div><div class="sample-notes"><strong>What changed:</strong> ${s.why}</div>`).join('')}
       </div>
@@ -748,6 +877,37 @@ function render(filter='all'){
       s.classList.toggle('hidden');
       const btn=card.querySelector('[data-action="reveal"]');
       btn.textContent = s.classList.contains('hidden')?'👁 Reveal samples':'🙈 Hide samples';
+    });
+    card.querySelector('[data-action="check"]').addEventListener('click',()=>{
+      const text = card.querySelector('textarea').value.trim();
+      const ch = card.querySelector('.checker-content');
+      const result = checkParaphraseText(text, p.prompt);
+      
+      if (!result.isValid) {
+        ch.innerHTML = `<div class="p-3 rounded-lg border mt-2" style="background:#fdeadf; border-color:var(--terra); color:var(--terra); font-size:0.82rem;">${result.tips[0]}</div>`;
+      } else {
+        ch.innerHTML = `
+          <div class="p-3 rounded-lg border mt-2" style="background:#f8f9fa; border-color:#dcd2b6; font-size:0.82rem;">
+            <div class="flex justify-between items-center mb-2">
+              <strong class="text-xs uppercase tracking-widest text-stone-600">Paraphrase Analysis</strong>
+              <span class="text-xs font-bold px-2 py-0.5 rounded-full" style="background:var(--blue)22; color:var(--blue)">Score: ${result.score}/100</span>
+            </div>
+            <div class="text-xs space-y-1 text-stone-700">
+              <div>${result.lengthFeedback}</div>
+              <div>${result.vocabFeedback}</div>
+              <div>${result.structureFeedback}</div>
+            </div>
+            ${result.tips.length > 0 ? `
+            <div class="mt-2 text-xs border-t pt-2" style="border-color:#e5e0d0">
+              <strong style="color:var(--terra)">💡 Tips:</strong>
+              <ul class="list-disc pl-4 mt-1 space-y-0.5">
+                ${result.tips.map(t => `<li>${t}</li>`).join('')}
+              </ul>
+            </div>` : ''}
+          </div>
+        `;
+      }
+      ch.classList.remove('hidden');
     });
     card.querySelector('[data-action="done"]').addEventListener('click',()=>{
       card.dataset.done = card.dataset.done==='1'?'0':'1';

@@ -22,7 +22,7 @@
   body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; line-height: 1.7; }
 
   nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
-  .logo { font-weight: 800; font-size: 1rem; color: var(--accent); letter-spacing: 1px; }
+  .logo { font-weight: 800; font-size: 1rem; color: var(--accent); letter-spacing: 1px; cursor: pointer; }
   .badge { background: var(--accent); color: #000; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
   .xp-display { font-size: 0.8rem; color: var(--accent); font-weight: 700; }
 
@@ -143,6 +143,8 @@
   footer { text-align: center; padding: 40px 24px; color: var(--muted); font-size: 0.78rem; border-top: 1px solid var(--border); margin-top: 40px; }
 
   @media (max-width: 640px) { .tone-grid { grid-template-columns: 1fr; } .bp-row { grid-template-columns: 100px 1fr; } }
+  .back-btn { text-decoration: none; font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--border); border-radius: 6px; color: var(--muted); transition: all 0.2s; display: inline-flex; align-items: center; }
+  .back-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(245,158,11,0.08); }
 </style>
   <script src="security.js"></script>
 </head>
@@ -151,7 +153,10 @@
 <div class="xp-toast" id="xpToast">+10 XP</div>
 
 <nav>
-  <div class="logo">🎓 ViATestPrep</div>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <a href="index.html" class="back-btn">← Back to Hub</a>
+    <div class="logo" onclick="location.href='index.html'">🎓 ViATestPrep</div>
+  </div>
   <div style="display:flex;align-items:center;gap:12px;">
     <div class="badge">UKVI · GT</div>
     <div class="xp-display">⚡ <span id="xpCount">0</span> XP</div>
@@ -159,13 +164,13 @@
 </nav>
 
 <div class="step-nav">
-  <button class="step-btn active" onclick="scrollTo('mission')">① Mission</button>
-  <button class="step-btn" onclick="scrollTo('difference')">② GT vs Academic</button>
-  <button class="step-btn" onclick="scrollTo('letterTypes')">③ 3 Letter Types</button>
-  <button class="step-btn" onclick="scrollTo('phraseBank')">④ Phrase Bank</button>
-  <button class="step-btn" onclick="scrollTo('drills')">⑤ Live Drills</button>
-  <button class="step-btn" onclick="scrollTo('boss')">⑥ Boss Build</button>
-  <button class="step-btn" onclick="scrollTo('plan')">⑦ Action Plan</button>
+  <button class="step-btn active" onclick="scrollToId('mission')">① Mission</button>
+  <button class="step-btn" onclick="scrollToId('difference')">② GT vs Academic</button>
+  <button class="step-btn" onclick="scrollToId('letterTypes')">③ 3 Letter Types</button>
+  <button class="step-btn" onclick="scrollToId('phraseBank')">④ Phrase Bank</button>
+  <button class="step-btn" onclick="scrollToId('drills')">⑤ Live Drills</button>
+  <button class="step-btn" onclick="scrollToId('boss')">⑥ Boss Build</button>
+  <button class="step-btn" onclick="scrollToId('plan')">⑦ Action Plan</button>
 </div>
 
 <!-- HERO -->
@@ -181,8 +186,8 @@
     <span class="pill">3 bullet points · 3 paragraphs</span>
   </div>
   <div style="display:flex;gap:12px;flex-wrap:wrap;">
-    <button class="btn-primary" onclick="scrollTo('difference')">▶ Open the Blueprint</button>
-    <button class="btn-ghost" onclick="scrollTo('boss')">Skip to Boss Build</button>
+    <button class="btn-primary" onclick="scrollToId('difference')">▶ Open the Blueprint</button>
+    <button class="btn-ghost" onclick="scrollToId('boss')">Skip to Boss Build</button>
   </div>
 </div>
 
@@ -219,17 +224,17 @@
   <p class="section-sub">Every GT Task 1 prompt is one of three types. Tap each to open the full blueprint, tone guide, and a worked example relevant to Skilled Worker visa scenarios.</p>
 
   <div class="letter-tabs">
-    <div class="letter-tab active-tab" onclick="showLetter('formal')">
+    <div class="letter-tab active-tab" onclick="showLetter('formal', this)">
       <div class="lt-icon">🏛</div>
       <h3>Formal Letter</h3>
       <p>Official body, unknown recipient</p>
     </div>
-    <div class="letter-tab" onclick="showLetter('semi')">
+    <div class="letter-tab" onclick="showLetter('semi', this)">
       <div class="lt-icon">🏢</div>
       <h3>Semi-Formal Letter</h3>
       <p>Manager, landlord, colleague</p>
     </div>
-    <div class="letter-tab" onclick="showLetter('informal')">
+    <div class="letter-tab" onclick="showLetter('informal', this)">
       <div class="lt-icon">💬</div>
       <h3>Informal Letter</h3>
       <p>Friend, family member</p>
@@ -654,7 +659,7 @@ Meena
   let bossInterval = null;
   let bossSeconds = 1200;
 
-  function scrollTo(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }); }
+  function scrollToId(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }); }
 
   function awardXP(key) {
     if (drillsDone.has(key)) return;
@@ -666,11 +671,15 @@ Meena
     setTimeout(() => toast.classList.remove('show'), 1500);
   }
 
-  function showLetter(type) {
+  function showLetter(type, btn) {
     document.querySelectorAll('.letter-content').forEach(el => el.classList.remove('active-lc'));
     document.querySelectorAll('.letter-tab').forEach(el => el.classList.remove('active-tab'));
     document.getElementById('lc-' + type).classList.add('active-lc');
-    event.currentTarget.classList.add('active-tab');
+    if (btn) {
+      btn.classList.add('active-tab');
+    } else if (window.event && window.event.currentTarget) {
+      window.event.currentTarget.classList.add('active-tab');
+    }
     awardXP('lt-' + type);
   }
 

@@ -58,6 +58,21 @@
   }
   .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
   .brand { font-family: 'Space Mono', monospace; font-size: 10px; color: var(--orange); letter-spacing: 2px; text-transform: uppercase; }
+  .back-btn {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+  }
+  .back-btn:hover {
+    color: var(--orange);
+    border-color: var(--orange);
+    background: var(--orange-glow);
+  }
   .progress-ring { display: flex; align-items: center; gap: 8px; }
   .progress-label { font-size: 11px; color: var(--text-muted); font-family: 'Space Mono', monospace; }
   .score-pill {
@@ -429,7 +444,10 @@
   <!-- HEADER -->
   <div class="header">
     <div class="header-top">
-      <div class="brand">▸ ViaTestPrep</div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="index.html" class="back-btn">← Back to Hub</a>
+        <div class="brand">▸ ViaTestPrep</div>
+      </div>
       <div class="progress-ring">
         <span class="progress-label">XP</span>
         <div class="score-pill" id="xp-counter">0 pts</div>
