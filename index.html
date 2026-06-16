@@ -158,6 +158,15 @@
   .dark #darkModeToggle:hover {
     background: rgba(255,255,255,0.25) !important;
   }
+  
+  .instagram-hero-btn {
+    transition: all 0.2s ease-in-out;
+  }
+  .instagram-hero-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(225,48,108,0.4) !important;
+    opacity: 0.95;
+  }
 </style>
   <script src="security.js"></script>
 </head>
@@ -178,6 +187,12 @@
     <span class="badge">📖 All 4 Skills</span>
     <span class="badge">🇬🇧 UKVI Modules</span>
   </div>
+  <div style="margin-top:2.2rem; position:relative; z-index:1;">
+    <a href="https://www.instagram.com/viatestprep/" target="_blank" class="instagram-hero-btn" style="display:inline-flex; align-items:center; gap:0.5rem; background:linear-gradient(135deg, #e1306c, #c13584, #833ab4); color:#fff; text-decoration:none; padding:0.75rem 1.6rem; border-radius:30px; font-size:0.85rem; font-weight:700; box-shadow:0 8px 20px rgba(225,48,108,0.25);">
+      <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      Message us on Instagram to Enroll
+    </a>
+  </div>
   <div class="scroll-hint">
     <span>Explore modules</span>
     <span>↓</span>
@@ -193,6 +208,19 @@
     <p>Begin with Class 01, then work through each skill module at your own pace. Every lesson includes strategy guides, live drills, and a boss-fight mock test.</p>
 
     <div class="grid">
+
+      <!-- Free Resource Card -->
+      <a href="free-essay-template.html" class="card" style="border-color:var(--gold);background:var(--gold-soft)">
+        <div class="card-inner">
+          <span class="inline-block bg-amber-100 text-amber-805 text-[9px] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider mb-2 dark:bg-amber-950 dark:text-amber-300" style="color:#78350f">
+            🎁 FREE PDF TEMPLATE
+          </span>
+          <div class="icon" style="background:#ffe599">📝</div>
+          <h3>Agree/Disagree Essay Template</h3>
+          <p>Get instant access to our Band 8+ essay template. Structurally optimized, print-friendly, and completely free to save as PDF.</p>
+          <div class="go-arrow" style="color:var(--gold)">Get free template →</div>
+        </div>
+      </a>
 
       <a href="00_IELTS_Orientation_Class_01.html" class="card">
         <div class="card-inner">
@@ -389,7 +417,17 @@
   <strong>ViATestPrep</strong><br>
   © 2026 ViATestPrep · All Rights Reserved<br>
   These materials are the exclusive intellectual property of ViATestPrep.<br>
-  Unauthorized reproduction, distribution, or sharing is strictly prohibited.
+  Unauthorized reproduction, distribution, or sharing is strictly prohibited.<br>
+  <div style="margin-top: 0.8rem; margin-bottom: 0.5rem;">
+    <a href="https://www.instagram.com/viatestprep/" target="_blank" style="color:#e1306c; text-decoration:none; font-weight:600; display:inline-flex; align-items:center; gap:0.25rem;">
+      📸 Follow us on Instagram @viatestprep
+    </a>
+  </div>
+  <div class="mt-4 text-xs text-stone-500 pt-4 border-t border-slate-800" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed rgba(255,255,255,0.1);">
+    <button onclick="localStorage.removeItem('viatestprep_unlocked'); alert('Premium resources locked. Click on any lesson module to test the password prompt overlay!'); location.reload();" style="color:#94a3b8;background:transparent;border:none;text-decoration:underline;cursor:pointer;font-size:0.75rem;">
+      🔒 Lock Premium Resources (Test Experience)
+    </button>
+  </div>
 </footer>
 
 <script>

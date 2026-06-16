@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Free IELTS Writing Task 2 Template — ViATestPrep</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f172a; --paper: #fdfcf7; --gold: #c8932a; --gold-soft: #fdf6e3;
+    --plum: #5b2a86; --plum-deep: #3b0a64; --teal: #0d8a7a; --rose: #e8456b;
+    --line: #e6dfce;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', serif;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: 0 1px 0 rgba(0,0,0,.02);
+  }
+  .template-highlight {
+    background-color: #f3ecff;
+    border-left: 3px solid var(--plum);
+    padding: 1px 4px;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #3b0a64;
+  }
+  .dark .template-highlight {
+    background-color: #2e1065;
+    color: #e9d5ff;
+    border-left-color: #a78bfa;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .6rem 1rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: transform .08s ease;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary { background: var(--plum); color: #fff; }
+  .btn-primary:hover { background: var(--plum-deep); }
+  .btn-ghost { background: #fff; border: 1px solid var(--line); color: var(--ink); }
+  .btn-ghost:hover { background: #f7f3e9; }
+
+  @media print {
+    body {
+      background: #fff !important;
+      color: #000 !important;
+    }
+    .no-print {
+      display: none !important;
+    }
+    .print-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+    .card {
+      border: none !important;
+      box-shadow: none !important;
+      background: none !important;
+      padding: 0 !important;
+    }
+    .template-highlight {
+      background-color: #f3f4f6 !important;
+      border-left: 3px solid #4b5563 !important;
+      color: #000 !important;
+    }
+  }
+
+  /* DARK MODE */
+  .dark {
+    --ink: #cbd5e1;
+    --paper: #0f172a;
+    --line: #334155;
+    --gold-soft: #3f2e0a;
+  }
+  .dark body {
+    background-color: #0f172a !important;
+    color: #cbd5e1 !important;
+  }
+  .dark .card {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    color: #cbd5e1 !important;
+  }
+  .dark .bg-white {
+    background-color: #1e293b !important;
+  }
+  .dark .bg-stone-50 {
+    background-color: #1e293b !important;
+  }
+  .dark .text-stone-600 {
+    color: #94a3b8 !important;
+  }
+  .dark .btn-ghost {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    color: #cbd5e1 !important;
+  }
+  .dark .btn-ghost:hover {
+    background-color: #334155 !important;
+  }
+</style>
+<script src="security.js"></script>
+</head>
+<body class="min-h-screen pb-16">
+
+  <!-- Navigation (Exempt from print) -->
+  <div class="no-print border-b border-line bg-white dark:bg-slate-900 sticky top-0 z-30">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="btn btn-ghost text-xs px-2.5 py-1.5 flex items-center gap-1">← Back to Hub</a>
+        <div class="w-9 h-9 rounded-xl bg-plum text-white flex items-center justify-center font-bold" style="background:var(--plum)">V</div>
+        <div>
+          <div class="text-sm font-bold">ViATestPrep</div>
+          <div class="text-[10px] uppercase tracking-widest text-stone-500">Free Resources</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="darkModeToggle" class="w-8 h-8 rounded-lg border border-line bg-white hover:bg-stone-100 flex items-center justify-center text-sm transition dark:bg-slate-800 dark:border-slate-700">🌙</button>
+        <button onclick="window.print()" class="btn btn-primary text-xs px-3 py-1.5 flex items-center gap-1">
+          ⬇ Save/Print PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Container -->
+  <main class="print-container max-w-4xl mx-auto px-4 py-8">
+    <div class="card p-8 bg-white">
+      
+      <!-- Header / Meta -->
+      <div class="border-b border-line pb-6 mb-8 text-center sm:text-left">
+        <span class="inline-block bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider mb-2 dark:bg-purple-950 dark:text-purple-300">
+          IELTS Academic & General Writing
+        </span>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white leading-tight">
+          Agree or Disagree Essay Template
+        </h1>
+        <p class="text-stone-600 dark:text-stone-400 mt-2 max-w-2xl">
+          A print-ready writing architecture designed for Band 7.5+ performance. Study the paragraph structures, memorize the anchor phrases, and review the model essay.
+        </p>
+      </div>
+
+      <!-- Part 1: The 4-Paragraph Architecture -->
+      <section class="mb-10">
+        <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-4 flex items-center gap-2">
+          <span class="text-plum" style="color:var(--plum)">■</span> 1. The 4-Paragraph Layout Grid
+        </h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="border border-line rounded-xl p-4 bg-stone-50 dark:bg-slate-800/50">
+            <h3 class="font-bold text-plum mb-1" style="color:var(--plum)">Paragraph 1: Introduction</h3>
+            <ul class="text-xs space-y-1 text-stone-600 dark:text-stone-300 list-disc list-inside">
+              <li>Sentence 1: Paraphrase the prompt context</li>
+              <li>Sentence 2: Clear thesis statement (Agree/Disagree)</li>
+              <li>Sentence 3: Outline sentence (Preview main points)</li>
+            </ul>
+          </div>
+          <div class="border border-line rounded-xl p-4 bg-stone-50 dark:bg-slate-800/50">
+            <h3 class="font-bold text-plum mb-1" style="color:var(--plum)">Paragraph 2: Body 1 (First Argument)</h3>
+            <ul class="text-xs space-y-1 text-stone-600 dark:text-stone-300 list-disc list-inside">
+              <li>Sentence 1: Topic sentence stating first supporting reason</li>
+              <li>Sentence 2: Deeper explanation of the point</li>
+              <li>Sentence 3: Concrete example or statistical reference</li>
+              <li>Sentence 4: Concluding link (Result/Impact)</li>
+            </ul>
+          </div>
+          <div class="border border-line rounded-xl p-4 bg-stone-50 dark:bg-slate-800/50">
+            <h3 class="font-bold text-plum mb-1" style="color:var(--plum)">Paragraph 3: Body 2 (Second Argument)</h3>
+            <ul class="text-xs space-y-1 text-stone-600 dark:text-stone-300 list-disc list-inside">
+              <li>Sentence 1: Topic sentence stating second supporting reason</li>
+              <li>Sentence 2: Deeper explanation of the point</li>
+              <li>Sentence 3: Concrete example or case study</li>
+              <li>Sentence 4: Concluding link (Result/Impact)</li>
+            </ul>
+          </div>
+          <div class="border border-line rounded-xl p-4 bg-stone-50 dark:bg-slate-800/50">
+            <h3 class="font-bold text-plum mb-1" style="color:var(--plum)">Paragraph 4: Conclusion</h3>
+            <ul class="text-xs space-y-1 text-stone-600 dark:text-stone-300 list-disc list-inside">
+              <li>Sentence 1: Restate thesis in a fresh way (No copying)</li>
+              <li>Sentence 2: Summarize body paragraph arguments</li>
+              <li>Sentence 3: Final prediction or recommendation</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Part 2: Sentence-by-Sentence Templates -->
+      <section class="mb-10">
+        <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-4 flex items-center gap-2">
+          <span class="text-plum" style="color:var(--plum)">■</span> 2. Sentence-by-Sentence Formulas
+        </h2>
+        <div class="space-y-4">
+          <div class="border-l-4 border-plum pl-4 py-1" style="border-left-color:var(--plum)">
+            <div class="text-xs font-bold text-stone-500 uppercase tracking-wide">Context Paraphrase Hook</div>
+            <p class="text-sm italic text-stone-700 dark:text-stone-300">
+              "It is frequently argued that [paraphrase prompt topic], while others believe that [alternative view]."
+            </p>
+          </div>
+          <div class="border-l-4 border-plum pl-4 py-1" style="border-left-color:var(--plum)">
+            <div class="text-xs font-bold text-stone-500 uppercase tracking-wide">Thesis & Preview Statement</div>
+            <p class="text-sm italic text-stone-700 dark:text-stone-300">
+              "I completely agree/disagree with this notion because [Reason A] and [Reason B]. This essay will examine both aspects of the issue."
+            </p>
+          </div>
+          <div class="border-l-4 border-plum pl-4 py-1" style="border-left-color:var(--plum)">
+            <div class="text-xs font-bold text-stone-500 uppercase tracking-wide">Body Topic Sentences</div>
+            <p class="text-sm italic text-stone-700 dark:text-stone-300">
+              "On the one hand, the primary reason supporting [Argument 1] is that..." or "Furthermore, another critical factor to consider is..."
+            </p>
+          </div>
+          <div class="border-l-4 border-plum pl-4 py-1" style="border-left-color:var(--plum)">
+            <div class="text-xs font-bold text-stone-500 uppercase tracking-wide">Example Introducers</div>
+            <p class="text-sm italic text-stone-700 dark:text-stone-300">
+              "A salient example of this is..." or "Recent empirical studies conducted by [Institution] demonstrate that..."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Part 3: Band 8+ Model Essay -->
+      <section class="border-t border-line pt-8">
+        <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-2 flex items-center gap-2">
+          <span class="text-plum" style="color:var(--plum)">■</span> 3. Band 8+ Model Essay in Action
+        </h2>
+        
+        <div class="bg-amber-50 text-amber-900 border border-amber-200 p-4 rounded-xl mb-4 text-xs dark:bg-amber-950/20 dark:text-amber-300 dark:border-amber-900/50">
+          <strong>Essay Prompt:</strong> Some people think that universities should focus on providing graduates with the practical skills needed in the workplace. Others think that the true function of a university should be to teach knowledge for its own sake, regardless of its employment utility. To what extent do you agree or disagree?
+        </div>
+
+        <div class="space-y-4 text-sm leading-relaxed text-stone-850 dark:text-stone-300">
+          <p>
+            <span class="template-highlight">In contemporary society, debate surrounds whether</span> tertiary institutions should orient their curricula primarily toward vocational training, or if they should remain bastions of pure academic knowledge. <span class="template-highlight">I strongly agree that</span> the primary function of higher education must be to equip students with practical skills, <span class="template-highlight">since this directly enhances</span> graduate employability <span class="template-highlight">and drives</span> economic productivity.
+          </p>
+          <p>
+            <span class="template-highlight">The primary argument in favor of</span> vocational-oriented education is that it directly addresses the challenges of the modern job market. With rising tuition fees and increasingly competitive employment sectors, graduates require immediate, tangible skills to secure professional positions. <span class="template-highlight">A salient example of this is</span> the technology sector, where graduates with practical coding experience are hired significantly faster than those with purely theoretical computer science backgrounds. <span class="template-highlight">Consequently, this highlights the necessity of</span> aligning university curricula with the demands of employers to ensure students receive a high return on their educational investment.
+          </p>
+          <p>
+            <span class="template-highlight">Furthermore, from a macroeconomic perspective,</span> universities that prioritize industry-specific skills serve as critical engines of economic growth. When educational frameworks produce job-ready professionals, businesses can innovate and scale without incurring heavy retraining costs. <span class="template-highlight">A study conducted by</span> the Munich Institute for Economics demonstrated that countries with strong university-industry partnerships experienced a 15% increase in technological innovation index scores. <span class="template-highlight">Therefore, it is clear that</span> tertiary education focused on utility rather than abstract theory yields substantial public benefits.
+          </p>
+          <p>
+            <span class="template-highlight">In conclusion, I firmly believe that</span> universities must prioritize practical skills over theoretical knowledge for its own sake. <span class="template-highlight">By focusing on</span> employment utility, universities not only safeguard the career prospects of graduates but also bolster national economic index indexes. <span class="template-highlight">Looking ahead, it is recommended that</span> governments incentivize universities to co-design curricula with leading corporate sectors.
+          </p>
+        </div>
+      </section>
+
+      <!-- Lead Gen Footer (Exempt from print) -->
+      <div class="no-print border-t border-line mt-12 pt-8 text-center bg-stone-50 rounded-2xl p-6 dark:bg-slate-800">
+        <h3 class="text-xl font-bold text-plum mb-2" style="color:var(--plum)">Want to Unlock All 16 Modules?</h3>
+        <p class="text-xs text-stone-600 dark:text-stone-300 max-w-md mx-auto mb-4">
+          This template is just the beginning. Join our live classes at <strong>ViATestPrep</strong> to unlock all guides, vocabulary mind maps, grammar drills, and progress tracking.
+        </p>
+        <a href="https://www.instagram.com/viatestprep/" target="_blank" class="btn btn-primary text-xs px-6 py-2.5">
+          💬 Message us on Instagram to Enroll
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="no-print text-center text-xs text-stone-500 mt-12">
+    &copy; 2026 ViATestPrep · All Rights Reserved
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('darkModeToggle');
+    function updateTheme() {
+      if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        toggleBtn.textContent = '☀️';
+      } else {
+        document.documentElement.classList.remove('dark');
+        toggleBtn.textContent = '🌙';
+      }
+    }
+    toggleBtn.addEventListener('click', () => {
+      if (document.documentElement.classList.contains('dark')) {
+        localStorage.setItem('theme', 'light');
+      } else {
+        localStorage.setItem('theme', 'dark');
+      }
+      updateTheme();
+    });
+    updateTheme();
+  </script>
+</body>
+</html>
