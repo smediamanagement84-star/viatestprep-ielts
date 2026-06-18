@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>IELTS Listening Simulator — ViATestPrep</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: 268, 52%, 48%; /* #5b2a86 */
+    --gold: 40, 65%, 48%; /* #c8932a */
+    --teal: 172, 83%, 30%; /* #0d8a7a */
+    --rose: 347, 79%, 59%; /* #e8456b */
+    --bg-main: #070913;
+    --bg-card: rgba(17, 20, 38, 0.65);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+  }
+  .light {
+    --bg-main: #faf9f6;
+    --bg-card: rgba(255, 255, 255, 0.85);
+    --border-color: rgba(15, 23, 42, 0.08);
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+  }
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', serif;
+  }
+
+  .test-container {
+    height: calc(100vh - 8.5rem);
+    overflow: hidden;
+  }
+  .audio-pane {
+    height: 100%;
+    overflow-y: auto;
+    border-right: 1px solid var(--border-color);
+  }
+  .questions-pane {
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  /* Custom Audio Controls styling */
+  .audio-player-card {
+    background: linear-gradient(135deg, rgba(91, 42, 134, 0.15), rgba(13, 138, 122, 0.05));
+    border: 1px solid rgba(91, 42, 134, 0.3);
+    border-radius: 20px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+
+  .input-fill {
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.25rem 0.6rem;
+    color: var(--text-main);
+    outline: none;
+    transition: all 0.2s;
+  }
+  .input-fill:focus {
+    border-color: hsl(var(--primary));
+    box-shadow: 0 0 8px rgba(91, 42, 134, 0.25);
+  }
+
+  .q-box {
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    transition: all 0.2s;
+  }
+  .q-box.flagged {
+    border-color: #d97706 !important;
+    box-shadow: 0 0 10px rgba(217, 119, 6, 0.1) inset;
+  }
+
+  .q-nav-btn {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s;
+  }
+  .q-nav-btn.answered {
+    background: #5b2a86;
+    color: #fff;
+    border-color: #5b2a86;
+  }
+  .q-nav-btn.flagged::after {
+    content: '🚩';
+    font-size: 0.55rem;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+  }
+  .q-nav-btn.current {
+    box-shadow: 0 0 0 2px #c8932a;
+  }
+</style>
+<script src="security.js"></script>
+</head>
+<body class="flex flex-col h-screen overflow-hidden">
+
+<!-- Header -->
+<header class="h-16 border-b border-white/10 bg-black/40 backdrop-blur-md px-6 flex items-center justify-between z-20">
+  <div class="flex items-center gap-3">
+    <a href="ielts-practice-hub.html" class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-bold transition">← Exit</a>
+    <div>
+      <span class="text-[10px] text-purple-400 uppercase tracking-widest font-extrabold" id="testSetTag">Test Set</span>
+      <h2 class="text-sm font-extrabold -mt-1" id="testTitle">Loading test...</h2>
+    </div>
+  </div>
+  
+  <div class="flex items-center gap-3">
+    <span class="text-xs text-stone-400" id="modeIndicator">Mode: Exam</span>
+    <div class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 font-mono text-sm font-bold flex items-center gap-1.5">
+      <span class="text-purple-400">⏱️</span>
+      <span id="timerText">30:00</span>
+    </div>
+  </div>
+  
+  <div>
+    <button onclick="submitTest()" class="px-4 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-700 text-xs font-bold transition shadow-lg shadow-purple-600/20" id="submitBtn">Submit Test</button>
+  </div>
+</header>
+
+<!-- Main content panes -->
+<div class="flex-1 flex test-container">
+  
+  <!-- Left Panel: Audio Controller & Tape script lobby -->
+  <div class="w-1/2 audio-pane p-8 flex flex-col justify-between" id="audioContainer">
+    <div class="max-w-md mx-auto w-full space-y-6">
+      
+      <!-- Section Tabs -->
+      <div class="flex gap-2 border-b border-white/10 pb-3 mb-4" id="sectionTabs">
+        <!-- Filled by JS -->
+      </div>
+      
+      <h1 class="text-2xl font-extrabold tracking-tight mb-2" id="sectionTitle">Section 1</h1>
+      <p class="text-sm text-stone-400 mb-6">Listen to the conversation carefully and fill in the blanks or select the correct choices on the right.</p>
+      
+      <!-- Audio Player Control Card -->
+      <div class="audio-player-card p-6 space-y-4">
+        <audio id="mainAudio" preload="auto"></audio>
+        
+        <!-- Audio timeline/scrubber -->
+        <div class="space-y-1">
+          <input type="range" id="audioTimeline" min="0" max="100" value="0" oninput="seekAudio(this.value)" class="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-purple-500" />
+          <div class="flex justify-between text-[11px] font-mono text-stone-500">
+            <span id="currentTime">0:00</span>
+            <span id="totalDuration">0:00</span>
+          </div>
+        </div>
+        
+        <!-- Controls buttons -->
+        <div class="flex justify-between items-center">
+          <div class="flex items-center gap-2">
+            <button id="playBtn" onclick="togglePlay()" class="w-12 h-12 rounded-full bg-purple-600 hover:bg-purple-700 text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-purple-600/25 transition">▶</button>
+            <button onclick="stopAudio()" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 flex items-center justify-center text-xs text-stone-400 transition">■</button>
+          </div>
+          
+          <!-- Speed Controller -->
+          <div class="flex gap-1 items-center bg-black/20 px-2 py-1.5 rounded-lg border border-white/5">
+            <span class="text-[10px] uppercase font-bold text-stone-500 mr-1">Speed</span>
+            <select id="audioSpeed" onchange="setPlaybackSpeed(this.value)" class="text-xs bg-transparent border-none outline-none text-purple-400 font-bold cursor-pointer">
+              <option value="0.75" class="bg-slate-900 text-white">0.75x</option>
+              <option value="1.0" selected class="bg-slate-900 text-white">1.0x</option>
+              <option value="1.25" class="bg-slate-900 text-white">1.25x</option>
+              <option value="1.5" class="bg-slate-900 text-white">1.5x</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transcript Box (Hidden during test, shown in Review) -->
+      <div id="transcriptBox" class="hidden p-4 rounded-xl border border-white/10 bg-white/5 max-h-60 overflow-y-auto text-xs leading-relaxed text-stone-400">
+        <span class="text-xs font-bold text-stone-300 block mb-2">📜 Audio Transcript / Tape Script</span>
+        <div id="transcriptContent"></div>
+      </div>
+    </div>
+    
+    <!-- Guidelines -->
+    <div class="max-w-md mx-auto w-full text-[11px] text-stone-500 border-t border-white/5 pt-4 mt-6">
+      <strong>Important:</strong> In the real computer-delivered IELTS exam, you can only play the audio once. Use speed adjustments and pause/scrub controls to facilitate learning in Practice Mode.
+    </div>
+  </div>
+  
+  <!-- Right Panel: Questions sheet -->
+  <div class="w-1/2 questions-pane p-8 bg-black/10">
+    <div class="max-w-xl mx-auto pb-12">
+      <!-- Scratchpad Toggle -->
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="text-xl font-bold">Questions Sheet</h3>
+        <button onclick="toggleScratchpad()" class="text-xs px-2.5 py-1 rounded bg-white/5 border border-white/10 text-stone-400 hover:bg-white/10 transition">📝 Scratchpad</button>
+      </div>
+
+      <!-- Floating Scratchpad -->
+      <div id="scratchpad" class="hidden mb-6 p-4 rounded-xl border border-white/10 bg-white/5">
+        <span class="text-xs font-bold text-stone-400 block mb-1">Scratchpad (Saved locally)</span>
+        <textarea id="scratchpadText" oninput="saveScratchpad()" class="w-full h-24 text-xs bg-black/30 border border-white/10 rounded-lg p-2 text-stone-300 outline-none focus:border-purple-500" placeholder="Write down spellings, notes, etc..."></textarea>
+      </div>
+
+      <!-- Questions -->
+      <div id="questionsContainer" class="space-y-6">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom Navigation Bar -->
+<footer class="h-16 border-t border-white/10 bg-black/40 backdrop-blur-md px-6 flex items-center justify-between z-20">
+  <div class="flex items-center gap-1.5 overflow-x-auto py-1 max-w-[75%]" id="bottomNavTray">
+    <!-- Question numbers rendered by JS -->
+  </div>
+  
+  <div class="flex gap-2">
+    <button id="prevBtn" onclick="navigateQuestion(-1)" class="px-3.5 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-bold transition">◀ Prev</button>
+    <button id="nextBtn" onclick="navigateQuestion(1)" class="px-3.5 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-bold transition">Next ▶</button>
+  </div>
+</footer>
+
+<script src="test-data.js"></script>
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const testId = urlParams.get('test') || '1';
+const testData = IELTS_TEST_DATA[testId];
+
+if (!testData) {
+  alert('Test Set not found! Redirecting to Test 1.');
+  window.location.search = '?test=1';
+}
+
+const currentTestMode = localStorage.getItem('vietest_practice_mode') || 'exam';
+let currentSectionIdx = 0;
+let currentQuestionIndex = 0;
+let userAnswers = {};
+let flaggedQuestions = {};
+let totalTimeSeconds = 30 * 60; // 30 mins
+let timeRemaining = totalTimeSeconds;
+let timerInterval;
+
+const audio = document.getElementById('mainAudio');
+const playBtn = document.getElementById('playBtn');
+const timeline = document.getElementById('audioTimeline');
+
+// Initialize
+function initTest() {
+  document.getElementById('testTitle').textContent = testData.title;
+  document.getElementById('testSetTag').textContent = `IELTS Academic Test Set 0${testId}`;
+  document.getElementById('modeIndicator').textContent = `Mode: ${currentTestMode === 'exam' ? 'Exam' : 'Practice'}`;
+  
+  // Set up timer
+  if (currentTestMode === 'practice') {
+    timeRemaining = 0;
+    document.getElementById('timerText').textContent = '00:00';
+    timerInterval = setInterval(() => {
+      timeRemaining++;
+      updateTimerDisplay(true);
+    }, 1000);
+  } else {
+    timeRemaining = 30 * 60;
+    updateTimerDisplay(false);
+    timerInterval = setInterval(() => {
+      timeRemaining--;
+      updateTimerDisplay(false);
+      if (timeRemaining <= 0) {
+        clearInterval(timerInterval);
+        alert('Time is up! Submitting your test automatically.');
+        submitTest(true);
+      }
+    }, 1000);
+  }
+  
+  // Render Section Tabs
+  const tabTray = document.getElementById('sectionTabs');
+  tabTray.innerHTML = '';
+  testData.listening.sections.forEach((sec, idx) => {
+    const btn = document.createElement('button');
+    btn.className = `px-3 py-1 rounded text-xs font-bold transition ${idx === 0 ? 'bg-purple-600 text-white' : 'text-stone-400 hover:text-stone-200'}`;
+    btn.textContent = `Section ${idx + 1}`;
+    btn.onclick = () => switchSection(idx, btn);
+    tabTray.appendChild(btn);
+  });
+  
+  // Load scratchpad
+  document.getElementById('scratchpadText').value = localStorage.getItem(`scratchpad_listening_${testId}`) || '';
+  
+  // Load current Section
+  loadSection();
+}
+
+function updateTimerDisplay(countUp) {
+  const m = Math.floor(Math.abs(timeRemaining) / 60);
+  const s = Math.abs(timeRemaining) % 60;
+  document.getElementById('timerText').textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+}
+
+function switchSection(idx, btnEl) {
+  currentSectionIdx = idx;
+  document.querySelectorAll('#sectionTabs button').forEach(b => {
+    b.className = 'px-3 py-1 rounded text-xs font-bold text-stone-400 hover:text-stone-200 transition';
+  });
+  btnEl.className = 'px-3 py-1 rounded text-xs font-bold bg-purple-600 text-white';
+  
+  loadSection();
+}
+
+function loadSection() {
+  const section = testData.listening.sections[currentSectionIdx];
+  document.getElementById('sectionTitle').textContent = section.title;
+  
+  // Set up audio source
+  audio.src = section.audio;
+  audio.load();
+  stopAudio(); // reset player states
+  
+  // Render questions
+  renderQuestions();
+}
+
+// Custom Audio Controls
+audio.addEventListener('timeupdate', () => {
+  if (audio.duration) {
+    const progress = (audio.currentTime / audio.duration) * 100;
+    timeline.value = progress;
+    
+    // Update labels
+    const curMin = Math.floor(audio.currentTime / 60);
+    const curSec = Math.floor(audio.currentTime % 60);
+    document.getElementById('currentTime').textContent = `${curMin}:${curSec.toString().padStart(2, '0')}`;
+    
+    const totMin = Math.floor(audio.duration / 60);
+    const totSec = Math.floor(audio.duration % 60);
+    document.getElementById('totalDuration').textContent = `${totMin}:${totSec.toString().padStart(2, '0')}`;
+  }
+});
+
+audio.addEventListener('ended', () => {
+  playBtn.textContent = '▶';
+});
+
+function togglePlay() {
+  if (audio.paused) {
+    audio.play();
+    playBtn.textContent = '⏸';
+  } else {
+    audio.pause();
+    playBtn.textContent = '▶';
+  }
+}
+
+function stopAudio() {
+  audio.pause();
+  audio.currentTime = 0;
+  playBtn.textContent = '▶';
+  timeline.value = 0;
+  document.getElementById('currentTime').textContent = '0:00';
+}
+
+function seekAudio(percent) {
+  if (audio.duration) {
+    audio.currentTime = (percent / 100) * audio.duration;
+  }
+}
+
+function setPlaybackSpeed(speed) {
+  audio.playbackRate = parseFloat(speed);
+}
+
+// Render questions list
+function renderQuestions() {
+  const section = testData.listening.sections[currentSectionIdx];
+  const qContainer = document.getElementById('questionsContainer');
+  qContainer.innerHTML = '';
+  
+  const tray = document.getElementById('bottomNavTray');
+  tray.innerHTML = '';
+  
+  section.questions.forEach((q, idx) => {
+    const qBox = document.createElement('div');
+    qBox.className = 'q-box p-5 rounded-2xl border border-white/5 bg-white/5 space-y-3';
+    qBox.id = `qbox-${q.num}`;
+    if (flaggedQuestions[q.num]) qBox.classList.add('flagged');
+    
+    let answerHtml = '';
+    
+    if (q.type === 'MCQ') {
+      const selected = userAnswers[q.num] || '';
+      answerHtml = `
+        <div class="flex flex-col gap-2">
+          ${q.options.map(opt => {
+            const letter = opt.slice(0, 2);
+            const text = opt.slice(2);
+            return `
+              <button onclick="selectOption(${q.num}, '${letter.replace('.', '')}')" class="w-full text-left py-2 px-3 rounded-lg border text-xs transition flex gap-2 items-start ${selected === letter.replace('.', '') ? 'bg-purple-600/30 border-purple-500 text-white font-semibold' : 'border-white/10 text-stone-300 hover:bg-white/5'}">
+                <span class="font-extrabold text-purple-400">${letter}</span>
+                <span>${text}</span>
+              </button>
+            `;
+          }).join('')}
+        </div>
+      `;
+    } else if (q.type === 'FILL') {
+      const val = userAnswers[q.num] || '';
+      answerHtml = `
+        <input type="text" oninput="handleInput(${q.num}, this.value)" class="w-full input-fill text-sm" value="${val}" placeholder="Type your answer here..." />
+      `;
+    }
+    
+    // Check answer (Only in Practice Mode)
+    let practiceBtnHtml = '';
+    if (currentTestMode === 'practice') {
+      practiceBtnHtml = `
+        <div class="flex justify-end border-t border-white/5 pt-2 mt-2" id="pract-actions-${q.num}">
+          <button onclick="checkPracticeAnswer(${q.num}, ${idx})" class="px-3 py-1 rounded bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition">Check Answer</button>
+        </div>
+        <div id="pract-feedback-${q.num}" class="hidden p-3.5 rounded-xl border border-white/5 mt-2 text-xs"></div>
+      `;
+    }
+    
+    qBox.innerHTML = `
+      <div class="flex justify-between items-start">
+        <span class="text-xs text-purple-400 font-extrabold uppercase">Question ${q.num}</span>
+        <label class="flex items-center gap-1.5 text-xs text-stone-500 cursor-pointer">
+          <input type="checkbox" onchange="toggleFlag(${q.num})" ${flaggedQuestions[q.num] ? 'checked' : ''} class="accent-purple-600" />
+          <span>Review 🚩</span>
+        </label>
+      </div>
+      <p class="text-sm font-semibold">${q.text}</p>
+      ${answerHtml}
+      ${practiceBtnHtml}
+    `;
+    qContainer.appendChild(qBox);
+    
+    // Bottom Nav Btn
+    const btn = document.createElement('button');
+    btn.className = `q-nav-btn relative ${userAnswers[q.num] ? 'answered' : ''} ${flaggedQuestions[q.num] ? 'flagged' : ''}`;
+    btn.textContent = q.num;
+    btn.onclick = () => {
+      document.getElementById(`qbox-${q.num}`).scrollIntoView({ behavior: 'smooth', block: 'center' });
+      document.querySelectorAll('.q-nav-btn').forEach(b => b.classList.remove('current'));
+      btn.classList.add('current');
+    };
+    tray.appendChild(btn);
+  });
+}
+
+function selectOption(qNum, val) {
+  userAnswers[qNum] = val;
+  renderQuestions();
+}
+
+function handleInput(qNum, val) {
+  userAnswers[qNum] = val;
+  const btns = document.querySelectorAll('.q-nav-btn');
+  btns.forEach(btn => {
+    if (btn.textContent == qNum) {
+      if (val.trim()) btn.classList.add('answered');
+      else btn.classList.remove('answered');
+    }
+  });
+}
+
+function toggleFlag(qNum) {
+  flaggedQuestions[qNum] = !flaggedQuestions[qNum];
+  renderQuestions();
+}
+
+function checkPracticeAnswer(qNum, idx) {
+  const section = testData.listening.sections[currentSectionIdx];
+  const q = section.questions[idx];
+  const uAns = (userAnswers[qNum] || '').trim().toLowerCase();
+  const cAns = q.answer.trim().toLowerCase();
+  
+  const fdContainer = document.getElementById(`pract-feedback-${qNum}`);
+  fdContainer.classList.remove('hidden');
+  
+  const isCorrect = uAns === cAns;
+  if (isCorrect) {
+    fdContainer.className = "p-3.5 rounded-xl border border-emerald-500/20 bg-emerald-500/5 mt-2 text-xs text-stone-300";
+    fdContainer.innerHTML = `
+      <div class="flex items-center gap-1.5 text-emerald-400 font-bold mb-1">
+        <span>✓ Correct Answer</span>
+      </div>
+      <p class="text-stone-400"><strong>Justification:</strong> ${q.explanation}</p>
+    `;
+  } else {
+    fdContainer.className = "p-3.5 rounded-xl border border-red-500/20 bg-red-500/5 mt-2 text-xs text-stone-300";
+    fdContainer.innerHTML = `
+      <div class="flex items-center gap-1.5 text-red-400 font-bold mb-1">
+        <span>✗ Incorrect</span>
+      </div>
+      <p>Your answer: <span class="line-through text-red-300">${userAnswers[qNum] || 'None'}</span></p>
+      <p class="mt-1">Correct answer: <strong class="text-emerald-400">${q.answer}</strong></p>
+      <p class="text-stone-400 mt-1"><strong>Justification:</strong> ${q.explanation}</p>
+    `;
+  }
+}
+
+// Submit Listening
+function submitTest(autoSubmit = false) {
+  if (!autoSubmit) {
+    if (!confirm('Are you sure you want to submit the test?')) return;
+  }
+  
+  clearInterval(timerInterval);
+  audio.pause();
+  
+  let correctCount = 0;
+  let totalQs = 0;
+  
+  testData.listening.sections.forEach(sec => {
+    sec.questions.forEach(q => {
+      totalQs++;
+      const uAns = (userAnswers[q.num] || '').trim().toLowerCase();
+      const cAns = q.answer.trim().toLowerCase();
+      if (uAns === cAns) correctCount++;
+    });
+  });
+  
+  let band = 1.0;
+  const pct = correctCount / totalQs;
+  if (pct >= 0.95) band = 9.0;
+  else if (pct >= 0.88) band = 8.5;
+  else if (pct >= 0.80) band = 8.0;
+  else if (pct >= 0.72) band = 7.5;
+  else if (pct >= 0.65) band = 7.0;
+  else if (pct >= 0.58) band = 6.5;
+  else if (pct >= 0.50) band = 6.0;
+  else if (pct >= 0.40) band = 5.5;
+  else if (pct >= 0.30) band = 5.0;
+  else band = 4.0;
+  
+  localStorage.setItem(`score_test_${testId}_listening`, band.toFixed(1));
+  alert(`Test Submitted!\nYour Score: ${correctCount}/${totalQs}\nEstimated IELTS Band: ${band.toFixed(1)}`);
+  
+  renderReviewMode();
+}
+
+function renderReviewMode() {
+  document.getElementById('modeIndicator').textContent = 'Mode: Review';
+  document.getElementById('submitBtn').remove();
+  
+  // Return button in header
+  const header = document.querySelector('header');
+  const returnBtn = document.createElement('a');
+  returnBtn.href = "ielts-practice-hub.html";
+  returnBtn.className = "px-4 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-xs font-bold transition text-white";
+  returnBtn.textContent = "Return to Lobby";
+  header.appendChild(returnBtn);
+  
+  // Show Transcript Container
+  const transBox = document.getElementById('transcriptBox');
+  const transContent = document.getElementById('transcriptContent');
+  const section = testData.listening.sections[currentSectionIdx];
+  
+  transBox.classList.remove('hidden');
+  transContent.innerHTML = section.transcript;
+  
+  // Render review questions in right panel
+  const qContainer = document.getElementById('questionsContainer');
+  qContainer.innerHTML = '';
+  
+  section.questions.forEach(q => {
+    const qBox = document.createElement('div');
+    const uAns = (userAnswers[q.num] || '').trim();
+    const cAns = q.answer.trim();
+    const isCorrect = uAns.toLowerCase() === cAns.toLowerCase();
+    
+    qBox.className = `q-box p-5 rounded-2xl border mt-4 ${isCorrect ? 'border-emerald-500/30 bg-emerald-500/5' : 'border-red-500/30 bg-red-500/5'}`;
+    qBox.innerHTML = `
+      <div class="flex justify-between items-center">
+        <span class="text-xs font-extrabold uppercase ${isCorrect ? 'text-emerald-400' : 'text-red-400'}">Question ${q.num} — ${isCorrect ? 'Correct' : 'Incorrect'}</span>
+      </div>
+      <p class="text-sm font-semibold">${q.text}</p>
+      <div class="text-xs space-y-1 mt-2 text-stone-300">
+        <div>Your choice: <strong class="${isCorrect ? 'text-emerald-400' : 'text-red-400'}">${uAns || 'None'}</strong></div>
+        ${!isCorrect ? `<div>Correct answer: <strong class="text-emerald-400">${cAns}</strong></div>` : ''}
+      </div>
+      <div class="p-3 bg-white/5 border border-white/10 rounded-xl mt-3 text-xs text-stone-400">
+        <div class="font-bold text-stone-300">Explanation & Keyword mapping:</div>
+        <p class="mt-1">${q.explanation}</p>
+      </div>
+    `;
+    qContainer.appendChild(qBox);
+  });
+}
+
+function toggleScratchpad() {
+  const sp = document.getElementById('scratchpad');
+  sp.classList.toggle('hidden');
+}
+
+function saveScratchpad() {
+  const txt = document.getElementById('scratchpadText').value;
+  localStorage.setItem(`scratchpad_listening_${testId}`, txt);
+}
+
+// Question Navigation via Bottom Prev/Next
+function navigateQuestion(direction) {
+  const section = testData.listening.sections[currentSectionIdx];
+  const qCount = section.questions.length;
+  let nextIdx = currentQuestionIndex + direction;
+  if (nextIdx >= 0 && nextIdx < qCount) {
+    currentQuestionIndex = nextIdx;
+    const targetQNum = section.questions[currentQuestionIndex].num;
+    const targetBox = document.getElementById(`qbox-${targetQNum}`);
+    if (targetBox) {
+      targetBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    document.querySelectorAll('.q-nav-btn').forEach(btn => {
+      btn.classList.remove('current');
+      if (parseInt(btn.textContent) === targetQNum) {
+        btn.classList.add('current');
+      }
+    });
+  }
+}
+
+// Launch
+initTest();
+</script>
+</body>
+</html>

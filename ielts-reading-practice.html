@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>IELTS Reading Simulator — ViATestPrep</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: 268, 52%, 48%; /* #5b2a86 */
+    --gold: 40, 65%, 48%; /* #c8932a */
+    --teal: 172, 83%, 30%; /* #0d8a7a */
+    --rose: 347, 79%, 59%; /* #e8456b */
+    --bg-main: #070913;
+    --bg-card: rgba(17, 20, 38, 0.65);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+  }
+  .light {
+    --bg-main: #faf9f6;
+    --bg-card: rgba(255, 255, 255, 0.85);
+    --border-color: rgba(15, 23, 42, 0.08);
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+  }
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', serif;
+  }
+
+  /* Split screen layout */
+  .test-container {
+    height: calc(100vh - 8.5rem);
+    overflow: hidden;
+  }
+  .passage-pane {
+    height: 100%;
+    overflow-y: auto;
+    border-right: 1px solid var(--border-color);
+  }
+  .questions-pane {
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  /* Highlight Tooltip */
+  #highlightTooltip {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    background: #1e293b;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    padding: 0.35rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Highlights styles */
+  .highlight-yellow { background-color: rgba(254, 240, 138, 0.7); color: #000; }
+  .highlight-pink { background-color: rgba(251, 207, 232, 0.7); color: #000; }
+  .highlight-green { background-color: rgba(187, 247, 208, 0.7); color: #000; }
+  .dark .highlight-yellow { background-color: rgba(234, 179, 8, 0.35); color: #fff; }
+  .dark .highlight-pink { background-color: rgba(236, 72, 153, 0.35); color: #fff; }
+  .dark .highlight-green { background-color: rgba(34, 197, 94, 0.35); color: #fff; }
+
+  /* Input fields */
+  .input-fill {
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.25rem 0.6rem;
+    color: var(--text-main);
+    outline: none;
+    transition: all 0.2s;
+  }
+  .input-fill:focus {
+    border-color: hsl(var(--primary));
+    box-shadow: 0 0 8px rgba(91, 42, 134, 0.25);
+  }
+  
+  .q-box {
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    transition: all 0.2s;
+  }
+  .q-box.flagged {
+    border-color: #d97706 !important;
+    box-shadow: 0 0 10px rgba(217, 119, 6, 0.1) inset;
+  }
+  
+  /* Bottom Nav questions tray */
+  .q-nav-btn {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s;
+  }
+  .q-nav-btn.answered {
+    background: #5b2a86;
+    color: #fff;
+    border-color: #5b2a86;
+  }
+  .q-nav-btn.flagged::after {
+    content: '🚩';
+    font-size: 0.55rem;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+  }
+  .q-nav-btn.current {
+    box-shadow: 0 0 0 2px #c8932a;
+  }
+</style>
+<script src="security.js"></script>
+</head>
+<body class="flex flex-col h-screen overflow-hidden">
+
+<!-- Custom Highlight Tooltip -->
+<div id="highlightTooltip" class="flex gap-1.5 items-center">
+  <button onclick="applyHighlight('yellow')" class="w-6 h-6 rounded-full bg-yellow-400 border border-white/20" title="Yellow"></button>
+  <button onclick="applyHighlight('pink')" class="w-6 h-6 rounded-full bg-pink-400 border border-white/20" title="Pink"></button>
+  <button onclick="applyHighlight('green')" class="w-6 h-6 rounded-full bg-green-400 border border-white/20" title="Green"></button>
+  <button onclick="applyHighlight('clear')" class="w-6 h-6 rounded-full bg-slate-600 flex items-center justify-center text-white text-xs border border-white/20" title="Clear">✕</button>
+</div>
+
+<!-- Header -->
+<header class="h-16 border-b border-white/10 bg-black/40 backdrop-blur-md px-6 flex items-center justify-between z-20">
+  <div class="flex items-center gap-3">
+    <a href="ielts-practice-hub.html" class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-bold transition">← Exit</a>
+    <div>
+      <span class="text-[10px] text-purple-400 uppercase tracking-widest font-extrabold" id="testSetTag">Test Set</span>
+      <h2 class="text-sm font-extrabold -mt-1" id="testTitle">Loading test...</h2>
+    </div>
+  </div>
+  
+  <!-- Center Timer Info -->
+  <div class="flex items-center gap-3">
+    <span class="text-xs text-stone-400" id="modeIndicator">Mode: Exam</span>
+    <div class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 font-mono text-sm font-bold flex items-center gap-1.5" id="timerContainer">
+      <span class="text-purple-400">⏱️</span>
+      <span id="timerText">60:00</span>
+    </div>
+  </div>
+  
+  <div>
+    <button onclick="submitTest()" class="px-4 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-700 text-xs font-bold transition shadow-lg shadow-purple-600/20" id="submitBtn">Submit Test</button>
+  </div>
+</header>
+
+<!-- Main content panes -->
+<div class="flex-1 flex test-container">
+  
+  <!-- Left Passage Panel -->
+  <div class="w-1/2 passage-pane p-8" id="passageContainer" onmouseup="handleTextSelection(event)">
+    <div class="max-w-2xl mx-auto">
+      <!-- Tabs for multi-passage navigation if there are multiple passages -->
+      <div class="flex gap-2 border-b border-white/10 pb-3 mb-6" id="passageTabs">
+        <!-- Rendered by JS -->
+      </div>
+      
+      <!-- Passage Content -->
+      <h1 class="text-3xl font-extrabold tracking-tight mb-4" id="passageTitle">Passage Title</h1>
+      <div class="text-sm leading-relaxed space-y-4 text-stone-300" id="passageContent">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+  
+  <!-- Right Questions Panel -->
+  <div class="w-1/2 questions-pane p-8 bg-black/10">
+    <div class="max-w-xl mx-auto pb-12">
+      <!-- Scratchpad Toggle -->
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="text-xl font-bold">Answer Sheet</h3>
+        <button onclick="toggleScratchpad()" class="text-xs px-2.5 py-1 rounded bg-white/5 border border-white/10 text-stone-400 hover:bg-white/10 transition">📝 Scratchpad</button>
+      </div>
+      
+      <!-- Floating Scratchpad (Collapsible) -->
+      <div id="scratchpad" class="hidden mb-6 p-4 rounded-xl border border-white/10 bg-white/5">
+        <span class="text-xs font-bold text-stone-400 block mb-1">Scratchpad (Saved locally)</span>
+        <textarea id="scratchpadText" oninput="saveScratchpad()" class="w-full h-24 text-xs bg-black/30 border border-white/10 rounded-lg p-2 text-stone-300 outline-none focus:border-purple-500" placeholder="Write down draft headings, spelling drafts or word counts..."></textarea>
+      </div>
+      
+      <!-- Questions Container -->
+      <div id="questionsContainer" class="space-y-6">
+        <!-- Rendered dynamically by JS -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom Navigation Bar -->
+<footer class="h-16 border-t border-white/10 bg-black/40 backdrop-blur-md px-6 flex items-center justify-between z-20">
+  <div class="flex items-center gap-1.5 overflow-x-auto py-1 max-w-[75%]" id="bottomNavTray">
+    <!-- Question buttons (1-40) rendered by JS -->
+  </div>
+  
+  <div class="flex gap-2">
+    <button id="prevBtn" onclick="navigateQuestion(-1)" class="px-3.5 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-bold transition">◀ Prev</button>
+    <button id="nextBtn" onclick="navigateQuestion(1)" class="px-3.5 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-bold transition">Next ▶</button>
+  </div>
+</footer>
+
+<script src="test-data.js"></script>
+<script>
+// Get Test ID from URL
+const urlParams = new URLSearchParams(window.location.search);
+const testId = urlParams.get('test') || '1';
+const testData = IELTS_TEST_DATA[testId];
+
+// Fallback to Test 1 if ID not found
+if (!testData) {
+  alert('Test Set not found! Redirecting to Test 1.');
+  window.location.search = '?test=1';
+}
+
+const currentTestMode = localStorage.getItem('vietest_practice_mode') || 'exam';
+let currentPassageIdx = 0;
+let currentQuestionIndex = 0;
+let userAnswers = {};
+let flaggedQuestions = {};
+let totalTimeSeconds = 60 * 60; // 60 mins for Exam
+let timeRemaining = totalTimeSeconds;
+let timerInterval;
+let selectedRange = null;
+
+// Initialize
+function initTest() {
+  document.getElementById('testTitle').textContent = testData.title;
+  document.getElementById('testSetTag').textContent = `IELTS Academic Test Set 0${testId}`;
+  document.getElementById('modeIndicator').textContent = `Mode: ${currentTestMode === 'exam' ? 'Exam' : 'Practice'}`;
+  
+  // Set up timer
+  if (currentTestMode === 'practice') {
+    timeRemaining = 0; // count up
+    document.getElementById('timerText').textContent = '00:00';
+    timerInterval = setInterval(() => {
+      timeRemaining++;
+      updateTimerDisplay(true);
+    }, 1000);
+  } else {
+    timeRemaining = 60 * 60;
+    updateTimerDisplay(false);
+    timerInterval = setInterval(() => {
+      timeRemaining--;
+      updateTimerDisplay(false);
+      if (timeRemaining <= 0) {
+        clearInterval(timerInterval);
+        alert('Time is up! Submitting your test automatically.');
+        submitTest(true);
+      }
+    }, 1000);
+  }
+  
+  // Render Passage Tabs
+  const tabTray = document.getElementById('passageTabs');
+  tabTray.innerHTML = '';
+  testData.reading.passages.forEach((p, idx) => {
+    const btn = document.createElement('button');
+    btn.className = `px-3 py-1 rounded text-xs font-bold transition ${idx === 0 ? 'bg-purple-600 text-white' : 'text-stone-400 hover:text-stone-200'}`;
+    btn.textContent = `Passage ${idx + 1}`;
+    btn.onclick = () => switchPassage(idx, btn);
+    tabTray.appendChild(btn);
+  });
+  
+  // Load local storage scratchpad
+  document.getElementById('scratchpadText').value = localStorage.getItem(`scratchpad_test_${testId}`) || '';
+  
+  // Render Current Passage
+  renderPassage();
+  
+  // Render Questions Pane & Bottom Tray
+  renderQuestionsAndNav();
+}
+
+function updateTimerDisplay(countUp) {
+  const m = Math.floor(Math.abs(timeRemaining) / 60);
+  const s = Math.abs(timeRemaining) % 60;
+  const timerText = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+  const timerContainer = document.getElementById('timerContainer');
+  const timerDisplay = document.getElementById('timerText');
+  
+  timerDisplay.textContent = timerText;
+  
+  if (!countUp && timeRemaining < 300) { // under 5 mins
+    timerContainer.classList.remove('border-white/10');
+    timerContainer.classList.add('border-red-500/50', 'bg-red-500/10', 'text-red-400');
+  }
+}
+
+function switchPassage(idx, btnEl) {
+  currentPassageIdx = idx;
+  document.querySelectorAll('#passageTabs button').forEach(b => {
+    b.className = 'px-3 py-1 rounded text-xs font-bold text-stone-400 hover:text-stone-200 transition';
+  });
+  btnEl.className = 'px-3 py-1 rounded text-xs font-bold bg-purple-600 text-white';
+  
+  renderPassage();
+  renderQuestionsAndNav();
+}
+
+function renderPassage() {
+  const passage = testData.reading.passages[currentPassageIdx];
+  document.getElementById('passageTitle').innerHTML = passage.title;
+  document.getElementById('passageContent').innerHTML = passage.text;
+}
+
+// Render Questions
+function renderQuestionsAndNav() {
+  const passage = testData.reading.passages[currentPassageIdx];
+  const qContainer = document.getElementById('questionsContainer');
+  qContainer.innerHTML = '';
+  
+  // Bottom Tray Container
+  const tray = document.getElementById('bottomNavTray');
+  tray.innerHTML = '';
+  
+  passage.questions.forEach((q, idx) => {
+    // Generate right question panel inputs
+    const qBox = document.createElement('div');
+    qBox.className = 'q-box p-5 rounded-2xl border border-white/5 bg-white/5 space-y-3';
+    qBox.id = `qbox-${q.num}`;
+    if (flaggedQuestions[q.num]) qBox.classList.add('flagged');
+    
+    let answerHtml = '';
+    
+    if (q.type === 'TFNG') {
+      const selected = userAnswers[q.num] || '';
+      answerHtml = `
+        <div class="flex gap-2">
+          ${q.options.map(opt => `
+            <button onclick="selectOption(${q.num}, '${opt}')" class="flex-1 py-1.5 rounded-lg border text-xs font-bold transition ${selected === opt ? 'bg-purple-600 border-purple-600 text-white' : 'border-white/10 text-stone-400 hover:bg-white/5'}">
+              ${opt}
+            </button>
+          `).join('')}
+        </div>
+      `;
+    } else if (q.type === 'MCQ') {
+      const selected = userAnswers[q.num] || '';
+      answerHtml = `
+        <div class="flex flex-col gap-2">
+          ${q.options.map(opt => {
+            const letter = opt.slice(0, 2); // e.g. "A."
+            const text = opt.slice(2);
+            return `
+              <button onclick="selectOption(${q.num}, '${letter.replace('.', '')}')" class="w-full text-left py-2 px-3 rounded-lg border text-xs transition flex gap-2 items-start ${selected === letter.replace('.', '') ? 'bg-purple-600/30 border-purple-500 text-white font-semibold' : 'border-white/10 text-stone-300 hover:bg-white/5'}">
+                <span class="font-extrabold text-purple-400">${letter}</span>
+                <span>${text}</span>
+              </button>
+            `;
+          }).join('')}
+        </div>
+      `;
+    } else if (q.type === 'FILL') {
+      const val = userAnswers[q.num] || '';
+      answerHtml = `
+        <input type="text" oninput="handleInput(${q.num}, this.value)" class="w-full input-fill text-sm" value="${val}" placeholder="Type your answer here..." />
+      `;
+    }
+    
+    // Check Answer button (Only in Practice Mode)
+    let practiceBtnHtml = '';
+    if (currentTestMode === 'practice') {
+      practiceBtnHtml = `
+        <div class="flex justify-end border-t border-white/5 pt-2 mt-2 gap-2" id="pract-actions-${q.num}">
+          <button onclick="checkPracticeAnswer(${q.num}, ${idx})" class="px-3 py-1 rounded bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition">Check Answer</button>
+        </div>
+        <div id="pract-feedback-${q.num}" class="hidden p-3.5 rounded-xl border border-white/5 mt-2 text-xs">
+          <!-- Populated dynamically -->
+        </div>
+      `;
+    }
+    
+    qBox.innerHTML = `
+      <div class="flex justify-between items-start">
+        <span class="text-xs text-purple-400 font-extrabold uppercase">Question ${q.num}</span>
+        <label class="flex items-center gap-1.5 text-xs text-stone-500 cursor-pointer">
+          <input type="checkbox" onchange="toggleFlag(${q.num})" ${flaggedQuestions[q.num] ? 'checked' : ''} class="accent-purple-600" />
+          <span>Review 🚩</span>
+        </label>
+      </div>
+      <p class="text-sm font-semibold">${q.text}</p>
+      ${answerHtml}
+      ${practiceBtnHtml}
+    `;
+    qContainer.appendChild(qBox);
+    
+    // Bottom navigation buttons
+    const btn = document.createElement('button');
+    btn.className = `q-nav-btn relative ${userAnswers[q.num] ? 'answered' : ''} ${flaggedQuestions[q.num] ? 'flagged' : ''}`;
+    btn.textContent = q.num;
+    btn.onclick = () => {
+      document.getElementById(`qbox-${q.num}`).scrollIntoView({ behavior: 'smooth', block: 'center' });
+      document.querySelectorAll('.q-nav-btn').forEach(b => b.classList.remove('current'));
+      btn.classList.add('current');
+    };
+    tray.appendChild(btn);
+  });
+}
+
+function selectOption(qNum, val) {
+  userAnswers[qNum] = val;
+  renderQuestionsAndNav();
+}
+
+function handleInput(qNum, val) {
+  userAnswers[qNum] = val;
+  // Dynamic update of answered button state
+  const btns = document.querySelectorAll('.q-nav-btn');
+  btns.forEach(btn => {
+    if (btn.textContent == qNum) {
+      if (val.trim()) {
+        btn.classList.add('answered');
+      } else {
+        btn.classList.remove('answered');
+      }
+    }
+  });
+}
+
+function toggleFlag(qNum) {
+  flaggedQuestions[qNum] = !flaggedQuestions[qNum];
+  const qBox = document.getElementById(`qbox-${qNum}`);
+  if (flaggedQuestions[qNum]) {
+    qBox.classList.add('flagged');
+  } else {
+    qBox.classList.remove('flagged');
+  }
+  renderQuestionsAndNav();
+}
+
+// Practice Mode: Check Individual Answer
+function checkPracticeAnswer(qNum, idx) {
+  const passage = testData.reading.passages[currentPassageIdx];
+  const q = passage.questions[idx];
+  const uAns = (userAnswers[qNum] || '').trim().toLowerCase();
+  const cAns = q.answer.trim().toLowerCase();
+  
+  const fdContainer = document.getElementById(`pract-feedback-${qNum}`);
+  fdContainer.classList.remove('hidden');
+  
+  const isCorrect = uAns === cAns;
+  
+  if (isCorrect) {
+    fdContainer.className = "p-3.5 rounded-xl border border-emerald-500/20 bg-emerald-500/5 mt-2 text-xs text-stone-300";
+    fdContainer.innerHTML = `
+      <div class="flex items-center gap-1.5 text-emerald-400 font-bold mb-1">
+        <span>✓ Correct Answer</span>
+      </div>
+      <p class="text-stone-400"><strong>Locating sentence:</strong> ${q.location || 'Within the passage.'}</p>
+      <div class="p-2 bg-emerald-500/10 border border-emerald-500/20 rounded mt-2 text-stone-200">
+        <strong>Explanation:</strong> ${q.explanation}
+      </div>
+    `;
+  } else {
+    fdContainer.className = "p-3.5 rounded-xl border border-red-500/20 bg-red-500/5 mt-2 text-xs text-stone-300";
+    fdContainer.innerHTML = `
+      <div class="flex items-center gap-1.5 text-red-400 font-bold mb-1">
+        <span>✗ Incorrect</span>
+      </div>
+      <p>Your answer: <span class="line-through text-red-300">${userAnswers[qNum] || 'None'}</span></p>
+      <p class="mt-1">Correct answer: <strong class="text-emerald-400">${q.answer}</strong></p>
+      <div class="p-2 bg-white/5 border border-white/10 rounded mt-2 text-stone-400">
+        <strong>Explanation:</strong> ${q.explanation}
+      </div>
+    `;
+  }
+}
+
+// Submit Test & Band calculation
+function submitTest(autoSubmit = false) {
+  if (!autoSubmit) {
+    if (!confirm('Are you sure you want to submit the test? You will see your total band score immediately.')) return;
+  }
+  
+  clearInterval(timerInterval);
+  
+  // Calculate score
+  let correctCount = 0;
+  let totalQs = 0;
+  
+  testData.reading.passages.forEach(p => {
+    p.questions.forEach(q => {
+      totalQs++;
+      const uAns = (userAnswers[q.num] || '').trim().toLowerCase();
+      const cAns = q.answer.trim().toLowerCase();
+      if (uAns === cAns) correctCount++;
+    });
+  });
+  
+  // Translate score to band (simplified IELTS Academic Reading scaling for our question count)
+  let band = 1.0;
+  const pct = correctCount / totalQs;
+  if (pct >= 0.95) band = 9.0;
+  else if (pct >= 0.88) band = 8.5;
+  else if (pct >= 0.80) band = 8.0;
+  else if (pct >= 0.72) band = 7.5;
+  else if (pct >= 0.65) band = 7.0;
+  else if (pct >= 0.58) band = 6.5;
+  else if (pct >= 0.50) band = 6.0;
+  else if (pct >= 0.40) band = 5.5;
+  else if (pct >= 0.30) band = 5.0;
+  else band = 4.0;
+  
+  // Save score to local storage
+  localStorage.setItem(`score_test_${testId}_reading`, band.toFixed(1));
+  
+  // Switch UI to Review Mode
+  alert(`Test Submitted Successfully!\nYour Score: ${correctCount}/${totalQs}\nEstimated IELTS Band: ${band.toFixed(1)}`);
+  
+  // Lock inputs and render reviews
+  renderReviewMode();
+}
+
+function renderReviewMode() {
+  document.getElementById('modeIndicator').textContent = 'Mode: Review';
+  document.getElementById('submitBtn').remove();
+  
+  // Add Return to Lobby button
+  const header = document.querySelector('header');
+  const returnBtn = document.createElement('a');
+  returnBtn.href = "ielts-practice-hub.html";
+  returnBtn.className = "px-4 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-xs font-bold transition text-white";
+  returnBtn.textContent = "Return to Lobby";
+  header.appendChild(returnBtn);
+  
+  // Render all explanations directly in right pane
+  const qContainer = document.getElementById('questionsContainer');
+  qContainer.innerHTML = '';
+  
+  const passage = testData.reading.passages[currentPassageIdx];
+  passage.questions.forEach(q => {
+    const qBox = document.createElement('div');
+    const uAns = (userAnswers[q.num] || '').trim();
+    const cAns = q.answer.trim();
+    const isCorrect = uAns.toLowerCase() === cAns.toLowerCase();
+    
+    qBox.className = `q-box p-5 rounded-2xl border mt-4 ${isCorrect ? 'border-emerald-500/30 bg-emerald-500/5' : 'border-red-500/30 bg-red-500/5'}`;
+    
+    qBox.innerHTML = `
+      <div class="flex justify-between items-center">
+        <span class="text-xs font-extrabold uppercase ${isCorrect ? 'text-emerald-400' : 'text-red-400'}">Question ${q.num} — ${isCorrect ? 'Correct' : 'Incorrect'}</span>
+      </div>
+      <p class="text-sm font-semibold">${q.text}</p>
+      
+      <div class="text-xs space-y-1 mt-2 text-stone-300">
+        <div>Your choice: <strong class="${isCorrect ? 'text-emerald-400' : 'text-red-400'}">${uAns || 'None'}</strong></div>
+        ${!isCorrect ? `<div>Correct answer: <strong class="text-emerald-400">${cAns}</strong></div>` : ''}
+      </div>
+      
+      <div class="p-3 bg-white/5 border border-white/10 rounded-xl mt-3 text-xs text-stone-400">
+        <div class="font-bold text-stone-300">Synonym Map & Justification:</div>
+        <p class="mt-1">${q.explanation}</p>
+        <p class="mt-1 text-stone-500">📍 <em>${q.location}</em></p>
+      </div>
+    `;
+    qContainer.appendChild(qBox);
+  });
+}
+
+// --- Text Highlighter Logic ---
+function handleTextSelection(event) {
+  const selection = window.getSelection();
+  if (selection.rangeCount > 0 && !selection.isCollapsed) {
+    selectedRange = selection.getRangeAt(0);
+    showHighlightTooltip(event.clientX, event.clientY);
+  } else {
+    hideHighlightTooltip();
+  }
+}
+
+function showHighlightTooltip(x, y) {
+  const tooltip = document.getElementById('highlightTooltip');
+  tooltip.style.left = `${x}px`;
+  tooltip.style.top = `${y - 45}px`;
+  tooltip.style.display = 'flex';
+}
+
+function hideHighlightTooltip() {
+  document.getElementById('highlightTooltip').style.display = 'none';
+}
+
+function applyHighlight(color) {
+  if (!selectedRange) return;
+  
+  if (color === 'clear') {
+    // Revert styling: we can clear highlighting or wrap in standard span
+    const span = document.createElement('span');
+    span.className = "";
+    selectedRange.surroundContents(span);
+  } else {
+    const span = document.createElement('span');
+    span.className = `highlight-${color} px-0.5 rounded`;
+    try {
+      selectedRange.surroundContents(span);
+    } catch (e) {
+      console.warn('Selection too wide for standard highlighting.');
+    }
+  }
+  
+  window.getSelection().removeAllRanges();
+  hideHighlightTooltip();
+}
+
+// Scratchpad Storage
+function toggleScratchpad() {
+  const sp = document.getElementById('scratchpad');
+  sp.classList.toggle('hidden');
+}
+
+function saveScratchpad() {
+  const txt = document.getElementById('scratchpadText').value;
+  localStorage.setItem(`scratchpad_test_${testId}`, txt);
+}
+
+// Question Navigation via Bottom Prev/Next
+function navigateQuestion(direction) {
+  const passage = testData.reading.passages[currentPassageIdx];
+  const qCount = passage.questions.length;
+  let nextIdx = currentQuestionIndex + direction;
+  if (nextIdx >= 0 && nextIdx < qCount) {
+    currentQuestionIndex = nextIdx;
+    const targetQNum = passage.questions[currentQuestionIndex].num;
+    const targetBox = document.getElementById(`qbox-${targetQNum}`);
+    if (targetBox) {
+      targetBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    document.querySelectorAll('.q-nav-btn').forEach(btn => {
+      btn.classList.remove('current');
+      if (parseInt(btn.textContent) === targetQNum) {
+        btn.classList.add('current');
+      }
+    });
+  }
+}
+
+// Run initial configurations
+initTest();
+</script>
+</body>
+</html>

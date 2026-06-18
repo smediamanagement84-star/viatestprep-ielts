@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>IELTS Writing Simulator — ViATestPrep</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: 268, 52%, 48%; /* #5b2a86 */
+    --gold: 40, 65%, 48%; /* #c8932a */
+    --teal: 172, 83%, 30%; /* #0d8a7a */
+    --rose: 347, 79%, 59%; /* #e8456b */
+    --bg-main: #070913;
+    --bg-card: rgba(17, 20, 38, 0.65);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+  }
+  .light {
+    --bg-main: #faf9f6;
+    --bg-card: rgba(255, 255, 255, 0.85);
+    --border-color: rgba(15, 23, 42, 0.08);
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+  }
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', serif;
+  }
+
+  .test-container {
+    height: calc(100vh - 8.5rem);
+    overflow: hidden;
+  }
+  .prompt-pane {
+    height: 100%;
+    overflow-y: auto;
+    border-right: 1px solid var(--border-color);
+  }
+  .editor-pane {
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  /* Custom essay text area */
+  .essay-textarea {
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    outline: none;
+    resize: none;
+    transition: all 0.2s;
+  }
+  .essay-textarea:focus {
+    border-color: hsl(var(--primary));
+    box-shadow: 0 0 10px rgba(91, 42, 134, 0.2);
+  }
+</style>
+<script src="security.js"></script>
+</head>
+<body class="flex flex-col h-screen overflow-hidden">
+
+<!-- Header -->
+<header class="h-16 border-b border-white/10 bg-black/40 backdrop-blur-md px-6 flex items-center justify-between z-20">
+  <div class="flex items-center gap-3">
+    <a href="ielts-practice-hub.html" class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-bold transition">← Exit</a>
+    <div>
+      <span class="text-[10px] text-purple-400 uppercase tracking-widest font-extrabold" id="testSetTag">Test Set</span>
+      <h2 class="text-sm font-extrabold -mt-1" id="testTitle">Loading test...</h2>
+    </div>
+  </div>
+  
+  <!-- Timer -->
+  <div class="flex items-center gap-3">
+    <span class="text-xs text-stone-400" id="modeIndicator">Mode: Exam</span>
+    <div class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 font-mono text-sm font-bold flex items-center gap-1.5" id="timerContainer">
+      <span class="text-purple-400">⏱️</span>
+      <span id="timerText">60:00</span>
+    </div>
+  </div>
+  
+  <div>
+    <button onclick="submitTest()" class="px-4 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-700 text-xs font-bold transition shadow-lg shadow-purple-600/20" id="submitBtn">Submit Writing</button>
+  </div>
+</header>
+
+<!-- Sim Containers -->
+<div class="flex-1 flex test-container">
+  
+  <!-- Left Panel: Prompt text and Visuals -->
+  <div class="w-1/2 prompt-pane p-8">
+    <div class="max-w-xl mx-auto space-y-6">
+      
+      <!-- Task Selection Tabs -->
+      <div class="flex gap-2 border-b border-white/10 pb-3" id="taskTabs">
+        <button onclick="switchTask(1)" id="tab1" class="px-3.5 py-1.5 rounded-lg text-xs font-bold bg-purple-600 text-white transition">Task 1 (Academic)</button>
+        <button onclick="switchTask(2)" id="tab2" class="px-3.5 py-1.5 rounded-lg text-xs font-bold text-stone-400 hover:text-stone-200 transition">Task 2 (Essay)</button>
+      </div>
+      
+      <div class="space-y-4">
+        <h1 class="text-2xl font-extrabold tracking-tight" id="taskTitle">Writing Task 1</h1>
+        
+        <!-- Info Banner -->
+        <div class="p-3 bg-white/5 rounded-xl border border-white/5 text-xs text-stone-400 flex justify-between">
+          <span id="taskTimeRecommendation">⏱️ Recommended time: 20 minutes</span>
+          <span id="taskWordRequirement">✍️ Minimum words: 150</span>
+        </div>
+        
+        <!-- Prompt Statement -->
+        <div class="p-4 rounded-xl border border-white/5 bg-white/5 text-stone-300 text-sm leading-relaxed" id="promptText">
+          Loading prompt...
+        </div>
+        
+        <!-- Graph / Data Visualization Representation (Task 1) -->
+        <div id="graphContainer" class="p-6 rounded-2xl border border-white/5 bg-white/5 flex flex-col items-center justify-center text-center">
+          <div id="graphicImage" class="font-mono text-xs text-purple-400 max-w-md"></div>
+        </div>
+      </div>
+      
+      <!-- Band 9 Model Answer Box (Hidden during test, shown in review/practice) -->
+      <div id="modelAnswerBox" class="hidden p-5 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 text-xs text-stone-300 space-y-2 mt-6">
+        <strong class="text-emerald-400 text-sm flex items-center gap-1.5">🏆 Band 9 Model Response</strong>
+        <p id="modelAnswerText" class="leading-relaxed"></p>
+      </div>
+
+    </div>
+  </div>
+  
+  <!-- Right Panel: Editor -->
+  <div class="w-1/2 editor-pane p-8 bg-black/10 flex flex-col justify-between">
+    <div class="flex-1 flex flex-col">
+      <div class="flex justify-between items-center mb-3">
+        <label for="essayInput" class="text-xs font-extrabold text-stone-400 uppercase tracking-widest">Type your response below</label>
+        <button onclick="clearEssay()" class="text-[10px] text-rose-400 underline hover:text-rose-300">Clear editor</button>
+      </div>
+      
+      <!-- Main Text Area -->
+      <textarea id="essayInput" oninput="handleTyping()" class="flex-1 w-full essay-textarea rounded-2xl p-6 outline-none" placeholder="Start typing your essay response here..."></textarea>
+    </div>
+    
+    <!-- Footer Word counts and Download buttons -->
+    <div class="flex justify-between items-center border-t border-white/10 pt-4 mt-6">
+      <div class="flex gap-4 items-center">
+        <!-- Word count status -->
+        <div class="text-xs text-stone-400">
+          Words: <span id="wordCount" class="font-extrabold text-rose-400">0</span>
+        </div>
+        <div id="wordRequirementStatus" class="text-[10px] uppercase font-bold text-rose-500">
+          Needs 150 words
+        </div>
+      </div>
+      
+      <button onclick="downloadEssay()" class="px-4 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-bold transition flex items-center gap-1.5 text-stone-300">
+        💾 Export Essay (.txt)
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<!-- Bottom Navigation Bar -->
+<footer class="h-16 border-t border-white/10 bg-black/40 backdrop-blur-md px-6 flex items-center justify-between z-20">
+  <div class="text-xs text-stone-500">
+    Writing answers are saved automatically as you type.
+  </div>
+  
+  <div class="flex gap-2">
+    <button onclick="switchTask(1)" id="footerPrevBtn" class="px-3.5 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs font-bold transition text-stone-500" disabled>◀ Task 1</button>
+    <button onclick="switchTask(2)" id="footerNextBtn" class="px-3.5 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-bold transition text-stone-300">Task 2 ▶</button>
+  </div>
+</footer>
+
+<script src="test-data.js"></script>
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const testId = urlParams.get('test') || '1';
+const testData = IELTS_TEST_DATA[testId];
+
+if (!testData) {
+  alert('Test Set not found! Redirecting to Test 1.');
+  window.location.search = '?test=1';
+}
+
+const currentTestMode = localStorage.getItem('vietest_practice_mode') || 'exam';
+let currentTask = 1;
+let essayContent = {
+  1: '',
+  2: ''
+};
+let totalTimeSeconds = 60 * 60; // 60 mins
+let timeRemaining = totalTimeSeconds;
+let timerInterval;
+
+// Load autosave from local storage
+essayContent[1] = localStorage.getItem(`autosave_test_${testId}_writing_task1`) || '';
+essayContent[2] = localStorage.getItem(`autosave_test_${testId}_writing_task2`) || '';
+
+function initTest() {
+  document.getElementById('testTitle').textContent = testData.title;
+  document.getElementById('testSetTag').textContent = `IELTS Academic Test Set 0${testId}`;
+  document.getElementById('modeIndicator').textContent = `Mode: ${currentTestMode === 'exam' ? 'Exam' : 'Practice'}`;
+  
+  // Set up timer
+  if (currentTestMode === 'practice') {
+    timeRemaining = 0;
+    document.getElementById('timerText').textContent = '00:00';
+    timerInterval = setInterval(() => {
+      timeRemaining++;
+      const m = Math.floor(timeRemaining / 60);
+      const s = timeRemaining % 60;
+      document.getElementById('timerText').textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+    }, 1000);
+    
+    // In practice mode, model answers can be opened
+    document.getElementById('modelAnswerBox').classList.remove('hidden');
+  } else {
+    timeRemaining = 60 * 60;
+    timerInterval = setInterval(() => {
+      timeRemaining--;
+      const m = Math.floor(timeRemaining / 60);
+      const s = timeRemaining % 60;
+      document.getElementById('timerText').textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+      
+      const timerContainer = document.getElementById('timerContainer');
+      if (timeRemaining < 300) { // under 5 mins
+        timerContainer.classList.remove('border-white/10');
+        timerContainer.classList.add('border-red-500/50', 'bg-red-500/10', 'text-red-400');
+      }
+      
+      if (timeRemaining <= 0) {
+        clearInterval(timerInterval);
+        alert('Time is up! Submitting writing responses automatically.');
+        submitTest(true);
+      }
+    }, 1000);
+  }
+  
+  switchTask(1);
+}
+
+function switchTask(taskNum) {
+  // Save active input first
+  const currentVal = document.getElementById('essayInput').value;
+  essayContent[currentTask] = currentVal;
+  localStorage.setItem(`autosave_test_${testId}_writing_task${currentTask}`, currentVal);
+  
+  currentTask = taskNum;
+  
+  const tab1 = document.getElementById('tab1');
+  const tab2 = document.getElementById('tab2');
+  const footerPrevBtn = document.getElementById('footerPrevBtn');
+  const footerNextBtn = document.getElementById('footerNextBtn');
+  
+  if (taskNum === 1) {
+    tab1.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold bg-purple-600 text-white transition";
+    tab2.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold text-stone-400 hover:text-stone-200 transition";
+    document.getElementById('taskTitle').textContent = "Writing Task 1 (Academic)";
+    document.getElementById('taskTimeRecommendation').textContent = "⏱️ Recommended time: 20 minutes";
+    document.getElementById('taskWordRequirement').textContent = "✍️ Minimum words: 150";
+    document.getElementById('promptText').textContent = testData.writing.task1.prompt;
+    
+    // Graphic
+    document.getElementById('graphContainer').classList.remove('hidden');
+    document.getElementById('graphicImage').textContent = testData.writing.task1.image;
+    
+    // Model answer
+    document.getElementById('modelAnswerText').textContent = testData.writing.task1.modelAnswer;
+    
+    footerPrevBtn.disabled = true;
+    footerPrevBtn.className = "px-3.5 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs font-bold transition text-stone-600 cursor-not-allowed";
+    footerNextBtn.disabled = false;
+    footerNextBtn.className = "px-3.5 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-bold transition text-stone-300";
+  } else {
+    tab2.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold bg-purple-600 text-white transition";
+    tab1.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold text-stone-400 hover:text-stone-200 transition";
+    document.getElementById('taskTitle').textContent = "Writing Task 2 (General Essay)";
+    document.getElementById('taskTimeRecommendation').textContent = "⏱️ Recommended time: 40 minutes";
+    document.getElementById('taskWordRequirement').textContent = "✍️ Minimum words: 250";
+    document.getElementById('promptText').textContent = testData.writing.task2.prompt;
+    
+    // No graphic for Task 2
+    document.getElementById('graphContainer').classList.add('hidden');
+    
+    // Model answer
+    document.getElementById('modelAnswerText').textContent = testData.writing.task2.modelAnswer;
+    
+    footerNextBtn.disabled = true;
+    footerNextBtn.className = "px-3.5 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs font-bold transition text-stone-600 cursor-not-allowed";
+    footerPrevBtn.disabled = false;
+    footerPrevBtn.className = "px-3.5 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-bold transition text-stone-300";
+  }
+  
+  // Set textarea content
+  document.getElementById('essayInput').value = essayContent[currentTask];
+  calculateWordCount();
+}
+
+function handleTyping() {
+  const val = document.getElementById('essayInput').value;
+  essayContent[currentTask] = val;
+  localStorage.setItem(`autosave_test_${testId}_writing_task${currentTask}`, val);
+  calculateWordCount();
+}
+
+function calculateWordCount() {
+  const text = document.getElementById('essayInput').value.trim();
+  const wordCount = text === "" ? 0 : text.split(/\s+/).length;
+  
+  const wcText = document.getElementById('wordCount');
+  const reqText = document.getElementById('wordRequirementStatus');
+  const reqLimit = currentTask === 1 ? 150 : 250;
+  
+  wcText.textContent = wordCount;
+  
+  if (wordCount < reqLimit) {
+    wcText.className = "font-extrabold text-rose-500";
+    reqText.textContent = `Needs ${reqLimit - wordCount} more words`;
+    reqText.className = "text-[10px] uppercase font-bold text-rose-500";
+  } else {
+    wcText.className = "font-extrabold text-emerald-400";
+    reqText.textContent = "Word count goal achieved ✓";
+    reqText.className = "text-[10px] uppercase font-bold text-emerald-400";
+  }
+}
+
+function clearEssay() {
+  if (confirm("Clear all text inside the editor for this task? This cannot be undone.")) {
+    document.getElementById('essayInput').value = '';
+    handleTyping();
+  }
+}
+
+// Download draft as text file
+function downloadEssay() {
+  // Save current state first
+  const currentVal = document.getElementById('essayInput').value;
+  essayContent[currentTask] = currentVal;
+  
+  const outputText = `ViATestPrep IELTS Writing Practice Output
+=============================================
+Test Set: Test Set 0${testId}
+Date: ${new Date().toLocaleDateString()}
+---------------------------------------------
+TASK 1 RESPONSE (Word count: ${essayContent[1].trim() === "" ? 0 : essayContent[1].trim().split(/\s+/).length})
+---------------------------------------------
+${essayContent[1] || '[No draft entered]'}
+
+---------------------------------------------
+TASK 2 RESPONSE (Word count: ${essayContent[2].trim() === "" ? 0 : essayContent[2].trim().split(/\s+/).length})
+---------------------------------------------
+${essayContent[2] || '[No draft entered]'}`;
+
+  const blob = new Blob([outputText], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `viatestprep_writing_test_${testId}_draft.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// Submit writing
+function submitTest(autoSubmit = false) {
+  if (!autoSubmit) {
+    if (!confirm("Are you sure you want to submit your writing exam? This will freeze your drafts and show the Band 9 Model responses.")) return;
+  }
+  
+  clearInterval(timerInterval);
+  
+  // Save current input
+  essayContent[currentTask] = document.getElementById('essayInput').value;
+  localStorage.setItem(`autosave_test_${testId}_writing_task1`, essayContent[1]);
+  localStorage.setItem(`autosave_test_${testId}_writing_task2`, essayContent[2]);
+  
+  // Set completed tag on local storage
+  localStorage.setItem(`score_test_${testId}_writing`, 'completed');
+  
+  alert("Writing submissions recorded! You can now review the Band 9 Model Responses and export your essays to share with a tutor.");
+  
+  // Freeze editor and show models
+  document.getElementById('essayInput').disabled = true;
+  document.getElementById('modelAnswerBox').classList.remove('hidden');
+  document.getElementById('submitBtn').remove();
+  
+  // Add lobby button
+  const header = document.querySelector('header');
+  const returnBtn = document.createElement('a');
+  returnBtn.href = "ielts-practice-hub.html";
+  returnBtn.className = "px-4 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-xs font-bold transition text-white";
+  returnBtn.textContent = "Return to Lobby";
+  header.appendChild(returnBtn);
+}
+
+initTest();
+</script>
+</body>
+</html>

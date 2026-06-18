@@ -942,6 +942,7 @@
     <button class="nav-tab" data-filter="ukvi">UKVI Specialist</button>
     <button class="nav-tab" data-filter="pte">PTE Academic</button>
     <button class="nav-tab" data-filter="grammar">Grammar</button>
+    <button class="nav-tab" data-filter="practice">Practice Tests</button>
     <button class="nav-tab" data-filter="free">Free PDF</button>
   </nav>
   
@@ -1026,6 +1027,8 @@
       </div>
 
       <div class="grid">
+
+
         <!-- Free Resource Card -->
         <a href="free-essay-template.html" class="card free-card" data-tags="free,core" data-recommended="ielts-7.0,ielts-7.5,ukvi">
           <div class="card-top">
@@ -1236,6 +1239,50 @@
       </div>
     </div>
 
+    <!-- FULL PRACTISE SETS SECTION -->
+    <hr class="section-divider" id="divider-practice"/>
+    <div class="grid-container" id="container-practice">
+      <div class="section-header">
+        <div class="section-label">Practice Center</div>
+        <h2>Full Practise Sets</h2>
+        <p class="section-desc">Test your readiness with 5 complete computer-delivered mock tests containing custom speed-controlled audios, split-screen reading, and writing simulators.</p>
+      </div>
+
+      <div class="grid">
+        <!-- IELTS Practice Lobby Card -->
+        <a href="ielts-practice-hub.html" class="card recommended-glow" data-tags="practice,core" data-recommended="ielts-7.0,ielts-7.5,ukvi">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">🏆 PREMIUM MOCK TESTS</span>
+              <span class="card-meta">⏱️ 3 hrs · 🔴 Hard</span>
+            </div>
+            <div class="card-icon-wrapper">🎯</div>
+            <h3>Interactive Mock Test Center</h3>
+            <p>Take 5 complete computer-delivered practice tests with Listening (speed control audios), Reading (split-screen with highlights), and Writing text editors.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Enter test center <span>→</span></div>
+          </div>
+        </a>
+
+        <!-- IELTS Mock Test Tracker Card -->
+        <a href="11_IELTS_Mock_Test_Tracker.html" class="card" data-tags="practice" data-recommended="ielts-7.0,ielts-7.5">
+          <div class="card-top">
+            <div class="card-header">
+              <span class="card-tag">📊 TEACHER DASHBOARD</span>
+              <span class="card-meta">⏱️ 1 hr · 🟢 Easy</span>
+            </div>
+            <div class="card-icon-wrapper">📈</div>
+            <h3>Mock Test Progress Tracker</h3>
+            <p>Log student band scores, calculate overall results, track progress differentials, and manage performance trends via simple local storage dashboards.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="go-arrow">Open tracker <span>→</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+
     <hr class="section-divider" id="divider-ukvi"/>
 
     <!-- UKVI SPECIALIST MODULES -->
@@ -1422,6 +1469,7 @@ let currentSearchQuery = '';
 const allCards = document.querySelectorAll('.card');
 const gridContainers = document.querySelectorAll('.grid-container');
 const dividers = [
+  { el: document.getElementById('divider-practice'), targetContainer: 'container-practice' },
   { el: document.getElementById('divider-ukvi'), targetContainer: 'container-ukvi' },
   { el: document.getElementById('divider-pte'), targetContainer: 'container-pte' }
 ];
