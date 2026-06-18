@@ -245,7 +245,7 @@ if (!testData) {
 
 const currentTestMode = localStorage.getItem('vietest_practice_mode') || 'exam';
 let currentSectionIdx = 0;
-let currentQuestionIndex = 0;
+let currentQuestionNum = 1;
 let userAnswers = {};
 let flaggedQuestions = {};
 let totalTimeSeconds = 30 * 60; // 30 mins
@@ -316,6 +316,14 @@ function switchSection(idx, btnEl) {
   btnEl.className = 'px-3 py-1 rounded text-xs font-bold bg-purple-600 text-white';
   
   loadSection();
+  
+  // After rendering, scroll to the active question box
+  setTimeout(() => {
+    const targetBox = document.getElementById(`qbox-${currentQuestionNum}`);
+    if (targetBox) {
+      targetBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, 100);
 }
 
 function loadSection() {
@@ -386,9 +394,6 @@ function renderQuestions() {
   const qContainer = document.getElementById('questionsContainer');
   qContainer.innerHTML = '';
   
-  const tray = document.getElementById('bottomNavTray');
-  tray.innerHTML = '';
-  
   section.questions.forEach((q, idx) => {
     const qBox = document.createElement('div');
     qBox.className = 'q-box p-5 rounded-2xl border border-white/5 bg-white/5 space-y-3';
@@ -444,17 +449,38 @@ function renderQuestions() {
       ${practiceBtnHtml}
     `;
     qContainer.appendChild(qBox);
-    
-    // Bottom Nav Btn
-    const btn = document.createElement('button');
-    btn.className = `q-nav-btn relative ${userAnswers[q.num] ? 'answered' : ''} ${flaggedQuestions[q.num] ? 'flagged' : ''}`;
-    btn.textContent = q.num;
-    btn.onclick = () => {
-      document.getElementById(`qbox-${q.num}`).scrollIntoView({ behavior: 'smooth', block: 'center' });
-      document.querySelectorAll('.q-nav-btn').forEach(b => b.classList.remove('current'));
-      btn.classList.add('current');
-    };
-    tray.appendChild(btn);
+  });
+
+  // Render bottom nav buttons for ALL questions in the test!
+  const tray = document.getElementById('bottomNavTray');
+  tray.innerHTML = '';
+  
+  testData.listening.sections.forEach((sec, sIdx) => {
+    sec.questions.forEach((q) => {
+      const btn = document.createElement('button');
+      btn.className = `q-nav-btn relative ${userAnswers[q.num] ? 'answered' : ''} ${flaggedQuestions[q.num] ? 'flagged' : ''}`;
+      btn.textContent = q.num;
+      if (q.num === currentQuestionNum) {
+        btn.classList.add('current');
+      }
+      btn.onclick = () => {
+        currentQuestionNum = q.num;
+        if (sIdx !== currentSectionIdx) {
+          const tabBtn = document.querySelectorAll('#sectionTabs button')[sIdx];
+          switchSection(sIdx, tabBtn);
+        } else {
+          const targetBox = document.getElementById(`qbox-${q.num}`);
+          if (targetBox) {
+            targetBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+          document.querySelectorAll('.q-nav-btn').forEach(b => {
+            b.classList.remove('current');
+            if (parseInt(b.textContent) === q.num) b.classList.add('current');
+          });
+        }
+      };
+      tray.appendChild(btn);
+    });
   });
 }
 
@@ -611,22 +637,38 @@ function saveScratchpad() {
 
 // Question Navigation via Bottom Prev/Next
 function navigateQuestion(direction) {
-  const section = testData.listening.sections[currentSectionIdx];
-  const qCount = section.questions.length;
-  let nextIdx = currentQuestionIndex + direction;
-  if (nextIdx >= 0 && nextIdx < qCount) {
-    currentQuestionIndex = nextIdx;
-    const targetQNum = section.questions[currentQuestionIndex].num;
-    const targetBox = document.getElementById(`qbox-${targetQNum}`);
-    if (targetBox) {
-      targetBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-    document.querySelectorAll('.q-nav-btn').forEach(btn => {
-      btn.classList.remove('current');
-      if (parseInt(btn.textContent) === targetQNum) {
-        btn.classList.add('current');
+  let nextQNum = currentQuestionNum + direction;
+  let totalQs = 0;
+  testData.listening.sections.forEach(sec => totalQs += sec.questions.length);
+  
+  if (nextQNum >= 1 && nextQNum <= totalQs) {
+    currentQuestionNum = nextQNum;
+    
+    // Find which section this question belongs to
+    let targetSectionIdx = -1;
+    testData.listening.sections.forEach((sec, sIdx) => {
+      if (sec.questions.some(q => q.num === currentQuestionNum)) {
+        targetSectionIdx = sIdx;
       }
     });
+    
+    if (targetSectionIdx !== -1) {
+      if (targetSectionIdx !== currentSectionIdx) {
+        const tabBtn = document.querySelectorAll('#sectionTabs button')[targetSectionIdx];
+        switchSection(targetSectionIdx, tabBtn);
+      } else {
+        const targetBox = document.getElementById(`qbox-${currentQuestionNum}`);
+        if (targetBox) {
+          targetBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        document.querySelectorAll('.q-nav-btn').forEach(btn => {
+          btn.classList.remove('current');
+          if (parseInt(btn.textContent) === currentQuestionNum) {
+            btn.classList.add('current');
+          }
+        });
+      }
+    }
   }
 }
 

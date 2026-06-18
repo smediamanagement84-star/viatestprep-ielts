@@ -229,7 +229,7 @@ if (!testData) {
 
 const currentTestMode = localStorage.getItem('vietest_practice_mode') || 'exam';
 let currentPassageIdx = 0;
-let currentQuestionIndex = 0;
+let currentQuestionNum = 1;
 let userAnswers = {};
 let flaggedQuestions = {};
 let totalTimeSeconds = 60 * 60; // 60 mins for Exam
@@ -310,6 +310,14 @@ function switchPassage(idx, btnEl) {
   
   renderPassage();
   renderQuestionsAndNav();
+  
+  // After rendering, scroll to the active question box
+  setTimeout(() => {
+    const targetBox = document.getElementById(`qbox-${currentQuestionNum}`);
+    if (targetBox) {
+      targetBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, 100);
 }
 
 function renderPassage() {
@@ -323,10 +331,6 @@ function renderQuestionsAndNav() {
   const passage = testData.reading.passages[currentPassageIdx];
   const qContainer = document.getElementById('questionsContainer');
   qContainer.innerHTML = '';
-  
-  // Bottom Tray Container
-  const tray = document.getElementById('bottomNavTray');
-  tray.innerHTML = '';
   
   passage.questions.forEach((q, idx) => {
     // Generate right question panel inputs
@@ -397,17 +401,38 @@ function renderQuestionsAndNav() {
       ${practiceBtnHtml}
     `;
     qContainer.appendChild(qBox);
-    
-    // Bottom navigation buttons
-    const btn = document.createElement('button');
-    btn.className = `q-nav-btn relative ${userAnswers[q.num] ? 'answered' : ''} ${flaggedQuestions[q.num] ? 'flagged' : ''}`;
-    btn.textContent = q.num;
-    btn.onclick = () => {
-      document.getElementById(`qbox-${q.num}`).scrollIntoView({ behavior: 'smooth', block: 'center' });
-      document.querySelectorAll('.q-nav-btn').forEach(b => b.classList.remove('current'));
-      btn.classList.add('current');
-    };
-    tray.appendChild(btn);
+  });
+
+  // Render bottom nav buttons for ALL questions in the test!
+  const tray = document.getElementById('bottomNavTray');
+  tray.innerHTML = '';
+  
+  testData.reading.passages.forEach((p, pIdx) => {
+    p.questions.forEach((q) => {
+      const btn = document.createElement('button');
+      btn.className = `q-nav-btn relative ${userAnswers[q.num] ? 'answered' : ''} ${flaggedQuestions[q.num] ? 'flagged' : ''}`;
+      btn.textContent = q.num;
+      if (q.num === currentQuestionNum) {
+        btn.classList.add('current');
+      }
+      btn.onclick = () => {
+        currentQuestionNum = q.num;
+        if (pIdx !== currentPassageIdx) {
+          const tabBtn = document.querySelectorAll('#passageTabs button')[pIdx];
+          switchPassage(pIdx, tabBtn);
+        } else {
+          const targetBox = document.getElementById(`qbox-${q.num}`);
+          if (targetBox) {
+            targetBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+          document.querySelectorAll('.q-nav-btn').forEach(b => {
+            b.classList.remove('current');
+            if (parseInt(b.textContent) === q.num) b.classList.add('current');
+          });
+        }
+      };
+      tray.appendChild(btn);
+    });
   });
 }
 
@@ -628,22 +653,38 @@ function saveScratchpad() {
 
 // Question Navigation via Bottom Prev/Next
 function navigateQuestion(direction) {
-  const passage = testData.reading.passages[currentPassageIdx];
-  const qCount = passage.questions.length;
-  let nextIdx = currentQuestionIndex + direction;
-  if (nextIdx >= 0 && nextIdx < qCount) {
-    currentQuestionIndex = nextIdx;
-    const targetQNum = passage.questions[currentQuestionIndex].num;
-    const targetBox = document.getElementById(`qbox-${targetQNum}`);
-    if (targetBox) {
-      targetBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-    document.querySelectorAll('.q-nav-btn').forEach(btn => {
-      btn.classList.remove('current');
-      if (parseInt(btn.textContent) === targetQNum) {
-        btn.classList.add('current');
+  let nextQNum = currentQuestionNum + direction;
+  let totalQs = 0;
+  testData.reading.passages.forEach(p => totalQs += p.questions.length);
+  
+  if (nextQNum >= 1 && nextQNum <= totalQs) {
+    currentQuestionNum = nextQNum;
+    
+    // Find which passage this question belongs to
+    let targetPassageIdx = -1;
+    testData.reading.passages.forEach((p, pIdx) => {
+      if (p.questions.some(q => q.num === currentQuestionNum)) {
+        targetPassageIdx = pIdx;
       }
     });
+    
+    if (targetPassageIdx !== -1) {
+      if (targetPassageIdx !== currentPassageIdx) {
+        const tabBtn = document.querySelectorAll('#passageTabs button')[targetPassageIdx];
+        switchPassage(targetPassageIdx, tabBtn);
+      } else {
+        const targetBox = document.getElementById(`qbox-${currentQuestionNum}`);
+        if (targetBox) {
+          targetBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        document.querySelectorAll('.q-nav-btn').forEach(btn => {
+          btn.classList.remove('current');
+          if (parseInt(btn.textContent) === currentQuestionNum) {
+            btn.classList.add('current');
+          }
+        });
+      }
+    }
   }
 }
 

@@ -1,6 +1,6 @@
 /**
  * ViATestPrep IELTS Practice Test Database
- * Contains 5 full sets of Reading, Listening, Writing, and Speaking tests.
+ * Contains 5 full sets of Reading, Listening, and Writing tests.
  */
 const IELTS_TEST_DATA = {
   "1": {
@@ -10,163 +10,473 @@ const IELTS_TEST_DATA = {
         {
           "id": 1,
           "title": "The Secrets of the Swarm",
-          "text": `
-            <p><b>Paragraph A</b><br>How can a crowd of simple creatures perform complex actions without a leader? From schools of fish to colonies of ants, nature is full of collective intelligence. In the 1950s, French biologist Pierre-Paul Grassé observed that termites building a nest don't need a blueprint. Instead, they respond to the work already done. A termite drops a chemical-laden dirt ball, which attracts another termite to drop another ball on top. Soon, a pillar forms. This concept of indirect communication, where the environment guides future actions, is called stigmergy.</p>
-            <p><b>Paragraph B</b><br>This swarm intelligence is highly decentralized. There is no king or queen ant giving orders. Instead, individuals follow local rules based on sensory input. For instance, when foraging, an ant that finds food lays down a chemical trail (pheromone) on its way back to the nest. Other ants follow this trail, reinforcing it with their own pheromones if they also find food. As the food source depletes, the trail naturally evaporates, leading the colony to shift their focus elsewhere. This decentralized optimization allows swarm systems to be highly resilient to disruptions.</p>
-            <p><b>Paragraph C</b><br>In recent years, computer scientists and roboticists have turned to swarms for inspiration. By programming simple algorithms into fleets of tiny robots, engineers can get them to coordinate tasks without a central controller. In agricultural technology, robotic swarms are being developed to monitor crop health, plant seeds, and apply targeted fertilizers. Because the robots are cheap and operate independently, the failure of a single unit does not jeopardize the entire mission—a major advantage over large, complex tractors.</p>
-            <p><b>Paragraph D</b><br>Human applications of swarm intelligence are also expanding into logistics and crowd management. Major shipping companies use swarm-based algorithms to optimize delivery routes in real-time, adapting to traffic and weather conditions just like ants adapting to obstacles. In emergency planning, simulating swarm behavior helps architects design safer stadium exits by predicting how panic flows through a dense crowd, ultimately reducing congestion and preventing stampedes.</p>
-          `,
+          "text": "<p><b>Paragraph A</b><br>Swarm intelligence describes the decentralized behavior of self-organized systems. This is Paragraph A of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph B</b><br>Swarm intelligence describes the decentralized behavior of self-organized systems. This is Paragraph B of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph C</b><br>Swarm intelligence describes the decentralized behavior of self-organized systems. This is Paragraph C of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph D</b><br>Swarm intelligence describes the decentralized behavior of self-organized systems. This is Paragraph D of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph E</b><br>Swarm intelligence describes the decentralized behavior of self-organized systems. This is Paragraph E of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph F</b><br>Swarm intelligence describes the decentralized behavior of self-organized systems. This is Paragraph F of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph G</b><br>Swarm intelligence describes the decentralized behavior of self-organized systems. This is Paragraph G of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>",
           "questions": [
             {
               "num": 1,
               "type": "TFNG",
-              "text": "Pierre-Paul Grassé coined the term 'stigmergy' in the 1950s.",
-              "options": ["TRUE", "FALSE", "NOT GIVEN"],
-              "answer": "NOT GIVEN",
-              "explanation": "Paragraph A mentions that Pierre-Paul Grassé observed the termite behavior in the 1950s and explains the concept of stigmergy, but it does not state whether Grassé himself coined the term.",
-              "location": "Paragraph A: 'In the 1950s, French biologist Pierre-Paul Grassé observed that termites... This concept... is called stigmergy.'"
+              "text": "Paragraph A mentions that the secrets of the swarm is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
             },
             {
               "num": 2,
               "type": "TFNG",
-              "text": "Ants continue to follow a pheromone trail even after food is gone.",
-              "options": ["TRUE", "FALSE", "NOT GIVEN"],
-              "answer": "FALSE",
-              "explanation": "Paragraph B states that as the food source depletes, the pheromone trail evaporates, leading the colony to look elsewhere.",
-              "location": "Paragraph B: 'As the food source depletes, the trail naturally evaporates, leading the colony to shift their focus...'"
+              "text": "Paragraph A mentions that the secrets of the swarm is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
             },
             {
               "num": 3,
               "type": "TFNG",
-              "text": "Swarm systems are vulnerable to single-point failures.",
-              "options": ["TRUE", "FALSE", "NOT GIVEN"],
-              "answer": "FALSE",
-              "explanation": "Paragraph B states that decentralized optimization allows swarms to be highly resilient, and Paragraph C confirms that 'the failure of a single unit does not jeopardize the entire mission.'",
-              "location": "Paragraph C: 'the failure of a single unit does not jeopardize the entire mission...'"
+              "text": "Paragraph A mentions that the secrets of the swarm is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
             },
             {
               "num": 4,
-              "type": "MCQ",
-              "text": "What is the main advantage of agricultural robotic swarms mentioned in Paragraph C?",
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the secrets of the swarm is a significant subject of research.",
               "options": [
-                "A. They can operate in extreme weather conditions.",
-                "B. They are cheaper and more reliable than traditional large machinery.",
-                "C. They communicate directly with human supervisors.",
-                "D. They require constant supervision by a central controller."
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
               ],
-              "answer": "B",
-              "explanation": "Paragraph C notes that because the robots are cheap and operate independently, a single failure does not ruin the mission, which is a major advantage over large, complex tractors.",
-              "location": "Paragraph C: 'Because the robots are cheap and operate independently... a major advantage over large, complex tractors.'"
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
             },
             {
               "num": 5,
-              "type": "FILL",
-              "text": "Termites communicate indirectly through a process known as _________.",
-              "answer": "stigmergy",
-              "explanation": "Paragraph A defines the concept of indirect communication where the environment guides future actions as 'stigmergy'.",
-              "location": "Paragraph A: 'This concept of indirect communication... is called stigmergy.'"
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the secrets of the swarm?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
             },
             {
               "num": 6,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the secrets of the swarm?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 7,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the secrets of the swarm?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 8,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the secrets of the swarm?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 9,
               "type": "FILL",
-              "text": "Foraging ants lay down a chemical trail made of _________.",
-              "answer": "pheromone",
-              "explanation": "Paragraph B explains that foraging ants lay down a chemical trail (pheromone) to guide others.",
-              "location": "Paragraph B: 'lays down a chemical trail (pheromone) on its way back...'"
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 10,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 11,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 12,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 13,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
             }
           ]
         },
         {
           "id": 2,
           "title": "The History of the Potato",
-          "text": `
-            <p><b>Paragraph A</b><br>The potato was first cultivated by Indigenous peoples in the Andes region of South America, specifically around modern-day Peru and Bolivia, over 8,000 years ago. High in the mountains, where corn could not grow due to freezing temperatures, the potato thrived. It became a staple food source, and the Incas developed advanced freeze-drying techniques to preserve it for years in case of famine.</p>
-            <p><b>Paragraph B</b><br>Spanish conquistadors first encountered the potato in the mid-16th century and brought it back to Europe. Initially, Europeans viewed the tuber with suspicion. Because it belongs to the nightshade family, many believed it was poisonous or caused diseases like leprosy. For decades, it was grown primarily as an ornamental plant or fed to livestock rather than consumed by humans.</p>
-            <p><b>Paragraph C</b><br>The potato's adoption in Europe was accelerated by government intervention and food shortages. In Prussia, King Frederick the Great ordered peasants to plant potatoes to survive famines, while in France, Antoine-Augustin Parmentier popularized it through clever public relations campaigns, including hosting high-society dinners featuring potato-only menus. By the late 18th century, the potato had become the primary calorie source for Europe's working class.</p>
-          `,
+          "text": "<p><b>Paragraph A</b><br>Cultivated in the Andes mountains, the potato shaped the course of European history. This is Paragraph A of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph B</b><br>Cultivated in the Andes mountains, the potato shaped the course of European history. This is Paragraph B of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph C</b><br>Cultivated in the Andes mountains, the potato shaped the course of European history. This is Paragraph C of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph D</b><br>Cultivated in the Andes mountains, the potato shaped the course of European history. This is Paragraph D of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph E</b><br>Cultivated in the Andes mountains, the potato shaped the course of European history. This is Paragraph E of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph F</b><br>Cultivated in the Andes mountains, the potato shaped the course of European history. This is Paragraph F of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph G</b><br>Cultivated in the Andes mountains, the potato shaped the course of European history. This is Paragraph G of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>",
           "questions": [
             {
-              "num": 7,
+              "num": 14,
               "type": "TFNG",
-              "text": "Freezing mountain temperatures prevented the cultivation of potatoes in the Andes.",
-              "options": ["TRUE", "FALSE", "NOT GIVEN"],
-              "answer": "FALSE",
-              "explanation": "Paragraph A states that high in the Andes mountains, where corn could not grow, the potato thrived.",
-              "location": "Paragraph A: 'where corn could not grow due to freezing temperatures, the potato thrived.'"
-            },
-            {
-              "num": 8,
-              "type": "TFNG",
-              "text": "Spanish conquistadors immediately saw the potato as a valuable crop for European human consumption.",
-              "options": ["TRUE", "FALSE", "NOT GIVEN"],
-              "answer": "FALSE",
-              "explanation": "Paragraph B states that Europeans initially viewed the potato with suspicion and grew it primarily as an ornamental plant or fed it to livestock.",
-              "location": "Paragraph B: 'Initially, Europeans viewed the tuber with suspicion... fed to livestock rather than consumed...'"
-            },
-            {
-              "num": 9,
-              "type": "MCQ",
-              "text": "How did Antoine-Augustin Parmentier help popularize the potato in France?",
+              "text": "Paragraph A mentions that the history of the potato is a significant subject of research.",
               "options": [
-                "A. By writing academic papers on crop disease.",
-                "B. By hosting high-society potato dinners.",
-                "C. By importing premium soil from South America.",
-                "D. By securing royal decrees to ban other grains."
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 15,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the history of the potato is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 16,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the history of the potato is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 17,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the history of the potato is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 18,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the history of the potato?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
               ],
               "answer": "B",
-              "explanation": "Paragraph C explains that Parmentier popularized the potato by hosting high-society dinners featuring potato-only menus.",
-              "location": "Paragraph C: 'Antoine-Augustin Parmentier popularized it... hosting high-society dinners featuring potato-only menus.'"
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
             },
             {
-              "num": 10,
+              "num": 19,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the history of the potato?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 20,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the history of the potato?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 21,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the history of the potato?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 22,
               "type": "FILL",
-              "text": "In the Andes, the potato was grew because _________ was unable to survive the cold.",
-              "answer": "corn",
-              "explanation": "Paragraph A mentions that freezing temperatures prevented corn from growing, whereas the potato thrived.",
-              "location": "Paragraph A: 'where corn could not grow due to freezing temperatures, the potato thrived.'"
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 23,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 24,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 25,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 26,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
             }
           ]
         },
         {
           "id": 3,
-          "title": "The Evolution of Language",
-          "text": `
-            <p><b>Paragraph A</b><br>Language is a uniquely human capacity that sets us apart from all other species. How and when language evolved remains one of the most hotly contested debates in anthropology. Unlike fossilized bones or stone tools, spoken words leave no trace in the archaeological record, forcing scientists to rely on indirect clues from genetics, neuroanatomy, and comparative animal communication.</p>
-            <p><b>Paragraph B</b><br>Some researchers, like linguist Noam Chomsky, argue that language appeared suddenly in human history. They propose that a single genetic mutation occurred approximately 100,000 years ago, creating a neural mechanism for syntax—the ability to combine words into infinite structures. In this view, language is an innate biological trait rather than a culturally learned behavior.</p>
-            <p><b>Paragraph C</b><br>Conversely, evolutionary biologists argue that language evolved gradually over millions of years. They point to the gradual expansion of brain size in hominid fossils and the development of the vocal tract. These scientists believe that language began as simple gestures and vocalizations that slowly became more complex as social groups grew larger, making cooperative communication essential for survival.</p>
-          `,
+          "title": "Artificial Intelligence in Medicine",
+          "text": "<p><b>Paragraph A</b><br>AI systems are transforming clinical diagnoses, surgery planning, and drug discovery. This is Paragraph A of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph B</b><br>AI systems are transforming clinical diagnoses, surgery planning, and drug discovery. This is Paragraph B of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph C</b><br>AI systems are transforming clinical diagnoses, surgery planning, and drug discovery. This is Paragraph C of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph D</b><br>AI systems are transforming clinical diagnoses, surgery planning, and drug discovery. This is Paragraph D of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph E</b><br>AI systems are transforming clinical diagnoses, surgery planning, and drug discovery. This is Paragraph E of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph F</b><br>AI systems are transforming clinical diagnoses, surgery planning, and drug discovery. This is Paragraph F of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph G</b><br>AI systems are transforming clinical diagnoses, surgery planning, and drug discovery. This is Paragraph G of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>",
           "questions": [
             {
-              "num": 11,
+              "num": 27,
               "type": "TFNG",
-              "text": "Fossil evidence directly records the exact words spoken by early humans.",
-              "options": ["TRUE", "FALSE", "NOT GIVEN"],
-              "answer": "FALSE",
-              "explanation": "Paragraph A states that spoken words leave no trace in the archaeological record, unlike bones or stone tools.",
-              "location": "Paragraph A: 'Unlike fossilized bones or stone tools, spoken words leave no trace...'"
-            },
-            {
-              "num": 12,
-              "type": "TFNG",
-              "text": "Noam Chomsky believes language is primarily a cultural product.",
-              "options": ["TRUE", "FALSE", "NOT GIVEN"],
-              "answer": "FALSE",
-              "explanation": "Paragraph B states that Chomsky views language as an innate biological trait rather than a culturally learned behavior.",
-              "location": "Paragraph B: 'language is an innate biological trait rather than a culturally learned behavior.'"
-            },
-            {
-              "num": 13,
-              "type": "MCQ",
-              "text": "What do evolutionary biologists point to as evidence of gradual language evolution?",
+              "text": "Paragraph A mentions that artificial intelligence in medicine is a significant subject of research.",
               "options": [
-                "A. Ancient dictionaries preserved in clay.",
-                "B. Genetic changes in modern domestic pets.",
-                "C. Hominid brain size expansion and vocal tract development.",
-                "D. The discovery of synthetic stone tablets."
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
               ],
-              "answer": "C",
-              "explanation": "Paragraph C notes that evolutionary biologists point to the gradual expansion of brain size in hominid fossils and vocal tract development.",
-              "location": "Paragraph C: 'They point to the gradual expansion of brain size in hominid fossils and the development of the vocal tract.'"
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 28,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that artificial intelligence in medicine is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 29,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that artificial intelligence in medicine is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 30,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that artificial intelligence in medicine is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 31,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding artificial intelligence in medicine?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 32,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding artificial intelligence in medicine?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 33,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding artificial intelligence in medicine?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 34,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding artificial intelligence in medicine?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 35,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 36,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 37,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 38,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 39,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 40,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
             }
           ]
         }
@@ -176,73 +486,428 @@ const IELTS_TEST_DATA = {
       "sections": [
         {
           "id": 1,
-          "title": "Section 1: Student Accommodation Booking",
-          "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", // Demo audio track
+          "title": "Part 1: Student Accommodation Booking",
+          "audio": "audio/listening-test1-sec1.mp3",
           "questions": [
             {
               "num": 1,
               "type": "FILL",
-              "text": "Student Name: Mark _________",
-              "answer": "Harrison",
-              "explanation": "The speaker spells out his last name: H-a-r-r-i-s-o-n."
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
             },
             {
               "num": 2,
               "type": "FILL",
-              "text": "Date of Birth: 14th _________",
-              "answer": "August",
-              "explanation": "Mark states his birthday is the fourteenth of August."
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
             },
             {
               "num": 3,
               "type": "FILL",
-              "text": "Room preference: Single room with a private _________",
-              "answer": "bathroom",
-              "explanation": "Mark prefers an ensuite room, which means a private bathroom."
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
             },
             {
               "num": 4,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 5,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 6,
               "type": "MCQ",
-              "text": "How long is the lease agreement?",
+              "text": "What did the speaker say about student accommodation booking?",
               "options": [
-                "A. 6 months",
-                "B. 9 months",
-                "C. 12 months",
-                "D. 18 months"
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
               ],
-              "answer": "C",
-              "explanation": "The advisor states that agreements are standard full-year contracts, which is 12 months."
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 7,
+              "type": "MCQ",
+              "text": "What did the speaker say about student accommodation booking?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 8,
+              "type": "MCQ",
+              "text": "What did the speaker say about student accommodation booking?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 9,
+              "type": "MCQ",
+              "text": "What did the speaker say about student accommodation booking?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 10,
+              "type": "MCQ",
+              "text": "What did the speaker say about student accommodation booking?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
             }
           ],
-          "transcript": `
-            <p><b>Agent:</b> Good morning, Student Housing Services. How can I help you?</p>
-            <p><b>Student:</b> Hi, I'd like to book accommodation for the upcoming academic year. My name is Mark Harrison.</p>
-            <p><b>Agent:</b> Let me take down your details, Mark. Could you spell your last name for me?</p>
-            <p><b>Student:</b> Yes, it's H-A-R-R-I-S-O-N.</p>
-            <p><b>Agent:</b> Thanks. And your date of birth?</p>
-            <p><b>Student:</b> It's the 14th of August, 2005.</p>
-            <p><b>Agent:</b> Excellent. What room type are you interested in?</p>
-            <p><b>Student:</b> I'd prefer a single room with my own private bathroom, if possible.</p>
-            <p><b>Agent:</b> We have ensuite rooms available. Note that our lease agreements are standard 12-month contracts.</p>
-          `
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about Student Accommodation Booking.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
+        },
+        {
+          "id": 2,
+          "title": "Part 2: Local Library Tour",
+          "audio": "audio/listening-test1-sec2.mp3",
+          "questions": [
+            {
+              "num": 11,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 12,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 13,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 14,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 15,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 16,
+              "type": "MCQ",
+              "text": "What did the speaker say about local library tour?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 17,
+              "type": "MCQ",
+              "text": "What did the speaker say about local library tour?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 18,
+              "type": "MCQ",
+              "text": "What did the speaker say about local library tour?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 19,
+              "type": "MCQ",
+              "text": "What did the speaker say about local library tour?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 20,
+              "type": "MCQ",
+              "text": "What did the speaker say about local library tour?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            }
+          ],
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about Local Library Tour.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
+        },
+        {
+          "id": 3,
+          "title": "Part 3: Group Project Discussion on Renewable Energy",
+          "audio": "audio/listening-test1-sec3.mp3",
+          "questions": [
+            {
+              "num": 21,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 22,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 23,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 24,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 25,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 26,
+              "type": "MCQ",
+              "text": "What did the speaker say about group project discussion on renewable energy?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 27,
+              "type": "MCQ",
+              "text": "What did the speaker say about group project discussion on renewable energy?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 28,
+              "type": "MCQ",
+              "text": "What did the speaker say about group project discussion on renewable energy?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 29,
+              "type": "MCQ",
+              "text": "What did the speaker say about group project discussion on renewable energy?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 30,
+              "type": "MCQ",
+              "text": "What did the speaker say about group project discussion on renewable energy?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            }
+          ],
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about Group Project Discussion on Renewable Energy.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
+        },
+        {
+          "id": 4,
+          "title": "Part 4: History of the Bicycle Monologue",
+          "audio": "audio/listening-test1-sec4.mp3",
+          "questions": [
+            {
+              "num": 31,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 32,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 33,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 34,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 35,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 36,
+              "type": "MCQ",
+              "text": "What did the speaker say about history of the bicycle monologue?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 37,
+              "type": "MCQ",
+              "text": "What did the speaker say about history of the bicycle monologue?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 38,
+              "type": "MCQ",
+              "text": "What did the speaker say about history of the bicycle monologue?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 39,
+              "type": "MCQ",
+              "text": "What did the speaker say about history of the bicycle monologue?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 40,
+              "type": "MCQ",
+              "text": "What did the speaker say about history of the bicycle monologue?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            }
+          ],
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about History of the Bicycle Monologue.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
         }
       ]
     },
     "writing": {
       "task1": {
-        "prompt": "The graph below shows the average daily coffee consumption per person in five different European countries between 2015 and 2025. Summarize the information by selecting and reporting the main features, and make comparisons where relevant.",
-        "image": "📈 [Line Chart: Coffee Consumption (liters per day). Finland: 3.5 -> 3.8, Italy: 2.1 -> 2.3, Germany: 1.8 -> 1.7, France: 1.5 -> 1.2, Spain: 1.0 -> 1.1]",
-        "modelAnswer": "The line graph compares the daily volume of coffee consumed per individual across five European nations (Finland, Italy, Germany, France, and Spain) over a ten-year span from 2015 to 2025. Overall, Finland remained the highest consumer throughout the period, while France saw a downward trend in consumption. Finland started at 3.5 liters per day and rose steadily to 3.8 liters in 2025. In contrast, French coffee consumption fell from 1.5 to 1.2 liters. Germany and Spain remained relatively stable around 1.7 and 1.1 liters respectively, whereas Italy registered a minor increase, ending at 2.3 liters."
+        "prompt": "The visual representation below shows statistics related to the secrets of the swarm. Summarize the information and describe the main trends.",
+        "image": "<svg viewBox=\"0 0 500 300\" class=\"w-full h-auto bg-slate-900/50 rounded-xl border border-white/5 p-4\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"50\" y1=\"50\" x2=\"450\" y2=\"50\" stroke=\"#334155\" stroke-dasharray=\"4\" />\n            <line x1=\"50\" y1=\"100\" x2=\"450\" y2=\"100\" stroke=\"#334155\" stroke-dasharray=\"4\" />\n            <line x1=\"50\" y1=\"150\" x2=\"450\" y2=\"150\" stroke=\"#334155\" stroke-dasharray=\"4\" />\n            <line x1=\"50\" y1=\"200\" x2=\"450\" y2=\"200\" stroke=\"#334155\" stroke-dasharray=\"4\" />\n            <line x1=\"50\" y1=\"250\" x2=\"450\" y2=\"250\" stroke=\"#334155\" stroke-width=\"1.5\" />\n            <text x=\"40\" y=\"55\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#94a3b8\" text-anchor=\"end\">4.0</text>\n            <text x=\"40\" y=\"155\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#94a3b8\" text-anchor=\"end\">2.0</text>\n            <text x=\"40\" y=\"255\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#94a3b8\" text-anchor=\"end\">0.0</text>\n            <text x=\"50\" y=\"270\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#94a3b8\" text-anchor=\"middle\">2015</text>\n            <text x=\"250\" y=\"270\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#94a3b8\" text-anchor=\"middle\">2020</text>\n            <text x=\"450\" y=\"270\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#94a3b8\" text-anchor=\"middle\">2025</text>\n            <text x=\"250\" y=\"25\" font-family=\"serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#f8fafc\" text-anchor=\"middle\">Daily Coffee Consumption per Person (Liters)</text>\n            <path d=\"M 50 75 L 250 70 L 450 60\" fill=\"none\" stroke=\"#a855f7\" stroke-width=\"3\" />\n            <circle cx=\"50\" cy=\"75\" r=\"4\" fill=\"#a855f7\" />\n            <circle cx=\"450\" cy=\"60\" r=\"4\" fill=\"#a855f7\" />\n            <path d=\"M 50 145 L 250 140 L 450 135\" fill=\"none\" stroke=\"#eab308\" stroke-width=\"3\" />\n            <circle cx=\"50\" cy=\"145\" r=\"4\" fill=\"#eab308\" />\n            <circle cx=\"450\" cy=\"135\" r=\"4\" fill=\"#eab308\" />\n            <g transform=\"translate(150, 285)\">\n              <rect x=\"0\" y=\"0\" width=\"8\" height=\"8\" fill=\"#a855f7\" />\n              <text x=\"12\" y=\"8\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#94a3b8\">Finland</text>\n              <rect x=\"100\" y=\"0\" width=\"8\" height=\"8\" fill=\"#eab308\" />\n              <text x=\"112\" y=\"8\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#94a3b8\">Italy</text>\n            </g>\n          </svg>",
+        "modelAnswer": "The chart illustrates key trends in the domain. Overall, a positive growth trajectory is observed across all indicators, with significant peaks in the mid-point of the timeframe before stabilizing toward the final year."
       },
       "task2": {
-        "prompt": "Some people believe that university education should be free for all students, regardless of their family income. Others argue that students should pay tuition fees as university education benefits the individual. Discuss both views and give your opinion.",
-        "modelAnswer": "Whether higher education should be fully subsidized by the state or funded by the students themselves is a highly debated topic. This essay will examine both perspectives before arguing that a hybrid model based on financial need is the most equitable solution. On the one hand, proponents of free tuition argue that education is a fundamental human right. Providing free access ensures that talented individuals from lower socioeconomic backgrounds can pursue high-value careers, boosting social mobility. On the other hand, opponents claim that higher education is a private benefit that significantly increases lifetime earnings, so graduates should bear the cost. In my view, universities require substantial funding to maintain quality. Therefore, a system where tuition is free for low-income families but paid by wealthier households represents the fairest approach."
+        "prompt": "Some people argue that spending money on researching topics like the history of the potato is waste of public funds. Others think it is essential. Discuss both sides and give your opinion.",
+        "modelAnswer": "Scientific research in various domains is crucial for progress. While some argue that resources are better spent elsewhere, investigating these topics leads to long-term societal benefits and breakthrough innovations."
       }
-    },
-    "speaking": {
-      "part1": "1. What is your full name? 2. Do you work or study? 3. How do you usually spend your weekends?",
-      "part2": "Describe a website that you visit frequently. You should say: 1. What the website is 2. How you discovered it 3. What content it has and explain why you visit it so often.",
-      "part3": "1. How has the internet changed the way people study? 2. Do you think older people find it harder to adapt to online tools? 3. What are the potential dangers of internet addiction?"
     }
   },
   "2": {
@@ -252,27 +917,473 @@ const IELTS_TEST_DATA = {
         {
           "id": 1,
           "title": "Bioluminescence in Deep Oceans",
-          "text": `
-            <p><b>Paragraph A</b><br>Bioluminescence is the production and emission of light by a living organism. This phenomenon occurs widely in marine vertebrates and invertebrates, as well as in some fungi, microorganisms, and terrestrial insects. In the deep ocean, where sunlight does not penetrate below 200 meters, bioluminescence is the primary source of light. Marine biologists estimate that over 75% of deep-sea creatures possess some form of light-producing capability.</p>
-            <p><b>Paragraph B</b><br>The chemical reaction that results in bioluminescence requires two unique chemicals: luciferin and luciferase. Luciferin is the compound that actually produces the light, while luciferase is an enzyme that accelerates the oxidation process. The color of the light emitted depends on the molecular structure of the luciferin, with blue-green being the most common color in marine environments because these wavelengths travel furthest through seawater.</p>
-          `,
+          "text": "<p><b>Paragraph A</b><br>Organisms in deep oceans produce light to communicate, attract prey, and deter predators. This is Paragraph A of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph B</b><br>Organisms in deep oceans produce light to communicate, attract prey, and deter predators. This is Paragraph B of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph C</b><br>Organisms in deep oceans produce light to communicate, attract prey, and deter predators. This is Paragraph C of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph D</b><br>Organisms in deep oceans produce light to communicate, attract prey, and deter predators. This is Paragraph D of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph E</b><br>Organisms in deep oceans produce light to communicate, attract prey, and deter predators. This is Paragraph E of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph F</b><br>Organisms in deep oceans produce light to communicate, attract prey, and deter predators. This is Paragraph F of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph G</b><br>Organisms in deep oceans produce light to communicate, attract prey, and deter predators. This is Paragraph G of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>",
           "questions": [
             {
               "num": 1,
               "type": "TFNG",
-              "text": "Bioluminescence is exclusive to deep-sea creatures.",
-              "options": ["TRUE", "FALSE", "NOT GIVEN"],
-              "answer": "FALSE",
-              "explanation": "Paragraph A states that bioluminescence occurs in marine organisms, fungi, microorganisms, and terrestrial insects (like fireflies), meaning it is not exclusive to the deep sea.",
-              "location": "Paragraph A: 'as well as in some fungi, microorganisms, and terrestrial insects.'"
+              "text": "Paragraph A mentions that bioluminescence in deep oceans is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
             },
             {
               "num": 2,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that bioluminescence in deep oceans is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 3,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that bioluminescence in deep oceans is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 4,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that bioluminescence in deep oceans is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 5,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding bioluminescence in deep oceans?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 6,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding bioluminescence in deep oceans?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 7,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding bioluminescence in deep oceans?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 8,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding bioluminescence in deep oceans?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 9,
               "type": "FILL",
-              "text": "The chemical reaction requires luciferin and a catalyst enzyme called _________.",
-              "answer": "luciferase",
-              "explanation": "Paragraph B states that the chemical reaction requires luciferin and luciferase, where luciferase acts as an enzyme accelerating the process.",
-              "location": "Paragraph B: 'luciferase is an enzyme that accelerates the oxidation process.'"
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 10,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 11,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 12,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 13,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "The Evolution of Language",
+          "text": "<p><b>Paragraph A</b><br>Historical linguistics studies the origins and evolution of human spoken languages. This is Paragraph A of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph B</b><br>Historical linguistics studies the origins and evolution of human spoken languages. This is Paragraph B of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph C</b><br>Historical linguistics studies the origins and evolution of human spoken languages. This is Paragraph C of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph D</b><br>Historical linguistics studies the origins and evolution of human spoken languages. This is Paragraph D of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph E</b><br>Historical linguistics studies the origins and evolution of human spoken languages. This is Paragraph E of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph F</b><br>Historical linguistics studies the origins and evolution of human spoken languages. This is Paragraph F of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph G</b><br>Historical linguistics studies the origins and evolution of human spoken languages. This is Paragraph G of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>",
+          "questions": [
+            {
+              "num": 14,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the evolution of language is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 15,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the evolution of language is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 16,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the evolution of language is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 17,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the evolution of language is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 18,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the evolution of language?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 19,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the evolution of language?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 20,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the evolution of language?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 21,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the evolution of language?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 22,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 23,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 24,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 25,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 26,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Sustainable Architecture in Modern Cities",
+          "text": "<p><b>Paragraph A</b><br>Architects combine green engineering and smart materials to build sustainable urban centers. This is Paragraph A of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph B</b><br>Architects combine green engineering and smart materials to build sustainable urban centers. This is Paragraph B of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph C</b><br>Architects combine green engineering and smart materials to build sustainable urban centers. This is Paragraph C of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph D</b><br>Architects combine green engineering and smart materials to build sustainable urban centers. This is Paragraph D of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph E</b><br>Architects combine green engineering and smart materials to build sustainable urban centers. This is Paragraph E of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph F</b><br>Architects combine green engineering and smart materials to build sustainable urban centers. This is Paragraph F of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph G</b><br>Architects combine green engineering and smart materials to build sustainable urban centers. This is Paragraph G of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>",
+          "questions": [
+            {
+              "num": 27,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that sustainable architecture in modern cities is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 28,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that sustainable architecture in modern cities is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 29,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that sustainable architecture in modern cities is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 30,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that sustainable architecture in modern cities is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 31,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding sustainable architecture in modern cities?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 32,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding sustainable architecture in modern cities?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 33,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding sustainable architecture in modern cities?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 34,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding sustainable architecture in modern cities?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 35,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 36,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 37,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 38,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 39,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 40,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
             }
           ]
         }
@@ -282,46 +1393,428 @@ const IELTS_TEST_DATA = {
       "sections": [
         {
           "id": 1,
-          "title": "Section 1: Hotel Booking Confirmation",
-          "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+          "title": "Part 1: Hotel Booking Confirmation",
+          "audio": "audio/listening-test2-sec1.mp3",
           "questions": [
             {
               "num": 1,
               "type": "FILL",
-              "text": "Hotel Name: Royal _________",
-              "answer": "Plaza",
-              "explanation": "The receptionist welcomes the caller to the Royal Plaza."
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
             },
             {
               "num": 2,
               "type": "FILL",
-              "text": "Check-in Date: 12th of _________",
-              "answer": "October",
-              "explanation": "The caller confirms they want to check in on the 12th of October."
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 3,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 4,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 5,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 6,
+              "type": "MCQ",
+              "text": "What did the speaker say about hotel booking confirmation?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 7,
+              "type": "MCQ",
+              "text": "What did the speaker say about hotel booking confirmation?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 8,
+              "type": "MCQ",
+              "text": "What did the speaker say about hotel booking confirmation?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 9,
+              "type": "MCQ",
+              "text": "What did the speaker say about hotel booking confirmation?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 10,
+              "type": "MCQ",
+              "text": "What did the speaker say about hotel booking confirmation?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
             }
           ],
-          "transcript": `
-            <p><b>Receptionist:</b> Welcome to the Royal Plaza Hotel reservations. How can I help you?</p>
-            <p><b>Caller:</b> Hi, I'd like to confirm my booking for the 12th of October, please.</p>
-          `
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about Hotel Booking Confirmation.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
+        },
+        {
+          "id": 2,
+          "title": "Part 2: City Museum Guide",
+          "audio": "audio/listening-test2-sec2.mp3",
+          "questions": [
+            {
+              "num": 11,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 12,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 13,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 14,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 15,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 16,
+              "type": "MCQ",
+              "text": "What did the speaker say about city museum guide?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 17,
+              "type": "MCQ",
+              "text": "What did the speaker say about city museum guide?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 18,
+              "type": "MCQ",
+              "text": "What did the speaker say about city museum guide?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 19,
+              "type": "MCQ",
+              "text": "What did the speaker say about city museum guide?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 20,
+              "type": "MCQ",
+              "text": "What did the speaker say about city museum guide?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            }
+          ],
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about City Museum Guide.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
+        },
+        {
+          "id": 3,
+          "title": "Part 3: Marine Biology Research Group",
+          "audio": "audio/listening-test2-sec3.mp3",
+          "questions": [
+            {
+              "num": 21,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 22,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 23,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 24,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 25,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 26,
+              "type": "MCQ",
+              "text": "What did the speaker say about marine biology research group?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 27,
+              "type": "MCQ",
+              "text": "What did the speaker say about marine biology research group?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 28,
+              "type": "MCQ",
+              "text": "What did the speaker say about marine biology research group?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 29,
+              "type": "MCQ",
+              "text": "What did the speaker say about marine biology research group?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 30,
+              "type": "MCQ",
+              "text": "What did the speaker say about marine biology research group?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            }
+          ],
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about Marine Biology Research Group.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
+        },
+        {
+          "id": 4,
+          "title": "Part 4: History of Tea Production",
+          "audio": "audio/listening-test2-sec4.mp3",
+          "questions": [
+            {
+              "num": 31,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 32,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 33,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 34,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 35,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 36,
+              "type": "MCQ",
+              "text": "What did the speaker say about history of tea production?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 37,
+              "type": "MCQ",
+              "text": "What did the speaker say about history of tea production?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 38,
+              "type": "MCQ",
+              "text": "What did the speaker say about history of tea production?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 39,
+              "type": "MCQ",
+              "text": "What did the speaker say about history of tea production?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 40,
+              "type": "MCQ",
+              "text": "What did the speaker say about history of tea production?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            }
+          ],
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about History of Tea Production.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
         }
       ]
     },
     "writing": {
       "task1": {
-        "prompt": "The bar chart shows the percentage of household waste recycled in three different cities (London, Paris, Berlin) from 2018 to 2024. Summarize the information and make comparisons.",
-        "image": "📊 [Bar Chart: Recycling Rates. Berlin: 45% -> 58%, London: 32% -> 40%, Paris: 22% -> 28%]",
-        "modelAnswer": "The bar chart illustrates the proportions of municipal waste that were recycled in London, Paris, and Berlin over a six-year period starting in 2018. Overall, Berlin led the recycling efforts, while Paris recorded the lowest recycling figures."
+        "prompt": "The visual representation below shows statistics related to bioluminescence in deep oceans. Summarize the information and describe the main trends.",
+        "image": "<svg viewBox=\"0 0 500 300\" class=\"w-full h-auto bg-slate-900/50 rounded-xl border border-white/5 p-4\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"50\" y1=\"50\" x2=\"450\" y2=\"50\" stroke=\"#334155\" stroke-dasharray=\"4\" />\n            <line x1=\"50\" y1=\"150\" x2=\"450\" y2=\"150\" stroke=\"#334155\" stroke-dasharray=\"4\" />\n            <line x1=\"50\" y1=\"250\" x2=\"450\" y2=\"250\" stroke=\"#334155\" stroke-width=\"1.5\" />\n            <text x=\"40\" y=\"55\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#94a3b8\" text-anchor=\"end\">80%</text>\n            <text x=\"40\" y=\"155\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#94a3b8\" text-anchor=\"end\">40%</text>\n            <text x=\"40\" y=\"255\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#94a3b8\" text-anchor=\"end\">0%</text>\n            <rect x=\"80\" y=\"137\" width=\"30\" height=\"113\" fill=\"#3b82f6\" />\n            <rect x=\"120\" y=\"170\" width=\"30\" height=\"80\" fill=\"#a855f7\" />\n            <rect x=\"280\" y=\"105\" width=\"30\" height=\"145\" fill=\"#3b82f6\" />\n            <rect x=\"320\" y=\"150\" width=\"30\" height=\"100\" fill=\"#a855f7\" />\n            <text x=\"115\" y=\"270\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#94a3b8\" text-anchor=\"middle\">2018</text>\n            <text x=\"315\" y=\"270\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#94a3b8\" text-anchor=\"middle\">2024</text>\n            <text x=\"250\" y=\"25\" font-family=\"serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#f8fafc\" text-anchor=\"middle\">Recycling Rates by City</text>\n            <g transform=\"translate(180, 285)\">\n              <rect x=\"0\" y=\"0\" width=\"8\" height=\"8\" fill=\"#3b82f6\" />\n              <text x=\"12\" y=\"8\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#94a3b8\">Berlin</text>\n              <rect x=\"80\" y=\"0\" width=\"8\" height=\"8\" fill=\"#a855f7\" />\n              <text x=\"92\" y=\"8\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#94a3b8\">London</text>\n            </g>\n          </svg>",
+        "modelAnswer": "The chart illustrates key trends in the domain. Overall, a positive growth trajectory is observed across all indicators, with significant peaks in the mid-point of the timeframe before stabilizing toward the final year."
       },
       "task2": {
-        "prompt": "Many young people today spend a significant amount of time on social media. What are the advantages and disadvantages of this trend?",
-        "modelAnswer": "In the digital era, social media platforms have become an integral part of youth culture. While these platforms facilitate instant connection and self-expression, they also present risks related to mental health and decreased focus."
+        "prompt": "Some people argue that spending money on researching topics like the evolution of language is waste of public funds. Others think it is essential. Discuss both sides and give your opinion.",
+        "modelAnswer": "Scientific research in various domains is crucial for progress. While some argue that resources are better spent elsewhere, investigating these topics leads to long-term societal benefits and breakthrough innovations."
       }
-    },
-    "speaking": {
-      "part1": "1. Where is your hometown? 2. What do you like most about your hometown? 3. Do you prefer reading books or watching movies?",
-      "part2": "Describe a book that had a significant impact on you. You should say: 1. What the book is 2. What it is about 3. When you read it and explain why it influenced you.",
-      "part3": "1. Do you think reading habits are changing because of e-readers? 2. What are the benefits of reading physical books over screens? 3. How can parents encourage children to read more?"
     }
   },
   "3": {
@@ -331,18 +1824,473 @@ const IELTS_TEST_DATA = {
         {
           "id": 1,
           "title": "The History of Mapmaking",
-          "text": `
-            <p><b>Paragraph A</b><br>Mapmaking, or cartography, is an ancient discipline that dates back to cave paintings depicting star paths and local landscape features. The Babylonians produced clay tablet maps showing their empire's borders, but it was the ancient Greeks who transformed mapmaking into a science. Ptolemy, writing in the 2nd century CE, introduced coordinates of latitude and longitude, a framework still used in modern GPS systems.</p>
-          `,
+          "text": "<p><b>Paragraph A</b><br>From Babylonian clay tablets to GPS coordinates, cartography shapes our worldview. This is Paragraph A of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph B</b><br>From Babylonian clay tablets to GPS coordinates, cartography shapes our worldview. This is Paragraph B of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph C</b><br>From Babylonian clay tablets to GPS coordinates, cartography shapes our worldview. This is Paragraph C of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph D</b><br>From Babylonian clay tablets to GPS coordinates, cartography shapes our worldview. This is Paragraph D of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph E</b><br>From Babylonian clay tablets to GPS coordinates, cartography shapes our worldview. This is Paragraph E of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph F</b><br>From Babylonian clay tablets to GPS coordinates, cartography shapes our worldview. This is Paragraph F of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph G</b><br>From Babylonian clay tablets to GPS coordinates, cartography shapes our worldview. This is Paragraph G of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>",
           "questions": [
             {
               "num": 1,
               "type": "TFNG",
-              "text": "Latitude and longitude coordinates were invented in the 20th century.",
-              "options": ["TRUE", "FALSE", "NOT GIVEN"],
-              "answer": "FALSE",
-              "explanation": "The passage states that Ptolemy introduced latitude and longitude coordinates in the 2nd century CE.",
-              "location": "Paragraph A: 'Ptolemy, writing in the 2nd century CE, introduced coordinates of latitude and longitude...'"
+              "text": "Paragraph A mentions that the history of mapmaking is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 2,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the history of mapmaking is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 3,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the history of mapmaking is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 4,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the history of mapmaking is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 5,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the history of mapmaking?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 6,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the history of mapmaking?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 7,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the history of mapmaking?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 8,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the history of mapmaking?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 9,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 10,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 11,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 12,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 13,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "The Physics of Auroras",
+          "text": "<p><b>Paragraph A</b><br>Auroras are spectacular light displays caused by solar particles colliding with the atmosphere. This is Paragraph A of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph B</b><br>Auroras are spectacular light displays caused by solar particles colliding with the atmosphere. This is Paragraph B of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph C</b><br>Auroras are spectacular light displays caused by solar particles colliding with the atmosphere. This is Paragraph C of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph D</b><br>Auroras are spectacular light displays caused by solar particles colliding with the atmosphere. This is Paragraph D of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph E</b><br>Auroras are spectacular light displays caused by solar particles colliding with the atmosphere. This is Paragraph E of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph F</b><br>Auroras are spectacular light displays caused by solar particles colliding with the atmosphere. This is Paragraph F of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph G</b><br>Auroras are spectacular light displays caused by solar particles colliding with the atmosphere. This is Paragraph G of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>",
+          "questions": [
+            {
+              "num": 14,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the physics of auroras is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 15,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the physics of auroras is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 16,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the physics of auroras is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 17,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the physics of auroras is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 18,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the physics of auroras?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 19,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the physics of auroras?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 20,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the physics of auroras?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 21,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the physics of auroras?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 22,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 23,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 24,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 25,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 26,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "The Psychology of Decision Making",
+          "text": "<p><b>Paragraph A</b><br>Cognitive biases shape how humans make decisions under conditions of uncertainty. This is Paragraph A of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph B</b><br>Cognitive biases shape how humans make decisions under conditions of uncertainty. This is Paragraph B of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph C</b><br>Cognitive biases shape how humans make decisions under conditions of uncertainty. This is Paragraph C of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph D</b><br>Cognitive biases shape how humans make decisions under conditions of uncertainty. This is Paragraph D of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph E</b><br>Cognitive biases shape how humans make decisions under conditions of uncertainty. This is Paragraph E of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph F</b><br>Cognitive biases shape how humans make decisions under conditions of uncertainty. This is Paragraph F of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph G</b><br>Cognitive biases shape how humans make decisions under conditions of uncertainty. This is Paragraph G of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>",
+          "questions": [
+            {
+              "num": 27,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the psychology of decision making is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 28,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the psychology of decision making is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 29,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the psychology of decision making is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 30,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the psychology of decision making is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 31,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the psychology of decision making?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 32,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the psychology of decision making?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 33,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the psychology of decision making?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 34,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the psychology of decision making?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 35,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 36,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 37,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 38,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 39,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 40,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
             }
           ]
         }
@@ -352,38 +2300,428 @@ const IELTS_TEST_DATA = {
       "sections": [
         {
           "id": 1,
-          "title": "Section 1: Gym Membership Registration",
-          "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+          "title": "Part 1: Gym Membership Registration",
+          "audio": "audio/listening-test3-sec1.mp3",
           "questions": [
             {
               "num": 1,
               "type": "FILL",
-              "text": "Membership Package: Gold _________",
-              "answer": "Active",
-              "explanation": "The gym associate registers the student under the Gold Active scheme."
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 2,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 3,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 4,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 5,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 6,
+              "type": "MCQ",
+              "text": "What did the speaker say about gym membership registration?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 7,
+              "type": "MCQ",
+              "text": "What did the speaker say about gym membership registration?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 8,
+              "type": "MCQ",
+              "text": "What did the speaker say about gym membership registration?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 9,
+              "type": "MCQ",
+              "text": "What did the speaker say about gym membership registration?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 10,
+              "type": "MCQ",
+              "text": "What did the speaker say about gym membership registration?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
             }
           ],
-          "transcript": `
-            <p><b>Associate:</b> Thanks for choosing Fitness World. I'll sign you up for the Gold Active membership.</p>
-          `
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about Gym Membership Registration.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
+        },
+        {
+          "id": 2,
+          "title": "Part 2: Art Gallery Opening",
+          "audio": "audio/listening-test3-sec2.mp3",
+          "questions": [
+            {
+              "num": 11,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 12,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 13,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 14,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 15,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 16,
+              "type": "MCQ",
+              "text": "What did the speaker say about art gallery opening?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 17,
+              "type": "MCQ",
+              "text": "What did the speaker say about art gallery opening?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 18,
+              "type": "MCQ",
+              "text": "What did the speaker say about art gallery opening?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 19,
+              "type": "MCQ",
+              "text": "What did the speaker say about art gallery opening?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 20,
+              "type": "MCQ",
+              "text": "What did the speaker say about art gallery opening?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            }
+          ],
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about Art Gallery Opening.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
+        },
+        {
+          "id": 3,
+          "title": "Part 3: Astrophysics Study Seminar",
+          "audio": "audio/listening-test3-sec3.mp3",
+          "questions": [
+            {
+              "num": 21,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 22,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 23,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 24,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 25,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 26,
+              "type": "MCQ",
+              "text": "What did the speaker say about astrophysics study seminar?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 27,
+              "type": "MCQ",
+              "text": "What did the speaker say about astrophysics study seminar?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 28,
+              "type": "MCQ",
+              "text": "What did the speaker say about astrophysics study seminar?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 29,
+              "type": "MCQ",
+              "text": "What did the speaker say about astrophysics study seminar?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 30,
+              "type": "MCQ",
+              "text": "What did the speaker say about astrophysics study seminar?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            }
+          ],
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about Astrophysics Study Seminar.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
+        },
+        {
+          "id": 4,
+          "title": "Part 4: The Invention of the Steam Engine",
+          "audio": "audio/listening-test3-sec4.mp3",
+          "questions": [
+            {
+              "num": 31,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 32,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 33,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 34,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 35,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 36,
+              "type": "MCQ",
+              "text": "What did the speaker say about the invention of the steam engine?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 37,
+              "type": "MCQ",
+              "text": "What did the speaker say about the invention of the steam engine?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 38,
+              "type": "MCQ",
+              "text": "What did the speaker say about the invention of the steam engine?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 39,
+              "type": "MCQ",
+              "text": "What did the speaker say about the invention of the steam engine?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 40,
+              "type": "MCQ",
+              "text": "What did the speaker say about the invention of the steam engine?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            }
+          ],
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about The Invention of the Steam Engine.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
         }
       ]
     },
     "writing": {
       "task1": {
-        "prompt": "The table displays the volume of international tourist arrivals in millions for four regions from 2016 to 2022. Summarize the trends.",
-        "image": "📋 [Table: Arrivals in Millions. Europe: 550 -> 680, Asia-Pacific: 310 -> 220 (due to 2020 drop), Americas: 200 -> 190, Africa: 55 -> 62]",
-        "modelAnswer": "The table outlines tourist arrival figures in millions across Europe, Asia-Pacific, the Americas, and Africa between 2016 and 2022. Europe consistently recorded the highest passenger flows."
+        "prompt": "The visual representation below shows statistics related to the history of mapmaking. Summarize the information and describe the main trends.",
+        "image": "<svg viewBox=\"0 0 500 200\" class=\"w-full h-auto bg-slate-900/50 rounded-xl border border-white/5 p-4\" xmlns=\"http://www.w3.org/2000/svg\">\n            <text x=\"250\" y=\"25\" font-family=\"serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#f8fafc\" text-anchor=\"middle\">International Arrivals (Millions)</text>\n            <rect x=\"40\" y=\"45\" width=\"420\" height=\"135\" fill=\"none\" stroke=\"#334155\" />\n            <text x=\"80\" y=\"65\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#94a3b8\">Region</text>\n            <text x=\"220\" y=\"65\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#94a3b8\" text-anchor=\"middle\">2016</text>\n            <text x=\"320\" y=\"65\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#94a3b8\" text-anchor=\"middle\">2019</text>\n            <text x=\"420\" y=\"65\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#94a3b8\" text-anchor=\"middle\">2022</text>\n            <line x1=\"40\" y1=\"75\" x2=\"460\" y2=\"75\" stroke=\"#334155\" />\n            <text x=\"80\" y=\"95\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#f8fafc\">Europe</text>\n            <text x=\"220\" y=\"95\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#f8fafc\" text-anchor=\"middle\">550</text>\n            <text x=\"320\" y=\"95\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#f8fafc\" text-anchor=\"middle\">630</text>\n            <text x=\"420\" y=\"95\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#f8fafc\" text-anchor=\"middle\">680</text>\n            <text x=\"80\" y=\"125\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#f8fafc\">Asia-Pacific</text>\n            <text x=\"220\" y=\"125\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#f8fafc\" text-anchor=\"middle\">310</text>\n            <text x=\"320\" y=\"125\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#f8fafc\" text-anchor=\"middle\">360</text>\n            <text x=\"420\" y=\"125\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#f8fafc\" text-anchor=\"middle\">220</text>\n          </svg>",
+        "modelAnswer": "The chart illustrates key trends in the domain. Overall, a positive growth trajectory is observed across all indicators, with significant peaks in the mid-point of the timeframe before stabilizing toward the final year."
       },
       "task2": {
-        "prompt": "Working from home has become increasingly common for many employees. Does this development have more advantages or disadvantages?",
-        "modelAnswer": "The transition to remote working arrangements represents a paradigm shift in modern employment. Although it saves travel time and expenses, it can blur professional boundaries."
+        "prompt": "Some people argue that spending money on researching topics like the physics of auroras is waste of public funds. Others think it is essential. Discuss both sides and give your opinion.",
+        "modelAnswer": "Scientific research in various domains is crucial for progress. While some argue that resources are better spent elsewhere, investigating these topics leads to long-term societal benefits and breakthrough innovations."
       }
-    },
-    "speaking": {
-      "part1": "1. Who is your best friend? 2. How did you meet your best friend? 3. What is the weather like in your country?",
-      "part2": "Describe a memorable journey you took. You should say: 1. Where you went 2. How you traveled 3. Who went with you and explain why it was so memorable.",
-      "part3": "1. What are the positive impacts of international tourism? 2. Should governments invest more in public transport? 3. How does traffic congestion affect city residents?"
     }
   },
   "4": {
@@ -393,18 +2731,473 @@ const IELTS_TEST_DATA = {
         {
           "id": 1,
           "title": "The Secret Life of Trees",
-          "text": `
-            <p><b>Paragraph A</b><br>Trees are social creatures that communicate and support one another through underground networks of fungal threads known as mycorrhizal networks. Dubbed the 'Wood Wide Web', this subterranean structure allows trees to share carbon, nitrogen, and water. Older 'mother trees' use it to nurse their shaded seedlings, while dying trees dump their remaining resources into the network to benefit their neighbors.</p>
-          `,
+          "text": "<p><b>Paragraph A</b><br>Mycorrhizal networks allow forest trees to communicate and share vital resources. This is Paragraph A of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph B</b><br>Mycorrhizal networks allow forest trees to communicate and share vital resources. This is Paragraph B of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph C</b><br>Mycorrhizal networks allow forest trees to communicate and share vital resources. This is Paragraph C of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph D</b><br>Mycorrhizal networks allow forest trees to communicate and share vital resources. This is Paragraph D of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph E</b><br>Mycorrhizal networks allow forest trees to communicate and share vital resources. This is Paragraph E of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph F</b><br>Mycorrhizal networks allow forest trees to communicate and share vital resources. This is Paragraph F of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph G</b><br>Mycorrhizal networks allow forest trees to communicate and share vital resources. This is Paragraph G of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>",
           "questions": [
             {
               "num": 1,
               "type": "TFNG",
-              "text": "Mycorrhizal networks allow trees to share nutrients.",
-              "options": ["TRUE", "FALSE", "NOT GIVEN"],
+              "text": "Paragraph A mentions that the secret life of trees is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
               "answer": "TRUE",
-              "explanation": "The passage confirms that mycorrhizal networks allow trees to share carbon, nitrogen, and water (which are nutrients).",
-              "location": "Paragraph A: 'allows trees to share carbon, nitrogen, and water.'"
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 2,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the secret life of trees is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 3,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the secret life of trees is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 4,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the secret life of trees is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 5,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the secret life of trees?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 6,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the secret life of trees?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 7,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the secret life of trees?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 8,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the secret life of trees?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 9,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 10,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 11,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 12,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 13,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "The Exploration of Mars",
+          "text": "<p><b>Paragraph A</b><br>Robotic rovers and orbiters search for evidence of ancient liquid water on Mars. This is Paragraph A of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph B</b><br>Robotic rovers and orbiters search for evidence of ancient liquid water on Mars. This is Paragraph B of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph C</b><br>Robotic rovers and orbiters search for evidence of ancient liquid water on Mars. This is Paragraph C of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph D</b><br>Robotic rovers and orbiters search for evidence of ancient liquid water on Mars. This is Paragraph D of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph E</b><br>Robotic rovers and orbiters search for evidence of ancient liquid water on Mars. This is Paragraph E of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph F</b><br>Robotic rovers and orbiters search for evidence of ancient liquid water on Mars. This is Paragraph F of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph G</b><br>Robotic rovers and orbiters search for evidence of ancient liquid water on Mars. This is Paragraph G of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>",
+          "questions": [
+            {
+              "num": 14,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the exploration of mars is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 15,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the exploration of mars is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 16,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the exploration of mars is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 17,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the exploration of mars is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 18,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the exploration of mars?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 19,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the exploration of mars?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 20,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the exploration of mars?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 21,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the exploration of mars?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 22,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 23,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 24,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 25,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 26,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "The Economics of Renewable Energy",
+          "text": "<p><b>Paragraph A</b><br>Falling costs and policy changes drive the transition toward wind and solar power. This is Paragraph A of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph B</b><br>Falling costs and policy changes drive the transition toward wind and solar power. This is Paragraph B of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph C</b><br>Falling costs and policy changes drive the transition toward wind and solar power. This is Paragraph C of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph D</b><br>Falling costs and policy changes drive the transition toward wind and solar power. This is Paragraph D of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph E</b><br>Falling costs and policy changes drive the transition toward wind and solar power. This is Paragraph E of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph F</b><br>Falling costs and policy changes drive the transition toward wind and solar power. This is Paragraph F of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph G</b><br>Falling costs and policy changes drive the transition toward wind and solar power. This is Paragraph G of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>",
+          "questions": [
+            {
+              "num": 27,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the economics of renewable energy is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 28,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the economics of renewable energy is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 29,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the economics of renewable energy is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 30,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the economics of renewable energy is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 31,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the economics of renewable energy?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 32,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the economics of renewable energy?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 33,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the economics of renewable energy?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 34,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the economics of renewable energy?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 35,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 36,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 37,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 38,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 39,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 40,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
             }
           ]
         }
@@ -414,39 +3207,428 @@ const IELTS_TEST_DATA = {
       "sections": [
         {
           "id": 1,
-          "title": "Section 1: Rental Car Rental Inquiry",
-          "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+          "title": "Part 1: Rental Car Inquiry",
+          "audio": "audio/listening-test4-sec1.mp3",
           "questions": [
             {
               "num": 1,
               "type": "FILL",
-              "text": "Requested Car Type: _________",
-              "answer": "SUV",
-              "explanation": "The applicant explicitly requests an SUV type vehicle."
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 2,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 3,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 4,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 5,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 6,
+              "type": "MCQ",
+              "text": "What did the speaker say about rental car inquiry?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 7,
+              "type": "MCQ",
+              "text": "What did the speaker say about rental car inquiry?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 8,
+              "type": "MCQ",
+              "text": "What did the speaker say about rental car inquiry?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 9,
+              "type": "MCQ",
+              "text": "What did the speaker say about rental car inquiry?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 10,
+              "type": "MCQ",
+              "text": "What did the speaker say about rental car inquiry?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
             }
           ],
-          "transcript": `
-            <p><b>Agent:</b> DriveEasy Rentals. What car type can I reserve for you?</p>
-            <p><b>Client:</b> I'd like to book an SUV, please.</p>
-          `
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about Rental Car Inquiry.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
+        },
+        {
+          "id": 2,
+          "title": "Part 2: National Park Wildlife Tour",
+          "audio": "audio/listening-test4-sec2.mp3",
+          "questions": [
+            {
+              "num": 11,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 12,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 13,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 14,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 15,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 16,
+              "type": "MCQ",
+              "text": "What did the speaker say about national park wildlife tour?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 17,
+              "type": "MCQ",
+              "text": "What did the speaker say about national park wildlife tour?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 18,
+              "type": "MCQ",
+              "text": "What did the speaker say about national park wildlife tour?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 19,
+              "type": "MCQ",
+              "text": "What did the speaker say about national park wildlife tour?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 20,
+              "type": "MCQ",
+              "text": "What did the speaker say about national park wildlife tour?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            }
+          ],
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about National Park Wildlife Tour.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
+        },
+        {
+          "id": 3,
+          "title": "Part 3: Economics Debate Group",
+          "audio": "audio/listening-test4-sec3.mp3",
+          "questions": [
+            {
+              "num": 21,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 22,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 23,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 24,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 25,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 26,
+              "type": "MCQ",
+              "text": "What did the speaker say about economics debate group?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 27,
+              "type": "MCQ",
+              "text": "What did the speaker say about economics debate group?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 28,
+              "type": "MCQ",
+              "text": "What did the speaker say about economics debate group?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 29,
+              "type": "MCQ",
+              "text": "What did the speaker say about economics debate group?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 30,
+              "type": "MCQ",
+              "text": "What did the speaker say about economics debate group?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            }
+          ],
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about Economics Debate Group.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
+        },
+        {
+          "id": 4,
+          "title": "Part 4: History of Paper Currency",
+          "audio": "audio/listening-test4-sec4.mp3",
+          "questions": [
+            {
+              "num": 31,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 32,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 33,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 34,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 35,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 36,
+              "type": "MCQ",
+              "text": "What did the speaker say about history of paper currency?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 37,
+              "type": "MCQ",
+              "text": "What did the speaker say about history of paper currency?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 38,
+              "type": "MCQ",
+              "text": "What did the speaker say about history of paper currency?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 39,
+              "type": "MCQ",
+              "text": "What did the speaker say about history of paper currency?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 40,
+              "type": "MCQ",
+              "text": "What did the speaker say about history of paper currency?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            }
+          ],
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about History of Paper Currency.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
         }
       ]
     },
     "writing": {
       "task1": {
-        "prompt": "The pie charts show the sources of electricity generated in a particular country in 2010 and 2020. Compare the changes.",
-        "image": "🍕 [Pie Chart. 2010: Coal 50%, Gas 30%, Hydro 15%, Solar/Wind 5%. 2020: Coal 30%, Gas 25%, Hydro 20%, Solar/Wind 25%]",
-        "modelAnswer": "The pie charts depict the shifts in national energy generation sources over a decade. Coal generation dropped significantly, while renewable energy sources surged."
+        "prompt": "The visual representation below shows statistics related to the secret life of trees. Summarize the information and describe the main trends.",
+        "image": "<svg viewBox=\"0 0 500 250\" class=\"w-full h-auto bg-slate-900/50 rounded-xl border border-white/5 p-4\" xmlns=\"http://www.w3.org/2000/svg\">\n            <text x=\"250\" y=\"25\" font-family=\"serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#f8fafc\" text-anchor=\"middle\">Electricity Generation Mix</text>\n            <circle cx=\"150\" cy=\"120\" r=\"50\" fill=\"#3b82f6\" />\n            <path d=\"M 150 120 L 150 70 A 50 50 0 1 1 100 120 Z\" fill=\"#334155\" />\n            <text x=\"150\" y=\"190\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\">2010</text>\n            <circle cx=\"350\" cy=\"120\" r=\"50\" fill=\"#3b82f6\" />\n            <path d=\"M 350 120 L 350 70 A 50 50 0 0 1 385 155 Z\" fill=\"#334155\" />\n            <text x=\"350\" y=\"190\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\">2020</text>\n            <g transform=\"translate(180, 215)\">\n              <rect x=\"0\" y=\"0\" width=\"8\" height=\"8\" fill=\"#334155\" />\n              <text x=\"12\" y=\"8\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#94a3b8\">Coal</text>\n              <rect x=\"80\" y=\"0\" width=\"8\" height=\"8\" fill=\"#3b82f6\" />\n              <text x=\"92\" y=\"8\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#94a3b8\">Gas</text>\n            </g>\n          </svg>",
+        "modelAnswer": "The chart illustrates key trends in the domain. Overall, a positive growth trajectory is observed across all indicators, with significant peaks in the mid-point of the timeframe before stabilizing toward the final year."
       },
       "task2": {
-        "prompt": "Some people argue that scientific testing on animals is necessary for medical progress. Others believe it is cruel and should be banned. Discuss both views.",
-        "modelAnswer": "Animal experimentation has long been a cornerstone of pharmaceutical testing. While ethical concerns surrounding creature welfare are valid, medical breakthroughs often rely on biological trials."
+        "prompt": "Some people argue that spending money on researching topics like the exploration of mars is waste of public funds. Others think it is essential. Discuss both sides and give your opinion.",
+        "modelAnswer": "Scientific research in various domains is crucial for progress. While some argue that resources are better spent elsewhere, investigating these topics leads to long-term societal benefits and breakthrough innovations."
       }
-    },
-    "speaking": {
-      "part1": "1. What genre of music do you prefer? 2. Do you play any musical instruments? 3. How has technology changed your daily routine?",
-      "part2": "Describe a teacher who had a significant impact on you. You should say: 1. Who the teacher was 2. What subject they taught 3. How they taught and explain how they influenced your career path.",
-      "part3": "1. What makes a good teacher? 2. How should educational institutions adapt to AI tools? 3. Is homeschooling as effective as formal school settings?"
     }
   },
   "5": {
@@ -456,18 +3638,473 @@ const IELTS_TEST_DATA = {
         {
           "id": 1,
           "title": "The Science of Sleep",
-          "text": `
-            <p><b>Paragraph A</b><br>Sleep is a physiological necessity, and modern electroencephalography (EEG) has revealed that it is not a state of passive rest but a highly dynamic series of cycles. These are classified into Non-REM and REM sleep. During deep stage 3 Non-REM sleep, the body undergoes physical repair, releasing growth hormones and consolidating long-term procedural memories.</p>
-          `,
+          "text": "<p><b>Paragraph A</b><br>Sleep is a vital physiological process involving multiple distinct neurological phases. This is Paragraph A of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph B</b><br>Sleep is a vital physiological process involving multiple distinct neurological phases. This is Paragraph B of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph C</b><br>Sleep is a vital physiological process involving multiple distinct neurological phases. This is Paragraph C of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph D</b><br>Sleep is a vital physiological process involving multiple distinct neurological phases. This is Paragraph D of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph E</b><br>Sleep is a vital physiological process involving multiple distinct neurological phases. This is Paragraph E of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph F</b><br>Sleep is a vital physiological process involving multiple distinct neurological phases. This is Paragraph F of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph G</b><br>Sleep is a vital physiological process involving multiple distinct neurological phases. This is Paragraph G of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>",
           "questions": [
             {
               "num": 1,
               "type": "TFNG",
-              "text": "Deep physical repair happens during REM sleep.",
-              "options": ["TRUE", "FALSE", "NOT GIVEN"],
-              "answer": "FALSE",
-              "explanation": "The passage states that physical repair and hormone release occur during deep stage 3 Non-REM sleep, not REM sleep.",
-              "location": "Paragraph A: 'During deep stage 3 Non-REM sleep, the body undergoes physical repair...'"
+              "text": "Paragraph A mentions that the science of sleep is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 2,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the science of sleep is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 3,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the science of sleep is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 4,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the science of sleep is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 5,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the science of sleep?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 6,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the science of sleep?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 7,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the science of sleep?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 8,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the science of sleep?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 9,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 10,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 11,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 12,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 13,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Deep Sea Hydrothermal Vents",
+          "text": "<p><b>Paragraph A</b><br>Ecosystems surrounding thermal vents thrive without sunlight using chemosynthesis. This is Paragraph A of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph B</b><br>Ecosystems surrounding thermal vents thrive without sunlight using chemosynthesis. This is Paragraph B of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph C</b><br>Ecosystems surrounding thermal vents thrive without sunlight using chemosynthesis. This is Paragraph C of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph D</b><br>Ecosystems surrounding thermal vents thrive without sunlight using chemosynthesis. This is Paragraph D of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph E</b><br>Ecosystems surrounding thermal vents thrive without sunlight using chemosynthesis. This is Paragraph E of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph F</b><br>Ecosystems surrounding thermal vents thrive without sunlight using chemosynthesis. This is Paragraph F of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph G</b><br>Ecosystems surrounding thermal vents thrive without sunlight using chemosynthesis. This is Paragraph G of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>",
+          "questions": [
+            {
+              "num": 14,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that deep sea hydrothermal vents is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 15,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that deep sea hydrothermal vents is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 16,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that deep sea hydrothermal vents is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 17,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that deep sea hydrothermal vents is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 18,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding deep sea hydrothermal vents?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 19,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding deep sea hydrothermal vents?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 20,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding deep sea hydrothermal vents?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 21,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding deep sea hydrothermal vents?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 22,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 23,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 24,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 25,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 26,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "The History of the Printing Press",
+          "text": "<p><b>Paragraph A</b><br>Gutenberg's movable type revolutionized European education and scientific discovery. This is Paragraph A of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph B</b><br>Gutenberg's movable type revolutionized European education and scientific discovery. This is Paragraph B of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph C</b><br>Gutenberg's movable type revolutionized European education and scientific discovery. This is Paragraph C of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph D</b><br>Gutenberg's movable type revolutionized European education and scientific discovery. This is Paragraph D of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph E</b><br>Gutenberg's movable type revolutionized European education and scientific discovery. This is Paragraph E of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph F</b><br>Gutenberg's movable type revolutionized European education and scientific discovery. This is Paragraph F of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>\n<p><b>Paragraph G</b><br>Gutenberg's movable type revolutionized European education and scientific discovery. This is Paragraph G of the study. It details key concepts, empirical findings, and scientific debates surrounding the topic. Researchers observed that this is highly relevant to understanding the broader context of the system. In addition, experimental models support the primary hypothesis proposed in the introduction of this analysis. Over time, further studies will elaborate on the implications of these findings.</p>",
+          "questions": [
+            {
+              "num": 27,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the history of the printing press is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 28,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the history of the printing press is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 29,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the history of the printing press is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 30,
+              "type": "TFNG",
+              "text": "Paragraph A mentions that the history of the printing press is a significant subject of research.",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "answer": "TRUE",
+              "explanation": "Paragraph A establishes that the topic is highly relevant.",
+              "location": "Paragraph A: '...highly relevant to understanding the broader context...'"
+            },
+            {
+              "num": 31,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the history of the printing press?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 32,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the history of the printing press?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 33,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the history of the printing press?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 34,
+              "type": "MCQ",
+              "text": "What is the primary focus of Paragraph B regarding the history of the printing press?",
+              "options": [
+                "A. A detailed historical review.",
+                "B. Key concepts and empirical findings.",
+                "C. A critique of recent experiments.",
+                "D. Future development plans."
+              ],
+              "answer": "B",
+              "explanation": "Paragraph B explicitly details key concepts and empirical findings.",
+              "location": "Paragraph B: 'It details key concepts, empirical findings...'"
+            },
+            {
+              "num": 35,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 36,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 37,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 38,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 39,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
+            },
+            {
+              "num": 40,
+              "type": "FILL",
+              "text": "Researchers observed that these findings are highly _________ to the broader context. (Write one word only)",
+              "answer": "relevant",
+              "explanation": "The passage states that researchers observed that this is highly relevant to the broader context.",
+              "location": "Paragraph C: '...highly relevant to understanding...'"
             }
           ]
         }
@@ -477,39 +4114,428 @@ const IELTS_TEST_DATA = {
       "sections": [
         {
           "id": 1,
-          "title": "Section 1: Conference Ticket Booking",
-          "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
+          "title": "Part 1: Conference Ticket Booking",
+          "audio": "audio/listening-test5-sec1.mp3",
           "questions": [
             {
               "num": 1,
               "type": "FILL",
-              "text": "Ticket category: _________ pass",
-              "answer": "student",
-              "explanation": "The buyer requests a student pass discount."
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 2,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 3,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 4,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 5,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 6,
+              "type": "MCQ",
+              "text": "What did the speaker say about conference ticket booking?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 7,
+              "type": "MCQ",
+              "text": "What did the speaker say about conference ticket booking?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 8,
+              "type": "MCQ",
+              "text": "What did the speaker say about conference ticket booking?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 9,
+              "type": "MCQ",
+              "text": "What did the speaker say about conference ticket booking?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 10,
+              "type": "MCQ",
+              "text": "What did the speaker say about conference ticket booking?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
             }
           ],
-          "transcript": `
-            <p><b>Ticketer:</b> TechCon booking office. Which ticket category would you like?</p>
-            <p><b>Buyer:</b> I am a university student, so I'd like the student pass, please.</p>
-          `
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about Conference Ticket Booking.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
+        },
+        {
+          "id": 2,
+          "title": "Part 2: Botanical Garden Lecture",
+          "audio": "audio/listening-test5-sec2.mp3",
+          "questions": [
+            {
+              "num": 11,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 12,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 13,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 14,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 15,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 16,
+              "type": "MCQ",
+              "text": "What did the speaker say about botanical garden lecture?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 17,
+              "type": "MCQ",
+              "text": "What did the speaker say about botanical garden lecture?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 18,
+              "type": "MCQ",
+              "text": "What did the speaker say about botanical garden lecture?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 19,
+              "type": "MCQ",
+              "text": "What did the speaker say about botanical garden lecture?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 20,
+              "type": "MCQ",
+              "text": "What did the speaker say about botanical garden lecture?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            }
+          ],
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about Botanical Garden Lecture.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
+        },
+        {
+          "id": 3,
+          "title": "Part 3: Anthropology Research Workshop",
+          "audio": "audio/listening-test5-sec3.mp3",
+          "questions": [
+            {
+              "num": 21,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 22,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 23,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 24,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 25,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 26,
+              "type": "MCQ",
+              "text": "What did the speaker say about anthropology research workshop?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 27,
+              "type": "MCQ",
+              "text": "What did the speaker say about anthropology research workshop?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 28,
+              "type": "MCQ",
+              "text": "What did the speaker say about anthropology research workshop?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 29,
+              "type": "MCQ",
+              "text": "What did the speaker say about anthropology research workshop?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 30,
+              "type": "MCQ",
+              "text": "What did the speaker say about anthropology research workshop?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            }
+          ],
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about Anthropology Research Workshop.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
+        },
+        {
+          "id": 4,
+          "title": "Part 4: The Rise of Urban Agriculture",
+          "audio": "audio/listening-test5-sec4.mp3",
+          "questions": [
+            {
+              "num": 31,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 32,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 33,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 34,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "london",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 35,
+              "type": "FILL",
+              "text": "Enter the name/value discussed: _________",
+              "answer": "active",
+              "explanation": "Spoken directly by the main speaker during the dialogue."
+            },
+            {
+              "num": 36,
+              "type": "MCQ",
+              "text": "What did the speaker say about the rise of urban agriculture?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 37,
+              "type": "MCQ",
+              "text": "What did the speaker say about the rise of urban agriculture?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 38,
+              "type": "MCQ",
+              "text": "What did the speaker say about the rise of urban agriculture?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 39,
+              "type": "MCQ",
+              "text": "What did the speaker say about the rise of urban agriculture?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            },
+            {
+              "num": 40,
+              "type": "MCQ",
+              "text": "What did the speaker say about the rise of urban agriculture?",
+              "options": [
+                "A. It was extremely positive.",
+                "B. It was negative.",
+                "C. It was postponed."
+              ],
+              "answer": "A",
+              "explanation": "The speaker explicitly mentions a positive outcome."
+            }
+          ],
+          "transcript": "\n        <p><b>Speaker A:</b> Welcome back. Today we are talking about The Rise of Urban Agriculture.</p>\n        <p><b>Speaker B:</b> That sounds active. I believe london is also involved.</p>\n        <p><b>Speaker A:</b> Yes, it is extremely positive indeed.</p>\n        "
         }
       ]
     },
     "writing": {
       "task1": {
-        "prompt": "The diagram illustrates the natural water cycle process. Summarize the steps and describe the stages.",
-        "image": "🔄 [Diagram: Evaporation -> Condensation -> Precipitation -> Runoff/Infiltration]",
-        "modelAnswer": "The process diagram details the continuous circulation of water within the Earth's hydrosphere. The cycle is powered by solar energy, beginning with evaporation."
+        "prompt": "The visual representation below shows statistics related to the science of sleep. Summarize the information and describe the main trends.",
+        "image": "<svg viewBox=\"0 0 500 250\" class=\"w-full h-auto bg-slate-900/50 rounded-xl border border-white/5 p-4\" xmlns=\"http://www.w3.org/2000/svg\">\n            <text x=\"250\" y=\"25\" font-family=\"serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#f8fafc\" text-anchor=\"middle\">The Water Cycle Process</text>\n            <circle cx=\"420\" cy=\"60\" r=\"15\" fill=\"#eab308\" />\n            <path d=\"M 50 200 L 150 120 L 250 170 L 350 130 L 450 200 Z\" fill=\"#334155\" />\n            <path d=\"M 380 180 L 380 140\" stroke=\"#60a5fa\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n            <text x=\"390\" y=\"160\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#60a5fa\">Evaporation</text>\n            <defs>\n              <marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n                <path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#60a5fa\" />\n              </marker>\n            </defs>\n          </svg>",
+        "modelAnswer": "The chart illustrates key trends in the domain. Overall, a positive growth trajectory is observed across all indicators, with significant peaks in the mid-point of the timeframe before stabilizing toward the final year."
       },
       "task2": {
-        "prompt": "Some believe governments should spend money on space exploration, while others think poverty on Earth should be resolved first. Discuss.",
-        "modelAnswer": "Funding astronomical exploration is perceived by many as an expensive indulgence when social crises remain unresolved. However, space programs generate technological innovations that improve life on Earth."
+        "prompt": "Some people argue that spending money on researching topics like deep sea hydrothermal vents is waste of public funds. Others think it is essential. Discuss both sides and give your opinion.",
+        "modelAnswer": "Scientific research in various domains is crucial for progress. While some argue that resources are better spent elsewhere, investigating these topics leads to long-term societal benefits and breakthrough innovations."
       }
-    },
-    "speaking": {
-      "part1": "1. What is your morning routine? 2. Do you prefer eating home-cooked meals or dining out? 3. How often do you go shopping?",
-      "part2": "Describe an item you purchased recently that you are happy with. You should say: 1. What it is 2. Where you bought it 3. What it looks like and explain why you are satisfied with this purchase.",
-      "part3": "1. How does advertising influence consumer choices? 2. Is online shopping better than shopping in brick-and-mortar stores? 3. What are the environmental costs of packaging?"
     }
   }
 };
