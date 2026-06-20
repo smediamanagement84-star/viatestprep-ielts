@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ViA Test Prep Portal - Premium Interactive Infographic</title>
+  <!-- Import Futuristic & Clean Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #030712;
+      --panel-bg: rgba(17, 24, 39, 0.55);
+      --border: rgba(255, 255, 255, 0.08);
+      --glow-purple: rgba(139, 92, 246, 0.35);
+      --glow-green: rgba(163, 230, 53, 0.25);
+      --purple: #8b5cf6;
+      --green: #a3e635;
+      --pink: #f472b6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #02040a;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: #f3f4f6;
+      overflow-x: hidden;
+    }
+
+    /* 1:1 Instagram Square Container (What you screenshot or screen-record) */
+    .instagram-square {
+      width: 1080px;
+      height: 1080px;
+      background-color: var(--bg);
+      border: 1px solid #1f2937;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 70px 70px;
+      box-shadow: 0 35px 80px -20px rgba(0, 0, 0, 0.9);
+    }
+
+    /* Animated Glowing Orbs in the background */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(140px);
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.65;
+    }
+    .orb-1 {
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, var(--glow-purple) 0%, transparent 70%);
+      top: -100px;
+      right: -100px;
+      animation: float-1 12s ease-in-out infinite alternate;
+    }
+    .orb-2 {
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, var(--glow-green) 0%, transparent 70%);
+      bottom: -80px;
+      left: -80px;
+      animation: float-2 15s ease-in-out infinite alternate;
+    }
+    @keyframes float-1 {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(-50px, 50px) scale(1.1); }
+    }
+    @keyframes float-2 {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(50px, -50px) scale(1.15); }
+    }
+
+    /* Grid Overlay */
+    .grid-overlay {
+      position: absolute;
+      inset: 0;
+      background-size: 60px 60px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Header Design */
+    .header {
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3.5rem;
+    }
+    .title-group h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--pink);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+    .title-group h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-top: 0.4rem;
+      background: linear-gradient(135deg, #fff 40%, rgba(255, 255, 255, 0.6));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .live-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(163, 230, 53, 0.08);
+      border: 1px solid rgba(163, 230, 53, 0.25);
+      padding: 0.6rem 1.2rem;
+      border-radius: 99px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--green);
+      box-shadow: 0 0 20px rgba(163, 230, 53, 0.05);
+    }
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 12px var(--green);
+      animation: pulse-dot 1.5s infinite alternate;
+    }
+    @keyframes pulse-dot {
+      0% { transform: scale(0.8); opacity: 0.5; }
+      100% { transform: scale(1.2); opacity: 1; }
+    }
+
+    /* Main Dashboard Layout */
+    .main-layout {
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      flex-grow: 1;
+      align-items: center;
+    }
+
+    /* LEFT SIDE: Interactive Phone Mockup (Highly engaging for videos) */
+    .phone-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    /* Sleek iPhone Shell */
+    .phone-shell {
+      width: 380px;
+      height: 620px;
+      background: #090d16;
+      border: 10px solid #1e293b;
+      border-radius: 48px;
+      position: relative;
+      box-shadow: 
+        0 25px 50px -12px rgba(0, 0, 0, 0.8),
+        0 0 40px rgba(139, 92, 246, 0.15);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Dynamic Notch */
+    .phone-notch {
+      width: 140px;
+      height: 25px;
+      background: #1e293b;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      z-index: 99;
+    }
+    /* Screen Screen Area */
+    .phone-screen {
+      flex-grow: 1;
+      padding: 40px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    /* Dynamic Password UI (Interactive Prototype States) */
+    .lock-screen-state {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 1;
+      transform: translateY(0);
+      z-index: 10;
+    }
+    .unlocked-state {
+      position: absolute;
+      inset: 40px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+      transform: translateY(50px);
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    /* Screen Elements - Locked State */
+    .app-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--purple), #6366f1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.5rem;
+      margin: 2rem auto 1rem;
+      color: #fff;
+    }
+    .screen-lock-title {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .screen-lock-desc {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #64748b;
+      line-height: 1.4;
+      margin-bottom: 2rem;
+      padding: 0 10px;
+    }
+    .screen-input-box {
+      width: 100%;
+      background: #02040a;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.9rem;
+      outline: none;
+      text-align: center;
+      margin-bottom: 0.75rem;
+      transition: border-color 0.2s;
+    }
+    .screen-input-box:focus {
+      border-color: var(--purple);
+    }
+    .screen-btn {
+      width: 100%;
+      background: var(--purple);
+      color: #fff;
+      border: none;
+      padding: 0.85rem;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .screen-btn:hover {
+      opacity: 0.9;
+    }
+    .error-msg {
+      color: #ef4444;
+      font-size: 0.75rem;
+      text-align: center;
+      min-height: 16px;
+      margin-top: 0.5rem;
+    }
+
+    /* Screen Elements - Unlocked State */
+    .unlocked-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding-bottom: 0.75rem;
+    }
+    .unlocked-header h3 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--purple);
+    }
+    .modules-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      margin: 1.5rem 0;
+      flex-grow: 1;
+    }
+    .module-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .module-name {
+      font-weight: 600;
+    }
+    .module-badge {
+      background: rgba(163,230,53,0.15);
+      color: var(--green);
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* RIGHT SIDE: Interactive Feature Grid */
+    .features-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+    .glass-card {
+      background: var(--panel-bg);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2rem;
+      backdrop-filter: blur(16px);
+      position: relative;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .glass-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255,255,255,0.15);
+    }
+    .card-glow-purple:hover {
+      box-shadow: 0 15px 30px -10px rgba(139, 92, 246, 0.15);
+    }
+    .card-glow-green:hover {
+      box-shadow: 0 15px 30px -10px rgba(163, 230, 53, 0.1);
+    }
+
+    .card-header-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 0.85rem;
+    }
+    .icon-wrapper {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+    }
+    .icon-purple {
+      background: rgba(139, 92, 246, 0.15);
+      color: var(--purple);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+    }
+    .icon-green {
+      background: rgba(163, 230, 53, 0.12);
+      color: var(--green);
+      border: 1px solid rgba(163, 230, 53, 0.3);
+    }
+    .card-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+    .card-desc {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    /* Footer Details */
+    .footer {
+      z-index: 10;
+      margin-top: 3.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 1.5rem;
+    }
+    .cta-text {
+      font-size: 1.15rem;
+      color: #64748b;
+    }
+    .cta-green {
+      color: var(--green);
+      font-weight: 800;
+    }
+    .site-url {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--purple);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carousel-wrapper">
+    <!-- Instagram Square (1080x1080px) -->
+    <div class="instagram-square" id="capture-box">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="grid-overlay"></div>
+
+      <!-- Header -->
+      <div class="header">
+        <div class="title-group">
+          <h2>ViA Test Prep</h2>
+          <h1>Smart Student Portal</h1>
+        </div>
+        <div class="live-badge">
+          <span class="badge-dot"></span>
+          <span>LIVE PLATFORM</span>
+        </div>
+      </div>
+
+      <!-- Main Grid Layout -->
+      <div class="main-layout">
+        
+        <!-- Left Column: Interactive Phone Simulator -->
+        <div class="phone-container">
+          <div class="phone-shell">
+            <div class="phone-notch"></div>
+            
+            <div class="phone-screen">
+              
+              <!-- LOCKED STATE CONTAINER -->
+              <div class="lock-screen-state" id="lock-state">
+                <div>
+                  <div class="app-icon">V</div>
+                  <h2 class="screen-lock-title">Student Lock</h2>
+                  <p class="screen-lock-desc">Enter passcode below to preview dynamic outlines and active recall tools.</p>
+                </div>
+                
+                <div>
+                  <input type="password" class="screen-input-box" id="pass-input" placeholder="Enter password (e.g. via79plus)" />
+                  <button class="screen-btn" onclick="verifyScreenPass()">Unlock Portal</button>
+                  <div class="error-msg" id="pass-error"></div>
+                </div>
+                
+                <div style="font-size: 0.65rem; color: #475569; text-align: center; font-family: 'JetBrains Mono', monospace;">
+                  STUDENT ACCESS SYSTEM v2.1
+                </div>
+              </div>
+
+              <!-- UNLOCKED STATE CONTAINER -->
+              <div class="unlocked-state" id="unlocked-state">
+                <div>
+                  <div class="unlocked-header">
+                    <h3>✅ PORTAL UNLOCKED</h3>
+                    <span style="font-size: 0.7rem; color: var(--green); font-family: 'JetBrains Mono', monospace;">ACCESS GRANTED</span>
+                  </div>
+                  
+                  <div class="modules-list">
+                    <div class="module-card">
+                      <span class="module-name">01. Opinion Essay Blueprint</span>
+                      <span class="module-badge">ACTIVE</span>
+                    </div>
+                    <div class="module-card">
+                      <span class="module-name">02. Discussion Essay Outline</span>
+                      <span class="module-badge">ACTIVE</span>
+                    </div>
+                    <div class="module-card">
+                      <span class="module-name">03. Paraphrase Engine v2</span>
+                      <span class="module-badge">ACTIVE</span>
+                    </div>
+                    <div class="module-card">
+                      <span class="module-name">04. Mock Score Tracker</span>
+                      <span class="module-badge">ACTIVE</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="text-align: center;">
+                  <p style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 0.5rem;">Ready to study in Sukedhara?</p>
+                  <button class="screen-btn" style="background: var(--green); color: #02040a;" onclick="resetPhoneMock()">Lock Portal</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Premium High-Contrast Cards -->
+        <div class="features-container">
+          
+          <!-- Card 1: Blueprints -->
+          <div class="glass-card card-glow-purple">
+            <div class="card-header-group">
+              <div class="icon-wrapper icon-purple">🏛️</div>
+              <h3 class="card-title">7 Interactive Outlines</h3>
+            </div>
+            <p class="card-desc">
+              Every IELTS Task 2 essay format mapped out. Click between tabs, study the logic, and write with structured layouts.
+            </p>
+          </div>
+
+          <!-- Card 2: Interactive Drills -->
+          <div class="glass-card card-glow-green">
+            <div class="card-header-group">
+              <div class="icon-wrapper icon-green">⚡</div>
+              <h3 class="card-title">Self-Grading Drills</h3>
+            </div>
+            <p class="card-desc">
+              Stop reading lists. Type your paraphrase, hit reveal, and compare your writing with Band 9.0 model samples instantly.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p class="cta-text">
+          Try the Free Demo! Comment <span class="cta-green">"PRACTICE"</span> for link & code.
+        </p>
+        <span class="site-url">viatestprep-ielts.vercel.app</span>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const lockState = document.getElementById('lock-state');
+    const unlockedState = document.getElementById('unlocked-state');
+    const inputField = document.getElementById('pass-input');
+    const errorMsg = document.getElementById('pass-error');
+
+    function verifyScreenPass() {
+      const val = inputField.value.trim();
+      if (val === 'via79plus') {
+        // Unlock animation
+        lockState.style.opacity = '0';
+        lockState.style.transform = 'translateY(-50px)';
+        lockState.style.pointerEvents = 'none';
+
+        setTimeout(() => {
+          unlockedState.style.opacity = '1';
+          unlockedState.style.transform = 'translateY(0)';
+          unlockedState.style.pointerEvents = 'all';
+        }, 300);
+
+        errorMsg.textContent = '';
+      } else {
+        errorMsg.textContent = '❌ Incorrect password. Hint: via79plus';
+        inputField.value = '';
+        inputField.focus();
+      }
+    }
+
+    function resetPhoneMock() {
+      // Lock animation
+      unlockedState.style.opacity = '0';
+      unlockedState.style.transform = 'translateY(50px)';
+      unlockedState.style.pointerEvents = 'none';
+
+      setTimeout(() => {
+        lockState.style.opacity = '1';
+        lockState.style.transform = 'translateY(0)';
+        lockState.style.pointerEvents = 'all';
+        inputField.value = '';
+        inputField.focus();
+      }, 300);
+    }
+
+    // Trigger unlock on enter key
+    inputField.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        verifyScreenPass();
+      }
+    });
+  </script>
+</body>
+</html>

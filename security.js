@@ -5,6 +5,13 @@
 (function () {
   const CONFIG_PASSWORD = 'via79plus'; // Admin-configurable access password
 
+  // Track mouse coordinates globally inside closure
+  const mouse = { x: 0, y: 0 };
+  window.addEventListener('mousemove', (e) => {
+    mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+  });
+
   // Determine page exemption status
   const currentPath = window.location.pathname.toLowerCase();
   const isExempt = currentPath === '' || 
@@ -620,10 +627,176 @@
     });
   }
 
+  // Auto-run global background particles, stardust, and tilts on every page
+  const initGlobal3DBackground = () => {
+    const canvas = document.createElement('canvas');
+    canvas.id = 'three-bg-canvas';
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    canvas.style.pointerEvents = 'none';
+    canvas.style.zIndex = '-1';
+    document.body.prepend(canvas);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100);
+    camera.position.z = 5;
+
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    // Stars
+    const starsCount = 400;
+    const starsGeo = new THREE.BufferGeometry();
+    const starsPos = new Float32Array(starsCount * 3);
+    for (let i = 0; i < starsCount * 3; i += 3) {
+      starsPos[i] = (Math.random() - 0.5) * 15;
+      starsPos[i + 1] = (Math.random() - 0.5) * 15;
+      starsPos[i + 2] = (Math.random() - 0.5) * 15;
+    }
+    starsGeo.setAttribute('position', new THREE.BufferAttribute(starsPos, 3));
+    const starsMat = new THREE.PointsMaterial({
+      color: 0x9c5bf5,
+      size: 0.03,
+      transparent: true,
+      opacity: 0.4,
+      blending: THREE.AdditiveBlending
+    });
+    const starField = new THREE.Points(starsGeo, starsMat);
+    scene.add(starField);
+
+    // Cursor Trail
+    const trailCount = 30;
+    const trailGeo = new THREE.BufferGeometry();
+    const trailPos = new Float32Array(trailCount * 3);
+    for (let i = 0; i < trailCount; i++) {
+      trailPos[i * 3] = 999;
+      trailPos[i * 3 + 1] = 999;
+      trailPos[i * 3 + 2] = 0;
+    }
+    trailGeo.setAttribute('position', new THREE.BufferAttribute(trailPos, 3));
+    const trailMat = new THREE.PointsMaterial({
+      color: 0x00f2fe,
+      size: 0.1,
+      transparent: true,
+      opacity: 0.75,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false
+    });
+    const trailPoints = new THREE.Points(trailGeo, trailMat);
+    scene.add(trailPoints);
+
+    let trailHistory = [];
+    window.addEventListener('mousemove', () => {
+      const vector = new THREE.Vector3(mouse.x, mouse.y, 0.5);
+      vector.unproject(camera);
+      const dir = vector.sub(camera.position).normalize();
+      const distance = -camera.position.z / dir.z;
+      const pos3D = camera.position.clone().add(dir.multiplyScalar(distance));
+      
+      trailHistory.push({ x: pos3D.x, y: pos3D.y, age: 0 });
+      if (trailHistory.length > trailCount) trailHistory.shift();
+    });
+
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    const clock = new THREE.Clock();
+    function animate() {
+      requestAnimationFrame(animate);
+      const elapsed = clock.getElapsedTime();
+      starField.rotation.y = elapsed * 0.01;
+      
+      const posAttr = trailGeo.attributes.position;
+      for (let i = 0; i < trailCount; i++) {
+        if (i < trailHistory.length) {
+          const item = trailHistory[i];
+          item.age += 0.08;
+          posAttr.setXYZ(i, item.x, item.y, 0.2);
+          item.x += (Math.random() - 0.5) * 0.015;
+          item.y += (Math.random() - 0.5) * 0.015;
+        } else {
+          posAttr.setXYZ(i, 999, 999, 0);
+        }
+      }
+      posAttr.needsUpdate = true;
+      trailHistory = trailHistory.filter(item => item.age < 1.0);
+
+      const isLight = document.documentElement.classList.contains('light');
+      if (isLight) {
+        starsMat.color.setHex(0x5b2a86);
+        trailMat.color.setHex(0x0d8a7a);
+      } else {
+        starsMat.color.setHex(0x9c5bf5);
+        trailMat.color.setHex(0x00f2fe);
+      }
+
+      renderer.render(scene, camera);
+    }
+    animate();
+  };
+
+  const init3DCardTilt = () => {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card) => {
+      if (card.classList.contains('tilt-active')) return;
+      card.classList.add('tilt-active');
+      card.style.transformStyle = 'preserve-3d';
+
+      const shine = document.createElement('div');
+      shine.className = 'card-shine-overlay';
+      shine.style.position = 'absolute';
+      shine.style.inset = '0';
+      shine.style.pointerEvents = 'none';
+      shine.style.borderRadius = 'inherit';
+      shine.style.zIndex = '5';
+      shine.style.transition = 'opacity 0.2s';
+      shine.style.opacity = '0';
+      shine.style.background = 'radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.12) 0%, transparent 60%)';
+      card.appendChild(shine);
+
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const normX = x / rect.width;
+        const normY = y / rect.height;
+        const tiltX = (0.5 - normY) * 12;
+        const tiltY = (normX - 0.5) * 12;
+        card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.02, 1.02, 1.02)`;
+        shine.style.opacity = '1';
+        shine.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255, 255, 255, 0.15) 0%, transparent 65%)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transition = 'transform 0.4s ease';
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        shine.style.opacity = '0';
+      });
+      card.addEventListener('mouseenter', () => {
+        card.style.transition = 'none';
+      });
+    });
+  };
+
   // Run watermark and password check on page load
   const runOnLoad = () => {
     initWatermark();
     checkPasswordLock();
+
+    // Auto-run global 3D background particles, stardust, and tilts on every page once loaded
+    ensureThreeJS(() => {
+      if (!document.getElementById('three-bg-canvas')) {
+        initGlobal3DBackground();
+      }
+      init3DCardTilt();
+    });
   };
 
   if (document.readyState === 'loading') {
