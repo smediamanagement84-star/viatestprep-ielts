@@ -966,11 +966,8 @@
 </header>
 
 <!-- HERO -->
-<section class="hero relative" style="overflow: hidden;">
-  <!-- WebGL Interactive 3D Scene container placed behind the text -->
-  <div id="three-hero-container" class="absolute inset-0 w-full h-full pointer-events-none" style="z-index: 0;"></div>
-  
-  <div class="relative z-10 flex flex-col items-center">
+<section class="hero" style="overflow:hidden;position:relative;">
+  <div style="position:relative;z-index:10;display:flex;flex-direction:column;align-items:center;">
     <div class="brand-tagline">ViATestPrep Portal</div>
     <h1>Your Complete <span class="gold-coral-gradient">IELTS &amp; PTE</span> Preparation Hub</h1>
     <p>16 interactive modules covering every IELTS &amp; PTE skill — Reading, Listening, Writing, Speaking, Grammar, Vocabulary, and UKVI. Built for Band 7+ and 79+ targets.</p>
@@ -988,7 +985,7 @@
       </a>
     </div>
   </div>
-  
+
   <div class="scroll-hint">
     <span>Explore modules</span>
     <span>↓</span>
@@ -998,8 +995,7 @@
 <!-- STUDY PLAN TRACK / TARGET BAND CALCULATOR WIDGET -->
 <section class="calculator-section">
   <div class="calc-card">
-    <div class="calc-left flex flex-col md:flex-row gap-4 items-center">
-      <div id="three-morph-container" class="w-24 h-24 flex-shrink-0"></div>
+    <div class="calc-left">
       <div>
         <h3 class="text-xl font-bold flex items-center gap-2">Recommended Study Track</h3>
         <p class="text-xs text-stone-400 mt-1">Select your preparation target goal. Our recommendation engine will instantly highlight and prioritize the critical modules needed for your score.</p>
