@@ -966,31 +966,32 @@
 </header>
 
 <!-- HERO -->
-<section class="hero max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-8 items-center text-center md:text-left pt-28 md:pt-36">
-  <div class="md:col-span-7 flex flex-col items-center md:items-start">
+<section class="hero relative" style="overflow: hidden;">
+  <!-- WebGL Interactive 3D Scene container placed behind the text -->
+  <div id="three-hero-container" class="absolute inset-0 w-full h-full pointer-events-none" style="z-index: 0;"></div>
+  
+  <div class="relative z-10 flex flex-col items-center">
     <div class="brand-tagline">ViATestPrep Portal</div>
     <h1>Your Complete <span class="gold-coral-gradient">IELTS &amp; PTE</span> Preparation Hub</h1>
-    <p class="mt-4">16 interactive modules covering every IELTS &amp; PTE skill — Reading, Listening, Writing, Speaking, Grammar, Vocabulary, and UKVI. Built for Band 7+ and 79+ targets.</p>
-    <div class="hero-badges mt-6">
+    <p>16 interactive modules covering every IELTS &amp; PTE skill — Reading, Listening, Writing, Speaking, Grammar, Vocabulary, and UKVI. Built for Band 7+ and 79+ targets.</p>
+    <div class="hero-badges">
       <span class="badge">🎯 Band 7+ Track</span>
       <span class="badge">⚡ Interactive Drills</span>
       <span class="badge">🏆 XP &amp; Progress Tracking</span>
       <span class="badge">📖 All 4 Skills</span>
       <span class="badge">🇬🇧 UKVI Modules</span>
     </div>
-    <div class="instagram-btn-wrapper mt-8">
+    <div class="instagram-btn-wrapper">
       <a href="https://www.instagram.com/viatestprep/" target="_blank" class="instagram-hero-btn">
         <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
         Message us on Instagram to Enroll
       </a>
     </div>
-    <div class="scroll-hint mt-12 mb-4 hidden md:flex">
-      <span>Explore modules</span>
-      <span>↓</span>
-    </div>
   </div>
-  <div class="md:col-span-5 w-full h-[400px] flex items-center justify-center relative" id="three-hero-container">
-    <!-- WebGL Interactive 3D Scene -->
+  
+  <div class="scroll-hint">
+    <span>Explore modules</span>
+    <span>↓</span>
   </div>
 </section>
 
@@ -1063,7 +1064,7 @@
               <span class="card-meta">⏱️ 2 hrs · 🟢 Easy</span>
             </div>
             <div class="card-icon-wrapper">🧭</div>
-            <h3>Welcome &amp; The Basics</h3>
+            <h3>Orientation</h3>
             <p>What IELTS is, Academic vs General Training, test format, scoring, test day prep, and 6 myths busted. Start here.</p>
           </div>
           <div class="card-bottom">
@@ -1079,7 +1080,7 @@
               <span class="card-meta">⏱️ 8 hrs · 🔴 Hard</span>
             </div>
             <div class="card-icon-wrapper">🕵️</div>
-            <h3>Detective Academy</h3>
+            <h3>Reading</h3>
             <p>Master all 14 reading question types with case-file strategies, skim/scan drills, and a timed boss fight.</p>
           </div>
           <div class="card-bottom">
@@ -1095,7 +1096,7 @@
               <span class="card-meta">⏱️ 6 hrs · 🟡 Medium</span>
             </div>
             <div class="card-icon-wrapper">🎧</div>
-            <h3>Sound Hunter</h3>
+            <h3>Listening</h3>
             <p>Section-by-section strategies, spelling traps, distraction techniques, and prediction drills.</p>
           </div>
           <div class="card-bottom">
@@ -1111,7 +1112,7 @@
               <span class="card-meta">⏱️ 10 hrs · 🔴 Hard</span>
             </div>
             <div class="card-icon-wrapper">✍️</div>
-            <h3>Architect's Blueprint</h3>
+            <h3>Writing</h3>
             <p>Task 1, Task 2 structures, live charts, paraphrase worksheet, interactive sample essays, and templates.</p>
           </div>
           <div class="card-bottom">
@@ -1127,7 +1128,7 @@
               <span class="card-meta">⏱️ 8 hrs · 🟡 Medium</span>
             </div>
             <div class="card-icon-wrapper">🎤</div>
-            <h3>Confident Performer</h3>
+            <h3>Speaking</h3>
             <p>Part 1, 2 &amp; 3 frameworks, fluency drills, filler reduction techniques, and pronunciation tips.</p>
           </div>
           <div class="card-bottom">
@@ -1143,7 +1144,7 @@
               <span class="card-meta">⏱️ 4 hrs · 🟢 Easy</span>
             </div>
             <div class="card-icon-wrapper">🧵</div>
-            <h3>Cohesive Devices Weaver</h3>
+            <h3>Cohesive Devices</h3>
             <p>All cohesive device categories with drag-and-place drills and before/after paragraph rewrites.</p>
           </div>
           <div class="card-bottom">
@@ -1175,7 +1176,7 @@
               <span class="card-meta">⏱️ 3 hrs · 🟢 Easy</span>
             </div>
             <div class="card-icon-wrapper">✏️</div>
-            <h3>Punctuation Signals</h3>
+            <h3>Punctuation</h3>
             <p>Commas, semicolons, colons and apostrophes — with interactive fix-the-error exercises.</p>
           </div>
           <div class="card-bottom">
@@ -1207,7 +1208,7 @@
               <span class="card-meta">⏱️ 6 hrs · 🔴 Hard</span>
             </div>
             <div class="card-icon-wrapper">🏗️</div>
-            <h3>Sentence Mastery</h3>
+            <h3>Sentence Structure</h3>
             <p>Simple, compound and complex sentence structures with clause-building and combining exercises.</p>
           </div>
           <div class="card-bottom">
@@ -1223,7 +1224,7 @@
               <span class="card-meta">⏱️ 5 hrs · 🟡 Medium</span>
             </div>
             <div class="card-icon-wrapper">🚀</div>
-            <h3>Vocabulary Accelerator</h3>
+            <h3>Vocabulary</h3>
             <p>Collocations, topic word banks, paraphrase drills, and band-7 synonym upgrades.</p>
           </div>
           <div class="card-bottom">
@@ -1239,7 +1240,7 @@
               <span class="card-meta">⏱️ 12 hrs · 🔴 Hard</span>
             </div>
             <div class="card-icon-wrapper">📖</div>
-            <h3>Vocabulary Mastery</h3>
+            <h3>Vocabulary Guide</h3>
             <p>Interactive spaced-repetition flashcards, topic word banks, upgrades, and mock quizzes for Band 7.5+.</p>
           </div>
           <div class="card-bottom">
@@ -1312,7 +1313,7 @@
               <span class="card-meta">⏱️ 7 hrs · 🟡 Medium</span>
             </div>
             <div class="card-icon-wrapper">🇬🇧</div>
-            <h3>GT Reading Module</h3>
+            <h3>UKVI Reading</h3>
             <p>Notices, advertisements, workplace documents and multi-text strategies built for the General Training Reading format.</p>
           </div>
           <div class="card-bottom">
@@ -1328,7 +1329,7 @@
               <span class="card-meta">⏱️ 6 hrs · 🟡 Medium</span>
             </div>
             <div class="card-icon-wrapper">✉️</div>
-            <h3>GT Writing Task 1 — Letter</h3>
+            <h3>UKVI Letters</h3>
             <p>Formal, semi-formal and informal letter frameworks, tone control, and opening/closing formula drills.</p>
           </div>
           <div class="card-bottom">
@@ -1344,7 +1345,7 @@
               <span class="card-meta">⏱️ 8 hrs · 🔴 Hard</span>
             </div>
             <div class="card-icon-wrapper">📝</div>
-            <h3>GT &amp; Academic Task 2 — Essay</h3>
+            <h3>UKVI Essays</h3>
             <p>Thesis development, 4-paragraph planning, formal vocabulary guidelines, and interactive essay building tools.</p>
           </div>
           <div class="card-bottom">
@@ -1373,7 +1374,7 @@
               <span class="card-meta">⏱️ 15 hrs · 🔴 Hard</span>
             </div>
             <div class="card-icon-wrapper">⚡</div>
-            <h3>PTE Academic Master Guide</h3>
+            <h3>PTE Master Guide</h3>
             <p>Score 80+ in PTE Academic. Complete guide to Speaking, Writing, Reading, and Listening with interactive templates and quizzes.</p>
           </div>
           <div class="card-bottom">

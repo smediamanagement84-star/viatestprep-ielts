@@ -337,76 +337,82 @@ function init3DHeroScene() {
 
   const scene = new THREE.Scene();
   
-  // Camera
+  // Camera - adjusted Z to 5.0 for wide background space
   const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 100);
-  camera.position.z = 6.5;
+  camera.position.z = 5.0;
 
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
   renderer.setSize(container.clientWidth, container.clientHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-  // Glassmorphic Glowing Material
+  // Glassmorphic Material with higher opacity to shine in light mode
   const glassMat = new THREE.MeshPhysicalMaterial({
-    color: 0x9c5bf5,
+    color: 0xc084fc,
     transparent: true,
-    opacity: 0.35,
+    opacity: 0.6,
     roughness: 0.15,
     metalness: 0.1,
-    transmission: 0.9, // high refraction glass
+    transmission: 0.7,
     ior: 1.5,
-    thickness: 1.2,
+    thickness: 0.8,
     specularIntensity: 1.0,
     clearcoat: 1.0,
     clearcoatRoughness: 0.1
   });
 
   const goldMat = new THREE.MeshStandardMaterial({
-    color: 0xc8932a,
-    roughness: 0.2,
+    color: 0xeab308, // bright golden yellow
+    roughness: 0.15,
     metalness: 0.95,
-    emissive: 0x221100
+    emissive: 0x442200
   });
 
   const tealMat = new THREE.MeshPhysicalMaterial({
-    color: 0x0ea5e9,
+    color: 0x22d3ee,
     transparent: true,
-    opacity: 0.4,
-    roughness: 0.2,
-    transmission: 0.8,
-    thickness: 0.8
+    opacity: 0.65,
+    roughness: 0.18,
+    transmission: 0.75,
+    thickness: 0.6
   });
+
+  // Calculate side-spread distance based on aspect ratio
+  const getSpreadX = () => {
+    const aspect = container.clientWidth / container.clientHeight;
+    // Lower aspect (mobile portrait) = narrower spread, higher aspect = wider spread
+    return Math.min(2.8, aspect * 1.55);
+  };
+  let spreadX = getSpreadX();
 
   // Group to hold all mesh objects
   const objectsGroup = new THREE.Group();
   scene.add(objectsGroup);
 
-  // 1. Extruded Glass Letters
+  // 1. Extruded Glass Letters (placed in a wide background arc behind the text)
   const letters = ['I', 'E', 'L', 'T', 'S'];
   const letterMeshes = [];
-  const extrudeSettings = { depth: 0.2, bevelEnabled: true, bevelThickness: 0.05, bevelSize: 0.02, bevelSegments: 3 };
+  const extrudeSettings = { depth: 0.15, bevelEnabled: true, bevelThickness: 0.04, bevelSize: 0.015, bevelSegments: 3 };
 
   letters.forEach((char, idx) => {
     const shape = createLetterShape(char);
     const geometry = new THREE.ExtrudeGeometry(shape, extrudeSettings);
     geometry.center();
 
-    // Alternate materials
     const mat = idx % 2 === 0 ? glassMat.clone() : tealMat.clone();
     const mesh = new THREE.Mesh(geometry, mat);
     
-    // Arrange in semi-circle arc
-    const angle = (idx / (letters.length - 1)) * Math.PI * 0.6 - Math.PI * 0.3;
-    mesh.position.x = Math.sin(angle) * 1.8;
-    mesh.position.y = Math.cos(angle) * 0.5 - 0.4;
-    mesh.position.z = Math.cos(angle) * 0.5 - 0.3;
+    // Arrange in a wide circle behind the text
+    const angle = (idx / (letters.length - 1)) * Math.PI * 0.8 - Math.PI * 0.4;
+    mesh.position.x = Math.sin(angle) * (spreadX * 1.25);
+    mesh.position.y = Math.cos(angle) * 0.6 - 0.25;
+    mesh.position.z = -0.8; // far back
     
-    mesh.scale.set(0.8, 0.8, 0.8);
-    mesh.rotation.y = -angle * 0.6;
+    mesh.scale.set(0.6, 0.6, 0.6);
+    mesh.rotation.y = -angle * 0.5;
     
-    // Custom float speed
     mesh.userData = {
-      floatSpeed: 0.6 + Math.random() * 0.5,
-      rotSpeed: 0.3 + Math.random() * 0.4,
+      floatSpeed: 0.7 + Math.random() * 0.5,
+      rotSpeed: 0.4 + Math.random() * 0.4,
       initialY: mesh.position.y,
       initialRotY: mesh.rotation.y
     };
@@ -415,58 +421,78 @@ function init3DHeroScene() {
     letterMeshes.push(mesh);
   });
 
-  // 2. 3D Glass Book (Cover + Sheets)
+  // 2. 3D Glass Book (floating on the left side)
   const bookGroup = new THREE.Group();
-  const coverGeo = new THREE.BoxGeometry(0.9, 1.2, 0.15);
-  const pagesGeo = new THREE.BoxGeometry(0.82, 1.12, 0.12);
+  const coverGeo = new THREE.BoxGeometry(0.8, 1.1, 0.13);
+  const pagesGeo = new THREE.BoxGeometry(0.74, 1.03, 0.1);
   pagesGeo.center();
   
   const coverMesh = new THREE.Mesh(coverGeo, glassMat);
   const pagesMesh = new THREE.Mesh(pagesGeo, goldMat);
-  pagesMesh.position.x = 0.04; // offset book cover bind
+  pagesMesh.position.x = 0.03;
 
   bookGroup.add(coverMesh);
   bookGroup.add(pagesMesh);
   
-  bookGroup.position.set(-2.0, 1.0, 0.5);
-  bookGroup.rotation.set(0.4, 0.6, -0.2);
-  bookGroup.userData = { floatSpeed: 0.8, rotSpeed: 0.3, initialY: 1.0 };
+  bookGroup.position.set(-spreadX, 0.1, 0.2); 
+  bookGroup.rotation.set(0.3, 0.5, -0.15);
+  bookGroup.userData = { floatSpeed: 0.7, rotSpeed: 0.2, initialY: 0.1, initialX: -spreadX };
   objectsGroup.add(bookGroup);
 
-  // 3. 3D Magnifying Glass
+  // 3. 3D Magnifying Glass (floating on the right side)
   const lensGroup = new THREE.Group();
-  const ringGeo = new THREE.TorusGeometry(0.35, 0.06, 12, 24);
-  const handleGeo = new THREE.CylinderGeometry(0.04, 0.04, 0.5, 12);
-  handleGeo.translate(0, -0.5, 0); // shift pivot to ring connector
+  const ringGeo = new THREE.TorusGeometry(0.26, 0.05, 12, 24);
+  const handleGeo = new THREE.CylinderGeometry(0.03, 0.03, 0.38, 12);
+  handleGeo.translate(0, -0.38, 0);
   
   const ringMesh = new THREE.Mesh(ringGeo, goldMat);
   const handleMesh = new THREE.Mesh(handleGeo, glassMat);
-  const lensGeo = new THREE.CylinderGeometry(0.34, 0.34, 0.02, 16);
+  const lensGeo = new THREE.CylinderGeometry(0.25, 0.25, 0.015, 16);
   lensGeo.rotateX(Math.PI / 2);
   const lensMesh = new THREE.Mesh(lensGeo, tealMat);
 
   lensGroup.add(ringMesh);
   lensGroup.add(handleMesh);
   lensGroup.add(lensMesh);
-  lensGroup.position.set(2.0, 0.8, 0.2);
-  lensGroup.rotation.set(-0.3, -0.4, 0.5);
-  lensGroup.userData = { floatSpeed: 0.7, rotSpeed: 0.5, initialY: 0.8 };
+  lensGroup.position.set(spreadX, 0.2, 0.3);
+  lensGroup.rotation.set(-0.2, -0.3, 0.4);
+  lensGroup.userData = { floatSpeed: 0.6, rotSpeed: 0.35, initialY: 0.2, initialX: spreadX };
   objectsGroup.add(lensGroup);
 
-  // Lights
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+  // 4. 3D Pencil (floating on the left-front, under the book)
+  const pencilGroup = new THREE.Group();
+  const pencilBodyGeo = new THREE.CylinderGeometry(0.03, 0.03, 0.45, 12);
+  const pencilTipGeo = new THREE.ConeGeometry(0.03, 0.11, 12);
+  pencilTipGeo.translate(0, 0.285, 0);
+  const pencilEraserGeo = new THREE.CylinderGeometry(0.03, 0.03, 0.06, 12);
+  pencilEraserGeo.translate(0, -0.25, 0);
+
+  const pBodyMesh = new THREE.Mesh(pencilBodyGeo, tealMat);
+  const pTipMesh = new THREE.Mesh(pencilTipGeo, goldMat);
+  const pEraserMesh = new THREE.Mesh(pencilEraserGeo, glassMat);
+
+  pencilGroup.add(pBodyMesh);
+  pencilGroup.add(pTipMesh);
+  pencilGroup.add(pEraserMesh);
+  pencilGroup.position.set(-spreadX * 0.95, -0.7, 0.5);
+  pencilGroup.rotation.set(0.5, 0, -0.7);
+  pencilGroup.userData = { floatSpeed: 0.5, rotSpeed: 0.45, initialY: -0.7, initialX: -spreadX * 0.95 };
+  objectsGroup.add(pencilGroup);
+
+  // Lights - brighter for front illumination
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.95);
   scene.add(ambientLight);
 
-  const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
-  dirLight.position.set(3, 5, 2);
+  const dirLight = new THREE.DirectionalLight(0xffffff, 1.8);
+  dirLight.position.set(0, 4, 6); // shine directly from front-top
   scene.add(dirLight);
 
-  const pointLight1 = new THREE.PointLight(0xa855f7, 2, 8); // purple glow
-  pointLight1.position.set(-2, -1, 1);
+  const pointLight1 = new THREE.PointLight(0xa855f7, 4, 15);
+  pointLight1.position.set(-3, 1, 3);
   scene.add(pointLight1);
 
-  const pointLight2 = new THREE.PointLight(0x0ea5e9, 2.5, 8); // teal glow
-  pointLight2.position.set(2, 1, 2);
+  const pointLight2 = new THREE.PointLight(0x0ea5e9, 4, 15);
+  pointLight2.position.set(3, -1, 3);
   scene.add(pointLight2);
 
   // Resize handler
@@ -474,6 +500,22 @@ function init3DHeroScene() {
     camera.aspect = container.clientWidth / container.clientHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(container.clientWidth, container.clientHeight);
+    
+    // Recalculate dynamic side spreads
+    spreadX = getSpreadX();
+    bookGroup.position.x = -spreadX;
+    if (bookGroup.userData) bookGroup.userData.initialX = -spreadX;
+    
+    lensGroup.position.x = spreadX;
+    if (lensGroup.userData) lensGroup.userData.initialX = spreadX;
+    
+    pencilGroup.position.x = -spreadX * 0.95;
+    if (pencilGroup.userData) pencilGroup.userData.initialX = -spreadX * 0.95;
+    
+    letterMeshes.forEach((mesh, idx) => {
+      const angle = (idx / (letters.length - 1)) * Math.PI * 0.8 - Math.PI * 0.4;
+      mesh.position.x = Math.sin(angle) * (spreadX * 1.25);
+    });
   });
 
   // Interactive mouse offset tracking
@@ -490,23 +532,30 @@ function init3DHeroScene() {
       const data = obj.userData;
       if (!data) return;
       
-      // Floating wave
-      obj.position.y = data.initialY + Math.sin(elapsed * data.floatSpeed) * 0.12;
+      // Floating wave Y
+      obj.position.y = data.initialY + Math.sin(elapsed * data.floatSpeed) * 0.08;
       
-      // Self rotation
+      // Horizontal sway X
+      if (typeof data.initialX !== 'undefined') {
+        obj.position.x = data.initialX + Math.cos(elapsed * data.floatSpeed * 0.5) * 0.05;
+      }
+      
+      // Rotation logic
       if (obj === bookGroup) {
-        obj.rotation.y = 0.6 + Math.sin(elapsed * data.rotSpeed) * 0.2;
-        obj.rotation.x = 0.4 + Math.cos(elapsed * data.rotSpeed) * 0.1;
+        obj.rotation.y = 0.5 + Math.sin(elapsed * data.rotSpeed) * 0.15;
+        obj.rotation.x = 0.3 + Math.cos(elapsed * data.rotSpeed) * 0.08;
       } else if (obj === lensGroup) {
-        obj.rotation.z = 0.5 + Math.sin(elapsed * data.rotSpeed) * 0.3;
+        obj.rotation.z = 0.4 + Math.sin(elapsed * data.rotSpeed) * 0.25;
+      } else if (obj === pencilGroup) {
+        obj.rotation.y = elapsed * 0.5;
       } else {
         obj.rotation.y = data.initialRotY + Math.sin(elapsed * data.rotSpeed) * 0.25;
       }
     });
 
     // Tilt camera slightly to react to mouse cursor
-    targetRot.x += (mouse.y * 0.15 - targetRot.x) * 0.1;
-    targetRot.y += (mouse.x * 0.15 - targetRot.y) * 0.1;
+    targetRot.x += (mouse.y * 0.12 - targetRot.x) * 0.08;
+    targetRot.y += (mouse.x * 0.12 - targetRot.y) * 0.08;
     
     objectsGroup.rotation.x = targetRot.x;
     objectsGroup.rotation.y = targetRot.y;
@@ -514,13 +563,17 @@ function init3DHeroScene() {
     // Handle theme variations
     const isLight = document.documentElement.classList.contains('light');
     if (isLight) {
-      pointLight1.color.setHex(0x5b2a86);
-      pointLight2.color.setHex(0x0d8a7a);
-      glassMat.opacity = 0.18;
+      pointLight1.color.setHex(0xa855f7);
+      pointLight1.intensity = 5.0;
+      pointLight2.color.setHex(0x0ea5e9);
+      pointLight2.intensity = 5.0;
+      glassMat.opacity = 0.35;
     } else {
       pointLight1.color.setHex(0xa855f7);
+      pointLight1.intensity = 3.0;
       pointLight2.color.setHex(0x0ea5e9);
-      glassMat.opacity = 0.35;
+      pointLight2.intensity = 3.0;
+      glassMat.opacity = 0.6;
     }
 
     renderer.render(scene, camera);
@@ -745,14 +798,12 @@ function init3DCardCarousel() {
 
   const toggleBtn = document.getElementById('toggle3DViewBtn');
   let is3DMode = false;
-
-  // Insert critical CSS styles for 3D layout
   const styleEl = document.createElement('style');
   styleEl.textContent = `
     .modules-workspace-3d {
       perspective: 1600px;
       perspective-origin: 50% 30%;
-      height: 600px;
+      height: 620px;
       position: relative;
       display: flex;
       align-items: center;
@@ -767,6 +818,7 @@ function init3DCardCarousel() {
       transform-style: preserve-3d;
       transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
       cursor: grab;
+      z-index: 5;
     }
     .carousel-cylinder-3d:active {
       cursor: grabbing;
@@ -782,17 +834,113 @@ function init3DCardCarousel() {
       -webkit-backface-visibility: hidden;
       transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s;
     }
-    /* Dim background cards */
+    /* Dim background cards and make them clickable */
     .carousel-cylinder-3d .card.carousel-behind {
-      opacity: 0.15;
-      pointer-events: none;
-      filter: blur(2px) grayscale(80%);
+      opacity: 0.22;
+      filter: blur(1.5px) grayscale(70%);
+      cursor: pointer;
     }
     .carousel-cylinder-3d .card.carousel-focus {
       opacity: 1;
       pointer-events: auto;
       filter: none;
       box-shadow: 0 25px 50px -12px rgba(156, 91, 245, 0.35);
+    }
+    .carousel-nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px solid var(--border-color);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 100;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      user-select: none;
+    }
+    .carousel-nav-arrow:hover {
+      background: rgba(91, 42, 134, 0.4);
+      border-color: hsl(var(--primary));
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 0 15px rgba(91, 42, 134, 0.4);
+    }
+    .carousel-nav-arrow.prev {
+      left: 2rem;
+    }
+    .carousel-nav-arrow.next {
+      right: 2rem;
+    }
+    .light .carousel-nav-arrow {
+      background: rgba(255, 255, 255, 0.6);
+    }
+    .light .carousel-nav-arrow:hover {
+      background: rgba(91, 42, 134, 0.15);
+    }
+    .carousel-dots-wrapper {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.6rem;
+      z-index: 100;
+    }
+    .carousel-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid var(--border-color);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .carousel-dot:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+    .carousel-dot.active {
+      background: hsl(var(--primary));
+      width: 24px;
+      border-radius: 999px;
+      box-shadow: 0 0 10px hsl(var(--primary));
+    }
+    .light .carousel-dot {
+      background: rgba(0, 0, 0, 0.2);
+    }
+    .light .carousel-dot:hover {
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .carousel-floor-reflection {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) rotateX(80deg);
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(156, 91, 245, 0.12) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .light .carousel-floor-reflection {
+      background: radial-gradient(circle, rgba(91, 42, 134, 0.06) 0%, transparent 60%);
+    }
+    @media (max-width: 768px) {
+      .carousel-nav-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+      }
+      .carousel-nav-arrow.prev { left: 0.5rem; }
+      .carousel-nav-arrow.next { right: 0.5rem; }
     }
   `;
   document.head.appendChild(styleEl);
@@ -820,7 +968,7 @@ function init3DCardCarousel() {
     // Collect all visible cards that are NOT currently filtered out
     const cards = Array.from(inner.querySelectorAll('.grid-container:not(.hidden) .card:not(.filtered-out)'));
     if (cards.length === 0) {
-      alert("No active cards to build 3D Carousel Workspace!");
+      alert("No active cards to build 3D Workspace!");
       is3DMode = false;
       return;
     }
@@ -839,6 +987,11 @@ function init3DCardCarousel() {
     workspace.appendChild(cylinder);
     inner.appendChild(workspace);
 
+    // Add floor reflection
+    const reflection = document.createElement('div');
+    reflection.className = 'carousel-floor-reflection';
+    workspace.appendChild(reflection);
+
     // Calculate layout parameters
     activeCards = cards;
     const n = cards.length;
@@ -849,13 +1002,48 @@ function init3DCardCarousel() {
     // Min radius fallback
     if (n < 6) radius = 350;
 
-    // Reposition cards inside cylinder
+    // Reposition cards inside cylinder and attach listeners
     cards.forEach((card, idx) => {
       const cardAngle = idx * theta;
       card.dataset.carouselIndex = idx;
       card.style.transform = `rotateY(${cardAngle}deg) translateZ(${radius}px)`;
       cylinder.appendChild(card);
+      
+      card.addEventListener('click', handleCardClick);
     });
+
+    // Add left and right navigation arrows
+    const prevBtn = document.createElement('button');
+    prevBtn.className = 'carousel-nav-arrow prev';
+    prevBtn.innerHTML = '‹';
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      rotateByOffset(-1);
+    });
+    workspace.appendChild(prevBtn);
+
+    const nextBtn = document.createElement('button');
+    nextBtn.className = 'carousel-nav-arrow next';
+    nextBtn.innerHTML = '›';
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      rotateByOffset(1);
+    });
+    workspace.appendChild(nextBtn);
+
+    // Add pagination dots container
+    const dotsContainer = document.createElement('div');
+    dotsContainer.className = 'carousel-dots-wrapper';
+    cards.forEach((_, idx) => {
+      const dot = document.createElement('span');
+      dot.className = 'carousel-dot';
+      dot.addEventListener('click', (e) => {
+        e.stopPropagation();
+        rotateToCardIndex(idx);
+      });
+      dotsContainer.appendChild(dot);
+    });
+    workspace.appendChild(dotsContainer);
 
     updateCarouselHighlight();
 
@@ -866,11 +1054,57 @@ function init3DCardCarousel() {
     window.addEventListener('touchmove', dragMove, { passive: false });
     window.addEventListener('mouseup', dragEnd);
     window.addEventListener('touchend', dragEnd);
+
+    // Add wheel event listener for scroll control
+    workspace.addEventListener('wheel', handleWheel, { passive: false });
+  }
+
+  function handleWheel(e) {
+    e.preventDefault();
+    cylinder.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+    const direction = e.deltaY > 0 ? 1 : -1;
+    angleY -= direction * theta;
+    cylinder.style.transform = `translateZ(-${radius}px) rotateY(${angleY}deg)`;
+    updateCarouselHighlight();
+  }
+
+  function handleCardClick(e) {
+    const card = e.currentTarget;
+    if (card.classList.contains('carousel-behind')) {
+      e.preventDefault();
+      e.stopPropagation();
+      const idx = parseInt(card.dataset.carouselIndex);
+      rotateToCardIndex(idx);
+    }
+  }
+
+  function rotateToCardIndex(idx) {
+    cylinder.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+    const n = activeCards.length;
+    const currentFocusIdx = (Math.round(-angleY / theta) % n + n) % n;
+    
+    let diff = (idx - currentFocusIdx + n) % n;
+    if (diff > n / 2) {
+      diff -= n;
+    }
+    
+    angleY -= diff * theta;
+    cylinder.style.transform = `translateZ(-${radius}px) rotateY(${angleY}deg)`;
+    updateCarouselHighlight();
+  }
+
+  function rotateByOffset(offset) {
+    cylinder.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+    angleY -= offset * theta;
+    cylinder.style.transform = `translateZ(-${radius}px) rotateY(${angleY}deg)`;
+    updateCarouselHighlight();
   }
 
   function exit3DWorkspace() {
     const workspace = document.getElementById('three-carousel-workspace');
     if (!workspace) return;
+
+    workspace.removeEventListener('wheel', handleWheel);
 
     // Extract cards from cylinder, put them back to original grid containers
     const cards = Array.from(cylinder.querySelectorAll('.card'));
@@ -882,6 +1116,7 @@ function init3DCardCarousel() {
     const pteGrid = inner.querySelector('#container-pte .grid');
 
     cards.forEach(card => {
+      card.removeEventListener('click', handleCardClick);
       card.style.transform = '';
       card.style.opacity = '';
       card.style.filter = '';
@@ -961,6 +1196,19 @@ function init3DCardCarousel() {
         if (!card.classList.contains('carousel-behind')) card.classList.add('carousel-behind');
       }
     });
+
+    // Update dots active status
+    const workspace = document.getElementById('three-carousel-workspace');
+    if (workspace) {
+      const dots = workspace.querySelectorAll('.carousel-dot');
+      dots.forEach((dot, idx) => {
+        if (idx === focusIdx) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
   }
 
   // Hook into custom standard filters to reset carousel items if filters change
