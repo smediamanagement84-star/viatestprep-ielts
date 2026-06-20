@@ -6,6 +6,8 @@
 <title>ViATestPrep — IELTS Practice Test Center</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <style>
   :root {
     --primary: 268, 52%, 48%; /* #5b2a86 */
@@ -246,6 +248,7 @@
 </main>
 
 <script src="test-data.js"></script>
+<script src="three-effects.js"></script>
 <script>
 // Default Mode
 let currentMode = localStorage.getItem('vietest_practice_mode') || 'exam';

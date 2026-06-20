@@ -305,7 +305,24 @@
     document.body.appendChild(overlay);
   };
 
-  // 7. Client-Side Password Protection (Lock Screen Injection)
+  // 7. Client-Side Password Protection (Lock Screen Injection with 3D Padlock)
+  const loadScript = (src, callback) => {
+    const s = document.createElement('script');
+    s.src = src;
+    s.onload = callback;
+    document.head.appendChild(s);
+  };
+
+  const ensureThreeJS = (callback) => {
+    if (typeof THREE !== 'undefined' && typeof gsap !== 'undefined') {
+      callback();
+    } else {
+      loadScript('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js', () => {
+        loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js', callback);
+      });
+    }
+  };
+
   const checkPasswordLock = () => {
     if (isExempt) return;
 
@@ -321,7 +338,7 @@
     lockScreen.id = 'vp-lock-screen-overlay';
     lockScreen.innerHTML = `
       <div class="vp-lock-card">
-        <div class="vp-lock-logo">V</div>
+        <div id="vp-3d-lock-container" style="width:100%; height:140px; margin-bottom:1rem; position:relative;"></div>
         <h2>Premium Resource</h2>
         <p>This study module is locked. If you are a student of <strong>ViATestPrep</strong>, enter your access password below.</p>
         
@@ -345,29 +362,263 @@
 
     document.body.appendChild(lockScreen);
 
-    // Setup events
+    // Setup input events
     const input = document.getElementById('vp-pass-input');
     const button = document.getElementById('vp-unlock-btn');
     const errorDiv = document.getElementById('vp-pass-error');
 
-    const handleUnlock = () => {
-      const enteredValue = input.value.trim();
-      if (enteredValue === CONFIG_PASSWORD) {
+    // Ensure libraries and run 3D lock rendering
+    ensureThreeJS(() => {
+      init3DLockCanvas('vp-3d-lock-container', (onFinish) => {
+        // Correct Callback
         localStorage.setItem('viatestprep_unlocked', 'true');
-        document.body.classList.remove('vp-locked');
-        lockScreen.remove();
-      } else {
+        // Close screen after unlock animation
+        setTimeout(() => {
+          document.body.classList.remove('vp-locked');
+          lockScreen.remove();
+          onFinish();
+        }, 1200);
+      }, () => {
+        // Incorrect Callback
         errorDiv.textContent = '❌ Incorrect password. Please try again.';
         input.value = '';
         input.focus();
+      });
+    });
+
+    const handleUnlockAttempt = () => {
+      const enteredValue = input.value.trim();
+      if (enteredValue === CONFIG_PASSWORD) {
+        if (window.trigger3DUnlock) {
+          window.trigger3DUnlock();
+        } else {
+          // Fallback if 3D scene failed
+          localStorage.setItem('viatestprep_unlocked', 'true');
+          document.body.classList.remove('vp-locked');
+          lockScreen.remove();
+        }
+      } else {
+        if (window.trigger3DLockError) {
+          window.trigger3DLockError();
+        } else {
+          errorDiv.textContent = '❌ Incorrect password. Please try again.';
+          input.value = '';
+          input.focus();
+        }
       }
     };
 
-    button.addEventListener('click', handleUnlock);
+    button.addEventListener('click', handleUnlockAttempt);
     input.addEventListener('keydown', e => {
-      if (e.key === 'Enter') handleUnlock();
+      if (e.key === 'Enter') handleUnlockAttempt();
     });
   };
+
+  // 3D Padlock Scene Creator inside Modal Card
+  function init3DLockCanvas(containerId, onCorrect, onIncorrect) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const canvas = document.createElement('canvas');
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    container.appendChild(canvas);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(40, container.clientWidth / container.clientHeight, 0.1, 100);
+    camera.position.z = 3.6;
+
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    // Padlock Group
+    const lockGroup = new THREE.Group();
+    scene.add(lockGroup);
+
+    // Materials
+    const goldMat = new THREE.MeshStandardMaterial({
+      color: 0xc8932a,
+      roughness: 0.15,
+      metalness: 0.9,
+      emissive: 0x1a1100
+    });
+    
+    const steelMat = new THREE.MeshStandardMaterial({
+      color: 0x94a3b8,
+      roughness: 0.2,
+      metalness: 0.85
+    });
+
+    const darkMat = new THREE.MeshBasicMaterial({ color: 0x0f172a });
+
+    // 1. Lock Body
+    const bodyGeo = new THREE.BoxGeometry(0.7, 0.55, 0.22);
+    // Chamfer body edges slightly
+    const bodyMesh = new THREE.Mesh(bodyGeo, goldMat);
+    bodyMesh.position.y = -0.15;
+    lockGroup.add(bodyMesh);
+
+    // 2. Lock Shackle (Torus)
+    const shackleGeo = new THREE.TorusGeometry(0.24, 0.05, 8, 24, Math.PI);
+    const shackleMesh = new THREE.Mesh(shackleGeo, steelMat);
+    shackleMesh.position.set(0, 0.12, 0);
+    lockGroup.add(shackleMesh);
+
+    // Shackle legs (Cylinders)
+    const legGeo = new THREE.CylinderGeometry(0.05, 0.05, 0.22, 12);
+    const legLeft = new THREE.Mesh(legGeo, steelMat);
+    legLeft.position.set(-0.24, 0.02, 0);
+    const legRight = new THREE.Mesh(legGeo, steelMat);
+    legRight.position.set(0.24, 0.02, 0);
+    lockGroup.add(legLeft);
+    lockGroup.add(legRight);
+
+    // 3. Keyhole (Cylinder + Box)
+    const keyholeGroup = new THREE.Group();
+    const keyholeCircle = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.06, 0.02, 12), darkMat);
+    keyholeCircle.rotation.x = Math.PI / 2;
+    const keyholeSlot = new THREE.Mesh(new THREE.BoxGeometry(0.03, 0.08, 0.02), darkMat);
+    keyholeSlot.position.y = -0.04;
+    keyholeGroup.add(keyholeCircle);
+    keyholeGroup.add(keyholeSlot);
+    keyholeGroup.position.set(0, -0.16, 0.12); // mount to front of body
+    lockGroup.add(keyholeGroup);
+
+    // Lights
+    const ambient = new THREE.AmbientLight(0xffffff, 0.6);
+    scene.add(ambient);
+    
+    const light1 = new THREE.DirectionalLight(0xffffff, 0.8);
+    light1.position.set(2, 4, 3);
+    scene.add(light1);
+
+    const colorFlashLight = new THREE.PointLight(0xa855f7, 0, 10);
+    colorFlashLight.position.set(0, 0.5, 2);
+    scene.add(colorFlashLight);
+
+    // Floating animation variables
+    let hoverActive = true;
+    let isTransitioning = false;
+
+    // Unlocking function
+    window.trigger3DUnlock = function() {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      hoverActive = false;
+
+      // Create key mesh dynamically
+      const keyGroup = new THREE.Group();
+      const keyShaft = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.02, 0.35, 8), steelMat);
+      keyShaft.rotation.x = Math.PI / 2;
+      const keyBow = new THREE.Mesh(new THREE.TorusGeometry(0.08, 0.02, 8, 16), steelMat);
+      keyBow.position.z = 0.22;
+      const keyBit = new THREE.Mesh(new THREE.BoxGeometry(0.02, 0.06, 0.06), steelMat);
+      keyBit.position.set(0, -0.03, -0.12);
+      
+      keyGroup.add(keyShaft);
+      keyGroup.add(keyBow);
+      keyGroup.add(keyBit);
+      keyGroup.position.set(0, -0.16, 1.2); // start key in front
+      scene.add(keyGroup);
+
+      const tl = gsap.timeline();
+
+      // 1. Insert key
+      tl.to(keyGroup.position, {
+        z: 0.15,
+        duration: 0.45,
+        ease: 'power2.out'
+      });
+
+      // 2. Turn key
+      tl.to(keyGroup.rotation, {
+        z: Math.PI / 2,
+        duration: 0.3,
+        ease: 'power1.inOut'
+      });
+
+      // 3. Shackle pops open
+      tl.to([shackleMesh.position, legLeft.position, legRight.position], {
+        y: (idx) => idx === 0 ? 0.28 : 0.18, // slide up shackle and legs
+        duration: 0.25,
+        ease: 'back.out(2)'
+      }, '-=0.1');
+
+      // Light flash emerald green
+      tl.to(colorFlashLight, {
+        color: 0x10b981,
+        intensity: 5.0,
+        duration: 0.2
+      }, '-=0.25');
+
+      // 4. Key & Lock dissolve/particle burst
+      tl.to([lockGroup.scale, keyGroup.scale], {
+        x: 0,
+        y: 0,
+        z: 0,
+        duration: 0.5,
+        ease: 'power3.in',
+        onComplete: () => {
+          keyGroup.remove();
+          onCorrect(() => {
+            renderer.dispose();
+          });
+        }
+      }, '+=0.15');
+    };
+
+    // Error shaking function
+    window.trigger3DLockError = function() {
+      if (isTransitioning) return;
+      isTransitioning = true;
+
+      // Play shake animation
+      const tl = gsap.timeline({
+        onComplete: () => {
+          isTransitioning = false;
+          onIncorrect();
+        }
+      });
+
+      tl.to(lockGroup.position, { x: -0.14, duration: 0.05, ease: 'power1.inOut' });
+      tl.to(lockGroup.position, { x: 0.14, duration: 0.05, ease: 'power1.inOut' });
+      tl.to(lockGroup.position, { x: -0.09, duration: 0.05, ease: 'power1.inOut' });
+      tl.to(lockGroup.position, { x: 0.09, duration: 0.05, ease: 'power1.inOut' });
+      tl.to(lockGroup.position, { x: 0, duration: 0.05, ease: 'power1.inOut' });
+
+      // Light flash red
+      gsap.fromTo(colorFlashLight, 
+        { color: 0xef4444, intensity: 6.0 }, 
+        { intensity: 0, duration: 0.45 }
+      );
+    };
+
+    // Draw loop
+    const clock = new THREE.Clock();
+    function animate() {
+      requestAnimationFrame(animate);
+      
+      if (hoverActive) {
+        const elapsed = clock.getElapsedTime();
+        // Floating motion
+        lockGroup.position.y = Math.sin(elapsed * 2.2) * 0.05;
+        // Hover react to mouse
+        lockGroup.rotation.y = mouse.x * 0.35;
+        lockGroup.rotation.x = Math.max(-0.2, Math.min(0.2, mouse.y * 0.3));
+      }
+
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    // Resize canvas
+    window.addEventListener('resize', () => {
+      camera.aspect = container.clientWidth / container.clientHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(container.clientWidth, container.clientHeight);
+    });
+  }
 
   // Run watermark and password check on page load
   const runOnLoad = () => {
@@ -381,3 +632,4 @@
     runOnLoad();
   }
 })();
+
