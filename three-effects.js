@@ -144,12 +144,41 @@ function injectHero3DScene() {
       gap: 0.5rem;
       transform-style: preserve-3d;
       will-change: transform;
+      pointer-events: auto;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
     }
     .light .hero-float-card {
       background: rgba(255,255,255,0.7);
       border-color: rgba(0,0,0,0.09);
       color: #0f172a;
       box-shadow: 0 24px 60px -10px rgba(91,42,134,0.12), inset 0 1px 0 rgba(255,255,255,0.9);
+    }
+    
+    .hero-float-card:hover {
+      animation-play-state: paused;
+      background: rgba(25, 30, 56, 0.8);
+    }
+    .light .hero-float-card:hover {
+      background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .hfc-reading:hover {
+      border-color: rgba(147,51,234,0.8);
+      box-shadow: 0 30px 60px -10px rgba(147,51,234,0.4), 0 0 15px rgba(147,51,234,0.2);
+    }
+    .hfc-listening:hover {
+      border-color: rgba(6,182,212,0.8);
+      box-shadow: 0 30px 60px -10px rgba(6,182,212,0.4), 0 0 15px rgba(6,182,212,0.2);
+    }
+    .hfc-writing:hover {
+      border-color: rgba(245,158,11,0.8);
+      box-shadow: 0 30px 60px -10px rgba(245,158,11,0.4), 0 0 15px rgba(245,158,11,0.2);
+    }
+    .hfc-speaking:hover {
+      border-color: rgba(236,72,153,0.8);
+      box-shadow: 0 30px 60px -10px rgba(236,72,153,0.4), 0 0 15px rgba(236,72,153,0.2);
     }
 
     .hero-float-card .hfc-icon {
@@ -366,40 +395,40 @@ function injectHero3DScene() {
     <div class="hero-grid-floor"></div>
 
     <!-- Reading card -->
-    <div class="hero-float-card hfc-reading">
+    <a href="01_IELTS_Reading_Detective_Academy.html" class="hero-float-card hfc-reading">
       <div class="hfc-icon">🕵️</div>
       <div class="hfc-label">Module 01</div>
       <div class="hfc-title">Reading</div>
       <div class="hfc-sub">14 question types + timed drills</div>
       <span class="hfc-badge" style="background:rgba(147,51,234,0.15);color:#a855f7">8 hrs · Hard</span>
-    </div>
+    </a>
 
     <!-- Listening card -->
-    <div class="hero-float-card hfc-listening">
+    <a href="02_IELTS_Listening_Sound_Hunter.html" class="hero-float-card hfc-listening">
       <div class="hfc-icon">🎧</div>
       <div class="hfc-label">Module 02</div>
       <div class="hfc-title">Listening</div>
       <div class="hfc-sub">4 sections, spelling traps</div>
       <span class="hfc-badge" style="background:rgba(6,182,212,0.15);color:#06b6d4">6 hrs · Med</span>
-    </div>
+    </a>
 
     <!-- Writing card -->
-    <div class="hero-float-card hfc-writing">
+    <a href="03_IELTS_Writing_Architects_Blueprint_v2.html" class="hero-float-card hfc-writing">
       <div class="hfc-icon">✍️</div>
       <div class="hfc-label">Module 03</div>
       <div class="hfc-title">Writing</div>
       <div class="hfc-sub">Task 1 + 2, templates, essays</div>
       <span class="hfc-badge" style="background:rgba(245,158,11,0.15);color:#f59e0b">10 hrs · Hard</span>
-    </div>
+    </a>
 
     <!-- Speaking card -->
-    <div class="hero-float-card hfc-speaking">
+    <a href="04_IELTS_Speaking_Confident_Performer.html" class="hero-float-card hfc-speaking">
       <div class="hfc-icon">🎤</div>
       <div class="hfc-label">Module 04</div>
       <div class="hfc-title">Speaking</div>
       <div class="hfc-sub">Part 1–3 fluency frameworks</div>
       <span class="hfc-badge" style="background:rgba(236,72,153,0.15);color:#ec4899">8 hrs · Med</span>
-    </div>
+    </a>
 
     <!-- Score chips -->
     <div class="hero-score-ring">
