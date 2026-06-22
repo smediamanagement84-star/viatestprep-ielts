@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PTE Academic Reading Mastery | ViaTestPrep</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --card: #ffffff;
+    --border: rgba(15, 23, 42, 0.08);
+    --border-hi: rgba(15, 23, 42, 0.16);
+    --text-1: #0f172a;
+    --text-2: #475569;
+    --text-3: #64748b;
+    --blue: #2563eb;
+    --orange: #ea580c;
+    --green: #16a34a;
+    --green-dim: rgba(22, 163, 74, 0.08);
+    --red: #dc2626;
+    --red-dim: rgba(220, 38, 38, 0.08);
+    --purple: #7c3aed;
+    --amber: #d97706;
+    --amber-dim: rgba(217, 119, 6, 0.08);
+    --amber-glow: rgba(217, 119, 6, 0.04);
+    --r: 16px;
+    --r-sm: 8px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text-1); font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+  
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 1.5rem 80px; }
+  
+  /* ── GLOBAL HEADER ── */
+  .g-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .back-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-2);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: var(--surface);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .back-btn:hover {
+    color: var(--amber);
+    border-color: var(--amber);
+    background: var(--amber-dim);
+    transform: translateY(-1px);
+  }
+  .g-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .g-title span { color: var(--amber); }
+
+  /* ── SKILL NAV TABS ── */
+  .tabs {
+    display: flex;
+    gap: 6px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    flex-shrink: 0;
+    padding: 10px 18px;
+    border-radius: var(--r-sm) var(--r-sm) 0 0;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--text-3);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+  .tab-btn:hover { color: var(--text-2); }
+  .tab-btn.active {
+    color: var(--amber);
+    border-color: var(--border) var(--border) transparent;
+    background: var(--surface);
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.02);
+  }
+
+  .panel { display: none; animation: fadeUp 0.3s ease; }
+  .panel.active { display: block; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ── CONTENT CARDS ── */
+  .card-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  }
+  .label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .label.amber { color: var(--amber); }
+  .label.green { color: var(--green); }
+  .label.orange { color: var(--orange); }
+  .label.red { color: var(--red); }
+
+  p { font-size: 14px; color: var(--text-2); line-height: 1.65; margin-bottom: 14px; }
+  strong { color: var(--text-1); }
+
+  .info-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+  .info-pill {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    color: var(--text-2);
+    background: var(--bg);
+  }
+  .info-pill.amber { color: var(--amber); border-color: var(--amber-dim); background: var(--amber-glow); }
+  .info-pill.green { color: var(--green); border-color: var(--green-dim); background: rgba(22, 163, 74, 0.04); }
+  .info-pill.orange { color: var(--orange); border-color: var(--orange-dim); background: rgba(234, 88, 12, 0.04); }
+  .info-pill.red { color: var(--red); border-color: var(--red-dim); background: var(--red-dim); }
+
+  /* ── TABLES ── */
+  .score-table { border: 1px solid var(--border); border-radius: var(--r-sm); overflow: hidden; margin-bottom: 18px; width: 100%; border-collapse: collapse; }
+  .st-row { display: grid; grid-template-columns: 140px 1fr; border-bottom: 1px solid var(--border); }
+  .st-row:last-child { border-bottom: none; }
+  .st-cell { padding: 12px; font-size: 13px; color: var(--text-2); line-height: 1.5; }
+  .st-cell.head { font-weight: 700; background: var(--bg); color: var(--text-1); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .st-cell.field { font-weight: 700; color: var(--text-1); border-right: 1px solid var(--border); background: var(--bg); }
+
+  /* ── STEPS ── */
+  .step-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
+  .step-item { display: flex; gap: 14px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 14px; }
+  .step-num {
+    width: 28px; height: 28px; border-radius: 50%; color: #fff;
+    font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; background: var(--amber);
+  }
+  .step-body { flex: 1; }
+  .step-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--text-1); }
+  .step-desc { font-size: 13px; color: var(--text-2); line-height: 1.5; }
+
+  /* ── TEMPLATE BOX ── */
+  .template-box { background: var(--bg); border: 1px solid var(--border-hi); border-radius: var(--r-sm); padding: 18px; margin-bottom: 18px; position: relative; }
+  .template-box::before {
+    content: 'Blueprints'; position: absolute; top: -1px; right: 16px;
+    font-size: 9px; font-weight: 800; letter-spacing: 2px;
+    background: var(--bg); padding: 2px 10px; border: 1px solid var(--border-hi);
+    border-top: none; border-radius: 0 0 6px 6px; color: var(--amber);
+  }
+  .template-text { font-size: 13px; line-height: 1.8; color: var(--text-2); }
+  .template-text .slot { font-weight: 700; padding: 2px 6px; border-radius: 4px; font-size: 12px; color: var(--amber); background: var(--amber-dim); }
+  .template-text .fixed { color: var(--text-1); font-weight: 700; display: block; margin-top: 12px; margin-bottom: 4px; font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; }
+
+  /* ── BOXES ── */
+  .tips-box { background: var(--amber-glow); border: 1px solid var(--amber-dim); border-radius: var(--r-sm); padding: 16px; margin-bottom: 18px; }
+  .tips-label { font-size: 10px; font-weight: 800; letter-spacing: 1.5px; color: var(--amber); margin-bottom: 8px; text-transform: uppercase; }
+  .tip-item { display: flex; gap: 8px; font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 6px; }
+  .tip-item:last-child { margin-bottom: 0; }
+  .tip-dot { color: var(--amber); flex-shrink: 0; }
+
+  .avoid-box { background: var(--red-dim); border: 1px solid rgba(220, 38, 38, 0.15); border-radius: var(--r-sm); padding: 16px; margin-bottom: 18px; }
+  .avoid-label { font-size: 10px; font-weight: 800; letter-spacing: 1.5px; color: var(--red); margin-bottom: 8px; text-transform: uppercase; }
+  .avoid-item { display: flex; gap: 8px; font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 6px; }
+  .avoid-item:last-child { margin-bottom: 0; }
+  .avoid-x { color: var(--red); flex-shrink: 0; font-weight: 700; }
+
+  /* ── INTERACTIVE DRILL WIDGET ── */
+  .drill-container {
+    border: 2px solid var(--amber-dim);
+    border-radius: var(--r);
+    padding: 24px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(217,119,6,0.03);
+    margin-top: 30px;
+  }
+  .drill-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px; }
+  .drill-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-weight: 800; display: flex; align-items: center; gap: 6px; color: var(--text-1); }
+  .drill-badge { font-size: 11px; font-weight: 700; color: var(--amber); background: var(--amber-dim); padding: 4px 10px; border-radius: 20px; }
+  
+  /* ROP list */
+  .rop-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .rop-item {
+    display: flex;
+    align-items: center;
+    background: var(--bg);
+    border: 1px solid var(--border-hi);
+    border-radius: var(--r-sm);
+    padding: 16px;
+    gap: 16px;
+    transition: all 0.2s;
+  }
+  .rop-text {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-1);
+  }
+  .rop-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .btn-rop-nav {
+    background: var(--surface);
+    color: var(--text-2);
+    border: 1px solid var(--border);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-rop-nav:hover {
+    color: var(--amber);
+    border-color: var(--amber);
+    background: var(--amber-dim);
+  }
+
+  .btn-drill {
+    background: var(--amber);
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 24px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 12px rgba(217,119,6,0.15);
+  }
+  .btn-drill:hover { background: #b45309; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(217,119,6,0.25); }
+  
+  .results-panel { display: none; border-top: 1px dashed var(--border); padding-top: 20px; animation: fadeUp 0.3s ease; }
+  .results-panel.active { display: block; }
+
+  .score-cards-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 20px; }
+  .score-card-item { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 12px; text-align: center; }
+  .sci-val { font-size: 22px; font-weight: 800; color: var(--amber); }
+  .sci-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; color: var(--text-3); margin-top: 2px; }
+
+  .rop-feedback-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-2);
+    margin-bottom: 6px;
+  }
+  .rop-indicator {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 800;
+    color: white;
+  }
+  .rop-indicator.ok { background: var(--green); }
+  .rop-indicator.err { background: var(--red); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  
+  <!-- GLOBAL HEADER -->
+  <div class="g-header">
+    <a href="index.html" class="back-btn">← Back to Hub</a>
+    <div class="g-title">PTE Reading <span>Tactics</span></div>
+  </div>
+
+  <!-- NAVIGATION TABS -->
+  <div class="tabs" id="readingTabs">
+    <button class="tab-btn active" onclick="switchTab('rwfib')">R&amp;W Fill Blanks</button>
+    <button class="tab-btn" onclick="switchTab('mcqm')">MCQ Multiple</button>
+    <button class="tab-btn" onclick="switchTab('rop')">Re-order Para</button>
+    <button class="tab-btn" onclick="switchTab('rfib')">Reading FiB</button>
+    <button class="tab-btn" onclick="switchTab('mcqs')">MCQ Single</button>
+  </div>
+
+  <!-- 1. R&W FILL IN THE BLANKS PANEL -->
+  <div id="panel-rwfib" class="panel active">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill amber">5–6 items</span>
+        <span class="info-pill amber">~2 min each</span>
+        <span class="info-pill green">Scores: Reading + Writing</span>
+        <span class="info-pill orange">Highest value reading task</span>
+      </div>
+      <p>A text with several blanks appears. Each blank has a dropdown with 4–6 word options. Select the best word for each blank. Tests vocabulary AND reading comprehension simultaneously.</p>
+      
+      <span class="label amber">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Read the full sentence around the blank first</div>
+            <div class="step-desc">Do not look at the options. Determine the grammatical slot (noun / verb / adjective) needed for the sentence to make sense.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Apply collocation logic</div>
+            <div class="step-desc">Words naturally pair together. Look at adjacent words to identify the correct pairing (e.g. "pose a threat", "meet the criteria").</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Eliminate based on register</div>
+            <div class="step-desc">PTE passages are academic. Prefer formal synonyms over casual/informal words (e.g. "substantial" instead of "big").</div>
+          </div>
+        </div>
+      </div>
+
+      <span class="label">4-Filter Elimination Method</span>
+      <div class="template-box">
+        <div class="template-text">
+          FILTER 1 — Wrong word class: <span class="slot">nouns in verb slots</span><br>
+          FILTER 2 — Wrong collocation: <span class="slot">"do research" vs "carry out research"</span><br>
+          FILTER 3 — Wrong register: <span class="slot">casual vs formal academic tone</span><br>
+          FILTER 4 — Preposition fit: <span class="slot">does the choice match the following preposition?</span>
+        </div>
+      </div>
+
+      <span class="label green">Collocations to Memorise</span>
+      <div class="tips-box">
+        <div class="tips-label">COMMON PAIRINGS</div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div>carry out research · reach a conclusion · raise awareness</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div>draw attention to · make an impact · pose a threat</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div>meet the criteria · fulfil a requirement · bear a resemblance</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. MCQ MULTIPLE PANEL -->
+  <div id="panel-mcqm" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill amber">2–3 items</span>
+        <span class="info-pill red">⚠ NEGATIVE MARKING</span>
+        <span class="info-pill green">Scores: Reading</span>
+      </div>
+      <p>A reading passage with a question. Multiple answers may be correct. <strong>Incorrect selections DEDUCT marks.</strong> The only Reading task with negative marking.</p>
+      
+      <div class="avoid-box">
+        <div class="avoid-label">Negative marking applies</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Selecting a wrong answer is WORSE than leaving it blank. Only select what you are 80%+ confident about. If in doubt, select just ONE correct answer and move on.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. RE-ORDER PARAGRAPHS PANEL -->
+  <div id="panel-rop" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill amber">2–3 items</span>
+        <span class="info-pill amber">~2 min each</span>
+        <span class="info-pill green">Partial credit (adjacent pairs)</span>
+      </div>
+      <p>Several text boxes appear in random order. Arrange them into the correct logical sequence. Partial credit is awarded — each correctly adjacent pair scores a point.</p>
+      
+      <span class="label amber">5-Step Re-ordering Method</span>
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Find the opening sentence first</div>
+            <div class="step-desc">The opening sentence is independent. It introduces a new topic and does NOT start with linking words (However, Therefore) or pronoun references (They, This).</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Match pronouns to their antecedents</div>
+            <div class="step-desc">If a sentence refers to "these findings" or "he", the sentence introducing the findings or the person must immediately precede it.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Follow logical connectors</div>
+            <div class="step-desc">Look for sequencing markers: "Firstly", "Consequently", "On the other hand", "In conclusion".</div>
+          </div>
+        </div>
+      </div>
+
+      <span class="label">Connector Signals</span>
+      <div class="template-box">
+        <div class="template-text">
+          <span class="fixed">SIGNALS AN OPENING:</span>
+          No pronouns referencing prior content · Introduces topic with "A/An" · Independent clause.
+          <span class="fixed">SIGNALS A LINK:</span>
+          Starts with "This" / "These" / "It" / "They" / "However" / "Furthermore".
+          <span class="fixed">SIGNALS A CONCLUSION:</span>
+          "Therefore" / "Thus" / "Ultimately" / "In summary" · Final result or outcome.
+        </div>
+      </div>
+    </div>
+
+    <!-- Re-order Paragraphs Simulator widget -->
+    <div class="drill-container">
+      <div class="drill-header">
+        <div class="drill-title">📖 Practice Drill: Re-order Paragraphs Game</div>
+        <div class="drill-badge">Interactive Ordering</div>
+      </div>
+      
+      <p>Arrange the following scrambled sentences into the correct logical paragraph order. Use the UP (▲) and DOWN (▼) buttons on each card to shift its position.</p>
+      
+      <div class="rop-list" id="ropList">
+        <!-- Scrambled Blocks -->
+        <div class="rop-item" data-id="A">
+          <div class="rop-text"><strong>[Block A]</strong> Ultimately, these green spaces not only improve the health of citizens, but also foster a strong sense of community cohesion.</div>
+          <div class="rop-controls">
+            <button class="btn-rop-nav" onclick="moveUp(this)">▲</button>
+            <button class="btn-rop-nav" onclick="moveDown(this)">▼</button>
+          </div>
+        </div>
+        <div class="rop-item" data-id="B">
+          <div class="rop-text"><strong>[Block B]</strong> To address this issue, city planners are increasingly focusing on the development of sustainable urban infrastructure.</div>
+          <div class="rop-controls">
+            <button class="btn-rop-nav" onclick="moveUp(this)">▲</button>
+            <button class="btn-rop-nav" onclick="moveDown(this)">▼</button>
+          </div>
+        </div>
+        <div class="rop-item" data-id="C">
+          <div class="rop-text"><strong>[Block C]</strong> In recent years, the rapid growth of modern cities has created significant environmental challenges.</div>
+          <div class="rop-controls">
+            <button class="btn-rop-nav" onclick="moveUp(this)">▲</button>
+            <button class="btn-rop-nav" onclick="moveDown(this)">▼</button>
+          </div>
+        </div>
+        <div class="rop-item" data-id="D">
+          <div class="rop-text"><strong>[Block D]</strong> One of the most effective strategies involves incorporating public parks and vertical gardens into commercial projects.</div>
+          <div class="rop-controls">
+            <button class="btn-rop-nav" onclick="moveUp(this)">▲</button>
+            <button class="btn-rop-nav" onclick="moveDown(this)">▼</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="drill-controls">
+        <button class="btn-drill" onclick="checkRopOrder()">🔍 Check Order</button>
+        <button class="btn-drill-secondary" onclick="resetRop()">🔄 Scramble/Reset</button>
+      </div>
+
+      <!-- Results panel -->
+      <div class="results-panel" id="ropResults">
+        <h4 style="margin-bottom: 12px; font-weight: 800;">📊 AI Ordering Feedback</h4>
+        <div class="score-cards-row">
+          <div class="score-card-item">
+            <div class="sci-val" id="ropScore" style="color:var(--green)">0 / 3</div>
+            <div class="sci-lbl">Adjacent Pair Points</div>
+          </div>
+          <div class="score-card-item">
+            <div class="sci-val" id="ropGrade" style="color:var(--amber)">Needs Work</div>
+            <div class="sci-lbl">Order Rating</div>
+          </div>
+        </div>
+        
+        <div style="margin-bottom: 8px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-3);">Adjacent Pairs Check:</div>
+        <div id="ropPairsReport">
+          <!-- Populated by JS -->
+        </div>
+        <p style="margin-top:10px; font-size: 12px; color: var(--text-3);">Note: PTE scoring rewards correct ADJACENT pairs. E.g. if the correct sequence is C-B-D-A, the pairs scored are C-B, B-D, and D-A (max 3 points).</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. READING FILL IN BLANKS PANEL -->
+  <div id="panel-rfib" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill amber">4–5 items</span>
+        <span class="info-pill amber">~90 sec each</span>
+        <span class="info-pill green">Scores: Reading</span>
+      </div>
+      <p>A text with several blanks appears. A word pool at the bottom contains more words than blanks. Drag words from the pool into the correct blanks.</p>
+      
+      <span class="label green">Key strategy</span>
+      <div class="tips-box">
+        <div class="tips-label">Drag and Drop tactics</div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Identify word class:</strong> Determine if the blank is a noun, verb, or adjective first.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Process of elimination:</strong> Fill the easiest blanks first. As words are placed, choices narrow.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. MCQ SINGLE PANEL -->
+  <div id="panel-mcqs" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill amber">2–3 items</span>
+        <span class="info-pill green">No negative marking</span>
+      </div>
+      <p>Exactly one correct option. Always answer as there is no negative marking.</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function switchTab(tabId) {
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(panel => panel.classList.remove('active'));
+    
+    const btn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(`'${tabId}'`));
+    if (btn) btn.classList.add('active');
+    
+    const panel = document.getElementById('panel-' + tabId);
+    if (panel) panel.classList.add('active');
+  }
+
+  // ── RE-ORDER PARAGRAPHS CODE ──
+  function moveUp(button) {
+    const item = button.closest('.rop-item');
+    const prev = item.previousElementSibling;
+    if (prev) {
+      item.parentNode.insertBefore(item, prev);
+    }
+  }
+
+  function moveDown(button) {
+    const item = button.closest('.rop-item');
+    const next = item.nextElementSibling;
+    if (next) {
+      item.parentNode.insertBefore(next, item);
+    }
+  }
+
+  function scramble(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  function resetRop() {
+    const list = document.getElementById('ropList');
+    const items = Array.from(list.children);
+    scramble(items);
+    list.innerHTML = '';
+    items.forEach(item => list.appendChild(item));
+    document.getElementById('ropResults').classList.remove('active');
+  }
+
+  function checkRopOrder() {
+    const list = document.getElementById('ropList');
+    const items = Array.from(list.children);
+    const order = items.map(item => item.getAttribute('data-id'));
+    
+    // Correct Order: C -> B -> D -> A
+    const correctPairs = ["CB", "BD", "DA"];
+    let score = 0;
+    let pairsHTML = '';
+
+    // Evaluate adjacent pairs
+    for (let i = 0; i < order.length - 1; i++) {
+      const pair = order[i] + order[i+1];
+      const isCorrect = correctPairs.includes(pair);
+      
+      let firstBlockText = items[i].querySelector('.rop-text').textContent.split(']')[0] + ']';
+      let secondBlockText = items[i+1].querySelector('.rop-text').textContent.split(']')[0] + ']';
+      
+      if (isCorrect) {
+        score++;
+        pairsHTML += `
+          <div class="rop-feedback-item">
+            <span class="rop-indicator ok">✓</span> Link between <strong>${firstBlockText}</strong> and <strong>${secondBlockText}</strong> is correct (+1 point)
+          </div>`;
+      } else {
+        pairsHTML += `
+          <div class="rop-feedback-item">
+            <span class="rop-indicator err">✗</span> Link between <strong>${firstBlockText}</strong> and <strong>${secondBlockText}</strong> is incorrect (0 points)
+          </div>`;
+      }
+    }
+
+    document.getElementById('ropScore').textContent = `${score} / 3`;
+    
+    let grade = 'Needs Work';
+    let color = 'var(--red)';
+    if (score === 3) { grade = 'Perfect (79+)'; color = 'var(--green)'; }
+    else if (score === 2) { grade = 'Good (65+)'; color = 'var(--purple)'; }
+    else if (score === 1) { grade = 'Needs Work'; color = 'var(--amber)'; }
+    
+    const gradeEl = document.getElementById('ropGrade');
+    gradeEl.textContent = grade;
+    gradeEl.style.color = color;
+    
+    document.getElementById('ropPairsReport').innerHTML = pairsHTML;
+    document.getElementById('ropResults').classList.add('active');
+    document.getElementById('ropResults').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // Scramble cards initially
+  window.addEventListener('DOMContentLoaded', () => {
+    // Make sure we start scrambled
+    resetRop();
+  });
+</script>
+</body>
+</html>

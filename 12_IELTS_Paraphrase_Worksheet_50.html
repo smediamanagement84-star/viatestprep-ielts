@@ -136,573 +136,554 @@ const typeColors={
 
 // ====== 50 PROMPTS · 10 per essay type ======
 const prompts = [
-  // ============================
-  // OPINION (10)
-  // ============================
   {
     n:1, type:"opinion",
     prompt:"Some people believe that the government should be responsible for solving environmental problems. To what extent do you agree or disagree?",
-    hint:"Swap: government → state / public authorities; responsible → accountable / take charge of; environmental problems → ecological issues. Try: 'It is often argued that…'",
+    hint:"Swap: government -> state / public authorities; responsible -> accountable / take charge of; environmental problems -> ecological issues. Try: 'It is often argued that…'",
     samples:[
-      {t:"It is often argued that responsibility for tackling ecological issues should rest with the state. To what extent do you agree with this view?",
-       why:"Swaps 'government'→'the state', 'solving environmental problems'→'tackling ecological issues', and opens with 'It is often argued that…'."},
-      {t:"Many people maintain that the task of addressing ecological problems falls on the public authorities. Do you agree or disagree?",
-       why:"Uses 'maintain', 'addressing', and 'public authorities' as synonym chains, and converts 'should be responsible' into 'the task falls on'."}
+      {t:"It is widely asserted that the state should assume full accountability for mitigating ecological damage.",
+       why:"Lexical Swap: Replaces 'government' with 'the state', 'be responsible' with 'assume full accountability', and uses a passive reporting verb."},
+      {t:"Tackling environmental degradation is often viewed as an obligation that falls primarily on public authorities.",
+       why:"Structural Swap: Uses nominalization ('Tackling environmental degradation') as the subject, changing the grammatical structure from active to passive."}
     ]
   },
   {
     n:2, type:"opinion",
     prompt:"Some people think that schools should focus more on practical subjects like cooking and money management rather than traditional academic subjects. Do you agree or disagree?",
-    hint:"Swap: schools → educational institutions; focus on → prioritise; practical → life-skills / hands-on; traditional academic subjects → classical academic disciplines.",
+    hint:"Swap: schools -> educational institutions; focus on -> prioritise; practical -> life-skills / hands-on; traditional academic subjects -> classical academic disciplines.",
     samples:[
-      {t:"It is sometimes argued that educational institutions ought to prioritise life-skills classes such as cookery and personal finance, rather than classical academic disciplines. Do you agree with this view?",
-       why:"'Schools'→'educational institutions'; 'focus more on'→'prioritise'; 'cooking and money management'→'cookery and personal finance'."},
-      {t:"Some hold the view that schools should give more time to hands-on subjects like cooking and budgeting, instead of standard academic ones. To what extent do you agree?",
-       why:"'Some hold the view that' replaces 'Some people think'; 'practical' becomes 'hands-on'; 'money management' becomes 'budgeting'."}
+      {t:"It is frequently argued that educational institutions ought to place greater emphasis on life-skills classes such as cookery and personal finance, rather than classical academic disciplines.",
+       why:"Lexical Swap: Employs precise synonyms ('educational institutions', 'life-skills classes', 'personal finance', 'classical academic disciplines')."},
+      {t:"Rather than dedicating classroom hours to traditional academic subjects, schools should prioritise hands-on training in budgeting and cooking.",
+       why:"Structural Swap: Uses a comparative clause ('Rather than...') at the beginning to reorder the emphasis of the sentence."}
     ]
   },
   {
     n:3, type:"opinion",
     prompt:"Some say that university tuition should be free for all students. To what extent do you agree?",
-    hint:"Swap: university → higher education; tuition → fees; free → no cost / state-funded. Reshape into 'It is sometimes claimed that…'.",
+    hint:"Swap: university -> higher education; tuition -> fees; free -> no cost / state-funded. Reshape into 'It is sometimes claimed that…'.",
     samples:[
-      {t:"It is sometimes claimed that higher education should be made available to all students at no cost. To what extent do you agree with this view?",
-       why:"'University tuition'→'higher education'; 'free'→'at no cost'; converts active claim into 'It is sometimes claimed that…'."},
-      {t:"Some argue that fees for university courses ought to be abolished entirely. Do you agree with this position?",
-       why:"'Tuition' becomes 'fees for university courses'; 'free' becomes 'abolished entirely'."}
+      {t:"It is sometimes claimed that higher education should be made available to all students at no cost.",
+       why:"Lexical Swap: Substitutes 'university tuition' with 'higher education' and 'free' with 'at no cost'."},
+      {t:"Abolishing fees for university courses is a policy that many believe would benefit all students.",
+       why:"Structural Swap: Uses a gerund phrase ('Abolishing fees...') as the subject and introduces a relative clause ('that many believe...')."}
     ]
   },
   {
     n:4, type:"opinion",
     prompt:"Some believe that all forms of public transport should be free of charge. Do you agree or disagree?",
-    hint:"Swap: public transport → mass-transit systems / buses, trains and trams; free of charge → without cost / subsidised entirely. Try a passive: 'It is sometimes suggested that…'.",
+    hint:"Swap: public transport -> mass-transit systems / buses, trains and trams; free of charge -> without cost / subsidised entirely. Try a passive: 'It is sometimes suggested that…'.",
     samples:[
-      {t:"It is sometimes suggested that all mass-transit systems ought to be subsidised entirely, allowing passengers to travel without charge. To what extent do you agree?",
-       why:"'Public transport'→'mass-transit systems'; 'free of charge' becomes 'subsidised entirely, allowing passengers to travel without charge'."},
-      {t:"Some hold the view that every type of public transport — buses, trains and trams — should be made available to passengers free of charge. Do you agree with this view?",
-       why:"Specifies the modes (buses, trains, trams) — concrete listing replaces the abstract 'all forms'."}
+      {t:"It is sometimes suggested that all mass-transit systems ought to be subsidised entirely, allowing passengers to travel without charge.",
+       why:"Lexical Swap: Replaces 'public transport' with 'mass-transit systems' and 'free of charge' with 'subsidised entirely'."},
+      {t:"Allowing citizens to use buses, trains, and trams without paying is a measure that has received significant support.",
+       why:"Structural Swap: Converts 'all forms of public transport' into a list ('buses, trains, and trams') and nominalizes the action of riding ('Allowing citizens to use...')."}
     ]
   },
   {
     n:5, type:"opinion",
     prompt:"It is sometimes said that paying high taxes is the duty of every citizen. To what extent do you agree?",
-    hint:"Swap: high taxes → substantial taxation; duty → obligation / civic responsibility; every citizen → all members of society.",
+    hint:"Swap: high taxes -> substantial taxation; duty -> obligation / civic responsibility; every citizen -> all members of society.",
     samples:[
-      {t:"There is a view that paying substantial taxation is the civic obligation of every member of society. To what extent do you agree?",
-       why:"'High taxes'→'substantial taxation'; 'duty of every citizen'→'civic obligation of every member of society'."},
-      {t:"Some argue that contributing high levels of tax is a moral responsibility shared by all citizens. Do you agree with this view?",
-       why:"'Paying'→'contributing'; 'duty'→'moral responsibility shared by'."}
+      {t:"There is an argument that paying substantial taxation is the civic obligation of every member of society.",
+       why:"Lexical Swap: Replaces 'high taxes' with 'substantial taxation' and 'duty of every citizen' with 'civic obligation of every member of society'."},
+      {t:"Contributing a significant portion of one's income to the state is often viewed as a fundamental responsibility shared by all citizens.",
+       why:"Structural Swap: Replaces the simple gerund 'paying' with a complex noun phrase and converts the active structure to passive voice."}
     ]
   },
   {
     n:6, type:"opinion",
     prompt:"Some people think that competitive sport in schools does more harm than good. Do you agree or disagree?",
-    hint:"Swap: competitive sport → competitive athletics; does more harm than good → has negative rather than positive effects / is ultimately damaging.",
+    hint:"Swap: competitive sport -> competitive athletics; does more harm than good -> has negative rather than positive effects / is ultimately damaging.",
     samples:[
-      {t:"It is sometimes argued that competitive athletics in school settings has negative rather than positive effects on young people. To what extent do you agree?",
-       why:"'Competitive sport'→'competitive athletics'; 'in schools'→'in school settings'."},
-      {t:"There is a view that organised school sports competitions cause more damage than benefit to children. Do you agree with this view?",
-       why:"'Competitive sport in schools'→'organised school sports competitions'; 'does more harm than good'→'causes more damage than benefit'."}
+      {t:"It is often argued that competitive athletics in school settings has negative rather than positive effects on young people.",
+       why:"Lexical Swap: Replaces 'competitive sport' with 'competitive athletics' and 'schools' with 'school settings'."},
+      {t:"Although school sports are popular, they are believed by some to be ultimately damaging to students' development.",
+       why:"Structural Swap: Uses an introductory concessive clause ('Although school sports are popular...') to restructure the relationship of the ideas."}
     ]
   },
   {
     n:7, type:"opinion",
     prompt:"Some people argue that the best leaders are those who have grown up in challenging circumstances. To what extent do you agree or disagree?",
-    hint:"Swap: leaders → individuals in positions of power; challenging circumstances → difficult / disadvantaged backgrounds; grown up in → been raised in.",
+    hint:"Swap: leaders -> individuals in positions of power; challenging circumstances -> difficult / disadvantaged backgrounds; grown up in -> been raised in.",
     samples:[
-      {t:"There is a view that the most effective individuals in positions of power are those raised in difficult circumstances. To what extent do you agree?",
-       why:"'Best leaders'→'most effective individuals in positions of power'; 'grown up in challenging'→'raised in difficult'."},
-      {t:"It is sometimes claimed that those who become outstanding leaders are people who were brought up in disadvantaged backgrounds. Do you agree?",
-       why:"Restructures with a relative clause and uses 'brought up' and 'disadvantaged backgrounds'."}
+      {t:"There is a view that the most effective individuals in positions of power are those raised in difficult circumstances.",
+       why:"Lexical Swap: Replaces 'best leaders' with 'most effective individuals in positions of power' and 'challenging circumstances' with 'difficult circumstances'."},
+      {t:"Having been raised in a disadvantaged background is often considered an essential precursor to becoming an outstanding leader.",
+       why:"Structural Swap: Uses a perfect gerund phrase ('Having been raised...') as the subject, inverting the order of the cause and effect."}
     ]
   },
   {
     n:8, type:"opinion",
     prompt:"Some say that smoking in public places should be completely banned. Do you agree?",
-    hint:"Swap: smoking → tobacco use; public places → public spaces / shared public areas; completely banned → outlawed / prohibited.",
+    hint:"Swap: smoking -> tobacco use; public places -> public spaces / shared public areas; completely banned -> outlawed / prohibited.",
     samples:[
-      {t:"There is a view that tobacco use ought to be entirely prohibited in all shared public spaces. Do you agree with this view?",
-       why:"'Smoking'→'tobacco use'; 'public places'→'shared public spaces'; 'completely banned'→'entirely prohibited'."},
-      {t:"It is sometimes argued that smoking should be outlawed in every public area. To what extent do you agree?",
-       why:"'Public places'→'every public area'; 'completely banned'→'outlawed'."}
+      {t:"There is an assertion that tobacco use ought to be entirely prohibited in all shared public spaces.",
+       why:"Lexical Swap: Replaces 'smoking' with 'tobacco use' and 'public places' with 'shared public spaces'."},
+      {t:"Imposing a total ban on smoking within public areas is a policy that is widely supported.",
+       why:"Structural Swap: Nominalizes 'completely banned' into the subject phrase 'Imposing a total ban on smoking' and uses a passive adjective clause."}
     ]
   },
   {
     n:9, type:"opinion",
     prompt:"Some people think that the only way to reduce traffic accidents is by introducing harsher punishments for dangerous drivers. To what extent do you agree?",
-    hint:"Swap: traffic accidents → road incidents / collisions; harsher punishments → stricter penalties; dangerous drivers → reckless motorists.",
+    hint:"Swap: traffic accidents -> road incidents / collisions; harsher punishments -> stricter penalties; dangerous drivers -> reckless motorists.",
     samples:[
-      {t:"It is sometimes argued that the sole solution to road collisions is to impose stricter penalties on reckless motorists. To what extent do you agree?",
-       why:"'Traffic accidents'→'road collisions'; 'harsher punishments for dangerous drivers'→'stricter penalties on reckless motorists'."},
-      {t:"There is a view that lowering rates of traffic accidents requires nothing other than tougher punishments for those who drive irresponsibly. Do you agree?",
-       why:"'Reduce'→'lowering rates of'; 'dangerous drivers'→'those who drive irresponsibly'."}
+      {t:"It is sometimes argued that the sole solution to road collisions is to impose stricter penalties on reckless motorists.",
+       why:"Lexical Swap: Substitutes 'only way to reduce traffic accidents' with 'sole solution to road collisions' and 'harsher punishments' with 'stricter penalties'."},
+      {t:"Only by punishing reckless motorists more severely can governments hope to lower the rate of accidents on the road.",
+       why:"Structural Swap: Uses subject-auxiliary inversion ('Only by... can governments hope...') to create a high-scoring complex grammatical structure."}
     ]
   },
   {
     n:10, type:"opinion",
     prompt:"Some believe that wealthy nations have a moral obligation to share their resources with poorer countries. Do you agree or disagree?",
-    hint:"Swap: wealthy nations → affluent countries; moral obligation → ethical duty; resources → wealth and assistance; poorer countries → developing nations.",
+    hint:"Swap: wealthy nations -> affluent countries; moral obligation -> ethical duty; resources -> wealth and assistance; poorer countries -> developing nations.",
     samples:[
-      {t:"There is a view that affluent countries hold an ethical duty to share their wealth and assistance with developing nations. Do you agree with this view?",
-       why:"'Wealthy nations'→'affluent countries'; 'moral obligation'→'ethical duty'; 'poorer countries'→'developing nations'."},
-      {t:"It is sometimes argued that prosperous states are morally bound to provide support to the world's less-developed nations. To what extent do you agree?",
-       why:"'Wealthy nations'→'prosperous states'; 'share resources with'→'provide support to'."}
+      {t:"There is a view that affluent countries hold an ethical duty to share their wealth and assistance with developing nations.",
+       why:"Lexical Swap: Replaces 'wealthy nations' with 'affluent countries' and 'moral obligation' with 'ethical duty'."},
+      {t:"That prosperous states are morally bound to provide support to the world's less-developed nations is an argument supported by many.",
+       why:"Structural Swap: Uses a noun clause starting with 'That' ('That prosperous states...') as the subject, creating an advanced grammatical layout."}
     ]
   },
-
-  // ============================
-  // DISCUSSION (10)
-  // ============================
   {
     n:11, type:"discussion",
     prompt:"Some people think that the best way to improve public health is to introduce a sugar tax. Others believe education is more effective. Discuss both views and give your opinion.",
-    hint:"Swap: improve public health → enhance population well-being; sugar tax → levy on sugary products; education → awareness campaigns. Use 'While some… others…'.",
+    hint:"Swap: improve public health -> enhance population well-being; sugar tax -> levy on sugary products; education -> awareness campaigns. Use 'While some… others…'.",
     samples:[
-      {t:"While some believe that the most effective method of enhancing population well-being is to impose a levy on sugary products, others maintain that public awareness campaigns deliver better results. Discuss both views and offer your opinion.",
-       why:"Uses 'While some… others…', 'enhancing population well-being', and 'levy on sugary products'."},
-      {t:"Opinion is divided over whether public health is best improved through a tax on sugar or through better education. Discuss both perspectives and give your own view.",
-       why:"Opens with 'Opinion is divided over', uses 'perspectives' rather than 'views', and shortens the sugar/education contrast."}
+      {t:"While some believe that the most effective method of enhancing population well-being is to impose a levy on sugary products, others maintain that public awareness campaigns deliver better results.",
+       why:"Lexical Swap: Replaces 'improve public health' with 'enhancing population well-being' and 'sugar tax' with 'levy on sugary products'."},
+      {t:"Opinion is divided over whether public health is best improved through fiscal measures on sugar or through targeted educational campaigns.",
+       why:"Structural Swap: Opens with the passive structure 'Opinion is divided over whether...' and contrasts 'fiscal measures' with 'educational campaigns' in parallel structures."}
     ]
   },
   {
     n:12, type:"discussion",
     prompt:"Some say that learning a foreign language should be compulsory in primary school. Others believe it should be optional. Discuss both views.",
-    hint:"Swap: foreign language → second language; compulsory → mandatory / a required subject; primary school → elementary education; optional → discretionary / a matter of choice.",
+    hint:"Swap: foreign language -> second language; compulsory -> mandatory / a required subject; primary school -> elementary education; optional -> discretionary / a matter of choice.",
     samples:[
-      {t:"While some argue that second-language study should be a required subject in elementary education, others maintain that it ought to be a matter of choice. Discuss both views.",
-       why:"'Foreign language'→'second-language study'; 'compulsory'→'a required subject'; 'optional'→'a matter of choice'."},
-      {t:"There is debate over whether young children should be obliged to learn a foreign language, or whether the decision should rest with families. Discuss both views.",
-       why:"Reframes 'compulsory vs optional' as 'obliged vs decision rests with families', adding agency."}
+      {t:"While some argue that second-language study should be a required subject in elementary education, others maintain that it ought to be discretionary.",
+       why:"Lexical Swap: Substitutes 'foreign language' with 'second-language study' and 'compulsory' with 'required subject'."},
+      {t:"Whether young children should be obliged to learn a foreign language or allowed to choose is a subject of ongoing debate.",
+       why:"Structural Swap: Converts the two contrasting opinions into a compound 'Whether... or...' noun clause that serves as the sentence subject."}
     ]
   },
   {
     n:13, type:"discussion",
     prompt:"Some people argue that animals should not be kept in zoos. Others believe zoos play an important role in conservation. Discuss both views and give your opinion.",
-    hint:"Swap: kept in zoos → held in captivity; play an important role in conservation → make a vital contribution to species protection.",
+    hint:"Swap: kept in zoos -> held in captivity; play an important role in conservation -> make a vital contribution to species protection.",
     samples:[
-      {t:"While some hold that wild creatures ought not to be held in captivity, others maintain that zoological parks make a vital contribution to species protection. Discuss both views and give your own opinion.",
-       why:"'Animals kept in zoos'→'wild creatures held in captivity'; 'conservation'→'species protection'."},
-      {t:"There is debate over whether animals belong in zoos, with some viewing this practice as cruel and others seeing it as essential for safeguarding endangered species. Discuss both views.",
-       why:"Reshapes into a contrast clause and uses 'safeguarding endangered species' for 'conservation'."}
+      {t:"While some hold that wild creatures ought not to be held in captivity, others maintain that zoological parks make a vital contribution to species protection.",
+       why:"Lexical Swap: Replaces 'animals in zoos' with 'wild creatures held in captivity' and 'conservation' with 'species protection'."},
+      {t:"Zoos are criticized by some as places of animal confinement, whereas others defend them as essential instruments for wildlife preservation.",
+       why:"Structural Swap: Structures the sentence around a strong adversative coordinator ('whereas') and active/passive parallel verb clauses."}
     ]
   },
   {
     n:14, type:"discussion",
     prompt:"Some people think that art classes are essential in school. Others feel that this time is better spent on academic subjects. Discuss both views.",
-    hint:"Swap: art classes → creative subjects / the arts; essential → indispensable; academic subjects → core academic disciplines.",
+    hint:"Swap: art classes -> creative subjects / the arts; essential -> indispensable; academic subjects -> core academic disciplines.",
     samples:[
-      {t:"While some consider creative subjects to be indispensable in school, others feel that this time would be better devoted to core academic disciplines. Discuss both views.",
-       why:"'Art classes'→'creative subjects'; 'essential'→'indispensable'; 'academic'→'core academic disciplines'."},
-      {t:"Opinion is divided over whether the arts deserve a permanent place on the school timetable, or whether classroom hours should instead be focused on traditional academic study. Discuss both views.",
-       why:"'Art classes' becomes 'the arts on the timetable'; clearer structural inversion."}
+      {t:"While some consider creative subjects to be indispensable in school, others feel that this time would be better devoted to core academic disciplines.",
+       why:"Lexical Swap: Replaces 'art classes' with 'creative subjects' and 'academic subjects' with 'core academic disciplines'."},
+      {t:"The debate centers on whether classroom hours should be dedicated to the arts or redirected toward traditional academic study.",
+       why:"Structural Swap: Nominalizes the conflict ('The debate centers on whether...') and uses parallel passive infinitive constructions ('to be dedicated... or redirected...')."}
     ]
   },
   {
     n:15, type:"discussion",
     prompt:"Some say technology has improved the way we work. Others argue it has made our work more stressful. Discuss both views and give your opinion.",
-    hint:"Swap: technology → digital tools / modern technology; improved → transformed for the better; stressful → demanding / a source of pressure.",
+    hint:"Swap: technology -> digital tools / modern technology; improved -> transformed for the better; stressful -> demanding / a source of pressure.",
     samples:[
-      {t:"While some argue that modern technology has transformed working life for the better, others contend that it has made the workplace far more demanding. Discuss both views and give your opinion.",
-       why:"'Technology'→'modern technology'; 'improved'→'transformed for the better'; 'stressful'→'demanding'."},
-      {t:"There is debate over the impact of digital tools at work — with some praising the gains in efficiency and others pointing to rising stress. Discuss both views.",
-       why:"Reshapes into a single sentence using 'with some… and others…' structure."}
+      {t:"While some argue that modern technology has transformed working life for the better, others contend that it has made the workplace far more demanding.",
+       why:"Lexical Swap: Replaces 'improved the way we work' with 'transformed working life for the better' and 'stressful' with 'demanding'."},
+      {t:"Although digital tools have undoubtedly streamlined professional tasks, some believe they have concurrently introduced unprecedented levels of workplace pressure.",
+       why:"Structural Swap: Uses an introductory concession clause ('Although...') and transitions to show simultaneous opposing effects."}
     ]
   },
   {
     n:16, type:"discussion",
     prompt:"Some believe museums should be free to enter, while others argue visitors should pay. Discuss both views.",
-    hint:"Swap: museums → cultural institutions; free to enter → admission-free / open without charge; pay → contribute / be charged an entry fee.",
+    hint:"Swap: museums -> cultural institutions; free to enter -> admission-free / open without charge; pay -> contribute / be charged an entry fee.",
     samples:[
-      {t:"While some hold that cultural institutions should be admission-free, others maintain that visitors ought to contribute a fee. Discuss both views.",
-       why:"'Museums'→'cultural institutions'; 'free to enter'→'admission-free'; 'pay'→'contribute a fee'."},
-      {t:"There is disagreement over whether museum entry ought to be open to all without charge or whether visitors should be required to pay. Discuss both views.",
-       why:"Begins with 'There is disagreement over', uses 'be required to pay'."}
+      {t:"While some hold that cultural institutions should be admission-free, others maintain that visitors ought to contribute an entry fee.",
+       why:"Lexical Swap: Uses precise academic terms ('cultural institutions', 'admission-free', 'contribute an entry fee')."},
+      {t:"Opinions differ on whether museum doors should be open to the public without charge, or if financial contributions through ticketing are necessary.",
+       why:"Structural Swap: Opens with 'Opinions differ on whether...' and balances a prepositional phrase ('without charge') against an 'if' clause."}
     ]
   },
   {
     n:17, type:"discussion",
     prompt:"Some people think the most important factor in choosing a job is salary. Others say job satisfaction matters more. Discuss both views.",
-    hint:"Swap: most important factor → key consideration; choosing a job → selecting a career; salary → financial reward; job satisfaction → fulfilment at work.",
+    hint:"Swap: most important factor -> key consideration; choosing a job -> selecting a career; salary -> financial reward; job satisfaction -> fulfilment at work.",
     samples:[
-      {t:"While some believe that the key consideration when selecting a career is financial reward, others maintain that fulfilment at work carries greater weight. Discuss both views.",
-       why:"'Most important factor'→'key consideration'; 'job satisfaction'→'fulfilment at work'."},
-      {t:"Opinion is divided over what should matter most in a career decision — pay or personal satisfaction. Discuss both views.",
-       why:"Compresses into one sentence and substitutes 'career decision' for the longer phrase."}
+      {t:"While some believe that the key consideration when selecting a career is financial reward, others maintain that fulfilment at work carries greater weight.",
+       why:"Lexical Swap: Replaces 'most important factor' with 'key consideration' and 'job satisfaction' with 'fulfilment at work'."},
+      {t:"Whether professionals should prioritize high earnings or personal gratification when selecting a job is a matter of division.",
+       why:"Structural Swap: Creates a subject clause using 'Whether...' and nominalizes 'matters more' into 'personal gratification'."}
     ]
   },
   {
     n:18, type:"discussion",
     prompt:"Some say it is better to live in a small town. Others prefer life in a big city. Discuss both views and give your opinion.",
-    hint:"Swap: small town → rural community; big city → metropolitan area / large urban centre.",
+    hint:"Swap: small town -> rural community; big city -> metropolitan area / large urban centre.",
     samples:[
-      {t:"While some hold that life in a rural community is preferable, others would rather reside in a large urban centre. Discuss both views and offer your opinion.",
-       why:"'Small town'→'rural community'; 'big city'→'large urban centre'; 'prefer'→'would rather reside in'."},
-      {t:"There is debate over whether one ought to settle in a quieter, smaller town or in a busy metropolitan area. Discuss both views.",
-       why:"Adds 'quieter, smaller town' and 'busy metropolitan area' to add precision."}
+      {t:"While some hold that life in a rural community is preferable, others would rather reside in a large urban centre.",
+       why:"Lexical Swap: Replaces 'small town' with 'rural community' and 'big city' with 'large urban centre'."},
+      {t:"Choosing to reside in a quiet town offers benefits that contrast sharply with the advantages of settling in a bustling metropolis.",
+       why:"Structural Swap: Restructures the comparison by using active gerunds ('Choosing to reside...') and contrasting the qualities of the two locations."}
     ]
   },
   {
     n:19, type:"discussion",
     prompt:"Some people argue that children should grow up with siblings. Others believe being an only child is preferable. Discuss both views.",
-    hint:"Swap: grow up with siblings → be raised alongside brothers or sisters; only child → without siblings.",
+    hint:"Swap: grow up with siblings -> be raised alongside brothers or sisters; only child -> without siblings.",
     samples:[
-      {t:"While some maintain that children ought to be raised alongside brothers or sisters, others believe that growing up without siblings is preferable. Discuss both views.",
-       why:"'Siblings'→'brothers or sisters'; reshapes 'an only child' into 'growing up without siblings'."},
-      {t:"There is disagreement over whether it is better for a child to have brothers and sisters or to be raised on their own. Discuss both views.",
-       why:"'Only child'→'raised on their own'; opens with 'There is disagreement over'."}
+      {t:"While some maintain that children ought to be raised alongside brothers or sisters, others believe that growing up without siblings is preferable.",
+       why:"Lexical Swap: Substitutes 'siblings' with 'brothers or sisters' and 'only child' with 'growing up without siblings'."},
+      {t:"The merits of a multi-child household are often contrasted with the perceived benefits of raising a single child.",
+       why:"Structural Swap: Restructures the sentence around nominalized subjects ('merits of a multi-child household', 'perceived benefits') and a passive verb."}
     ]
   },
   {
     n:20, type:"discussion",
     prompt:"Some say books are the best way to learn. Others claim that direct experience is more valuable. Discuss both views.",
-    hint:"Swap: books → reading / printed material; direct experience → first-hand experience / hands-on learning.",
+    hint:"Swap: books -> reading / printed material; direct experience -> first-hand experience / hands-on learning.",
     samples:[
-      {t:"While some hold that reading is the most effective method of learning, others claim that hands-on experience offers greater value. Discuss both views.",
-       why:"'Books'→'reading'; 'best way to learn'→'most effective method of learning'; 'direct experience'→'hands-on experience'."},
-      {t:"There is debate over whether knowledge is best gained from books or from learning by doing. Discuss both views.",
-       why:"Reshapes into a single contrast and uses the idiomatic 'learning by doing'."}
+      {t:"While some hold that reading is the most effective method of learning, others claim that hands-on experience offers greater value.",
+       why:"Lexical Swap: Replaces 'books' with 'reading' and 'direct experience' with 'hands-on experience'."},
+      {t:"Acquiring knowledge through literature is highly regarded by some, whereas others advocate for learning by doing.",
+       why:"Structural Swap: Employs a passive opening clause ('Acquiring knowledge... is highly regarded') contrasted against an active clause via 'whereas'."}
     ]
   },
-
-  // ============================
-  // ADVANTAGES / DISADVANTAGES (10)
-  // ============================
   {
     n:21, type:"advdis",
     prompt:"More and more people are choosing to retire early. Do the advantages of this trend outweigh the disadvantages?",
-    hint:"Swap: more and more people → a growing number of individuals; retire early → leave the workforce at a younger age; advantages outweigh disadvantages → benefits surpass drawbacks.",
+    hint:"Swap: more and more people -> a growing number of individuals; retire early -> leave the workforce at a younger age; advantages outweigh disadvantages -> benefits surpass drawbacks.",
     samples:[
       {t:"A growing number of individuals are deciding to leave the workforce at a younger age. Do the benefits of this trend surpass the drawbacks?",
-       why:"'More and more people'→'a growing number of individuals'; 'retire early'→'leave the workforce at a younger age'."},
-      {t:"In many countries, an increasing proportion of workers are opting for early retirement. Do its advantages outweigh the disadvantages?",
-       why:"Adds 'In many countries' and uses 'opting for early retirement' as a precise phrase."}
+       why:"Lexical Swap: Swaps 'more and more people' for 'a growing number of individuals' and 'retire early' for 'leave the workforce at a younger age'."},
+      {t:"Although early retirement offers clear personal benefits, its potential disadvantages for the wider economy must be weighed.",
+       why:"Structural Swap: Introduces a concessive clause ('Although...') and restructures the prompt's question into an active recommendation."}
     ]
   },
   {
     n:22, type:"advdis",
     prompt:"An increasing number of students are studying abroad. Discuss the advantages and disadvantages.",
-    hint:"Swap: students → young people / undergraduates; studying abroad → pursuing education overseas / studying in a foreign country.",
+    hint:"Swap: students -> young people / undergraduates; studying abroad -> pursuing education overseas / studying in a foreign country.",
     samples:[
       {t:"A growing proportion of young people are choosing to pursue their education overseas. What are the advantages and disadvantages of this trend?",
-       why:"'Students'→'young people'; 'studying abroad'→'pursuing education overseas'."},
-      {t:"More and more undergraduates are deciding to study in a foreign country. Discuss the benefits and drawbacks.",
-       why:"'Students'→'undergraduates'; 'study abroad'→'study in a foreign country'; 'advantages and disadvantages'→'benefits and drawbacks'."}
+       why:"Lexical Swap: Replaces 'students' with 'young people' and 'studying abroad' with 'pursuing their education overseas'."},
+      {t:"While obtaining a degree in a foreign country presents numerous opportunities, it also carries distinct challenges.",
+       why:"Structural Swap: Converts 'advantages and disadvantages' into 'opportunities' and 'challenges' inside a 'While...' contrast framework."}
     ]
   },
   {
     n:23, type:"advdis",
     prompt:"Online shopping has become extremely popular. Do its benefits outweigh its drawbacks?",
-    hint:"Swap: online shopping → e-commerce / purchasing goods over the internet; extremely popular → widely adopted / increasingly prevalent.",
+    hint:"Swap: online shopping -> e-commerce / purchasing goods over the internet; extremely popular -> widely adopted / increasingly prevalent.",
     samples:[
       {t:"E-commerce has become widely adopted around the world. Do its advantages outweigh its disadvantages?",
-       why:"'Online shopping'→'e-commerce'; 'extremely popular'→'widely adopted'."},
-      {t:"Purchasing goods over the internet is now an increasingly common practice. Do its benefits surpass its drawbacks?",
-       why:"'Online shopping'→'purchasing goods over the internet'; 'extremely popular'→'an increasingly common practice'."}
+       why:"Lexical Swap: Replaces 'online shopping' with 'e-commerce' and 'popular' with 'widely adopted'."},
+      {t:"Although purchasing goods over the internet offers unprecedented convenience, it remains questionable whether these benefits exceed the negative impacts.",
+       why:"Structural Swap: Starts with an 'Although' concessive clause and turns the prompt question into an embedded noun clause."}
     ]
   },
   {
     n:24, type:"advdis",
     prompt:"Many young people choose to live with their parents into their thirties. Do the advantages outweigh the disadvantages?",
-    hint:"Swap: young people → adults in their twenties and thirties; live with their parents → reside in the parental home / remain in the family home.",
+    hint:"Swap: young people -> adults in their twenties and thirties; live with their parents -> reside in the parental home / remain in the family home.",
     samples:[
       {t:"Many adults are continuing to reside in the parental home well into their thirties. Do the benefits of this outweigh the drawbacks?",
-       why:"'Live with their parents'→'reside in the parental home'; 'into their thirties'→'well into their thirties'."},
-      {t:"A considerable number of people in their twenties and thirties remain in the family home rather than moving out. Do the advantages outweigh the disadvantages?",
-       why:"Contrasts 'remain in the family home' with the implied alternative 'moving out'."}
+       why:"Lexical Swap: Swaps 'live with their parents' for 'reside in the parental home'."},
+      {t:"Remaining under the parental roof past university age is a trend whose advantages must be balanced against its drawbacks.",
+       why:"Structural Swap: Uses a gerund phrase ('Remaining under...') as the subject and subordinates the advantages/drawbacks comparison."}
     ]
   },
   {
     n:25, type:"advdis",
     prompt:"Some companies now allow employees to set their own working hours. Discuss the advantages and disadvantages.",
-    hint:"Swap: companies → firms / employers; set their own working hours → choose their own schedules / decide when they work.",
+    hint:"Swap: companies -> firms / employers; set their own working hours -> choose their own schedules / decide when they work.",
     samples:[
       {t:"Some firms now permit their staff to decide their own working schedules. Discuss the advantages and disadvantages.",
-       why:"'Companies'→'firms'; 'employees'→'staff'; 'set their own working hours'→'decide their own working schedules'."},
-      {t:"A growing number of employers offer flexible hours that allow workers to choose when they work. What are the benefits and drawbacks?",
-       why:"Reshapes into 'offer flexible hours that allow…' clause and uses 'workers'."}
+       why:"Lexical Swap: Swaps 'companies' with 'firms' and 'employees to set their own working hours' with 'staff to decide their own working schedules'."},
+      {t:"Allowing workers to determine their own schedules has become a corporate practice with both positive and negative implications.",
+       why:"Structural Swap: Converts the active sentence into a gerund subject clause ('Allowing workers...') and noun phrase modifiers."}
     ]
   },
   {
     n:26, type:"advdis",
     prompt:"The use of cashless payment is becoming more common. Do the advantages outweigh the disadvantages?",
-    hint:"Swap: cashless payment → digital payment methods / contactless transactions; becoming more common → increasingly widespread.",
+    hint:"Swap: cashless payment -> digital payment methods / contactless transactions; becoming more common -> increasingly widespread.",
     samples:[
       {t:"Digital payment methods are becoming increasingly widespread around the world. Do their advantages outweigh their disadvantages?",
-       why:"'Cashless payment'→'digital payment methods'; 'more common'→'increasingly widespread'."},
-      {t:"Contactless transactions have grown rapidly in popularity in recent years. Do the benefits of this trend surpass the drawbacks?",
-       why:"'Cashless payment'→'contactless transactions'; uses 'grown rapidly in popularity'."}
+       why:"Lexical Swap: Swaps 'cashless payment' for 'digital payment methods' and 'more common' for 'increasingly widespread'."},
+      {t:"Although transitioning to a cashless society accelerates transaction speed, it may bring significant risks that outweigh these benefits.",
+       why:"Structural Swap: Inverts the sentence structure by focusing on the active verb transition ('transitioning to a cashless society') and introducing specific examples of advantages/disadvantages."}
     ]
   },
   {
     n:27, type:"advdis",
     prompt:"More and more people are eating plant-based diets. Discuss the advantages and disadvantages.",
-    hint:"Swap: plant-based diets → vegetarian or vegan diets / meat-free diets; more and more people → a growing number of individuals.",
+    hint:"Swap: plant-based diets -> vegetarian or vegan diets / meat-free diets; more and more people -> a growing number of individuals.",
     samples:[
       {t:"A growing number of individuals are adopting vegetarian or vegan diets. Discuss the advantages and disadvantages.",
-       why:"'Plant-based diets'→'vegetarian or vegan diets'; 'eating'→'adopting'."},
-      {t:"Meat-free eating is becoming increasingly common across many countries. What are the benefits and drawbacks of this trend?",
-       why:"Inverts the sentence: subject becomes the trend itself, not the people."}
+       why:"Lexical Swap: Substitutes 'eating plant-based diets' with 'adopting vegetarian or vegan diets'."},
+      {t:"Adopting a meat-free diet is a choice that offers substantial health benefits, yet it also presents certain nutritional challenges.",
+       why:"Structural Swap: Converts the prompt into a compound sentence joined by the coordinator 'yet', showcasing parallel clauses."}
     ]
   },
   {
     n:28, type:"advdis",
     prompt:"Many parents are choosing to homeschool their children. Do the benefits outweigh the drawbacks?",
-    hint:"Swap: homeschool → educate at home / teach their children at home; benefits → advantages; drawbacks → disadvantages.",
+    hint:"Swap: homeschool -> educate at home / teach their children at home; benefits -> advantages; drawbacks -> disadvantages.",
     samples:[
       {t:"A growing number of parents are opting to educate their children at home. Do the advantages of this practice outweigh the disadvantages?",
-       why:"'Homeschool their children'→'educate their children at home'; 'choosing'→'opting'."},
-      {t:"In many countries, home-based education is becoming an increasingly popular choice among parents. Do its benefits surpass its drawbacks?",
-       why:"Restructures so 'home-based education' is the subject; uses 'popular choice'."}
+       why:"Lexical Swap: Swaps 'homeschool their children' for 'educate their children at home'."},
+      {t:"Although teaching children at home allows for personalized learning, its disadvantages may surpass its potential rewards.",
+       why:"Structural Swap: Uses an introductory concession clause ('Although...') to frame the advantages, inverting the sentence flow."}
     ]
   },
   {
     n:29, type:"advdis",
     prompt:"Streaming services have replaced traditional cinema-going for many people. Discuss the advantages and disadvantages.",
-    hint:"Swap: streaming services → on-demand platforms / online video services; cinema-going → trips to the cinema / visiting movie theatres.",
+    hint:"Swap: streaming services -> on-demand platforms / online video services; cinema-going -> trips to the cinema / visiting movie theatres.",
     samples:[
       {t:"For many viewers, on-demand platforms have taken the place of traditional trips to the cinema. Discuss the advantages and disadvantages of this shift.",
-       why:"'Streaming services'→'on-demand platforms'; 'cinema-going'→'trips to the cinema'."},
-      {t:"Online video services are now replacing visits to movie theatres for a large number of people. What are the benefits and drawbacks?",
-       why:"'Streaming services'→'online video services'; 'cinema-going'→'visits to movie theatres'."}
+       why:"Lexical Swap: Replaces 'streaming services' with 'on-demand platforms' and 'cinema-going' with 'trips to the cinema'."},
+      {t:"While subscribing to online video services offers comfort and convenience, it may lead to the decline of communal movie-going.",
+       why:"Structural Swap: Restructures using 'While...' to set up a direct contrast between convenience (advantage) and loss of community (disadvantage)."}
     ]
   },
   {
     n:30, type:"advdis",
     prompt:"An increasing number of people are working past retirement age. Do the advantages outweigh the disadvantages?",
-    hint:"Swap: working past retirement age → continuing to work beyond the standard retirement age / remaining in employment after retirement.",
+    hint:"Swap: working past retirement age -> continuing to work beyond the standard retirement age / remaining in employment after retirement.",
     samples:[
       {t:"A growing number of individuals are choosing to continue working beyond the standard retirement age. Do the advantages of this trend outweigh the disadvantages?",
-       why:"'Working past retirement age'→'continuing to work beyond the standard retirement age'."},
-      {t:"More and more older adults are remaining in employment after the typical retirement age. Do its benefits surpass the drawbacks?",
-       why:"Adds 'older adults' for specificity; 'after the typical retirement age' replaces 'past retirement age'."}
+       why:"Lexical Swap: Swaps 'working past retirement age' for 'continuing to work beyond the standard retirement age'."},
+      {t:"Remaining in employment past the traditional age of retirement is a growing phenomenon that carries both significant benefits and drawbacks.",
+       why:"Structural Swap: Nominalizes 'working past retirement' into 'Remaining in employment past...' and reframes the question as a descriptive statement."}
     ]
   },
-
-  // ============================
-  // PROBLEM / SOLUTION (10)
-  // ============================
   {
     n:31, type:"probsol",
     prompt:"Many large cities suffer from traffic congestion. What are the main causes, and what can be done to address this?",
-    hint:"Swap: large cities → major urban areas; suffer from → are affected by / experience; traffic congestion → road congestion / heavy traffic.",
+    hint:"Swap: large cities -> major urban areas; suffer from -> are affected by / experience; traffic congestion -> road congestion / heavy traffic.",
     samples:[
       {t:"Many major urban areas are affected by serious road congestion. What are the principal causes, and what measures could be taken to tackle the problem?",
-       why:"'Large cities'→'major urban areas'; 'suffer from'→'are affected by'; 'traffic congestion'→'serious road congestion'."},
-      {t:"In numerous big cities, heavy traffic has become a persistent problem. What are the underlying causes, and how could governments address it?",
-       why:"'Suffer from traffic congestion' becomes 'heavy traffic has become a persistent problem'."}
+       why:"Lexical Swap: Replaces 'large cities' with 'major urban areas' and 'traffic congestion' with 'serious road congestion'."},
+      {t:"Traffic gridlock is a critical issue facing large cities today, requiring a combination of public investment and urban planning to resolve.",
+       why:"Structural Swap: Combines the problem and the general solution direction into a single compound statement, replacing the questions."}
     ]
   },
   {
     n:32, type:"probsol",
     prompt:"Childhood obesity is rising in many countries. What problems does this cause, and what can be done?",
-    hint:"Swap: childhood obesity → obesity among children / paediatric obesity; rising → on the increase / climbing.",
+    hint:"Swap: childhood obesity -> obesity among children / paediatric obesity; rising -> on the increase / climbing.",
     samples:[
       {t:"Obesity among children is on the increase in many parts of the world. What difficulties does this create, and what steps could be taken?",
-       why:"'Childhood obesity'→'obesity among children'; 'rising'→'on the increase'; 'problems'→'difficulties'."},
-      {t:"In numerous countries, rates of paediatric obesity have climbed in recent years. What issues result from this, and what can be done?",
-       why:"'Rising'→'have climbed in recent years'; 'problems'→'issues'."}
+       why:"Lexical Swap: Swaps 'childhood obesity' for 'obesity among children' and 'rising' for 'on the increase'."},
+      {t:"The steady climb in paediatric obesity rates has created serious health challenges, demanding immediate governmental intervention.",
+       why:"Structural Swap: Restructures by turning the question into a cause-and-effect statement, using active present participle phrases ('demanding...')."}
     ]
   },
   {
     n:33, type:"probsol",
     prompt:"In many countries, fewer young people are choosing careers in farming. Why is this, and what can be done?",
-    hint:"Swap: young people → the younger generation; careers in farming → agricultural professions / a career in agriculture.",
+    hint:"Swap: young people -> the younger generation; careers in farming -> agricultural professions / a career in agriculture.",
     samples:[
       {t:"In many parts of the world, the younger generation is increasingly turning away from a career in agriculture. Why is this the case, and what could be done to reverse the trend?",
-       why:"'Choosing'→'turning away from'; 'careers in farming'→'a career in agriculture'."},
-      {t:"In numerous countries, the number of young people entering agricultural professions has fallen sharply. What lies behind this trend, and how could it be addressed?",
-       why:"Reframes 'choosing fewer' as 'has fallen sharply'; uses 'agricultural professions'."}
+       why:"Lexical Swap: Replaces 'young people' with 'the younger generation' and 'farming' with 'agriculture'."},
+      {t:"A decline in the number of young adults entering agricultural professions has threatened food security, necessitating rural incentives.",
+       why:"Structural Swap: Frames the problem's consequence ('threatened food security') as the main verb clause and follows with a solution participle."}
     ]
   },
   {
     n:34, type:"probsol",
     prompt:"Many endangered species are at risk of extinction. Why is this happening, and what measures should governments take?",
-    hint:"Swap: endangered species → threatened animal and plant species; at risk of extinction → in danger of dying out / facing the threat of extinction.",
+    hint:"Swap: endangered species -> threatened animal and plant species; at risk of extinction -> in danger of dying out / facing the threat of extinction.",
     samples:[
       {t:"A number of threatened animal and plant species are in danger of dying out. Why is this occurring, and what steps should governments take to address it?",
-       why:"'Endangered species'→'threatened animal and plant species'; 'at risk of extinction'→'in danger of dying out'."},
-      {t:"Many of the world's threatened species are facing the very real threat of extinction. What lies behind this, and what action should governments take?",
-       why:"Adds 'world's' and 'very real' for emphasis; 'measures'→'action'."}
+       why:"Lexical Swap: Substitutes 'endangered species' with 'threatened animal and plant species' and 'extinction' with 'dying out'."},
+      {t:"To prevent vulnerable wildlife from going extinct, state authorities must enforce stricter preservation laws and establish nature reserves.",
+       why:"Structural Swap: Starts with an infinitive clause of purpose ('To prevent...') to lead directly into concrete solutions."}
     ]
   },
   {
     n:35, type:"probsol",
     prompt:"Loneliness among elderly people is becoming a serious issue. What are the causes, and what solutions can be proposed?",
-    hint:"Swap: loneliness → social isolation; elderly people → older adults / senior citizens; serious issue → significant social problem.",
+    hint:"Swap: loneliness -> social isolation; elderly people -> older adults / senior citizens; serious issue -> significant social problem.",
     samples:[
       {t:"Social isolation among older adults is emerging as a significant social problem in many societies. What are the causes, and what solutions could be proposed?",
-       why:"'Loneliness'→'social isolation'; 'elderly people'→'older adults'; 'serious issue'→'significant social problem'."},
-      {t:"In many countries, growing numbers of senior citizens are suffering from loneliness. What lies behind this trend, and how could it be addressed?",
-       why:"Reshapes 'becoming a serious issue' as 'growing numbers… are suffering from'."}
+       why:"Lexical Swap: Swaps 'loneliness' for 'social isolation' and 'elderly people' for 'older adults'."},
+      {t:"Solving the growing problem of social isolation among senior citizens requires a combination of community support and technology.",
+       why:"Structural Swap: Nominalizes the solution action ('Solving the growing problem...') as the subject, inverting the prompt's layout."}
     ]
   },
   {
     n:36, type:"probsol",
     prompt:"In some countries, people are abandoning their native languages in favour of English. Why is this, and what problems does it cause?",
-    hint:"Swap: abandoning → giving up / moving away from; native languages → mother tongues / first languages; in favour of → in preference to.",
+    hint:"Swap: abandoning -> giving up / moving away from; native languages -> mother tongues / first languages; in favour of -> in preference to.",
     samples:[
       {t:"In certain countries, people are gradually giving up their mother tongues in preference to English. Why is this the case, and what difficulties does it create?",
-       why:"'Abandoning'→'gradually giving up'; 'native languages'→'mother tongues'; 'in favour of'→'in preference to'."},
-      {t:"In some societies, English is replacing the local first language as the preferred means of communication. What lies behind this, and what problems result?",
-       why:"Inverts subject — 'English' becomes the agent rather than 'people'."}
+       why:"Lexical Swap: Replaces 'abandoning' with 'giving up' and 'native languages' with 'mother tongues'."},
+      {t:"The global spread of English has led to the abandonment of local dialects, resulting in cultural erosion and communication barriers.",
+       why:"Structural Swap: Reorders the prompt so that 'the global spread of English' is the causal subject, linking it directly to the consequences."}
     ]
   },
   {
     n:37, type:"probsol",
     prompt:"Many city centres are losing their independent shops. What are the reasons, and what can be done?",
-    hint:"Swap: city centres → town centres / urban high streets; independent shops → small businesses / family-run stores.",
+    hint:"Swap: city centres -> town centres / urban high streets; independent shops -> small businesses / family-run stores.",
     samples:[
       {t:"Many town centres are seeing their small businesses disappear. What lies behind this trend, and what action could be taken?",
-       why:"'City centres'→'town centres'; 'losing their independent shops'→'seeing their small businesses disappear'."},
-      {t:"In numerous urban high streets, family-run stores are vanishing at an alarming rate. What are the underlying causes, and how could the trend be reversed?",
-       why:"'Independent shops'→'family-run stores'; adds 'vanishing at an alarming rate'."}
+       why:"Lexical Swap: Swaps 'city centres' for 'town centres' and 'independent shops' for 'small businesses'."},
+      {t:"To revitalize urban high streets that are losing family-run stores, local governments must implement tax breaks and rent controls.",
+       why:"Structural Swap: Uses an infinitive clause of purpose ('To revitalize...') containing a relative clause ('that are losing...') to introduce solutions."}
     ]
   },
   {
     n:38, type:"probsol",
     prompt:"People in developed countries are working longer hours than ever before. Why is this happening, and what can be done?",
-    hint:"Swap: developed countries → wealthy / industrialised nations; working longer hours → putting in longer working days / spending more time at work.",
+    hint:"Swap: developed countries -> wealthy / industrialised nations; working longer hours -> putting in longer working days / spending more time at work.",
     samples:[
       {t:"In industrialised nations, employees are putting in longer working days than at any time in recent history. What lies behind this, and what could be done?",
-       why:"'Developed countries'→'industrialised nations'; 'working longer hours'→'putting in longer working days'."},
-      {t:"Workers in wealthy nations are now spending more time at the office than previous generations did. Why is this occurring, and what steps could be taken?",
-       why:"'Developed countries'→'wealthy nations'; 'longer hours'→'more time at the office'."}
+       why:"Lexical Swap: Replaces 'developed countries' with 'industrialised nations' and 'working longer hours' with 'putting in longer working days'."},
+      {t:"The modern trend of extended working hours in wealthy nations has severely impacted mental health, requiring immediate labor reforms.",
+       why:"Structural Swap: Combines the problem, its impact, and the solution into a single structured statement."}
     ]
   },
   {
     n:39, type:"probsol",
     prompt:"Plastic pollution in the oceans is reaching critical levels. What are the main causes, and how can governments address this?",
-    hint:"Swap: plastic pollution → plastic waste / contamination by plastics; reaching critical levels → reaching alarming proportions / becoming a serious threat.",
+    hint:"Swap: plastic pollution -> plastic waste / contamination by plastics; reaching critical levels -> reaching alarming proportions / becoming a serious threat.",
     samples:[
       {t:"Plastic waste in the world's oceans is reaching alarming proportions. What are the principal causes, and how could governments tackle this issue?",
-       why:"'Plastic pollution'→'plastic waste'; 'critical levels'→'alarming proportions'; 'address'→'tackle'."},
-      {t:"Contamination of marine environments by plastics has become a serious threat. What lies behind this, and what measures should governments adopt?",
-       why:"'Plastic pollution in the oceans'→'contamination of marine environments by plastics'."}
+       why:"Lexical Swap: Swaps 'plastic pollution' for 'plastic waste' and 'critical levels' for 'alarming proportions'."},
+      {t:"Contamination of marine environments by plastics is a global disaster that can only be resolved by international treaties and bans on single-use items.",
+       why:"Structural Swap: Restructures the prompt into a passive declaration pointing to specific solutions ('can only be resolved by...')."}
     ]
   },
   {
     n:40, type:"probsol",
     prompt:"Many young adults struggle to enter the housing market. What are the causes, and what solutions can be proposed?",
-    hint:"Swap: struggle → find it difficult / face significant barriers; enter the housing market → buy their first home / get on the property ladder.",
+    hint:"Swap: struggle -> find it difficult / face significant barriers; enter the housing market -> buy their first home / get on the property ladder.",
     samples:[
       {t:"A large number of young adults are finding it increasingly difficult to buy their first home. What are the causes, and what solutions could be proposed?",
-       why:"'Struggle to enter the housing market'→'finding it increasingly difficult to buy their first home'."},
-      {t:"In many countries, young people face significant barriers to getting on the property ladder. What lies behind this, and how could governments address it?",
-       why:"'Struggle'→'face significant barriers'; uses the idiom 'getting on the property ladder'."}
+       why:"Lexical Swap: Replaces 'struggle to enter the housing market' with 'finding it increasingly difficult to buy their first home'."},
+      {t:"Because of soaring real estate prices, getting on the property ladder has become nearly impossible for young adults, requiring rent controls and subsidies.",
+       why:"Structural Swap: Starts with a causal prepositional phrase ('Because of...') and uses a gerund subject ('getting on the property ladder')."}
     ]
   },
-
-  // ============================
-  // TWO-PART QUESTION (10)
-  // ============================
   {
     n:41, type:"twopart",
     prompt:"Many people now choose to get news from social media rather than newspapers. Why is this the case, and is it a positive or negative development?",
-    hint:"Swap: get news → consume / receive news / keep up with current events; newspapers → printed press / traditional news outlets.",
+    hint:"Swap: get news -> consume / receive news / keep up with current events; newspapers -> printed press / traditional news outlets.",
     samples:[
       {t:"A large number of people now keep up with current events through social media rather than the printed press. What lies behind this trend, and is it a positive or negative development?",
-       why:"'Get news'→'keep up with current events'; 'newspapers'→'the printed press'."},
-      {t:"In recent years, social media has overtaken traditional newspapers as the main source of news for many. Why has this happened, and is the change beneficial or harmful?",
-       why:"Inverts subject — social media becomes the actor; 'positive or negative'→'beneficial or harmful'."}
+       why:"Lexical Swap: Replaces 'get news' with 'keep up with current events' and 'newspapers' with 'the printed press'."},
+      {t:"Social media has overtaken traditional newspapers as the primary source of news for many. Why has this occurred, and is the change beneficial or harmful?",
+       why:"Structural Swap: Inverts the subject so 'Social media' is the actor, and rephrases 'positive or negative' as 'beneficial or harmful'."}
     ]
   },
   {
     n:42, type:"twopart",
     prompt:"In many countries, people are getting married later in life. Why is this happening, and what effect does it have on society?",
-    hint:"Swap: getting married later → marrying later in life / delaying marriage; effect → impact / consequence.",
+    hint:"Swap: getting married later -> marrying later in life / delaying marriage; effect -> impact / consequence.",
     samples:[
       {t:"In numerous countries, people are increasingly delaying marriage until later in life. What lies behind this trend, and what impact does it have on society?",
-       why:"'Getting married later'→'delaying marriage'; 'effect'→'impact'."},
-      {t:"In many parts of the world, the average age at which people marry has risen steadily. Why is this occurring, and what are its consequences for society?",
-       why:"Reshapes 'getting married later' into 'the average age at which people marry has risen steadily'."}
+       why:"Lexical Swap: Swaps 'getting married later' for 'delaying marriage' and 'effect' for 'impact'."},
+      {t:"The rising average age of marriage is a significant modern phenomenon whose causes and societal consequences require analysis.",
+       why:"Structural Swap: Nominalizes 'getting married later' into 'The rising average age of marriage' and turns the question into a statement of analytical intent."}
     ]
   },
   {
     n:43, type:"twopart",
     prompt:"A growing number of adults are choosing to live alone. Why is this trend increasing, and is it a positive or negative development?",
-    hint:"Swap: live alone → reside on their own / live in single-person households; trend → tendency / pattern.",
+    hint:"Swap: live alone -> reside on their own / live in single-person households; trend -> tendency / pattern.",
     samples:[
       {t:"An increasing proportion of adults are choosing to reside on their own. Why is this pattern becoming more common, and is it a positive or negative development?",
-       why:"'Live alone'→'reside on their own'; 'trend'→'pattern'."},
-      {t:"More and more adults are now living in single-person households. What lies behind this rise, and is the development a beneficial or harmful one?",
-       why:"'Live alone'→'living in single-person households'; 'positive or negative'→'beneficial or harmful'."}
+       why:"Lexical Swap: Replaces 'live alone' with 'reside on their own' and 'trend' with 'pattern'."},
+      {t:"Living in single-person households is a growing practice; why this is happening and whether it represents a beneficial or harmful shift is highly debated.",
+       why:"Structural Swap: Splits the sentence with a semicolon and uses a compound noun clause ('why... and whether...') as a joint subject."}
     ]
   },
   {
     n:44, type:"twopart",
     prompt:"Many young people now follow influencers on social media. Why is this so popular, and what effect does it have on young people?",
-    hint:"Swap: follow influencers → engage with social-media personalities / subscribe to online influencers; popular → widespread; effect → impact / consequence.",
+    hint:"Swap: follow influencers -> engage with social-media personalities / subscribe to online influencers; popular -> widespread; effect -> impact / consequence.",
     samples:[
       {t:"A large proportion of young people now engage with social-media personalities online. Why has this become so widespread, and what impact does it have on them?",
-       why:"'Follow influencers'→'engage with social-media personalities'; 'popular'→'widespread'."},
-      {t:"In recent years, subscribing to online influencers has become a near-universal habit among younger users. What lies behind this, and what consequences does it carry?",
-       why:"'Follow influencers' becomes 'subscribing to online influencers'; uses 'near-universal habit'."}
+       why:"Lexical Swap: Swaps 'follow influencers' for 'engage with social-media personalities' and 'popular' for 'widespread'."},
+      {t:"Subscribing to online influencers is now a near-universal habit among younger users. What lies behind this, and what consequences does it carry?",
+       why:"Structural Swap: Replaces 'Many young people now follow...' with the gerund subject 'Subscribing to...' and uses a precise relative clause."}
     ]
   },
   {
     n:45, type:"twopart",
     prompt:"Fast-food restaurants continue to expand around the world. Why is this happening, and is it a positive or negative development?",
-    hint:"Swap: fast-food restaurants → quick-service eateries / chain fast-food outlets; expand → grow / spread.",
+    hint:"Swap: fast-food restaurants -> quick-service eateries / chain fast-food outlets; expand -> grow / spread.",
     samples:[
       {t:"Chain fast-food outlets are continuing to spread across the globe. Why is this the case, and is the development a positive or negative one?",
-       why:"'Fast-food restaurants'→'chain fast-food outlets'; 'expand'→'spread'."},
+       why:"Lexical Swap: Replaces 'fast-food restaurants' with 'chain fast-food outlets' and 'expand' with 'spread'."},
       {t:"Quick-service eateries are appearing in more and more countries every year. What lies behind this growth, and is the trend beneficial or harmful?",
-       why:"'Continue to expand'→'are appearing in more and more countries'; 'positive or negative'→'beneficial or harmful'."}
+       why:"Structural Swap: Inverts the active verb clause to emphasize the rate of appearance, and swaps the final adjectives for academic terms."}
     ]
   },
   {
     n:46, type:"twopart",
     prompt:"More people are choosing to travel for tourism than ever before. Why is this, and what effect does it have on local communities?",
-    hint:"Swap: travel for tourism → take holidays abroad / engage in tourism; effect → impact; local communities → host populations / local residents.",
+    hint:"Swap: travel for tourism -> take holidays abroad / engage in tourism; effect -> impact; local communities -> host populations / local residents.",
     samples:[
       {t:"A larger number of people than ever are now taking holidays abroad. Why is this the case, and what impact does it have on host populations?",
-       why:"'Travel for tourism'→'taking holidays abroad'; 'local communities'→'host populations'."},
+       why:"Lexical Swap: Swaps 'travel for tourism' with 'taking holidays abroad' and 'local communities' with 'host populations'."},
       {t:"International tourism is at an all-time high in terms of participation. What lies behind this, and how does it affect local residents in destination areas?",
-       why:"'More people traveling'→'tourism is at an all-time high'; 'local communities'→'local residents'."}
+       why:"Structural Swap: Nominalizes 'More people are choosing to travel' into 'International tourism is at an all-time high' and uses a relative adverb clause."}
     ]
   },
   {
     n:47, type:"twopart",
     prompt:"Many people now feel that they have less free time than previous generations. Why might this be, and is it a positive or negative development?",
-    hint:"Swap: free time → leisure time / personal time; previous generations → earlier generations / those who came before them.",
+    hint:"Swap: free time -> leisure time / personal time; previous generations -> earlier generations / those who came before them.",
     samples:[
       {t:"A large number of people today feel they have less leisure time than earlier generations did. Why might this be, and is the change a positive or negative one?",
-       why:"'Free time'→'leisure time'; 'previous generations'→'earlier generations'."},
+       why:"Lexical Swap: Replaces 'free time' with 'leisure time' and 'previous generations' with 'earlier generations'."},
       {t:"It is often claimed that modern adults have less personal time than those who came before them. Why might this be the case, and is it a beneficial or harmful trend?",
-       why:"Reshapes into 'It is often claimed that…'; uses 'personal time' and 'those who came before them'."}
+       why:"Structural Swap: Opens with the reporting passive 'It is often claimed that...' and changes the comparative clause construction."}
     ]
   },
   {
     n:48, type:"twopart",
     prompt:"In many countries, the popularity of vegetarianism is increasing. Why is this happening, and is it a positive or negative trend?",
-    hint:"Swap: vegetarianism → meat-free eating / a vegetarian diet; popularity is increasing → is becoming more widespread / is on the rise.",
+    hint:"Swap: vegetarianism -> meat-free eating / a vegetarian diet; popularity is increasing -> is becoming more widespread / is on the rise.",
     samples:[
       {t:"In many countries, meat-free eating is becoming increasingly widespread. What lies behind this trend, and is it a positive or negative development?",
-       why:"'Vegetarianism'→'meat-free eating'; 'popularity is increasing'→'is becoming increasingly widespread'."},
+       why:"Lexical Swap: Swaps 'vegetarianism' for 'meat-free eating' and 'popularity is increasing' for 'is becoming increasingly widespread'."},
       {t:"Vegetarian diets are on the rise in numerous parts of the world. Why is this occurring, and is the change beneficial or harmful?",
-       why:"'Popularity is increasing'→'are on the rise'; 'positive or negative'→'beneficial or harmful'."}
+       why:"Structural Swap: Swaps the noun 'popularity' to focus on 'Vegetarian diets' as the direct plural subject, and uses 'on the rise' as the verb predicate."}
     ]
   },
   {
     n:49, type:"twopart",
     prompt:"People in developed countries are spending more time looking at screens. Why is this, and what are the consequences?",
-    hint:"Swap: developed countries → industrialised / wealthy nations; looking at screens → using digital devices / staring at electronic displays; consequences → effects.",
+    hint:"Swap: developed countries -> industrialised / wealthy nations; looking at screens -> using digital devices / staring at electronic displays; consequences -> effects.",
     samples:[
       {t:"In wealthy nations, people are devoting an increasing amount of time to digital devices. Why is this the case, and what effects does it have?",
-       why:"'Developed countries'→'wealthy nations'; 'looking at screens'→'devoting time to digital devices'."},
+       why:"Lexical Swap: Swaps 'developed countries' for 'wealthy nations' and 'looking at screens' for 'devoting time to digital devices'."},
       {t:"Residents of industrialised countries are spending ever more hours in front of electronic displays. What lies behind this, and what are the consequences?",
-       why:"'People in developed countries'→'Residents of industrialised countries'; 'looking at screens'→'in front of electronic displays'."}
+       why:"Structural Swap: Replaces the general 'People' with 'Residents of...' and restructures the time description to 'ever more hours'."}
     ]
   },
   {
     n:50, type:"twopart",
     prompt:"Many people now believe that schoolchildren should be taught how to manage money. Why is this view becoming common, and is it a positive development?",
-    hint:"Swap: schoolchildren → pupils / young students; manage money → handle their finances / look after personal finances.",
+    hint:"Swap: schoolchildren -> pupils / young students; manage money -> handle their finances / look after personal finances.",
     samples:[
       {t:"A growing number of people believe that pupils should be taught how to look after their personal finances. Why is this view becoming widespread, and is it a positive development?",
-       why:"'Schoolchildren'→'pupils'; 'manage money'→'look after their personal finances'."},
+       why:"Lexical Swap: Replaces 'schoolchildren' with 'pupils' and 'manage money' with 'look after their personal finances'."},
       {t:"There is increasing support for the idea that young students should be taught to handle their finances. Why is this opinion gaining ground, and is the change beneficial?",
-       why:"Reshapes into 'There is increasing support for the idea that…'; uses 'gaining ground'."}
+       why:"Structural Swap: Opens with the existential structure 'There is increasing support for the idea that...' and rephrases the questions with academic idioms ('gaining ground')."}
     ]
   }
 ];

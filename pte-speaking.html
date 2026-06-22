@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PTE Academic Speaking Mastery | ViaTestPrep</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --card: #ffffff;
+    --border: rgba(15, 23, 42, 0.08);
+    --border-hi: rgba(15, 23, 42, 0.16);
+    --text-1: #0f172a;
+    --text-2: #475569;
+    --text-3: #64748b;
+    --blue: #2563eb;
+    --blue-dim: rgba(37, 99, 235, 0.08);
+    --blue-glow: rgba(37, 99, 235, 0.04);
+    --orange: #ea580c;
+    --orange-dim: rgba(234, 88, 12, 0.08);
+    --orange-glow: rgba(234, 88, 12, 0.04);
+    --green: #16a34a;
+    --green-dim: rgba(22, 163, 74, 0.08);
+    --red: #dc2626;
+    --red-dim: rgba(220, 38, 38, 0.08);
+    --purple: #7c3aed;
+    --purple-dim: rgba(124, 58, 237, 0.08);
+    --amber: #d97706;
+    --amber-dim: rgba(217, 119, 6, 0.08);
+    --teal: #0d9488;
+    --teal-dim: rgba(13, 148, 136, 0.08);
+    --r: 16px;
+    --r-sm: 8px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text-1); font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+  
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 1.5rem 80px; }
+  
+  /* ── GLOBAL HEADER ── */
+  .g-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .back-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-2);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: var(--surface);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .back-btn:hover {
+    color: var(--blue);
+    border-color: var(--blue);
+    background: var(--blue-dim);
+    transform: translateY(-1px);
+  }
+  .g-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .g-title span { color: var(--blue); }
+
+  /* ── SKILL NAV TABS ── */
+  .tabs {
+    display: flex;
+    gap: 6px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    flex-shrink: 0;
+    padding: 10px 18px;
+    border-radius: var(--r-sm) var(--r-sm) 0 0;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--text-3);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+  .tab-btn:hover { color: var(--text-2); }
+  .tab-btn.active {
+    color: var(--blue);
+    border-color: var(--border) var(--border) transparent;
+    background: var(--surface);
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.02);
+  }
+
+  .panel { display: none; animation: fadeUp 0.3s ease; }
+  .panel.active { display: block; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ── CONTENT CARDS ── */
+  .card-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  }
+  .label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .label.blue { color: var(--blue); }
+  .label.green { color: var(--green); }
+  .label.orange { color: var(--orange); }
+  .label.red { color: var(--red); }
+
+  p { font-size: 14px; color: var(--text-2); line-height: 1.65; margin-bottom: 14px; }
+  strong { color: var(--text-1); }
+
+  .info-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+  .info-pill {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    color: var(--text-2);
+    background: var(--bg);
+  }
+  .info-pill.blue { color: var(--blue); border-color: var(--blue-dim); background: var(--blue-glow); }
+  .info-pill.green { color: var(--green); border-color: var(--green-dim); background: rgba(22, 163, 74, 0.04); }
+  .info-pill.orange { color: var(--orange); border-color: var(--orange-dim); background: var(--orange-glow); }
+
+  /* ── TABLES ── */
+  .score-table { border: 1px solid var(--border); border-radius: var(--r-sm); overflow: hidden; margin-bottom: 18px; width: 100%; border-collapse: collapse; }
+  .st-row { display: grid; grid-template-columns: 140px 1fr; border-bottom: 1px solid var(--border); }
+  .st-row:last-child { border-bottom: none; }
+  .st-cell { padding: 12px; font-size: 13px; color: var(--text-2); line-height: 1.5; }
+  .st-cell.head { font-weight: 700; background: var(--bg); color: var(--text-1); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .st-cell.field { font-weight: 700; color: var(--text-1); border-right: 1px solid var(--border); background: var(--bg); }
+
+  /* ── STEPS ── */
+  .step-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
+  .step-item { display: flex; gap: 14px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 14px; }
+  .step-num {
+    width: 28px; height: 28px; border-radius: 50%; color: #fff;
+    font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; background: var(--blue);
+  }
+  .step-body { flex: 1; }
+  .step-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--text-1); }
+  .step-desc { font-size: 13px; color: var(--text-2); line-height: 1.5; }
+
+  /* ── TEMPLATE BOX ── */
+  .template-box { background: var(--bg); border: 1px solid var(--border-hi); border-radius: var(--r-sm); padding: 18px; margin-bottom: 18px; position: relative; }
+  .template-box::before {
+    content: 'TEMPLATE'; position: absolute; top: -1px; right: 16px;
+    font-size: 9px; font-weight: 800; letter-spacing: 2px;
+    background: var(--bg); padding: 2px 10px; border: 1px solid var(--border-hi);
+    border-top: none; border-radius: 0 0 6px 6px; color: var(--blue);
+  }
+  .template-text { font-size: 13px; line-height: 1.8; color: var(--text-2); }
+  .template-text .slot { font-weight: 700; padding: 2px 6px; border-radius: 4px; font-size: 12px; color: var(--blue); background: var(--blue-dim); }
+  .template-text .fixed { color: var(--text-1); font-weight: 700; display: block; margin-top: 12px; margin-bottom: 4px; font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; }
+
+  /* ── BOXES ── */
+  .tips-box { background: var(--blue-glow); border: 1px solid var(--blue-dim); border-radius: var(--r-sm); padding: 16px; margin-bottom: 18px; }
+  .tips-label { font-size: 10px; font-weight: 800; letter-spacing: 1.5px; color: var(--blue); margin-bottom: 8px; text-transform: uppercase; }
+  .tip-item { display: flex; gap: 8px; font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 6px; }
+  .tip-item:last-child { margin-bottom: 0; }
+  .tip-dot { color: var(--blue); flex-shrink: 0; }
+
+  .avoid-box { background: var(--red-dim); border: 1px solid rgba(220, 38, 38, 0.15); border-radius: var(--r-sm); padding: 16px; margin-bottom: 18px; }
+  .avoid-label { font-size: 10px; font-weight: 800; letter-spacing: 1.5px; color: var(--red); margin-bottom: 8px; text-transform: uppercase; }
+  .avoid-item { display: flex; gap: 8px; font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 6px; }
+  .avoid-item:last-child { margin-bottom: 0; }
+  .avoid-x { color: var(--red); flex-shrink: 0; font-weight: 700; }
+
+  /* ── INTERACTIVE DRILL WIDGET ── */
+  .drill-container {
+    border: 2px solid var(--blue-dim);
+    border-radius: var(--r);
+    padding: 24px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(37,99,235,0.03);
+    margin-top: 30px;
+  }
+  .drill-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px; }
+  .drill-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-weight: 800; display: flex; align-items: center; gap: 6px; color: var(--text-1); }
+  .drill-badge { font-size: 11px; font-weight: 700; color: var(--blue); background: var(--blue-dim); padding: 4px 10px; border-radius: 20px; }
+  
+  .drill-passage {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-1);
+    background: var(--bg);
+    padding: 20px;
+    border-radius: var(--r-sm);
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .drill-controls { display: flex; gap: 12px; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }
+  .btn-drill {
+    background: var(--blue);
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 24px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 12px rgba(37,99,235,0.15);
+  }
+  .btn-drill:hover { background: #1d4ed8; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(37,99,235,0.25); }
+  .btn-drill:disabled { background: var(--text-3); cursor: not-allowed; transform: none; box-shadow: none; }
+  .btn-drill-secondary {
+    background: var(--surface);
+    color: var(--text-2);
+    border: 1px solid var(--border-hi);
+    padding: 10px 22px;
+    border-radius: 24px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-drill-secondary:hover { color: var(--blue); border-color: var(--blue); background: var(--bg); }
+  
+  .timer-box { font-family: monospace; font-size: 18px; font-weight: 700; color: var(--text-2); background: var(--bg); padding: 6px 16px; border-radius: 20px; border: 1px solid var(--border); }
+  .timer-box.counting { color: var(--orange); border-color: rgba(234,88,12,0.3); background: var(--orange-glow); }
+  
+  .record-wave { display: flex; gap: 4px; align-items: center; height: 24px; opacity: 0; transition: opacity 0.3s; }
+  .record-wave.active { opacity: 1; }
+  .wave-bar { width: 3px; height: 60%; background: var(--blue); border-radius: 3px; animation: wave-anim 1s infinite ease-in-out; }
+  .wave-bar:nth-child(2) { animation-delay: 0.15s; }
+  .wave-bar:nth-child(3) { animation-delay: 0.3s; }
+  .wave-bar:nth-child(4) { animation-delay: 0.45s; }
+  @keyframes wave-anim { 0%, 100% { height: 30%; } 50% { height: 100%; } }
+
+  .results-panel { display: none; border-top: 1px dashed var(--border); padding-top: 20px; animation: fadeUp 0.3s ease; }
+  .results-panel.active { display: block; }
+  .score-cards-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+  @media (max-width: 576px) { .score-cards-row { grid-template-columns: 1fr; } }
+  .score-card-item { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 12px; text-align: center; }
+  .sci-val { font-size: 22px; font-weight: 800; color: var(--blue); }
+  .sci-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; color: var(--text-3); margin-top: 2px; }
+  
+  .word-highlight-text { font-size: 15px; line-height: 1.8; color: var(--text-2); background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 16px; }
+  .w-ok { color: var(--green); font-weight: 700; text-decoration: underline; text-decoration-color: rgba(22, 163, 74, 0.4); }
+  .w-warn { color: var(--amber); font-weight: 700; }
+  .w-err { color: var(--red); font-weight: 700; text-decoration: line-through; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  
+  <!-- GLOBAL HEADER -->
+  <div class="g-header">
+    <a href="index.html" class="back-btn">← Back to Hub</a>
+    <div class="g-title">PTE Speaking <span>Mastery</span></div>
+  </div>
+
+  <!-- NAVIGATION TABS -->
+  <div class="tabs" id="speakingTabs">
+    <button class="tab-btn active" onclick="switchTab('ra')">Read Aloud</button>
+    <button class="tab-btn" onclick="switchTab('rs')">Repeat Sentence</button>
+    <button class="tab-btn" onclick="switchTab('di')">Describe Image</button>
+    <button class="tab-btn" onclick="switchTab('rl')">Re-tell Lecture</button>
+    <button class="tab-btn" onclick="switchTab('asq')">Answer Short Q</button>
+    <button class="tab-btn" onclick="switchTab('rts')">Respond to Situation</button>
+    <button class="tab-btn" onclick="switchTab('sgd')">Summarise Group Disc.</button>
+  </div>
+
+  <!-- 1. READ ALOUD PANEL -->
+  <div id="panel-ra" class="panel active">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill blue">6–7 items</span>
+        <span class="info-pill blue">30–40 sec each</span>
+        <span class="info-pill green">Scores: Speaking + Reading</span>
+        <span class="info-pill orange">Highest value task</span>
+      </div>
+      <p>A text of up to 60 words appears on screen. After a countdown and beep you read it aloud. This is the <strong>single most impactful task in PTE</strong> — it scores Speaking (fluency, pronunciation) AND Reading (accuracy) simultaneously.</p>
+      
+      <span class="label blue">What The AI Scores</span>
+      <table class="score-table">
+        <tr class="st-row">
+          <td class="st-cell head field">SUB-SKILL</td>
+          <td class="st-cell head">WHAT IT MEASURES</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Content</td>
+          <td class="st-cell">Percentage of words read correctly and in order</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Oral Fluency</td>
+          <td class="st-cell">Natural rhythm, smooth chunked phrasing — no hesitations or false starts</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Pronunciation</td>
+          <td class="st-cell">Correct sound production, word stress, and connected speech</td>
+        </tr>
+      </table>
+
+      <span class="label green">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Use all prep time wisely</div>
+            <div class="step-desc">Skim the full text once. Identify unfamiliar words and rehearse them silently. Mark natural pause points at commas and full stops.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Begin immediately after the beep</div>
+            <div class="step-desc">Start within 1 second. Dead air at the beginning registers as a fluency issue.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Read in meaning chunks — not word by word</div>
+            <div class="step-desc">Group words into phrases: "The government / has announced / new investment policies / for rural development." Pausing at punctuation creates natural rhythm.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Stress content words, reduce function words</div>
+            <div class="step-desc">Emphasise nouns, main verbs, adjectives. Reduce articles (a, the), prepositions (of, in). This is how native English rhythm works.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <div class="step-title">Never stop or self-correct</div>
+            <div class="step-desc">If you mispronounce a word, keep going. Self-correction destroys fluency more than the original error.</div>
+          </div>
+        </div>
+      </div>
+
+      <span class="label">Chunking Guide</span>
+      <div class="template-box">
+        <div class="template-text">
+          <span class="fixed">READ IN MEANING CHUNKS:</span>
+          ✗ Wrong: "The / risk / of / flooding / in / coastal / areas / is / increasing."<br>
+          ✓ Correct: <span class="slot">The risk of flooding</span> / <span class="slot">in coastal areas</span> / <span class="slot">is increasing</span> / <span class="slot">at an alarming rate.</span>
+          <span class="fixed">Pause rule:</span> Comma = brief pause (0.3s) · Full stop = longer pause (0.5s)<br>
+          <span class="fixed">Stress rule:</span> Give extra volume + length to the main noun in each chunk:<br>
+          "The <em>RISK</em> of flooding / in <em>COAST</em>al areas / is in<em>CREAS</em>ing."
+        </div>
+      </div>
+
+      <span class="label orange">Pronunciation Rules For 79+</span>
+      <div class="tips-box">
+        <div class="tips-label">KEY RULES</div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Linking:</strong> Connect words — "turn_it_on", "an_apple", "at_all". Choppy delivery drops fluency.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Schwa:</strong> Unstressed vowels reduce to /ə/ — "about" = /əˈbaʊt/.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Syllable stress:</strong> pho-TOG-ra-phy · e-CON-o-my · gov-ERN-ment.</div></div>
+      </div>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">COMMON MISTAKES</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Going silent mid-text — the AI cuts the microphone after 3 seconds of silence.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Repeating or correcting yourself — self-correction destroys fluency.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Skipping words or lines — each skipped word reduces content score.</div></div>
+      </div>
+    </div>
+
+    <!-- Read Aloud Simulator widget -->
+    <div class="drill-container">
+      <div class="drill-header">
+        <div class="drill-title">🎙️ Practice Drill: Read Aloud Simulator</div>
+        <div class="drill-badge">Interactive Practice</div>
+      </div>
+      <div class="drill-passage" id="raPassage">
+        "The rapid expansion of urban centers has led to significant environmental challenges, including increased air pollution and the loss of natural habitats. To mitigate these effects, city planners must prioritize sustainable infrastructure and green spaces, ensuring a healthier living environment for future generations."
+      </div>
+      
+      <div class="drill-controls">
+        <button class="btn-drill" id="btnPrep" onclick="startPrep()">⏱️ Start Preparation (35s)</button>
+        <button class="btn-drill" id="btnRecord" onclick="startRecord()" disabled>🎤 Record Speech</button>
+        <div class="timer-box" id="raTimer">35s</div>
+        
+        <div class="record-wave" id="recordWave">
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+        </div>
+      </div>
+      
+      <!-- Results display -->
+      <div class="results-panel" id="raResults">
+        <h4 style="margin-bottom: 12px; font-weight: 800;">📊 AI Assessment Feedback</h4>
+        <div class="score-cards-row">
+          <div class="score-card-item">
+            <div class="sci-val" style="color:var(--green)">90%</div>
+            <div class="sci-lbl">Content Accuracy</div>
+          </div>
+          <div class="score-card-item">
+            <div class="sci-val" style="color:var(--blue)">86%</div>
+            <div class="sci-lbl">Oral Fluency</div>
+          </div>
+          <div class="score-card-item">
+            <div class="sci-val" style="color:var(--purple)">88%</div>
+            <div class="sci-lbl">Pronunciation</div>
+          </div>
+        </div>
+        
+        <div style="margin-bottom: 8px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-3);">Word-by-Word Feedback:</div>
+        <div class="word-highlight-text">
+          "<span class="w-ok">The</span> <span class="w-ok">rapid</span> <span class="w-ok">expansion</span> <span class="w-ok">of</span> <span class="w-ok">urban</span> <span class="w-ok">centers</span> <span class="w-ok">has</span> <span class="w-ok">led</span> <span class="w-ok">to</span> <span class="w-warn">significant</span> <span class="w-ok">environmental</span> <span class="w-ok">challenges</span>, <span class="w-ok">including</span> <span class="w-ok">increased</span> <span class="w-ok">air</span> <span class="w-err">pollution</span> <span class="w-ok">and</span> <span class="w-ok">the</span> <span class="w-ok">loss</span> <span class="w-ok">of</span> <span class="w-ok">natural</span> <span class="w-ok">habitats</span>. <span class="w-ok">To</span> <span class="w-ok">mitigate</span> <span class="w-ok">these</span> <span class="w-ok">effects</span>, <span class="w-ok">city</span> <span class="w-ok">planners</span> <span class="w-ok">must</span> <span class="w-ok">prioritize</span> <span class="w-ok">sustainable</span> <span class="w-ok">infrastructure</span> <span class="w-ok">and</span> <span class="w-warn">green</span> <span class="w-ok">spaces</span>, <span class="w-ok">ensuring</span> <span class="w-ok">a</span> <span class="w-ok">healthier</span> <span class="w-ok">living</span> <span class="w-ok">environment</span> <span class="w-ok">for</span> <span class="w-ok">future</span> <span class="w-ok">generations</span>."
+        </div>
+        <p style="margin-top:10px; font-size: 12px; color: var(--text-3);">Green: Good production · Yellow: Minor stress warning · Red: Pronunciation mismatch/skipped</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. REPEAT SENTENCE PANEL -->
+  <div id="panel-rs" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill blue">10–12 items</span>
+        <span class="info-pill blue">15 sec to respond</span>
+        <span class="info-pill green">Scores: Speaking + Listening</span>
+        <span class="info-pill orange">2nd highest value task</span>
+      </div>
+      <p>An audio sentence plays once. You must repeat it exactly — same words, same order, same rhythm. With 10–12 items it is the <strong>most frequently occurring task</strong> in the test, and simultaneously scores Speaking and Listening.</p>
+      
+      <span class="label blue">What The AI Scores</span>
+      <table class="score-table">
+        <tr class="st-row">
+          <td class="st-cell head field">SUB-SKILL</td>
+          <td class="st-cell head">WHAT IT MEASURES</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Content</td>
+          <td class="st-cell">Percentage of original words reproduced correctly and in the right order</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Oral Fluency</td>
+          <td class="st-cell">Smooth, uninterrupted delivery at natural pace — no choppy hesitation</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Pronunciation</td>
+          <td class="st-cell">Correct sounds and stress patterns matching the original speaker</td>
+        </tr>
+      </table>
+
+      <span class="label green">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Listen without writing or typing</div>
+            <div class="step-desc">Full attention on audio only. Writing shorthand means you will miss the second half of the sentence.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Use the 4-Block Memory Method</div>
+            <div class="step-desc">Anchor the first 2-3 words → capture subject + verb core → hold the last 3-4 words → reconstruct.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Speak immediately after audio ends</div>
+            <div class="step-desc">Begin within 1 second. The microphone activates automatically. Pausing longer than 2 seconds costs fluency.</div>
+          </div>
+        </div>
+      </div>
+
+      <span class="label">Memory Template</span>
+      <div class="template-box">
+        <div class="template-text">
+          <span class="fixed">Example: "The government has allocated significant funding for renewable energy development."</span>
+          BLOCK 1 (Anchor): <span class="slot">The government has</span><br>
+          BLOCK 2 (Core): <span class="slot">allocated significant funding</span><br>
+          BLOCK 3 (Tail): <span class="slot">for renewable energy development</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. DESCRIBE IMAGE PANEL -->
+  <div id="panel-di" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill blue">3–4 items</span>
+        <span class="info-pill blue">25 sec prep · 40 sec speak</span>
+        <span class="info-pill green">Scores: Speaking</span>
+      </div>
+      <p>An image appears — bar chart, line graph, pie chart, table, map, or process diagram. You have 25 seconds to study it then 40 seconds to describe it. You <strong>must fill the full 40 seconds</strong> without stopping.</p>
+      
+      <span class="label blue">Universal 5-Sentence Template</span>
+      <div class="template-box">
+        <div class="template-text">
+          <span class="fixed">① INTRODUCTION (5–6 sec):</span>
+          "The <span class="slot">[image type]</span> illustrates <span class="slot">[main topic]</span>."
+          <span class="fixed">② OVERVIEW — Key Trend (7–8 sec):</span>
+          "Overall, it is evident that <span class="slot">[most striking finding or dominant pattern]</span>."
+          <span class="fixed">③ HIGHEST / MOST PROMINENT (8 sec):</span>
+          "Notably, <span class="slot">[category with highest value]</span> recorded the highest figure at approximately <span class="slot">[value]</span>."
+          <span class="fixed">④ LOWEST / CONTRAST (7–8 sec):</span>
+          "In contrast, <span class="slot">[lowest category]</span> showed the smallest figure at <span class="slot">[value]</span>."
+          <span class="fixed">⑤ CONCLUSION (6–7 sec):</span>
+          "In conclusion, the <span class="slot">[image type]</span> clearly demonstrates that <span class="slot">[key takeaway]</span>."
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. RE-TELL LECTURE PANEL -->
+  <div id="panel-rl" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill blue">2–3 items</span>
+        <span class="info-pill blue">Audio up to 90 sec</span>
+        <span class="info-pill green">Scores: Speaking + Listening</span>
+      </div>
+      <p>An audio lecture plays. After it ends you have 10 seconds to prepare then 40 seconds to summarise it in your own words. Focus on the main topic, central argument, and 2-3 supporting points.</p>
+      
+      <span class="label blue">5-Sentence Response Template</span>
+      <div class="template-box">
+        <div class="template-text">
+          <span class="fixed">① TOPIC (5 sec):</span>
+          "The lecture discusses <span class="slot">[main topic]</span>."
+          <span class="fixed">② MAIN ARGUMENT (8 sec):</span>
+          "The speaker argues that <span class="slot">[central claim]</span>."
+          <span class="fixed">③ SUPPORTING DETAIL 1 (8 sec):</span>
+          "Furthermore, <span class="slot">[first key supporting point]</span>."
+          <span class="fixed">④ SUPPORTING DETAIL 2 (8 sec):</span>
+          "The speaker also mentions that <span class="slot">[second key point]</span>."
+          <span class="fixed">⑤ CONCLUSION (7 sec):</span>
+          "In conclusion, the lecture highlights the importance of <span class="slot">[key takeaway]</span>."
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. ANSWER SHORT QUESTION PANEL -->
+  <div id="panel-asq" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill blue">5–6 items</span>
+        <span class="info-pill blue">3–9 sec audio</span>
+        <span class="info-pill green">Scores: Listening + Speaking</span>
+      </div>
+      <p>A short question plays. You answer with <strong>one word or a very short phrase</strong>. One correct word = full marks.</p>
+      
+      <span class="label blue">Examples</span>
+      <table class="score-table">
+        <tr class="st-row">
+          <td class="st-cell head field">QUESTION TYPE</td>
+          <td class="st-cell head">EXAMPLE → ANSWER</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Opposites</td>
+          <td class="st-cell">"What is the opposite of expensive?" → <strong>cheap / inexpensive</strong></td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Definitions</td>
+          <td class="st-cell">"What do you call a doctor who treats children?" → <strong>paediatrician</strong></td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Science</td>
+          <td class="st-cell">"What gas do plants absorb?" → <strong>carbon dioxide / CO₂</strong></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 6. RESPOND TO A SITUATION PANEL -->
+  <div id="panel-rts" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill blue">2–3 items (Academic)</span>
+        <span class="info-pill green">Scores: Speaking</span>
+      </div>
+      <p>You hear and read a real-world situation. You have 10 seconds to prepare, then 40 seconds to speak. Respond naturally as you would to a real person.</p>
+      
+      <span class="label blue">4-Part Template</span>
+      <div class="template-box">
+        <div class="template-text">
+          <span class="fixed">OPENER:</span>
+          "<span class="slot">[Hi / Hello / Good morning]</span>, I <span class="slot">[wanted to reach out]</span> about <span class="slot">[the situation]</span>."
+          <span class="fixed">MAIN RESPONSE:</span>
+          "I <span class="slot">[apologise for / wanted to explain]</span> <span class="slot">[specific detail]</span>."
+          <span class="fixed">SOLUTION / NEXT STEP:</span>
+          "I think the best way to resolve this would be to <span class="slot">[practical step]</span>."
+          <span class="fixed">POLITE CLOSE:</span>
+          "Please <span class="slot">[let me know]</span> if you need anything further."
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. SUMMARISE GROUP DISCUSSION PANEL -->
+  <div id="panel-sgd" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill blue">2–3 items</span>
+        <span class="info-pill green">Scores: Listening + Speaking</span>
+      </div>
+      <p>You listen to a 3-speaker conversation (up to 3 minutes) then have 2 minutes to summarise the main viewpoints.</p>
+      
+      <span class="label blue">5-Sentence Response Template</span>
+      <div class="template-box">
+        <div class="template-text">
+          <span class="fixed">① INTRODUCE TOPIC:</span>
+          "The group discussed <span class="slot">[main topic]</span>, exploring a range of perspectives."
+          <span class="fixed">② FIRST VIEWPOINT:</span>
+          "One speaker argued that <span class="slot">[Viewpoint A]</span>."
+          <span class="fixed">③ SECOND VIEWPOINT:</span>
+          "Another participant pointed out that <span class="slot">[Viewpoint B]</span>."
+          <span class="fixed">④ THIRD VIEWPOINT:</span>
+          "A third perspective raised was that <span class="slot">[Viewpoint C]</span>."
+          <span class="fixed">⑤ OVERALL CONCLUSION:</span>
+          "Overall, the discussion highlighted <span class="slot">[central tension]</span>."
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function switchTab(tabId) {
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(panel => panel.classList.remove('active'));
+    
+    // Find matching button
+    const btn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(`'${tabId}'`));
+    if (btn) btn.classList.add('active');
+    
+    const panel = document.getElementById('panel-' + tabId);
+    if (panel) panel.classList.add('active');
+  }
+
+  // ── READ ALOUD SIMULATOR CODE ──
+  let prepTimer, recordTimer;
+  let audioBeep = new (window.AudioContext || window.webkitAudioContext)();
+  
+  function playBeep() {
+    let osc = audioBeep.createOscillator();
+    let gain = audioBeep.createGain();
+    osc.connect(gain);
+    gain.connect(audioBeep.destination);
+    osc.frequency.setValueAtTime(800, audioBeep.currentTime); // 800Hz beep
+    gain.gain.setValueAtTime(0.3, audioBeep.currentTime);
+    osc.start();
+    osc.stop(audioBeep.currentTime + 0.35); // Play for 350ms
+  }
+
+  function startPrep() {
+    clearInterval(prepTimer);
+    clearInterval(recordTimer);
+    document.getElementById('raResults').classList.remove('active');
+    document.getElementById('recordWave').classList.remove('active');
+    
+    let time = 35;
+    const timerBox = document.getElementById('raTimer');
+    const btnPrep = document.getElementById('btnPrep');
+    const btnRecord = document.getElementById('btnRecord');
+    
+    btnPrep.disabled = true;
+    btnPrep.textContent = "⏱️ Preparing...";
+    timerBox.className = "timer-box counting";
+    timerBox.textContent = time + "s";
+    
+    prepTimer = setInterval(() => {
+      time--;
+      timerBox.textContent = time + "s";
+      if (time <= 0) {
+        clearInterval(prepTimer);
+        timerBox.className = "timer-box";
+        btnPrep.textContent = "⏱️ Prep Done";
+        btnRecord.disabled = false;
+        playBeep();
+        // Automatically trigger record to match exam experience
+        startRecord();
+      }
+    }, 1000);
+  }
+
+  function startRecord() {
+    clearInterval(prepTimer);
+    clearInterval(recordTimer);
+    
+    const timerBox = document.getElementById('raTimer');
+    const btnRecord = document.getElementById('btnRecord');
+    const btnPrep = document.getElementById('btnPrep');
+    const wave = document.getElementById('recordWave');
+    
+    btnPrep.disabled = true;
+    btnPrep.textContent = "⏱️ Prep Done";
+    btnRecord.textContent = "🛑 Stop & Analyse";
+    btnRecord.onclick = stopRecord;
+    
+    wave.classList.add('active');
+    timerBox.className = "timer-box counting";
+    
+    let time = 40;
+    timerBox.textContent = time + "s";
+    
+    recordTimer = setInterval(() => {
+      time--;
+      timerBox.textContent = time + "s";
+      if (time <= 0) {
+        stopRecord();
+      }
+    }, 1000);
+  }
+
+  function stopRecord() {
+    clearInterval(recordTimer);
+    
+    const timerBox = document.getElementById('raTimer');
+    const btnRecord = document.getElementById('btnRecord');
+    const btnPrep = document.getElementById('btnPrep');
+    const wave = document.getElementById('recordWave');
+    
+    wave.classList.remove('active');
+    timerBox.className = "timer-box";
+    timerBox.textContent = "0s";
+    
+    btnRecord.textContent = "🎤 Record Again";
+    btnRecord.onclick = () => { startRecord(); };
+    btnPrep.disabled = false;
+    btnPrep.textContent = "⏱️ Start Preparation (35s)";
+    
+    // Display scoring results panel
+    document.getElementById('raResults').classList.add('active');
+    document.getElementById('raResults').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+</script>
+</body>
+</html>

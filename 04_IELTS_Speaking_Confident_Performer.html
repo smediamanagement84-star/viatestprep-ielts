@@ -111,9 +111,10 @@ img,svg{-webkit-user-drag:none!important}
       <span class="nav-step" data-jump="act2">④ Part 2</span>
       <span class="nav-step" data-jump="act3">⑤ Part 3</span>
       <span class="nav-step" data-jump="boss">⑥ Boss Stage</span>
-      <span class="nav-step" data-jump="liveTalk">🎤 Live</span>
-      <span class="nav-step" data-jump="interview">🎙 Interview</span>
       <span class="nav-step" data-jump="rapidfire">⚡ Rapid Fire</span>
+      <span class="nav-step" data-jump="liveTalk">🎤 Cue-Card</span>
+      <span class="nav-step" data-jump="deepdive">🧠 Deep Dive</span>
+      <span class="nav-step" data-jump="interview">🎙 Simulator</span>
     </div>
     <div class="flex items-center gap-3">
       <div class="text-right hidden sm:block">
@@ -446,7 +447,36 @@ img,svg{-webkit-user-drag:none!important}
     <div class="space-y-3 mt-4" id="errorDrill"></div>
   </section>
 
-  <!-- LIVE 2-MIN CUE CARD (for in-class) -->
+  <!-- RAPID FIRE (PART 1 DRILL) -->
+  <section id="rapidfire" class="mb-14">
+    <div class="flex items-end justify-between mb-3">
+      <h2 class="text-3xl">⚡ Rapid Fire — Part 1 Drill</h2>
+      <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">10 questions · 30 sec each · examiner speaks</span>
+    </div>
+    <p class="text-stone-700 max-w-3xl">10 random Part 1 questions, asked aloud by the examiner. 30 seconds per answer with auto-advance. Trains fluency under pressure. Project on screen for class drills.</p>
+
+    <div class="card p-6 mt-4">
+      <div class="flex items-center justify-between flex-wrap gap-3 mb-4">
+        <div class="flex items-center gap-3">
+          <button class="btn btn-primary" id="rfStart">▶ Start drill</button>
+          <button class="btn btn-ghost" id="rfStop">⏹ Stop</button>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="timer-pill text-2xl" style="color:var(--burgundy)" id="rfTimer">00:30</div>
+          <div class="text-sm" id="rfCount">0 / 10</div>
+        </div>
+      </div>
+
+      <div class="cue-card" style="background:linear-gradient(180deg,#fff,var(--cream))">
+        <div class="text-xs uppercase tracking-widest text-stone-500">Examiner</div>
+        <p class="text-xl mt-2" id="rfQuestion">Click "Start drill" to begin.</p>
+      </div>
+
+      <div class="mt-4 progress-bar"><div class="progress-fill" id="rfBar" style="width:0%"></div></div>
+    </div>
+  </section>
+
+  <!-- LIVE 2-MIN CUE CARD (PART 2 DRILL) -->
   <section id="liveTalk" class="mb-14">
     <div class="flex items-end justify-between mb-3">
       <h2 class="text-3xl">🎤 Live Cue-Card Stage · 2-Minute Talk</h2>
@@ -487,6 +517,61 @@ img,svg{-webkit-user-drag:none!important}
         <div class="p-2 rounded-lg" style="background:#fdf6e3"><strong>30s–1m:</strong> PAST details (what you did, felt)</div>
         <div class="p-2 rounded-lg" style="background:#fdf6e3"><strong>1m–1m30:</strong> PRESENT (why memorable now)</div>
         <div class="p-2 rounded-lg" style="background:#eef9f3"><strong>1m30–2m:</strong> FUTURE (plan to revisit?)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PART 3 DEEP DIVE (A.R.E. FRAMEWORK BUILDER) -->
+  <section id="deepdive" class="mb-14">
+    <div class="flex items-end justify-between mb-3">
+      <h2 class="text-3xl">🧠 Part 3 Deep Dive — A.R.E. Framework Builder</h2>
+      <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">Abstract · societal · analytical</span>
+    </div>
+    <p class="text-stone-700 max-w-3xl">Practise structured thinking for abstract Part 3 questions. Select a topic, read the question, and select the best Answer, Reason, and Example from the options below to assemble a Band 8+ response. Tap the components to add them in order.</p>
+
+    <div class="card p-6 mt-4">
+      <div class="flex flex-wrap gap-2 mb-4">
+        <button class="btn btn-ghost text-sm dd-topic-btn btn-active" data-topic="tech">💻 Technology & Society</button>
+        <button class="btn btn-ghost text-sm dd-topic-btn" data-topic="edu">🎓 Education & Careers</button>
+        <button class="btn btn-ghost text-sm dd-topic-btn" data-topic="tour">✈️ Tourism & Culture</button>
+      </div>
+
+      <div class="cue-card relative mb-4" style="background:linear-gradient(180deg,#fff,var(--cream))">
+        <div class="ribbon">PART 3 QUESTION</div>
+        <p class="text-xl font-semibold mt-2" id="ddQuestion">How will AI affect the job market in the future?</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-4">
+        <!-- Choices Column -->
+        <div class="md:col-span-2 space-y-3">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="chip" id="ddStepBadge" style="background:var(--burgundy);color:#fff">STEP 1: Choose Answer (A)</span>
+          </div>
+          <div id="ddChoices" class="space-y-3">
+            <!-- Choice buttons go here dynamically -->
+          </div>
+          <div id="ddFeedback" class="mt-3"></div>
+        </div>
+
+        <!-- Assembly Column -->
+        <div class="card p-4 bg-stone-50" style="border-color:var(--line)">
+          <h4 class="font-bold text-sm uppercase tracking-wider text-stone-500 mb-3">Your Assembled Answer</h4>
+          <div class="space-y-3 text-sm" id="ddAssembly">
+            <div>
+              <span class="font-bold text-xs" style="color:var(--burgundy)">A · ANSWER</span>
+              <p class="text-stone-400 italic mt-1" id="ddAssemblyA">Waiting for selection...</p>
+            </div>
+            <div>
+              <span class="font-bold text-xs" style="color:var(--gold)">R · REASON</span>
+              <p class="text-stone-400 italic mt-1" id="ddAssemblyR">Waiting for selection...</p>
+            </div>
+            <div>
+              <span class="font-bold text-xs" style="color:var(--teal)">E · EXAMPLE</span>
+              <p class="text-stone-400 italic mt-1" id="ddAssemblyE">Waiting for selection...</p>
+            </div>
+          </div>
+          <button class="btn btn-primary w-full mt-4" id="ddReset" style="display:none">Reset Drill</button>
+        </div>
       </div>
     </div>
   </section>
@@ -541,35 +626,6 @@ img,svg{-webkit-user-drag:none!important}
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- RAPID FIRE -->
-  <section id="rapidfire" class="mb-14">
-    <div class="flex items-end justify-between mb-3">
-      <h2 class="text-3xl">⚡ Rapid Fire — Part 1 Drill</h2>
-      <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">10 questions · 30 sec each · examiner speaks</span>
-    </div>
-    <p class="text-stone-700 max-w-3xl">10 random Part 1 questions, asked aloud by the examiner. 30 seconds per answer with auto-advance. Trains fluency under pressure. Project on screen for class drills.</p>
-
-    <div class="card p-6 mt-4">
-      <div class="flex items-center justify-between flex-wrap gap-3 mb-4">
-        <div class="flex items-center gap-3">
-          <button class="btn btn-primary" id="rfStart">▶ Start drill</button>
-          <button class="btn btn-ghost" id="rfStop">⏹ Stop</button>
-        </div>
-        <div class="flex items-center gap-3">
-          <div class="timer-pill text-2xl" style="color:var(--burgundy)" id="rfTimer">00:30</div>
-          <div class="text-sm" id="rfCount">0 / 10</div>
-        </div>
-      </div>
-
-      <div class="cue-card" style="background:linear-gradient(180deg,#fff,var(--cream))">
-        <div class="text-xs uppercase tracking-widest text-stone-500">Examiner</div>
-        <p class="text-xl mt-2" id="rfQuestion">Click "Start drill" to begin.</p>
-      </div>
-
-      <div class="mt-4 progress-bar"><div class="progress-fill" id="rfBar" style="width:0%"></div></div>
     </div>
   </section>
 
@@ -1329,6 +1385,188 @@ function rfNext(){
     if (rfSec<=0){ clearInterval(rfInt); rfNext(); }
   },1000);
 }
+
+// ====== PART 3 DEEP DIVE DRILL ======
+const ddData = {
+  tech: {
+    q: "How will AI affect the job market in the future?",
+    steps: [
+      {
+        type: "A",
+        label: "ANSWER (A)",
+        options: [
+          { text: "I'd argue that artificial intelligence will likely reshape the job landscape rather than completely destroy it.", band: 8, fb: "Correct! Elegant hedge ('likely') and precise vocabulary ('reshape', 'job landscape')." },
+          { text: "AI will take all the jobs and people will have no work because computers are smarter.", band: 6, fb: "Too simple and sweeping. Fails to hedge and uses conversational word choice ('take all the jobs')." }
+        ]
+      },
+      {
+        type: "R",
+        label: "REASON (R)",
+        options: [
+          { text: "This is primarily because while automation will displace routine cognitive tasks, it will simultaneously generate new roles focused on system oversight and creative problem-solving.", band: 8, fb: "Correct! Shows complex sentence structure and precise vocabulary ('displace routine cognitive tasks', 'system oversight')." },
+          { text: "Because companies want to save money and they don't want to pay humans anymore.", band: 6, fb: "Too informal. Starting with 'Because' in a standalone way and using simple words like 'pay humans' is typical of a Band 6 candidate." }
+        ]
+      },
+      {
+        type: "E",
+        label: "EXAMPLE (E)",
+        options: [
+          { text: "For instance, in the software industry, developers are transitioning from writing basic code to supervising AI agents that generate the code, which demands a higher level of analytical design.", band: 8, fb: "Correct! A generalized example (software industry) that supports the reason with advanced vocabulary." },
+          { text: "For example, my cousin is a coder and he uses ChatGPT every day to write his emails.", band: 6, fb: "A personal anecdote (my cousin) is okay for Part 1, but too informal for the abstract nature of Part 3." }
+        ]
+      }
+    ]
+  },
+  edu: {
+    q: "Is a university degree still necessary for career success?",
+    steps: [
+      {
+        type: "A",
+        label: "ANSWER (A)",
+        options: [
+          { text: "It seems to me that a traditional degree is becoming less of an absolute requirement and more of a supplementary asset.", band: 8, fb: "Correct! Great hedging ('It seems to me') and precise nouns ('absolute requirement', 'supplementary asset')." },
+          { text: "No, degrees are useless because Bill Gates dropped out of college and he is a billionaire.", band: 6, fb: "Very informal, absolute assertion, and relies on an extreme personal example." }
+        ]
+      },
+      {
+        type: "R",
+        label: "REASON (R)",
+        options: [
+          { text: "The main driver behind this shift is the rapid growth of specialized online certifications and skill-based hiring, which allow employers to verify competency directly.", band: 8, fb: "Correct! Excellent collocations ('main driver', 'skill-based hiring', 'verify competency') and relative clause structure." },
+          { text: "Because university is too expensive and you can learn everything on YouTube for free.", band: 6, fb: "Lacks academic vocabulary. Relies on simple ideas ('university is too expensive', 'learn on YouTube')." }
+        ]
+      },
+      {
+        type: "E",
+        label: "EXAMPLE (E)",
+        options: [
+          { text: "For example, many major technology firms have officially removed degree requirements from their job listings, focusing instead on portfolios and practical assessments.", band: 8, fb: "Correct! Valid, generalized real-world evidence ('technology firms', 'portfolios and practical assessments')." },
+          { text: "For example, in my country many students study business but they end up working in restaurants.", band: 6, fb: "Rambling personal observation and informal phrasing." }
+        ]
+      }
+    ]
+  },
+  tour: {
+    q: "Does international travel help reduce prejudice between cultures?",
+    steps: [
+      {
+        type: "A",
+        label: "ANSWER (A)",
+        options: [
+          { text: "By and large, exposure to foreign countries tends to foster cultural empathy and break down preconceived stereotypes.", band: 8, fb: "Correct! Uses strong hedging ('By and large', 'tends to') and elegant vocabulary ('foster cultural empathy', 'preconceived stereotypes')." },
+          { text: "Yes, traveling makes you a nice person because you see new things and eat good food.", band: 6, fb: "Too informal and simplistic ('nice person', 'good food')." }
+        ]
+      },
+      {
+        type: "R",
+        label: "REASON (R)",
+        options: [
+          { text: "This is because first-hand interactions with local populations force travelers to confront their own biases, replacing media-driven caricatures with lived experiences.", band: 8, fb: "Correct! Advanced vocabulary ('confront their own biases', 'media-driven caricatures', 'lived experiences')." },
+          { text: "Because when you go to another country you talk to people and you see they are just like you.", band: 6, fb: "Simplistic grammar structure and simple vocabulary." }
+        ]
+      },
+      {
+        type: "E",
+        label: "EXAMPLE (E)",
+        options: [
+          { text: "For instance, studies show that individuals who have lived or traveled extensively abroad score significantly higher on measures of cultural tolerance and open-mindedness.", band: 8, fb: "Correct! Generalised evidence ('studies show') that fits the academic tone of Part 3." },
+          { text: "For instance, my friend went to Japan and she said the people there were extremely polite and clean.", band: 6, fb: "Anecdotal evidence about a single friend is too informal and subjective for Part 3." }
+        ]
+      }
+    ]
+  }
+};
+
+let ddCurrentTopic = 'tech';
+let ddCurrentStep = 0; // 0: A, 1: R, 2: E
+let ddSelections = { A: null, R: null, E: null };
+
+function ddRender() {
+  const data = ddData[ddCurrentTopic];
+  if (!data) return;
+  document.getElementById('ddQuestion').textContent = data.q;
+
+  const step = data.steps[ddCurrentStep];
+  const choicesDiv = document.getElementById('ddChoices');
+  const badge = document.getElementById('ddStepBadge');
+  const feedbackDiv = document.getElementById('ddFeedback');
+  const resetBtn = document.getElementById('ddReset');
+
+  choicesDiv.innerHTML = '';
+  feedbackDiv.innerHTML = '';
+
+  if (ddCurrentStep < 3) {
+    badge.textContent = `STEP ${ddCurrentStep + 1}: Choose ${step.label}`;
+    badge.style.display = 'inline-flex';
+    resetBtn.style.display = 'none';
+
+    // Scramble choices
+    const options = [...step.options];
+
+    options.forEach(opt => {
+      const btn = document.createElement('div');
+      btn.className = 'opt';
+      btn.innerHTML = `<div class="letter">${opt.band === 8 ? 'B8' : 'B6'}</div><div>${opt.text}</div>`;
+      btn.addEventListener('click', () => {
+        const isCorrect = opt.band === 8;
+        if (isCorrect) {
+          btn.classList.add('correct');
+          choicesDiv.querySelectorAll('.opt').forEach(x => { if (!x.classList.contains('correct')) x.classList.add('disabled') });
+          feedbackDiv.innerHTML = `<div class="feedback good"><strong>Band 8+ locked!</strong> ${opt.fb}</div>`;
+          ddSelections[step.type] = opt.text;
+          
+          const assemblyEl = document.getElementById('ddAssembly' + step.type);
+          if (assemblyEl) {
+            assemblyEl.textContent = opt.text;
+            assemblyEl.className = 'text-stone-800 font-medium mt-1';
+          }
+          
+          addXP(10, 'A.R.E. Step ' + step.type);
+          
+          setTimeout(() => {
+            ddCurrentStep++;
+            ddRender();
+          }, 2000);
+        } else {
+          btn.classList.add('wrong');
+          feedbackDiv.innerHTML = `<div class="feedback bad"><strong>Band 6:</strong> ${opt.fb}</div>`;
+          addXP(2, 'A.R.E. Learning');
+        }
+      });
+      choicesDiv.appendChild(btn);
+    });
+  } else {
+    // Complete!
+    badge.style.display = 'none';
+    choicesDiv.innerHTML = `<div class="feedback good text-center p-4">🎉 Excellent! You have constructed a cohesive, Band 8+ analytical answer using the A.R.E. framework!</div>`;
+    resetBtn.style.display = 'block';
+  }
+}
+
+document.querySelectorAll('.dd-topic-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.dd-topic-btn').forEach(x => x.classList.remove('btn-active'));
+    btn.classList.add('btn-active');
+    ddCurrentTopic = btn.dataset.topic;
+    ddResetDrill();
+  });
+});
+
+function ddResetDrill() {
+  ddCurrentStep = 0;
+  ddSelections = { A: null, R: null, E: null };
+  ['A', 'R', 'E'].forEach(type => {
+    const assemblyEl = document.getElementById('ddAssembly' + type);
+    if (assemblyEl) {
+      assemblyEl.textContent = 'Waiting for selection...';
+      assemblyEl.className = 'text-stone-400 italic mt-1';
+    }
+  });
+  ddRender();
+}
+
+document.getElementById('ddReset').addEventListener('click', ddResetDrill);
+ddRender();
 </script>
 <script>
 (function(){

@@ -207,10 +207,10 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
 <!-- SKILL NAVIGATION -->
 <div class="skill-nav">
   <button class="skill-nav-btn active" onclick="showSkill('hub')">📋 Overview</button>
-  <button class="skill-nav-btn" onclick="showSkill('speaking')">🎙️ Speaking</button>
-  <button class="skill-nav-btn" onclick="showSkill('writing')">✍️ Writing</button>
-  <button class="skill-nav-btn" onclick="showSkill('reading')">📖 Reading</button>
-  <button class="skill-nav-btn" onclick="showSkill('listening')">🎧 Listening</button>
+  <button class="skill-nav-btn" onclick="window.location.href='pte-speaking.html'">🎙️ Speaking</button>
+  <button class="skill-nav-btn" onclick="window.location.href='pte-writing.html'">✍️ Writing</button>
+  <button class="skill-nav-btn" onclick="window.location.href='pte-reading.html'">📖 Reading</button>
+  <button class="skill-nav-btn" onclick="window.location.href='pte-listening.html'">🎧 Listening</button>
 </div>
 
 <!-- ══════════ HUB / OVERVIEW ══════════ -->
@@ -1148,10 +1148,30 @@ Starts with "This" / "These" / "It" / "They" / "He" / "She" · Starts with "Howe
 function showSkill(name) {
   document.querySelectorAll('.skill-section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.skill-nav-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('skill-' + name).classList.add('active');
-  event.target.classList.add('active');
+  
+  const targetSection = document.getElementById('skill-' + name);
+  if (targetSection) targetSection.classList.add('active');
+  
+  const btn = Array.from(document.querySelectorAll('.skill-nav-btn')).find(b => b.getAttribute('onclick')?.includes(`'${name}'`));
+  if (btn) btn.classList.add('active');
+  
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash.substring(1);
+  if (hash === 'speaking') {
+    window.location.href = 'pte-speaking.html';
+  } else if (hash === 'writing') {
+    window.location.href = 'pte-writing.html';
+  } else if (hash === 'reading') {
+    window.location.href = 'pte-reading.html';
+  } else if (hash === 'listening') {
+    window.location.href = 'pte-listening.html';
+  } else if (hash === 'hub') {
+    showSkill('hub');
+  }
+});
 
 // ── INNER TAB SWITCHING (prefixed per skill) ──
 function sw(id) {

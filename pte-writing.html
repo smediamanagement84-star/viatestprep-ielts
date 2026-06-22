@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PTE Academic Writing Mastery | ViaTestPrep</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --card: #ffffff;
+    --border: rgba(15, 23, 42, 0.08);
+    --border-hi: rgba(15, 23, 42, 0.16);
+    --text-1: #0f172a;
+    --text-2: #475569;
+    --text-3: #64748b;
+    --blue: #2563eb;
+    --blue-dim: rgba(37, 99, 235, 0.08);
+    --orange: #ea580c;
+    --orange-dim: rgba(234, 88, 12, 0.08);
+    --green: #16a34a;
+    --green-dim: rgba(22, 163, 74, 0.08);
+    --green-glow: rgba(22, 163, 74, 0.04);
+    --red: #dc2626;
+    --red-dim: rgba(220, 38, 38, 0.08);
+    --purple: #7c3aed;
+    --purple-dim: rgba(124, 58, 237, 0.08);
+    --purple-glow: rgba(124, 58, 237, 0.04);
+    --amber: #d97706;
+    --amber-dim: rgba(217, 119, 6, 0.08);
+    --amber-glow: rgba(217, 119, 6, 0.04);
+    --r: 16px;
+    --r-sm: 8px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text-1); font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+  
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 1.5rem 80px; }
+  
+  /* ── GLOBAL HEADER ── */
+  .g-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .back-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-2);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: var(--surface);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .back-btn:hover {
+    color: var(--purple);
+    border-color: var(--purple);
+    background: var(--purple-dim);
+    transform: translateY(-1px);
+  }
+  .g-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .g-title span { color: var(--purple); }
+
+  /* ── SKILL NAV TABS ── */
+  .tabs {
+    display: flex;
+    gap: 6px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    flex-shrink: 0;
+    padding: 10px 18px;
+    border-radius: var(--r-sm) var(--r-sm) 0 0;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--text-3);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+  .tab-btn:hover { color: var(--text-2); }
+  .tab-btn.active {
+    color: var(--purple);
+    border-color: var(--border) var(--border) transparent;
+    background: var(--surface);
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.02);
+  }
+
+  .panel { display: none; animation: fadeUp 0.3s ease; }
+  .panel.active { display: block; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ── CONTENT CARDS ── */
+  .card-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  }
+  .label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .label.purple { color: var(--purple); }
+  .label.green { color: var(--green); }
+  .label.orange { color: var(--orange); }
+  .label.red { color: var(--red); }
+
+  p { font-size: 14px; color: var(--text-2); line-height: 1.65; margin-bottom: 14px; }
+  strong { color: var(--text-1); }
+
+  .info-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+  .info-pill {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    color: var(--text-2);
+    background: var(--bg);
+  }
+  .info-pill.purple { color: var(--purple); border-color: var(--purple-dim); background: var(--purple-glow); }
+  .info-pill.green { color: var(--green); border-color: var(--green-dim); background: rgba(22, 163, 74, 0.04); }
+  .info-pill.orange { color: var(--orange); border-color: var(--orange-dim); background: var(--orange-glow); }
+
+  /* ── TABLES ── */
+  .score-table { border: 1px solid var(--border); border-radius: var(--r-sm); overflow: hidden; margin-bottom: 18px; width: 100%; border-collapse: collapse; }
+  .st-row { display: grid; grid-template-columns: 140px 1fr; border-bottom: 1px solid var(--border); }
+  .st-row:last-child { border-bottom: none; }
+  .st-cell { padding: 12px; font-size: 13px; color: var(--text-2); line-height: 1.5; }
+  .st-cell.head { font-weight: 700; background: var(--bg); color: var(--text-1); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .st-cell.field { font-weight: 700; color: var(--text-1); border-right: 1px solid var(--border); background: var(--bg); }
+
+  /* ── STEPS ── */
+  .step-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
+  .step-item { display: flex; gap: 14px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 14px; }
+  .step-num {
+    width: 28px; height: 28px; border-radius: 50%; color: #fff;
+    font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; background: var(--purple);
+  }
+  .step-body { flex: 1; }
+  .step-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--text-1); }
+  .step-desc { font-size: 13px; color: var(--text-2); line-height: 1.5; }
+
+  /* ── TEMPLATE BOX ── */
+  .template-box { background: var(--bg); border: 1px solid var(--border-hi); border-radius: var(--r-sm); padding: 18px; margin-bottom: 18px; position: relative; }
+  .template-box::before {
+    content: 'TEMPLATE'; position: absolute; top: -1px; right: 16px;
+    font-size: 9px; font-weight: 800; letter-spacing: 2px;
+    background: var(--bg); padding: 2px 10px; border: 1px solid var(--border-hi);
+    border-top: none; border-radius: 0 0 6px 6px; color: var(--purple);
+  }
+  .template-text { font-size: 13px; line-height: 1.8; color: var(--text-2); }
+  .template-text .slot { font-weight: 700; padding: 2px 6px; border-radius: 4px; font-size: 12px; color: var(--purple); background: var(--purple-dim); }
+  .template-text .fixed { color: var(--text-1); font-weight: 700; display: block; margin-top: 12px; margin-bottom: 4px; font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; }
+
+  /* ── BOXES ── */
+  .tips-box { background: var(--purple-glow); border: 1px solid var(--purple-dim); border-radius: var(--r-sm); padding: 16px; margin-bottom: 18px; }
+  .tips-label { font-size: 10px; font-weight: 800; letter-spacing: 1.5px; color: var(--purple); margin-bottom: 8px; text-transform: uppercase; }
+  .tip-item { display: flex; gap: 8px; font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 6px; }
+  .tip-item:last-child { margin-bottom: 0; }
+  .tip-dot { color: var(--purple); flex-shrink: 0; }
+
+  .avoid-box { background: var(--red-dim); border: 1px solid rgba(220, 38, 38, 0.15); border-radius: var(--r-sm); padding: 16px; margin-bottom: 18px; }
+  .avoid-label { font-size: 10px; font-weight: 800; letter-spacing: 1.5px; color: var(--red); margin-bottom: 8px; text-transform: uppercase; }
+  .avoid-item { display: flex; gap: 8px; font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 6px; }
+  .avoid-item:last-child { margin-bottom: 0; }
+  .avoid-x { color: var(--red); flex-shrink: 0; font-weight: 700; }
+
+  /* ── INTERACTIVE DRILL WIDGET ── */
+  .drill-container {
+    border: 2px solid var(--purple-dim);
+    border-radius: var(--r);
+    padding: 24px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(124,58,237,0.03);
+    margin-top: 30px;
+  }
+  .drill-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px; }
+  .drill-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-weight: 800; display: flex; align-items: center; gap: 6px; color: var(--text-1); }
+  .drill-badge { font-size: 11px; font-weight: 700; color: var(--purple); background: var(--purple-dim); padding: 4px 10px; border-radius: 20px; }
+  
+  .drill-prompt {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-1);
+    background: var(--bg);
+    padding: 18px;
+    border-radius: var(--r-sm);
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .editor-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  textarea.writing-editor {
+    width: 100%;
+    height: 240px;
+    padding: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-1);
+    background: var(--surface);
+    border: 1px solid var(--border-hi);
+    border-radius: var(--r-sm);
+    outline: none;
+    resize: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  textarea.writing-editor:focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.1);
+  }
+
+  .editor-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-3);
+    margin-top: 8px;
+    font-weight: 600;
+  }
+  .stat-highlight { color: var(--purple); font-weight: 700; }
+
+  .btn-drill {
+    background: var(--purple);
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 24px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 12px rgba(124,58,237,0.15);
+  }
+  .btn-drill:hover { background: #6d28d9; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(124,58,237,0.25); }
+  
+  .results-panel { display: none; border-top: 1px dashed var(--border); padding-top: 20px; animation: fadeUp 0.3s ease; }
+  .results-panel.active { display: block; }
+  
+  .score-cards-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+  @media (max-width: 576px) { .score-cards-row { grid-template-columns: 1fr; } }
+  .score-card-item { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 12px; text-align: center; }
+  .sci-val { font-size: 22px; font-weight: 800; color: var(--purple); }
+  .sci-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; color: var(--text-3); margin-top: 2px; }
+
+  .text-analysis-box {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--text-2);
+  }
+  .marker-transition {
+    background-color: var(--green-dim);
+    color: var(--green);
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-weight: 700;
+    border: 1px solid rgba(22,163,74,0.15);
+  }
+  .marker-error {
+    background-color: var(--red-dim);
+    color: var(--red);
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-weight: 700;
+    border: 1px solid rgba(220,38,38,0.15);
+  }
+  .marker-placeholder {
+    background-color: var(--amber-dim);
+    color: var(--amber);
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-weight: 700;
+    border: 1px solid rgba(217,119,6,0.15);
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  
+  <!-- GLOBAL HEADER -->
+  <div class="g-header">
+    <a href="index.html" class="back-btn">← Back to Hub</a>
+    <div class="g-title">PTE Writing <span>Mastery</span></div>
+  </div>
+
+  <!-- NAVIGATION TABS -->
+  <div class="tabs" id="writingTabs">
+    <button class="tab-btn active" onclick="switchTab('swt')">Summarise Written Text</button>
+    <button class="tab-btn" onclick="switchTab('we')">Write Essay</button>
+    <button class="tab-btn" onclick="switchTab('email')">Write Email (Core)</button>
+  </div>
+
+  <!-- 1. SUMMARISE WRITTEN TEXT PANEL -->
+  <div id="panel-swt" class="panel active">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill purple">1–2 items</span>
+        <span class="info-pill purple">10 min each</span>
+        <span class="info-pill purple">ONE sentence: 5–75 words</span>
+        <span class="info-pill green">Scores: Writing + Reading</span>
+      </div>
+      <p>A passage of up to 300 words appears. You must write a <strong>single summary sentence of 5–75 words</strong> in 10 minutes. Scores both Writing and Reading simultaneously — one of the highest-value tasks in the test.</p>
+      
+      <span class="label red">CRITICAL WARNING</span>
+      <div class="avoid-box">
+        <div class="avoid-label">Form is the highest-weighted criterion</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>If you write more than one sentence (even separated by a semicolon), or fewer than 5 words, you score ZERO on Form. One complete sentence only.</div></div>
+      </div>
+
+      <span class="label green">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Read quickly to find the main idea (2 min)</div>
+            <div class="step-desc">The main idea is almost always in the first and last paragraphs. Skim for the author's central claim — not a supporting example.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Draft your sentence using a complex structure (5 min)</div>
+            <div class="step-desc">Use a subordinate clause to connect the main argument to a supporting detail. Aim for 40–60 words.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Proofread and word count (3 min)</div>
+            <div class="step-desc">Count words. Verify there is no full stop creating a second sentence. Replace copied phrases with synonyms.</div>
+          </div>
+        </div>
+      </div>
+
+      <span class="label">Sentence Structure Blueprints</span>
+      <div class="template-box">
+        <div class="template-text">
+          <span class="fixed">STRUCTURE 1 — Although / While contrast:</span>
+          "Although <span class="slot">[concession / opposing point]</span>, the passage argues that <span class="slot">[main claim]</span>, emphasising that <span class="slot">[supporting detail]</span>."
+          <span class="fixed">STRUCTURE 2 — The passage discusses:</span>
+          "The passage discusses <span class="slot">[topic]</span>, highlighting the fact that <span class="slot">[main argument]</span> and suggesting that <span class="slot">[implication]</span>."
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. WRITE ESSAY PANEL -->
+  <div id="panel-we" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill purple">1–2 items</span>
+        <span class="info-pill purple">20 min each</span>
+        <span class="info-pill purple">200–300 words</span>
+        <span class="info-pill green">Scores: All 6 Writing sub-skills</span>
+      </div>
+      <p>A topic is given. You write an argumentative essay of <strong>200–300 words in 20 minutes</strong>. This task tests the widest range of writing sub-skills in the entire test.</p>
+      
+      <span class="label purple">Universal 4-Paragraph Template</span>
+      <div class="template-box">
+        <div class="template-text">
+          <span class="fixed">INTRO (~50 words):</span>
+          "In recent years, <span class="slot">[topic/issue]</span> has become a matter of considerable debate. While some argue that <span class="slot">[opposing view]</span>, I firmly believe that <span class="slot">[your position]</span> for two key reasons."
+          <span class="fixed">BODY 1 — Main reason (~80 words):</span>
+          "The principal reason for this view is that <span class="slot">[reason 1]</span>. This is because <span class="slot">[explanation]</span>. For instance, <span class="slot">[specific example]</span>. This demonstrates that <span class="slot">[link to thesis]</span>."
+          <span class="fixed">BODY 2 — Counter + rebuttal (~80 words):</span>
+          "Admittedly, some argue that <span class="slot">[counter-argument]</span>. However, this view overlooks the fact that <span class="slot">[rebuttal]</span>. While it is true that <span class="slot">[concession]</span>, the evidence suggests that <span class="slot">[reinforce position]</span>."
+          <span class="fixed">CONCLUSION (~40 words):</span>
+          "In conclusion, it is evident that <span class="slot">[restate position]</span>. <span class="slot">[Governments/Individuals]</span> should <span class="slot">[recommended action]</span>. Only through <span class="slot">[solution]</span> can <span class="slot">[outcome]</span> be achieved."
+        </div>
+      </div>
+
+      <span class="label orange">Grammar Structures To Include For 79+</span>
+      <div class="tips-box">
+        <div class="tips-label">KEY MOVES</div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Passive voice:</strong> "It has been demonstrated that..."</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Conditionals:</strong> "If governments fail to act, consequences will follow."</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Inversion:</strong> "Not only does X reduce costs, but it also increases output."</div></div>
+      </div>
+    </div>
+
+    <!-- Writing Simulator widget -->
+    <div class="drill-container">
+      <div class="drill-header">
+        <div class="drill-title">✍️ Practice Drill: Essay & Email Structure Validator</div>
+        <div class="drill-badge">Interactive Validator</div>
+      </div>
+      
+      <div class="drill-prompt" id="wePrompt">
+        "Some people believe that university education should be free for all students. Others disagree, arguing that students should pay for their tuition. Discuss both views and give your opinion."
+      </div>
+      
+      <div class="editor-wrapper">
+        <textarea class="writing-editor" id="weTextarea" placeholder="Type or paste your template-based response here..." oninput="updateWordCount()"></textarea>
+        <div class="editor-stats">
+          <div>Words: <span class="stat-highlight" id="lblWordCount">0</span> (Target: 200–300)</div>
+          <div>Time elapsed: <span class="stat-highlight" id="lblTimer">00:00</span></div>
+        </div>
+      </div>
+
+      <div class="drill-controls">
+        <button class="btn-drill" onclick="analyseStructure()">🔍 Check Structure & Cohesion</button>
+        <button class="btn-drill-secondary" onclick="loadSampleTemplate()">📝 Load Sample Template</button>
+      </div>
+
+      <!-- Analysis feedback -->
+      <div class="results-panel" id="weResults">
+        <h4 style="margin-bottom: 12px; font-weight: 800;">📊 Structural & Cohesion Analysis</h4>
+        <div class="score-cards-row">
+          <div class="score-card-item">
+            <div class="sci-val" id="resWordCount" style="color:var(--green)">0</div>
+            <div class="sci-lbl">Total Words</div>
+          </div>
+          <div class="score-card-item">
+            <div class="sci-val" id="resTransitionCount" style="color:var(--purple)">0</div>
+            <div class="sci-lbl">Transitions Found</div>
+          </div>
+          <div class="score-card-item">
+            <div class="sci-val" id="resStructureGrade" style="color:var(--amber)">-</div>
+            <div class="sci-lbl">Cohesion Rating</div>
+          </div>
+        </div>
+        
+        <div style="margin-bottom: 8px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-3);">Highlighted Text Analysis:</div>
+        <div class="text-analysis-box" id="analysisOutput">
+          <!-- Populated by JS -->
+        </div>
+        <p style="margin-top:10px; font-size: 12px; color: var(--text-3);">Green: Good Transition Words · Orange: Placeholder Slots to fill · Red: Potential Errors</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. WRITE EMAIL PANEL -->
+  <div id="panel-email" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill purple">2–3 items</span>
+        <span class="info-pill purple">9 min each</span>
+        <span class="info-pill purple">80–120 words</span>
+        <span class="info-pill orange">PTE Core only</span>
+      </div>
+      <p>A prompt describes a situation requiring an email. You write a formal or semi-formal email of <strong>80–120 words in 9 minutes</strong>. Scored on email conventions (subject line, salutation, body, sign-off).</p>
+      
+      <span class="label purple">Formal Email Template</span>
+      <div class="template-box">
+        <div class="template-text">
+          Subject: <span class="slot">[Clear, concise description]</span><br><br>
+          Dear <span class="slot">[Mr/Ms Last Name]</span>,<br><br>
+          I am writing to <span class="slot">[enquire about / request]</span> <span class="slot">[subject]</span>.<br><br>
+          <span class="slot">[Address Point 1]</span>. Furthermore, <span class="slot">[address Point 2]</span>. I would also like to mention that <span class="slot">[address Point 3]</span>.<br><br>
+          I would be grateful if you could <span class="slot">[action needed]</span>. Please do not hesitate to contact me should you require any further information.<br><br>
+          Yours sincerely,<br>
+          <span class="slot">[Your Full Name]</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function switchTab(tabId) {
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(panel => panel.classList.remove('active'));
+    
+    const btn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(`'${tabId}'`));
+    if (btn) btn.classList.add('active');
+    
+    const panel = document.getElementById('panel-' + tabId);
+    if (panel) panel.classList.add('active');
+  }
+
+  // ── WRITING TIMER ──
+  let secondsElapsed = 0;
+  setInterval(() => {
+    secondsElapsed++;
+    const mins = Math.floor(secondsElapsed / 60).toString().padStart(2, '0');
+    const secs = (secondsElapsed % 60).toString().padStart(2, '0');
+    const timerEl = document.getElementById('lblTimer');
+    if (timerEl) timerEl.textContent = `${mins}:${secs}`;
+  }, 1000);
+
+  function getWordsCount(text) {
+    const cleanText = text.trim();
+    if (!cleanText) return 0;
+    return cleanText.split(/\s+/).length;
+  }
+
+  function updateWordCount() {
+    const text = document.getElementById('weTextarea').value;
+    const count = getWordsCount(text);
+    document.getElementById('lblWordCount').textContent = count;
+  }
+
+  function loadSampleTemplate() {
+    document.getElementById('weTextarea').value = `In recent years, the cost of university education has become a matter of considerable debate. While some argue that higher education should be financed by students, I firmly believe that university education should be free for all students for two key reasons.
+
+The principal reason for this view is that it provides equal opportunities for all members of society. This is because intelligent students from low-income families are not restricted by financial barriers. For instance, countries offering free tuition show higher social mobility rates. This demonstrates that accessibility is crucial.
+
+Admittedly, some argue that public funding increases national tax burdens. However, this view overlooks the fact that a highly educated workforce generates significantly higher economic output. While it is true that government budgets are strained, the long-term evidence suggests that education is a profitable investment.
+
+In conclusion, it is evident that tertiary education should be fully funded by the state. Governments should act immediately to execute these policies. Only through free education can economic prosperity be achieved.`;
+    updateWordCount();
+  }
+
+  function analyseStructure() {
+    const text = document.getElementById('weTextarea').value;
+    const wordCount = getWordsCount(text);
+    
+    // Scan transition list
+    const transitions = [
+      "although", "furthermore", "in conclusion", "notably", "admittedly",
+      "however", "for instance", "this demonstrates that", "overall", "while",
+      "firstly", "secondly", "therefore", "consequently", "on the other hand",
+      "ultimately", "principal reason", "this is because", "while it is true", "rebuttal"
+    ];
+    
+    let transitionCount = 0;
+    let markedText = text;
+
+    // Highlight slots (placeholders)
+    const slotRegex = /\[[a-zA-Z\s0-9]+\]/g;
+    markedText = markedText.replace(slotRegex, match => {
+      return `<span class="marker-placeholder">${match}</span>`;
+    });
+
+    // Escape HTML from user text to prevent injection but retain our highlighted elements
+    const tempDiv = document.createElement('div');
+    tempDiv.textContent = text;
+    let safeText = tempDiv.innerHTML;
+    
+    // Re-apply placeholders
+    safeText = safeText.replace(/&amp;nbsp;/g, ' ').replace(/\[[a-zA-Z\s0-9]+\]/g, match => {
+      return `<span class="marker-placeholder">${match}</span>`;
+    });
+
+    // Highlight transitions
+    transitions.forEach(tr => {
+      const regex = new RegExp(`\\b(${tr})\\b`, 'gi');
+      safeText = safeText.replace(regex, match => {
+        transitionCount++;
+        return `<span class="marker-transition">${match}</span>`;
+      });
+    });
+
+    // Update results cards
+    document.getElementById('resWordCount').textContent = wordCount;
+    document.getElementById('resTransitionCount').textContent = transitionCount;
+    
+    let rating = 'Poor';
+    let color = 'var(--red)';
+    if (wordCount >= 200 && wordCount <= 300) {
+      if (transitionCount >= 8) { rating = 'Excellent (79+)'; color = 'var(--green)'; }
+      else if (transitionCount >= 4) { rating = 'Good (65)'; color = 'var(--purple)'; }
+      else { rating = 'Needs Work'; color = 'var(--amber)'; }
+    } else {
+      rating = 'Word Count Penalty';
+      color = 'var(--red)';
+    }
+
+    const gradeEl = document.getElementById('resStructureGrade');
+    gradeEl.textContent = rating;
+    gradeEl.style.color = color;
+
+    document.getElementById('analysisOutput').innerHTML = safeText.replace(/\n/g, '<br>');
+    
+    document.getElementById('weResults').classList.add('active');
+    document.getElementById('weResults').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+</script>
+</body>
+</html>

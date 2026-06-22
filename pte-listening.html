@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PTE Academic Listening Mastery | ViaTestPrep</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --card: #ffffff;
+    --border: rgba(15, 23, 42, 0.08);
+    --border-hi: rgba(15, 23, 42, 0.16);
+    --text-1: #0f172a;
+    --text-2: #475569;
+    --text-3: #64748b;
+    --blue: #2563eb;
+    --orange: #ea580c;
+    --orange-dim: rgba(234, 88, 12, 0.08);
+    --green: #16a34a;
+    --green-dim: rgba(22, 163, 74, 0.08);
+    --red: #dc2626;
+    --red-dim: rgba(220, 38, 38, 0.08);
+    --purple: #7c3aed;
+    --amber: #d97706;
+    --teal: #0d9488;
+    --teal-dim: rgba(13, 148, 136, 0.08);
+    --teal-glow: rgba(13, 148, 136, 0.04);
+    --r: 16px;
+    --r-sm: 8px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text-1); font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+  
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 1.5rem 80px; }
+  
+  /* ── GLOBAL HEADER ── */
+  .g-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .back-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-2);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: var(--surface);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .back-btn:hover {
+    color: var(--teal);
+    border-color: var(--teal);
+    background: var(--teal-dim);
+    transform: translateY(-1px);
+  }
+  .g-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .g-title span { color: var(--teal); }
+
+  /* ── SKILL NAV TABS ── */
+  .tabs {
+    display: flex;
+    gap: 6px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    flex-shrink: 0;
+    padding: 10px 18px;
+    border-radius: var(--r-sm) var(--r-sm) 0 0;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--text-3);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+  .tab-btn:hover { color: var(--text-2); }
+  .tab-btn.active {
+    color: var(--teal);
+    border-color: var(--border) var(--border) transparent;
+    background: var(--surface);
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.02);
+  }
+
+  .panel { display: none; animation: fadeUp 0.3s ease; }
+  .panel.active { display: block; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ── CONTENT CARDS ── */
+  .card-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  }
+  .label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .label.teal { color: var(--teal); }
+  .label.green { color: var(--green); }
+  .label.orange { color: var(--orange); }
+  .label.red { color: var(--red); }
+
+  p { font-size: 14px; color: var(--text-2); line-height: 1.65; margin-bottom: 14px; }
+  strong { color: var(--text-1); }
+
+  .info-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+  .info-pill {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    color: var(--text-2);
+    background: var(--bg);
+  }
+  .info-pill.teal { color: var(--teal); border-color: var(--teal-dim); background: var(--teal-glow); }
+  .info-pill.green { color: var(--green); border-color: var(--green-dim); background: rgba(22, 163, 74, 0.04); }
+  .info-pill.orange { color: var(--orange); border-color: var(--orange-dim); background: rgba(234, 88, 12, 0.04); }
+
+  /* ── TABLES ── */
+  .score-table { border: 1px solid var(--border); border-radius: var(--r-sm); overflow: hidden; margin-bottom: 18px; width: 100%; border-collapse: collapse; }
+  .st-row { display: grid; grid-template-columns: 140px 1fr; border-bottom: 1px solid var(--border); }
+  .st-row:last-child { border-bottom: none; }
+  .st-cell { padding: 12px; font-size: 13px; color: var(--text-2); line-height: 1.5; }
+  .st-cell.head { font-weight: 700; background: var(--bg); color: var(--text-1); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .st-cell.field { font-weight: 700; color: var(--text-1); border-right: 1px solid var(--border); background: var(--bg); }
+
+  /* ── STEPS ── */
+  .step-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
+  .step-item { display: flex; gap: 14px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 14px; }
+  .step-num {
+    width: 28px; height: 28px; border-radius: 50%; color: #fff;
+    font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; background: var(--teal);
+  }
+  .step-body { flex: 1; }
+  .step-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--text-1); }
+  .step-desc { font-size: 13px; color: var(--text-2); line-height: 1.5; }
+
+  /* ── TEMPLATE BOX ── */
+  .template-box { background: var(--bg); border: 1px solid var(--border-hi); border-radius: var(--r-sm); padding: 18px; margin-bottom: 18px; position: relative; }
+  .template-box::before {
+    content: 'Blueprints'; position: absolute; top: -1px; right: 16px;
+    font-size: 9px; font-weight: 800; letter-spacing: 2px;
+    background: var(--bg); padding: 2px 10px; border: 1px solid var(--border-hi);
+    border-top: none; border-radius: 0 0 6px 6px; color: var(--teal);
+  }
+  .template-text { font-size: 13px; line-height: 1.8; color: var(--text-2); }
+  .template-text .slot { font-weight: 700; padding: 2px 6px; border-radius: 4px; font-size: 12px; color: var(--teal); background: var(--teal-dim); }
+  .template-text .fixed { color: var(--text-1); font-weight: 700; display: block; margin-top: 12px; margin-bottom: 4px; font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; }
+
+  /* ── BOXES ── */
+  .tips-box { background: var(--teal-glow); border: 1px solid var(--teal-dim); border-radius: var(--r-sm); padding: 16px; margin-bottom: 18px; }
+  .tips-label { font-size: 10px; font-weight: 800; letter-spacing: 1.5px; color: var(--teal); margin-bottom: 8px; text-transform: uppercase; }
+  .tip-item { display: flex; gap: 8px; font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 6px; }
+  .tip-item:last-child { margin-bottom: 0; }
+  .tip-dot { color: var(--teal); flex-shrink: 0; }
+
+  .avoid-box { background: var(--red-dim); border: 1px solid rgba(220, 38, 38, 0.15); border-radius: var(--r-sm); padding: 16px; margin-bottom: 18px; }
+  .avoid-label { font-size: 10px; font-weight: 800; letter-spacing: 1.5px; color: var(--red); margin-bottom: 8px; text-transform: uppercase; }
+  .avoid-item { display: flex; gap: 8px; font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 6px; }
+  .avoid-item:last-child { margin-bottom: 0; }
+  .avoid-x { color: var(--red); flex-shrink: 0; font-weight: 700; }
+
+  /* ── INTERACTIVE DRILL WIDGET ── */
+  .drill-container {
+    border: 2px solid var(--teal-dim);
+    border-radius: var(--r);
+    padding: 24px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(13,148,136,0.03);
+    margin-top: 30px;
+  }
+  .drill-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px; }
+  .drill-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-weight: 800; display: flex; align-items: center; gap: 6px; color: var(--text-1); }
+  .drill-badge { font-size: 11px; font-weight: 700; color: var(--teal); background: var(--teal-dim); padding: 4px 10px; border-radius: 20px; }
+  
+  .dictation-panel {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: var(--r-sm);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .btn-audio-play {
+    background: var(--teal);
+    color: white;
+    border: none;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(13,148,136,0.2);
+    transition: all 0.2s;
+    margin-bottom: 10px;
+  }
+  .btn-audio-play:hover {
+    background: #0f766e;
+    transform: scale(1.05);
+  }
+  .audio-status {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-3);
+  }
+
+  input.dictation-input {
+    width: 100%;
+    padding: 14px 18px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--text-1);
+    background: var(--surface);
+    border: 1px solid var(--border-hi);
+    border-radius: var(--r-sm);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    margin-bottom: 20px;
+  }
+  input.dictation-input:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(13,148,136,0.1);
+  }
+
+  .btn-drill {
+    background: var(--teal);
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 24px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 12px rgba(13,148,136,0.15);
+  }
+  .btn-drill:hover { background: #0f766e; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(13,148,136,0.25); }
+  
+  .results-panel { display: none; border-top: 1px dashed var(--border); padding-top: 20px; animation: fadeUp 0.3s ease; }
+  .results-panel.active { display: block; }
+
+  .score-cards-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 20px; }
+  .score-card-item { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 12px; text-align: center; }
+  .sci-val { font-size: 22px; font-weight: 800; color: var(--teal); }
+  .sci-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; color: var(--text-3); margin-top: 2px; }
+
+  .word-highlight-text { font-size: 15px; line-height: 1.8; color: var(--text-2); background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 16px; }
+  .w-ok { color: var(--green); font-weight: 700; text-decoration: underline; text-decoration-color: rgba(22, 163, 74, 0.4); }
+  .w-err { color: var(--red); font-weight: 700; text-decoration: line-through; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  
+  <!-- GLOBAL HEADER -->
+  <div class="g-header">
+    <a href="index.html" class="back-btn">← Back to Hub</a>
+    <div class="g-title">PTE Listening <span>Focus</span></div>
+  </div>
+
+  <!-- NAVIGATION TABS -->
+  <div class="tabs" id="listeningTabs">
+    <button class="tab-btn active" onclick="switchTab('sst')">Summarise Spoken</button>
+    <button class="tab-btn" onclick="switchTab('mcqm')">MCQ Multiple</button>
+    <button class="tab-btn" onclick="switchTab('lfib')">Fill Blanks</button>
+    <button class="tab-btn" onclick="switchTab('hcs')">Highlight Summary</button>
+    <button class="tab-btn" onclick="switchTab('wfd')">Write Dictation</button>
+    <button class="tab-btn" onclick="switchTab('mcqs')">MCQ Single</button>
+  </div>
+
+  <!-- 1. SUMMARISE SPOKEN TEXT PANEL -->
+  <div id="panel-sst" class="panel active">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill teal">1–2 items</span>
+        <span class="info-pill teal">Audio 60–90 sec</span>
+        <span class="info-pill teal">10 min to write</span>
+        <span class="info-pill teal">50–70 words</span>
+        <span class="info-pill green">Scores: Listening + Writing</span>
+      </div>
+      <p>An audio recording of 60–90 seconds plays once. You write a <strong>50–70 word summary in 10 minutes</strong>. Scores both Listening AND Writing simultaneously.</p>
+      
+      <span class="label teal">What The AI Scores</span>
+      <table class="score-table">
+        <tr class="st-row">
+          <td class="st-cell head field">SUB-SKILL</td>
+          <td class="st-cell head">WHAT IT MEASURES</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Content</td>
+          <td class="st-cell">Does the summary capture the main point and key details accurately?</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Form</td>
+          <td class="st-cell">Is it within 50–70 words? Multiple sentences are allowed.</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Spelling</td>
+          <td class="st-cell">Every word correctly spelled. Choose British or American consistently.</td>
+        </tr>
+      </table>
+
+      <span class="label green">4-Sentence SST Template</span>
+      <div class="template-box">
+        <div class="template-text">
+          SENTENCE 1 — Topic + Main Point:<br>
+          "The lecture discusses <span class="slot">[main topic]</span>, with particular focus on <span class="slot">[specific aspect]</span>."<br><br>
+          SENTENCE 2 — Central Claim:<br>
+          "The speaker argues that <span class="slot">[central claim]</span>, providing evidence that <span class="slot">[supporting evidence]</span>."<br><br>
+          SENTENCE 3 — Detail:<br>
+          "Furthermore, <span class="slot">[second important point]</span>, which highlights <span class="slot">[significance]</span>."<br><br>
+          SENTENCE 4 — Conclusion:<br>
+          "In conclusion, <span class="slot">[key takeaway / recommendation]</span>."
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. MCQ MULTIPLE PANEL -->
+  <div id="panel-mcqm" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill teal">2–3 items</span>
+        <span class="info-pill red">⚠ NEGATIVE MARKING</span>
+      </div>
+      <p>Negative marking applies. Incorrect selections deduct marks. Only select options you are highly confident about.</p>
+    </div>
+  </div>
+
+  <!-- 3. FILL IN THE BLANKS PANEL -->
+  <div id="panel-lfib" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill teal">2–3 items</span>
+        <span class="info-pill green">Scores: Listening + Writing</span>
+      </div>
+      <p>An audio recording plays. Type the missing words in the blanks. Focus heavily on spelling, as every typo costs writing marks.</p>
+    </div>
+  </div>
+
+  <!-- 4. HIGHLIGHT SUMMARY PANEL -->
+  <div id="panel-hcs" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill teal">1–2 items</span>
+        <span class="info-pill green">Scores: Listening + Reading</span>
+      </div>
+      <p>An audio recording plays. Select the summary option that best represents the key points of the recording.</p>
+    </div>
+  </div>
+
+  <!-- 5. WRITE FROM DICTATION PANEL -->
+  <div id="panel-wfd" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill teal">3–4 items</span>
+        <span class="info-pill green">Scores: Listening + Writing</span>
+        <span class="info-pill orange">Crucial task</span>
+      </div>
+      <p>A short sentence plays once. Type the sentence exactly as you heard it. <strong>Every correct word earns 1 point</strong>. This is one of the highest-scoring tasks in the entire test.</p>
+      
+      <span class="label green">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Listen intently without typing</div>
+            <div class="step-desc">Focus all concentration on the voice. Do not look down or touch the keyboard during playback.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Type immediately while fresh</div>
+            <div class="step-desc">Write down the words in order. Check spelling, capitalization, and punctuation carefully.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Use spelling synonyms if unsure</div>
+            <div class="step-desc">If you're unsure whether a word was singular or plural, some systems allow writing both (e.g. "student students") for partial credit.</div>
+          </div>
+        </div>
+      </div>
+
+      <span class="label orange">Spelling Traps</span>
+      <div class="tips-box">
+        <div class="tips-label">COMMON MISTAKES</div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Double letters:</strong> necessary · accommodation · commitment · beginning</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Homophones:</strong> their vs there · affect vs effect · principal vs principle</div></div>
+      </div>
+    </div>
+
+    <!-- Dictation Simulator widget -->
+    <div class="drill-container">
+      <div class="drill-header">
+        <div class="drill-title">🎧 Practice Drill: Write from Dictation Simulator</div>
+        <div class="drill-badge">Interactive Dictation</div>
+      </div>
+      
+      <div class="dictation-panel">
+        <button class="btn-audio-play" onclick="playDictationSentence()">▶</button>
+        <div class="audio-status" id="audioStatus">Click play to listen to the sentence (plays once)</div>
+      </div>
+
+      <input type="text" class="dictation-input" id="dictationInput" placeholder="Type the sentence you heard here..." autocomplete="off"/>
+
+      <div class="drill-controls">
+        <button class="btn-drill" onclick="checkDictationAnswer()">🔍 Check Accuracy</button>
+        <button class="btn-drill-secondary" onclick="loadNextDictation()">🔄 Next Sentence</button>
+      </div>
+
+      <!-- Results panel -->
+      <div class="results-panel" id="dictationResults">
+        <h4 style="margin-bottom: 12px; font-weight: 800;">📊 AI Accuracy Report</h4>
+        <div class="score-cards-row">
+          <div class="score-card-item">
+            <div class="sci-val" id="dictationScore" style="color:var(--green)">0 / 0</div>
+            <div class="sci-lbl">Correct Words</div>
+          </div>
+          <div class="score-card-item">
+            <div class="sci-val" id="dictationAccuracy" style="color:var(--teal)">0%</div>
+            <div class="sci-lbl">Total Accuracy</div>
+          </div>
+        </div>
+        
+        <div style="margin-bottom: 8px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-3);">Transcription Comparison:</div>
+        <div class="word-highlight-text" id="dictationComparison">
+          <!-- Populated by JS -->
+        </div>
+        <p style="margin-top:10px; font-size: 12px; color: var(--text-3);">Green: Correct word · Red: Incorrect or missing word. Punctuation is ignored in scoring.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. MCQ SINGLE PANEL -->
+  <div id="panel-mcqs" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill teal">2–3 items</span>
+        <span class="info-pill green">No negative marking</span>
+      </div>
+      <p>Exactly one correct answer. Always guess if unsure.</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function switchTab(tabId) {
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(panel => panel.classList.remove('active'));
+    
+    const btn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(`'${tabId}'`));
+    if (btn) btn.classList.add('active');
+    
+    const panel = document.getElementById('panel-' + tabId);
+    if (panel) panel.classList.add('active');
+  }
+
+  // ── DICTATION PRACTICE DATA & LOGIC ──
+  const DICTATIONS = [
+    "The university will provide additional funding for research projects next semester.",
+    "Spelling is scored independently in all written tasks in the Pearson test.",
+    "Students must read the instructions carefully before attempting the exam.",
+    "A highly educated workforce generates significantly higher economic output."
+  ];
+  let currentIdx = 0;
+  let hasPlayed = false;
+
+  function loadNextDictation() {
+    currentIdx = (currentIdx + 1) % DICTATIONS.length;
+    document.getElementById('dictationInput').value = '';
+    document.getElementById('dictationResults').classList.remove('active');
+    document.getElementById('audioStatus').textContent = "Click play to listen to the sentence (plays once)";
+    hasPlayed = false;
+  }
+
+  function playDictationSentence() {
+    if (hasPlayed) {
+      alert("In the real PTE exam, the dictation audio plays ONLY ONCE. Challenge yourself!");
+    }
+    
+    const sentence = DICTATIONS[currentIdx];
+    
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(sentence);
+      utterance.rate = 0.85; // Speak slightly slowly to simulate real test pace
+      utterance.pitch = 1.0;
+      utterance.lang = 'en-US';
+      
+      utterance.onstart = () => {
+        document.getElementById('audioStatus').textContent = "🔊 Audio playing...";
+      };
+      utterance.onend = () => {
+        document.getElementById('audioStatus').textContent = "✅ Audio completed. Type your answer below.";
+        hasPlayed = true;
+      };
+      window.speechSynthesis.speak(utterance);
+    } else {
+      // Fallback
+      document.getElementById('audioStatus').textContent = "⚠️ Text-to-speech not supported. Read silently for testing: " + sentence;
+      hasPlayed = true;
+    }
+  }
+
+  function cleanWord(word) {
+    return word.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+  }
+
+  function checkDictationAnswer() {
+    const input = document.getElementById('dictationInput').value.trim();
+    const target = DICTATIONS[currentIdx];
+    
+    if (!input) {
+      alert("Please type a transcription first!");
+      return;
+    }
+
+    const inputWords = input.split(/\s+/).map(cleanWord);
+    const targetWords = target.split(/\s+/).map(cleanWord);
+    const originalTargetWords = target.split(/\s+/);
+    
+    let correctCount = 0;
+    let comparisonHTML = '';
+
+    targetWords.forEach((word, idx) => {
+      const originalWord = originalTargetWords[idx];
+      // Simple word match check (PTE matches words anywhere or in sequence)
+      if (inputWords.includes(word)) {
+        correctCount++;
+        comparisonHTML += `<span class="w-ok">${originalWord}</span> `;
+      } else {
+        comparisonHTML += `<span class="w-err">${originalWord}</span> `;
+      }
+    });
+
+    const accuracy = Math.round((correctCount / targetWords.length) * 100);
+
+    document.getElementById('dictationScore').textContent = `${correctCount} / ${targetWords.length}`;
+    document.getElementById('dictationAccuracy').textContent = `${accuracy}%`;
+    document.getElementById('dictationComparison').innerHTML = comparisonHTML;
+
+    document.getElementById('dictationResults').classList.add('active');
+    document.getElementById('dictationResults').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+</script>
+</body>
+</html>
