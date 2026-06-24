@@ -1,341 +1,376 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>ViATestPrep — IELTS Practice Test Center</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --primary: 268, 52%, 48%; /* #5b2a86 */
-    --primary-raw: 91, 42, 134;
-    --gold: 40, 65%, 48%; /* #c8932a */
-    --teal: 172, 83%, 30%; /* #0d8a7a */
-    --rose: 347, 79%, 59%; /* #e8456b */
-    --bg-main: #070913;
-    --bg-modules: #0a0c16;
-    --bg-card: rgba(17, 20, 38, 0.65);
-    --bg-card-hover: rgba(25, 30, 56, 0.85);
-    --border-color: rgba(255, 255, 255, 0.08);
-    --border-hover: rgba(255, 255, 255, 0.18);
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-    --glass-navbar: rgba(7, 9, 19, 0.75);
-    --divider-color: rgba(255, 255, 255, 0.08);
-    --accent-glow: rgba(91, 42, 134, 0.25);
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ViATestPrep — IELTS Practice Test Center</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --primary: 268, 52%, 48%;
+      /* #5b2a86 */
+      --primary-raw: 91, 42, 134;
+      --gold: 40, 65%, 48%;
+      /* #c8932a */
+      --teal: 172, 83%, 30%;
+      /* #0d8a7a */
+      --rose: 347, 79%, 59%;
+      /* #e8456b */
+      --bg-main: #070913;
+      --bg-modules: #0a0c16;
+      --bg-card: rgba(17, 20, 38, 0.65);
+      --bg-card-hover: rgba(25, 30, 56, 0.85);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(255, 255, 255, 0.18);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --glass-navbar: rgba(7, 9, 19, 0.75);
+      --divider-color: rgba(255, 255, 255, 0.08);
+      --accent-glow: rgba(91, 42, 134, 0.25);
+    }
 
-  .light {
-    --bg-main: #faf9f6;
-    --bg-modules: #f5f3ec;
-    --bg-card: rgba(255, 255, 255, 0.85);
-    --bg-card-hover: rgba(255, 255, 255, 0.98);
-    --border-color: rgba(15, 23, 42, 0.08);
-    --border-hover: rgba(15, 23, 42, 0.16);
-    --text-main: #0f172a;
-    --text-muted: #64748b;
-    --glass-navbar: rgba(250, 249, 246, 0.8);
-    --divider-color: rgba(15, 23, 42, 0.08);
-    --accent-glow: rgba(91, 42, 134, 0.05);
-  }
+    .light {
+      --bg-main: #faf9f6;
+      --bg-modules: #f5f3ec;
+      --bg-card: rgba(255, 255, 255, 0.85);
+      --bg-card-hover: rgba(255, 255, 255, 0.98);
+      --border-color: rgba(15, 23, 42, 0.08);
+      --border-hover: rgba(15, 23, 42, 0.16);
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --glass-navbar: rgba(250, 249, 246, 0.8);
+      --divider-color: rgba(15, 23, 42, 0.08);
+      --accent-glow: rgba(91, 42, 134, 0.05);
+    }
 
-  body {
-    background-color: var(--bg-main);
-    color: var(--text-main);
-    font-family: 'Inter', sans-serif;
-    min-height: 100vh;
-    transition: background-color 0.4s ease, color 0.4s ease;
-  }
-  h1, h2, h3, h4 {
-    font-family: 'Fraunces', serif;
-  }
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
 
-  .glow-blob {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0.16;
-    pointer-events: none;
-    z-index: 0;
-  }
-  .light .glow-blob {
-    opacity: 0.08;
-  }
-  .blob-1 {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, hsl(var(--primary)) 0%, transparent 70%);
-    top: -150px;
-    right: -100px;
-  }
-  .blob-2 {
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, hsl(var(--teal)) 0%, transparent 70%);
-    bottom: 15%;
-    left: -200px;
-  }
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Fraunces', serif;
+    }
 
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4.8rem;
-    background: var(--glass-navbar);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border-color);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 3rem;
-  }
-  .nav-logo-mark {
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, hsl(var(--primary)), #3b0a64);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Fraunces', serif;
-    font-size: 1.35rem;
-    font-weight: 800;
-    color: #fff;
-    box-shadow: 0 6px 20px rgba(91,42,134,0.45);
-  }
+    .glow-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.16;
+      pointer-events: none;
+      z-index: 0;
+    }
 
-  .card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 24px;
-    padding: 2rem;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .card:hover {
-    transform: translateY(-4px);
-    background: var(--bg-card-hover);
-    border-color: var(--border-hover);
-    box-shadow: 0 20px 40px -15px rgba(var(--primary-raw), 0.15);
-  }
+    .light .glow-blob {
+      opacity: 0.08;
+    }
 
-  .mode-btn {
-    padding: 0.65rem 1.4rem;
-    border-radius: 999px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    border: 1px solid var(--border-color);
-    background: var(--bg-card);
-    color: var(--text-muted);
-    cursor: pointer;
-    transition: all 0.25s;
-  }
-  .mode-btn.active {
-    background: hsl(var(--primary));
-    border-color: hsl(var(--primary));
-    color: #fff;
-    box-shadow: 0 6px 20px rgba(91, 42, 134, 0.4);
-  }
+    .blob-1 {
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, hsl(var(--primary)) 0%, transparent 70%);
+      top: -150px;
+      right: -100px;
+    }
 
-  .lock-status-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.45rem;
-    background: rgba(13, 16, 30, 0.7);
-    border: 1px solid var(--border-color);
-    padding: 0.55rem 1rem;
-    border-radius: 999px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    cursor: pointer;
-    color: var(--text-main);
-  }
-  .lock-status-btn.unlocked {
-    color: #10b981;
-    border-color: rgba(16, 185, 129, 0.3);
-  }
-</style>
-<script src="security.js"></script>
+    .blob-2 {
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, hsl(var(--teal)) 0%, transparent 70%);
+      bottom: 15%;
+      left: -200px;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4.8rem;
+      background: var(--glass-navbar);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 3rem;
+    }
+
+    .nav-logo-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, hsl(var(--primary)), #3b0a64);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fraunces', serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(91, 42, 134, 0.45);
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 2rem;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      background: var(--bg-card-hover);
+      border-color: var(--border-hover);
+      box-shadow: 0 20px 40px -15px rgba(var(--primary-raw), 0.15);
+    }
+
+    .mode-btn {
+      padding: 0.65rem 1.4rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border: 1px solid var(--border-color);
+      background: var(--bg-card);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+
+    .mode-btn.active {
+      background: hsl(var(--primary));
+      border-color: hsl(var(--primary));
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(91, 42, 134, 0.4);
+    }
+
+    .lock-status-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: rgba(13, 16, 30, 0.7);
+      border: 1px solid var(--border-color);
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: pointer;
+      color: var(--text-main);
+    }
+
+    .lock-status-btn.unlocked {
+      color: #10b981;
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+  </style>
+  <script src="security.js"></script>
 </head>
+
 <body class="pt-28 pb-16">
 
-<!-- Ambient Glow Blobs -->
-<div class="glow-blob blob-1"></div>
-<div class="glow-blob blob-2"></div>
+  <!-- Ambient Glow Blobs -->
+  <div class="glow-blob blob-1"></div>
+  <div class="glow-blob blob-2"></div>
 
-<!-- Top Sticky Navbar -->
-<header class="navbar px-6 lg:px-12">
-  <div class="flex items-center gap-3">
-    <a href="index.html" class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-bold transition">← Back</a>
-    <div class="nav-logo-mark">V</div>
-    <a href="index.html" class="font-serif text-xl font-extrabold tracking-tight bg-gradient-to-r from-slate-200 to-purple-400 bg-clip-text text-transparent">ViATestPrep</a>
-  </div>
-  
-  <div class="flex items-center gap-3">
-    <button id="lockStatusBtn" class="lock-status-btn">
-      <span id="lockIcon"></span>
-      <span id="lockLabel">Loading...</span>
-    </button>
-    <button id="darkModeToggle" class="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-sm transition hover:scale-105">🌙</button>
-  </div>
-</header>
-
-<main class="max-w-6xl mx-auto px-4 relative z-10">
-  
-  <!-- Header Title -->
-  <section class="mb-10 text-center md:text-left md:flex justify-between items-end gap-6">
-    <div>
-      <span class="text-xs uppercase tracking-widest font-extrabold text-purple-500">Official Cambridge Audio</span>
-      <h1 class="text-4xl lg:text-5xl font-extrabold mt-1">IELTS Practice Test Center</h1>
-      <p class="text-stone-400 mt-2 max-w-prose text-sm lg:text-base">12 complete tests from Cambridge IELTS 18, 19 &amp; 20 — with <strong class="text-purple-400">real official audio</strong>, real questions, answer keys, and instant score tracking.</p>
-    </div>
-    
-    <!-- Mode Selection -->
-    <div class="mt-6 md:mt-0 flex gap-2 justify-center bg-white/5 p-1 rounded-full border border-white/10 self-center">
-      <button class="mode-btn active" id="btnExamMode" onclick="setMode('exam')">⏱️ Exam Mode</button>
-      <button class="mode-btn" id="btnPracticeMode" onclick="setMode('practice')">💡 Practice Mode</button>
-    </div>
-  </section>
-
-  <!-- Mode Description Callout -->
-  <div class="p-4 rounded-2xl border border-purple-500/20 bg-purple-500/5 mb-10 text-sm flex gap-3 items-start" id="modeDescription">
-    <span class="text-lg">⏱️</span>
-    <div>
-      <strong class="text-purple-400">Exam Mode Active</strong>
-      <p class="text-stone-400 mt-0.5">Strict time limits (60 minutes for Reading/Writing), standard layout, and no answers displayed until submission. Mimics actual test day settings.</p>
-    </div>
-  </div>
-
-  <!-- Score Board Accordion -->
-  <section class="card p-5 mb-10" id="scoreBoard">
-    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">📊 Personal Score Card & History</h3>
-    <div id="noHistory" class="text-sm text-stone-400">No tests taken yet. Launch a test below to start tracking your band scores!</div>
-    <div id="historyTableContainer" class="hidden overflow-x-auto">
-      <table class="w-full text-sm text-left border-collapse">
-        <thead>
-          <tr class="border-b border-white/10 text-stone-400">
-            <th class="py-2">Test Name</th>
-            <th class="py-2">Module</th>
-            <th class="py-2">Mode</th>
-            <th class="py-2">Raw Score</th>
-            <th class="py-2">Band Score</th>
-            <th class="py-2">Date Completed</th>
-          </tr>
-        </thead>
-        <tbody id="historyBody" class="text-stone-300">
-          <!-- Populated by JS -->
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- 5 Mock Tests List -->
-  <!-- IELTS 18 -->
-  <section class="space-y-4">
+  <!-- Top Sticky Navbar -->
+  <header class="navbar px-6 lg:px-12">
     <div class="flex items-center gap-3">
-      <span class="text-xs font-black uppercase tracking-widest text-amber-400 border border-amber-400/30 bg-amber-400/10 px-2.5 py-1 rounded-full">Cambridge IELTS 18</span>
-      <div class="flex-1 h-px bg-white/5"></div>
+      <a href="index.html"
+        class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-bold transition">←
+        Back</a>
+      <div class="nav-logo-mark">V</div>
+      <a href="index.html"
+        class="font-serif text-xl font-extrabold tracking-tight bg-gradient-to-r from-slate-200 to-purple-400 bg-clip-text text-transparent">ViATestPrep</a>
     </div>
-    <div class="grid gap-5" id="testSetGrid18"></div>
-  </section>
 
-  <!-- IELTS 19 -->
-  <section class="space-y-4 mt-8">
     <div class="flex items-center gap-3">
-      <span class="text-xs font-black uppercase tracking-widest text-cyan-400 border border-cyan-400/30 bg-cyan-400/10 px-2.5 py-1 rounded-full">Cambridge IELTS 19</span>
-      <div class="flex-1 h-px bg-white/5"></div>
+      <button id="lockStatusBtn" class="lock-status-btn">
+        <span id="lockIcon"></span>
+        <span id="lockLabel">Loading...</span>
+      </button>
+      <button id="darkModeToggle"
+        class="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-sm transition hover:scale-105">🌙</button>
     </div>
-    <div class="grid gap-5" id="testSetGrid19"></div>
-  </section>
+  </header>
 
-  <!-- IELTS 20 -->
-  <section class="space-y-4 mt-8">
-    <div class="flex items-center gap-3">
-      <span class="text-xs font-black uppercase tracking-widest text-emerald-400 border border-emerald-400/30 bg-emerald-400/10 px-2.5 py-1 rounded-full">Cambridge IELTS 20</span>
-      <div class="flex-1 h-px bg-white/5"></div>
+  <main class="max-w-6xl mx-auto px-4 relative z-10">
+
+    <!-- Header Title -->
+    <section class="mb-10 text-center md:text-left md:flex justify-between items-end gap-6">
+      <div>
+        <span class="text-xs uppercase tracking-widest font-extrabold text-purple-500">Official Cambridge Audio</span>
+        <h1 class="text-4xl lg:text-5xl font-extrabold mt-1">IELTS Practice Test Center</h1>
+        <p class="text-stone-400 mt-2 max-w-prose text-sm lg:text-base">12 complete tests from Cambridge IELTS 18, 19
+          &amp; 20 — with <strong class="text-purple-400">real official audio</strong>, real questions, answer keys, and
+          instant score tracking.</p>
+      </div>
+
+      <!-- Mode Selection -->
+      <div
+        class="mt-6 md:mt-0 flex gap-2 justify-center bg-white/5 p-1 rounded-full border border-white/10 self-center">
+        <button class="mode-btn active" id="btnExamMode" onclick="setMode('exam')">⏱️ Exam Mode</button>
+        <button class="mode-btn" id="btnPracticeMode" onclick="setMode('practice')">💡 Practice Mode</button>
+      </div>
+    </section>
+
+    <!-- Mode Description Callout -->
+    <div class="p-4 rounded-2xl border border-purple-500/20 bg-purple-500/5 mb-10 text-sm flex gap-3 items-start"
+      id="modeDescription">
+      <span class="text-lg">⏱️</span>
+      <div>
+        <strong class="text-purple-400">Exam Mode Active</strong>
+        <p class="text-stone-400 mt-0.5">Strict time limits (60 minutes for Reading/Writing), standard layout, and no
+          answers displayed until submission. Mimics actual test day settings.</p>
+      </div>
     </div>
-    <div class="grid gap-5" id="testSetGrid20"></div>
-  </section>
 
-</main>
+    <!-- Score Board Accordion -->
+    <section class="card p-5 mb-10" id="scoreBoard">
+      <h3 class="text-xl font-bold mb-3 flex items-center gap-2">📊 Personal Score Card & History</h3>
+      <div id="noHistory" class="text-sm text-stone-400">No tests taken yet. Launch a test below to start tracking your
+        band scores!</div>
+      <div id="historyTableContainer" class="hidden overflow-x-auto">
+        <table class="w-full text-sm text-left border-collapse">
+          <thead>
+            <tr class="border-b border-white/10 text-stone-400">
+              <th class="py-2">Test Name</th>
+              <th class="py-2">Module</th>
+              <th class="py-2">Mode</th>
+              <th class="py-2">Raw Score</th>
+              <th class="py-2">Band Score</th>
+              <th class="py-2">Date Completed</th>
+            </tr>
+          </thead>
+          <tbody id="historyBody" class="text-stone-300">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-<script src="test-data.js"></script>
-<script>
-// Default Mode
-let currentMode = localStorage.getItem('vietest_practice_mode') || 'exam';
+    <!-- 5 Mock Tests List -->
+    <!-- IELTS 18 -->
+    <section class="space-y-4">
+      <div class="flex items-center gap-3">
+        <span
+          class="text-xs font-black uppercase tracking-widest text-amber-400 border border-amber-400/30 bg-amber-400/10 px-2.5 py-1 rounded-full">Cambridge
+          IELTS 18</span>
+        <div class="flex-1 h-px bg-white/5"></div>
+      </div>
+      <div class="grid gap-5" id="testSetGrid18"></div>
+    </section>
 
-function setMode(mode) {
-  currentMode = mode;
-  localStorage.setItem('vietest_practice_mode', mode);
-  
-  const examBtn = document.getElementById('btnExamMode');
-  const practiceBtn = document.getElementById('btnPracticeMode');
-  const desc = document.getElementById('modeDescription');
-  
-  if (mode === 'exam') {
-    examBtn.classList.add('active');
-    practiceBtn.classList.remove('active');
-    desc.innerHTML = `
+    <!-- IELTS 19 -->
+    <section class="space-y-4 mt-8">
+      <div class="flex items-center gap-3">
+        <span
+          class="text-xs font-black uppercase tracking-widest text-cyan-400 border border-cyan-400/30 bg-cyan-400/10 px-2.5 py-1 rounded-full">Cambridge
+          IELTS 19</span>
+        <div class="flex-1 h-px bg-white/5"></div>
+      </div>
+      <div class="grid gap-5" id="testSetGrid19"></div>
+    </section>
+
+    <!-- IELTS 20 -->
+    <section class="space-y-4 mt-8">
+      <div class="flex items-center gap-3">
+        <span
+          class="text-xs font-black uppercase tracking-widest text-emerald-400 border border-emerald-400/30 bg-emerald-400/10 px-2.5 py-1 rounded-full">Cambridge
+          IELTS 20</span>
+        <div class="flex-1 h-px bg-white/5"></div>
+      </div>
+      <div class="grid gap-5" id="testSetGrid20"></div>
+    </section>
+
+  </main>
+
+  <script src="test-data.js"></script>
+  <script>
+    // Default Mode
+    let currentMode = localStorage.getItem('vietest_practice_mode') || 'exam';
+
+    function setMode(mode) {
+      currentMode = mode;
+      localStorage.setItem('vietest_practice_mode', mode);
+
+      const examBtn = document.getElementById('btnExamMode');
+      const practiceBtn = document.getElementById('btnPracticeMode');
+      const desc = document.getElementById('modeDescription');
+
+      if (mode === 'exam') {
+        examBtn.classList.add('active');
+        practiceBtn.classList.remove('active');
+        desc.innerHTML = `
       <span class="text-lg">⏱️</span>
       <div>
         <strong class="text-purple-400">Exam Mode Active</strong>
         <p class="text-stone-400 mt-0.5">Strict time limits (60 minutes for Reading/Writing), standard layout, and no answers displayed until submission. Mimics actual test day settings.</p>
       </div>
     `;
-  } else {
-    practiceBtn.classList.add('active');
-    examBtn.classList.remove('active');
-    desc.innerHTML = `
+      } else {
+        practiceBtn.classList.add('active');
+        examBtn.classList.remove('active');
+        desc.innerHTML = `
       <span class="text-lg">💡</span>
       <div>
         <strong class="text-emerald-400">Practice Mode Active</strong>
         <p class="text-stone-400 mt-0.5">Untimed or relaxed timer, direct checking of answers as you solve questions, and instant visual access to detailed explanations and synonym maps.</p>
       </div>
     `;
-  }
-}
+      }
+    }
 
-// Set initial mode button classes
-setMode(currentMode);
+    // Set initial mode button classes
+    setMode(currentMode);
 
-// Book colour mapping
-const bookColors = {
-  'IELTS 18': { badge: 'text-amber-400 border-amber-400/30 bg-amber-400/10', accent: 'border-amber-500/30', container: 'testSetGrid18' },
-  'IELTS 19': { badge: 'text-cyan-400 border-cyan-400/30 bg-cyan-400/10', accent: 'border-cyan-500/30', container: 'testSetGrid19' },
-  'IELTS 20': { badge: 'text-emerald-400 border-emerald-400/30 bg-emerald-400/10', accent: 'border-emerald-500/30', container: 'testSetGrid20' }
-};
+    // Book colour mapping
+    const bookColors = {
+      'IELTS 18': { badge: 'text-amber-400 border-amber-400/30 bg-amber-400/10', accent: 'border-amber-500/30', container: 'testSetGrid18' },
+      'IELTS 19': { badge: 'text-cyan-400 border-cyan-400/30 bg-cyan-400/10', accent: 'border-cyan-500/30', container: 'testSetGrid19' },
+      'IELTS 20': { badge: 'text-emerald-400 border-emerald-400/30 bg-emerald-400/10', accent: 'border-emerald-500/30', container: 'testSetGrid20' }
+    };
 
-// Render Test Sets
-function renderTestSets() {
-  document.getElementById('testSetGrid18').innerHTML = '';
-  document.getElementById('testSetGrid19').innerHTML = '';
-  document.getElementById('testSetGrid20').innerHTML = '';
-  
-  // Calculate test number within each book (1–4)
-  const bookCounters = {};
+    // Render Test Sets
+    function renderTestSets() {
+      document.getElementById('testSetGrid18').innerHTML = '';
+      document.getElementById('testSetGrid19').innerHTML = '';
+      document.getElementById('testSetGrid20').innerHTML = '';
 
-  Object.keys(IELTS_TEST_DATA).forEach(key => {
-    const test = IELTS_TEST_DATA[key];
-    const book = test.book || 'IELTS 18';
-    bookCounters[book] = (bookCounters[book] || 0) + 1;
-    const testNum = bookCounters[book];
-    const colors = bookColors[book] || bookColors['IELTS 18'];
-    const container = document.getElementById(colors.container);
-    
-    const card = document.createElement('div');
-    card.className = `card relative flex flex-col md:flex-row justify-between gap-6 items-start md:items-center hover:${colors.accent}`;
-    
-    // Check local storage for completed states
-    const lsScore = localStorage.getItem(`score_test_${key}_listening`);
-    const rdScore = localStorage.getItem(`score_test_${key}_reading`);
-    const wrDone = localStorage.getItem(`score_test_${key}_writing`) === 'completed';
-    
-    card.innerHTML = `
+      // Calculate test number within each book (1–4)
+      const bookCounters = {};
+
+      Object.keys(IELTS_TEST_DATA).forEach(key => {
+        const test = IELTS_TEST_DATA[key];
+        const book = test.book || 'IELTS 18';
+        bookCounters[book] = (bookCounters[book] || 0) + 1;
+        const testNum = bookCounters[book];
+        const colors = bookColors[book] || bookColors['IELTS 18'];
+        const container = document.getElementById(colors.container);
+
+        const card = document.createElement('div');
+        card.className = `card relative flex flex-col md:flex-row justify-between gap-6 items-start md:items-center hover:${colors.accent}`;
+
+        // Check local storage for completed states
+        const lsScore = localStorage.getItem(`score_test_${key}_listening`);
+        const rdScore = localStorage.getItem(`score_test_${key}_reading`);
+        const wrDone = localStorage.getItem(`score_test_${key}_writing`) === 'completed';
+
+        card.innerHTML = `
       <div>
         <div class="flex items-center gap-2 mb-1">
           <span class="text-xs font-black ${colors.badge} border px-2 py-0.5 rounded-full uppercase tracking-widest">${book}</span>
@@ -371,33 +406,33 @@ function renderTestSets() {
         </a>
       </div>
     `;
-    if (container) container.appendChild(card);
-  });
-}
+        if (container) container.appendChild(card);
+      });
+    }
 
-// Render Scores History
-function renderHistory() {
-  const historyBody = document.getElementById('historyBody');
-  const tableContainer = document.getElementById('historyTableContainer');
-  const noHistory = document.getElementById('noHistory');
-  
-  historyBody.innerHTML = '';
-  let recordsFound = false;
-  
-  // Scan local storage keys
-  for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i);
-    if (key.startsWith('score_test_')) {
-      recordsFound = true;
-      const parts = key.split('_'); // ['score', 'test', 'ID', 'module']
-      const testId = parts[2];
-      const module = parts[3];
-      const score = localStorage.getItem(key);
-      const testName = IELTS_TEST_DATA[testId] ? IELTS_TEST_DATA[testId].title : `Test ${testId}`;
-      
-      const tr = document.createElement('tr');
-      tr.className = 'border-b border-white/5 hover:bg-white/5 transition';
-      tr.innerHTML = `
+    // Render Scores History
+    function renderHistory() {
+      const historyBody = document.getElementById('historyBody');
+      const tableContainer = document.getElementById('historyTableContainer');
+      const noHistory = document.getElementById('noHistory');
+
+      historyBody.innerHTML = '';
+      let recordsFound = false;
+
+      // Scan local storage keys
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key.startsWith('score_test_')) {
+          recordsFound = true;
+          const parts = key.split('_'); // ['score', 'test', 'ID', 'module']
+          const testId = parts[2];
+          const module = parts[3];
+          const score = localStorage.getItem(key);
+          const testName = IELTS_TEST_DATA[testId] ? IELTS_TEST_DATA[testId].title : `Test ${testId}`;
+
+          const tr = document.createElement('tr');
+          tr.className = 'border-b border-white/5 hover:bg-white/5 transition';
+          tr.innerHTML = `
         <td class="py-2.5 font-bold">${testName}</td>
         <td class="py-2.5 capitalize">${module}</td>
         <td class="py-2.5 text-stone-400">Exam Mode</td>
@@ -405,77 +440,78 @@ function renderHistory() {
         <td class="py-2.5 font-extrabold text-purple-400">${module === 'writing' ? 'Reviewed' : 'Band ' + score}</td>
         <td class="py-2.5 text-stone-500 text-xs">Recently</td>
       `;
-      historyBody.appendChild(tr);
+          historyBody.appendChild(tr);
+        }
+      }
+
+      if (recordsFound) {
+        tableContainer.classList.remove('hidden');
+        noHistory.classList.add('hidden');
+      } else {
+        tableContainer.classList.add('hidden');
+        noHistory.classList.remove('hidden');
+      }
     }
-  }
-  
-  if (recordsFound) {
-    tableContainer.classList.remove('hidden');
-    noHistory.classList.add('hidden');
-  } else {
-    tableContainer.classList.add('hidden');
-    noHistory.classList.remove('hidden');
-  }
-}
 
-// Theme Management
-const toggleBtn = document.getElementById('darkModeToggle');
-function updateTheme() {
-  const currentTheme = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (currentTheme === 'dark' || (!currentTheme && prefersDark)) {
-    document.documentElement.classList.add('dark');
-    document.documentElement.classList.remove('light');
-    toggleBtn.textContent = '☀️';
-  } else {
-    document.documentElement.classList.add('light');
-    document.documentElement.classList.remove('dark');
-    toggleBtn.textContent = '🌙';
-  }
-}
-toggleBtn.addEventListener('click', () => {
-  if (document.documentElement.classList.contains('dark')) {
-    localStorage.setItem('theme', 'light');
-  } else {
-    localStorage.setItem('theme', 'dark');
-  }
-  updateTheme();
-});
-updateTheme();
-
-// Lock Status
-function checkLockStatus() {
-  const isUnlocked = localStorage.getItem('viatestprep_unlocked') === 'true';
-  const lockIcon = document.getElementById('lockIcon');
-  const lockLabel = document.getElementById('lockLabel');
-  const btn = document.getElementById('lockStatusBtn');
-  
-  if (isUnlocked) {
-    btn.className = "lock-status-btn unlocked";
-    lockIcon.innerHTML = `<svg style="width:12px;height:12px;fill:currentColor" viewBox="0 0 24 24"><path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v1.9H6c-1.1 0-2 .9-2 2 v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6-5c1.66 0 3 1.34 3 3v2H9V6c0-1.66 1.34-3 3-3zm6 17H6V10h12v10z"/></svg>`;
-    lockLabel.textContent = "Unlocked";
-  } else {
-    btn.className = "lock-status-btn";
-    lockIcon.innerHTML = `<svg style="width:12px;height:12px;fill:currentColor" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>`;
-    lockLabel.textContent = "Locked";
-  }
-}
-document.getElementById('lockStatusBtn').addEventListener('click', () => {
-  const isUnlocked = localStorage.getItem('viatestprep_unlocked') === 'true';
-  if (isUnlocked) {
-    if (confirm("Lock premium resources?")) {
-      localStorage.removeItem('viatestprep_unlocked');
-      location.reload();
+    // Theme Management
+    const toggleBtn = document.getElementById('darkModeToggle');
+    function updateTheme() {
+      const currentTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (currentTheme === 'dark' || (!currentTheme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+        toggleBtn.textContent = '☀️';
+      } else {
+        document.documentElement.classList.add('light');
+        document.documentElement.classList.remove('dark');
+        toggleBtn.textContent = '🌙';
+      }
     }
-  } else {
-    alert("Please click any practice module to enter the passcode and unlock!");
-  }
-});
+    toggleBtn.addEventListener('click', () => {
+      if (document.documentElement.classList.contains('dark')) {
+        localStorage.setItem('theme', 'light');
+      } else {
+        localStorage.setItem('theme', 'dark');
+      }
+      updateTheme();
+    });
+    updateTheme();
 
-// Run Initial Renders
-checkLockStatus();
-renderTestSets();
-renderHistory();
-</script>
+    // Lock Status
+    function checkLockStatus() {
+      const isUnlocked = localStorage.getItem('viatestprep_unlocked') === 'true';
+      const lockIcon = document.getElementById('lockIcon');
+      const lockLabel = document.getElementById('lockLabel');
+      const btn = document.getElementById('lockStatusBtn');
+
+      if (isUnlocked) {
+        btn.className = "lock-status-btn unlocked";
+        lockIcon.innerHTML = `<svg style="width:12px;height:12px;fill:currentColor" viewBox="0 0 24 24"><path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v1.9H6c-1.1 0-2 .9-2 2 v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6-5c1.66 0 3 1.34 3 3v2H9V6c0-1.66 1.34-3 3-3zm6 17H6V10h12v10z"/></svg>`;
+        lockLabel.textContent = "Unlocked";
+      } else {
+        btn.className = "lock-status-btn";
+        lockIcon.innerHTML = `<svg style="width:12px;height:12px;fill:currentColor" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>`;
+        lockLabel.textContent = "Locked";
+      }
+    }
+    document.getElementById('lockStatusBtn').addEventListener('click', () => {
+      const isUnlocked = localStorage.getItem('viatestprep_unlocked') === 'true';
+      if (isUnlocked) {
+        if (confirm("Lock premium resources?")) {
+          localStorage.removeItem('viatestprep_unlocked');
+          location.reload();
+        }
+      } else {
+        alert("Please click any practice module to enter the passcode and unlock!");
+      }
+    });
+
+    // Run Initial Renders
+    checkLockStatus();
+    renderTestSets();
+    renderHistory();
+  </script>
 </body>
+
 </html>

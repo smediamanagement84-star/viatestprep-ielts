@@ -267,7 +267,17 @@ function switchTask(taskNum) {
     document.getElementById('taskTitle').textContent = "Writing Task 1 (Academic)";
     document.getElementById('taskTimeRecommendation').textContent = "⏱️ Recommended time: 20 minutes";
     document.getElementById('taskWordRequirement').textContent = "✍️ Minimum words: 150";
-    document.getElementById('promptText').textContent = testData.writing.task1.prompt;
+    
+    const prompt = testData.writing.task1.prompt;
+    document.getElementById('promptText').innerHTML = `
+      <div class="space-y-3 text-stone-300">
+        <p class="font-extrabold text-white text-xs uppercase tracking-wider">WRITING TASK 1</p>
+        <p class="text-xs text-stone-400">You should spend about 20 minutes on this task.</p>
+        <p class="text-sm border-l-2 border-purple-500 pl-3 py-1 font-semibold text-stone-200">${prompt}</p>
+        <p class="text-xs text-stone-400 mt-2 leading-relaxed">Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</p>
+        <p class="text-xs font-extrabold text-stone-300">Write at least 150 words.</p>
+      </div>
+    `;
     
     // Graphic
     document.getElementById('graphContainer').classList.remove('hidden');
@@ -286,7 +296,18 @@ function switchTask(taskNum) {
     document.getElementById('taskTitle').textContent = "Writing Task 2 (General Essay)";
     document.getElementById('taskTimeRecommendation').textContent = "⏱️ Recommended time: 40 minutes";
     document.getElementById('taskWordRequirement').textContent = "✍️ Minimum words: 250";
-    document.getElementById('promptText').textContent = testData.writing.task2.prompt;
+    
+    const prompt = testData.writing.task2.prompt;
+    document.getElementById('promptText').innerHTML = `
+      <div class="space-y-3 text-stone-300">
+        <p class="font-extrabold text-white text-xs uppercase tracking-wider">WRITING TASK 2</p>
+        <p class="text-xs text-stone-400">You should spend about 40 minutes on this task.</p>
+        <p class="text-xs text-stone-400">Write about the following topic:</p>
+        <p class="text-sm border-l-2 border-purple-500 pl-3 py-1 font-semibold text-stone-200">${prompt}</p>
+        <p class="text-xs text-stone-400 mt-2 leading-relaxed">Give reasons for your answer and include any relevant examples from your own knowledge or experience.</p>
+        <p class="text-xs font-extrabold text-stone-300">Write at least 250 words.</p>
+      </div>
+    `;
     
     // No graphic for Task 2
     document.getElementById('graphContainer').classList.add('hidden');
