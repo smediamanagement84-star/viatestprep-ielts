@@ -3,7 +3,7 @@
  * Handles copy-paste prevention, print protection, and client-side password locks.
  */
 (function () {
-  const CONFIG_PASSWORD = 'via79plus'; // Admin-configurable access password
+  const CONFIG_PASSWORD = 'ResVia@8847'; // Admin-configurable access password
 
   // Track mouse coordinates globally inside closure
   const mouse = { x: 0, y: 0 };
