@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en" class="dark">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -1451,7 +1451,7 @@
       <span id="lockLabel">Loading...</span>
     </button>
     
-    <button id="darkModeToggle" class="theme-toggle-btn" aria-label="Toggle Theme">🌙</button>
+    <button id="darkModeToggle" class="theme-toggle-btn" style="display: none !important;" aria-label="Toggle Theme">🌙</button>
     <button id="menuToggleBtn" class="menu-toggle-btn" aria-label="Toggle Menu">
       <svg style="width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -1997,31 +1997,11 @@
 
 <script>
 // ====== Theme Management ======
-const toggleBtn = document.getElementById('darkModeToggle');
-
 function updateTheme() {
-  const currentTheme = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
-  if (currentTheme === 'dark' || (!currentTheme && prefersDark)) {
-    document.documentElement.classList.add('dark');
-    document.documentElement.classList.remove('light');
-    toggleBtn.textContent = '☀️';
-  } else {
-    document.documentElement.classList.add('light');
-    document.documentElement.classList.remove('dark');
-    toggleBtn.textContent = '🌙';
-  }
+  document.documentElement.classList.add('dark');
+  document.documentElement.classList.remove('light');
+  localStorage.setItem('theme', 'dark');
 }
-
-toggleBtn.addEventListener('click', () => {
-  if (document.documentElement.classList.contains('dark')) {
-    localStorage.setItem('theme', 'light');
-  } else {
-    localStorage.setItem('theme', 'dark');
-  }
-  updateTheme();
-});
 
 // Run theme update initially
 updateTheme();

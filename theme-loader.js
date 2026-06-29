@@ -1,14 +1,8 @@
 /**
- * ViATestPrep — Universal Theme Loader & Dark Mode Toggle
- * -------------------------------------------------------
- * Injected into every sub-page for seamless dark/light theme
- * persistence synced with the main Hub (index.html).
- *
- * Features:
- * - Reads theme from localStorage on page load (instant, no flash)
- * - Injects a dark mode toggle button into the toolbar
- * - Applies comprehensive dark mode CSS overrides for warm-themed pages
- * - Responsive: hides XP bar text on mobile, compacts toolbar
+ * ViATestPrep — Universal Theme Loader
+ * ------------------------------------
+ * Injected into every sub-page to force the premium dark color scheme
+ * and apply high-contrast, premium styling across all preparation resources.
  *
  * © 2026 ViATestPrep. All Rights Reserved.
  */
@@ -17,72 +11,89 @@
   'use strict';
 
   // ---- 1. Instant Theme Application (no flash) ----
-  var savedTheme = localStorage.getItem('theme');
-  var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  var isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
-  
-  if (isDark) {
-    document.documentElement.classList.add('dark');
-    document.documentElement.classList.remove('light');
-  } else {
-    document.documentElement.classList.add('light');
-    document.documentElement.classList.remove('dark');
-  }
+  // Force dark mode globally to maintain a single, highly readable premium color scheme
+  document.documentElement.classList.add('dark');
+  document.documentElement.classList.remove('light');
+  localStorage.setItem('theme', 'dark');
 
   // ---- 2. Inject Dark Mode CSS Overrides ----
-  // These override the warm light-themed pages when .dark is on <html>
   var darkCSS = document.createElement('style');
   darkCSS.id = 'vtp-dark-mode-overrides';
   darkCSS.textContent = `
     /* === VTP Universal Dark Mode Overrides === */
     html.dark body,
     html.dark {
-      background: #0c0e1a !important;
-      color: #e2e8f0 !important;
+      background: #070913 !important;
+      color: #f8fafc !important;
     }
 
     html.dark .toolbar {
-      background: rgba(12, 14, 26, 0.92) !important;
+      background: rgba(7, 9, 19, 0.92) !important;
       border-bottom-color: rgba(255,255,255,0.08) !important;
     }
 
     html.dark .card,
     html.dark [class*="card"],
-    html.dark .module-mock {
+    html.dark .module-mock,
+    html.dark .q-box {
       background: rgba(17, 20, 38, 0.65) !important;
-      border-color: rgba(255,255,255,0.1) !important;
-      color: #e2e8f0 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+      color: #f8fafc !important;
     }
 
     html.dark h1, html.dark h2, html.dark h3, html.dark h4 {
       color: #f1f5f9 !important;
     }
 
-    html.dark p, html.dark span, html.dark div, html.dark li, html.dark td, html.dark th, html.dark label {
-      color: inherit;
+    /* Hide all theme toggles */
+    #darkModeToggle,
+    .theme-toggle-btn,
+    .vtp-theme-toggle {
+      display: none !important;
     }
 
-    html.dark a { color: #93c5fd; }
-    html.dark a:hover { color: #bfdbfe; }
-
-    html.dark .btn-ghost,
-    html.dark .opt,
-    html.dark button:not(.vtp-theme-toggle) {
-      background: rgba(255,255,255,0.06) !important;
-      border-color: rgba(255,255,255,0.12) !important;
-      color: #e2e8f0 !important;
+    /* Question box and passage text visibility overrides (Highly visible & readable) */
+    html.dark .q-box p,
+    html.dark .instruction-box p {
+      color: #f1f5f9 !important; /* High-contrast slate-100 */
     }
-    html.dark .btn-ghost:hover,
-    html.dark .opt:hover {
-      background: rgba(255,255,255,0.1) !important;
-      border-color: rgba(255,255,255,0.2) !important;
+    
+    html.dark #passageContent p,
+    html.dark #passageContent span,
+    html.dark #passageContent li {
+      color: #d6d3d1 !important; /* Premium warm readable off-white */
     }
-
-    html.dark .btn-primary {
-      background: #5b2a86 !important;
-      color: #fff !important;
+    html.dark #passageContent h1,
+    html.dark #passageContent h2,
+    html.dark #passageContent h3,
+    html.dark #passageContent strong {
+      color: #f1f5f9 !important; /* Bright headers and bold text */
     }
 
+    /* Sub-page header text contrast adjustments */
+    html.dark .text-stone-500, html.dark .text-stone-600, html.dark .text-stone-700 { color: #94a3b8 !important; }
+    html.dark .text-stone-800, html.dark .text-stone-900 { color: #e2e8f0 !important; }
+    html.dark .text-gray-500, html.dark .text-gray-600, html.dark .text-gray-700 { color: #94a3b8 !important; }
+    html.dark .text-gray-800, html.dark .text-gray-900 { color: #e2e8f0 !important; }
+    html.dark .text-slate-500, html.dark .text-slate-600, html.dark .text-slate-700 { color: #94a3b8 !important; }
+
+    /* Background overrides for Tailwind utility classes */
+    html.dark .bg-white { background-color: rgba(17, 20, 38, 0.65) !important; }
+    html.dark .bg-gray-50, html.dark .bg-gray-100, html.dark .bg-stone-50, html.dark .bg-stone-100 { background-color: rgba(17, 20, 38, 0.4) !important; }
+    html.dark .bg-slate-50, html.dark .bg-slate-100 { background-color: rgba(17, 20, 38, 0.4) !important; }
+
+    html.dark .border, html.dark .border-gray-200, html.dark .border-stone-200, html.dark .border-slate-200 {
+      border-color: rgba(255,255,255,0.1) !important;
+    }
+    html.dark .divide-gray-200 > :not([hidden]) ~ :not([hidden]) { border-color: rgba(255,255,255,0.08) !important; }
+
+    html.dark .shadow-sm, html.dark .shadow-md, html.dark .shadow-lg {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
+    }
+
+    html.dark .timer-pill { color: #c4b5fd !important; }
+
+    /* Feedbacks styling */
     html.dark .feedback.good { background: rgba(16, 185, 129, 0.1) !important; border-color: #10b981 !important; color: #a7f3d0 !important; }
     html.dark .feedback.bad { background: rgba(239, 68, 68, 0.1) !important; border-color: #ef4444 !important; color: #fca5a5 !important; }
     html.dark .feedback.tip { background: rgba(251, 191, 36, 0.1) !important; border-color: #f59e0b !important; color: #fde68a !important; }
@@ -116,67 +127,53 @@
     html.dark .marker-green { background: linear-gradient(transparent 60%, rgba(52,211,153,0.25) 60%) !important; }
 
     html.dark .reveal { border-color: rgba(255,255,255,0.08) !important; }
-
     html.dark .stamp { border-color: #f87171 !important; color: #f87171 !important; }
-
-    html.dark .vtp-corner {
-      background: linear-gradient(135deg, #5b2a86, #3b0a64) !important;
-    }
+    html.dark .vtp-corner { background: linear-gradient(135deg, #5b2a86, #3b0a64) !important; }
 
     html.dark .nav-step { color: #94a3b8 !important; }
     html.dark .nav-step:hover { color: #e2e8f0 !important; }
 
-    /* Sub-page header text fixes */
-    html.dark .text-stone-500, html.dark .text-stone-600, html.dark .text-stone-700 { color: #94a3b8 !important; }
-    html.dark .text-stone-800, html.dark .text-stone-900 { color: #e2e8f0 !important; }
-    html.dark .text-gray-500, html.dark .text-gray-600, html.dark .text-gray-700 { color: #94a3b8 !important; }
-    html.dark .text-gray-800, html.dark .text-gray-900 { color: #e2e8f0 !important; }
-    html.dark .text-slate-500, html.dark .text-slate-600, html.dark .text-slate-700 { color: #94a3b8 !important; }
+    /* Retain custom Tailwind text colors (make sure they are not wiped by overrides) */
+    html.dark .text-purple-300 { color: #d8b4fe !important; }
+    html.dark .text-purple-400 { color: #c084fc !important; }
+    html.dark .text-purple-500 { color: #a855f7 !important; }
+    html.dark .text-teal-300 { color: #5eead4 !important; }
+    html.dark .text-teal-400 { color: #2dd4bf !important; }
+    html.dark .text-teal-500 { color: #14b8a6 !important; }
+    html.dark .text-emerald-400 { color: #34d399 !important; }
+    html.dark .text-emerald-500 { color: #10b981 !important; }
+    html.dark .text-cyan-400 { color: #22d3ee !important; }
+    html.dark .text-amber-400 { color: #fbbf24 !important; }
+    html.dark .text-amber-500 { color: #f59e0b !important; }
+    html.dark .text-red-400 { color: #f87171 !important; }
 
-    /* Background overrides for Tailwind utility classes */
-    html.dark .bg-white { background-color: rgba(17, 20, 38, 0.65) !important; }
-    html.dark .bg-gray-50, html.dark .bg-gray-100, html.dark .bg-stone-50, html.dark .bg-stone-100 { background-color: rgba(17, 20, 38, 0.4) !important; }
-    html.dark .bg-slate-50, html.dark .bg-slate-100 { background-color: rgba(17, 20, 38, 0.4) !important; }
-
-    html.dark .border, html.dark .border-gray-200, html.dark .border-stone-200, html.dark .border-slate-200 {
-      border-color: rgba(255,255,255,0.1) !important;
-    }
-    html.dark .divide-gray-200 > :not([hidden]) ~ :not([hidden]) { border-color: rgba(255,255,255,0.08) !important; }
-
-    html.dark .shadow-sm, html.dark .shadow-md, html.dark .shadow-lg {
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
-    }
-
-    /* Timer pill and XP display */
-    html.dark .timer-pill { color: #c4b5fd !important; }
-
-    /* VTP Theme Toggle Button */
-    .vtp-theme-toggle {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      border: 1px solid rgba(0,0,0,0.1);
-      background: rgba(0,0,0,0.04);
-      color: inherit;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      transition: all 0.25s ease;
-      flex-shrink: 0;
-      line-height: 1;
-      padding: 0;
-    }
-    html.dark .vtp-theme-toggle {
-      border-color: rgba(255,255,255,0.15) !important;
+    /* Button styling exception: prevent general dark styles from overriding active selection states */
+    html.dark button:not(.vtp-theme-toggle):not([class*="bg-purple"]):not([class*="bg-emerald"]):not([class*="bg-teal"]):not([class*="bg-red"]):not([class*="bg-green"]):not(.active) {
       background: rgba(255,255,255,0.06) !important;
+      border-color: rgba(255,255,255,0.12) !important;
       color: #e2e8f0 !important;
     }
-    .vtp-theme-toggle:hover {
-      transform: scale(1.08) rotate(12deg);
-      border-color: #5b2a86;
-      background: rgba(91,42,134,0.08) !important;
+
+    /* Strong, vibrant custom overrides for Chosen/Selected answers */
+    html.dark button.bg-purple-600,
+    html.dark button[class*="bg-purple-600"] {
+      background-color: #7c3aed !important;
+      border-color: #c084fc !important;
+      color: #ffffff !important;
+      box-shadow: 0 0 12px rgba(124, 58, 237, 0.4) !important;
+    }
+    html.dark button.bg-purple-600\/30,
+    html.dark button[class*="bg-purple-600/30"] {
+      background-color: rgba(124, 58, 237, 0.3) !important;
+      border-color: #a78bfa !important;
+      color: #ffffff !important;
+      box-shadow: inset 0 0 8px rgba(167, 139, 250, 0.2) !important;
+    }
+    html.dark button.bg-emerald-600,
+    html.dark button[class*="bg-emerald-600"] {
+      background-color: #059669 !important;
+      border-color: #34d399 !important;
+      color: #ffffff !important;
     }
 
     /* Responsive toolbar optimizations */
@@ -190,104 +187,4 @@
     }
   `;
   document.head.appendChild(darkCSS);
-
-  // ---- 3. DOM Ready: Inject Toggle Button Into Toolbar ----
-  function injectToggle() {
-    // Find the toolbar's inner flex container (the direct child that holds the layout)
-    var toolbar = document.querySelector('.toolbar');
-    if (!toolbar) return; // No toolbar on this page (e.g., practice pages)
-
-    // Find the rightmost flex group in the toolbar
-    var innerWrapper = toolbar.querySelector(':scope > div');
-    if (!innerWrapper) return;
-
-    // Find the last flex group (right side of toolbar)
-    var rightGroups = innerWrapper.querySelectorAll(':scope > div');
-    var rightGroup = rightGroups[rightGroups.length - 1];
-    if (!rightGroup) return;
-
-    // Don't inject twice
-    if (toolbar.querySelector('.vtp-theme-toggle')) return;
-
-    // Create toggle button
-    var btn = document.createElement('button');
-    btn.className = 'vtp-theme-toggle';
-    btn.setAttribute('aria-label', 'Toggle Dark Mode');
-    btn.title = 'Toggle Dark Mode';
-    btn.innerHTML = isDark ? '☀️' : '🌙';
-
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var html = document.documentElement;
-      var currentlyDark = html.classList.contains('dark');
-
-      if (currentlyDark) {
-        html.classList.remove('dark');
-        html.classList.add('light');
-        localStorage.setItem('theme', 'light');
-        btn.innerHTML = '🌙';
-      } else {
-        html.classList.remove('light');
-        html.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-        btn.innerHTML = '☀️';
-      }
-    });
-
-    // Insert at the end of the right group
-    rightGroup.appendChild(btn);
-  }
-
-  // Also handle practice pages that use a different layout (nav element at top)
-  function injectTogglePractice() {
-    // Practice pages (ielts-*-practice.html, pte-*.html) use a <nav> element
-    var nav = document.querySelector('nav');
-    if (!nav) return;
-    // Check if already has a toggle
-    if (document.querySelector('.vtp-theme-toggle')) return;
-
-    // Find the rightmost flex/button group
-    var groups = nav.querySelectorAll(':scope > div');
-    var rightGroup = groups[groups.length - 1];
-    if (!rightGroup) return;
-
-    var btn = document.createElement('button');
-    btn.className = 'vtp-theme-toggle';
-    btn.style.cssText = 'margin-left:0.5rem;';
-    btn.setAttribute('aria-label', 'Toggle Dark Mode');
-    btn.title = 'Toggle Dark Mode';
-    btn.innerHTML = isDark ? '☀️' : '🌙';
-
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var html = document.documentElement;
-      var currentlyDark = html.classList.contains('dark');
-
-      if (currentlyDark) {
-        html.classList.remove('dark');
-        html.classList.add('light');
-        localStorage.setItem('theme', 'light');
-        btn.innerHTML = '🌙';
-      } else {
-        html.classList.remove('light');
-        html.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-        btn.innerHTML = '☀️';
-      }
-    });
-
-    rightGroup.appendChild(btn);
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
-      injectToggle();
-      injectTogglePractice();
-    });
-  } else {
-    injectToggle();
-    injectTogglePractice();
-  }
 })();

@@ -187,8 +187,8 @@ const urlParams = new URLSearchParams(window.location.search);
 const testId = urlParams.get('test') || '1';
 const testData = IELTS_TEST_DATA[testId];
 
-if (!testData || parseInt(testId) >= 9) {
-  alert('Test Set not found or temporarily disabled! Redirecting to Test 1.');
+if (!testData) {
+  alert('Test Set not found! Redirecting to Test 1.');
   window.location.search = '?test=1';
 }
 

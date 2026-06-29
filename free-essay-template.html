@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -279,26 +279,11 @@
     &copy; 2026 ViATestPrep · All Rights Reserved
   </footer>
 
-  <script>
-    const toggleBtn = document.getElementById('darkModeToggle');
+    // Force dark mode
     function updateTheme() {
-      if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-        toggleBtn.textContent = '☀️';
-      } else {
-        document.documentElement.classList.remove('dark');
-        toggleBtn.textContent = '🌙';
-      }
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
     }
-    toggleBtn.addEventListener('click', () => {
-      if (document.documentElement.classList.contains('dark')) {
-        localStorage.setItem('theme', 'light');
-      } else {
-        localStorage.setItem('theme', 'dark');
-      }
-      updateTheme();
-    });
     updateTheme();
-  </script>
 </body>
 </html>

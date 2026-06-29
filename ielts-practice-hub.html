@@ -288,7 +288,7 @@
     </section>
 
     <!-- IELTS 20 -->
-    <section class="space-y-4 mt-8 hidden">
+    <section class="space-y-4 mt-8">
       <div class="flex items-center gap-3">
         <span
           class="text-xs font-black uppercase tracking-widest text-emerald-400 border border-emerald-400/30 bg-emerald-400/10 px-2.5 py-1 rounded-full">Cambridge
@@ -358,7 +358,6 @@
       Object.keys(IELTS_TEST_DATA).forEach(key => {
         const test = IELTS_TEST_DATA[key];
         const book = test.book || 'IELTS 18';
-        if (book === 'IELTS 20') return; // Skip Tests 9-12 temporarily
         bookCounters[book] = (bookCounters[book] || 0) + 1;
         const testNum = bookCounters[book];
         const colors = bookColors[book] || bookColors['IELTS 18'];
@@ -456,28 +455,11 @@
     }
 
     // Theme Management
-    const toggleBtn = document.getElementById('darkModeToggle');
     function updateTheme() {
-      const currentTheme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if (currentTheme === 'dark' || (!currentTheme && prefersDark)) {
-        document.documentElement.classList.add('dark');
-        document.documentElement.classList.remove('light');
-        toggleBtn.textContent = '☀️';
-      } else {
-        document.documentElement.classList.add('light');
-        document.documentElement.classList.remove('dark');
-        toggleBtn.textContent = '🌙';
-      }
+      document.documentElement.classList.add('dark');
+      document.documentElement.classList.remove('light');
+      localStorage.setItem('theme', 'dark');
     }
-    toggleBtn.addEventListener('click', () => {
-      if (document.documentElement.classList.contains('dark')) {
-        localStorage.setItem('theme', 'light');
-      } else {
-        localStorage.setItem('theme', 'dark');
-      }
-      updateTheme();
-    });
     updateTheme();
 
     // Lock Status

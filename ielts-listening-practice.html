@@ -281,8 +281,8 @@
     const testId = urlParams.get('test') || '1';
     const testData = IELTS_TEST_DATA[testId];
 
-    if (!testData || parseInt(testId) >= 9) {
-      alert('Test Set not found or temporarily disabled! Redirecting to Test 1.');
+    if (!testData) {
+      alert('Test Set not found! Redirecting to Test 1.');
       window.location.search = '?test=1';
     }
 
@@ -503,7 +503,7 @@
           <span>Review 🚩</span>
         </label>
       </div>
-      <p class="text-sm font-semibold">${q.text}</p>
+      <p class="text-sm font-semibold text-slate-100">${q.text}</p>
       ${answerHtml}
       ${practiceBtnHtml}
     `;
