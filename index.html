@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="light">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -19,20 +19,20 @@
     --ukvi: 215, 68%, 32%; /* #1a4a8a */
     --pte: 17, 81%, 54%; /* #e8622a */
     
-    /* Unified Premium Dark Theme */
-    --bg-main: #070913;
-    --bg-modules: #0a0c16;
-    --bg-card: rgba(17, 20, 38, 0.65);
-    --bg-card-hover: rgba(25, 30, 56, 0.85);
-    --border-color: rgba(255, 255, 255, 0.08);
-    --border-hover: rgba(255, 255, 255, 0.18);
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-    --glass-navbar: rgba(7, 9, 19, 0.75);
-    --input-bg: rgba(13, 16, 30, 0.7);
-    --card-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.7);
-    --accent-glow: rgba(91, 42, 134, 0.25);
-    --divider-color: rgba(255, 255, 255, 0.08);
+    /* Unified Premium Nordic Light Theme */
+    --bg-main: #f8fafc;
+    --bg-modules: #f1f5f9;
+    --bg-card: #ffffff;
+    --bg-card-hover: #ffffff;
+    --border-color: rgba(15, 23, 42, 0.06);
+    --border-hover: rgba(15, 23, 42, 0.15);
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --glass-navbar: rgba(255, 255, 255, 0.85);
+    --input-bg: #f8fafc;
+    --card-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
+    --accent-glow: rgba(99, 102, 241, 0.03);
+    --divider-color: rgba(15, 23, 42, 0.06);
   }
 
   /* Reset & Core Styling */
@@ -1981,9 +1981,9 @@
 <script>
 // ====== Theme Management ======
 function updateTheme() {
-  document.documentElement.classList.add('dark');
-  document.documentElement.classList.remove('light');
-  localStorage.setItem('theme', 'dark');
+  document.documentElement.classList.add('light');
+  document.documentElement.classList.remove('dark');
+  localStorage.setItem('theme', 'light');
 }
 
 // Run theme update initially
