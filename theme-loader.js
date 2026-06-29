@@ -42,10 +42,79 @@
       color: #0f172a !important;
     }
 
-    html.light .toolbar {
-      background: rgba(255, 255, 255, 0.85) !important;
-      border-bottom-color: rgba(15, 23, 42, 0.06) !important;
-      backdrop-filter: blur(8px) !important;
+    /* Header & Footer Navigation in Mock Simulator (Clean, professional look) */
+    html.light header,
+    html.light header[class*="bg-black"],
+    html.light header.bg-black\/40 {
+      background: #ffffff !important;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.06) !important;
+      color: #0f172a !important;
+    }
+    html.light header h2,
+    html.light header span,
+    html.light header a,
+    html.light header div {
+      color: #0f172a !important;
+    }
+    html.light header a[class*="bg-white"],
+    html.light header div[class*="bg-white"],
+    html.light header button[class*="bg-white"] {
+      background: #f1f5f9 !important;
+      border: 1px solid rgba(15, 23, 42, 0.08) !important;
+      color: #0f172a !important;
+    }
+    html.light header a[class*="bg-white"]:hover,
+    html.light header button[class*="bg-white"]:hover {
+      background: #e2e8f0 !important;
+    }
+    html.light header span[class*="text-purple-400"] {
+      color: #4f46e5 !important;
+    }
+    html.light header .timer-pill,
+    html.light header span#timerText {
+      color: #4f46e5 !important;
+    }
+
+    /* Main Content Layout Panels */
+    html.light .audio-pane,
+    html.light .passage-pane {
+      background: #f8fafc !important;
+      border-right: 1px solid rgba(15, 23, 42, 0.06) !important;
+    }
+    html.light .questions-pane {
+      background: #f1f5f9 !important;
+    }
+
+    /* Bottom Nav Tray in Simulator */
+    html.light footer,
+    html.light div[class*="border-t"][class*="bg-black"] {
+      background: #ffffff !important;
+      border-top: 1px solid rgba(15, 23, 42, 0.06) !important;
+      color: #0f172a !important;
+    }
+
+    /* Audio Player Control Card */
+    html.light .audio-player-card {
+      background: #ffffff !important;
+      border: 1px solid rgba(79, 70, 229, 0.12) !important;
+      box-shadow: 0 10px 30px rgba(79, 70, 229, 0.04) !important;
+    }
+    html.light .audio-player-card select,
+    html.light .audio-player-card option {
+      background: #ffffff !important;
+      color: #4f46e5 !important;
+    }
+
+    /* Instruction Box contrast fix */
+    html.light .instruction-box,
+    html.light div[class*="bg-teal-500/10"] {
+      background: rgba(13, 148, 136, 0.05) !important;
+      border-color: rgba(13, 148, 136, 0.15) !important;
+      color: #0f766e !important;
+    }
+    html.light .instruction-box *,
+    html.light div[class*="bg-teal-500/10"] * {
+      color: #0f766e !important;
     }
 
     /* Hide all theme toggles */
@@ -119,7 +188,7 @@
     html.light .feedback.bad { border-color: var(--terra) !important; background: rgba(234, 88, 12, 0.03) !important; }
     html.light .feedback.tip { border-color: var(--gold) !important; background: rgba(217, 119, 6, 0.03) !important; }
 
-    /* Inline badge styling override via attribute matching */
+    /* Badges */
     html.light .badge[style*="var(--terra)"],
     html.light .badge[style*="terra"] {
       background: rgba(234, 88, 12, 0.08) !important;
@@ -207,36 +276,69 @@
       background: #f1f5f9 !important;
     }
 
-    /* Chosen/Selected answers highlights in Light Mode */
-    html.light button.bg-purple-600,
-    html.light button[class*="bg-purple-600"] {
-      background-color: #4f46e5 !important; /* Premium Indigo */
-      border-color: #6366f1 !important;
-      color: #ffffff !important;
-      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2) !important;
+    /* Selected Option Highlights in MCQ */
+    html.light button[onclick*="selectOption"] {
+      background-color: #ffffff !important;
+      border-color: rgba(15, 23, 42, 0.08) !important;
+      color: #334155 !important;
     }
-    html.light button.bg-purple-600\/30,
-    html.light button[class*="bg-purple-600/30"] {
-      background-color: rgba(79, 70, 229, 0.1) !important;
+    html.light button[onclick*="selectOption"]:hover {
+      background-color: #f8fafc !important;
+      border-color: #6366f1 !important;
+    }
+    
+    /* MCQ Selected (Translucent Indigo Glow) */
+    html.light button[onclick*="selectOption"][class*="bg-purple-600/30"] {
+      background-color: rgba(79, 70, 229, 0.08) !important;
       border-color: #6366f1 !important;
       color: #4f46e5 !important;
-      box-shadow: inset 0 0 6px rgba(79, 70, 229, 0.05) !important;
+      font-weight: 600 !important;
+      box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08) !important;
     }
-    html.light button.bg-emerald-600,
-    html.light button[class*="bg-emerald-600"] {
-      background-color: #059669 !important;
-      border-color: #10b981 !important;
-      color: #ffffff !important;
+    html.light button[onclick*="selectOption"][class*="bg-purple-600/30"] span {
+      color: #4f46e5 !important;
     }
 
-    /* Responsive toolbar optimizations */
-    @media (max-width: 640px) {
-      .toolbar .progress-bar { display: none !important; }
-      .toolbar .nav-step { display: none !important; }
-      .toolbar .hidden.sm\\:block { display: none !important; }
+    /* TFNG Selected (Solid Indigo with White text) */
+    html.light button[onclick*="selectOption"][class*="bg-purple-600"]:not([class*="/30"]) {
+      background-color: #4f46e5 !important;
+      border-color: #4f46e5 !important;
+      color: #ffffff !important;
+      font-weight: 600 !important;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2) !important;
     }
-    @media (max-width: 480px) {
-      .toolbar > div { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+
+    /* Input blanks in mock simulator */
+    html.light .input-fill {
+      background: #ffffff !important;
+      border-color: rgba(15, 23, 42, 0.12) !important;
+      color: #0f172a !important;
+    }
+    html.light .input-fill:focus {
+      border-color: #4f46e5 !important;
+      box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15) !important;
+    }
+
+    /* Bottom Nav Tray Buttons */
+    html.light .q-nav-btn {
+      background: #ffffff !important;
+      border-color: rgba(15, 23, 42, 0.08) !important;
+      color: #475569 !important;
+    }
+    html.light .q-nav-btn.current {
+      border-color: #4f46e5 !important;
+      color: #4f46e5 !important;
+      box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15) !important;
+    }
+    html.light .q-nav-btn.answered {
+      background: rgba(79, 70, 229, 0.08) !important;
+      border-color: #6366f1 !important;
+      color: #4f46e5 !important;
+    }
+    html.light .q-nav-btn.flagged {
+      border-color: #ea580c !important;
+      background: rgba(234, 88, 12, 0.08) !important;
+      color: #ea580c !important;
     }
   `;
   document.head.appendChild(lightCSS);
