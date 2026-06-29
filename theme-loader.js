@@ -93,7 +93,7 @@
       color: #0f172a !important;
     }
 
-    /* Audio Player Control Card */
+    /* Audio Player Control Card (Light theme styling) */
     html.light .audio-player-card {
       background: #ffffff !important;
       border: 1px solid rgba(79, 70, 229, 0.12) !important;
@@ -104,17 +104,60 @@
       background: #ffffff !important;
       color: #4f46e5 !important;
     }
+    html.light button#playBtn {
+      background-color: #4f46e5 !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25) !important;
+    }
+    html.light button#playBtn:hover {
+      background-color: #3730a3 !important;
+    }
+    html.light button[onclick="stopAudio()"] {
+      background: #f1f5f9 !important;
+      border: 1px solid rgba(15, 23, 42, 0.08) !important;
+      color: #475569 !important;
+    }
+    html.light button[onclick="stopAudio()"]:hover {
+      background: #e2e8f0 !important;
+      color: #0f172a !important;
+    }
+    html.light .audio-player-card div[class*="bg-black/20"] {
+      background: #f1f5f9 !important;
+      border: 1px solid rgba(15, 23, 42, 0.08) !important;
+    }
+    html.light .audio-player-card span[class*="text-stone-500"] {
+      color: #475569 !important;
+    }
+    html.light #audioSpeed {
+      color: #4f46e5 !important;
+    }
+    html.light #audioSpeed option {
+      background: #ffffff !important;
+      color: #0f172a !important;
+    }
+    html.light input[type="range"]#audioTimeline {
+      background: rgba(15, 23, 42, 0.08) !important;
+    }
+    html.light #currentTime,
+    html.light #totalDuration {
+      color: #64748b !important;
+    }
 
-    /* Instruction Box contrast fix */
+    /* Simulator Warnings & Tips (Teal info box contrast fixes) */
+    html.light div[class*="bg-teal-500/8"],
+    html.light div[class*="border-teal-500"],
+    html.light div[class*="text-teal-200"],
     html.light .instruction-box,
     html.light div[class*="bg-teal-500/10"] {
-      background: rgba(13, 148, 136, 0.05) !important;
+      background-color: rgba(13, 148, 136, 0.04) !important;
       border-color: rgba(13, 148, 136, 0.15) !important;
       color: #0f766e !important;
     }
+    html.light div[class*="bg-teal-500/8"] strong,
+    html.light div[class*="bg-teal-500/8"] span,
     html.light .instruction-box *,
     html.light div[class*="bg-teal-500/10"] * {
-      color: #0f766e !important;
+      color: #0d9488 !important;
     }
 
     /* Hide all theme toggles */
