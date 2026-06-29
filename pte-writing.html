@@ -322,6 +322,7 @@
     border: 1px solid rgba(217,119,6,0.15);
   }
 </style>
+  <script src="theme-loader.js"></script>
 </head>
 <body>
 
@@ -348,14 +349,39 @@
         <span class="info-pill purple">10 min each</span>
         <span class="info-pill purple">ONE sentence: 5–75 words</span>
         <span class="info-pill green">Scores: Writing + Reading</span>
+        <span class="info-pill orange">High value task</span>
       </div>
       <p>A passage of up to 300 words appears. You must write a <strong>single summary sentence of 5–75 words</strong> in 10 minutes. Scores both Writing and Reading simultaneously — one of the highest-value tasks in the test.</p>
       
-      <span class="label red">CRITICAL WARNING</span>
+      <span class="label red">CRITICAL WARNING — Form is Highest-Weighted</span>
       <div class="avoid-box">
         <div class="avoid-label">Form is the highest-weighted criterion</div>
-        <div class="avoid-item"><div class="avoid-x">✗</div><div>If you write more than one sentence (even separated by a semicolon), or fewer than 5 words, you score ZERO on Form. One complete sentence only.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>If you write more than one sentence (even separated by a semicolon), or fewer than 5 words, or more than 75 words, you score ZERO on Form. One complete sentence only. No exceptions.</div></div>
       </div>
+
+      <span class="label blue">What The AI Scores</span>
+      <table class="score-table">
+        <tr class="st-row">
+          <td class="st-cell head field">SUB-SKILL</td>
+          <td class="st-cell head">WHAT IT MEASURES</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Content</td>
+          <td class="st-cell">Does the summary capture the MAIN idea of the passage accurately?</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Form</td>
+          <td class="st-cell">Is it exactly ONE grammatically complete sentence of 5–75 words? (Zero marks if failed)</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Grammar</td>
+          <td class="st-cell">Are grammatical structures correct throughout the sentence? Mix of subordinate clauses.</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Vocabulary</td>
+          <td class="st-cell">Is vocabulary appropriate, academic, and not simply copied from the passage?</td>
+        </tr>
+      </table>
 
       <span class="label green">How To Attempt — Step By Step</span>
       <div class="step-list">
@@ -363,33 +389,71 @@
           <div class="step-num">1</div>
           <div class="step-body">
             <div class="step-title">Read quickly to find the main idea (2 min)</div>
-            <div class="step-desc">The main idea is almost always in the first and last paragraphs. Skim for the author's central claim — not a supporting example.</div>
+            <div class="step-desc">The main idea is almost always in the first and last paragraphs. Skim for the author's central claim — not a supporting example or minor detail.</div>
           </div>
         </div>
         <div class="step-item">
           <div class="step-num">2</div>
           <div class="step-body">
-            <div class="step-title">Draft your sentence using a complex structure (5 min)</div>
-            <div class="step-desc">Use a subordinate clause to connect the main argument to a supporting detail. Aim for 40–60 words.</div>
+            <div class="step-title">Identify: Topic + What is said about it</div>
+            <div class="step-desc">Every good summary = Subject (the main topic) + Predicate (what the passage says about it). Find these two components before writing.</div>
           </div>
         </div>
         <div class="step-item">
           <div class="step-num">3</div>
           <div class="step-body">
-            <div class="step-title">Proofread and word count (3 min)</div>
-            <div class="step-desc">Count words. Verify there is no full stop creating a second sentence. Replace copied phrases with synonyms.</div>
+            <div class="step-title">Draft your sentence using a complex structure (5 min)</div>
+            <div class="step-desc">Use a subordinate clause to connect the main argument to a supporting detail. Aim for 40–60 words — enough to show grammatical range.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Check: one sentence? 5–75 words? no copied phrases? (3 min)</div>
+            <div class="step-desc">Count your words. Verify there is no full stop creating a second sentence. Replace any phrase copied verbatim from the passage with a paraphrase.</div>
           </div>
         </div>
       </div>
 
-      <span class="label">Sentence Structure Blueprints</span>
+      <span class="label blue">4 Sentence Structure Blueprints</span>
       <div class="template-box">
         <div class="template-text">
           <span class="fixed">STRUCTURE 1 — Although / While contrast:</span>
-          "Although <span class="slot">[concession / opposing point]</span>, the passage argues that <span class="slot">[main claim]</span>, emphasising that <span class="slot">[supporting detail]</span>."
+          "Although <span class="slot">[concession / opposing point from passage]</span>, the passage argues that <span class="slot">[main claim]</span>, emphasising that <span class="slot">[supporting detail]</span>."
           <span class="fixed">STRUCTURE 2 — The passage discusses:</span>
-          "The passage discusses <span class="slot">[topic]</span>, highlighting the fact that <span class="slot">[main argument]</span> and suggesting that <span class="slot">[implication]</span>."
+          "The passage discusses <span class="slot">[topic]</span>, highlighting the fact that <span class="slot">[main argument]</span> and suggesting that <span class="slot">[implication or recommendation]</span>."
+          <span class="fixed">STRUCTURE 3 — Which relative clause:</span>
+          "<span class="slot">[Main topic]</span>, which <span class="slot">[defining characteristic]</span>, is presented as <span class="slot">[main claim]</span> because <span class="slot">[key reason from passage]</span>."
+          <span class="fixed">STRUCTURE 4 — Causal structure:</span>
+          "The passage argues that <span class="slot">[main cause or problem]</span> leads to <span class="slot">[effect]</span>, and therefore recommends that <span class="slot">[solution or implication]</span>."
         </div>
+      </div>
+
+      <div class="example-box">
+        <div class="example-label">SAMPLE RESPONSE — Passage about deforestation (47 words)</div>
+        <div class="example-text">"Although <em>forests provide critical ecological services including carbon sequestration and biodiversity preservation</em>, the passage argues that <em>commercial deforestation driven by agricultural expansion</em> is rapidly destroying these ecosystems, highlighting that <em>without coordinated international policy intervention, irreversible environmental degradation will occur within the next two decades</em>."</div>
+      </div>
+
+      <span class="label orange">Useful Reporting Phrases</span>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;">
+        <span style="font-size:11px;padding:3px 9px;background:var(--bg);border:1px solid var(--border);border-radius:20px;color:var(--text-2);">the passage argues</span>
+        <span style="font-size:11px;padding:3px 9px;background:var(--bg);border:1px solid var(--border);border-radius:20px;color:var(--text-2);">the author contends</span>
+        <span style="font-size:11px;padding:3px 9px;background:var(--bg);border:1px solid var(--border);border-radius:20px;color:var(--text-2);">emphasising that</span>
+        <span style="font-size:11px;padding:3px 9px;background:var(--bg);border:1px solid var(--border);border-radius:20px;color:var(--text-2);">highlighting the importance of</span>
+        <span style="font-size:11px;padding:3px 9px;background:var(--bg);border:1px solid var(--border);border-radius:20px;color:var(--text-2);">suggesting that</span>
+        <span style="font-size:11px;padding:3px 9px;background:var(--bg);border:1px solid var(--border);border-radius:20px;color:var(--text-2);">which ultimately leads to</span>
+        <span style="font-size:11px;padding:3px 9px;background:var(--bg);border:1px solid var(--border);border-radius:20px;color:var(--text-2);">despite the fact that</span>
+        <span style="font-size:11px;padding:3px 9px;background:var(--bg);border:1px solid var(--border);border-radius:20px;color:var(--text-2);">as a consequence</span>
+      </div>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">MISTAKES TO AVOID</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Writing two sentences — even with a semicolon separating them, this risks a Form penalty.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Fewer than 5 words or more than 75 words — automatic zero on Form.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Copying whole sentences from the passage verbatim — always paraphrase using synonyms.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Summarising a minor detail instead of the MAIN idea — look at the first and last paragraphs.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Using first person: "I think this passage is about…" — maintain a formal academic register.</div></div>
       </div>
     </div>
   </div>
@@ -402,36 +466,107 @@
         <span class="info-pill purple">20 min each</span>
         <span class="info-pill purple">200–300 words</span>
         <span class="info-pill green">Scores: All 6 Writing sub-skills</span>
+        <span class="info-pill orange">High value task</span>
       </div>
-      <p>A topic is given. You write an argumentative essay of <strong>200–300 words in 20 minutes</strong>. This task tests the widest range of writing sub-skills in the entire test.</p>
+      <p>A topic is given. You write an argumentative essay of <strong>200–300 words in 20 minutes</strong>. This task tests the widest range of writing sub-skills in the entire test, including grammar, vocabulary, spelling, and written discourse.</p>
       
+      <span class="label blue">What The AI Scores</span>
+      <table class="score-table">
+        <tr class="st-row">
+          <td class="st-cell head field">SUB-SKILL</td>
+          <td class="st-cell head">WHAT IT MEASURES</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Content</td>
+          <td class="st-cell">Does the essay address the topic with relevant, developed ideas?</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Form</td>
+          <td class="st-cell">Is it within 200–300 words? Under or over is heavily penalised.</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Grammar</td>
+          <td class="st-cell">Variety and accuracy — mix of simple, compound, and complex structures.</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Vocabulary</td>
+          <td class="st-cell">Range, precision, and appropriate academic register.</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Spelling</td>
+          <td class="st-cell">No errors. Choose British or American and stay consistent throughout.</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Written Discourse</td>
+          <td class="st-cell">Logical structure, paragraph cohesion, transition words, and smooth flow.</td>
+        </tr>
+      </table>
+
+      <span class="label green">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">3 min — Plan on your notepad</div>
+            <div class="step-desc">Write 3 bullet points: ① Your position ② Main argument (Body 1) ③ Counter + rebuttal (Body 2). Never skip this — unplanned essays ramble and miss the word count.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">14 min — Write in 4 clear paragraphs</div>
+            <div class="step-desc">Intro (~50w) → Body 1 (~80w) → Body 2 (~80w) → Conclusion (~40w). Each paragraph has ONE main idea.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">3 min — Check grammar, spelling, word count</div>
+            <div class="step-desc">Read every sentence once. Fix spelling or grammatical errors. Count words — aim for 240–270 for safety margin.</div>
+          </div>
+        </div>
+      </div>
+
       <span class="label purple">Universal 4-Paragraph Template</span>
       <div class="template-box">
         <div class="template-text">
           <span class="fixed">INTRO (~50 words):</span>
-          "In recent years, <span class="slot">[topic/issue]</span> has become a matter of considerable debate. While some argue that <span class="slot">[opposing view]</span>, I firmly believe that <span class="slot">[your position]</span> for two key reasons."
+          "In recent years, <span class="slot">[topic/issue]</span> has become a matter of considerable debate. While some argue that <span class="slot">[opposing view]</span>, I firmly believe that <span class="slot">[your clear position]</span> for two key reasons."
           <span class="fixed">BODY 1 — Main reason (~80 words):</span>
-          "The principal reason for this view is that <span class="slot">[reason 1]</span>. This is because <span class="slot">[explanation]</span>. For instance, <span class="slot">[specific example]</span>. This demonstrates that <span class="slot">[link to thesis]</span>."
+          "The principal reason for this view is that <span class="slot">[reason 1]</span>. This is because <span class="slot">[explanation]</span>. For instance, <span class="slot">[specific example with data]</span>. This demonstrates that <span class="slot">[link back to thesis]</span>."
           <span class="fixed">BODY 2 — Counter + rebuttal (~80 words):</span>
-          "Admittedly, some argue that <span class="slot">[counter-argument]</span>. However, this view overlooks the fact that <span class="slot">[rebuttal]</span>. While it is true that <span class="slot">[concession]</span>, the evidence suggests that <span class="slot">[reinforce position]</span>."
+          "Admittedly, some argue that <span class="slot">[counter-argument]</span>. However, this view overlooks the fact that <span class="slot">[rebuttal]</span>. While it is true that <span class="slot">[concession]</span>, the evidence suggests that <span class="slot">[reinforcement of your position]</span>."
           <span class="fixed">CONCLUSION (~40 words):</span>
-          "In conclusion, it is evident that <span class="slot">[restate position]</span>. <span class="slot">[Governments/Individuals]</span> should <span class="slot">[recommended action]</span>. Only through <span class="slot">[solution]</span> can <span class="slot">[outcome]</span> be achieved."
+          "In conclusion, it is evident that <span class="slot">[restate main argument in different words]</span>. <span class="slot">[Governments / Individuals / Society]</span> should <span class="slot">[recommended action]</span>. Only through <span class="slot">[key solution]</span> can <span class="slot">[desired outcome]</span> be achieved."
         </div>
       </div>
 
       <span class="label orange">Grammar Structures To Include For 79+</span>
       <div class="tips-box">
-        <div class="tips-label">KEY MOVES</div>
-        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Passive voice:</strong> "It has been demonstrated that..."</div></div>
-        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Conditionals:</strong> "If governments fail to act, consequences will follow."</div></div>
-        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Inversion:</strong> "Not only does X reduce costs, but it also increases output."</div></div>
+        <div class="tips-label">USE AT LEAST 3 OF THESE IN YOUR ESSAY</div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Passive voice:</strong> "It has been demonstrated that…" / "This is widely regarded as…"</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Conditionals:</strong> "If governments fail to act, unemployment will rise significantly."</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Relative clause:</strong> "Workers, who lack digital skills, face the greatest risk."</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Inversion:</strong> "Not only does automation reduce costs, but it also increases output."</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Nominalisation:</strong> "The displacement of workers" instead of "when workers get displaced".</div></div>
+      </div>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">SCORE-KILLERS</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Fewer than 200 words or more than 300 words — automatic Form penalty. Stop at 240–280 words.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Informal language: "gonna", "wanna", "kids", "a lot of" — always academic register.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Repeating the same vocabulary — use synonyms: problem → issue / challenge / predicament.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Only one body paragraph — always include at least two body paragraphs.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Mixing British and American spelling in the same essay.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Copying a memorised essay word-for-word — Pearson's AI detects and penalises template abuse. Customize slots heavily.</div></div>
       </div>
     </div>
 
     <!-- Writing Simulator widget -->
     <div class="drill-container">
       <div class="drill-header">
-        <div class="drill-title">✍️ Practice Drill: Essay & Email Structure Validator</div>
+        <div class="drill-title">✍️ Practice Drill: Essay &amp; Email Structure Validator</div>
         <div class="drill-badge">Interactive Validator</div>
       </div>
       
@@ -448,13 +583,13 @@
       </div>
 
       <div class="drill-controls">
-        <button class="btn-drill" onclick="analyseStructure()">🔍 Check Structure & Cohesion</button>
+        <button class="btn-drill" onclick="analyseStructure()">🔍 Check Structure &amp; Cohesion</button>
         <button class="btn-drill-secondary" onclick="loadSampleTemplate()">📝 Load Sample Template</button>
       </div>
 
       <!-- Analysis feedback -->
       <div class="results-panel" id="weResults">
-        <h4 style="margin-bottom: 12px; font-weight: 800;">📊 Structural & Cohesion Analysis</h4>
+        <h4 style="margin-bottom: 12px; font-weight: 800;">📊 Structural &amp; Cohesion Analysis</h4>
         <div class="score-cards-row">
           <div class="score-card-item">
             <div class="sci-val" id="resWordCount" style="color:var(--green)">0</div>
@@ -487,20 +622,117 @@
         <span class="info-pill purple">9 min each</span>
         <span class="info-pill purple">80–120 words</span>
         <span class="info-pill orange">PTE Core only</span>
+        <span class="info-pill green">Scores: Writing (all sub-skills)</span>
       </div>
-      <p>A prompt describes a situation requiring an email. You write a formal or semi-formal email of <strong>80–120 words in 9 minutes</strong>. Scored on email conventions (subject line, salutation, body, sign-off).</p>
+      <p>A prompt describes a real-world situation requiring an email. You write a formal or semi-formal email of <strong>80–120 words in 9 minutes</strong>. Scored on email conventions (subject line, salutation, body, sign-off). <strong>PTE Core exclusive</strong> — does not appear in PTE Academic.</p>
       
+      <span class="label blue">What The AI Scores</span>
+      <table class="score-table">
+        <tr class="st-row">
+          <td class="st-cell head field">SUB-SKILL</td>
+          <td class="st-cell head">WHAT IT MEASURES</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Content</td>
+          <td class="st-cell">Did you address ALL points in the prompt? Missing one drops this score heavily.</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Email Conventions</td>
+          <td class="st-cell">Subject line · correct salutation · body paragraphs · appropriate sign-off. (Mandatory for full marks)</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Form</td>
+          <td class="st-cell">80–120 words. Under or over is penalised.</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Organisation</td>
+          <td class="st-cell">Logical flow: opening purpose → body content → clear closing action.</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Vocabulary &amp; Grammar</td>
+          <td class="st-cell">Appropriate register, correct formal phrasing, no contractions in formal emails.</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Spelling</td>
+          <td class="st-cell">Every word correctly spelled — consistent British or American English.</td>
+        </tr>
+      </table>
+
+      <span class="label red">CRITICAL CONVENTION RULE</span>
+      <div class="avoid-box">
+        <div class="avoid-label">EMAIL CONVENTIONS ARE SCORING ANCHORS</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>A missing subject line, wrong salutation, or missing sign-off will drop your conventions sub-score even if the body is excellent. Keep structural elements complete.</div></div>
+      </div>
+
+      <span class="label green">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Read the prompt and identify all 3 required points</div>
+            <div class="step-desc">Every prompt has exactly 3 elements you must cover. Underline them. Missing even one drops your Content score significantly.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Decide register: formal or semi-formal?</div>
+            <div class="step-desc">Email to a manager/company/institution = FORMAL (Dear Mr/Ms [Name], Yours sincerely). Email to a colleague/acquaintance = SEMI-FORMAL (Hi [Name], Kind regards). No contractions in formal emails.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Write Subject line first</div>
+            <div class="step-desc">Always include: "Subject: [clear summary of email purpose]". Scored under Email Conventions — missing it costs marks immediately.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Write in 3 body paragraphs</div>
+            <div class="step-desc">Para 1: State why you are writing. Para 2: Cover the 3 required points. Para 3: Close with a clear action or next step.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <div class="step-title">Count words and check spelling</div>
+            <div class="step-desc">Aim for 95–110 words — safely inside the 80–120 range. Re-read every sentence once for spelling errors.</div>
+          </div>
+        </div>
+      </div>
+
       <span class="label purple">Formal Email Template</span>
       <div class="template-box">
         <div class="template-text">
-          Subject: <span class="slot">[Clear, concise description]</span><br><br>
-          Dear <span class="slot">[Mr/Ms Last Name]</span>,<br><br>
-          I am writing to <span class="slot">[enquire about / request]</span> <span class="slot">[subject]</span>.<br><br>
-          <span class="slot">[Address Point 1]</span>. Furthermore, <span class="slot">[address Point 2]</span>. I would also like to mention that <span class="slot">[address Point 3]</span>.<br><br>
-          I would be grateful if you could <span class="slot">[action needed]</span>. Please do not hesitate to contact me should you require any further information.<br><br>
+          <span class="fixed">Subject:</span> <span class="slot">[Clear, concise description of email purpose]</span><br><br>
+          Dear <span class="slot">[Mr/Ms Last Name]</span> / Dear Sir or Madam,<br><br>
+          <span class="fixed">PARA 1 — Purpose (1–2 sentences):</span>
+          "I am writing to <span class="slot">[enquire about / apply for / inform you of / request]</span> <span class="slot">[specific subject from prompt]</span>."<br><br>
+          <span class="fixed">PARA 2 — 3 Required Points (3–4 sentences):</span>
+          "<span class="slot">[Address Point 1 from the prompt]</span>. Furthermore, <span class="slot">[address Point 2]</span>. I would also like to mention that <span class="slot">[address Point 3]</span>."<br><br>
+          <span class="fixed">PARA 3 — Closing action (1–2 sentences):</span>
+          "I would be grateful if you could <span class="slot">[specific action needed from recipient]</span>. Please do not hesitate to contact me should you require any further information."<br><br>
           Yours sincerely,<br>
           <span class="slot">[Your Full Name]</span>
         </div>
+      </div>
+
+      <div class="example-box">
+        <div class="example-label">SAMPLE EMAIL — Band 79+ (~105 words)</div>
+        <div class="example-text">Subject: Feedback on Recent Training Session<br><br>Dear Ms Johnson,<br><br>I am writing to share my feedback regarding the training session held last Tuesday. While I appreciated the effort involved, I found the content too general and not directly applicable to our day-to-day responsibilities, which limited its practical value.<br><br>I would suggest that future sessions focus on task-specific scenarios relevant to our team's workflow. Including interactive exercises and case studies would also significantly improve engagement and retention.<br><br>I would be grateful if a follow-up session could be arranged to address these areas more thoroughly. Please let me know if you would like to discuss this further.<br><br>Yours sincerely,<br>Alex Carter</div>
+      </div>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">SCORE-KILLERS</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>No subject line — automatic conventions deduction.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>No salutation or sign-off — "Dear..." and "Yours sincerely / Kind regards" are mandatory.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Mixing formal and informal register or tone in the same email.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Missing one of the 3 required content points — address every element in the prompt.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Under 80 or over 120 words — count words before submitting.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Contractions in formal emails: don't → do not · can't → cannot · I've → I have.</div></div>
       </div>
     </div>
   </div>

@@ -105,6 +105,7 @@ svg.chart{width:100%;overflow:visible}
 @media(max-width:640px){.gameboard{grid-template-columns:1fr 1fr}}
 </style>
   <script src="security.js"></script>
+  <script src="theme-loader.js"></script>
 </head>
 <body>
 <!-- TOOLBAR -->
@@ -118,12 +119,12 @@ svg.chart{width:100%;overflow:visible}
     <div class="hidden md:flex items-center gap-4 text-sm font-medium flex-wrap">
       <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="mindset">① Mindset</span>
       <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="pillars">② Pillars</span>
-      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="task1">③ Task 1 + Charts</span>
-      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="essays">④ Essay Types</span>
-      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="skeleton">⑤ Skeleton</span>
-      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="drills">⑥ Drills</span>
-      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="paraphrase">⑦ Paraphrase WS</span>
-      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="templates">⑧ Templates</span>
+      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="drills">③ Steps 1-3: Drills</span>
+      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="task1">④ Step 4: Charts</span>
+      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="essays">⑤ Essay Types</span>
+      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="skeleton">⑥ Skeleton</span>
+      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="paraphrase">⑦ Step 5: Paraphrase WS</span>
+      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="templates">⑧ Step 6: Templates</span>
     </div>
     <div class="flex items-center gap-3">
       <div class="text-right hidden sm:block"><div class="text-[11px] uppercase tracking-widest text-stone-500">XP</div><div class="font-bold text-lg" style="color:var(--blue);font-family:'Fraunces',serif" id="xpDisplay">0</div></div>
@@ -221,8 +222,80 @@ svg.chart{width:100%;overflow:visible}
 
 <!-- ⑥ DRILLS -->
 <section id="drills" class="mb-10">
-  <h2 class="text-2xl mb-2">⑥ Sentence-Making Drills</h2>
-  <p class="text-stone-700 max-w-3xl text-sm">Eight targeted drills. Tap to open each one.</p>
+  <h2 class="text-2xl mb-2">⑥ Steps 1-3: Sentence-Making Drills</h2>
+  <p class="text-stone-700 max-w-3xl text-sm mb-4">Eight targeted drills covering sentence structures, logical linking, academic tone, and thesis building.</p>
+
+  <!-- Sequential Learning Path Dashboard -->
+  <div class="card p-6 mb-8 bg-white border border-line rounded-2xl bg-white" style="background-image:radial-gradient(rgba(30,58,138,.03) 1px, transparent 1px);background-size:18px 18px">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="stamp">Roadmap</span>
+      <h3 class="text-xl font-bold">IELTS Writing Sequential Learning Path</h3>
+    </div>
+    <p class="text-xs text-stone-600 mb-5">Master these steps in order to build grammatical range, logical coherence, and essay structures required for a Band 7+.</p>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-3">
+      <!-- Step 1 -->
+      <div class="p-3 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(30,58,138,0.02)">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 1</span>
+          <h4 class="font-bold text-xs mt-1">Sentence Foundations</h4>
+          <p class="text-[10px] text-stone-500 mt-1 leading-normal">Master linkers, compound-complex clauses, and relative modifiers.</p>
+        </div>
+        <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center mt-3 w-full" onclick="document.getElementById('drills').scrollIntoView({behavior:'smooth'})">Go to Step 1</button>
+      </div>
+      
+      <!-- Step 2 -->
+      <div class="p-3 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(181,138,44,0.02)">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 2</span>
+          <h4 class="font-bold text-xs mt-1">Academic Tone</h4>
+          <p class="text-[10px] text-stone-500 mt-1 leading-normal">Upgrade claims using academic hedging and hypothetical conditionals.</p>
+        </div>
+        <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center mt-3 w-full" onclick="document.getElementById('drills').scrollIntoView({behavior:'smooth'})">Go to Step 2</button>
+      </div>
+      
+      <!-- Step 3 -->
+      <div class="p-3 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(31,122,77,0.02)">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 3</span>
+          <h4 class="font-bold text-xs mt-1">Paragraph Parts</h4>
+          <p class="text-[10px] text-stone-500 mt-1 leading-normal">Draft high-scoring thesis statements, topic lines, and concrete examples.</p>
+        </div>
+        <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center mt-3 w-full" onclick="document.getElementById('drills').scrollIntoView({behavior:'smooth'})">Go to Step 3</button>
+      </div>
+      
+      <!-- Step 4 -->
+      <div class="p-3 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(192,83,28,0.02)">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 4</span>
+          <h4 class="font-bold text-xs mt-1">Data Reporting</h4>
+          <p class="text-[10px] text-stone-500 mt-1 leading-normal">Describe bar, line, table, process, and map visuals in Task 1.</p>
+        </div>
+        <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center mt-3 w-full" onclick="document.getElementById('task1').scrollIntoView({behavior:'smooth'})">Go to Step 4</button>
+      </div>
+      
+      <!-- Step 5 -->
+      <div class="p-3 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(30,58,138,0.02)">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 5</span>
+          <h4 class="font-bold text-xs mt-1">Paraphrase Worksheet</h4>
+          <p class="text-[10px] text-stone-500 mt-1 leading-normal">Train on 50 real IELTS prompts across all essay styles.</p>
+        </div>
+        <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center mt-3 w-full" onclick="document.getElementById('paraphrase').scrollIntoView({behavior:'smooth'})">Go to Step 5</button>
+      </div>
+      
+      <!-- Step 6 -->
+      <div class="p-3 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(91,59,138,0.02)">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 6</span>
+          <h4 class="font-bold text-xs mt-1">Essay Templates</h4>
+          <p class="text-[10px] text-stone-500 mt-1 leading-normal">Assemble full essays with slot-based templates for all 5 prompts.</p>
+        </div>
+        <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center mt-3 w-full" onclick="document.getElementById('templates').scrollIntoView({behavior:'smooth'})">Go to Step 6</button>
+      </div>
+    </div>
+  </div>
+
   <div class="gameboard mt-4" id="drillCards"></div>
 </section>
 
@@ -705,17 +778,17 @@ function renderSkeleton(){
 document.getElementById('skType').addEventListener('change',renderSkeleton);renderSkeleton();
 // ====== DRILLS ======
 const drills=[
-{n:1,name:"Paraphrase the Prompt",icon:"🔄",accent:"var(--blue)",intro:"The strongest paraphrase changes BOTH vocabulary AND structure — not just synonyms.",items:[{prompt:"\"Some people believe universities should focus on academic skills, while others think they should also prepare students for the workplace.\"",options:[{t:"Some people think universities should focus on academic skills, while others think they should prepare students for the workplace too.",c:false,w:"Almost identical — minimal change. This is Band 6 at best."},{t:"While certain individuals contend that higher education should prioritise the cultivation of intellectual abilities, others maintain it must equally equip graduates with practical career-ready competencies.",c:true,w:"✓ Synonyms (academic→intellectual; workplace→career-ready), inverted structure, formal register."},{t:"Universities are for jobs and thinking, so it depends.",c:false,w:"Informal + oversimplified. Loses meaning."},{t:"Universities focus on academic skills but also prepare students for the workplace.",c:false,w:"Drops one viewpoint — distorts the original meaning."}]}]},
-{n:2,name:"Build a Topic Sentence",icon:"🏛️",accent:"var(--gold)",intro:"A topic sentence states the paragraph's main claim — clearly, without examples yet.",items:[{prompt:"You're defending 'governments should fund the arts'. Which is the strongest topic sentence?",options:[{t:"In 1995, the Spanish government funded a museum in Bilbao.",c:false,w:"This is an EXAMPLE — save it for sentence 2 or 3 of the paragraph."},{t:"The arts are important to people.",c:false,w:"Too vague. No clear academic claim."},{t:"The principal reason governments should fund the arts is that culture is a fundamental dimension of any civilised society, not a luxury.",c:true,w:"✓ Clear claim, signals the argument, sets up the example to follow."},{t:"Some say arts are vital, but others disagree.",c:false,w:"Restates the debate — doesn't take a position."}]}]},
-{n:3,name:"Pick the Strongest Example",icon:"💡",accent:"var(--green)",intro:"Strong examples are specific, recent and verifiable — not vague generalisations.",items:[{prompt:"You've claimed remote work boosts well-being. Which example most strengthens this claim?",options:[{t:"Many people say they like working from home.",c:false,w:"Vague — no source, no statistics."},{t:"My friend's brother works from home and is happy.",c:false,w:"Anecdotal. Avoid 'my friend / family member' examples."},{t:"A 2022 UK ONS survey found that remote workers reported 22% higher life-satisfaction scores than office-based peers.",c:true,w:"✓ Specific date, named institution, concrete figure. Textbook Band 7+."},{t:"Remote work is generally considered beneficial by experts.",c:false,w:"Weasel words ('generally', 'experts') — adds no concrete evidence."}]}]},
-{n:4,name:"Combine into a Complex Sentence",icon:"🧩",accent:"var(--terra)",intro:"Joining simple sentences with subordinators shows grammatical range.",items:[{prompt:"Combine: 'The factory closed. Workers lost jobs. The government provided no support.'",options:[{t:"The factory closed. Workers lost jobs. The government provided no support.",c:false,w:"Three simple sentences — no upgrade. Band 6."},{t:"The factory closed and workers lost jobs and the government provided no support.",c:false,w:"'And… and…' is repetitive coordination. Not complex enough."},{t:"When the factory closed, workers lost their livelihoods, yet the government, despite repeated appeals, provided no meaningful support.",c:true,w:"✓ Subordinator ('When'), coordinator ('yet'), parenthetical ('despite repeated appeals'). Complex grammar."},{t:"Because the factory closed and workers lost their jobs, the government didn't help.",c:false,w:"Causal logic is distorted — closure didn't cause government inaction."}]}]},
-{n:5,name:"Pick the Right Linker",icon:"🔗",accent:"var(--blue)",intro:"The connector must match the LOGIC between clauses — not just sound academic.",items:[{prompt:"\"Working from home reduces commute time. ____, it can also lower stress.\"",options:[{t:"In contrast",c:false,w:"Both clauses are POSITIVE — no contrast."},{t:"However",c:false,w:"'However' signals contrast; both clauses agree."},{t:"Furthermore",c:true,w:"✓ Additive: adds a second benefit to the first."},{t:"Therefore",c:false,w:"Cause-effect — reduced commute doesn't directly cause lower stress."}]},{prompt:"\"The plan was popular with parents. ____, teachers strongly opposed it.\"",options:[{t:"Furthermore",c:false,w:"The clauses CONTRAST — not additive."},{t:"However",c:true,w:"✓ Two contrasting positions — needs a contrast linker."},{t:"For example",c:false,w:"This is not an example."},{t:"In conclusion",c:false,w:"This is mid-paragraph — not a conclusion."}]}]},
-{n:6,name:"Upgrade to Hedging Language",icon:"🛡️",accent:"var(--gold)",intro:"Academic English avoids absolute claims. Hedge with: tend to, may, appears to, is likely to, in many cases…",items:[{prompt:"Replace: \"Social media always damages teenagers' mental health.\"",options:[{t:"Social media always damages teenagers' mental health.",c:false,w:"'Always' is too absolute — Band 6 register."},{t:"Heavy use of social media has been linked to declining mental health among many adolescents.",c:true,w:"✓ Hedged with 'has been linked to' and 'many'. Uses precise academic vocabulary."},{t:"Social media is bad for kids.",c:false,w:"Informal ('kids', 'bad')."},{t:"It is a fact that social media destroys teenagers.",c:false,w:"'It is a fact' is itself unhedged, and 'destroys' is hyperbole."}]}]},
-{n:7,name:"Build a Second Conditional",icon:"❓",accent:"var(--terra)",intro:"For solutions/proposals: 'If + past simple, would + base verb' — hypothetical effects.",items:[{prompt:"Express this idea as a 2nd conditional: 'governments should fund cycling → fewer cars'",options:[{t:"If governments will fund cycling, there will be fewer cars.",c:false,w:"Don't use 'will' in the IF clause. Classic error."},{t:"If governments fund cycling, there are fewer cars.",c:false,w:"That's first conditional — missing 'will' in the main clause."},{t:"If governments funded cycling infrastructure, there would be fewer cars on the roads.",c:true,w:"✓ Textbook 2nd conditional: If + past simple, would + base verb."},{t:"If governments had funded cycling, there would have been fewer cars.",c:false,w:"That's 3rd conditional — about an imaginary PAST, not a future hypothesis."}]}]},
-{n:8,name:"Add a Relative Clause",icon:"🔄",accent:"var(--green)",intro:"Relative clauses ('which / who / that…') pack more information into one sentence.",items:[{prompt:"Add a non-defining relative clause to: 'The Bilbao Guggenheim opened in 1997.'",options:[{t:"The Bilbao Guggenheim opened in 1997.",c:false,w:"No upgrade — a simple sentence."},{t:"The Bilbao Guggenheim, which is widely credited with revitalising the city's economy, opened in 1997.",c:true,w:"✓ Non-defining relative clause, enclosed in commas. The sentence still works without it."},{t:"The Bilbao Guggenheim, that is widely credited with revitalising the city, opened in 1997.",c:false,w:"'That' cannot introduce a non-defining relative clause — use 'which'."},{t:"The Bilbao Guggenheim opened in 1997 it is widely credited with revitalising the city.",c:false,w:"Run-on sentence — missing connector."}]}]}
+{n:"Step 1A",name:"Connectors & Linkers",icon:"🔗",accent:"var(--blue)",intro:"The connector must match the LOGIC between clauses — not just sound academic.",items:[{prompt:"\"Working from home reduces commute time. ____, it can also lower stress.\"",options:[{t:"In contrast",c:false,w:"Both clauses are POSITIVE — no contrast."},{t:"However",c:false,w:"'However' signals contrast; both clauses agree."},{t:"Furthermore",c:true,w:"✓ Additive: adds a second benefit to the first."},{t:"Therefore",c:false,w:"Cause-effect — reduced commute doesn't directly cause lower stress."}]},{prompt:"\"The plan was popular with parents. ____, teachers strongly opposed it.\"",options:[{t:"Furthermore",c:false,w:"The clauses CONTRAST — not additive."},{t:"However",c:true,w:"✓ Two contrasting positions — needs a contrast linker."},{t:"For example",c:false,w:"This is not an example."},{t:"In conclusion",c:false,w:"This is mid-paragraph — not a conclusion."}]}]},
+{n:"Step 1B",name:"Compound-Complex Sentences",icon:"🧩",accent:"var(--terra)",intro:"Joining simple sentences with subordinators shows grammatical range.",items:[{prompt:"Combine: 'The factory closed. Workers lost jobs. The government provided no support.'",options:[{t:"The factory closed. Workers lost jobs. The government provided no support.",c:false,w:"Three simple sentences — no upgrade. Band 6."},{t:"The factory closed and workers lost jobs and the government provided no support.",c:false,w:"'And… and…' is repetitive coordination. Not complex enough."},{t:"When the factory closed, workers lost their livelihoods, yet the government, despite repeated appeals, provided no meaningful support.",c:true,w:"✓ Subordinator ('When'), coordinator ('yet'), parenthetical ('despite repeated appeals'). Complex grammar."},{t:"Because the factory closed and workers lost their jobs, the government didn't help.",c:false,w:"Causal logic is distorted — closure didn't cause government inaction."}]}]},
+{n:"Step 1C",name:"Relative Clauses",icon:"🔄",accent:"var(--green)",intro:"Relative clauses ('which / who / that…') pack more information into one sentence.",items:[{prompt:"Add a non-defining relative clause to: 'The Bilbao Guggenheim opened in 1997.'",options:[{t:"The Bilbao Guggenheim opened in 1997.",c:false,w:"No upgrade — a simple sentence."},{t:"The Bilbao Guggenheim, which is widely credited with revitalising the city's economy, opened in 1997.",c:true,w:"✓ Non-defining relative clause, enclosed in commas. The sentence still works without it."},{t:"The Bilbao Guggenheim, that is widely credited with revitalising the city, opened in 1997.",c:false,w:"'That' cannot introduce a non-defining relative clause — use 'which'."},{t:"The Bilbao Guggenheim opened in 1997 it is widely credited with revitalising the city.",c:false,w:"Run-on sentence — missing connector."}]}]},
+{n:"Step 2A",name:"Academic Hedging",icon:"🛡️",accent:"var(--gold)",intro:"Academic English avoids absolute claims. Hedge with: tend to, may, appears to, is likely to, in many cases…",items:[{prompt:"Replace: \"Social media always damages teenagers' mental health.\"",options:[{t:"Social media always damages teenagers' mental health.",c:false,w:"'Always' is too absolute — Band 6 register."},{t:"Heavy use of social media has been linked to declining mental health among many adolescents.",c:true,w:"✓ Hedged with 'has been linked to' and 'many'. Uses precise academic vocabulary."},{t:"Social media is bad for kids.",c:false,w:"Informal ('kids', 'bad')."},{t:"It is a fact that social media destroys teenagers.",c:false,w:"'It is a fact' is itself unhedged, and 'destroys' is hyperbole."}]}]},
+{n:"Step 2B",name:"Second Conditionals",icon:"❓",accent:"var(--terra)",intro:"For solutions/proposals: 'If + past simple, would + base verb' — hypothetical effects.",items:[{prompt:"Express this idea as a 2nd conditional: 'governments should fund cycling → fewer cars'",options:[{t:"If governments will fund cycling, there will be fewer cars.",c:false,w:"Don't use 'will' in the IF clause. Classic error."},{t:"If governments fund cycling, there are fewer cars.",c:false,w:"That's first conditional — missing 'will' in the main clause."},{t:"If governments funded cycling infrastructure, there would be fewer cars on the roads.",c:true,w:"✓ Textbook 2nd conditional: If + past simple, would + base verb."},{t:"If governments had funded cycling, there would have been fewer cars.",c:false,w:"That's 3rd conditional — about an imaginary PAST, not a future hypothesis."}]}]},
+{n:"Step 3A",name:"Paraphrase the Prompt",icon:"🔄",accent:"var(--blue)",intro:"The strongest paraphrase changes BOTH vocabulary AND structure — not just synonyms.",items:[{prompt:"\"Some people believe universities should focus on academic skills, while others think they should also prepare students for the workplace.\"",options:[{t:"Some people think universities should focus on academic skills, while others think they should prepare students for the workplace too.",c:false,w:"Almost identical — minimal change. This is Band 6 at best."},{t:"While certain individuals contend that higher education should prioritise the cultivation of intellectual abilities, others maintain it must equally equip graduates with practical career-ready competencies.",c:true,w:"✓ Synonyms (academic→intellectual; workplace→career-ready), inverted structure, formal register."},{t:"Universities are for jobs and thinking, so it depends.",c:false,w:"Informal + oversimplified. Loses meaning."},{t:"Universities focus on academic skills but also prepare students for the workplace.",c:false,w:"Drops one viewpoint — distorts the original meaning."}]}]},
+{n:"Step 3B",name:"Topic Sentences",icon:"🏛️",accent:"var(--gold)",intro:"A topic sentence states the paragraph's main claim — clearly, without examples yet.",items:[{prompt:"You're defending 'governments should fund the arts'. Which is the strongest topic sentence?",options:[{t:"In 1995, the Spanish government funded a museum in Bilbao.",c:false,w:"This is an EXAMPLE — save it for sentence 2 or 3 of the paragraph."},{t:"The arts are important to people.",c:false,w:"Too vague. No academic claim."},{t:"The principal reason governments should fund the arts is that culture is a fundamental dimension of any civilised society, not a luxury.",c:true,w:"✓ Clear claim, signals the argument, sets up the example to follow."},{t:"Some say arts are vital, but others disagree.",c:false,w:"Restates the debate — doesn't take a position."}]}]},
+{n:"Step 3C",name:"Specific Examples",icon:"💡",accent:"var(--green)",intro:"Strong examples are specific, recent and verifiable — not vague generalisations.",items:[{prompt:"You've claimed remote work boosts well-being. Which example most strengthens this claim?",options:[{t:"Many people say they like working from home.",c:false,w:"Vague — no source, no statistics."},{t:"My friend's brother works from home and is happy.",c:false,w:"Anecdotal. Avoid 'my friend / family member' examples."},{t:"A 2022 UK ONS survey found that remote workers reported 22% higher life-satisfaction scores than office-based peers.",c:true,w:"✓ Specific date, named institution, concrete figure. Textbook Band 7+."},{t:"Remote work is generally considered beneficial by experts.",c:false,w:"Weasel words ('generally', 'experts') — adds no concrete evidence."}]}]}
 ];
 function renderDrills(){
-  document.getElementById('drillCards').innerHTML=drills.map((d,di)=>`<div class="case-card" style="background:linear-gradient(180deg,${d.accent}20,#fff 70%)" onclick="openDrillModal(${di})"><div class="flex items-center gap-2"><div class="num" style="background:${d.accent}">${d.icon}</div><div class="font-bold">${d.n}. ${d.name}</div></div><div class="text-xs text-stone-600 mt-2">${d.intro.slice(0,70)}…</div><div class="preview mt-auto" style="color:${d.accent}">▶ Practice drill</div></div>`).join('');
+  document.getElementById('drillCards').innerHTML=drills.map((d,di)=>`<div class="case-card" style="background:linear-gradient(180deg,${d.accent}20,#fff 70%)" onclick="openDrillModal(${di})"><div class="flex items-center gap-2"><div class="num" style="background:${d.accent};font-size:0.75rem">${d.n}</div><div class="font-bold">${d.name}</div></div><div class="text-xs text-stone-600 mt-2">${d.intro.slice(0,70)}…</div><div class="preview mt-auto" style="color:${d.accent}">▶ Practice drill</div></div>`).join('');
 }
 function openDrillModal(di){
   const d=drills[di];let body=`<p class="text-sm mb-4 p-3 rounded-lg" style="background:#eef2fa">${d.intro}</p>`;
@@ -724,7 +797,7 @@ function openDrillModal(di){
     item.options.forEach((opt,oi)=>{body+=`<div class="opt" onclick="checkDrill(${di},${qi},${oi})">${opt.t}</div>`;});
     body+=`</div><div id="drillFb${di}_${qi}"></div></div>`;
   });
-  openModal(`<div class="num" style="background:${d.accent};width:36px;height:36px">${d.icon}</div><div><div class="font-bold text-lg">Drill ${d.n}: ${d.name}</div></div>`,body);
+  openModal(`<div class="num" style="background:${d.accent};width:36px;height:36px;font-size:0.75rem">${d.n}</div><div><div class="font-bold text-lg">${d.n}: ${d.name}</div></div>`,body);
   addXP(3);
 }
 function checkDrill(di,qi,oi){
@@ -1128,6 +1201,7 @@ function switchTpl(i){activeTpl=i;document.querySelectorAll('.tpl-tab').forEach(
 function updateTplWC(){let total=0;document.querySelectorAll('[id^="tplinput"]').forEach(el=>{total+=el.value.trim().split(/\s+/).filter(Boolean).length;});const wc=document.getElementById('tplWC');if(wc)wc.textContent=total;}
 function clearTpl(){document.querySelectorAll('[id^="tplinput"]').forEach(el=>el.value='');updateTplWC();}
 renderTplTabs();renderTplCard();
+document.querySelectorAll('.nav-step').forEach(s=>s.addEventListener('click',()=>document.getElementById(s.dataset.jump)?.scrollIntoView({behavior:'smooth'})));
 </script>
 </body>
 </html>

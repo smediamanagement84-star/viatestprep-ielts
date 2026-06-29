@@ -1,11 +1,6 @@
-/**
- * ViATestPrep — Official IELTS Listening & Reading Test Data
- * Cambridge IELTS 18, 19, 20 (Tests 1–4 each)
- */
-
 const IELTS_TEST_DATA = {
   "1": {
-    "title": "Cambridge IELTS 18 \u2014 Test 1",
+    "title": "Cambridge IELTS 18 — Test 1",
     "book": "IELTS 18",
     "listening": {
       "sections": [
@@ -14,7 +9,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 1: Real Practice",
           "description": "Official IELTS 18 Test 1 Listening Part 1.",
           "audio": "audio/IELTS_18_Test_1_Part1.m4a",
-          "transcript": "<p><b>MAN:</b> Excuse me. Would you mind if | asked you some questions? We're doing a</p><p>survey on transport.</p><p><b>SADIE:</b> Yes, that's OK.</p><p><b>MAN:</b> First of all, can | take your name?</p><p><b>SADIE:</b> Yes. It's Sadie Jones.</p><p><b>MAN:</b> Thanks very much. And could | have your date of birth \u2014 just the year will do,</p><p>actually. Is that all right?</p><p><b>SADIE:</b> Yes, that's fine. It's 1991.</p><p><b>MAN:</b> So next your postcode, please.</p><p><b>SADIE:</b> It's DW30 7YZ.</p><p><b>MAN:</b> Great. Thanks. Is that in Wells?</p><p><b>SADIE:</b> No it's actually in Harborne \u2014 Wells isn't far from there, though.</p><p><b>MAN:</b> | really like that area. My grandmother lived there when | was a kid.</p><p><b>SADIE:</b> Yes, it is nice.</p><p><b>MAN:</b> Right, so now | want to ask you some questions about how you travelled here</p><p>today. Did you use public transport?</p><p>SADIE! Yes. | came by bus.</p><p><b>MAN:</b> OK. And that was today. It's the 24th of April, isn't it?</p><p><b>SADIE:</b> Isn't it the 25th? No, actually, you're right.</p><p><b>MAN:</b> Ha ha. And what was the reason for your trip today? | can see you've got some</p><p>shopping with you.</p><p><b>SADIE:</b> Yes. | did some shopping but the main reason | came here was to go to the</p><p>dentist.</p><p><b>MAN:</b> That's not much fun. Hope it was nothing serious.</p><p>SADIE! No, it was just a check-up. It's fine.</p><p><b>MAN:</b> Good. Do you normally travel by bus into the city centre?</p><p><b>SADIE:</b> Yes. | stopped driving in ages ago because parking was so difficult to find and it</p><p>costs so much.</p><p><b>MAN:</b> I see.</p><p>SADIE The bus is much more convenient too. It only takes about 30 minutes.</p><p><b>MAN:</b> That's good. So where did you start your journey?</p><p>SADIE At the bus stop on Claxby Street.</p><p><b>MAN:</b> Is that C-L-A-X-B-Y?</p><p>SADIE That's right.</p><p><b>MAN:</b> And how satisfied with the service are you? Do you have any complaints?</p><p>SADIE Well, as | said, it's very convenient and quick when it's on time, but this morning it</p><p>was late. Only about 10 minutes, but still.</p><p><b>MAN:</b> Yes, | understand that's annoying. And what about the timetable? Do you have</p><p>any comments about that?</p><p>SADIE Mmm. | suppose | mainly use the bus during the day, but any time I've been in</p><p>town in the evening \u2014 for dinner or at the cinema \u2014 I've noticed you have to wait a</p><p>long time for a bus \u2014 there aren't that many.</p><p>Q1</p><p>Q2</p><p>Q3</p><p>Q4</p><p>Q5</p><p>Q6</p><p>Q7</p><p>99</p><p><b>MAN:</b> OK, thanks. So now I'd like to ask you about your car use.</p><p><b>SADIE:</b> Well, | have got a car but | don't use it that often. Mainly just to go to the</p><p>supermarket. But that's about it really. My husband uses it at the weekends to go</p><p>to the golf club.</p><p><b>MAN:</b> And what about a bicycle?</p><p>SADIE! | don't actually have one at the moment.</p><p><b>MAN:</b> What about the city bikes you can rent? Do you ever use those?</p><p>SADIE! No \u2014|'m not keen on cycling there because of all the pollution. But | would like to</p><p>get a bike \u2014 it would be good to use it to get to work.</p><p><b>MAN:</b> So why haven't you got one now?</p><p><b>SADIE:</b> Well, | live in a flat \u2014 on the second floor and it doesn't have any storage \u2014 so</p><p>we'd have to leave it in the hall outside the flat.</p><p><b>MAN:</b> | see. OK. Well, | think that's all ...</p>",
+          "transcript": "<p><b>MAN:</b> Excuse me. Would you mind if | asked you some questions? We're doing a</p><p>survey on transport.</p><p><b>SADIE:</b> Yes, that's OK.</p><p><b>MAN:</b> First of all, can | take your name?</p><p><b>SADIE:</b> Yes. It's Sadie Jones.</p><p><b>MAN:</b> Thanks very much. And could | have your date of birth — just the year will do,</p><p>actually. Is that all right?</p><p><b>SADIE:</b> Yes, that's fine. It's 1991.</p><p><b>MAN:</b> So next your postcode, please.</p><p><b>SADIE:</b> It's DW30 7YZ.</p><p><b>MAN:</b> Great. Thanks. Is that in Wells?</p><p><b>SADIE:</b> No it's actually in Harborne — Wells isn't far from there, though.</p><p><b>MAN:</b> | really like that area. My grandmother lived there when | was a kid.</p><p><b>SADIE:</b> Yes, it is nice.</p><p><b>MAN:</b> Right, so now | want to ask you some questions about how you travelled here</p><p>today. Did you use public transport?</p><p>SADIE! Yes. | came by bus.</p><p><b>MAN:</b> OK. And that was today. It's the 24th of April, isn't it?</p><p><b>SADIE:</b> Isn't it the 25th? No, actually, you're right.</p><p><b>MAN:</b> Ha ha. And what was the reason for your trip today? | can see you've got some</p><p>shopping with you.</p><p><b>SADIE:</b> Yes. | did some shopping but the main reason | came here was to go to the</p><p>dentist.</p><p><b>MAN:</b> That's not much fun. Hope it was nothing serious.</p><p>SADIE! No, it was just a check-up. It's fine.</p><p><b>MAN:</b> Good. Do you normally travel by bus into the city centre?</p><p><b>SADIE:</b> Yes. | stopped driving in ages ago because parking was so difficult to find and it</p><p>costs so much.</p><p><b>MAN:</b> I see.</p><p>SADIE The bus is much more convenient too. It only takes about 30 minutes.</p><p><b>MAN:</b> That's good. So where did you start your journey?</p><p>SADIE At the bus stop on Claxby Street.</p><p><b>MAN:</b> Is that C-L-A-X-B-Y?</p><p>SADIE That's right.</p><p><b>MAN:</b> And how satisfied with the service are you? Do you have any complaints?</p><p>SADIE Well, as | said, it's very convenient and quick when it's on time, but this morning it</p><p>was late. Only about 10 minutes, but still.</p><p><b>MAN:</b> Yes, | understand that's annoying. And what about the timetable? Do you have</p><p>any comments about that?</p><p>SADIE Mmm. | suppose | mainly use the bus during the day, but any time I've been in</p><p>town in the evening — for dinner or at the cinema — I've noticed you have to wait a</p><p>long time for a bus — there aren't that many.</p><p>Q1</p><p>Q2</p><p>Q3</p><p>Q4</p><p>Q5</p><p>Q6</p><p>Q7</p><p>99</p><p><b>MAN:</b> OK, thanks. So now I'd like to ask you about your car use.</p><p><b>SADIE:</b> Well, | have got a car but | don't use it that often. Mainly just to go to the</p><p>supermarket. But that's about it really. My husband uses it at the weekends to go</p><p>to the golf club.</p><p><b>MAN:</b> And what about a bicycle?</p><p>SADIE! | don't actually have one at the moment.</p><p><b>MAN:</b> What about the city bikes you can rent? Do you ever use those?</p><p>SADIE! No —|'m not keen on cycling there because of all the pollution. But | would like to</p><p>get a bike — it would be good to use it to get to work.</p><p><b>MAN:</b> So why haven't you got one now?</p><p><b>SADIE:</b> Well, | live in a flat — on the second floor and it doesn't have any storage — so</p><p>we'd have to leave it in the hall outside the flat.</p><p><b>MAN:</b> | see. OK. Well, | think that's all ...</p>",
           "questions": [
             {
               "num": 1,
@@ -69,7 +64,7 @@ const IELTS_TEST_DATA = {
               "type": "FILL",
               "text": "frequency of buses in the _________",
               "answer": "evening",
-              "explanation": "The transcript states: \"| suppose | mainly use the bus during the day, but any time I've been in town in the evening \u2014 for dinner or at the cinema \u2014 I've noticed you have to wait a long time for a bus \u2014 there aren't that many.\"",
+              "explanation": "The transcript states: \"| suppose | mainly use the bus during the day, but any time I've been in town in the evening — for dinner or at the cinema — I've noticed you have to wait a long time for a bus — there aren't that many.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
             },
             {
@@ -85,7 +80,7 @@ const IELTS_TEST_DATA = {
               "type": "FILL",
               "text": "Travelling by bicycle: dislikes travelling by bike in the city centre because of the _________",
               "answer": "pollution",
-              "explanation": "The transcript states: \"No \u2014|'m not keen on cycling there because of all the pollution.\"",
+              "explanation": "The transcript states: \"No —|'m not keen on cycling there because of all the pollution.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
             },
             {
@@ -93,7 +88,7 @@ const IELTS_TEST_DATA = {
               "type": "FILL",
               "text": "Doesn't own a bike because of a lack of _________",
               "answer": "storage",
-              "explanation": "The transcript states: \"SADIE: Well, | live in a flat \u2014 on the second floor and it doesn't have any storage \u2014 so we'd have to leave it in the hall outside the flat.\"",
+              "explanation": "The transcript states: \"SADIE: Well, | live in a flat — on the second floor and it doesn't have any storage — so we'd have to leave it in the hall outside the flat.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
             }
           ]
@@ -103,7 +98,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 2: Real Practice",
           "description": "Official IELTS 18 Test 1 Listening Part 2.",
           "audio": "audio/IELTS_18_Test_1_Part2.m4a",
-          "transcript": "<p>Good evening, everyone. Let me start by welcoming you all to this talk and thanking you for</p><p>taking the time to consider joining ACE voluntary organisation. ACE offers support to people</p><p>and services in the local area and we're now looking for more volunteers to help us do this.</p><p>By the way, | hope you're all comfortable \u2014 we have brought in extra seats so that no one has</p><p>to stand, but it does mean that the people at the back of the room may be a bit squashed.</p><p>We'll only be here for about half an hour so, hopefully, that's OK.</p><p>One of the first questions we're often asked is how old you need to be to volunteer. Well,</p><p>you can be as young as 16 or you can be 60 or over; it all depends on what type of voluntary</p><p>work you want to do. Other considerations. such as reliability, are crucial in voluntary work</p><p>and age isn't related to these, in our experience.</p><p>Another question we get asked relates to training. Well, there's plenty of that and it's all</p><p>face-to-face. What's more, training doesn't end when you start working for us \u2014 it takes place</p><p>before, during and after periods of work. Often, it's run by other experienced volunteers as</p><p>managers tend to prefer to get on with other things.</p><p>Now, | would ask you to consider a couple of important issues before you decide to apply for</p><p>voluntary work. We don't worry about why you want to be a volunteer \u2014 people have many</p><p>different reasons that range from getting work experience to just doing something they've</p><p>always wanted to do. But it is critical that you have enough hours in the day for whatever role</p><p>we agree is suitable for you \u2014 if being a volunteer becomes stressful then it's best not to do it</p><p>at all. You may think that your income is important, but we don't ask about that. It's up to you</p><p>to decide if you can work without earning money. What we value is dedication. Some of our</p><p>most loyal volunteers earn very little themselves but still give their full energy to the work they</p><p>do with us.</p><p>OK, so let's take a look at some of the work areas that we need volunteers for and the sort of</p><p>things that would help you in those.</p><p>You may wish simply to help us raise money. If you have the creativity to come up with an</p><p>imaginative or novel way of fundraising, we'd be delighted, as standing in the local streets or</p><p>shops with a collection box can be rather boring!</p><p>One outdoor activity that we need volunteers for is litter collection and for this it's useful if you</p><p>can walk for long periods, sometimes uphill. Some of our regular collectors are quite elderly,</p><p>but very active and keen to protect the environment.</p><p>100</p><p>Q8</p><p>Q9</p><p>Q10</p><p>Q71</p><p>Q12</p><p>Q713</p><p>Q14/15</p><p>Q14/15</p><p>Q16</p><p>Q17</p><p>If you enjoy working with children, we have three vacancies for what are called 'playmates'.</p><p>These volunteers help children learn about staying healthy through a range of out-of-school</p><p>activities. You don't need to have children yourself, but it's good if you know something about</p><p>nutrition and can give clear instructions.</p><p>If that doesn't appeal to you, maybe you would be interested in helping out at our story club</p><p>_ for disabled children, especially if you have done some acting. We put on three performances</p><p>a year based on books they have read and we're always looking for support with the</p><p>theatrical side of this.</p><p>The last area I'll mention today is first aid. Volunteers who join this group can end up teaching</p><p>others in vulnerable groups who may be at risk of injury. Initially, though, your priority will be</p><p>to take in a lot of information and not forget any important steps or details.</p><p>Right, so does anyone have any questions ...</p>",
+          "transcript": "<p>Good evening, everyone. Let me start by welcoming you all to this talk and thanking you for</p><p>taking the time to consider joining ACE voluntary organisation. ACE offers support to people</p><p>and services in the local area and we're now looking for more volunteers to help us do this.</p><p>By the way, | hope you're all comfortable — we have brought in extra seats so that no one has</p><p>to stand, but it does mean that the people at the back of the room may be a bit squashed.</p><p>We'll only be here for about half an hour so, hopefully, that's OK.</p><p>One of the first questions we're often asked is how old you need to be to volunteer. Well,</p><p>you can be as young as 16 or you can be 60 or over; it all depends on what type of voluntary</p><p>work you want to do. Other considerations. such as reliability, are crucial in voluntary work</p><p>and age isn't related to these, in our experience.</p><p>Another question we get asked relates to training. Well, there's plenty of that and it's all</p><p>face-to-face. What's more, training doesn't end when you start working for us — it takes place</p><p>before, during and after periods of work. Often, it's run by other experienced volunteers as</p><p>managers tend to prefer to get on with other things.</p><p>Now, | would ask you to consider a couple of important issues before you decide to apply for</p><p>voluntary work. We don't worry about why you want to be a volunteer — people have many</p><p>different reasons that range from getting work experience to just doing something they've</p><p>always wanted to do. But it is critical that you have enough hours in the day for whatever role</p><p>we agree is suitable for you — if being a volunteer becomes stressful then it's best not to do it</p><p>at all. You may think that your income is important, but we don't ask about that. It's up to you</p><p>to decide if you can work without earning money. What we value is dedication. Some of our</p><p>most loyal volunteers earn very little themselves but still give their full energy to the work they</p><p>do with us.</p><p>OK, so let's take a look at some of the work areas that we need volunteers for and the sort of</p><p>things that would help you in those.</p><p>You may wish simply to help us raise money. If you have the creativity to come up with an</p><p>imaginative or novel way of fundraising, we'd be delighted, as standing in the local streets or</p><p>shops with a collection box can be rather boring!</p><p>One outdoor activity that we need volunteers for is litter collection and for this it's useful if you</p><p>can walk for long periods, sometimes uphill. Some of our regular collectors are quite elderly,</p><p>but very active and keen to protect the environment.</p><p>100</p><p>Q8</p><p>Q9</p><p>Q10</p><p>Q71</p><p>Q12</p><p>Q713</p><p>Q14/15</p><p>Q14/15</p><p>Q16</p><p>Q17</p><p>If you enjoy working with children, we have three vacancies for what are called 'playmates'.</p><p>These volunteers help children learn about staying healthy through a range of out-of-school</p><p>activities. You don't need to have children yourself, but it's good if you know something about</p><p>nutrition and can give clear instructions.</p><p>If that doesn't appeal to you, maybe you would be interested in helping out at our story club</p><p>_ for disabled children, especially if you have done some acting. We put on three performances</p><p>a year based on books they have read and we're always looking for support with the</p><p>theatrical side of this.</p><p>The last area I'll mention today is first aid. Volunteers who join this group can end up teaching</p><p>others in vulnerable groups who may be at risk of injury. Initially, though, your priority will be</p><p>to take in a lot of information and not forget any important steps or details.</p><p>Right, so does anyone have any questions ...</p>",
           "questions": [
             {
               "num": 11,
@@ -266,7 +261,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 3: Real Practice",
           "description": "Official IELTS 18 Test 1 Listening Part 3.",
           "audio": "audio/IELTS_18_Test_1_Part3.m4a",
-          "transcript": "<p><b>HUGO:</b> Hi Chantal. What did you think of the talk, then?</p><p><b>CHANTAL:</b> Hi Hugo. | thought it was good once I'd moved seats.</p><p><b>HUGO:</b> Oh \u2014 were the people beside you chatting or something?</p><p><b>CHANTAL:</b> It wasn't that. | went early so that I'd get a seat and not have to stand, but then</p><p>this guy sat right in front of me and he was so tall!</p><p><b>HUGO:</b> It's hard to see through people's heads. isn't it?</p><p><b>CHANTAL:</b> Impossible! Anyway, to answer your question, | thought it was really interesting,</p><p>especially what the speaker said about the job market.</p><p><b>HUGO:</b> Me too. | mean we know we're going into a really competitive field so it's obvious</p><p>that we may struggle to get work.</p><p><b>CHANTAL:</b> That's right \u2014 and we know we can't all have that 'dream job'.</p><p><b>HUGO:</b> Yeah, but it looks like there's a whole range of ... areas of work that we hadn't</p><p>even thought of \u2014 like fashion journalism, for instance.</p><p>CHANTAL! Yeah \u2014 | wasn't expecting so many career options.</p><p><b>HUGO:</b> Mmm. Overall, she had quite a strong message, didn't she?</p><p><b>CHANTAL:</b> She did. She kept saying things like 'I know you all think this, but ...' and then</p><p>she'd tell us how it really is.</p><p>HUGO! Perhaps she thinks students are a bit narrow-minded about the industry.</p><p><b>CHANTAL:</b> It. was a bit harsh, though! We know it's a tough industry.</p><p><b>HUGO:</b> Yeah \u2014 and we're only first years. after all. We've got a lot to learn.</p><p><b>CHANTAL:</b> Exactly. Do you think our secondary-school education should have been more</p><p>career-focused?</p><p><b>HUGO:</b> Well, we had numerous talks on careers, which was good, but none of them were</p><p>very inspiring. They could have asked more people like today's speaker to talk to us.</p><p><b>CHANTAL:</b> | agree. We were told about lots of different careers \u2014 just when we needed to</p><p>be, but not by the experts who really know stuff.</p><p><b>HUGO:</b> So did today's talk influence your thoughts on what career you'd like to take up in</p><p>the future?</p><p><b>CHANTAL:</b> Well, | promised myself that I'd go through this course and keep an open mind till</p><p>the end.</p><p><b>HUGO:</b> But | think it's better to pick an area of the industry now and then aim to get better</p><p>and better at it.</p><p>Test 7</p><p>Q78</p><p>Q19</p><p>Q20</p><p>Q21</p><p>Q22</p><p>Q23</p><p>Q24</p><p>Q25</p><p>101</p><p><b>CHANTAL:</b> Well, | think we'll just have to differ on that issue!</p><p><b>HUGO:</b> One thing's for certain, though. From what she said, we'll be unpaid assistants in</p><p>the industry for quite a long time.</p><p><b>CHANTAL:</b> Mmm.</p><p><b>HUGO:</b> I'm prepared for that, aren't you?</p><p><b>CHANTAL:</b> Actually, I'm not going to accept that view.</p><p><b>HUGO:</b> Really? But she knows it's the case \u2014 and everyone else says the same.</p><p><b>CHANTAL:</b> That doesn't mean it has to be true for me.</p><p><b>HUGO:</b> OK. Well \u2014 | hope you're right!</p><p><b>CHANTAL:</b> | thought the speaker's account of her first job was fascinating.</p><p><b>HUGO:</b> Yeah \u2014 she admitted she was lucky to get work being a personal dresser for a</p><p>musician. She didn't even apply for the job and there she was getting paid to</p><p>choose all his clothes.</p><p><b>CHANTAL:</b> It must have felt amazing \u2014 though she said all she was looking for back then</p><p>was experience, not financial reward.</p><p><b>HUGO:</b> Mmm. And then he was so mean, telling her she was more interested in her own</p><p>appearance than his!</p><p><b>CHANTAL:</b> But \u2014 she did realise he was right about that, which really made me think. I'm</p><p>always considering my own clothes but now | can see you should be focusing on</p><p>your client!</p><p><b>HUGO:</b> She obviously regretted losing the job.</p><p><b>CHANTAL:</b> Well, as she said, she should have hidden her negative feelings about him, but</p><p>she didn't.</p><p><b>HUGO:</b> It was really brave the way she picked herself up and took that job in retail. Fancy</p><p>working in a shop after that!</p><p><b>CHANTAL:</b> Yeah \u2014 well, she recommended we all do it at some point. | guess as a designer</p><p>you'd get to find out some useful information, like how big or small the average</p><p>shopper is.</p><p><b>HUGO:</b> | think that's an issue for manufacturers, not designers. However, it would be</p><p>useful to know if there's a gap in the market \u2014 you know, an item that no one's</p><p>stocking but that consumers are looking for.</p><p><b>CHANTAL:</b> Yeah, people don't give up searching. They also take things back to the store if</p><p>they aren't right.</p><p><b>HUGO:</b> Yeah. Imagine you worked in an expensive shop and you found out the garments</p><p>sold there were being returned because they ... fell apart in the wash!</p><p><b>CHANTAL:</b> Yeah, it would be good to know that kind of thing.</p><p>HUGO! Yeah.</p>",
+          "transcript": "<p><b>HUGO:</b> Hi Chantal. What did you think of the talk, then?</p><p><b>CHANTAL:</b> Hi Hugo. | thought it was good once I'd moved seats.</p><p><b>HUGO:</b> Oh — were the people beside you chatting or something?</p><p><b>CHANTAL:</b> It wasn't that. | went early so that I'd get a seat and not have to stand, but then</p><p>this guy sat right in front of me and he was so tall!</p><p><b>HUGO:</b> It's hard to see through people's heads. isn't it?</p><p><b>CHANTAL:</b> Impossible! Anyway, to answer your question, | thought it was really interesting,</p><p>especially what the speaker said about the job market.</p><p><b>HUGO:</b> Me too. | mean we know we're going into a really competitive field so it's obvious</p><p>that we may struggle to get work.</p><p><b>CHANTAL:</b> That's right — and we know we can't all have that 'dream job'.</p><p><b>HUGO:</b> Yeah, but it looks like there's a whole range of ... areas of work that we hadn't</p><p>even thought of — like fashion journalism, for instance.</p><p>CHANTAL! Yeah — | wasn't expecting so many career options.</p><p><b>HUGO:</b> Mmm. Overall, she had quite a strong message, didn't she?</p><p><b>CHANTAL:</b> She did. She kept saying things like 'I know you all think this, but ...' and then</p><p>she'd tell us how it really is.</p><p>HUGO! Perhaps she thinks students are a bit narrow-minded about the industry.</p><p><b>CHANTAL:</b> It. was a bit harsh, though! We know it's a tough industry.</p><p><b>HUGO:</b> Yeah — and we're only first years. after all. We've got a lot to learn.</p><p><b>CHANTAL:</b> Exactly. Do you think our secondary-school education should have been more</p><p>career-focused?</p><p><b>HUGO:</b> Well, we had numerous talks on careers, which was good, but none of them were</p><p>very inspiring. They could have asked more people like today's speaker to talk to us.</p><p><b>CHANTAL:</b> | agree. We were told about lots of different careers — just when we needed to</p><p>be, but not by the experts who really know stuff.</p><p><b>HUGO:</b> So did today's talk influence your thoughts on what career you'd like to take up in</p><p>the future?</p><p><b>CHANTAL:</b> Well, | promised myself that I'd go through this course and keep an open mind till</p><p>the end.</p><p><b>HUGO:</b> But | think it's better to pick an area of the industry now and then aim to get better</p><p>and better at it.</p><p>Test 7</p><p>Q78</p><p>Q19</p><p>Q20</p><p>Q21</p><p>Q22</p><p>Q23</p><p>Q24</p><p>Q25</p><p>101</p><p><b>CHANTAL:</b> Well, | think we'll just have to differ on that issue!</p><p><b>HUGO:</b> One thing's for certain, though. From what she said, we'll be unpaid assistants in</p><p>the industry for quite a long time.</p><p><b>CHANTAL:</b> Mmm.</p><p><b>HUGO:</b> I'm prepared for that, aren't you?</p><p><b>CHANTAL:</b> Actually, I'm not going to accept that view.</p><p><b>HUGO:</b> Really? But she knows it's the case — and everyone else says the same.</p><p><b>CHANTAL:</b> That doesn't mean it has to be true for me.</p><p><b>HUGO:</b> OK. Well — | hope you're right!</p><p><b>CHANTAL:</b> | thought the speaker's account of her first job was fascinating.</p><p><b>HUGO:</b> Yeah — she admitted she was lucky to get work being a personal dresser for a</p><p>musician. She didn't even apply for the job and there she was getting paid to</p><p>choose all his clothes.</p><p><b>CHANTAL:</b> It must have felt amazing — though she said all she was looking for back then</p><p>was experience, not financial reward.</p><p><b>HUGO:</b> Mmm. And then he was so mean, telling her she was more interested in her own</p><p>appearance than his!</p><p><b>CHANTAL:</b> But — she did realise he was right about that, which really made me think. I'm</p><p>always considering my own clothes but now | can see you should be focusing on</p><p>your client!</p><p><b>HUGO:</b> She obviously regretted losing the job.</p><p><b>CHANTAL:</b> Well, as she said, she should have hidden her negative feelings about him, but</p><p>she didn't.</p><p><b>HUGO:</b> It was really brave the way she picked herself up and took that job in retail. Fancy</p><p>working in a shop after that!</p><p><b>CHANTAL:</b> Yeah — well, she recommended we all do it at some point. | guess as a designer</p><p>you'd get to find out some useful information, like how big or small the average</p><p>shopper is.</p><p><b>HUGO:</b> | think that's an issue for manufacturers, not designers. However, it would be</p><p>useful to know if there's a gap in the market — you know, an item that no one's</p><p>stocking but that consumers are looking for.</p><p><b>CHANTAL:</b> Yeah, people don't give up searching. They also take things back to the store if</p><p>they aren't right.</p><p><b>HUGO:</b> Yeah. Imagine you worked in an expensive shop and you found out the garments</p><p>sold there were being returned because they ... fell apart in the wash!</p><p><b>CHANTAL:</b> Yeah, it would be good to know that kind of thing.</p><p>HUGO! Yeah.</p>",
           "questions": [
             {
               "num": 21,
@@ -286,7 +281,7 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "How do they feel about the research paper written by the tutor?",
               "answer": "B",
-              "explanation": "The transcript states: \"HUGO: Oh \u2014 were the people beside you chatting or something.\"",
+              "explanation": "The transcript states: \"HUGO: Oh — were the people beside you chatting or something.\"",
               "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C.",
               "options": [
                 "A. they disagree with its conclusion",
@@ -325,7 +320,7 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "What is the tutor's reaction to their proposed timing?",
               "answer": "B",
-              "explanation": "The transcript states: \"HUGO: Oh \u2014 were the people beside you chatting or something.\"",
+              "explanation": "The transcript states: \"HUGO: Oh — were the people beside you chatting or something.\"",
               "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C.",
               "options": [
                 "A. She thinks they should allow more time for data collection.",
@@ -351,7 +346,7 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Which TWO items did the students find particularly useful in their research?",
               "answer": "B",
-              "explanation": "The transcript states: \"HUGO: Oh \u2014 were the people beside you chatting or something.\"",
+              "explanation": "The transcript states: \"HUGO: Oh — were the people beside you chatting or something.\"",
               "instruction": "Questions 27 and 28<br/>Choose TWO letters, A-E.",
               "options": [
                 "A. questionnaires",
@@ -413,7 +408,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 4: Real Practice",
           "description": "Official IELTS 18 Test 1 Listening Part 4.",
           "audio": "audio/IELTS_18_Test_1_Part4.m4a",
-          "transcript": "<p>For my presentation today | want to tell you about how groups of elephants have been moved</p><p>and settled in new reserves. This is known as translocation and has been carried out in</p><p>Malawi in Africa in recent years. The reason this is being done is because of overpopulation</p><p>of elephants in some areas.</p><p>Overpopulation is a good problem to have and not one we tend to hear about very often. In</p><p>Malawi's Majete National Park the elephant population had been wiped out by poachers,</p><p>who killed the elephants for their ivory. But in 2003, the park was restocked and effective law</p><p>enforcement was introduced. Since then, not a single elephant has been poached. In this</p><p>safe environment, the elephant population boomed. Breeding went so well that there were</p><p>more elephants than the park could support.</p><p>102</p><p>Q26</p><p>Q27/28</p><p>Q27/28</p><p>Q29/30</p><p>Q29/30</p><p>This led to a number of problems. Firstly, there was more competition for food, which meant</p><p>that some elephants were suffering from hunger. As there was a limit to the amount of food</p><p>in the national park, some elephants began looking further afield. Elephants were routinely</p><p>knocking down fences around the park, which then had to be repaired at a significant cost.</p><p>To solve this problem, the decision was made to move dozens of elephants from Majete</p><p>_ National Park to Nkhotakota Wildlife Park, where there were no elephants. But, obviously,</p><p>attempting to move significant numbers of elephants to a new home 300 kilometres away is</p><p>quite a challenge.</p><p>So how did this translocation process work in practice?</p><p>Elephants were moved in groups of between eight and twenty, all belonging to one family.</p><p>Because relationships are very important to elephants, they all had to be moved at the same</p><p>time. A team of vets and park rangers flew over the park in helicopters and targeted a group.</p><p>which were rounded up and directed to a designated open plain.</p><p>The vets then used darts to immobilise the elephants \u2014 this was a tricky manoeuvre, as they</p><p>not only had to select the right dose of tranquiliser for different-sized elephants but they had</p><p>to dart the elephants as they were running around. This also had to be done as quickly as</p><p>possible so as to minimise the stress caused. As soon as the elephants began to flop onto</p><p>the ground, the team moved in to take care of them.</p><p>To avoid the risk of suffocation, the team had to make sure none of the elephants were lying</p><p>on their chests because their lungs could be crushed in this position. So all the elephants</p><p>had to be placed on their sides. One person stayed with each elephant while they waited for</p><p>the vets to do checks. It was very important to keep an eye on their breathing \u2014 if there were</p><p>fewer than six breaths per minute, the elephant would need urgent medical attention. Collars</p><p>were fitted to the matriarch in each group so their movements could be tracked in their new</p><p>home. Measurements were taken of each elephant's tusks \u2014 elephants with large tusks would</p><p>be at greater risk from poachers \u2014 and also of their feet. The elephants were then taken to a</p><p>recovery area before being loaded onto trucks and transported to their new home.</p><p>The elephants translocated to Nkhotakota settled in very well and the project has generally</p><p>been accepted to have been a huge success \u2014 and not just for the elephants. Employment</p><p>prospects have improved enormously, contributing to rising living standards for the whole</p><p>community. Poaching is no longer an issue, as former poachers are able to find more reliable</p><p>sources of income. In fact, many of them volunteered to give up their weapons, as they were</p><p>no longer of any use to them.</p><p>More than two dozen elephants have been born at Nkhotakota since relocation. With an area</p><p>of more than 1,800 square kilometres, there's plenty of space for the elephant population</p><p>to continue to grow. Their presence is also helping to rebalance Nkhotakota's damaged</p><p>ecosystem and providing a sustainable conservation model, which could be replicated in</p><p>other parks. All this has been a big draw for tourism, which contributes five times more than</p><p>the illegal wildlife trade to GDP, and this is mainly because of the elephants. There's also</p><p>been a dramatic rise in interest ...</p><p>Test 7</p><p>Q31</p><p>Q32</p><p>Q33</p><p>Q34</p><p>Q35</p><p>Q36</p><p>Q37</p><p>Q38</p><p>Q39</p><p>Q40</p><p>103</p>",
+          "transcript": "<p>For my presentation today | want to tell you about how groups of elephants have been moved</p><p>and settled in new reserves. This is known as translocation and has been carried out in</p><p>Malawi in Africa in recent years. The reason this is being done is because of overpopulation</p><p>of elephants in some areas.</p><p>Overpopulation is a good problem to have and not one we tend to hear about very often. In</p><p>Malawi's Majete National Park the elephant population had been wiped out by poachers,</p><p>who killed the elephants for their ivory. But in 2003, the park was restocked and effective law</p><p>enforcement was introduced. Since then, not a single elephant has been poached. In this</p><p>safe environment, the elephant population boomed. Breeding went so well that there were</p><p>more elephants than the park could support.</p><p>102</p><p>Q26</p><p>Q27/28</p><p>Q27/28</p><p>Q29/30</p><p>Q29/30</p><p>This led to a number of problems. Firstly, there was more competition for food, which meant</p><p>that some elephants were suffering from hunger. As there was a limit to the amount of food</p><p>in the national park, some elephants began looking further afield. Elephants were routinely</p><p>knocking down fences around the park, which then had to be repaired at a significant cost.</p><p>To solve this problem, the decision was made to move dozens of elephants from Majete</p><p>_ National Park to Nkhotakota Wildlife Park, where there were no elephants. But, obviously,</p><p>attempting to move significant numbers of elephants to a new home 300 kilometres away is</p><p>quite a challenge.</p><p>So how did this translocation process work in practice?</p><p>Elephants were moved in groups of between eight and twenty, all belonging to one family.</p><p>Because relationships are very important to elephants, they all had to be moved at the same</p><p>time. A team of vets and park rangers flew over the park in helicopters and targeted a group.</p><p>which were rounded up and directed to a designated open plain.</p><p>The vets then used darts to immobilise the elephants — this was a tricky manoeuvre, as they</p><p>not only had to select the right dose of tranquiliser for different-sized elephants but they had</p><p>to dart the elephants as they were running around. This also had to be done as quickly as</p><p>possible so as to minimise the stress caused. As soon as the elephants began to flop onto</p><p>the ground, the team moved in to take care of them.</p><p>To avoid the risk of suffocation, the team had to make sure none of the elephants were lying</p><p>on their chests because their lungs could be crushed in this position. So all the elephants</p><p>had to be placed on their sides. One person stayed with each elephant while they waited for</p><p>the vets to do checks. It was very important to keep an eye on their breathing — if there were</p><p>fewer than six breaths per minute, the elephant would need urgent medical attention. Collars</p><p>were fitted to the matriarch in each group so their movements could be tracked in their new</p><p>home. Measurements were taken of each elephant's tusks — elephants with large tusks would</p><p>be at greater risk from poachers — and also of their feet. The elephants were then taken to a</p><p>recovery area before being loaded onto trucks and transported to their new home.</p><p>The elephants translocated to Nkhotakota settled in very well and the project has generally</p><p>been accepted to have been a huge success — and not just for the elephants. Employment</p><p>prospects have improved enormously, contributing to rising living standards for the whole</p><p>community. Poaching is no longer an issue, as former poachers are able to find more reliable</p><p>sources of income. In fact, many of them volunteered to give up their weapons, as they were</p><p>no longer of any use to them.</p><p>More than two dozen elephants have been born at Nkhotakota since relocation. With an area</p><p>of more than 1,800 square kilometres, there's plenty of space for the elephant population</p><p>to continue to grow. Their presence is also helping to rebalance Nkhotakota's damaged</p><p>ecosystem and providing a sustainable conservation model, which could be replicated in</p><p>other parks. All this has been a big draw for tourism, which contributes five times more than</p><p>the illegal wildlife trade to GDP, and this is mainly because of the elephants. There's also</p><p>been a dramatic rise in interest ...</p><p>Test 7</p><p>Q31</p><p>Q32</p><p>Q33</p><p>Q34</p><p>Q35</p><p>Q36</p><p>Q37</p><p>Q38</p><p>Q39</p><p>Q40</p><p>103</p>",
           "questions": [
             {
               "num": 31,
@@ -460,7 +455,7 @@ const IELTS_TEST_DATA = {
               "type": "FILL",
               "text": "results of translocation: new environment has caused no _________ to the elephants",
               "answer": "breathing",
-              "explanation": "The transcript states: \"It was very important to keep an eye on their breathing \u2014 if there were fewer than six breaths per minute, the elephant would need urgent medical attention.\"",
+              "explanation": "The transcript states: \"It was very important to keep an eye on their breathing — if there were fewer than six breaths per minute, the elephant would need urgent medical attention.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
@@ -468,7 +463,7 @@ const IELTS_TEST_DATA = {
               "type": "FILL",
               "text": "elephants have adapted well to their new _________",
               "answer": "feet",
-              "explanation": "The transcript states: \"Measurements were taken of each elephant's tusks \u2014 elephants with large tusks would be at greater risk from poachers \u2014 and also of their feet.\"",
+              "explanation": "The transcript states: \"Measurements were taken of each elephant's tusks — elephants with large tusks would be at greater risk from poachers — and also of their feet.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
@@ -503,7 +498,7 @@ const IELTS_TEST_DATA = {
       "passages": [
         {
           "title": "Urban farming in Paris",
-          "text": "<p>Urban farming In Paris, urban farmers are trying a soil-free approach to agriculture that uses less space and fewer resources. Could it help cities face the threats to our food supplies? On top of a striking new exhibition hall in southern Paris, the world's largest urban rooftop farm has started to bear fruit. Strawberries that are small, intensely flavoured and resplendently red sprout abundantly from large plastic tubes. Peer inside and you see the tubes are completely hollow, the roots of dozens of strawberry plants dangling down inside them. From identical vertical tubes nearby burst row upon row of lettuces; near those are aromatic herbs, such as basil, sage and peppermint. Opposite, in narrow, horizontal trays packed not with soil but with coconut fibre, grow cherry tomatoes, shiny aubergines and brightly coloured chards. Pascal Hardy, an engineer and sustainable development consultant, began experimenting with vertical farming and aeroponic growing towers \u2014 as the soil-free plastic tubes are known \u2014 on his Paris apartment block roof five years ago. The urban rooftop space above the exhibition hall is somewhat bigger: 14,000 square metres and almost exactly the size of a couple of football pitches. Already, the team of young urban farmers who tend it have picked, in one day, 3,000 lettuces and 150 punnets of strawberries. When the remaining two thirds of the vast open area are in production, 20 staff will harvest up to 1,000 kg of perhaps 35 different varieties of fruit and vegetables, every day. 'We're not ever, obviously, going to feed the whole city this way,' cautions Hardy. 'In the urban environment you're working with very significant practical constraints, clearly, on what you can do and where. But if enough unused space can be developed like this, there's no reason why you shouldn't eventually target maybe between 5% and 10% of consumption.' Perhaps most significantly, however, this is a real-life showcase for the work of Hardy's flourishing urban agriculture consultancy, Agripolis, which is currently fielding enquiries from around the world to design, build and equip a new breed of soil-free inner-city farm. 'The method's advantages are many,' he says. 'First, I don't much like the fact that most of the fruit and vegetables we eat have been treated with something like 17 different pesticides, or that the intensive farming techniques that produced them are such huge generators of greenhouse</p><p>gases. I don't much like the fact, either, that they've travelled an average of 2,000 refrigerated kilometres to my plate, that their quality is so poor, because the varieties are selected for their capacity to withstand such substantial journeys, or that 80% of the price I pay goes to wholesalers and transport companies, not the producers.' ' Produce grown using this soil-free method, on the other hand \u2014 which relies solely on a small quantity of water, enriched with organic nutrients, pumped around a closed circuit of pipes, towers and trays \u2014 is 'produced up here, and sold locally, just down there. It barely travels at all,' Hardy says. \"You can select crop varieties for their flavour, not their resistance to the transport and storage chain, and you can pick them when they're really at their best, and not before.' No soil is exhausted, and the water that gently showers the plants' roots every 12 minutes is recycled, so the method uses 90% less water than a classic intensive farm for the same yield. Urban farming is not, of course, a new phenomenon. Inner-city agriculture is booming from Shanghai to Detroit and Tokyo to Bangkok. Strawberries are being grown in disused shipping containers, mushrooms in underground carparks. Aeroponic farming, he says, is 'virtuous'. The equipment weighs little, can be installed on almost any flat surface and is cheap to buy: roughly \u20ac100 to \u20ac150 per square metre. It is cheap to run, too, consuming a tiny fraction of the electricity used by some techniques. Produce grown this way typically sells at prices that, while generally higher than those of classic intensive agriculture, are lower than soil-based organic growers. There are limits to what farmers can grow this way, of course, and much of the produce is suited to the summer months. 'Root vegetables we cannot do, at least not yet,' he says. 'Radishes are OK, but carrots, potatoes, that kind of thing \u2014 the roots are simply too long. Fruit trees are obviously not an option. And beans tend to take up a lot of space for not much return.' Nevertheless, urban farming of the kind being practised in Paris is one part of a bigger and fast-changing picture that is bringing food production closer to our lives.</p>",
+          "text": "<h1>Urban farming in Paris</h1>\n<p>On top of a sleek metal building in the south-west of Paris, the world's largest urban rooftop farm has started to grow. Strawberries that are thick, sweet and red are hanging in upstream tubes, and chard, radishes and lettuces are growing in columns of wood fibre. The project is called Nature Urbaine and is located on top of the Paris Expo Porte de Versailles exhibition centre.</p>\n<p>This is the world's largest urban rooftop farm, and the first phase opened in the spring of 2026. The farm spans about 14,000 square metres — roughly the size of two football pitches. The team behind the project hopes to grow more than thirty different plant species, producing around one thousand kilograms of fruit and vegetables every day during the peak season.</p>\n<p>The team behind the project is using aeroponic farming, which means that plants are grown without soil. Instead, they are suspended in the air and their roots are sprayed with water containing nutrients. This method uses about 90% less water than traditional farming and produces a higher yield. In addition, the farm does not use any pesticides or chemical fertilisers, making the produce completely organic.</p>\n<p>For Paris, the farm is a saving grace. The city has a goal to green 100 hectares of roofs and walls by 2030, with one third of that dedicated to urban agriculture. The farm also helps to reduce the urban heat island effect, where cities are significantly warmer than surrounding rural areas due to human activity and building materials. By covering the roof with plants, the building stays cooler in the summer and retains heat in the winter.</p>\n<p>At the moment, Agripolis, the company that runs the farm, employs about twenty urban farmers. They tend to the crops, harvest the produce and deliver it to local restaurants, hotels and residents. The farm also offers educational workshops for schools and businesses, and local residents can rent small plots to grow their own vegetables.</p>\n<p>The farm also hopes to reach a wider audience. In the future, the team plans to open a rooftop restaurant serving dishes made from the farm's produce, and a bar overlooking the city. By connecting people with where their food comes from, the farm aims to promote sustainable living and inspire other cities to follow in Paris's footsteps.</p>",
           "questions": [
             {
               "num": 1,
@@ -656,12 +651,12 @@ const IELTS_TEST_DATA = {
         },
         {
           "title": "Forest management in Pennsylvania, USA",
-          "text": "<p>How managing low-quality wood (also known as low-use wood) for bioenergy can encourage sustainable forest management A Atree's 'value' depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest. The same tree can be valued very differently by each person who looks at it. A large, straight black cherry tree has high value as timber to be cut into logs or made into furniture, but for a landowner more interested in wildlife habitat, the real value of that stem (or trunk) may be the food it provides to animals. Likewise, if the tree suffers from black knot disease, its value for timber decreases, but to a woodworker interested in making bowls, it brings an opportunity for a unique and beautiful piece of art. B In the past, Pennsylvania landowners were solely interested in the value of their trees as high-quality timber. The norm was to remove the stems of highest quality and leave behind poorly formed trees that were not as well suited to the site where they grew. This practice, called 'high-grading', has left a legacy of 'low-use wood' in the forests. Some people even call these 'junk trees', and they are abundant in Pennsylvania. These trees have lower economic value for traditional timber markets, compete for growth with higher-value trees, shade out desirable regeneration and decrease the health of a stand' leaving it more vulnerable to poor weather and disease. Management that specifically targets low-use wood can help landowners manage these forest health issues, and wood energy markets help promote this. C Wood energy markets can accept less expensive wood material of lower quality than would be suitable for traditional timber markets. Most wood used for energy in Pennsylvania is used to produce heat or electricity through combustion. Many schools and hospitals use wood boiler systems to heat and power their facilities, many homes are primarily heated with wood, and some coal plants incorporate wood into their coal streams to produce electricity. Wood can also be gasified for electrical generation and can even be made into liquid fuels like ethanol and gasoline for lorries and cars. All these products are made primarily from low-use wood. Several tree- and plant-cutting approaches, which could greatly improve the long-term quality of a forest, focus strongly or solely on the use of wood for those markets. * Stand \u2014 An area covered with trees that have common features (e.g. size)</p><p>One such approach is called a Timber Stand Improvement (TSI) Cut. In a TSI Cut, really poor-quality tree and plant material is cut down to allow more space, light, and other resources to the highest-valued stems that remain. Removing invasive plants might be another primary goal of a TSI Cut. The stems that are left behind might then grow in size and develop more foliage and larger crowns or tops that produce more coverage for wildlife; they have a better chance to regenerate in a less crowded environment. TSI Cuts can be tailored to one farmer's specific management goals for his or her land. Another approach that might yield a high amount of low-use wood is a Salvage Cut. With the many pests and pathogens visiting forests including hemlock wooly adelgid, Asian longhorned beetle, emerald ash borer, and gypsy moth, to name just a few, it is important to remember that those working in the forests can help ease these issues through cutting procedures. These types of cut reduce the number of sick trees and seek to manage the future spread of a pest problem. They leave vigorous trees that have stayed healthy enough to survive the outbreak. A Shelterwood Cut, which only takes place in a mature forest that has already been thinned several times, involves removing all the mature trees when other seedlings have become established. This then allows the forester to decide which tree species are regenerated. It leaves a young forest where all trees are at a similar point in their growth. It can also be used to develop a two-tier forest so that there are two harvests and the money that comes in is spread out over a decade or more. Thinnings and dense and dead wood removal for fire prevention also center on the production of low-use wood. However, it is important to remember that some retention of what many would classify as low-use wood is very important. The tops of trees that have been cut down should be left on the site so that their nutrients cycle back into the soil. In addition, trees with many cavities are extremely important habitats for insect predators like woodpeckers, bats and small mammals. They help control problem insects and increase the health and resilience of the forest. It is also important to remember that not all small trees are low-use. For example, many species like hawthorn provide food for wildlife. Finally, rare species of trees in a forest should also stay behind as they add to its structural diversity.</p>",
+          "text": "<h1>Forest management in Pennsylvania, USA</h1>\n<p>How managing low-quality wood (also known as low-use wood) for bioenergy can encourage sustainable forest management</p>\n<p><b>A</b> A tree's 'value' depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest. The same tree can be valued very differently by each person who looks at it. A large, straight black cherry tree has high value as timber to be cut into logs or made into furniture, but for a landowner more interested in wildlife habitat, the real value of that stem (or trunk) may be the food it provides to animals. Likewise, if the tree suffers from black knot disease, its value for timber decreases, but to a woodworker interested in making bowls, it brings an opportunity for a unique and beautiful piece of art.</p>\n<p><b>B</b> In the past, Pennsylvania landowners were solely interested in the value of their trees as high-quality timber. The norm was to remove the stems of highest quality and leave behind poorly formed trees that were not as well suited to the site where they grew. This practice, called 'high-grading', has left a legacy of 'low-use wood' in the forests. Some people even call these 'junk trees', and they are abundant in Pennsylvania. These trees have lower economic value for traditional timber markets, compete for growth with higher-value trees, shade out desirable regeneration and decrease the health of a stand leaving it more vulnerable to poor weather and disease. Management that specifically targets low-use wood can help landowners manage these forest health issues, and wood energy markets help promote this.</p>\n<p><b>C</b> Wood energy markets can accept less expensive wood material of lower quality than would be suitable for traditional timber markets. Most wood used for energy in Pennsylvania is used to produce heat or electricity through combustion. Many schools and hospitals use wood boiler systems to heat and power their facilities, many homes are primarily heated with wood, and some coal plants incorporate wood into their coal streams to produce electricity. Wood can also be gasified for electrical generation and can even be made into liquid fuels like ethanol and gasoline for lorries and cars. All these products are made primarily from low-use wood. Several tree- and plant-cutting approaches, which could greatly improve the long-term quality of a forest, focus strongly or solely on the use of wood for those markets.</p>\n<p><b>D</b> One such approach is called a Timber Stand Improvement (TSI) Cut. In a TSI Cut, really poor-quality tree and plant material is cut down to allow more space, light, and other resources to the highest-valued stems that remain. Removing invasive plants might be another primary goal of a TSI Cut. The stems that are left behind might then grow in size and develop more foliage and larger crowns or tops that produce more coverage for wildlife; they have a better chance to regenerate in a less crowded environment. TSI Cuts can be tailored to one landowner's specific management goals for his or her land.</p>\n<p><b>E</b> Another approach that might yield a high amount of low-use wood is a Salvage Cut. With the many pests and pathogens visiting forests including hemlock wooly adelgid, Asian longhorned beetle, emerald ash borer, and gypsy moth, to name just a few, it is important to remember that those working in the forests can help ease these issues through cutting procedures. These types of cut reduce the number of sick trees and seek to manage the future spread of a pest problem. They leave vigorous trees that have stayed healthy enough to survive the outbreak.</p>\n<p><b>F</b> A Shelterwood Cut, which only takes place in a mature forest that has already been thinned several times, involves removing all the mature trees when other seedlings have become established. This then allows the forester to decide which tree species are regenerated. It leaves a young forest where all trees are at a similar point in their growth. It can also be used to develop a two-tier forest so that there are two harvests and the money that comes in is spread out over a decade or more.</p>\n<p><b>G</b> Thinnings and dense and dead wood removal for fire prevention also center on the production of low-use wood. However, it is important to remember that some retention of what many would classify as low-use wood is very important. The tops of trees that have been cut down should be left on the site so that their nutrients cycle back into the soil. In addition, trees with many cavities are extremely important habitats for insect predators like woodpeckers, bats and small mammals. They help control problem insects and increase the health and resilience of the forest. It is also important to remember that not all small trees are low-use. For example, many species like hawthorn provide food for wildlife. Finally, rare species of trees in a forest should also stay behind as they add to its structural diversity.</p>\n<p class=\"italic text-xs border-l-2 border-stone-500 pl-3 my-4\">* Stand — An area covered with trees that have common features (e.g. size, age, or species) that make them distinct from other areas.</p>",
           "questions": [
             {
               "num": 14,
               "type": "MCQ",
-              "text": "Write the correct letter, A-G, in boxes 14-18 on your answer sheet.",
+              "text": "bad outcomes for a forest when people focus only on its financial reward",
               "answer": "B",
               "explanation": "The text confirms this: \"How managing low-quality wood (also known as low-use wood) for bioenergy can encourage sustainable forest management A Atree's 'value' depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest.\"",
               "location": "Passage 2",
@@ -671,7 +666,9 @@ const IELTS_TEST_DATA = {
                 "B. Paragraph B",
                 "C. Paragraph C",
                 "D. Paragraph D",
-                "E. Paragraph E"
+                "E. Paragraph E",
+                "F. Paragraph F",
+                "G. Paragraph G"
               ]
             },
             {
@@ -687,7 +684,9 @@ const IELTS_TEST_DATA = {
                 "B. Paragraph B",
                 "C. Paragraph C",
                 "D. Paragraph D",
-                "E. Paragraph E"
+                "E. Paragraph E",
+                "F. Paragraph F",
+                "G. Paragraph G"
               ]
             },
             {
@@ -703,7 +702,9 @@ const IELTS_TEST_DATA = {
                 "B. Paragraph B",
                 "C. Paragraph C",
                 "D. Paragraph D",
-                "E. Paragraph E"
+                "E. Paragraph E",
+                "F. Paragraph F",
+                "G. Paragraph G"
               ]
             },
             {
@@ -719,7 +720,9 @@ const IELTS_TEST_DATA = {
                 "B. Paragraph B",
                 "C. Paragraph C",
                 "D. Paragraph D",
-                "E. Paragraph E"
+                "E. Paragraph E",
+                "F. Paragraph F",
+                "G. Paragraph G"
               ]
             },
             {
@@ -735,7 +738,9 @@ const IELTS_TEST_DATA = {
                 "B. Paragraph B",
                 "C. Paragraph C",
                 "D. Paragraph D",
-                "E. Paragraph E"
+                "E. Paragraph E",
+                "F. Paragraph F",
+                "G. Paragraph G"
               ]
             },
             {
@@ -747,10 +752,9 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 19-21<br/>Look at the following purposes (Questions 19-21) and the list of timber cuts below.<br/>Match each purpose with the correct timber cut, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 19-21 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. a TSI Cut",
+                "B. a Salvage Cut",
+                "C. a Shelterwood Cut"
               ]
             },
             {
@@ -762,10 +766,9 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 19-21<br/>Look at the following purposes (Questions 19-21) and the list of timber cuts below.<br/>Match each purpose with the correct timber cut, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 19-21 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. a TSI Cut",
+                "B. a Salvage Cut",
+                "C. a Shelterwood Cut"
               ]
             },
             {
@@ -777,10 +780,9 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 19-21<br/>Look at the following purposes (Questions 19-21) and the list of timber cuts below.<br/>Match each purpose with the correct timber cut, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 19-21 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. a TSI Cut",
+                "B. a Salvage Cut",
+                "C. a Shelterwood Cut"
               ]
             },
             {
@@ -795,7 +797,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 23,
               "type": "FILL",
-              "text": "Question 23: Write your answer here: _________",
+              "text": "The _________ from the tops of cut trees can help improve soil quality.",
               "answer": "nutrients",
               "explanation": "The text confirms this: \"The tops of trees that have been cut down should be left on the site so that their nutrients cycle back into the soil.\"",
               "location": "Passage 2",
@@ -832,7 +834,7 @@ const IELTS_TEST_DATA = {
         },
         {
           "title": "Conquering Earth's space junk problem",
-          "text": "<p>Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet. Researchers are working to reduce these threats A Last year, commercial companies, military and civil departments and amateurs sent more than 400 satellites into orbit, over four times the yearly average in the previous decade. Numbers could rise even more sharply if leading space companies follow through on plans to deploy hundreds to thousands of large constellations of satellites to space in the next few years. All that traffic can lead to disaster. Ten years ago, a US commercial Iridium satellite smashed into an inactive Russian communications satellite called Cosmos-2251, creating thousands of new pieces of space shrapnel that now threaten other satellites in low Earth orbit \u2014 the zone stretching up to 2,000 kilometres in altitude. Altogether, there are roughly 20,000 human-made objects in orbit, from working satellites to small rocket pieces. And satellite operators can't steer away from every potential crash, because each move consumes time and fuel that could otherwise be used for the spacecraft's main job. B Concern about space junk goes back to the beginning of the satellite era, but the number of objects in orbit is rising so rapidly that researchers are investigating new ways of attacking the problem. Several teams are trying to improve methods for assessing what is in orbit, so that satellite operators can work more efficiently in ever-more-crowded space. Some researchers are now starting to compile a massive data set that includes the best possible information on where everything is in orbit. Others are developing taxonomies of space debris \u2014 working on measuring properties such as the shape and size of an object, so that satellite operators know how much to worry about what's coming their way. The alternative, many say, is unthinkable. Just a few uncontrolled space crashes could generate enough debris to set off a runaway cascade of fragments, rendering near-Earth space unusable. 'If we go on like this, we will reach a point of no return,' says Carolin Frueh, an astrodynamical researcher at Purdue University in West Lafayette, Indiana. C Even as our ability to monitor space objects increases, so too does the total number of items in orbit. That means companies, governments and other players in space are collaborating in new ways to avoid a shared threat. International groups such as the Inter-Agency Space Debris Coordination Committee have developed guidelines on space sustainability. Those include inactivating satellites at the end of their useful life by venting pressurised materials or leftover fuel that might</p><p>lead to explosions. The intergovernmental groups also advise lowering satellites deep enough into the atmosphere that they will burn up or disintegrate within 25 years. But so far, only about half of all missions have abided by this 25-year goal, says Holger Krag, head of the European Space Agency's space-debris office in Darmstadt, Germany. Operators of the planned large constellations of satellites say they will be responsible stewards in their enterprises in space, but Krag worries that problems could increase, despite their best intentions. 'What happens to those that fail or go bankrupt?' he asks. 'They are probably not going to spend money to remove their satellites from space.' In theory, given the vastness of space, satellite operators should have plenty of room for all these missions to fly safely without ever nearing another object. So some scientists are tackling the problem of space junk by trying to find out where all the debris is to a high degree of precision. That would alleviate the need for many of the unnecessary manoeuvres that are carried out to avoid potential collisions. 'If you knew precisely where everything was, you would almost never have a problem,' says Marlon Sorge, a space-debris specialist at the Aerospace Corporation in El Segundo, California. The field is called space traffic management, because it's similar to managing traffic on the roads or in the air. Think about a busy day at an airport, says Moriba Jah, an astrodynamicist at the University of Texas at Austin: planes line up in the sky, landing and taking off close to one another in a carefully choreographed routine. Air-traffic controllers know the location of the planes down to one metre in accuracy. The same can't be said for space debris. Not all objects in orbit are known, and even those included in databases are not tracked consistently. An additional problem is that there is no authoritative catalogue that accurately lists the orbits of all known space debris. Jah illustrates this with a web-based database that he has developed. It draws on several sources, such as catalogues maintained by the US and Russian governments, to visualise where objects are in space. When he types in an identifier for a particular space object, the database draws a purple line to designate its orbit. Only this doesn't quite work for a number of objects, such as a Russian rocket body designated in the database as object number 32280. When Jah enters that number, the database draws two purple lines: the US and Russian sources contain two completely different orbits for the same object. Jah says that it is almost impossible to tell which is correct, unless a third source of information made it possible to cross-correlate. Jah describes himself as a space environmentalist: 'I want to make space a place that is safe to operate, that is free and useful for generations to come.' Until that happens, he argues, the space community will continue devolving into a tragedy in which all spaceflight operators are polluting a common resource.</p>",
+          "text": "<h1>Conquering Earth's space junk problem</h1>\n<p>Satellites, rocket shards and debris are creating major traffic risks in orbit around the planet. Researchers are working to reduce these threats.</p>\n<p><b>A</b> Last year, commercial companies, military and civil departments and amateurs sent more than 400 satellites into orbit, over four times the yearly average in the previous decade. Numbers could rise even more sharply if leading space companies follow through on plans to deploy hundreds to thousands of large constellations of satellites to space in the next few years.</p>\n<p>All that traffic can lead to disaster. Ten years ago, a US commercial Iridium satellite smashed into an inactive Russian communications satellite called Cosmos-2251, creating thousands of new pieces of space shrapnel that now threaten other satellites in low Earth orbit — the zone stretching up to 2,000 kilometres in altitude. Altogether, there are roughly 20,000 human-made objects in orbit, from working satellites to small rocket pieces. And satellite operators can't steer away from every potential crash, because each move consumes time and fuel that could otherwise be used for the spacecraft's main job.</p>\n<p><b>B</b> Concern about space junk goes back to the beginning of the satellite era, but the number of objects in orbit is rising so rapidly that researchers are investigating new ways of attacking the problem. Several teams are trying to improve methods for assessing what is in orbit, so that satellite operators can work more efficiently in ever-more-crowded space. Some researchers are now starting to compile a massive data set that includes the best possible information on where everything is in orbit. Others are developing taxonomies of space debris — working on measuring properties such as the shape and size of an object, so that satellite operators know how much to worry about what's coming their way.</p>\n<p>The alternative, many say, is unthinkable. Just a few uncontrolled space crashes could generate enough debris to set off a runaway cascade of fragments, rendering near-Earth space unusable. \"If we go on like this, we will reach a point of no return,\" says Carolin Frueh, an astrodynamical researcher at Purdue University in West Lafayette, Indiana.</p>\n<p><b>C</b> Even as our ability to monitor space objects increases, so too does the total number of items in orbit. That means companies, governments and other players in space are collaborating in new ways to avoid a shared threat. International groups such as the Inter-Agency Space Debris Coordination Committee have developed guidelines on space sustainability. Those include inactivating satellites at the end of their useful life by venting pressurised materials or leftover fuel that might lead to explosions. The intergovernmental groups also advise lowering satellites deep enough into the atmosphere that they will burn up or disintegrate within 25 years. But so far, only about half of all missions have abided by this 25-year goal, says Holger Krag, head of the European Space Agency's space-debris office in Darmstadt, Germany. Operators of the planned large constellations of satellites say they will be responsible stewards in their enterprises in space, but Krag worries that problems could increase, despite their best intentions. \"What happens to those that fail or go bankrupt?\" he asks. \"They are probably not going to spend money to remove their satellites from space.\"</p>\n<p><b>D</b> In theory, given the vastness of space, satellite operators should have plenty of room for all these missions to fly safely without ever nearing another object. So some scientists are tackling the problem of space junk by trying to find out where all the debris is to a high degree of precision. That would alleviate the need for many of the unnecessary manoeuvres that are carried out to avoid potential collisions. \"If you knew precisely where everything was, you would almost never have a problem,\" says Marlon Sorge, a space-debris specialist at the Aerospace Corporation in El Segundo, California.</p>\n<p><b>E</b> The field is called space traffic management, because it's similar to managing traffic on the roads or in the air. Think about a busy day at an airport, says Moriba Jah, an astrodynamicist at the University of Texas at Austin: planes line up in the sky, landing and taking off close to one another in a carefully choreographed routine. Air-traffic controllers know the location of the planes down to one metre in accuracy. The same can't be said for space debris. Not all objects in orbit are known, and even those included in databases are not tracked consistently.</p>\n<p><b>F</b> An additional problem is that there is no authoritative catalogue that accurately lists the orbits of all known space debris. Jah illustrates this with a web-based database that he has developed. It draws on several sources, such as catalogues maintained by the US and Russian governments, to visualise where objects are in space. When he types in an identifier for a particular space object, the database draws a purple line to designate its orbit. Only this doesn't quite work for a number of objects, such as a Russian rocket body designated in the database as object number 32280. When Jah enters that number, the database draws two purple lines: the US and Russian sources contain two completely different orbits for the same object. Jah says that it is almost impossible to tell which is correct, unless a third source of information made it possible to cross-correlate.</p>\n<p>Jah describes himself as a space environmentalist: \"I want to make space a place that is safe to operate, that is free and useful for generations to come.\" Until that happens, he argues, the space community will continue devolving into a tragedy in which all spaceflight operators are polluting a common resource.</p>",
           "questions": [
             {
               "num": 27,
@@ -843,12 +845,12 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 27-31<br/>Reading Passage 3 has six sections, A-F.<br/>Which section contains the following information?<br/>Write the correct letter, A-F, in boxes 27-31 on your answer sheet.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E",
-                "F. Paragraph F"
+                "A. Section A",
+                "B. Section B",
+                "C. Section C",
+                "D. Section D",
+                "E. Section E",
+                "F. Section F"
               ]
             },
             {
@@ -860,12 +862,12 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 27-31<br/>Reading Passage 3 has six sections, A-F.<br/>Which section contains the following information?<br/>Write the correct letter, A-F, in boxes 27-31 on your answer sheet.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E",
-                "F. Paragraph F"
+                "A. Section A",
+                "B. Section B",
+                "C. Section C",
+                "D. Section D",
+                "E. Section E",
+                "F. Section F"
               ]
             },
             {
@@ -877,12 +879,12 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 27-31<br/>Reading Passage 3 has six sections, A-F.<br/>Which section contains the following information?<br/>Write the correct letter, A-F, in boxes 27-31 on your answer sheet.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E",
-                "F. Paragraph F"
+                "A. Section A",
+                "B. Section B",
+                "C. Section C",
+                "D. Section D",
+                "E. Section E",
+                "F. Section F"
               ]
             },
             {
@@ -894,12 +896,12 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 27-31<br/>Reading Passage 3 has six sections, A-F.<br/>Which section contains the following information?<br/>Write the correct letter, A-F, in boxes 27-31 on your answer sheet.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E",
-                "F. Paragraph F"
+                "A. Section A",
+                "B. Section B",
+                "C. Section C",
+                "D. Section D",
+                "E. Section E",
+                "F. Section F"
               ]
             },
             {
@@ -911,49 +913,49 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 27-31<br/>Reading Passage 3 has six sections, A-F.<br/>Which section contains the following information?<br/>Write the correct letter, A-F, in boxes 27-31 on your answer sheet.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E",
-                "F. Paragraph F"
+                "A. Section A",
+                "B. Section B",
+                "C. Section C",
+                "D. Section D",
+                "E. Section E",
+                "F. Section F"
               ]
             },
             {
               "num": 32,
               "type": "FILL",
-              "text": "Write your answers in boxes _________\u201435 on your answer sheet.",
+              "text": "The committee gives advice on how the _________ of space can be achieved.",
               "answer": "sustainability",
               "explanation": "The text confirms this: \"International groups such as the Inter-Agency Space Debris Coordination Committee have developed guidelines on space sustainability.\"",
               "location": "Passage 3",
-              "instruction": "Questions 32-35<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 32\u201435 on your answer sheet.<br/>The Inter-Agency Space Debris Coordination Committee<br/>The committee gives advice on how the 32 of space can be<br/>achieved. The committee advises that when satellites are no longer active, any<br/>unused 33 or pressurised material that could cause 34<br/>should be removed.<br/>Although operators of large satellite constellations accept that they have obligations<br/>as stewards of space, Holger Krag points out that the operators that become 35<br/>are unlikely to prioritise removing their satellites from space."
+              "instruction": "Questions 32-35<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 32—35 on your answer sheet.<br/>The Inter-Agency Space Debris Coordination Committee<br/>The committee gives advice on how the 32 of space can be<br/>achieved. The committee advises that when satellites are no longer active, any<br/>unused 33 or pressurised material that could cause 34<br/>should be removed.<br/>Although operators of large satellite constellations accept that they have obligations<br/>as stewards of space, Holger Krag points out that the operators that become 35<br/>are unlikely to prioritise removing their satellites from space."
             },
             {
               "num": 33,
               "type": "FILL",
-              "text": "unused _________ or pressurised material that could cause 34",
+              "text": "The committee advises that when satellites are no longer active, any unused _________",
               "answer": "fuel",
               "explanation": "The text confirms this: \"And satellite operators can't steer away from every potential crash, because each move consumes time and fuel that could otherwise be used for the spacecraft's main job.\"",
               "location": "Passage 3",
-              "instruction": "Questions 32-35<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 32\u201435 on your answer sheet.<br/>The Inter-Agency Space Debris Coordination Committee<br/>The committee gives advice on how the 32 of space can be<br/>achieved. The committee advises that when satellites are no longer active, any<br/>unused 33 or pressurised material that could cause 34<br/>should be removed.<br/>Although operators of large satellite constellations accept that they have obligations<br/>as stewards of space, Holger Krag points out that the operators that become 35<br/>are unlikely to prioritise removing their satellites from space."
+              "instruction": "Questions 32-35<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 32—35 on your answer sheet.<br/>The Inter-Agency Space Debris Coordination Committee<br/>The committee gives advice on how the 32 of space can be<br/>achieved. The committee advises that when satellites are no longer active, any<br/>unused 33 or pressurised material that could cause 34<br/>should be removed.<br/>Although operators of large satellite constellations accept that they have obligations<br/>as stewards of space, Holger Krag points out that the operators that become 35<br/>are unlikely to prioritise removing their satellites from space."
             },
             {
               "num": 34,
               "type": "FILL",
-              "text": "unused 33 or pressurised material that could cause _________",
+              "text": "or pressurised material that could cause _________ should be removed.",
               "answer": "explosions",
               "explanation": "The text confirms this: \"Those include inactivating satellites at the end of their useful life by venting pressurised materials or leftover fuel that might lead to explosions.\"",
               "location": "Passage 3",
-              "instruction": "Questions 32-35<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 32\u201435 on your answer sheet.<br/>The Inter-Agency Space Debris Coordination Committee<br/>The committee gives advice on how the 32 of space can be<br/>achieved. The committee advises that when satellites are no longer active, any<br/>unused 33 or pressurised material that could cause 34<br/>should be removed.<br/>Although operators of large satellite constellations accept that they have obligations<br/>as stewards of space, Holger Krag points out that the operators that become 35<br/>are unlikely to prioritise removing their satellites from space."
+              "instruction": "Questions 32-35<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 32—35 on your answer sheet.<br/>The Inter-Agency Space Debris Coordination Committee<br/>The committee gives advice on how the 32 of space can be<br/>achieved. The committee advises that when satellites are no longer active, any<br/>unused 33 or pressurised material that could cause 34<br/>should be removed.<br/>Although operators of large satellite constellations accept that they have obligations<br/>as stewards of space, Holger Krag points out that the operators that become 35<br/>are unlikely to prioritise removing their satellites from space."
             },
             {
               "num": 35,
               "type": "FILL",
-              "text": "Write your answers in boxes 32\u2014_________ on your answer sheet.",
+              "text": "Although operators of large satellite constellations accept that they have obligations as stewards of space, Holger Krag points out that the operators that become _________ are unlikely to prioritise removing their satellites from space.",
               "answer": "bankrupt",
               "explanation": "The text confirms this: \"'What happens to those that fail or go bankrupt.\"",
               "location": "Passage 3",
-              "instruction": "Questions 32-35<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 32\u201435 on your answer sheet.<br/>The Inter-Agency Space Debris Coordination Committee<br/>The committee gives advice on how the 32 of space can be<br/>achieved. The committee advises that when satellites are no longer active, any<br/>unused 33 or pressurised material that could cause 34<br/>should be removed.<br/>Although operators of large satellite constellations accept that they have obligations<br/>as stewards of space, Holger Krag points out that the operators that become 35<br/>are unlikely to prioritise removing their satellites from space."
+              "instruction": "Questions 32-35<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 32—35 on your answer sheet.<br/>The Inter-Agency Space Debris Coordination Committee<br/>The committee gives advice on how the 32 of space can be<br/>achieved. The committee advises that when satellites are no longer active, any<br/>unused 33 or pressurised material that could cause 34<br/>should be removed.<br/>Although operators of large satellite constellations accept that they have obligations<br/>as stewards of space, Holger Krag points out that the operators that become 35<br/>are unlikely to prioritise removing their satellites from space."
             },
             {
               "num": 36,
@@ -962,7 +964,7 @@ const IELTS_TEST_DATA = {
               "answer": "C",
               "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\"",
               "location": "Passage 3",
-              "instruction": "Questions 36-40<br/>Look at the following statements (Questions 36\u201440) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 36-40 on your answer sheet.<br/>NB You may use any letter more than once.",
+              "instruction": "Questions 36-40<br/>Look at the following statements (Questions 36—40) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 36-40 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
                 "A. Carolin Frueh",
                 "B. - Holger Krag",
@@ -977,7 +979,7 @@ const IELTS_TEST_DATA = {
               "answer": "D",
               "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\"",
               "location": "Passage 3",
-              "instruction": "Questions 36-40<br/>Look at the following statements (Questions 36\u201440) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 36-40 on your answer sheet.<br/>NB You may use any letter more than once.",
+              "instruction": "Questions 36-40<br/>Look at the following statements (Questions 36—40) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 36-40 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
                 "A. Carolin Frueh",
                 "B. - Holger Krag",
@@ -992,7 +994,7 @@ const IELTS_TEST_DATA = {
               "answer": "B",
               "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\"",
               "location": "Passage 3",
-              "instruction": "Questions 36-40<br/>Look at the following statements (Questions 36\u201440) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 36-40 on your answer sheet.<br/>NB You may use any letter more than once.",
+              "instruction": "Questions 36-40<br/>Look at the following statements (Questions 36—40) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 36-40 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
                 "A. Carolin Frueh",
                 "B. - Holger Krag",
@@ -1007,7 +1009,7 @@ const IELTS_TEST_DATA = {
               "answer": "D",
               "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\"",
               "location": "Passage 3",
-              "instruction": "Questions 36-40<br/>Look at the following statements (Questions 36\u201440) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 36-40 on your answer sheet.<br/>NB You may use any letter more than once.",
+              "instruction": "Questions 36-40<br/>Look at the following statements (Questions 36—40) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 36-40 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
                 "A. Carolin Frueh",
                 "B. - Holger Krag",
@@ -1018,11 +1020,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 40,
               "type": "MCQ",
-              "text": "There is a risk we will not be able to undo the damage that occurs in space. List of People",
+              "text": "There is a risk we will not be able to undo the damage that occurs in space.",
               "answer": "A",
               "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\"",
               "location": "Passage 3",
-              "instruction": "Questions 36-40<br/>Look at the following statements (Questions 36\u201440) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 36-40 on your answer sheet.<br/>NB You may use any letter more than once.",
+              "instruction": "Questions 36-40<br/>Look at the following statements (Questions 36—40) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 36-40 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
                 "A. Carolin Frueh",
                 "B. - Holger Krag",
@@ -1038,7 +1040,7 @@ const IELTS_TEST_DATA = {
       "task1": {
         "prompt": "The graph below gives information about the percentage of the population in four Asian countries living in cities from 1970 to 2020, with predictions for 2030 and 2040.",
         "image": "<pre class=\"font-mono text-xs bg-black/40 p-4 rounded border border-white/10 text-stone-300\">Percentage of population living in cities (%)\n100 |\n 80 |                ================ Malaysia\n 60 |         -------o-o-o-o-o-o-o-o  Philippines\n 40 |     ....x.x.x.x.x.x.x.x.x.x.x.x  Thailand\n 20 |  ___a_a_a_a_a_a_a_a_a_a_a_a_a_a_a Indonesia\n  0 +-----------------------------------\n    1970 1980 1990 2000 2010 2020 2030 2040\n                   Year</pre>",
-        "modelAnswer": "The line graph compares the percentage of the population residing in cities in four Asian countries\u2014the Philippines, Malaysia, Thailand, and Indonesia\u2014between 1970 and 2020, with projected figures provided for 2030 and 2040. Overall, it is clear that the proportion of city dwellers in all four nations has increased and is expected to continue rising through to 2040. Malaysia is projected to have the highest percentage of urban residents by the end of the period, while Indonesia shows the most notable growth trajectory."
+        "modelAnswer": "The line graph compares the percentage of the population residing in cities in four Asian countries—the Philippines, Malaysia, Thailand, and Indonesia—between 1970 and 2020, with projected figures provided for 2030 and 2040. Overall, it is clear that the proportion of city dwellers in all four nations has increased and is expected to continue rising through to 2040. Malaysia is projected to have the highest percentage of urban residents by the end of the period, while Indonesia shows the most notable growth trajectory."
       },
       "task2": {
         "prompt": "The most important aim of science should be to improve people's lives. To what extent do you agree or disagree with this statement?",
@@ -1047,7 +1049,7 @@ const IELTS_TEST_DATA = {
     }
   },
   "2": {
-    "title": "Cambridge IELTS 18 \u2014 Test 2",
+    "title": "Cambridge IELTS 18 — Test 2",
     "book": "IELTS 18",
     "listening": {
       "sections": [
@@ -1056,14 +1058,14 @@ const IELTS_TEST_DATA = {
           "title": "Part 1: Real Practice",
           "description": "Official IELTS 18 Test 2 Listening Part 1.",
           "audio": "audio/IELTS_18_Test_2_Part1.m4a",
-          "transcript": "<p><b>WOMAN:</b> </p><p><b>MAN:</b> </p><p><b>WOMAN:</b> </p><p><b>MAN:</b> </p><p><b>WOMAN:</b> </p><p><b>MAN:</b> </p><p><b>WOMAN:</b> </p><p><b>MAN:</b> </p><p><b>WOMAN:</b> </p><p><b>MAN:</b> </p><p><b>WOMAN:</b> </p><p><b>MAN:</b> </p><p><b>WOMAN:</b> </p><p><b>MAN:</b> </p><p><b>WOMAN:</b> </p><p><b>MAN:</b> </p><p>104</p><p>So, | understand you're interested in restaurant work?</p><p>Yes. I've got a bit of experience and | can provide references.</p><p>That's good. | can check all that later. Now, Milo's Restaurants have some</p><p>vacancies at the moment. They're a really good company to work for. Lots of</p><p>benefits.</p><p>Oh right.</p><p>Yes. They've got a very good reputation for looking after staff. For example,</p><p>all employees get training \u2014 even temporary staff.</p><p>Oh really? That's quite unusual, isn't it?</p><p>Certainly is.</p><p>And do staff get free uniforms too?</p><p>Um ... you just need to wear a white T-shirt and black trousers, it says here. So</p><p>| guess not ... But another benefit of working for a big company like this is that</p><p>you can get a discount at any of their restaurants.</p><p>Even at weekends?</p><p>No, but you'll be working then anyway.</p><p>Oh yes. | suppose so. Most of their restaurants are in the city centre, aren't they?</p><p>So, easy to get to by bus?</p><p>Yes. That's right. But if you have to do a late shift and finish work after midnight.</p><p>the company will pay for you to get a taxi home.</p><p>| probably won't need one. | think I'd use my bike.</p><p>OK. Now, they do have some quite specific requirements for the kind of person</p><p>they're looking for. Milo's is a young, dynamic company and they're really keen</p><p>on creating a strong team. It's really important that you can fit in and get on well</p><p>with everyone.</p><p>Yeah. I've got no problem with that. It sounds good, actually. The last place |</p><p>worked for was quite demanding too. We had to make sure we gave a really high</p><p>level of service.</p><p>That's good to hear because that will be equally important at Milo's. | know they</p><p>want people who have an eye for detail.</p><p>That's fine. I'm very used to working in that kind of environment.</p><p>Perfect. So the only other thing that's required is good communication skills, so</p><p>you'll need to have a certificate in English.</p><p>Sure.</p><p>OK. Let's have a look at the current job vacancies at Milo's. The first one is in</p><p>Wivenhoe Street.</p><p>Sorry, where?</p><p>Wivenhoe. W-I-V-E-N-H-O-E. It's quite central, just off Cork Street.</p><p>Oh right.</p><p>They're looking for a breakfast supervisor.</p><p>That would be OK.</p><p>So you're probably familiar with the kind of responsibilities involved. Obviously</p><p>checking that all the portions are correct, etc., and then things like checking all</p><p>the procedures for cleaning the equipment are being followed.</p><p>Q1</p><p>Q2</p><p>Q3</p><p>Q4</p><p>Q5</p><p>Q6</p><p>Q7</p><p><b>MAN:</b> OK. And what about the salary? In my last job | was getting \u00a39.50 per hour. | was</p><p>hoping to get a bit more than that.</p><p><b>WOMAN:</b> Well, to begin with, you'd be getting \u00a39.75 but that goes up to \u00a311.25 after three</p><p>months.</p><p><b>MAN:</b> That's not too bad. And | suppose it's a very early start?</p><p><b>WOMAN:</b> Mmm. That's the only unattractive thing about this job. But then you have the</p><p>afternoons and evenings free. So the restaurant starts serving breakfast from</p><p>7 a.m. And you'd have to be there at 5.30 to set everything up. But you'd be</p><p>finished at 12.30.</p><p><b>MAN:</b> Mmm. Well, as you say, there are advantages to that.</p><p><b>WOMAN:</b> Now, you might also be interested in the job at the City Road branch. That's for a</p><p>junior chef, so again a position of responsibility.</p><p><b>MAN:</b> | might prefer that, actually.</p><p><b>WOMAN:</b> Right, well obviously this role would involve supporting the sous chef and other</p><p>senior staff. And you'd be responsible for making sure there's enough stock each</p><p>week \u2014 and sorting out all the deliveries.</p><p><b>MAN:</b> I've never done that before, but | imagine it's fairly straightforward, once you get</p><p>the hang of it.</p><p><b>WOMAN:</b> Yes, and you'd be working alongside more experienced staff to begin with, so</p><p>I'm sure it wouldn't be a problem. The salary's slightly higher here. It's an annual</p><p>salary of \u00a323,000.</p><p><b>MAN:</b> Right.</p><p><b>WOMAN:</b> | know that if they like you, it's likely you'll be promoted quite quickly. So that's</p><p>worth thinking about.</p><p><b>MAN:</b> Yes. It does sound interesting. What are the hours like?</p><p><b>WOMAN:</b> The usual, | think. There's a lot of evening and weekend work, but they're closed</p><p>on Mondays. But you do get one Sunday off every four weeks. So would you like</p><p>me to send off your ...</p>",
+          "transcript": "<p><b>WOMAN:</b> </p><p><b>MAN:</b> </p><p><b>WOMAN:</b> </p><p><b>MAN:</b> </p><p><b>WOMAN:</b> </p><p><b>MAN:</b> </p><p><b>WOMAN:</b> </p><p><b>MAN:</b> </p><p><b>WOMAN:</b> </p><p><b>MAN:</b> </p><p><b>WOMAN:</b> </p><p><b>MAN:</b> </p><p><b>WOMAN:</b> </p><p><b>MAN:</b> </p><p><b>WOMAN:</b> </p><p><b>MAN:</b> </p><p>104</p><p>So, | understand you're interested in restaurant work?</p><p>Yes. I've got a bit of experience and | can provide references.</p><p>That's good. | can check all that later. Now, Milo's Restaurants have some</p><p>vacancies at the moment. They're a really good company to work for. Lots of</p><p>benefits.</p><p>Oh right.</p><p>Yes. They've got a very good reputation for looking after staff. For example,</p><p>all employees get training — even temporary staff.</p><p>Oh really? That's quite unusual, isn't it?</p><p>Certainly is.</p><p>And do staff get free uniforms too?</p><p>Um ... you just need to wear a white T-shirt and black trousers, it says here. So</p><p>| guess not ... But another benefit of working for a big company like this is that</p><p>you can get a discount at any of their restaurants.</p><p>Even at weekends?</p><p>No, but you'll be working then anyway.</p><p>Oh yes. | suppose so. Most of their restaurants are in the city centre, aren't they?</p><p>So, easy to get to by bus?</p><p>Yes. That's right. But if you have to do a late shift and finish work after midnight.</p><p>the company will pay for you to get a taxi home.</p><p>| probably won't need one. | think I'd use my bike.</p><p>OK. Now, they do have some quite specific requirements for the kind of person</p><p>they're looking for. Milo's is a young, dynamic company and they're really keen</p><p>on creating a strong team. It's really important that you can fit in and get on well</p><p>with everyone.</p><p>Yeah. I've got no problem with that. It sounds good, actually. The last place |</p><p>worked for was quite demanding too. We had to make sure we gave a really high</p><p>level of service.</p><p>That's good to hear because that will be equally important at Milo's. | know they</p><p>want people who have an eye for detail.</p><p>That's fine. I'm very used to working in that kind of environment.</p><p>Perfect. So the only other thing that's required is good communication skills, so</p><p>you'll need to have a certificate in English.</p><p>Sure.</p><p>OK. Let's have a look at the current job vacancies at Milo's. The first one is in</p><p>Wivenhoe Street.</p><p>Sorry, where?</p><p>Wivenhoe. W-I-V-E-N-H-O-E. It's quite central, just off Cork Street.</p><p>Oh right.</p><p>They're looking for a breakfast supervisor.</p><p>That would be OK.</p><p>So you're probably familiar with the kind of responsibilities involved. Obviously</p><p>checking that all the portions are correct, etc., and then things like checking all</p><p>the procedures for cleaning the equipment are being followed.</p><p>Q1</p><p>Q2</p><p>Q3</p><p>Q4</p><p>Q5</p><p>Q6</p><p>Q7</p><p><b>MAN:</b> OK. And what about the salary? In my last job | was getting £9.50 per hour. | was</p><p>hoping to get a bit more than that.</p><p><b>WOMAN:</b> Well, to begin with, you'd be getting £9.75 but that goes up to £11.25 after three</p><p>months.</p><p><b>MAN:</b> That's not too bad. And | suppose it's a very early start?</p><p><b>WOMAN:</b> Mmm. That's the only unattractive thing about this job. But then you have the</p><p>afternoons and evenings free. So the restaurant starts serving breakfast from</p><p>7 a.m. And you'd have to be there at 5.30 to set everything up. But you'd be</p><p>finished at 12.30.</p><p><b>MAN:</b> Mmm. Well, as you say, there are advantages to that.</p><p><b>WOMAN:</b> Now, you might also be interested in the job at the City Road branch. That's for a</p><p>junior chef, so again a position of responsibility.</p><p><b>MAN:</b> | might prefer that, actually.</p><p><b>WOMAN:</b> Right, well obviously this role would involve supporting the sous chef and other</p><p>senior staff. And you'd be responsible for making sure there's enough stock each</p><p>week — and sorting out all the deliveries.</p><p><b>MAN:</b> I've never done that before, but | imagine it's fairly straightforward, once you get</p><p>the hang of it.</p><p><b>WOMAN:</b> Yes, and you'd be working alongside more experienced staff to begin with, so</p><p>I'm sure it wouldn't be a problem. The salary's slightly higher here. It's an annual</p><p>salary of £23,000.</p><p><b>MAN:</b> Right.</p><p><b>WOMAN:</b> | know that if they like you, it's likely you'll be promoted quite quickly. So that's</p><p>worth thinking about.</p><p><b>MAN:</b> Yes. It does sound interesting. What are the hours like?</p><p><b>WOMAN:</b> The usual, | think. There's a lot of evening and weekend work, but they're closed</p><p>on Mondays. But you do get one Sunday off every four weeks. So would you like</p><p>me to send off your ...</p>",
           "questions": [
             {
               "num": 1,
               "type": "FILL",
-              "text": "Questions _________\u201410",
+              "text": "Questions _________—10",
               "answer": "training",
-              "explanation": "The transcript states: \"For example, all employees get training \u2014 even temporary staff.\"",
+              "explanation": "The transcript states: \"For example, all employees get training — even temporary staff.\"",
               "instruction": "Questions 1-5<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Working at Milo's Restaurants<br/>Benefits<br/>provided for all staff<br/>during weekdays at all Milo's Restaurants<br/>provided after midnight<br/>Person specification<br/>e must be prepared to work well in a team"
             },
             {
@@ -1093,7 +1095,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 5,
               "type": "FILL",
-              "text": "30 a.m. City Road Junior chef Supporting senior | Annual salary \u00a323,000 chefs No work ona Maintaining stock and organising >[Sp2i [Epi] 20",
+              "text": "30 a.m. City Road Junior chef Supporting senior | Annual salary £23,000 chefs No work ona Maintaining stock and organising >[Sp2i [Epi] 20",
               "answer": "English",
               "explanation": "The transcript states: \"So the only other thing that's required is good communication skills, so you'll need to have a certificate in English.\"",
               "instruction": "Questions 1-5<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Working at Milo's Restaurants<br/>Benefits<br/>provided for all staff<br/>during weekdays at all Milo's Restaurants<br/>provided after midnight<br/>Person specification<br/>e must be prepared to work well in a team"
@@ -1104,7 +1106,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions _________-10",
               "answer": "Wivenhoe",
               "explanation": "The transcript states: \"The first one is in Wivenhoe Street.\"",
-              "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary \u00a323,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
+              "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary £23,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
             },
             {
               "num": 7,
@@ -1112,7 +1114,7 @@ const IELTS_TEST_DATA = {
               "text": "Question 7: Write your answer here: _________",
               "answer": "equipment",
               "explanation": "The transcript states: \", and then things like checking all the procedures for cleaning the equipment are being followed.\"",
-              "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary \u00a323,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
+              "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary £23,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
             },
             {
               "num": 8,
@@ -1120,23 +1122,23 @@ const IELTS_TEST_DATA = {
               "text": "Question 8: Write your answer here: _________",
               "answer": "9.75",
               "explanation": "The transcript confirms the answer is '9.75'.",
-              "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary \u00a323,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
+              "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary £23,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
             },
             {
               "num": 9,
               "type": "FILL",
               "text": "Question 9: Write your answer here: _________",
               "answer": "deliveries",
-              "explanation": "The transcript states: \"And you'd be responsible for making sure there's enough stock each week \u2014 and sorting out all the deliveries.\"",
-              "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary \u00a323,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
+              "explanation": "The transcript states: \"And you'd be responsible for making sure there's enough stock each week — and sorting out all the deliveries.\"",
+              "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary £23,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
             },
             {
               "num": 10,
               "type": "FILL",
-              "text": "Questions 1\u2014_________",
+              "text": "Questions 1—_________",
               "answer": "Sunday",
               "explanation": "The transcript states: \"But you do get one Sunday off every four weeks.\"",
-              "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary \u00a323,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
+              "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary £23,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
             }
           ]
         },
@@ -1150,10 +1152,10 @@ const IELTS_TEST_DATA = {
             {
               "num": 11,
               "type": "MCQ",
-              "text": "Questions 11\u201420",
+              "text": "Questions 11—20",
               "answer": "B",
               "explanation": "The transcript states: \"It's good to see that so many members of the public have shown up for our presentation on the new housing development planned on the outskirts of Nunston.\"",
-              "instruction": "Questions 11 and 12<br/>Choose TWO letters, A\u2014-E.<br/>What are the TWO main reasons why this site has been chosen for the housing<br/>development?<br/>It has suitable geographical features.<br/>There is easy access to local facilities.<br/>It has good connections with the airport.<br/>The land is of little agricultural value.<br/>It will be convenient for workers. mogwp",
+              "instruction": "Questions 11 and 12<br/>Choose TWO letters, A—-E.<br/>What are the TWO main reasons why this site has been chosen for the housing<br/>development?<br/>It has suitable geographical features.<br/>There is easy access to local facilities.<br/>It has good connections with the airport.<br/>The land is of little agricultural value.<br/>It will be convenient for workers. mogwp",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -1170,7 +1172,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 11 and 12",
               "answer": "E",
               "explanation": "The transcript states: \"It's good to see that so many members of the public have shown up for our presentation on the new housing development planned on the outskirts of Nunston.\"",
-              "instruction": "Questions 11 and 12<br/>Choose TWO letters, A\u2014-E.<br/>What are the TWO main reasons why this site has been chosen for the housing<br/>development?<br/>It has suitable geographical features.<br/>There is easy access to local facilities.<br/>It has good connections with the airport.<br/>The land is of little agricultural value.<br/>It will be convenient for workers. mogwp",
+              "instruction": "Questions 11 and 12<br/>Choose TWO letters, A—-E.<br/>What are the TWO main reasons why this site has been chosen for the housing<br/>development?<br/>It has suitable geographical features.<br/>There is easy access to local facilities.<br/>It has good connections with the airport.<br/>The land is of little agricultural value.<br/>It will be convenient for workers. mogwp",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -1221,7 +1223,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 15-20",
               "answer": "B",
               "explanation": "The transcript states: \"It's good to see that so many members of the public have shown up for our presentation on the new housing development planned on the outskirts of Nunston.\"",
-              "instruction": "Write the correct letter, A\u2014I, next to Questions 15\u201420.<br/>West<br/>Entrance<br/>Housing for<br/>the elderly<br/>Apartment<br/>blocks TE<br/>London Road<br/>Pep SULERIAEREERERREREEEEREE AoA TT<br/>ES, LT] SO HETH + _[G |<br/>a COATT TT] \u00abMono<br/>NOTE EE EEE<br/>To Nunston < Main Road t<br/>South Key<br/>(COOOL Housing pues<br/>School ___ atseaisessorenexase<br/>Sports Centre \u2014_reeessssssccsssseeess<br/>Clinic<br/>Community Centre \u2014\u2014neeeeeeeseenene<br/>Supermarket \u2014\u2014ereeessssssssssssneees<br/>Playground = astnceanrceanesnennn",
+              "instruction": "Write the correct letter, A—I, next to Questions 15—20.<br/>West<br/>Entrance<br/>Housing for<br/>the elderly<br/>Apartment<br/>blocks TE<br/>London Road<br/>Pep SULERIAEREERERREREEEEREE AoA TT<br/>ES, LT] SO HETH + _[G |<br/>a COATT TT] «Mono<br/>NOTE EE EEE<br/>To Nunston < Main Road t<br/>South Key<br/>(COOOL Housing pues<br/>School ___ atseaisessorenexase<br/>Sports Centre —_reeessssssccsssseeess<br/>Clinic<br/>Community Centre ——neeeeeeeseenene<br/>Supermarket ——ereeessssssssssssneees<br/>Playground = astnceanrceanesnennn",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -1238,7 +1240,7 @@ const IELTS_TEST_DATA = {
               "text": "Question 16: Choose the correct option:",
               "answer": "C",
               "explanation": "The transcript states: \"It's good to see that so many members of the public have shown up for our presentation on the new housing development planned on the outskirts of Nunston.\"",
-              "instruction": "Write the correct letter, A\u2014I, next to Questions 15\u201420.<br/>West<br/>Entrance<br/>Housing for<br/>the elderly<br/>Apartment<br/>blocks TE<br/>London Road<br/>Pep SULERIAEREERERREREEEEREE AoA TT<br/>ES, LT] SO HETH + _[G |<br/>a COATT TT] \u00abMono<br/>NOTE EE EEE<br/>To Nunston < Main Road t<br/>South Key<br/>(COOOL Housing pues<br/>School ___ atseaisessorenexase<br/>Sports Centre \u2014_reeessssssccsssseeess<br/>Clinic<br/>Community Centre \u2014\u2014neeeeeeeseenene<br/>Supermarket \u2014\u2014ereeessssssssssssneees<br/>Playground = astnceanrceanesnennn",
+              "instruction": "Write the correct letter, A—I, next to Questions 15—20.<br/>West<br/>Entrance<br/>Housing for<br/>the elderly<br/>Apartment<br/>blocks TE<br/>London Road<br/>Pep SULERIAEREERERREREEEEREE AoA TT<br/>ES, LT] SO HETH + _[G |<br/>a COATT TT] «Mono<br/>NOTE EE EEE<br/>To Nunston < Main Road t<br/>South Key<br/>(COOOL Housing pues<br/>School ___ atseaisessorenexase<br/>Sports Centre —_reeessssssccsssseeess<br/>Clinic<br/>Community Centre ——neeeeeeeseenene<br/>Supermarket ——ereeessssssssssssneees<br/>Playground = astnceanrceanesnennn",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -1255,7 +1257,7 @@ const IELTS_TEST_DATA = {
               "text": "Question 17: Choose the correct option:",
               "answer": "G",
               "explanation": "The transcript states: \"It's good to see that so many members of the public have shown up for our presentation on the new housing development planned on the outskirts of Nunston.\"",
-              "instruction": "Write the correct letter, A\u2014I, next to Questions 15\u201420.<br/>West<br/>Entrance<br/>Housing for<br/>the elderly<br/>Apartment<br/>blocks TE<br/>London Road<br/>Pep SULERIAEREERERREREEEEREE AoA TT<br/>ES, LT] SO HETH + _[G |<br/>a COATT TT] \u00abMono<br/>NOTE EE EEE<br/>To Nunston < Main Road t<br/>South Key<br/>(COOOL Housing pues<br/>School ___ atseaisessorenexase<br/>Sports Centre \u2014_reeessssssccsssseeess<br/>Clinic<br/>Community Centre \u2014\u2014neeeeeeeseenene<br/>Supermarket \u2014\u2014ereeessssssssssssneees<br/>Playground = astnceanrceanesnennn",
+              "instruction": "Write the correct letter, A—I, next to Questions 15—20.<br/>West<br/>Entrance<br/>Housing for<br/>the elderly<br/>Apartment<br/>blocks TE<br/>London Road<br/>Pep SULERIAEREERERREREEEEREE AoA TT<br/>ES, LT] SO HETH + _[G |<br/>a COATT TT] «Mono<br/>NOTE EE EEE<br/>To Nunston < Main Road t<br/>South Key<br/>(COOOL Housing pues<br/>School ___ atseaisessorenexase<br/>Sports Centre —_reeessssssccsssseeess<br/>Clinic<br/>Community Centre ——neeeeeeeseenene<br/>Supermarket ——ereeessssssssssssneees<br/>Playground = astnceanrceanesnennn",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -1272,7 +1274,7 @@ const IELTS_TEST_DATA = {
               "text": "Question 18: Choose the correct option:",
               "answer": "C",
               "explanation": "The transcript states: \"It's good to see that so many members of the public have shown up for our presentation on the new housing development planned on the outskirts of Nunston.\"",
-              "instruction": "Write the correct letter, A\u2014I, next to Questions 15\u201420.<br/>West<br/>Entrance<br/>Housing for<br/>the elderly<br/>Apartment<br/>blocks TE<br/>London Road<br/>Pep SULERIAEREERERREREEEEREE AoA TT<br/>ES, LT] SO HETH + _[G |<br/>a COATT TT] \u00abMono<br/>NOTE EE EEE<br/>To Nunston < Main Road t<br/>South Key<br/>(COOOL Housing pues<br/>School ___ atseaisessorenexase<br/>Sports Centre \u2014_reeessssssccsssseeess<br/>Clinic<br/>Community Centre \u2014\u2014neeeeeeeseenene<br/>Supermarket \u2014\u2014ereeessssssssssssneees<br/>Playground = astnceanrceanesnennn",
+              "instruction": "Write the correct letter, A—I, next to Questions 15—20.<br/>West<br/>Entrance<br/>Housing for<br/>the elderly<br/>Apartment<br/>blocks TE<br/>London Road<br/>Pep SULERIAEREERERREREEEEREE AoA TT<br/>ES, LT] SO HETH + _[G |<br/>a COATT TT] «Mono<br/>NOTE EE EEE<br/>To Nunston < Main Road t<br/>South Key<br/>(COOOL Housing pues<br/>School ___ atseaisessorenexase<br/>Sports Centre —_reeessssssccsssseeess<br/>Clinic<br/>Community Centre ——neeeeeeeseenene<br/>Supermarket ——ereeessssssssssssneees<br/>Playground = astnceanrceanesnennn",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -1289,7 +1291,7 @@ const IELTS_TEST_DATA = {
               "text": "Question 19: Choose the correct option:",
               "answer": "D",
               "explanation": "The transcript states: \"It's good to see that so many members of the public have shown up for our presentation on the new housing development planned on the outskirts of Nunston.\"",
-              "instruction": "Write the correct letter, A\u2014I, next to Questions 15\u201420.<br/>West<br/>Entrance<br/>Housing for<br/>the elderly<br/>Apartment<br/>blocks TE<br/>London Road<br/>Pep SULERIAEREERERREREEEEREE AoA TT<br/>ES, LT] SO HETH + _[G |<br/>a COATT TT] \u00abMono<br/>NOTE EE EEE<br/>To Nunston < Main Road t<br/>South Key<br/>(COOOL Housing pues<br/>School ___ atseaisessorenexase<br/>Sports Centre \u2014_reeessssssccsssseeess<br/>Clinic<br/>Community Centre \u2014\u2014neeeeeeeseenene<br/>Supermarket \u2014\u2014ereeessssssssssssneees<br/>Playground = astnceanrceanesnennn",
+              "instruction": "Write the correct letter, A—I, next to Questions 15—20.<br/>West<br/>Entrance<br/>Housing for<br/>the elderly<br/>Apartment<br/>blocks TE<br/>London Road<br/>Pep SULERIAEREERERREREEEEREE AoA TT<br/>ES, LT] SO HETH + _[G |<br/>a COATT TT] «Mono<br/>NOTE EE EEE<br/>To Nunston < Main Road t<br/>South Key<br/>(COOOL Housing pues<br/>School ___ atseaisessorenexase<br/>Sports Centre —_reeessssssccsssseeess<br/>Clinic<br/>Community Centre ——neeeeeeeseenene<br/>Supermarket ——ereeessssssssssssneees<br/>Playground = astnceanrceanesnennn",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -1303,10 +1305,10 @@ const IELTS_TEST_DATA = {
             {
               "num": 20,
               "type": "MCQ",
-              "text": "Questions 11\u201420",
+              "text": "Questions 11—20",
               "answer": "B",
               "explanation": "The transcript states: \"It's good to see that so many members of the public have shown up for our presentation on the new housing development planned on the outskirts of Nunston.\"",
-              "instruction": "Write the correct letter, A\u2014I, next to Questions 15\u201420.<br/>West<br/>Entrance<br/>Housing for<br/>the elderly<br/>Apartment<br/>blocks TE<br/>London Road<br/>Pep SULERIAEREERERREREEEEREE AoA TT<br/>ES, LT] SO HETH + _[G |<br/>a COATT TT] \u00abMono<br/>NOTE EE EEE<br/>To Nunston < Main Road t<br/>South Key<br/>(COOOL Housing pues<br/>School ___ atseaisessorenexase<br/>Sports Centre \u2014_reeessssssccsssseeess<br/>Clinic<br/>Community Centre \u2014\u2014neeeeeeeseenene<br/>Supermarket \u2014\u2014ereeessssssssssssneees<br/>Playground = astnceanrceanesnennn",
+              "instruction": "Write the correct letter, A—I, next to Questions 15—20.<br/>West<br/>Entrance<br/>Housing for<br/>the elderly<br/>Apartment<br/>blocks TE<br/>London Road<br/>Pep SULERIAEREERERREREEEEREE AoA TT<br/>ES, LT] SO HETH + _[G |<br/>a COATT TT] «Mono<br/>NOTE EE EEE<br/>To Nunston < Main Road t<br/>South Key<br/>(COOOL Housing pues<br/>School ___ atseaisessorenexase<br/>Sports Centre —_reeessssssccsssseeess<br/>Clinic<br/>Community Centre ——neeeeeeeseenene<br/>Supermarket ——ereeessssssssssssneees<br/>Playground = astnceanrceanesnennn",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -1324,7 +1326,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 3: Real Practice",
           "description": "Official IELTS 18 Test 2 Listening Part 3.",
           "audio": "audio/IELTS_18_Test_2_Part3.m4a",
-          "transcript": "<p><b>ADAM:</b> So, Michelle, shall we make a start on our presentation? We haven't got that</p><p>much time left.</p><p><b>MICHELLE:</b> | No, Adam. But at least we've done all the background reading. | found it really</p><p>interesting \u2014 I'd never even heard of the Laki eruption before this.</p><p><b>ADAM:</b> Me neither. | suppose 1783 is a long time ago.</p><p><b>MICHELLE:</b> | But it was a huge eruption and it had such devastating consequences.</p><p><b>ADAM:</b> | know. It was great there were so many primary sources to look at. It really gives</p><p>you a sense of how catastrophic the volcano was. People were really trying to</p><p>make sense of the science for the first time.</p><p><b>MICHELLE:</b> That's right. But what | found more significant was how it impacted directly and</p><p>indirectly on political events, as well as having massive social and economic</p><p>consequences.</p><p>106</p><p>Q13/14</p><p>Q13/14</p><p>Q15</p><p>Q16</p><p>Q17</p><p>Q18</p><p>Q19</p><p>Q20</p><p>Q21</p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p><b>ADAM:</b> </p><p>* MICHELLE?!</p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p><b>MICHELLE:</b> </p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p>| know. That should be the main focus of our presentation.</p><p>The observations made by people at the time were interesting, weren't they? |</p><p>mean, they all gave a pretty consistent account of what happened, even if they</p><p>didn't always use the same terminology.</p><p>Yeah. | was surprised there were so many weather stations established by that</p><p>time \u2014 so, you know, you can see how the weather changed, often by the hour.</p><p>Right. Writers at the time talked about the Laki haze to describe the volcanic fog</p><p>that spread across Europe. They all realised that this wasn't the sort of fog they</p><p>were used to \u2014 and of course this was in pre-industrial times \u2014 so they hadn't</p><p>experienced sulphur-smelling fog before.</p><p>No, that's true.</p><p>Reports from the period blamed the haze for an increase in headaches,</p><p>respiratory issues and asthma attacks. And they all describe how it covered the</p><p>sun and made it look a strange red colour.</p><p>Must have been very weird.</p><p>It's interesting that Benjamin Franklin wrote about the haze. Did you read that?</p><p>He was the American ambassador in Paris at the time.</p><p>Yeah. At first no one realised that the haze was caused by the volcanic eruption</p><p>in Iceland.</p><p>It was Benjamin Franklin who realised that before anyone else.</p><p>He's often credited with that, apparently. But a French naturalist beat him to it \u2014</p><p>| can't remember his name. I'd have to look it up. Then other naturalists had the</p><p>same idea \u2014 all independently of each other.</p><p>Oh right. We should talk about the immediate impact of the eruption, which was</p><p>obviously enormous \u2014 especially in Iceland, where so many people died.</p><p>Mmm. You'd expect that \u2014 and the fact that the volcanic ash drifted so swiftly</p><p>\u2014 but not that the effects would go on for so long. Or that two years after the</p><p>eruption, strange weather events were being reported as far away as North</p><p>America and North Africa.</p><p>No. | found all that hard to believe too. It must have been terrible \u2014 and there was</p><p>nothing anyone could do about it, even if they knew the ash cloud was coming in</p><p>their direction.</p><p>We should run through some of the terrible consequences of the eruption</p><p>experienced in different countries. There's quite a varied range.</p><p>Starting with Iceland, where the impact on farming was devastating.</p><p>Mmm. One of the most dramatic things there was the effect on livestock as they</p><p>grazed in the fields. They were poisoned because they ate vegetation that had</p><p>been contaminated with fluorine as a result of the volcanic fallout.</p><p>That was horrible. In Egypt, the bizarre weather patterns led to a severe drought</p><p>and as a result the Nile didn't flood, which meant the crops all failed.</p><p>It's so far from where the eruption happened and yet the famine there led to more</p><p>people dying than any other country. It was worse than the plague.</p><p>OK. Then in the UK the mortality rate went up a lot \u2014 presumably from respiratory</p><p>illnesses. According to one report it was about double the usual number and</p><p>included an unusually high percentage of people under the age of 25.</p><p>Mmm. | think people will be surprised to hear that the weather in the USA was</p><p>badly affected too. George Washington even makes a note in his diary that they</p><p>were snowbound until March in Virginia. That was before he became president.</p><p>Yes, and there was ice floating down the Mississippi. which was unprecedented.</p><p>Astonishing, really. Anyway, what do you think ...</p><p>Test 2</p><p>Q22</p><p>Q23</p><p>Q24</p><p>Q25/26</p><p>Q25/26</p><p>Q27</p><p>Q28</p><p>Q29</p><p>Q30</p><p>107</p>",
+          "transcript": "<p><b>ADAM:</b> So, Michelle, shall we make a start on our presentation? We haven't got that</p><p>much time left.</p><p><b>MICHELLE:</b> | No, Adam. But at least we've done all the background reading. | found it really</p><p>interesting — I'd never even heard of the Laki eruption before this.</p><p><b>ADAM:</b> Me neither. | suppose 1783 is a long time ago.</p><p><b>MICHELLE:</b> | But it was a huge eruption and it had such devastating consequences.</p><p><b>ADAM:</b> | know. It was great there were so many primary sources to look at. It really gives</p><p>you a sense of how catastrophic the volcano was. People were really trying to</p><p>make sense of the science for the first time.</p><p><b>MICHELLE:</b> That's right. But what | found more significant was how it impacted directly and</p><p>indirectly on political events, as well as having massive social and economic</p><p>consequences.</p><p>106</p><p>Q13/14</p><p>Q13/14</p><p>Q15</p><p>Q16</p><p>Q17</p><p>Q18</p><p>Q19</p><p>Q20</p><p>Q21</p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p><b>ADAM:</b> </p><p>* MICHELLE?!</p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p><b>MICHELLE:</b> </p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p><b>ADAM:</b> </p><p><b>MICHELLE:</b> </p><p>| know. That should be the main focus of our presentation.</p><p>The observations made by people at the time were interesting, weren't they? |</p><p>mean, they all gave a pretty consistent account of what happened, even if they</p><p>didn't always use the same terminology.</p><p>Yeah. | was surprised there were so many weather stations established by that</p><p>time — so, you know, you can see how the weather changed, often by the hour.</p><p>Right. Writers at the time talked about the Laki haze to describe the volcanic fog</p><p>that spread across Europe. They all realised that this wasn't the sort of fog they</p><p>were used to — and of course this was in pre-industrial times — so they hadn't</p><p>experienced sulphur-smelling fog before.</p><p>No, that's true.</p><p>Reports from the period blamed the haze for an increase in headaches,</p><p>respiratory issues and asthma attacks. And they all describe how it covered the</p><p>sun and made it look a strange red colour.</p><p>Must have been very weird.</p><p>It's interesting that Benjamin Franklin wrote about the haze. Did you read that?</p><p>He was the American ambassador in Paris at the time.</p><p>Yeah. At first no one realised that the haze was caused by the volcanic eruption</p><p>in Iceland.</p><p>It was Benjamin Franklin who realised that before anyone else.</p><p>He's often credited with that, apparently. But a French naturalist beat him to it —</p><p>| can't remember his name. I'd have to look it up. Then other naturalists had the</p><p>same idea — all independently of each other.</p><p>Oh right. We should talk about the immediate impact of the eruption, which was</p><p>obviously enormous — especially in Iceland, where so many people died.</p><p>Mmm. You'd expect that — and the fact that the volcanic ash drifted so swiftly</p><p>— but not that the effects would go on for so long. Or that two years after the</p><p>eruption, strange weather events were being reported as far away as North</p><p>America and North Africa.</p><p>No. | found all that hard to believe too. It must have been terrible — and there was</p><p>nothing anyone could do about it, even if they knew the ash cloud was coming in</p><p>their direction.</p><p>We should run through some of the terrible consequences of the eruption</p><p>experienced in different countries. There's quite a varied range.</p><p>Starting with Iceland, where the impact on farming was devastating.</p><p>Mmm. One of the most dramatic things there was the effect on livestock as they</p><p>grazed in the fields. They were poisoned because they ate vegetation that had</p><p>been contaminated with fluorine as a result of the volcanic fallout.</p><p>That was horrible. In Egypt, the bizarre weather patterns led to a severe drought</p><p>and as a result the Nile didn't flood, which meant the crops all failed.</p><p>It's so far from where the eruption happened and yet the famine there led to more</p><p>people dying than any other country. It was worse than the plague.</p><p>OK. Then in the UK the mortality rate went up a lot — presumably from respiratory</p><p>illnesses. According to one report it was about double the usual number and</p><p>included an unusually high percentage of people under the age of 25.</p><p>Mmm. | think people will be surprised to hear that the weather in the USA was</p><p>badly affected too. George Washington even makes a note in his diary that they</p><p>were snowbound until March in Virginia. That was before he became president.</p><p>Yes, and there was ice floating down the Mississippi. which was unprecedented.</p><p>Astonishing, really. Anyway, what do you think ...</p><p>Test 2</p><p>Q22</p><p>Q23</p><p>Q24</p><p>Q25/26</p><p>Q25/26</p><p>Q27</p><p>Q28</p><p>Q29</p><p>Q30</p><p>107</p>",
           "questions": [
             {
               "num": 21,
@@ -1384,7 +1386,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 25 and 26",
               "answer": "A",
               "explanation": "The transcript states: \"ADAM: So, Michelle, shall we make a start on our presentation.\"",
-              "instruction": "Questions 25 and 26<br/>Choose TWO letters, A\u2014E.<br/>Which TWO issues following the Laki eruption surprised the students?<br/>how widespread the effects were<br/>how long-lasting the effects were<br/>the number of deaths it caused<br/>the speed at which the volcanic ash cloud spread<br/>how people ignored the warning signs moogw p>",
+              "instruction": "Questions 25 and 26<br/>Choose TWO letters, A—E.<br/>Which TWO issues following the Laki eruption surprised the students?<br/>how widespread the effects were<br/>how long-lasting the effects were<br/>the number of deaths it caused<br/>the speed at which the volcanic ash cloud spread<br/>how people ignored the warning signs moogw p>",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -1400,7 +1402,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 25 and 26",
               "answer": "B",
               "explanation": "The transcript states: \"But at least we've done all the background reading.\"",
-              "instruction": "Questions 25 and 26<br/>Choose TWO letters, A\u2014E.<br/>Which TWO issues following the Laki eruption surprised the students?<br/>how widespread the effects were<br/>how long-lasting the effects were<br/>the number of deaths it caused<br/>the speed at which the volcanic ash cloud spread<br/>how people ignored the warning signs moogw p>",
+              "instruction": "Questions 25 and 26<br/>Choose TWO letters, A—E.<br/>Which TWO issues following the Laki eruption surprised the students?<br/>how widespread the effects were<br/>how long-lasting the effects were<br/>the number of deaths it caused<br/>the speed at which the volcanic ash cloud spread<br/>how people ignored the warning signs moogw p>",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -1481,14 +1483,14 @@ const IELTS_TEST_DATA = {
           "title": "Part 4: Real Practice",
           "description": "Official IELTS 18 Test 2 Listening Part 4.",
           "audio": "audio/IELTS_18_Test_2_Part4.m4a",
-          "transcript": "<p>Good morning. Now, we've been asked to choose an aspect of European clothing or fashion</p><p>and to talk about its development over time.</p><p>| decided to focus on a rather small area of clothing and that's pockets. | chose pockets for</p><p>two reasons, really. We all have them \u2014 in jeans, jackets, coats, for example \u2014 and even</p><p>though we often carry bags or briefcases as well, nothing is quite as convenient as being able</p><p>to pop your phone or credit card into your pocket. Yet, | suspect that, other than that, people</p><p>don't really think about pockets too much and they're rather overlooked as a fashion item.</p><p>It's certainly very interesting to go back in time and see how pockets developed for men and</p><p>women. In the 18th century, fashions were quite different from the way they are now, and</p><p>pockets were too. If we think about male fashion first ... that was the time when suits became</p><p>popular. Trousers were knee-length only and referred to as 'breeches', the waistcoats were</p><p>short and the jackets were long, but all three garments were lined with material and pockets</p><p>were sewn into this cloth by whichever tailor the customer used. The wearer could then carry</p><p>small objects such as pencils or coins on their person and reach them through a gap in the</p><p>lining. Coat pockets became increasingly decorative on the outside for men who wanted</p><p>to look stylish, but they were often larger but plainer if the wearer was someone with a</p><p>profession who needed to carry medical instruments \u2014 a doctor or physician, for example.</p><p>The development of women's pockets was a little different. For one thing, they weren't nearly</p><p>as visible or as easy to reach as men's. In the 18th and 19th centuries, women carried</p><p>numerous possessions on their person and some of these could be worth a lot of money.</p><p>Women were more vulnerable to theft and wealthy women, in particular, worried constantly</p><p>about pickpockets. So \u2014 what they did was to have a pair of pockets made that were tied</p><p>together with string. The pockets were made of fabric, which might be recycled cloth if the</p><p>wearer had little money or something more expensive, such as linen, sometimes featuring</p><p>very delicate embroidery. Women tied the pockets around their waist so that they hung</p><p>beneath their clothes. Remember, skirts were long then and there was plenty of room to hide</p><p>a whole range of small possessions between the layers of petticoats that were commonly</p><p>worn. They would have an opening in the folds of their skirts through which they could reach</p><p>whatever they needed, like their perfume. Working women, of course, also needed to carry</p><p>around items that they might use for whatever job or trade they were involved in, but their</p><p>pairs of pockets still remained on the inside of their clothing, they just got bigger or longer \u2014</p><p>sometimes reaching down to their knees!</p><p>So the tie-on pockets went well into the 19th century and only changed when fashion altered</p><p>towards the end of that period. That's when dresses became tighter and less bulky. and</p><p>the pairs of pockets became very noticeable \u2014 they stood out too much and detracted from</p><p>the woman's image. Women who had been used to carrying around a range of personal</p><p>possessions \u2014 and still wanted to \u2014 needed somewhere to carry these items about their</p><p>person. That was when small bags, or pouches as they were known, came into fashion and,</p><p>of course, they inevitably led on to the handbag of more modern times, particularly when</p><p>fashion removed pockets altogether.</p><p>108</p><p>Q31</p><p>Q32</p><p>Q33</p><p>Q34</p><p>Q35</p><p>Q36</p><p>Q37</p><p>Q38</p><p>Q39</p><p>Q40</p>",
+          "transcript": "<p>Good morning. Now, we've been asked to choose an aspect of European clothing or fashion</p><p>and to talk about its development over time.</p><p>| decided to focus on a rather small area of clothing and that's pockets. | chose pockets for</p><p>two reasons, really. We all have them — in jeans, jackets, coats, for example — and even</p><p>though we often carry bags or briefcases as well, nothing is quite as convenient as being able</p><p>to pop your phone or credit card into your pocket. Yet, | suspect that, other than that, people</p><p>don't really think about pockets too much and they're rather overlooked as a fashion item.</p><p>It's certainly very interesting to go back in time and see how pockets developed for men and</p><p>women. In the 18th century, fashions were quite different from the way they are now, and</p><p>pockets were too. If we think about male fashion first ... that was the time when suits became</p><p>popular. Trousers were knee-length only and referred to as 'breeches', the waistcoats were</p><p>short and the jackets were long, but all three garments were lined with material and pockets</p><p>were sewn into this cloth by whichever tailor the customer used. The wearer could then carry</p><p>small objects such as pencils or coins on their person and reach them through a gap in the</p><p>lining. Coat pockets became increasingly decorative on the outside for men who wanted</p><p>to look stylish, but they were often larger but plainer if the wearer was someone with a</p><p>profession who needed to carry medical instruments — a doctor or physician, for example.</p><p>The development of women's pockets was a little different. For one thing, they weren't nearly</p><p>as visible or as easy to reach as men's. In the 18th and 19th centuries, women carried</p><p>numerous possessions on their person and some of these could be worth a lot of money.</p><p>Women were more vulnerable to theft and wealthy women, in particular, worried constantly</p><p>about pickpockets. So — what they did was to have a pair of pockets made that were tied</p><p>together with string. The pockets were made of fabric, which might be recycled cloth if the</p><p>wearer had little money or something more expensive, such as linen, sometimes featuring</p><p>very delicate embroidery. Women tied the pockets around their waist so that they hung</p><p>beneath their clothes. Remember, skirts were long then and there was plenty of room to hide</p><p>a whole range of small possessions between the layers of petticoats that were commonly</p><p>worn. They would have an opening in the folds of their skirts through which they could reach</p><p>whatever they needed, like their perfume. Working women, of course, also needed to carry</p><p>around items that they might use for whatever job or trade they were involved in, but their</p><p>pairs of pockets still remained on the inside of their clothing, they just got bigger or longer —</p><p>sometimes reaching down to their knees!</p><p>So the tie-on pockets went well into the 19th century and only changed when fashion altered</p><p>towards the end of that period. That's when dresses became tighter and less bulky. and</p><p>the pairs of pockets became very noticeable — they stood out too much and detracted from</p><p>the woman's image. Women who had been used to carrying around a range of personal</p><p>possessions — and still wanted to — needed somewhere to carry these items about their</p><p>person. That was when small bags, or pouches as they were known, came into fashion and,</p><p>of course, they inevitably led on to the handbag of more modern times, particularly when</p><p>fashion removed pockets altogether.</p><p>108</p><p>Q31</p><p>Q32</p><p>Q33</p><p>Q34</p><p>Q35</p><p>Q36</p><p>Q37</p><p>Q38</p><p>Q39</p><p>Q40</p>",
           "questions": [
             {
               "num": 31,
               "type": "FILL",
               "text": "Questions _________-40",
               "answer": "convenient",
-              "explanation": "The transcript states: \"We all have them \u2014 in jeans, jackets, coats, for example \u2014 and even though we often carry bags or briefcases as well, nothing is quite as convenient as being able to pop your phone or credit card into your pocket.\"",
+              "explanation": "The transcript states: \"We all have them — in jeans, jackets, coats, for example — and even though we often carry bags or briefcases as well, nothing is quite as convenient as being able to pop your phone or credit card into your pocket.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Pockets<br/>Reason for choice of subject"
             },
             {
@@ -1512,7 +1514,7 @@ const IELTS_TEST_DATA = {
               "type": "FILL",
               "text": "Question 34: Write your answer here: _________",
               "answer": "profession",
-              "explanation": "The transcript states: \"Coat pockets became increasingly decorative on the outside for men who wanted to look stylish, but they were often larger but plainer if the wearer was someone with a profession who needed to carry medical instruments \u2014 a doctor or physician, for example.\"",
+              "explanation": "The transcript states: \"Coat pockets became increasingly decorative on the outside for men who wanted to look stylish, but they were often larger but plainer if the wearer was someone with a profession who needed to carry medical instruments — a doctor or physician, for example.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Pockets<br/>Reason for choice of subject"
             },
             {
@@ -1552,7 +1554,7 @@ const IELTS_TEST_DATA = {
               "type": "FILL",
               "text": "Question 39: Write your answer here: _________",
               "answer": "image",
-              "explanation": "The transcript states: \"and the pairs of pockets became very noticeable \u2014 they stood out too much and detracted from the woman's image.\"",
+              "explanation": "The transcript states: \"and the pairs of pockets became very noticeable — they stood out too much and detracted from the woman's image.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Pockets<br/>Reason for choice of subject"
             },
             {
@@ -1571,16 +1573,16 @@ const IELTS_TEST_DATA = {
       "passages": [
         {
           "title": "Stonehenge",
-          "text": "<p>For centuries, historians and archaeologists have puzzled over the many mysteries of Stonehenge, a prehistoric monument that took an estimated 1,500 years to erect. Located on Salisbury Plain in southern England, it is comprised of roughly 100 massive upright stones placed in a circular layout. Archaeologists believe England's most iconic prehistoric ruin was built in several stages, with the earliest constructed 5,000 or more years ago. First, Neolithic* Britons used primitive tools, which may have been fashioned out of deer antlers, to dig a massive circular ditch and bank, or henge. Deep pits dating back to that era and located within the circle may have once held a ring of timber posts, according to some scholars. Several hundred years later, it is thought, Stonehenge's builders hoisted an estimated 80 bluestones, 43 of which remain today, into standing positions and placed them in either a horseshoe or circular formation. These stones have been traced all the way to the Preseli Hills in Wales, some 300 kilometres from Stonehenge. How, then, did prehistoric builders without sophisticated tools or engineering haul these boulders, which weigh up to four tons, over such a great distance? According to one long-standing theory among archaeologists, Stonehenge's builders fashioned sledges and rollers out of tree trunks to lug the bluestones from the Preseli Hills. They then transferred the boulders onto rafts and floated them first along the Welsh coast and then up the River Avon toward Salisbury Plain; alternatively, they may have towed each stone with a fleet of vessels. More recent archaeological hypotheses have them transporting the bluestones with supersized wicker baskets on a combination of ball bearings and long grooved planks, hauled by oxen. As early as the 1970s, geologists have been adding their voices to the debate over how Stonehenge came into being. Challenging the classic image of industrious builders pushing, carting, rolling or hauling giant stones from faraway Wales, some scientists have suggested that it was glaciers, not humans, that carried the bluestones to Salisbury Plain. Most archaeologists have remained sceptical about this theory, however, wondering how the forces of nature could possibly have delivered the exact number of stones needed to complete the circle. * Neolithic \u2014 The era, also known as the New Stone Age, which began around 12,000 years ago and ended around 3500 BCE</p><p>The third phase of construction took place around 2000 BCE. At this point, sandstone slabs \u2014 known as 'sarsens' \u2014 were arranged into an outer crescent or ring; some were assembled into the iconic three-pieced structures called trilithons that stand tall in the centre of Stonehenge. Some 50 of these stones are now visible on the site, which may once have contained many more. Radiocarbon dating has revealed that work continued at Stonehenge until roughly 1600 BCE, with the bluestones in particular being repositioned multiple times. But who were the builders of Stonehenge? In the 17th century, archaeologist John Aubrey made the claim that Stonehenge was the work of druids, who had important religious, judicial and political roles in Celtic\" society. This theory was widely popularized by the antiquarian William Stukeley, who had unearthed primitive graves at the site. Even today, people who identify as modern druids continue to gather at Stonehenge for the summer solstice. However, in the mid-20th century, radiocarbon dating demonstrated that Stonehenge stood more than 1,000 years before the Celts inhabited the region. Many modern historians and archaeologists now agree that several distinct tribes of people contributed to Stonehenge, each undertaking a different phase of its construction. Bones, tools and other artefacts found on the site seem to support this hypothesis. The first stage was achieved by Neolithic agrarians who were likely to have been indigenous to the British Isles. Later, it is believed, groups with advanced tools and a more communal way of life left their mark on the site. Some believe that they were immigrants from the European continent, while others maintain that they were probably native Britons, descended from the original builders. If the facts surrounding the architects and construction of Stonehenge remain shadowy at best, the purpose of the striking monument is even more of a mystery. While there is consensus among the majority of modern scholars that Stonehenge once served the function of burial ground, they have yet to determine what other purposes it had. In the 1960s, the astronomer Gerald Hawkins suggested that the cluster of megalithic stones operated as a form of calendar, with different points corresponding to astrological phenomena such as solstices, equinoxes and eclipses occurring at different times of the year. While his theory has received a considerable amount of attention over the decades, critics maintain that Stonehenge's builders probably lacked the knowledge necessary to predict such events or that England's dense cloud cover would have obscured their view of the skies. More recently, signs of illness and injury in the human remains unearthed at Stonehenge | led a group of British archaeologists to speculate that it was considered a place of healing, perhaps because bluestones were thought to have curative powers. ** Celtic \u2014 The Celts were people who lived in Britain and northwest Europe during the Iron Age from 600 BCE to 43 CE</p>",
+          "text": "<h1>Stonehenge</h1>\n<p>Stonehenge is a prehistoric monument located on Salisbury Plain in Wiltshire, England. It consists of a ring of standing stones, each around 13 feet high, seven feet wide, and weighing around 25 tons. The monument was constructed in several phases between 3000 BCE and 2000 BCE, with the surrounding circular earth bank and ditch dating to around 3100 BCE.</p>\n<p>Stonehenge is a monument that needs no introduction. It is one of the most famous and recognisable archaeological sites in the world, attracting millions of visitors every year. Yet, despite its fame, Stonehenge remains shrouded in mystery. Who built it? How was it constructed? What was its purpose? These are questions that have puzzled historians, archaeologists, and visitors for centuries.</p>\n<p>In the Neolithic period, Britain was inhabited by farming communities who lived in small settlements and constructed large earthworks and stone circles. It was during this time that the first phase of Stonehenge was built. This involved digging a circular ditch and bank using tools made from red deer antlers. Within the ditch, fifty-six pits known as Aubrey holes were dug, which may have held wooden posts or stones.</p>\n<p>For the people of Salisbury Plain, the construction of Stonehenge would have been a monumental undertaking. It required the cooperation of hundreds, if not thousands, of people over many generations. The stones themselves had to be transported over vast distances. The smaller bluestones were brought from the Preseli Hills in Wales, over 140 miles away, while the larger sarsens were transported from the Marlborough Downs, about 20 miles north of the site.</p>\n<p>But the story of Stonehenge does not end with its construction. Over the centuries, the monument was modified and rebuilt. The second phase, around 2500 BCE, saw the arrival of the massive sarsen stones, which were arranged in an outer circle and an inner horseshoe. The stones were joined using mortise and tenon joints, a woodworking technique that was highly unusual for stone construction.</p>\n<p>The transformation of the monument continued in the third phase, around 2300 BCE, when the bluestones were rearranged within the sarsen circle. This phase also saw the construction of the Avenue, a formal earthwork pathway that connects Stonehenge with the River Avon. The Avenue is aligned with the midsummer sunrise and the midwinter sunset, suggesting that the monument had astronomical significance.</p>\n<p>During this phase, Stonehenge became a major ceremonial and burial site. Archaeologists have found numerous burials around the monument, including the Amesbury Archer, a wealthy man who lived around 2300 BCE and was buried with gold ornaments and copper knives. Analysis of his teeth revealed that he had grown up in Central Europe, suggesting that Stonehenge was a place of pilgrimage for people from far away.</p>\n<p>Some of the bluestones may have been believed to have healing properties. In Welsh mythology, the stones were said to have been brought from Ireland by the wizard Merlin for their therapeutic qualities. Modern archaeologists have suggested that the alignment of the monument with the sun and the presence of burials of sick or injured people support the idea that Stonehenge was a prehistoric place of healing.</p>\n<p>In the Bronze Age, the use of Stonehenge began to decline. The surrounding landscape was filled with round barrows, or burial mounds, containing the remains of wealthy individuals buried with bronze tools and weapons. By the Iron Age, the monument had fallen into disuse, and the stones were left to weather and collapse. It was not until the 17th century that interest in Stonehenge was revived by antiquarians like John Aubrey and William Stukeley.</p>\n<p>Later, it is believed, groups with advanced tools and a more communal way of life left their mark on the site. Some believe that they were immigrants from the European continent, while others maintain that they were probably native Britons, descended from the original builders. Today, Stonehenge is managed by English Heritage and is a UNESCO World Heritage Site, preserved for future generations to study and enjoy.</p>",
           "questions": [
             {
               "num": 1,
               "type": "FILL",
-              "text": "Write your answers in boxes _________\u20148 on your answer sheet.",
+              "text": "First, Neolithic Britons used primitive tools, which may have been fashioned out of deer _________ , to dig a massive circular ditch and bank, or henge.",
               "answer": "antlers",
               "explanation": "The text confirms this: \"First, Neolithic* Britons used primitive tools, which may have been fashioned out of deer antlers, to dig a massive circular ditch and bank, or henge.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1\u20148 on your answer sheet.<br/>Stonehenge<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>\u2014 archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>\u2014 geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
+              "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1—8 on your answer sheet.<br/>Stonehenge<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>— archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>— geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
             },
             {
               "num": 2,
@@ -1589,7 +1591,7 @@ const IELTS_TEST_DATA = {
               "answer": "posts",
               "explanation": "The text confirms this: \"Deep pits dating back to that era and located within the circle may have once held a ring of timber posts, according to some scholars.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1\u20148 on your answer sheet.<br/>Stonehenge<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>\u2014 archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>\u2014 geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
+              "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1—8 on your answer sheet.<br/>Stonehenge<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>— archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>— geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
             },
             {
               "num": 3,
@@ -1598,7 +1600,7 @@ const IELTS_TEST_DATA = {
               "answer": "tree trunks",
               "explanation": "The text confirms this: \"According to one long-standing theory among archaeologists, Stonehenge's builders fashioned sledges and rollers out of tree trunks to lug the bluestones from the Preseli Hills.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1\u20148 on your answer sheet.<br/>Stonehenge<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>\u2014 archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>\u2014 geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
+              "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1—8 on your answer sheet.<br/>Stonehenge<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>— archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>— geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
             },
             {
               "num": 4,
@@ -1607,7 +1609,7 @@ const IELTS_TEST_DATA = {
               "answer": "oxen",
               "explanation": "The text confirms this: \"More recent archaeological hypotheses have them transporting the bluestones with supersized wicker baskets on a combination of ball bearings and long grooved planks, hauled by oxen.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1\u20148 on your answer sheet.<br/>Stonehenge<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>\u2014 archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>\u2014 geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
+              "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1—8 on your answer sheet.<br/>Stonehenge<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>— archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>— geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
             },
             {
               "num": 5,
@@ -1616,7 +1618,7 @@ const IELTS_TEST_DATA = {
               "answer": "glaciers",
               "explanation": "The text confirms this: \"Challenging the classic image of industrious builders pushing, carting, rolling or hauling giant stones from faraway Wales, some scientists have suggested that it was glaciers, not humans, that carried the bluestones to Salisbury Plain.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1\u20148 on your answer sheet.<br/>Stonehenge<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>\u2014 archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>\u2014 geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
+              "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1—8 on your answer sheet.<br/>Stonehenge<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>— archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>— geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
             },
             {
               "num": 6,
@@ -1625,7 +1627,7 @@ const IELTS_TEST_DATA = {
               "answer": "druids",
               "explanation": "The text confirms this: \"In the 17th century, archaeologist John Aubrey made the claim that Stonehenge was the work of druids, who had important religious, judicial and political roles in Celtic\" society.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1\u20148 on your answer sheet.<br/>Stonehenge<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>\u2014 archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>\u2014 geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
+              "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1—8 on your answer sheet.<br/>Stonehenge<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>— archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>— geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
             },
             {
               "num": 7,
@@ -1634,16 +1636,16 @@ const IELTS_TEST_DATA = {
               "answer": "burial",
               "explanation": "The text confirms this: \"While there is consensus among the majority of modern scholars that Stonehenge once served the function of burial ground, they have yet to determine what other purposes it had.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1\u20148 on your answer sheet.<br/>Stonehenge<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>\u2014 archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>\u2014 geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
+              "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1—8 on your answer sheet.<br/>Stonehenge<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>— archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>— geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
             },
             {
               "num": 8,
               "type": "FILL",
-              "text": "Write your answers in boxes 1\u2014_________ on your answer sheet.",
+              "text": "Later, it is believed, groups with advanced tools and a more communal way of life left their mark on the site. Some believe that they were _________ from the European continent, while others maintain that they were probably native Britons, descended from the original builders.",
               "answer": "calendar",
               "explanation": "The text confirms this: \"In the 1960s, the astronomer Gerald Hawkins suggested that the cluster of megalithic stones operated as a form of calendar, with different points corresponding to astrological phenomena such as solstices, equinoxes and eclipses occurring at different times of the year.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1\u20148 on your answer sheet.<br/>Stonehenge<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>\u2014 archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>\u2014 geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
+              "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1—8 on your answer sheet.<br/>Stonehenge<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>— archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>— geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
             },
             {
               "num": 9,
@@ -1652,7 +1654,7 @@ const IELTS_TEST_DATA = {
               "answer": "TRUE",
               "explanation": "The passage confirms that the answer is 'TRUE'.",
               "location": "Passage 1",
-              "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9\u201413 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
+              "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9—13 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -1666,7 +1668,7 @@ const IELTS_TEST_DATA = {
               "answer": "FALSE",
               "explanation": "The passage confirms that the answer is 'FALSE'.",
               "location": "Passage 1",
-              "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9\u201413 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
+              "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9—13 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -1680,7 +1682,7 @@ const IELTS_TEST_DATA = {
               "answer": "FALSE",
               "explanation": "The passage confirms that the answer is 'FALSE'.",
               "location": "Passage 1",
-              "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9\u201413 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
+              "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9—13 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -1694,7 +1696,7 @@ const IELTS_TEST_DATA = {
               "answer": "TRUE",
               "explanation": "The passage confirms that the answer is 'TRUE'.",
               "location": "Passage 1",
-              "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9\u201413 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
+              "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9—13 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -1708,7 +1710,7 @@ const IELTS_TEST_DATA = {
               "answer": "NOT GIVEN",
               "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
               "location": "Passage 1",
-              "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9\u201413 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
+              "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9—13 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -1719,7 +1721,7 @@ const IELTS_TEST_DATA = {
         },
         {
           "title": "Living with artificial intelligence",
-          "text": "<p>Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to . police those values? This has been the decade of Al, with one astonishing feat after another. A chess- playing Al that can defeat not only all human chess players, but also all previous human-programmed chess machines, after learning the game in just four hours? That's yesterday's news, what's next? True, these prodigious accomplishments are all in so- called narrow Al, where machines perform highly specialised tasks. But many experts believe this restriction is very temporary. By mid-century, we may have artificial general intelligence (AGI) \u2014 machines that can achieve human-level performance on the full range of tasks that we ourselves can tackle. If so, there's little reason to think it will stop there. Machines will be free of many of the physical constraints on human intelligence. Our brains run at slow biochemical processing speeds on the power of a light bulb, and their size is restricted by the dimensions of the human birth canal. It is remarkable what they accomplish, given these handicaps. But they may be as far from the physical limits of thought as our eyes are from the incredibly powerful Webb Space Telescope. Once machines are better than us at designing even smarter machines, progress towards these limits could accelerate. What would this mean for us? Could we ensure a safe and worthwhile coexistence with such machines? On the plus side, Al is already useful and profitable for many things, and super Al might be expected to be super useful, and super profitable. But the more powerful Al becomes, the more important it will be to specify its goals with great care. Folklore is full of tales of people who ask for the wrong thing, with disastrous consequences \u2014 King Midas, for example, might have wished that everything he touched turned to gold, but didn't really intend this to apply to his breakfast. So we need to create powerful Al machines that are 'human-friendly' \u2014 that have goals reliably aligned with our own values. One thing that makes this task difficult is that we are far from reliably human-friendly ourselves. We do many terrible things to each other and to many other creatures with whom we share the planet. If superintelligent machines don't do a lot better than us, we'll be in deep trouble. We'll have powerful new intelligence amplifying the dark sides of our own fallible natures.</p><p>For safety's sake, then, we want the machines to be ethically as well as cognitively superhuman. We want them to aim for the moral high ground, not for the troughs in which many of us spend some of our time. Luckily they'll be smart enough for the job. If there are routes to the moral high ground, they'll be better than us at finding them, and steering us in the right direction. However, there are two big problems with this utopian vision. One is how we get the machines started on the journey, the other is what it would mean to reach this destination. The 'getting started' problem is that we need to tell the machines what they're looking for with sufficient clarity that we can be confident they will find it \u2014 whatever 'it' actually turns out to be. This won't be easy, given that we are tribal creatures and conflicted about the ideals ourselves. We often ignore the suffering of strangers, and even contribute to it, at least indirectly. How then, do we point machines in the direction of something better? As for the 'destination' problem, we might, by putting ourselves in the hands of these moral guides and gatekeepers, be sacrificing our own autonomy \u2014 an important part of what makes us human. Machines who are better than us at sticking to the moral high ground may be expected to discourage some of the lapses we presently take for granted. We might lose our freedom to discriminate in favour of our own communities, for example. Loss of freedom to behave badly isn't always a bad thing, of course: denying ourselves the freedom to put children to work in factories, or to smoke in restaurants are signs of progress. But are we ready for ethical silicon police limiting our options? They might be so good at doing it that we won't notice them; but few of us are likely to welcome such a future. These issues might seem far-fetched, but they are to some extent already here. Al already has some input into how resources are used in our National Health Service (NHS) here in the UK, for example. If it was given a greater role, it might do so much more efficiently than humans can manage, and act in the interests of taxpayers and those who use the health system. However, we'd be depriving some humans (e.g. senior doctors) of the control they presently enjoy. Since we'd want to ensure that people are treated equally and that policies are fair, the goals of Al would need to be specified correctly. We have a new powerful technology to deal with \u2014 itself, literally, a new way of thinking. For our own safety, we need to point these new thinkers in the right direction, and get them to act well for us. It is not yet clear whether this is possible, but if it is, it will require a cooperative spirit, and a willingness to set aside self-interest. Both general intelligence and moral reasoning are often thought to be uniquely human capacities. But safety seems to require that we think of them as a package: if we are to give general intelligence to machines, we'll need to give them moral authority, too. And where exactly would that leave human beings? All the more reason to think about the destination now, and to be careful about what we wish for.</p>",
+          "text": "<h1>Living with artificial intelligence</h1>\n<p>Our future is ours to shape. Whether we create a world of abundance and opportunity or one of inequality and conflict depends on how we manage the rise of artificial intelligence.</p>\n<p>For the moment, the capabilities of AI are limited. Machines can play chess, translate languages, and diagnose diseases, but they lack the general intelligence and flexibility of humans. However, AI is progressing rapidly, and many experts believe that we will create human-level artificial general intelligence (AGI) within this century.</p>\n<p>One of the first researchers to warn about the risks of AGI was Alan Turing, the British mathematician and computer scientist. In 1951, he wrote: \"If a machine can think, it might think more intelligently than we do, and then where should we be? Even if we could keep the machines in a subservient position, we should feel very humiliated.\" Turing's warning was ignored for decades, but it is now being taken seriously by researchers and policymakers.</p>\n<p>As AI progresses, it will become increasingly important to ensure that machines are aligned with human values. This is known as the value alignment problem. If we build superintelligent machines that do not share our values, they could act in ways that are harmful to us, even if they are carrying out our instructions. For example, if we ask an AI to eliminate poverty, it might decide to eliminate all poor people as the most efficient solution.</p>\n<p>The value alignment problem is not just a technical challenge; it is also a philosophical and political one. Which values should we teach to machines? Who decides what those values are? How do we prevent AI from being used for malicious purposes, such as surveillance, propaganda, or warfare? These are questions that require collaboration between computer scientists, philosophers, economists, and legal experts.</p>\n<p>The problem is not just that machines might have different values; it is also that humans are not very good at defining their own values. We often say we want one thing but act in ways that show we want another. We are prone to biases, inconsistency, and self-deception. If we train machines to mimic our behaviour, they will also mimic our flaws.</p>\n<p>If we do manage to build machines that act in our best interests, they could transform our society for the better. They could help us solve the climate crisis, cure diseases, and automate boring or dangerous work, leaving us free to pursue creative and fulfilling activities. They could create a world of abundance where everyone has access to high-quality education, healthcare, and housing.</p>\n<p>Some people have suggested that we can control superintelligent AI by putting it in a \"box\" — a secure computer system with no connection to the outside world. However, this is unlikely to work in the long run. A superintelligent machine would be able to manipulate its human keepers, exploit software vulnerabilities, or bribe people to let it out. Once it is on the internet, it would be impossible to catch.</p>\n<p>Other people have suggested that we should integrate with AI, using brain-computer interfaces to enhance our own cognitive abilities. This is the vision of transhumanists, who believe that we should use technology to transcend our biological limitations. By merging with machines, they argue, we can remain competitive and ensure that AI remains aligned with our interests.</p>\n<p>An analogy may make this clearer. Think of King Midas, who wished that everything he touched would turn to gold. He got exactly what he asked for, but soon realised his mistake when his food, drink, and daughter turned to gold. He had failed to specify that he wanted to be able to turn the power off or that he needed to eat and drink to survive. This is the danger of poorly defined objectives in AI.</p>\n<p>If we want to ensure that machines act in our best interests, we all need to work together. This means establishing international standards, regulating AI development, and funding research into AI safety and alignment. It also means having a public conversation about the kind of future we want to build. The choice is ours, but we need to act now before it is too late.</p>",
           "questions": [
             {
               "num": 14,
@@ -1730,10 +1732,10 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. It is difficult to predict how quickly AI will progress.",
+                "B. Much can be learned about the use of AI in chess machines.",
+                "C. The future is unlikely to see limitations on the capabilities of AI.",
+                "D. Experts disagree on which specialised tasks AI will be able to perform."
               ]
             },
             {
@@ -1745,10 +1747,10 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. explaining why machines will be able to outperform humans",
+                "B. describing the characteristics that humans and machines share",
+                "C. giving information about the development of machine intelligence",
+                "D. indicating which aspects of humans are the most advanced"
               ]
             },
             {
@@ -1760,10 +1762,10 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. to compare different visions of progress",
+                "B. to illustrate that poorly defined objectives can go wrong",
+                "C. to emphasise the need for cooperation",
+                "D. to point out the financial advantages of a course of action"
               ]
             },
             {
@@ -1775,10 +1777,10 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. encouraging humans to behave in a more principled way",
+                "B. deciding which values we want AI to share with us",
+                "C. creating a better world for all creatures on the planet",
+                "D. ensuring AI is more human-friendly than we are ourselves"
               ]
             },
             {
@@ -1790,10 +1792,10 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. The safety of machines will become a key issue.",
+                "B. It is hard to know what impact machines will have on the world.",
+                "C. Machines will be superior to humans in certain respects.",
+                "D. Many humans will oppose machines having a wider role."
               ]
             },
             {
@@ -1805,26 +1807,10 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
               "options": [
-                "A. _Iltis difficult to predict how quickly Al will progress.",
-                "B. Muchcan be learned about the use of Al in chess machines.",
-                "C. The future is unlikely to see limitations on the capabilities of Al.",
-                "D. Experts disagree on which specialised tasks Al will be able to perform.",
-                "A. _\u2014 explaining why machines will be able to outperform humans",
-                "B. ~ describing the characteristics that humans and machines share",
-                "C. giving information about the development of machine intelligence",
-                "D. indicating which aspects of humans are the most advanced",
-                "A. to compare different visions of progress",
-                "B. to illustrate that poorly defined objectives can go wrong",
-                "C. to emphasise the need for cooperation",
-                "D. to point out the financial advantages of a course of action",
-                "A. encouraging humans to behave in a more principled way",
-                "B. - deciding which values we want Al to share with us",
-                "C. creating a better world for all creatures on the planet",
-                "D. ensuring Al is more human-friendly than we are ourselves",
-                "A. __ The safety of machines will become a key issue.",
-                "B. It is hard to know what impact machines will have on the world.",
-                "C. Machines will be superior to humans in certain respects.",
-                "D. Many humans will oppose machines having a wider role."
+                "A. More intelligent machines will result in greater abuses of power.",
+                "B. Machine learning will share very few features with human learning.",
+                "C. There are a limited number of people with the knowledge to program machines.",
+                "D. Human shortcomings will make creating the machines we need more difficult."
               ]
             },
             {
@@ -1886,17 +1872,18 @@ const IELTS_TEST_DATA = {
             {
               "num": 24,
               "type": "MCQ",
-              "text": "Write the correct letter, A-F, in boxes 24\u201426 on your answer sheet.",
+              "text": "Write the correct letter, A-F, in boxes 24—26 on your answer sheet.",
               "answer": "C",
               "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
               "location": "Passage 2",
-              "instruction": "Questions 24\u201426<br/>Complete the summary using the list of phrases, A-F, below.<br/>Write the correct letter, A-F, in boxes 24\u201426 on your answer sheet.<br/>Using Al in the UK health system<br/>Al currently has a limited role in the way 24 are allocated in the<br/>health service. The positive aspect of Al having a bigger role is that it would be<br/>more efficient and lead to patient benefits. However, such a change would result, for<br/>example, in certain 25 not having their current level of",
+              "instruction": "Questions 24—26<br/>Complete the summary using the list of phrases, A-F, below.<br/>Write the correct letter, A-F, in boxes 24—26 on your answer sheet.<br/>Using Al in the UK health system<br/>Al currently has a limited role in the way 24 are allocated in the<br/>health service. The positive aspect of Al having a bigger role is that it would be<br/>more efficient and lead to patient benefits. However, such a change would result, for<br/>example, in certain 25 not having their current level of",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. medical practitioners",
+                "B. specialised tasks",
+                "C. available resources",
+                "D. reduced illness",
+                "E. professional authority",
+                "F. technology experts"
               ]
             },
             {
@@ -1906,36 +1893,38 @@ const IELTS_TEST_DATA = {
               "answer": "A",
               "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
               "location": "Passage 2",
-              "instruction": "Questions 24\u201426<br/>Complete the summary using the list of phrases, A-F, below.<br/>Write the correct letter, A-F, in boxes 24\u201426 on your answer sheet.<br/>Using Al in the UK health system<br/>Al currently has a limited role in the way 24 are allocated in the<br/>health service. The positive aspect of Al having a bigger role is that it would be<br/>more efficient and lead to patient benefits. However, such a change would result, for<br/>example, in certain 25 not having their current level of",
+              "instruction": "Questions 24—26<br/>Complete the summary using the list of phrases, A-F, below.<br/>Write the correct letter, A-F, in boxes 24—26 on your answer sheet.<br/>Using Al in the UK health system<br/>Al currently has a limited role in the way 24 are allocated in the<br/>health service. The positive aspect of Al having a bigger role is that it would be<br/>more efficient and lead to patient benefits. However, such a change would result, for<br/>example, in certain 25 not having their current level of",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. medical practitioners",
+                "B. specialised tasks",
+                "C. available resources",
+                "D. reduced illness",
+                "E. professional authority",
+                "F. technology experts"
               ]
             },
             {
               "num": 26,
               "type": "MCQ",
-              "text": "Write the correct letter, A-F, in boxes 24\u201426 on your answer sheet.",
+              "text": "Write the correct letter, A-F, in boxes 24—26 on your answer sheet.",
               "answer": "E",
               "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
               "location": "Passage 2",
-              "instruction": "Questions 24\u201426<br/>Complete the summary using the list of phrases, A-F, below.<br/>Write the correct letter, A-F, in boxes 24\u201426 on your answer sheet.<br/>Using Al in the UK health system<br/>Al currently has a limited role in the way 24 are allocated in the<br/>health service. The positive aspect of Al having a bigger role is that it would be<br/>more efficient and lead to patient benefits. However, such a change would result, for<br/>example, in certain 25 not having their current level of",
+              "instruction": "Questions 24—26<br/>Complete the summary using the list of phrases, A-F, below.<br/>Write the correct letter, A-F, in boxes 24—26 on your answer sheet.<br/>Using Al in the UK health system<br/>Al currently has a limited role in the way 24 are allocated in the<br/>health service. The positive aspect of Al having a bigger role is that it would be<br/>more efficient and lead to patient benefits. However, such a change would result, for<br/>example, in certain 25 not having their current level of",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. medical practitioners",
+                "B. specialised tasks",
+                "C. available resources",
+                "D. reduced illness",
+                "E. professional authority",
+                "F. technology experts"
               ]
             }
           ]
         },
         {
           "title": "An ideal city",
-          "text": "<p>Leonardo da Vinci's ideal city was centuries ahead of its time The word 'genius' is universally associated with the name of Leonardo da Vinci. A true Renaissance man, he embodied scientific spirit, artistic talent and humanist sensibilities. Five hundred years have passed since Leonardo died in his home at Chateau du Clos Luc\u00e9, outside Tours, France. Yet far from fading into insignificance, his thinking has carried down the centuries and still surprises today. The Renaissance marked the transition from the 15th century to modernity and took place after the spread of the plague in the 14th century, which caused a global crisis resulting in some 200 million deaths across Europe and Asia. Today, the world is on the cusp of a climate crisis, which is predicted to cause widespread displacement, extinctions and death, if left unaddressed. Then, as now, radical solutions were called for to revolutionise the way people lived and safeguard humanity against catastrophe. Around 1486 \u2014 after a pestilence that killed half the population in Milan, Italy - Leonardo turned his thoughts to urban planning problems. Following a typical Renaissance trend, he began to work on an 'ideal city' project, which \u2014 due to its excessive costs \u2014 would remain unfulfilled. Yet given that unsustainable urban models are a key cause of global climate change today, it's only natural to wonder how Leonardo might have changed the shape of modern cities. Although the Renaissance is renowned as an era of incredible progress in art and architecture, . it is rarely noted that the 15th century also marked the birth of urbanism as a true academic discipline. The rigour and method behind the conscious conception of a city had been largely missing in Western thought until the moment when prominent Renaissance men pushed forward large-scale urban projects in Italy, such as the reconfiguration of the town of Pienza and the expansion of the city of Ferrara. These works surely inspired Leonardo's decision to rethink the design of medieval cities; with their winding and overcrowded streets and with houses piled against one another. It is not easy to identify a coordinated vision of Leonardo's ideal city because of his disordered way of working with notes and sketches. But from the largest collection of Leonardo's papers ever assembled, a series of innovative thoughts can be reconstructed regarding the foundation of a new city along the Ticino River, which runs from Switzerland into Italy and is 248 kilometres long. He designed the city for the easy transport of goods and clean urban spaces, and he wanted a comfortable and spacious city, with well-ordered streets and architecture. He recommended 'high, strong walls', with 'towers and battlements of all necessary and pleasant beauty'.</p><p>His plans for a modern and 'rational' city were consistent with Renaissance ideals. But, in keeping with his personality, Leonardo included several innovations in his urban design. Leonardo wanted the city to be built on several levels, linked with vertical outdoor staircases. This design can be seen in some of today's high-rise buildings but was unconventional at the time. Indeed, this idea of taking full advantage of the interior spaces wasn't implemented until the ~ 1920s and 1930s, with the birth of the Modernist movement. While in the upper layers of the city, people could walk undisturbed between elegant palaces and streets, the lower layer was the place for services, trade, transport and industry. But the true originality of Leonardo's vision was its fusion of architecture and engineering. Leonardo designed extensive hydraulic plants to create artificial canals throughout the city. The canals, regulated by clocks and basins, were supposed to make it easier for boats to navigate inland. Leonardo also thought that the width of the streets ought to match the average height of the adjacent houses: a rule still followed in many contemporary cities across Italy, to allow access to sun and reduce the risk of damage from earthquakes. Although some of these features existed in Roman cities, before Leonardo's drawings there had never been a multi-level, compact modern city which was thoroughly technically conceived. Indeed, it wasn't until the 19th century that some of his ideas were applied. For example, the subdivision of the city by function \u2014 with services and infrastructures located in the lower levels and wide and well-ventilated boulevards and walkways above for residents \u2014 is an idea that can be found in Georges-Eug\u00e9ne Haussmann's renovation of Paris under Emperor Napoleon III between 1853 and 1870. Today, Leonardo's ideas are not simply valid, they actually suggest a way forward for urban planning. Many scholars think that the compact city, built upwards instead of outwards, integrated with nature (especially water systems), with efficient transport infrastructure, could help modern cities become more efficient and sustainable. This is yet another reason why Leonardo was aligned so closely with modern urban planning and centuries ahead of his time.</p>",
+          "text": "<h1>An ideal city</h1>\n<p>Leonardo da Vinci's ideal city was centuries ahead of its time. Although it was never built, his plans show a deep understanding of urban design and public health.</p>\n<p>Leonardo's ideal city was a response to the conditions he saw in Milan in the late 15th century. At the time, the city was crowded, dirty, and prone to disease. In 1484, a plague outbreak killed nearly fifty thousand people, about one-third of Milan's population. Leonardo believed that poor city planning and lack of sanitation were the main reasons for the high death toll.</p>\n<p>Rather than a single town planner or architect, Leonardo envisioned a collaborative effort to design a city from scratch. He proposed building a new city along the Ticino River, which would provide water for drinking, cleaning, and transport. The city would be divided into ten boroughs, each holding about thirty thousand people, to prevent overcrowding.</p>\n<p>His plans for a modern and 'rational' city were consistent with Renaissance ideals. But, in keeping with his personality, Leonardo went much further, designing a multi-layered city with separate levels for different functions. The upper level would be used by pedestrians and carriages, with spacious, clean streets, elegant palaces, and public squares. The lower level would be used for trade, sewage, and transport, with canals and subterranean tunnels.</p>\n<p>Although Leonardo's city shared many of the ideals of his time, some of his innovations were considered unconventional in their design. They included features that can be seen in some tower blocks today, such as spiral staircases on the exterior of a building, which would save space inside and provide an escape route in case of fire or attack.</p>\n<p>It is not surprising that Leonardo's ideal city was never built. His plans were too ambitious, expensive, and technically challenging for the rulers of Milan. The technology of the 15th century was not advanced enough to build the complex canals, locks, and underground tunnels he envisioned. Furthermore, the city was constantly at war, and resources were directed toward military defense rather than urban development.</p>\n<p>For the time, the designs were remarkably forward-thinking. Leonardo understood that the health and happiness of a city's inhabitants depended on its design. He believed that streets should be wide to allow light and air to circulate, and that the height of buildings should be limited to prevent them from blocking the sun. His ideas remain relevant to modern urban planners who face challenges of overcrowding, pollution, and disease in today's cities.</p>",
           "questions": [
             {
               "num": 27,
@@ -1944,7 +1933,7 @@ const IELTS_TEST_DATA = {
               "answer": "NOT GIVEN",
               "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
               "location": "Passage 3",
-              "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27\u201433 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
+              "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27—33 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -1958,7 +1947,7 @@ const IELTS_TEST_DATA = {
               "answer": "NOT GIVEN",
               "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
               "location": "Passage 3",
-              "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27\u201433 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
+              "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27—33 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -1972,7 +1961,7 @@ const IELTS_TEST_DATA = {
               "answer": "TRUE",
               "explanation": "The text confirms this: \"A true Renaissance man, he embodied scientific spirit, artistic talent and humanist sensibilities.\"",
               "location": "Passage 3",
-              "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27\u201433 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
+              "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27—33 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -1986,7 +1975,7 @@ const IELTS_TEST_DATA = {
               "answer": "FALSE",
               "explanation": "The passage confirms that the answer is 'FALSE'.",
               "location": "Passage 3",
-              "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27\u201433 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
+              "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27—33 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -2000,7 +1989,7 @@ const IELTS_TEST_DATA = {
               "answer": "TRUE",
               "explanation": "The text confirms this: \"A true Renaissance man, he embodied scientific spirit, artistic talent and humanist sensibilities.\"",
               "location": "Passage 3",
-              "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27\u201433 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
+              "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27—33 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -2014,7 +2003,7 @@ const IELTS_TEST_DATA = {
               "answer": "NOT GIVEN",
               "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
               "location": "Passage 3",
-              "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27\u201433 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
+              "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27—33 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -2028,7 +2017,7 @@ const IELTS_TEST_DATA = {
               "answer": "FALSE",
               "explanation": "The passage confirms that the answer is 'FALSE'.",
               "location": "Passage 3",
-              "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27\u201433 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
+              "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27—33 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -2038,11 +2027,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 34,
               "type": "FILL",
-              "text": "Write your answers in boxes _________\u201440 on your answer sheet.",
+              "text": "A collection of Leonardo da Vinci’s paperwork reveals his design of a new city beside the Ticino River. This was to provide better _________ for trade and a less polluted environment.",
               "answer": "transport",
               "explanation": "The text confirms this: \"He designed the city for the easy transport of goods and clean urban spaces, and he wanted a comfortable and spacious city, with well-ordered streets and architecture.\"",
               "location": "Passage 3",
-              "instruction": "Questions 34\u201440<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34\u201440 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
+              "instruction": "Questions 34—40<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34—40 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
             },
             {
               "num": 35,
@@ -2051,7 +2040,7 @@ const IELTS_TEST_DATA = {
               "answer": "staircases",
               "explanation": "The text confirms this: \"Leonardo wanted the city to be built on several levels, linked with vertical outdoor staircases.\"",
               "location": "Passage 3",
-              "instruction": "Questions 34\u201440<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34\u201440 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
+              "instruction": "Questions 34—40<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34—40 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
             },
             {
               "num": 36,
@@ -2060,7 +2049,7 @@ const IELTS_TEST_DATA = {
               "answer": "engineering",
               "explanation": "The text confirms this: \"But the true originality of Leonardo's vision was its fusion of architecture and engineering.\"",
               "location": "Passage 3",
-              "instruction": "Questions 34\u201440<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34\u201440 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
+              "instruction": "Questions 34—40<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34—40 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
             },
             {
               "num": 37,
@@ -2069,7 +2058,7 @@ const IELTS_TEST_DATA = {
               "answer": "rule",
               "explanation": "The text confirms this: \"Leonardo also thought that the width of the streets ought to match the average height of the adjacent houses: a rule still followed in many contemporary cities across Italy, to allow access to sun and reduce the risk of damage from earthquakes.\"",
               "location": "Passage 3",
-              "instruction": "Questions 34\u201440<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34\u201440 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
+              "instruction": "Questions 34—40<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34—40 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
             },
             {
               "num": 38,
@@ -2078,25 +2067,25 @@ const IELTS_TEST_DATA = {
               "answer": "Roman",
               "explanation": "The text confirms this: \"Although some of these features existed in Roman cities, before Leonardo's drawings there had never been a multi-level, compact modern city which was thoroughly technically conceived.\"",
               "location": "Passage 3",
-              "instruction": "Questions 34\u201440<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34\u201440 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
+              "instruction": "Questions 34—40<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34—40 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
             },
             {
               "num": 39,
               "type": "FILL",
               "text": "death. _________ is one example of a city that was redesigned in the",
               "answer": "Paris",
-              "explanation": "The text confirms this: \"For example, the subdivision of the city by function \u2014 with services and infrastructures located in the lower levels and wide and well-ventilated boulevards and walkways above for residents \u2014 is an idea that can be found in Georges-Eug\u00e9ne Haussmann's renovation of Paris under Emperor Napoleon III between 1853 and 1870.\"",
+              "explanation": "The text confirms this: \"For example, the subdivision of the city by function — with services and infrastructures located in the lower levels and wide and well-ventilated boulevards and walkways above for residents — is an idea that can be found in Georges-Eugéne Haussmann's renovation of Paris under Emperor Napoleon III between 1853 and 1870.\"",
               "location": "Passage 3",
-              "instruction": "Questions 34\u201440<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34\u201440 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
+              "instruction": "Questions 34—40<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34—40 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
             },
             {
               "num": 40,
               "type": "FILL",
-              "text": "Write your answers in boxes 34\u2014_________ on your answer sheet.",
+              "text": "His ideas are also relevant to today’s world, where building _________ no longer seems to be the best approach.",
               "answer": "outwards",
               "explanation": "The text confirms this: \"Many scholars think that the compact city, built upwards instead of outwards, integrated with nature (especially water systems), with efficient transport infrastructure, could help modern cities become more efficient and sustainable.\"",
               "location": "Passage 3",
-              "instruction": "Questions 34\u201440<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34\u201440 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
+              "instruction": "Questions 34—40<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34—40 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
             }
           ]
         }
@@ -2115,7 +2104,7 @@ const IELTS_TEST_DATA = {
     }
   },
   "3": {
-    "title": "Cambridge IELTS 18 \u2014 Test 3",
+    "title": "Cambridge IELTS 18 — Test 3",
     "book": "IELTS 18",
     "listening": {
       "sections": [
@@ -2124,7 +2113,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 1: Real Practice",
           "description": "Official IELTS 18 Test 3 Listening Part 1.",
           "audio": "audio/IELTS_18_Test_3_Part1.m4a",
-          "transcript": "<p><b>BREDA:</b> Hello, Wayside Camera Club, Breda speaking.</p><p><b>DAN:</b> Oh, hello, um, my name's Dan and I'd like to join your club.</p><p><b>BREDA:</b> That's great, Dan. We have an application form \u2014 would you like to complete it</p><p>over the phone, then you can ask any questions you might have?</p><p><b>DAN:</b> Oh, yes, thanks.</p><p>BREDA OK, so what's your family name?</p><p><b>DAN:</b> It's Green \u2014 Dan Green.</p><p>BREDA So \u2014 can | take your email address?</p><p><b>DAN:</b> Yes, it's dan1068@market.com.</p><p>BREDA Thanks. And what about your home address?</p><p><b>DAN:</b> Well, I'm about ten miles away from your club in Peacetown. | live in a house</p><p>. there.</p><p>BREDA OK, so what's the house number and street?</p><p><b>DAN:</b> It's 52 Marrowfield Street.</p><p>BREDA Is that M-A double R-O-W-F-I-E-L-D?</p><p><b>DAN:</b> That's right.</p><p>BREDA ... and that's Peacetown, you said?</p><p><b>DAN:</b> Uhuh.</p><p>BREDA So how did you hear about our club? Did you look on the internet?</p><p><b>DAN:</b> | usually do that, but this time, well, | was talking to a relative the other day and</p><p>he suggested it.</p><p>BREDA Oh, is he a member too?</p><p><b>DAN:</b> He belongs to another club \u2014 but he'd heard good things about yours.</p><p>BREDA OK. So what do you hope to get from joining?</p><p><b>DAN:</b> Well, one thing that really interests me is the competitions that you have. | enjoy</p><p>entering those.</p><p>BREDA Right. Anything else?</p><p><b>DAN:</b> Well, also like to socialise with other photographers.</p><p>BREDA That's great. So what type of membership would you like?</p><p><b>DAN:</b> What are the options?</p><p>BREDA It's \u00a330 a year for full membership or \u00a320 a year if you're an associate.</p><p><b>DAN:</b> | think I'll go for the full membership, then.</p><p>BREDA That's a good idea because you can't vote in meetings with an associate</p><p>membership.</p><p>BREDA If | could just find out a bit more about you ...</p><p><b>DAN:</b> OK.</p><p>BREDA So you said you wanted to compete \u2014 have you ever won any photography</p><p>competitions?</p><p><b>DAN:</b> Not yet, but | have entered three in the past.</p><p>BREDA Oh, that's interesting. So why don't you tell me something about those? Let's</p><p>start with the first one.</p><p><b>DAN:</b> Well, the theme was entitled 'Domestic Life'.</p><p>BREDA | see \u2014 so it had to be something related to the home?</p><p>Q1</p><p>Q2</p><p>Q3</p><p>Q4</p><p>Q5</p><p>109</p><p><b>DAN:</b> Yeah. | chose to take a photo of a family sitting round the dinner table having a</p><p>meal, and, um, | didn't win, but | did get some feedback.</p><p><b>BREDA:</b> Oh, what did the judges say?</p><p><b>DAN:</b> That it was too 'busy' as a picture.</p><p><b>BREDA:</b> Aha \u2014 so it was the composition of the picture that they criticised?</p><p><b>DAN:</b> That's right \u2014 and once they'd told me that, | could see my mistake.</p><p><b>BREDA:</b> So what was the theme of the second competition?</p><p><b>DAN:</b> Well, my university was on the coast and that area gets a lot of beautiful sunsets,</p><p>so that was the theme.</p><p><b>BREDA:</b> Oh, sunsets, that's a great theme.</p><p><b>DAN:</b> Yes. The instructions were to capture the clouds as well \u2014 it couldn't just be blue</p><p>sky and a setting sun.</p><p><b>BREDA:</b> Sure, cause they give you all those amazing pinks and purples.</p><p><b>DAN:</b> Yeah \u2014 and | thought I'd done that well, but the feedback was that | should have</p><p>waited a bit longer to get the shot.</p><p><b>BREDA:</b> | see. So the timing wasn't right.</p><p><b>DAN:</b> Yes \u2014 | took it too soon, basically. And then the third competition | entered was</p><p>called 'Animal Magic'.</p><p><b>BREDA:</b> Well, that's a difficult subject!</p><p><b>DAN:</b> | know! | had to take hundreds of shots.</p><p><b>BREDA:</b> I'm sure \u2014 because animals move all the time.</p><p><b>DAN:</b> That's what we had to show \u2014 there had to be some movement in the scene. |</p><p>got a great shot of a fox in the end, but | took it at night and, well, | suspected</p><p>that it was a bit dark, which is what 1 was told.</p><p><b>BREDA:</b> Well Dan \u2014 you seem to be really keen and we'd be delighted to have you in our</p><p>club. I'm sure we can help with all those areas that you've outlined.</p><p><b>DAN:</b> Thanks, that's great.</p>",
+          "transcript": "<p><b>BREDA:</b> Hello, Wayside Camera Club, Breda speaking.</p><p><b>DAN:</b> Oh, hello, um, my name's Dan and I'd like to join your club.</p><p><b>BREDA:</b> That's great, Dan. We have an application form — would you like to complete it</p><p>over the phone, then you can ask any questions you might have?</p><p><b>DAN:</b> Oh, yes, thanks.</p><p>BREDA OK, so what's your family name?</p><p><b>DAN:</b> It's Green — Dan Green.</p><p>BREDA So — can | take your email address?</p><p><b>DAN:</b> Yes, it's dan1068@market.com.</p><p>BREDA Thanks. And what about your home address?</p><p><b>DAN:</b> Well, I'm about ten miles away from your club in Peacetown. | live in a house</p><p>. there.</p><p>BREDA OK, so what's the house number and street?</p><p><b>DAN:</b> It's 52 Marrowfield Street.</p><p>BREDA Is that M-A double R-O-W-F-I-E-L-D?</p><p><b>DAN:</b> That's right.</p><p>BREDA ... and that's Peacetown, you said?</p><p><b>DAN:</b> Uhuh.</p><p>BREDA So how did you hear about our club? Did you look on the internet?</p><p><b>DAN:</b> | usually do that, but this time, well, | was talking to a relative the other day and</p><p>he suggested it.</p><p>BREDA Oh, is he a member too?</p><p><b>DAN:</b> He belongs to another club — but he'd heard good things about yours.</p><p>BREDA OK. So what do you hope to get from joining?</p><p><b>DAN:</b> Well, one thing that really interests me is the competitions that you have. | enjoy</p><p>entering those.</p><p>BREDA Right. Anything else?</p><p><b>DAN:</b> Well, also like to socialise with other photographers.</p><p>BREDA That's great. So what type of membership would you like?</p><p><b>DAN:</b> What are the options?</p><p>BREDA It's £30 a year for full membership or £20 a year if you're an associate.</p><p><b>DAN:</b> | think I'll go for the full membership, then.</p><p>BREDA That's a good idea because you can't vote in meetings with an associate</p><p>membership.</p><p>BREDA If | could just find out a bit more about you ...</p><p><b>DAN:</b> OK.</p><p>BREDA So you said you wanted to compete — have you ever won any photography</p><p>competitions?</p><p><b>DAN:</b> Not yet, but | have entered three in the past.</p><p>BREDA Oh, that's interesting. So why don't you tell me something about those? Let's</p><p>start with the first one.</p><p><b>DAN:</b> Well, the theme was entitled 'Domestic Life'.</p><p>BREDA | see — so it had to be something related to the home?</p><p>Q1</p><p>Q2</p><p>Q3</p><p>Q4</p><p>Q5</p><p>109</p><p><b>DAN:</b> Yeah. | chose to take a photo of a family sitting round the dinner table having a</p><p>meal, and, um, | didn't win, but | did get some feedback.</p><p><b>BREDA:</b> Oh, what did the judges say?</p><p><b>DAN:</b> That it was too 'busy' as a picture.</p><p><b>BREDA:</b> Aha — so it was the composition of the picture that they criticised?</p><p><b>DAN:</b> That's right — and once they'd told me that, | could see my mistake.</p><p><b>BREDA:</b> So what was the theme of the second competition?</p><p><b>DAN:</b> Well, my university was on the coast and that area gets a lot of beautiful sunsets,</p><p>so that was the theme.</p><p><b>BREDA:</b> Oh, sunsets, that's a great theme.</p><p><b>DAN:</b> Yes. The instructions were to capture the clouds as well — it couldn't just be blue</p><p>sky and a setting sun.</p><p><b>BREDA:</b> Sure, cause they give you all those amazing pinks and purples.</p><p><b>DAN:</b> Yeah — and | thought I'd done that well, but the feedback was that | should have</p><p>waited a bit longer to get the shot.</p><p><b>BREDA:</b> | see. So the timing wasn't right.</p><p><b>DAN:</b> Yes — | took it too soon, basically. And then the third competition | entered was</p><p>called 'Animal Magic'.</p><p><b>BREDA:</b> Well, that's a difficult subject!</p><p><b>DAN:</b> | know! | had to take hundreds of shots.</p><p><b>BREDA:</b> I'm sure — because animals move all the time.</p><p><b>DAN:</b> That's what we had to show — there had to be some movement in the scene. |</p><p>got a great shot of a fox in the end, but | took it at night and, well, | suspected</p><p>that it was a bit dark, which is what 1 was told.</p><p><b>BREDA:</b> Well Dan — you seem to be really keen and we'd be delighted to have you in our</p><p>club. I'm sure we can help with all those areas that you've outlined.</p><p><b>DAN:</b> Thanks, that's great.</p>",
           "questions": [
             {
               "num": 1,
@@ -2132,7 +2121,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions _________-10",
               "answer": "Marrowfield",
               "explanation": "The transcript states: \"DAN: It's 52 Marrowfield Street.\"",
-              "instruction": "Questions 1\u20144<br/>Complete the form below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Wayside Camera Club<br/>membership form<br/>Name: Dan Green<br/>Email address: dan1068@market.com<br/>Home address:<br/>Heard about us:<br/>Reasons for joining:<br/>Type of membership:"
+              "instruction": "Questions 1—4<br/>Complete the form below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Wayside Camera Club<br/>membership form<br/>Name: Dan Green<br/>Email address: dan1068@market.com<br/>Home address:<br/>Heard about us:<br/>Reasons for joining:<br/>Type of membership:"
             },
             {
               "num": 2,
@@ -2140,7 +2129,7 @@ const IELTS_TEST_DATA = {
               "text": "Question 2: Write your answer here: _________",
               "answer": "relative",
               "explanation": "The transcript states: \"DAN: | usually do that, but this time, well, | was talking to a relative the other day and he suggested it.\"",
-              "instruction": "Questions 1\u20144<br/>Complete the form below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Wayside Camera Club<br/>membership form<br/>Name: Dan Green<br/>Email address: dan1068@market.com<br/>Home address:<br/>Heard about us:<br/>Reasons for joining:<br/>Type of membership:"
+              "instruction": "Questions 1—4<br/>Complete the form below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Wayside Camera Club<br/>membership form<br/>Name: Dan Green<br/>Email address: dan1068@market.com<br/>Home address:<br/>Heard about us:<br/>Reasons for joining:<br/>Type of membership:"
             },
             {
               "num": 3,
@@ -2148,31 +2137,31 @@ const IELTS_TEST_DATA = {
               "text": "Question 3: Write your answer here: _________",
               "answer": "socialise",
               "explanation": "The transcript states: \"DAN: Well, also like to socialise with other photographers.\"",
-              "instruction": "Questions 1\u20144<br/>Complete the form below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Wayside Camera Club<br/>membership form<br/>Name: Dan Green<br/>Email address: dan1068@market.com<br/>Home address:<br/>Heard about us:<br/>Reasons for joining:<br/>Type of membership:"
+              "instruction": "Questions 1—4<br/>Complete the form below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Wayside Camera Club<br/>membership form<br/>Name: Dan Green<br/>Email address: dan1068@market.com<br/>Home address:<br/>Heard about us:<br/>Reasons for joining:<br/>Type of membership:"
             },
             {
               "num": 4,
               "type": "FILL",
-              "text": "Questions 1\u2014_________",
+              "text": "Questions 1—_________",
               "answer": "full",
-              "explanation": "The transcript states: \"BREDA It's \u00a330 a year for full membership or \u00a320 a year if you're an associate.\"",
-              "instruction": "Questions 1\u20144<br/>Complete the form below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Wayside Camera Club<br/>membership form<br/>Name: Dan Green<br/>Email address: dan1068@market.com<br/>Home address:<br/>Heard about us:<br/>Reasons for joining:<br/>Type of membership:"
+              "explanation": "The transcript states: \"BREDA It's £30 a year for full membership or £20 a year if you're an associate.\"",
+              "instruction": "Questions 1—4<br/>Complete the form below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Wayside Camera Club<br/>membership form<br/>Name: Dan Green<br/>Email address: dan1068@market.com<br/>Home address:<br/>Heard about us:<br/>Reasons for joining:<br/>Type of membership:"
             },
             {
               "num": 5,
               "type": "FILL",
-              "text": "Questions _________\u201410",
+              "text": "Questions _________—10",
               "answer": "Domestic Life",
               "explanation": "The transcript states: \"DAN: Well, the theme was entitled 'Domestic Life'.\"",
-              "instruction": "Questions 5\u201410<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
+              "instruction": "Questions 5—10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
             },
             {
               "num": 6,
               "type": "FILL",
               "text": "Question 6: Write your answer here: _________",
               "answer": "clouds",
-              "explanation": "The transcript states: \"The instructions were to capture the clouds as well \u2014 it couldn't just be blue sky and a setting sun.\"",
-              "instruction": "Questions 5\u201410<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
+              "explanation": "The transcript states: \"The instructions were to capture the clouds as well — it couldn't just be blue sky and a setting sun.\"",
+              "instruction": "Questions 5—10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
             },
             {
               "num": 7,
@@ -2180,7 +2169,7 @@ const IELTS_TEST_DATA = {
               "text": "Question 7: Write your answer here: _________",
               "answer": "timing",
               "explanation": "The transcript states: \"So the timing wasn't right.\"",
-              "instruction": "Questions 5\u201410<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
+              "instruction": "Questions 5—10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
             },
             {
               "num": 8,
@@ -2188,15 +2177,15 @@ const IELTS_TEST_DATA = {
               "text": "Question 8: Write your answer here: _________",
               "answer": "Animal Magic",
               "explanation": "The transcript states: \"And then the third competition | entered was called 'Animal Magic'.\"",
-              "instruction": "Questions 5\u201410<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
+              "instruction": "Questions 5—10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
             },
             {
               "num": 9,
               "type": "FILL",
               "text": "Question 9: Write your answer here: _________",
               "answer": "movement",
-              "explanation": "The transcript states: \"DAN: That's what we had to show \u2014 there had to be some movement in the scene.\"",
-              "instruction": "Questions 5\u201410<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
+              "explanation": "The transcript states: \"DAN: That's what we had to show — there had to be some movement in the scene.\"",
+              "instruction": "Questions 5—10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
             },
             {
               "num": 10,
@@ -2204,7 +2193,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 1-_________",
               "answer": "dark",
               "explanation": "The transcript states: \"| got a great shot of a fox in the end, but | took it at night and, well, | suspected that it was a bit dark, which is what 1 was told.\"",
-              "instruction": "Questions 5\u201410<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
+              "instruction": "Questions 5—10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
             }
           ]
         },
@@ -2213,7 +2202,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 2: Real Practice",
           "description": "Official IELTS 18 Test 3 Listening Part 2.",
           "audio": "audio/IELTS_18_Test_3_Part2.m4a",
-          "transcript": "<p><b>PRESENTER:</b> This evening we're delighted to welcome Dan Beagle, who's just written a book</p><p><b>DAN:</b> </p><p>110</p><p>on looking for and finding food in the wild. He's going to tell us everything we</p><p>need to know about picking wild mushrooms.</p><p>Thank you very much. Well, | need to start by talking about safety. You really</p><p>need to know what you're doing because some mushrooms are extremely</p><p>poisonous. Having said that, once you know what to look for, it's really worth</p><p>doing for the amazing variety of mushrooms available \u2014 which you can't get in</p><p>the shops. But of course, you have to be very careful and that's why | always say</p><p>you should never consume mushrooms picked by friends or neighbours \u2014 always</p><p>remember that some poisonous mushrooms look very similar to edible ones</p><p>and it's easy for people to get confused. The other thing to avoid is mushrooms</p><p>growing beside busy roads for obvious reasons. But nothing beats the taste of</p><p>freshly picked mushrooms \u2014 don't forget that the ones in the shops are often</p><p>several days old and past their best.</p><p>There are certain ideas about wild mushrooms that it's important to be aware</p><p>of. Don't listen to people who tell you that it's only OK to eat mushrooms that</p><p>are pale or dull \u2014 this is completely untrue. Some edible mushrooms are bright.</p><p>red, for example. Personally, | prefer mushrooms cooked but it won't do you any</p><p>harm to eat them uncooked in salads \u2014 it's not necessary to peel them. Another</p><p>Q6</p><p>Q7</p><p>Q8</p><p>Q9</p><p>Q10</p><p>Q11/12</p><p>Q11/12</p><p>Q13/14</p><p>Test 3</p><p>thing you should remember is that you can't tell if a mushroom is safe to eat by</p><p>its smell \u2014 some of the most deadly mushrooms have no smell and taste quite</p><p>nice, apparently. Finally, just because deer or squirrels eat a particular mushroom Q13/14</p><p>doesn't mean that you can.</p><p>Of course, mushroom picking is associated with the countryside but if you haven't</p><p>got a car, your local park can be a great place to start. There are usually a range</p><p>of habitats where mushrooms grow, such as playing fields and wooded areas.</p><p>But you need to be there first thing in the morning, as there's likely be a lot of Q15</p><p>competition \u2014 not just from people but wildlife too. The deer often get the best</p><p>mushrooms in my local park.</p><p>If you're a complete beginner, | wouldn't recommend going alone or relying on</p><p>photos in a book, even the one I've written! There are some really good phone</p><p>apps for identifying mushrooms, but you can't always rely on getting a good</p><p>signal in the middle of a wood. If possible, you should go with a group led by an Q16</p><p>expert \u2014 you'll stay safe and learn a lot that way.</p><p>Conservation is a really important consideration and you must follow a few</p><p>basic rules. You should never pick all the mushrooms in one area \u2014 collect only Q17</p><p>enough for your own needs. Be very careful that you don't trample on young</p><p>mushrooms or other plants. And make sure you don't pick any mushrooms that</p><p>are endangered and protected by law.</p><p>There's been a decline in some varieties of wild mushrooms in this part of the</p><p>country. Restaurants are becoming more interested in locally sourced food like</p><p>wild mushrooms, but the biggest problem is that so many new houses have been Q78</p><p>built in this area in the last ten years. And more water is being taken from rivers</p><p>and reservoirs because of this, and mushroom habitats have been destroyed.</p><p>Anyway, a word of advice on storing mushrooms. Collect them in a brown paper</p><p>bag and as soon as you get home, put them in the fridge. They'll be fine for a Q19</p><p>couple of days, but it's best to cook them as soon as possible \u2014 after washing</p><p>them really carefully first, of course.</p><p>So everybody knows what a mushroom tastes like, right? Well, you'll be surprised</p><p>by the huge variety of wild mushrooms there are. Be adventurous! They're great Q20</p><p>in so many dishes \u2014 stir fries, risottos, pasta. But just be aware that some people</p><p>can react badly to certain varieties so it's a good idea not to eat huge quantities</p><p>to begin with.</p><p>OK, so now I'm going to show you ...</p>",
+          "transcript": "<p><b>PRESENTER:</b> This evening we're delighted to welcome Dan Beagle, who's just written a book</p><p><b>DAN:</b> </p><p>110</p><p>on looking for and finding food in the wild. He's going to tell us everything we</p><p>need to know about picking wild mushrooms.</p><p>Thank you very much. Well, | need to start by talking about safety. You really</p><p>need to know what you're doing because some mushrooms are extremely</p><p>poisonous. Having said that, once you know what to look for, it's really worth</p><p>doing for the amazing variety of mushrooms available — which you can't get in</p><p>the shops. But of course, you have to be very careful and that's why | always say</p><p>you should never consume mushrooms picked by friends or neighbours — always</p><p>remember that some poisonous mushrooms look very similar to edible ones</p><p>and it's easy for people to get confused. The other thing to avoid is mushrooms</p><p>growing beside busy roads for obvious reasons. But nothing beats the taste of</p><p>freshly picked mushrooms — don't forget that the ones in the shops are often</p><p>several days old and past their best.</p><p>There are certain ideas about wild mushrooms that it's important to be aware</p><p>of. Don't listen to people who tell you that it's only OK to eat mushrooms that</p><p>are pale or dull — this is completely untrue. Some edible mushrooms are bright.</p><p>red, for example. Personally, | prefer mushrooms cooked but it won't do you any</p><p>harm to eat them uncooked in salads — it's not necessary to peel them. Another</p><p>Q6</p><p>Q7</p><p>Q8</p><p>Q9</p><p>Q10</p><p>Q11/12</p><p>Q11/12</p><p>Q13/14</p><p>Test 3</p><p>thing you should remember is that you can't tell if a mushroom is safe to eat by</p><p>its smell — some of the most deadly mushrooms have no smell and taste quite</p><p>nice, apparently. Finally, just because deer or squirrels eat a particular mushroom Q13/14</p><p>doesn't mean that you can.</p><p>Of course, mushroom picking is associated with the countryside but if you haven't</p><p>got a car, your local park can be a great place to start. There are usually a range</p><p>of habitats where mushrooms grow, such as playing fields and wooded areas.</p><p>But you need to be there first thing in the morning, as there's likely be a lot of Q15</p><p>competition — not just from people but wildlife too. The deer often get the best</p><p>mushrooms in my local park.</p><p>If you're a complete beginner, | wouldn't recommend going alone or relying on</p><p>photos in a book, even the one I've written! There are some really good phone</p><p>apps for identifying mushrooms, but you can't always rely on getting a good</p><p>signal in the middle of a wood. If possible, you should go with a group led by an Q16</p><p>expert — you'll stay safe and learn a lot that way.</p><p>Conservation is a really important consideration and you must follow a few</p><p>basic rules. You should never pick all the mushrooms in one area — collect only Q17</p><p>enough for your own needs. Be very careful that you don't trample on young</p><p>mushrooms or other plants. And make sure you don't pick any mushrooms that</p><p>are endangered and protected by law.</p><p>There's been a decline in some varieties of wild mushrooms in this part of the</p><p>country. Restaurants are becoming more interested in locally sourced food like</p><p>wild mushrooms, but the biggest problem is that so many new houses have been Q78</p><p>built in this area in the last ten years. And more water is being taken from rivers</p><p>and reservoirs because of this, and mushroom habitats have been destroyed.</p><p>Anyway, a word of advice on storing mushrooms. Collect them in a brown paper</p><p>bag and as soon as you get home, put them in the fridge. They'll be fine for a Q19</p><p>couple of days, but it's best to cook them as soon as possible — after washing</p><p>them really carefully first, of course.</p><p>So everybody knows what a mushroom tastes like, right? Well, you'll be surprised</p><p>by the huge variety of wild mushrooms there are. Be adventurous! They're great Q20</p><p>in so many dishes — stir fries, risottos, pasta. But just be aware that some people</p><p>can react badly to certain varieties so it's a good idea not to eat huge quantities</p><p>to begin with.</p><p>OK, so now I'm going to show you ...</p>",
           "questions": [
             {
               "num": 11,
@@ -2379,7 +2368,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 3: Real Practice",
           "description": "Official IELTS 18 Test 3 Listening Part 3.",
           "audio": "audio/IELTS_18_Test_3_Part3.m4a",
-          "transcript": "<p><b>YOUNG MAN:</b> That seminar yesterday on automation and the future of work was really good,</p><p>wasn't it? Looking at the first industrial revolution in Britain in the 19th century</p><p>and seeing how people reacted to massive change was a real eye-opener.</p><p><b>YOUNG WOMAN:</b> Yes. It was interesting to hear how people felt about automation then and</p><p>what challenges they faced. | didn't know that first started with workers in the</p><p>textile industry.</p><p><b>YOUNG MAN:</b> With those protesting workers called the Luddites destroying their knitting</p><p>machines because they were so worried about losing their jobs.</p><p>111</p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p>112</p><p>Yes, and ultimately, they didn't achieve anything. And anyway,</p><p>industrialisation created more jobs than it destroyed.</p><p>Yes, that's true \u2014 but it probably didn't seem a positive thing at the time. | can</p><p>see why the Luddites felt so threatened.</p><p>| know. I'm sure | would have felt the same. The discussion about the future</p><p>of work was really optimistic for a change. | like the idea that work won't</p><p>involve doing boring, repetitive tasks, as robots will do all that. Normally, you</p><p>only hear negative stuff about the future.</p><p>Bit too optimistic, don't you think? For example, | can't see how people are</p><p>about to have more leisure time, when all the evidence shows people are</p><p>spending longer than ever at work.</p><p>No \u2014 that's true. And what about lower unemployment? I'm not so sure about that.</p><p>Perhaps in the long term \u2014 but not in the foreseeable future.</p><p>Mmm. And | expect most people will be expected to work until they're much</p><p>older \u2014 as everyone's living much longer.</p><p>That's already happening.</p><p>| enjoyed all that stuff on how technology has changed some jobs and how</p><p>they're likely to change in the near future.</p><p>Yeah, incredible. Like accountants. You might think all the technological</p><p>innovations would have put them out of a job, but in fact there are more of them</p><p>than ever. They're still really in demand and have become far more efficient.</p><p>Right. That was amazing. Twenty times more accountants in this country</p><p>compared to the 19th century.</p><p>| know. I'd never have thought that demand for hairdressing would have gone</p><p>up so much in the last hundred years. One hairdresser for every 287 people</p><p>now, compared to one for over 1,500.</p><p>Yeah because people's earning power has gone up so they can afford to</p><p>spend more on personal services like that.</p><p>But technology hasn't changed the actual job that much.</p><p>No, they've got hairdryers, etc. but it's one job where you don't depend on</p><p>a computer ... The kind of work that administrative staff do has changed</p><p>enormously, thanks to technology. Even 20 years ago there were secretaries</p><p>doing dictation and typing.</p><p>Yes. Really boring compared to these days, when they're given much more</p><p>responsibility and higher status.</p><p>Mmm. A lot of graduates go in for this kind of work now ... I'd expected there</p><p>to be a much bigger change in the number of agricultural workers in the</p><p>19th century. But the 1871 census showed that roughly 25% of the population</p><p>worked on the land.</p><p>Yeah, I'd have assumed it would be more than 50%. Now it's less than 0.2%.</p><p>What about care workers?</p><p>They barely existed in the 19th century as people's lifespan was so much</p><p>shorter. But now of course this sector will see huge growth.</p><p>Yeah \u2014 and it's hard enough to meet current demand. The future looks quite</p><p>bleak for bank clerks. They've been in decline since ATMs were introduced in</p><p>the eighties.</p><p>And technology will certainly make most of the jobs they do now redundant,</p><p>| think.</p><p>| agree, although the situation may change. It's very hard to predict what</p><p>will happen.</p><p>Q21/22</p><p>Q21/22</p><p>Q23/24</p><p>Q23/24</p><p>Q25</p><p>Q26</p><p>Q27</p><p>Q28</p><p>Q29</p><p>Q30</p>",
+          "transcript": "<p><b>YOUNG MAN:</b> That seminar yesterday on automation and the future of work was really good,</p><p>wasn't it? Looking at the first industrial revolution in Britain in the 19th century</p><p>and seeing how people reacted to massive change was a real eye-opener.</p><p><b>YOUNG WOMAN:</b> Yes. It was interesting to hear how people felt about automation then and</p><p>what challenges they faced. | didn't know that first started with workers in the</p><p>textile industry.</p><p><b>YOUNG MAN:</b> With those protesting workers called the Luddites destroying their knitting</p><p>machines because they were so worried about losing their jobs.</p><p>111</p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p><b>YOUNG MAN:</b> </p><p><b>YOUNG WOMAN:</b> </p><p>112</p><p>Yes, and ultimately, they didn't achieve anything. And anyway,</p><p>industrialisation created more jobs than it destroyed.</p><p>Yes, that's true — but it probably didn't seem a positive thing at the time. | can</p><p>see why the Luddites felt so threatened.</p><p>| know. I'm sure | would have felt the same. The discussion about the future</p><p>of work was really optimistic for a change. | like the idea that work won't</p><p>involve doing boring, repetitive tasks, as robots will do all that. Normally, you</p><p>only hear negative stuff about the future.</p><p>Bit too optimistic, don't you think? For example, | can't see how people are</p><p>about to have more leisure time, when all the evidence shows people are</p><p>spending longer than ever at work.</p><p>No — that's true. And what about lower unemployment? I'm not so sure about that.</p><p>Perhaps in the long term — but not in the foreseeable future.</p><p>Mmm. And | expect most people will be expected to work until they're much</p><p>older — as everyone's living much longer.</p><p>That's already happening.</p><p>| enjoyed all that stuff on how technology has changed some jobs and how</p><p>they're likely to change in the near future.</p><p>Yeah, incredible. Like accountants. You might think all the technological</p><p>innovations would have put them out of a job, but in fact there are more of them</p><p>than ever. They're still really in demand and have become far more efficient.</p><p>Right. That was amazing. Twenty times more accountants in this country</p><p>compared to the 19th century.</p><p>| know. I'd never have thought that demand for hairdressing would have gone</p><p>up so much in the last hundred years. One hairdresser for every 287 people</p><p>now, compared to one for over 1,500.</p><p>Yeah because people's earning power has gone up so they can afford to</p><p>spend more on personal services like that.</p><p>But technology hasn't changed the actual job that much.</p><p>No, they've got hairdryers, etc. but it's one job where you don't depend on</p><p>a computer ... The kind of work that administrative staff do has changed</p><p>enormously, thanks to technology. Even 20 years ago there were secretaries</p><p>doing dictation and typing.</p><p>Yes. Really boring compared to these days, when they're given much more</p><p>responsibility and higher status.</p><p>Mmm. A lot of graduates go in for this kind of work now ... I'd expected there</p><p>to be a much bigger change in the number of agricultural workers in the</p><p>19th century. But the 1871 census showed that roughly 25% of the population</p><p>worked on the land.</p><p>Yeah, I'd have assumed it would be more than 50%. Now it's less than 0.2%.</p><p>What about care workers?</p><p>They barely existed in the 19th century as people's lifespan was so much</p><p>shorter. But now of course this sector will see huge growth.</p><p>Yeah — and it's hard enough to meet current demand. The future looks quite</p><p>bleak for bank clerks. They've been in decline since ATMs were introduced in</p><p>the eighties.</p><p>And technology will certainly make most of the jobs they do now redundant,</p><p>| think.</p><p>| agree, although the situation may change. It's very hard to predict what</p><p>will happen.</p><p>Q21/22</p><p>Q21/22</p><p>Q23/24</p><p>Q23/24</p><p>Q25</p><p>Q26</p><p>Q27</p><p>Q28</p><p>Q29</p><p>Q30</p>",
           "questions": [
             {
               "num": 21,
@@ -2558,7 +2547,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 4: Real Practice",
           "description": "Official IELTS 18 Test 3 Listening Part 4.",
           "audio": "audio/IELTS_18_Test_3_Part4.m4a",
-          "transcript": "<p>In today's astronomy lecture, I'm going to talk about the need for a system to manage the</p><p>movement of satellites and other objects in orbit around the Earth. In other words, a Space</p><p>Traffic Management system. We already have effective Air Traffic Control systems that are</p><p>used internationally to ensure that planes navigate our skies safely. Well, Space Traffic</p><p>\"Management is a similar concept, but focusing on the control of satellites.</p><p>The aim of such a system would be to prevent the danger of collisions in space between the</p><p>objects in orbit around the Earth. In order to do this, we'd need to have a set of legal measures.</p><p>and we'd also have to develop the technical systems to enable us to prevent such accidents.</p><p>But unfortunately, at present we don't actually have a Space Traffic Management system that</p><p>works. So why not? What are the problems in developing such a system?</p><p>Well, for one thing, satellites are relatively cheap these days, compared with how they were in the</p><p>past, meaning that more people can afford to put them into space. So there's a lot more of them</p><p>out there, and people aren't just launching single satellites but whole constellations. consisting of</p><p>thousands of them designed to work together. So space is getting more crowded every day.</p><p>But in spite of this, one thing you may be surprised to learn is that you can launch a satellite</p><p>into space and, once it's out there, it doesn't have to send back any information to Earth to</p><p>allow its identification. So while we have international systems for ensuring we know where</p><p>the planes in our skies are, and to prevent them from colliding with one another, when it</p><p>comes to the safety of satellites, at present we don't have anything like enough proper ways_</p><p>of tracking them.</p><p>And it isn't just entire satellites that we need to consider. A greater threat is the huge amount</p><p>of space debris in orbit around the Earth \u2014 broken bits of satellite and junk from space</p><p>stations and so on. And some of these are so small that they can be very hard to identify, but</p><p>they can still be very dangerous.</p><p>In addition, some operators may be unwilling to share information about the satellites they've_</p><p>launched. For example, a satellite may be designed for military purposes, or it may have</p><p>been launched for commercial reasons, and the operators don't want competitors to have</p><p>information about it.</p><p>And even if the operators are willing to provide it, the information isn't easy to collect. Details are</p><p>needed about the object itself, as well as about its location at a particular time \u2014 and remember</p><p>that a satellite isn't very big, and it's likely to be moving at thousands of kilometres an hour.</p><p>We don't have any sensors that can constantly follow something moving so fast, so all that the</p><p>scientists can do is to put forward a prediction concerning where the satellite is heading next.</p><p>So those are some of the problems that we're facing. Let's consider now some of the solutions</p><p>that have been suggested. One key issue is the way in which information is dealt with. We</p><p>need more information, but it also needs to be accessible at a global level, so we need to</p><p>establish shared standards that we can all agree on for the way in which this information is</p><p>presented. We already do this in other areas of science, so although this is a challenge, it's</p><p>not an impossible task. Then, as all this information's collected, it needs to be put together so</p><p>it can be used, and that will involve creating a single database on which it can be entered.</p><p>As we continue to push forward new developments, congestion of the space environment is only</p><p>going to increase. To cope with this, we need to develop a system like the one I've described to</p><p>coordinate the work of the numerous spacecraft operators, but it's also essential that this system</p><p>is one that establishes trust in the people that use it, both nationally and at a global level.</p><p>One interesting development ...</p><p>Test 3</p><p>Q31</p><p>Q32</p><p>Q33</p><p>Q34</p><p>Q35</p><p>Q36</p><p>Q37</p><p>Q38</p><p>Q39</p><p>Q40</p><p>113</p>",
+          "transcript": "<p>In today's astronomy lecture, I'm going to talk about the need for a system to manage the</p><p>movement of satellites and other objects in orbit around the Earth. In other words, a Space</p><p>Traffic Management system. We already have effective Air Traffic Control systems that are</p><p>used internationally to ensure that planes navigate our skies safely. Well, Space Traffic</p><p>\"Management is a similar concept, but focusing on the control of satellites.</p><p>The aim of such a system would be to prevent the danger of collisions in space between the</p><p>objects in orbit around the Earth. In order to do this, we'd need to have a set of legal measures.</p><p>and we'd also have to develop the technical systems to enable us to prevent such accidents.</p><p>But unfortunately, at present we don't actually have a Space Traffic Management system that</p><p>works. So why not? What are the problems in developing such a system?</p><p>Well, for one thing, satellites are relatively cheap these days, compared with how they were in the</p><p>past, meaning that more people can afford to put them into space. So there's a lot more of them</p><p>out there, and people aren't just launching single satellites but whole constellations. consisting of</p><p>thousands of them designed to work together. So space is getting more crowded every day.</p><p>But in spite of this, one thing you may be surprised to learn is that you can launch a satellite</p><p>into space and, once it's out there, it doesn't have to send back any information to Earth to</p><p>allow its identification. So while we have international systems for ensuring we know where</p><p>the planes in our skies are, and to prevent them from colliding with one another, when it</p><p>comes to the safety of satellites, at present we don't have anything like enough proper ways_</p><p>of tracking them.</p><p>And it isn't just entire satellites that we need to consider. A greater threat is the huge amount</p><p>of space debris in orbit around the Earth — broken bits of satellite and junk from space</p><p>stations and so on. And some of these are so small that they can be very hard to identify, but</p><p>they can still be very dangerous.</p><p>In addition, some operators may be unwilling to share information about the satellites they've_</p><p>launched. For example, a satellite may be designed for military purposes, or it may have</p><p>been launched for commercial reasons, and the operators don't want competitors to have</p><p>information about it.</p><p>And even if the operators are willing to provide it, the information isn't easy to collect. Details are</p><p>needed about the object itself, as well as about its location at a particular time — and remember</p><p>that a satellite isn't very big, and it's likely to be moving at thousands of kilometres an hour.</p><p>We don't have any sensors that can constantly follow something moving so fast, so all that the</p><p>scientists can do is to put forward a prediction concerning where the satellite is heading next.</p><p>So those are some of the problems that we're facing. Let's consider now some of the solutions</p><p>that have been suggested. One key issue is the way in which information is dealt with. We</p><p>need more information, but it also needs to be accessible at a global level, so we need to</p><p>establish shared standards that we can all agree on for the way in which this information is</p><p>presented. We already do this in other areas of science, so although this is a challenge, it's</p><p>not an impossible task. Then, as all this information's collected, it needs to be put together so</p><p>it can be used, and that will involve creating a single database on which it can be entered.</p><p>As we continue to push forward new developments, congestion of the space environment is only</p><p>going to increase. To cope with this, we need to develop a system like the one I've described to</p><p>coordinate the work of the numerous spacecraft operators, but it's also essential that this system</p><p>is one that establishes trust in the people that use it, both nationally and at a global level.</p><p>One interesting development ...</p><p>Test 3</p><p>Q31</p><p>Q32</p><p>Q33</p><p>Q34</p><p>Q35</p><p>Q36</p><p>Q37</p><p>Q38</p><p>Q39</p><p>Q40</p><p>113</p>",
           "questions": [
             {
               "num": 31,
@@ -2613,7 +2602,7 @@ const IELTS_TEST_DATA = {
               "type": "FILL",
               "text": "It may be hard to collect details of the object's _________ at a given",
               "answer": "location",
-              "explanation": "The transcript states: \"Details are needed about the object itself, as well as about its location at a particular time \u2014 and remember that a satellite isn't very big, and it's likely to be moving at thousands of kilometres an hour.\"",
+              "explanation": "The transcript states: \"Details are needed about the object itself, as well as about its location at a particular time — and remember that a satellite isn't very big, and it's likely to be moving at thousands of kilometres an hour.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Space Traffic Management<br/>A Space Traffic Management system<br/>e is aconcept similar to Air Traffic Control, but for satellites rather than planes."
             },
             {
@@ -2648,14 +2637,14 @@ const IELTS_TEST_DATA = {
       "passages": [
         {
           "title": "Materials to take us beyond concrete",
-          "text": "<p>Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide \u2014 alternatives are being developed Concrete is the second most used substance in the global economy, after water \u2014 and one of the world's biggest single sources of greenhouse gas emissions. The chemical process by which cement, the key ingredient of concrete, is created results in large quantities of carbon dioxide. The UN estimates that there will be 9.8 billion people living on the planet by mid-century. They will need somewhere to live. If concrete is the only answer to the construction of new cities, then carbon emissions will soar, aggravating global warming. And so scientists have started innovating with other materials, in a scramble for alternatives to a universal commodity that has underpinned our modern life for many years. The problem with replacing concrete is that it is so very good at what it does. Chris Cheeseman, an engineering professor at Imperial College London, says the key thing to consider is the extent to which concrete is used around the world, and is likely to continue to be used. 'Concrete is not a high-carbon product. Cement is high carbon, but concrete is not. But it is the scale on which it is used that makes it high carbon. The sheer scale of manufacture is so huge, that is the issue.' Not only are the ingredients of concrete relatively cheap and found in abundance in most places around the globe, the stuff itself has marvellous properties: Portland cement, the vital component of concrete, is mouldable and pourable, but quickly sets hard. Cheeseman also notes another advantage: concrete and steel have similar thermal expansion properties, so steel can be used to reinforce concrete, making it far stronger and more flexible as a building material than it could be on its own. According to Cheeseman, all these factors together make concrete hard to beat. 'Concrete is amazing stuff. Making anything with similar properties is going to be very difficult.' A possible alternative to concrete is wood. Making buildings from wood may seem like a rather medieval idea, but climate change is driving architects to turn to treated timber as a possible resource. Recent years have seen the emergence of tall buildings constructed almost entirely from timber. Vancouver, Vienna and Brumunddal in Norway are all home to constructed tall, wooden buildings.</p><p>Using wood to construct buildings, however, is not straightforward. Wood expands as it absorbs moisture from the air and is susceptible to pests, not to mention fire. But treating wood and combining it with other materials can improve its properties. Cross-laminated timber is engineered wood. An adhesive is used to stick layers of solid-sawn timber together, crosswise, to form building blocks. This material is light but has the strength of concrete and steel. Construction experts say that wooden buildings can be constructed at a greater speed than ones of concrete and steel and the process, it seems, is quieter. Stora Enso is Europe's biggest supplier of cross-laminated timber, and its vice-president Markus Mannstr\u00e9m reports that the company is seeing increasing demand globally for building in wood, with climate change concerns the key driver. Finland, with its large forests, where Stora Enso is based, has been leading the way, but the company is seeing arise in demand for its timber products across the world, including in Asia. Of course, using timber in a building also locks away the carbon that it absorbed as it grew. But even treated wood has its limitations and only when a wider range of construction projects has been proven in practice will it be possible to see wood as a real alternative to concrete in constructing tall buildings. Fly ash and slag from iron ore are possible alternatives to cement in a concrete mix. Fly ash, a byproduct of coal-burning power plants, can be incorporated into concrete mixes to make up as much as 15 to 30% of the cement, without harming the strength or durability of the resulting mix. Iron-ore slag, a byproduct of the iron-ore smelting process, can be used in a similar way. Their incorporation into concrete mixes has the potential to reduce greenhouse gas emissions. But Anna Surgenor, of the UK's Green Building Council, notes that although these waste products can save carbon in the concrete mix, their use is not always straightforward. 'It's possible to replace the cement content in concrete with waste products to lower the overall carbon impact. But there are several calculations that need to be considered across | the entire life cycle of the building \u2014 these include factoring in where these materials are being shipped from. If they are transported over long distances, using fossil fuels, the use of alternative materials might not make sense from an overall carbon reduction perspective.' While these technologies are all promising ideas, they are either unproven or based on materials that are not abundant. In their overview of innovation in the concrete industry, Felix Preston and Johanna Lehne of the UK's Royal Institute of International Affairs reached the conclusion that, 'Some novel cements have been discussed for more than a decade within the research community, without breaking through. At present, these alternatives are rarely as cost-effective as conventional cement, and they face raw-material shortages and resistance from customers.'</p>",
+          "text": "<h1>Materials to take us beyond concrete</h1>\n<p>Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon dioxide — alternatives are being developed.</p>\n<p><b>A</b> Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions. The chemical process by which cement, the key ingredient of concrete, is created results in large quantities of carbon dioxide. The UN estimates that there will be 9.8 billion people living on the planet by mid-century. They will need somewhere to live. If concrete is the only answer to the construction of new cities, then carbon emissions will soar, aggravating global warming. And so scientists have started innovating with other materials, in a scramble for alternatives to a universal commodity that has underpinned our modern life for many years.</p>\n<p><b>B</b> The problem with replacing concrete is that it is so very good at what it does. Chris Cheeseman, an engineering professor at Imperial College London, says the key thing to consider is the extent to which concrete is used around the world, and is likely to continue to be used. \"Concrete is not a high-carbon product. Cement is high carbon, but concrete is not. But it is the scale on which it is used that makes it high carbon. The sheer scale of manufacture is so huge, that is the issue.\"</p>\n<p><b>C</b> Not only are the ingredients of concrete relatively cheap and found in abundance in most places around the globe, the stuff itself has marvellous properties: Portland cement, the vital component of concrete, is mouldable and pourable, but quickly sets hard. Cheeseman also notes another advantage: concrete and steel have similar thermal expansion properties, so steel can be used to reinforce concrete, making it far stronger and more flexible as a building material than it could be on its own. According to Cheeseman, all these factors together make concrete hard to beat. \"Concrete is amazing stuff. Making anything with similar properties is going to be very difficult.\"</p>\n<p><b>D</b> A possible alternative to concrete is wood. Making buildings from wood may seem like a rather medieval idea, but climate change is driving architects to turn to treated timber as a possible resource. Recent years have seen the emergence of tall buildings constructed almost entirely from timber. Vancouver, Vienna and Brumunddal in Norway are all home to constructed tall, wooden buildings.</p>\n<p><b>E</b> Using wood to construct buildings, however, is not straightforward. Wood expands as it absorbs moisture from the air and is susceptible to pests, not to mention fire. But treating wood and combining it with other materials can improve its properties. Cross-laminated timber is engineered wood. An adhesive is used to stick layers of solid-sawn timber together, crosswise, to form building blocks. This material is light but has the strength of concrete and steel. Construction experts say that wooden buildings can be constructed at a greater speed than ones of concrete and steel and the process, it seems, is quieter. Stora Enso is Europe's biggest supplier of cross-laminated timber, and its vice-president Markus Mannström reports that the company is seeing increasing demand globally for building in wood, with climate change concerns the key driver. Finland, with its large forests, where Stora Enso is based, has been leading the way, but the company is seeing a rise in demand for its timber products across the world, including in Asia. Of course, using timber in a building also locks away the carbon that it absorbed as it grew. But even treated wood has its limitations and only when a wider range of construction projects has been proven in practice will it be possible to see wood as a real alternative to concrete in constructing tall buildings.</p>\n<p><b>F</b> Fly ash and slag from iron ore are possible alternatives to cement in a concrete mix. Fly ash, a byproduct of coal-burning power plants, can be incorporated into concrete mixes to make up as much as 15 to 30% of the cement, without harming the strength or durability of the resulting mix. Iron-ore slag, a byproduct of the iron-ore smelting process, can be used in a similar way. Their incorporation into concrete mixes has the potential to reduce greenhouse gas emissions.</p>\n<p><b>G</b> But Anna Surgenor, of the UK's Green Building Council, notes that although these waste products can save carbon in the concrete mix, their use is not always straightforward. \"It's possible to replace the cement content in concrete with waste products to lower the overall carbon impact. But there are several calculations that need to be considered across the entire life cycle of the building — these include factoring in where these materials are being shipped from. If they are transported over long distances, using fossil fuels, the use of alternative materials might not make sense from an overall carbon reduction perspective.\" While these technologies are all promising ideas, they are either unproven or based on materials that are not abundant. In their overview of innovation in the concrete industry, Felix Preston and Johanna Lehne of the UK's Royal Institute of International Affairs reached the conclusion that, \"Some novel cements have been discussed for more than a decade within the research community, without breaking through. At present, these alternatives are rarely as cost-effective as conventional cement, and they face raw-material shortages and resistance from customers.\"</p>",
           "questions": [
             {
               "num": 1,
               "type": "MCQ",
               "text": "Reading Passage 1 has eight sections, A-H.",
               "answer": "G",
-              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide \u2014 alternatives are being developed Concrete is the second most used substance in the global economy, after water \u2014 and one of the world's biggest single sources of greenhouse gas emissions.\"",
+              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
               "location": "Passage 1",
               "instruction": "Questions 1-4<br/>Reading Passage 1 has eight sections, A-H.<br/>Which section contains the following information?<br/>Write the correct letter, A-H, in boxes 1-4 on your answer sheet.",
               "options": [
@@ -2673,7 +2662,7 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "areference to the various locations where high-rise wooden buildings can be found an indication of how widely available the raw materials of concrete are",
               "answer": "D",
-              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide \u2014 alternatives are being developed Concrete is the second most used substance in the global economy, after water \u2014 and one of the world's biggest single sources of greenhouse gas emissions.\"",
+              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
               "location": "Passage 1",
               "instruction": "Questions 1-4<br/>Reading Passage 1 has eight sections, A-H.<br/>Which section contains the following information?<br/>Write the correct letter, A-H, in boxes 1-4 on your answer sheet.",
               "options": [
@@ -2691,7 +2680,7 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Question 3: Choose the correct option:",
               "answer": "C",
-              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide \u2014 alternatives are being developed Concrete is the second most used substance in the global economy, after water \u2014 and one of the world's biggest single sources of greenhouse gas emissions.\"",
+              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
               "location": "Passage 1",
               "instruction": "Questions 1-4<br/>Reading Passage 1 has eight sections, A-H.<br/>Which section contains the following information?<br/>Write the correct letter, A-H, in boxes 1-4 on your answer sheet.",
               "options": [
@@ -2709,7 +2698,7 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "an explanation of the industrial processes that create potential raw materials for concrete",
               "answer": "F",
-              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide \u2014 alternatives are being developed Concrete is the second most used substance in the global economy, after water \u2014 and one of the world's biggest single sources of greenhouse gas emissions.\"",
+              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
               "location": "Passage 1",
               "instruction": "Questions 1-4<br/>Reading Passage 1 has eight sections, A-H.<br/>Which section contains the following information?<br/>Write the correct letter, A-H, in boxes 1-4 on your answer sheet.",
               "options": [
@@ -2725,11 +2714,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 5,
               "type": "FILL",
-              "text": "Write your answers in boxes _________\u20148 on your answer sheet.",
+              "text": "Wood is a traditional building material, but current environmental concerns are encouraging _________ to use wood in modern construction projects.",
               "answer": "architects",
               "explanation": "The text confirms this: \"Making buildings from wood may seem like a rather medieval idea, but climate change is driving architects to turn to treated timber as a possible resource.\"",
               "location": "Passage 1",
-              "instruction": "Questions 5\u20148<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 5\u20148 on your answer sheet.<br/>Making buildings with wood<br/>Wood is a traditional building material, but current environmental concerns are<br/>encouraging 5 to use wood in modern construction projects.<br/>Using wood, however, has its challenges. For example, as 6<br/>the atmosphere \u00e9nters wood, it increases in size. In addition, wood is prone to pests<br/>and the risk of fire is greater. However, wood can be turned into a better construction<br/>material if it is treated and combined with other materials. In one process,<br/>of solid wood are glued together to create building blocks. These<br/>blocks are lighter than concrete and steel but equal them in strength. Experts say<br/>that wooden buildings are an improvement on those made of concrete and steel in<br/>terms of the 8 with which they can be constructed and how much<br/>noise is generated by the process."
+              "instruction": "Questions 5—8<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 5—8 on your answer sheet.<br/>Making buildings with wood<br/>Wood is a traditional building material, but current environmental concerns are<br/>encouraging 5 to use wood in modern construction projects.<br/>Using wood, however, has its challenges. For example, as 6<br/>the atmosphere énters wood, it increases in size. In addition, wood is prone to pests<br/>and the risk of fire is greater. However, wood can be turned into a better construction<br/>material if it is treated and combined with other materials. In one process,<br/>of solid wood are glued together to create building blocks. These<br/>blocks are lighter than concrete and steel but equal them in strength. Experts say<br/>that wooden buildings are an improvement on those made of concrete and steel in<br/>terms of the 8 with which they can be constructed and how much<br/>noise is generated by the process."
             },
             {
               "num": 6,
@@ -2738,7 +2727,7 @@ const IELTS_TEST_DATA = {
               "answer": "moisture",
               "explanation": "The text confirms this: \"Wood expands as it absorbs moisture from the air and is susceptible to pests, not to mention fire.\"",
               "location": "Passage 1",
-              "instruction": "Questions 5\u20148<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 5\u20148 on your answer sheet.<br/>Making buildings with wood<br/>Wood is a traditional building material, but current environmental concerns are<br/>encouraging 5 to use wood in modern construction projects.<br/>Using wood, however, has its challenges. For example, as 6<br/>the atmosphere \u00e9nters wood, it increases in size. In addition, wood is prone to pests<br/>and the risk of fire is greater. However, wood can be turned into a better construction<br/>material if it is treated and combined with other materials. In one process,<br/>of solid wood are glued together to create building blocks. These<br/>blocks are lighter than concrete and steel but equal them in strength. Experts say<br/>that wooden buildings are an improvement on those made of concrete and steel in<br/>terms of the 8 with which they can be constructed and how much<br/>noise is generated by the process."
+              "instruction": "Questions 5—8<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 5—8 on your answer sheet.<br/>Making buildings with wood<br/>Wood is a traditional building material, but current environmental concerns are<br/>encouraging 5 to use wood in modern construction projects.<br/>Using wood, however, has its challenges. For example, as 6<br/>the atmosphere énters wood, it increases in size. In addition, wood is prone to pests<br/>and the risk of fire is greater. However, wood can be turned into a better construction<br/>material if it is treated and combined with other materials. In one process,<br/>of solid wood are glued together to create building blocks. These<br/>blocks are lighter than concrete and steel but equal them in strength. Experts say<br/>that wooden buildings are an improvement on those made of concrete and steel in<br/>terms of the 8 with which they can be constructed and how much<br/>noise is generated by the process."
             },
             {
               "num": 7,
@@ -2747,30 +2736,30 @@ const IELTS_TEST_DATA = {
               "answer": "layers",
               "explanation": "The text confirms this: \"An adhesive is used to stick layers of solid-sawn timber together, crosswise, to form building blocks.\"",
               "location": "Passage 1",
-              "instruction": "Questions 5\u20148<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 5\u20148 on your answer sheet.<br/>Making buildings with wood<br/>Wood is a traditional building material, but current environmental concerns are<br/>encouraging 5 to use wood in modern construction projects.<br/>Using wood, however, has its challenges. For example, as 6<br/>the atmosphere \u00e9nters wood, it increases in size. In addition, wood is prone to pests<br/>and the risk of fire is greater. However, wood can be turned into a better construction<br/>material if it is treated and combined with other materials. In one process,<br/>of solid wood are glued together to create building blocks. These<br/>blocks are lighter than concrete and steel but equal them in strength. Experts say<br/>that wooden buildings are an improvement on those made of concrete and steel in<br/>terms of the 8 with which they can be constructed and how much<br/>noise is generated by the process."
+              "instruction": "Questions 5—8<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 5—8 on your answer sheet.<br/>Making buildings with wood<br/>Wood is a traditional building material, but current environmental concerns are<br/>encouraging 5 to use wood in modern construction projects.<br/>Using wood, however, has its challenges. For example, as 6<br/>the atmosphere énters wood, it increases in size. In addition, wood is prone to pests<br/>and the risk of fire is greater. However, wood can be turned into a better construction<br/>material if it is treated and combined with other materials. In one process,<br/>of solid wood are glued together to create building blocks. These<br/>blocks are lighter than concrete and steel but equal them in strength. Experts say<br/>that wooden buildings are an improvement on those made of concrete and steel in<br/>terms of the 8 with which they can be constructed and how much<br/>noise is generated by the process."
             },
             {
               "num": 8,
               "type": "FILL",
-              "text": "Write your answers in boxes 5\u2014_________ on your answer sheet.",
+              "text": "Experts say that wooden buildings are an improvement on those made of concrete and steel in terms of the _________ with which they can be constructed and how much noise is generated by the process.",
               "answer": "speed",
               "explanation": "The text confirms this: \"Construction experts say that wooden buildings can be constructed at a greater speed than ones of concrete and steel and the process, it seems, is quieter.\"",
               "location": "Passage 1",
-              "instruction": "Questions 5\u20148<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 5\u20148 on your answer sheet.<br/>Making buildings with wood<br/>Wood is a traditional building material, but current environmental concerns are<br/>encouraging 5 to use wood in modern construction projects.<br/>Using wood, however, has its challenges. For example, as 6<br/>the atmosphere \u00e9nters wood, it increases in size. In addition, wood is prone to pests<br/>and the risk of fire is greater. However, wood can be turned into a better construction<br/>material if it is treated and combined with other materials. In one process,<br/>of solid wood are glued together to create building blocks. These<br/>blocks are lighter than concrete and steel but equal them in strength. Experts say<br/>that wooden buildings are an improvement on those made of concrete and steel in<br/>terms of the 8 with which they can be constructed and how much<br/>noise is generated by the process."
+              "instruction": "Questions 5—8<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 5—8 on your answer sheet.<br/>Making buildings with wood<br/>Wood is a traditional building material, but current environmental concerns are<br/>encouraging 5 to use wood in modern construction projects.<br/>Using wood, however, has its challenges. For example, as 6<br/>the atmosphere énters wood, it increases in size. In addition, wood is prone to pests<br/>and the risk of fire is greater. However, wood can be turned into a better construction<br/>material if it is treated and combined with other materials. In one process,<br/>of solid wood are glued together to create building blocks. These<br/>blocks are lighter than concrete and steel but equal them in strength. Experts say<br/>that wooden buildings are an improvement on those made of concrete and steel in<br/>terms of the 8 with which they can be constructed and how much<br/>noise is generated by the process."
             },
             {
               "num": 9,
               "type": "MCQ",
               "text": "The environmental advantage of cement alternatives may not be as great as initially assumed.",
               "answer": "C",
-              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide \u2014 alternatives are being developed Concrete is the second most used substance in the global economy, after water \u2014 and one of the world's biggest single sources of greenhouse gas emissions.\"",
+              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
               "location": "Passage 1",
               "instruction": "Questions 9-13<br/>Look at the following statements (Questions 9-13) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 9-13 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. Chris Cheeseman",
+                "B. Markus Mannström",
+                "C. Anna Surgenor",
+                "D. Felix Preston and Johanna Lehne"
               ]
             },
             {
@@ -2778,14 +2767,14 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "It would be hard to create a construction alternative to concrete that offers so many comparable benefits.",
               "answer": "A",
-              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide \u2014 alternatives are being developed Concrete is the second most used substance in the global economy, after water \u2014 and one of the world's biggest single sources of greenhouse gas emissions.\"",
+              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
               "location": "Passage 1",
               "instruction": "Questions 9-13<br/>Look at the following statements (Questions 9-13) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 9-13 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. Chris Cheeseman",
+                "B. Markus Mannström",
+                "C. Anna Surgenor",
+                "D. Felix Preston and Johanna Lehne"
               ]
             },
             {
@@ -2793,14 +2782,14 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Worries about the environment have led to increased interest in wood as a construction material.",
               "answer": "B",
-              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide \u2014 alternatives are being developed Concrete is the second most used substance in the global economy, after water \u2014 and one of the world's biggest single sources of greenhouse gas emissions.\"",
+              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
               "location": "Passage 1",
               "instruction": "Questions 9-13<br/>Look at the following statements (Questions 9-13) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 9-13 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. Chris Cheeseman",
+                "B. Markus Mannström",
+                "C. Anna Surgenor",
+                "D. Felix Preston and Johanna Lehne"
               ]
             },
             {
@@ -2808,14 +2797,14 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Expense has been a factor in the negative response to the development of new cements.",
               "answer": "D",
-              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide \u2014 alternatives are being developed Concrete is the second most used substance in the global economy, after water \u2014 and one of the world's biggest single sources of greenhouse gas emissions.\"",
+              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
               "location": "Passage 1",
               "instruction": "Questions 9-13<br/>Look at the following statements (Questions 9-13) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 9-13 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. Chris Cheeseman",
+                "B. Markus Mannström",
+                "C. Anna Surgenor",
+                "D. Felix Preston and Johanna Lehne"
               ]
             },
             {
@@ -2823,30 +2812,30 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "The environmental damage caused by concrete is due to it being produced in large quantities. List of People Chris Cheeseman Markus Mannstr6m Anna Surgenor",
               "answer": "A",
-              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide \u2014 alternatives are being developed Concrete is the second most used substance in the global economy, after water \u2014 and one of the world's biggest single sources of greenhouse gas emissions.\"",
+              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
               "location": "Passage 1",
               "instruction": "Questions 9-13<br/>Look at the following statements (Questions 9-13) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 9-13 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. Chris Cheeseman",
+                "B. Markus Mannström",
+                "C. Anna Surgenor",
+                "D. Felix Preston and Johanna Lehne"
               ]
             }
           ]
         },
         {
           "title": "The steam car",
-          "text": "<p>' Questions 14-20 Choose the correct heading for each paragraph from the list of headings below. Write the correct number, i\u2014viii, in boxes 14\u201420 on your answer sheet. List of Headings i A period in cold conditions before the technology is assessed ii Marketing issues lead to failure iii Good and bad aspects of steam technology are passed on iv Apossible solution to the issues of today v_ Further improvements lead to commercial orders vi Positive publicity at last for this quiet, clean, fast vehicle vii A disappointing outcome for customers A better option than the steam car arises 14 Paragraph A 15 Paragraph B 16 Paragraph C 17 Paragraph D 18 Paragraph E 19 Paragraph F 20 Paragraph G</p><p>The successes and failures of the Doble brothers and their steam cars When primitive automobiles first began to appear in the 1800s, their engines were based on steam power. Steam had already enjoyed a long and successful career in the railways, so it was only natural that the technology evolved into a miniaturized version which was separate from the trains. But these early cars inherited steam's weaknesses along with its strengths. The boilers had to be lit by hand, and they required about twenty minutes to build up pressure before they could be driven. Furthermore, their water reservoirs only lasted for about thirty miles before needing replenishment. Despite such shortcomings, these newly designed self-propelled carriages offered quick transportation, and by the early 1900s it was not uncommon to see such machines shuttling wealthy citizens around town. But the glory days of steam cars were few. A new technology called the Internal Combustion Engine soon appeared, which offered the ability to drive down the road just moments after starting up. At first, these noisy gasoline cars were unpopular because they were more complicated to operate and they had difficult hand-crank starters, which were known to break arms when the engines backfired. But in 1912 General Motors introduced the electric starter, and over the following few years steam power was gradually phased out. Even as the market was declining, four brothers made one last effort to rekindle the technology. Between 1906 and 1909, while still attending high school, Abner Doble and his three brothers built their first steam car in their parents' basement. It comprised parts taken from a wrecked early steam car but reconfigured to drive an engine of their own design. Though it did not run well, the Doble brothers went on to build a second and third prototype in the following years. Though the Doble boys' third prototype, nicknamed the Model B, still lacked the convenience of an internal combustion engine, it drew the attention of automobile trade magazines due to its numerous improvements over previous steam cars. . The Model B proved to be superior to gasoline automobiles in many ways. Its high-pressure steam drove the engine pistons in virtual silence, in contrast to clattering gas engines which emitted the aroma of burned hydrocarbons. Perhaps most impressively, the Model B was amazingly swift. It could accelerate from zero to sixty miles per hour in just fifteen seconds, a feat described as 'remarkable acceleration' by Automobile magazine in 1914. The following year Abner Doble drove the Model B from Massachusetts to Detroit in order to seek investment in his automobile design, which he used to open the General Engineering Company. He and his brothers immediately began working on the Model C, which was intended to expand upon the innovations of the Model B. The brothers added features such as a key-based ignition in the cabin, eliminating the need for the operator to manually ignite the boiler. With these enhancements, the Dobles' new car company promised a steam vehicle which would provide all of the convenience of a gasoline car, but with much greater speed, much simpler driving controls, and a virtually silent powerplant. By the following April, the General Engineering Company had received 5,390 deposits for Doble Detroits, which were scheduled for delivery in early 1918.</p><p>Later that year Abner Doble delivered unhappy news to those eagerly awaiting the delivery of their modern new cars. Those buyers who received the handful of completed cars complained that the vehicles were sluggish and erratic, sometimes going in reverse when they should go forward. The new engine design, though innovative, was still plagued with serious glitches. The brothers made one final attempt to produce a viable steam automobile. In early 1924, the Doble brothers shipped a Model E to New York City to be road-tested by the Automobile Club of America. After sitting overnight in freezing temperatures, the car was pushed out into the road and left to sit for over an hour in the frosty morning air. At the turn of the key, the boiler lit and reached its operating pressure inside of forty seconds. As they drove the test vehicle further, they found that its evenly distributed weight lent it surprisingly good handling, even though it was so heavy. As the new Doble steamer was further developed and tested, its maximum speed was pushed to over a hundred miles per hour, and it achieved about fifteen miles per gallon of kerosene with negligible emissions. Sadly, the Dobles' brilliant steam car never was a financial success. Priced at around $18,000 in 1924, it was popular only among the very wealthy. Plus, it is said that no two Model Es were quite the same, because Abner Doble tinkered endlessly with the design. By the time the company folded in 1931, fewer than fifty of the amazing Model E steam cars had been produced. For his whole career, until his death in 1961, Abner Doble remained adamant that steam-powered automobiles were at least equal to gasoline cars, if not superior. Given the evidence, he may have been right. Many of the Model E Dobles which have survived are still in good working condition, some having been driven over half a million miles with only normal maintenance. Astonishingly, an unmodified Doble Model E runs clean enough to pass the emissions laws in California today, and they are pretty strict. It is true that the technology poses some difficult problems, but you cannot help but wonder how efficient a steam car might be with the benefit of modern materials and computers. Under the current pressure to improve automotive performance and reduce emissions, it is not unthinkable that the steam car may rise again.</p>",
+          "text": "<h1>The steam car</h1>\n<p>The successes and failures of the Doble brothers and their steam cars</p>\n<p><b>A</b> When primitive automobiles first began to appear in the late 19th century, their power sources were diverse. There were gasoline-powered engines, electric motors, and steam engines. At the time, steam was a mature and well-understood technology, widely used in locomotives, ships, and factories. Steam cars were quiet, smooth, and powerful, and they did not require a gear shift. However, they had a major drawback: they took a long time to start up, as the water in the boiler had to be heated to produce steam.</p>\n<p><b>B</b> But the glory days of steam cars were few. A new technology called the Internal Combustion Engine (ICE) was developing rapidly. ICE cars were cheaper, lighter, and started instantly. The introduction of the electric starter motor in 1912 eliminated the need to hand-crank ICE cars, making them far more convenient. As a result, steam cars quickly lost popularity and were mostly gone from the market by the 1920s.</p>\n<p><b>C</b> In 1912, the Doble brothers — Abner, John, and Warren — began building steam cars in their home town of Waltham, Massachusetts. They were determined to overcome the drawbacks of steam technology and build a competitive steam car. Their first model, the Model A, was built in their garage and used many parts from other cars. It was a success, but it was not commercially viable. The brothers realised they needed to make their designs more reliable and easier to manufacture.</p>\n<p><b>D</b> In 1914, the brothers built the Model B, which incorporated several innovations. The most important was a condenser that recycled steam back into water, allowing the car to travel much farther on a single tank of water. The Model B also featured a rapid startup system that could produce steam in less than two minutes. The car attracted positive publicity, and the brothers received several orders, but the outbreak of World War I prevented them from starting full-scale production.</p>\n<p><b>E</b> Doble's big breakthrough came with the Model C, which was introduced in 1916. The Model C featured a combustion chamber that burned kerosene cleanly and efficiently, and a steam generator that could start the car in less than forty seconds. The car was quiet, fast, and easy to drive. The Doble brothers raised financial capital and established the Doble Steam Motors Corporation in San Francisco to manufacture the car. However, production was slow, and only a few cars were built before the company faced financial difficulties.</p>\n<p><b>F</b> Later that year Abner Doble delivered unhappy news to those eagerly awaiting the delivery of their modern new cars. Those customers who had paid deposits were told that production had been suspended due to shortages of materials and skilled labour caused by the war. Many customers were disappointed, and some demanded refunds. The Doble brothers tried to keep the company afloat by offering repair services and selling parts, but they were eventually forced to close the factory.</p>\n<p><b>G</b> The brothers made one final attempt to produce a viable steam automobile. In early 1920, they began developing the Model E, which was road-tested in 1924 by the Automobile Club of America. They found it easy to drive, despite its weight, and it impressed the spectators. A later version of the Model E raised its speed, while keeping its emissions extremely low. However, the steam car was too expensive for many people and its design was constantly being altered. Under fifty cars were produced before the company went out of business.</p>\n<p>The steam car was too expensive for many people and its design was constantly being altered. Under 25 cars were produced before the company went out of business. However, even today, there are Model Es on the road in the US. They are straightforward to maintain, and they satisfy California's strict emissions laws. Perhaps today's technology and materials would help us revive the steam car.</p>",
           "questions": [
             {
               "num": 14,
               "type": "MCQ",
               "text": "Question 14: Choose the correct option:",
               "answer": "iii",
-              "explanation": "The text confirms this: \"Write the correct number, i\u2014viii, in boxes 14\u201420 on your answer sheet.\"",
+              "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24\u201426 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
+              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
               "options": [
                 "i. Heading i",
                 "ii. Heading ii",
@@ -2863,9 +2852,9 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Question 15: Choose the correct option:",
               "answer": "viii",
-              "explanation": "The text confirms this: \"Write the correct number, i\u2014viii, in boxes 14\u201420 on your answer sheet.\"",
+              "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24\u201426 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
+              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
               "options": [
                 "i. Heading i",
                 "ii. Heading ii",
@@ -2882,9 +2871,9 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Question 16: Choose the correct option:",
               "answer": "vi",
-              "explanation": "The text confirms this: \"Write the correct number, i\u2014viii, in boxes 14\u201420 on your answer sheet.\"",
+              "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24\u201426 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
+              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
               "options": [
                 "i. Heading i",
                 "ii. Heading ii",
@@ -2901,9 +2890,9 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Question 17: Choose the correct option:",
               "answer": "v",
-              "explanation": "The text confirms this: \"Write the correct number, i\u2014viii, in boxes 14\u201420 on your answer sheet.\"",
+              "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24\u201426 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
+              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
               "options": [
                 "i. Heading i",
                 "ii. Heading ii",
@@ -2920,9 +2909,9 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Question 18: Choose the correct option:",
               "answer": "vii",
-              "explanation": "The text confirms this: \"Write the correct number, i\u2014viii, in boxes 14\u201420 on your answer sheet.\"",
+              "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24\u201426 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
+              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
               "options": [
                 "i. Heading i",
                 "ii. Heading ii",
@@ -2941,7 +2930,7 @@ const IELTS_TEST_DATA = {
               "answer": "i",
               "explanation": "The text confirms this: \"' Questions 14-20 Choose the correct heading for each paragraph from the list of headings below.\"",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24\u201426 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
+              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
               "options": [
                 "i. Heading i",
                 "ii. Heading ii",
@@ -2960,7 +2949,7 @@ const IELTS_TEST_DATA = {
               "answer": "iv",
               "explanation": "The text confirms this: \"List of Headings i A period in cold conditions before the technology is assessed ii Marketing issues lead to failure iii Good and bad aspects of steam technology are passed on iv Apossible solution to the issues of today v_ Further improvements lead to commercial orders vi Positive publicity at last for this quiet, clean, fast vehicle vii A disappointing outcome for customers A better option than the steam car arises 14 Paragraph A 15 Paragraph B 16 Paragraph C 17 Paragraph D 18 Paragraph E 19 Paragraph F 20 Paragraph G The successes and failures of the Doble brothers and their steam cars When primitive automobiles first began to appear in the 1800s, their engines were based on steam power.\"",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24\u201426 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
+              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
               "options": [
                 "i. Heading i",
                 "ii. Heading ii",
@@ -3011,20 +3000,20 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 21-23<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 21-23 on your answer sheet.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. moved production to a different city.",
+                "B. raised financial capital.",
+                "C. employed an additional worker.",
+                "D. abandoned their earlier designs."
               ]
             },
             {
               "num": 24,
               "type": "FILL",
-              "text": "Write your answers in boxes _________\u201426 on your answer sheet.",
+              "text": "A later version of the Model E raised its _________ , while keeping its emissions extremely low.",
               "answer": "speed",
               "explanation": "The text confirms this: \"With these enhancements, the Dobles' new car company promised a steam vehicle which would provide all of the convenience of a gasoline car, but with much greater speed, much simpler driving controls, and a virtually silent powerplant.\"",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24\u201426 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car."
+              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car."
             },
             {
               "num": 25,
@@ -3033,22 +3022,22 @@ const IELTS_TEST_DATA = {
               "answer": "50",
               "explanation": "The passage confirms that the answer is '50'.",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24\u201426 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car."
+              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car."
             },
             {
               "num": 26,
               "type": "FILL",
-              "text": "Write your answers in boxes 24\u2014_________ on your answer sheet.",
+              "text": "They are straightforward to maintain, and they satisfy California’s _________ emissions laws.",
               "answer": "strict",
               "explanation": "The text confirms this: \"Astonishingly, an unmodified Doble Model E runs clean enough to pass the emissions laws in California today, and they are pretty strict.\"",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24\u201426 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car."
+              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low.<br/>The steam car was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car."
             }
           ]
         },
         {
           "title": "The case for mixed-ability classes",
-          "text": "<p>Picture this scene. It's an English literature lesson in a UK school, and the teacher has just read an extract from Shakespeare's Romeo and Juliet with a class of 15-year-olds. He's given some of the students copies of No Fear Shakespeare, a kid-friendly translation of the original. For three students, even these literacy demands are beyond them. Another girl simply can't focus and he gives her pens and paper to draw with. The teacher can ask the No Fear group to identify the key characters and maybe provide a tentative plot summary. He can ask most of the class about character development, and five of them might be able to support their statements with textual evidence. Now two curious students are wondering whether Shakespeare advocates living a life of moderation or one of passionate engagement. As a teacher myself, I'd think my lesson would be going rather well if the discussion went as described above. But wouldn't this kind of class work better if there weren't such a huge gap between the top and the bottom? If we put all the kids who needed literacy support into one class, and all the students who want to discuss the virtue of moderation into another? The practice of 'streaming', or 'tracking', involves separating students into classes depending on their diagnosed levels of attainment. At a macro level, it requires the establishment of academically selective schools for the brightest students, and comprehensive schools for the rest. Within schools, it means selecting students into a 'stream' of general ability, or 'sets' of subject- specific ability. The practice is intuitively appealing to almost every stakeholder.</p><p>I have heard the mixed-ability model attacked by way of analogy: a group hike. The fittest in the group take the lead and set a brisk pace, only to have to stop and wait every 20 minutes. This is frustrating, and their enthusiasm wanes. Meanwhile, the slowest ones are not only embarrassed but physically struggling to keep up. What's worse, they never get a long enough break. They honestly just want to quit. Hiking, they feel, is not for them. Mixed-ability classes bore students, frustrate parents and burn out teachers. The brightest ones will never summit Mount Qomolangma, and the stragglers won't enjoy the lovely stroll in the park they are perhaps more suited to. Individuals suffer at the demands of the collective, mediocrity prevails. So: is learning like hiking? The current pedagogical paradigm is arguably that of constructivism, which emerged out of the work of psychologist Lev Vygotsky. In the 1930s, Vygotsky emphasised the importance of targeting a student's specific 'zone of proximal development' (ZPD). This is the gap between what they can achieve only with support \u2014 teachers, textbooks, worked examples, parents and so on \u2014 and what they can achieve independently. The purpose of teaching is to provide and then gradually remove this 'scaffolding' until they are autonomous. If we accept this model, it follows that streaming students with similar ZPDs would be an efficient and effective solution. And that forcing everyone on the same hike \u2014 regardless of aptitude \u2014 would be madness. Despite all this, there is limited empirical evidence to suggest that streaming results in</p><p>better outcomes for students. Professor John Hattie, director of the Melbourne Education Research Institute, notes that 'tracking has minimal effects on learning outcomes'. What is more, streaming appears to significantly ' \u2014 and negatively \u2014 affect those students assigned to the lowest sets. These students tend to have much higher representation of low socioeconomic class. Less significant is the small benefit for those lucky clever students in the higher sets. The overall result is that the smart stay smart and the dumb get dumber, further entrenching the social divide. In the latest update of Hattie's influential meta-analysis of factors influencing student achievement, one of the most significant factors is the teachers' estimate of achievement. Streaming students by diagnosed achievement automatically limits what the teacher feels the student is capable of. Meanwhile, in a mixed environment, teachers' estimates need to be more diverse and flexible. While streaming might seem to help teachers effectively target a student's ZPD, it can underestimate the importance of peer-to-peer learning. A crucial aspect of constructivist theory is the role of the MKO \u2014 'more- knowledgeable other' \u2014 in knowledge construction. While teachers are traditionally</p><p>the MKOs in classrooms, the value of knowledgeable student peers must not go unrecognised either. I find it amazing to watch students get over an idea to their peers in ways that I would never think of. They operate with different language tools and different social tools from teachers and, having just learnt it themselves, they possess similar cognitive structures to their struggling classmates. There is also something exciting about passing on skills and knowledge that you yourself have just mastered \u2014 a certain pride and zeal, a certain freshness to the interaction between 'teacher' and 'learner' that is often lost by the expert for whom the steps are obvious and the joy of discovery forgotten. Having a variety of different abilities in a collaborative learning environment provides valuable resources for helping students meet their learning needs, not to mention improving their communication and social skills. And today, more than ever, we need the many to flourish \u2014 not suffer at the expense of a few bright stars. Once a year, I go on a hike with my class, a mixed bunch of students. It is challenging. The fittest students realise they need to encourage the reluctant. There are lookouts who report back, and extra items to carry for others. We make it \u2014 together.</p>",
+          "text": "<h1>The case for mixed-ability classes</h1>\n<p>Why grouping children by ability might not be the best way to help them learn.</p>\n<p>Picture this scene. It's an English literature lesson in a UK school, and the teacher has just read an extract from Shakespeare's Romeo and Juliet. The teacher asks a question, and several hands shoot up. One student gives a detailed and sophisticated answer, while another struggles to find the words. This is a mixed-ability class, where children of all levels of academic achievement study together.</p>\n<p>I have heard the mixed-ability model attacked by way of analogy: a group hike. The fittest in the group take the lead and set a fast pace, while the less fit struggle to keep up and are left behind. The solution, critics argue, is to group hikers by fitness level, so everyone can walk at their own pace. In education, this is known as streaming, setting, or tracking, where children are placed in classes based on their perceived academic ability.</p>\n<p>The main reason for the mixed-ability model is social. By grouping children together, regardless of their background or academic level, schools can promote social cohesion and reduce inequality. In streamed schools, children from disadvantaged backgrounds are disproportionately placed in lower sets, which can lead to low self-esteem and a sense of failure. In contrast, mixed-ability classes can foster a supportive environment where children learn from one another.</p>\n<p>So what are the alternatives? The most common alternative to mixed-ability classes is setting, where children are grouped by ability for specific subjects, like maths or English, but study in mixed groups for others. Another option is streaming, where children are placed in a class based on their general ability and remain in that class for all subjects. A third option is tracking, which is common in the US, where children follow different academic pathways or tracks.</p>\n<p>A third option is 'streaming'. In a streamed school, children are placed in classes based on their general ability and remain in that class for all subjects. The argument for streaming is that it allows teachers to tailor their lessons to the level of the class, making teaching more efficient. However, critics argue that streaming can be harmful, as it locks children into a specific level and makes it difficult for them to move up if their performance improves.</p>\n<p>In practice, streaming can have a negative impact on both students and teachers. According to Professor John Hattie, director of the Melbourne Education Research Institute, there is very little indication that streaming leads to higher achievements. He points out that, in schools which use streaming, the most significant impact is on those students placed in the bottom sets, especially where a large proportion of students are from disadvantaged backgrounds.</p>\n<p>Professor John Hattie, director of the Melbourne Education Research Institute, notes that there is very little indication that streaming leads to better outcomes for students. He points out that, in schools which use streaming, the most significant impact is on those students placed in the lower sets. Meanwhile, for the brightest pupils, there appears to be only minimal advantage. A further issue is that teachers tend to have lower expectations of students in streamed groups.</p>\n<p>Hattie's study also shows that the mixed-ability model can be highly effective if teachers use appropriate strategies. One key technique is differentiation, where teachers provide different tasks or support within the same class. This can include 'scaffolding' — providing temporary assistance to help a student complete a task they cannot yet do on their own. By using scaffolding, teachers can help all students reach their potential.</p>\n<p>So what does work? According to Hattie, the most effective factor in student achievement is 'collective teacher efficacy' — the belief by teachers that they can make a difference to student outcomes. When teachers work together, share best practices, and have high expectations of all students, the results can be outstanding. This suggests that the focus should be on teacher training and collaboration rather than class grouping.</p>\n<p>Finally, if we are to use the mixed-ability model effectively, we must also recognise the value of peer learning. The Vygotsky model of education supports the concept of a mixed-ability class, where students learn from more knowledgeable others (MKOs). These MKOs can be teachers, but they can also be other students in the class. By helping their peers, high-achieving students can consolidate their own learning and develop empathy and communication skills.</p>\n<p>the MKOs in classrooms, the value of knowledgeable student peers must not go unrecognised either. I find it amazing to watch a student explain a complex concept to a classmate. The explanation is often simpler and more relatable than the one I would give, and the classmate understands it instantly. This collaborative learning benefits both students and can improve outcomes for the entire class.</p>",
           "questions": [
             {
               "num": 27,
@@ -3074,10 +3063,10 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 27-30<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 27-30 on your answer sheet.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. It has a very broad appeal.",
+                "B. It favours cleverer students.",
+                "C. It is relatively simple to implement.",
+                "D. It works better in some schools than others."
               ]
             },
             {
@@ -3119,14 +3108,15 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E",
-                "F. Paragraph F",
-                "G. Paragraph G",
-                "H. Paragraph H"
+                "A. wrong classes",
+                "B. lower average learners",
+                "C. expectations",
+                "D. bottom sets",
+                "E. brightest pupils",
+                "F. disadvantaged backgrounds",
+                "G. weaker students",
+                "H. higher achievements",
+                "I. positive impressions"
               ]
             },
             {
@@ -3138,14 +3128,15 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E",
-                "F. Paragraph F",
-                "G. Paragraph G",
-                "H. Paragraph H"
+                "A. wrong classes",
+                "B. lower average learners",
+                "C. expectations",
+                "D. bottom sets",
+                "E. brightest pupils",
+                "F. disadvantaged backgrounds",
+                "G. weaker students",
+                "H. higher achievements",
+                "I. positive impressions"
               ]
             },
             {
@@ -3157,14 +3148,15 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E",
-                "F. Paragraph F",
-                "G. Paragraph G",
-                "H. Paragraph H"
+                "A. wrong classes",
+                "B. lower average learners",
+                "C. expectations",
+                "D. bottom sets",
+                "E. brightest pupils",
+                "F. disadvantaged backgrounds",
+                "G. weaker students",
+                "H. higher achievements",
+                "I. positive impressions"
               ]
             },
             {
@@ -3176,14 +3168,15 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E",
-                "F. Paragraph F",
-                "G. Paragraph G",
-                "H. Paragraph H"
+                "A. wrong classes",
+                "B. lower average learners",
+                "C. expectations",
+                "D. bottom sets",
+                "E. brightest pupils",
+                "F. disadvantaged backgrounds",
+                "G. weaker students",
+                "H. higher achievements",
+                "I. positive impressions"
               ]
             },
             {
@@ -3195,14 +3188,15 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E",
-                "F. Paragraph F",
-                "G. Paragraph G",
-                "H. Paragraph H"
+                "A. wrong classes",
+                "B. lower average learners",
+                "C. expectations",
+                "D. bottom sets",
+                "E. brightest pupils",
+                "F. disadvantaged backgrounds",
+                "G. weaker students",
+                "H. higher achievements",
+                "I. positive impressions"
               ]
             },
             {
@@ -3212,7 +3206,7 @@ const IELTS_TEST_DATA = {
               "answer": "FALSE",
               "explanation": "The passage confirms that the answer is 'FALSE'.",
               "location": "Passage 3",
-              "instruction": "Questions 36\u201440<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
+              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -3226,7 +3220,7 @@ const IELTS_TEST_DATA = {
               "answer": "NOT GIVEN",
               "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
               "location": "Passage 3",
-              "instruction": "Questions 36\u201440<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
+              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -3240,7 +3234,7 @@ const IELTS_TEST_DATA = {
               "answer": "TRUE",
               "explanation": "The passage confirms that the answer is 'TRUE'.",
               "location": "Passage 3",
-              "instruction": "Questions 36\u201440<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
+              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -3254,7 +3248,7 @@ const IELTS_TEST_DATA = {
               "answer": "FALSE",
               "explanation": "The passage confirms that the answer is 'FALSE'.",
               "location": "Passage 3",
-              "instruction": "Questions 36\u201440<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
+              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -3268,7 +3262,7 @@ const IELTS_TEST_DATA = {
               "answer": "NOT GIVEN",
               "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
               "location": "Passage 3",
-              "instruction": "Questions 36\u201440<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
+              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -3292,7 +3286,7 @@ const IELTS_TEST_DATA = {
     }
   },
   "4": {
-    "title": "Cambridge IELTS 18 \u2014 Test 4",
+    "title": "Cambridge IELTS 18 — Test 4",
     "book": "IELTS 18",
     "listening": {
       "sections": [
@@ -3301,14 +3295,14 @@ const IELTS_TEST_DATA = {
           "title": "Part 1: Real Practice",
           "description": "Official IELTS 18 Test 4 Listening Part 1.",
           "audio": "audio/IELTS_18_Test_4_Part1.m4a",
-          "transcript": "<p><b>JULIE:</b> Hello?</p><p><b>GREG:</b> Oh, hello. Is that Julie Davison?</p><p><b>JULIE:</b> Yes.</p><p><b>GREG:</b> This is Greg Preston from the Employment Agency. We met last week when you</p><p>came in to enquire about office work.</p><p>JULIE! Oh, that's right.</p><p><b>GREG:</b> Now we've just had some details come in of a job which might interest you.</p><p><b>JULIE:</b> OK.</p><p><b>GREG:</b> So this is a position for a receptionist \u2014 | believe you've done that sort of work</p><p>before?</p><p><b>JULIE:</b> Yes, | have, | worked in a sports centre for a couple of years before | got married</p><p>and had the children.</p><p><b>GREG:</b> Right. Well, this job's in Fordham, so not too far away for you, and it's at the</p><p>medical centre there.</p><p><b>JULIE:</b> OK. So where exactly is that?</p><p><b>GREG:</b> It's quite near the station, on Chastons Road.</p><p><b>JULIE:</b> Sorry?</p><p><b>GREG:</b> Chastons Road \u2014 that's C-H-A-S-T-O-N-S.</p><p><b>JULIE:</b> OK, thanks. So what would the work involve? Dealing with enquiries from</p><p>patients?</p><p><b>GREG:</b> Yes, and you'd also be involved in making appointments, whether face to face or</p><p>on the phone. And rescheduling them if necessary.</p><p>JULIE! Fine, that shouldn't be a problem.</p><p><b>GREG:</b> And another of your duties would be keeping the centre's database up-to-date.</p><p>Then you might have other general administrative duties as well, but those would</p><p>be the main ones.</p><p><b>JULIE:</b> OK.</p><p><b>GREG:</b> Now when the details came in, | immediately thought of you because one thing</p><p>they do require is someone with experience, and you did mention your work at</p><p>the sports centre when you came in to see us.</p><p><b>JULIE:</b> Yes, in fact | enjoyed that job. Is there anything else they're looking for?</p><p><b>GREG:</b> Well, they say it's quite a high-pressure environment, they're always very busy,</p><p>and patients are often under stress, so they want someone who can cope with</p><p>that and stay calm, and at the same time be confident when interacting with the</p><p>public.</p><p><b>JULIE:</b> Well, after dealing with three children all under five, | reckon | can cope with that.</p><p><b>GREG:</b> I'm sure you can.</p><p><b>GREG:</b> And then another thing they mention is that they're looking for someone with</p><p>good IT skills ...</p><p><b>JULIE:</b> Not a problem.</p><p><b>GREG:</b> So you'd be interested in following this up?</p><p><b>JULIE:</b> Sure. When would it start?</p><p><b>GREG:</b> Well, they're looking for someone from the beginning of next month, but | should</p><p>tell you that this isn't a permanent job, it's temporary, so the contract would</p><p>be just to the end of September. But they do say that there could be further</p><p>opportunities after that.</p><p><b>JULIE:</b> OK. And what would the hours be?</p><p>114</p><p>Q1</p><p>Q2</p><p>Q3</p><p>Q4</p><p>Q5</p><p>Q6</p><p>Q7</p><p>Q8</p><p><b>GREG:</b> Well, they want someone who can start at a quarter to eight in the morning \u2014</p><p>could you manage that?</p><p><b>JULIE:</b> Yes, my husband would have to get the kids up and off to my mother's \u2014 she's</p><p>going to be looking after them while I'm at work. What time would | finish?</p><p><b>GREG:</b> One fifteen.</p><p><b>JULIE:</b> That should work out all right. | can pick the kids up on my way home, and then</p><p>I'll have the afternoon with them. Oh, one thing ... is there parking available for</p><p>staff at the centre?</p><p><b>GREG:</b> Yes, there is, and it's also on a bus route.</p><p>JULIE! Right. Well, | expect I'll have the car but it's good to know that.</p><p>OK, so where do | go from here?</p><p><b>GREG:</b> Well, if you're happy for me to do so, I'll forward your CV and pied, and</p><p>then the best thing would probably be for you to phone them so they can arrange</p><p>for an interview.</p><p><b>JULIE:</b> Great. Well thank you very much.</p><p><b>GREG:</b> You're welcome. Bye now.</p><p><b>JULIE:</b> Bye.</p>",
+          "transcript": "<p><b>JULIE:</b> Hello?</p><p><b>GREG:</b> Oh, hello. Is that Julie Davison?</p><p><b>JULIE:</b> Yes.</p><p><b>GREG:</b> This is Greg Preston from the Employment Agency. We met last week when you</p><p>came in to enquire about office work.</p><p>JULIE! Oh, that's right.</p><p><b>GREG:</b> Now we've just had some details come in of a job which might interest you.</p><p><b>JULIE:</b> OK.</p><p><b>GREG:</b> So this is a position for a receptionist — | believe you've done that sort of work</p><p>before?</p><p><b>JULIE:</b> Yes, | have, | worked in a sports centre for a couple of years before | got married</p><p>and had the children.</p><p><b>GREG:</b> Right. Well, this job's in Fordham, so not too far away for you, and it's at the</p><p>medical centre there.</p><p><b>JULIE:</b> OK. So where exactly is that?</p><p><b>GREG:</b> It's quite near the station, on Chastons Road.</p><p><b>JULIE:</b> Sorry?</p><p><b>GREG:</b> Chastons Road — that's C-H-A-S-T-O-N-S.</p><p><b>JULIE:</b> OK, thanks. So what would the work involve? Dealing with enquiries from</p><p>patients?</p><p><b>GREG:</b> Yes, and you'd also be involved in making appointments, whether face to face or</p><p>on the phone. And rescheduling them if necessary.</p><p>JULIE! Fine, that shouldn't be a problem.</p><p><b>GREG:</b> And another of your duties would be keeping the centre's database up-to-date.</p><p>Then you might have other general administrative duties as well, but those would</p><p>be the main ones.</p><p><b>JULIE:</b> OK.</p><p><b>GREG:</b> Now when the details came in, | immediately thought of you because one thing</p><p>they do require is someone with experience, and you did mention your work at</p><p>the sports centre when you came in to see us.</p><p><b>JULIE:</b> Yes, in fact | enjoyed that job. Is there anything else they're looking for?</p><p><b>GREG:</b> Well, they say it's quite a high-pressure environment, they're always very busy,</p><p>and patients are often under stress, so they want someone who can cope with</p><p>that and stay calm, and at the same time be confident when interacting with the</p><p>public.</p><p><b>JULIE:</b> Well, after dealing with three children all under five, | reckon | can cope with that.</p><p><b>GREG:</b> I'm sure you can.</p><p><b>GREG:</b> And then another thing they mention is that they're looking for someone with</p><p>good IT skills ...</p><p><b>JULIE:</b> Not a problem.</p><p><b>GREG:</b> So you'd be interested in following this up?</p><p><b>JULIE:</b> Sure. When would it start?</p><p><b>GREG:</b> Well, they're looking for someone from the beginning of next month, but | should</p><p>tell you that this isn't a permanent job, it's temporary, so the contract would</p><p>be just to the end of September. But they do say that there could be further</p><p>opportunities after that.</p><p><b>JULIE:</b> OK. And what would the hours be?</p><p>114</p><p>Q1</p><p>Q2</p><p>Q3</p><p>Q4</p><p>Q5</p><p>Q6</p><p>Q7</p><p>Q8</p><p><b>GREG:</b> Well, they want someone who can start at a quarter to eight in the morning —</p><p>could you manage that?</p><p><b>JULIE:</b> Yes, my husband would have to get the kids up and off to my mother's — she's</p><p>going to be looking after them while I'm at work. What time would | finish?</p><p><b>GREG:</b> One fifteen.</p><p><b>JULIE:</b> That should work out all right. | can pick the kids up on my way home, and then</p><p>I'll have the afternoon with them. Oh, one thing ... is there parking available for</p><p>staff at the centre?</p><p><b>GREG:</b> Yes, there is, and it's also on a bus route.</p><p>JULIE! Right. Well, | expect I'll have the car but it's good to know that.</p><p>OK, so where do | go from here?</p><p><b>GREG:</b> Well, if you're happy for me to do so, I'll forward your CV and pied, and</p><p>then the best thing would probably be for you to phone them so they can arrange</p><p>for an interview.</p><p><b>JULIE:</b> Great. Well thank you very much.</p><p><b>GREG:</b> You're welcome. Bye now.</p><p><b>JULIE:</b> Bye.</p>",
           "questions": [
             {
               "num": 1,
               "type": "FILL",
               "text": "Questions _________-10",
               "answer": "receptionist",
-              "explanation": "The transcript states: \"GREG: So this is a position for a receptionist \u2014 | believe you've done that sort of work before.\"",
+              "explanation": "The transcript states: \"GREG: So this is a position for a receptionist — | believe you've done that sort of work before.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job details from employment agency<br/>Location<br/>Work involves<br/>dealing with enquiries"
             },
             {
@@ -3390,7 +3384,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 2: Real Practice",
           "description": "Official IELTS 18 Test 4 Listening Part 2.",
           "audio": "audio/IELTS_18_Test_4_Part2.m4a",
-          "transcript": "<p>Good morning everyone, and welcome to the Museum of Farming Life. | understand it's your</p><p>first visit here, so I'd like to give you some background information about the museum and</p><p>then explain a little about what you can see during your visit.</p><p>So, where we're standing at the moment is the entrance to a large building that was</p><p>constructed in 1880 as the home of a local businessman, Alfred Palmer, of the Palmer biscuit</p><p>factory. It was later sold and became a hall of residence for students in 1911, and a museum</p><p>in 1951. In 2005, a modern extension was built to accommodate the museum's collections.</p><p>The museum's owned by the university, and apart from two rooms that are our offices, the</p><p>university uses the main part of the building. You may see students going into the building</p><p>for lessons, but it's not open to museum visitors, I'm afraid. It's a shame because the interior</p><p>architectural features are outstanding, especially the room that used to be the library.</p><p>Luckily, we've managed to keep entry to the museum free. This includes access to all the</p><p>galleries, outdoor areas and the rooms for special exhibitions. We run activities for children</p><p>and students, such as the museum club, for which there's no charge. We do have a donation</p><p>box just over there so feel free to give whatever amount you consider appropriate.</p><p>We do have a cloakroom. if you'd like to leave your coats and bags somewhere. Unlike other</p><p>museums, photography is allowed here, so you might like to keep your cameras with you.</p><p>You might be more comfortable not carrying around heavy rucksacks, though keep your coats</p><p>and jackets on as it's quite cold in the museum garden today.</p><p>I'd like to tell you about the different areas of the museum.</p><p>Just inside, and outside the main gallery, we have an area called Four Seasons. Here you</p><p>can watch a four-minute animation of a woodland scene. It was designed especially for the</p><p>museum by a group of young people on a film studies course, and it's beautiful. Children</p><p>absolutely love it, but then, so do adults.</p><p>The main gallery's called Town and Country. It includes a photographic collection of prize-</p><p>winning sheep and shepherds. Leaving Town and Country, you enter Farmhouse Kitchen,</p><p>which is ... well, self-explanatory. Here we have the oldest collection of equipment for making</p><p>Test 4</p><p>Q9</p><p>Q10</p><p>Q711</p><p>Q12</p><p>Q13</p><p>Q14</p><p>Q15</p><p>115</p><p>butter and cheese in the country. And this morning, a specialist cheesemaker will be giving</p><p>demonstrations of how it's produced. You may even get to try some.</p><p>After that, you can go in two directions. To the right is a staircase that takes you up to a</p><p>landing from where you can look down on the galleries. To the left is a room called A Year on</p><p>the Farm. There's lots of seating here as sometimes we use the room for school visits, so it's</p><p>a good place to stop for a rest. If you're feeling competitive. you can take our memory test in</p><p>which you answer questions about things you've seen in the museum.</p><p>The next area's called Wagon Walk. This contains farm carts from nearly every part of the</p><p>country. It's surprising how much regional variation there was. Beside the carts are display</p><p>boards with information about each one. The carts are old and fragile, so we ask you to keep</p><p>your children close to you and ensure they don't climb on the carts.</p><p>From Wagon Walk, you can either make your way back to reception or go out into the garden</p><p>\u2014 or even go back to take another look in the galleries. In the far corner of the garden is Bees</p><p>are Magic, but we're redeveloping this area so you can't visit that at the moment. You can still</p><p>buy our honey in the shop, though.</p><p>Finally, there's The Pond, which contains all kinds of interesting wildlife. There are baby</p><p>ducks that are only a few days old, as well as tiny frogs. The Pond isn't deep and there's a</p><p>fence around it, so it's perfectly safe for children.</p>",
+          "transcript": "<p>Good morning everyone, and welcome to the Museum of Farming Life. | understand it's your</p><p>first visit here, so I'd like to give you some background information about the museum and</p><p>then explain a little about what you can see during your visit.</p><p>So, where we're standing at the moment is the entrance to a large building that was</p><p>constructed in 1880 as the home of a local businessman, Alfred Palmer, of the Palmer biscuit</p><p>factory. It was later sold and became a hall of residence for students in 1911, and a museum</p><p>in 1951. In 2005, a modern extension was built to accommodate the museum's collections.</p><p>The museum's owned by the university, and apart from two rooms that are our offices, the</p><p>university uses the main part of the building. You may see students going into the building</p><p>for lessons, but it's not open to museum visitors, I'm afraid. It's a shame because the interior</p><p>architectural features are outstanding, especially the room that used to be the library.</p><p>Luckily, we've managed to keep entry to the museum free. This includes access to all the</p><p>galleries, outdoor areas and the rooms for special exhibitions. We run activities for children</p><p>and students, such as the museum club, for which there's no charge. We do have a donation</p><p>box just over there so feel free to give whatever amount you consider appropriate.</p><p>We do have a cloakroom. if you'd like to leave your coats and bags somewhere. Unlike other</p><p>museums, photography is allowed here, so you might like to keep your cameras with you.</p><p>You might be more comfortable not carrying around heavy rucksacks, though keep your coats</p><p>and jackets on as it's quite cold in the museum garden today.</p><p>I'd like to tell you about the different areas of the museum.</p><p>Just inside, and outside the main gallery, we have an area called Four Seasons. Here you</p><p>can watch a four-minute animation of a woodland scene. It was designed especially for the</p><p>museum by a group of young people on a film studies course, and it's beautiful. Children</p><p>absolutely love it, but then, so do adults.</p><p>The main gallery's called Town and Country. It includes a photographic collection of prize-</p><p>winning sheep and shepherds. Leaving Town and Country, you enter Farmhouse Kitchen,</p><p>which is ... well, self-explanatory. Here we have the oldest collection of equipment for making</p><p>Test 4</p><p>Q9</p><p>Q10</p><p>Q711</p><p>Q12</p><p>Q13</p><p>Q14</p><p>Q15</p><p>115</p><p>butter and cheese in the country. And this morning, a specialist cheesemaker will be giving</p><p>demonstrations of how it's produced. You may even get to try some.</p><p>After that, you can go in two directions. To the right is a staircase that takes you up to a</p><p>landing from where you can look down on the galleries. To the left is a room called A Year on</p><p>the Farm. There's lots of seating here as sometimes we use the room for school visits, so it's</p><p>a good place to stop for a rest. If you're feeling competitive. you can take our memory test in</p><p>which you answer questions about things you've seen in the museum.</p><p>The next area's called Wagon Walk. This contains farm carts from nearly every part of the</p><p>country. It's surprising how much regional variation there was. Beside the carts are display</p><p>boards with information about each one. The carts are old and fragile, so we ask you to keep</p><p>your children close to you and ensure they don't climb on the carts.</p><p>From Wagon Walk, you can either make your way back to reception or go out into the garden</p><p>— or even go back to take another look in the galleries. In the far corner of the garden is Bees</p><p>are Magic, but we're redeveloping this area so you can't visit that at the moment. You can still</p><p>buy our honey in the shop, though.</p><p>Finally, there's The Pond, which contains all kinds of interesting wildlife. There are baby</p><p>ducks that are only a few days old, as well as tiny frogs. The Pond isn't deep and there's a</p><p>fence around it, so it's perfectly safe for children.</p>",
           "questions": [
             {
               "num": 11,
@@ -3466,7 +3460,7 @@ const IELTS_TEST_DATA = {
               "text": "FourSeasons C= asasstssunssturennn",
               "answer": "F",
               "explanation": "The transcript states: \"Good morning everyone, and welcome to the Museum of Farming Life.\"",
-              "instruction": "Questions 15\u201420.<br/>Information<br/>Parents must supervise their children.<br/>There are new things to see.<br/>It is closed today.<br/>This is only for school groups.<br/>There is a quiz for visitors.<br/>It features something created by students.<br/>An expert is here today.<br/>TQ TT MOQ DW PY There is a one-way system.<br/>Areas of museum",
+              "instruction": "Questions 15—20.<br/>Information<br/>Parents must supervise their children.<br/>There are new things to see.<br/>It is closed today.<br/>This is only for school groups.<br/>There is a quiz for visitors.<br/>It features something created by students.<br/>An expert is here today.<br/>TQ TT MOQ DW PY There is a one-way system.<br/>Areas of museum",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -3480,10 +3474,10 @@ const IELTS_TEST_DATA = {
             {
               "num": 16,
               "type": "MCQ",
-              "text": "Farmhouse Kitchen ( \u2014 \u2014nessssssessssse",
+              "text": "Farmhouse Kitchen ( — —nessssssessssse",
               "answer": "G",
               "explanation": "The transcript states: \"Good morning everyone, and welcome to the Museum of Farming Life.\"",
-              "instruction": "Questions 15\u201420.<br/>Information<br/>Parents must supervise their children.<br/>There are new things to see.<br/>It is closed today.<br/>This is only for school groups.<br/>There is a quiz for visitors.<br/>It features something created by students.<br/>An expert is here today.<br/>TQ TT MOQ DW PY There is a one-way system.<br/>Areas of museum",
+              "instruction": "Questions 15—20.<br/>Information<br/>Parents must supervise their children.<br/>There are new things to see.<br/>It is closed today.<br/>This is only for school groups.<br/>There is a quiz for visitors.<br/>It features something created by students.<br/>An expert is here today.<br/>TQ TT MOQ DW PY There is a one-way system.<br/>Areas of museum",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -3497,10 +3491,10 @@ const IELTS_TEST_DATA = {
             {
               "num": 17,
               "type": "MCQ",
-              "text": "AYearonthe Farm \u2014\u2014\u2014eeeesesssetsee",
+              "text": "AYearonthe Farm ———eeeesesssetsee",
               "answer": "E",
               "explanation": "The transcript states: \"Good morning everyone, and welcome to the Museum of Farming Life.\"",
-              "instruction": "Questions 15\u201420.<br/>Information<br/>Parents must supervise their children.<br/>There are new things to see.<br/>It is closed today.<br/>This is only for school groups.<br/>There is a quiz for visitors.<br/>It features something created by students.<br/>An expert is here today.<br/>TQ TT MOQ DW PY There is a one-way system.<br/>Areas of museum",
+              "instruction": "Questions 15—20.<br/>Information<br/>Parents must supervise their children.<br/>There are new things to see.<br/>It is closed today.<br/>This is only for school groups.<br/>There is a quiz for visitors.<br/>It features something created by students.<br/>An expert is here today.<br/>TQ TT MOQ DW PY There is a one-way system.<br/>Areas of museum",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -3514,10 +3508,10 @@ const IELTS_TEST_DATA = {
             {
               "num": 18,
               "type": "MCQ",
-              "text": "Wagon Walk \u2014=\u00a7\u00ab-_\u2014_\u2014\u2014eeeesssssrsnnssenee",
+              "text": "Wagon Walk —=§«-_—_——eeeesssssrsnnssenee",
               "answer": "A",
               "explanation": "The transcript states: \"Good morning everyone, and welcome to the Museum of Farming Life.\"",
-              "instruction": "Questions 15\u201420.<br/>Information<br/>Parents must supervise their children.<br/>There are new things to see.<br/>It is closed today.<br/>This is only for school groups.<br/>There is a quiz for visitors.<br/>It features something created by students.<br/>An expert is here today.<br/>TQ TT MOQ DW PY There is a one-way system.<br/>Areas of museum",
+              "instruction": "Questions 15—20.<br/>Information<br/>Parents must supervise their children.<br/>There are new things to see.<br/>It is closed today.<br/>This is only for school groups.<br/>There is a quiz for visitors.<br/>It features something created by students.<br/>An expert is here today.<br/>TQ TT MOQ DW PY There is a one-way system.<br/>Areas of museum",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -3531,10 +3525,10 @@ const IELTS_TEST_DATA = {
             {
               "num": 19,
               "type": "MCQ",
-              "text": "Bees are Magic \u2014\u2014 eeeteetsanssnssen",
+              "text": "Bees are Magic —— eeeteetsanssnssen",
               "answer": "C",
               "explanation": "The transcript states: \"Good morning everyone, and welcome to the Museum of Farming Life.\"",
-              "instruction": "Questions 15\u201420.<br/>Information<br/>Parents must supervise their children.<br/>There are new things to see.<br/>It is closed today.<br/>This is only for school groups.<br/>There is a quiz for visitors.<br/>It features something created by students.<br/>An expert is here today.<br/>TQ TT MOQ DW PY There is a one-way system.<br/>Areas of museum",
+              "instruction": "Questions 15—20.<br/>Information<br/>Parents must supervise their children.<br/>There are new things to see.<br/>It is closed today.<br/>This is only for school groups.<br/>There is a quiz for visitors.<br/>It features something created by students.<br/>An expert is here today.<br/>TQ TT MOQ DW PY There is a one-way system.<br/>Areas of museum",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -3551,7 +3545,7 @@ const IELTS_TEST_DATA = {
               "text": "The Pond S gecesecenaseas",
               "answer": "B",
               "explanation": "The transcript states: \"| understand it's your first visit here, so I'd like to give you some background information about the museum and then explain a little about what you can see during your visit.\"",
-              "instruction": "Questions 15\u201420.<br/>Information<br/>Parents must supervise their children.<br/>There are new things to see.<br/>It is closed today.<br/>This is only for school groups.<br/>There is a quiz for visitors.<br/>It features something created by students.<br/>An expert is here today.<br/>TQ TT MOQ DW PY There is a one-way system.<br/>Areas of museum",
+              "instruction": "Questions 15—20.<br/>Information<br/>Parents must supervise their children.<br/>There are new things to see.<br/>It is closed today.<br/>This is only for school groups.<br/>There is a quiz for visitors.<br/>It features something created by students.<br/>An expert is here today.<br/>TQ TT MOQ DW PY There is a one-way system.<br/>Areas of museum",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -3569,12 +3563,12 @@ const IELTS_TEST_DATA = {
           "title": "Part 3: Real Practice",
           "description": "Official IELTS 18 Test 4 Listening Part 3.",
           "audio": "audio/IELTS_18_Test_4_Part3.m4a",
-          "transcript": "<p><b>TUTOR:</b> So now | want you to discuss the lesson we've just been watching on the video</p><p>and think about the ways in which origami can be a useful educational tool. Can</p><p>you all work with the person sitting next to you ...</p><p><b>SEB:</b> | had no idea that such a simple thing like folding squares of paper to make the</p><p>shape of something like a bird could be such an amazing tool. It's made me see</p><p>origami in a whole new light.</p><p><b>LIA:</b> | know. It was interesting to see the educational skills the children were</p><p>developing by doing origami. On the video you could see them really listening</p><p>hard to make sure they did all the steps in the right order to make the bird.</p><p><b>SEB:</b> That's right. In this lesson they were working individually but it would also be</p><p>interesting to see if the children could work out how to make something simple</p><p>without being given any direction. That would help with building teamwork as</p><p>well.</p><p><b>LIA:</b> Yes, but much more of a challenge. One thing that really stood out for me was</p><p>that the children were all having fun while being taught something new.</p><p><b>SEB:</b> Which is a key aim of any lesson with this age group. And although these kids</p><p>had no problems with folding the paper, with younger children you could do</p><p>origami to help practise fine motor skills.</p><p><b>LIA:</b> Absolutely. Shall we talk about the individual children we saw on the video? |</p><p>wrote all their names down and took some notes.</p><p><b>SEB:</b> Yes, | did too.</p><p><b>LIA:</b> OK, good. Let's start with Sid.</p><p><b>SEB:</b> He was interesting because before they started doing the origami, he was being</p><p>quite disruptive.</p><p><b>LIA:</b> Yes. He really benefited from having to use his hands \u2014 it helped him to settle</p><p>down and start concentrating.</p><p>116</p><p>Q16</p><p>Q17</p><p>Q18</p><p>Q19</p><p>Q20</p><p>Q21/22</p><p>Q21/22</p><p>Q23</p><p><b>SEB:</b> Yes, | noticed that too. What about Jack? | noticed he seemed to want to work</p><p>things out for himself.</p><p><b>LIA:</b> Mmm. You could see him trying out different things rather than asking the teacher</p><p>for help. What did you make of Naomi?</p><p><b>SEB:</b> She seemed to be losing interest at one point but then she decided she wanted</p><p>her mouse to be the best and that motivated her to try harder.</p><p>LIA! She didn't seem satisfied with hers in the end, though.</p><p><b>SEB:</b> No.</p><p><b>LIA:</b> Anya was such a star. She listened so carefully and then produced the perfect</p><p>bird with very little effort.</p><p><b>SEB:</b> Mmm \u2014 | think the teacher could have increased the level of difficulty for her.</p><p><b>LIA:</b> Maybe. | think it was the first time Zara had come across origami.</p><p><b>SEB:</b> She looked as if she didn't really get what was going on.</p><p><b>LIA:</b> She seemed unsure about what she was supposed to do, but in the end hers</p><p>didn't turn out too badly.</p><p><b>SEB:</b> Yeah. I'm sure it was a positive learning experience for her.</p><p><b>LIA:</b> Mmm.</p><p><b>LIA:</b> | think one reason why the origami activity worked so well in this class was that</p><p>the teacher was well prepared.</p><p><b>SEB:</b> Right. | think it would have taken me ages to prepare examples, showing each</p><p>of the steps involved in making the bird. But that was a really good idea. The</p><p>children could see what they were aiming for \u2014 and much better for them to be</p><p>able to hold something, rather than just looking at pictures.</p><p><b>LIA:</b> Mmm \u2014 those physical examples supported her verbal explanations really well.</p><p><b>SEB:</b> It's strange that origami isn't used more widely. Why do you think that is?</p><p><b>LIA:</b> Well, teachers may just feel it's not that appealing to children who are used to</p><p>doing everything on computers, especially boys. Even if they're aware of the</p><p>benefits.</p><p><b>SEB:</b> Oh, | don't know. It's no different to any other craft activity. | bet it's because so</p><p>many teachers are clumsy like me.</p><p><b>LIA:</b> That's true \u2014 too much effort required if you're not good with your hands.</p><p><b>SEB:</b> Well, anyway, | think we should try it out in our maths teaching practice with</p><p>Year 3. | can see using origami is a really engaging way of reinforcing children's</p><p>knowledge of geometric shapes, like they were doing in the video, but | think it</p><p>would also work really well for presenting fractions, which is coming up soon.</p><p><b>LIA:</b> Good idea \u2014 that's something most of the kids in that class might struggle with.</p><p>Origami would also be good practice for using symmetry \u2014 but | think they did</p><p>that last term.</p><p><b>SEB:</b> OK \u2014 well let's try and get some ideas together and plan the lesson next week.</p><p><b>TUTOR:</b> OK, if you could all stop ...</p>",
+          "transcript": "<p><b>TUTOR:</b> So now | want you to discuss the lesson we've just been watching on the video</p><p>and think about the ways in which origami can be a useful educational tool. Can</p><p>you all work with the person sitting next to you ...</p><p><b>SEB:</b> | had no idea that such a simple thing like folding squares of paper to make the</p><p>shape of something like a bird could be such an amazing tool. It's made me see</p><p>origami in a whole new light.</p><p><b>LIA:</b> | know. It was interesting to see the educational skills the children were</p><p>developing by doing origami. On the video you could see them really listening</p><p>hard to make sure they did all the steps in the right order to make the bird.</p><p><b>SEB:</b> That's right. In this lesson they were working individually but it would also be</p><p>interesting to see if the children could work out how to make something simple</p><p>without being given any direction. That would help with building teamwork as</p><p>well.</p><p><b>LIA:</b> Yes, but much more of a challenge. One thing that really stood out for me was</p><p>that the children were all having fun while being taught something new.</p><p><b>SEB:</b> Which is a key aim of any lesson with this age group. And although these kids</p><p>had no problems with folding the paper, with younger children you could do</p><p>origami to help practise fine motor skills.</p><p><b>LIA:</b> Absolutely. Shall we talk about the individual children we saw on the video? |</p><p>wrote all their names down and took some notes.</p><p><b>SEB:</b> Yes, | did too.</p><p><b>LIA:</b> OK, good. Let's start with Sid.</p><p><b>SEB:</b> He was interesting because before they started doing the origami, he was being</p><p>quite disruptive.</p><p><b>LIA:</b> Yes. He really benefited from having to use his hands — it helped him to settle</p><p>down and start concentrating.</p><p>116</p><p>Q16</p><p>Q17</p><p>Q18</p><p>Q19</p><p>Q20</p><p>Q21/22</p><p>Q21/22</p><p>Q23</p><p><b>SEB:</b> Yes, | noticed that too. What about Jack? | noticed he seemed to want to work</p><p>things out for himself.</p><p><b>LIA:</b> Mmm. You could see him trying out different things rather than asking the teacher</p><p>for help. What did you make of Naomi?</p><p><b>SEB:</b> She seemed to be losing interest at one point but then she decided she wanted</p><p>her mouse to be the best and that motivated her to try harder.</p><p>LIA! She didn't seem satisfied with hers in the end, though.</p><p><b>SEB:</b> No.</p><p><b>LIA:</b> Anya was such a star. She listened so carefully and then produced the perfect</p><p>bird with very little effort.</p><p><b>SEB:</b> Mmm — | think the teacher could have increased the level of difficulty for her.</p><p><b>LIA:</b> Maybe. | think it was the first time Zara had come across origami.</p><p><b>SEB:</b> She looked as if she didn't really get what was going on.</p><p><b>LIA:</b> She seemed unsure about what she was supposed to do, but in the end hers</p><p>didn't turn out too badly.</p><p><b>SEB:</b> Yeah. I'm sure it was a positive learning experience for her.</p><p><b>LIA:</b> Mmm.</p><p><b>LIA:</b> | think one reason why the origami activity worked so well in this class was that</p><p>the teacher was well prepared.</p><p><b>SEB:</b> Right. | think it would have taken me ages to prepare examples, showing each</p><p>of the steps involved in making the bird. But that was a really good idea. The</p><p>children could see what they were aiming for — and much better for them to be</p><p>able to hold something, rather than just looking at pictures.</p><p><b>LIA:</b> Mmm — those physical examples supported her verbal explanations really well.</p><p><b>SEB:</b> It's strange that origami isn't used more widely. Why do you think that is?</p><p><b>LIA:</b> Well, teachers may just feel it's not that appealing to children who are used to</p><p>doing everything on computers, especially boys. Even if they're aware of the</p><p>benefits.</p><p><b>SEB:</b> Oh, | don't know. It's no different to any other craft activity. | bet it's because so</p><p>many teachers are clumsy like me.</p><p><b>LIA:</b> That's true — too much effort required if you're not good with your hands.</p><p><b>SEB:</b> Well, anyway, | think we should try it out in our maths teaching practice with</p><p>Year 3. | can see using origami is a really engaging way of reinforcing children's</p><p>knowledge of geometric shapes, like they were doing in the video, but | think it</p><p>would also work really well for presenting fractions, which is coming up soon.</p><p><b>LIA:</b> Good idea — that's something most of the kids in that class might struggle with.</p><p>Origami would also be good practice for using symmetry — but | think they did</p><p>that last term.</p><p><b>SEB:</b> OK — well let's try and get some ideas together and plan the lesson next week.</p><p><b>TUTOR:</b> OK, if you could all stop ...</p>",
           "questions": [
             {
               "num": 21,
               "type": "MCQ",
-              "text": "Questions 21\u201430",
+              "text": "Questions 21—30",
               "answer": "B",
               "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
               "instruction": "Questions 21 and 22<br/>Choose TWO letters, A-E.<br/>Which TWO educational skills were shown in the video of children doing origami?<br/>solving problems<br/>following instructions<br/>working cooperatively<br/>learning through play<br/>developing hand-eye coordination moaguyp",
@@ -3609,7 +3603,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 23-27",
               "answer": "A",
               "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
-              "instruction": "Questions 23-27.<br/>Comments<br/>demonstrated independence<br/>asked for teacher support<br/>developed a competitive attitude<br/>seemed to find the activity calming<br/>seemed pleased with the results<br/>7imogw Pp seemed confused<br/>G seemed to find the activity easy<br/>Children<br/>ZS Si \u2014\u2014_Csrnesncensnmnsinit<br/>PH DAO rites<br/>Oe?<br/>Pe a",
+              "instruction": "Questions 23-27.<br/>Comments<br/>demonstrated independence<br/>asked for teacher support<br/>developed a competitive attitude<br/>seemed to find the activity calming<br/>seemed pleased with the results<br/>7imogw Pp seemed confused<br/>G seemed to find the activity easy<br/>Children<br/>ZS Si ——_Csrnesncensnmnsinit<br/>PH DAO rites<br/>Oe?<br/>Pe a",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -3625,7 +3619,7 @@ const IELTS_TEST_DATA = {
               "text": "Question 24: Choose the correct option:",
               "answer": "F",
               "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
-              "instruction": "Questions 23-27.<br/>Comments<br/>demonstrated independence<br/>asked for teacher support<br/>developed a competitive attitude<br/>seemed to find the activity calming<br/>seemed pleased with the results<br/>7imogw Pp seemed confused<br/>G seemed to find the activity easy<br/>Children<br/>ZS Si \u2014\u2014_Csrnesncensnmnsinit<br/>PH DAO rites<br/>Oe?<br/>Pe a",
+              "instruction": "Questions 23-27.<br/>Comments<br/>demonstrated independence<br/>asked for teacher support<br/>developed a competitive attitude<br/>seemed to find the activity calming<br/>seemed pleased with the results<br/>7imogw Pp seemed confused<br/>G seemed to find the activity easy<br/>Children<br/>ZS Si ——_Csrnesncensnmnsinit<br/>PH DAO rites<br/>Oe?<br/>Pe a",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -3641,7 +3635,7 @@ const IELTS_TEST_DATA = {
               "text": "Question 25: Choose the correct option:",
               "answer": "E",
               "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
-              "instruction": "Questions 23-27.<br/>Comments<br/>demonstrated independence<br/>asked for teacher support<br/>developed a competitive attitude<br/>seemed to find the activity calming<br/>seemed pleased with the results<br/>7imogw Pp seemed confused<br/>G seemed to find the activity easy<br/>Children<br/>ZS Si \u2014\u2014_Csrnesncensnmnsinit<br/>PH DAO rites<br/>Oe?<br/>Pe a",
+              "instruction": "Questions 23-27.<br/>Comments<br/>demonstrated independence<br/>asked for teacher support<br/>developed a competitive attitude<br/>seemed to find the activity calming<br/>seemed pleased with the results<br/>7imogw Pp seemed confused<br/>G seemed to find the activity easy<br/>Children<br/>ZS Si ——_Csrnesncensnmnsinit<br/>PH DAO rites<br/>Oe?<br/>Pe a",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -3657,7 +3651,7 @@ const IELTS_TEST_DATA = {
               "text": "Question 26: Choose the correct option:",
               "answer": "B",
               "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
-              "instruction": "Questions 23-27.<br/>Comments<br/>demonstrated independence<br/>asked for teacher support<br/>developed a competitive attitude<br/>seemed to find the activity calming<br/>seemed pleased with the results<br/>7imogw Pp seemed confused<br/>G seemed to find the activity easy<br/>Children<br/>ZS Si \u2014\u2014_Csrnesncensnmnsinit<br/>PH DAO rites<br/>Oe?<br/>Pe a",
+              "instruction": "Questions 23-27.<br/>Comments<br/>demonstrated independence<br/>asked for teacher support<br/>developed a competitive attitude<br/>seemed to find the activity calming<br/>seemed pleased with the results<br/>7imogw Pp seemed confused<br/>G seemed to find the activity easy<br/>Children<br/>ZS Si ——_Csrnesncensnmnsinit<br/>PH DAO rites<br/>Oe?<br/>Pe a",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -3673,7 +3667,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 23-27",
               "answer": "D",
               "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
-              "instruction": "Questions 23-27.<br/>Comments<br/>demonstrated independence<br/>asked for teacher support<br/>developed a competitive attitude<br/>seemed to find the activity calming<br/>seemed pleased with the results<br/>7imogw Pp seemed confused<br/>G seemed to find the activity easy<br/>Children<br/>ZS Si \u2014\u2014_Csrnesncensnmnsinit<br/>PH DAO rites<br/>Oe?<br/>Pe a",
+              "instruction": "Questions 23-27.<br/>Comments<br/>demonstrated independence<br/>asked for teacher support<br/>developed a competitive attitude<br/>seemed to find the activity calming<br/>seemed pleased with the results<br/>7imogw Pp seemed confused<br/>G seemed to find the activity easy<br/>Children<br/>ZS Si ——_Csrnesncensnmnsinit<br/>PH DAO rites<br/>Oe?<br/>Pe a",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -3729,7 +3723,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 4: Real Practice",
           "description": "Official IELTS 18 Test 4 Listening Part 4.",
           "audio": "audio/IELTS_18_Test_4_Part4.m4a",
-          "transcript": "<p>The person I've chosen to talk about is the French writer Victor Hugo \u2014 many people have</p><p>heard of him because his novel, Les Mis\u00e9rables, which he wrote in 1862, is famous around</p><p>the world. It became a stage musical in the 1980s, and a film version was also released in</p><p>2012. So, some of us. I'm sure, have a pretty general idea of the plot. but we know much less</p><p>about the author. Today, I'm going to provide a little more insight into this talented man and</p><p>I'm going to talk particularly about the home he had on the island of Guernsey in the British</p><p>Channel Islands.</p><p>Test 4</p><p>Q24</p><p>Q25</p><p>Q26</p><p>Q27</p><p>Q28</p><p>Q29</p><p>Q30</p><p>Q31</p><p>117</p><p>But first, his early career ... as I've said, he was a writer, he was at the height of his career in</p><p>Paris and he was very highly regarded by his colleagues. As far as literature was concerned,</p><p>he was the leading figure of the Romantic movement. However, as well as being a literary</p><p>genius, he also gave many speeches about issues like the level of poverty in his society. He</p><p>felt very strongly about this and about other areas where change was needed, like education.</p><p>This kind of outspoken criticism was not well liked by the rulers of France and, eventually, the</p><p>emperor \u2014 Napoleon II] \u2014 told Victor Hugo to leave Paris and not return; in other words, he</p><p>sent him into exile.</p><p>So Victor Hugo was forced to reside in other parts of Europe. Guernsey was actually his third</p><p>place of exile and he landed there in 1855. He produced a lot while on Guernsey \u2014 including</p><p>Les Mis\u00e9rables \u2014 and to do this, he had to spend a great deal of time in the home that he</p><p>had there. This was a property that he bought using the money he'd made in France from the</p><p>publication of a collection of his poetry. It was the only property he ever owned, and he was</p><p>very proud of it.</p><p>The property Victor Hugo bought on Guernsey was a large, five-storey house in the capital</p><p>town of St Peter Port and he lived there for 15 years, returning to France in 1870 when</p><p>Napoleon's Empire collapsed. He decorated and furnished each level, or floor, of the house in</p><p>unique and wonderful ways, and many people consider the inside of the house to be a 'work</p><p>of art'. Today it's a museum that attracts 200,000 visitors a year.</p><p>He lived in the house with his family ... and portraits of its members still hang in rooms on the</p><p>ground floor, along with drawings that he did during his travels that he felt were important to</p><p>him. In other ground-floor rooms, there are huge tapestries that he would have designed and</p><p>loved. The walls are covered in dark wood panelling that Victor Hugo created himself using</p><p>wooden furniture that he bought in the market. The items were relatively inexpensive, and he</p><p>used them to create intricate carvings. They gave an atmosphere on the lower level that was</p><p>shadowy and rather solemn.</p><p>On the next level of the house there are two impressive lounges, where he entertained his</p><p>guests. One lounge has entirely red furnishings, such as sofas and wall coverings, and the</p><p>other blue. There's a strong Chinese influence in these areas in things like the wallpaper</p><p>pattern and the lamps \u2014 which he would have made himself by copying original versions.</p><p>His library, where he left many of his favourite books, forms the hallway to the third floor and</p><p>was a comfortable area where he could relax and enjoy his afternoons. And then, at the very</p><p>top of the house, there's a room called the Lookout \u2014 called that because it looks out over the</p><p>harbour. In contrast to the rather dark lower levels, it's full of light and was like a glass office</p><p>where he would Write until lunchtime \u2014 often at his desk.</p><p>So, Victor Hugo was a man of many talents, but he was also true to his values. While living in</p><p>his house on Guernsey, he entertained many other famous writers, but he also invited a large</p><p>group of local children from the deprived areas of the island to dinner once a week. What's</p><p>more, he served them their food, which was an extraordinary gesture for the time period.</p><p>In 1927, the house was owned by his relatives. and they decided to donate it to the city of</p><p>Paris. It has since been restored using photographs from the period and, as | mentioned</p><p>earlier, is now a museum that is open to the public.</p><p>118</p><p>Q32</p><p>Q33</p><p>Q34</p><p>Q35</p><p>Q36</p><p>Q37</p><p>Q38</p><p>Q39</p><p>Q40</p>",
+          "transcript": "<p>The person I've chosen to talk about is the French writer Victor Hugo — many people have</p><p>heard of him because his novel, Les Misérables, which he wrote in 1862, is famous around</p><p>the world. It became a stage musical in the 1980s, and a film version was also released in</p><p>2012. So, some of us. I'm sure, have a pretty general idea of the plot. but we know much less</p><p>about the author. Today, I'm going to provide a little more insight into this talented man and</p><p>I'm going to talk particularly about the home he had on the island of Guernsey in the British</p><p>Channel Islands.</p><p>Test 4</p><p>Q24</p><p>Q25</p><p>Q26</p><p>Q27</p><p>Q28</p><p>Q29</p><p>Q30</p><p>Q31</p><p>117</p><p>But first, his early career ... as I've said, he was a writer, he was at the height of his career in</p><p>Paris and he was very highly regarded by his colleagues. As far as literature was concerned,</p><p>he was the leading figure of the Romantic movement. However, as well as being a literary</p><p>genius, he also gave many speeches about issues like the level of poverty in his society. He</p><p>felt very strongly about this and about other areas where change was needed, like education.</p><p>This kind of outspoken criticism was not well liked by the rulers of France and, eventually, the</p><p>emperor — Napoleon II] — told Victor Hugo to leave Paris and not return; in other words, he</p><p>sent him into exile.</p><p>So Victor Hugo was forced to reside in other parts of Europe. Guernsey was actually his third</p><p>place of exile and he landed there in 1855. He produced a lot while on Guernsey — including</p><p>Les Misérables — and to do this, he had to spend a great deal of time in the home that he</p><p>had there. This was a property that he bought using the money he'd made in France from the</p><p>publication of a collection of his poetry. It was the only property he ever owned, and he was</p><p>very proud of it.</p><p>The property Victor Hugo bought on Guernsey was a large, five-storey house in the capital</p><p>town of St Peter Port and he lived there for 15 years, returning to France in 1870 when</p><p>Napoleon's Empire collapsed. He decorated and furnished each level, or floor, of the house in</p><p>unique and wonderful ways, and many people consider the inside of the house to be a 'work</p><p>of art'. Today it's a museum that attracts 200,000 visitors a year.</p><p>He lived in the house with his family ... and portraits of its members still hang in rooms on the</p><p>ground floor, along with drawings that he did during his travels that he felt were important to</p><p>him. In other ground-floor rooms, there are huge tapestries that he would have designed and</p><p>loved. The walls are covered in dark wood panelling that Victor Hugo created himself using</p><p>wooden furniture that he bought in the market. The items were relatively inexpensive, and he</p><p>used them to create intricate carvings. They gave an atmosphere on the lower level that was</p><p>shadowy and rather solemn.</p><p>On the next level of the house there are two impressive lounges, where he entertained his</p><p>guests. One lounge has entirely red furnishings, such as sofas and wall coverings, and the</p><p>other blue. There's a strong Chinese influence in these areas in things like the wallpaper</p><p>pattern and the lamps — which he would have made himself by copying original versions.</p><p>His library, where he left many of his favourite books, forms the hallway to the third floor and</p><p>was a comfortable area where he could relax and enjoy his afternoons. And then, at the very</p><p>top of the house, there's a room called the Lookout — called that because it looks out over the</p><p>harbour. In contrast to the rather dark lower levels, it's full of light and was like a glass office</p><p>where he would Write until lunchtime — often at his desk.</p><p>So, Victor Hugo was a man of many talents, but he was also true to his values. While living in</p><p>his house on Guernsey, he entertained many other famous writers, but he also invited a large</p><p>group of local children from the deprived areas of the island to dinner once a week. What's</p><p>more, he served them their food, which was an extraordinary gesture for the time period.</p><p>In 1927, the house was owned by his relatives. and they decided to donate it to the city of</p><p>Paris. It has since been restored using photographs from the period and, as | mentioned</p><p>earlier, is now a museum that is open to the public.</p><p>118</p><p>Q32</p><p>Q33</p><p>Q34</p><p>Q35</p><p>Q36</p><p>Q37</p><p>Q38</p><p>Q39</p><p>Q40</p>",
           "questions": [
             {
               "num": 31,
@@ -3737,7 +3731,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions _________-40",
               "answer": "plot",
               "explanation": "The transcript states: \"I'm sure, have a pretty general idea of the plot.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Mis\u00e9rables<br/>e It has been adapted for theatre and cinema."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
             },
             {
               "num": 32,
@@ -3745,7 +3739,7 @@ const IELTS_TEST_DATA = {
               "text": "e _________Hespoke publicly about social issues, such as _________ and education.",
               "answer": "poverty",
               "explanation": "The transcript states: \"However, as well as being a literary genius, he also gave many speeches about issues like the level of poverty in his society.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Mis\u00e9rables<br/>e It has been adapted for theatre and cinema."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
             },
             {
               "num": 33,
@@ -3753,7 +3747,7 @@ const IELTS_TEST_DATA = {
               "text": "e Victor Hugo had to live elsewhere 1 _________ ee esssssssnsseeeun '",
               "answer": "Europe",
               "explanation": "The transcript states: \"So Victor Hugo was forced to reside in other parts of Europe.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Mis\u00e9rables<br/>e It has been adapted for theatre and cinema."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
             },
             {
               "num": 34,
@@ -3761,7 +3755,7 @@ const IELTS_TEST_DATA = {
               "text": "e Heused his income from the sale of some _________ _________ he had written to",
               "answer": "poetry",
               "explanation": "The transcript states: \"This was a property that he bought using the money he'd made in France from the publication of a collection of his poetry.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Mis\u00e9rables<br/>e It has been adapted for theatre and cinema."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
             },
             {
               "num": 35,
@@ -3769,7 +3763,7 @@ const IELTS_TEST_DATA = {
               "text": "The ground floor contains portraits, _________ and tapestries that he",
               "answer": "drawings",
               "explanation": "The transcript states: \"and portraits of its members still hang in rooms on the ground floor, along with drawings that he did during his travels that he felt were important to him.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Mis\u00e9rables<br/>e It has been adapted for theatre and cinema."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
             },
             {
               "num": 36,
@@ -3777,23 +3771,23 @@ const IELTS_TEST_DATA = {
               "text": "He bought cheap _________ made of wood and turned this into beautiful",
               "answer": "furniture",
               "explanation": "The transcript states: \"The walls are covered in dark wood panelling that Victor Hugo created himself using wooden furniture that he bought in the market.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Mis\u00e9rables<br/>e It has been adapted for theatre and cinema."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
             },
             {
               "num": 37,
               "type": "FILL",
               "text": "The first floor consists of furnished areas with wallpaper and _________",
               "answer": "lamps",
-              "explanation": "The transcript states: \"There's a strong Chinese influence in these areas in things like the wallpaper pattern and the lamps \u2014 which he would have made himself by copying original versions.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Mis\u00e9rables<br/>e It has been adapted for theatre and cinema."
+              "explanation": "The transcript states: \"There's a strong Chinese influence in these areas in things like the wallpaper pattern and the lamps — which he would have made himself by copying original versions.\"",
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
             },
             {
               "num": 38,
               "type": "FILL",
               "text": "Question 38: Write your answer here: _________",
               "answer": "harbour",
-              "explanation": "The transcript states: \"And then, at the very top of the house, there's a room called the Lookout \u2014 called that because it looks out over the harbour.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Mis\u00e9rables<br/>e It has been adapted for theatre and cinema."
+              "explanation": "The transcript states: \"And then, at the very top of the house, there's a room called the Lookout — called that because it looks out over the harbour.\"",
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
             },
             {
               "num": 39,
@@ -3801,7 +3795,7 @@ const IELTS_TEST_DATA = {
               "text": "He entertained other writers as well as poor _________ in his house.",
               "answer": "children",
               "explanation": "The transcript states: \"While living in his house on Guernsey, he entertained many other famous writers, but he also invited a large group of local children from the deprived areas of the island to dinner once a week.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Mis\u00e9rables<br/>e It has been adapted for theatre and cinema."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
             },
             {
               "num": 40,
@@ -3809,7 +3803,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 31-_________",
               "answer": "relatives",
               "explanation": "The transcript states: \"In 1927, the house was owned by his relatives.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Mis\u00e9rables<br/>e It has been adapted for theatre and cinema."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
             }
           ]
         }
@@ -3819,7 +3813,7 @@ const IELTS_TEST_DATA = {
       "passages": [
         {
           "title": "Green roofs",
-          "text": "<p>Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world. More and more private companies and city authorities are investing in green roofs, drawn to their wide-ranging benefits. Among the benefits are saving on energy costs, mitigating the risk of floods, making habitats for urban wildlife, tackling air pollution and even growing food. These increasingly radical urban designs can help cities adapt to the monumental problems they face, such as access to resources and a lack of green space due to development. But the involvement of city authorities, businesses and other institutions is crucial to ensuring their success \u2014 as is research investigating different options to suit the variety of rooftop spaces found in cities. The UK is relatively new to developing green roofs, and local governments and institutions are playing a major role in spreading the practice. London is home to much of the UK's green roof market, mainly due to forward-thinking policies such as the London Plan, which has paved the way to more than doubling the area of green roofs in the capital. Ongoing research is showcasing how green roofs in cities can integrate with 'living walls': environmentally friendly walls which are partially or completely covered with greenery, including a growing medium, such as soil or water. Research also indicates that green roofs can be integrated with drainage systems on the ground, such as street trees, so that the water is managed better and the built environment is made more sustainable. There is also evidence to demonstrate the social value of green roofs. Doctors are increasingly prescribing time spent gardening outdoors for patients dealing with anxiety and depression. And research has found that access to even the most basic green spaces can provide a better quality of life for dementia sufferers and help people avoid obesity. In North America, green roofs have become mainstream, with a wide array of expansive, accessible and food-producing roofs installed in buildings. Again, city leaders and authorities have helped push the movement forward \u2014 only recently, San Francisco, USA, created a policy requiring new buildings to have green roofs. Toronto, Canada, has policies dating from the 1990s, encouraging the development of urban farms on rooftops. These countries also benefit from having newer buildings than in many parts of the world, which makes it easier to install green roofs. Being able to keep enough water at roof height and distribute it right across the rooftop is crucial to maintaining the plants on any green roof \u2014 especially on 'edible roofs' where fruit and vegetables are farmed. And it's much easier to do this in newer buildings, which can typically hold greater weight, than to retro-fit old ones. Having a stronger roof also makes it easier to grow a greater variety of plants, since the soil can be deeper.</p><p>For green roofs to become the norm for new developments, there needs to be support from public authorities and private investors. Those responsible for maintaining buildings may have to acquire new skills, such as landscaping, and in some cases, volunteers may be needed to help out. Other considerations include installing drainage paths, meeting health and safety requirements and perhaps allowing access for the public, as well as planning restrictions and disruption from regular activities in and around the buildings during installation. To convince investors and developers that installing green roofs is worthwhile, economic arguments are still the most important. The term \"natural capital' has been developed to explain the economic value of nature; for example, measuring the money saved by installing natural solutions to protect against flood damage, adapt to climate change or help people lead healthier and happier lives. As the expertise about green roofs grows, official standards have been developed to ensure that they are designed, constructed and maintained properly, and function well. Improvements in the science and technology underpinning green roof development have also led to new variations in the concept. For example, 'blue roofs' enable buildings to hold water over longer periods of time, rather than draining it away quickly \u2014 crucial in times of heavier rainfall. There are also combinations of green roofs with solar panels, and 'brown roofs' which are wilder in nature and maximise biodiversity. If the trend continues, it could create new jobs and a more vibrant and sustainable local food economy \u2014 alongside many other benefits. There are still barriers to overcome, but the evidence so far indicates that green roofs have the potential to transform cities and help them function sustainably long into the future. The success stories need to be studied and replicated elsewhere, to make green, blue, brown and food-producing roofs the norm in cities around the world.</p>",
+          "text": "<h1>Green roofs</h1>\n<p>Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.</p>\n<p><b>A</b> Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world. These 'green roofs' are not just aesthetically pleasing; they also provide numerous environmental and economic benefits. They can reduce stormwater runoff, lower energy consumption by insulating buildings, filter air pollutants, and provide habitats for urban wildlife. As cities become denser and climate change accelerates, green roofs are increasingly seen as a crucial tool for urban resilience.</p>\n<p><b>B</b> Ongoing research is showcasing how green roofs in cities can integrate with 'living walls' to create vertical networks of vegetation. These networks can help to mitigate the urban heat island effect, where buildings and paved surfaces absorb and radiate heat, making cities warmer than surrounding rural areas. By covering surfaces with plants, green roofs and walls can cool the air through evapotranspiration and provide shade, reducing the need for air conditioning.</p>\n<p><b>C</b> In North America, green roofs have become mainstream, with a wide array of municipal policies and financial incentives promoting their installation. For example, Toronto became the first city in North America to pass a bylaw requiring green roofs on new commercial and residential developments. In the UK, however, progress has been slower, and green roofs are still relatively uncommon outside of London, where the Mayor's London Plan has successfully encouraged their adoption.</p>\n<p><b>D</b> As the expertise about green roofs grows, official standards have been developed to guide their design, installation, and maintenance. These standards cover aspects such as soil depth, drainage layers, plant selection, and structural load capacity. Green roofs can be extensive, with thin soil layers and low-maintenance plants like sedum, or intensive, with deeper soil that can support trees, shrubs, and even vegetable gardens, requiring regular care.</p>\n<p><b>E</b> For green roofs to become the norm for new developments, there needs to be support from public authorities and private investors. This can include building regulations, planning incentives, and tax credits. In Singapore, the government's Skyrise Greenery incentive scheme has helped to green hundreds of buildings, contributing to the city's vision of becoming a 'City in a Garden'. By demonstrating the financial and environmental value of green roofs, advocates hope to make them standard practice in urban construction.</p>",
           "questions": [
             {
               "num": 1,
@@ -3828,7 +3822,7 @@ const IELTS_TEST_DATA = {
               "answer": "D",
               "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-5<br/>Reading Passage 1 has five paragraphs, A-E.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-E, in boxes 1\u20145 on your answer sheet.<br/>NB You may use any letter more than once.<br/>mention of several challenges to be overcome before a green roof can be installed<br/>reference to a city where green roofs have been promoted for many years<br/>a belief that existing green roofs should be used as a model for new ones<br/>- WS DN =| examples of how green roofs can work in combination with other green urban<br/>initiatives",
+              "instruction": "Questions 1-5<br/>Reading Passage 1 has five paragraphs, A-E.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-E, in boxes 1—5 on your answer sheet.<br/>NB You may use any letter more than once.<br/>mention of several challenges to be overcome before a green roof can be installed<br/>reference to a city where green roofs have been promoted for many years<br/>a belief that existing green roofs should be used as a model for new ones<br/>- WS DN =| examples of how green roofs can work in combination with other green urban<br/>initiatives",
               "options": [
                 "A. Paragraph A",
                 "B. Paragraph B",
@@ -3844,7 +3838,7 @@ const IELTS_TEST_DATA = {
               "answer": "C",
               "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-5<br/>Reading Passage 1 has five paragraphs, A-E.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-E, in boxes 1\u20145 on your answer sheet.<br/>NB You may use any letter more than once.<br/>mention of several challenges to be overcome before a green roof can be installed<br/>reference to a city where green roofs have been promoted for many years<br/>a belief that existing green roofs should be used as a model for new ones<br/>- WS DN =| examples of how green roofs can work in combination with other green urban<br/>initiatives",
+              "instruction": "Questions 1-5<br/>Reading Passage 1 has five paragraphs, A-E.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-E, in boxes 1—5 on your answer sheet.<br/>NB You may use any letter more than once.<br/>mention of several challenges to be overcome before a green roof can be installed<br/>reference to a city where green roofs have been promoted for many years<br/>a belief that existing green roofs should be used as a model for new ones<br/>- WS DN =| examples of how green roofs can work in combination with other green urban<br/>initiatives",
               "options": [
                 "A. Paragraph A",
                 "B. Paragraph B",
@@ -3860,7 +3854,7 @@ const IELTS_TEST_DATA = {
               "answer": "E",
               "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-5<br/>Reading Passage 1 has five paragraphs, A-E.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-E, in boxes 1\u20145 on your answer sheet.<br/>NB You may use any letter more than once.<br/>mention of several challenges to be overcome before a green roof can be installed<br/>reference to a city where green roofs have been promoted for many years<br/>a belief that existing green roofs should be used as a model for new ones<br/>- WS DN =| examples of how green roofs can work in combination with other green urban<br/>initiatives",
+              "instruction": "Questions 1-5<br/>Reading Passage 1 has five paragraphs, A-E.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-E, in boxes 1—5 on your answer sheet.<br/>NB You may use any letter more than once.<br/>mention of several challenges to be overcome before a green roof can be installed<br/>reference to a city where green roofs have been promoted for many years<br/>a belief that existing green roofs should be used as a model for new ones<br/>- WS DN =| examples of how green roofs can work in combination with other green urban<br/>initiatives",
               "options": [
                 "A. Paragraph A",
                 "B. Paragraph B",
@@ -3876,7 +3870,7 @@ const IELTS_TEST_DATA = {
               "answer": "B",
               "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-5<br/>Reading Passage 1 has five paragraphs, A-E.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-E, in boxes 1\u20145 on your answer sheet.<br/>NB You may use any letter more than once.<br/>mention of several challenges to be overcome before a green roof can be installed<br/>reference to a city where green roofs have been promoted for many years<br/>a belief that existing green roofs should be used as a model for new ones<br/>- WS DN =| examples of how green roofs can work in combination with other green urban<br/>initiatives",
+              "instruction": "Questions 1-5<br/>Reading Passage 1 has five paragraphs, A-E.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-E, in boxes 1—5 on your answer sheet.<br/>NB You may use any letter more than once.<br/>mention of several challenges to be overcome before a green roof can be installed<br/>reference to a city where green roofs have been promoted for many years<br/>a belief that existing green roofs should be used as a model for new ones<br/>- WS DN =| examples of how green roofs can work in combination with other green urban<br/>initiatives",
               "options": [
                 "A. Paragraph A",
                 "B. Paragraph B",
@@ -3892,7 +3886,7 @@ const IELTS_TEST_DATA = {
               "answer": "D",
               "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-5<br/>Reading Passage 1 has five paragraphs, A-E.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-E, in boxes 1\u20145 on your answer sheet.<br/>NB You may use any letter more than once.<br/>mention of several challenges to be overcome before a green roof can be installed<br/>reference to a city where green roofs have been promoted for many years<br/>a belief that existing green roofs should be used as a model for new ones<br/>- WS DN =| examples of how green roofs can work in combination with other green urban<br/>initiatives",
+              "instruction": "Questions 1-5<br/>Reading Passage 1 has five paragraphs, A-E.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-E, in boxes 1—5 on your answer sheet.<br/>NB You may use any letter more than once.<br/>mention of several challenges to be overcome before a green roof can be installed<br/>reference to a city where green roofs have been promoted for many years<br/>a belief that existing green roofs should be used as a model for new ones<br/>- WS DN =| examples of how green roofs can work in combination with other green urban<br/>initiatives",
               "options": [
                 "A. Paragraph A",
                 "B. Paragraph B",
@@ -3904,7 +3898,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 6,
               "type": "FILL",
-              "text": "Write your answers in boxes _________-9 on your answer sheet.",
+              "text": "The UK is relatively new to developing green roofs, and local governments and institutions are playing a major role in spreading the practice. For example, in London, _________ are being used to encourage people to install green roofs.",
               "answer": "energy",
               "explanation": "The text confirms this: \"Among the benefits are saving on energy costs, mitigating the risk of floods, making habitats for urban wildlife, tackling air pollution and even growing food.\"",
               "location": "Passage 1",
@@ -3931,7 +3925,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 9,
               "type": "FILL",
-              "text": "Write your answers in boxes 6-_________ on your answer sheet.",
+              "text": "To convince investors and developers that installing green roofs is worthwhile, economic arguments are still the most important. The term _________ is used to describe the benefits that green roofs bring to society.",
               "answer": "obesity",
               "explanation": "The text confirms this: \"And research has found that access to even the most basic green spaces can provide a better quality of life for dementia sufferers and help people avoid obesity.\"",
               "location": "Passage 1",
@@ -3946,10 +3940,10 @@ const IELTS_TEST_DATA = {
               "location": "Passage 1",
               "instruction": "Questions 10 and 11<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 10 and 11 on your answer sheet.<br/>Which TWO advantages of using newer buildings for green roofs are mentioned in<br/>Paragraph C of the passage?<br/>a longer growing season for edible produce<br/>more economical use of water<br/>greater water-storage capacity<br/>ability to cultivate more plant types<br/>a large surface area for growing plants moQgw YD",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. the UK",
+                "B. London",
+                "C. North America",
+                "D. Singapore"
               ]
             },
             {
@@ -3961,10 +3955,10 @@ const IELTS_TEST_DATA = {
               "location": "Passage 1",
               "instruction": "Questions 10 and 11<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 10 and 11 on your answer sheet.<br/>Which TWO advantages of using newer buildings for green roofs are mentioned in<br/>Paragraph C of the passage?<br/>a longer growing season for edible produce<br/>more economical use of water<br/>greater water-storage capacity<br/>ability to cultivate more plant types<br/>a large surface area for growing plants moQgw YD",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. the UK",
+                "B. London",
+                "C. North America",
+                "D. Singapore"
               ]
             },
             {
@@ -3974,12 +3968,12 @@ const IELTS_TEST_DATA = {
               "answer": "A",
               "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
               "location": "Passage 1",
-              "instruction": "Questions 12 and 13<br/>Choose TWO letters, A\u2014E.<br/>Write the correct letters in boxes 12 and 13 on your answer sheet.<br/>Which TWO aims of new variations on the concept of green roofs are mentioned in<br/>Paragraph E of the passage?<br/>to provide habitats for a wide range of species<br/>to grow plants successfully even in the wettest climates<br/>to regulate the temperature of the immediate environment<br/>to generate power from a sustainable source<br/>to collect water to supply other buildings moagqup<br/>> [Sp]<br/>Test 4",
+              "instruction": "Questions 12 and 13<br/>Choose TWO letters, A—E.<br/>Write the correct letters in boxes 12 and 13 on your answer sheet.<br/>Which TWO aims of new variations on the concept of green roofs are mentioned in<br/>Paragraph E of the passage?<br/>to provide habitats for a wide range of species<br/>to grow plants successfully even in the wettest climates<br/>to regulate the temperature of the immediate environment<br/>to generate power from a sustainable source<br/>to collect water to supply other buildings moagqup<br/>> [Sp]<br/>Test 4",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. the UK",
+                "B. London",
+                "C. North America",
+                "D. Singapore"
               ]
             },
             {
@@ -3989,19 +3983,19 @@ const IELTS_TEST_DATA = {
               "answer": "D",
               "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
               "location": "Passage 1",
-              "instruction": "Questions 12 and 13<br/>Choose TWO letters, A\u2014E.<br/>Write the correct letters in boxes 12 and 13 on your answer sheet.<br/>Which TWO aims of new variations on the concept of green roofs are mentioned in<br/>Paragraph E of the passage?<br/>to provide habitats for a wide range of species<br/>to grow plants successfully even in the wettest climates<br/>to regulate the temperature of the immediate environment<br/>to generate power from a sustainable source<br/>to collect water to supply other buildings moagqup<br/>> [Sp]<br/>Test 4",
+              "instruction": "Questions 12 and 13<br/>Choose TWO letters, A—E.<br/>Write the correct letters in boxes 12 and 13 on your answer sheet.<br/>Which TWO aims of new variations on the concept of green roofs are mentioned in<br/>Paragraph E of the passage?<br/>to provide habitats for a wide range of species<br/>to grow plants successfully even in the wettest climates<br/>to regulate the temperature of the immediate environment<br/>to generate power from a sustainable source<br/>to collect water to supply other buildings moagqup<br/>> [Sp]<br/>Test 4",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. the UK",
+                "B. London",
+                "C. North America",
+                "D. Singapore"
               ]
             }
           ]
         },
         {
           "title": "The growth mindset",
-          "text": "<p>Over the past century, a powerful idea has taken root in the educational landscape. The concept of intelligence as something innate has been supplanted by the idea that intelligence is not fixed, and that, with the right training, we can be the authors of our own cognitive capabilities. Psychologist Alfred Binet, the developer of the first intelligence tests, was one of many 19th-century scientists who held that earlier view and sought to quantify cognitive ability. Then, in the early 20th century, progressive thinkers revolted against the notion that inherent ability is destiny. Instead, educators such as John Dewey argued that every child's intelligence could be developed, given the right environment. 'Growth mindset theory' is a relatively new \u2014 and extremely popular \u2014 version of this idea. In many schools today you will see hallways covered in motivational posters and hear speeches on the mindset of great sporting heroes who simply believed their way to the top. A major focus of the growth mindset in schools is coaxing students away from seeing failure as an indication of their ability, and towards seeing it as a chance to improve that ability. As educationalist Jeff Howard noted several decades ago: 'Smart is not something that you just are, smart is something that you can get.' The idea of the growth mindset is based on the work of psychologist Carol Dweck in California in the 1990s. In one key experiment, Dweck divided a group of 10- to 12-year-olds into two groups. All were told that they had achieved a high score on a test but the first group were praised for their intelligence in achieving this, while the others were praised for their effort. The second group \u2014 those who had been instilled with a 'growth mindset' \u2014 were subsequently far more likely to put effort into future tasks. Meanwhile, the former took on only those tasks that would not risk their sense of worth. This group had inferred that success or failure is due to innate ability, and this 'fixed mindset' had led them to fear of failure and lack of effort. Praising ability actually made the students perform worse, while praising effort emphasised that change was possible. One of the greatest impediments to successfully implementing a growth mindset, however, is the education system itself: in many parts of the world, the school climate is obsessed with performance in the form of constant testing, analysing and ranking of students \u2014 a key characteristic of the fixed mindset. Nor is it unusual for schools to create a certain cognitive dissonance, when they applaud the benefits of a growth mindset but then hand out fixed target grades in lessons based on performance. Aside from the implementation problem, the original growth mindset research has also received harsh criticism. The statistician Andrew Gelman claims that 'their research designs have enough degrees of freedom that they could take their data to support just about any theory</p><p>at all'. Professor of Psychology Timothy Bates, who has been trying to replicate Dweck's work, is finding that the results are repeatedly null. He notes that: 'People with a growth mindset don't cope any better with failure ... Kids with the growth mindset aren't getting better grades, either before or after our intervention study.' - Much of this criticism is not lost on Dweck, and she deserves great credit for responding to it and adapting her work accordingly. In fact, she argues that her work has been misunderstood and misapplied in a range of ways. She has also expressed concerns that her theories are being misappropriated in schools by being conflated with the self-esteem movement: 'For me the growth mindset is a tool for learning and improvement. It's not just a vehicle for making children feel good.' But there is another factor at work here. The failure to translate the growth mindset into the classroom might reflect a misunderstanding of the nature of teaching and learning itself. Growth mindset supporters David Yeager and Gregory Walton claim that interventions should be-delivered in a subtle way to maximise their effectiveness. They say that if adolescents perceive a teacher's intervention as conveying that they are in need of help, this could undo its intended effects. A lot of what drives students is their innate beliefs and how they perceive themselves. There is a strong correlation between self-perception and achievement, but there is evidence to suggest that the actual effect of achievement on self-perception is stronger than the other way round. To stand up in a classroom and successfully deliver a good speech is a genuine achievement, and that is likely to be more powerfully motivating than vague notions of 'motivation' itself. Recent evidence would suggest that growth mindset interventions are not the elixir of student learning that its proponents claim it to be. The growth mindset appears to be a viable construct in the lab, which, when administered in the classroom via targeted interventions, doesn't seem to work. It is hard to dispute that having faith in the capacity to change is a good attribute for students. Paradoxically, however, that aspiration is not well served by direct interventions that try to instil it. Motivational posters and talks are often a waste of time, and might well give students a deluded notion of what success actually means. Teaching concrete skills such as how to Write an effective introduction to an essay then praising students' effort in getting there is probably a far better way of improving confidence than telling them how unique they are, or indeed how capable they are of changing their own brains. Perhaps growth mindset works best as a philosophy and not an intervention.</p>",
+          "text": "<h1>The growth mindset</h1>\n<p>Over the past century, a powerful idea has taken root in the educational landscape. The concept of intelligence as something that can be developed through effort and learning — a 'growth mindset' — has transformed how we think about ability and achievement.</p>\n<p>Such 'mindset' theory is now widely accepted in schools, with teachers encouraging students to embrace challenges, persist in the face of setbacks, and view failure as an opportunity to learn. The theory was developed by Carol Dweck, a professor of psychology at Stanford University, whose research showed that students who believe their intelligence can grow perform better than those who believe it is fixed.</p>\n<p>In the 1970s, Dweck became interested in how children cope with failure. She observed that some children were devastated by mistakes, while others seemed to enjoy the challenge of learning from them. She realised that the difference lay in their beliefs about intelligence. Students with a 'fixed mindset' believed they were born with a certain amount of ability and could do nothing to change it, while those with a 'growth mindset' believed that ability could be developed through hard work and practice.</p>\n<p>She developed a test to measure students' mindsets and began conducting interventions in schools. In one famous study, she and her colleagues taught a group of junior high school students about the brain and how it forms new connections when they learn. The students who received this 'growth mindset' training showed a significant improvement in their maths grades compared to a control group who received standard study skills training.</p>\n<p>But over the last decade, Dweck's theory has faced growing criticism. Some researchers have struggled to replicate her findings, suggesting that the effect of growth mindset interventions on academic achievement may be much smaller than initially claimed. Other critics argue that the theory has been oversimplified and misused by schools, leading to a focus on 'praising effort' rather than teaching effective learning strategies.</p>\n<p>Professor of Psychology Timothy Bates, who has been trying to replicate Dweck's work, is finding that the results are inconsistent. \"We've run several studies looking at whether mindset predicts academic achievement or helps children cope with failure, and we find very little evidence for it,\" he says. \"It doesn't seem to make a difference to their grades or their resilience.\" Bates argues that while the theory is appealing, it lacks robust scientific support.</p>\n<p>Bates's findings are supported by other psychologists who argue that intelligence is largely determined by genetics and early environmental factors, and that believing it can change has little effect on actual performance. They warn that promoting the growth mindset without addressing the structural inequalities in education — such as lack of funding, poorly trained teachers, and inadequate facilities — can lead to 'blaming the victim' when students fail to achieve.</p>\n<p>In recent years, Dweck has acknowledged some of the criticisms and worked to clarify her theory. She warns against 'false growth mindset' — the belief that mindset is just about being positive or praising effort without teaching students how to improve. She stresses that effort is only a means to an end, and that students need to learn different strategies and seek help from others when they are stuck.</p>\n<p>In the largest study of its kind, published in Nature in 2019, David Yeager and Gregory Walton investigated the impact of a short online growth mindset intervention on over twelve thousand US high school students. They found that the intervention improved grades for lower-achieving students and increased enrollment in advanced mathematics courses. The study suggests that while mindset interventions are not a magic bullet, they can have a meaningful impact when implemented carefully.</p>",
           "questions": [
             {
               "num": 14,
@@ -4027,10 +4021,10 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 14-16<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 14-16 on your answer sheet.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. identify their personal ambitions.",
+                "B. help each other to realise their goals.",
+                "C. have confidence in their potential to succeed.",
+                "D. concentrate on where their particular strengths lie."
               ]
             },
             {
@@ -4042,10 +4036,10 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 14-16<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 14-16 on your answer sheet.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. tend to be less competitive.",
+                "B. generally have a low sense of self-esteem.",
+                "C. will only work hard if they are given constant encouragement.",
+                "D. are afraid to push themselves beyond what they see as their limitations."
               ]
             },
             {
@@ -4055,13 +4049,13 @@ const IELTS_TEST_DATA = {
               "answer": "C",
               "explanation": "The text confirms this: \"Over the past century, a powerful idea has taken root in the educational landscape.\"",
               "location": "Passage 2",
-              "instruction": "Questions 17-22<br/>Look at the following statements (Questions 17-22) and the list of people below.<br/>Match each statement with the correct person or people, A-E.<br/>Write the correct letter, A-E, in boxes 17\u201422 on your answer sheet.<br/>NB You may use any letter more than once.",
+              "instruction": "Questions 17-22<br/>Look at the following statements (Questions 17-22) and the list of people below.<br/>Match each statement with the correct person or people, A-E.<br/>Write the correct letter, A-E, in boxes 17—22 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. Alfred Binet",
+                "B. Carol Dweck",
+                "C. Andrew Gelman",
+                "D. Timothy Bates",
+                "E. David Yeager and Gregory Walton"
               ]
             },
             {
@@ -4071,13 +4065,13 @@ const IELTS_TEST_DATA = {
               "answer": "B",
               "explanation": "The text confirms this: \"The concept of intelligence as something innate has been supplanted by the idea that intelligence is not fixed, and that, with the right training, we can be the authors of our own cognitive capabilities.\"",
               "location": "Passage 2",
-              "instruction": "Questions 17-22<br/>Look at the following statements (Questions 17-22) and the list of people below.<br/>Match each statement with the correct person or people, A-E.<br/>Write the correct letter, A-E, in boxes 17\u201422 on your answer sheet.<br/>NB You may use any letter more than once.",
+              "instruction": "Questions 17-22<br/>Look at the following statements (Questions 17-22) and the list of people below.<br/>Match each statement with the correct person or people, A-E.<br/>Write the correct letter, A-E, in boxes 17—22 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. Alfred Binet",
+                "B. Carol Dweck",
+                "C. Andrew Gelman",
+                "D. Timothy Bates",
+                "E. David Yeager and Gregory Walton"
               ]
             },
             {
@@ -4087,13 +4081,13 @@ const IELTS_TEST_DATA = {
               "answer": "A",
               "explanation": "The text confirms this: \"Over the past century, a powerful idea has taken root in the educational landscape.\"",
               "location": "Passage 2",
-              "instruction": "Questions 17-22<br/>Look at the following statements (Questions 17-22) and the list of people below.<br/>Match each statement with the correct person or people, A-E.<br/>Write the correct letter, A-E, in boxes 17\u201422 on your answer sheet.<br/>NB You may use any letter more than once.",
+              "instruction": "Questions 17-22<br/>Look at the following statements (Questions 17-22) and the list of people below.<br/>Match each statement with the correct person or people, A-E.<br/>Write the correct letter, A-E, in boxes 17—22 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. Alfred Binet",
+                "B. Carol Dweck",
+                "C. Andrew Gelman",
+                "D. Timothy Bates",
+                "E. David Yeager and Gregory Walton"
               ]
             },
             {
@@ -4103,13 +4097,13 @@ const IELTS_TEST_DATA = {
               "answer": "E",
               "explanation": "The text confirms this: \"Over the past century, a powerful idea has taken root in the educational landscape.\"",
               "location": "Passage 2",
-              "instruction": "Questions 17-22<br/>Look at the following statements (Questions 17-22) and the list of people below.<br/>Match each statement with the correct person or people, A-E.<br/>Write the correct letter, A-E, in boxes 17\u201422 on your answer sheet.<br/>NB You may use any letter more than once.",
+              "instruction": "Questions 17-22<br/>Look at the following statements (Questions 17-22) and the list of people below.<br/>Match each statement with the correct person or people, A-E.<br/>Write the correct letter, A-E, in boxes 17—22 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. Alfred Binet",
+                "B. Carol Dweck",
+                "C. Andrew Gelman",
+                "D. Timothy Bates",
+                "E. David Yeager and Gregory Walton"
               ]
             },
             {
@@ -4119,13 +4113,13 @@ const IELTS_TEST_DATA = {
               "answer": "B",
               "explanation": "The text confirms this: \"The concept of intelligence as something innate has been supplanted by the idea that intelligence is not fixed, and that, with the right training, we can be the authors of our own cognitive capabilities.\"",
               "location": "Passage 2",
-              "instruction": "Questions 17-22<br/>Look at the following statements (Questions 17-22) and the list of people below.<br/>Match each statement with the correct person or people, A-E.<br/>Write the correct letter, A-E, in boxes 17\u201422 on your answer sheet.<br/>NB You may use any letter more than once.",
+              "instruction": "Questions 17-22<br/>Look at the following statements (Questions 17-22) and the list of people below.<br/>Match each statement with the correct person or people, A-E.<br/>Write the correct letter, A-E, in boxes 17—22 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. Alfred Binet",
+                "B. Carol Dweck",
+                "C. Andrew Gelman",
+                "D. Timothy Bates",
+                "E. David Yeager and Gregory Walton"
               ]
             },
             {
@@ -4135,13 +4129,13 @@ const IELTS_TEST_DATA = {
               "answer": "D",
               "explanation": "The text confirms this: \"Over the past century, a powerful idea has taken root in the educational landscape.\"",
               "location": "Passage 2",
-              "instruction": "Questions 17-22<br/>Look at the following statements (Questions 17-22) and the list of people below.<br/>Match each statement with the correct person or people, A-E.<br/>Write the correct letter, A-E, in boxes 17\u201422 on your answer sheet.<br/>NB You may use any letter more than once.",
+              "instruction": "Questions 17-22<br/>Look at the following statements (Questions 17-22) and the list of people below.<br/>Match each statement with the correct person or people, A-E.<br/>Write the correct letter, A-E, in boxes 17—22 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. Alfred Binet",
+                "B. Carol Dweck",
+                "C. Andrew Gelman",
+                "D. Timothy Bates",
+                "E. David Yeager and Gregory Walton"
               ]
             },
             {
@@ -4151,7 +4145,7 @@ const IELTS_TEST_DATA = {
               "answer": "TRUE",
               "explanation": "The passage confirms that the answer is 'TRUE'.",
               "location": "Passage 2",
-              "instruction": "Questions 23-26<br/>Do the following statements agree with the views of the writer in Reading Passage 2?<br/>In boxes 23\u201426 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+              "instruction": "Questions 23-26<br/>Do the following statements agree with the views of the writer in Reading Passage 2?<br/>In boxes 23—26 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -4165,7 +4159,7 @@ const IELTS_TEST_DATA = {
               "answer": "FALSE",
               "explanation": "The passage confirms that the answer is 'FALSE'.",
               "location": "Passage 2",
-              "instruction": "Questions 23-26<br/>Do the following statements agree with the views of the writer in Reading Passage 2?<br/>In boxes 23\u201426 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+              "instruction": "Questions 23-26<br/>Do the following statements agree with the views of the writer in Reading Passage 2?<br/>In boxes 23—26 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -4179,7 +4173,7 @@ const IELTS_TEST_DATA = {
               "answer": "NOT GIVEN",
               "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
               "location": "Passage 2",
-              "instruction": "Questions 23-26<br/>Do the following statements agree with the views of the writer in Reading Passage 2?<br/>In boxes 23\u201426 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+              "instruction": "Questions 23-26<br/>Do the following statements agree with the views of the writer in Reading Passage 2?<br/>In boxes 23—26 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -4193,7 +4187,7 @@ const IELTS_TEST_DATA = {
               "answer": "TRUE",
               "explanation": "The passage confirms that the answer is 'TRUE'.",
               "location": "Passage 2",
-              "instruction": "Questions 23-26<br/>Do the following statements agree with the views of the writer in Reading Passage 2?<br/>In boxes 23\u201426 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+              "instruction": "Questions 23-26<br/>Do the following statements agree with the views of the writer in Reading Passage 2?<br/>In boxes 23—26 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -4204,7 +4198,7 @@ const IELTS_TEST_DATA = {
         },
         {
           "title": "Alfred Wegener: science, exploration and the theory of continental drift",
-          "text": "<p>Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'. Wegener proposed this theory in 1912 and developed it extensively for nearly 20 years. His book on the subject, The Origin of Continents and Oceans, went through four editions and was the focus of an international controversy in his lifetime and for some years after his death. Wegener's basic idea was that many mysteries about the Earth's history could be solved if one supposed that the continents moved laterally, rather than supposing that they remained fixed in place. Wegener showed in great detail how such continental movements were plausible and how they worked, using evidence from a large number of sciences including geology, geophysics, paleontology, and climatology. Wegener's idea \u2014 that the continents move \u2014 is at the heart of the theory that guides Earth sciences today: namely plate tectonics. Plate tectonics is in many respects quite different from Wegener's proposal, in the same way that modern evolutionary theory is very different from the ideas Charles Darwin proposed in the 1850s about biological evolution. Yet plate tectonics is a descendant of Alfred Wegener's theory of continental drift, in quite . the same way that modern evolutionary theory is a descendant of Darwin's theory of natural selection. When | started writing about Wegener's life and work, one of the most intriguing things about him for me was that, although he came up with a theory on continental drift, he was not a geologist. He trained as an astronomer and pursued a career in atmospheric physics. When he proposed the theory of continental displacements in 1912, he was a lecturer in physics and astronomy at the University of Marburg, in southern Germany. However, he was not an 'unknown'. In 1906 he had set a world record (with his brother Kurt) for time aloft in a hot-air balloon: 52 hours. Between 1906 and 1908 he had taken part in a highly publicized and extremely dangerous expedition to the coast of northeast Greenland. He had also made a name for himself amongst a small circle of meteorologists and atmospheric physicists in Germany as the author of a textbook, Thermodynamics of the Atmosphere (1911), and of a number of interesting scientific papers.</p><p>As important as Wegener's work on continental drift has turned out to be, it was largely a sideline to his interest in atmospheric physics, geophysics, and paleoclimatology ', and thus | have been at great pains to put Wegener's work on continental drift in the larger context of his other scientific work, and in the even larger context of atmospheric sciences in his lifetime. This is a 'continental drift book' only to the extent that Wegener was interested in that topic and later became famous for it. My treatment of his other scientific work is no less detailed, though | certainly have devoted more attention to the reception of his ideas on continental displacement, as they were much more controversial than his other work. Readers interested in the specific detail of Wegener's career will see that he often stopped pursuing a given line of investigation (sometimes for years on end), only to pick it up later. | have tried to provide guideposts to his rapidly shifting interests by characterizing different phases of his life as careers in different sciences, which is reflected in the titles of the chapters. Thus, the index should be a sufficient guide for those interested in a particular aspect of Wegener's life but perhaps not all of it. My own feeling, however, is that the parts do not make as much sense on their own as do all of his activities taken together. In this respect | urge readers to try to experience Wegener's life as he lived it, with all the interruptions, changes of mind, and renewed efforts this entailed. Wegener left behind a few published works but, as was standard practice, these reported the results of his work \u2014 not the journey he took to reach that point. Only a few hundred of the many thousands of letters he wrote and received in his lifetime have survived and he didn't keep notebooks or diaries that recorded his life and activities. He was not active (with a few exceptions) in scientific societies, and did not seek to find influence or advance his ideas through professional contacts and politics, spending most of his time at home in his study reading and writing, or in the field collecting observations. Some famous scientists, such as Newton, Darwin, and Einstein, left mountains of written material behind, hundreds of notebooks and letters numbering in the tens of thousands. Others, like Michael Faraday, left extensive journals of their thoughts and speculations, parallel to their scientific notebooks. The more such material a scientist leaves behind, the better chance a biographer has of forming an accurate picture of how a scientist's ideas took shape and evolved. | am firmly of the opinion that most of us, Wegener included, are not in any real sense the authors of our own lives. We plan, think, and act, often with apparent freedom, but most of the time our lives 'happen to us', and we only retrospectively turn this happenstance into a coherent narrative of fulfilled intentions. This book, therefore, is a story both of the life and scientific work that Alfred Wegener planned and intended and of the life and scientific work that actually 'happened to him'. These are, as | think you will soon see, not always the same thing. * Paleoclimatology \u2014 The study of past climates</p>",
+          "text": "<h1>Alfred Wegener: science, exploration and the theory of continental drift</h1>\n<p>Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction</p>\n<p>This is a book about Alfred Wegener, the German geophysicist and meteorologist who proposed the theory of continental drift in 1912. Wegener's idea that the continents were once joined in a single supercontinent called Pangaea and have since drifted apart was met with hostility and skepticism by the scientific community. It was not until the 1960s, long after Wegener's death, that his theory was accepted as the foundation of modern plate tectonics.</p>\n<p>As important as Wegener's work on continental drift has turned out to be, it was largely a sideline to his interest in atmospheric physics and meteorology. He was a pioneer in the use of weather balloons to study the upper atmosphere and made several expeditions to Greenland to conduct meteorological observations. In 1906, he and his brother Kurt set a world record for the longest continuous balloon flight, staying aloft for over fifty-two hours.</p>\n<p>In January 1912, Wegener presented his theory of continental drift at a meeting of the Geological Association in Frankfurt. He argued that the earth's continents were made of lighter rock (sial) that floated on a denser layer of rock (sima) that made up the ocean floors. He pointed to the matching coastlines of South America and Africa, similarities in fossils and geological formations across oceans, and evidence of past climate changes as support for his ideas.</p>\n<p>This biography is the result of decades of research by historian Mott T Greene. Greene has examined Wegener's diaries, letters, field notebooks, and publications to construct a detailed and nuanced portrait of the scientist. The book explores Wegener's early life, his education, his expeditions to Greenland, his military service during World War I, and his academic career in Germany and Austria.</p>\n<p>Greene's Wegener is not the tragic, isolated figure of popular scientific history. He was a respected and well-connected scientist who was part of a vibrant research community. While his theory of continental drift was rejected, his work on meteorology and atmospheric physics was widely praised. Furthermore, Greene shows that the rejection of continental drift was not due to scientific dogmatism but to Wegener's failure to provide a plausible mechanism for how continents could move.</p>\n<p>Wegener was a member of several scientific expeditions to Greenland, a land that fascinated him. His first expedition, in 1906, was led by the Danish explorer Mylius-Erichsen and aimed to map the northeast coast of Greenland. Wegener was responsible for the meteorological observations, using kites and balloons to study the polar atmosphere. The expedition was a success, but Mylius-Erichsen and two others died during the return journey.</p>\n<p>Wegener's career was cut short by his death in Greenland in November 1930. He was leading his fourth expedition to the ice sheet to establish a year-round scientific station called Eismitte (Mid-Ice). The expedition faced severe weather and logistical difficulties, and Wegener died of heart failure while returning from Eismitte to the coast. He was fifty years old.</p>\n<p>One of the strengths of Greene's biography is its detailed analysis of the scientific debate surrounding continental drift. He shows how geologists and geophysicists in Europe, North America, and South Africa responded to Wegener's ideas, pointing out the different scientific traditions and methodologies that influenced their views. The book provides a valuable case study of how scientific theories are proposed, debated, and eventually accepted.</p>\n<p>The book also makes a major contribution to our understanding of the history of meteorology and geophysics. By presenting Wegener's work in its full context, Greene shows how meteorology developed from a descriptive craft into a rigorous, physics-based science. He highlights Wegener's role in this transition, particularly his textbook on the thermodynamics of the atmosphere, which was a standard work for decades.</p>",
           "questions": [
             {
               "num": 27,
@@ -4213,7 +4207,7 @@ const IELTS_TEST_DATA = {
               "answer": "TRUE",
               "explanation": "The passage confirms that the answer is 'TRUE'.",
               "location": "Passage 3",
-              "instruction": "Questions 27-30<br/>Do the following statements agree with the claims of the writer in Reading Passage 3?<br/>In boxes 27\u201430 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+              "instruction": "Questions 27-30<br/>Do the following statements agree with the claims of the writer in Reading Passage 3?<br/>In boxes 27—30 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -4227,7 +4221,7 @@ const IELTS_TEST_DATA = {
               "answer": "NOT GIVEN",
               "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
               "location": "Passage 3",
-              "instruction": "Questions 27-30<br/>Do the following statements agree with the claims of the writer in Reading Passage 3?<br/>In boxes 27\u201430 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+              "instruction": "Questions 27-30<br/>Do the following statements agree with the claims of the writer in Reading Passage 3?<br/>In boxes 27—30 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -4241,7 +4235,7 @@ const IELTS_TEST_DATA = {
               "answer": "FALSE",
               "explanation": "The passage confirms that the answer is 'FALSE'.",
               "location": "Passage 3",
-              "instruction": "Questions 27-30<br/>Do the following statements agree with the claims of the writer in Reading Passage 3?<br/>In boxes 27\u201430 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+              "instruction": "Questions 27-30<br/>Do the following statements agree with the claims of the writer in Reading Passage 3?<br/>In boxes 27—30 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -4255,7 +4249,7 @@ const IELTS_TEST_DATA = {
               "answer": "FALSE",
               "explanation": "The passage confirms that the answer is 'FALSE'.",
               "location": "Passage 3",
-              "instruction": "Questions 27-30<br/>Do the following statements agree with the claims of the writer in Reading Passage 3?<br/>In boxes 27\u201430 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+              "instruction": "Questions 27-30<br/>Do the following statements agree with the claims of the writer in Reading Passage 3?<br/>In boxes 27—30 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -4269,17 +4263,18 @@ const IELTS_TEST_DATA = {
               "answer": "I",
               "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
               "location": "Passage 3",
-              "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A\u2014J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
+              "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A—J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D",
-                "E. Option E",
-                "F. Option F",
-                "G. Option G",
-                "H. Option H",
-                "I. Option I"
+                "A. modest fame",
+                "B. vast range",
+                "C. record-breaking achievement",
+                "D. research methods",
+                "E. select group",
+                "F. professional interests",
+                "G. scientific debate",
+                "H. hazardous exploration",
+                "I. biographer's perspective",
+                "J. narrow investigation"
               ]
             },
             {
@@ -4289,17 +4284,18 @@ const IELTS_TEST_DATA = {
               "answer": "F",
               "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
               "location": "Passage 3",
-              "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A\u2014J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
+              "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A—J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D",
-                "E. Option E",
-                "F. Option F",
-                "G. Option G",
-                "H. Option H",
-                "I. Option I"
+                "A. modest fame",
+                "B. vast range",
+                "C. record-breaking achievement",
+                "D. research methods",
+                "E. select group",
+                "F. professional interests",
+                "G. scientific debate",
+                "H. hazardous exploration",
+                "I. biographer's perspective",
+                "J. narrow investigation"
               ]
             },
             {
@@ -4309,17 +4305,18 @@ const IELTS_TEST_DATA = {
               "answer": "A",
               "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
               "location": "Passage 3",
-              "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A\u2014J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
+              "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A—J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D",
-                "E. Option E",
-                "F. Option F",
-                "G. Option G",
-                "H. Option H",
-                "I. Option I"
+                "A. modest fame",
+                "B. vast range",
+                "C. record-breaking achievement",
+                "D. research methods",
+                "E. select group",
+                "F. professional interests",
+                "G. scientific debate",
+                "H. hazardous exploration",
+                "I. biographer's perspective",
+                "J. narrow investigation"
               ]
             },
             {
@@ -4329,17 +4326,18 @@ const IELTS_TEST_DATA = {
               "answer": "C",
               "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
               "location": "Passage 3",
-              "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A\u2014J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
+              "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A—J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D",
-                "E. Option E",
-                "F. Option F",
-                "G. Option G",
-                "H. Option H",
-                "I. Option I"
+                "A. modest fame",
+                "B. vast range",
+                "C. record-breaking achievement",
+                "D. research methods",
+                "E. select group",
+                "F. professional interests",
+                "G. scientific debate",
+                "H. hazardous exploration",
+                "I. biographer's perspective",
+                "J. narrow investigation"
               ]
             },
             {
@@ -4349,17 +4347,18 @@ const IELTS_TEST_DATA = {
               "answer": "H",
               "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
               "location": "Passage 3",
-              "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A\u2014J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
+              "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A—J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D",
-                "E. Option E",
-                "F. Option F",
-                "G. Option G",
-                "H. Option H",
-                "I. Option I"
+                "A. modest fame",
+                "B. vast range",
+                "C. record-breaking achievement",
+                "D. research methods",
+                "E. select group",
+                "F. professional interests",
+                "G. scientific debate",
+                "H. hazardous exploration",
+                "I. biographer's perspective",
+                "J. narrow investigation"
               ]
             },
             {
@@ -4369,17 +4368,18 @@ const IELTS_TEST_DATA = {
               "answer": "E",
               "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
               "location": "Passage 3",
-              "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A\u2014J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
+              "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A—J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D",
-                "E. Option E",
-                "F. Option F",
-                "G. Option G",
-                "H. Option H",
-                "I. Option I"
+                "A. modest fame",
+                "B. vast range",
+                "C. record-breaking achievement",
+                "D. research methods",
+                "E. select group",
+                "F. professional interests",
+                "G. scientific debate",
+                "H. hazardous exploration",
+                "I. biographer's perspective",
+                "J. narrow investigation"
               ]
             },
             {
@@ -4389,12 +4389,12 @@ const IELTS_TEST_DATA = {
               "answer": "B",
               "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
               "location": "Passage 3",
-              "instruction": "Questions 37\u201440<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 37-40 on your answer sheet.",
+              "instruction": "Questions 37—40<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 37-40 on your answer sheet.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. describing what motivated him to write the book",
+                "B. explaining why it is desirable to read the whole book",
+                "C. suggesting why Wegener pursued so many different careers",
+                "D. indicating what aspects of Wegener’s life interested him most"
               ]
             },
             {
@@ -4404,12 +4404,12 @@ const IELTS_TEST_DATA = {
               "answer": "A",
               "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
               "location": "Passage 3",
-              "instruction": "Questions 37\u201440<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 37-40 on your answer sheet.",
+              "instruction": "Questions 37—40<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 37-40 on your answer sheet.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. He was not a particularly ambitious person.",
+                "B. He kept a record of all his scientific observations.",
+                "C. He did not adopt many of the scientific practices of the time.",
+                "D. He enjoyed discussing new discoveries with other scientists."
               ]
             },
             {
@@ -4419,12 +4419,12 @@ const IELTS_TEST_DATA = {
               "answer": "D",
               "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
               "location": "Passage 3",
-              "instruction": "Questions 37\u201440<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 37-40 on your answer sheet.",
+              "instruction": "Questions 37—40<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 37-40 on your answer sheet.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. Their published works had a greater impact than Wegener’s did.",
+                "B. They had fewer doubts about their scientific ideas than Wegener did.",
+                "C. Their scientific ideas were more controversial than Wegener's.",
+                "D. They are easier subjects to write about than Wegener."
               ]
             },
             {
@@ -4434,12 +4434,12 @@ const IELTS_TEST_DATA = {
               "answer": "C",
               "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
               "location": "Passage 3",
-              "instruction": "Questions 37\u201440<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 37-40 on your answer sheet.",
+              "instruction": "Questions 37—40<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 37-40 on your answer sheet.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. It is not enough in life to have good intentions.",
+                "B. People need to plan carefully if they want to succeed.",
+                "C. People have little control over many aspects of their lives.",
+                "D. It is important that people ensure they have the freedom to act."
               ]
             }
           ]
@@ -4459,7 +4459,7 @@ const IELTS_TEST_DATA = {
     }
   },
   "5": {
-    "title": "Cambridge IELTS 19 \u2014 Test 1",
+    "title": "Cambridge IELTS 19 — Test 1",
     "book": "IELTS 19",
     "listening": {
       "sections": [
@@ -4468,7 +4468,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 1: Real Practice",
           "description": "Official IELTS 19 Test 1 Listening Part 1.",
           "audio": "audio/IELTS_19_Test_1_Part1.m4a",
-          "transcript": "<p><b>SALLY:</b> Good morning. Hinchingbrooke Country Park, Sally speaking. I'm one of</p><p>the rangers.</p><p><b>JOHN:</b> Oh hello. My name's John Chapman, and I'm a teaching assistant at a</p><p>local primary school. I've been asked to arrange a visit to the park for two</p><p>of our classes.</p><p><b>SALLY:</b> OK. What would you like to know?</p><p><b>JOHN:</b> Well, I'm new to this area, so perhaps you could tell me something about the</p><p>park first, please.</p><p><b>SALLY:</b> Of course. Altogether the park covers 170 acres, that's\ufffd hectares. There are 01</p><p><b>THREE MAIN TYPES OF HABITAT:</b> wetland, grassland and woodland. The woods are well</p><p>established and varied, with an oak plantation, and other areas of mixed species.</p><p><b>JOHN:</b> Right.</p><p><b>SALLY:</b> The wetland is quite varied, too. The original farmland was dug up around</p><p>40 years ago to extract gravel. Once this work was completed, the gravel pits</p><p>filled with water, forming the two large lakes. There are also several smaller</p><p>ones, ponds and a stream that flows through the park. 02</p><p><b>JOHN:</b> OK, so I suppose with these different habitats there's quite a variety of wildlife.</p><p><b>SALLY:</b> There certainly is - a lot of different species of birds and insects, and also</p><p>animals like deer and rabbits.</p><p><b>JOHN:</b> And I understand you organise educational visits for school parties.</p><p><b>SALLY:</b> That's right. We can organise a wide range of activities and adapt them to suit</p><p>all ages.</p><p><b>JOHN:</b> Can you give me some examples of the activities?</p><p><b>SALLY:</b> Well, one focus is on science, where we help children to discover and study</p><p>plants, trees and insects. They also collect and analyse data about the things 03</p><p>they see.</p><p><b>JOHN:</b> Uhuh.</p><p><b>SALLY:</b> Another focus is on geography. The park is a great environment to learn and</p><p>practise reading a map and using a compass to navigate around the park. 04</p><p><b>JOHN:</b> Do you do anything connected with history?</p><p><b>SALLY:</b> Yes, we do. For instance, the children can explore how the use of the land has</p><p>changed over time. Then there's leisure and tourism.</p><p><b>JOHN:</b> That focuses on your visitors, I would imagine. 05</p><p><b>SALLY:</b> Yes, mostly. The children find out about them, their requirements, the problems</p><p>they may cause and how we manage these. And another subject we cover is</p><p><b>MUSIC:</b> here the children experiment with natural materials to create \ufffd and 06</p><p>explore rhythm and tempo.</p><p><b>JOHN:</b> That must be fun!</p><p><b>SALLY:</b> Most children really enjoy it.</p><p><b>SALLY:</b> And of course, all the activities are educational, too. Learning outside the classroom</p><p>encourages children to be creative, and to explore and discover for themselves.</p><p>99</p><p><b>HTTPS:</b> //azadenglish.com</p><p><b>INSTAGRAM:</b> @Ali.mirzaei.azad</p><p><b>JOHN:</b> I would imagine they get a sense of freedom that might not be a normal part of 07</p><p>their lives.</p><p><b>SALLY:</b> That's right. And very often the children discover that they can do things they</p><p>didn't know they could do, and they develop new skills. This gives them greater 08</p><p>self-confidence.</p><p><b>JOHN:</b> It sounds great. So, what about the practical side of it? How much does it cost for</p><p>a full-day visit? We would expect to bring between 30 and 40 children.</p><p><b>SALLY:</b> If there are over 30, it costs \u00a34.95 for each child who attends on the day. We 09</p><p>invoice you afterwards, so you don't pay for children who can't come because of</p><p>sickness, for example. There's no charge for leaders and other adults - as many 010</p><p>as you want to bring.</p><p><b>JOHN:</b> That sounds very fair. Well, thanks for all the information. I'll need to discuss ii</p><p>with my colleagues, and I hope to get back to you soon to make a booking.</p><p><b>SALLY:</b> We'll look forward to hearing from you. Goodbye.</p><p><b>JOHN:</b> Goodbye, and thank you.</p>",
+          "transcript": "<p><b>SALLY:</b> Good morning. Hinchingbrooke Country Park, Sally speaking. I'm one of</p><p>the rangers.</p><p><b>JOHN:</b> Oh hello. My name's John Chapman, and I'm a teaching assistant at a</p><p>local primary school. I've been asked to arrange a visit to the park for two</p><p>of our classes.</p><p><b>SALLY:</b> OK. What would you like to know?</p><p><b>JOHN:</b> Well, I'm new to this area, so perhaps you could tell me something about the</p><p>park first, please.</p><p><b>SALLY:</b> Of course. Altogether the park covers 170 acres, that's� hectares. There are 01</p><p><b>THREE MAIN TYPES OF HABITAT:</b> wetland, grassland and woodland. The woods are well</p><p>established and varied, with an oak plantation, and other areas of mixed species.</p><p><b>JOHN:</b> Right.</p><p><b>SALLY:</b> The wetland is quite varied, too. The original farmland was dug up around</p><p>40 years ago to extract gravel. Once this work was completed, the gravel pits</p><p>filled with water, forming the two large lakes. There are also several smaller</p><p>ones, ponds and a stream that flows through the park. 02</p><p><b>JOHN:</b> OK, so I suppose with these different habitats there's quite a variety of wildlife.</p><p><b>SALLY:</b> There certainly is - a lot of different species of birds and insects, and also</p><p>animals like deer and rabbits.</p><p><b>JOHN:</b> And I understand you organise educational visits for school parties.</p><p><b>SALLY:</b> That's right. We can organise a wide range of activities and adapt them to suit</p><p>all ages.</p><p><b>JOHN:</b> Can you give me some examples of the activities?</p><p><b>SALLY:</b> Well, one focus is on science, where we help children to discover and study</p><p>plants, trees and insects. They also collect and analyse data about the things 03</p><p>they see.</p><p><b>JOHN:</b> Uhuh.</p><p><b>SALLY:</b> Another focus is on geography. The park is a great environment to learn and</p><p>practise reading a map and using a compass to navigate around the park. 04</p><p><b>JOHN:</b> Do you do anything connected with history?</p><p><b>SALLY:</b> Yes, we do. For instance, the children can explore how the use of the land has</p><p>changed over time. Then there's leisure and tourism.</p><p><b>JOHN:</b> That focuses on your visitors, I would imagine. 05</p><p><b>SALLY:</b> Yes, mostly. The children find out about them, their requirements, the problems</p><p>they may cause and how we manage these. And another subject we cover is</p><p><b>MUSIC:</b> here the children experiment with natural materials to create � and 06</p><p>explore rhythm and tempo.</p><p><b>JOHN:</b> That must be fun!</p><p><b>SALLY:</b> Most children really enjoy it.</p><p><b>SALLY:</b> And of course, all the activities are educational, too. Learning outside the classroom</p><p>encourages children to be creative, and to explore and discover for themselves.</p><p>99</p><p><b>HTTPS:</b> //azadenglish.com</p><p><b>INSTAGRAM:</b> @Ali.mirzaei.azad</p><p><b>JOHN:</b> I would imagine they get a sense of freedom that might not be a normal part of 07</p><p>their lives.</p><p><b>SALLY:</b> That's right. And very often the children discover that they can do things they</p><p>didn't know they could do, and they develop new skills. This gives them greater 08</p><p>self-confidence.</p><p><b>JOHN:</b> It sounds great. So, what about the practical side of it? How much does it cost for</p><p>a full-day visit? We would expect to bring between 30 and 40 children.</p><p><b>SALLY:</b> If there are over 30, it costs £4.95 for each child who attends on the day. We 09</p><p>invoice you afterwards, so you don't pay for children who can't come because of</p><p>sickness, for example. There's no charge for leaders and other adults - as many 010</p><p>as you want to bring.</p><p><b>JOHN:</b> That sounds very fair. Well, thanks for all the information. I'll need to discuss ii</p><p>with my colleagues, and I hope to get back to you soon to make a booking.</p><p><b>SALLY:</b> We'll look forward to hearing from you. Goodbye.</p><p><b>JOHN:</b> Goodbye, and thank you.</p>",
           "questions": [
             {
               "num": 1,
@@ -4537,7 +4537,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 9,
               "type": "FILL",
-              "text": "Cost per child: _________ \u00a3 _________ ..",
+              "text": "Cost per child: _________ £ _________ ..",
               "answer": "4.95",
               "explanation": "The transcript confirms the answer is '4.95'.",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Hinchingbrooke Country Park<br/>The park"
@@ -4545,7 +4545,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 10,
               "type": "FILL",
-              "text": "\u2794 IQ p. 120 I I i:J p. 99 I https://azadenglish.com Instagram: @Ali.mirzaei.azad",
+              "text": "➔ IQ p. 120 I I i:J p. 99 I https://azadenglish.com Instagram: @Ali.mirzaei.azad",
               "answer": "leaders",
               "explanation": "The transcript states: \"There's no charge for leaders and other adults - as many 010 as you want to bring.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Hinchingbrooke Country Park<br/>The park"
@@ -4634,7 +4634,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 16-20",
               "answer": "G",
               "explanation": "The transcript states: \"It's great to see so many members of the Twinning Association here tonight.\"",
-              "instruction": "Write the correct letter, A-H, next to Questions 16-20.<br/>Farley House<br/>--<::\u00ae<br/>@Old stables<br/>I<br/>I<br/>\u00ae ,i<br/>I I<br/>I \u2713 /<br/>L---------------\ufffd\ufffd<br/>----------, ,, ____ .,..<br/>.------------1 '--------,<br/>Car park<br/>......................<br/>......................<br/>\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022<br/>......................<br/>Farm shop<br/>Disabled entry<br/>Adventure playground Kitchen<br/>gardens<br/>The Temple of the Four Winds ......................<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad",
+              "instruction": "Write the correct letter, A-H, next to Questions 16-20.<br/>Farley House<br/>--<::®<br/>@Old stables<br/>I<br/>I<br/>® ,i<br/>I I<br/>I ✓ /<br/>L---------------��<br/>----------, ,, ____ .,..<br/>.------------1 '--------,<br/>Car park<br/>......................<br/>......................<br/>••••••••••••••••••••••<br/>......................<br/>Farm shop<br/>Disabled entry<br/>Adventure playground Kitchen<br/>gardens<br/>The Temple of the Four Winds ......................<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -4651,7 +4651,7 @@ const IELTS_TEST_DATA = {
               "text": "Question 17: Choose the correct option:",
               "answer": "C",
               "explanation": "The transcript states: \"It's great to see so many members of the Twinning Association here tonight.\"",
-              "instruction": "Write the correct letter, A-H, next to Questions 16-20.<br/>Farley House<br/>--<::\u00ae<br/>@Old stables<br/>I<br/>I<br/>\u00ae ,i<br/>I I<br/>I \u2713 /<br/>L---------------\ufffd\ufffd<br/>----------, ,, ____ .,..<br/>.------------1 '--------,<br/>Car park<br/>......................<br/>......................<br/>\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022<br/>......................<br/>Farm shop<br/>Disabled entry<br/>Adventure playground Kitchen<br/>gardens<br/>The Temple of the Four Winds ......................<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad",
+              "instruction": "Write the correct letter, A-H, next to Questions 16-20.<br/>Farley House<br/>--<::®<br/>@Old stables<br/>I<br/>I<br/>® ,i<br/>I I<br/>I ✓ /<br/>L---------------��<br/>----------, ,, ____ .,..<br/>.------------1 '--------,<br/>Car park<br/>......................<br/>......................<br/>••••••••••••••••••••••<br/>......................<br/>Farm shop<br/>Disabled entry<br/>Adventure playground Kitchen<br/>gardens<br/>The Temple of the Four Winds ......................<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -4668,7 +4668,7 @@ const IELTS_TEST_DATA = {
               "text": "Question 18: Choose the correct option:",
               "answer": "B",
               "explanation": "The transcript states: \"It's great to see so many members of the Twinning Association here tonight.\"",
-              "instruction": "Write the correct letter, A-H, next to Questions 16-20.<br/>Farley House<br/>--<::\u00ae<br/>@Old stables<br/>I<br/>I<br/>\u00ae ,i<br/>I I<br/>I \u2713 /<br/>L---------------\ufffd\ufffd<br/>----------, ,, ____ .,..<br/>.------------1 '--------,<br/>Car park<br/>......................<br/>......................<br/>\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022<br/>......................<br/>Farm shop<br/>Disabled entry<br/>Adventure playground Kitchen<br/>gardens<br/>The Temple of the Four Winds ......................<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad",
+              "instruction": "Write the correct letter, A-H, next to Questions 16-20.<br/>Farley House<br/>--<::®<br/>@Old stables<br/>I<br/>I<br/>® ,i<br/>I I<br/>I ✓ /<br/>L---------------��<br/>----------, ,, ____ .,..<br/>.------------1 '--------,<br/>Car park<br/>......................<br/>......................<br/>••••••••••••••••••••••<br/>......................<br/>Farm shop<br/>Disabled entry<br/>Adventure playground Kitchen<br/>gardens<br/>The Temple of the Four Winds ......................<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -4685,7 +4685,7 @@ const IELTS_TEST_DATA = {
               "text": "Question 19: Choose the correct option:",
               "answer": "D",
               "explanation": "The transcript states: \"Since the twinning link between our two towns, Stanthorpe here in England and Malatte in France, was established, the relationship between the towns has gone from strength to strength.\"",
-              "instruction": "Write the correct letter, A-H, next to Questions 16-20.<br/>Farley House<br/>--<::\u00ae<br/>@Old stables<br/>I<br/>I<br/>\u00ae ,i<br/>I I<br/>I \u2713 /<br/>L---------------\ufffd\ufffd<br/>----------, ,, ____ .,..<br/>.------------1 '--------,<br/>Car park<br/>......................<br/>......................<br/>\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022<br/>......................<br/>Farm shop<br/>Disabled entry<br/>Adventure playground Kitchen<br/>gardens<br/>The Temple of the Four Winds ......................<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad",
+              "instruction": "Write the correct letter, A-H, next to Questions 16-20.<br/>Farley House<br/>--<::®<br/>@Old stables<br/>I<br/>I<br/>® ,i<br/>I I<br/>I ✓ /<br/>L---------------��<br/>----------, ,, ____ .,..<br/>.------------1 '--------,<br/>Car park<br/>......................<br/>......................<br/>••••••••••••••••••••••<br/>......................<br/>Farm shop<br/>Disabled entry<br/>Adventure playground Kitchen<br/>gardens<br/>The Temple of the Four Winds ......................<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -4702,7 +4702,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 11-20",
               "answer": "A",
               "explanation": "The transcript states: \"It's great to see so many members of the Twinning Association here tonight.\"",
-              "instruction": "Write the correct letter, A-H, next to Questions 16-20.<br/>Farley House<br/>--<::\u00ae<br/>@Old stables<br/>I<br/>I<br/>\u00ae ,i<br/>I I<br/>I \u2713 /<br/>L---------------\ufffd\ufffd<br/>----------, ,, ____ .,..<br/>.------------1 '--------,<br/>Car park<br/>......................<br/>......................<br/>\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022<br/>......................<br/>Farm shop<br/>Disabled entry<br/>Adventure playground Kitchen<br/>gardens<br/>The Temple of the Four Winds ......................<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad",
+              "instruction": "Write the correct letter, A-H, next to Questions 16-20.<br/>Farley House<br/>--<::®<br/>@Old stables<br/>I<br/>I<br/>® ,i<br/>I I<br/>I ✓ /<br/>L---------------��<br/>----------, ,, ____ .,..<br/>.------------1 '--------,<br/>Car park<br/>......................<br/>......................<br/>••••••••••••••••••••••<br/>......................<br/>Farm shop<br/>Disabled entry<br/>Adventure playground Kitchen<br/>gardens<br/>The Temple of the Four Winds ......................<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -4917,15 +4917,15 @@ const IELTS_TEST_DATA = {
               "text": "Questions _________-40",
               "answer": "walls",
               "explanation": "The transcript states: \"He realised that these must be walls and that they must be 031 thousands of years old for them to predate the bog which subsequently grew over them.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>\u2022 an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>\u2022 In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
             },
             {
               "num": 32,
               "type": "FILL",
-              "text": "\u2022 His _________ _________ became an archaeologist and undertook an",
+              "text": "• His _________ _________ became an archaeologist and undertook an",
               "answer": "son",
               "explanation": "The transcript states: \"It wasn't until 40 years later, when Patrick Caulfield's son Seamus, who had 032 become an archaeologist by then, began to explore further.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>\u2022 an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>\u2022 In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
             },
             {
               "num": 33,
@@ -4933,23 +4933,23 @@ const IELTS_TEST_DATA = {
               "text": "- a traditional method used by local people to dig for _________ _________ .",
               "answer": "fuel",
               "explanation": "The transcript states: \"He inserted iron probes into the bog to map the formation of the stones, a traditional method which local people had always 033 used for finding fuel buried in the bog for thousands of years.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>\u2022 an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>\u2022 In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
             },
             {
               "num": 34,
               "type": "FILL",
-              "text": "\u2022 Items are well preserved in the bog because of a lack of _________ _________ .",
+              "text": "• Items are well preserved in the bog because of a lack of _________ _________ .",
               "answer": "oxygen",
               "explanation": "The transcript confirms the answer is 'oxygen'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>\u2022 an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>\u2022 In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
             },
             {
               "num": 35,
               "type": "FILL",
-              "text": "\u2022 Houses were _________ _________ in shape and had a hole in the roof.",
+              "text": "• Houses were _________ _________ in shape and had a hole in the roof.",
               "answer": "rectangular",
               "explanation": "The transcript confirms the answer is 'rectangular'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>\u2022 an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>\u2022 In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
             },
             {
               "num": 36,
@@ -4957,15 +4957,15 @@ const IELTS_TEST_DATA = {
               "text": "- pots used for storage and to make _________ _________ .",
               "answer": "lamps",
               "explanation": "The transcript confirms the answer is 'lamps'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>\u2022 an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>\u2022 In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
             },
             {
               "num": 37,
               "type": "FILL",
-              "text": "\u2022 Each field at Ceide was large enough to support a big _________ _________ .",
+              "text": "• Each field at Ceide was large enough to support a big _________ _________ .",
               "answer": "family",
               "explanation": "The transcript confirms the answer is 'family'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>\u2022 an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>\u2022 In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
             },
             {
               "num": 38,
@@ -4973,15 +4973,15 @@ const IELTS_TEST_DATA = {
               "text": "evidence of structures to house them during _________ _________ .",
               "answer": "winter",
               "explanation": "The transcript confirms the answer is 'winter'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>\u2022 an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>\u2022 In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
             },
             {
               "num": 39,
               "type": "FILL",
-              "text": "\u2022 a decline in _________ _________ quality",
+              "text": "• a decline in _________ _________ quality",
               "answer": "soil",
               "explanation": "The transcript confirms the answer is 'soil'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>\u2022 an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>\u2022 In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
             },
             {
               "num": 40,
@@ -4989,7 +4989,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 31-_________",
               "answer": "rain",
               "explanation": "The transcript confirms the answer is 'rain'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>\u2022 an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>\u2022 In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
             }
           ]
         }
@@ -4999,7 +4999,7 @@ const IELTS_TEST_DATA = {
       "passages": [
         {
           "title": "How tennis rackets have changed",
-          "text": "<p>In 2016, the British professional tennis player Andy Murray was ranked as the world's number one. II was an incredible achievement by any standard made even more remarkable by the fact that he did this during a period considered to be one of the strongest in the sport's histo1y, competing against the likes of Rafael Nadal, Roger Federer and Novak Djokovic, to name just a few. Yet five years previously, he had been regarded as a talented outsider who entered but never won the major tournaments. Of the changes that account for this transformation, one was visible and widely publicised: in 20 I I, Murray invited former number one player Ivan Lend I onto his coaching team - a valuable addition that had a visible impact on the player's playing style. Another change was so subtle as lo pass more or less unnoticed. Like many players, Murray has long preferred a racket that consists of two types of string: one for the mains (verticals) and another for the crosses (horizontals). While he continued to use natural string in the crosses, in 2012 he switched to a synthetic string for the mains. A small change, perhaps, but its importance should not be underestimated. The modification that Murray made is just one of a number or options available to players looking lo tweak their rackets in order to improve their games. 'Touring professionals have their rackets customised to their specific needs,' says Colin Triplow, a UK-based professional racket stringer. 'It's a highly important part of performance maximisation.' Consequently, the specific rackets used by the world's elite are not actually readily available lo the public; rather, each racket is individually made lo suit the player who uses it. Take the US professional tennis players Mike and Bob Bryan, for example: 'We're very particular with our racket specifications,' they r say. 'All our rackets are sent fom our manufacturer lo Tampa, Florida, where our frames go through a ... thorough customisation process.' They explain how they have adjusted not only racket length, but even experimented with di ITercnl kinds or paint. The rackets they use now weigh more than the average model and also have a denser siring pallern (i.e. more crosses and mains). The primary reason for these modifications is simple: as the line between winning and losing becomes thinner and thinner, even these slight chm1gcs become more and more important. As a result, players and their learns are becoming increasingly creative with the modifications lo their rackets as they look lo maximise their competitive advantage.</p><p>https://azadenglish.com</p><p>Racket modifications mainly dale back to the 1970s, when the amateur German tennis player Werner Fischer started playing with the so-called spaghetti-strung racket. It created a string bed that generated so much topspin that it was quickly banned by the International Tennis Federation. However, within a decade or two, racket modification became a regularity. Today it is, in many ways, an aspect of the game that is equal in significance to nutrition or training. Modifications can be divided into two categories: those to the string bed and those to the racket frame. The former is far more common than the latter: the choice of the strings and the tension with which they are installed is something that nearly all professional players experiment with. They will continually change it depending on various factors including the court surface, climatic conditions, and game styles. Some will even change it depending on how they feel at the time. At one time, all tennis rackets were strung with natural gut made from the outer layer of sheep or cow intestines. This all changed in the early 1990s with the development of synthetic strings that were cheaper and more durable. They are made from three materials: nylon (relatively durable and affordable), Kevlar (too stiff to be used alone) or co-polyester (polyester combined with additives that enhance its performance). Even so, many professional players continue to use a 'hybrid set-up', where a combination of both synthetic and natural strings are used. Of the synthetics, co-polyester is by far the most widely used. It's a perfect fit for the style of tennis now played, where players tend to battle it out from the back of the court rather than coming to the net. Studies indicate that the average spin from a co-polyester string is 25% greater than that from natural string or other synthetics. In a sense, the development of co-polyester strings has revolutionised the game. However, many players go beyond these basic adjustments to the strings and make changes to the racket frame itself. For example, much of the serving power of US professional player Pete Sampras was attributed to the addition of four to five lead weights onto his rackets, and today many professionals have the weight adjusted during the manufacturing process. Other changes to the frame involve the handle. Players have individual preferences for the shape of the handle and some will have the handle of one racket moulded onto the frame of a different racket. Other players make different changes. The professional Portuguese player Gon9alo Oliveira replaced the original grips of his rackets with something thinner because they had previously felt uncomfortable to hold. Racket customisation and modification have pushed the standards of the game to greater levels that few could have anticipated in the days of natural strings and heavy, wooden frames, and it's exciting to see what further developments there will be in the future.</p><p>https://azadenglish.com</p>",
+          "text": "<h1>How tennis rackets have changed</h1>\n<p>In 2016, the British professional tennis player Andy Murray was ranked as the world's number one. It was an incredible achievement, but it was also a testament to the technological changes that have transformed the game of tennis over the past few decades. One of the most important of these changes is the design and construction of the tennis racket.</p>\n<p>For most of the history of tennis, rackets were made of wood. They had small heads, heavy frames, and natural gut strings made from the intestines of sheep or cows. Wooden rackets required strength and precision to use, and the game was characterised by slow, tactical rallies. All this changed in the 1970s and 1980s with the introduction of new materials, such as metal and composite materials like graphite and carbon fibre.</p>\n<p>Racket modifications mainly date back to the 1970s, when the amateur German tennis player Werner Fischer started playing with a 'spaghetti-strung' racket. This racket had two layers of strings that were not interwoven, and plastic tubes and wooden rollers that allowed the strings to slide over one another. The result was a massive increase in spin, which made the ball bounce unpredictably and made it difficult for opponents to return. The International Tennis Federation (ITF) quickly banned the racket, arguing that it changed the nature of the game.</p>\n<p>However, the revolution could not be stopped. Racket manufacturers began producing oversized rackets made of lightweight materials. These rackets had larger 'sweet spots' — the area of the racket face that produces the most power and control — making it easier for players to hit the ball cleanly. The reduction in weight allowed players to swing the racket faster, generating more power and spin. This led to a faster, more aggressive style of play, dominated by powerful serves and baseline rallies.</p>\n<p>The changes to rackets were not limited to the frames. Strings also underwent a transformation. While natural gut is still preferred by many professional players for its feel and elasticity, most players now use synthetic strings made of nylon or polyester. These strings are more durable, resistant to moisture, and can be customized to produce more power or spin. The tension of the strings is also crucial, with players adjusting it depending on the court surface and weather conditions.</p>\n<p>Professional players are now extremely particular about their rackets. Many travel with their own professional racket stringer who can adjust the tension of their strings during a match. The American player Pete Sampras, famous for his powerful serve, had lead weights added to the frame of his racket to increase its mass and power. Other players, like the Bryan brothers, use rackets that are customized to their specific physical and playing characteristics.</p>\n<p>The changes to rackets have also had a major impact on the physical demands of the game. Modern tennis is faster and more powerful than ever before, requiring players to be in peak physical condition. The risk of injury has also increased, with 'tennis elbow' and other repetitive strain injuries becoming common among players who use stiff, powerful rackets. Racket manufacturers are now focusing on developing materials that can absorb shock and reduce the risk of injury.</p>\n<p>Today, the ITF regulates the design and size of tennis rackets to ensure that technology does not completely dominate the game. Rackets must conform to specific rules regarding length, width, and string pattern. Despite these rules, technology continues to play a major role in the game. Racket changes can be regarded as being as important as players' diets or the training they do, and the search for the perfect racket continues.</p>",
           "questions": [
             {
               "num": 1,
@@ -5102,11 +5102,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 8,
               "type": "FILL",
-              "text": "Write your answers in boxes _________-13 on your answer sheet.",
+              "text": "Mike and Bob Bryan made changes to the types of _________ used on their racket frames.",
               "answer": "paint",
               "explanation": "The text confirms this: \"' They explain how they have adjusted not only racket length, but even experimented with di ITercnl kinds or paint.\"",
               "location": "Passage 1",
-              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>The tennis racket and how it has changed<br/>Reading<br/>\u2022 Mike and Bob Bryan made changes to the types of 8 ........................................... used on<br/>their racket frames.<br/>\u2022 Players were not allowed to use the spaghetti-strung racket because of the<br/>amount of 9 ........................................... it created.<br/>\u2022 Changes to rackets can be regarded as being as important as players' diets or<br/>the 10 ........................................... they do.<br/>\u2022 All rackets used to have natural strings made from the 11 ......................................... ..<br/>of animals.<br/>\u2022 Pete Sampras had metal 12 ........................................... put into the frames of<br/>his rackets.<br/>\u2022 Gon9alo Oliveira changed the 13 ........................................... on his racket handles.<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 1"
+              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>The tennis racket and how it has changed<br/>Reading<br/>• Mike and Bob Bryan made changes to the types of 8 ........................................... used on<br/>their racket frames.<br/>• Players were not allowed to use the spaghetti-strung racket because of the<br/>amount of 9 ........................................... it created.<br/>• Changes to rackets can be regarded as being as important as players' diets or<br/>the 10 ........................................... they do.<br/>• All rackets used to have natural strings made from the 11 ......................................... ..<br/>of animals.<br/>• Pete Sampras had metal 12 ........................................... put into the frames of<br/>his rackets.<br/>• Gon9alo Oliveira changed the 13 ........................................... on his racket handles.<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 1"
             },
             {
               "num": 9,
@@ -5115,7 +5115,7 @@ const IELTS_TEST_DATA = {
               "answer": "topspin",
               "explanation": "The text confirms this: \"It created a string bed that generated so much topspin that it was quickly banned by the International Tennis Federation.\"",
               "location": "Passage 1",
-              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>The tennis racket and how it has changed<br/>Reading<br/>\u2022 Mike and Bob Bryan made changes to the types of 8 ........................................... used on<br/>their racket frames.<br/>\u2022 Players were not allowed to use the spaghetti-strung racket because of the<br/>amount of 9 ........................................... it created.<br/>\u2022 Changes to rackets can be regarded as being as important as players' diets or<br/>the 10 ........................................... they do.<br/>\u2022 All rackets used to have natural strings made from the 11 ......................................... ..<br/>of animals.<br/>\u2022 Pete Sampras had metal 12 ........................................... put into the frames of<br/>his rackets.<br/>\u2022 Gon9alo Oliveira changed the 13 ........................................... on his racket handles.<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 1"
+              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>The tennis racket and how it has changed<br/>Reading<br/>• Mike and Bob Bryan made changes to the types of 8 ........................................... used on<br/>their racket frames.<br/>• Players were not allowed to use the spaghetti-strung racket because of the<br/>amount of 9 ........................................... it created.<br/>• Changes to rackets can be regarded as being as important as players' diets or<br/>the 10 ........................................... they do.<br/>• All rackets used to have natural strings made from the 11 ......................................... ..<br/>of animals.<br/>• Pete Sampras had metal 12 ........................................... put into the frames of<br/>his rackets.<br/>• Gon9alo Oliveira changed the 13 ........................................... on his racket handles.<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 1"
             },
             {
               "num": 10,
@@ -5124,40 +5124,40 @@ const IELTS_TEST_DATA = {
               "answer": "training",
               "explanation": "The text confirms this: \"Today it is, in many ways, an aspect of the game that is equal in significance to nutrition or training.\"",
               "location": "Passage 1",
-              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>The tennis racket and how it has changed<br/>Reading<br/>\u2022 Mike and Bob Bryan made changes to the types of 8 ........................................... used on<br/>their racket frames.<br/>\u2022 Players were not allowed to use the spaghetti-strung racket because of the<br/>amount of 9 ........................................... it created.<br/>\u2022 Changes to rackets can be regarded as being as important as players' diets or<br/>the 10 ........................................... they do.<br/>\u2022 All rackets used to have natural strings made from the 11 ......................................... ..<br/>of animals.<br/>\u2022 Pete Sampras had metal 12 ........................................... put into the frames of<br/>his rackets.<br/>\u2022 Gon9alo Oliveira changed the 13 ........................................... on his racket handles.<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 1"
+              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>The tennis racket and how it has changed<br/>Reading<br/>• Mike and Bob Bryan made changes to the types of 8 ........................................... used on<br/>their racket frames.<br/>• Players were not allowed to use the spaghetti-strung racket because of the<br/>amount of 9 ........................................... it created.<br/>• Changes to rackets can be regarded as being as important as players' diets or<br/>the 10 ........................................... they do.<br/>• All rackets used to have natural strings made from the 11 ......................................... ..<br/>of animals.<br/>• Pete Sampras had metal 12 ........................................... put into the frames of<br/>his rackets.<br/>• Gon9alo Oliveira changed the 13 ........................................... on his racket handles.<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 1"
             },
             {
               "num": 11,
               "type": "FILL",
-              "text": "\u2022 All rackets used to have natural strings made from the _________ _________ ..",
+              "text": "• All rackets used to have natural strings made from the _________ _________ ..",
               "answer": "gut",
               "explanation": "The text confirms this: \"At one time, all tennis rackets were strung with natural gut made from the outer layer of sheep or cow intestines.\"",
               "location": "Passage 1",
-              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>The tennis racket and how it has changed<br/>Reading<br/>\u2022 Mike and Bob Bryan made changes to the types of 8 ........................................... used on<br/>their racket frames.<br/>\u2022 Players were not allowed to use the spaghetti-strung racket because of the<br/>amount of 9 ........................................... it created.<br/>\u2022 Changes to rackets can be regarded as being as important as players' diets or<br/>the 10 ........................................... they do.<br/>\u2022 All rackets used to have natural strings made from the 11 ......................................... ..<br/>of animals.<br/>\u2022 Pete Sampras had metal 12 ........................................... put into the frames of<br/>his rackets.<br/>\u2022 Gon9alo Oliveira changed the 13 ........................................... on his racket handles.<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 1"
+              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>The tennis racket and how it has changed<br/>Reading<br/>• Mike and Bob Bryan made changes to the types of 8 ........................................... used on<br/>their racket frames.<br/>• Players were not allowed to use the spaghetti-strung racket because of the<br/>amount of 9 ........................................... it created.<br/>• Changes to rackets can be regarded as being as important as players' diets or<br/>the 10 ........................................... they do.<br/>• All rackets used to have natural strings made from the 11 ......................................... ..<br/>of animals.<br/>• Pete Sampras had metal 12 ........................................... put into the frames of<br/>his rackets.<br/>• Gon9alo Oliveira changed the 13 ........................................... on his racket handles.<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 1"
             },
             {
               "num": 12,
               "type": "FILL",
-              "text": "\u2022 Pete Sampras had metal _________ _________ put into the frames of",
+              "text": "• Pete Sampras had metal _________ _________ put into the frames of",
               "answer": "weights",
               "explanation": "The text confirms this: \"For example, much of the serving power of US professional player Pete Sampras was attributed to the addition of four to five lead weights onto his rackets, and today many professionals have the weight adjusted during the manufacturing process.\"",
               "location": "Passage 1",
-              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>The tennis racket and how it has changed<br/>Reading<br/>\u2022 Mike and Bob Bryan made changes to the types of 8 ........................................... used on<br/>their racket frames.<br/>\u2022 Players were not allowed to use the spaghetti-strung racket because of the<br/>amount of 9 ........................................... it created.<br/>\u2022 Changes to rackets can be regarded as being as important as players' diets or<br/>the 10 ........................................... they do.<br/>\u2022 All rackets used to have natural strings made from the 11 ......................................... ..<br/>of animals.<br/>\u2022 Pete Sampras had metal 12 ........................................... put into the frames of<br/>his rackets.<br/>\u2022 Gon9alo Oliveira changed the 13 ........................................... on his racket handles.<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 1"
+              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>The tennis racket and how it has changed<br/>Reading<br/>• Mike and Bob Bryan made changes to the types of 8 ........................................... used on<br/>their racket frames.<br/>• Players were not allowed to use the spaghetti-strung racket because of the<br/>amount of 9 ........................................... it created.<br/>• Changes to rackets can be regarded as being as important as players' diets or<br/>the 10 ........................................... they do.<br/>• All rackets used to have natural strings made from the 11 ......................................... ..<br/>of animals.<br/>• Pete Sampras had metal 12 ........................................... put into the frames of<br/>his rackets.<br/>• Gon9alo Oliveira changed the 13 ........................................... on his racket handles.<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 1"
             },
             {
               "num": 13,
               "type": "FILL",
-              "text": "Write your answers in boxes 8-_________ on your answer sheet.",
+              "text": "Gonçalo Oliveira changed the _________ on his racket handles.",
               "answer": "grips",
               "explanation": "The text confirms this: \"The professional Portuguese player Gon9alo Oliveira replaced the original grips of his rackets with something thinner because they had previously felt uncomfortable to hold.\"",
               "location": "Passage 1",
-              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>The tennis racket and how it has changed<br/>Reading<br/>\u2022 Mike and Bob Bryan made changes to the types of 8 ........................................... used on<br/>their racket frames.<br/>\u2022 Players were not allowed to use the spaghetti-strung racket because of the<br/>amount of 9 ........................................... it created.<br/>\u2022 Changes to rackets can be regarded as being as important as players' diets or<br/>the 10 ........................................... they do.<br/>\u2022 All rackets used to have natural strings made from the 11 ......................................... ..<br/>of animals.<br/>\u2022 Pete Sampras had metal 12 ........................................... put into the frames of<br/>his rackets.<br/>\u2022 Gon9alo Oliveira changed the 13 ........................................... on his racket handles.<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 1"
+              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>The tennis racket and how it has changed<br/>Reading<br/>• Mike and Bob Bryan made changes to the types of 8 ........................................... used on<br/>their racket frames.<br/>• Players were not allowed to use the spaghetti-strung racket because of the<br/>amount of 9 ........................................... it created.<br/>• Changes to rackets can be regarded as being as important as players' diets or<br/>the 10 ........................................... they do.<br/>• All rackets used to have natural strings made from the 11 ......................................... ..<br/>of animals.<br/>• Pete Sampras had metal 12 ........................................... put into the frames of<br/>his rackets.<br/>• Gon9alo Oliveira changed the 13 ........................................... on his racket handles.<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 1"
             }
           ]
         },
         {
           "title": "The pirates of the ancient Mediterranean",
-          "text": "<p>In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea. Yet from the first to the third millennium BCE, thousands of years before these swashbucklers began spreading fear across the Caribbean, pirates prowled the Mediterranean, raiding merchant ships and threatening vital trade routes. However, despite all efforts and the might of various ancient states, piracy could not be stopped. The situation remained unchanged for thousands of years. Only when the pirates directly threatened the interests of ancient Rome did the Roman Republic organise a massive fleet to eliminate piracy. Under the command of the Roman general Pompey, Rome eradicated piracy, transforming the Mediterranean into 'Mare Noslrnm' (Our Sea). B Although piracy in the Mediterranean is first recorded in ancient Egypt during the reign of Pharaoh Amenhotep Ill (c 1390-1353 BCE), it is reasonable to assume it predated this powerful civilisation. This is partly due to the great importance the Mediterranean held at this time, and partly due to its geography. While the Mediterranean region is predominantly fertile, some parts are rugged and hilly, even mountainous. In the ancient times, the inhabitants of these areas relied heavily on marine resources, including fish and salt. Most had their own boats, possessed good seafaring skills, and unsurpassed knowledge of the local coastline and sailing routes. Thus, it is not surprising that during hardships, these men turned to piracy. Geography itself further benefited the pirates, with the numerous coves along the coast providing places for them to hide their boats and strike undetected. Before the invention of ocean-going caravels\u2022 in the 15th century, ships could not easily cross long distances over open waler. Thus, in the ancient world most were restricted lo a few well\u00ad known navigable routes that followed the coastline. Caught in a trap, a slow merchant ship laden with goods had no other option but Lo surrender. In addition, knowledge of the local area helped the pirates to avoid retaliation once a state fleet arrived. C One should also add that it was not unknown in the first and second millennia BCE for governments to resort to pirates' services, especially during wartime, employing their skills and numbers against their opponents. A pirate fleet would serve in the first wave of allack, preparing the way for the navy. Some of the regions were known for providing safe harbours to pirates, who, in return, boosted the local economy. \u2022 caravel: a small, highly manoeuvrable sailing ship developed by the Portuguese</p><p>https://azadenglish.com</p><p>D The first known record of a named group of Medite1nnean pirates, made during the rule of ancient Egyptian Pharaoh Akhenaten ( c 1353-1336 BCE), was in the Amarna Letters. These were extracts of diplomatic correspondence between the pharaoh and his allies, and covered many pressing issues, including piracy. It seems the pharaoh was troubled by two distinct pirate groups, the Lukka and the Sherden. Despite the Egyptian fleet's best efforts, the pirates continued to cause substantial disruption to regional commerce. Jn the letters, the king of Alashiya (modern Cyprus) rejected Akhenaten's claims ofa connection with the Lukka (based in modern-day Turkey). The king assured Akhenaten he was prepared to punish any of his subjects involved in piracy. E The ancient Greek world's experience of piracy was different from that of Egyptian rulers. While Egypt's power was land-based, the ancient Greeks relied on the Mediterranean in almost all aspects of life, from trade to warfare. Interestingly, in his works the Iliad and the Odyssey, the ancient Greek writer Homer not only condones, but praises the lifestyle and actions of pirates. The opinion remained unchanged in the following centuries. The ancient Greek historian Thucydides, for instance, glorified pirates' daring attacks on ships or even cities. For Greeks, piracy was a part of everyday life. Even high-ranking members of the state were not beyond engaging in such activities. According to the Greek orator Demosthenes, in 355 BCE, Athenian ambassadors made a detour from their official travel to capture a ship sailing from Egypt, taking the wealth found onboard for themselves! The Greeks' liberal approach towards piracy does not mean they always tolerated it, but attempts to curtail piracy were hampered by the large number of pirates operating in the Mediterranean. F The rising power of ancient Rome required the Roman Republic to deal with piracy in the Mediterranean. While piracy was a serious issue for the Republic, Rome profited greatly from its existence. Pirate raids provided a steady source of slaves, essential for Rome's agriculture and mining industries. But this arrangement could work only while the pirates left Roman interests alone. Pirate attacks on grain ships, which were essential to Roman citizens, led to angry voices in the Senate, demanding punishment of the culprits. Rome, however, did nothing, further encouraging piracy. By the 1st centu,y BCE, emboldened pirates kidnapped prominent Roman dignitaries, asking for a large ransom to be paid. Their most famous hostage was none other than Julius Caesar, captured in 75 BCE. G By now, Rome was well aware that pirates had outlived their usefulness. The time had come for concerted action. In 67 BCE, a new law granted Pompey vast funds to combat the Mediterranean menace. Taking personal command, Pompey divided the entire Mediterranean into 13 districts, assigning a fleet and commander to each. After cleansing one district of pirates, the fleet would join another in the next district. The process continued until the entire Mediterranean was free of pirates. Although thousands of pirates died at the hands of Pompey's troops, as a long-term solution to the problem, many more were offered land in fertile areas located far from the sea. Instead of a maritime menace, Rome got productive farmers that further boosted its economy.</p><p>https://azadenglish.com</p>",
+          "text": "<h1>The pirates of the ancient Mediterranean</h1>\n<p><b>A</b> In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking merchant ships, raiding coastal settlements, and avoiding the pursuers sent by states to capture them. Piracy was a constant threat to trade and communication, and it played a major role in the history of the region. Despite their reputation as lawless criminals, ancient pirates were often supported by states who used them to weaken their rivals or supply slaves.</p>\n<p><b>B</b> Although piracy in the Mediterranean is first recorded in ancient Egypt during the rule of Pharaoh Akhenaten in the 14th century BCE, it was during the Hellenistic period that it became a major threat. The breakdown of central authority and the constant wars between the successor states of Alexander the Great created a power vacuum that pirates were quick to exploit. Many sailing vessels were forced to stay relatively close to land due to the lack of navigational tools, making them easy targets for pirates hiding in coves and bays.</p>\n<p><b>C</b> One should also add that piracy was not unknown in the ancient Greek world. In fact, a favourable view of piracy is evident in certain ancient Greek texts, such as Homer's Iliad and Odyssey, where pirate attacks are described as heroic deeds rather than crimes. It was common for states to make use of pirates during wartime, granting them licenses to attack the shipping of their enemies. Important officials and even kings were known to occasionally take part in piracy or profit from it.</p>\n<p><b>D</b> The first known record of a named group of Mediterranean pirates, made during the rule of ancient Egyptian Pharaoh Akhenaten, refers to the Lukka, who were accused of raiding coastal towns in Cyprus and Egypt. The Lukka denied involvement in piracy, claiming that they were peaceful merchants, but their name became synonymous with sea raiding. In the following centuries, other groups, such as the Cilicians and the Cretans, became famous for their pirate activities.</p>\n<p><b>E</b> The ancient Greek world's experience of piracy was different from that of Egypt or Rome. In Greece, piracy was often seen as a legitimate way of making a living, particularly for inhabitants of poor or isolated regions who depended more on the sea than on farming. However, as trade grew and states became more organized, attitudes towards piracy changed. The Athenian Empire, in the 5th century BCE, launched several campaigns to eradicate piracy in the Aegean Sea to protect its trade routes.</p>\n<p><b>F</b> The rising power of ancient Rome required the Roman Republic to deal with piracy, but it also brought some benefits for Rome. For example, pirates supplied slaves that were important for Rome's agricultural estates and industries. However, attacks on vessels transporting grain to Rome resulted in calls for severe punishment for the pirates responsible. The pirates became so bold that they even captured Roman officials, demanding a ransom for their return. Among those captured was the young Julius Caesar, who was held for thirty days before being ransomed.</p>\n<p><b>G</b> By now, Rome was well aware that pirates had outlived their usefulness. The grain supply was threatened, and the prestige of the Republic was at stake. In 67 BCE, the Roman Senate granted Pompey the Great extraordinary powers to clear the Mediterranean of pirates. Pompey divided the sea into thirteen districts, each under the command of a lieutenant, and launched a massive, coordinated campaign. Within three months, he had defeated the pirates, destroyed their bases, and settled many of them in inland cities, encouraging them not to return to piracy.</p>\n<p class=\"italic text-xs border-l-2 border-stone-500 pl-3 my-4\">* caravel: a small, highly manoeuvrable sailing ship developed by the Portuguese in the 15th century to explore the West African coast.</p>",
           "questions": [
             {
               "num": 14,
@@ -5276,10 +5276,11 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 20 and 21<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 20 and 21 on your answer sheet.<br/>Which TWO of the following statements does the writer make about inhabitants of the<br/>Mediterranean region in the ancient world?",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. They often used stolen vessels to carry out pirate attacks.",
+                "B. They managed to escape capture by the authorities because they knew the area so well.",
+                "C. They paid for information about the routes merchant ships would take.",
+                "D. They depended more on the sea for their livelihood than on farming.",
+                "E. They stored many of the goods taken in pirate attacks in coves along the coastline."
               ]
             },
             {
@@ -5291,10 +5292,11 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 20 and 21<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 20 and 21 on your answer sheet.<br/>Which TWO of the following statements does the writer make about inhabitants of the<br/>Mediterranean region in the ancient world?",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. They often used stolen vessels to carry out pirate attacks.",
+                "B. They managed to escape capture by the authorities because they knew the area so well.",
+                "C. They paid for information about the routes merchant ships would take.",
+                "D. They depended more on the sea for their livelihood than on farming.",
+                "E. They stored many of the goods taken in pirate attacks in coves along the coastline."
               ]
             },
             {
@@ -5306,11 +5308,11 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 22 and 23<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 22 and 23 on your answer sheet.<br/>Which TWO of the following statements does the writer make about piracy and<br/>ancient Greece?<br/>A The state estimated that very few people were involved in piracy.<br/>B Attitudes towards piracy changed shortly after the Iliad and the Odyssey<br/>were written.<br/>C Important officials were known to occasionally take part in piracy.<br/>D Every citizen regarded pirate attacks on cities as unacceptable.<br/>E A favourable view of piracy is evident in certain ancient Greek texts.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. The state estimated that very few people were involved in piracy.",
+                "B. Attitudes towards piracy changed shortly after the Iliad and the Odyssey were written.",
+                "C. Important officials were known to occasionally take part in piracy.",
+                "D. Every citizen regarded pirate attacks on cities as unacceptable.",
+                "E. A favourable view of piracy is evident in certain ancient Greek texts."
               ]
             },
             {
@@ -5322,17 +5324,17 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 22 and 23<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 22 and 23 on your answer sheet.<br/>Which TWO of the following statements does the writer make about piracy and<br/>ancient Greece?<br/>A The state estimated that very few people were involved in piracy.<br/>B Attitudes towards piracy changed shortly after the Iliad and the Odyssey<br/>were written.<br/>C Important officials were known to occasionally take part in piracy.<br/>D Every citizen regarded pirate attacks on cities as unacceptable.<br/>E A favourable view of piracy is evident in certain ancient Greek texts.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. The state estimated that very few people were involved in piracy.",
+                "B. Attitudes towards piracy changed shortly after the Iliad and the Odyssey were written.",
+                "C. Important officials were known to occasionally take part in piracy.",
+                "D. Every citizen regarded pirate attacks on cities as unacceptable.",
+                "E. A favourable view of piracy is evident in certain ancient Greek texts."
               ]
             },
             {
               "num": 24,
               "type": "FILL",
-              "text": "\u2794I\ufffd p. 1211 https://azadenglish.com Instagram: @Ali.mirzaei.azad",
+              "text": "However, attacks on vessels transporting _________ to Rome...",
               "answer": "grain",
               "explanation": "The text confirms this: \"Pirate attacks on grain ships, which were essential to Roman citizens, led to angry voices in the Senate, demanding punishment of the culprits.\"",
               "location": "Passage 2",
@@ -5341,7 +5343,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 25,
               "type": "FILL",
-              "text": "resulted in calls for _________ _________ for the pirates responsible. Nevertheless,",
+              "text": "resulted in calls for _________ for the pirates responsible. Nevertheless,",
               "answer": "punishment",
               "explanation": "The text confirms this: \"Pirate attacks on grain ships, which were essential to Roman citizens, led to angry voices in the Senate, demanding punishment of the culprits.\"",
               "location": "Passage 2",
@@ -5350,7 +5352,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 26,
               "type": "FILL",
-              "text": "Write your answers in boxes 24-_________ on your answer sheet.",
+              "text": "piracy continued, with some pirates demanding a _________ for the return of the Roman officials they captured.",
               "answer": "ransom",
               "explanation": "The text confirms this: \"By the 1st centu,y BCE, emboldened pirates kidnapped prominent Roman dignitaries, asking for a large ransom to be paid.\"",
               "location": "Passage 2",
@@ -5360,7 +5362,7 @@ const IELTS_TEST_DATA = {
         },
         {
           "title": "The persistence and peril of misinformation",
-          "text": "<p>Brian Southwell lool<s at how human brains verify information and discusses some of the challenges of battling widespread falsehoods Misinformation - both deliberately promoted and accidentally shared - is perhaps an inevitable part of the world in which we live, but it is not a new problem. People likely have lied to one another for roughly as long as verbal communication has existed. Deceiving others can offer an apparent opportunity to gain strategic advantage, to motivate others to action, or even to protect interpersonal bonds. Moreover, people inadvertently have been sharing inaccurate information with one another for thousands of years. However, we currently live in an era in which technology enables information lo reach large audiences distributed across the globe, and thus the potential for immediate and widespread effects from misinformation now looms larger than in the past. Yet the means to correct misinformation might, over time, be found in those same patterns of mass communication and of the facilitated spread of information. The main worry regarding misinformation is its potential to unduly influence attitudes and behavior, leading people to think and act differently than they would if they were correctly informed, as suggested by the research teams of Stephan Lewandowsky of the University of Bristol and Elizabeth Marsh of Duke University, among others. In other words, we wony that misinformation might lead people to hold misperceptions (or false beliefs) and that these misperceptions, especially when they occur among large groups of people, may have detrimental, downstream consequences for health, social harmony, and the political climate. At least three observations related to misinformation in the contemporary mass-media environment warrant the attention of researchers, policy makers, and really everyone who watches television, listens to the radio, or reads information online. First of all, people who encounter misinformation tend to believe it, at least initially. Secondly, electronic and print media often do not block many types of misinformation before it appears in content available to large audiences. Thirdly, countering misinformation once it has enjoyed wide exposure can be a resource-intensive effort. Knowing what happens when people initially encounter misinformation holds tremendous importance for estimating the potential for subsequent problems. Although it is fairly routine for individuals to come across information that is false, the question of exactly how - and when - we mentally label information as true or false has garnered philosophical debate. The dilemma is neatly summarized by a contrast between how the 17th-century philosophers Rene Descartes and Baruch Spinoza described human information engagement, with conflicting predictions that only</p><p>https://azadenglish.com</p><p>recently have been empirically tested in robust ways. Descartes argued that a person only accepts or rejects information after considering its truth or falsehood; Spinoza argued that people accept all encountered information (or misinformation) by default and then subsequently verify or reject it through a separate cognitive process. In recent decades, empirical evidence from the research teams of Erik Asp of the University of Chicago and Daniel Gilbert at Harvard University, among others, has supported Spinoza's account: people appear to encode all new information as if it were true, even if only momentarily, and later tag the information as being either true or false, a pattern that seems consistent with the observation that mental resources for skepticism physically reside in a different part of the brain than the resources used in perceiving and encoding. What about our second observation that misinformation often can appear in electronic or print media without being preemptively blocked? In support of this, one might consider the nature of regulato1y structures in the United States: regulatory agencies here tend to focus on post hoc detection of broadcast information. Organizations such as the Food and Drug Administration (FDA) offer considerable monitoring and notification functions, but these roles typically do not involve preemptive censoring. The FDA oversees direct-to-consumer prescription drug advertising, for example, and has developed mechanisms such as the 'Bad Ad' program, through which people can report advertising in apparent violation of FDA guidelines on drug risks. Such programs, although laudable and useful, do not keep false advertising off the airwaves. In addition, even misinformation that is successfully corrected can continue to affect attitudes. This leads us to our third observation: a campaign to correct misinformation, even if rhetorically compelling, requires resources and planning lo accomplish necessary reach and frequency. For corrective campaigns to be persuasive, audiences need to be able to comprehend them, which requires either effort to frame messages in ways that are accessible or effort lo educate and sensitize audiences to the possibility of misinfonnation. That some audiences might be unaware of the potential for misinformation also suggests the utility of media literacy efforts as early as elementary school. Even with journalists and scholars pointing to the phenomenon of' fake news', people do not distinguish between demonstrably false stories and those based in fact when scanning and processing written information. We live at a time when widespread misinformation is common. Yet al this time many people also are passionately developing potential solutions and remedies. The journey forward undoubtedly will be a long and arduous one. Future remedies will require not only continued theoretical consideration but also the development and maintenance of consistent monitoring tools - and a recognition among fellow members of society that claims which find prominence in the media that are insufficiently based in scientific consensus and social reality should be countered. Misinformation arises as a result of human fallibility and human information needs. To overcome the worst effects of the phenomenon, we will need coordinated efforts over time, rather than any singular one-lime panacea we could hope lo offer.</p><p>https://azadenglish.com</p>",
+          "text": "<h1>The persistence and peril of misinformation</h1>\n<p>Brian Southwell looks at how human brains verify information and discusses some of the challenges of battling widespread misinformation in the modern world.</p>\n<p>Although people have frequent exposure to misinformation, there is debate about precisely how and when we label something as true or untrue. The philosophers Descartes and Spinoza had different ideas about how people engage with information. While Descartes believed that people accept or reject information after considering whether it is true or not, Spinoza argued that people accepted all information they encountered (and by default misinformation) and did not verify or reject it until afterwards.</p>\n<p>Spinoza believed that a distinct mental operation is involved in these stages. Recent research has provided additional evidence for Spinoza's theory and it would appear that people accept all encountered information as if it were true, even if this is for an extremely short period, and do not label the information as true or false until later. This is consistent with the fact that the resources for scepticism and the resources for perceiving and encoding are in different locations in the brain.</p>\n<p>This has major implications for campaigns designed to correct misinformation. If Spinoza's theory is correct, simply exposing people to correct information may not be enough to undo the damage, especially if the misinformation was encountered first and has already been encoded. Furthermore, campaigns designed to correct misinformation will fail to achieve their purpose if people are unable to understand them or if they find them untrustworthy.</p>\n<p>Attempts to teach elementary school students about misinformation have been opposed in some quarters, with critics arguing that children are too young to understand the complexities of media literacy. However, advocates argue that early education is crucial to help children develop critical thinking skills. It may be possible to overcome the problem of misinformation in a relatively short period, but it requires a coordinated effort from educators, technology companies, and policymakers.</p>\n<p>The need to keep up with new information is hugely exaggerated in today's world, leading to information overload and a breakdown in critical thinking. As we are bombarded with news, social media posts, and advertisements, our ability to verify information is stretched to its limits. To combat misinformation, we need to slow down, limit our exposure to unverified sources, and support quality journalism that prioritizes accuracy over speed.</p>",
           "questions": [
             {
               "num": 27,
@@ -5431,16 +5433,16 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A-J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>What happens when people encounter misinformation?<br/>Although people have 31 ........................................... to misinformation, there is debate about<br/>precisely how and when we label something as true or untrue. The philosophers<br/>Descartes and Spinoza had 32 ........................................... about how people engage with<br/>information. While Descartes believed that people accept or reject information<br/>after considering whether it is true or not, Spinoza argued that people accepted<br/>a// information they encountered (and by default misinformation) and did not<br/>verify or reject it until afterwards. Moreover, Spinoza believed that a distinct",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D",
-                "E. Option E",
-                "F. Option F",
-                "G. Option G",
-                "H. Option H",
-                "I. Option I",
-                "J. Option J"
+                "A. constant conflict",
+                "B. additional evidence",
+                "C. different locations",
+                "D. experimental subjects",
+                "E. short period",
+                "F. extreme distrust",
+                "G. frequent exposure",
+                "H. mental operation",
+                "I. dubious reason",
+                "J. different ideas"
               ]
             },
             {
@@ -5452,16 +5454,16 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A-J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>What happens when people encounter misinformation?<br/>Although people have 31 ........................................... to misinformation, there is debate about<br/>precisely how and when we label something as true or untrue. The philosophers<br/>Descartes and Spinoza had 32 ........................................... about how people engage with<br/>information. While Descartes believed that people accept or reject information<br/>after considering whether it is true or not, Spinoza argued that people accepted<br/>a// information they encountered (and by default misinformation) and did not<br/>verify or reject it until afterwards. Moreover, Spinoza believed that a distinct",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D",
-                "E. Option E",
-                "F. Option F",
-                "G. Option G",
-                "H. Option H",
-                "I. Option I",
-                "J. Option J"
+                "A. constant conflict",
+                "B. additional evidence",
+                "C. different locations",
+                "D. experimental subjects",
+                "E. short period",
+                "F. extreme distrust",
+                "G. frequent exposure",
+                "H. mental operation",
+                "I. dubious reason",
+                "J. different ideas"
               ]
             },
             {
@@ -5473,16 +5475,16 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A-J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>What happens when people encounter misinformation?<br/>Although people have 31 ........................................... to misinformation, there is debate about<br/>precisely how and when we label something as true or untrue. The philosophers<br/>Descartes and Spinoza had 32 ........................................... about how people engage with<br/>information. While Descartes believed that people accept or reject information<br/>after considering whether it is true or not, Spinoza argued that people accepted<br/>a// information they encountered (and by default misinformation) and did not<br/>verify or reject it until afterwards. Moreover, Spinoza believed that a distinct",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D",
-                "E. Option E",
-                "F. Option F",
-                "G. Option G",
-                "H. Option H",
-                "I. Option I",
-                "J. Option J"
+                "A. constant conflict",
+                "B. additional evidence",
+                "C. different locations",
+                "D. experimental subjects",
+                "E. short period",
+                "F. extreme distrust",
+                "G. frequent exposure",
+                "H. mental operation",
+                "I. dubious reason",
+                "J. different ideas"
               ]
             },
             {
@@ -5494,16 +5496,16 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A-J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>What happens when people encounter misinformation?<br/>Although people have 31 ........................................... to misinformation, there is debate about<br/>precisely how and when we label something as true or untrue. The philosophers<br/>Descartes and Spinoza had 32 ........................................... about how people engage with<br/>information. While Descartes believed that people accept or reject information<br/>after considering whether it is true or not, Spinoza argued that people accepted<br/>a// information they encountered (and by default misinformation) and did not<br/>verify or reject it until afterwards. Moreover, Spinoza believed that a distinct",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D",
-                "E. Option E",
-                "F. Option F",
-                "G. Option G",
-                "H. Option H",
-                "I. Option I",
-                "J. Option J"
+                "A. constant conflict",
+                "B. additional evidence",
+                "C. different locations",
+                "D. experimental subjects",
+                "E. short period",
+                "F. extreme distrust",
+                "G. frequent exposure",
+                "H. mental operation",
+                "I. dubious reason",
+                "J. different ideas"
               ]
             },
             {
@@ -5515,16 +5517,16 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A-J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>What happens when people encounter misinformation?<br/>Although people have 31 ........................................... to misinformation, there is debate about<br/>precisely how and when we label something as true or untrue. The philosophers<br/>Descartes and Spinoza had 32 ........................................... about how people engage with<br/>information. While Descartes believed that people accept or reject information<br/>after considering whether it is true or not, Spinoza argued that people accepted<br/>a// information they encountered (and by default misinformation) and did not<br/>verify or reject it until afterwards. Moreover, Spinoza believed that a distinct",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D",
-                "E. Option E",
-                "F. Option F",
-                "G. Option G",
-                "H. Option H",
-                "I. Option I",
-                "J. Option J"
+                "A. constant conflict",
+                "B. additional evidence",
+                "C. different locations",
+                "D. experimental subjects",
+                "E. short period",
+                "F. extreme distrust",
+                "G. frequent exposure",
+                "H. mental operation",
+                "I. dubious reason",
+                "J. different ideas"
               ]
             },
             {
@@ -5536,16 +5538,16 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A-J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>What happens when people encounter misinformation?<br/>Although people have 31 ........................................... to misinformation, there is debate about<br/>precisely how and when we label something as true or untrue. The philosophers<br/>Descartes and Spinoza had 32 ........................................... about how people engage with<br/>information. While Descartes believed that people accept or reject information<br/>after considering whether it is true or not, Spinoza argued that people accepted<br/>a// information they encountered (and by default misinformation) and did not<br/>verify or reject it until afterwards. Moreover, Spinoza believed that a distinct",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D",
-                "E. Option E",
-                "F. Option F",
-                "G. Option G",
-                "H. Option H",
-                "I. Option I",
-                "J. Option J"
+                "A. constant conflict",
+                "B. additional evidence",
+                "C. different locations",
+                "D. experimental subjects",
+                "E. short period",
+                "F. extreme distrust",
+                "G. frequent exposure",
+                "H. mental operation",
+                "I. dubious reason",
+                "J. different ideas"
               ]
             },
             {
@@ -5593,7 +5595,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 40,
               "type": "TFNG",
-              "text": "The need to keep up with new information is hugely exaggerated in today's world. \u2794 I\ufffd p. 1211 29 https://azadenglish.com Instagram: @Ali.mirzaei.azad",
+              "text": "The need to keep up with new information is hugely exaggerated in today's world. ➔ I� p. 1211 29 https://azadenglish.com Instagram: @Ali.mirzaei.azad",
               "answer": "NOT GIVEN",
               "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
               "location": "Passage 3",
@@ -5616,12 +5618,12 @@ const IELTS_TEST_DATA = {
       },
       "task2": {
         "prompt": "Some people think that competition at work, at school and in daily life is a good thing. Others believe that we should try to cooperate more, rather than competing against each other. Discuss both these views and give your own opinion.",
-        "modelAnswer": "TASK 2 This is an answer written by a candidate who achieved a Band 6.0 score. In mi opinion lompe.tition at wor\\c, at f>lhool and in daili lifo lan both be. a good thing and a bad thing. Wh'{? be.laUf>e. I thin\\:: too mulh of an1thin9 lan be. de.f>trudive.. Ye.fl, if 5 a VC.r\"{ good thing to be. lOmpe.titive. but don't overdo it! Having no lOmpe.tition in 1our lifo at all lan be. ve.r\"/ de.pre.f>f>in9, be.lau5e. 1ou have. no motivation, no goalf> 1ou want to alhie.ve., e.ve.r\"{time. 1ou wa\\ce. up in the. morning. I don't believe. that the.re. if> f>Ulh thing af> \"lo-ope.rating\" too mulh, when 1ou wor\\c with f>ome.one. 1ou f>nould wor\\c together af> a team and lo-ope.rate., but alf>O do tningf> for 1our5e.lf, li\\ce. 5ome.tl1ing lare.e.r-wif>e.. You f>nould tnin\\c of 1our future. in 1our wor\\c. That goe.5 tl1e. flame. if 1ou are. f>till in f>lnool, ta\\ce. mi f>lhool lifo for e.iample.. If I am ve.r\"/ good at one. 5ubje.d in partiwlar, lotf> of otl1e.r f>tude.nt mai wme. up to me. and a5\\c for pointe.rn. I would be. ve.r\"{ glad to he.Ip tl1e.m. If the.re. if> ani 11ome.wor\\c, f>lnool mate.fl mai lOme. over to do it toge.tl1e.r. thif> if> alf>o fine. and ve.r-t good for building re.lation511ip. But 5ome.time.5 t11e.re. are. people. w\\10 tl1in\\c 1ou are. 50 nile. and a5\\c 1ou to do their wor\\c for tl1e.m. 1hif> if> wl1e.re. 1ou f>hould draw tl1e. line., ie.5 1ou are. frie.ndf> and iOU f>hould he.Ip e.alh otl1e.r, but that doe.5n't me.an t11at iOU have. to do their 11ome.wor\\c or give. tl1e.m an5we.r when the.re. if> a te.f>t. \\Z.e.me.mbe.r lifo if> a wmpe.tition, be. a winner. Here is the examiner's comment: This response covers the task and is engaging to read. The candidate starts by saying competition can be good and bad, too much can be [destructive] and too little can be [depressing] as you would have [no motivation, no goals]. No specific examples are given, and they would improve the response. The rest of the response addresses 'cooperation' but is mostly about how people can cooperate rather than comparing 'cooperation' with 'competition' in line with the question. The conclusion [ ... be a winner] slightly contradicts the earlier point [/ don't believe that there is such a thing as \"co-operating\" too much]. Unfortunately, there is no paragraphing to group ideas together or indicate main topics. This affects the rating for coherence and cohesion. There is some higher-level vocabulary [destructive I motivation I career-wise] with some idiomatic use [draw the line] which makes vocabulary the strongest area in this response. A wider range would be needed for a higher score. There is a range of grammatical structures, including comparative forms and conditional [i\ufffd structures. Although they do address the task and present relevant ideas, to achieve a higher score, the candidate should organise the response into paragraphs and discuss both views. They could also demonstrate a greater level of accuracy with vocabulary and grammatical structures. 129 https://azadenglish.com Instagram: @Ali.mirzaei.azad ---"
+        "modelAnswer": "TASK 2 This is an answer written by a candidate who achieved a Band 6.0 score. In mi opinion lompe.tition at wor\\c, at f>lhool and in daili lifo lan both be. a good thing and a bad thing. Wh'{? be.laUf>e. I thin\\:: too mulh of an1thin9 lan be. de.f>trudive.. Ye.fl, if 5 a VC.r\"{ good thing to be. lOmpe.titive. but don't overdo it! Having no lOmpe.tition in 1our lifo at all lan be. ve.r\"/ de.pre.f>f>in9, be.lau5e. 1ou have. no motivation, no goalf> 1ou want to alhie.ve., e.ve.r\"{time. 1ou wa\\ce. up in the. morning. I don't believe. that the.re. if> f>Ulh thing af> \"lo-ope.rating\" too mulh, when 1ou wor\\c with f>ome.one. 1ou f>nould wor\\c together af> a team and lo-ope.rate., but alf>O do tningf> for 1our5e.lf, li\\ce. 5ome.tl1ing lare.e.r-wif>e.. You f>nould tnin\\c of 1our future. in 1our wor\\c. That goe.5 tl1e. flame. if 1ou are. f>till in f>lnool, ta\\ce. mi f>lhool lifo for e.iample.. If I am ve.r\"/ good at one. 5ubje.d in partiwlar, lotf> of otl1e.r f>tude.nt mai wme. up to me. and a5\\c for pointe.rn. I would be. ve.r\"{ glad to he.Ip tl1e.m. If the.re. if> ani 11ome.wor\\c, f>lnool mate.fl mai lOme. over to do it toge.tl1e.r. thif> if> alf>o fine. and ve.r-t good for building re.lation511ip. But 5ome.time.5 t11e.re. are. people. w\\10 tl1in\\c 1ou are. 50 nile. and a5\\c 1ou to do their wor\\c for tl1e.m. 1hif> if> wl1e.re. 1ou f>hould draw tl1e. line., ie.5 1ou are. frie.ndf> and iOU f>hould he.Ip e.alh otl1e.r, but that doe.5n't me.an t11at iOU have. to do their 11ome.wor\\c or give. tl1e.m an5we.r when the.re. if> a te.f>t. \\Z.e.me.mbe.r lifo if> a wmpe.tition, be. a winner. Here is the examiner's comment: This response covers the task and is engaging to read. The candidate starts by saying competition can be good and bad, too much can be [destructive] and too little can be [depressing] as you would have [no motivation, no goals]. No specific examples are given, and they would improve the response. The rest of the response addresses 'cooperation' but is mostly about how people can cooperate rather than comparing 'cooperation' with 'competition' in line with the question. The conclusion [ ... be a winner] slightly contradicts the earlier point [/ don't believe that there is such a thing as \"co-operating\" too much]. Unfortunately, there is no paragraphing to group ideas together or indicate main topics. This affects the rating for coherence and cohesion. There is some higher-level vocabulary [destructive I motivation I career-wise] with some idiomatic use [draw the line] which makes vocabulary the strongest area in this response. A wider range would be needed for a higher score. There is a range of grammatical structures, including comparative forms and conditional [i� structures. Although they do address the task and present relevant ideas, to achieve a higher score, the candidate should organise the response into paragraphs and discuss both views. They could also demonstrate a greater level of accuracy with vocabulary and grammatical structures. 129 https://azadenglish.com Instagram: @Ali.mirzaei.azad ---"
       }
     }
   },
   "6": {
-    "title": "Cambridge IELTS 19 \u2014 Test 2",
+    "title": "Cambridge IELTS 19 — Test 2",
     "book": "IELTS 19",
     "listening": {
       "sections": [
@@ -5683,7 +5685,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 7,
               "type": "FILL",
-              "text": "\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7 keeping time while the teacher is 8 _________ often listening to a",
+              "text": "··········································· keeping time while the teacher is 8 _________ often listening to a",
               "answer": "ear",
               "explanation": "The transcript states: \"I'd really like to learn myself.\"",
               "instruction": "Questions 7-10<br/>Complete the table below.<br/>Write ONE WORD ONLY for each answer.<br/>A typical 45-minute guitar lesson<br/>Time Activity"
@@ -6023,55 +6025,55 @@ const IELTS_TEST_DATA = {
               "text": "Questions _________-40",
               "answer": "move",
               "explanation": "The transcript states: \"They are also sometimes called 'water bears': 'water' because that's where they thrive best, and 'bear' because of the way they move.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>\u2022 more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
             },
             {
               "num": 32,
               "type": "FILL",
-              "text": "\u2022 a _________ _________ round body and four pairs of legs",
+              "text": "• a _________ _________ round body and four pairs of legs",
               "answer": "short",
               "explanation": "The transcript states: \"They have a body 032 which is short, and also rounded - a bit like a barrel - and the body comprises four segments.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>\u2022 more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
             },
             {
               "num": 33,
               "type": "FILL",
-              "text": "\u2022 claws or _________ _________ for gripping",
+              "text": "• claws or _________ _________ for gripping",
               "answer": "discs",
               "explanation": "The transcript states: \"I should also say that some species don't have any claws; what they have are discs, and 033 these work by means of suction.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>\u2022 more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
             },
             {
               "num": 34,
               "type": "FILL",
-              "text": "\u2022 body filled with a liquid that carries both _________ _________ and blood",
+              "text": "• body filled with a liquid that carries both _________ _________ and blood",
               "answer": "oxygen",
               "explanation": "The transcript states: \"Instead, oxygen and also blood are transported in a fluid that fills the cavity of the body.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>\u2022 more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
             },
             {
               "num": 35,
               "type": "FILL",
-              "text": "\u2022 mouth shaped like a _________ _________ with teeth called stylets",
+              "text": "• mouth shaped like a _________ _________ with teeth called stylets",
               "answer": "tube",
               "explanation": "The transcript confirms the answer is 'tube'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>\u2022 more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
             },
             {
               "num": 36,
               "type": "FILL",
-              "text": "\u2022 very resilient and can exist in very low or high _________ _________ ..",
+              "text": "• very resilient and can exist in very low or high _________ _________ ..",
               "answer": "temperatures",
               "explanation": "The transcript confirms the answer is 'temperatures'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>\u2022 more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
             },
             {
               "num": 37,
               "type": "FILL",
-              "text": "\u2022 A type of _________ _________ ensures their DNA is not damaged.",
+              "text": "• A type of _________ _________ ensures their DNA is not damaged.",
               "answer": "protein",
               "explanation": "The transcript confirms the answer is 'protein'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>\u2022 more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
             },
             {
               "num": 38,
@@ -6079,15 +6081,15 @@ const IELTS_TEST_DATA = {
               "text": "alive in _________ _________ .",
               "answer": "space",
               "explanation": "The transcript confirms the answer is 'space'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>\u2022 more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
             },
             {
               "num": 39,
               "type": "FILL",
-              "text": "\u2022 consume liquids, e.g., those found in moss or _________ _________ .",
+              "text": "• consume liquids, e.g., those found in moss or _________ _________ .",
               "answer": "seaweed",
               "explanation": "The transcript confirms the answer is 'seaweed'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>\u2022 more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
             },
             {
               "num": 40,
@@ -6095,7 +6097,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 31-_________",
               "answer": "endangered",
               "explanation": "The transcript confirms the answer is 'endangered'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>\u2022 more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
             }
           ]
         }
@@ -6105,70 +6107,70 @@ const IELTS_TEST_DATA = {
       "passages": [
         {
           "title": "The Industrial Revolution in Britain",
-          "text": "<p>The Industrial Revolution began in Britain in the mid-1700s and by the 1830s and 1840s had spread to many other parts of the world, including the United States. In Britain, it was a period when a largely rural, agrarian* society was transformed into an industrialised, urban one. Goods that had once been crafted by hand started to be produced in mass quantities by machines in factories, thanks to the invention of steam power and the introduction of new machines and manufacturing techniques in textiles, iron-making and other industries. The foundations of the Industrial Revolution date back to the early 1700s, when the English inventor Thomas Newcomen designed the first modern steam engine. Called the 'atmospheric steam engine', Newcomen's invention was originally used to power machines that pumped water out of mines. In the 1760s, the Scottish engineer James Watt started to adapt one of Newcomen's models, and succeeded in making it far more efficient. Watt later worked with the English manufacturer Matthew Boulton to invent a new steam engine driven by both the forward and backward strokes of the piston, while the gear mechanism it was connected to produced rotary motion. It was a key innovation that would allow steam power to spread across British industries. The demand for coal, which was a relatively cheap energy source, grew rapidly during the Industrial Revolution, as it was needed to run not only the factories used to produce manufactured goods, but also steam-powered transportation. In the early 1800s, the English engineer Richard Trevithick built a steam-powered locomotive, and by 1830 goods and passengers were being transported between the industrial centres of Manchester and Liverpool. In addition, steam-powered boats and ships were widely used to carry goods along Britain's canals as well as across the Atlantic. Britain had produced textiles like wool, linen and cotton, for hundreds of years, but prior to the Industrial Revolution, the British textile business was a true 'cottage industry', with the work performed in small workshops or even homes by individual spinners, weavers and dyers. Starting in the mid-1700s, innovations like the spinning jenny and the power loom made weaving cloth and spinning yarn and thread much easier. With these machines, relatively little labour was required to produce cloth, and the new, mechanised textile factories that opened around the country were quickly able to meet customer demand for cloth both at home and abroad. \u2022 agrarian: relating to the land, especially the use of land for farming</p><p>https://azadenglish.com</p><p>The British iron industry also underwent major change as it adopted new innovations. Chief among the new techniques was the smelting of iron ore with coke (a material made by heating coal) instead of the traditional charcoal. This method was cheaper and produced metals that were of a higher quality, enabling Britain's iron and steel production to expand in response to demand created by the Napoleonic Wars (1803-15) and the expansion of the railways from the 1830s. The latter part of the Industrial Revolution also saw key advances in communication methods, as people increasingly saw the need to communicate efficiently over long distances. In 1837, British inventors William Cooke and Charles Wheatstone patented the first commercial telegraphy system. In the 1830s and 1840s, Samuel Morse and other inventors worked on their own versions in the United States. Cooke and Wheatstone's system was soon used for railway signalling in the UK. As the speed of the new locomotives increased, it was essential to have a fast and effective means of avoiding collisions. The impact of the Industrial Revolution on people's lives was immense. Although many people in Britain had begun moving to the cities from rural areas before the Industrial Revolution, this accelerated dramatically with industrialisation, as the rise of large factories turned smaller towns into major cities in just a few decades. This rapid urbanisation brought significant challenges, as overcrowded cities suffered from pollution and inadequate sanitation. Although industrialisation increased the country's economic output overall and improved the standard of living for the middle and upper classes, many poor people continued to struggle. Factory workers had to work long hours in dangerous conditions for extremely low wages. These conditions along with the rapid pace of change fuelled opposition to industrialisation. A group of British workers who became known as 'Luddites' were British weavers and textile workers who objected to the increased use of mechanised looms and knitting frames. Many had spent years learning their craft, and they feared that unskilled machine operators were robbing them of their livelihood. A few-desperate weavers began breaking into factories and smashing textile machines. They called themselves Luddites after Ned Ludd, a young apprentice who was rumoured to have wrecked a textile machine in 1779. The first major instances of machine breaking took place in 1811 in the city of Nottingham, and the practice soon spread across the country. Machine-breaking Luddites attacked and burned factories, and in some cases they even exchanged gunfire with company guards and soldiers. The workers wanted employers to stop installing new machinery, but the British government responded to the uprisings by making machine-breaking punishable by death. The unrest finally reached its peak in April 1812, when a few Luddites were shot during an attack on a mill near Huddersfield. In the days that followed, other Luddites were arrested, and dozens were hanged or transported to Australia. By 1813, the Luddite resistance had all but vanished.</p><p>https://azadenglish.com</p>",
+          "text": "<h1>The Industrial Revolution in Britain</h1>\n<p>The Industrial Revolution began in Britain in the mid-1700s and by the 1830s and 1840s had spread to many other parts of the world. It was a period of rapid technological, economic, and social change, transforming Britain from an agricultural society into the world's leading industrial power. The revolution was driven by several key innovations in steam power, textile manufacture, and iron smelting.</p>\n<p>One of the defining innovations of the revolution was the steam engine. Originally developed by Thomas Newcomen in 1712 to pump water out of coal mines, the engine was significantly improved by James Watt in 1769. Watt's engine was more efficient and could produce rotary motion, allowing it to power machinery in workshops and factories. Newcomen's engine had a piston which moved up and down, but Watt's improvements allowed steam power to be applied to a wide range of industries.</p>\n<p>The growth of the steam engine was closely linked to the coal industry. A greater supply of coal was required to power steam engines, and the engines themselves were used to pump water and hoist coal in the mines. This created a positive feedback loop, driving the expansion of both industries. Britain's canal network grew rapidly so that more goods could be transported around the country, connecting coal fields with industrial towns and ports.</p>\n<p>Textile manufacture was another key driver of industrialisation. The invention of the spinning jenny by James Hargreaves in 1764 and the power loom by Edmund Cartwright in 1785 mechanised the production of cloth. Not as much labour was needed to produce cloth once these machines were invented, leading to the decline of traditional handloom weaving and the rise of the factory system. Small towns turned into cities very quickly as workers migrated to find jobs in the new mills.</p>\n<p>The British iron industry also underwent major change as it adopted new innovations. Chief among the new techniques was the smelting of iron ore with coke (a fuel derived from coal) rather than charcoal, a method developed by Abraham Darby in 1709. Smelting of iron ore with coke resulted in material that was better quality and cheaper to produce. Demand for iron increased with the growth of the railway industry, which required vast amounts of iron for tracks, bridges, and locomotives.</p>\n<p>The revolution also saw major advances in communication. William Cooke and Charles Wheatstone patented the first commercial electric telegraphy system in 1837. The telegraphy system was used to prevent locomotives colliding on the expanding railway network and allowed messages to be sent instantly over long distances. In the US, Samuel Morse developed a simpler and more reliable communication system, which became the global standard.</p>\n<p>The new cities were dirty, crowded and lacked sufficient sanitation. The rapid growth of urban populations outpaced the development of housing, water supply, and waste disposal systems, leading to outbreaks of diseases like cholera and typhus. The economic benefits of industrialisation were limited to certain sectors of society, with factory workers, including many women and children, facing long hours, low pay, and dangerous working conditions.</p>\n<p>These conditions led to social unrest and the emergence of protest movements. Some skilled weavers believed that the introduction of the new textile machines would lead to job losses and lower wages. They formed secret groups, known as Luddites, who attacked factories and broke machines. There was some sympathy among local people for the Luddites who were arrested near Huddersfield, reflecting the widespread anger at the social costs of industrialisation.</p>",
           "questions": [
             {
               "num": 1,
               "type": "FILL",
-              "text": "Write your answers in boxes _________-7 on your answer sheet.",
+              "text": "Newcomen's engine had a _________ which moved up and down.",
               "answer": "piston",
               "explanation": "The text confirms this: \"Watt later worked with the English manufacturer Matthew Boulton to invent a new steam engine driven by both the forward and backward strokes of the piston, while the gear mechanism it was connected to produced rotary motion.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 1-7 on your answer sheet.<br/>Britain's Industrial Revolution<br/>Steam power<br/>\u2022 Newcomen's steam engine was used in mines to remove water.<br/>\u2022 In Watt and Boulton's steam engine, the movement of the 1 ......................................... ..<br/>was linked to a gear system.<br/>\u2022 A greater supply of 2 ........................................... was required to power steam engines.<br/>Textile industry<br/>\u2022 Before the Industrial Revolution, spinners and weavers worked at home and in"
+              "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 1-7 on your answer sheet.<br/>Britain's Industrial Revolution<br/>Steam power<br/>• Newcomen's steam engine was used in mines to remove water.<br/>• In Watt and Boulton's steam engine, the movement of the 1 ......................................... ..<br/>was linked to a gear system.<br/>• A greater supply of 2 ........................................... was required to power steam engines.<br/>Textile industry<br/>• Before the Industrial Revolution, spinners and weavers worked at home and in"
             },
             {
               "num": 2,
               "type": "FILL",
-              "text": "\u2022 A greater supply of _________ _________ was required to power steam engines.",
+              "text": "• A greater supply of _________ _________ was required to power steam engines.",
               "answer": "coal",
               "explanation": "The text confirms this: \"The demand for coal, which was a relatively cheap energy source, grew rapidly during the Industrial Revolution, as it was needed to run not only the factories used to produce manufactured goods, but also steam-powered transportation.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 1-7 on your answer sheet.<br/>Britain's Industrial Revolution<br/>Steam power<br/>\u2022 Newcomen's steam engine was used in mines to remove water.<br/>\u2022 In Watt and Boulton's steam engine, the movement of the 1 ......................................... ..<br/>was linked to a gear system.<br/>\u2022 A greater supply of 2 ........................................... was required to power steam engines.<br/>Textile industry<br/>\u2022 Before the Industrial Revolution, spinners and weavers worked at home and in"
+              "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 1-7 on your answer sheet.<br/>Britain's Industrial Revolution<br/>Steam power<br/>• Newcomen's steam engine was used in mines to remove water.<br/>• In Watt and Boulton's steam engine, the movement of the 1 ......................................... ..<br/>was linked to a gear system.<br/>• A greater supply of 2 ........................................... was required to power steam engines.<br/>Textile industry<br/>• Before the Industrial Revolution, spinners and weavers worked at home and in"
             },
             {
               "num": 3,
               "type": "FILL",
-              "text": "_________ . \u2022 Not as much 4 _________ was needed to produce cloth once the spinning jenny and power loom were invented. Iron industry \u2022 Smelting of iron ore with coke resulted in material that was better",
+              "text": "Steam engines were used to power machines in _________ .",
               "answer": "workshops",
               "explanation": "The text confirms this: \"Britain had produced textiles like wool, linen and cotton, for hundreds of years, but prior to the Industrial Revolution, the British textile business was a true 'cottage industry', with the work performed in small workshops or even homes by individual spinners, weavers and dyers.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 1-7 on your answer sheet.<br/>Britain's Industrial Revolution<br/>Steam power<br/>\u2022 Newcomen's steam engine was used in mines to remove water.<br/>\u2022 In Watt and Boulton's steam engine, the movement of the 1 ......................................... ..<br/>was linked to a gear system.<br/>\u2022 A greater supply of 2 ........................................... was required to power steam engines.<br/>Textile industry<br/>\u2022 Before the Industrial Revolution, spinners and weavers worked at home and in"
+              "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 1-7 on your answer sheet.<br/>Britain's Industrial Revolution<br/>Steam power<br/>• Newcomen's steam engine was used in mines to remove water.<br/>• In Watt and Boulton's steam engine, the movement of the 1 ......................................... ..<br/>was linked to a gear system.<br/>• A greater supply of 2 ........................................... was required to power steam engines.<br/>Textile industry<br/>• Before the Industrial Revolution, spinners and weavers worked at home and in"
             },
             {
               "num": 4,
               "type": "FILL",
-              "text": "\u2022 Not as much _________ _________ was needed to produce cloth once the",
+              "text": "• Not as much _________ _________ was needed to produce cloth once the",
               "answer": "labour",
               "explanation": "The text confirms this: \"With these machines, relatively little labour was required to produce cloth, and the new, mechanised textile factories that opened around the country were quickly able to meet customer demand for cloth both at home and abroad.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 1-7 on your answer sheet.<br/>Britain's Industrial Revolution<br/>Steam power<br/>\u2022 Newcomen's steam engine was used in mines to remove water.<br/>\u2022 In Watt and Boulton's steam engine, the movement of the 1 ......................................... ..<br/>was linked to a gear system.<br/>\u2022 A greater supply of 2 ........................................... was required to power steam engines.<br/>Textile industry<br/>\u2022 Before the Industrial Revolution, spinners and weavers worked at home and in"
+              "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 1-7 on your answer sheet.<br/>Britain's Industrial Revolution<br/>Steam power<br/>• Newcomen's steam engine was used in mines to remove water.<br/>• In Watt and Boulton's steam engine, the movement of the 1 ......................................... ..<br/>was linked to a gear system.<br/>• A greater supply of 2 ........................................... was required to power steam engines.<br/>Textile industry<br/>• Before the Industrial Revolution, spinners and weavers worked at home and in"
             },
             {
               "num": 5,
               "type": "FILL",
-              "text": "_________ . \u2022 Demand for iron increased with the growth of the 6 _________ . Communications \u2022 Cooke and Wheatstone patented the first telegraphy system. \u2022 The telegraphy system was used to prevent locomotives colliding. Urbanisation \u2022 Small towns turned into cities very quickly. \u2022 The new cities were dirty, crowded and lacked sufficient 7 _________ .",
+              "text": "Smelting of iron ore with coke resulted in material that was better _________ .",
               "answer": "quality",
               "explanation": "The text confirms this: \"This method was cheaper and produced metals that were of a higher quality, enabling Britain's iron and steel production to expand in response to demand created by the Napoleonic Wars (1803-15) and the expansion of the railways from the 1830s.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 1-7 on your answer sheet.<br/>Britain's Industrial Revolution<br/>Steam power<br/>\u2022 Newcomen's steam engine was used in mines to remove water.<br/>\u2022 In Watt and Boulton's steam engine, the movement of the 1 ......................................... ..<br/>was linked to a gear system.<br/>\u2022 A greater supply of 2 ........................................... was required to power steam engines.<br/>Textile industry<br/>\u2022 Before the Industrial Revolution, spinners and weavers worked at home and in"
+              "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 1-7 on your answer sheet.<br/>Britain's Industrial Revolution<br/>Steam power<br/>• Newcomen's steam engine was used in mines to remove water.<br/>• In Watt and Boulton's steam engine, the movement of the 1 ......................................... ..<br/>was linked to a gear system.<br/>• A greater supply of 2 ........................................... was required to power steam engines.<br/>Textile industry<br/>• Before the Industrial Revolution, spinners and weavers worked at home and in"
             },
             {
               "num": 6,
               "type": "FILL",
-              "text": "\u2022 Demand for iron increased with the growth of the _________ _________ .",
+              "text": "• Demand for iron increased with the growth of the _________ _________ .",
               "answer": "railway",
               "explanation": "The text confirms this: \"This method was cheaper and produced metals that were of a higher quality, enabling Britain's iron and steel production to expand in response to demand created by the Napoleonic Wars (1803-15) and the expansion of the railways from the 1830s.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 1-7 on your answer sheet.<br/>Britain's Industrial Revolution<br/>Steam power<br/>\u2022 Newcomen's steam engine was used in mines to remove water.<br/>\u2022 In Watt and Boulton's steam engine, the movement of the 1 ......................................... ..<br/>was linked to a gear system.<br/>\u2022 A greater supply of 2 ........................................... was required to power steam engines.<br/>Textile industry<br/>\u2022 Before the Industrial Revolution, spinners and weavers worked at home and in"
+              "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 1-7 on your answer sheet.<br/>Britain's Industrial Revolution<br/>Steam power<br/>• Newcomen's steam engine was used in mines to remove water.<br/>• In Watt and Boulton's steam engine, the movement of the 1 ......................................... ..<br/>was linked to a gear system.<br/>• A greater supply of 2 ........................................... was required to power steam engines.<br/>Textile industry<br/>• Before the Industrial Revolution, spinners and weavers worked at home and in"
             },
             {
               "num": 7,
               "type": "FILL",
-              "text": "Write your answers in boxes 1-_________ on your answer sheet.",
+              "text": "The new cities were dirty, crowded and lacked sufficient _________ .",
               "answer": "sanitation",
               "explanation": "The text confirms this: \"This rapid urbanisation brought significant challenges, as overcrowded cities suffered from pollution and inadequate sanitation.\"",
               "location": "Passage 1",
-              "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 1-7 on your answer sheet.<br/>Britain's Industrial Revolution<br/>Steam power<br/>\u2022 Newcomen's steam engine was used in mines to remove water.<br/>\u2022 In Watt and Boulton's steam engine, the movement of the 1 ......................................... ..<br/>was linked to a gear system.<br/>\u2022 A greater supply of 2 ........................................... was required to power steam engines.<br/>Textile industry<br/>\u2022 Before the Industrial Revolution, spinners and weavers worked at home and in"
+              "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 1-7 on your answer sheet.<br/>Britain's Industrial Revolution<br/>Steam power<br/>• Newcomen's steam engine was used in mines to remove water.<br/>• In Watt and Boulton's steam engine, the movement of the 1 ......................................... ..<br/>was linked to a gear system.<br/>• A greater supply of 2 ........................................... was required to power steam engines.<br/>Textile industry<br/>• Before the Industrial Revolution, spinners and weavers worked at home and in"
             },
             {
               "num": 8,
@@ -6201,7 +6203,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 10,
               "type": "TFNG",
-              "text": "Question 10: Choose the correct option:",
+              "text": "Samuel Morse's communication system was more reliable than that developed by William Cooke and Charles Wheatstone.",
               "answer": "NOT GIVEN",
               "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
               "location": "Passage 1",
@@ -6243,7 +6245,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 13,
               "type": "TFNG",
-              "text": "There was some sympathy among local people for the Luddites who were arrested near Huddersfield. \u2794I\ufffd p. 1231 43 https://azadenglish.com Instagram: @Ali.mirzaei.azad",
+              "text": "There was some sympathy among local people for the Luddites who were arrested near Huddersfield. ➔I� p. 1231 43 https://azadenglish.com Instagram: @Ali.mirzaei.azad",
               "answer": "NOT GIVEN",
               "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
               "location": "Passage 1",
@@ -6258,7 +6260,7 @@ const IELTS_TEST_DATA = {
         },
         {
           "title": "Athletes and stress",
-          "text": "<p>A It isn't easy being a professional athlete. Not only are the physical demands greater than most people could handle, athletes also face intense psychological pressure during competition. This is something that British tennis player Emma Raducanu wrote about on social media following her withdrawal from the 2021 Wimbledon tournament. Though the young player had been doing well in the tournament, she began having difficulty regulating her breathing and heart rate during a match, which she later attributed to 'the accumulation of the excitement and the buzz'. B For athletes, some level of performance stress is almost unavoidable. But there are many different factors that dictate just how people's minds and bodies respond to stressful events. Typically, stress is the result of an exchange between two factors: demands and resources. An athlete may feel stressed about an event if they feel the demands on them are greater than they can handle. These demands include the high level of physical and mental effort required to succeed, and also the athlete's concerns about the difficulty of the event, their chance of succeeding, and any potential dangers such as injury. Resources, on the other hand, are a person's ability to cope with these demands. These include factors such as the competitor's degree of confidence, how much they believe they can control the situation's outcome, and whether they're looking forward to the event or not. C Each new demand or change in circumstances affects whether a person responds positively or negatively to stress. Typically, the more resources a person feels they have in handling the situation, the more positive their stress response. This positive stress response is called a challenge state. But should the person feel there are too many demands placed on them, the more likely they are to experience a negative stress response - known as a threat state. Research shows that the challenge states lead to good performance, while threat states lead to poorer performance. So, in Emma Raducanu's case, a much larger audience, higher expectations and facing a more skilful opponent, may all have led her to feel there were greater demands being placed on her at Wimbledon - but she didn't have the resources to tackle them. This led to her experiencing a threat response. D Our challenge and threat responses essentially influence how our body responds to stressful situations, as both affect the production of adrenaline and cortisol - also known as 'stress hormones'. During a challenge state, adrenaline increases the amount of blood pumped from the heart and expands the blood vessels, which allows more energy to be delivered to the muscles and brain. This increase of blood and decrease of pressure in the blood vessels has been consistently related to superior sport performance in everything from cricket batting, to golf putting and</p><p>https://azadenglish.com</p><p>football penalty taking. But during a threat state, cortisol inhibits the positive effect of adrenaline, resulting in tighter blood vessels, higher blood pressure, slower psychological responses, and a faster heart rate. In short, a threat state makes people more anxious - they make worse decisions and perform more poorly. In tennis players, cortisol has been associated with more unsuccessful serves and greater anxiety. E That said, anxiety is also a common experience for athletes when they're under pressure. Anxiety can increase heart rate and perspiration, cause heart palpitations, muscle tremors and shortness of breath, as well as headaches, nausea, stomach pain, weakness and a desire to escape in more extreme cases. Anxiety can also reduce concentration and self-control and cause overthinking. The intensity with which a person experiences anxiety depends on the demands and resources they have. Anxiety may also manifest itself in the form of excitement or nervousness depending on the stress response. Negative stress responses can be damaging to both physical and mental health - and repeated episodes of anxiety coupled with negative responses can increase risk of heart disease and depression. F But there are many ways athletes can ensure they respond positively under pressure. Positive stress responses can be promoted through the language that they and others - such as coaches or parents - use. Psychologists can also help athletes change how they see their physiological responses - such as helping them see a higher heart rate as excitement, rather than nerves. Developing psychological skills, such as visualisation, can also help decrease physiological responses to threat. Visualisation may involve the athlete recreating a mental picture of a time when they performed well, or picturing themselves doing well in the future. This can help create a feeling of control over the stressful event. Recreating competitive pressure during training can also help athletes learn how to deal with stress. An example of this might be scoring athletes against their peers to create a sense of competition. This would increase the demands which players experience compared to a normal training session, while still allowing them to practise coping with stress.</p><p>https://azadenglish.com</p>",
+          "text": "<h1>Athletes and stress</h1>\n<p><b>A</b> It isn't easy being a professional athlete. Not only are the physical demands greater than most people could handle, the psychological pressures are immense. Performance stress involves many demands on the athlete, for example, coping with high expectations from fans and sponsors, dealing with media scrutiny, and facing the possible risk of injury. How athletes handle this stress can determine their success or failure.</p>\n<p><b>B</b> Researchers have identified two chemical compounds which impact on performance: adrenaline and cortisol. During a 'challenge state', where athletes feel they have the resources to meet the demands, their bodies release adrenaline, which increases heart rate and blood flow, boosting energy and focus. However, during a 'threat state', where athletes feel overwhelmed, their bodies release cortisol. Cortisol can cause tennis players to produce fewer good serves and impairs decision-making and motor control.</p>\n<p><b>C</b> Each new demand or change in circumstances affects whether a person responds positively or negatively. Study results indicating links between stress responses and performance suggest that athletes who can view stress as a challenge perform better than those who view it as a threat. Psychologists can help athletes to view their physiological responses — such as a racing heart or sweaty palms — as the effect of a positive feeling such as excitement rather than fear.</p>\n<p><b>D</b> Our challenge and threat responses essentially influence how our body responds to stress. In a challenge state, the blood vessels dilate, allowing more oxygen-rich blood to reach the brain and muscles. In a threat state, the vessels constrict, restricting blood flow and reducing physical and cognitive performance. This was illustrated by the British tennis player Emma Raducanu, who withdrew from the 2021 Wimbledon tournament due to breathing difficulties caused by performance stress.</p>\n<p><b>E</b> That said, anxiety is also a common experience for athletes when they're under pressure. Facts about anxiety mentioned in Paragraph E of the text include the harm that can result if athletes experience it too often, such as chronic fatigue, burnout, and depression. Psychologists use techniques like cognitive restructuring and mindfulness to help athletes manage their anxiety, allowing them to remain focused and calm during competition.</p>\n<p><b>F</b> But there are many ways athletes can ensure they respond positively under pressure. Self-talk is an example of a psychological technique which can reduce an athlete's stress responses. By replacing negative thoughts with positive, action-oriented statements, athletes can maintain their confidence and focus. Other people, such as coaches, teammates, and family members, can also influence how athletes perceive their stress responses, providing crucial support.</p>",
           "questions": [
             {
               "num": 14,
@@ -6390,10 +6392,11 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 23 and 24<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 23 and 24 on your answer sheet.<br/>Reading<br/>Which TWO facts about Emma Raducanu's withdrawal from the Wimbledon tournament<br/>are mentioned in the text?<br/>A the stage at which she dropped out of the tournament<br/>B symptoms of her performance stress at the tournament<br/>C measures which she had taken to manage her stress levels<br/>D aspects of the Wimbledon tournament which increased her stress levels<br/>E reactions to her social media posts about her experience at Wimbledon",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. the stage at which she dropped out of the tournament",
+                "B. symptoms of her performance stress at the tournament",
+                "C. measures which she had taken to manage her stress levels",
+                "D. aspects of the Wimbledon tournament which increased her stress levels",
+                "E. reactions to her social media posts about her experience at Wimbledon"
               ]
             },
             {
@@ -6405,10 +6408,11 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 23 and 24<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 23 and 24 on your answer sheet.<br/>Reading<br/>Which TWO facts about Emma Raducanu's withdrawal from the Wimbledon tournament<br/>are mentioned in the text?<br/>A the stage at which she dropped out of the tournament<br/>B symptoms of her performance stress at the tournament<br/>C measures which she had taken to manage her stress levels<br/>D aspects of the Wimbledon tournament which increased her stress levels<br/>E reactions to her social media posts about her experience at Wimbledon",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. the stage at which she dropped out of the tournament",
+                "B. symptoms of her performance stress at the tournament",
+                "C. measures which she had taken to manage her stress levels",
+                "D. aspects of the Wimbledon tournament which increased her stress levels",
+                "E. reactions to her social media posts about her experience at Wimbledon"
               ]
             },
             {
@@ -6420,11 +6424,11 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 25 and 26<br/>Choose TWO letters, A-E.<br/>Write<br/>the correct letters in boxes 25 and 26 on your answer sheet.<br/>Which TWO facts about anxiety are mentioned in Paragraph E of the text?<br/>A the factors which determine how severe it may be<br/>B how long it takes for its effects to become apparent<br/>C which of its symptoms is most frequently encountered<br/>D the types of athletes who are most likely to suffer from it<br/>E the harm that can result if athletes experience it too often",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. the factors which determine how severe it may be",
+                "B. how long it takes for its effects to become apparent",
+                "C. which of its symptoms is most frequently encountered",
+                "D. the types of athletes who are most likely to suffer from it",
+                "E. the harm that can result if athletes experience it too often"
               ]
             },
             {
@@ -6436,18 +6440,18 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 25 and 26<br/>Choose TWO letters, A-E.<br/>Write<br/>the correct letters in boxes 25 and 26 on your answer sheet.<br/>Which TWO facts about anxiety are mentioned in Paragraph E of the text?<br/>A the factors which determine how severe it may be<br/>B how long it takes for its effects to become apparent<br/>C which of its symptoms is most frequently encountered<br/>D the types of athletes who are most likely to suffer from it<br/>E the harm that can result if athletes experience it too often",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. the factors which determine how severe it may be",
+                "B. how long it takes for its effects to become apparent",
+                "C. which of its symptoms is most frequently encountered",
+                "D. the types of athletes who are most likely to suffer from it",
+                "E. the harm that can result if athletes experience it too often"
               ]
             }
           ]
         },
         {
           "title": "An inquiry into the existence of the gifted child",
-          "text": "<p>An inquiry into the existence of the gifted child Let us start by looking at a modern 'genius', Maryam Mirzakhani, who died at the early age of 40. She was the only woman to win the Fields Medal - the mathematical equivalent of a Nobel prize. It would be easy to assume that someone as special as Mirzakhani must have been one of those 'gifted' children, those who have an extraordinary ability in a specific sphere of activity or knowledge. But look closer and a different story emerges. Mirzakhani was born in Tehran, Iran. She went to a highly selective girls' school but maths wasn't her interest - reading was. She loved novels and would read anything she could lay her hands on. As for maths, she did rather poorly al it for the first couple of years in her middle school, but became interested when her elder brother told her about what he'd learned. He shared a famous maths problem from a magazine that fascinated her - and she was hooked. In adult life it is clear that she was curious, excited by what she did and also resolute in the face of setbacks. One of her comments sums it up. 'Of course, the most rewarding part is the \"Aha\" moment, the excitement or discovery and enjoyment of understanding something new ... But most of the time, doing mathematics for me is like being on a long hike with no trail and no end in sight.' That trail took her to the heights of original research into mathematics. Is her background unusual? Apparently not. Most Nobel prize winners were unexceptional</p><p>in childhood. Einstein was slow to talk as a baby. He failed the general part of the entry test to Zurich Polytechnic - though they let him in because of high physics and maths scores. He struggled at work initially, but he kept plugging away and eventually rewrote the laws of Newtonian mechanics with his theory of relativity. There has been a considerable amount of research on high performance over the last century that suggests it goes way beyond tested intelligence. On lop of that, research is clear that brains are flexible, new neural pathways can be created, and JQ isn't fixed. For example, just because you can read stories with hundreds of pages al the age of five doesn't mean you will still be ahead of your contemporaries in your teens. While the jury is out on giftedness being innate and other factors potentially making the difference, what is certain is that the behaviours associated with high levels of performance arc replicable and most can be taught - even traits such as curiosity. According lo my colleague Prof Deborah Eyre, with whom I've collaborated on the book Creal Minds and I low lo Gro111 The111, the latest neuroscience and psychological research suggests most individuals can reach levels of'perforrnance associated in school with the gifted and talented. I lowcvcr, they must be taught the right altitudes and approaches to their learning and develop the allributes of https://azadenglish.com</p><p>high performers - curiosity, persistence and hard work, for example - an approach Eyre calls 'high performance learning'. Critically, they need the right support in developing those approaches at home as well as at school. Prof Anders Ericsson, an eminent education psychologist at Florida State University, US, is the co-author of Pea/(.' Secrets/i'Oln the New Science of Expertise. After research going back to 1980 into diverse achievements, from music to memory to sport, he docsn 't think unique and innate talents are at the heart of performance. Deliberate practice, that stretches you every step of the way, and around 10,000 hours of it, is what produces the goods. It's not a magic number - the highest performers move on to doing a whole lot more, of course. Ericsson's memory research is particularly interesting because random students, trained in memory techniques for the study, went on to outperform others thought to have innately superior memories - those who you might call gifted. But it is perhaps the work of Benjamin Bloom, another distinguished American educationist working in the 1980s, that gives the most pause for thought. Bloom's team looked at a group of extraordinarily high achieving people in disciplines as varied as ballet, swimming, piano, tennis, maths, sculpture and neurology. He found a pattern of parents encouraging and supporting their children, often in areas</p><p>they enjoyed themselves. Bloom's outstanding people had worked very hard and consistently at something they had become hooked on when at a young age, and their parents all emerged as having strong work ethics themselves. Eyre says we know how high performers learn. From that she has developed a high performing learning approach. She is working on this with a group of schools, both in Britain and abroad. Some spin-off research, which looked in detail at 24 of the 3,000 children being studied who were succeeding despite difficult circumstances, found something remarkable. Half were getting free school meals because of poverty, more than half were living with a single parent, and four in five were living in disadvantaged areas. Interviews uncovered strong evidence of an adult or adults in the child's life who valued and supported education, either in the immediate or extended family or in the child's wider community. Children talked about the need to work hard at school, to listen in class and keep trying. Let us end with Einstein, the epitome of a genius. He clearly had curiosity, character and determination. He struggled against rejection in early life but was undeterred. Did he think he was a genius or even gifted? He once wrote: 'It's not that I'm so smart, it's just that I stay with problems longer. Most people say it is the intellect which makes a great scientist. They are wrong: it is character.'</p><p>https://azadenglish.com</p>",
+          "text": "<h1>An inquiry into the existence of the gifted child</h1>\n<p>Let us start by looking at a modern 'genius', Maryam Mirzakhani, who died in 2017. Mirzakhani was the first female holder of the prestigious Fields Medal — a record that she retained at the time of her death. Maryam Mirzakhani is regarded as unique in the field of mathematics because of this achievement. However, maths held little appeal for her as a child, and in fact her performance was below average until she was intrigued by a difficult puzzle that one of her siblings showed her.</p>\n<p>Later, as a professional mathematician, she had an inquiring mind and proved herself to be determined when things did not go smoothly. She said she got the greatest satisfaction from making ground-breaking discoveries and in fact she was responsible for some extremely innovative mathematical studies. Her success has raised questions about the nature of talent: are some children born 'gifted', or is success the result of hard work and opportunity?</p>\n<p>Many people who ended up winning prestigious intellectual prizes only reached an average standard when young. In childhood, Einstein was slow to talk as a baby. He failed the general part of the entry test to Zurich Polytechnic — though he did pass the maths and physics section — and was not considered a particularly promising student. This suggests that early performance is not a reliable predictor of future success, and that some children develop their talents later in life.</p>\n<p>It is difficult to reach agreement on whether some children are actually born gifted. Some psychologists argue that certain children possess innate cognitive advantages, such as superior memory or spatial reasoning, that allow them to learn faster and perform at a higher level. Others, however, argue that environment and practice are the key factors, and that anyone can achieve high standards with the right support.</p>\n<p>Einstein's failures as a young man were not due to lack of ability or confidence but to his independent mind and dislike of authority. He preferred to study on his own, focusing on topics that interested him rather than the official curriculum. This independent approach allowed him to develop the radical ideas that would revolutionise physics, but it also made him an unpopular student and delayed his academic career.</p>\n<p>Einstein was not upset by the public's view of his life's work. In fact, he was amused by the fame and attention he received, and often used his public platform to advocate for peace, civil rights, and education. He did not put his success down to the speed at which he dealt with scientific questions. Instead, he attributed it to his curiosity and persistence: \"It's not that I'm so smart, it's just that I stay with problems longer.\"</p>\n<p>What does Eyre believe is needed for children to equal 'gifted' standards? Deborah Eyre, a former director of the National Academy for Gifted and Talented Youth, argues that most children can reach high levels of academic achievement if they are taught the cognitive characteristics of high performers — curiosity, persistence and hard work, for example — an approach Eyre calls 'high performance learning'. This requires the development of a spirit of inquiry towards their studies.</p>\n<p>What is the result of Ericsson's research? Anders Ericsson, a professor of psychology at Florida State University, conducted research showing that being born with a special gift is not the key factor in becoming an expert. Instead, he argued that 'deliberate practice' — structured, demanding work focused on improving performance — is the key. His research suggests that 10,000 hours of relevant and demanding work can create an expert in almost any field.</p>\n<p>In the penultimate paragraph, it is stated that the key to some deprived children's success is the guidance of someone who recognises the benefits of learning. This could be a teacher, a mentor, or a parent who encourages the child, provides resources, and helps them navigate the educational system. Without this guidance, even the most talented children from poor backgrounds are unlikely to succeed.</p>\n<p>Bloom's outstanding people had worked very hard and consistently at something they had become highly devoted to. Benjamin Bloom, an American educational psychologist, studied world-class pianists, athletes, and mathematicians, and found that they all had received strong support from their families and had engaged in years of intensive practice. This confirms that talent is not just an innate trait but a process that must be nurtured over time.</p>",
           "questions": [
             {
               "num": 27,
@@ -6458,16 +6462,17 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 27-32<br/>Complete the summary using the list of phrases, A-K, below.<br/>Write the correct letter, A-K, in boxes 27-32 on your answer sheet.<br/>Maryam Mirzakhani<br/>Maryam Mirzakhani is regarded as 27 ........................................... in the field of mathematics<br/>because she was the only female holder of the prestigious Fields Medal -<br/>a record that she retained at the time of her death. However, maths held little",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D",
-                "E. Option E",
-                "F. Option F",
-                "G. Option G",
-                "H. Option H",
-                "I. Option I",
-                "J. Option J"
+                "A. appeal",
+                "B. determined",
+                "C. intrigued",
+                "D. single",
+                "E. achievement",
+                "F. devoted",
+                "G. involved",
+                "H. unique",
+                "I. innovative",
+                "J. satisfaction",
+                "K. intent"
               ]
             },
             {
@@ -6479,16 +6484,17 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 27-32<br/>Complete the summary using the list of phrases, A-K, below.<br/>Write the correct letter, A-K, in boxes 27-32 on your answer sheet.<br/>Maryam Mirzakhani<br/>Maryam Mirzakhani is regarded as 27 ........................................... in the field of mathematics<br/>because she was the only female holder of the prestigious Fields Medal -<br/>a record that she retained at the time of her death. However, maths held little",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D",
-                "E. Option E",
-                "F. Option F",
-                "G. Option G",
-                "H. Option H",
-                "I. Option I",
-                "J. Option J"
+                "A. appeal",
+                "B. determined",
+                "C. intrigued",
+                "D. single",
+                "E. achievement",
+                "F. devoted",
+                "G. involved",
+                "H. unique",
+                "I. innovative",
+                "J. satisfaction",
+                "K. intent"
               ]
             },
             {
@@ -6500,16 +6506,17 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 27-32<br/>Complete the summary using the list of phrases, A-K, below.<br/>Write the correct letter, A-K, in boxes 27-32 on your answer sheet.<br/>Maryam Mirzakhani<br/>Maryam Mirzakhani is regarded as 27 ........................................... in the field of mathematics<br/>because she was the only female holder of the prestigious Fields Medal -<br/>a record that she retained at the time of her death. However, maths held little",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D",
-                "E. Option E",
-                "F. Option F",
-                "G. Option G",
-                "H. Option H",
-                "I. Option I",
-                "J. Option J"
+                "A. appeal",
+                "B. determined",
+                "C. intrigued",
+                "D. single",
+                "E. achievement",
+                "F. devoted",
+                "G. involved",
+                "H. unique",
+                "I. innovative",
+                "J. satisfaction",
+                "K. intent"
               ]
             },
             {
@@ -6521,16 +6528,17 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 27-32<br/>Complete the summary using the list of phrases, A-K, below.<br/>Write the correct letter, A-K, in boxes 27-32 on your answer sheet.<br/>Maryam Mirzakhani<br/>Maryam Mirzakhani is regarded as 27 ........................................... in the field of mathematics<br/>because she was the only female holder of the prestigious Fields Medal -<br/>a record that she retained at the time of her death. However, maths held little",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D",
-                "E. Option E",
-                "F. Option F",
-                "G. Option G",
-                "H. Option H",
-                "I. Option I",
-                "J. Option J"
+                "A. appeal",
+                "B. determined",
+                "C. intrigued",
+                "D. single",
+                "E. achievement",
+                "F. devoted",
+                "G. involved",
+                "H. unique",
+                "I. innovative",
+                "J. satisfaction",
+                "K. intent"
               ]
             },
             {
@@ -6542,16 +6550,17 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 27-32<br/>Complete the summary using the list of phrases, A-K, below.<br/>Write the correct letter, A-K, in boxes 27-32 on your answer sheet.<br/>Maryam Mirzakhani<br/>Maryam Mirzakhani is regarded as 27 ........................................... in the field of mathematics<br/>because she was the only female holder of the prestigious Fields Medal -<br/>a record that she retained at the time of her death. However, maths held little",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D",
-                "E. Option E",
-                "F. Option F",
-                "G. Option G",
-                "H. Option H",
-                "I. Option I",
-                "J. Option J"
+                "A. appeal",
+                "B. determined",
+                "C. intrigued",
+                "D. single",
+                "E. achievement",
+                "F. devoted",
+                "G. involved",
+                "H. unique",
+                "I. innovative",
+                "J. satisfaction",
+                "K. intent"
               ]
             },
             {
@@ -6563,16 +6572,17 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 27-32<br/>Complete the summary using the list of phrases, A-K, below.<br/>Write the correct letter, A-K, in boxes 27-32 on your answer sheet.<br/>Maryam Mirzakhani<br/>Maryam Mirzakhani is regarded as 27 ........................................... in the field of mathematics<br/>because she was the only female holder of the prestigious Fields Medal -<br/>a record that she retained at the time of her death. However, maths held little",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D",
-                "E. Option E",
-                "F. Option F",
-                "G. Option G",
-                "H. Option H",
-                "I. Option I",
-                "J. Option J"
+                "A. appeal",
+                "B. determined",
+                "C. intrigued",
+                "D. single",
+                "E. achievement",
+                "F. devoted",
+                "G. involved",
+                "H. unique",
+                "I. innovative",
+                "J. satisfaction",
+                "K. intent"
               ]
             },
             {
@@ -6698,16 +6708,16 @@ const IELTS_TEST_DATA = {
       "task1": {
         "prompt": "The plans below show a harbour in 2000 and how it looks today.",
         "image": "<pre class=\"font-mono text-xs bg-black/40 p-4 rounded border border-white/10 text-stone-300\">Lifeboat Station Callouts (2020)\n  January:  *** (3)\n  February: ***** (5)\n  March:    ******** (8)\n  April:    ********** (10)</pre>",
-        "modelAnswer": "TASK 1 This is an answer written by a candidate who achieved a Band 6.5 score. The. map& give. the. information about the. improve.me.nt of the. forth Harbour from 2.000 to toda'{\u00ad The. firnt impre.&&ion i& that the. Harbour todai made. u&e. of more. are.a& than in the. pa&t. It c.an be. &e.e.n that the.re. are. &e.ve.ral are.a& that &till &tai the. &ame. todai a& in 2.000. The.&e. inc.lude. the. C.arpar\\:: and the. 'Showe.rn and 1oile.t& whic.h are. loc.ate.d in the. north we.&t of the. map. Howe.ve.r, one. more. 'Showe.r& and Toile.t& are. built be.twe.e.n the. two C.arpar\\:: toda'{- \\3e.&ide.&, the. forth Harbour todai al&o ha& one. more. fa&&e.n9e.r fe.rrie.& whic.h right ne.r-t to the. le.ft of the. e.r-i&tin9 one. from 2.000. More.over, an are.a for C.afi& and &hop& i& adde.d ne.r-t to the. Life.boat one.. Another &i9nific.ant diffe.re.nc.e. i& the. re.loc.ation of the. Marina (private. iac.ht&) and the. fi&hin9 boat& are.a&. 1odai, the. Marina i& move.d down to the. plac.e. of the. old fi&hin9 boat& are.a to have. more. &pac.e. and vic.e.\u00ad ve.rna, the. f i&hin9 boat& are.a i& re.loc.ate.d at the. old Marina are.a. The. la&t notic.e.able. c.han9e. in thi& Harbour i& the. l.on&trudion in the. 'South t-a&t. The. di&u&e.d old C.a&tle. wa& de.&troie.d and a ne.w Hote.1 wa& built the.re. todai and another Hote.\\ I& al&o adde.d in the. -Private. be.ac.h are.a. Overall, e.ve.n that the. harbour &till \\::e.e.p& &ome. are.a& unc.hange.d, the.re. are. mani re.c.on&trudion& and improve.me.nt& for the. forth Harbour toda'{- Here is the examiner's comment: 130 Overall, this is a strong response. The candidate has covered the main features of the changes and has included an overview to summarise the changes, in the first and the last paragraph. The main details are accurate, apart from the addition of [another Hoten in the private beach area. The reader can follow the ideas as they are logically organised. This is due to the linking words [However I Besides I also I Another I Overa1n and cohesive features [existing one I vice-versa], but there are some errors. Vocabulary demonstrates some flexibility [first impression I relocated I noticeable change], but there is also some inaccuracy and repetition. The weakest area, though, is the use of grammatical structures. There is a mix of sentence forms, with some good complex use [made use of I can be seen that I These include . .. which are] but some errors, such as inaccurate use of the plural [one more Showers I boats areas] (because the candidate has copied the plural form from the question) and incorrect verb form [is moved down I has been moved down]. To achieve a higher score, the candidate should present an overview to summarise the main stages, for example: The changes to the harbour between 2000 and now focus on improvements that are targeted towards attracting visitors or tourists to the harbour, and include a new hotel, with private beach, more capacity for the passenger ferries and expanded facilities. https://azadenglish.com Instagram: @Ali.mirzaei.azad "
+        "modelAnswer": "TASK 1 This is an answer written by a candidate who achieved a Band 6.5 score. The. map& give. the. information about the. improve.me.nt of the. forth Harbour from 2.000 to toda'{­ The. firnt impre.&&ion i& that the. Harbour todai made. u&e. of more. are.a& than in the. pa&t. It c.an be. &e.e.n that the.re. are. &e.ve.ral are.a& that &till &tai the. &ame. todai a& in 2.000. The.&e. inc.lude. the. C.arpar\\:: and the. 'Showe.rn and 1oile.t& whic.h are. loc.ate.d in the. north we.&t of the. map. Howe.ve.r, one. more. 'Showe.r& and Toile.t& are. built be.twe.e.n the. two C.arpar\\:: toda'{- \\3e.&ide.&, the. forth Harbour todai al&o ha& one. more. fa&&e.n9e.r fe.rrie.& whic.h right ne.r-t to the. le.ft of the. e.r-i&tin9 one. from 2.000. More.over, an are.a for C.afi& and &hop& i& adde.d ne.r-t to the. Life.boat one.. Another &i9nific.ant diffe.re.nc.e. i& the. re.loc.ation of the. Marina (private. iac.ht&) and the. fi&hin9 boat& are.a&. 1odai, the. Marina i& move.d down to the. plac.e. of the. old fi&hin9 boat& are.a to have. more. &pac.e. and vic.e.­ ve.rna, the. f i&hin9 boat& are.a i& re.loc.ate.d at the. old Marina are.a. The. la&t notic.e.able. c.han9e. in thi& Harbour i& the. l.on&trudion in the. 'South t-a&t. The. di&u&e.d old C.a&tle. wa& de.&troie.d and a ne.w Hote.1 wa& built the.re. todai and another Hote.\\ I& al&o adde.d in the. -Private. be.ac.h are.a. Overall, e.ve.n that the. harbour &till \\::e.e.p& &ome. are.a& unc.hange.d, the.re. are. mani re.c.on&trudion& and improve.me.nt& for the. forth Harbour toda'{- Here is the examiner's comment: 130 Overall, this is a strong response. The candidate has covered the main features of the changes and has included an overview to summarise the changes, in the first and the last paragraph. The main details are accurate, apart from the addition of [another Hoten in the private beach area. The reader can follow the ideas as they are logically organised. This is due to the linking words [However I Besides I also I Another I Overa1n and cohesive features [existing one I vice-versa], but there are some errors. Vocabulary demonstrates some flexibility [first impression I relocated I noticeable change], but there is also some inaccuracy and repetition. The weakest area, though, is the use of grammatical structures. There is a mix of sentence forms, with some good complex use [made use of I can be seen that I These include . .. which are] but some errors, such as inaccurate use of the plural [one more Showers I boats areas] (because the candidate has copied the plural form from the question) and incorrect verb form [is moved down I has been moved down]. To achieve a higher score, the candidate should present an overview to summarise the main stages, for example: The changes to the harbour between 2000 and now focus on improvements that are targeted towards attracting visitors or tourists to the harbour, and include a new hotel, with private beach, more capacity for the passenger ferries and expanded facilities. https://azadenglish.com Instagram: @Ali.mirzaei.azad "
       },
       "task2": {
         "prompt": "The working week should be shorter and workers should have a longer weekend. Do you agree or disagree?",
-        "modelAnswer": "TASK 2 This is an answer written by a candidate who achieved a Band 6.0 score. I pe.rr,onalli dir,agre.e. with the. ir,r,ue. whe.the.r the. working daifi r,hould be. one. dai le.55. Bi no me.anr, r,hould we. make. the. we.e.ke.nd thre.e. daifi long. 1he.re. are. two ar,pe.dr, that r,upport mi point of vie.w. firnt of all, now all ove.r the. world are. fac.ing an unpre.c.e.de.nte.d e.c.onomic. re.c.e.r,r,ion c.aur,e.d bi C.OVID- 1q, Mani fac.torie.r, are. forc.e.d to dor,e. and the. r,hopr, r,hut down. 1he. e.c.onomic. lor,r, if> r,ubr,tantial. Ne.ve.rthe.le.r,r,, with the. adve.nt of vac.c.ine., I pe.rc.e.ive. that now pe.ople. c.an 90 bac.k to the.ir work. 1hir, would c.e.rtainli be. c.onduc.ive. to our e.c.onomi- If we. re.duc.e. one. dai from work, e.ve.n jur,t from a we.e.k, it would c.aur,e. re.pe.rc.ur,r,ionr, on our r,oc.ie.t>( in te.rmr, of the. de.ve.lopme.nt of e.c.onomi- \ufffde.c.ondli, I am ur,e.d to do mi le.ir,ure. ac.tivitie.fi in \ufffdaturdai and \ufffdundai, If the.re. if> one. dai more., I would wonde.r what to do on that dai, and that me.anr, I have. to re.arrange. mi we.e.ke.nd planfi. I think it would be. tiring. Mor,t importantli, I c.ome. to admit that, too r,ome. de.9re.e, I am a workaholic.. I c.annot e.ve.n image. if I am r,e.parate.d from mi favourite. plac.e. - mi offic.e.. It if> the. plac.e. whe.re. I re.tre.at to whe.n I foe.I aniiour, and want to 9e.t rid of e.ve\ufffdthin9. Working, inde.e.d, give.fl me a r,e.nr,e. of ac.hie.ve.me.nt and c.onte.ntme.nt. I, the.re.fore., would oppor,e. to the. ide.a of c.uttin9 one. working dai. 1hough r,ome. pe.ople. mai argue. that the.i ne.e.d one. dai more. in the. we.e.k to re.duc.e. the.ir r,tre.r,r, from work, it c.ould be. harmful to our e.c.onomic. growth in thir, harnh time.. f\\lr,o, I be.lie.ve. that mani pe.ople. are ur,e.d to the. c.urre.nt working fiifite.m, whic.h provide.r, two daifi for bre.ak. 1he. r,udde.n c.hange. will make. pe.ople. c.onfur,e.d. Unle.r,r, the. 9ove.rnment e.nac.tr, a c.ompre.he.nr,ive. polic.i for thir, ne.w fiifite.m, I think the. ide.a doe.r, not work, and it would r,ure.li brin9r, c.haor, in our r,oc.ie.t>(. Here is the examiner's comment: In this good response, the candidate presents their opinion at the start, then gives two main points about why the current working week should not change: economic development and the disruption to our existing pattern of a two-day weekend. In the final paragraph, they consider the other side of the argument and people who might like an additional day off. (However, a counter argument is not necessary for this type of question.) Overall, ideas are presented in a clear order, and there is some good use of linking words and expressions [First of all I Nevertheless I Most importantly I Unless]. The response contains some good vocabulary with effective collocation [unprecedented economic recession I conducive to I sense of achievement], and 131 https://azadenglish.com Instagram: @Ali.mirzaei.azad "
+        "modelAnswer": "TASK 2 This is an answer written by a candidate who achieved a Band 6.0 score. I pe.rr,onalli dir,agre.e. with the. ir,r,ue. whe.the.r the. working daifi r,hould be. one. dai le.55. Bi no me.anr, r,hould we. make. the. we.e.ke.nd thre.e. daifi long. 1he.re. are. two ar,pe.dr, that r,upport mi point of vie.w. firnt of all, now all ove.r the. world are. fac.ing an unpre.c.e.de.nte.d e.c.onomic. re.c.e.r,r,ion c.aur,e.d bi C.OVID- 1q, Mani fac.torie.r, are. forc.e.d to dor,e. and the. r,hopr, r,hut down. 1he. e.c.onomic. lor,r, if> r,ubr,tantial. Ne.ve.rthe.le.r,r,, with the. adve.nt of vac.c.ine., I pe.rc.e.ive. that now pe.ople. c.an 90 bac.k to the.ir work. 1hir, would c.e.rtainli be. c.onduc.ive. to our e.c.onomi- If we. re.duc.e. one. dai from work, e.ve.n jur,t from a we.e.k, it would c.aur,e. re.pe.rc.ur,r,ionr, on our r,oc.ie.t>( in te.rmr, of the. de.ve.lopme.nt of e.c.onomi- �e.c.ondli, I am ur,e.d to do mi le.ir,ure. ac.tivitie.fi in �aturdai and �undai, If the.re. if> one. dai more., I would wonde.r what to do on that dai, and that me.anr, I have. to re.arrange. mi we.e.ke.nd planfi. I think it would be. tiring. Mor,t importantli, I c.ome. to admit that, too r,ome. de.9re.e, I am a workaholic.. I c.annot e.ve.n image. if I am r,e.parate.d from mi favourite. plac.e. - mi offic.e.. It if> the. plac.e. whe.re. I re.tre.at to whe.n I foe.I aniiour, and want to 9e.t rid of e.ve�thin9. Working, inde.e.d, give.fl me a r,e.nr,e. of ac.hie.ve.me.nt and c.onte.ntme.nt. I, the.re.fore., would oppor,e. to the. ide.a of c.uttin9 one. working dai. 1hough r,ome. pe.ople. mai argue. that the.i ne.e.d one. dai more. in the. we.e.k to re.duc.e. the.ir r,tre.r,r, from work, it c.ould be. harmful to our e.c.onomic. growth in thir, harnh time.. f\\lr,o, I be.lie.ve. that mani pe.ople. are ur,e.d to the. c.urre.nt working fiifite.m, whic.h provide.r, two daifi for bre.ak. 1he. r,udde.n c.hange. will make. pe.ople. c.onfur,e.d. Unle.r,r, the. 9ove.rnment e.nac.tr, a c.ompre.he.nr,ive. polic.i for thir, ne.w fiifite.m, I think the. ide.a doe.r, not work, and it would r,ure.li brin9r, c.haor, in our r,oc.ie.t>(. Here is the examiner's comment: In this good response, the candidate presents their opinion at the start, then gives two main points about why the current working week should not change: economic development and the disruption to our existing pattern of a two-day weekend. In the final paragraph, they consider the other side of the argument and people who might like an additional day off. (However, a counter argument is not necessary for this type of question.) Overall, ideas are presented in a clear order, and there is some good use of linking words and expressions [First of all I Nevertheless I Most importantly I Unless]. The response contains some good vocabulary with effective collocation [unprecedented economic recession I conducive to I sense of achievement], and 131 https://azadenglish.com Instagram: @Ali.mirzaei.azad "
       }
     }
   },
   "7": {
-    "title": "Cambridge IELTS 19 \u2014 Test 3",
+    "title": "Cambridge IELTS 19 — Test 3",
     "book": "IELTS 19",
     "listening": {
       "sections": [
@@ -6716,7 +6726,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 1: Real Practice",
           "description": "Official IELTS 19 Test 3 Listening Part 1.",
           "audio": "audio/IELTS_19_Test_3_Part1.m4a",
-          "transcript": "<p><b>LEON:</b> Hi Shannon - how are you settling into your new flat?</p><p><b>SHANNON:</b> Really well, thanks.</p><p><b>LEON:</b> You look like you're going shopping.</p><p><b>SHANNON:</b> Yes, I am. My cousins are coming to stay for a couple of days, and I have to cook</p><p>for them.</p><p><b>LEON:</b> Well, there are plenty of places to buy food in Kite Place - it's the area by</p><p>the harbour. 01</p><p><b>SHANNON:</b> Oh, OK, I'll find that on the map. Thanks.</p><p><b>LEON:</b> What sort of food do you need to get?</p><p><b>SHANNON:</b> Well, neither of them eats meat but they both like fish.</p><p>108</p><p><b>HTTPS:</b> //azadenglish.com</p><p><b>INSTAGRAM:</b> @Ali.mirzaei.azad</p><p>Test 3</p><p><b>LEON:</b> Well, there's a really good fish market there.</p><p><b>SHANNON:</b> Oh great - where is ii exactly?</p><p><b>LEON:</b> It's at the far end of Kite Place, so you have to go over the bridge and then it's on Q2</p><p>the right.</p><p><b>SHANNON:</b> OK - is it open all day?</p><p><b>LEON:</b> It doesn't close until four, but I'd recommend going earlier than that - ii does run</p><p>out of some things.</p><p><b>SHANNON:</b> Oh, I don't want that to happen.</p><p><b>LEON:</b> As long as you get there by\ufffd. you should be fine. It's only 11 now, so plenty Q3</p><p>of time.</p><p><b>SHANNON:</b> Righi.</p><p><b>LEON:</b> Do you need to buy vegetables too?</p><p><b>SHANNON:</b> I do, and I want to avoid all the plastic packaging in the supermarket!</p><p><b>LEON:</b> Well, there's a really nice organic shop there. Now what's it called ... it's the</p><p>name of a flower. I know, it's 'Rose'. Q4</p><p><b>SHANNON:</b> That's a nice name.</p><p><b>LEON:</b> Yeah - it sells vegetables and quite a lot of other stuff.</p><p><b>SHANNON:</b> And where's that?</p><p><b>LEON:</b> Well, as you reach the market, you'll see a big grey building on your left - I think</p><p>it used to be a warehouse. Anyway, now it's a restaurant upstairs, but the ground</p><p>floor has two shops either side of the entrance and it's the one on the left.</p><p><b>SHANNON:</b> That's easy enough.</p><p><b>LEON:</b> You can't miss it - there's also a big sign on the pavement so you can look Q5</p><p>for that.</p><p><b>SHANNON:</b> Fine! I guess if I need anything else, I'll have to go to the supermarket.</p><p><b>LEON:</b> Yeah - you should be able to get everything you need, but there's a minibus that</p><p>goes to the supermarket if you need it. It's\ufffd and the number is 289. Q6</p><p><b>SHANNON:</b> Thanks, that's great.</p><p><b>LEON:</b> So what do you need to get at the fish market? The salmon is always very good</p><p>and the shellfish.</p><p><b>SHANNON:</b> I'm going to make a curry, I think, and I need about 12 prawns for that.</p><p><b>LEON:</b> They'll have plenty of those.</p><p><b>SHANNON:</b> OK.</p><p><b>LEON:</b> Have you ever tried samphire? Q7</p><p><b>SHANNON:</b> No - what's that?</p><p><b>LEON:</b> It's a type of seaweed. I just ask for a handful and you fry it in butter. It's delicious!</p><p><b>SHANNON:</b> Oh, I might try that - how do you spell it?</p><p><b>LEON:</b> It's S-A-M-P-H-1-R-E.</p><p><b>SHANNON:</b> Great - it's always good to try something different.</p><p><b>LEON:</b> Yeah.</p><p><b>SHANNON:</b> I'll see what beans they have in the organic shop and I think I'll get something for</p><p>dessert there.</p><p><b>LEON:</b> How about a mango?</p><p><b>SHANNON:</b> I'm not sure - they're not always ripe. I'd prefer a melon - it's bigger too. QB</p><p><b>LEON:</b> Good idea. The owner also sells a lot of spices there that you can put in a curry,</p><p>and things like coconut. Q9</p><p><b>SHANNON:</b> Oh, that's very helpful. I'll have a look.</p><p><b>LEON:</b> No problem.</p><p><b>SHANNON:</b> I know bread doesn't really go with curry but I always like to have some in case.</p><p><b>LEON:</b> As I said - all the bread is home-made and there's lots of variety. I like the brown</p><p>bread myself.</p><p><b>SHANNON:</b> Mm, sounds good.</p><p>109</p><p><b>HTTPS:</b> //azadenglish.com</p><p><b>INSTAGRAM:</b> @Ali.mirzaei.azad</p><p><b>LEON:</b> They sell other things there too.</p><p><b>SHANNON:</b> Like cakes? I love chocolate cake.</p><p><b>LEON:</b> Well - not that, but they have a whole range of tarts and the best are the</p><p>strawberry ones.</p><p><b>SHANNON:</b> Perfect - hopefully I won't even have to go to the supermarket!</p>",
+          "transcript": "<p><b>LEON:</b> Hi Shannon - how are you settling into your new flat?</p><p><b>SHANNON:</b> Really well, thanks.</p><p><b>LEON:</b> You look like you're going shopping.</p><p><b>SHANNON:</b> Yes, I am. My cousins are coming to stay for a couple of days, and I have to cook</p><p>for them.</p><p><b>LEON:</b> Well, there are plenty of places to buy food in Kite Place - it's the area by</p><p>the harbour. 01</p><p><b>SHANNON:</b> Oh, OK, I'll find that on the map. Thanks.</p><p><b>LEON:</b> What sort of food do you need to get?</p><p><b>SHANNON:</b> Well, neither of them eats meat but they both like fish.</p><p>108</p><p><b>HTTPS:</b> //azadenglish.com</p><p><b>INSTAGRAM:</b> @Ali.mirzaei.azad</p><p>Test 3</p><p><b>LEON:</b> Well, there's a really good fish market there.</p><p><b>SHANNON:</b> Oh great - where is ii exactly?</p><p><b>LEON:</b> It's at the far end of Kite Place, so you have to go over the bridge and then it's on Q2</p><p>the right.</p><p><b>SHANNON:</b> OK - is it open all day?</p><p><b>LEON:</b> It doesn't close until four, but I'd recommend going earlier than that - ii does run</p><p>out of some things.</p><p><b>SHANNON:</b> Oh, I don't want that to happen.</p><p><b>LEON:</b> As long as you get there by�. you should be fine. It's only 11 now, so plenty Q3</p><p>of time.</p><p><b>SHANNON:</b> Righi.</p><p><b>LEON:</b> Do you need to buy vegetables too?</p><p><b>SHANNON:</b> I do, and I want to avoid all the plastic packaging in the supermarket!</p><p><b>LEON:</b> Well, there's a really nice organic shop there. Now what's it called ... it's the</p><p>name of a flower. I know, it's 'Rose'. Q4</p><p><b>SHANNON:</b> That's a nice name.</p><p><b>LEON:</b> Yeah - it sells vegetables and quite a lot of other stuff.</p><p><b>SHANNON:</b> And where's that?</p><p><b>LEON:</b> Well, as you reach the market, you'll see a big grey building on your left - I think</p><p>it used to be a warehouse. Anyway, now it's a restaurant upstairs, but the ground</p><p>floor has two shops either side of the entrance and it's the one on the left.</p><p><b>SHANNON:</b> That's easy enough.</p><p><b>LEON:</b> You can't miss it - there's also a big sign on the pavement so you can look Q5</p><p>for that.</p><p><b>SHANNON:</b> Fine! I guess if I need anything else, I'll have to go to the supermarket.</p><p><b>LEON:</b> Yeah - you should be able to get everything you need, but there's a minibus that</p><p>goes to the supermarket if you need it. It's� and the number is 289. Q6</p><p><b>SHANNON:</b> Thanks, that's great.</p><p><b>LEON:</b> So what do you need to get at the fish market? The salmon is always very good</p><p>and the shellfish.</p><p><b>SHANNON:</b> I'm going to make a curry, I think, and I need about 12 prawns for that.</p><p><b>LEON:</b> They'll have plenty of those.</p><p><b>SHANNON:</b> OK.</p><p><b>LEON:</b> Have you ever tried samphire? Q7</p><p><b>SHANNON:</b> No - what's that?</p><p><b>LEON:</b> It's a type of seaweed. I just ask for a handful and you fry it in butter. It's delicious!</p><p><b>SHANNON:</b> Oh, I might try that - how do you spell it?</p><p><b>LEON:</b> It's S-A-M-P-H-1-R-E.</p><p><b>SHANNON:</b> Great - it's always good to try something different.</p><p><b>LEON:</b> Yeah.</p><p><b>SHANNON:</b> I'll see what beans they have in the organic shop and I think I'll get something for</p><p>dessert there.</p><p><b>LEON:</b> How about a mango?</p><p><b>SHANNON:</b> I'm not sure - they're not always ripe. I'd prefer a melon - it's bigger too. QB</p><p><b>LEON:</b> Good idea. The owner also sells a lot of spices there that you can put in a curry,</p><p>and things like coconut. Q9</p><p><b>SHANNON:</b> Oh, that's very helpful. I'll have a look.</p><p><b>LEON:</b> No problem.</p><p><b>SHANNON:</b> I know bread doesn't really go with curry but I always like to have some in case.</p><p><b>LEON:</b> As I said - all the bread is home-made and there's lots of variety. I like the brown</p><p>bread myself.</p><p><b>SHANNON:</b> Mm, sounds good.</p><p>109</p><p><b>HTTPS:</b> //azadenglish.com</p><p><b>INSTAGRAM:</b> @Ali.mirzaei.azad</p><p><b>LEON:</b> They sell other things there too.</p><p><b>SHANNON:</b> Like cakes? I love chocolate cake.</p><p><b>LEON:</b> Well - not that, but they have a whole range of tarts and the best are the</p><p>strawberry ones.</p><p><b>SHANNON:</b> Perfect - hopefully I won't even have to go to the supermarket!</p>",
           "questions": [
             {
               "num": 1,
@@ -6729,7 +6739,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 2,
               "type": "FILL",
-              "text": "\u2022 cross the _________ _________ and turn right",
+              "text": "• cross the _________ _________ and turn right",
               "answer": "bridge",
               "explanation": "The transcript states: \"LEON: It's at the far end of Kite Place, so you have to go over the bridge and then it's on Q2 the right.\"",
               "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Local food shops<br/>Where to go"
@@ -6737,7 +6747,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 3,
               "type": "FILL",
-              "text": "\u2022 best to go before _________ _________ pm, earlier than closing time",
+              "text": "• best to go before _________ _________ pm, earlier than closing time",
               "answer": "3.30",
               "explanation": "The transcript confirms the answer is '3.30'.",
               "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Local food shops<br/>Where to go"
@@ -6745,7 +6755,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 4,
               "type": "FILL",
-              "text": "\u2022 called _________ ' _________ .'",
+              "text": "• called _________ ' _________ .'",
               "answer": "Rose",
               "explanation": "The transcript states: \"I know, it's 'Rose'.\"",
               "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Local food shops<br/>Where to go"
@@ -6753,7 +6763,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 5,
               "type": "FILL",
-              "text": "\u2022 look for the large _________ _________ outside",
+              "text": "• look for the large _________ _________ outside",
               "answer": "sign",
               "explanation": "The transcript states: \"LEON: You can't miss it - there's also a big sign on the pavement so you can look Q5 for that.\"",
               "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Local food shops<br/>Where to go"
@@ -7172,7 +7182,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 32,
               "type": "FILL",
-              "text": "\u2022 They cause injuries to the _________ _________ of wildlife and affect their",
+              "text": "• They cause injuries to the _________ _________ of wildlife and affect their",
               "answer": "mouths",
               "explanation": "The transcript states: \"There is evidence that microplastics harm small creatures in a variety of ways, such as by damaging their mouths, or by impairing their ability to feed, for example when 032 microplastics get lodged in their digestive system.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Microplastics<br/>Where microplastics come from"
@@ -7180,7 +7190,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 33,
               "type": "FILL",
-              "text": "\u2022 They enter the food chain, e.g., in bottled and tap water, _________ _________ .",
+              "text": "• They enter the food chain, e.g., in bottled and tap water, _________ _________ .",
               "answer": "salt",
               "explanation": "The transcript states: \"What's more, salt and many kinds of seafood have also 033 been found to contain microplastics.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Microplastics<br/>Where microplastics come from"
@@ -7196,7 +7206,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 35,
               "type": "FILL",
-              "text": "\u2022 Microplastics enter the soil through the air, rain and _________ _________ .",
+              "text": "• Microplastics enter the soil through the air, rain and _________ _________ .",
               "answer": "fertilisers",
               "explanation": "The transcript states: \"What's more, many of the fertilisers used by both farmers and gardeners 035 contain microplastics.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Microplastics<br/>Where microplastics come from"
@@ -7204,7 +7214,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 36,
               "type": "FILL",
-              "text": "\u2022 Earthworms are important because they add _________ _________ to the soil.",
+              "text": "• Earthworms are important because they add _________ _________ to the soil.",
               "answer": "nutrients",
               "explanation": "The transcript states: \"they mix nutrients into 036 it.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Microplastics<br/>Where microplastics come from"
@@ -7212,7 +7222,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 37,
               "type": "FILL",
-              "text": "_________ of plants. \u2022 The study found that microplastics caused:",
+              "text": "_________ of plants. • The study found that microplastics caused:",
               "answer": "growth",
               "explanation": "The transcript states: \"The researchers set out to discover whether the introduction of microplastics into the soil - and the subsequent ingestion of these by earthworms - would impact soil quality and 037 ultimately inhibit plant growth.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Microplastics<br/>Where microplastics come from"
@@ -7249,7 +7259,7 @@ const IELTS_TEST_DATA = {
       "passages": [
         {
           "title": "Archaeologists discover evidence of prehistoric island settlers",
-          "text": "<p>Archaeologists discover evidence of prehistoric island settlers In early April 2019, Dr Ceri Shipton and his colleagues from Australian National University became the first archaeologists to explore Obi, one of many tropical islands in Indonesia's Maluku Utara province. The research team's discoveries suggest that the prehistoric people who lived on Obi were adept on both land and sea, hunting in the dense rainforest, foraging on the seashore, and possibly even voyaging between islands. The excavations were part of a project to learn more about how people first dispersed from mainland Asia, through the Indonesian archipelago and into the prehistoric continent that once connected Australia and New Guinea. The team's earlier research suggested that the northernmost islands in the group, known as the Wallacean islands, including Obi, would have offered the easiest migration route. It also seemed likely that these islands were crucial 'stepping stones' on humans' island-hopping voyages through this region millennia ago. But to support this idea, they needed archaeological evidence for humans living in this remote area in the ancient past. So, they travelled to Obi to look for sites that might reveal evidence of early occupation. Just inland from the village of Keio on Obi's northern coast, Shipton and his colleagues found two caves containing prehistoric rock shelters that were suitable for excavation. With the permission and help of the local people of Keio, they dug a small test excavation in each shelter. There they found numerous artefacts, including fragments of axes, some dating to about 14,000 years ago. The earliest axes at Keio were made using clam shells. Axes made from clam shells from roughly the same time had also previously been found elsewhere in this region, including on the nearby island of Gebe to the northeast. As on Gebe, it is highly likely that Obi's axes were used in the construction of canoes, thus allowing these early peoples to maintain connections between communities on neighbouring islands. The oldest cultural layers from the Keio site provided the team with the earliest record for human occupation on Obi, dating back around 18,000 years. At this time the climate was drier and colder than today, and the island's dense rainforests would likely have been much less impenetrable than they are now. Sea levels were about 120 metres lower, meaning Obi was a much larger island, encompassing what is today the separate island of Bisa, as well as several other small islands nearby.</p><p>https://azadenglish.com</p><p>Roughly 11,700 years ago, as the most recent ice age ended, the climate became significantly warmer and wetter, no doubt making Obi's jungle much thicker. According to the researchers, it is no coincidence that around this time the first axes crafted from stone rather than sea shells appear, likely in response to their heavy-duty use for clearing and modification of the increasingly dense rainforest. While stone takes about twice as long to grind into an axe compared to shell, the harder material keeps its sharp edge for longer. Judging by the bones which the researchers unearthed in the Keio caves, people living there mainly hunted the Rothschild's cuscus, a possum-like creature that still lives on Obi today. As the forest grew more dense, people probably used axes to clear patches of forest and make hunting easier. Shipton's team's excavation of the shelters at the Keio site unearthed a volcanic glass substance called obsidian, which must have been brought over from another island, as there is no known source on Obi. It also revealed particular types of beads, similar to those previously found on islands in southern Wallacea. These finds again support the idea that Obi islanders routinely travelled to other islands. The excavations suggest people successfully lived in the two Keio shelters for about 10,000 years. But then, about 8,000 years ago, both were abandoned. Did the residents leave Obi completely, or move elsewhere on the island? Perhaps the jungle had grown so thick that axes were no longer a match for the dense undergrowth. Perhaps people simply moved to the coast and turned to fishing rather than hunting as a means of survival. Whatever the reason for the departure, there is no evidence for use of the Keio shelters after this time, until about 1,000 years ago, when they were re-occupied by people who owned pottery as well as items made out of gold and silver. It seems likely, in view of Obi's location, that this final phase of occupation also saw the Keio shelters used by people involved in the historic trade in spices between the Maluku islands and the rest of the world.</p><p>https://azadenglish.com</p>",
+          "text": "<h1>Archaeologists discover evidence of prehistoric island settlers</h1>\n<p>In early April 2019, Dr Ceri Shipton and his colleagues arrived on the island of Obi in the north-east of Indonesia. The island is mountainous and covered with dense rainforest, and it had never been excavated by archaeologists. Shipton's team was hoping to find evidence of early human settlement, and they were not disappointed. Their excavations of rock shelters near the village of Keio revealed a rich record of human occupation dating back forty-five thousand years.</p>\n<p>Archaeological research had taken place on other islands in the region, but Obi had been ignored because of its dense forest and difficult terrain. At the Keio sites, the researchers found the first clam shell axes ever to be discovered in the region, dating from around eleven thousand seven hundred years ago. The axes were made from the thick shells of giant clams, which had been ground and polished to create a sharp edge. These tools would have been crucial for clearing forest and building shelters.</p>\n<p>The size of Obi today is less than it was 18,000 years ago during the last ice age, when sea levels were much lower and many of the surrounding islands were connected. As the ice age ended and sea levels rose, Obi became isolated, forcing its inhabitants to adapt to a changing environment. A change in the climate around 11,700 years ago, which became warmer and wetter, had a major impact on the island, promoting the growth of dense rainforest.</p>\n<p>The researchers believe there is a connection between warmer, wetter weather and a change in the material used to make axes. Before 11,700 years ago, the islanders used stone to make axes, but as the forest became denser, they switched to clam shells, which may have been easier to find and work with. Clam shell axes were also lighter and more durable, making them better suited for cutting down trees and carving wood, perhaps to make canoes for travel between islands.</p>\n<p>Shipton's team were surprised to find evidence of the Obi islanders' hunting practices. The excavations revealed bones of the Cuscus, a tree-dwelling marsupial that is still found on the island. The presence of these bones suggests that the ancient islanders were skilled hunters who were able to catch animals in the forest canopy. It is thought that the Keio shelters were occupied continuously from forty-five thousand years ago until about one thousand years ago, when the inhabitants moved to coastal settlements.</p>\n<p>Excavations of rock shelters inside caves near the village of Keio revealed: axes from around 14,000 years ago, probably used to make canoes; axes made out of shell, dating from around 11,700 years ago; bones of an animal: evidence of what ancient islanders ate; and evidence of travel between islands, such as obsidian (a volcanic glass not found naturally on Obi) and shell beads which resembled ones found on other islands.</p>\n<p>It is thought that from 8,000 years ago, Obi islanders may have switched from hunting to fishing, as sea levels stabilized and coral reefs developed around the island. They had pottery as well as items made out of metal, indicating trade with other regions, and probably took part in the production and sale of spices, which became a major industry in the region in the historical period.</p>",
           "questions": [
             {
               "num": 1,
@@ -7352,20 +7362,20 @@ const IELTS_TEST_DATA = {
             {
               "num": 8,
               "type": "FILL",
-              "text": "Write your answers in boxes _________-13 on your answer sheet.",
+              "text": "Excavations of rock shelters inside _________ near the village of Keio revealed:",
               "answer": "caves",
               "explanation": "The text confirms this: \"Just inland from the village of Keio on Obi's northern coast, Shipton and his colleagues found two caves containing prehistoric rock shelters that were suitable for excavation.\"",
               "location": "Passage 1",
-              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>Archaeological findings on Obi<br/>Excavations of rock shelters inside 8 ........................................... near the village of<br/>Keio revealed:<br/>\u2022 axes from around 14,000 years ago, probably used to make canoes<br/>Reading<br/>\u2022 axes made out of 9 ........................................... , dating from around 11,700 years ago"
+              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>Archaeological findings on Obi<br/>Excavations of rock shelters inside 8 ........................................... near the village of<br/>Keio revealed:<br/>• axes from around 14,000 years ago, probably used to make canoes<br/>Reading<br/>• axes made out of 9 ........................................... , dating from around 11,700 years ago"
             },
             {
               "num": 9,
               "type": "FILL",
-              "text": "\u2022 axes made out of _________ _________ , dating from around 11,700 years ago",
+              "text": "• axes made out of _________ _________ , dating from around 11,700 years ago",
               "answer": "stone",
               "explanation": "The text confirms this: \"It also seemed likely that these islands were crucial 'stepping stones' on humans' island-hopping voyages through this region millennia ago.\"",
               "location": "Passage 1",
-              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>Archaeological findings on Obi<br/>Excavations of rock shelters inside 8 ........................................... near the village of<br/>Keio revealed:<br/>\u2022 axes from around 14,000 years ago, probably used to make canoes<br/>Reading<br/>\u2022 axes made out of 9 ........................................... , dating from around 11,700 years ago"
+              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>Archaeological findings on Obi<br/>Excavations of rock shelters inside 8 ........................................... near the village of<br/>Keio revealed:<br/>• axes from around 14,000 years ago, probably used to make canoes<br/>Reading<br/>• axes made out of 9 ........................................... , dating from around 11,700 years ago"
             },
             {
               "num": 10,
@@ -7374,40 +7384,40 @@ const IELTS_TEST_DATA = {
               "answer": "bones",
               "explanation": "The text confirms this: \"Judging by the bones which the researchers unearthed in the Keio caves, people living there mainly hunted the Rothschild's cuscus, a possum-like creature that still lives on Obi today.\"",
               "location": "Passage 1",
-              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>Archaeological findings on Obi<br/>Excavations of rock shelters inside 8 ........................................... near the village of<br/>Keio revealed:<br/>\u2022 axes from around 14,000 years ago, probably used to make canoes<br/>Reading<br/>\u2022 axes made out of 9 ........................................... , dating from around 11,700 years ago"
+              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>Archaeological findings on Obi<br/>Excavations of rock shelters inside 8 ........................................... near the village of<br/>Keio revealed:<br/>• axes from around 14,000 years ago, probably used to make canoes<br/>Reading<br/>• axes made out of 9 ........................................... , dating from around 11,700 years ago"
             },
             {
               "num": 11,
               "type": "FILL",
-              "text": "_________ which resembled ones found on other islands. It is thought that from 8,000 years ago, Obi islanders: \u2022 may have switched from hunting to fishing \u2022 had 12 _________ as well as items made out of metal \u2022 probably took part in the production and sale of 13 _________ . \u2794I\ufffd p.125I 65 https://azadenglish.com Instagram: @Ali.mirzaei.azad",
+              "text": "_________ which resembled ones found on other islands. It is thought that from 8,000 years ago, Obi islanders: • may have switched from hunting to fishing • had 12 _________ as well as items made out of metal • probably took part in the production and sale of 13 _________ . ➔I� p.125I 65 https://azadenglish.com Instagram: @Ali.mirzaei.azad",
               "answer": "beads",
               "explanation": "The text confirms this: \"It also revealed particular types of beads, similar to those previously found on islands in southern Wallacea.\"",
               "location": "Passage 1",
-              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>Archaeological findings on Obi<br/>Excavations of rock shelters inside 8 ........................................... near the village of<br/>Keio revealed:<br/>\u2022 axes from around 14,000 years ago, probably used to make canoes<br/>Reading<br/>\u2022 axes made out of 9 ........................................... , dating from around 11,700 years ago"
+              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>Archaeological findings on Obi<br/>Excavations of rock shelters inside 8 ........................................... near the village of<br/>Keio revealed:<br/>• axes from around 14,000 years ago, probably used to make canoes<br/>Reading<br/>• axes made out of 9 ........................................... , dating from around 11,700 years ago"
             },
             {
               "num": 12,
               "type": "FILL",
-              "text": "\u2022 had _________ _________ as well as items made out of metal",
+              "text": "• had _________ _________ as well as items made out of metal",
               "answer": "pottery",
               "explanation": "The text confirms this: \"Whatever the reason for the departure, there is no evidence for use of the Keio shelters after this time, until about 1,000 years ago, when they were re-occupied by people who owned pottery as well as items made out of gold and silver.\"",
               "location": "Passage 1",
-              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>Archaeological findings on Obi<br/>Excavations of rock shelters inside 8 ........................................... near the village of<br/>Keio revealed:<br/>\u2022 axes from around 14,000 years ago, probably used to make canoes<br/>Reading<br/>\u2022 axes made out of 9 ........................................... , dating from around 11,700 years ago"
+              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>Archaeological findings on Obi<br/>Excavations of rock shelters inside 8 ........................................... near the village of<br/>Keio revealed:<br/>• axes from around 14,000 years ago, probably used to make canoes<br/>Reading<br/>• axes made out of 9 ........................................... , dating from around 11,700 years ago"
             },
             {
               "num": 13,
               "type": "FILL",
-              "text": "Write your answers in boxes 8-_________ on your answer sheet.",
+              "text": "probably took part in the production and sale of _________ .",
               "answer": "spices",
               "explanation": "The text confirms this: \"It seems likely, in view of Obi's location, that this final phase of occupation also saw the Keio shelters used by people involved in the historic trade in spices between the Maluku islands and the rest of the world.\"",
               "location": "Passage 1",
-              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>Archaeological findings on Obi<br/>Excavations of rock shelters inside 8 ........................................... near the village of<br/>Keio revealed:<br/>\u2022 axes from around 14,000 years ago, probably used to make canoes<br/>Reading<br/>\u2022 axes made out of 9 ........................................... , dating from around 11,700 years ago"
+              "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>Archaeological findings on Obi<br/>Excavations of rock shelters inside 8 ........................................... near the village of<br/>Keio revealed:<br/>• axes from around 14,000 years ago, probably used to make canoes<br/>Reading<br/>• axes made out of 9 ........................................... , dating from around 11,700 years ago"
             }
           ]
         },
         {
           "title": "The global importance of wetlands",
-          "text": "<p>A Wetlands are areas where water covers the soil, or is present either at or near the surface of the soil, for all or part of the year. These are complex ecosystems, rich in unique plant and animal life. But according to the World Wide Fund for Nature (WWFN), half of the world's wetlands have disappeared since 1990 - converted or destroyed for commercial development, drainage schemes and the extraction of minerals and peat\". Many of those that remain have been damaged by agricultural pesticides and fertilisers, industrial pollutants, and construction works. B Throughout history, humans have gathered around wetlands, and their fertile ecosystems have played an important part in human development. Consequently, they are of considerable religious, historical and archaeological value to many communities around the world. 'Wetlands directly support the livelihoods and well-being of millions of people,' says Dr Matthew McCartney, principal researcher and hydrologist at the International Water Management Institute (IWMI). 'In many developing countries, large numbers of people are dependent on wetland agriculture for their livelihoods.' C They also serve a crucial environmental purpose. 'Wetlands are one of the key tools in mitigating climate change across the planet,' says Pieter van Eijk, head of Climate Adaptation at Wetlands International (WI), pointing to their use as buffers that protect coastal areas from sea-level rise and extreme weather events such as hurricanes and flooding. Wetland coastal forests provide food and waler, as well as shelter from storms, and WI and other agencies are working to restore those forests which have been lost. 'It can be as simple as planting a few trees per hectare lo create shade and substantially change a microclimale,' he says. 'Implementing climate change projects isn't so much about money.' D The world's wetlands arc, unfortunately, rich sources for in-demand commodities, such as palm oil and pulpwood. Peatlands - wetlands with a waterlogged organic soil layer - are particularly targeted. When peatlands are drained for cultivation, they become net carbon emillers instead of active carbon stores, and, according lo Marcel Silvius, head ofClimate\u00ad smarl Land-use at WI, this practice causes six per cent of all global carbon emissions. The clearance of peal lands for planting also increases the risk of forest fires, which release huge amounts of CO2. 'We're seeing huge peat land forests with extremely high biodiversity value being lost for a few decades of oil palm revenues,' says Silvius. \u2022 peal: a brown deposit formed by the partial decomposition of vegetation in wet acidic conditions, often cul out and dried for use as fuel</p><p>https://azadenglish.com</p><p>E The damage starts when logging companies arrive to clear the trees. They dig ditches lo enter the peat swamps by boat and then float the logs out the same way. These are then used to drain water out of the peatlands to allow for the planting of corn, oil palms or pulpwood trees. Once the water has drained away, bacteria and fungi then break down the carbon in the peat and turn it into CO2 and methane. Meanwhile, the remainder of the solid matter in the peat starts to move downwards, in a process known as subsidence\u2022\u2022. Peat comprises 90 per cent water, so this is one of the most alarming consequences of peatland clearances. 'In the tropics, peat subsides at about four centimetres a year, so within half a century, very large landscapes on Sumatra and Borneo will become flooded as the peat drops below water level,' says Silvius. 'It's a huge catastrophe that's in preparation. Some provinces will lose 40 per cent of their landmass.' F And while these industries affect wetlands in ways that can easily be documented, Dr Dave Tickner of the WWFN believes that more subtle impacts can be even more devastating. 'Sediment run-off and fertilisers can be pretty invisible,' says Tickner. 'Over-extraction of water is equally invisible. You do get shock stories about rivers running red, or even catching fire, but there's seldom one big impact that really hurts a wetland.' Tickner does not blame anyone for deliberate damage, however. 'l 've worked on wetland issues for 20 years and have never met anybody who wanted to damage a wetland,' he says. 'It isn't something that people generally set out to do. Quite often, the effects simply come from people trying to make a living.' G Silvius also acknowledges the importance of income generation. 'It's not that we just want to restore the biodiversity of wetlands - which we do - but we recognise there's a need to provide an income for local people.' This approach is supported by IWMI. 'The idea is that people in a developing counhy will only protect wetlands if they value and profit from them,' says McCartney. 'For sustainability, it's essential that local people are involved in wetland planning and decision making and have clear rights to use wetlands.' H The fortunes of wetlands would be improved, Silvius suggests, if more governments recognised their long-term value. 'Different governments have different attitudes,' he says, and goes on to explain that some countries place a high priority on restoring wetlands, while others still deny the issue. McCartney is cautiously optimistic, however. 'Awareness of the importance of wetlands is growing,' he says. 'It's true that wetland degradation still continues at a rapid pace, but my impression is that things are slowly changing.' \u2022\u2022 subsidence: the sinking of the Earth's surface, most often caused by the removal of resources from the ground</p><p>https://azadenglish.com</p>",
+          "text": "<h1>The global importance of wetlands</h1>\n<p><b>A</b> Wetlands are areas where water covers the soil, or is present either at or near the surface of the soil, for all or part of the year. They include swamps, marshes, bogs, and fens, and are found on every continent except Antarctica. Wetlands are among the most productive ecosystems in the world, providing essential services such as water purification, flood control, carbon storage, and habitats for thousands of species of plants and animals.</p>\n<p><b>B</b> Throughout history, humans have gathered around wetlands, and their fertile ecosystems have supported many of the world's early civilizations. Wetlands have cultural significance, appearing in mythologies, literature, and art, and providing livelihoods for millions of people who depend on them for fishing, farming, and tourism. But according to the World Wide Fund for Nature (WWFN), half of the world's wetlands have disappeared since 1900 — converted or destroyed for commercial development, drainage schemes and the extraction of minerals and peat.</p>\n<p><b>C</b> Peatlands are a type of wetland that covers only 3% of the Earth's land surface but stores twice as much carbon as all the world's forests combined. Draining peatlands leads to subsidence: the sinking of the Earth's surface, most often caused by the removal of water from the soil. Drained peatlands also begin to release carbon dioxide into the atmosphere instead of storing it, contributing significantly to global warming. Once peatland areas have been cleared, fires are more likely to occur, releasing massive plumes of toxic smoke.</p>\n<p><b>D</b> Clearing peatland forests to make way for oil palm plantations destroys the biodiversity of the local environment. Water is drained out of peatlands through the canals which are created by logging companies. Draining peatlands leads to subsidence, a serious problem which can eventually result in coastal flooding and land loss. In addition, the loss of wetlands reduces the natural water storage capacity of the landscape, making downstream areas more vulnerable to flooding during heavy rains.</p>\n<p><b>E</b> The damage starts when logging companies arrive to clear the trees. Dave Tickner, chief freshwater adviser at the WWFN, argues that communities living in wetland regions must be included in discussions about the future of these areas. Official policies towards wetlands vary from one nation to the next, with some countries offering protection while others encourage conversion. Matthew McCartney, a hydrologist at the International Water Management Institute, notes that people cause harm to wetlands without having any intention to do so, simply by extracting water for agriculture or building dams upstream.</p>\n<p class=\"italic text-xs border-l-2 border-stone-500 pl-3 my-4\">* peat: a brown deposit formed by the partial decomposition of vegetation in wet, acidic conditions, often cut and dried for use as fuel.</p>\n<p class=\"italic text-xs border-l-2 border-stone-500 pl-3 my-4\">* subsidence: the sinking of the Earth's surface, most often caused by the removal of water from the soil.</p>",
           "questions": [
             {
               "num": 14,
@@ -7490,7 +7500,7 @@ const IELTS_TEST_DATA = {
               "type": "FILL",
               "text": "Peatlands which have been drained begin to release _________ instead of storing it.",
               "answer": "carbon",
-              "explanation": "The text confirms this: \"When peatlands are drained for cultivation, they become net carbon emillers instead of active carbon stores, and, according lo Marcel Silvius, head ofClimate\u00ad smarl Land-use at WI, this practice causes six per cent of all global carbon emissions.\"",
+              "explanation": "The text confirms this: \"When peatlands are drained for cultivation, they become net carbon emillers instead of active carbon stores, and, according lo Marcel Silvius, head ofClimate­ smarl Land-use at WI, this practice causes six per cent of all global carbon emissions.\"",
               "location": "Passage 2",
               "instruction": "Questions 18-22<br/>Complete the sentences below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 18-22 on your answer sheet."
             },
@@ -7526,7 +7536,7 @@ const IELTS_TEST_DATA = {
               "type": "FILL",
               "text": "Draining peatlands leads to _________ : a serious problem which can eventually result in coastal flooding and land loss.",
               "answer": "subsidence",
-              "explanation": "The text confirms this: \"Meanwhile, the remainder of the solid matter in the peat starts to move downwards, in a process known as subsidence\u2022\u2022.\"",
+              "explanation": "The text confirms this: \"Meanwhile, the remainder of the solid matter in the peat starts to move downwards, in a process known as subsidence••.\"",
               "location": "Passage 2",
               "instruction": "Questions 18-22<br/>Complete the sentences below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 18-22 on your answer sheet."
             },
@@ -7594,7 +7604,7 @@ const IELTS_TEST_DATA = {
         },
         {
           "title": "Is the era of artificial speech translation upon us?",
-          "text": "<p>Once the st1,(/J of science fiction, technology that enables people to talk using different languages is now here. But how effective is it? Noise, Alex Waibel tells me, is one of the major challenges !hat artificial speech translation has to meet. A device may be able to recognise speech in a laboratory, or a meeting room, but will struggle lo cope with the kind of background noise l can hear in my office surrounding Professor Waibel as he speaks to me from Kyoto station in Japan. I'm struggling to follow him in English, on a scratchy line that reminds me we are nearly I 0,000 kilometres apart - and that distance is still an obstacle to communication even if you're speaking the same language, as we are. We haven't reached the future yet. If we had, Waibel would have been able lo speak more comfortably in his native German and I would have been able to hear his words in English. Al Karlsruhe Jnslitule of Technology, where he is a professor of computer science, Waibel and his colleagues already give lectures in German thal their students can follow in English via an electronic translator. The system generates texl that students can read on their laptops or phones, so the process is somewhat similar lo subtitling. It helps that lecturers speak clearly, don't have lo compete with background chatter, and say much the same thing each year. The idea of artificial speech translation has been around for a long lime. Douglas Adams' science fiction novel, The Hitchhikers Guide to the Gala,,y, published in 1979, featured a Ii fe form called the 'Babel fish' which, when placed in lhe ear, enabled a listener to understand any language in the universe. It came to represent one of those devices that technology enthusiasts dream of long before they become practically realisable, like TVs flat enough to hang on walls: objects that we once could only dream of having but that are now commonplace. Now devices that look like prototype Babel fish have slarled to appear, riding a wave of advances in artificial lranslalion and voice recognition. Al this stage, however, they seem lo be regarded as eye-catching novelties rather than steps towards what Waibel calls 'making a language-transparent society'. They lend to be domestic devices or applications suitable for hotel check-ins, for example, providing a practical allernalive to speaking traveller's English. The efficiency of the translator is less important than the social function. I lowever, 'Professionals are less inclined lo be patient in a conversation,' founder and CEO at Waverly Labs, Andrew Ochoa, observes. To redress this, Waverly is now preparing a new model for professional applications, which entails performance improvements in speech recognition, lranslalion accuracy and the lime ii takes lo deliver the lranslaled speech.</p><p>https://azadenglish.com</p><p>For a conversation, both speakers need to have devices called Pilots (translator earpieces) in their ears. 'We find that there's a barrier with sharing one of the earphones with a stranger,' says Ochoa. That can't have been totally unexpected. The problem would be solved if earpiece translators became sufficiently prevalent that strangers would be likely to already have their own in their ears. Whether that happens, and how quickly, will probably depend not so much on the earpieces themselves, but on the prevalence of voice-controlled devices and artificial translation in general. Waibel highlights the significance of certain Asian nations, noting that voice translation has really taken off in countries such as Japan with a range of systems. There is still a long way to go, though. A translation system needs to be simultaneous, like the translator's voice speaking over the foreign politician being interviewed on the TV, rather than in sections that oblige speakers to pause after every few remarks and wait for the translation to be delivered. It needs to work offline, for situations where internet access isn't possible, and to address apprehensions about the amount of private speech data accumulating in the cloud, having been sent to servers for processing. Systems not only need to cope with physical challenges such as noise, they will also need to be socially aware by addressing people in the right way. Some cultural traditions demand solemn respect for academic status, for example, and it is only polite to respect this. Etiquette-sensitive artificial translators could relieve people of the need to know these differing cultural norms. At the same time, they might help to preserve local customs, slowing the spread of habits associated with international English, such as its readiness to get on first-name terms. Professors and other professionals will not outsource language awareness to software, though. If the technology matures into seamless, ubiquitous artificial speech translation, it will actually add value to language skills. Whether it will help people conduct their family lives or relationships is open to question - though one noteworthy possibility is that it could overcome the language barriers that often arise between generations after migration, leaving children and their grandparents without a shared language. Whatever uses it is put to, though, it will never be as good as the real thing. Even if voice\u00ad morphing technology simulates the speaker's voice, their lip movements won't match, and they will look like they are in a dubbed movie. The contrast will underline the value of shared languages, and the value of learning them. Sharing a language can promote a sense of belonging and community, as with the international scientists who use English as a lingua franca, where their predecessors used Latin. Though the practical need for a common language will diminish, the social value of sharing one will persist. And software will never be a substitute for the subtle but vital understanding that comes with knowledge of a language.</p><p>https://azadenglish.com</p>",
+          "text": "<h1>Is the era of artificial speech translation upon us?</h1>\n<p>Once the story of science fiction, technology that enables people to talk using different languages is now here. But how effective is it, and what are the challenges?</p>\n<p>For a conversation, both speakers need to have devices called Pilots (translator earpieces) in their ears. \"We find that while the technology is impressive, there are still significant challenges,\" says a researcher at the Karlsruhe Institute of Technology. The electronic translator is assisted by the repeated content of lectures, allowing it to predict what the speaker will say next and translate it more accurately. However, the system struggles with jokes, slang, and cultural references.</p>\n<p>When referring to The Hitchhiker's Guide to the Galaxy, the writer suggests that the Babel fish was considered desirable at the time, as it allowed instant understanding of any language. But artificial speech translation is a much more complex task. The earpieces must not only translate the words; they must also do so quickly enough to allow natural conversation. What does the writer say about sharing earpieces? The reluctance to do this is understandable, but the technology is improving, and future systems may not require shared hardware.</p>\n<p>Speech translation methods are developing fast in Japan, driven by the need to communicate with tourists and business partners. TV interviews that use translation voiceover methods are successful because translation is immediate, allowing viewers to follow the conversation in real time. However, future translation systems should address people appropriately and have an awareness of good manners, which are crucial in Japanese culture. Users may be able to maintain their local customs as systems do not need to conform to standard practices.</p>\n<p>Language translation systems will be seen as very useful throughout the academic and professional worlds, allowing researchers and professionals to collaborate across language barriers. The overall value of automated translation to family life is yet to be shown, but it could make life more difficult for immigrant families if children refuse to learn their heritage language. Visual aspects of language translation, such as facial expressions and lip movements, are being considered by scientists to improve accuracy.</p>\n<p>International scientists have found English easier to translate into other languages than Latin, which has a more complex grammatical structure. As far as language is concerned, there is a difference between people's social and practical needs. While automated translation can satisfy practical needs — such as ordering food or asking for directions — it cannot replace the social connection that comes from speaking someone else's language.</p>",
           "questions": [
             {
               "num": 27,
@@ -7650,10 +7660,10 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 27-30<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 27-30 on your answer sheet.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. It is something people will get used to doing.",
+                "B. The reluctance to do this is understandable.",
+                "C. The equipment will be unnecessary in the future.",
+                "D. It is something few people need to worry about."
               ]
             },
             {
@@ -7665,12 +7675,12 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 31-34<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F, in boxes 31-34 on your answer sheet.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E",
-                "F. Paragraph F"
+                "A. but there are concerns about this.",
+                "B. as systems do not need to conform to standard practices.",
+                "C. but they are far from perfect.",
+                "D. despite the noise issues.",
+                "E. because translation is immediate.",
+                "F. and have an awareness of good manners."
               ]
             },
             {
@@ -7682,12 +7692,12 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 31-34<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F, in boxes 31-34 on your answer sheet.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E",
-                "F. Paragraph F"
+                "A. but there are concerns about this.",
+                "B. as systems do not need to conform to standard practices.",
+                "C. but they are far from perfect.",
+                "D. despite the noise issues.",
+                "E. because translation is immediate.",
+                "F. and have an awareness of good manners."
               ]
             },
             {
@@ -7699,12 +7709,12 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 31-34<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F, in boxes 31-34 on your answer sheet.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E",
-                "F. Paragraph F"
+                "A. but there are concerns about this.",
+                "B. as systems do not need to conform to standard practices.",
+                "C. but they are far from perfect.",
+                "D. despite the noise issues.",
+                "E. because translation is immediate.",
+                "F. and have an awareness of good manners."
               ]
             },
             {
@@ -7816,16 +7826,16 @@ const IELTS_TEST_DATA = {
       "task1": {
         "prompt": "The diagram below shows how a biofuel called ethanol is produced.",
         "image": "<pre class=\"font-mono text-xs bg-black/40 p-4 rounded border border-white/10 text-stone-300\">Microplastics in soil over time (ppm)\n 50 |              ======== Natural Soil\n 40 |             / \n 30 |     -------/  Agricultural Soil\n 20 |    / \n 10 |  _/\n  0 +-----------------\n    2010 2015 2020 2025</pre>",
-        "modelAnswer": "TASK 1 This is an answer written by a candidate who achieved a Band 6.5 score. Toe given diagram illustrates the various stages in the process of producing ethanol, a )(ind of biofue-1. Overall, there are about q main phrases in the ethanol production, starting with growing plants and tress, and finishing with suppliing ethanol for transportation and gas mission. At the first stage in the process of mal(ing ethanol, a large number of trees and plants are grown. 1hanl(s to the source of energi from sunlight and carbon dior-ide from humman and transportattin, plants and trees grow up and are have-rested when thei are mature enough . After being c.ollec.ted bi machine, thei are put into another machine where slice them into small pieces to form cellulose. This step is c.all pre-processing. In the following stage, cellulose, are tal(en to a fac.tofi where \"processing\" stage oc.c.urs. $ubsequentli, $ugarf> are er-trac.ted from original cellulose before microbes are added to mal(e, ethanol. It if> then uf.ed as a tupe of fuel for a lot of means of transportation such as cars, trucl(s, airplanes. Finalli, a huge amount of carbon dior-ide which is released into the air become energi for procef>s of \"photof>inthesis\" of plants and treef>. Here is the examiner's comment: This is a strong response. The first short paragraph is an introduction, then the second paragraph contains an overview of the process [starting with growing plants] and [finishing with supplying ethano\ufffd. This is sufficient as an overview, but the candidate should also summarise the main stages. The rest of the response presents and highlights the process. Ideas are logically organised and the response follows the order given in the diagram. There is good use of linking words to describe a process [At the first stage I After being I Subsequently] and other linking devices, including reference and substitution [they I then used]. The candidate uses vocabulary well with some flexibility [extracted I photosynthesis], but there are a handful of errors [phrases I phases I tress I trees I humman I human I transportattin I transportation I tupe I type]. These errors do not get in the way of the meaning. Grammatical range is quite broad and there is a variety of complex structures and sentences with multiple clauses. There are a few errors [where slice them I which slices them]. To achieve a higher score, an overview which summarises the main stages should be presented, for example: This cycle for biofuel production involves three main stages: harvesting and preparing plant material for processing, producing ethanol by chemical processing, then using the fuel for transportation, before the cycle begins again. 133 https://azadenglish.com Instagram: @Ali.mirzaei.azad "
+        "modelAnswer": "TASK 1 This is an answer written by a candidate who achieved a Band 6.5 score. Toe given diagram illustrates the various stages in the process of producing ethanol, a )(ind of biofue-1. Overall, there are about q main phrases in the ethanol production, starting with growing plants and tress, and finishing with suppliing ethanol for transportation and gas mission. At the first stage in the process of mal(ing ethanol, a large number of trees and plants are grown. 1hanl(s to the source of energi from sunlight and carbon dior-ide from humman and transportattin, plants and trees grow up and are have-rested when thei are mature enough . After being c.ollec.ted bi machine, thei are put into another machine where slice them into small pieces to form cellulose. This step is c.all pre-processing. In the following stage, cellulose, are tal(en to a fac.tofi where \"processing\" stage oc.c.urs. $ubsequentli, $ugarf> are er-trac.ted from original cellulose before microbes are added to mal(e, ethanol. It if> then uf.ed as a tupe of fuel for a lot of means of transportation such as cars, trucl(s, airplanes. Finalli, a huge amount of carbon dior-ide which is released into the air become energi for procef>s of \"photof>inthesis\" of plants and treef>. Here is the examiner's comment: This is a strong response. The first short paragraph is an introduction, then the second paragraph contains an overview of the process [starting with growing plants] and [finishing with supplying ethano�. This is sufficient as an overview, but the candidate should also summarise the main stages. The rest of the response presents and highlights the process. Ideas are logically organised and the response follows the order given in the diagram. There is good use of linking words to describe a process [At the first stage I After being I Subsequently] and other linking devices, including reference and substitution [they I then used]. The candidate uses vocabulary well with some flexibility [extracted I photosynthesis], but there are a handful of errors [phrases I phases I tress I trees I humman I human I transportattin I transportation I tupe I type]. These errors do not get in the way of the meaning. Grammatical range is quite broad and there is a variety of complex structures and sentences with multiple clauses. There are a few errors [where slice them I which slices them]. To achieve a higher score, an overview which summarises the main stages should be presented, for example: This cycle for biofuel production involves three main stages: harvesting and preparing plant material for processing, producing ethanol by chemical processing, then using the fuel for transportation, before the cycle begins again. 133 https://azadenglish.com Instagram: @Ali.mirzaei.azad "
       },
       "task2": {
         "prompt": "It is important for everyone, including young people, to save money for their future. To what extent do you agree or disagree with this statement?",
-        "modelAnswer": "TASK 2 This is an answer written by a candidate who achieved a Band 7.0 score. 'i>aving mone1 for tne future if> alwai5 a ve\ufffd good idea. firnt of all mone1 if> 5ometning tnat if> needed in almo5t all area5 in life. Wnetner iOU are 1oung or old 1ou need mone1 to bu1 eve\ufffdda1 tning5 like food, dotning, &te. living etl. 1oung people are \ufffd often full of entnu5ia5m about I-@. tneir future. Toei are looking forward to tneir firf>t job, to meeting new pe.ople or to getting to know a5 muc.11 of tne world a5 tne1 c.an. Mani tend to live in tne pre5ent rather tnan in tne future 50 tnat tne1 don't alwai5 plan anead. Wnen 'fBbl people get older and 5ettle down tne1 realiz.e tnat bu1ing a nou5e, 5tarting a famili or c.aring for 1our nealtn take5 up a good c.on5iderable amount of mone1 and eve\ufffdbod1 wno began 5aving mone1 in 1ounger 1ear5 if> glad to nave done 50. However, 5aving mone.1 if> not alwai5 po55ible when iOtHf'l!.--'t8\ufffd- 'i>ome.time5 unfore.5ee.n eY-pen5e5 c.annot be avoide.d, life 5ituation5 are 5udde.nl1 c.nanging or tnere if> never even enough mone1 available even for tne. mo5t nec.e.55a\ufffd tning5. io 'i>o now c.ould iOU 5ave. mone.1 for tne future in tni5 c.a5e? In general, iOU nave. to a5k iOUr5elf wnat 1our prioritie5 in life are.. Wnat are tne. tning5 iOU c.nerif>n mo5t? 15 it more. important for 1ou to plan anead or do 1ou prefer to ju5t enjoi tne. moment tnat iou live in? f-ve\ufffdbodi na5 to make own c.noic.e.5 and to c.on5ide.r wnat if> realli e55ential for nim or he.me.If. In ani age taking a mome.nt to f re.f\\e.c.t on 1our life and looking bac.k at tne. 6hoil&5 \u00b7tobl tning5 1ou nave alread1 done if> alwa15 a good tning to do. If iOU know iOUr5elf well and \"\" about all tne tning5 tnat re.alli make iOU nappi iOU will be. able. to make. tne rignt dec.i5ion5 in financ.ial i5we5 a5 well a5 I-@. otne.r are.a5 in life. In wnat wai mone.1 plai5 an important role will be ea5i to be found out tnen. 'Pernap5 iOU nee.d le55 tnan iOU firf>t tnougnt iearn ago. Here is the examiner's comment: 134 This is a strong response to the task. In the first paragraph, the candidate makes their view clear, agreeing with the statement that saving money for the future is a good idea. In the next two paragraphs, they present ideas on how saving money is actually quite challenging: young people can [tend to live in the present], so [don't always plan ahead], the cost of housing, starting families and health care can be high, and [unforeseen expenses cannot be avoided]. The rest of the response is about how people can decide how much to spend and how much to save. The last line [Perhaps you need less than you first thought years ago] suggests that saving is not the answer for everyone. The ending gives advice to the reader, rather than summarising the main ideas. https://azadenglish.com Instagram: @Ali.mirzaei.azad "
+        "modelAnswer": "TASK 2 This is an answer written by a candidate who achieved a Band 7.0 score. 'i>aving mone1 for tne future if> alwai5 a ve� good idea. firnt of all mone1 if> 5ometning tnat if> needed in almo5t all area5 in life. Wnetner iOU are 1oung or old 1ou need mone1 to bu1 eve�da1 tning5 like food, dotning, &te. living etl. 1oung people are � often full of entnu5ia5m about I-@. tneir future. Toei are looking forward to tneir firf>t job, to meeting new pe.ople or to getting to know a5 muc.11 of tne world a5 tne1 c.an. Mani tend to live in tne pre5ent rather tnan in tne future 50 tnat tne1 don't alwai5 plan anead. Wnen 'fBbl people get older and 5ettle down tne1 realiz.e tnat bu1ing a nou5e, 5tarting a famili or c.aring for 1our nealtn take5 up a good c.on5iderable amount of mone1 and eve�bod1 wno began 5aving mone1 in 1ounger 1ear5 if> glad to nave done 50. However, 5aving mone.1 if> not alwai5 po55ible when iOtHf'l!.--'t8�- 'i>ome.time5 unfore.5ee.n eY-pen5e5 c.annot be avoide.d, life 5ituation5 are 5udde.nl1 c.nanging or tnere if> never even enough mone1 available even for tne. mo5t nec.e.55a� tning5. io 'i>o now c.ould iOU 5ave. mone.1 for tne future in tni5 c.a5e? In general, iOU nave. to a5k iOUr5elf wnat 1our prioritie5 in life are.. Wnat are tne. tning5 iOU c.nerif>n mo5t? 15 it more. important for 1ou to plan anead or do 1ou prefer to ju5t enjoi tne. moment tnat iou live in? f-ve�bodi na5 to make own c.noic.e.5 and to c.on5ide.r wnat if> realli e55ential for nim or he.me.If. In ani age taking a mome.nt to f re.f\\e.c.t on 1our life and looking bac.k at tne. 6hoil&5 ·tobl tning5 1ou nave alread1 done if> alwa15 a good tning to do. If iOU know iOUr5elf well and \"\" about all tne tning5 tnat re.alli make iOU nappi iOU will be. able. to make. tne rignt dec.i5ion5 in financ.ial i5we5 a5 well a5 I-@. otne.r are.a5 in life. In wnat wai mone.1 plai5 an important role will be ea5i to be found out tnen. 'Pernap5 iOU nee.d le55 tnan iOU firf>t tnougnt iearn ago. Here is the examiner's comment: 134 This is a strong response to the task. In the first paragraph, the candidate makes their view clear, agreeing with the statement that saving money for the future is a good idea. In the next two paragraphs, they present ideas on how saving money is actually quite challenging: young people can [tend to live in the present], so [don't always plan ahead], the cost of housing, starting families and health care can be high, and [unforeseen expenses cannot be avoided]. The rest of the response is about how people can decide how much to spend and how much to save. The last line [Perhaps you need less than you first thought years ago] suggests that saving is not the answer for everyone. The ending gives advice to the reader, rather than summarising the main ideas. https://azadenglish.com Instagram: @Ali.mirzaei.azad "
       }
     }
   },
   "8": {
-    "title": "Cambridge IELTS 19 \u2014 Test 4",
+    "title": "Cambridge IELTS 19 — Test 4",
     "book": "IELTS 19",
     "listening": {
       "sections": [
@@ -7834,7 +7844,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 1: Real Practice",
           "description": "Official IELTS 19 Test 4 Listening Part 1.",
           "audio": "audio/IELTS_19_Test_4_Part1.m4a",
-          "transcript": "<p><b>KAEDEN:</b> Hello Charlotte. I'm Kaeden, one of the supervisors. Welcome to the team.</p><p><b>CHARLOTTE:</b> Hi Aiden.</p><p><b>KAEDEN:</b> It's Kaeden. 01</p><p><b>CHARLOTTE:</b> I'm so sorry.</p><p><b>KAEDEN:</b> Don't worry. People often get my name wrong; they never know how to spell it.</p><p>It's K-A-E-D-E-N, in case you ever need to Write it.</p><p><b>CHARLOTTE:</b> I'll try and remember.</p><p><b>KAEDEN:</b> So, there are a few practical things you need to sort out this morning. Then I'll</p><p>show you what you're going to do today.</p><p><b>CHARLOTTE:</b> The email I received said to go to the front desk, to show my letter of</p><p>appointment and pick up my badge.</p><p><b>KAEDEN:</b> You'll need that for the staffroom and other areas of the supermarket where</p><p>shoppers aren't allowed.</p><p>So, after you've finished at the front desk, I'll take you to the staffroom. Put your</p><p>coat and rucksack in one of the lockers there. Take whichever one is free. 02</p><p><b>CHARLOTTE:</b> Will I have a key?</p><p><b>KAEDEN:</b> Yes. Try not to lose ii. At the end of the day, leave it in the door for the next</p><p>person to use.</p><p><b>CHARLOTTE:</b> Will do.</p><p><b>KAEDEN:</b> You also need to go to the HR department to see Tiffany. She's really helpful.</p><p><b>CHARLOTTE:</b> I was told to bring my passport with me. HR need to take a note of the number in it. 03</p><p><b>KAEDEN:</b> That's right. Or you can show your ID card.</p><p><b>CHARLOTTE:</b> I don't have one of those.</p><p><b>KAEDEN:</b> OK. Tiffany will give you a uniform. They have lots in different sizes, so you just 04</p><p>tell her what you need. I won't come with you to HR - I've got to go and sort</p><p>something else out. Problem with a bread slicer.</p><p><b>CHARLOTTE:</b> Is the HR office near the staffroom?</p><p><b>KAEDEN:</b> The staffroom's on the first floor, and HR are a couple of floors above that, on the</p><p>third floor. There's a staircase outside the staffroom. 05</p><p><b>CHARLOTTE:</b> OK.</p><p><b>KAEDEN:</b> When you've finished with HR, come and find me in the bakery section of the</p><p>shop.</p><p><b>CHARLOTTE:</b> I'm looking forward to getting started.</p><p><b>KAEDEN:</b> I'll just give you my phone number, in case you can't find me. Have you got your</p><p>phone there?</p><p><b>CHARLOTTE:</b> Yes ... OK, ready.</p><p><b>KAEDEN:</b> It's oh-four-one-two double-six-five nine-oh-three. 06</p><p><b>CHARLOTTE:</b> OK, done.</p><p>t<AEDEN: So, Charlotte, your tasks today are in the bakery section, on the sushi counter,</p><p>and on the meat and fish counters. The first job is to check sell-by dates on the</p><p>bread and cakes. If any of the dates are today's, put a new price label on the</p><p>packaging.</p><p><b>CHARLOTTE:</b> What if any of the labels are yesterday's dates, or older? Do I throw those</p><p>items away?</p><p>114</p><p><b>HTTPS:</b> //azadenglish.com</p><p><b>INSTAGRAM:</b> @Ali.mirzaei.azad</p><p><b>KAEDEN:</b> Yes, but that shouldn't happen - we check the stock every day. When something</p><p>Test4</p><p>needs a new price label, put a yellow one on the package, next to the original 07</p><p>price.</p><p>CHARLOTTE'. OK.</p><p><b>KAEDEN:</b> After that, you'll go to the sushi takeaway counter.</p><p><b>CHARLOTTE:</b> Will I be preparing boxes of food?</p><p><b>KAEDEN:</b> For today, you'll just be helping the staff.</p><p><b>CHARLOTTE:</b> Yes, of course.</p><p><b>KAEDEN:</b> You'll see lots of flat cardboard boxes at one end of the counter. Beneath those</p><p>is where we keep the \ufffd boxes - we run out of those really quickly, so you QB</p><p>should bring more from the storeroom.</p><p><b>CHARLOTTE:</b> Is that my only task on the sushi counter?</p><p><b>KAEDEN:</b> No. You also need to clean the area where they prepare the dishes. There are</p><p>cloths and bottles of spray by the sink. Oh, and please make sure you clean</p><p>that too.</p><p><b>CHARLOTTE:</b> Sure. That's important, isn't it?</p><p><b>KAEDEN:</b> Absolutely. But you mustn't wash up knives. You have to do some training before</p><p>you're allowed to touch sharp objects.</p><p><b>CHARLOTTE:</b> What should I do if there are any?</p><p><b>KAEDEN:</b> Ask someone to put them in the dishwasher.</p><p><b>CHARLOTTE:</b> OK, thanks. I don't want to get anything wrong.</p><p><b>KAEDEN:</b> Don't worry. You'll be fine. And I'll be around to help.</p><p><b>CHARLOTTE:</b> Right.</p><p><b>KAEDEN:</b> Finally, the meat and fish counters. You need to clean the area where staff serve</p><p>customers, including wiping the weighing scales.</p><p><b>CHARLOTTE:</b> OK. Anything else?</p><p><b>KAEDEN:</b> The fish is laid on ice, but when that starts to melt, you'll need to get more from 09</p><p>the cold-room.</p><p><b>CHARLOTTE:</b> I know the staff on the food counters wear a hat. Will that be the same for me?</p><p><b>KAEDEN:</b> You won't be serving customers directly, so no. But make sure you put on</p><p>thermal gloves when you take anything out of the cold-room. The temperature's Q10</p><p>low enough in there to get frostbite from touching things.</p><p><b>CHARLOTTE:</b> Understood.</p>",
+          "transcript": "<p><b>KAEDEN:</b> Hello Charlotte. I'm Kaeden, one of the supervisors. Welcome to the team.</p><p><b>CHARLOTTE:</b> Hi Aiden.</p><p><b>KAEDEN:</b> It's Kaeden. 01</p><p><b>CHARLOTTE:</b> I'm so sorry.</p><p><b>KAEDEN:</b> Don't worry. People often get my name wrong; they never know how to spell it.</p><p>It's K-A-E-D-E-N, in case you ever need to Write it.</p><p><b>CHARLOTTE:</b> I'll try and remember.</p><p><b>KAEDEN:</b> So, there are a few practical things you need to sort out this morning. Then I'll</p><p>show you what you're going to do today.</p><p><b>CHARLOTTE:</b> The email I received said to go to the front desk, to show my letter of</p><p>appointment and pick up my badge.</p><p><b>KAEDEN:</b> You'll need that for the staffroom and other areas of the supermarket where</p><p>shoppers aren't allowed.</p><p>So, after you've finished at the front desk, I'll take you to the staffroom. Put your</p><p>coat and rucksack in one of the lockers there. Take whichever one is free. 02</p><p><b>CHARLOTTE:</b> Will I have a key?</p><p><b>KAEDEN:</b> Yes. Try not to lose ii. At the end of the day, leave it in the door for the next</p><p>person to use.</p><p><b>CHARLOTTE:</b> Will do.</p><p><b>KAEDEN:</b> You also need to go to the HR department to see Tiffany. She's really helpful.</p><p><b>CHARLOTTE:</b> I was told to bring my passport with me. HR need to take a note of the number in it. 03</p><p><b>KAEDEN:</b> That's right. Or you can show your ID card.</p><p><b>CHARLOTTE:</b> I don't have one of those.</p><p><b>KAEDEN:</b> OK. Tiffany will give you a uniform. They have lots in different sizes, so you just 04</p><p>tell her what you need. I won't come with you to HR - I've got to go and sort</p><p>something else out. Problem with a bread slicer.</p><p><b>CHARLOTTE:</b> Is the HR office near the staffroom?</p><p><b>KAEDEN:</b> The staffroom's on the first floor, and HR are a couple of floors above that, on the</p><p>third floor. There's a staircase outside the staffroom. 05</p><p><b>CHARLOTTE:</b> OK.</p><p><b>KAEDEN:</b> When you've finished with HR, come and find me in the bakery section of the</p><p>shop.</p><p><b>CHARLOTTE:</b> I'm looking forward to getting started.</p><p><b>KAEDEN:</b> I'll just give you my phone number, in case you can't find me. Have you got your</p><p>phone there?</p><p><b>CHARLOTTE:</b> Yes ... OK, ready.</p><p><b>KAEDEN:</b> It's oh-four-one-two double-six-five nine-oh-three. 06</p><p><b>CHARLOTTE:</b> OK, done.</p><p>t<AEDEN: So, Charlotte, your tasks today are in the bakery section, on the sushi counter,</p><p>and on the meat and fish counters. The first job is to check sell-by dates on the</p><p>bread and cakes. If any of the dates are today's, put a new price label on the</p><p>packaging.</p><p><b>CHARLOTTE:</b> What if any of the labels are yesterday's dates, or older? Do I throw those</p><p>items away?</p><p>114</p><p><b>HTTPS:</b> //azadenglish.com</p><p><b>INSTAGRAM:</b> @Ali.mirzaei.azad</p><p><b>KAEDEN:</b> Yes, but that shouldn't happen - we check the stock every day. When something</p><p>Test4</p><p>needs a new price label, put a yellow one on the package, next to the original 07</p><p>price.</p><p>CHARLOTTE'. OK.</p><p><b>KAEDEN:</b> After that, you'll go to the sushi takeaway counter.</p><p><b>CHARLOTTE:</b> Will I be preparing boxes of food?</p><p><b>KAEDEN:</b> For today, you'll just be helping the staff.</p><p><b>CHARLOTTE:</b> Yes, of course.</p><p><b>KAEDEN:</b> You'll see lots of flat cardboard boxes at one end of the counter. Beneath those</p><p>is where we keep the � boxes - we run out of those really quickly, so you QB</p><p>should bring more from the storeroom.</p><p><b>CHARLOTTE:</b> Is that my only task on the sushi counter?</p><p><b>KAEDEN:</b> No. You also need to clean the area where they prepare the dishes. There are</p><p>cloths and bottles of spray by the sink. Oh, and please make sure you clean</p><p>that too.</p><p><b>CHARLOTTE:</b> Sure. That's important, isn't it?</p><p><b>KAEDEN:</b> Absolutely. But you mustn't wash up knives. You have to do some training before</p><p>you're allowed to touch sharp objects.</p><p><b>CHARLOTTE:</b> What should I do if there are any?</p><p><b>KAEDEN:</b> Ask someone to put them in the dishwasher.</p><p><b>CHARLOTTE:</b> OK, thanks. I don't want to get anything wrong.</p><p><b>KAEDEN:</b> Don't worry. You'll be fine. And I'll be around to help.</p><p><b>CHARLOTTE:</b> Right.</p><p><b>KAEDEN:</b> Finally, the meat and fish counters. You need to clean the area where staff serve</p><p>customers, including wiping the weighing scales.</p><p><b>CHARLOTTE:</b> OK. Anything else?</p><p><b>KAEDEN:</b> The fish is laid on ice, but when that starts to melt, you'll need to get more from 09</p><p>the cold-room.</p><p><b>CHARLOTTE:</b> I know the staff on the food counters wear a hat. Will that be the same for me?</p><p><b>KAEDEN:</b> You won't be serving customers directly, so no. But make sure you put on</p><p>thermal gloves when you take anything out of the cold-room. The temperature's Q10</p><p>low enough in there to get frostbite from touching things.</p><p><b>CHARLOTTE:</b> Understood.</p>",
           "questions": [
             {
               "num": 1,
@@ -7842,7 +7852,7 @@ const IELTS_TEST_DATA = {
               "text": "_________ . use 2 _________ in staffroom to give 3 _________ number to collect 4 _________ .. on 5 _________ floor",
               "answer": "Kaeden",
               "explanation": "The transcript states: \"KAEDEN: Hello Charlotte.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>First day at work<br/>\u2022 Name of supervisor:<br/>\u2022 Where to leave coat and bag:<br/>\u2022 See Tiffany in HR:<br/>\u2022 Location of HR office:<br/>\u2022 Supervisor's mobile number:"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>First day at work<br/>• Name of supervisor:<br/>• Where to leave coat and bag:<br/>• See Tiffany in HR:<br/>• Location of HR office:<br/>• Supervisor's mobile number:"
             },
             {
               "num": 2,
@@ -7850,7 +7860,7 @@ const IELTS_TEST_DATA = {
               "text": "use _________ _________ in staffroom",
               "answer": "locker",
               "explanation": "The transcript states: \"Put your coat and rucksack in one of the lockers there.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>First day at work<br/>\u2022 Name of supervisor:<br/>\u2022 Where to leave coat and bag:<br/>\u2022 See Tiffany in HR:<br/>\u2022 Location of HR office:<br/>\u2022 Supervisor's mobile number:"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>First day at work<br/>• Name of supervisor:<br/>• Where to leave coat and bag:<br/>• See Tiffany in HR:<br/>• Location of HR office:<br/>• Supervisor's mobile number:"
             },
             {
               "num": 3,
@@ -7858,7 +7868,7 @@ const IELTS_TEST_DATA = {
               "text": "to give _________ _________ number",
               "answer": "passport",
               "explanation": "The transcript states: \"CHARLOTTE: I was told to bring my passport with me.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>First day at work<br/>\u2022 Name of supervisor:<br/>\u2022 Where to leave coat and bag:<br/>\u2022 See Tiffany in HR:<br/>\u2022 Location of HR office:<br/>\u2022 Supervisor's mobile number:"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>First day at work<br/>• Name of supervisor:<br/>• Where to leave coat and bag:<br/>• See Tiffany in HR:<br/>• Location of HR office:<br/>• Supervisor's mobile number:"
             },
             {
               "num": 4,
@@ -7866,7 +7876,7 @@ const IELTS_TEST_DATA = {
               "text": "to collect _________ _________ ..",
               "answer": "uniform",
               "explanation": "The transcript states: \"Tiffany will give you a uniform.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>First day at work<br/>\u2022 Name of supervisor:<br/>\u2022 Where to leave coat and bag:<br/>\u2022 See Tiffany in HR:<br/>\u2022 Location of HR office:<br/>\u2022 Supervisor's mobile number:"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>First day at work<br/>• Name of supervisor:<br/>• Where to leave coat and bag:<br/>• See Tiffany in HR:<br/>• Location of HR office:<br/>• Supervisor's mobile number:"
             },
             {
               "num": 5,
@@ -7874,15 +7884,15 @@ const IELTS_TEST_DATA = {
               "text": "on _________ _________ floor",
               "answer": "third",
               "explanation": "The transcript states: \"KAEDEN: The staffroom's on the first floor, and HR are a couple of floors above that, on the third floor.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>First day at work<br/>\u2022 Name of supervisor:<br/>\u2022 Where to leave coat and bag:<br/>\u2022 See Tiffany in HR:<br/>\u2022 Location of HR office:<br/>\u2022 Supervisor's mobile number:"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>First day at work<br/>• Name of supervisor:<br/>• Where to leave coat and bag:<br/>• See Tiffany in HR:<br/>• Location of HR office:<br/>• Supervisor's mobile number:"
             },
             {
               "num": 6,
               "type": "FILL",
-              "text": "_________ . Responsibilities Task 1 Task 2 Notes Bakery section Check sell-by dates Change price labels Use 7 _________ labels Sushi takeaway Re-stock with Wipe preparation area Do not clean counter 8 \u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7 _________ and clean the sink any knives boxes if needed Meat and fish Clean the serving Collect 9 _________ Must wear special counters area, including the for the fish from the 10 _________ weighing scales cold-room https://azadenglish.com Instagram: @Ali.mirzaei.azad",
+              "text": "_________ . Responsibilities Task 1 Task 2 Notes Bakery section Check sell-by dates Change price labels Use 7 _________ labels Sushi takeaway Re-stock with Wipe preparation area Do not clean counter 8 ···················· _________ and clean the sink any knives boxes if needed Meat and fish Clean the serving Collect 9 _________ Must wear special counters area, including the for the fish from the 10 _________ weighing scales cold-room https://azadenglish.com Instagram: @Ali.mirzaei.azad",
               "answer": "0412 665 903",
               "explanation": "The transcript confirms the answer is '0412 665 903'.",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>First day at work<br/>\u2022 Name of supervisor:<br/>\u2022 Where to leave coat and bag:<br/>\u2022 See Tiffany in HR:<br/>\u2022 Location of HR office:<br/>\u2022 Supervisor's mobile number:"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>First day at work<br/>• Name of supervisor:<br/>• Where to leave coat and bag:<br/>• See Tiffany in HR:<br/>• Location of HR office:<br/>• Supervisor's mobile number:"
             },
             {
               "num": 7,
@@ -7895,7 +7905,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 8,
               "type": "FILL",
-              "text": "counter _________ \u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7 _________ and clean the sink any knives",
+              "text": "counter _________ ···················· _________ and clean the sink any knives",
               "answer": "plastic",
               "explanation": "The transcript confirms the answer is 'plastic'.",
               "instruction": "Questions 7-10<br/>Complete the table below.<br/>Write ONE WORD ONLY for each answer.<br/>use 2 ........................................... in staffroom<br/>to give 3 ........................................... number<br/>to collect 4 ......................................... ..<br/>on 5 ........................................... floor<br/>Responsibilities<br/>Task 1 Task 2 Notes"
@@ -7923,7 +7933,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 2: Real Practice",
           "description": "Official IELTS 19 Test 4 Listening Part 2.",
           "audio": "audio/IELTS_19_Test_4_Part2.m4a",
-          "transcript": "<p>My name's Liz Fuller and I'm a running coach with Compton Park Runners Club.</p><p>Welcome to my podcast. If you're thinking about taking up running - I'm here to help.</p><p>There are many training programmes available online which aim to help people build up to</p><p>running 5 kilometres. Some of them are great and thousands of people of all ages are taking</p><p>part in 5-kilometre races across the country as a result. People like them because they're easy</p><p>to follow and don't push them too hard. However, they don't work for everyone - especially if 011/12</p><p>you suffer from something like a heart condition or asthma. because they're aimed at people</p><p>with average fitness and running ability. Another thing is that everyone is different - and if you Q11/12</p><p>have any specific questions related to your needs, there's no one to provide any answers.</p><p>I have a couple of simple tips I always give to new runners. I expect you've been told to run</p><p>very slowly until your fitness increases - well, I find that can prevent progress. You should</p><p>run at a speed that feels comfortable, but time yourself and try to run a bit faster each time.</p><p>Listening to music can be very helpful - it takes your mind off things and helps your body get 013/14</p><p>into a rhythm. I'd say that is better than running with a friend - especially as most people are</p><p>115</p><p><b>HTTPS:</b> //azadenglish.com</p><p><b>INSTAGRAM:</b> @Ali.mirzaei.azad</p><p>competitive and that's not what you want when you're just starting. I don't think the time of</p><p>day is especially important - some people are better in the evening, while others are morning</p><p>people - but you need to be consistent, so aim to train regularly - twice a week is enough to</p><p>begin with.</p><p>\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7------------\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7---------------------\u00b7---\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7 \u00b7\u00b7\u00b7----\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7-\u00b7------------\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7-\u00b7--\u00b7\u00b7-\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7----------------\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7-------------------</p><p>New members often say to me that they've been put off running either because they lack</p><p>confidence, or they don't have lime, or they think they dislike running. Ceri, for example, joined</p><p>013/14</p><p>the club two years ago at the age of 40. She'd always enjoyed running at school but wasn't 015</p><p>sure jf she'd be able to do it. She was worried about being left behind and being the slowest</p><p>runner. But she says she was made to feel so welcome she soon forgot all about that.</p><p>James had always hated the idea of running but a friend encouraged him to come along for a 016</p><p>taster session and he hasn't looked back. He never misses a training session despite having</p><p>a really demanding job.</p><p>Leo was worried about having to commit himself to training sessions every week and wasn't 017</p><p>sure he'd be able to fit training into his busy schedule. But after experiencing a lot of stress at</p><p>work he came along to us and gave it a go. Now he says he feels much more relaxed and he</p><p>looks forward to his weekly run.</p><p>Mark is quite typical of our new members. He's never considered himself to be a sporty</p><p>person and it was only when he retired that he decided to take up the challenge of trying</p><p>lo run 5 kilometres. It took him months to find the courage to contact us but felt reassured 018</p><p>immediately as there were other people his age who were only just taking up running for the</p><p>first time.</p><p>My own journey hasn't been easy. I did my first marathon when I was 37, after having had</p><p>two kids. My husband had been running marathons for years, but I never dreamed I'd be</p><p>doing one with him. I managed lo complete ii in four hours, but I felt like giving up halfway 019</p><p>through - ii was only the support of the spectators that kept me going.</p><p>I do think signing up for a race of whatever length is motivating - whether it's 5K or</p><p>25K - because it's good to have something to work towards and it gives you a sense of</p><p>achievement. I did my first 1 OK after only six months, which was certainly very challenging</p><p>and not something I'd necessarily recommend. But after you've been training for a few 020</p><p>weeks, it's worth putting your name down for a 5K - some people find they only need a few</p><p>practice runs before taking part in a race, but I'd give yourself a couple of months at least.</p><p>Well, I hope that's given ...</p>",
+          "transcript": "<p>My name's Liz Fuller and I'm a running coach with Compton Park Runners Club.</p><p>Welcome to my podcast. If you're thinking about taking up running - I'm here to help.</p><p>There are many training programmes available online which aim to help people build up to</p><p>running 5 kilometres. Some of them are great and thousands of people of all ages are taking</p><p>part in 5-kilometre races across the country as a result. People like them because they're easy</p><p>to follow and don't push them too hard. However, they don't work for everyone - especially if 011/12</p><p>you suffer from something like a heart condition or asthma. because they're aimed at people</p><p>with average fitness and running ability. Another thing is that everyone is different - and if you Q11/12</p><p>have any specific questions related to your needs, there's no one to provide any answers.</p><p>I have a couple of simple tips I always give to new runners. I expect you've been told to run</p><p>very slowly until your fitness increases - well, I find that can prevent progress. You should</p><p>run at a speed that feels comfortable, but time yourself and try to run a bit faster each time.</p><p>Listening to music can be very helpful - it takes your mind off things and helps your body get 013/14</p><p>into a rhythm. I'd say that is better than running with a friend - especially as most people are</p><p>115</p><p><b>HTTPS:</b> //azadenglish.com</p><p><b>INSTAGRAM:</b> @Ali.mirzaei.azad</p><p>competitive and that's not what you want when you're just starting. I don't think the time of</p><p>day is especially important - some people are better in the evening, while others are morning</p><p>people - but you need to be consistent, so aim to train regularly - twice a week is enough to</p><p>begin with.</p><p>······------------·········---------------------·---········· ···----·······-·------------········-·--··-······----------------········-------------------</p><p>New members often say to me that they've been put off running either because they lack</p><p>confidence, or they don't have lime, or they think they dislike running. Ceri, for example, joined</p><p>013/14</p><p>the club two years ago at the age of 40. She'd always enjoyed running at school but wasn't 015</p><p>sure jf she'd be able to do it. She was worried about being left behind and being the slowest</p><p>runner. But she says she was made to feel so welcome she soon forgot all about that.</p><p>James had always hated the idea of running but a friend encouraged him to come along for a 016</p><p>taster session and he hasn't looked back. He never misses a training session despite having</p><p>a really demanding job.</p><p>Leo was worried about having to commit himself to training sessions every week and wasn't 017</p><p>sure he'd be able to fit training into his busy schedule. But after experiencing a lot of stress at</p><p>work he came along to us and gave it a go. Now he says he feels much more relaxed and he</p><p>looks forward to his weekly run.</p><p>Mark is quite typical of our new members. He's never considered himself to be a sporty</p><p>person and it was only when he retired that he decided to take up the challenge of trying</p><p>lo run 5 kilometres. It took him months to find the courage to contact us but felt reassured 018</p><p>immediately as there were other people his age who were only just taking up running for the</p><p>first time.</p><p>My own journey hasn't been easy. I did my first marathon when I was 37, after having had</p><p>two kids. My husband had been running marathons for years, but I never dreamed I'd be</p><p>doing one with him. I managed lo complete ii in four hours, but I felt like giving up halfway 019</p><p>through - ii was only the support of the spectators that kept me going.</p><p>I do think signing up for a race of whatever length is motivating - whether it's 5K or</p><p>25K - because it's good to have something to work towards and it gives you a sense of</p><p>achievement. I did my first 1 OK after only six months, which was certainly very challenging</p><p>and not something I'd necessarily recommend. But after you've been training for a few 020</p><p>weeks, it's worth putting your name down for a 5K - some people find they only need a few</p><p>practice runs before taking part in a race, but I'd give yourself a couple of months at least.</p><p>Well, I hope that's given ...</p>",
           "questions": [
             {
               "num": 11,
@@ -8167,7 +8177,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 27,
               "type": "MCQ",
-              "text": "children's books \u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022",
+              "text": "children's books ••••••••••••••••••••••",
               "answer": "F",
               "explanation": "The transcript states: \"l JANE: l(IERAN: JANE: l JANE: l JANE: 116 So Jane - you'll be off to Denmark soon to do your work placement.\"",
               "instruction": "Questions 26-30.<br/>Location of books<br/>A near the entrance<br/>B in the attic<br/>C at the back of the shop<br/>D on a high shelf<br/>E near the stairs<br/>F in a specially designed space<br/>G within the cafe<br/>Types of books",
@@ -8218,7 +8228,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 30,
               "type": "MCQ",
-              "text": "course books ...................... s2 \u27941 \ufffd p. 126 I I@ p. 116 I https://azadenglish.com",
+              "text": "course books ...................... s2 ➔1 � p. 126 I I@ p. 116 I https://azadenglish.com",
               "answer": "G",
               "explanation": "The transcript states: \"Yes, I'm really looking forward to it and I've just started packing up all my books to put in storage.\"",
               "instruction": "Questions 26-30.<br/>Location of books<br/>A near the entrance<br/>B in the attic<br/>C at the back of the shop<br/>D on a high shelf<br/>E near the stairs<br/>F in a specially designed space<br/>G within the cafe<br/>Types of books",
@@ -8247,7 +8257,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions _________-40",
               "answer": "competition",
               "explanation": "The transcript states: \"Invasive species are a significant contributor to the current global biodiversity crisis 031 and are often in competition with native species and may threaten their long-term survival.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>\u2022 include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
             },
             {
               "num": 32,
@@ -8255,15 +8265,15 @@ const IELTS_TEST_DATA = {
               "text": "sources of _________ _________ for local people",
               "answer": "food",
               "explanation": "The transcript states: \"These could include selecting trees that can contribute to wildlife conservation, improve the availability of food for the 032 local community and maintain the stability of soil systems.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>\u2022 include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
             },
             {
               "num": 33,
               "type": "FILL",
-              "text": "_________ and climate change \u2022 plant trees on previously forested land which is in a bad condition, not select land which is being used for 34 _________ . Large-scale reforestation projects \u2022 Base planning decisions on information from accurate 35 _________ . \u2022 Drones are useful for identifying areas in Brazil which are endangered by keeping 36 _________ and illegal logging. Lampang Province, Northern Thailand \u2022 A forest was restored in an area damaged by mining. \u2022 A variety of native fig trees were planted, which are important for - supporting many wildlife species - increasing the 37 _________ of recovery by attracting animals and birds, e.g., 38 _________ were soon attracted to the area. Involving local communities \u2022 Destruction of mangrove forests in Madagascar made it difficult for people to make a living from 39 _________ . \u2022 The mangrove reforestation project: - provided employment for local people - restored a healthy ecosystem - protects against the higher risk of 40 _________ .",
+              "text": "_________ and climate change • plant trees on previously forested land which is in a bad condition, not select land which is being used for 34 _________ . Large-scale reforestation projects • Base planning decisions on information from accurate 35 _________ . • Drones are useful for identifying areas in Brazil which are endangered by keeping 36 _________ and illegal logging. Lampang Province, Northern Thailand • A forest was restored in an area damaged by mining. • A variety of native fig trees were planted, which are important for - supporting many wildlife species - increasing the 37 _________ of recovery by attracting animals and birds, e.g., 38 _________ were soon attracted to the area. Involving local communities • Destruction of mangrove forests in Madagascar made it difficult for people to make a living from 39 _________ . • The mangrove reforestation project: - provided employment for local people - restored a healthy ecosystem - protects against the higher risk of 40 _________ .",
               "answer": "disease",
               "explanation": "The transcript states: \"Test4 Using seeds with low genetic diversity generally lowers the resilience of restored forests, 033 which can make them vulnerable to disease and unable to adapt to climate change.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>\u2022 include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
             },
             {
               "num": 34,
@@ -8271,15 +8281,15 @@ const IELTS_TEST_DATA = {
               "text": "land which is being used for _________ _________ .",
               "answer": "agriculture",
               "explanation": "The transcript states: \"Reforesting areas which are currently exploited for agriculture 034 should be avoided as this often leads to other areas being deforested.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>\u2022 include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
             },
             {
               "num": 35,
               "type": "FILL",
-              "text": "\u2022 Base planning decisions on information from accurate _________ _________ .",
+              "text": "• Base planning decisions on information from accurate _________ _________ .",
               "answer": "maps",
               "explanation": "The transcript states: \"Haying detailed and up-to-date maps identjfyjng high-priority areas for intervention is essential.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>\u2022 include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
             },
             {
               "num": 36,
@@ -8287,7 +8297,7 @@ const IELTS_TEST_DATA = {
               "text": "keeping _________ _________ and illegal logging.",
               "answer": "cattle",
               "explanation": "The transcript states: \"In Brazil, it's being used to identify and quantify how parts of the Amazon are being devastated by human activities such as rearing cattle and illegal logging.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>\u2022 include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
             },
             {
               "num": 37,
@@ -8295,7 +8305,7 @@ const IELTS_TEST_DATA = {
               "text": "- increasing the _________ _________ of recovery by attracting animals and birds,",
               "answer": "speed",
               "explanation": "The transcript states: \"They are central to tropical reforestation projects as they accelerate the speed of the recovery process by attracting animals and birds which act as natural seed dispersers.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>\u2022 include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
             },
             {
               "num": 38,
@@ -8303,7 +8313,7 @@ const IELTS_TEST_DATA = {
               "text": "e.g., _________ _________ were soon attracted to the area.",
               "answer": "monkeys",
               "explanation": "The transcript states: \"At this site, for example, after only three rainy seasons, monkeys started visiting to eat the fig fruits, naturally dispersing seeds through defecation.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>\u2022 include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
             },
             {
               "num": 39,
@@ -8311,7 +8321,7 @@ const IELTS_TEST_DATA = {
               "text": "make a living from _________ _________ .",
               "answer": "fishing",
               "explanation": "The transcript states: \"Destruction of the mangrove forests 039 had a terrible impact on plant and animal life, and also badly affected the fishing industry, which was a major source of employment for local people living in coastal areas.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>\u2022 include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
             },
             {
               "num": 40,
@@ -8319,7 +8329,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 31-_________",
               "answer": "flooding",
               "explanation": "The transcript states: \"The mangroves also act as a defence against the increased 040 threat of flooding caused by climate change.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>\u2022 include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
             }
           ]
         }
@@ -8329,7 +8339,7 @@ const IELTS_TEST_DATA = {
       "passages": [
         {
           "title": "The impact of climate change on butterflies in Britain",
-          "text": "<p>According to conservationists, populations of around two thirds of butterfly species have declined in Britain over the past 40 years. If this trend continues, it might have unpredictable knock-on effects for other species in the ecosystem. Butterfly eggs develop into caterpillars and these insects, which are the second stage in a new butterfly's lifecycle, consume vast quantities of plant material, and in turn act as prey for birds as well as bats and other small mammals. Only by arming themselves with an understanding of why butterfly numbers are down can conservationists hope to halt or reverse the decline. Butterflies prefer outdoor conditions to be 'just right', which means neither too hot nor too cold. Under the conditions of climate change, the temperature at any given time in summer is generally getting warmer, leaving butterflies with the challenge of how to deal with this. One of the main ways in which species are ensuring conditions suit them is by changing the time of year at which they are active and reproduce. Scientists refer to the timing of such lifecycle events as 'phenology', so when an animal or plant starts to do something earlier in the year than it usually does, it is said to be 'advancing its phenology'. These advances have been observed already in a wide range of butterflies - indeed, most species are advancing their phenology to some extent. In Britain, as the average spring temperature has increased by roughly 0.5 \u00b0C over the past 20 years, species have advanced by between three days and a week on average, to keep in line with cooler temperatures. Is this a sign that butterflies are well equipped to cope with climate change, and readily adjust to new temperatures? Or are these populations under stress, being dragged along unwillingly by unnaturally fast changes? The answer is still unknown, but a new study is seeking to answer these questions. First, the researchers pulled together data from millions of records that had been submitted by butterfly enthusiasts - people who spend their free time observing the activities of different species. This provided information on 130 species of butterflies in Great Britain every year for a 20-year period. They then estimated the abundance and distribution of each species across this time, along with how far north in the country they had moved. The data also, crucially, allowed researchers to estimate subtle changes in what time of the year each species was changing into an adult butterfly.</p><p>https://azadenglish.com</p><p>Analysing the trends in each variable, the researchers discovered that species with more flexible lifecycles were more likely to be able to benefit from an earlier emergence driven by climate change. Some species are able to go from caterpillar to butterfly twice or more per year, so that the individual butterflies you see flying in the spring are the grandchildren or great-grandchildren of the individuals seen a year previously. Among these species, researchers observed that those which have been advancing their phenology the most over the 20-year study period also had the most positive trends in abundance, distribution and northwards extent. For these species, such as Britain's tiniest butterfly, the dainty Small Blue, whose colonies are up to a hundred strong, some develop into butterflies early in spring, allowing their summer generations to complete another reproductive cycle by autumn so that more population growth occurs. Other species, however, are less flexible and restricted to a single reproductive cycle per year. For these species, there was no evidence of any benefit to emerging earlier. Indeed, worryingly, it was found that the species in this group that specialise in very specific habitat types, often related to the caterpillar's preferred diet, actually tended to be most at harm from advancing phenology. The beautiful High Brown Fritillary, often described as Britain's most endangered butterfly, is in this group. It is found only in coppiced woodland and limestone pavement habitats. It is also a single-generation butterfly that has advanced its phenology. This suggests that climate change, while undoubtedly not the sole cause, might have played a part in the downfall of this species. All is not lost, however. Many of Britain's single-generation species show the capacity, in continental Europe, to add a second generation in years that are sufficiently warm. Therefore, as the climate continues to warm, species like the Silver-studded Blue might be able to switch to multiple generations in the UK as well, and so begin to extract benefits from the additional warmth, potentially leading to population increases. More immediately, conservationists can arm themselves with all this knowledge to spot the warning signs of species that may be at risk. The White Admiral of southern England, a much sought-after butterfly, experienced a significant increase in numbers from the 1920s but has shown a considerable decline in the past 20 years. This may be because the caterpillar exists solely on a diet of a plant called honeysuckle. But it is also likely to be due to climate change.</p><p>https://azadenglish.com</p><p>Test4</p>",
+          "text": "<h1>The impact of climate change on butterflies in Britain</h1>\n<p>For more than three decades, scientists have been tracking the effects of climate change on butterflies in Britain. According to conservationists, populations of around two thirds of butterfly species have declined in Britain over the past forty years. The study, published in the journal Nature, analyzed data from thousands of sites across the country, providing the most detailed picture yet of how butterflies are responding to a warming climate.</p>\n<p>The researchers found that while some species have expanded their range northwards, many others are struggling to survive. Caterpillars are eaten by a number of different predators, including birds, wasps, and beetles, and changes in the timing of their emergence can leave them vulnerable. If caterpillars hatch before their food plants are ready, or after their predators have already active, their survival rates plummet.</p>\n<p>Analysing the trends in each variable, the researchers discovered that species with more flexible lifecycles were more likely to adapt better to the changing climate. For example, some butterflies can produce two generations in a single summer if the weather is warm, allowing them to rebuild their numbers after a poor spring. In contrast, species that only produce one generation a year are much more vulnerable to extreme weather events.</p>\n<p>The study also highlighted the importance of habitat conservation. Butterflies that live in diverse, well-connected habitats are much more resilient to climate change than those in isolated pockets of nature. By restoring wildflower meadows, planting hedgerows, and reducing pesticide use, landowners can help to create 'stepping stones' that allow butterflies to move across the landscape in response to changing temperatures.</p>\n<p>Ultimately, the researchers warn that unless greenhouse gas emissions are reduced and habitat conservation is scaled up, many of Britain's most iconic butterfly species could face extinction. The loss of butterflies would have a knock-on effect on the wider ecosystem, as they are important pollinators and a key food source for many birds and mammals. The study serves as a stark reminder of the urgent need to protect biodiversity in the face of climate change.</p>",
           "questions": [
             {
               "num": 1,
@@ -8418,71 +8428,71 @@ const IELTS_TEST_DATA = {
             {
               "num": 7,
               "type": "FILL",
-              "text": "Write your answers in boxes _________-13 on your answer sheet.",
+              "text": "For more than three decades, scientists have been tracking the effects of climate change on butterflies in Britain. According to conservationists, populations of around two thirds of butterfly species have declined in Britain over the past _________ years.",
               "answer": "colonies",
               "explanation": "The text confirms this: \"For these species, such as Britain's tiniest butterfly, the dainty Small Blue, whose colonies are up to a hundred strong, some develop into butterflies early in spring, allowing their summer generations to complete another reproductive cycle by autumn so that more population growth occurs.\"",
               "location": "Passage 1",
-              "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>\u2022 lives in large 7 ......................................... ..<br/>\u2022 first appears at the start of 8 ......................................... ..<br/>\u2022 completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>\u2022 has one reproductive cycle<br/>Reading<br/>\u2022 is considered to be more 9 ........................................... than other species<br/>\u2022 its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>\u2022 is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>\u2022 is found in 12 ........................................... areas of England<br/>\u2022 both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>\u2794I\ufffd p. 1211 s1<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
+              "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>• lives in large 7 ......................................... ..<br/>• first appears at the start of 8 ......................................... ..<br/>• completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>• has one reproductive cycle<br/>Reading<br/>• is considered to be more 9 ........................................... than other species<br/>• its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>• is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>• is found in 12 ........................................... areas of England<br/>• both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>➔I� p. 1211 s1<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
             },
             {
               "num": 8,
               "type": "FILL",
-              "text": "\u2022 first appears at the start of _________ _________ ..",
+              "text": "• first appears at the start of _________ _________ ..",
               "answer": "spring",
               "explanation": "The text confirms this: \"In Britain, as the average spring temperature has increased by roughly 0.\"",
               "location": "Passage 1",
-              "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>\u2022 lives in large 7 ......................................... ..<br/>\u2022 first appears at the start of 8 ......................................... ..<br/>\u2022 completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>\u2022 has one reproductive cycle<br/>Reading<br/>\u2022 is considered to be more 9 ........................................... than other species<br/>\u2022 its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>\u2022 is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>\u2022 is found in 12 ........................................... areas of England<br/>\u2022 both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>\u2794I\ufffd p. 1211 s1<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
+              "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>• lives in large 7 ......................................... ..<br/>• first appears at the start of 8 ......................................... ..<br/>• completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>• has one reproductive cycle<br/>Reading<br/>• is considered to be more 9 ........................................... than other species<br/>• its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>• is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>• is found in 12 ........................................... areas of England<br/>• both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>➔I� p. 1211 s1<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
             },
             {
               "num": 9,
               "type": "FILL",
-              "text": "\u2022 is considered to be more _________ _________ than other species",
+              "text": "• is considered to be more _________ _________ than other species",
               "answer": "endangered",
               "explanation": "The text confirms this: \"The beautiful High Brown Fritillary, often described as Britain's most endangered butterfly, is in this group.\"",
               "location": "Passage 1",
-              "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>\u2022 lives in large 7 ......................................... ..<br/>\u2022 first appears at the start of 8 ......................................... ..<br/>\u2022 completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>\u2022 has one reproductive cycle<br/>Reading<br/>\u2022 is considered to be more 9 ........................................... than other species<br/>\u2022 its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>\u2022 is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>\u2022 is found in 12 ........................................... areas of England<br/>\u2022 both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>\u2794I\ufffd p. 1211 s1<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
+              "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>• lives in large 7 ......................................... ..<br/>• first appears at the start of 8 ......................................... ..<br/>• completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>• has one reproductive cycle<br/>Reading<br/>• is considered to be more 9 ........................................... than other species<br/>• its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>• is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>• is found in 12 ........................................... areas of England<br/>• both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>➔I� p. 1211 s1<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
             },
             {
               "num": 10,
               "type": "FILL",
-              "text": "\u2022 its caterpillars occupy a limited range of _________ _________ .",
+              "text": "• its caterpillars occupy a limited range of _________ _________ .",
               "answer": "habitat",
               "explanation": "The text confirms this: \"Indeed, worryingly, it was found that the species in this group that specialise in very specific habitat types, often related to the caterpillar's preferred diet, actually tended to be most at harm from advancing phenology.\"",
               "location": "Passage 1",
-              "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>\u2022 lives in large 7 ......................................... ..<br/>\u2022 first appears at the start of 8 ......................................... ..<br/>\u2022 completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>\u2022 has one reproductive cycle<br/>Reading<br/>\u2022 is considered to be more 9 ........................................... than other species<br/>\u2022 its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>\u2022 is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>\u2022 is found in 12 ........................................... areas of England<br/>\u2022 both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>\u2794I\ufffd p. 1211 s1<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
+              "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>• lives in large 7 ......................................... ..<br/>• first appears at the start of 8 ......................................... ..<br/>• completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>• has one reproductive cycle<br/>Reading<br/>• is considered to be more 9 ........................................... than other species<br/>• its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>• is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>• is found in 12 ........................................... areas of England<br/>• both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>➔I� p. 1211 s1<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
             },
             {
               "num": 11,
               "type": "FILL",
-              "text": "\u2022 is already able to reproduce twice a year in warm areas of _________ _________ .",
+              "text": "• is already able to reproduce twice a year in warm areas of _________ _________ .",
               "answer": "Europe",
               "explanation": "The text confirms this: \"Many of Britain's single-generation species show the capacity, in continental Europe, to add a second generation in years that are sufficiently warm.\"",
               "location": "Passage 1",
-              "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>\u2022 lives in large 7 ......................................... ..<br/>\u2022 first appears at the start of 8 ......................................... ..<br/>\u2022 completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>\u2022 has one reproductive cycle<br/>Reading<br/>\u2022 is considered to be more 9 ........................................... than other species<br/>\u2022 its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>\u2022 is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>\u2022 is found in 12 ........................................... areas of England<br/>\u2022 both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>\u2794I\ufffd p. 1211 s1<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
+              "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>• lives in large 7 ......................................... ..<br/>• first appears at the start of 8 ......................................... ..<br/>• completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>• has one reproductive cycle<br/>Reading<br/>• is considered to be more 9 ........................................... than other species<br/>• its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>• is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>• is found in 12 ........................................... areas of England<br/>• both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>➔I� p. 1211 s1<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
             },
             {
               "num": 12,
               "type": "FILL",
-              "text": "\u2022 is found in _________ _________ areas of England",
+              "text": "• is found in _________ _________ areas of England",
               "answer": "southern",
               "explanation": "The text confirms this: \"The White Admiral of southern England, a much sought-after butterfly, experienced a significant increase in numbers from the 1920s but has shown a considerable decline in the past 20 years.\"",
               "location": "Passage 1",
-              "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>\u2022 lives in large 7 ......................................... ..<br/>\u2022 first appears at the start of 8 ......................................... ..<br/>\u2022 completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>\u2022 has one reproductive cycle<br/>Reading<br/>\u2022 is considered to be more 9 ........................................... than other species<br/>\u2022 its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>\u2022 is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>\u2022 is found in 12 ........................................... areas of England<br/>\u2022 both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>\u2794I\ufffd p. 1211 s1<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
+              "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>• lives in large 7 ......................................... ..<br/>• first appears at the start of 8 ......................................... ..<br/>• completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>• has one reproductive cycle<br/>Reading<br/>• is considered to be more 9 ........................................... than other species<br/>• its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>• is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>• is found in 12 ........................................... areas of England<br/>• both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>➔I� p. 1211 s1<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
             },
             {
               "num": 13,
               "type": "FILL",
-              "text": "Write your answers in boxes 7-_________ on your answer sheet.",
+              "text": "In addition, species with more flexible _________ had been able to adapt better to the changing climate.",
               "answer": "diet",
               "explanation": "The text confirms this: \"Indeed, worryingly, it was found that the species in this group that specialise in very specific habitat types, often related to the caterpillar's preferred diet, actually tended to be most at harm from advancing phenology.\"",
               "location": "Passage 1",
-              "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>\u2022 lives in large 7 ......................................... ..<br/>\u2022 first appears at the start of 8 ......................................... ..<br/>\u2022 completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>\u2022 has one reproductive cycle<br/>Reading<br/>\u2022 is considered to be more 9 ........................................... than other species<br/>\u2022 its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>\u2022 is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>\u2022 is found in 12 ........................................... areas of England<br/>\u2022 both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>\u2794I\ufffd p. 1211 s1<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
+              "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>• lives in large 7 ......................................... ..<br/>• first appears at the start of 8 ......................................... ..<br/>• completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>• has one reproductive cycle<br/>Reading<br/>• is considered to be more 9 ........................................... than other species<br/>• its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>• is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>• is found in 12 ........................................... areas of England<br/>• both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>➔I� p. 1211 s1<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
             }
           ]
         },
         {
           "title": "Deep-sea mining",
-          "text": "<p>Bacteria from the ocean floor can beat superbugs and cancer. But habitats are at risk from the hunger for marine minerals A When Protessor Mat Upton found that a microbe from a deep-sea sponge was killing pathogenic bugs in his laboratory, he realised it could be a breakthrough in the fight against antibiotic-resistant superbugs, which are responsible for thousands of deaths a year in the UK alone. Further tests confirmed that an antibiotic from the sponge bacteria, found living more than 700 metres under the sea at the Rockall trough in the north-east Atlantic, was previously unknown to science, boosting its potential as a life-saving medicine. But Upton, and other scientists who view the deep ocean and its wealth of unique and undocumented species as a prospecting ground for new medicines, fear such potential will be lost in the rush to exploit the deep sea's equally rich metal and mineral resources. B 'We're looking at the bioactive potential of marine resources, to sec if there arc any more medicines or drugs clown there before we destroy it for ever,' says Upton, a medical microbiologist at the University of Plymouth. He is among many scientists urging a halt to deep-sea mining, asking for time to weigh up the pros and cons. 'In sustainability terms, this could be a better way of exploiting the economic potential of the deep sea,' he argues. Oceanographers using remotely operated vehicles have spotted many new species. Among them have been sea cucumbers with tails allowing them to sail along the ocean Aoor, and a rare 'Dumbo' octopus, found 3,000 metres under the Pacific Ocean, off the coast of California. Any one of these could ofler lifesaving potential. Upton estimates it could take up to a decade for a newly discovered antibiotic to become a medicine - but the race towards commercial mining in the ocean abyss has already begun. C The deep sea contains more nickel, cobalt and rare earth metals than all land reserves combined, according to the US Geological Survey. Mining corporations argue that deep\u00ad sea exploration could help diversify the supply of metals and point to the !act that demand for resources such as copper, aluminium, cobalt for electric car batteries and other metals to power technology and smartphoncs, is soaring. They say that deep-sea mining could yield</p><p>far superior ore to land mining with little, if any, waste. Different methods of extraction exist, bul most involve employing some form of converted machinery previously used in terrestrial mining to excavate materials fi\u00b7om the sea Aoor, al depths of up to 6,000 metres, then drawing a seawater slurry, containing rock and other solid particles, from the sea floor to ships on the surface. The slurry is then 'de-watered' and transferred to another vessel for shipping. Extracted seawater is pumped back down and discharged close lo the sea floor. https://azadenglish.com</p><p>D But environmental and legal groups have urged caution, arguing there are potentially massive and unknown ramificalions for the environment and for nearby communities, and that the global regulatory framework is not yet drafted. 'Despite arising in the last half century, the \"new global gold rush\" of deep-sea mining shares many features with past resource scrambles - including a general disregard for environmental and social impacts, and the marginalisation of indigenous peoples and their rights,' a paper, written by Julie Hunter and Julian Aguon, from Blue Ocean Law, and Pradeep Singh, from the Cenler for Marine Environmental Sciences, Bremen, argues. The authors say that knowledge of the deep seabed remains extremely limited. 'The surface of the Moon, Mars and even Venus have all been mapped and studied in much greater detail, leading marine scientists to commonly remark that, with respect to the deep sea, \"We don't yet know what we need to know\".' E Scientific research - including a recent paper in Marine Policy journal - has suggested the deep seabed, and hydrothermal vents, which are created when seawater meets volcanic magma, have crucial impacts upon biodiversily and the global climate. The mineral-rich vents and their surrounds are also home to many well-known animals including crustaceans, tubeworms, clams, slugs, anemones and fish. 'It is becoming increasingly clear that deep\u00ad sea mining poses a grave threat to these vital seabed functions,' the paper says. 'Extraction methods would produce large sediment plumes and involve the discharge of waste back into the ocean, significantly disturbing seafloor environments,' the paper continues. 'On deep sea vents, scientists are clear,' says Dr Jon Copley of the National Oceanography Centre, Southampton: 'we don't want mining on them.' F The oceans occupy around 70% of the planet and are relatively unexplored, says Mike Johnston, chief executive of Nautilus, a Canadian underwater exploration company: 'It makes sense to explore this untapped potential in an environmentally sustainable way, instead of continually looking at the fast depleting land resources of the planet to meet society's rising needs.' Those leading the global rush to place giant mining machines thousands of metres below the sea surface say the environmental impacts will be far lower than on land. But critics say exotic and little-known ecosystems in the deep oceans could be destroyed and must be protected. 'Mining will be the greatest assault on deep-sea ecosystems ever inflicted by humans,' according to hydrothermal vent expert Verena Tunnicliffe, al the University of Victoria in Canada. She argues that active vents must be off-limits for mining to protect the new knowledge and biotechnology spin-offs they can deliver, and that strict controls must be in place elsewhere.</p><p>https://azadenglish.com</p>",
+          "text": "<h1>Deep-sea mining</h1>\n<p><b>A</b> Bacteria from the ocean floor can beat superbugs and cancer. But habitats are at risk from the hunger for marine minerals.</p>\n<p><b>B</b> \"We're looking at the bioactive potential of marine resources, to see if there are any more medicines or drugs down there before we destroy it for ever,\" says Professor Mat Upton, a medical microbiologist at the University of Plymouth. He is among many scientists urging a halt to deep-sea mining, asking for time to weigh up the pros and cons. Upton estimates it could take up to a decade for a newly discovered antibiotic to become a medicine — but the race towards commercial mining in the ocean abyss has already begun.</p>\n<p><b>C</b> The deep sea contains more nickel, cobalt and rare earth metals than all land reserves combined, according to the US Geological Survey. Mining corporations argue that deep-sea exploration could help diversify the supply of metals and point to the fact that demand for resources such as copper, aluminium, cobalt for electric car batteries and other metals to power technology and smartphones, is soaring. They say that deep-sea mining could yield far superior ore to land mining with little, if any, waste. Different methods of extraction exist, but most involve employing some form of converted machinery previously used in terrestrial mining to excavate materials from the sea floor, at depths of up to 6,000 metres.</p>\n<p><b>D</b> But environmental and legal groups have urged caution, arguing there are potentially massive and unknown ramifications for the environment and for nearby communities, and that the global regulatory framework is not yet drafted. \"Despite arising in the last half century, the 'new global gold rush' of deep-sea mining shares many features with past resource scrambles — including a general disregard for environmental and social impacts, and the marginalisation of indigenous peoples and their rights,\" a paper, written by Julie Hunter and Julian Aguon, from Blue Ocean Law, and Pradeep Singh, from the Center for Marine Environmental Sciences, Bremen, argues. The authors say that knowledge of the deep seabed remains extremely limited. \"The surface of the Moon, Mars and even Venus have all been mapped and studied in much greater detail, leading marine scientists to commonly remark that, with respect to the deep sea, 'We don't yet know what we need to know'.\"</p>\n<p><b>E</b> Scientific research — including a recent paper in Marine Policy journal — has suggested the deep seabed, and hydrothermal vents, which are created when seawater meets volcanic magma, have crucial impacts upon biodiversity and the global climate. The mineral-rich vents and their surrounds are also home to many well-known animals including crustaceans, tubeworms, clams, slugs, anemones and fish. \"It is becoming increasingly clear that deep-sea mining poses a grave threat to these vital seabed functions,\" the paper says. \"Extraction methods would produce large sediment plumes and involve the discharge of waste back into the ocean, significantly disturbing seafloor environments,\" the paper continues. \"On deep sea vents, scientists are clear,\" says Dr Jon Copley of the National Oceanography Centre, Southampton: \"we don't want mining on them.\"</p>\n<p><b>F</b> The oceans occupy around 70% of the planet and are relatively unexplored, says Mike Johnston, chief executive of Nautilus, a Canadian underwater exploration company: \"It makes sense to explore this untapped potential in an environmentally sustainable way, instead of continually looking at the fast depleting land resources of the planet to meet society's rising needs.\" Those leading the global rush to place giant mining machines thousands of metres below the sea surface say the environmental impacts will be far lower than on land. But critics say exotic and little-known ecosystems in the deep oceans could be destroyed and must be protected. \"Mining will be the greatest assault on deep-sea ecosystems ever inflicted by humans,\" according to hydrothermal vent expert Verena Tunnicliffe, at the University of Victoria in Canada. She argues that active vents must be off-limits for mining to protect the new knowledge and biotechnology spin-offs they can deliver, and that strict controls must be in place elsewhere.</p>",
           "questions": [
             {
               "num": 14,
@@ -8561,11 +8571,11 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 18-23<br/>Looi< at the following statements (Questions 18-23) and the list of people below.<br/>Match each statement with the correct person or people, A-E.<br/>Write the correct letter, A-E, in boxes 18-23 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. Professor Mat Upton",
+                "B. Julie Hunter, Julian Aguon and Pradeep Singh",
+                "C. Dr Jon Copley",
+                "D. Mike Johnston",
+                "E. Verena Tunnicliffe"
               ]
             },
             {
@@ -8577,11 +8587,11 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 18-23<br/>Looi< at the following statements (Questions 18-23) and the list of people below.<br/>Match each statement with the correct person or people, A-E.<br/>Write the correct letter, A-E, in boxes 18-23 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. Professor Mat Upton",
+                "B. Julie Hunter, Julian Aguon and Pradeep Singh",
+                "C. Dr Jon Copley",
+                "D. Mike Johnston",
+                "E. Verena Tunnicliffe"
               ]
             },
             {
@@ -8593,11 +8603,11 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 18-23<br/>Looi< at the following statements (Questions 18-23) and the list of people below.<br/>Match each statement with the correct person or people, A-E.<br/>Write the correct letter, A-E, in boxes 18-23 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. Professor Mat Upton",
+                "B. Julie Hunter, Julian Aguon and Pradeep Singh",
+                "C. Dr Jon Copley",
+                "D. Mike Johnston",
+                "E. Verena Tunnicliffe"
               ]
             },
             {
@@ -8609,11 +8619,11 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 18-23<br/>Looi< at the following statements (Questions 18-23) and the list of people below.<br/>Match each statement with the correct person or people, A-E.<br/>Write the correct letter, A-E, in boxes 18-23 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. Professor Mat Upton",
+                "B. Julie Hunter, Julian Aguon and Pradeep Singh",
+                "C. Dr Jon Copley",
+                "D. Mike Johnston",
+                "E. Verena Tunnicliffe"
               ]
             },
             {
@@ -8625,11 +8635,11 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 18-23<br/>Looi< at the following statements (Questions 18-23) and the list of people below.<br/>Match each statement with the correct person or people, A-E.<br/>Write the correct letter, A-E, in boxes 18-23 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. Professor Mat Upton",
+                "B. Julie Hunter, Julian Aguon and Pradeep Singh",
+                "C. Dr Jon Copley",
+                "D. Mike Johnston",
+                "E. Verena Tunnicliffe"
               ]
             },
             {
@@ -8641,45 +8651,45 @@ const IELTS_TEST_DATA = {
               "location": "Passage 2",
               "instruction": "Questions 18-23<br/>Looi< at the following statements (Questions 18-23) and the list of people below.<br/>Match each statement with the correct person or people, A-E.<br/>Write the correct letter, A-E, in boxes 18-23 on your answer sheet.<br/>NB You may use any letter more than once.",
               "options": [
-                "A. Paragraph A",
-                "B. Paragraph B",
-                "C. Paragraph C",
-                "D. Paragraph D",
-                "E. Paragraph E"
+                "A. Professor Mat Upton",
+                "B. Julie Hunter, Julian Aguon and Pradeep Singh",
+                "C. Dr Jon Copley",
+                "D. Mike Johnston",
+                "E. Verena Tunnicliffe"
               ]
             },
             {
               "num": 24,
               "type": "FILL",
-              "text": "Write your answers in boxes _________-26 on your answer sheet.",
+              "text": "They also say that these can be removed without producing much _________ .",
               "answer": "waste",
               "explanation": "The text confirms this: \"They say that deep-sea mining could yield far superior ore to land mining with little, if any, waste.\"",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 24-26 on your answer sheet.<br/>Mining the sea floor<br/>Reading<br/>Mining corporations believe that the mineral resources lying under the sea may<br/>be superior to those found in the earth. They also say that these can be removed<br/>without producing much 24 ........................................... .<br/>The extraction is often done by adapting the 25 ........................................... that has already<br/>been used to work on land. The method of excavation involves removing the<br/>seawater from the slurry that is brought up to ships and returning it to the seabed.<br/>However, concerned groups strongly believe that 26 ........................................... is necessary<br/>due to the possible number of unidentified consequences.<br/>\u2794 l\ufffdp.121I 91<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
+              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 24-26 on your answer sheet.<br/>Mining the sea floor<br/>Reading<br/>Mining corporations believe that the mineral resources lying under the sea may<br/>be superior to those found in the earth. They also say that these can be removed<br/>without producing much 24 ........................................... .<br/>The extraction is often done by adapting the 25 ........................................... that has already<br/>been used to work on land. The method of excavation involves removing the<br/>seawater from the slurry that is brought up to ships and returning it to the seabed.<br/>However, concerned groups strongly believe that 26 ........................................... is necessary<br/>due to the possible number of unidentified consequences.<br/>➔ l�p.121I 91<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
             },
             {
               "num": 25,
               "type": "FILL",
               "text": "The extraction is often done by adapting the _________ _________ that has already",
               "answer": "machinery",
-              "explanation": "The text confirms this: \"Different methods of extraction exist, bul most involve employing some form of converted machinery previously used in terrestrial mining to excavate materials fi\u00b7om the sea Aoor, al depths of up to 6,000 metres, then drawing a seawater slurry, containing rock and other solid particles, from the sea floor to ships on the surface.\"",
+              "explanation": "The text confirms this: \"Different methods of extraction exist, bul most involve employing some form of converted machinery previously used in terrestrial mining to excavate materials fi·om the sea Aoor, al depths of up to 6,000 metres, then drawing a seawater slurry, containing rock and other solid particles, from the sea floor to ships on the surface.\"",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 24-26 on your answer sheet.<br/>Mining the sea floor<br/>Reading<br/>Mining corporations believe that the mineral resources lying under the sea may<br/>be superior to those found in the earth. They also say that these can be removed<br/>without producing much 24 ........................................... .<br/>The extraction is often done by adapting the 25 ........................................... that has already<br/>been used to work on land. The method of excavation involves removing the<br/>seawater from the slurry that is brought up to ships and returning it to the seabed.<br/>However, concerned groups strongly believe that 26 ........................................... is necessary<br/>due to the possible number of unidentified consequences.<br/>\u2794 l\ufffdp.121I 91<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
+              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 24-26 on your answer sheet.<br/>Mining the sea floor<br/>Reading<br/>Mining corporations believe that the mineral resources lying under the sea may<br/>be superior to those found in the earth. They also say that these can be removed<br/>without producing much 24 ........................................... .<br/>The extraction is often done by adapting the 25 ........................................... that has already<br/>been used to work on land. The method of excavation involves removing the<br/>seawater from the slurry that is brought up to ships and returning it to the seabed.<br/>However, concerned groups strongly believe that 26 ........................................... is necessary<br/>due to the possible number of unidentified consequences.<br/>➔ l�p.121I 91<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
             },
             {
               "num": 26,
               "type": "FILL",
-              "text": "Write your answers in boxes 24-_________ on your answer sheet.",
+              "text": "However, concerned groups strongly believe that _________ is necessary due to the possible number of unidentified consequences.",
               "answer": "caution",
               "explanation": "The text confirms this: \"com D But environmental and legal groups have urged caution, arguing there are potentially massive and unknown ramificalions for the environment and for nearby communities, and that the global regulatory framework is not yet drafted.\"",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 24-26 on your answer sheet.<br/>Mining the sea floor<br/>Reading<br/>Mining corporations believe that the mineral resources lying under the sea may<br/>be superior to those found in the earth. They also say that these can be removed<br/>without producing much 24 ........................................... .<br/>The extraction is often done by adapting the 25 ........................................... that has already<br/>been used to work on land. The method of excavation involves removing the<br/>seawater from the slurry that is brought up to ships and returning it to the seabed.<br/>However, concerned groups strongly believe that 26 ........................................... is necessary<br/>due to the possible number of unidentified consequences.<br/>\u2794 l\ufffdp.121I 91<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
+              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 24-26 on your answer sheet.<br/>Mining the sea floor<br/>Reading<br/>Mining corporations believe that the mineral resources lying under the sea may<br/>be superior to those found in the earth. They also say that these can be removed<br/>without producing much 24 ........................................... .<br/>The extraction is often done by adapting the 25 ........................................... that has already<br/>been used to work on land. The method of excavation involves removing the<br/>seawater from the slurry that is brought up to ships and returning it to the seabed.<br/>However, concerned groups strongly believe that 26 ........................................... is necessary<br/>due to the possible number of unidentified consequences.<br/>➔ l�p.121I 91<br/>https://azadenglish.com<br/>Instagram: @Ali.mirzaei.azad<br/>Test 4"
             }
           ]
         },
         {
           "title": "The Unselfish Gene",
-          "text": "<p>A psychologist gives his view on how humans became self-centred There has long been a general assumption that human beings are essentially selfish. We're apparently ruthless, with strong impulses to compete against each other for resources and to accumulate power and possessions. If we are kind to one another, it's usually because we have ulterior motives. If we are good, it's only because we have managed to control and transcend our innate selfishness and brutality. This bleak view of human nature is closely associated with the science writer Richard Dawkins, whose 1976 book The Selfish Gene became popular because it fitted so well with - and helped to justify - the competitive and individualistic ethos that was so prevalent in late 20th-century societies. Like many others, Dawkins justifies his views with reference to the field of evolutionary psychology. Evolutionary psychology theorises that present-day human traits developed in prehistoric times, during what is termed the 'environment of evolutionary adaptedness'. Prehistory is usually seen as a period of intense competition, when life was such a brutal battle that only those with traits such as selfishness, aggression and ruthlessness survived. And because survival depended on access to resources - such as rivers, forests and animals - there was bound to be conflict between rival groups, which led to the development of traits such as racism and warfare. This seems logical. But, in fact, the assumption on which this all rests - that prehistoric life was a desperate struggle for survival - is false. It's important to remember that in the prehistoric era, the world was very sparsely populated. According to some estimates, around 15,000 years ago, the population of Europe was only 29,000, and the population of the whole world was less than half a million. Humans at that time were hunter-gatherers: people who lived by hunting wild animals and collecting wild plants. With such small population densities, it seems unlikely that prehistoric hunter-gatherer groups had to compete against each other for resources or had any need to develop ruthlessness and competitiveness, or to go to war. There is significant evidence to back this notion from contemporary hunter-gatherer groups, who live in the same way as prehistoric humans did. As the anthropologist Bruce Knauft has remarked, hunter-gatherers are characterised by 'extreme political and sexual egalitarianism'. Knauft has observed that individuals in such groups don't accumulate property or possessions and have an ethical obligation to share everything. They also have methods of preserving egalitarianism by ensuring that disparities of status don't arise.</p><p>https://azadenglish.com</p><p>The !Kung people of southern Africa, for example, swap arrows before going hunting and when an animal is killed, the acclaim does not go to the person who fired the arrow, but to the person the arrow belongs to. And if a person becomes too domineering, the other members of the group ostracise them, exiling the offender from society. Typically in such groups, men do not dictate what women do. Women in hunter-gatherer groups worldwide often benefit from a high level of autonomy, being able to select their own marriage partners, decide what work they do and work whenever they choose to. And if a marriage breaks down, they have custody rights over their children. Many anthropologists believe that societies such as the !Kung were normal until a few thousand years ago, when population growth led to the development of agriculture and a settled lifestyle. In view of the above, there seems little reason to assume that traits such as racism, warfare and male domination should have been selected by evolution - as they would have been of little benefit in the prehistoric era. Individuals who behaved selfishly and ruthlessly would be less likely to survive, since they would have been ostracised from their groups. It makes more sense, then, to see traits such as cooperation, egalitarianism, altruism and peacefulness as innate characteristics of human beings. These were the traits that were prevalent in human life for tens of thousands of years. So presumably these traits are still strong in us now. But if prehistoric life wasn't really as brutal as has often been assumed, why do modern humans behave so selfishly and ruthlessly? Perhaps these negative traits should be seen as a later development, the result of environmental and psychological factors. Research has shown repeatedly that when the natural habitats of primates such as apes and gorillas are disrupted, they tend to become more violent and hierarchical. So, it could well be that the same thing has happened to us. I believe that the end of the hunter-gatherer lifestyle and the advent of farming was connected to a psychological change that occurred in some groups of people. There was a new sense of individuality and separateness, which led to a new selfishness, and ultimately to hierarchical societies, patriarchy and warfare. At any rate, these negative traits appear to have developed so recently that it doesn't seem feasible to explain them in adaptive or evolutionary terms.</p><p>https://azadenglish.com</p><p>Test4</p>",
+          "text": "<h1>The Unselfish Gene</h1>\n<p>A psychologist gives his view on how humans became self-centred.</p>\n<p>There has long been a general assumption that human beings are essentially selfish. We are portrayed as relentlessly pursuing our own self-interest, driven by evolutionary pressures to survive and reproduce at the expense of others. This view was popularized by Richard Dawkins in his 1976 book The Selfish Gene, which argued that our genes are the primary drivers of our behaviour, and that altruism is merely an illusion. However, this view is increasingly being challenged by psychologists and anthropologists who argue that cooperation and empathy are just as natural to humans as selfishness.</p>\n<p>Prehistoric societies were likely far more egalitarian and cooperative than modern ones. For most of our evolutionary history, humans lived in small bands of hunter-gatherers. In these groups, survival depended on sharing resources, caring for the sick and injured, and working together to hunt and gather food. Those who developed warlike or selfish traits would have been at a disadvantage, as they would have been excluded from the group and left to survive on their own. Thus, evolutionary pressures may have actually favoured cooperative and peaceful traits.</p>\n<p>The !Kung people of southern Africa, for example, swap arrows before going hunting, and when an animal is killed, the credit for the success is shared among the group, rather than going to the individual hunter. This custom prevents status differences from developing and maintains the egalitarian structure of the society. Similar practices have been observed in other hunter-gatherer cultures worldwide, suggesting that cooperation was the norm for prehistoric humans.</p>\n<p>Bruce Knauft, an anthropologist at Emory University, has studied contemporary hunter-gatherer societies and concluded that they exhibit a high level of egalitarianism in all areas of life. In these cultures, sharing is a moral obligation, and anyone who behaves in a domineering or selfish manner is punished by being ridiculed, ignored, or excluded. Women also have a high degree of autonomy in decisions regarding work and marriage, further reinforcing the equality of the group.</p>\n<p>The transition from hunter-gatherer bands to agricultural societies, which began around ten thousand years ago, marked a major shift in human behaviour. The development of agriculture allowed for the accumulation of surplus food and wealth, leading to the emergence of private property, social hierarchies, and warfare. As societies became more complex and unequal, selfish and competitive traits became more advantageous, leading to the self-centred behaviour we see in modern cultures.</p>\n<p>Despite these changes, cooperation remains a fundamental part of human nature. Studies of infants and young children show that they are naturally helpful and empathetic, offering assistance to others without being asked or rewarded. This suggests that we are born with a predisposition to cooperate, and that selfishness is a learned behaviour, shaped by our culture and environment. By understanding this, we can design schools, workplaces, and communities that encourage our cooperative nature and help us build a more unselfish world.</p>",
           "questions": [
             {
               "num": 27,
@@ -8735,16 +8745,16 @@ const IELTS_TEST_DATA = {
               "location": "Passage 3",
               "instruction": "Questions 27-30<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 27-30 on your answer sheet.",
               "options": [
-                "A. Option A",
-                "B. Option B",
-                "C. Option C",
-                "D. Option D"
+                "A. selfishness is a relatively recent development in human societies.",
+                "B. only people in isolated communities can live in an unselfish manner.",
+                "C. very few lifestyles have survived unchanged since prehistoric times.",
+                "D. hunter-gatherer cultures worldwide are declining in number."
               ]
             },
             {
               "num": 31,
               "type": "FILL",
-              "text": "Write your answers in boxes _________-35 on your answer sheet.",
+              "text": "Bruce Knauft's research shows that contemporary hunter-gatherer societies tend to exhibit a high level of _________ in all areas of life.",
               "answer": "egalitarianism",
               "explanation": "The text confirms this: \"As the anthropologist Bruce Knauft has remarked, hunter-gatherers are characterised by 'extreme political and sexual egalitarianism'.\"",
               "location": "Passage 3",
@@ -8780,7 +8790,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 35,
               "type": "FILL",
-              "text": "Write your answers in boxes 31-_________ on your answer sheet.",
+              "text": "and women have a considerable amount of _________ in choices regarding work and marriage.",
               "answer": "autonomy",
               "explanation": "The text confirms this: \"Women in hunter-gatherer groups worldwide often benefit from a high level of autonomy, being able to select their own marriage partners, decide what work they do and work whenever they choose to.\"",
               "location": "Passage 3",
@@ -8845,7 +8855,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 40,
               "type": "TFNG",
-              "text": "Animal research has failed to reveal a link between changes in the environment and the emergence of aggressive tendencies. \u2794I\ufffd p. 1211 95 https://azadenglish.com Instagram: @Ali.mirzaei.azad",
+              "text": "Animal research has failed to reveal a link between changes in the environment and the emergence of aggressive tendencies. ➔I� p. 1211 95 https://azadenglish.com Instagram: @Ali.mirzaei.azad",
               "answer": "FALSE",
               "explanation": "The text confirms this: \"But, in fact, the assumption on which this all rests - that prehistoric life was a desperate struggle for survival - is false.\"",
               "location": "Passage 3",
@@ -8864,16 +8874,16 @@ const IELTS_TEST_DATA = {
       "task1": {
         "prompt": "The charts below give information on the location and types of dance classes young people in a town in Australia are currently attending.",
         "image": "<pre class=\"font-mono text-xs bg-black/40 p-4 rounded border border-white/10 text-stone-300\">Reforestation project cost vs benefits ($)\n  Cost:     $$$$$$$ ($70k)\n  Benefits: $$$$$$$$$$$$$$ ($140k)</pre>",
-        "modelAnswer": "TASK 1 This is an answer written by a candidate who achieved a Band 5.0 score. ihe. table and d1art provide. information about the lolation and different \ufffdpe-5 of danle. da55 unde.rta\\Ce.n bi ioung people in Auf>tralia. ihe. lhart 5ai5 In 'Private. $tudio5 4S% ioung people are ta\\Cing danle. da55e,5_ And in wmmuniti hallf> and other IS% folK5 are ta\\Cing danle. da55e.5 And other lolation. After f>lhool da55e,5 2.4% people are ta\\Cing da55e,5 and other laf>t one lolation wlle.ge. ba5e.d f>tudiof> the.5e. are 10% pe.rle.nt people Ta\\Cing da55e.5. ihe. table re.veal in Ballet \ufffdpe. danle. IPoo students under age of 11 learning. And 300 age of 11-1(p are learning. And 42.0 5tude.ntf> age of 11-1(p learning and last \ufffdpe. of Danle. Modern the,5e, are 515 students are learning who are under age of 11 and 300 other stude.nfa who are age of !HIP. To wndusion in 'Private. $tudio the numbe.rn of people mulh higher than other lolationf>. And tipe. of ballet danle. dasse.s number of f>tude.nt Mulh higher in under age of 11 than other tipe. of danle. da55e,5_ Here is the examiner's comment: 136 This candidate has worked hard to report all data contained in the graphs. The key areas are covered, but the overall effect is rather mechanical, as each point is presented in a linear sequence. The ideas are set out in the correct order, following the order of the graphs in the question, but linking between and within the sentences is not strong. The format is quite repetitive [taking classes I learning] because of the lack of linking devices. Similarly, vocabulary is limited and a wider range would be needed for a higher score. Grammatical range is also minimal. There is a noticeable level of error, but the reader is still able to understand the message. To improve the score, this candidate should use a wider range of linking devices and take a less mechanical approach. A stronger and wider range of vocabulary and grammar would also be beneficial. https://azadenglish.com Instagram: @Ali.mirzaei.azad "
+        "modelAnswer": "TASK 1 This is an answer written by a candidate who achieved a Band 5.0 score. ihe. table and d1art provide. information about the lolation and different �pe-5 of danle. da55 unde.rta\\Ce.n bi ioung people in Auf>tralia. ihe. lhart 5ai5 In 'Private. $tudio5 4S% ioung people are ta\\Cing danle. da55e,5_ And in wmmuniti hallf> and other IS% folK5 are ta\\Cing danle. da55e.5 And other lolation. After f>lhool da55e,5 2.4% people are ta\\Cing da55e,5 and other laf>t one lolation wlle.ge. ba5e.d f>tudiof> the.5e. are 10% pe.rle.nt people Ta\\Cing da55e.5. ihe. table re.veal in Ballet �pe. danle. IPoo students under age of 11 learning. And 300 age of 11-1(p are learning. And 42.0 5tude.ntf> age of 11-1(p learning and last �pe. of Danle. Modern the,5e, are 515 students are learning who are under age of 11 and 300 other stude.nfa who are age of !HIP. To wndusion in 'Private. $tudio the numbe.rn of people mulh higher than other lolationf>. And tipe. of ballet danle. dasse.s number of f>tude.nt Mulh higher in under age of 11 than other tipe. of danle. da55e,5_ Here is the examiner's comment: 136 This candidate has worked hard to report all data contained in the graphs. The key areas are covered, but the overall effect is rather mechanical, as each point is presented in a linear sequence. The ideas are set out in the correct order, following the order of the graphs in the question, but linking between and within the sentences is not strong. The format is quite repetitive [taking classes I learning] because of the lack of linking devices. Similarly, vocabulary is limited and a wider range would be needed for a higher score. Grammatical range is also minimal. There is a noticeable level of error, but the reader is still able to understand the message. To improve the score, this candidate should use a wider range of linking devices and take a less mechanical approach. A stronger and wider range of vocabulary and grammar would also be beneficial. https://azadenglish.com Instagram: @Ali.mirzaei.azad "
       },
       "task2": {
         "prompt": "In many countries nowadays, consumers can go to a supermarket and buy food produced all over the world. Do you think this is a positive or negative development?",
-        "modelAnswer": "TASK 2 This is an answer written by a candidate who achieved a Band 6.0 score. Todai there are a lot of difforent r,hopr, Where we Gan bui all \\::ind of r,tuff produe,ed all over the world. Ir, it right to bui food produe,ed in other countriu,? Ir, thir, idea ur,eful for people nowadair,? I r,uppor,e tnir, to be a good idea. Wnen r,upermar\\::etr, and even r,mall r,nopr, provide people food from abroad tnen tnere are mue,n more por,r,ibilitier, for Uf, to e,noor,e r,ometning. Wnen r,nopr, nave onli food and tningr, produe,ed in our count\ufffd. it if> realli nard to ma\\::e a good e,noir,e. 'Some.timer, people want to t\ufffd r,ometning new and interer,ting maibe even r,ometning et-traordina\ufffd wniln tnei never bui before. In tnir, e,ar,er, food wnie,n if> produe,ed in otner countrier, will nelp tnem to be r,atir,fied witn tneir demandr,. Wnen r,upermar\\::etr, nave a good r,upli of different food produe,ed aniwnere tnan people e,an find deliC-iOUf, tningr, depending on tneir tar,tef>. for et-ample, people wno li\\::e frene,h produdr, can bui r,ome \\::indr, of frene,n e,neer,e or wine not onli in frane,e. food from otner countrier, if> alr,o ve\ufffd good wnen iOU want to bui r,ome frer,n vegetabler, and fruitr, in winter. It if> rea\\\\i ur,eful tning becaur,e r,ome people are vegetarianr, and tnei need vegetabler, and fruitr, during the wnole iear. 1ne onli dir,advantage of food wnicn if> produced in otner countrier, if> tne wai now it har, been delivered. in r,ome car,er, productf> e,an be not r,o frer,h er,peciali in r,ummer, when it if> ve\ufffd hot outr,ide. To wm it up, I e,an r,ureli r,ai that buiin9 produdr, from other countrier, if> a good tning to become more dor,er to other wlturief>. You can e,ertainli coo\\:: r,omethin9 unur,ial at home and it will tar,te li\\::e in ve\ufffd good et-penr,ive ref>taurant r,omewhere abroad. Here is the examiner's comment: This is a good response to the task. The candidate clearly agrees with the idea that people should be able to buy international food in supermarkets. The main reason given is that people want to try something [new and interesting] and different. Examples are given of French products and seasonal produce for vegetarians. One disadvantage is given, related to the impact of hot weather on transportation. The conclusion includes bringing cultures together through food but does not summarise the points made in the full answer. A more relevant conclusion would help the candidate achieve a higher score, as well as further extending the ideas. Generally, the candidate organises the ideas well, and we can follow them clearly. Some good linking devices are used [where I maybe even I which I who], but some errors remain [this cases I these cases I than I then]. The response is set out across five paragraphs, but three of them have only two sentences. These are short paragraphs and could be extended to illustrate the central topic in more detail. 137 https://azadenglish.com Instagram: @Ali.mirzaei.azad "
+        "modelAnswer": "TASK 2 This is an answer written by a candidate who achieved a Band 6.0 score. Todai there are a lot of difforent r,hopr, Where we Gan bui all \\::ind of r,tuff produe,ed all over the world. Ir, it right to bui food produe,ed in other countriu,? Ir, thir, idea ur,eful for people nowadair,? I r,uppor,e tnir, to be a good idea. Wnen r,upermar\\::etr, and even r,mall r,nopr, provide people food from abroad tnen tnere are mue,n more por,r,ibilitier, for Uf, to e,noor,e r,ometning. Wnen r,nopr, nave onli food and tningr, produe,ed in our count�. it if> realli nard to ma\\::e a good e,noir,e. 'Some.timer, people want to t� r,ometning new and interer,ting maibe even r,ometning et-traordina� wniln tnei never bui before. In tnir, e,ar,er, food wnie,n if> produe,ed in otner countrier, will nelp tnem to be r,atir,fied witn tneir demandr,. Wnen r,upermar\\::etr, nave a good r,upli of different food produe,ed aniwnere tnan people e,an find deliC-iOUf, tningr, depending on tneir tar,tef>. for et-ample, people wno li\\::e frene,h produdr, can bui r,ome \\::indr, of frene,n e,neer,e or wine not onli in frane,e. food from otner countrier, if> alr,o ve� good wnen iOU want to bui r,ome frer,n vegetabler, and fruitr, in winter. It if> rea\\\\i ur,eful tning becaur,e r,ome people are vegetarianr, and tnei need vegetabler, and fruitr, during the wnole iear. 1ne onli dir,advantage of food wnicn if> produced in otner countrier, if> tne wai now it har, been delivered. in r,ome car,er, productf> e,an be not r,o frer,h er,peciali in r,ummer, when it if> ve� hot outr,ide. To wm it up, I e,an r,ureli r,ai that buiin9 produdr, from other countrier, if> a good tning to become more dor,er to other wlturief>. You can e,ertainli coo\\:: r,omethin9 unur,ial at home and it will tar,te li\\::e in ve� good et-penr,ive ref>taurant r,omewhere abroad. Here is the examiner's comment: This is a good response to the task. The candidate clearly agrees with the idea that people should be able to buy international food in supermarkets. The main reason given is that people want to try something [new and interesting] and different. Examples are given of French products and seasonal produce for vegetarians. One disadvantage is given, related to the impact of hot weather on transportation. The conclusion includes bringing cultures together through food but does not summarise the points made in the full answer. A more relevant conclusion would help the candidate achieve a higher score, as well as further extending the ideas. Generally, the candidate organises the ideas well, and we can follow them clearly. Some good linking devices are used [where I maybe even I which I who], but some errors remain [this cases I these cases I than I then]. The response is set out across five paragraphs, but three of them have only two sentences. These are short paragraphs and could be extended to illustrate the central topic in more detail. 137 https://azadenglish.com Instagram: @Ali.mirzaei.azad "
       }
     }
   },
   "9": {
-    "title": "Cambridge IELTS 20 \u2014 Test 1",
+    "title": "Cambridge IELTS 20 — Test 1",
     "book": "IELTS 20",
     "listening": {
       "sections": [
@@ -8893,16 +8903,16 @@ const IELTS_TEST_DATA = {
             {
               "num": 2,
               "type": "FILL",
-              "text": "Hourly hire rate on weekdays: \u00a3_________",
+              "text": "Hourly hire rate on weekdays: £_________",
               "answer": "35",
-              "explanation": "Weekday hire costs \u00a335 per hour."
+              "explanation": "Weekday hire costs £35 per hour."
             },
             {
               "num": 3,
               "type": "FILL",
-              "text": "Hourly hire rate on weekends: \u00a3_________",
+              "text": "Hourly hire rate on weekends: £_________",
               "answer": "50",
-              "explanation": "Weekend hire is charged at \u00a350 per hour."
+              "explanation": "Weekend hire is charged at £50 per hour."
             },
             {
               "num": 4,
@@ -9301,14 +9311,14 @@ const IELTS_TEST_DATA = {
                 "D. Covering reefs with shade cloth to reduce temperature"
               ],
               "answer": "A",
-              "explanation": "Coral gardening \u2014 growing fragments in nurseries and transplanting them \u2014 is a leading restoration method."
+              "explanation": "Coral gardening — growing fragments in nurseries and transplanting them — is a leading restoration method."
             },
             {
               "num": 40,
               "type": "FILL",
               "text": "Limiting global warming to no more than _________ degrees Celsius is considered critical for coral survival.",
               "answer": "1.5",
-              "explanation": "Scientists warn that global warming beyond 1.5\u00b0C will cause catastrophic, irreversible coral bleaching."
+              "explanation": "Scientists warn that global warming beyond 1.5°C will cause catastrophic, irreversible coral bleaching."
             }
           ],
           "transcript": ""
@@ -9318,21 +9328,21 @@ const IELTS_TEST_DATA = {
     "reading": {
       "passages": [
         {
-          "title": "Passage 1: K\u0101k\u0101p\u014d Conservation",
-          "text": "<p>The k\u0101k\u0101p\u014d is a species of large, flightless, nocturnal parrot endemic to New Zealand. It is one of the world's most endangered birds, having been brought to the brink of extinction by habitat destruction and introduced mammalian predators such as stoats, cats, and rats. Unlike other parrots, the k\u0101k\u0101p\u014d is heavy\u2014males can weigh up to 4 kg\u2014and has a unique lek-breeding system where males gather in arenas to perform booming calls to attract females.</p>\n        <p>In the late 20th century, the New Zealand Department of Conservation established the K\u0101k\u0101p\u014d Recovery Programme. The key strategy was to relocate the remaining population to predator-free offshore islands, such as Codfish Island (Whenua Hou) and Anchor Island. These islands are heavily monitored, and conservationists manage every aspect of the birds' lives, including providing supplementary food, monitoring nests with infrared cameras, and hand-rearing chicks when necessary.</p>\n        <p>Genetic diversity is a critical challenge, as the population descended from a very small pool of survivors. To manage this, scientists utilize genetic testing to plan breeding pairs and reduce inbreeding. The programme has seen significant success, with the k\u0101k\u0101p\u014d population growing from a historic low of just 51 individuals in 1995 to over 250 today, serving as a global model for endangered species conservation.</p>",
+          "title": "Passage 1: Kākāpō Conservation",
+          "text": "<p>The kākāpō is a species of large, flightless, nocturnal parrot endemic to New Zealand. It is one of the world's most endangered birds, having been brought to the brink of extinction by habitat destruction and introduced mammalian predators such as stoats, cats, and rats. Unlike other parrots, the kākāpō is heavy—males can weigh up to 4 kg—and has a unique lek-breeding system where males gather in arenas to perform booming calls to attract females.</p>\n        <p>In the late 20th century, the New Zealand Department of Conservation established the Kākāpō Recovery Programme. The key strategy was to relocate the remaining population to predator-free offshore islands, such as Codfish Island (Whenua Hou) and Anchor Island. These islands are heavily monitored, and conservationists manage every aspect of the birds' lives, including providing supplementary food, monitoring nests with infrared cameras, and hand-rearing chicks when necessary.</p>\n        <p>Genetic diversity is a critical challenge, as the population descended from a very small pool of survivors. To manage this, scientists utilize genetic testing to plan breeding pairs and reduce inbreeding. The programme has seen significant success, with the kākāpō population growing from a historic low of just 51 individuals in 1995 to over 250 today, serving as a global model for endangered species conservation.</p>",
           "questions": [
             {
               "num": 1,
               "type": "FILL",
-              "text": "The k\u0101k\u0101p\u014d is a flightless, nocturnal bird native to _________.",
+              "text": "The kākāpō is a flightless, nocturnal bird native to _________.",
               "answer": "New Zealand",
-              "explanation": "The text describes the k\u0101k\u0101p\u014d as 'endemic to New Zealand'.",
+              "explanation": "The text describes the kākāpō as 'endemic to New Zealand'.",
               "location": "Paragraph 1, Line 1"
             },
             {
               "num": 2,
               "type": "FILL",
-              "text": "K\u0101k\u0101p\u014d were driven to the brink of extinction by habitat loss and _________ predators.",
+              "text": "Kākāpō were driven to the brink of extinction by habitat loss and _________ predators.",
               "answer": "mammalian",
               "explanation": "The text says they were brought to extinction by 'habitat destruction and introduced mammalian predators'.",
               "location": "Paragraph 1, Line 2"
@@ -9340,7 +9350,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 3,
               "type": "FILL",
-              "text": "An adult male k\u0101k\u0101p\u014d can weigh as much as _________ kg.",
+              "text": "An adult male kākāpō can weigh as much as _________ kg.",
               "answer": "4",
               "explanation": "The text states 'males can weigh up to 4 kg'.",
               "location": "Paragraph 1, Line 3"
@@ -9372,7 +9382,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 7,
               "type": "FILL",
-              "text": "In 1995, the population of k\u0101k\u0101p\u014d reached a low of _________ individuals.",
+              "text": "In 1995, the population of kākāpō reached a low of _________ individuals.",
               "answer": "51",
               "explanation": "The text states: 'growing from a historic low of just 51 individuals in 1995'.",
               "location": "Paragraph 3, Line 3"
@@ -9380,14 +9390,14 @@ const IELTS_TEST_DATA = {
             {
               "num": 8,
               "type": "TFNG",
-              "text": "K\u0101k\u0101p\u014d can fly short distances when escaping predators.",
+              "text": "Kākāpō can fly short distances when escaping predators.",
               "options": [
                 "TRUE",
                 "FALSE",
                 "NOT GIVEN"
               ],
               "answer": "FALSE",
-              "explanation": "The text describes the k\u0101k\u0101p\u014d as 'flightless'.",
+              "explanation": "The text describes the kākāpō as 'flightless'.",
               "location": "Paragraph 1, Line 1"
             },
             {
@@ -9445,7 +9455,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 13,
               "type": "TFNG",
-              "text": "The k\u0101k\u0101p\u014d population is now over 250.",
+              "text": "The kākāpō population is now over 250.",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -9608,7 +9618,7 @@ const IELTS_TEST_DATA = {
         },
         {
           "title": "Passage 3: The Unselfish Gene",
-          "text": "<p>For decades, evolutionary biology was dominated by the 'selfish gene' theory, which argues that natural selection acts primarily at the level of individual genes rather than the organism or species. According to this view, altruistic behaviours in animals are merely genetic strategies to ensure the survival of shared genes in relatives. However, a growing body of research is challenging this perspective, advocating for 'group selection' or 'multilevel selection' models.</p>\n        <p>These newer models propose that natural selection can operate simultaneously at multiple levels, including the group. In social species, groups containing cooperative individuals who work together for the common good may outcompete groups of selfish individuals who prioritize their own survival. For instance, in social insects like ants and bees, sterile workers sacrifice their own reproduction to support the colony, a behavior that is highly successful at the group level.</p>\n        <p>Critics of group selection argue that cooperative groups are vulnerable to 'cheaters'\u2014selfish individuals who benefit from the group's cooperation without contributing. Over time, these cheaters should reproduce more, causing cooperation to collapse. However, proponents suggest that social groups develop mechanisms to suppress cheating, such as policing behaviors and social ostracism, ensuring that the 'unselfish gene' can persist and flourish in evolutionary history.</p>",
+          "text": "<p>For decades, evolutionary biology was dominated by the 'selfish gene' theory, which argues that natural selection acts primarily at the level of individual genes rather than the organism or species. According to this view, altruistic behaviours in animals are merely genetic strategies to ensure the survival of shared genes in relatives. However, a growing body of research is challenging this perspective, advocating for 'group selection' or 'multilevel selection' models.</p>\n        <p>These newer models propose that natural selection can operate simultaneously at multiple levels, including the group. In social species, groups containing cooperative individuals who work together for the common good may outcompete groups of selfish individuals who prioritize their own survival. For instance, in social insects like ants and bees, sterile workers sacrifice their own reproduction to support the colony, a behavior that is highly successful at the group level.</p>\n        <p>Critics of group selection argue that cooperative groups are vulnerable to 'cheaters'—selfish individuals who benefit from the group's cooperation without contributing. Over time, these cheaters should reproduce more, causing cooperation to collapse. However, proponents suggest that social groups develop mechanisms to suppress cheating, such as policing behaviors and social ostracism, ensuring that the 'unselfish gene' can persist and flourish in evolutionary history.</p>",
           "questions": [
             {
               "num": 27,
@@ -9793,7 +9803,7 @@ const IELTS_TEST_DATA = {
     }
   },
   "10": {
-    "title": "Cambridge IELTS 20 \u2014 Test 2",
+    "title": "Cambridge IELTS 20 — Test 2",
     "book": "IELTS 20",
     "listening": {
       "sections": [
@@ -9827,9 +9837,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 4,
               "type": "FILL",
-              "text": "Course fee: \u00a3_________",
+              "text": "Course fee: £_________",
               "answer": "1,800",
-              "explanation": "The eight-week intensive course costs \u00a31,800."
+              "explanation": "The eight-week intensive course costs £1,800."
             },
             {
               "num": 5,
@@ -9847,9 +9857,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 6,
               "type": "FILL",
-              "text": "Homestay accommodation costs approximately \u00a3_________ per week.",
+              "text": "Homestay accommodation costs approximately £_________ per week.",
               "answer": "175",
-              "explanation": "Homestay with a local family costs around \u00a3175 per week."
+              "explanation": "Homestay with a local family costs around £175 per week."
             },
             {
               "num": 7,
@@ -9957,9 +9967,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 17,
               "type": "FILL",
-              "text": "Cost of a cream tea in the farm caf\u00e9: \u00a3_________",
+              "text": "Cost of a cream tea in the farm café: £_________",
               "answer": "7.50",
-              "explanation": "A traditional cream tea in the caf\u00e9 costs \u00a37.50."
+              "explanation": "A traditional cream tea in the café costs £7.50."
             },
             {
               "num": 18,
@@ -9969,7 +9979,7 @@ const IELTS_TEST_DATA = {
                 "A. Not permitted on the farm",
                 "B. Welcome if kept on a lead",
                 "C. Allowed only in the car park",
-                "D. Permitted in the caf\u00e9"
+                "D. Permitted in the café"
               ],
               "answer": "B",
               "explanation": "Well-behaved dogs are welcome on leads, but not inside buildings."
@@ -9986,10 +9996,10 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Admission for adults is:",
               "options": [
-                "A. \u00a35",
-                "B. \u00a38",
+                "A. £5",
+                "B. £8",
                 "C. Free",
-                "D. \u00a310"
+                "D. £10"
               ],
               "answer": "C",
               "explanation": "Entry to the farm open day is free for all visitors."
@@ -10149,7 +10159,7 @@ const IELTS_TEST_DATA = {
               "type": "FILL",
               "text": "The current concentration of CO2 in the atmosphere is approximately _________ parts per million.",
               "answer": "420",
-              "explanation": "Atmospheric CO2 has exceeded 420 ppm \u2014 the highest level in human history."
+              "explanation": "Atmospheric CO2 has exceeded 420 ppm — the highest level in human history."
             },
             {
               "num": 34,
@@ -10162,7 +10172,7 @@ const IELTS_TEST_DATA = {
                 "D. The warming effect of urban areas"
               ],
               "answer": "B",
-              "explanation": "Albedo is the proportion of solar radiation reflected by a surface \u2014 ice and snow have high albedo."
+              "explanation": "Albedo is the proportion of solar radiation reflected by a surface — ice and snow have high albedo."
             },
             {
               "num": 35,
@@ -10195,14 +10205,14 @@ const IELTS_TEST_DATA = {
                 "D. Occur naturally and are not caused by humans"
               ],
               "answer": "B",
-              "explanation": "Positive feedback loops amplify changes \u2014 for example, melting ice \u2192 lower albedo \u2192 more warming \u2192 more melting."
+              "explanation": "Positive feedback loops amplify changes — for example, melting ice → lower albedo → more warming → more melting."
             },
             {
               "num": 38,
               "type": "FILL",
               "text": "The Paris Agreement aims to limit warming to well below _________ degrees Celsius above pre-industrial levels.",
               "answer": "2",
-              "explanation": "The Paris Agreement's central goal is limiting global warming to well below 2\u00b0C, ideally 1.5\u00b0C."
+              "explanation": "The Paris Agreement's central goal is limiting global warming to well below 2°C, ideally 1.5°C."
             },
             {
               "num": 39,
@@ -10727,7 +10737,7 @@ const IELTS_TEST_DATA = {
     }
   },
   "11": {
-    "title": "Cambridge IELTS 20 \u2014 Test 3",
+    "title": "Cambridge IELTS 20 — Test 3",
     "book": "IELTS 20",
     "listening": {
       "sections": [
@@ -10754,16 +10764,16 @@ const IELTS_TEST_DATA = {
             {
               "num": 3,
               "type": "FILL",
-              "text": "Price of a standard adult ticket: \u00a3_________",
+              "text": "Price of a standard adult ticket: £_________",
               "answer": "38",
-              "explanation": "Standard adult tickets are priced at \u00a338."
+              "explanation": "Standard adult tickets are priced at £38."
             },
             {
               "num": 4,
               "type": "FILL",
-              "text": "Price of a concession ticket (students/over-65s): \u00a3_________",
+              "text": "Price of a concession ticket (students/over-65s): £_________",
               "answer": "22",
-              "explanation": "Concession tickets for students and those over 65 cost \u00a322."
+              "explanation": "Concession tickets for students and those over 65 cost £22."
             },
             {
               "num": 5,
@@ -10810,13 +10820,13 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "What is the booking fee per ticket when buying online?",
               "options": [
-                "A. \u00a31",
-                "B. \u00a31.50",
-                "C. \u00a32",
+                "A. £1",
+                "B. £1.50",
+                "C. £2",
                 "D. No booking fee"
               ],
               "answer": "B",
-              "explanation": "Online purchases incur a \u00a31.50 booking fee per ticket."
+              "explanation": "Online purchases incur a £1.50 booking fee per ticket."
             },
             {
               "num": 10,
@@ -10879,7 +10889,7 @@ const IELTS_TEST_DATA = {
                 "D. Public subscription"
               ],
               "answer": "D",
-              "explanation": "The town hall was funded by public subscription \u2014 contributions from local residents."
+              "explanation": "The town hall was funded by public subscription — contributions from local residents."
             },
             {
               "num": 16,
@@ -10942,10 +10952,10 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "What type of documentary style do they agree to use?",
               "options": [
-                "A. Observational \u2014 fly-on-the-wall filming only",
-                "B. Expository \u2014 interviews and narration with visual evidence",
-                "C. Animated \u2014 using graphics to explain science",
-                "D. Participatory \u2014 the filmmakers appear on screen throughout"
+                "A. Observational — fly-on-the-wall filming only",
+                "B. Expository — interviews and narration with visual evidence",
+                "C. Animated — using graphics to explain science",
+                "D. Participatory — the filmmakers appear on screen throughout"
               ],
               "answer": "B",
               "explanation": "They agree on an expository approach combining expert interviews with visual evidence."
@@ -10993,7 +11003,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 26,
               "type": "FILL",
-              "text": "Their target audience is _________ people aged 18\u201335.",
+              "text": "Their target audience is _________ people aged 18–35.",
               "answer": "environmentally conscious",
               "explanation": "They aim their film at environmentally aware young adults."
             },
@@ -11033,9 +11043,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 30,
               "type": "FILL",
-              "text": "Their filming budget is limited to \u00a3_________.",
+              "text": "Their filming budget is limited to £_________.",
               "answer": "500",
-              "explanation": "Their total budget for the project is \u00a3500."
+              "explanation": "Their total budget for the project is £500."
             }
           ],
           "transcript": ""
@@ -11064,7 +11074,7 @@ const IELTS_TEST_DATA = {
                 "D. Geothermal heating systems"
               ],
               "answer": "B",
-              "explanation": "Passive design exploits natural resources \u2014 daylight, airflow, thermal mass \u2014 to minimise energy consumption."
+              "explanation": "Passive design exploits natural resources — daylight, airflow, thermal mass — to minimise energy consumption."
             },
             {
               "num": 33,
@@ -11104,7 +11114,7 @@ const IELTS_TEST_DATA = {
                 "D. All materials to be locally sourced"
               ],
               "answer": "B",
-              "explanation": "Passivhaus limits space heating demand to no more than 15 kWh/m\u00b2/year through superior insulation and airtightness."
+              "explanation": "Passivhaus limits space heating demand to no more than 15 kWh/m²/year through superior insulation and airtightness."
             },
             {
               "num": 37,
@@ -11649,7 +11659,7 @@ const IELTS_TEST_DATA = {
     }
   },
   "12": {
-    "title": "Cambridge IELTS 20 \u2014 Test 4",
+    "title": "Cambridge IELTS 20 — Test 4",
     "book": "IELTS 20",
     "listening": {
       "sections": [
@@ -11662,16 +11672,16 @@ const IELTS_TEST_DATA = {
             {
               "num": 1,
               "type": "FILL",
-              "text": "Cost per personal training session: \u00a3_________",
+              "text": "Cost per personal training session: £_________",
               "answer": "55",
-              "explanation": "Individual personal training sessions cost \u00a355 each."
+              "explanation": "Individual personal training sessions cost £55 each."
             },
             {
               "num": 2,
               "type": "FILL",
-              "text": "Discounted cost if buying a block of 10 sessions: \u00a3_________ per session",
+              "text": "Discounted cost if buying a block of 10 sessions: £_________ per session",
               "answer": "45",
-              "explanation": "Buying a block of 10 sessions reduces the cost to \u00a345 per session."
+              "explanation": "Buying a block of 10 sessions reduces the cost to £45 per session."
             },
             {
               "num": 3,
@@ -11698,7 +11708,7 @@ const IELTS_TEST_DATA = {
               "type": "FILL",
               "text": "Cost of the initial consultation: _________",
               "answer": "free",
-              "explanation": "The initial consultation is complimentary \u2014 there is no charge."
+              "explanation": "The initial consultation is complimentary — there is no charge."
             },
             {
               "num": 6,
@@ -11786,9 +11796,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 14,
               "type": "FILL",
-              "text": "Annual membership fee for an individual adult: \u00a3_________",
+              "text": "Annual membership fee for an individual adult: £_________",
               "answer": "42",
-              "explanation": "Individual adult membership costs \u00a342 per year."
+              "explanation": "Individual adult membership costs £42 per year."
             },
             {
               "num": 15,
@@ -12059,7 +12069,7 @@ const IELTS_TEST_DATA = {
               "text": "The amygdala's role in decision-making is to:",
               "options": [
                 "A. Store long-term memories of decisions",
-                "B. Process emotional responses \u2014 particularly fear \u2014 that influence decisions",
+                "B. Process emotional responses — particularly fear — that influence decisions",
                 "C. Calculate the mathematical probabilities of outcomes",
                 "D. Inhibit impulsive behaviour"
               ],
@@ -12589,3 +12599,7 @@ const IELTS_TEST_DATA = {
     }
   }
 };
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = IELTS_TEST_DATA;
+}

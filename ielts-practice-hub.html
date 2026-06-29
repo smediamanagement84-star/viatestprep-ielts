@@ -179,6 +179,7 @@
     }
   </style>
   <script src="security.js"></script>
+  <script src="theme-loader.js"></script>
 </head>
 
 <body class="pt-28 pb-16">
@@ -215,8 +216,8 @@
       <div>
         <span class="text-xs uppercase tracking-widest font-extrabold text-purple-500">Official Cambridge Audio</span>
         <h1 class="text-4xl lg:text-5xl font-extrabold mt-1">IELTS Practice Test Center</h1>
-        <p class="text-stone-400 mt-2 max-w-prose text-sm lg:text-base">12 complete tests from Cambridge IELTS 18, 19
-          &amp; 20 — with <strong class="text-purple-400">real official audio</strong>, real questions, answer keys, and
+        <p class="text-stone-400 mt-2 max-w-prose text-sm lg:text-base">8 complete tests from Cambridge IELTS 18 &amp;
+          19 — with <strong class="text-purple-400">real official audio</strong>, real questions, answer keys, and
           instant score tracking.</p>
       </div>
 
@@ -287,7 +288,7 @@
     </section>
 
     <!-- IELTS 20 -->
-    <section class="space-y-4 mt-8">
+    <section class="space-y-4 mt-8 hidden">
       <div class="flex items-center gap-3">
         <span
           class="text-xs font-black uppercase tracking-widest text-emerald-400 border border-emerald-400/30 bg-emerald-400/10 px-2.5 py-1 rounded-full">Cambridge
@@ -357,6 +358,7 @@
       Object.keys(IELTS_TEST_DATA).forEach(key => {
         const test = IELTS_TEST_DATA[key];
         const book = test.book || 'IELTS 18';
+        if (book === 'IELTS 20') return; // Skip Tests 9-12 temporarily
         bookCounters[book] = (bookCounters[book] || 0) + 1;
         const testNum = bookCounters[book];
         const colors = bookColors[book] || bookColors['IELTS 18'];

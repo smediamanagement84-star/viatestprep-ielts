@@ -341,6 +341,7 @@
   .scan-word.selected-right { background-color: var(--teal) !important; color: #fff !important; font-weight: bold; }
 </style>
   <script src="security.js"></script>
+  <script src="theme-loader.js"></script>
 </head>
 <body>
 
@@ -356,11 +357,11 @@
     </div>
     <div class="hidden md:flex items-center gap-4 text-sm">
       <span class="nav-step" data-jump="mission">① Mission</span>
-      <span class="nav-step" data-jump="toolkit">② Toolkit</span>
+      <span class="nav-step" data-jump="toolkit">② Step 1: Labs</span>
       <span class="nav-step" data-jump="plan">③ Game Plan</span>
       <span class="nav-step" data-jump="cases">④ Case Files</span>
-      <span class="nav-step" data-jump="drills">⑤ Drills</span>
-      <span class="nav-step" data-jump="boss">⑥ Boss Fight</span>
+      <span class="nav-step" data-jump="drills">⑤ Steps 2-4: Drills</span>
+      <span class="nav-step" data-jump="boss">⑥ Step 5: Boss Fight</span>
     </div>
     <div class="flex items-center gap-3">
       <button id="darkModeToggle" class="w-8 h-8 rounded-lg border border-line bg-white hover:bg-stone-100 flex items-center justify-center text-sm transition" aria-label="Toggle Dark Mode">🌙</button>
@@ -435,7 +436,7 @@
     <div class="mt-10 border-t border-line pt-8">
       <div class="flex items-center gap-3 mb-4">
         <span class="stamp">Academy Lab</span>
-        <h3 class="text-2xl">Detective Eye-Training Lab</h3>
+        <h3 class="text-2xl">Step 1: Foundational Eye-Training Labs</h3>
       </div>
       <p class="text-sm text-stone-600 dark:text-stone-300 mb-6">Put skimming and scanning into action. Complete these two micro-drills to train your eyes and earn extra XP.</p>
 
@@ -444,7 +445,7 @@
         <div class="card p-6 flex flex-col justify-between" id="skim-drill-card">
           <div>
             <div class="flex items-center justify-between mb-3">
-              <span class="chip" style="background:var(--gold-soft);color:var(--plum)">Drill 1: Skimming Map Builder</span>
+              <span class="chip" style="background:var(--gold-soft);color:var(--plum)">Step 1A: Skimming Map Builder</span>
               <span class="timer-pill text-sm px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-850" id="skim-timer">15s</span>
             </div>
             <h4 class="font-bold text-lg mb-2">The Bioluminescence Mystery</h4>
@@ -534,7 +535,7 @@
         <div class="card p-6 flex flex-col justify-between" id="scan-drill-card">
           <div>
             <div class="flex items-center justify-between mb-3">
-              <span class="chip" style="background:#fdf0f3;color:var(--rose)">Drill 2: Synonym Target Lock</span>
+              <span class="chip" style="background:#fdf0f3;color:var(--rose)">Step 1B: Synonym Scanning Target Lock</span>
               <span class="timer-pill text-xs px-2 py-0.5 rounded bg-rose-50 text-rose-600 dark:bg-rose-950 dark:text-rose-300" id="scan-target-desc">Target 1 of 2</span>
             </div>
             <h4 class="font-bold text-lg mb-2">The Searchlight Sweep</h4>
@@ -608,12 +609,88 @@
 
   <!-- DRILLS -->
   <section id="drills" class="mb-14">
-    <h2 class="text-3xl mb-2">⑤ Live Drills</h2>
+    <h2 class="text-3xl mb-2">⑤ Steps 2-4: Live Practice Drills</h2>
     <p class="text-stone-600 max-w-3xl mb-6">Master the three most challenging reading question types with dedicated passages. Click options to reveal detailed Synonym Maps and Distractor Elimination explanations.</p>
 
+    <!-- Sequential Learning Path Dashboard -->
+    <div class="card p-6 mb-8 bg-white border border-line rounded-2xl grid-mono">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="stamp">Roadmap</span>
+        <h3 class="text-2xl font-bold">IELTS Reading Sequential Learning Path</h3>
+      </div>
+      <p class="text-sm text-stone-600 dark:text-stone-300 mb-6">This curriculum is structured sequentially. Master each step before advancing to build timing, scanning reflexes, and logical accuracy.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <!-- Step 1 -->
+        <div class="p-4 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(91,42,134,0.03)">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 1</span>
+              <span class="text-lg">🕵️</span>
+            </div>
+            <h4 class="font-bold text-sm mb-1">Foundational Eye-Training</h4>
+            <p class="text-[11px] text-stone-500 leading-normal">Train visual reflexes with skimming map building and synonym target scanning.</p>
+          </div>
+          <button class="btn btn-ghost text-[10px] px-2 py-1 justify-center mt-3 w-full" onclick="document.getElementById('toolkit').scrollIntoView({behavior:'smooth'})">Go to Step 1</button>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="p-4 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(13,138,122,0.03)">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 2</span>
+              <span class="text-lg">⚖️</span>
+            </div>
+            <h4 class="font-bold text-sm mb-1">Fact Verification</h4>
+            <p class="text-[11px] text-stone-500 leading-normal">Solve True/False/Not Given logic traps by matching strict evidence.</p>
+          </div>
+          <button class="btn btn-ghost text-[10px] px-2 py-1 justify-center mt-3 w-full" onclick="document.getElementById('drill-tfng-section').scrollIntoView({behavior:'smooth'})">Go to Step 2</button>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="p-4 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(91,42,134,0.03)">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 3</span>
+              <span class="text-lg">🪤</span>
+            </div>
+            <h4 class="font-bold text-sm mb-1">Option Elimination</h4>
+            <p class="text-[11px] text-stone-500 leading-normal">Master Multiple Choice distractors and eliminate false options.</p>
+          </div>
+          <button class="btn btn-ghost text-[10px] px-2 py-1 justify-center mt-3 w-full" onclick="document.getElementById('drill-mcq-section').scrollIntoView({behavior:'smooth'})">Go to Step 3</button>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="p-4 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(200,147,42,0.03)">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 4</span>
+              <span class="text-lg">🔦</span>
+            </div>
+            <h4 class="font-bold text-sm mb-1">Global Matching</h4>
+            <p class="text-[11px] text-stone-500 leading-normal">Hunt out-of-order details with paragraph matching and synonym maps.</p>
+          </div>
+          <button class="btn btn-ghost text-[10px] px-2 py-1 justify-center mt-3 w-full" onclick="document.getElementById('drill-matching-section').scrollIntoView({behavior:'smooth'})">Go to Step 4</button>
+        </div>
+        
+        <!-- Step 5 -->
+        <div class="p-4 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(232,69,107,0.03)">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 5</span>
+              <span class="text-lg">👑</span>
+            </div>
+            <h4 class="font-bold text-sm mb-1">Timed Simulation</h4>
+            <p class="text-[11px] text-stone-500 leading-normal">Put all methods to the test under strict time pressure in the Boss Fight.</p>
+          </div>
+          <button class="btn btn-ghost text-[10px] px-2 py-1 justify-center mt-3 w-full" onclick="document.getElementById('boss').scrollIntoView({behavior:'smooth'})">Go to Step 5</button>
+        </div>
+      </div>
+    </div>
+
     <!-- DRILL A: T/F/NG -->
-    <div class="card p-6 mb-8 bg-white">
-      <div class="flex items-center gap-3 mb-4"><span class="chip" style="background:#fdf0f3;color:var(--rose)">Drill A · T / F / NG</span><h3 class="text-xl">The Logic Test — "Prove It" (20 Questions)</h3></div>
+    <div class="card p-6 mb-8 bg-white" id="drill-tfng-section">
+      <div class="flex items-center gap-3 mb-4"><span class="chip" style="background:#fdf0f3;color:var(--rose)">Step 2 · T / F / NG</span><h3 class="text-xl">The Logic Test — "Prove It" (20 Questions)</h3></div>
       
       <!-- Tab selectors -->
       <div class="flex gap-2 mb-4 border-b border-line pb-2">
@@ -648,8 +725,8 @@
     </div>
 
     <!-- DRILL B: MCQ -->
-    <div class="card p-6 mb-8 bg-white">
-      <div class="flex items-center gap-3 mb-4"><span class="chip" style="background:#f3ecff;color:var(--plum)">Drill B · MCQ</span><h3 class="text-xl">The Distractor Test — Elimination (20 Questions)</h3></div>
+    <div class="card p-6 mb-8 bg-white" id="drill-mcq-section">
+      <div class="flex items-center gap-3 mb-4"><span class="chip" style="background:#f3ecff;color:var(--plum)">Step 3 · MCQ</span><h3 class="text-xl">The Distractor Test — Elimination (20 Questions)</h3></div>
       
       <!-- Tab selectors -->
       <div class="flex gap-2 mb-4 border-b border-line pb-2">
@@ -684,8 +761,8 @@
     </div>
 
     <!-- DRILL C: MATCHING INFORMATION -->
-    <div class="card p-6 bg-white">
-      <div class="flex items-center gap-3 mb-4"><span class="chip" style="background:#fdf6e3;color:var(--gold)">Drill C · Matching Info</span><h3 class="text-xl">The Searchlight Test — Paragraph Match (16 Questions)</h3></div>
+    <div class="card p-6 bg-white" id="drill-matching-section">
+      <div class="flex items-center gap-3 mb-4"><span class="chip" style="background:#fdf6e3;color:var(--gold)">Step 4 · Matching Info</span><h3 class="text-xl">The Searchlight Test — Paragraph Match (16 Questions)</h3></div>
       
       <!-- Tab selectors -->
       <div class="flex gap-2 mb-4 border-b border-line pb-2">
@@ -734,7 +811,7 @@
 
   <!-- BOSS FIGHT -->
   <section id="boss" class="mb-14">
-    <h2 class="text-3xl mb-2">⑥ Boss Fight — 5-Minute Mock</h2>
+    <h2 class="text-3xl mb-2">⑥ Step 5: Timed Exam Simulation (Boss Fight)</h2>
     <div class="card p-6 mt-6">
       <div class="flex items-center justify-between mb-3">
         <span class="chip" style="background:#fdf6e3;color:var(--gold)">Mock Passage · 280 words</span>

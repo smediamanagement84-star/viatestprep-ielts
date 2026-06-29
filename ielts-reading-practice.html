@@ -168,6 +168,7 @@
     }
   </style>
   <script src="security.js"></script>
+  <script src="theme-loader.js"></script>
 </head>
 
 <body class="flex flex-col h-screen overflow-hidden">
@@ -287,9 +288,9 @@
     const testId = urlParams.get('test') || '1';
     const testData = IELTS_TEST_DATA[testId];
 
-    // Fallback to Test 1 if ID not found
-    if (!testData) {
-      alert('Test Set not found! Redirecting to Test 1.');
+    // Fallback to Test 1 if ID not found or disabled
+    if (!testData || parseInt(testId) >= 9) {
+      alert('Test Set not found or temporarily disabled! Redirecting to Test 1.');
       window.location.search = '?test=1';
     }
 

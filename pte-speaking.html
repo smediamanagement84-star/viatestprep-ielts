@@ -284,6 +284,7 @@
   .w-warn { color: var(--amber); font-weight: 700; }
   .w-err { color: var(--red); font-weight: 700; text-decoration: line-through; }
 </style>
+  <script src="theme-loader.js"></script>
 </head>
 <body>
 
@@ -530,23 +531,103 @@
         <span class="info-pill blue">3–4 items</span>
         <span class="info-pill blue">25 sec prep · 40 sec speak</span>
         <span class="info-pill green">Scores: Speaking</span>
+        <span class="info-pill orange">High value task</span>
       </div>
-      <p>An image appears — bar chart, line graph, pie chart, table, map, or process diagram. You have 25 seconds to study it then 40 seconds to describe it. You <strong>must fill the full 40 seconds</strong> without stopping.</p>
+      <p>An image appears — bar chart, line graph, pie chart, table, map, process diagram, or photo. You have 25 seconds to study it then 40 seconds to describe it. You <strong>must fill the full 40 seconds</strong> without stopping. Pearson's AI measures your oral fluency, pronunciation, and content coverage.</p>
       
+      <span class="label blue">What The AI Scores</span>
+      <table class="score-table">
+        <tr class="st-row">
+          <td class="st-cell head field">SUB-SKILL</td>
+          <td class="st-cell head">WHAT IT MEASURES</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Content</td>
+          <td class="st-cell">Did you cover the key features, overall trend, and speak for the full time?</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Oral Fluency</td>
+          <td class="st-cell">Natural rhythm — no dead silence, smooth transitions between points</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Pronunciation</td>
+          <td class="st-cell">Clear, intelligible delivery of data points and descriptive vocabulary</td>
+        </tr>
+      </table>
+
+      <span class="label green">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">During prep: build a 5-sentence skeleton on notepad</div>
+            <div class="step-desc">Write down: ① What is it? ② Overall trend ③ Highest value ④ Lowest / contrast ⑤ Conclusion. 5 sentences × 8 seconds = 40 seconds perfectly filled.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Always start with introduction — never with data</div>
+            <div class="step-desc">Open by stating what the image shows: "The bar chart illustrates..." This signals to the AI you understood the visual structure first.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">State the overall trend as your second sentence</div>
+            <div class="step-desc">The Overview is the most important sentence. Always give a general summary before diving into specific numbers.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Select 2–3 key data points — not all of them</div>
+            <div class="step-desc">Trying to mention every data point causes rushed monotone delivery. Pick highest, lowest, and one interesting comparison. Use "approximately" for unclear values.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <div class="step-title">Always end with a conclusion sentence</div>
+            <div class="step-desc">If time is running short: "In conclusion, this data highlights a clear pattern of..." Never stop mid-thought; a proper conclusion ensures high content scores.</div>
+          </div>
+        </div>
+      </div>
+
       <span class="label blue">Universal 5-Sentence Template</span>
       <div class="template-box">
         <div class="template-text">
           <span class="fixed">① INTRODUCTION (5–6 sec):</span>
-          "The <span class="slot">[image type]</span> illustrates <span class="slot">[main topic]</span>."
+          "The <span class="slot">[image type: bar chart / line graph / pie chart / table / map / diagram]</span> illustrates <span class="slot">[main topic]</span> <span class="slot">[time period / location if shown]</span>."
           <span class="fixed">② OVERVIEW — Key Trend (7–8 sec):</span>
           "Overall, it is evident that <span class="slot">[most striking finding or dominant pattern]</span>."
           <span class="fixed">③ HIGHEST / MOST PROMINENT (8 sec):</span>
-          "Notably, <span class="slot">[category with highest value]</span> recorded the highest figure at approximately <span class="slot">[value]</span>."
+          "Notably, <span class="slot">[category with highest value]</span> recorded the highest figure at approximately <span class="slot">[value]</span>, <span class="slot">[followed by / compared with / while]</span> <span class="slot">[contrast detail]</span>."
           <span class="fixed">④ LOWEST / CONTRAST (7–8 sec):</span>
-          "In contrast, <span class="slot">[lowest category]</span> showed the smallest figure at <span class="slot">[value]</span>."
+          "In contrast, <span class="slot">[lowest category]</span> showed the smallest figure at <span class="slot">[value]</span>, <span class="slot">[additional observation]</span>."
           <span class="fixed">⑤ CONCLUSION (6–7 sec):</span>
-          "In conclusion, the <span class="slot">[image type]</span> clearly demonstrates that <span class="slot">[key takeaway]</span>."
+          "In conclusion, the <span class="slot">[image type]</span> clearly demonstrates that <span class="slot">[key takeaway — link to real-world implication]</span>."
         </div>
+      </div>
+
+      <span class="label orange">Vocabulary Banks</span>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px;">
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px;"><div style="font-size:10px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:1px;text-transform:uppercase;">INCREASES</div><div style="font-size:12px;color:var(--text-2);line-height:1.7;">rose sharply · surged to · climbed steadily · increased dramatically · peaked at · reached a high of</div></div>
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px;"><div style="font-size:10px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:1px;text-transform:uppercase;">DECREASES</div><div style="font-size:12px;color:var(--text-2);line-height:1.7;">declined sharply · fell dramatically · dropped to · plummeted · hit a low of · decreased steadily</div></div>
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px;"><div style="font-size:10px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:1px;text-transform:uppercase;">STABLE</div><div style="font-size:12px;color:var(--text-2);line-height:1.7;">remained stable · levelled off · fluctuated around · showed little change · stayed relatively constant</div></div>
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px;"><div style="font-size:10px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:1px;text-transform:uppercase;">COMPARISON &amp; DIALS</div><div style="font-size:12px;color:var(--text-2);line-height:1.7;">in contrast · compared with · whereas · while · on the other hand · significantly higher than</div></div>
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px;"><div style="font-size:10px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:1px;text-transform:uppercase;">PROCESS DIAGRAMS</div><div style="font-size:12px;color:var(--text-2);line-height:1.7;">first · then · subsequently · after which · finally · the process begins with · this leads to</div></div>
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px;"><div style="font-size:10px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:1px;text-transform:uppercase;">MAPS &amp; SPATIAL</div><div style="font-size:12px;color:var(--text-2);line-height:1.7;">was demolished · was replaced by · was built · was extended · to the north/south of · in the centre</div></div>
+      </div>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">MISTAKES TO AVOID</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Going silent — if you run out of content, repeat the overview in different words to fill time.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Describing every single data point — causes rushed monotone delivery that drops oral fluency.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Inventing precise numbers not visible in the image — use "approximately" or "roughly".</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Using past tense for process diagrams — always present simple passive: "water IS filtered".</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Reading numbers too fast — "forty-five percent" should take a full second; rush it and it sounds like gibberish.</div></div>
       </div>
     </div>
   </div>
@@ -557,24 +638,70 @@
       <div class="info-row">
         <span class="info-pill blue">2–3 items</span>
         <span class="info-pill blue">Audio up to 90 sec</span>
+        <span class="info-pill blue">10 sec prep · 40 sec speak</span>
         <span class="info-pill green">Scores: Speaking + Listening</span>
       </div>
-      <p>An audio lecture plays. After it ends you have 10 seconds to prepare then 40 seconds to summarise it in your own words. Focus on the main topic, central argument, and 2-3 supporting points.</p>
+      <p>An audio lecture plays — sometimes with a still image on screen. After it ends you have 10 seconds to prepare then 40 seconds to summarise it in your own words. Focus on the main topic, central argument, and 2-3 supporting points.</p>
       
+      <span class="label blue">What The AI Scores</span>
+      <table class="score-table">
+        <tr class="st-row">
+          <td class="st-cell head field">SUB-SKILL</td>
+          <td class="st-cell head">WHAT IT MEASURES</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Content</td>
+          <td class="st-cell">Did you accurately capture the main topic, central claim, and key supporting points?</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Oral Fluency</td>
+          <td class="st-cell">Smooth connected delivery — no long pauses, hesitations, or choppy word-by-word output</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Pronunciation</td>
+          <td class="st-cell">Clear production of English sounds and natural word stress</td>
+        </tr>
+      </table>
+
+      <span class="label orange">Note-Taking System During Audio</span>
+      <div class="tips-box">
+        <div class="tips-label">WHAT TO WRITE ON YOUR NOTEPAD</div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>First 10 sec:</strong> Write the TOPIC — 1–2 words only. Always stated early in the lecture.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Middle section:</strong> Note key nouns, numbers, names, technical terms. Hardest to recall from memory.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Last 10 sec:</strong> Note the conclusion or recommendation — speakers always signal it at the end.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div>Use symbols: → = leads to · + = also · ↑ = increase · ↓ = decrease · ? = question raised.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div>Write KEYWORDS only — do NOT attempt full sentences. Your listening will suffer.</div></div>
+      </div>
+
       <span class="label blue">5-Sentence Response Template</span>
       <div class="template-box">
         <div class="template-text">
           <span class="fixed">① TOPIC (5 sec):</span>
           "The lecture discusses <span class="slot">[main topic]</span>."
           <span class="fixed">② MAIN ARGUMENT (8 sec):</span>
-          "The speaker argues that <span class="slot">[central claim]</span>."
+          "The speaker argues that <span class="slot">[central claim]</span>, explaining that <span class="slot">[main reasoning]</span>."
           <span class="fixed">③ SUPPORTING DETAIL 1 (8 sec):</span>
-          "Furthermore, <span class="slot">[first key supporting point]</span>."
+          "Furthermore, <span class="slot">[first key supporting point or evidence]</span>, which <span class="slot">[significance or implication]</span>."
           <span class="fixed">④ SUPPORTING DETAIL 2 (8 sec):</span>
-          "The speaker also mentions that <span class="slot">[second key point]</span>."
+          "The speaker also mentions that <span class="slot">[second key point]</span>, highlighting <span class="slot">[why it matters]</span>."
           <span class="fixed">⑤ CONCLUSION (7 sec):</span>
           "In conclusion, the lecture highlights the importance of <span class="slot">[key takeaway]</span>."
         </div>
+      </div>
+
+      <div class="example-box">
+        <div class="example-label">SAMPLE RESPONSE (~40 seconds)</div>
+        <div class="example-text">The lecture discusses <em>the psychological effects of social media on teenagers</em>. The speaker argues that <em>excessive screen time is directly linked to rising anxiety levels</em>, explaining that <em>algorithmic design deliberately extends engagement beyond healthy limits</em>. Furthermore, <em>studies show a 40% rise in reported mental health issues among adolescents over the past decade</em>. The speaker also mentions that <em>parents and schools are ill-equipped to counter this without policy intervention</em>. In conclusion, the lecture highlights the importance of <em>urgent regulatory frameworks to protect young users from harmful content</em>.</div>
+      </div>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">MISTAKES TO AVOID</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Starting with "I heard…" or "He said…" — use "The lecture discusses…" or "The speaker argues…".</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Using first person to paraphrase: "He said he thought climate was bad." — maintain academic reporting register.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Trying to reproduce every detail — 4–5 key points delivered fluently beats 8 points delivered poorly.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Going silent if you miss a point — say "the lecture also explores related aspects of this field" and continue.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Stopping before 40 seconds — always fill the time even if you need to repeat the conclusion.</div></div>
       </div>
     </div>
   </div>
@@ -585,11 +712,44 @@
       <div class="info-row">
         <span class="info-pill blue">5–6 items</span>
         <span class="info-pill blue">3–9 sec audio</span>
+        <span class="info-pill blue">10 sec to respond</span>
         <span class="info-pill green">Scores: Listening + Speaking</span>
       </div>
-      <p>A short question plays. You answer with <strong>one word or a very short phrase</strong>. One correct word = full marks.</p>
+      <p>A short question plays — sometimes accompanied by an image. You answer with <strong>one word or a very short phrase</strong>. Questions test general world knowledge, vocabulary, and common facts. One correct word = full marks.</p>
       
-      <span class="label blue">Examples</span>
+      <span class="label green">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Focus on the question word</div>
+            <div class="step-desc">What is…? / Who…? / What do you call…? The question word tells you exactly what type of answer is needed.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Answer immediately — within 1 second</div>
+            <div class="step-desc">The microphone window is short. Hesitation wastes recording time. Say your answer confidently.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">One or two words maximum</div>
+            <div class="step-desc">Do not explain or justify. Extra words do not help — the AI scores on the single correct answer word.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Always attempt — never stay silent</div>
+            <div class="step-desc">A wrong answer scores zero — same as silence. But confident delivery at least keeps your oral fluency metrics intact.</div>
+          </div>
+        </div>
+      </div>
+
+      <span class="label blue">Common Question Categories + Sample Answers</span>
       <table class="score-table">
         <tr class="st-row">
           <td class="st-cell head field">QUESTION TYPE</td>
@@ -597,17 +757,47 @@
         </tr>
         <tr class="st-row">
           <td class="st-cell field">Opposites</td>
-          <td class="st-cell">"What is the opposite of expensive?" → <strong>cheap / inexpensive</strong></td>
+          <td class="st-cell">"What is the opposite of expensive?" → <strong style="color:var(--green)">cheap / inexpensive</strong></td>
         </tr>
         <tr class="st-row">
           <td class="st-cell field">Definitions</td>
-          <td class="st-cell">"What do you call a doctor who treats children?" → <strong>paediatrician</strong></td>
+          <td class="st-cell">"What do you call a doctor who treats children?" → <strong style="color:var(--green)">paediatrician</strong></td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Geography</td>
+          <td class="st-cell">"What is the largest ocean?" → <strong style="color:var(--green)">Pacific</strong></td>
         </tr>
         <tr class="st-row">
           <td class="st-cell field">Science</td>
-          <td class="st-cell">"What gas do plants absorb?" → <strong>carbon dioxide / CO₂</strong></td>
+          <td class="st-cell">"What gas do plants absorb?" → <strong style="color:var(--green)">carbon dioxide / CO₂</strong></td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Tools</td>
+          <td class="st-cell">"What measures temperature?" → <strong style="color:var(--green)">thermometer</strong></td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Professions</td>
+          <td class="st-cell">"Who writes prescriptions?" → <strong style="color:var(--green)">doctor / physician</strong></td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Language</td>
+          <td class="st-cell">"What is the plural form of child?" → <strong style="color:var(--green)">children</strong></td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Calendar</td>
+          <td class="st-cell">"How many days are in a leap year?" → <strong style="color:var(--green)">366</strong></td>
         </tr>
       </table>
+
+      <div class="callout" style="border-color:var(--border-hi);background:rgba(37,99,235,0.02)"><strong>Preparation tip:</strong> Study a list of 200 common PTE ASQ answers — these questions repeat from a limited pool. Recognising the question instantly builds response speed and confidence significantly.</div>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">MISTAKES TO AVOID</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Long answers: "I think it might be a thermometer because it measures temperature..." — one word only.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Saying "I don't know" or staying silent — always guess a likely word.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Over-thinking — ASQ answers are almost always the first common word that comes to mind.</div></div>
+      </div>
     </div>
   </div>
 
@@ -616,22 +806,120 @@
     <div class="card-block">
       <div class="info-row">
         <span class="info-pill blue">2–3 items (Academic)</span>
+        <span class="info-pill blue">2–4 items (Core)</span>
+        <span class="info-pill blue">10s prep · 40s speak</span>
         <span class="info-pill green">Scores: Speaking</span>
       </div>
-      <p>You hear and read a real-world situation. You have 10 seconds to prepare, then 40 seconds to speak. Respond naturally as you would to a real person.</p>
+      <p>You hear and read a real-world situation on screen. After the audio ends, you have <strong>10 seconds to prepare</strong> (Academic) or 20 seconds (Core), then <strong>40 seconds to speak</strong>. Respond naturally — as you would to a real person in that situation.</p>
       
-      <span class="label blue">4-Part Template</span>
+      <span class="label blue">What The AI Scores</span>
+      <table class="score-table">
+        <tr class="st-row">
+          <td class="st-cell head field">SUB-SKILL</td>
+          <td class="st-cell head">WHAT IT MEASURES</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Content</td>
+          <td class="st-cell">Does your response address all elements of the situation fully and appropriately?</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Oral Fluency</td>
+          <td class="st-cell">Natural, conversational rhythm — not academic, not robotic</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Pronunciation</td>
+          <td class="st-cell">Clear, intelligible delivery at a natural conversational pace</td>
+        </tr>
+      </table>
+
+      <span class="label green">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">During prep: identify 3 key elements</div>
+            <div class="step-desc">① WHO am I talking to? (neighbour, manager, customer) ② WHAT happened? ③ WHAT is my response? (apologise, request, explain, offer solution)</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Open by acknowledging the situation naturally</div>
+            <div class="step-desc">Start with a natural opener relevant to the audience: "Hi, I just wanted to come over and..." / "Good morning, I'm calling about..."</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">State your main response clearly</div>
+            <div class="step-desc">Make your key point in one clear sentence, then support it with a brief reason or explanation from the prompt details.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Offer a specific solution or next step</div>
+            <div class="step-desc">Strong responses always include a concrete action: "I'll make sure this doesn't happen again." / "Could we arrange a time to discuss this?"</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <div class="step-title">Close politely and invite follow-up</div>
+            <div class="step-desc">End with: "Please let me know if there's anything else I can do." This signals communicative competence to the AI.</div>
+          </div>
+        </div>
+      </div>
+
+      <span class="label blue">Universal 4-Part Template</span>
       <div class="template-box">
         <div class="template-text">
-          <span class="fixed">OPENER:</span>
-          "<span class="slot">[Hi / Hello / Good morning]</span>, I <span class="slot">[wanted to reach out]</span> about <span class="slot">[the situation]</span>."
-          <span class="fixed">MAIN RESPONSE:</span>
-          "I <span class="slot">[apologise for / wanted to explain]</span> <span class="slot">[specific detail]</span>."
+          <span class="fixed">OPENER — Address audience directly:</span>
+          "<span class="slot">[Hi / Hello / Good morning / Excuse me]</span>, I <span class="slot">[wanted to reach out / am calling / came over]</span> about <span class="slot">[the situation from the prompt]</span>."
+          <span class="fixed">MAIN RESPONSE — Your key action:</span>
+          "I <span class="slot">[sincerely apologise for / wanted to let you know that / would like to request / need to explain]</span> <span class="slot">[specific detail]</span> because <span class="slot">[brief reason]</span>."
           <span class="fixed">SOLUTION / NEXT STEP:</span>
-          "I think the best way to resolve this would be to <span class="slot">[practical step]</span>."
+          "I think the best way to <span class="slot">[resolve / address / move forward]</span> would be to <span class="slot">[specific practical step]</span>, and I <span class="slot">[will ensure / can arrange / would appreciate]</span> <span class="slot">[outcome]</span>."
           <span class="fixed">POLITE CLOSE:</span>
-          "Please <span class="slot">[let me know]</span> if you need anything further."
+          "Please <span class="slot">[let me know / feel free to contact me / don't hesitate to reach out]</span> if you need anything further."
         </div>
+      </div>
+
+      <span class="label orange">Situation Type Quick-Reference</span>
+      <table class="score-table">
+        <tr class="st-row">
+          <td class="st-cell head field">SITUATION TYPE</td>
+          <td class="st-cell head">KEY LANGUAGE</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Apologising</td>
+          <td class="st-cell">I sincerely apologise for… · I take full responsibility… · It won't happen again.</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Making a request</td>
+          <td class="st-cell">I was wondering if you could… · Would it be possible to… · I'd really appreciate it if…</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Giving information</td>
+          <td class="st-cell">I wanted to let you know that… · Just to update you… · Please be aware that…</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Solving a problem</td>
+          <td class="st-cell">The best approach would be to… · I suggest we… · One way to resolve this is…</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Accepting / Declining</td>
+          <td class="st-cell">I'd be happy to… · Unfortunately, I'm unable to… · I'm afraid I won't be able to…</td>
+        </tr>
+      </table>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">MISTAKES TO AVOID</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Using academic or formal essay language — this is real-world conversation, use natural speech register.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Ignoring details from the prompt — every detail in the situation description must be addressed.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Stopping before 40 seconds — add a polite follow-up or reiterate your solution to fill the remaining time.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Memorising one fixed response — situations vary, use the template structure not the exact words.</div></div>
       </div>
     </div>
   </div>
@@ -641,29 +929,79 @@
     <div class="card-block">
       <div class="info-row">
         <span class="info-pill blue">2–3 items</span>
+        <span class="info-pill blue">Audio up to 3 min</span>
+        <span class="info-pill blue">2 min to respond</span>
         <span class="info-pill green">Scores: Listening + Speaking</span>
       </div>
-      <p>You listen to a 3-speaker conversation (up to 3 minutes) then have 2 minutes to summarise the main viewpoints.</p>
+      <p>You listen to a <strong>3-speaker conversation</strong> (up to 3 minutes) then have <strong>2 minutes</strong> to summarise the main viewpoints. This is a double-skill task that scores both Listening and Speaking simultaneously.</p>
       
+      <span class="label blue">What The AI Scores</span>
+      <table class="score-table">
+        <tr class="st-row">
+          <td class="st-cell head field">SUB-SKILL</td>
+          <td class="st-cell head">WHAT IT MEASURES</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Content</td>
+          <td class="st-cell">Did you accurately capture the key viewpoints all three speakers contributed?</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Oral Fluency</td>
+          <td class="st-cell">Smooth, uninterrupted 2-minute delivery at a natural pace</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Pronunciation</td>
+          <td class="st-cell">Clear production maintained throughout the full response</td>
+        </tr>
+      </table>
+
+      <span class="label orange">Note-Taking System During Audio</span>
+      <div class="tips-box">
+        <div class="tips-label">WHAT TO WRITE ON YOUR NOTEPAD</div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>First 15 sec:</strong> Write the TOPIC — 1–2 words. Always established at the very start.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Speaker A:</strong> Note their main position or key argument — 3–5 keywords.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Speaker B:</strong> Do they agree, counter, or add a new angle? Note their key point.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Speaker C:</strong> Note their contribution — especially if they propose a conclusion or solution.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div>You do NOT need to track who said what — just capture 3 distinct viewpoints or ideas.</div></div>
+      </div>
+
       <span class="label blue">5-Sentence Response Template</span>
       <div class="template-box">
         <div class="template-text">
-          <span class="fixed">① INTRODUCE TOPIC:</span>
-          "The group discussed <span class="slot">[main topic]</span>, exploring a range of perspectives."
-          <span class="fixed">② FIRST VIEWPOINT:</span>
-          "One speaker argued that <span class="slot">[Viewpoint A]</span>."
-          <span class="fixed">③ SECOND VIEWPOINT:</span>
-          "Another participant pointed out that <span class="slot">[Viewpoint B]</span>."
-          <span class="fixed">④ THIRD VIEWPOINT:</span>
-          "A third perspective raised was that <span class="slot">[Viewpoint C]</span>."
-          <span class="fixed">⑤ OVERALL CONCLUSION:</span>
-          "Overall, the discussion highlighted <span class="slot">[central tension]</span>."
+          <span class="fixed">① INTRODUCE TOPIC (8 sec):</span>
+          "The group discussed <span class="slot">[main topic]</span>, exploring a range of perspectives on <span class="slot">[specific aspect]</span>."
+          <span class="fixed">② FIRST VIEWPOINT (18 sec):</span>
+          "One speaker argued that <span class="slot">[Viewpoint A]</span>, emphasising that <span class="slot">[key reason or supporting detail]</span>."
+          <span class="fixed">③ SECOND VIEWPOINT (18 sec):</span>
+          "Another participant <span class="slot">[agreed / disagreed / extended this]</span> by pointing out that <span class="slot">[Viewpoint B]</span>, which <span class="slot">[adds to / contrasts with the first view]</span>."
+          <span class="fixed">④ THIRD VIEWPOINT (18 sec):</span>
+          "A third perspective raised was that <span class="slot">[Viewpoint C]</span>, suggesting that <span class="slot">[implication or proposed solution]</span>."
+          <span class="fixed">⑤ OVERALL CONCLUSION (10 sec):</span>
+          "Overall, the discussion highlighted <span class="slot">[central tension or shared conclusion]</span> as a key issue requiring <span class="slot">[further attention / a balanced approach]</span>."
         </div>
       </div>
+
+      <div class="example-box">
+        <div class="example-label">SAMPLE RESPONSE — Topic: Remote Work</div>
+        <div class="example-text">The group discussed the growing trend of remote work, exploring its impact on productivity and workplace culture. One speaker argued that working from home dramatically improves work-life balance and reduces commuting stress, citing measurable output gains. Another participant disagreed, pointing out that remote work weakens team cohesion and makes onboarding new staff extremely difficult. A third perspective raised was that a hybrid model offers the most practical solution, preserving flexibility while maintaining social bonds. Overall, the discussion highlighted that while remote work brings genuine individual benefits, a balanced organisational policy is needed to address its wider professional drawbacks.</div>
+      </div>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">MISTAKES TO AVOID</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Attributing specific quotes to specific speakers — summarise the ideas, not who said them.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Only covering two of the three viewpoints — all three must feature for full Content marks.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Adding your own personal opinion — this is a neutral summary of what the speakers discussed.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Running out of time — 2 minutes = approximately 5 sentences at a natural pace. Plan your structure.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Going silent if you miss a point — say "the discussion also explored related dimensions of this topic" as a bridge.</div></div>
+      </div>
+
+      <div class="callout" style="border-color:var(--border-hi);background:rgba(37,99,235,0.02)"><strong>Training tip:</strong> Watch BBC HARDtalk, Al Jazeera panel discussions, or TEDx debates. After each one, summarise in 2 minutes out loud. This builds the exact listening-to-speaking conversion skill tested here.</div>
     </div>
   </div>
 
 </div>
+
 
 <script>
   function switchTab(tabId) {

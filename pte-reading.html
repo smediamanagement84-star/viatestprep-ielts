@@ -307,6 +307,7 @@
   .rop-indicator.ok { background: var(--green); }
   .rop-indicator.err { background: var(--red); }
 </style>
+  <script src="theme-loader.js"></script>
 </head>
 <body>
 
@@ -336,29 +337,59 @@
         <span class="info-pill green">Scores: Reading + Writing</span>
         <span class="info-pill orange">Highest value reading task</span>
       </div>
-      <p>A text with several blanks appears. Each blank has a dropdown with 4–6 word options. Select the best word for each blank. Tests vocabulary AND reading comprehension simultaneously.</p>
+      <p>A text with several blanks appears. Each blank has a dropdown with 4–6 word options. Select the best word for each blank. Tests vocabulary AND reading comprehension simultaneously — scores both Reading and Writing (vocabulary sub-skill).</p>
       
-      <span class="label amber">How To Attempt — Step By Step</span>
+      <span class="label amber">What The AI Scores</span>
+      <table class="score-table">
+        <tr class="st-row">
+          <td class="st-cell head field">CRITERION</td>
+          <td class="st-cell head">DETAIL</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Correct selections</td>
+          <td class="st-cell">Each correct blank = 1 point. Partial credit — each blank scored independently.</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Skills contributed</td>
+          <td class="st-cell">Feeds Reading score AND Writing (Vocabulary) score simultaneously.</td>
+        </tr>
+      </table>
+
+      <span class="label green">How To Attempt — Step By Step</span>
       <div class="step-list">
         <div class="step-item">
           <div class="step-num">1</div>
           <div class="step-body">
-            <div class="step-title">Read the full sentence around the blank first</div>
-            <div class="step-desc">Do not look at the options. Determine the grammatical slot (noun / verb / adjective) needed for the sentence to make sense.</div>
+            <div class="step-title">Read the full sentence around the blank BEFORE opening the dropdown</div>
+            <div class="step-desc">Never look at the options first. Read the complete sentence to understand meaning and identify the grammatical slot needed (noun / verb / adjective / adverb).</div>
           </div>
         </div>
         <div class="step-item">
           <div class="step-num">2</div>
           <div class="step-body">
-            <div class="step-title">Apply collocation logic</div>
-            <div class="step-desc">Words naturally pair together. Look at adjacent words to identify the correct pairing (e.g. "pose a threat", "meet the criteria").</div>
+            <div class="step-title">Identify the grammatical slot</div>
+            <div class="step-desc">Is the blank a noun (subject/object), verb (action), adjective (describes noun), or adverb (modifies verb)? This eliminates 2–3 options immediately.</div>
           </div>
         </div>
         <div class="step-item">
           <div class="step-num">3</div>
           <div class="step-body">
-            <div class="step-title">Eliminate based on register</div>
-            <div class="step-desc">PTE passages are academic. Prefer formal synonyms over casual/informal words (e.g. "substantial" instead of "big").</div>
+            <div class="step-title">Apply collocation logic</div>
+            <div class="step-desc">Words naturally pair together. "strong argument" not "powerful argument". "make a mistake" not "do a mistake". Knowing collocations often identifies the answer instantly.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Check register — academic texts require formal vocabulary</div>
+            <div class="step-desc">If one option is informal (big, good, bad) and another is formal (substantial, beneficial, detrimental), the academic text almost always requires the formal word.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <div class="step-title">Re-read the full sentence with your selected word</div>
+            <div class="step-desc">Does it sound grammatically correct and semantically natural? If yes, move on. If not, try the next best option.</div>
           </div>
         </div>
       </div>
@@ -366,19 +397,28 @@
       <span class="label">4-Filter Elimination Method</span>
       <div class="template-box">
         <div class="template-text">
-          FILTER 1 — Wrong word class: <span class="slot">nouns in verb slots</span><br>
-          FILTER 2 — Wrong collocation: <span class="slot">"do research" vs "carry out research"</span><br>
-          FILTER 3 — Wrong register: <span class="slot">casual vs formal academic tone</span><br>
-          FILTER 4 — Preposition fit: <span class="slot">does the choice match the following preposition?</span>
+          <span class="fixed">FILTER 1 — Wrong word class:</span> Eliminate any word that is the wrong part of speech for the slot (verb in adjective position, noun in adverb position).<br><br>
+          <span class="fixed">FILTER 2 — Wrong collocation:</span> Eliminate words that don't pair naturally with adjacent words. "carry out research" not "make research".<br><br>
+          <span class="fixed">FILTER 3 — Wrong meaning or tone:</span> Eliminate words with incorrect meaning or wrong formality level for the academic context.<br><br>
+          <span class="fixed">FILTER 4 — Wrong preposition fit:</span> Check prepositions around the blank. "responsible for" not "responsible of". "interested in" not "interested about".
         </div>
       </div>
 
-      <span class="label green">Collocations to Memorise</span>
+      <span class="label green">Collocation bank to memorise</span>
       <div class="tips-box">
         <div class="tips-label">COMMON PAIRINGS</div>
         <div class="tip-item"><div class="tip-dot">▸</div><div>carry out research · reach a conclusion · raise awareness</div></div>
         <div class="tip-item"><div class="tip-dot">▸</div><div>draw attention to · make an impact · pose a threat</div></div>
         <div class="tip-item"><div class="tip-dot">▸</div><div>meet the criteria · fulfil a requirement · bear a resemblance</div></div>
+      </div>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">MISTAKES TO AVOID</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Opening the dropdown before reading the sentence — options are designed to distract.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Spending more than 2.5 minutes on one item — move on and return if time allows.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Randomly guessing without applying grammatical and collocation filters first.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Ignoring register — informal words rarely appear as correct answers in academic texts.</div></div>
       </div>
     </div>
   </div>
@@ -388,14 +428,78 @@
     <div class="card-block">
       <div class="info-row">
         <span class="info-pill amber">2–3 items</span>
+        <span class="info-pill amber">~90 sec each</span>
         <span class="info-pill red">⚠ NEGATIVE MARKING</span>
         <span class="info-pill green">Scores: Reading</span>
       </div>
-      <p>A reading passage with a question. Multiple answers may be correct. <strong>Incorrect selections DEDUCT marks.</strong> The only Reading task with negative marking.</p>
+      <p>A reading passage with a question. Multiple answers may be correct — typically 2 or 3 of 5–6 options. <strong style="color:var(--red);">Incorrect selections DEDUCT marks.</strong> The only Reading task with negative marking.</p>
       
+      <div class="callout red">
+        <strong>Negative marking rule:</strong> Correct answer selected = +1. Incorrect answer selected = −1. Blank (not selected) = 0. Selecting a wrong answer is WORSE than leaving it blank. Only select options you are 80%+ confident about. If in doubt, select just ONE correct answer and move on.
+      </div>
+
+      <span class="label green">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Read the question first — not the passage</div>
+            <div class="step-desc">Know exactly what you are looking for before reading. Is the question asking about: main idea / specific detail / writer's attitude / inference / vocabulary in context?</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Skim passage for the relevant section only</div>
+            <div class="step-desc">Do not read every word. Locate the section relevant to the question and read only that part carefully.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Evaluate each option against the passage — not your knowledge</div>
+            <div class="step-desc">For each option ask: "Is this explicitly stated or clearly implied in the passage?" If neither, it is wrong — regardless of how plausible it sounds in general.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Apply the 80% confidence filter</div>
+            <div class="step-desc">Only select options you are 80%+ confident about. If you are 50/50 on an option, DO NOT select it — the deduction outweighs the potential gain.</div>
+          </div>
+        </div>
+      </div>
+
+      <span class="label amber">Wrong Answer Patterns — What Distractors Do</span>
+      <table class="score-table">
+        <tr class="st-row">
+          <td class="st-cell head field">DISTRACTOR TYPE</td>
+          <td class="st-cell head">HOW TO SPOT IT</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Too extreme</td>
+          <td class="st-cell">Uses absolute words like "always", "never", "completely" while the passage uses qualifiers like "often", "tends to", "may".</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Partially true</td>
+          <td class="st-cell">Mentions something from the passage but applies it to the wrong subject, time period, or context.</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Not in text</td>
+          <td class="st-cell">Sounds topic-related and highly plausible in the real world but is simply not stated or implied in the passage.</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Opposite meaning</td>
+          <td class="st-cell">Reverses the actual meaning of what the passage states (e.g. claims a positive link when it is negative).</td>
+        </tr>
+      </table>
+
+      <span class="label red">What To Avoid</span>
       <div class="avoid-box">
-        <div class="avoid-label">Negative marking applies</div>
-        <div class="avoid-item"><div class="avoid-x">✗</div><div>Selecting a wrong answer is WORSE than leaving it blank. Only select what you are 80%+ confident about. If in doubt, select just ONE correct answer and move on.</div></div>
+        <div class="avoid-label">MISTAKES TO AVOID</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Selecting answers based on general world knowledge — only what the passage says counts.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Selecting many options "to be safe" — this almost guarantees more deductions than gains.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Spending more than 2 minutes — this task is worth fewer points than R&W Fill Blanks. Cap your time.</div></div>
       </div>
     </div>
   </div>
@@ -407,8 +511,9 @@
         <span class="info-pill amber">2–3 items</span>
         <span class="info-pill amber">~2 min each</span>
         <span class="info-pill green">Partial credit (adjacent pairs)</span>
+        <span class="info-pill green">Scores: Reading</span>
       </div>
-      <p>Several text boxes appear in random order. Arrange them into the correct logical sequence. Partial credit is awarded — each correctly adjacent pair scores a point.</p>
+      <p>Several text boxes appear in random order on the left. Drag and drop them into the correct sequence on the right to form a coherent paragraph. Partial credit is awarded — each correctly adjacent pair scores a point.</p>
       
       <span class="label amber">5-Step Re-ordering Method</span>
       <div class="step-list">
@@ -416,36 +521,52 @@
           <div class="step-num">1</div>
           <div class="step-body">
             <div class="step-title">Find the opening sentence first</div>
-            <div class="step-desc">The opening sentence is independent. It introduces a new topic and does NOT start with linking words (However, Therefore) or pronoun references (They, This).</div>
+            <div class="step-desc">The opening sentence introduces a NEW idea with NO pronoun references to anything before it. It does NOT start with "However", "This", "They", "It", "Furthermore". It may use the indefinite article "A" or "An" to introduce something for the first time.</div>
           </div>
         </div>
         <div class="step-item">
           <div class="step-num">2</div>
           <div class="step-body">
-            <div class="step-title">Match pronouns to their antecedents</div>
-            <div class="step-desc">If a sentence refers to "these findings" or "he", the sentence introducing the findings or the person must immediately precede it.</div>
+            <div class="step-title">Find the conclusion sentence</div>
+            <div class="step-desc">The closing sentence wraps up with "In conclusion", "Therefore", "Ultimately", "Thus", or provides a final outcome/implication that cannot logically be followed by another point.</div>
           </div>
         </div>
         <div class="step-item">
           <div class="step-num">3</div>
           <div class="step-body">
-            <div class="step-title">Follow logical connectors</div>
-            <div class="step-desc">Look for sequencing markers: "Firstly", "Consequently", "On the other hand", "In conclusion".</div>
+            <div class="step-title">Match pronouns to their antecedents</div>
+            <div class="step-desc">If a sentence starts with "He", "She", "It", "They", "This", "These" — the sentence INTRODUCING that person/thing/concept must come immediately before it.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Follow logical connectors in sequence</div>
+            <div class="step-desc">"Firstly" → "Secondly" → "Finally". "For example" comes after a general claim. "However" comes after a positive statement. "Furthermore" adds to the same argument.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <div class="step-title">Read the full sequence in your head</div>
+            <div class="step-desc">After placing all boxes, read the full paragraph mentally. Does it flow? Is there a sudden topic jump? If so, swap the two boxes either side of that jump.</div>
           </div>
         </div>
       </div>
 
-      <span class="label">Connector Signals</span>
+      <span class="label">Connector Sequence Guide</span>
       <div class="template-box">
         <div class="template-text">
-          <span class="fixed">SIGNALS AN OPENING:</span>
-          No pronouns referencing prior content · Introduces topic with "A/An" · Independent clause.
-          <span class="fixed">SIGNALS A LINK:</span>
-          Starts with "This" / "These" / "It" / "They" / "However" / "Furthermore".
-          <span class="fixed">SIGNALS A CONCLUSION:</span>
-          "Therefore" / "Thus" / "Ultimately" / "In summary" · Final result or outcome.
+          <span class="fixed">SIGNALS AN OPENING SENTENCE:</span>
+          No pronouns referencing prior content · Introduces a new topic with "A/An" · No linking word at the start<br><br>
+          <span class="fixed">SIGNALS A FOLLOWING SENTENCE:</span>
+          Starts with "This" / "These" / "It" / "They" / "He" / "She" · Starts with "However" / "Furthermore" / "Additionally" · Uses "The [thing already introduced]"<br><br>
+          <span class="fixed">SIGNALS A FINAL SENTENCE:</span>
+          "In conclusion" / "Therefore" / "Thus" / "Ultimately" / "In summary" · Contains a recommendation, result, or outcome · No idea that requires further development
         </div>
       </div>
+
+      <div class="callout amber"><strong>Partial credit tip:</strong> Even if you cannot determine the full order, getting the FIRST and LAST sentences correct is worth points and is usually the most identifiable step. Build from the outside in. Scored per correct adjacent pair.</div>
     </div>
 
     <!-- Re-order Paragraphs Simulator widget -->
@@ -523,15 +644,60 @@
       <div class="info-row">
         <span class="info-pill amber">4–5 items</span>
         <span class="info-pill amber">~90 sec each</span>
+        <span class="info-pill green">Partial credit · No negative marking</span>
         <span class="info-pill green">Scores: Reading</span>
       </div>
-      <p>A text with several blanks appears. A word pool at the bottom contains more words than blanks. Drag words from the pool into the correct blanks.</p>
+      <p>A text with several blanks appears. A word pool at the bottom contains more words than blanks — not all will be used. Drag words from the pool into the correct blank positions. Tests vocabulary in context and reading comprehension.</p>
       
-      <span class="label green">Key strategy</span>
-      <div class="tips-box">
-        <div class="tips-label">Drag and Drop tactics</div>
-        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Identify word class:</strong> Determine if the blank is a noun, verb, or adjective first.</div></div>
-        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Process of elimination:</strong> Fill the easiest blanks first. As words are placed, choices narrow.</div></div>
+      <span class="label green">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Read the whole text before touching the word pool</div>
+            <div class="step-desc">Get a sense of the topic and tone before looking at options. This primes your vocabulary matching.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Identify the word class needed for each blank</div>
+            <div class="step-desc">Is the blank a noun? verb? adjective? adverb? Check what comes before and after: "a [blank] solution" needs an adjective; "[blank] the problem" needs a verb.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Filter the word pool by word class first</div>
+            <div class="step-desc">Eliminate words from the pool that are the wrong part of speech. Usually 2–3 words will fit the class — then use meaning and collocation to select the correct one.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Fill the easiest blanks first</div>
+            <div class="step-desc">Once you place a word it disappears from the pool, narrowing choices for remaining blanks. Fill confident choices first to gain this process-of-elimination advantage.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <div class="step-title">Use context clues — synonyms, antonyms, examples nearby</div>
+            <div class="step-desc">Often the text provides a clue. "Unlike X, the [blank] approach is…" — the blank likely means the opposite of X.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout amber">
+        <strong>Key difference from R&W FiB:</strong> Words are dragged from a shared pool — not dropdowns. Each word can only be used once. Process of elimination becomes more powerful as you place each word.
+      </div>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">MISTAKES TO AVOID</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Starting with the word pool before reading the text — you will be matching words without context.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Forcing a word that fits grammatically but not semantically — both must be correct.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Leaving blanks empty — no negative marking, so always make a best-guess selection.</div></div>
       </div>
     </div>
   </div>
@@ -541,11 +707,72 @@
     <div class="card-block">
       <div class="info-row">
         <span class="info-pill amber">2–3 items</span>
+        <span class="info-pill amber">~60–90 sec each</span>
         <span class="info-pill green">No negative marking</span>
+        <span class="info-pill green">Scores: Reading</span>
       </div>
-      <p>Exactly one correct option. Always answer as there is no negative marking.</p>
+      <p>A passage and question with 4–5 options. Exactly <strong>ONE answer is correct</strong>. No negative marking — always select an answer even if unsure. Tests main idea, specific detail, inference, or writer's purpose.</p>
+      
+      <span class="label green">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Read the question — not the options — first</div>
+            <div class="step-desc">Know whether you're looking for: main idea / specific fact / writer's opinion / inference / vocabulary in context. This focuses your reading.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Locate the answer zone in the passage</div>
+            <div class="step-desc">For specific details: skim for the keyword from the question. For main idea: focus on the first and last sentences of each paragraph.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Eliminate wrong answers using 4 distractor patterns</div>
+            <div class="step-desc">Too extreme (always/never) · Partially correct · Not in text · Opposite meaning. Eliminate until one option remains.</div>
+          </div>
+        </div>
+      </div>
+
+      <span class="label amber">Question Type Guide</span>
+      <table class="score-table">
+        <tr class="st-row">
+          <td class="st-cell head field">QUESTION TYPE</td>
+          <td class="st-cell head">WHERE TO LOOK</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Main idea</td>
+          <td class="st-cell">First sentence of passage + conclusion paragraph.</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Specific detail</td>
+          <td class="st-cell">Skim for keywords from the question in the body of the text.</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Writer's attitude</td>
+          <td class="st-cell">Look for evaluative language: "unfortunately", "remarkably", "it is clear that".</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Inference</td>
+          <td class="st-cell">What does the text IMPLY but not directly state? Choose the logical conclusion from given info only.</td>
+        </tr>
+        <tr class="st-row">
+          <td class="st-cell field">Vocabulary in context</td>
+          <td class="st-cell">Re-read the full sentence — which option best fits the meaning in context?</td>
+        </tr>
+      </table>
+
+      <div class="callout green">
+        <strong>No negative marking = always answer.</strong> Even a random guess between 2 remaining options is 50/50. Never leave MCQ Single blank.
+      </div>
     </div>
   </div>
+
+  <div class="callout amber" style="margin:20px;"><strong>Time Management — Reading Section:</strong> R&amp;W Fill Blanks ~2 min per item · MCQ Multiple ~90 sec · Re-order Paragraphs ~2 min · Reading FiB ~90 sec · MCQ Single ~60 sec. Total: ~28 min. The timer is shared — monitor it constantly.</div>
 
 </div>
 
@@ -646,7 +873,6 @@
 
   // Scramble cards initially
   window.addEventListener('DOMContentLoaded', () => {
-    // Make sure we start scrambled
     resetRop();
   });
 </script>

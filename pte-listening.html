@@ -37,77 +37,36 @@
   
   .wrap { max-width: 960px; margin: 0 auto; padding: 0 1.5rem 80px; }
   
-  /* ── GLOBAL HEADER ── */
   .g-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 24px 0;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 24px;
-    flex-wrap: wrap;
-    gap: 12px;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 24px 0; border-bottom: 1px solid var(--border); margin-bottom: 24px;
+    flex-wrap: wrap; gap: 12px;
   }
   .back-btn {
-    font-family: 'Inter', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text-2);
-    text-decoration: none;
-    border: 1px solid var(--border);
-    padding: 6px 14px;
-    border-radius: 20px;
-    background: var(--surface);
-    transition: all 0.2s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
+    font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600;
+    color: var(--text-2); text-decoration: none; border: 1px solid var(--border);
+    padding: 6px 14px; border-radius: 20px; background: var(--surface);
+    transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 4px;
   }
-  .back-btn:hover {
-    color: var(--teal);
-    border-color: var(--teal);
-    background: var(--teal-dim);
-    transform: translateY(-1px);
-  }
-  .g-title {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-  }
+  .back-btn:hover { color: var(--teal); border-color: var(--teal); background: var(--teal-dim); transform: translateY(-1px); }
+  .g-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 24px; font-weight: 800; letter-spacing: -0.02em; }
   .g-title span { color: var(--teal); }
 
-  /* ── SKILL NAV TABS ── */
   .tabs {
-    display: flex;
-    gap: 6px;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 24px;
-    overflow-x: auto;
-    scrollbar-width: none;
-    padding-bottom: 2px;
+    display: flex; gap: 6px; border-bottom: 1px solid var(--border);
+    margin-bottom: 24px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px;
   }
   .tabs::-webkit-scrollbar { display: none; }
   .tab-btn {
-    flex-shrink: 0;
-    padding: 10px 18px;
-    border-radius: var(--r-sm) var(--r-sm) 0 0;
-    border: 1px solid transparent;
-    background: transparent;
-    color: var(--text-3);
-    font-family: 'Inter', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    white-space: nowrap;
+    flex-shrink: 0; padding: 10px 18px; border-radius: var(--r-sm) var(--r-sm) 0 0;
+    border: 1px solid transparent; background: transparent; color: var(--text-3);
+    font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600;
+    cursor: pointer; transition: all 0.25s ease; white-space: nowrap;
   }
   .tab-btn:hover { color: var(--text-2); }
   .tab-btn.active {
-    color: var(--teal);
-    border-color: var(--border) var(--border) transparent;
-    background: var(--surface);
-    border-radius: 8px 8px 0 0;
+    color: var(--teal); border-color: var(--border) var(--border) transparent;
+    background: var(--surface); border-radius: 8px 8px 0 0;
     box-shadow: 0 -2px 10px rgba(0,0,0,0.02);
   }
 
@@ -115,23 +74,14 @@
   .panel.active { display: block; }
   @keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 
-  /* ── CONTENT CARDS ── */
   .card-block {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--r);
-    padding: 24px;
-    margin-bottom: 24px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--r); padding: 24px; margin-bottom: 24px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
   }
   .label {
-    font-family: 'Inter', sans-serif;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    display: block;
+    font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 800;
+    letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 12px; display: block;
   }
   .label.teal { color: var(--teal); }
   .label.green { color: var(--green); }
@@ -143,27 +93,21 @@
 
   .info-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
   .info-pill {
-    font-size: 11px;
-    font-weight: 600;
-    padding: 4px 12px;
-    border-radius: 20px;
-    border: 1px solid var(--border);
-    color: var(--text-2);
-    background: var(--bg);
+    font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 20px;
+    border: 1px solid var(--border); color: var(--text-2); background: var(--bg);
   }
   .info-pill.teal { color: var(--teal); border-color: var(--teal-dim); background: var(--teal-glow); }
   .info-pill.green { color: var(--green); border-color: var(--green-dim); background: rgba(22, 163, 74, 0.04); }
   .info-pill.orange { color: var(--orange); border-color: var(--orange-dim); background: rgba(234, 88, 12, 0.04); }
+  .info-pill.red { color: var(--red); border-color: var(--red-dim); background: var(--red-dim); }
 
-  /* ── TABLES ── */
   .score-table { border: 1px solid var(--border); border-radius: var(--r-sm); overflow: hidden; margin-bottom: 18px; width: 100%; border-collapse: collapse; }
-  .st-row { display: grid; grid-template-columns: 140px 1fr; border-bottom: 1px solid var(--border); }
+  .st-row { display: grid; grid-template-columns: 160px 1fr; border-bottom: 1px solid var(--border); }
   .st-row:last-child { border-bottom: none; }
   .st-cell { padding: 12px; font-size: 13px; color: var(--text-2); line-height: 1.5; }
   .st-cell.head { font-weight: 700; background: var(--bg); color: var(--text-1); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
   .st-cell.field { font-weight: 700; color: var(--text-1); border-right: 1px solid var(--border); background: var(--bg); }
 
-  /* ── STEPS ── */
   .step-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
   .step-item { display: flex; gap: 14px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 14px; }
   .step-num {
@@ -175,10 +119,9 @@
   .step-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--text-1); }
   .step-desc { font-size: 13px; color: var(--text-2); line-height: 1.5; }
 
-  /* ── TEMPLATE BOX ── */
   .template-box { background: var(--bg); border: 1px solid var(--border-hi); border-radius: var(--r-sm); padding: 18px; margin-bottom: 18px; position: relative; }
   .template-box::before {
-    content: 'Blueprints'; position: absolute; top: -1px; right: 16px;
+    content: 'Blueprint'; position: absolute; top: -1px; right: 16px;
     font-size: 9px; font-weight: 800; letter-spacing: 2px;
     background: var(--bg); padding: 2px 10px; border: 1px solid var(--border-hi);
     border-top: none; border-radius: 0 0 6px 6px; color: var(--teal);
@@ -187,7 +130,6 @@
   .template-text .slot { font-weight: 700; padding: 2px 6px; border-radius: 4px; font-size: 12px; color: var(--teal); background: var(--teal-dim); }
   .template-text .fixed { color: var(--text-1); font-weight: 700; display: block; margin-top: 12px; margin-bottom: 4px; font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; }
 
-  /* ── BOXES ── */
   .tips-box { background: var(--teal-glow); border: 1px solid var(--teal-dim); border-radius: var(--r-sm); padding: 16px; margin-bottom: 18px; }
   .tips-label { font-size: 10px; font-weight: 800; letter-spacing: 1.5px; color: var(--teal); margin-bottom: 8px; text-transform: uppercase; }
   .tip-item { display: flex; gap: 8px; font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 6px; }
@@ -200,100 +142,45 @@
   .avoid-item:last-child { margin-bottom: 0; }
   .avoid-x { color: var(--red); flex-shrink: 0; font-weight: 700; }
 
-  /* ── INTERACTIVE DRILL WIDGET ── */
-  .drill-container {
-    border: 2px solid var(--teal-dim);
-    border-radius: var(--r);
-    padding: 24px;
-    background: #ffffff;
-    box-shadow: 0 10px 30px rgba(13,148,136,0.03);
-    margin-top: 30px;
-  }
+  .callout { padding: 14px 16px; border-radius: var(--r-sm); font-size: 13px; line-height: 1.65; margin-bottom: 18px; border: 1px solid; }
+  .callout.teal { background: var(--teal-glow); border-color: var(--teal-dim); color: var(--text-2); }
+  .callout.teal strong { color: var(--teal); }
+  .callout.red { background: var(--red-dim); border-color: rgba(220,38,38,0.2); color: var(--text-2); }
+  .callout.red strong { color: var(--red); }
+  .callout.orange { background: var(--orange-dim); border-color: rgba(234,88,12,0.2); color: var(--text-2); }
+  .callout.orange strong { color: var(--orange); }
+
+  .example-box { background: var(--surface); border-left: 3px solid var(--green); border-radius: 0 var(--r-sm) var(--r-sm) 0; padding: 14px 16px; margin-bottom: 18px; border: 1px solid var(--green-dim); border-left: 3px solid var(--green); }
+  .example-label { font-size: 10px; font-weight: 800; letter-spacing: 1.5px; color: var(--green); margin-bottom: 8px; text-transform: uppercase; }
+  .example-text { font-size: 13px; color: var(--text-2); line-height: 1.75; }
+  .example-text em { color: var(--green); font-style: normal; font-weight: 600; }
+
+  /* Dictation widget */
+  .drill-container { border: 2px solid var(--teal-dim); border-radius: var(--r); padding: 24px; background: #fff; box-shadow: 0 10px 30px rgba(13,148,136,0.03); margin-top: 30px; }
   .drill-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px; }
   .drill-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-weight: 800; display: flex; align-items: center; gap: 6px; color: var(--text-1); }
   .drill-badge { font-size: 11px; font-weight: 700; color: var(--teal); background: var(--teal-dim); padding: 4px 10px; border-radius: 20px; }
-  
-  .dictation-panel {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    padding: 20px;
-    border-radius: var(--r-sm);
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .btn-audio-play {
-    background: var(--teal);
-    color: white;
-    border: none;
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    font-size: 20px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(13,148,136,0.2);
-    transition: all 0.2s;
-    margin-bottom: 10px;
-  }
-  .btn-audio-play:hover {
-    background: #0f766e;
-    transform: scale(1.05);
-  }
-  .audio-status {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--text-3);
-  }
-
-  input.dictation-input {
-    width: 100%;
-    padding: 14px 18px;
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    color: var(--text-1);
-    background: var(--surface);
-    border: 1px solid var(--border-hi);
-    border-radius: var(--r-sm);
-    outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    margin-bottom: 20px;
-  }
-  input.dictation-input:focus {
-    border-color: var(--teal);
-    box-shadow: 0 0 0 3px rgba(13,148,136,0.1);
-  }
-
-  .btn-drill {
-    background: var(--teal);
-    color: #fff;
-    border: none;
-    padding: 10px 22px;
-    border-radius: 24px;
-    font-size: 13px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    box-shadow: 0 4px 12px rgba(13,148,136,0.15);
-  }
-  .btn-drill:hover { background: #0f766e; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(13,148,136,0.25); }
-  
+  .dictation-panel { background: var(--bg); border: 1px solid var(--border); padding: 20px; border-radius: var(--r-sm); text-align: center; margin-bottom: 20px; }
+  .btn-audio-play { background: var(--teal); color: white; border: none; width: 54px; height: 54px; border-radius: 50%; font-size: 20px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 12px rgba(13,148,136,0.2); transition: all 0.2s; margin-bottom: 10px; }
+  .btn-audio-play:hover { background: #0f766e; transform: scale(1.05); }
+  .audio-status { font-size: 12px; font-weight: 700; color: var(--text-3); }
+  input.dictation-input { width: 100%; padding: 14px 18px; font-family: 'Inter', sans-serif; font-size: 15px; color: var(--text-1); background: var(--surface); border: 1px solid var(--border-hi); border-radius: var(--r-sm); outline: none; transition: border-color 0.2s, box-shadow 0.2s; margin-bottom: 20px; }
+  input.dictation-input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(13,148,136,0.1); }
+  .btn-drill { background: var(--teal); color: #fff; border: none; padding: 10px 22px; border-radius: 24px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(13,148,136,0.15); }
+  .btn-drill:hover { background: #0f766e; transform: translateY(-1px); }
+  .btn-drill-secondary { background: var(--surface); color: var(--text-2); border: 1px solid var(--border-hi); padding: 10px 22px; border-radius: 24px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+  .btn-drill-secondary:hover { color: var(--teal); border-color: var(--teal); }
   .results-panel { display: none; border-top: 1px dashed var(--border); padding-top: 20px; animation: fadeUp 0.3s ease; }
   .results-panel.active { display: block; }
-
   .score-cards-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 20px; }
   .score-card-item { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 12px; text-align: center; }
   .sci-val { font-size: 22px; font-weight: 800; color: var(--teal); }
   .sci-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; color: var(--text-3); margin-top: 2px; }
-
   .word-highlight-text { font-size: 15px; line-height: 1.8; color: var(--text-2); background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 16px; }
   .w-ok { color: var(--green); font-weight: 700; text-decoration: underline; text-decoration-color: rgba(22, 163, 74, 0.4); }
   .w-err { color: var(--red); font-weight: 700; text-decoration: line-through; }
 </style>
+  <script src="theme-loader.js"></script>
 </head>
 <body>
 
@@ -302,7 +189,7 @@
   <!-- GLOBAL HEADER -->
   <div class="g-header">
     <a href="index.html" class="back-btn">← Back to Hub</a>
-    <div class="g-title">PTE Listening <span>Focus</span></div>
+    <div class="g-title">PTE Listening <span>Mastery</span></div>
   </div>
 
   <!-- NAVIGATION TABS -->
@@ -311,11 +198,12 @@
     <button class="tab-btn" onclick="switchTab('mcqm')">MCQ Multiple</button>
     <button class="tab-btn" onclick="switchTab('lfib')">Fill Blanks</button>
     <button class="tab-btn" onclick="switchTab('hcs')">Highlight Summary</button>
+    <button class="tab-btn" onclick="switchTab('hiw')">Highlight Wrong</button>
     <button class="tab-btn" onclick="switchTab('wfd')">Write Dictation</button>
     <button class="tab-btn" onclick="switchTab('mcqs')">MCQ Single</button>
   </div>
 
-  <!-- 1. SUMMARISE SPOKEN TEXT PANEL -->
+  <!-- 1. SUMMARISE SPOKEN TEXT -->
   <div id="panel-sst" class="panel active">
     <div class="card-block">
       <div class="info-row">
@@ -325,118 +213,289 @@
         <span class="info-pill teal">50–70 words</span>
         <span class="info-pill green">Scores: Listening + Writing</span>
       </div>
-      <p>An audio recording of 60–90 seconds plays once. You write a <strong>50–70 word summary in 10 minutes</strong>. Scores both Listening AND Writing simultaneously.</p>
-      
+      <p>An audio recording of 60–90 seconds plays <strong>once</strong>. You write a <strong>50–70 word summary in 10 minutes</strong>. Scores both Listening AND Writing simultaneously — the most complex task in the Listening section.</p>
+
       <span class="label teal">What The AI Scores</span>
-      <table class="score-table">
-        <tr class="st-row">
-          <td class="st-cell head field">SUB-SKILL</td>
-          <td class="st-cell head">WHAT IT MEASURES</td>
-        </tr>
-        <tr class="st-row">
-          <td class="st-cell field">Content</td>
-          <td class="st-cell">Does the summary capture the main point and key details accurately?</td>
-        </tr>
-        <tr class="st-row">
-          <td class="st-cell field">Form</td>
-          <td class="st-cell">Is it within 50–70 words? Multiple sentences are allowed.</td>
-        </tr>
-        <tr class="st-row">
-          <td class="st-cell field">Spelling</td>
-          <td class="st-cell">Every word correctly spelled. Choose British or American consistently.</td>
-        </tr>
-      </table>
+      <div class="score-table">
+        <div class="st-row"><div class="st-cell head field">SUB-SKILL</div><div class="st-cell head">WHAT IT MEASURES</div></div>
+        <div class="st-row"><div class="st-cell field">Content</div><div class="st-cell">Does the summary capture the main point and key details accurately?</div></div>
+        <div class="st-row"><div class="st-cell field">Form</div><div class="st-cell">Is it within 50–70 words? Multiple sentences are allowed.</div></div>
+        <div class="st-row"><div class="st-cell field">Grammar</div><div class="st-cell">Grammatically correct sentences throughout</div></div>
+        <div class="st-row"><div class="st-cell field">Vocabulary</div><div class="st-cell">Appropriate, varied, academic vocabulary — no copy-paste from audio</div></div>
+        <div class="st-row"><div class="st-cell field">Spelling</div><div class="st-cell">Every word correctly spelled. Choose British or American consistently.</div></div>
+      </div>
+
+      <span class="label orange">Note-Taking During Audio — Critical</span>
+      <div class="tips-box">
+        <div class="tips-label">WHAT TO WRITE ON YOUR NOTEPAD</div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>First 10 sec:</strong> Write the TOPIC — 1–2 words. Always established at the very start.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Body:</strong> Key nouns, numbers, names, technical terms — hardest to reconstruct from memory.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Last 10 sec:</strong> Note the conclusion or recommendation — speakers always signal it at the end.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div>Shorthand only: → = leads to · + = also/and · ↑ = increase · ↓ = decrease · ? = problem raised.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div>Do NOT try to write full sentences — your listening will suffer. Keywords only.</div></div>
+      </div>
 
       <span class="label green">4-Sentence SST Template</span>
       <div class="template-box">
         <div class="template-text">
-          SENTENCE 1 — Topic + Main Point:<br>
+          <span class="fixed">SENTENCE 1 — Topic + Main Point:</span>
           "The lecture discusses <span class="slot">[main topic]</span>, with particular focus on <span class="slot">[specific aspect]</span>."<br><br>
-          SENTENCE 2 — Central Claim:<br>
-          "The speaker argues that <span class="slot">[central claim]</span>, providing evidence that <span class="slot">[supporting evidence]</span>."<br><br>
-          SENTENCE 3 — Detail:<br>
+          <span class="fixed">SENTENCE 2 — Central Argument / Finding:</span>
+          "The speaker argues that <span class="slot">[central claim or finding]</span>, providing evidence that <span class="slot">[supporting evidence or example]</span>."<br><br>
+          <span class="fixed">SENTENCE 3 — Additional Key Detail:</span>
           "Furthermore, <span class="slot">[second important point]</span>, which highlights <span class="slot">[significance]</span>."<br><br>
-          SENTENCE 4 — Conclusion:<br>
-          "In conclusion, <span class="slot">[key takeaway / recommendation]</span>."
+          <span class="fixed">SENTENCE 4 — Conclusion / Implication:</span>
+          "In conclusion, <span class="slot">[key takeaway or recommendation from the speaker]</span>."
         </div>
+      </div>
+
+      <div class="example-box">
+        <div class="example-label">SAMPLE SST RESPONSE (~62 words)</div>
+        <div class="example-text">The lecture discusses <em>the psychological effects of social media use on adolescents</em>, with particular focus on <em>self-esteem and sleep disruption</em>. The speaker argues that <em>excessive screen time correlates with increased anxiety and depression</em>, citing studies showing a 40% rise in reported mental health issues. Furthermore, <em>algorithmic design deliberately prolongs engagement</em>, exacerbating these effects. In conclusion, <em>urgent regulatory frameworks are needed to protect young users</em>.</div>
+      </div>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">SCORE-KILLERS</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Fewer than 50 words — automatic Form penalty. Count before submitting.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>More than 70 words — also penalised on Form. Always count during the final 60 seconds.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Adding opinions not in the audio — Content is scored on accuracy to the source only.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Copying exact phrases from the audio verbatim — paraphrase to demonstrate comprehension.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Not counting words before submitting — this is the #1 cause of avoidable Form penalties.</div></div>
       </div>
     </div>
   </div>
 
-  <!-- 2. MCQ MULTIPLE PANEL -->
+  <!-- 2. MCQ MULTIPLE -->
   <div id="panel-mcqm" class="panel">
     <div class="card-block">
       <div class="info-row">
         <span class="info-pill teal">2–3 items</span>
+        <span class="info-pill teal">Audio plays once</span>
         <span class="info-pill red">⚠ NEGATIVE MARKING</span>
+        <span class="info-pill teal">Scores: Listening</span>
       </div>
-      <p>Negative marking applies. Incorrect selections deduct marks. Only select options you are highly confident about.</p>
+      <p>An audio recording plays once. A question with multiple answer options follows — more than one may be correct. <strong>Incorrect selections DEDUCT marks.</strong></p>
+
+      <div class="callout red"><strong>Negative marking rule:</strong> Correct selection = +1. Wrong selection = −1. Blank = 0. Never guess. Only select options you are genuinely confident were stated in the audio.</div>
+
+      <span class="label green">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item"><div class="step-num">1</div><div class="step-body"><div class="step-title">Read ALL options before audio plays</div><div class="step-desc">Your prep time is the most valuable window. Reading options before the audio turns passive listening into an active search for specific information.</div></div></div>
+        <div class="step-item"><div class="step-num">2</div><div class="step-body"><div class="step-title">Listen for explicit statements matching options</div><div class="step-desc">Correct answers are usually stated directly in the audio. Wrong answers: not mentioned / contradict the speaker / only partially stated.</div></div></div>
+        <div class="step-item"><div class="step-num">3</div><div class="step-body"><div class="step-title">Apply the 80% confidence filter post-audio</div><div class="step-desc">Review each option: "Am I 80%+ confident this was clearly stated?" If uncertain, leave it blank — the deduction outweighs the potential gain.</div></div></div>
+      </div>
+
+      <span class="label teal">Distractor Patterns</span>
+      <div class="score-table">
+        <div class="st-row"><div class="st-cell head field">DISTRACTOR TYPE</div><div class="st-cell head">HOW TO SPOT IT</div></div>
+        <div class="st-row"><div class="st-cell field">Not mentioned</div><div class="st-cell">Plausible and topic-related but the speaker simply never said it</div></div>
+        <div class="st-row"><div class="st-cell field">Partially true</div><div class="st-cell">Correct topic but wrong subject, quantity, or outcome stated</div></div>
+        <div class="st-row"><div class="st-cell field">Too extreme</div><div class="st-cell">"always" / "all" when speaker said "often" / "most" / "some"</div></div>
+        <div class="st-row"><div class="st-cell field">Opposite</div><div class="st-cell">Reverses the speaker's actual position or finding</div></div>
+      </div>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">SCORE-KILLERS</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Selecting answers based on general knowledge — only what the speaker explicitly states counts.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Selecting 3 or more options — rarely are more than 2 options correct. More selections = more risk.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Not reading options before audio — you will not know what specific details to listen for.</div></div>
+      </div>
     </div>
   </div>
 
-  <!-- 3. FILL IN THE BLANKS PANEL -->
+  <!-- 3. LISTENING FILL IN THE BLANKS -->
   <div id="panel-lfib" class="panel">
     <div class="card-block">
       <div class="info-row">
         <span class="info-pill teal">2–3 items</span>
+        <span class="info-pill teal">Audio plays once</span>
+        <span class="info-pill teal">Spelling counts</span>
         <span class="info-pill green">Scores: Listening + Writing</span>
       </div>
-      <p>An audio recording plays. Type the missing words in the blanks. Focus heavily on spelling, as every typo costs writing marks.</p>
+      <p>A transcript appears on screen with missing words. The audio plays simultaneously. You type the missing words exactly as heard. <strong>Spelling is marked</strong> — incorrect spelling = zero for that blank even if you heard the word correctly.</p>
+
+      <span class="label green">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item"><div class="step-num">1</div><div class="step-body"><div class="step-title">Read the full transcript before audio starts</div><div class="step-desc">You usually have a few seconds before audio begins. Read the complete text to know where the blanks are and what words surround them — this primes your ears for exactly the right spot.</div></div></div>
+        <div class="step-item"><div class="step-num">2</div><div class="step-body"><div class="step-title">Follow the transcript word by word as audio plays</div><div class="step-desc">Track the audio with your eyes on the text. When you reach a blank, your ears are already primed. Blanked words are almost always content words (nouns, verbs, adjectives).</div></div></div>
+        <div class="step-item"><div class="step-num">3</div><div class="step-body"><div class="step-title">Type immediately while the word is fresh</div><div class="step-desc">Do not wait until audio ends to type. Type as you hear — short-term memory for specific words fades in 3–5 seconds. Type immediately and keep tracking.</div></div></div>
+        <div class="step-item"><div class="step-num">4</div><div class="step-body"><div class="step-title">Use context to confirm spelling after audio ends</div><div class="step-desc">Look at surrounding words — do they confirm the word class or spelling? Double-check each typed word before moving on. The text context almost always tells you if you got the right word.</div></div></div>
+      </div>
+
+      <span class="label orange">Spelling Traps To Know</span>
+      <div class="tips-box">
+        <div class="tips-label">COMMON SPELLING ERRORS IN THIS TASK</div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>-tion vs -sion:</strong> education / communication / organisation — but: television / decision / conclusion.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Double letters:</strong> necessary (1c 2s) · accommodation (2c 2m) · commitment (1t) · beginning (2g).</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>British spellings:</strong> behaviour · colour · organisation · recognise · analyse (if using British English consistently).</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Homophones:</strong> affect/effect · their/there/they're · whose/who's — context determines which is correct.</div></div>
+      </div>
+
+      <div class="callout teal"><strong>Key difference:</strong> Unlike Highlight Incorrect Words, this task requires you to TYPE the missing words — spelling accuracy is scored directly. A correctly heard word spelled wrong = 0 marks for that blank.</div>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">SCORE-KILLERS</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Writing phonetic spellings — the AI requires correct standard English spelling, not approximations.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Leaving a blank empty — no negative marking, so always write your best attempt even if unsure.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Looking away from the transcript during audio — lose your place once and you may miss multiple blanks.</div></div>
+      </div>
     </div>
   </div>
 
-  <!-- 4. HIGHLIGHT SUMMARY PANEL -->
+  <!-- 4. HIGHLIGHT CORRECT SUMMARY -->
   <div id="panel-hcs" class="panel">
     <div class="card-block">
       <div class="info-row">
-        <span class="info-pill teal">1–2 items</span>
+        <span class="info-pill teal">2–3 items</span>
+        <span class="info-pill teal">Audio 30–90 sec</span>
+        <span class="info-pill green">No negative marking</span>
         <span class="info-pill green">Scores: Listening + Reading</span>
       </div>
-      <p>An audio recording plays. Select the summary option that best represents the key points of the recording.</p>
+      <p>An audio recording plays once. Afterwards, select which of 4–5 written paragraphs <strong>best summarises what you heard</strong>. Only one option is correct. Tests whether you understood the overall message — not specific details.</p>
+
+      <span class="label green">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item"><div class="step-num">1</div><div class="step-body"><div class="step-title">Read ALL options before audio plays</div><div class="step-desc">Scan all 4–5 summary options during prep time. This gives you a clear map of differences to listen for — key words, different conclusions, contrasting claims. This is the single most impactful preparation move for this task.</div></div></div>
+        <div class="step-item"><div class="step-num">2</div><div class="step-body"><div class="step-title">Listen for the MAIN POINT — not details</div><div class="step-desc">This task tests overall understanding. Details are used in wrong options as distractors. The correct summary captures the central argument, not a specific supporting example.</div></div></div>
+        <div class="step-item"><div class="step-num">3</div><div class="step-body"><div class="step-title">Note the topic + conclusion during audio</div><div class="step-desc">The topic is stated in the first 10–15 seconds. The conclusion is signalled in the last 10 seconds with phrases like "in summary", "therefore" or "ultimately". These two anchor the correct summary option.</div></div></div>
+        <div class="step-item"><div class="step-num">4</div><div class="step-body"><div class="step-title">Eliminate wrong options systematically</div><div class="step-desc">Wrong options: too narrow (only one detail) / not mentioned / exaggerated / opposite meaning. The correct summary covers the FULL scope of the audio, not just one part of it.</div></div></div>
+      </div>
+
+      <span class="label teal">Wrong Option Patterns</span>
+      <div class="score-table">
+        <div class="st-row"><div class="st-cell head field">WRONG TYPE</div><div class="st-cell head">HOW TO SPOT IT</div></div>
+        <div class="st-row"><div class="st-cell field">Too narrow</div><div class="st-cell">Focuses on one specific detail from the middle of the audio but misses the main point</div></div>
+        <div class="st-row"><div class="st-cell field">Not mentioned</div><div class="st-cell">Topic-related and plausible but the speaker simply never said it</div></div>
+        <div class="st-row"><div class="st-cell field">Exaggerated</div><div class="st-cell">Uses "completely" / "all" / "never" when speaker used "often" / "tends to" / "may"</div></div>
+        <div class="st-row"><div class="st-cell field">Opposite</div><div class="st-cell">Reverses the speaker's position — common trap for students who half-heard the argument</div></div>
+      </div>
+
+      <div class="tips-box">
+        <div class="tips-label">ACTIVE LISTENING STRATEGY</div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div>Note the TOPIC (first 10 sec) and CONCLUSION (last 10 sec) — these two points anchor the correct summary.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div>Ask: "What is the ONE main thing the speaker is saying?" — the correct option answers exactly this question.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div>If two options seem similar, the correct one covers the FULL scope; the wrong one covers only part of the talk.</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div>Options using "only" or "exclusively" are almost always wrong — academic talks rarely deal in absolutes.</div></div>
+      </div>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">MISTAKES</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Choosing the option with the most words matching what you heard — distractors deliberately echo the audio.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Choosing based on general topic familiarity — the correct answer must match what THIS speaker specifically said.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Not reading options before audio plays — you waste the most valuable preparation window you have.</div></div>
+      </div>
     </div>
   </div>
 
-  <!-- 5. WRITE FROM DICTATION PANEL -->
+  <!-- 5. HIGHLIGHT INCORRECT WORDS -->
+  <div id="panel-hiw" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill teal">2–3 items</span>
+        <span class="info-pill teal">Audio 15–50 sec</span>
+        <span class="info-pill orange">Partial negative marking per wrong click</span>
+        <span class="info-pill green">Scores: Listening + Reading</span>
+      </div>
+      <p>A written transcript appears while an audio recording plays. Some words in the transcript <strong>differ from what the speaker actually says</strong>. Click on every differing word. Scores both Listening AND Reading simultaneously.</p>
+
+      <div class="callout orange"><strong>Scoring rule:</strong> Correct word clicked = +1. Incorrect word clicked (a word that was actually said correctly) = −1. Word not clicked when it should be = 0. This task has negative marking per incorrect click.</div>
+
+      <span class="label green">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item"><div class="step-num">1</div><div class="step-body"><div class="step-title">Use ALL prep time to read the full transcript</div><div class="step-desc">Read every word before audio starts. Familiarise yourself with the text so your brain detects deviations rather than processing both text and audio simultaneously from scratch.</div></div></div>
+        <div class="step-item"><div class="step-num">2</div><div class="step-body"><div class="step-title">Track the transcript word by word during audio</div><div class="step-desc">Follow the audio with your eyes on the text, word by word. The moment you hear a word that differs from what you are reading — click it immediately. Do not wait until audio ends.</div></div></div>
+        <div class="step-item"><div class="step-num">3</div><div class="step-body"><div class="step-title">Focus on content words — differences are always in nouns, verbs, adjectives</div><div class="step-desc">The AI never substitutes function words (the, a, of, and). Concentrate your listening effort on nouns, main verbs, and adjectives only — never function words.</div></div></div>
+        <div class="step-item"><div class="step-num">4</div><div class="step-body"><div class="step-title">If uncertain — do NOT click</div><div class="step-desc">Because of negative marking, uncertainty = leave it. A wrong click costs you more than a missed correct word. The safe choice is always to not click if unsure.</div></div></div>
+      </div>
+
+      <span class="label teal">Typical Difference Patterns</span>
+      <div class="score-table">
+        <div class="st-row"><div class="st-cell head field">TRANSCRIPT SAYS</div><div class="st-cell head">SPEAKER ACTUALLY SAYS</div></div>
+        <div class="st-row"><div class="st-cell field">large increase</div><div class="st-cell">significant increase (synonym substitution)</div></div>
+        <div class="st-row"><div class="st-cell field">the government</div><div class="st-cell">the organisation (related word substitution)</div></div>
+        <div class="st-row"><div class="st-cell field">economic growth</div><div class="st-cell">economic decline (antonym substitution)</div></div>
+        <div class="st-row"><div class="st-cell field">researchers suggest</div><div class="st-cell">scientists suggest (synonym substitution)</div></div>
+      </div>
+      <p style="font-size:12px;color:var(--text-3);margin-bottom:16px;">Differences are always single-word substitutions — synonyms, antonyms, or related words. Never structural or grammatical changes.</p>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">SCORE-KILLERS</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Clicking words because they "sound slightly different" due to accent — only click genuine word substitutions.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Not reading the transcript before audio starts — the single most costly preparation mistake for this task.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Trying to write down differences on notepad — you have no time; click in real time as you hear them.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Clicking function words (the, a, of, and) — differences are never in function words.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. WRITE FROM DICTATION -->
   <div id="panel-wfd" class="panel">
     <div class="card-block">
       <div class="info-row">
         <span class="info-pill teal">3–4 items</span>
+        <span class="info-pill teal">Audio plays once</span>
         <span class="info-pill green">Scores: Listening + Writing</span>
-        <span class="info-pill orange">Crucial task</span>
+        <span class="info-pill orange">Crucial task — every word counts</span>
       </div>
-      <p>A short sentence plays once. Type the sentence exactly as you heard it. <strong>Every correct word earns 1 point</strong>. This is one of the highest-scoring tasks in the entire test.</p>
-      
-      <span class="label green">How To Attempt — Step By Step</span>
+      <p>A short sentence — usually 7–13 words — is read aloud <strong>once</strong>. You type it exactly as heard. <strong>Spelling, capitalisation, and every word</strong> are scored. This task comes at the END of the test when fatigue is highest — do not let tiredness drop these marks.</p>
+
+      <span class="label teal">What The AI Scores</span>
+      <div class="score-table">
+        <div class="st-row"><div class="st-cell head field">CRITERION</div><div class="st-cell head">DETAIL</div></div>
+        <div class="st-row"><div class="st-cell field">Correct words</div><div class="st-cell">Each correct word in correct position = 1 point. Partial credit — each word scored independently.</div></div>
+        <div class="st-row"><div class="st-cell field">Spelling</div><div class="st-cell">Misspelled word = 0 marks for that word even if correctly heard</div></div>
+        <div class="st-row"><div class="st-cell field">Skills scored</div><div class="st-cell">Listening (recall accuracy) + Writing (spelling, grammar) simultaneously</div></div>
+      </div>
+
+      <span class="label green">The 3-Phase Method</span>
       <div class="step-list">
-        <div class="step-item">
-          <div class="step-num">1</div>
-          <div class="step-body">
-            <div class="step-title">Listen intently without typing</div>
-            <div class="step-desc">Focus all concentration on the voice. Do not look down or touch the keyboard during playback.</div>
-          </div>
-        </div>
-        <div class="step-item">
-          <div class="step-num">2</div>
-          <div class="step-body">
-            <div class="step-title">Type immediately while fresh</div>
-            <div class="step-desc">Write down the words in order. Check spelling, capitalization, and punctuation carefully.</div>
-          </div>
-        </div>
-        <div class="step-item">
-          <div class="step-num">3</div>
-          <div class="step-body">
-            <div class="step-title">Use spelling synonyms if unsure</div>
-            <div class="step-desc">If you're unsure whether a word was singular or plural, some systems allow writing both (e.g. "student students") for partial credit.</div>
-          </div>
+        <div class="step-item"><div class="step-num">1</div><div class="step-body"><div class="step-title">LISTEN — Absorb the full sentence first</div><div class="step-desc">Do NOT start typing during the audio. Let the complete sentence play. Hold it in working memory. Focus especially on: the first word, the main verb, and the last word. These anchor the whole sentence structure.</div></div></div>
+        <div class="step-item"><div class="step-num">2</div><div class="step-body"><div class="step-title">NOTE — Write shorthand on notepad immediately after audio ends</div><div class="step-desc">Immediately after audio ends, scribble key anchor words: first 2 words + verb + last 2 words. This externalises your memory so you can type accurately without holding everything in your head.</div></div></div>
+        <div class="step-item"><div class="step-num">3</div><div class="step-body"><div class="step-title">TYPE — Carefully, checking as you go</div><div class="step-desc">Type from your notepad notes. Check: first word capitalised, all other words lower case (unless proper noun), correct spelling of each word. Re-read once before moving on.</div></div></div>
+      </div>
+
+      <span class="label">Common WFD Sentence Patterns</span>
+      <div class="template-box">
+        <div class="template-text">
+          <span class="fixed">Academic results / research findings:</span>
+          "The results of the study suggest that further research is required."<br>
+          "Recent studies have demonstrated a clear link between diet and health outcomes."<br><br>
+          <span class="fixed">Education / assignment:</span>
+          "Students are expected to submit their assignments before the deadline."<br>
+          "The university provides a range of support services for international students."<br><br>
+          <span class="fixed">Environment / science:</span>
+          "Environmental factors play a significant role in determining long-term outcomes."<br>
+          "The development of renewable energy has accelerated significantly in recent years."<br><br>
+          <span class="fixed">Government / policy:</span>
+          "The government has implemented a range of measures to address rising unemployment."
         </div>
       </div>
 
       <span class="label orange">Spelling Traps</span>
       <div class="tips-box">
-        <div class="tips-label">COMMON MISTAKES</div>
-        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Double letters:</strong> necessary · accommodation · commitment · beginning</div></div>
-        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Homophones:</strong> their vs there · affect vs effect · principal vs principle</div></div>
+        <div class="tips-label">MOST COMMONLY MISSPELLED WORDS IN WFD</div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>-tion vs -sion:</strong> education · communication · organisation — but: television · decision · conclusion</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Double letters:</strong> necessary (1c, 2s) · accommodation (2c, 2m) · commitment (1t) · beginning (2g)</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>Common academic words:</strong> environment · development · government · significant · demonstrate · implement</div></div>
+        <div class="tip-item"><div class="tip-dot">▸</div><div><strong>British spellings:</strong> behaviour · colour · organisation · recognise (if using British consistently)</div></div>
       </div>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">SCORE-KILLERS</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Starting to type DURING the audio — you lose concentration on the second half of the sentence.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Not re-reading what you typed — one missing word can cost 2–3 points on a 10-word sentence.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Phonetic spelling: "their" as "there" / "affect" as "effect" / "principal" as "principle".</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Capitalising random words — only capitalise the first word and proper nouns.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Giving up on a long sentence — type whatever you heard. Partial credit applies per correct word.</div></div>
+      </div>
+
+      <div class="callout orange"><strong>Practice tip:</strong> WFD sentences repeat from a known pool. Students who have practiced extensively will recognise sentences they have seen before. Regular dictation practice with academic English dramatically improves performance here.</div>
     </div>
 
     <!-- Dictation Simulator widget -->
@@ -453,12 +512,11 @@
 
       <input type="text" class="dictation-input" id="dictationInput" placeholder="Type the sentence you heard here..." autocomplete="off"/>
 
-      <div class="drill-controls">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
         <button class="btn-drill" onclick="checkDictationAnswer()">🔍 Check Accuracy</button>
         <button class="btn-drill-secondary" onclick="loadNextDictation()">🔄 Next Sentence</button>
       </div>
 
-      <!-- Results panel -->
       <div class="results-panel" id="dictationResults">
         <h4 style="margin-bottom: 12px; font-weight: 800;">📊 AI Accuracy Report</h4>
         <div class="score-cards-row">
@@ -471,24 +529,49 @@
             <div class="sci-lbl">Total Accuracy</div>
           </div>
         </div>
-        
         <div style="margin-bottom: 8px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-3);">Transcription Comparison:</div>
-        <div class="word-highlight-text" id="dictationComparison">
-          <!-- Populated by JS -->
-        </div>
+        <div class="word-highlight-text" id="dictationComparison"></div>
         <p style="margin-top:10px; font-size: 12px; color: var(--text-3);">Green: Correct word · Red: Incorrect or missing word. Punctuation is ignored in scoring.</p>
       </div>
     </div>
   </div>
 
-  <!-- 6. MCQ SINGLE PANEL -->
+  <!-- 7. MCQ SINGLE -->
   <div id="panel-mcqs" class="panel">
     <div class="card-block">
       <div class="info-row">
         <span class="info-pill teal">2–3 items</span>
+        <span class="info-pill teal">Audio 30–90 sec</span>
         <span class="info-pill green">No negative marking</span>
+        <span class="info-pill teal">Scores: Listening</span>
       </div>
-      <p>Exactly one correct answer. Always guess if unsure.</p>
+      <p>An audio recording plays once. A question with 4–5 options follows — exactly <strong>one correct answer</strong>. No negative marking. The most straightforward listening task — always answer even if unsure.</p>
+
+      <span class="label green">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item"><div class="step-num">1</div><div class="step-body"><div class="step-title">Read question AND all options before audio</div><div class="step-desc">Read the question carefully first: is it asking for main idea / specific detail / speaker's attitude / inference? Then read all options so you know what to listen for.</div></div></div>
+        <div class="step-item"><div class="step-num">2</div><div class="step-body"><div class="step-title">Skim for keywords from the options during audio</div><div class="step-desc">Each option has a key word or phrase. When you hear that keyword in the audio, pay close attention to whether the context matches the option's claim.</div></div></div>
+        <div class="step-item"><div class="step-num">3</div><div class="step-body"><div class="step-title">Eliminate using the 4 distractor patterns</div><div class="step-desc">Too extreme (always/never) · Partially correct · Not mentioned in audio · Opposite meaning. After elimination, the remaining option is correct.</div></div></div>
+      </div>
+
+      <span class="label teal">Question Type Guide</span>
+      <div class="score-table">
+        <div class="st-row"><div class="st-cell head field">QUESTION TYPE</div><div class="st-cell head">WHERE TO FOCUS</div></div>
+        <div class="st-row"><div class="st-cell field">Main idea</div><div class="st-cell">Listen to the opening statement and conclusion — these state the overall message</div></div>
+        <div class="st-row"><div class="st-cell field">Specific detail</div><div class="st-cell">Listen for keywords from the question in the body of the recording</div></div>
+        <div class="st-row"><div class="st-cell field">Speaker's attitude</div><div class="st-cell">Listen for evaluative language: "unfortunately" / "remarkably" / "it is clear that"</div></div>
+        <div class="st-row"><div class="st-cell field">Inference</div><div class="st-cell">What does the speaker IMPLY but not directly state? Choose the logical conclusion.</div></div>
+      </div>
+
+      <div class="callout teal"><strong>No negative marking = always answer.</strong> Even a random guess between 2 remaining options is 50/50. Never leave MCQ Single blank.</div>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">MISTAKES</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Answering based on general knowledge — the answer must come from the audio itself.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Selecting the most "detailed" or "interesting" option — correct answers are usually clearly stated.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Leaving blank — no negative marking, so always select your best option.</div></div>
+      </div>
     </div>
   </div>
 
@@ -498,20 +581,21 @@
   function switchTab(tabId) {
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelectorAll('.panel').forEach(panel => panel.classList.remove('active'));
-    
     const btn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(`'${tabId}'`));
     if (btn) btn.classList.add('active');
-    
     const panel = document.getElementById('panel-' + tabId);
     if (panel) panel.classList.add('active');
   }
 
-  // ── DICTATION PRACTICE DATA & LOGIC ──
   const DICTATIONS = [
     "The university will provide additional funding for research projects next semester.",
     "Spelling is scored independently in all written tasks in the Pearson test.",
     "Students must read the instructions carefully before attempting the exam.",
-    "A highly educated workforce generates significantly higher economic output."
+    "A highly educated workforce generates significantly higher economic output.",
+    "The government has implemented a range of measures to address rising unemployment.",
+    "Environmental factors play a significant role in determining long-term outcomes.",
+    "The development of renewable energy has accelerated significantly in recent years.",
+    "Recent studies have demonstrated a clear link between diet and health outcomes."
   ];
   let currentIdx = 0;
   let hasPlayed = false;
@@ -527,55 +611,37 @@
   function playDictationSentence() {
     if (hasPlayed) {
       alert("In the real PTE exam, the dictation audio plays ONLY ONCE. Challenge yourself!");
+      return;
     }
-    
     const sentence = DICTATIONS[currentIdx];
-    
     if ('speechSynthesis' in window) {
       window.speechSynthesis.cancel();
       const utterance = new SpeechSynthesisUtterance(sentence);
-      utterance.rate = 0.85; // Speak slightly slowly to simulate real test pace
+      utterance.rate = 0.85;
       utterance.pitch = 1.0;
       utterance.lang = 'en-US';
-      
-      utterance.onstart = () => {
-        document.getElementById('audioStatus').textContent = "🔊 Audio playing...";
-      };
-      utterance.onend = () => {
-        document.getElementById('audioStatus').textContent = "✅ Audio completed. Type your answer below.";
-        hasPlayed = true;
-      };
+      utterance.onstart = () => { document.getElementById('audioStatus').textContent = "🔊 Audio playing..."; };
+      utterance.onend = () => { document.getElementById('audioStatus').textContent = "✅ Audio completed. Type your answer below."; hasPlayed = true; };
       window.speechSynthesis.speak(utterance);
     } else {
-      // Fallback
-      document.getElementById('audioStatus').textContent = "⚠️ Text-to-speech not supported. Read silently for testing: " + sentence;
+      document.getElementById('audioStatus').textContent = "⚠️ Text-to-speech not supported. Read silently: " + sentence;
       hasPlayed = true;
     }
   }
 
-  function cleanWord(word) {
-    return word.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
-  }
+  function cleanWord(word) { return word.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""); }
 
   function checkDictationAnswer() {
     const input = document.getElementById('dictationInput').value.trim();
     const target = DICTATIONS[currentIdx];
-    
-    if (!input) {
-      alert("Please type a transcription first!");
-      return;
-    }
-
+    if (!input) { alert("Please type a transcription first!"); return; }
     const inputWords = input.split(/\s+/).map(cleanWord);
     const targetWords = target.split(/\s+/).map(cleanWord);
     const originalTargetWords = target.split(/\s+/);
-    
     let correctCount = 0;
     let comparisonHTML = '';
-
     targetWords.forEach((word, idx) => {
       const originalWord = originalTargetWords[idx];
-      // Simple word match check (PTE matches words anywhere or in sequence)
       if (inputWords.includes(word)) {
         correctCount++;
         comparisonHTML += `<span class="w-ok">${originalWord}</span> `;
@@ -583,13 +649,10 @@
         comparisonHTML += `<span class="w-err">${originalWord}</span> `;
       }
     });
-
     const accuracy = Math.round((correctCount / targetWords.length) * 100);
-
     document.getElementById('dictationScore').textContent = `${correctCount} / ${targetWords.length}`;
     document.getElementById('dictationAccuracy').textContent = `${accuracy}%`;
     document.getElementById('dictationComparison').innerHTML = comparisonHTML;
-
     document.getElementById('dictationResults').classList.add('active');
     document.getElementById('dictationResults').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }

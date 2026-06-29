@@ -91,6 +91,7 @@
   input:focus{outline:2px solid var(--deep);border-color:var(--deep);outline-offset:-1px}
 </style>
   <script src="security.js"></script>
+  <script src="theme-loader.js"></script>
 </head>
 <body>
 
@@ -104,13 +105,13 @@
     <div class="hidden lg:flex items-center gap-3 text-stone-700 text-xs">
       <span class="nav-step" data-jump="mindset">① Mindset</span>
       <span class="nav-step" data-jump="pillars">② Pillars</span>
-      <span class="nav-step" data-jump="pause">③ Pause</span>
+      <span class="nav-step" data-jump="pause">③ Step 2A: Predict</span>
       <span class="nav-step" data-jump="sections">④ Sections</span>
       <span class="nav-step" data-jump="qtypes">⑤ Q-Types</span>
-      <span class="nav-step" data-jump="labs">⑥ Labs</span>
-      <span class="nav-step" data-jump="map">⑦ Map</span>
-      <span class="nav-step" data-jump="audio">⑧ Audio Mocks</span>
-      <span class="nav-step" data-jump="boss">⑨ Boss Fight</span>
+      <span class="nav-step" data-jump="labs">⑥ Steps 1 &amp; 3: Labs</span>
+      <span class="nav-step" data-jump="map">⑦ Step 2B: Map</span>
+      <span class="nav-step" data-jump="audio">⑧ Step 4: Mocks</span>
+      <span class="nav-step" data-jump="boss">⑨ Step 5: Boss Fight</span>
     </div>
     <div class="flex items-center gap-2 flex-wrap">
       <button class="btn btn-ghost text-xs" id="stopAudio" title="Stop audio">⏹</button>
@@ -198,7 +199,7 @@
 
     <!-- PREDICT DRILL -->
     <div class="card p-5 mt-4">
-      <div class="flex items-center gap-3 mb-3"><span class="chip" style="background:#fdf6e3;color:var(--gold)">Predict drill</span><h3 class="text-lg font-bold">Predict the Answer Type</h3></div>
+      <div class="flex items-center gap-3 mb-3"><span class="chip" style="background:#fdf6e3;color:var(--gold)">Step 2A · Predict</span><h3 class="text-lg font-bold">Step 2A: Predict the Answer Type</h3></div>
       <p class="text-sm text-stone-700">For each gapped question, click the <em>type</em> of word you'd expect to hear.</p>
       <div class="space-y-3 mt-3" id="predictDrill"></div>
     </div>
@@ -220,15 +221,79 @@
 
   <!-- LABS -->
   <section id="labs" class="mb-10">
-    <h2 class="text-2xl mb-3">⑥ The 6 Listening Labs</h2>
-    <p class="text-stone-700 text-sm max-w-3xl">Each lab targets one of the highest-leverage micro-skills. Open the lab, hit ▶ to hear the audio (browser TTS), then answer.</p>
+    <h2 class="text-2xl mb-3">⑥ Steps 1 &amp; 3: Listening Labs</h2>
+    <p class="text-stone-700 text-sm max-w-3xl mb-4">Each lab targets one of the highest-leverage micro-skills. Open the lab, hit ▶ to hear the audio (browser TTS), then answer.</p>
+
+    <!-- Sequential Learning Path Dashboard -->
+    <div class="card p-5 mb-6 border border-line rounded-2xl bg-white" style="background-image:radial-gradient(rgba(0,0,0,.03) 1px, transparent 1px);background-size:18px 18px">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="stamp">Roadmap</span>
+        <h3 class="text-xl font-bold">IELTS Listening Sequential Learning Path</h3>
+      </div>
+      <p class="text-xs text-stone-600 mb-5">Master these steps in order to train your ears, predict structure, and avoid common listening traps.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
+        <!-- Step 1 -->
+        <div class="p-3 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(13,138,122,0.03)">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 1</span>
+            <h4 class="font-bold text-xs mt-1">Foundational Transcription</h4>
+            <p class="text-[10px] text-stone-500 mt-1 leading-normal">Train on spelling, number patterns, dates, and final plural consonants.</p>
+          </div>
+          <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center mt-2 w-full" onclick="document.getElementById('labs').scrollIntoView({behavior:'smooth'})">Labs 1A - 1C</button>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="p-3 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(226,169,63,0.03)">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 2</span>
+            <h4 class="font-bold text-xs mt-1">Prediction &amp; Navigation</h4>
+            <p class="text-[10px] text-stone-500 mt-1 leading-normal">Underline keywords, predict word classes, and track map directions.</p>
+          </div>
+          <div class="flex flex-col gap-1 mt-2">
+            <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center w-full" onclick="document.getElementById('pause').scrollIntoView({behavior:'smooth'})">2A: Predict Drill</button>
+            <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center w-full" onclick="document.getElementById('map').scrollIntoView({behavior:'smooth'})">2B: Map Lab</button>
+          </div>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="p-3 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(13,138,122,0.03)">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 3</span>
+            <h4 class="font-bold text-xs mt-1">Advanced Cognitive Labs</h4>
+            <p class="text-[10px] text-stone-500 mt-1 leading-normal">Identify synonym replacements, catch speaker corrections, and trace lecture signposts.</p>
+          </div>
+          <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center mt-2 w-full" onclick="document.getElementById('labs').scrollIntoView({behavior:'smooth'})">Labs 3A - 3C</button>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="p-3 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(91,59,138,0.03)">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 4</span>
+            <h4 class="font-bold text-xs mt-1">Section Practice</h4>
+            <p class="text-[10px] text-stone-500 mt-1 leading-normal">Apply focus on 4 section-specific mini-tests with direct audio scripts.</p>
+          </div>
+          <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center mt-2 w-full" onclick="document.getElementById('audio').scrollIntoView({behavior:'smooth'})">4 Mini-Tests</button>
+        </div>
+        
+        <!-- Step 5 -->
+        <div class="p-3 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(232,88,13,0.03)">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 5</span>
+            <h4 class="font-bold text-xs mt-1">Mock Simulation</h4>
+            <p class="text-[10px] text-stone-500 mt-1 leading-normal">Face a full distractor-heavy Section 3 lecture mockup with live timers.</p>
+          </div>
+          <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center mt-2 w-full" onclick="document.getElementById('boss').scrollIntoView({behavior:'smooth'})">Boss Fight</button>
+        </div>
+      </div>
+    </div>
     <div class="feedback tip mt-3 text-xs"><strong>How the labs work:</strong> The audio plays the IELTS-style sentence. You can't see the audio script — you have to listen. After you answer, the script + explanation appear. This mirrors a real IELTS Section 1/2 micro-task. Click ▶ multiple times if you need to re-hear (real IELTS plays only once, but training wheels are fine while learning).</div>
     <div class="gameboard mt-4" id="labCards"></div>
   </section>
 
   <!-- MAP -->
   <section id="map" class="mb-10">
-    <h2 class="text-2xl mb-3">⑦ Map Navigation Lab</h2>
+    <h2 class="text-2xl mb-3">⑦ Step 2B: Map Navigation Lab</h2>
     <p class="text-stone-700 text-sm max-w-3xl">In Section 2 maps, orient yourself first (entrance, compass, landmarks), then follow prepositions exactly: <em>past, opposite, between, on the corner of, next to</em>. Wrong clicks don't move you — they tell you what was expected.</p>
 
     <div class="card p-5 mt-4">
@@ -266,7 +331,7 @@
 
   <!-- AUDIO MOCKS -->
   <section id="audio" class="mb-10">
-    <h2 class="text-2xl mb-3">⑧ Audio Mini-Tests — One Per Section</h2>
+    <h2 class="text-2xl mb-3">⑧ Step 4: Audio Mini-Tests — One Per Section</h2>
     <p class="text-stone-700 text-sm max-w-3xl">Four full audio mini-tests with original IELTS-style transcripts. Click ▶ to hear, then answer without looking at the transcript first.</p>
 
     <div class="card p-4 mt-3 flex items-center gap-3 flex-wrap">
@@ -285,7 +350,7 @@
   <!-- BOSS FIGHT -->
   <section id="boss" class="mb-10">
     <div class="flex items-end justify-between mb-3 flex-wrap gap-2">
-      <h2 class="text-2xl">⑨ Boss Fight · Section 3 Mock</h2>
+      <h2 class="text-2xl">⑨ Step 5: Boss Fight · Section 3 Mock</h2>
       <span class="badge" style="background:var(--soft);color:var(--deep)">5 Qs · ~4-min audio · live timer</span>
     </div>
     <p class="text-stone-700 text-sm max-w-3xl">A full Section 3 simulation — most distractor-heavy section. Hit ▶ Start, listen ONCE, answer all 5 questions, get a band estimate.</p>
@@ -699,7 +764,7 @@ qtypes.forEach(q=>{
 
 // ===== LABS (6 of them) =====
 const labs=[
-  {n:1,name:"Number Lab",icon:"🔢",accent:"var(--signal)",
+  {n:1,name:"Step 1A: Number Transcription Lab",icon:"🔢",accent:"var(--signal)",
    intro:"13 vs 30. 14 vs 40. Phone numbers with 'double'. Decimal prices. The five number traps that cost band points.",
    items:[
      {audio:"Three nine seven five double oh four two.", q:"Type the phone number (digits only):", a:"39750042", aliases:["3975 00 42","3 9 7 5 0 0 4 2"], why:"'Double oh' = 00. So 3975 then 00 42 = 39750042."},
@@ -708,7 +773,7 @@ const labs=[
      {audio:"The fourteenth of March, two thousand and nineteen.", q:"Write the date (format: DD Month YYYY):", a:"14 march 2019", aliases:["14/3/2019","14 march 19","14 mar 2019","14th march 2019","14th of march 2019"], why:"'The fourteenth of March' = 14 March. 'Two thousand and nineteen' = 2019."},
      {audio:"Half past two in the afternoon.", q:"Write the time (format: H:MM am/pm):", a:"2:30 pm", aliases:["2.30pm","14:30","2:30pm","2:30 p.m.","2.30 pm","half past two"], why:"'Half past two' = 2:30. 'Afternoon' = pm."}
    ]},
-  {n:2,name:"Spelling Lab",icon:"🔤",accent:"var(--gold)",
+  {n:2,name:"Step 1B: Spelling & Address Lab",icon:"🔤",accent:"var(--gold)",
    intro:"M/N. B/V. P/B. Double letters. Common confusions that cost a full mark per slip.",
    items:[
      {audio:"L-A-N-G-F-O-R-D.", q:"Type the surname:", a:"langford", aliases:["Langford"], why:"L–A–N–G–F–O–R–D. Watch the 'N' — easy to confuse with M."},
@@ -717,7 +782,16 @@ const labs=[
      {audio:"Twenty-three Belmont Crescent.", q:"Type the full address:", a:"23 belmont crescent", aliases:["23 Belmont Crescent","twenty-three belmont crescent"], why:"'Twenty-three' = 23. 'Crescent' is a road type — common in UK addresses."},
      {audio:"That's S-T-E-P-H-E-N. With a P-H, not V.", q:"Type the first name:", a:"stephen", aliases:["Stephen"], why:"'Stephen' (P-H) vs 'Steven' (V) — both pronounced the same. The speaker confirmed the spelling."}
    ]},
-  {n:3,name:"Synonym Lab",icon:"🔁",accent:"var(--alert)",
+  {n:6,name:"Step 1C: Plural Detector Lab",icon:"➕",accent:"var(--alert)",
+   intro:"Missing one 's' = full mark lost. Train your ear for the final consonant.",
+   items:[
+     {audio:"The main reason for the change was the high cost.", q:"Did the speaker use SINGULAR or PLURAL for 'reason'?", options:["singular","plural"],a:"singular",why:"'The main reason' — singular. If you write 'reasons', you lose the mark."},
+     {audio:"There are several reasons why this approach has failed.", q:"Did the speaker use SINGULAR or PLURAL for 'reason'?", options:["singular","plural"],a:"plural",why:"'Several reasons' — plural. The -s is essential."},
+     {audio:"The participant arrived at half past nine.", q:"How many people arrived?", options:["one","more than one"],a:"one",why:"'The participant' — singular. Listen for the article 'the' + noun ending."},
+     {audio:"The participants completed three different tasks.", q:"How many tasks did they complete?", options:["one","three"],a:"three",why:"'Three different tasks' — plural with explicit number. Both 'tasks' and 'participants' have -s."},
+     {audio:"The benefit of this method is its low cost.", q:"How many benefits?", options:["one","more than one"],a:"one",why:"'The benefit' — singular. Writing 'benefits' loses the mark."}
+   ]},
+  {n:3,name:"Step 3A: Synonym Paraphrasing Lab",icon:"🔁",accent:"var(--alert)",
    intro:"Question says one word; audio says another. Train your ear for meaning, not surface vocabulary.",
    items:[
      {audio:"The annual conference attracts visitors from over thirty countries.", q:"The question word was: 'yearly'. What did the audio say instead?", a:"annual", aliases:["annually"], why:"'Yearly' → 'annual / annually'. Classic IELTS synonym."},
@@ -726,7 +800,7 @@ const labs=[
      {audio:"Participants must purchase their own equipment.", q:"The question word was: 'buy'. What did the audio say instead?", a:"purchase", why:"'Buy' → 'purchase'. Watch also for: 'acquire', 'obtain'."},
      {audio:"This research is widely regarded as groundbreaking.", q:"The question word was: 'considered'. What did the audio say instead?", a:"regarded", aliases:["regarded as"], why:"'Considered' → 'regarded'. Watch also for: 'viewed as', 'seen as'."}
    ]},
-  {n:4,name:"Distractor Lab (Section 3 specialty)",icon:"🪤",accent:"var(--purple)",
+  {n:4,name:"Step 3B: Distractor Avoidance Lab",icon:"🪤",accent:"var(--purple)",
    intro:"The classic Section 3 trick: the first answer is wrong. Train yourself to wait for the speaker's commitment.",
    items:[
      {audio:"Originally we were going to focus on social media, but after the literature review, we decided to look at smartphone addiction instead.", q:"What is the team's FINAL focus?",
@@ -738,7 +812,7 @@ const labs=[
      {audio:"I was going to argue that climate change is the cause, but actually, the data suggests urban planning is the real factor.", q:"What does the speaker conclude is the REAL cause?",
       options:["climate change","urban planning","data analysis","both"],a:"urban planning",why:"Trap signal: 'I was going to… but actually…'. 'Actually' is one of the strongest distractor signals in IELTS."}
    ]},
-  {n:5,name:"Signpost Spotter (Section 4)",icon:"📍",accent:"var(--deep)",
+  {n:5,name:"Step 3C: Signpost Lecture Spotter",icon:"📍",accent:"var(--deep)",
    intro:"In Section 4 lectures, signposts tell you when an answer is coming. Identify the type of signpost = predict the type of info.",
    items:[
      {audio:"Firstly, let's consider the historical context.", q:"What type of signpost did the speaker use?",
@@ -751,15 +825,6 @@ const labs=[
       options:["contrast","example","cause/effect","conclusion"],a:"example",why:"'For instance' signals an EXAMPLE — listen for specific names, dates, or numbers next."},
      {audio:"To summarise, the three key findings can be grouped together.", q:"What type of signpost did the speaker use?",
       options:["sequence","addition","contrast","conclusion"],a:"conclusion",why:"'To summarise' signals a WRAP-UP. Lecture is ending — last chance for answers."}
-   ]},
-  {n:6,name:"Plural Detector",icon:"➕",accent:"var(--alert)",
-   intro:"Missing one 's' = full mark lost. Train your ear for the final consonant.",
-   items:[
-     {audio:"The main reason for the change was the high cost.", q:"Did the speaker use SINGULAR or PLURAL for 'reason'?", options:["singular","plural"],a:"singular",why:"'The main reason' — singular. If you write 'reasons', you lose the mark."},
-     {audio:"There are several reasons why this approach has failed.", q:"Did the speaker use SINGULAR or PLURAL for 'reason'?", options:["singular","plural"],a:"plural",why:"'Several reasons' — plural. The -s is essential."},
-     {audio:"The participant arrived at half past nine.", q:"How many people arrived?", options:["one","more than one"],a:"one",why:"'The participant' — singular. Listen for the article 'the' + noun ending."},
-     {audio:"The participants completed three different tasks.", q:"How many tasks did they complete?", options:["one","three"],a:"three",why:"'Three different tasks' — plural with explicit number. Both 'tasks' and 'participants' have -s."},
-     {audio:"The benefit of this method is its low cost.", q:"How many benefits?", options:["one","more than one"],a:"one",why:"'The benefit' — singular. Writing 'benefits' loses the mark."}
    ]}
 ];
 

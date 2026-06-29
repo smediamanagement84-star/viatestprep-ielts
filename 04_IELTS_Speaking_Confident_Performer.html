@@ -89,6 +89,7 @@ img,svg{-webkit-user-drag:none!important}
 .vtp-wm::after{content:"ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential  \B7  ViATestPrep  \B7  Confidential";position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-28deg);font-size:1.1rem;font-weight:800;color:rgba(91,42,134,0.05);white-space:nowrap;letter-spacing:.3em;pointer-events:none}
 .vtp-corner{position:fixed;bottom:14px;right:14px;z-index:9999;background:linear-gradient(135deg,#5b2a86,#3b0a64);color:#fff;padding:.3rem .8rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.05em;box-shadow:0 2px 14px rgba(91,42,134,.4);pointer-events:none;font-family:Inter,sans-serif}
 </style>  <script src="security.js"></script>
+  <script src="theme-loader.js"></script>
 </head>
 <body>
 <div class="vtp-wm" aria-hidden="true"></div><div class="vtp-corner" aria-hidden="true">&#127891; ViATestPrep</div>
@@ -104,17 +105,14 @@ img,svg{-webkit-user-drag:none!important}
         <div class="font-bold -mt-1">Speaking · Band 7+</div>
       </div>
     </div>
-    <div class="hidden md:flex items-center gap-4 text-sm">
-      <span class="nav-step" data-jump="mission">① Mindset</span>
-      <span class="nav-step" data-jump="pillars">② 4 Pillars</span>
-      <span class="nav-step" data-jump="act1">③ Part 1</span>
-      <span class="nav-step" data-jump="act2">④ Part 2</span>
-      <span class="nav-step" data-jump="act3">⑤ Part 3</span>
-      <span class="nav-step" data-jump="boss">⑥ Boss Stage</span>
-      <span class="nav-step" data-jump="rapidfire">⚡ Rapid Fire</span>
-      <span class="nav-step" data-jump="liveTalk">🎤 Cue-Card</span>
-      <span class="nav-step" data-jump="deepdive">🧠 Deep Dive</span>
-      <span class="nav-step" data-jump="interview">🎙 Simulator</span>
+    <div class="hidden md:flex items-center gap-4 text-sm flex-wrap">
+      <span class="nav-step cursor-pointer hover:text-stone-900" data-jump="mission">① Mindset</span>
+      <span class="nav-step cursor-pointer hover:text-stone-900" data-jump="pillars">② Step 1: Foundations</span>
+      <span class="nav-step cursor-pointer hover:text-stone-900" data-jump="act1">③ Step 2: Part 1</span>
+      <span class="nav-step cursor-pointer hover:text-stone-900" data-jump="act2">④ Step 3: Part 2</span>
+      <span class="nav-step cursor-pointer hover:text-stone-900" data-jump="act3">⑤ Step 4: Part 3</span>
+      <span class="nav-step cursor-pointer hover:text-stone-900" data-jump="interview">⑥ Step 5A: Simulator</span>
+      <span class="nav-step cursor-pointer hover:text-stone-900" data-jump="boss">⑦ Step 5B: Boss Fight</span>
     </div>
     <div class="flex items-center gap-3">
       <div class="text-right hidden sm:block">
@@ -161,8 +159,84 @@ img,svg{-webkit-user-drag:none!important}
 
   <!-- 4 PILLARS -->
   <section id="pillars" class="mb-14">
-    <h2 class="text-3xl mb-2">② The Four Pillars (= Your Score)</h2>
-    <p class="text-stone-700 max-w-3xl">25% each. The examiner has a checklist. Give them evidence on every line.</p>
+    <h2 class="text-3xl mb-2">② Step 1: Speaking Foundations &amp; The 4 Pillars</h2>
+    <p class="text-stone-700 max-w-3xl">Master the basic delivery metrics: Fluency, Vocabulary range, Grammar range, and Pronunciation stress. Train your ear on syllable stress and error spotting before moving to conversational speed.</p>
+
+    <!-- Sequential Learning Path Dashboard -->
+    <div class="card p-6 mb-8 bg-white border border-line rounded-2xl bg-white mt-4" style="background-image:radial-gradient(rgba(122,31,43,.03) 1px, transparent 1px);background-size:18px 18px">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="stamp" style="border-color:var(--burgundy);color:var(--burgundy)">Roadmap</span>
+        <h3 class="text-xl font-bold">IELTS Speaking Sequential Learning Path</h3>
+      </div>
+      <p class="text-xs text-stone-600 mb-5">Follow this structured path to master delivery foundations, conversational speed, long-turn timing, abstract reasoning, and full exam simulations.</p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3">
+        <!-- Step 1 -->
+        <div class="p-3 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(122,31,43,0.02)">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 1</span>
+            <h4 class="font-bold text-xs mt-1">Delivery Foundations</h4>
+            <p class="text-[10px] text-stone-500 mt-1 leading-normal">Train syllable stress and identify common grammatical and lexical errors.</p>
+          </div>
+          <div class="flex flex-col gap-1 mt-2">
+            <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center w-full" onclick="document.getElementById('pillars').scrollIntoView({behavior:'smooth'})">1A: Word Stress</button>
+            <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center w-full" onclick="document.getElementById('errors').scrollIntoView({behavior:'smooth'})">1B: Error Spotter</button>
+          </div>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="p-3 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(202,161,74,0.02)">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 2</span>
+            <h4 class="font-bold text-xs mt-1">Part 1 (Conversational)</h4>
+            <p class="text-[10px] text-stone-500 mt-1 leading-normal">Master the Answer+1 rule and practice under rapid-fire pressure.</p>
+          </div>
+          <div class="flex flex-col gap-1 mt-2">
+            <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center w-full" onclick="document.getElementById('act1').scrollIntoView({behavior:'smooth'})">2A: Answer+1</button>
+            <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center w-full" onclick="document.getElementById('rapidfire').scrollIntoView({behavior:'smooth'})">2B: Rapid Fire</button>
+          </div>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="p-3 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(31,122,106,0.02)">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 3</span>
+            <h4 class="font-bold text-xs mt-1">Part 2 (Monologue)</h4>
+            <p class="text-[10px] text-stone-500 mt-1 leading-normal">Learn the P.P.F. structuring method and test your 2-minute timing.</p>
+          </div>
+          <div class="flex flex-col gap-1 mt-2">
+            <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center w-full" onclick="document.getElementById('act2').scrollIntoView({behavior:'smooth'})">3A: PPF Planner</button>
+            <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center w-full" onclick="document.getElementById('liveTalk').scrollIntoView({behavior:'smooth'})">3B: Monologue Timer</button>
+          </div>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="p-3 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(122,31,43,0.02)">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 4</span>
+            <h4 class="font-bold text-xs mt-1">Part 3 (Analytical)</h4>
+            <p class="text-[10px] text-stone-500 mt-1 leading-normal">Construct abstract responses using the A.R.E. framework.</p>
+          </div>
+          <div class="flex flex-col gap-1 mt-2">
+            <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center w-full" onclick="document.getElementById('act3').scrollIntoView({behavior:'smooth'})">4A: A.R.E. Order</button>
+            <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center w-full" onclick="document.getElementById('deepdive').scrollIntoView({behavior:'smooth'})">4B: Deep Dive</button>
+          </div>
+        </div>
+        
+        <!-- Step 5 -->
+        <div class="p-3 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(26,14,14,0.02)">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Step 5</span>
+            <h4 class="font-bold text-xs mt-1">Mock Simulation</h4>
+            <p class="text-[10px] text-stone-500 mt-1 leading-normal">Run interactive voice-recorded mocks and assess using examiners' rubric.</p>
+          </div>
+          <div class="flex flex-col gap-1 mt-2">
+            <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center w-full" onclick="document.getElementById('interview').scrollIntoView({behavior:'smooth'})">5A: Voice Simulator</button>
+            <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center w-full" onclick="document.getElementById('boss').scrollIntoView({behavior:'smooth'})">5B: Boss Fight</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="grid md:grid-cols-2 gap-4 mt-6">
       <div class="pillar fc">
@@ -205,7 +279,7 @@ img,svg{-webkit-user-drag:none!important}
   <!-- ACT 1: PART 1 -->
   <section id="act1" class="mb-14">
     <div class="flex items-end justify-between mb-3">
-      <h2 class="text-3xl">③ Act 1 · Part 1 — The Warm-Up (4–5 min)</h2>
+      <h2 class="text-3xl">③ Step 2A: Act 1 · Part 1 — The Warm-Up (Answer+1)</h2>
       <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">Friendly · direct · conversational</span>
     </div>
     <p class="text-stone-700 max-w-3xl">12 short questions about familiar topics. Goal: first impressions. Trap: 1-word answers OR 30-second monologues.</p>
@@ -244,7 +318,7 @@ img,svg{-webkit-user-drag:none!important}
   <!-- ACT 2: PART 2 -->
   <section id="act2" class="mb-14">
     <div class="flex items-end justify-between mb-3">
-      <h2 class="text-3xl">④ Act 2 · Part 2 — The Long Turn (3–4 min)</h2>
+      <h2 class="text-3xl">④ Step 3A: Act 2 · Part 2 — The Long Turn (P.P.F. Plan)</h2>
       <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">2-min monologue · 1-min prep</span>
     </div>
     <p class="text-stone-700 max-w-3xl">Your solo performance. The 1-minute preparation is sacred. Don't write sentences — use the <strong>P.P.F. method</strong>.</p>
@@ -324,7 +398,7 @@ img,svg{-webkit-user-drag:none!important}
   <!-- ACT 3: PART 3 -->
   <section id="act3" class="mb-14">
     <div class="flex items-end justify-between mb-3">
-      <h2 class="text-3xl">⑤ Act 3 · Part 3 — The Deep Dive (4–5 min)</h2>
+      <h2 class="text-3xl">⑤ Step 4A: Act 3 · Part 3 — The Deep Dive (A.R.E. Answers)</h2>
       <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">Abstract · societal · analytical</span>
     </div>
     <p class="text-stone-700 max-w-3xl">Discuss abstract issues related to your Part 2 topic. The trap: giving only personal opinions. The move: <strong>A.R.E. — Answer, Reason, Example</strong>. Move from "I" to "people in general".</p>
@@ -388,7 +462,7 @@ img,svg{-webkit-user-drag:none!important}
   <!-- BOSS STAGE -->
   <section id="boss" class="mb-14">
     <div class="flex items-end justify-between mb-4">
-      <h2 class="text-3xl">⑥ Boss Stage — Full Mock</h2>
+      <h2 class="text-3xl">⑥ Step 5B: Boss Stage — Full Mock Exam</h2>
       <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">Self-record · self-grade</span>
     </div>
     <p class="text-stone-700 max-w-3xl">Three mini-rounds. Use your phone's voice recorder. Then self-grade against the rubric below.</p>
@@ -440,7 +514,7 @@ img,svg{-webkit-user-drag:none!important}
   <!-- ERROR SPOTTING -->
   <section id="errors" class="mb-14">
     <div class="flex items-end justify-between mb-3">
-      <h2 class="text-3xl">🔍 Common Errors · Spot & Fix</h2>
+      <h2 class="text-3xl">🔍 Step 1B: Common Errors · Spot &amp; Fix</h2>
       <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">Real Band 6 transcripts</span>
     </div>
     <p class="text-stone-700 max-w-3xl">Each line is something a real Band 6 student said in a mock test. Click the word/phrase that's wrong. Then read the fix.</p>
@@ -450,7 +524,7 @@ img,svg{-webkit-user-drag:none!important}
   <!-- RAPID FIRE (PART 1 DRILL) -->
   <section id="rapidfire" class="mb-14">
     <div class="flex items-end justify-between mb-3">
-      <h2 class="text-3xl">⚡ Rapid Fire — Part 1 Drill</h2>
+      <h2 class="text-3xl">⚡ Step 2B: Rapid Fire — Part 1 Drill</h2>
       <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">10 questions · 30 sec each · examiner speaks</span>
     </div>
     <p class="text-stone-700 max-w-3xl">10 random Part 1 questions, asked aloud by the examiner. 30 seconds per answer with auto-advance. Trains fluency under pressure. Project on screen for class drills.</p>
@@ -479,7 +553,7 @@ img,svg{-webkit-user-drag:none!important}
   <!-- LIVE 2-MIN CUE CARD (PART 2 DRILL) -->
   <section id="liveTalk" class="mb-14">
     <div class="flex items-end justify-between mb-3">
-      <h2 class="text-3xl">🎤 Live Cue-Card Stage · 2-Minute Talk</h2>
+      <h2 class="text-3xl">🎤 Step 3B: Live Cue-Card Stage · 2-Minute Talk</h2>
       <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">Project this · pick a student · hit START</span>
     </div>
     <p class="text-stone-700 max-w-3xl">Designed for classroom use. Pick a card, give the student 1 minute to plan, then run the 2-minute talk timer. Visual countdown so students can pace themselves.</p>
@@ -524,7 +598,7 @@ img,svg{-webkit-user-drag:none!important}
   <!-- PART 3 DEEP DIVE (A.R.E. FRAMEWORK BUILDER) -->
   <section id="deepdive" class="mb-14">
     <div class="flex items-end justify-between mb-3">
-      <h2 class="text-3xl">🧠 Part 3 Deep Dive — A.R.E. Framework Builder</h2>
+      <h2 class="text-3xl">🧠 Step 4B: Part 3 Deep Dive — A.R.E. Framework Builder</h2>
       <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">Abstract · societal · analytical</span>
     </div>
     <p class="text-stone-700 max-w-3xl">Practise structured thinking for abstract Part 3 questions. Select a topic, read the question, and select the best Answer, Reason, and Example from the options below to assemble a Band 8+ response. Tap the components to add them in order.</p>
@@ -579,7 +653,7 @@ img,svg{-webkit-user-drag:none!important}
   <!-- LIVE INTERVIEW SIMULATOR -->
   <section id="interview" class="mb-14">
     <div class="flex items-end justify-between mb-3">
-      <h2 class="text-3xl">🎙 Live Interview Simulator</h2>
+      <h2 class="text-3xl">🎙 Step 5A: Live Interview Simulator</h2>
       <span class="badge" style="background:var(--gold-soft);color:var(--burgundy)">Examiner speaks · You record</span>
     </div>
     <p class="text-stone-700 max-w-3xl">A real-feel simulation. The examiner (browser TTS) asks each question aloud. You record your answer (mic permission required), then play it back to self-assess. No data leaves your browser.</p>
