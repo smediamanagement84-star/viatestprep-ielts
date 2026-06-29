@@ -63,6 +63,7 @@
     .questions-pane {
       height: 100%;
       overflow-y: auto;
+      position: relative;
     }
 
     /* Highlight Tooltip */
@@ -230,7 +231,7 @@
         </div>
 
         <!-- Passage Content -->
-        <h1 class="text-3xl font-extrabold tracking-tight mb-4" id="passageTitle">Passage Title</h1>
+        <h1 class="text-3xl font-extrabold tracking-tight mb-4 hidden" id="passageTitle">Passage Title</h1>
         <div class="text-sm leading-relaxed space-y-4 text-stone-300" id="passageContent">
           <!-- Rendered by JS -->
         </div>
@@ -303,6 +304,15 @@
     let timeRemaining = totalTimeSeconds;
     let timerInterval;
     let selectedRange = null;
+
+    function scrollToQuestion(qNum) {
+      const targetBox = document.getElementById(`qbox-${qNum}`);
+      const pane = document.querySelector('.questions-pane');
+      if (targetBox && pane) {
+        const topPos = targetBox.offsetTop - pane.offsetTop - (pane.clientHeight / 2) + (targetBox.clientHeight / 2);
+        pane.scrollTo({ top: topPos, behavior: 'smooth' });
+      }
+    }
 
     // Initialize
     function initTest() {
@@ -380,10 +390,7 @@
 
       // After rendering, scroll to the active question box
       setTimeout(() => {
-        const targetBox = document.getElementById(`qbox-${currentQuestionNum}`);
-        if (targetBox) {
-          targetBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
+        scrollToQuestion(currentQuestionNum);
       }, 100);
     }
 
@@ -504,10 +511,7 @@
               const tabBtn = document.querySelectorAll('#passageTabs button')[pIdx];
               switchPassage(pIdx, tabBtn);
             } else {
-              const targetBox = document.getElementById(`qbox-${q.num}`);
-              if (targetBox) {
-                targetBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              }
+              scrollToQuestion(q.num);
               document.querySelectorAll('.q-nav-btn').forEach(b => {
                 b.classList.remove('current');
                 if (parseInt(b.textContent) === q.num) b.classList.add('current');
@@ -756,10 +760,7 @@
             const tabBtn = document.querySelectorAll('#passageTabs button')[targetPassageIdx];
             switchPassage(targetPassageIdx, tabBtn);
           } else {
-            const targetBox = document.getElementById(`qbox-${currentQuestionNum}`);
-            if (targetBox) {
-              targetBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
+            scrollToQuestion(currentQuestionNum);
             document.querySelectorAll('.q-nav-btn').forEach(btn => {
               btn.classList.remove('current');
               if (parseInt(btn.textContent) === currentQuestionNum) {

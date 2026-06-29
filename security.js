@@ -55,7 +55,7 @@
     }
     
     /* Allow selection only for input/textarea/button/a elements so students can type answers and click naturally */
-    input, textarea, button, a, select, [contenteditable="true"] {
+    input, textarea, button, a, select, [contenteditable="true"], .passage-pane, .passage-pane * {
       -webkit-user-select: text !important;
       -moz-user-select: text !important;
       -ms-user-select: text !important;
