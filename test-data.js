@@ -1063,7 +1063,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 1,
               "type": "FILL",
-              "text": "Questions _________—10",
+              "text": "Basic membership includes free _________ for all staff.",
               "answer": "training",
               "explanation": "The transcript states: \"For example, all employees get training — even temporary staff.\"",
               "instruction": "Questions 1-5<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Working at Milo's Restaurants<br/>Benefits<br/>provided for all staff<br/>during weekdays at all Milo's Restaurants<br/>provided after midnight<br/>Person specification<br/>e must be prepared to work well in a team"
@@ -1071,7 +1071,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 2,
               "type": "FILL",
-              "text": "Question 2: Write your answer here: _________",
+              "text": "All staff receive a _________ at any of their restaurants.",
               "answer": "discount",
               "explanation": "The transcript states: \"But another benefit of working for a big company like this is that you can get a discount at any of their restaurants.\"",
               "instruction": "Questions 1-5<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Working at Milo's Restaurants<br/>Benefits<br/>provided for all staff<br/>during weekdays at all Milo's Restaurants<br/>provided after midnight<br/>Person specification<br/>e must be prepared to work well in a team"
@@ -1079,7 +1079,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 3,
               "type": "FILL",
-              "text": "Question 3: Write your answer here: _________",
+              "text": "For late shifts ending after midnight, the company pays for a _________ home.",
               "answer": "taxi",
               "explanation": "The transcript states: \"the company will pay for you to get a taxi home.\"",
               "instruction": "Questions 1-5<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Working at Milo's Restaurants<br/>Benefits<br/>provided for all staff<br/>during weekdays at all Milo's Restaurants<br/>provided after midnight<br/>Person specification<br/>e must be prepared to work well in a team"
@@ -1087,7 +1087,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 4,
               "type": "FILL",
-              "text": "e must care about maintaining a high standard of _________",
+              "text": "Candidate must care about maintaining a high standard of _________.",
               "answer": "service",
               "explanation": "The transcript states: \"We had to make sure we gave a really high level of service.\"",
               "instruction": "Questions 1-5<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Working at Milo's Restaurants<br/>Benefits<br/>provided for all staff<br/>during weekdays at all Milo's Restaurants<br/>provided after midnight<br/>Person specification<br/>e must be prepared to work well in a team"
@@ -1095,7 +1095,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 5,
               "type": "FILL",
-              "text": "30 a.m. City Road Junior chef Supporting senior | Annual salary £23,000 chefs No work ona Maintaining stock and organising >[Sp2i [Epi] 20",
+              "text": "Candidate must have a certificate in _________.",
               "answer": "English",
               "explanation": "The transcript states: \"So the only other thing that's required is good communication skills, so you'll need to have a certificate in English.\"",
               "instruction": "Questions 1-5<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Working at Milo's Restaurants<br/>Benefits<br/>provided for all staff<br/>during weekdays at all Milo's Restaurants<br/>provided after midnight<br/>Person specification<br/>e must be prepared to work well in a team"
@@ -1103,7 +1103,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 6,
               "type": "FILL",
-              "text": "Questions _________-10",
+              "text": "The first vacancy is for a breakfast supervisor in _________ Street.",
               "answer": "Wivenhoe",
               "explanation": "The transcript states: \"The first one is in Wivenhoe Street.\"",
               "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary £23,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
@@ -1111,7 +1111,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 7,
               "type": "FILL",
-              "text": "Question 7: Write your answer here: _________",
+              "text": "Responsibilities include checking the procedures for cleaning the _________.",
               "answer": "equipment",
               "explanation": "The transcript states: \", and then things like checking all the procedures for cleaning the equipment are being followed.\"",
               "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary £23,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
@@ -1119,7 +1119,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 8,
               "type": "FILL",
-              "text": "Question 8: Write your answer here: _________",
+              "text": "The starting salary is £_________ per hour.",
               "answer": "9.75",
               "explanation": "The transcript confirms the answer is '9.75'.",
               "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary £23,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
@@ -1127,7 +1127,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 9,
               "type": "FILL",
-              "text": "Question 9: Write your answer here: _________",
+              "text": "The junior chef will be responsible for stock and sorting out all the _________.",
               "answer": "deliveries",
               "explanation": "The transcript states: \"And you'd be responsible for making sure there's enough stock each week — and sorting out all the deliveries.\"",
               "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary £23,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
@@ -1135,7 +1135,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 10,
               "type": "FILL",
-              "text": "Questions 1—_________",
+              "text": "The branch is closed on Mondays, but staff get one _________ off every four weeks.",
               "answer": "Sunday",
               "explanation": "The transcript states: \"But you do get one Sunday off every four weeks.\"",
               "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary £23,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
@@ -1488,7 +1488,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 31,
               "type": "FILL",
-              "text": "Questions _________-40",
+              "text": "Pockets are popular because nothing is as _________ as putting items in them.",
               "answer": "convenient",
               "explanation": "The transcript states: \"We all have them — in jeans, jackets, coats, for example — and even though we often carry bags or briefcases as well, nothing is quite as convenient as being able to pop your phone or credit card into your pocket.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Pockets<br/>Reason for choice of subject"
@@ -1504,7 +1504,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 33,
               "type": "FILL",
-              "text": "Question 33: Write your answer here: _________",
+              "text": "Waistcoat and jacket pockets were sewn in by a _________.",
               "answer": "tailor",
               "explanation": "The transcript states: \"Trousers were knee-length only and referred to as 'breeches', the waistcoats were short and the jackets were long, but all three garments were lined with material and pockets were sewn into this cloth by whichever tailor the customer used.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Pockets<br/>Reason for choice of subject"
@@ -1512,7 +1512,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 34,
               "type": "FILL",
-              "text": "Question 34: Write your answer here: _________",
+              "text": "Pockets were larger and plainer for men with a _________.",
               "answer": "profession",
               "explanation": "The transcript states: \"Coat pockets became increasingly decorative on the outside for men who wanted to look stylish, but they were often larger but plainer if the wearer was someone with a profession who needed to carry medical instruments — a doctor or physician, for example.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Pockets<br/>Reason for choice of subject"
@@ -1544,7 +1544,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 38,
               "type": "FILL",
-              "text": "Items such as _________ could be reached through a gap in the",
+              "text": "Items such as _________ could be reached through a gap in the skirt.",
               "answer": "perfume",
               "explanation": "The transcript states: \"They would have an opening in the folds of their skirts through which they could reach whatever they needed, like their perfume.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Pockets<br/>Reason for choice of subject"
@@ -1552,7 +1552,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 39,
               "type": "FILL",
-              "text": "Question 39: Write your answer here: _________",
+              "text": "Bulky pockets were thought to ruin a woman's _________.",
               "answer": "image",
               "explanation": "The transcript states: \"and the pairs of pockets became very noticeable — they stood out too much and detracted from the woman's image.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Pockets<br/>Reason for choice of subject"
@@ -1560,7 +1560,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 40,
               "type": "FILL",
-              "text": "Questions 31-_________",
+              "text": "This led to the development of the _________.",
               "answer": "handbag",
               "explanation": "The transcript states: \"That was when small bags, or pouches as they were known, came into fashion and, of course, they inevitably led on to the handbag of more modern times, particularly when fashion removed pockets altogether.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Pockets<br/>Reason for choice of subject"
@@ -2118,7 +2118,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 1,
               "type": "FILL",
-              "text": "Questions _________-10",
+              "text": "Home address: 52 _________ Street.",
               "answer": "Marrowfield",
               "explanation": "The transcript states: \"DAN: It's 52 Marrowfield Street.\"",
               "instruction": "Questions 1—4<br/>Complete the form below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Wayside Camera Club<br/>membership form<br/>Name: Dan Green<br/>Email address: dan1068@market.com<br/>Home address:<br/>Heard about us:<br/>Reasons for joining:<br/>Type of membership:"
@@ -2126,7 +2126,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 2,
               "type": "FILL",
-              "text": "Question 2: Write your answer here: _________",
+              "text": "Heard about us from a _________.",
               "answer": "relative",
               "explanation": "The transcript states: \"DAN: | usually do that, but this time, well, | was talking to a relative the other day and he suggested it.\"",
               "instruction": "Questions 1—4<br/>Complete the form below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Wayside Camera Club<br/>membership form<br/>Name: Dan Green<br/>Email address: dan1068@market.com<br/>Home address:<br/>Heard about us:<br/>Reasons for joining:<br/>Type of membership:"
@@ -2134,7 +2134,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 3,
               "type": "FILL",
-              "text": "Question 3: Write your answer here: _________",
+              "text": "Reasons for joining: to _________ with other photographers.",
               "answer": "socialise",
               "explanation": "The transcript states: \"DAN: Well, also like to socialise with other photographers.\"",
               "instruction": "Questions 1—4<br/>Complete the form below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Wayside Camera Club<br/>membership form<br/>Name: Dan Green<br/>Email address: dan1068@market.com<br/>Home address:<br/>Heard about us:<br/>Reasons for joining:<br/>Type of membership:"
@@ -2142,7 +2142,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 4,
               "type": "FILL",
-              "text": "Questions 1—_________",
+              "text": "Type of membership: _________ membership.",
               "answer": "full",
               "explanation": "The transcript states: \"BREDA It's £30 a year for full membership or £20 a year if you're an associate.\"",
               "instruction": "Questions 1—4<br/>Complete the form below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Wayside Camera Club<br/>membership form<br/>Name: Dan Green<br/>Email address: dan1068@market.com<br/>Home address:<br/>Heard about us:<br/>Reasons for joining:<br/>Type of membership:"
@@ -2150,7 +2150,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 5,
               "type": "FILL",
-              "text": "Questions _________—10",
+              "text": "Title of first competition entered: _________.",
               "answer": "Domestic Life",
               "explanation": "The transcript states: \"DAN: Well, the theme was entitled 'Domestic Life'.\"",
               "instruction": "Questions 5—10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
@@ -2158,7 +2158,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 6,
               "type": "FILL",
-              "text": "Question 6: Write your answer here: _________",
+              "text": "Instructions: must capture the _________ as well.",
               "answer": "clouds",
               "explanation": "The transcript states: \"The instructions were to capture the clouds as well — it couldn't just be blue sky and a setting sun.\"",
               "instruction": "Questions 5—10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
@@ -2166,7 +2166,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 7,
               "type": "FILL",
-              "text": "Question 7: Write your answer here: _________",
+              "text": "Feedback: the _________ wasn't right.",
               "answer": "timing",
               "explanation": "The transcript states: \"So the timing wasn't right.\"",
               "instruction": "Questions 5—10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
@@ -2174,7 +2174,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 8,
               "type": "FILL",
-              "text": "Question 8: Write your answer here: _________",
+              "text": "Title of second competition entered: _________.",
               "answer": "Animal Magic",
               "explanation": "The transcript states: \"And then the third competition | entered was called 'Animal Magic'.\"",
               "instruction": "Questions 5—10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
@@ -2182,7 +2182,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 9,
               "type": "FILL",
-              "text": "Question 9: Write your answer here: _________",
+              "text": "Instructions: there had to be some _________ in the scene.",
               "answer": "movement",
               "explanation": "The transcript states: \"DAN: That's what we had to show — there had to be some movement in the scene.\"",
               "instruction": "Questions 5—10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
@@ -2190,7 +2190,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 10,
               "type": "FILL",
-              "text": "Questions 1-_________",
+              "text": "Feedback: the photograph was too _________.",
               "answer": "dark",
               "explanation": "The transcript states: \"| got a great shot of a fox in the end, but | took it at night and, well, | suspected that it was a bit dark, which is what 1 was told.\"",
               "instruction": "Questions 5—10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
@@ -2552,7 +2552,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 31,
               "type": "FILL",
-              "text": "Questions _________-40",
+              "text": "We need to develop the _________ systems to prevent accidents.",
               "answer": "technical",
               "explanation": "The transcript states: \"and we'd also have to develop the technical systems to enable us to prevent such accidents.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Space Traffic Management<br/>A Space Traffic Management system<br/>e is aconcept similar to Air Traffic Control, but for satellites rather than planes."
@@ -2576,7 +2576,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 34,
               "type": "FILL",
-              "text": "Question 34: Write your answer here: _________",
+              "text": "Satellites do not need to send information back to allow their _________.",
               "answer": "identification",
               "explanation": "The transcript states: \"But in spite of this, one thing you may be surprised to learn is that you can launch a satellite into space and, once it's out there, it doesn't have to send back any information to Earth to allow its identification.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Space Traffic Management<br/>A Space Traffic Management system<br/>e is aconcept similar to Air Traffic Control, but for satellites rather than planes."
@@ -2592,7 +2592,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 36,
               "type": "FILL",
-              "text": "Question 36: Write your answer here: _________",
+              "text": "Some satellites are launched for _________ or commercial reasons.",
               "answer": "military",
               "explanation": "The transcript states: \"For example, a satellite may be designed for military purposes, or it may have been launched for commercial reasons, and the operators don't want competitors to have information about it.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Space Traffic Management<br/>A Space Traffic Management system<br/>e is aconcept similar to Air Traffic Control, but for satellites rather than planes."
@@ -2616,7 +2616,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 39,
               "type": "FILL",
-              "text": "Question 39: Write your answer here: _________",
+              "text": "The collected space debris data will be entered onto a single _________.",
               "answer": "database",
               "explanation": "The transcript states: \"Then, as all this information's collected, it needs to be put together so it can be used, and that will involve creating a single database on which it can be entered.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Space Traffic Management<br/>A Space Traffic Management system<br/>e is aconcept similar to Air Traffic Control, but for satellites rather than planes."
@@ -3300,7 +3300,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 1,
               "type": "FILL",
-              "text": "Questions _________-10",
+              "text": "Position title: _________.",
               "answer": "receptionist",
               "explanation": "The transcript states: \"GREG: So this is a position for a receptionist — | believe you've done that sort of work before.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job details from employment agency<br/>Location<br/>Work involves<br/>dealing with enquiries"
@@ -3308,7 +3308,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 2,
               "type": "FILL",
-              "text": "Question 2: Write your answer here: _________",
+              "text": "Location: at the _________ centre in Fordham.",
               "answer": "Medical",
               "explanation": "The transcript states: \"Well, this job's in Fordham, so not too far away for you, and it's at the medical centre there.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job details from employment agency<br/>Location<br/>Work involves<br/>dealing with enquiries"
@@ -3316,7 +3316,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 3,
               "type": "FILL",
-              "text": "7 _________(Gp | Ear",
+              "text": "Address: on _________ Road.",
               "answer": "Chastons",
               "explanation": "The transcript states: \"GREG: It's quite near the station, on Chastons Road.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job details from employment agency<br/>Location<br/>Work involves<br/>dealing with enquiries"
@@ -3340,7 +3340,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 6,
               "type": "FILL",
-              "text": "Question 6: Write your answer here: _________",
+              "text": "Requirements: they require someone with _________.",
               "answer": "experience",
               "explanation": "The transcript states: \"GREG: Now when the details came in, | immediately thought of you because one thing they do require is someone with experience, and you did mention your work at the sports centre when you came in to see us.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job details from employment agency<br/>Location<br/>Work involves<br/>dealing with enquiries"
@@ -3348,7 +3348,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 7,
               "type": "FILL",
-              "text": "3(Gp | Ear",
+              "text": "Candidate should be calm and _________ when interacting with public.",
               "answer": "confident",
               "explanation": "The transcript states: \"GREG: Well, they say it's quite a high-pressure environment, they're always very busy, and patients are often under stress, so they want someone who can cope with that and stay calm, and at the same time be confident when interacting with the public.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job details from employment agency<br/>Location<br/>Work involves<br/>dealing with enquiries"
@@ -3356,7 +3356,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 8,
               "type": "FILL",
-              "text": "Hours! TAS GM. 10 _________ ss ccrsecsocomsncmmmrenscunin p.m. Monday to Friday",
+              "text": "Type of job contract: _________.",
               "answer": "temporary",
               "explanation": "The transcript states: \"GREG: Well, they're looking for someone from the beginning of next month, but | should tell you that this isn't a permanent job, it's temporary, so the contract would be just to the end of September.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job details from employment agency<br/>Location<br/>Work involves<br/>dealing with enquiries"
@@ -3364,7 +3364,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 9,
               "type": "FILL",
-              "text": "Question 9: Write your answer here: _________",
+              "text": "Hours: 7.45 am to _________ pm, Monday to Friday.",
               "answer": "1.15",
               "explanation": "The transcript confirms the answer is '1.15'.",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job details from employment agency<br/>Location<br/>Work involves<br/>dealing with enquiries"
@@ -3372,7 +3372,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 10,
               "type": "FILL",
-              "text": "Questions 1-_________",
+              "text": "Staff benefits: free _________ is available.",
               "answer": "parking",
               "explanation": "The transcript states: \"is there parking available for staff at the centre.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job details from employment agency<br/>Location<br/>Work involves<br/>dealing with enquiries"
@@ -3728,7 +3728,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 31,
               "type": "FILL",
-              "text": "Questions _________-40",
+              "text": "Most audience members already have a general idea of the _________.",
               "answer": "plot",
               "explanation": "The transcript states: \"I'm sure, have a pretty general idea of the plot.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
@@ -3784,7 +3784,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 38,
               "type": "FILL",
-              "text": "Question 38: Write your answer here: _________",
+              "text": "The Lookout room looks out over the _________.",
               "answer": "harbour",
               "explanation": "The transcript states: \"And then, at the very top of the house, there's a room called the Lookout — called that because it looks out over the harbour.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
@@ -4473,7 +4473,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 1,
               "type": "FILL",
-              "text": "Questions _________-10",
+              "text": "Age of participant: _________.",
               "answer": "69",
               "explanation": "The transcript confirms the answer is '69'.",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Hinchingbrooke Country Park<br/>The park"
@@ -4914,7 +4914,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 31,
               "type": "FILL",
-              "text": "Questions _________-40",
+              "text": "He realised that these must be _________.",
               "answer": "walls",
               "explanation": "The transcript states: \"He realised that these must be walls and that they must be 031 thousands of years old for them to predate the bog which subsequently grew over them.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
@@ -5637,7 +5637,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 1,
               "type": "FILL",
-              "text": "Questions _________-6",
+              "text": "Gary _________ (Gary Mathieson).",
               "answer": "Mathieson",
               "explanation": "The transcript states: \"COLEMAN: He's called a 'coordinator' - his name's Gary Mathieson.\"",
               "instruction": "Questions 1-6"
@@ -6022,7 +6022,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 31,
               "type": "FILL",
-              "text": "Questions _________-40",
+              "text": "Named 'bear' because of the way they _________.",
               "answer": "move",
               "explanation": "The transcript states: \"They are also sometimes called 'water bears': 'water' because that's where they thrive best, and 'bear' because of the way they move.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
@@ -6731,7 +6731,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 1,
               "type": "FILL",
-              "text": "Questions _________-10",
+              "text": "Food stalls are in the area by the _________.",
               "answer": "harbour",
               "explanation": "The transcript states: \"LEON: Well, there are plenty of places to buy food in Kite Place - it's the area by the harbour.\"",
               "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Local food shops<br/>Where to go"
@@ -6779,7 +6779,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 7,
               "type": "FILL",
-              "text": "Questions _________-10",
+              "text": "A local vegetable called _________.",
               "answer": "samphire",
               "explanation": "The transcript states: \"LEON: Have you ever tried samphire.\"",
               "instruction": "Questions 7-10<br/>Complete the table below.<br/>Write ONE WORD ONLY for each answer.<br/>Shopping<br/>To buy<br/>Fish market a dozen prawns"
@@ -7174,7 +7174,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 31,
               "type": "FILL",
-              "text": "Questions _________-40",
+              "text": "Threads and microfibres detach from synthetic _________.",
               "answer": "clothing",
               "explanation": "The transcript states: \"Threads and microfibres detach from synthetic clothing every time they're put in a washing machine, and 031 112 HTTPS: //azadenglish.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Microplastics<br/>Where microplastics come from"
@@ -7897,7 +7897,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 7,
               "type": "FILL",
-              "text": "Questions _________-10",
+              "text": "Put a _________ label on items that need a new price.",
               "answer": "yellow",
               "explanation": "The transcript states: \"When something Test4 needs a new price label, put a yellow one on the package, next to the original 07 price.\"",
               "instruction": "Questions 7-10<br/>Complete the table below.<br/>Write ONE WORD ONLY for each answer.<br/>use 2 ........................................... in staffroom<br/>to give 3 ........................................... number<br/>to collect 4 ......................................... ..<br/>on 5 ........................................... floor<br/>Responsibilities<br/>Task 1 Task 2 Notes"
@@ -8254,7 +8254,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 31,
               "type": "FILL",
-              "text": "Questions _________-40",
+              "text": "Invasive species are often in _________ with native species.",
               "answer": "competition",
               "explanation": "The transcript states: \"Invasive species are a significant contributor to the current global biodiversity crisis 031 and are often in competition with native species and may threaten their long-term survival.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
@@ -12599,7 +12599,3 @@ const IELTS_TEST_DATA = {
     }
   }
 };
-
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = IELTS_TEST_DATA;
-}
