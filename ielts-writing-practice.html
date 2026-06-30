@@ -69,7 +69,7 @@
 <!-- Header -->
 <header class="h-16 border-b border-white/10 bg-black/40 backdrop-blur-md px-6 flex items-center justify-between z-20">
   <div class="flex items-center gap-3">
-    <a href="ielts-practice-hub.html" class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-bold transition">← Exit</a>
+    <a href="index.html" class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-bold transition">← Exit</a>
     <div>
       <span class="text-[10px] text-purple-400 uppercase tracking-widest font-extrabold" id="testSetTag">Test Set</span>
       <h2 class="text-sm font-extrabold -mt-1" id="testTitle">Loading test...</h2>
@@ -412,7 +412,7 @@ function submitTest(autoSubmit = false) {
   // Add lobby button
   const header = document.querySelector('header');
   const returnBtn = document.createElement('a');
-  returnBtn.href = "ielts-practice-hub.html";
+  returnBtn.href = "index.html";
   returnBtn.className = "px-4 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-xs font-bold transition text-white";
   returnBtn.textContent = "Return to Lobby";
   header.appendChild(returnBtn);
