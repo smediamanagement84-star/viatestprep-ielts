@@ -623,66 +623,52 @@
       <div class="p-6 space-y-5 hidden" id="m-step-pricing">
         <div>
           <h3 class="text-xl font-bold text-slate-900">Institutional Licensing Plans</h3>
-          <p class="text-xs text-slate-400">Choose the license matching your student capacity (priced Rs. 200 cheaper than Alfa PTE):</p>
+          <p class="text-xs text-slate-400">Choose the capacity license that matches your consultancy's student volume. All plans include 100% of platform features:</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-          <!-- Plan A -->
-          <div onclick="selectPricingPlan('Plan A')" class="bg-white/40 backdrop-blur-sm border-2 border-slate-100 hover:border-indigo-600 rounded-2xl p-5 text-center cursor-pointer transition relative flex flex-col justify-between hover:shadow-lg hover:shadow-indigo-600/5 duration-300" id="m-card-planA">
+          <!-- Starter -->
+          <div onclick="selectPricingPlan('Starter')" class="bg-white/40 backdrop-blur-sm border-2 border-slate-100 hover:border-indigo-600 rounded-2xl p-5 text-center cursor-pointer transition flex flex-col justify-between hover:shadow-lg hover:shadow-indigo-600/5 duration-300" id="m-card-Starter">
+            <h4 class="font-bold text-xs text-slate-800">Starter Plan</h4>
+            <div class="my-3">
+              <span class="text-2xl font-extrabold text-indigo-600">Rs. 5,000</span>
+              <span class="text-[9px] text-slate-400 block font-semibold">/ month</span>
+            </div>
+            <ul class="text-[9px] text-left text-slate-600 space-y-2 mt-2 border-t border-slate-50 pt-3">
+              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> Up to **10 Students**</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> All IELTS Mock Exams</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> 16+ Study Modules</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> CRM &amp; Speaking Grader</li>
+            </ul>
+          </div>
+          <!-- Growth -->
+          <div onclick="selectPricingPlan('Growth')" class="bg-white/40 backdrop-blur-sm border-2 border-slate-100 hover:border-indigo-600 rounded-2xl p-5 text-center cursor-pointer transition relative flex flex-col justify-between hover:shadow-lg hover:shadow-indigo-600/5 duration-300" id="m-card-Growth">
             <span class="absolute top-[-10px] left-1/2 transform -translate-x-1/2 bg-indigo-600 text-white font-extrabold text-[8px] uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-md shadow-indigo-600/25">Recommended</span>
-            <h4 class="font-bold text-xs text-slate-800">Plan A: Full Suite</h4>
+            <h4 class="font-bold text-xs text-slate-800">Growth Plan</h4>
             <div class="my-3">
-              <span id="m-rate-planA" class="text-2xl font-extrabold text-indigo-600">Rs. 500</span>
-              <span class="text-[9px] text-slate-400 block font-semibold">/ student / mo</span>
+              <span class="text-2xl font-extrabold text-indigo-600">Rs. 8,000</span>
+              <span class="text-[9px] text-slate-400 block font-semibold">/ month</span>
             </div>
             <ul class="text-[9px] text-left text-slate-600 space-y-2 mt-2 border-t border-slate-50 pt-3">
-              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> IELTS mock exams</li>
-              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> 16+ study modules</li>
-              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> CRM student roster</li>
-              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> speaking evaluator</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> Up to **25 Students**</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> All IELTS Mock Exams</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> 16+ Study Modules</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> CRM &amp; Speaking Grader</li>
             </ul>
           </div>
-          <!-- Plan B -->
-          <div onclick="selectPricingPlan('Plan B')" class="bg-white/40 backdrop-blur-sm border-2 border-slate-100 hover:border-indigo-600 rounded-2xl p-5 text-center cursor-pointer transition flex flex-col justify-between hover:shadow-lg hover:shadow-indigo-600/5 duration-300" id="m-card-planB">
-            <h4 class="font-bold text-xs text-slate-800">Plan B: Vault Only</h4>
+          <!-- Enterprise -->
+          <div onclick="selectPricingPlan('Enterprise')" class="bg-white/40 backdrop-blur-sm border-2 border-slate-100 hover:border-indigo-600 rounded-2xl p-5 text-center cursor-pointer transition flex flex-col justify-between hover:shadow-lg hover:shadow-indigo-600/5 duration-300" id="m-card-Enterprise">
+            <h4 class="font-bold text-xs text-slate-800">Enterprise Plan</h4>
             <div class="my-3">
-              <span id="m-rate-planB" class="text-2xl font-extrabold text-indigo-600">Rs. 350</span>
-              <span class="text-[9px] text-slate-400 block font-semibold">/ student / mo</span>
+              <span class="text-2xl font-extrabold text-indigo-600">Rs. 24,000</span>
+              <span class="text-[9px] text-slate-400 block font-semibold">/ month</span>
             </div>
             <ul class="text-[9px] text-left text-slate-600 space-y-2 mt-2 border-t border-slate-50 pt-3">
-              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> 16+ study modules</li>
-              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> speaking prompts</li>
-              <li class="flex items-center gap-1.5 text-slate-400"><span class="text-rose-500 font-bold">✕</span> Mock test center</li>
-              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> CRM student roster</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> Up to **100 Students**</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> All IELTS Mock Exams</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> 16+ Study Modules</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> CRM &amp; Speaking Grader</li>
             </ul>
-          </div>
-          <!-- Plan C -->
-          <div onclick="selectPricingPlan('Plan C')" class="bg-white/40 backdrop-blur-sm border-2 border-slate-100 hover:border-indigo-600 rounded-2xl p-5 text-center cursor-pointer transition flex flex-col justify-between hover:shadow-lg hover:shadow-indigo-600/5 duration-300" id="m-card-planC">
-            <h4 class="font-bold text-xs text-slate-800">Plan C: Pay Mock</h4>
-            <div class="my-3">
-              <span id="m-rate-planC" class="text-2xl font-extrabold text-indigo-600">Rs. 75</span>
-              <span class="text-[9px] text-slate-400 block font-semibold">/ mock ticket</span>
-            </div>
-            <ul class="text-[9px] text-left text-slate-600 space-y-2 mt-2 border-t border-slate-50 pt-3">
-              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> IELTS mock exams</li>
-              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> Pay-as-you-go keys</li>
-              <li class="flex items-center gap-1.5 text-slate-400"><span class="text-rose-500 font-bold">✕</span> study module vault</li>
-              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> class averages logs</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="flex items-center justify-between text-xs border-t border-slate-100 pt-4 mt-2">
-          <label class="font-bold text-slate-600">Student Volume Tier:</label>
-          <div class="relative">
-            <select id="m-volume-select" onchange="adjustModalRates()" class="appearance-none pr-8 pl-3 py-1.5 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:bg-white outline-none focus:border-indigo-500 font-bold text-indigo-700 transition">
-              <option value="small">5 - 25 Accounts (Standard)</option>
-              <option value="medium">26 - 99 Accounts (Bulk Discount)</option>
-              <option value="large">100 - 499 Accounts (Enterprise Discount)</option>
-            </select>
-            <div class="pointer-events-none absolute inset-y-0 right-2 flex items-center text-slate-400">
-              <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
-            </div>
           </div>
         </div>
 
@@ -846,12 +832,12 @@
     let completedModules = [];
 
     // Modal Rates Database
-    let modalSelectedPlan = 'Plan A';
-    let modalSelectedTier = 'small';
-    const modalPricingData = {
-      small: { A: 500, B: 350, C: 75 },
-      medium: { A: 400, B: 250, C: 65 },
-      large: { A: 300, B: 180, C: 45 }
+    // Modal Rates Database
+    let modalSelectedPlan = 'Growth';
+    const modalPricingPlans = {
+      'Starter': { name: 'Starter Plan', price: 5000, students: 10 },
+      'Growth': { name: 'Growth Plan', price: 8000, students: 25 },
+      'Enterprise': { name: 'Enterprise Plan', price: 24000, students: 100 }
     };
 
     // IELTS Modules list configuration
@@ -1038,26 +1024,17 @@
     }
 
     function adjustModalRates() {
-      modalSelectedTier = document.getElementById('m-volume-select').value;
-      const rates = modalPricingData[modalSelectedTier];
-      
-      document.getElementById('m-rate-planA').textContent = 'Rs. ' + rates.A;
-      document.getElementById('m-rate-planB').textContent = 'Rs. ' + rates.B;
-      document.getElementById('m-rate-planC').textContent = 'Rs. ' + rates.C;
+      // Volume select tier is removed in simplified model
     }
 
     function selectPricingPlan(plan) {
       modalSelectedPlan = plan;
-      const rates = modalPricingData[modalSelectedTier];
-      const rate = plan === 'Plan A' ? rates.A : (plan === 'Plan B' ? rates.B : rates.C);
+      const planObj = modalPricingPlans[plan];
       
-      const selectText = modalSelectedTier === 'small' ? '5-25 accounts' : (modalSelectedTier === 'medium' ? '26-99 accounts' : '100-499 accounts');
-      const rateLabel = plan === 'Plan C' ? 'per mock ticket' : 'per student / month';
+      document.getElementById('m-checkout-desc').innerHTML = `Registering for <strong>${planObj.name}</strong> at <strong>Rs. ${planObj.price.toLocaleString()}</strong> / month (includes up to ${planObj.students} student slots).`;
       
-      document.getElementById('m-checkout-desc').innerHTML = `Registering for <strong>${plan}</strong> (${selectText} tier) at <strong>Rs. ${rate}</strong> ${rateLabel}.`;
-      
-      const totalAmount = rate * (modalSelectedTier === 'small' ? 5 : (modalSelectedTier === 'medium' ? 26 : 100));
-      document.getElementById('m-checkout-btn').textContent = `Pay Rs. ${totalAmount} & Launch CRM Portal`;
+      const totalAmount = planObj.price;
+      document.getElementById('m-checkout-btn').textContent = `Pay Rs. ${totalAmount.toLocaleString()} & Launch CRM Portal`;
       
       showModalStep('m-step-pricing', 'm-step-checkout');
     }
