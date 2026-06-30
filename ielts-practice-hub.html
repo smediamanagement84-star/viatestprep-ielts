@@ -175,11 +175,11 @@
   <!-- Top Sticky Navbar -->
   <header class="navbar px-6 lg:px-12">
     <div class="flex items-center gap-3">
-      <a href="index.html"
+      <a href="resources_hub.html"
         class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-bold transition">←
         Back</a>
       <div class="nav-logo-mark">V</div>
-      <a href="index.html"
+      <a href="resources_hub.html"
         class="font-serif text-xl font-extrabold tracking-tight bg-gradient-to-r from-slate-200 to-purple-400 bg-clip-text text-transparent">ViATestPrep</a>
     </div>
 
@@ -280,6 +280,73 @@
         <div class="flex-1 h-px bg-white/5"></div>
       </div>
       <div class="grid gap-5" id="testSetGrid20"></div>
+    </section>
+
+    <!-- NEW SECTION: Speaking Self-Practice Room -->
+    <section class="card p-5 mt-10" id="speakingPracticeRoom">
+      <h3 class="text-xl font-bold mb-3 flex items-center gap-2">🎤 Speaking Mock Self-Practice Room</h3>
+      <p class="text-xs text-stone-400 mb-6">Select a speaking cue-card topic, prepare using the timer, record your answer directly in the browser, and play it back to self-evaluate.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Topic Selection -->
+        <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+          <label class="text-xs font-black uppercase text-purple-400 tracking-wider block mb-2">Select a Cue Card</label>
+          <select id="speakingTopicSelect" onchange="loadSpeakingTopic()" class="w-full bg-stone-900 border border-white/10 rounded-lg p-2 text-xs text-stone-200 outline-none focus:border-purple-500">
+            <option value="Describe a skill you learned from an older relative.">Cue Card 1: Skill Learned from Relative (Part 2)</option>
+            <option value="Describe a time you had to resolve a conflict in a team.">Cue Card 2: Team Conflict Resolution (Part 2)</option>
+            <option value="Describe a website or app you use daily and why it helps you.">Cue Card 3: Daily Website or App (Part 2)</option>
+            <option value="Part 1: Hometown & Leisure activities.">Part 1: Hometown & Free Time Prompts</option>
+            <option value="Part 3: The impact of technology and AI on future career choices.">Part 3: Future of Technology & Careers</option>
+          </select>
+          <div class="mt-4 p-3 bg-stone-900/50 rounded-lg border border-white/5 min-h-[100px]">
+            <span class="text-[10px] uppercase font-bold text-stone-500">Prompt Card</span>
+            <p id="selectedTopicPrompt" class="text-xs mt-1 leading-relaxed text-stone-300">Describe a skill you learned from an older relative. You should say: who you learned it from, what the skill is, how long it took, and explain how it has helped you in life.</p>
+          </div>
+        </div>
+
+        <!-- Timers Control -->
+        <div class="bg-white/5 p-4 rounded-xl border border-white/5 flex flex-col justify-between">
+          <div>
+            <label class="text-xs font-black uppercase text-purple-400 tracking-wider block mb-3">Preparation & Speaking Timers</label>
+            <div class="grid grid-cols-2 gap-3 text-center">
+              <div class="bg-stone-900 p-3 rounded-xl border border-white/5">
+                <span class="text-[10px] text-stone-500 uppercase block mb-1">Preparation</span>
+                <span id="prepTimerDisplay" class="text-xl font-bold font-mono text-amber-400">01:00</span>
+                <button id="btnStartPrep" onclick="startPrepTimer()" class="w-full mt-2 py-1 bg-amber-400/10 hover:bg-amber-400/20 text-amber-400 font-bold text-[10px] rounded-lg transition border border-amber-400/20">Start Prep</button>
+              </div>
+              <div class="bg-stone-900 p-3 rounded-xl border border-white/5">
+                <span class="text-[10px] text-stone-500 uppercase block mb-1">Response</span>
+                <span id="responseTimerDisplay" class="text-xl font-bold font-mono text-purple-400">02:00</span>
+                <button id="btnStartResponse" onclick="startResponseTimer()" class="w-full mt-2 py-1 bg-purple-400/10 hover:bg-purple-400/20 text-purple-400 font-bold text-[10px] rounded-lg transition border border-purple-400/20">Start Talk</button>
+              </div>
+            </div>
+          </div>
+          <div id="timerStatusLabel" class="text-center text-[10px] text-stone-500 font-semibold italic mt-4">Select a timer to begin.</div>
+        </div>
+
+        <!-- Microphone Recorder -->
+        <div class="bg-white/5 p-4 rounded-xl border border-white/5 flex flex-col justify-between items-center text-center">
+          <div class="w-full">
+            <label class="text-xs font-black uppercase text-purple-400 tracking-wider block mb-3">Audio Voice Recorder</label>
+            <div class="flex justify-center items-center gap-4 py-2">
+              <button id="btnRecord" onclick="toggleRecording()" class="w-14 h-14 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center text-lg transition shadow-lg shadow-red-600/20 relative">
+                <span id="recIcon">🔴</span>
+                <span id="recPulse" class="hidden absolute inset-0 rounded-full border-4 border-red-500 animate-ping"></span>
+              </button>
+              <div class="text-left">
+                <span id="recStatus" class="text-xs font-bold text-stone-300 block">Microphone Idle</span>
+                <span id="recTime" class="text-[10px] font-mono text-stone-500">00:00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full mt-4 bg-stone-900 p-3 rounded-xl border border-white/5 flex flex-col items-center gap-2">
+            <audio id="recordedAudioPlayer" controls class="w-full max-w-[200px] h-8 hidden"></audio>
+            <span id="noRecordingLabel" class="text-xs text-stone-500 py-1">No audio recorded yet.</span>
+            <a id="downloadRecordLink" class="hidden w-full py-1 text-center bg-emerald-600/10 hover:bg-emerald-600/20 text-emerald-400 border border-emerald-600/20 font-bold text-[10px] rounded-lg transition">⬇ Save Recording (.wav)</a>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>
@@ -404,7 +471,7 @@
       historyBody.innerHTML = '';
       let recordsFound = false;
 
-      // Scan local storage keys
+      // 1. Scan local storage keys for automated test scores
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         if (key.startsWith('score_test_')) {
@@ -418,14 +485,47 @@
           const tr = document.createElement('tr');
           tr.className = 'border-b border-white/5 hover:bg-white/5 transition';
           tr.innerHTML = `
-        <td class="py-2.5 font-bold">${testName}</td>
-        <td class="py-2.5 capitalize">${module}</td>
-        <td class="py-2.5 text-stone-400">Exam Mode</td>
-        <td class="py-2.5">${module === 'writing' ? 'Submitted' : '—'}</td>
-        <td class="py-2.5 font-extrabold text-purple-400">${module === 'writing' ? 'Reviewed' : 'Band ' + score}</td>
-        <td class="py-2.5 text-stone-500 text-xs">Recently</td>
-      `;
+            <td class="py-2.5 font-bold">${testName}</td>
+            <td class="py-2.5 capitalize text-amber-400">${module}</td>
+            <td class="py-2.5 text-stone-400">Exam Mode</td>
+            <td class="py-2.5">${module === 'writing' ? 'Submitted' : '—'}</td>
+            <td class="py-2.5 font-extrabold text-purple-400">${module === 'writing' ? 'Reviewed' : 'Band ' + score}</td>
+            <td class="py-2.5 text-stone-500 text-xs">Recently</td>
+          `;
           historyBody.appendChild(tr);
+        }
+      }
+
+      // 2. Scan CRM database for manual Speaking grades logged under this student's email
+      const userEmail = localStorage.getItem('userEmail');
+      if (userEmail) {
+        const studentsData = localStorage.getItem('viatestprep_students');
+        if (studentsData) {
+          const allStudents = JSON.parse(studentsData);
+          const currentStudent = allStudents.find(s => s.email && s.email.toLowerCase() === userEmail.toLowerCase());
+          if (currentStudent && currentStudent.mockHistory && currentStudent.mockHistory.length > 0) {
+            recordsFound = true;
+            currentStudent.mockHistory.forEach(h => {
+              const tr = document.createElement('tr');
+              tr.className = 'border-b border-white/5 hover:bg-white/5 transition bg-purple-950/20';
+              
+              let scoreDisplay = 'Band ' + h.overall;
+              let details = 'Speaking Interview';
+              if (typeof h.speaking === 'object') {
+                details = `Fluency: ${h.speaking.fluency}, Vocab: ${h.speaking.vocab}, Grammar: ${h.speaking.grammar}, Pronunciation: ${h.speaking.pronunciation}`;
+              }
+              
+              tr.innerHTML = `
+                <td class="py-2.5 font-bold text-purple-300">${escapeHtml(h.test)}</td>
+                <td class="py-2.5 font-semibold text-purple-400">speaking</td>
+                <td class="py-2.5 text-stone-400">1-on-1 Graded</td>
+                <td class="py-2.5 text-stone-400 max-w-[220px] truncate" title="${escapeHtml(h.notes || '')}">${escapeHtml(h.notes || '—')}</td>
+                <td class="py-2.5 font-extrabold text-emerald-400" title="${details}">${scoreDisplay}</td>
+                <td class="py-2.5 text-stone-500 text-xs">${h.date}</td>
+              `;
+              historyBody.appendChild(tr);
+            });
+          }
         }
       }
 
@@ -436,6 +536,177 @@
         tableContainer.classList.add('hidden');
         noHistory.classList.remove('hidden');
       }
+    }
+
+    // Speaking practice recorder logic
+    let mediaRecorder;
+    let audioChunks = [];
+    let isRecording = false;
+    let recTimerInterval;
+    let recStartTime;
+
+    function toggleRecording() {
+      const btn = document.getElementById('btnRecord');
+      const recIcon = document.getElementById('recIcon');
+      const pulse = document.getElementById('recPulse');
+      const status = document.getElementById('recStatus');
+      const timeDisplay = document.getElementById('recTime');
+      const player = document.getElementById('recordedAudioPlayer');
+      const dLink = document.getElementById('downloadRecordLink');
+      const noRec = document.getElementById('noRecordingLabel');
+
+      if (!isRecording) {
+        navigator.mediaDevices.getUserMedia({ audio: true })
+          .then(stream => {
+            mediaRecorder = new MediaRecorder(stream);
+            audioChunks = [];
+
+            mediaRecorder.ondataavailable = event => {
+              audioChunks.push(event.data);
+            };
+
+            mediaRecorder.onstop = () => {
+              const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+              const audioUrl = URL.createObjectURL(audioBlob);
+              
+              player.src = audioUrl;
+              player.classList.remove('hidden');
+              
+              dLink.href = audioUrl;
+              dLink.download = `viatestprep_speaking_practice_${Date.now()}.wav`;
+              dLink.classList.remove('hidden');
+              noRec.classList.add('hidden');
+            };
+
+            mediaRecorder.start();
+            isRecording = true;
+            recIcon.textContent = '⏹️';
+            pulse.classList.remove('hidden');
+            status.textContent = 'Recording Voice...';
+            status.classList.add('text-red-500');
+            
+            player.classList.add('hidden');
+            dLink.classList.add('hidden');
+            noRec.classList.remove('hidden');
+
+            recStartTime = Date.now();
+            recTimerInterval = setInterval(() => {
+              const elapsed = Math.floor((Date.now() - recStartTime) / 1000);
+              const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+              const secs = String(elapsed % 60).padStart(2, '0');
+              timeDisplay.textContent = `${mins}:${secs}`;
+            }, 1000);
+          })
+          .catch(err => {
+            alert('Could not access microphone. Please allow microphone access permissions: ' + err.message);
+          });
+      } else {
+        if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+          mediaRecorder.stop();
+          mediaRecorder.stream.getTracks().forEach(track => track.stop());
+        }
+        isRecording = false;
+        recIcon.textContent = '🔴';
+        pulse.classList.add('hidden');
+        status.textContent = 'Microphone Idle';
+        status.classList.remove('text-red-500');
+        clearInterval(recTimerInterval);
+      }
+    }
+
+    // Timers logic
+    let prepInterval;
+    let responseInterval;
+
+    function startPrepTimer() {
+      clearInterval(prepInterval);
+      const display = document.getElementById('prepTimerDisplay');
+      const status = document.getElementById('timerStatusLabel');
+      let time = 60;
+      status.textContent = 'Preparation Countdown Active...';
+
+      prepInterval = setInterval(() => {
+        time--;
+        const mins = String(Math.floor(time / 60)).padStart(2, '0');
+        const secs = String(time % 60).padStart(2, '0');
+        display.textContent = `${mins}:${secs}`;
+
+        if (time <= 0) {
+          clearInterval(prepInterval);
+          status.textContent = 'Prep Time Finished! Click "Start Talk" to record.';
+          display.textContent = '00:00';
+          playBeep();
+        }
+      }, 1000);
+    }
+
+    function startResponseTimer() {
+      clearInterval(responseInterval);
+      const display = document.getElementById('responseTimerDisplay');
+      const status = document.getElementById('timerStatusLabel');
+      let time = 120;
+      status.textContent = 'Speaking Time Active! Keep talking...';
+
+      responseInterval = setInterval(() => {
+        time--;
+        const mins = String(Math.floor(time / 60)).padStart(2, '0');
+        const secs = String(time % 60).padStart(2, '0');
+        display.textContent = `${mins}:${secs}`;
+
+        if (time <= 0) {
+          clearInterval(responseInterval);
+          status.textContent = 'Speaking Time Limit reached!';
+          display.textContent = '00:00';
+          playBeep();
+        }
+      }, 1000);
+    }
+
+    function playBeep() {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = audioCtx.createOscillator();
+        const gainNode = audioCtx.createGain();
+        oscillator.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+        oscillator.type = 'sine';
+        oscillator.frequency.setValueAtTime(600, audioCtx.currentTime);
+        gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
+        oscillator.start();
+        oscillator.stop(audioCtx.currentTime + 0.35);
+      } catch (e) {
+        console.log('Beep failed to play: ', e);
+      }
+    }
+
+    const cueCards = {
+      'Describe a skill you learned from an older relative.': 'Describe a skill you learned from an older relative. You should say: who you learned it from, what the skill is, how long it took, and explain how it has helped you in life.',
+      'Describe a time you had to resolve a conflict in a team.': 'Describe a time you had to resolve a conflict in a team. You should say: what the conflict was, who was involved, how you resolved it, and what you learned from this experience.',
+      'Describe a website or app you use daily and why it helps you.': 'Describe a website or app you use daily and why it helps you. You should say: what it is, how often you use it, what its features are, and explain why it is important to you.',
+      'Part 1: Hometown & Leisure activities.': 'Part 1 Interview Questions:\n- Where is your hometown?\n- What do you like about it?\n- What do you do in your free time?\n- Do you prefer spending leisure time alone or with friends?',
+      'Part 3: The impact of technology and AI on future career choices.': 'Part 3 Discussion Prompts:\n- How has technology changed the job market in your country?\n- Do you think robots will replace humans in most professions?\n- What skills will be most valuable for future generations?'
+    };
+
+    function loadSpeakingTopic() {
+      const select = document.getElementById('speakingTopicSelect');
+      const prompt = document.getElementById('selectedTopicPrompt');
+      prompt.textContent = cueCards[select.value] || select.value;
+      
+      clearInterval(prepInterval);
+      clearInterval(responseInterval);
+      document.getElementById('prepTimerDisplay').textContent = '01:00';
+      document.getElementById('responseTimerDisplay').textContent = '02:00';
+      document.getElementById('timerStatusLabel').textContent = 'Select a timer to begin.';
+    }
+
+    function escapeHtml(text) {
+      if (!text) return '';
+      return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
     }
 
     // Theme Management

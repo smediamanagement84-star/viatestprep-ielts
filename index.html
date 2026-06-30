@@ -6,20 +6,14 @@
 <title>ViATestPrep — IELTS &amp; PTE Preparation Hub</title>
 <meta name="description" content="ViATestPrep's complete IELTS and PTE preparation suite. Master Reading, Listening, Writing, Speaking, Grammar, and Vocabulary with interactive lessons designed for Band 7+ and 79+ targets."/>
 <meta name="copyright" content="© 2026 ViATestPrep. All Rights Reserved."/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Fraunces:wght@600;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --primary: 262, 70%, 50%; /* #6366f1 (elegant purple/violet) */
+    --primary: 262, 70%, 50%; /* Indigo / Purple */
     --primary-raw: 99, 102, 241;
-    --gold: 40, 65%, 48%; /* #c8932a */
-    --teal: 172, 83%, 30%; /* #0d8a7a */
-    --rose: 347, 79%, 59%; /* #e8456b */
-    --ukvi: 215, 68%, 32%; /* #1a4a8a */
-    --pte: 17, 81%, 54%; /* #e8622a */
-    
-    /* Unified Premium Nordic Light Theme */
+    --gold: 40, 65%, 48%;
+    --teal: 172, 83%, 30%;
+    --rose: 347, 79%, 59%;
     --bg-main: #f8fafc;
     --bg-modules: #f1f5f9;
     --bg-card: #ffffff;
@@ -51,14 +45,13 @@
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
-    transition: background-color 0.4s ease, color 0.4s ease;
   }
   h1, h2, h3 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
   }
 
-  /* Ambient Animated Glow Blobs */
+  /* Glow Blobs */
   .glow-blob {
     position: absolute;
     border-radius: 50%;
@@ -66,10 +59,6 @@
     opacity: 0.06;
     pointer-events: none;
     z-index: 0;
-    transition: opacity 0.4s ease;
-  }
-  .dark .glow-blob {
-    opacity: 0.15;
   }
   .blob-1 {
     width: 500px;
@@ -77,7 +66,6 @@
     background: radial-gradient(circle, hsl(var(--primary)) 0%, transparent 70%);
     top: -150px;
     right: -100px;
-    animation: float-blob-1 18s infinite alternate ease-in-out;
   }
   .blob-2 {
     width: 600px;
@@ -85,18 +73,9 @@
     background: radial-gradient(circle, hsl(var(--teal)) 0%, transparent 70%);
     bottom: 25%;
     left: -200px;
-    animation: float-blob-2 22s infinite alternate ease-in-out;
-  }
-  @keyframes float-blob-1 {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(-100px, 120px) scale(1.15); }
-  }
-  @keyframes float-blob-2 {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(120px, -150px) scale(1.1); }
   }
 
-  /* Premium Glassmorphic Header / Navbar */
+  /* Navbar */
   .navbar {
     position: fixed;
     top: 0;
@@ -112,17 +91,10 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 3rem;
-    transition: background 0.4s, border-color 0.4s;
   }
-  @media (max-width: 991px) {
+  @media (max-width: 768px) {
     .navbar {
       padding: 0 1.5rem;
-      flex-direction: column;
-      height: auto;
-      gap: 1rem;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      position: relative;
     }
   }
   .nav-left {
@@ -143,12 +115,6 @@
     font-weight: 800;
     color: #fff;
     box-shadow: 0 6px 20px rgba(91,42,134,0.45);
-    animation: logo-pulse 3s infinite;
-  }
-  @keyframes logo-pulse {
-    0% { box-shadow: 0 0 0 0 rgba(91,42,134,0.6); }
-    70% { box-shadow: 0 0 0 12px rgba(91,42,134,0); }
-    100% { box-shadow: 0 0 0 0 rgba(91,42,134,0); }
   }
   .nav-brand {
     font-family: 'Fraunces', serif;
@@ -160,155 +126,26 @@
     -webkit-text-fill-color: transparent;
     text-decoration: none;
   }
-
-  .nav-center {
-    display: flex;
-    gap: 0.3rem;
-    background: rgba(15, 23, 42, 0.04);
-    padding: 0.25rem;
-    border-radius: 999px;
-    border: 1px solid var(--border-color);
-  }
-  .dark .nav-center {
-    background: rgba(255, 255, 255, 0.03);
-  }
-  @media (max-width: 768px) {
-    .nav-center {
-      width: 100%;
-      overflow-x: auto;
-      white-space: nowrap;
-      justify-content: flex-start;
-      border-radius: 12px;
-    }
-  }
-  .nav-tab {
-    background: transparent;
-    border: none;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    font-weight: 600;
-    padding: 0.5rem 1.1rem;
-    border-radius: 999px;
-    cursor: pointer;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .nav-tab:hover {
-    color: var(--text-main);
-  }
-  .nav-tab.active {
-    color: #fff;
+  .nav-right-btn {
     background: hsl(var(--primary));
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.25);
-  }
-  .dark .nav-tab.active {
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
-  }
-
-  .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-  }
-  @media (max-width: 991px) {
-    .nav-right {
-      width: 100%;
-      justify-content: space-between;
-    }
-  }
-  .search-wrapper {
-    position: relative;
-  }
-  @media (max-width: 991px) {
-    .search-wrapper {
-      flex-grow: 1;
-      max-width: 400px;
-    }
-  }
-  .search-input {
-    background: var(--input-bg);
-    border: 1px solid var(--border-color);
+    color: #fff;
+    border: none;
     border-radius: 999px;
-    padding: 0.55rem 1rem 0.55rem 2.6rem;
+    padding: 0.6rem 1.4rem;
     font-size: 0.85rem;
-    color: var(--text-main);
-    outline: none;
-    width: 190px;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .search-input:focus {
-    width: 260px;
-    border-color: hsl(var(--primary));
-    box-shadow: 0 0 15px rgba(91,42,134,0.25);
-  }
-  @media (max-width: 991px) {
-    .search-input {
-      width: 100%;
-    }
-    .search-input:focus {
-      width: 100%;
-    }
-  }
-  .search-icon {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-muted);
-    pointer-events: none;
-    display: flex;
-    align-items: center;
-  }
-  
-  .lock-status-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.45rem;
-    background: var(--input-bg);
-    border: 1px solid var(--border-color);
-    padding: 0.55rem 1rem;
-    border-radius: 999px;
-    font-size: 0.75rem;
     font-weight: 700;
     cursor: pointer;
-    color: var(--text-main);
-    transition: all 0.2s;
-  }
-  .lock-status-btn:hover {
-    transform: translateY(-1px);
-    border-color: hsl(var(--primary));
-    box-shadow: 0 4px 12px rgba(91,42,134,0.1);
-  }
-  .lock-status-btn.unlocked {
-    color: #10b981;
-    border-color: rgba(16, 185, 129, 0.3);
-  }
-  .lock-status-btn.unlocked:hover {
-    border-color: #10b981;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
-  }
-  
-  .theme-toggle-btn {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: var(--input-bg);
-    border: 1px solid var(--border-color);
-    color: var(--text-main);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.2);
     transition: all 0.25s ease;
   }
-  .theme-toggle-btn:hover {
-    transform: scale(1.06) rotate(15deg);
-    border-color: hsl(var(--primary));
+  .nav-right-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
   }
 
-  /* ---- HERO SECTION ---- */
+  /* Hero Section */
   .hero {
-    min-height: 80vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -320,19 +157,14 @@
   }
   .hero-container {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1.2fr 0.8fr;
     gap: 4rem;
     width: 100%;
     align-items: center;
   }
   @media (max-width: 991px) {
-    .hero {
-      padding-top: 6rem;
-      min-height: auto;
-    }
     .hero-container {
       grid-template-columns: 1fr;
-      gap: 2rem;
       text-align: center;
     }
   }
@@ -340,12 +172,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    text-align: left;
   }
   @media (max-width: 991px) {
     .hero-content {
       align-items: center;
-      text-align: center;
     }
   }
   .brand-tagline {
@@ -355,2048 +185,884 @@
     text-transform: uppercase;
     color: hsl(var(--primary));
     margin-bottom: 1.2rem;
-    animation: fade-down 0.8s ease-out;
   }
   .hero h1 {
     font-size: clamp(2.4rem, 5vw, 4rem);
     line-height: 1.15;
-    max-width: 920px;
     color: var(--text-main);
-    font-weight: 800;
     letter-spacing: -0.025em;
-    animation: fade-up 0.8s ease-out;
+    margin-bottom: 1.5rem;
   }
-  .gold-coral-gradient {
+  .gradient-text {
     background: linear-gradient(135deg, #e8a838 0%, #c8932a 50%, #e8456b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
     filter: drop-shadow(0 0 30px rgba(200,147,42,0.15));
   }
   .hero p {
-    margin-top: 1.6rem;
     color: var(--text-muted);
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     max-width: 580px;
     line-height: 1.65;
-    animation: fade-up 1s ease-out;
+    margin-bottom: 2rem;
   }
-  .hero-badges {
+  .cta-group {
     display: flex;
+    gap: 1rem;
     flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-top: 2.2rem;
-    animation: fade-up 1.2s ease-out;
   }
-  @media (max-width: 991px) {
-    .hero-badges {
-      justify-content: center;
-    }
-  }
-  .badge {
-    padding: 0.45rem 1.1rem;
-    border-radius: 999px;
-    font-size: 0.78rem;
-    font-weight: 600;
-    border: 1px solid var(--border-color);
-    background: var(--bg-card);
-    color: var(--text-main);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: var(--card-shadow);
-  }
-  
-  .instagram-btn-wrapper {
-    margin-top: 2.8rem;
-    animation: fade-up 1.4s ease-out;
-  }
-  .instagram-hero-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.65rem;
-    background: linear-gradient(135deg, #e1306c, #c13584, #833ab4);
+  .btn-cta-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)), #3b0a64);
     color: #fff;
-    text-decoration: none;
-    padding: 0.95rem 2.2rem;
+    border: none;
     border-radius: 999px;
-    font-size: 0.92rem;
-    font-weight: 700;
-    box-shadow: 0 10px 25px rgba(225,48,108,0.22);
+    padding: 1rem 2.2rem;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(91,42,134,0.3);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .instagram-hero-btn:hover {
+  .btn-cta-primary:hover {
     transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(225,48,108,0.35);
+    box-shadow: 0 15px 35px rgba(91,42,134,0.45);
+  }
+  .btn-cta-secondary {
+    background: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 1rem 2.2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: var(--card-shadow);
+  }
+  .btn-cta-secondary:hover {
+    border-color: hsl(var(--primary));
+    transform: translateY(-2px);
   }
 
+  /* Floating visual cards */
   .hero-visual {
     position: relative;
-    height: 480px;
-    width: 100%;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
   }
   @media (max-width: 991px) {
     .hero-visual {
       display: none;
     }
   }
-  .hero-stage {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    perspective: 1000px;
-  }
-
-  /* Skill floating cards */
-  .hero-float-card {
+  .float-badge {
     position: absolute;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
     border-radius: 20px;
-    padding: 1.2rem 1.4rem;
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    border: 1px solid var(--border-color);
-    background: var(--bg-card);
-    box-shadow: var(--card-shadow);
-    color: var(--text-main);
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.05);
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
-    transform-style: preserve-3d;
-    will-change: transform;
-    pointer-events: auto;
-    cursor: pointer;
-    text-decoration: none;
-    transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+    gap: 0.3rem;
+    width: 200px;
+    animation: floating 6s infinite alternate ease-in-out;
   }
-  .hero-float-card:hover {
-    background: var(--bg-card-hover);
-    border-color: var(--border-hover);
-    box-shadow: 0 20px 40px rgba(var(--primary-raw), 0.08);
+  .fb-1 {
+    top: 10%;
+    left: 5%;
+    border-top: 4px solid hsl(var(--teal));
+    animation-delay: 0s;
   }
-  .dark .hero-float-card:hover {
-    box-shadow: 0 20px 40px rgba(var(--primary-raw), 0.25);
+  .fb-2 {
+    bottom: 10%;
+    right: 5%;
+    border-top: 4px solid hsl(var(--primary));
+    animation-delay: 1.5s;
   }
-  
-  .hero-float-card .hfc-icon {
-    font-size: 1.6rem;
-    line-height: 1;
+  .fb-3 {
+    top: 50%;
+    left: 45%;
+    border-top: 4px solid hsl(var(--rose));
+    animation-delay: 3s;
+    width: 170px;
   }
-  .hero-float-card .hfc-label {
-    font-size: 0.65rem;
+  .fb-icon {
+    font-size: 1.8rem;
+  }
+  .fb-title {
     font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    opacity: 0.6;
+    font-size: 1.05rem;
   }
-  .hero-float-card .hfc-title {
-    font-size: 1.1rem;
-    font-weight: 800;
-  }
-  .hero-float-card .hfc-sub {
-    font-size: 0.72rem;
-    opacity: 0.7;
-    line-height: 1.4;
-  }
-  .hero-float-card .hfc-badge {
-    margin-top: 0.3rem;
-    font-size: 0.6rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    padding: 0.22rem 0.6rem;
-    border-radius: 999px;
-    display: inline-block;
-    width: fit-content;
-  }
-
-  .hfc-reading {
-    left: 2%;
-    top: 8%;
-    width: 190px;
-    animation: float-reading 7s ease-in-out infinite;
-    border-top: 3px solid #0d8a7a;
-    transform: rotateY(18deg) rotateX(-6deg);
-  }
-  .hfc-listening {
-    left: 8%;
-    bottom: 8%;
-    width: 180px;
-    animation: float-listening 8.5s ease-in-out infinite;
-    border-top: 3px solid #1a4a8a;
-    transform: rotateY(14deg) rotateX(5deg);
-  }
-  .hfc-writing {
-    right: 2%;
-    top: 5%;
-    width: 190px;
-    animation: float-writing 9s ease-in-out infinite;
-    border-top: 3px solid #5b2a86;
-    transform: rotateY(-18deg) rotateX(-6deg);
-  }
-  .hfc-speaking {
-    right: 8%;
-    bottom: 12%;
-    width: 180px;
-    animation: float-speaking 7.5s ease-in-out infinite;
-    border-top: 3px solid #e8456b;
-    transform: rotateY(-14deg) rotateX(4deg);
-  }
-
-  @keyframes float-reading {
-    0%,100% { transform: rotateY(18deg) rotateX(-6deg) translateY(0px); }
-    50% { transform: rotateY(20deg) rotateX(-4deg) translateY(-12px); }
-  }
-  @keyframes float-listening {
-    0%,100% { transform: rotateY(14deg) rotateX(5deg) translateY(0px); }
-    50% { transform: rotateY(16deg) rotateX(7deg) translateY(-10px); }
-  }
-  @keyframes float-writing {
-    0%,100% { transform: rotateY(-18deg) rotateX(-6deg) translateY(0px); }
-    50% { transform: rotateY(-20deg) rotateX(-4deg) translateY(-14px); }
-  }
-  @keyframes float-speaking {
-    0%,100% { transform: rotateY(-14deg) rotateX(4deg) translateY(0px); }
-    50% { transform: rotateY(-16deg) rotateX(6deg) translateY(-8px); }
-  }
-  
-  .scroll-hint {
-    margin-top: 3rem;
-    color: var(--text-muted);
-    font-size: 0.8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.4rem;
-    opacity: 0.65;
-    animation: bob 2s ease-in-out infinite;
-  }
-  @keyframes bob {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(8px); }
-  }
-  @keyframes fade-up {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fade-down {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* ---- TARGET SCORE CALCULATOR WIDGET ---- */
-  .calculator-section {
-    max-width: 1100px;
-    margin: 0 auto 4rem;
-    padding: 0 2rem;
-    position: relative;
-    z-index: 10;
-  }
-  @media (max-width: 768px) {
-    .calculator-section {
-      padding: 0 1rem;
-    }
-  }
-  .calc-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 24px;
-    padding: 2.2rem;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    box-shadow: var(--card-shadow);
-    display: grid;
-    grid-template-columns: 1.1fr 1.3fr;
-    gap: 2.5rem;
-    align-items: center;
-    transition: border-color 0.3s;
-  }
-  @media(max-width: 768px) {
-    .calc-card { grid-template-columns: 1fr; gap: 1.8rem; padding: 1.8rem; }
-  }
-  .calc-left h3 {
-    font-size: 1.45rem;
-    margin-bottom: 0.6rem;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-weight: 800;
-  }
-  .calc-left p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-  }
-  .calc-right {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-  }
-  .calc-label {
+  .fb-sub {
     font-size: 0.75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: hsl(var(--primary));
-  }
-  .calc-options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-  }
-  .calc-btn {
-    background: var(--input-bg);
-    border: 1px solid var(--border-color);
-    padding: 0.65rem 1.2rem;
-    border-radius: 12px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--text-main);
-    cursor: pointer;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .calc-btn:hover {
-    border-color: hsl(var(--primary));
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  }
-  .calc-btn.active {
-    background: hsl(var(--primary));
-    border-color: hsl(var(--primary));
-    color: #fff;
-    box-shadow: 0 6px 20px rgba(91, 42, 134, 0.4);
-  }
-  .calc-feedback {
-    font-size: 0.88rem;
     color: var(--text-muted);
-    min-height: 38px;
-    line-height: 1.6;
-    padding-top: 0.8rem;
-    border-top: 1px dashed var(--divider-color);
-    display: flex;
-    align-items: center;
+  }
+  @keyframes floating {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-15px) rotate(1deg); }
   }
 
-  /* ---- MODULES SECTION ---- */
-  .modules {
+  /* Info / Features Section */
+  .features-section {
     background-color: var(--bg-modules);
     padding: 6rem 2rem;
     border-top: 1px solid var(--border-color);
     position: relative;
     z-index: 10;
-    transition: background-color 0.4s ease;
   }
-  @media (max-width: 768px) {
-    .modules {
-      padding: 4rem 1rem;
-    }
-  }
-  .modules-inner {
+  .section-container {
     max-width: 1100px;
     margin: 0 auto;
   }
-  
   .section-header {
-    margin-bottom: 3.5rem;
-  }
-  .section-label {
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: hsl(var(--primary));
-    margin-bottom: 0.6rem;
-  }
-  
-  .modules h2 {
-    font-size: clamp(1.9rem, 4.2vw, 2.6rem);
-    margin-bottom: 0.6rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-  }
-  .section-desc {
-    color: var(--text-muted);
-    max-width: 580px;
-    line-height: 1.65;
-    font-size: 0.98rem;
-  }
-
-  .grid-container {
+    text-align: center;
     margin-bottom: 4rem;
   }
-  .grid-container.hidden {
-    display: none;
+  .section-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
   }
-  .grid {
+  .section-header p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 1.6rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
   }
-  @media (max-width: 576px) {
-    .grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  /* ---- CARD COMPONENT ---- */
-  .card {
+  .feature-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 24px;
+    padding: 2.2rem;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--border-hover);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.05);
+  }
+  .f-icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .fic-purple { background: rgba(99,102,241,0.1); color: hsl(var(--primary)); }
+  .fic-teal { background: rgba(13,138,122,0.1); color: hsl(var(--teal)); }
+  .fic-rose { background: rgba(232,69,107,0.1); color: hsl(var(--rose)); }
+  .fic-gold { background: rgba(200,147,42,0.1); color: hsl(var(--gold)); }
+
+  .feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
+  }
+  .feature-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* Multi-step Modal Overlay */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .modal-box {
+    background: #ffffff;
+    border-radius: 28px;
+    max-width: 680px;
+    width: 100%;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    position: relative;
+    transform: scale(0.95);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .modal-overlay.active .modal-box {
+    transform: scale(1);
+  }
+  .modal-close-btn {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: rgba(15, 23, 42, 0.05);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: background 0.2s;
+    z-index: 100;
+  }
+  .modal-close-btn:hover {
+    background: rgba(15, 23, 42, 0.15);
+  }
+
+  /* Modal Steps Container */
+  .modal-step {
+    display: none;
+    padding: 3rem 2.5rem;
+  }
+  .modal-step.active {
+    display: block;
+    animation: fadeIn 0.4s ease-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Role Selection Styling */
+  .role-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  @media (max-width: 580px) {
+    .role-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  .role-card {
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
     padding: 2rem;
-    text-decoration: none;
-    color: var(--text-main);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s;
+  }
+  .role-card:hover {
+    border-color: hsl(var(--primary));
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.05);
+  }
+  .role-card .rc-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  .role-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .role-card p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* Student Selection Styling */
+  .student-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-top: 1.8rem;
+  }
+  @media (max-width: 500px) {
+    .student-options {
+      grid-template-columns: 1fr;
+    }
+  }
+  .student-option-btn {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  .student-option-btn:hover {
+    border-color: hsl(var(--primary));
+    background: #ffffff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+  }
+  .student-option-btn h4 {
+    margin-bottom: 0.4rem;
+    font-size: 1.05rem;
+    color: hsl(var(--primary));
+  }
+  .student-option-btn p {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+  .beta-alert {
+    background: rgba(200, 147, 42, 0.05);
+    border: 1px solid rgba(200, 147, 42, 0.15);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #a16207;
+    line-height: 1.5;
+  }
+
+  /* Consultancy Pricing Table */
+  .pricing-plans {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  @media (max-width: 768px) {
+    .pricing-plans {
+      grid-template-columns: 1fr;
+      max-height: 350px;
+      overflow-y: auto;
+      padding-right: 0.5rem;
+    }
+  }
+  .plan-card {
+    border: 2px solid var(--border-color);
+    border-radius: 18px;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.25s;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: var(--card-shadow);
-    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  /* Gradient border glow overlay */
-  .card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 24px;
-    padding: 1.2px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
-  }
-  .light .card::before {
-    background: linear-gradient(135deg, rgba(15,23,42,0.12), rgba(15,23,42,0.02));
-  }
-  .card:hover {
-    transform: translateY(-6px) scale(1.01);
-    background: var(--bg-card-hover);
-    border-color: var(--border-hover);
-    box-shadow: 0 20px 40px -15px rgba(var(--primary-raw), 0.22);
-  }
-  .light .card:hover {
-    box-shadow: 0 20px 40px -15px rgba(var(--primary-raw), 0.12);
-  }
-  
-  /* UKVI theme card overrides */
-  .card.ukvi-card:hover {
-    box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.22);
-  }
-  .light .card.ukvi-card:hover {
-    box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.12);
-  }
-  
-  /* PTE theme card overrides */
-  .card.pte-card:hover {
-    box-shadow: 0 20px 40px -15px rgba(249, 115, 22, 0.22);
-  }
-  .light .card.pte-card:hover {
-    box-shadow: 0 20px 40px -15px rgba(249, 115, 22, 0.12);
-  }
-
-  /* Recommended Glow Effect */
-  .card.recommended-glow {
-    animation: card-glow-pulse 2.5s infinite;
+  .plan-card.recommended {
     border-color: hsl(var(--primary));
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.08);
   }
-  .card.recommended-glow.ukvi-card {
-    border-color: #3b82f6;
-    animation: card-glow-pulse-ukvi 2.5s infinite;
-  }
-  .card.recommended-glow.pte-card {
-    border-color: #f97316;
-    animation: card-glow-pulse-pte 2.5s infinite;
-  }
-  @keyframes card-glow-pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(91, 42, 134, 0.3); }
-    50% { box-shadow: 0 0 22px 6px rgba(91, 42, 134, 0.5); }
-  }
-  @keyframes card-glow-pulse-ukvi {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.3); }
-    50% { box-shadow: 0 0 22px 6px rgba(37, 99, 235, 0.5); }
-  }
-  @keyframes card-glow-pulse-pte {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.3); }
-    50% { box-shadow: 0 0 22px 6px rgba(249, 115, 22, 0.5); }
-  }
-
-  /* Card Inner Elements */
-  .card-top {
-    margin-bottom: 1.5rem;
-  }
-  .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.2rem;
-  }
-  .card-tag {
+  .recommended-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: hsl(var(--primary));
+    color: #fff;
     font-size: 0.65rem;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    padding: 0.25rem 0.65rem;
-    border-radius: 6px;
-    background: rgba(91, 42, 134, 0.1);
-    color: hsl(var(--primary));
-    border: 1px solid rgba(91, 42, 134, 0.18);
-  }
-  .card.ukvi-card .card-tag {
-    background: rgba(37, 99, 235, 0.08);
-    color: #3b82f6;
-    border-color: rgba(37, 99, 235, 0.16);
-  }
-  .card.pte-card .card-tag {
-    background: rgba(249, 115, 22, 0.08);
-    color: #f97316;
-    border-color: rgba(249, 115, 22, 0.16);
-  }
-  .card.free-card .card-tag {
-    background: rgba(200, 147, 42, 0.08);
-    color: #d97706;
-    border-color: rgba(200, 147, 42, 0.16);
-  }
-  
-  .card-meta {
-    font-size: 0.68rem;
-    color: var(--text-muted);
-    font-weight: 700;
-    letter-spacing: -0.01em;
-  }
-
-  .card-icon-wrapper {
-    width: 46px;
-    height: 46px;
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--border-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.35rem;
-    margin-bottom: 1.1rem;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .light .card-icon-wrapper {
-    background: rgba(0, 0, 0, 0.03);
-  }
-  .card:hover .card-icon-wrapper {
-    transform: scale(1.1) rotate(6deg);
-    border-color: hsl(var(--primary));
-    background: rgba(91, 42, 134, 0.1);
-  }
-  .card.ukvi-card:hover .card-icon-wrapper {
-    border-color: #3b82f6;
-    background: rgba(37, 99, 235, 0.1);
-  }
-  .card.pte-card:hover .card-icon-wrapper {
-    border-color: #f97316;
-    background: rgba(249, 115, 22, 0.1);
-  }
-
-  .card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.6rem;
-    line-height: 1.3;
-    font-weight: 800;
-    letter-spacing: -0.015em;
-  }
-  .card p {
-    font-size: 0.88rem;
-    color: var(--text-muted);
-    line-height: 1.55;
-  }
-
-  .card-bottom {
-    margin-top: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-  }
-  .go-arrow {
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: hsl(var(--primary));
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-  }
-  .card.ukvi-card .go-arrow { color: #3b82f6; }
-  .card.pte-card .go-arrow { color: #f97316; }
-  .card.free-card .go-arrow { color: #d97706; }
-  
-  .go-arrow span {
-    transition: transform 0.2s;
-  }
-  .card:hover .go-arrow span {
-    transform: translateX(4px);
-  }
-
-  /* ---- SECTION DIVIDERS ---- */
-  .section-divider {
-    margin: 4.5rem 0 3rem;
-    border: none;
-    border-top: 1px solid var(--divider-color);
-  }
-
-  /* ---- FOOTER ---- */
-  .footer {
-    background-color: var(--bg-main);
-    color: var(--text-muted);
-    text-align: center;
-    padding: 4.5rem 2rem 4rem;
-    font-size: 0.85rem;
-    line-height: 1.8;
-    border-top: 1px solid var(--border-color);
-    position: relative;
-    z-index: 10;
-    transition: background-color 0.4s ease;
-  }
-  .footer strong {
-    color: var(--text-main);
-    font-weight: 700;
-  }
-  .footer-insta {
-    margin: 1.2rem 0;
-  }
-  .footer-insta a {
-    color: #e1306c;
-    text-decoration: none;
-    font-weight: 700;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    transition: text-shadow 0.2s;
-  }
-  .footer-insta a:hover {
-    text-shadow: 0 0 10px rgba(225,48,108,0.35);
-  }
-  .footer-lock-test {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px dashed var(--divider-color);
-  }
-  .footer-lock-test button {
-    background: transparent;
-    border: none;
-    color: var(--text-muted);
-    text-decoration: underline;
-    font-size: 0.78rem;
-    cursor: pointer;
-    transition: color 0.2s;
-  }
-  .footer-lock-test button:hover {
-    color: var(--text-main);
-  }
-
-  /* Transitions & Classes for Searching & Recommendation highlighting */
-  .card.filtered-out {
-    display: none !important;
-  }
-  .card.dimmed {
-    opacity: 0.3;
-    filter: blur(1.5px) grayscale(50%);
-  }
-  /* ---- CALC FEEDBACK PREMIUM STYLING ---- */
-  .calc-feedback {
-    font-size: 0.88rem;
-    line-height: 1.65;
-    padding: 1.1rem 1.3rem;
-    border-radius: 14px;
-    border: 1px solid rgba(91, 42, 134, 0.2);
-    background: linear-gradient(135deg, rgba(91, 42, 134, 0.1) 0%, rgba(13, 138, 122, 0.05) 100%);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    min-height: 56px;
-    color: var(--text-main);
-    transition: all 0.3s ease;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  }
-  .light .calc-feedback {
-    background: linear-gradient(135deg, rgba(91, 42, 134, 0.06) 0%, rgba(13, 138, 122, 0.03) 100%);
-    border-color: rgba(91, 42, 134, 0.15);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
-  }
-  .calc-feedback-icon {
-    font-size: 1.25rem;
-    flex-shrink: 0;
-    margin-top: 0.05rem;
-  }
-  .calc-feedback-text strong {
-    color: hsl(var(--primary));
-    font-weight: 700;
-  }
-  .calc-feedback-text small {
-    display: block;
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    margin-top: 0.2rem;
-    letter-spacing: 0.02em;
-  }
-
-  /* ---- FOOTER INSTAGRAM CTA ---- */
-  .footer-insta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.65rem;
-    background: linear-gradient(135deg, #e1306c, #c13584, #833ab4);
-    color: #fff !important;
-    text-decoration: none !important;
-    padding: 0.85rem 2rem;
+    padding: 0.25rem 0.6rem;
     border-radius: 999px;
-    font-size: 0.9rem;
-    font-weight: 700;
-    box-shadow: 0 8px 22px rgba(225, 48, 108, 0.32);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    margin: 1.8rem auto 0.5rem;
+    letter-spacing: 0.05em;
   }
-  .footer-insta-btn:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 14px 30px rgba(225, 48, 108, 0.55);
+  .plan-card h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
   }
-  .footer-insta-note {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    margin-top: 0.5rem;
+  .plan-card .price-box {
+    margin: 0.8rem 0;
   }
-
-  /* --- Mobile Drawer and Sticky Responsive Navbar Fixes --- */
-  @media (max-width: 850px) {
-    .navbar {
-      padding: 0 1.5rem;
-      height: 4.2rem !important;
-      position: fixed !important;
-    }
-    .navbar .nav-center,
-    .navbar .search-wrapper {
-      display: none !important;
-    }
-    #lockLabel {
-      display: none !important;
-    }
-    .lock-status-btn {
-      padding: 0.55rem !important;
-    }
-    body {
-      padding-top: 4.2rem !important; /* Avoid navbar covering content */
-    }
-  }
-
-  .menu-toggle-btn {
-    display: none;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: var(--input-bg);
-    border: 1px solid var(--border-color);
-    color: var(--text-main);
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.25s ease;
-  }
-  .menu-toggle-btn:hover {
-    transform: scale(1.06);
-    border-color: hsl(var(--primary));
-  }
-  @media (max-width: 850px) {
-    .menu-toggle-btn {
-      display: flex;
-    }
-  }
-
-  /* Mobile Drawer styles */
-  .nav-drawer {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 300px;
-    background: var(--glass-navbar);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    border-left: 1px solid var(--border-color);
-    z-index: 1100;
-    transform: translateX(100%);
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
-  }
-  .drawer-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-  }
-  .close-drawer-btn {
-    background: transparent;
-    border: none;
+  .plan-card .price-amount {
     font-size: 1.5rem;
-    color: var(--text-main);
-    cursor: pointer;
-  }
-  .drawer-body {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  .drawer-search-wrapper {
-    position: relative;
-    width: 100%;
-  }
-  .drawer-search-wrapper .search-input {
-    width: 100% !important;
-  }
-  .drawer-tabs-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: stretch;
-  }
-  .drawer-tabs-wrapper .nav-tab {
-    text-align: left;
-    width: 100%;
-    padding: 0.8rem 1.2rem;
-    border-radius: 12px;
-  }
-
-  .drawer-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(4px);
-    z-index: 1050;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  /* Card completion buttons and badge styles */
-  .card-complete-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 0.8rem;
-    border-radius: 10px;
-    background: rgba(15, 23, 42, 0.04);
-    border: 1px solid var(--border-color);
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--text-muted);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    width: fit-content;
-    pointer-events: auto;
-    z-index: 10;
-  }
-  .dark .card-complete-btn {
-    background: rgba(255, 255, 255, 0.03);
-  }
-  .card-complete-btn:hover {
-    background: rgba(16, 185, 129, 0.08);
-    border-color: #10b981;
-    color: #10b981;
-  }
-  .card-complete-btn.completed {
-    background: rgba(16, 185, 129, 0.12);
-    border-color: #10b981;
-    color: #10b981;
-  }
-  .card-complete-btn .checkbox-box {
-    width: 14px;
-    height: 14px;
-    border-radius: 4px;
-    border: 1.5px solid var(--text-muted);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-  }
-  .card-complete-btn:hover .checkbox-box {
-    border-color: #10b981;
-  }
-  .card-complete-btn.completed .checkbox-box {
-    border-color: #10b981;
-    background: #10b981;
-  }
-  .card-complete-btn.completed .checkbox-box::after {
-    content: '✓';
-    color: #fff;
-    font-size: 10px;
-    font-weight: 900;
-  }
-  .card.completed-card {
-    border-color: rgba(16, 185, 129, 0.4) !important;
-  }
-  .card.completed-card:hover {
-    box-shadow: 0 20px 40px -15px rgba(16, 185, 129, 0.15) !important;
-  }
-
-  /* Dynamic Study Planner widget styles */
-  .study-planner-feedback {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-  }
-  .planner-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-  .planner-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    border-top: 1px dashed var(--divider-color);
-    border-bottom: 1px dashed var(--divider-color);
-    padding: 0.8rem 0;
-    width: 100%;
-  }
-  .stat-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-  .stat-item strong {
-    font-size: 1.25rem;
     font-weight: 800;
     color: hsl(var(--primary));
   }
-  .stat-item .stat-label {
-    font-size: 0.72rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-  }
-  .planner-progress-container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-  }
-  .planner-progress-bar {
-    flex-grow: 1;
-    height: 8px;
-    background: var(--border-color);
-    border-radius: 999px;
-    overflow: hidden;
-  }
-  .planner-progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #10b981, #34d399);
-    border-radius: 999px;
-    transition: width 0.4s ease;
-  }
-  .planner-progress-text {
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: #10b981;
-    white-space: nowrap;
-  }
-  .planner-modules-details {
-    margin-top: 0.5rem;
-    width: 100%;
-  }
-  .planner-modules-details summary {
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: hsl(var(--primary));
-    cursor: pointer;
-    outline: none;
-    user-select: none;
-  }
-  .planner-modules-list {
-    margin-top: 0.8rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    max-height: 200px;
-    overflow-y: auto;
-    padding-right: 0.5rem;
-  }
-  .planner-modules-list::-webkit-scrollbar {
-    width: 6px;
-  }
-  .planner-modules-list::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  .planner-modules-list::-webkit-scrollbar-thumb {
-    background: var(--border-color);
-    border-radius: 10px;
-  }
-  .planner-modules-list::-webkit-scrollbar-thumb:hover {
-    background: var(--border-hover);
-  }
-  .planner-module-row {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.5rem 0.8rem;
-    background: rgba(15, 23, 42, 0.02);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    font-size: 0.78rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  .dark .planner-module-row {
-    background: rgba(255, 255, 255, 0.01);
-  }
-  .planner-module-row:hover {
-    background: rgba(15, 23, 42, 0.04);
-    border-color: var(--border-hover);
-  }
-  .dark .planner-module-row:hover {
-    background: rgba(255, 255, 255, 0.03);
-  }
-  .planner-module-row.completed {
-    border-color: rgba(16, 185, 129, 0.25);
-    background: rgba(16, 185, 129, 0.04);
-  }
-  .planner-module-row.completed .row-title {
-    text-decoration: line-through;
-    color: var(--text-muted);
-  }
-  .row-checkbox {
-    width: 14px;
-    height: 14px;
-    border-radius: 4px;
-    border: 1px solid var(--text-muted);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 9px;
-    font-weight: 800;
-    color: #fff;
-    flex-shrink: 0;
-  }
-  .planner-module-row.completed .row-checkbox {
-    background: #10b981;
-    border-color: #10b981;
-  }
-  .row-title {
-    flex-grow: 1;
-    font-weight: 600;
-    color: var(--text-main);
-  }
-  .row-meta {
+  .plan-card .price-period {
     font-size: 0.7rem;
     color: var(--text-muted);
   }
+  .plan-card ul {
+    list-style: none;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-align: left;
+    margin: 0.8rem 0 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .plan-card ul li::before {
+    content: "✓ ";
+    color: #10b981;
+    font-weight: bold;
+  }
+  .plan-select-btn {
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .plan-card.recommended .plan-select-btn,
+  .plan-card:hover .plan-select-btn {
+    background: hsl(var(--primary));
+    color: #fff;
+    border-color: hsl(var(--primary));
+  }
+
+  /* Checkout Form Styling */
+  .checkout-container {
+    margin-top: 1.5rem;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 500px) {
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .form-group.full {
+    grid-column: span 2;
+  }
+  @media (max-width: 500px) {
+    .form-group.full {
+      grid-column: span 1;
+    }
+  }
+  .form-group label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+  }
+  .form-group input {
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.65rem 0.8rem;
+    font-size: 0.88rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus {
+    border-color: hsl(var(--primary));
+  }
+  .checkout-btn {
+    background: #10b981;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.85rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background 0.2s;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+  }
+  .checkout-btn:hover {
+    background: #059669;
+  }
+  .back-link {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+  .back-link:hover {
+    color: hsl(var(--primary));
+  }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--border-color);
+    padding: 3rem 2rem;
+    text-align: center;
+    background: #ffffff;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
 </style>
-<!-- Vercel Web Analytics -->
-<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
-<!-- Ambient Glow Blobs -->
-<div class="glow-blob blob-1"></div>
-<div class="glow-blob blob-2"></div>
+  <!-- Ambient Glow Blobs -->
+  <div class="glow-blob blob-1"></div>
+  <div class="glow-blob blob-2"></div>
 
-<!-- Top Sticky Glassmorphic Navbar -->
-<header class="navbar">
-  <div class="nav-left">
-    <div class="nav-logo-mark">V</div>
-    <a href="#" class="nav-brand">ViATestPrep</a>
-  </div>
-  
-  <nav class="nav-center" id="navTabs">
-    <button class="nav-tab active" data-filter="all">All Modules</button>
-    <button class="nav-tab" data-filter="core">IELTS Core</button>
-    <button class="nav-tab" data-filter="ukvi">UKVI Specialist</button>
-    <button class="nav-tab" data-filter="pte">PTE Academic</button>
-    <button class="nav-tab" data-filter="grammar">Grammar</button>
-    <button class="nav-tab" data-filter="practice">Practice Tests</button>
-    <button class="nav-tab" data-filter="free">Free PDF</button>
-  </nav>
-  
-  <div class="nav-right">
-    <div class="search-wrapper">
-      <span class="search-icon">
-        <svg style="width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-      </span>
-      <input type="text" id="moduleSearch" class="search-input" placeholder="Search modules..."/>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="nav-logo-mark">V</div>
+      <a href="#" class="nav-brand">ViATestPrep</a>
     </div>
-    
-    <button id="lockStatusBtn" class="lock-status-btn">
-      <span id="lockIcon"></span>
-      <span id="lockLabel">Loading...</span>
-    </button>
-    
-    <button id="darkModeToggle" class="theme-toggle-btn" style="display: none !important;" aria-label="Toggle Theme">🌙</button>
-    <button id="menuToggleBtn" class="menu-toggle-btn" aria-label="Toggle Menu">
-      <svg style="width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-    </button>
-  </div>
-</header>
+    <button class="nav-right-btn" onclick="openAccessModal()">Access Platform</button>
+  </header>
 
-<!-- Mobile Navigation Drawer & Backdrop -->
-<div id="drawerBackdrop" class="drawer-backdrop"></div>
-<div id="navDrawer" class="nav-drawer">
-  <div class="drawer-header">
-    <div class="nav-brand">ViATestPrep</div>
-    <button id="closeDrawerBtn" class="close-drawer-btn">✕</button>
-  </div>
-  <div class="drawer-body">
-    <div class="drawer-search-wrapper">
-      <span class="search-icon">
-        <svg style="width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-      </span>
-      <input type="text" id="drawerModuleSearch" class="search-input" placeholder="Search modules..."/>
-    </div>
-    <div class="drawer-tabs-wrapper" id="drawerNavTabs">
-      <button class="nav-tab active" data-filter="all">All Modules</button>
-      <button class="nav-tab" data-filter="core">IELTS Core</button>
-      <button class="nav-tab" data-filter="ukvi">UKVI Specialist</button>
-      <button class="nav-tab" data-filter="pte">PTE Academic</button>
-      <button class="nav-tab" data-filter="grammar">Grammar</button>
-      <button class="nav-tab" data-filter="practice">Practice Tests</button>
-      <button class="nav-tab" data-filter="free">Free PDF</button>
-    </div>
-  </div>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-container">
-    <!-- Left Column: Content -->
-    <div class="hero-content">
-      <div class="brand-tagline">ViATestPrep Portal</div>
-      <h1>Your Complete <span class="gold-coral-gradient">IELTS &amp; PTE</span> Preparation Hub</h1>
-      <p>16 interactive modules covering every IELTS &amp; PTE skill — Reading, Listening, Writing, Speaking, Grammar, Vocabulary, and UKVI. Built for Band 7+ and 79+ targets.</p>
-      <div class="hero-badges">
-        <span class="badge">🎯 Band 7+ Track</span>
-        <span class="badge">⚡ Interactive Drills</span>
-        <span class="badge">🏆 XP &amp; Progress Tracking</span>
-        <span class="badge">📖 All 4 Skills</span>
-        <span class="badge">🇬🇧 UKVI Modules</span>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="brand-tagline">Premium IELTS &amp; PTE Suite</span>
+        <h1>Master the Exams with <span class="gradient-text">Interactive Drills</span></h1>
+        <p>A comprehensive study ecosystem designed to help you score Band 7+ or 79+. Complete with visual test interfaces, official listening audio modules, essay feedback builders, and robust metrics tracking.</p>
+        <div class="cta-group">
+          <button class="btn-cta-primary" onclick="openAccessModal()">Access Resources &amp; Tests</button>
+          <a href="#features" class="btn-cta-secondary">Explore Features</a>
+        </div>
       </div>
-      <div class="instagram-btn-wrapper">
-        <a href="https://www.instagram.com/viatestprep/" target="_blank" class="instagram-hero-btn">
-          <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-          Message us on Instagram to Enroll
-        </a>
-      </div>
-    </div>
-    
-    <!-- Right Column: Visual Showcase -->
-    <div class="hero-visual">
-      <div class="hero-stage">
-        <!-- Reading card -->
-        <a href="01_IELTS_Reading_Detective_Academy.html" class="hero-float-card hfc-reading">
-          <div class="hfc-icon">🕵️</div>
-          <div class="hfc-label">Module 01</div>
-          <div class="hfc-title">Reading</div>
-          <div class="hfc-sub">14 question types + timed drills</div>
-          <span class="hfc-badge" style="background:rgba(13,138,122,0.08);color:#0d8a7a">8 hrs · Hard</span>
-        </a>
-
-        <!-- Listening card -->
-        <a href="02_IELTS_Listening_Sound_Hunter.html" class="hero-float-card hfc-listening">
-          <div class="hfc-icon">🎧</div>
-          <div class="hfc-label">Module 02</div>
-          <div class="hfc-title">Listening</div>
-          <div class="hfc-sub">4 sections, spelling traps</div>
-          <span class="hfc-badge" style="background:rgba(26,74,138,0.08);color:#1a4a8a">6 hrs · Med</span>
-        </a>
-
-        <!-- Writing card -->
-        <a href="03_IELTS_Writing_Architects_Blueprint_v2.html" class="hero-float-card hfc-writing">
-          <div class="hfc-icon">✍️</div>
-          <div class="hfc-label">Module 03</div>
-          <div class="hfc-title">Writing</div>
-          <div class="hfc-sub">Task 1 + 2, templates, essays</div>
-          <span class="hfc-badge" style="background:rgba(91,42,134,0.08);color:#5b2a86">10 hrs · Hard</span>
-        </a>
-
-        <!-- Speaking card -->
-        <a href="04_IELTS_Speaking_Confident_Performer.html" class="hero-float-card hfc-speaking">
-          <div class="hfc-icon">🎤</div>
-          <div class="hfc-label">Module 04</div>
-          <div class="hfc-title">Speaking</div>
-          <div class="hfc-sub">Part 1–3 fluency frameworks</div>
-          <span class="hfc-badge" style="background:rgba(232,69,107,0.08);color:#e8456b">8 hrs · Med</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STUDY PLAN TRACK / TARGET BAND CALCULATOR WIDGET -->
-<section class="calculator-section">
-  <div class="calc-card">
-    <div class="calc-left">
-      <div>
-        <h3 class="text-xl font-bold flex items-center gap-2">Recommended Study Track</h3>
-        <p class="text-xs text-stone-400 mt-1">Select your preparation target goal. Our recommendation engine will instantly highlight and prioritize the critical modules needed for your score.</p>
-      </div>
-    </div>
-    <div class="calc-right">
-      <span class="calc-label">Select Your Target Score</span>
-      <div class="calc-options" id="calcOptions">
-        <button class="calc-btn" data-track="ielts-7.0">IELTS 7.0</button>
-        <button class="calc-btn" data-track="ielts-7.5">IELTS 7.5+</button>
-        <button class="calc-btn" data-track="pte-65">PTE 65</button>
-        <button class="calc-btn" data-track="pte-79">PTE 79+</button>
-        <button class="calc-btn" data-track="ukvi">UKVI GT Track</button>
-        <button class="calc-btn" data-track="clear">✕ Clear</button>
-      </div>
-      <div id="calcFeedback" class="calc-feedback">
-        <span class="calc-feedback-icon">🎯</span>
-        <div class="calc-feedback-text">Select a score target above to get customized recommendations.
-          <small>We'll highlight the best modules for your goal.</small>
+      <div class="hero-visual">
+        <div class="float-badge fb-1">
+          <span class="fb-icon">🎧</span>
+          <span class="fb-title">Sound Hunter</span>
+          <span class="fb-sub">Official Cambridge Audio</span>
+        </div>
+        <div class="float-badge fb-2">
+          <span class="fb-icon">📝</span>
+          <span class="fb-title">Architect Blueprint</span>
+          <span class="fb-sub">Essay Structures &amp; Drills</span>
+        </div>
+        <div class="float-badge fb-3">
+          <span class="fb-icon">📊</span>
+          <span class="fb-title">CRM Tracking</span>
+          <span class="fb-sub">Score History &amp; Progress</span>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- MODULES GRID -->
-<section class="modules" id="modulesSection">
-  <div class="modules-inner">
-
-    <!-- Start Here / Orientation Grid -->
-    <div class="grid-container" id="container-orientation">
+  <!-- Features Section -->
+  <section id="features" class="features-section">
+    <div class="section-container">
       <div class="section-header">
-        <div class="section-label">Start Here</div>
-        <h2>Orientation &amp; Core Modules</h2>
-        <p class="section-desc">Begin with Class 01, then work through each skill module at your own pace. Every lesson includes strategy guides, live drills, and a boss-fight mock test.</p>
+        <h2>What's Inside ViATestPrep</h2>
+        <p>Everything you need to succeed, structured into simple, highly effective interactive modules.</p>
       </div>
-
-      <div class="grid">
-
-
-        <!-- Free Resource Card -->
-        <a href="free-essay-template.html" class="card free-card" data-tags="free,core" data-recommended="ielts-7.0,ielts-7.5,ukvi">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">🎁 FREE PDF TEMPLATE</span>
-              <span class="card-meta">⏱️ 1 hr · 🟢 Easy</span>
-            </div>
-            <div class="card-icon-wrapper">📝</div>
-            <h3>Agree/Disagree Essay Template</h3>
-            <p>Get instant access to our Band 8+ essay template. Structurally optimized, print-friendly, and completely free to save as PDF.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Get free template <span>→</span></div>
-          </div>
-        </a>
-
-        <!-- Class 01 Orientation -->
-        <a href="00_IELTS_Orientation_Class_01.html" class="card" data-tags="core" data-recommended="ielts-7.0,ielts-7.5,ukvi">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">Class 01 · Orientation</span>
-              <span class="card-meta">⏱️ 2 hrs · 🟢 Easy</span>
-            </div>
-            <div class="card-icon-wrapper">🧭</div>
-            <h3>Orientation</h3>
-            <p>What IELTS is, Academic vs General Training, test format, scoring, test day prep, and 6 myths busted. Start here.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start here <span>→</span></div>
-          </div>
-        </a>
-
-        <!-- Module 01 Reading -->
-        <a href="01_IELTS_Reading_Detective_Academy.html" class="card" data-tags="core,reading" data-recommended="ielts-7.0,ielts-7.5,ukvi">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">Module 01 · Reading</span>
-              <span class="card-meta">⏱️ 8 hrs · 🔴 Hard</span>
-            </div>
-            <div class="card-icon-wrapper">🕵️</div>
-            <h3>Reading</h3>
-            <p>Master all 14 reading question types with case-file strategies, skim/scan drills, and a timed boss fight.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start lesson <span>→</span></div>
-          </div>
-        </a>
-
-        <!-- Module 02 Listening -->
-        <a href="02_IELTS_Listening_Sound_Hunter.html" class="card" data-tags="core,listening" data-recommended="ielts-7.0,ielts-7.5,ukvi">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">Module 02 · Listening</span>
-              <span class="card-meta">⏱️ 6 hrs · 🟡 Medium</span>
-            </div>
-            <div class="card-icon-wrapper">🎧</div>
-            <h3>Listening</h3>
-            <p>Section-by-section strategies, spelling traps, distraction techniques, and prediction drills.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start lesson <span>→</span></div>
-          </div>
-        </a>
-
-        <!-- Module 03 Writing -->
-        <a href="03_IELTS_Writing_Architects_Blueprint_v2.html" class="card" data-tags="core,writing" data-recommended="ielts-7.0,ielts-7.5,ukvi">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">Module 03 · Writing (v2)</span>
-              <span class="card-meta">⏱️ 10 hrs · 🔴 Hard</span>
-            </div>
-            <div class="card-icon-wrapper">✍️</div>
-            <h3>Writing</h3>
-            <p>Task 1, Task 2 structures, live charts, paraphrase worksheet, interactive sample essays, and templates.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start lesson <span>→</span></div>
-          </div>
-        </a>
-
-        <!-- Module 04 Speaking -->
-        <a href="04_IELTS_Speaking_Confident_Performer.html" class="card" data-tags="core,speaking" data-recommended="ielts-7.0,ielts-7.5,ukvi">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">Module 04 · Speaking</span>
-              <span class="card-meta">⏱️ 8 hrs · 🟡 Medium</span>
-            </div>
-            <div class="card-icon-wrapper">🎤</div>
-            <h3>Speaking</h3>
-            <p>Part 1, 2 &amp; 3 frameworks, fluency drills, filler reduction techniques, and pronunciation tips.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start lesson <span>→</span></div>
-          </div>
-        </a>
-
-        <!-- Module 05 Cohesive Devices -->
-        <a href="05_IELTS_Cohesive_Devices_Weaver.html" class="card" data-tags="grammar" data-recommended="ielts-7.0,ielts-7.5,pte-65,pte-79">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">Module 05 · Grammar</span>
-              <span class="card-meta">⏱️ 4 hrs · 🟢 Easy</span>
-            </div>
-            <div class="card-icon-wrapper">🧵</div>
-            <h3>Cohesive Devices</h3>
-            <p>All cohesive device categories with drag-and-place drills and before/after paragraph rewrites.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start lesson <span>→</span></div>
-          </div>
-        </a>
-
-        <!-- Module 06 Tenses -->
-        <a href="06_IELTS_Tenses_Conditionals.html" class="card" data-tags="grammar" data-recommended="ielts-7.0,ielts-7.5,pte-65,pte-79">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">Module 06 · Grammar</span>
-              <span class="card-meta">⏱️ 5 hrs · 🟡 Medium</span>
-            </div>
-            <div class="card-icon-wrapper">⏱️</div>
-            <h3>Tenses &amp; Conditionals</h3>
-            <p>Perfect tense control, conditional structures, and timed transformation drills for writing accuracy.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start lesson <span>→</span></div>
-          </div>
-        </a>
-
-        <!-- Module 07 Punctuation -->
-        <a href="07_IELTS_Punctuation_Signals.html" class="card" data-tags="grammar" data-recommended="ielts-7.0,ielts-7.5,pte-65,pte-79">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">Module 07 · Grammar</span>
-              <span class="card-meta">⏱️ 3 hrs · 🟢 Easy</span>
-            </div>
-            <div class="card-icon-wrapper">✏️</div>
-            <h3>Punctuation</h3>
-            <p>Commas, semicolons, colons and apostrophes — with interactive fix-the-error exercises.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start lesson <span>→</span></div>
-          </div>
-        </a>
-
-        <!-- Module 08 Voice & Speech -->
-        <a href="08_IELTS_Voice_Speech.html" class="card" data-tags="grammar" data-recommended="ielts-7.0,ielts-7.5,pte-65,pte-79">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">Module 08 · Grammar</span>
-              <span class="card-meta">⏱️ 4 hrs · 🟡 Medium</span>
-            </div>
-            <div class="card-icon-wrapper">🔄</div>
-            <h3>Active &amp; Passive Voice</h3>
-            <p>When to use passive in academic writing, transformation drills, and writing task integration.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start lesson <span>→</span></div>
-          </div>
-        </a>
-
-        <!-- Module 09 Sentence Mastery -->
-        <a href="09_IELTS_Sentence_Mastery.html" class="card" data-tags="grammar" data-recommended="ielts-7.0,ielts-7.5,pte-65,pte-79">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">Module 09 · Grammar</span>
-              <span class="card-meta">⏱️ 6 hrs · 🔴 Hard</span>
-            </div>
-            <div class="card-icon-wrapper">🏗️</div>
-            <h3>Sentence Structure</h3>
-            <p>Simple, compound and complex sentence structures with clause-building and combining exercises.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start lesson <span>→</span></div>
-          </div>
-        </a>
-
-        <!-- Module 10 Vocabulary Accelerator -->
-        <a href="10_IELTS_Vocabulary_Accelerator.html" class="card" data-tags="grammar,vocabulary" data-recommended="ielts-7.0,ielts-7.5,pte-65,pte-79">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">Module 10 · Vocabulary</span>
-              <span class="card-meta">⏱️ 5 hrs · 🟡 Medium</span>
-            </div>
-            <div class="card-icon-wrapper">🚀</div>
-            <h3>Vocabulary</h3>
-            <p>Collocations, topic word banks, paraphrase drills, and band-7 synonym upgrades.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start lesson <span>→</span></div>
-          </div>
-        </a>
-
-        <!-- Vocabulary Master Guide -->
-        <a href="ielts-vocabulary-guide.html" class="card" data-tags="vocabulary" data-recommended="ielts-7.0,ielts-7.5,pte-65,pte-79">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">Vocabulary · Master Guide</span>
-              <span class="card-meta">⏱️ 12 hrs · 🔴 Hard</span>
-            </div>
-            <div class="card-icon-wrapper">📖</div>
-            <h3>Vocabulary Guide</h3>
-            <p>Interactive spaced-repetition flashcards, topic word banks, upgrades, and mock quizzes for Band 7.5+.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start guide <span>→</span></div>
-          </div>
-        </a>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="f-icon-box fic-purple">📚</div>
+          <h3>16+ Skill-Builder Modules</h3>
+          <p>Grammar builders, vocabulary accelerators, sentence mastery courses, cohesive devices, and punctuation checklists designed to correct structural errors instantly.</p>
+        </div>
+        <div class="feature-card">
+          <div class="f-icon-box fic-teal">🎧</div>
+          <h3>Official Cambridge Mocks</h3>
+          <p>Take Cambridge IELTS 18 &amp; 19 tests with real audio. Features Exam Mode (timed layout) and Practice Mode (instant answers and explanations).</p>
+        </div>
+        <div class="feature-card">
+          <div class="f-icon-box fic-rose">🎤</div>
+          <h3>Speaking Cue-Card Practise</h3>
+          <p>Microphone integration lets students record answers directly in the browser, time their responses, and listen to playbacks to perform self-assessments.</p>
+        </div>
+        <div class="feature-card">
+          <div class="f-icon-box fic-gold">🏢</div>
+          <h3>Consultancy CRM Portal</h3>
+          <p>A specialized records management dashboard for institutions to register students, log 1-on-1 speaking interview marks, check progress, and export rosters.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- FULL PRACTISE SETS SECTION -->
-    <canvas class="three-separator section-divider" id="divider-practice"></canvas>
-    <div class="grid-container" id="container-practice">
-      <div class="section-header">
-        <div class="section-label">Practice Center</div>
-        <h2>Full Practise Sets</h2>
-        <p class="section-desc">Test your readiness with 5 complete computer-delivered mock tests containing custom speed-controlled audios, split-screen reading, and writing simulators.</p>
-      </div>
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 ViATestPrep. All Rights Reserved. Professional Coaching &amp; Institutional CRM Portal.</p>
+  </footer>
 
-      <div class="grid">
-        <!-- IELTS Practice Lobby Card -->
-        <a href="ielts-practice-hub.html" class="card recommended-glow" data-tags="practice,core" data-recommended="ielts-7.0,ielts-7.5,ukvi">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">🏆 PREMIUM MOCK TESTS</span>
-              <span class="card-meta">⏱️ 3 hrs · 🔴 Hard</span>
-            </div>
-            <div class="card-icon-wrapper">🎯</div>
-            <h3>Interactive Mock Test Center</h3>
-            <p>Take 5 complete computer-delivered practice tests with Listening (speed control audios), Reading (split-screen with highlights), and Writing text editors.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Enter test center <span>→</span></div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <canvas class="three-separator section-divider" id="divider-ukvi"></canvas>
-
-    <!-- UKVI SPECIALIST MODULES -->
-    <div class="grid-container" id="container-ukvi">
-      <div class="section-header">
-        <div class="section-label ukvi-label">UKVI · Academic &amp; General Training</div>
-        <h2>UKVI Specialist Modules</h2>
-        <p class="section-desc">Targeted modules for the UK Visas and Immigration (UKVI) IELTS — Reading, Writing Task 1, and Writing Task 2 Essay.</p>
-      </div>
-
-      <div class="grid">
-        <!-- GT Reading -->
-        <a href="UKVI_GT_Reading_Module.html" class="card ukvi-card" data-tags="ukvi,reading" data-recommended="ukvi">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">UKVI · GT Reading</span>
-              <span class="card-meta">⏱️ 7 hrs · 🟡 Medium</span>
-            </div>
-            <div class="card-icon-wrapper">🇬🇧</div>
-            <h3>UKVI Reading</h3>
-            <p>Notices, advertisements, workplace documents and multi-text strategies built for the General Training Reading format.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start lesson <span>→</span></div>
-          </div>
-        </a>
-
-        <!-- GT Writing Task 1 -->
-        <a href="UKVI_GT_Writing_Task1_Module.html" class="card ukvi-card" data-tags="ukvi,writing" data-recommended="ukvi">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">UKVI · GT Writing</span>
-              <span class="card-meta">⏱️ 6 hrs · 🟡 Medium</span>
-            </div>
-            <div class="card-icon-wrapper">✉️</div>
-            <h3>UKVI Letters</h3>
-            <p>Formal, semi-formal and informal letter frameworks, tone control, and opening/closing formula drills.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start lesson <span>→</span></div>
-          </div>
-        </a>
-
-        <!-- GT & Academic Task 2 -->
-        <a href="UKVI_Writing_Task2_Essay_Module.html" class="card ukvi-card" data-tags="ukvi,writing" data-recommended="ukvi">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">UKVI · GT &amp; Academic</span>
-              <span class="card-meta">⏱️ 8 hrs · 🔴 Hard</span>
-            </div>
-            <div class="card-icon-wrapper">📝</div>
-            <h3>UKVI Essays</h3>
-            <p>Thesis development, 4-paragraph planning, formal vocabulary guidelines, and interactive essay building tools.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start lesson <span>→</span></div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <canvas class="three-separator section-divider" id="divider-pte"></canvas>
-
-    <!-- PTE SPECIALIST MODULES -->
-    <div class="grid-container" id="container-pte">
-      <div class="section-header">
-        <div class="section-label pte-label">PTE · Pearson Test of English</div>
-        <h2>PTE Specialist Modules</h2>
-        <p class="section-desc">Comprehensive study materials and strategies built for the Pearson Test of English (PTE) Academic format.</p>
-      </div>
-
-      <div class="grid">
-        <!-- PTE Speaking Specialist -->
-        <a href="pte-speaking.html" class="card pte-card" data-tags="pte" data-recommended="pte-65,pte-79">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">PTE Academic · Speaking</span>
-              <span class="card-meta">⏱️ 4 hrs · 🟡 Medium</span>
-            </div>
-            <div class="card-icon-wrapper">🎙️</div>
-            <h3>PTE Speaking Mastery</h3>
-            <p>Master Read Aloud, Repeat Sentence, and Describe Image tasks. Includes high-scoring templates and oral fluency strategies.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start Speaking <span>→</span></div>
-          </div>
-        </a>
-
-        <!-- PTE Writing Specialist -->
-        <a href="pte-writing.html" class="card pte-card" data-tags="pte" data-recommended="pte-65,pte-79">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">PTE Academic · Writing</span>
-              <span class="card-meta">⏱️ 3 hrs · 🔴 Hard</span>
-            </div>
-            <div class="card-icon-wrapper">✍️</div>
-            <h3>PTE Writing Templates</h3>
-            <p>Get the exact templates for Summarise Written Text, Write Essay, and Write Email. Learn scoring rules for grammar and spelling.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start Writing <span>→</span></div>
-          </div>
-        </a>
-
-        <!-- PTE Reading Specialist -->
-        <a href="pte-reading.html" class="card pte-card" data-tags="pte" data-recommended="pte-65,pte-79">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">PTE Academic · Reading</span>
-              <span class="card-meta">⏱️ 4 hrs · 🔴 Hard</span>
-            </div>
-            <div class="card-icon-wrapper">📖</div>
-            <h3>PTE Reading Tactics</h3>
-            <p>Conquer Reading & Writing Fill in the Blanks, Re-order Paragraphs, and other question types. Build key academic vocabulary.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start Reading <span>→</span></div>
-          </div>
-        </a>
-
-        <!-- PTE Listening Specialist -->
-        <a href="pte-listening.html" class="card pte-card" data-tags="pte" data-recommended="pte-65,pte-79">
-          <div class="card-top">
-            <div class="card-header">
-              <span class="card-tag">PTE Academic · Listening</span>
-              <span class="card-meta">⏱️ 4 hrs · 🟡 Medium</span>
-            </div>
-            <div class="card-icon-wrapper">🎧</div>
-            <h3>PTE Listening Focus</h3>
-            <p>Improve scores in Summarise Spoken Text, Write from Dictation, and Highlight Correct Summary. Train listening comprehension.</p>
-          </div>
-          <div class="card-bottom">
-            <div class="go-arrow">Start Listening <span>→</span></div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <strong>ViATestPrep</strong><br>
-  © 2026 ViATestPrep · All Rights Reserved<br>
-  These materials are the exclusive intellectual property of ViATestPrep.<br>
-  Unauthorized reproduction, distribution, or sharing is strictly prohibited.<br>
-  
-  <div class="footer-insta">
-    <a href="https://www.instagram.com/viatestprep/" target="_blank" class="footer-insta-btn">
-      <svg style="width:18px;height:18px;fill:currentColor;flex-shrink:0" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-      Follow @viatestprep · DM to Enroll
-    </a>
-    <p class="footer-insta-note">Message us on Instagram to get your access passcode 🔑</p>
-  </div>
-  
-  <div class="footer-lock-test">
-    <button id="lockTestBtn">
-      🔒 Lock Premium Resources (Test Experience)
-    </button>
-  </div>
-</footer>
-
-<script>
-// ====== Theme Management ======
-function updateTheme() {
-  document.documentElement.classList.add('light');
-  document.documentElement.classList.remove('dark');
-  localStorage.setItem('theme', 'light');
-}
-
-// Run theme update initially
-updateTheme();
-
-// ====== Passcode Access Lock Status ======
-function checkLockStatus() {
-  const isUnlocked = localStorage.getItem('viatestprep_unlocked') === 'true';
-  const lockIcon = document.getElementById('lockIcon');
-  const lockLabel = document.getElementById('lockLabel');
-  const btn = document.getElementById('lockStatusBtn');
-  
-  if (isUnlocked) {
-    btn.className = "lock-status-btn unlocked";
-    lockIcon.innerHTML = `<svg style="width:12px;height:12px;fill:currentColor" viewBox="0 0 24 24"><path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v1.9H6c-1.1 0-2 .9-2 2 v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6-5c1.66 0 3 1.34 3 3v2H9V6c0-1.66 1.34-3 3-3zm6 17H6V10h12v10z"/></svg>`;
-    lockLabel.textContent = "Premium Unlocked";
-  } else {
-    btn.className = "lock-status-btn";
-    lockIcon.innerHTML = `<svg style="width:12px;height:12px;fill:currentColor" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>`;
-    lockLabel.textContent = "Premium Locked";
-  }
-}
-
-function toggleLockState() {
-  const isUnlocked = localStorage.getItem('viatestprep_unlocked') === 'true';
-  if (isUnlocked) {
-    if (confirm("Do you want to lock premium resources to test the access lock overlay?")) {
-      localStorage.removeItem('viatestprep_unlocked');
-      location.reload();
-    }
-  } else {
-    alert("Please click any lesson module card to trigger the access passcode entry overlay!");
-  }
-}
-
-// Initial status check
-checkLockStatus();
-
-// ====== Search & Filter Engine ======
-let currentActiveCategory = 'all';
-let currentSearchQuery = '';
-
-const allCards = document.querySelectorAll('.card');
-const gridContainers = document.querySelectorAll('.grid-container');
-const dividers = [
-  { el: document.getElementById('divider-practice'), targetContainer: 'container-practice' },
-  { el: document.getElementById('divider-ukvi'), targetContainer: 'container-ukvi' },
-  { el: document.getElementById('divider-pte'), targetContainer: 'container-pte' }
-];
-
-function filterCategory(category, tabBtn) {
-  // Update active tab style
-  if (tabBtn) {
-    document.querySelectorAll('.nav-tab').forEach(btn => btn.classList.remove('active'));
-    tabBtn.classList.add('active');
-  }
-  
-  currentActiveCategory = category;
-  applyFilters();
-}
-
-function handleSearch(query) {
-  currentSearchQuery = query.toLowerCase().trim();
-  applyFilters();
-}
-
-function applyFilters() {
-  allCards.forEach(card => {
-    const tags = card.getAttribute('data-tags').split(',');
-    const title = card.querySelector('h3').textContent.toLowerCase();
-    const desc = card.querySelector('p').textContent.toLowerCase();
-    
-    // Category check
-    const matchesCategory = (currentActiveCategory === 'all') || tags.includes(currentActiveCategory);
-    
-    // Search check
-    const matchesSearch = !currentSearchQuery || 
-                          title.includes(currentSearchQuery) || 
-                          desc.includes(currentSearchQuery) || 
-                          tags.some(tag => tag.includes(currentSearchQuery));
-                          
-    if (matchesCategory && matchesSearch) {
-      card.classList.remove('filtered-out');
-    } else {
-      card.classList.add('filtered-out');
-    }
-  });
-
-  // Handle visibility of container sections (hide if no cards are visible)
-  gridContainers.forEach(container => {
-    const visibleCards = container.querySelectorAll('.card:not(.filtered-out)');
-    if (visibleCards.length === 0) {
-      container.classList.add('hidden');
-    } else {
-      container.classList.remove('hidden');
-    }
-  });
-
-  // Handle dividers visibility
-  dividers.forEach(divObj => {
-    const targetEl = document.getElementById(divObj.targetContainer);
-    if (targetEl && targetEl.classList.contains('hidden')) {
-      divObj.el.style.display = 'none';
-    } else {
-      divObj.el.style.display = 'block';
-    }
-  });
-}
-
-// ====== Recommendation Engine ======
-let currentTrack = 'clear';
-
-function recommendTrack(trackKey, btn) {
-  // Update active state on recommendation buttons
-  document.querySelectorAll('.calc-btn').forEach(b => b.classList.remove('active'));
-  
-  currentTrack = trackKey;
-  
-  if (trackKey === 'clear') {
-    allCards.forEach(card => {
-      card.classList.remove('dimmed');
-      card.classList.remove('recommended-glow');
-    });
-    updateStudyPlannerUI();
-    return;
-  }
-  
-  if (btn) btn.classList.add('active');
-  
-  updateStudyPlannerUI();
-  
-  // Update cards classes to highlight recommendations
-  allCards.forEach(card => {
-    const recommendedList = (card.getAttribute('data-recommended') || '').split(',');
-    const isRecommended = recommendedList.includes(trackKey);
-    
-    if (isRecommended) {
-      card.classList.remove('dimmed');
-      card.classList.add('recommended-glow');
-    } else {
-      card.classList.add('dimmed');
-      card.classList.remove('recommended-glow');
-    }
-  });
-}
-
-// ====== Mobile Drawer Controls (GSAP) ======
-const navDrawer = document.getElementById('navDrawer');
-const drawerBackdrop = document.getElementById('drawerBackdrop');
-const menuToggleBtn = document.getElementById('menuToggleBtn');
-const closeDrawerBtn = document.getElementById('closeDrawerBtn');
-
-function openDrawer() {
-  if (typeof gsap !== 'undefined') {
-    gsap.to(navDrawer, { x: 0, duration: 0.4, ease: "power2.out" });
-    gsap.to(drawerBackdrop, { opacity: 1, duration: 0.3, pointerEvents: "auto" });
-  } else {
-    navDrawer.classList.add('open');
-    drawerBackdrop.classList.add('open');
-  }
-}
-
-function closeDrawer() {
-  if (typeof gsap !== 'undefined') {
-    gsap.to(navDrawer, { x: "100%", duration: 0.4, ease: "power2.inOut" });
-    gsap.to(drawerBackdrop, { opacity: 0, duration: 0.3, pointerEvents: "none" });
-  } else {
-    navDrawer.classList.remove('open');
-    drawerBackdrop.classList.remove('open');
-  }
-}
-
-if (menuToggleBtn) menuToggleBtn.addEventListener('click', openDrawer);
-if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeDrawer);
-if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
-
-// ====== Dynamic Card Completion Injection ======
-document.querySelectorAll('.card').forEach(card => {
-  const href = card.getAttribute('href');
-  const bottom = card.querySelector('.card-bottom');
-  if (bottom && href) {
-    const btn = document.createElement('div');
-    btn.className = 'card-complete-btn';
-    btn.dataset.href = href;
-    btn.innerHTML = `
-      <span class="checkbox-box"></span>
-      <span class="checkbox-text">Mark Complete</span>
-    `;
-    bottom.appendChild(btn);
-  }
-});
-
-// ====== Progress & Completion System ======
-function toggleCardCompleted(href, event) {
-  if (event) {
-    event.preventDefault();
-    event.stopPropagation();
-  }
-  
-  const key = 'viatestprep_completed_' + href;
-  const isCompleted = localStorage.getItem(key) === 'true';
-  
-  if (!isCompleted) {
-    localStorage.setItem(key, 'true');
-  } else {
-    localStorage.removeItem(key);
-  }
-  
-  updateCardProgressUI();
-  updateStudyPlannerUI();
-}
-
-function updateCardProgressUI() {
-  document.querySelectorAll('.card-complete-btn').forEach(btn => {
-    const href = btn.dataset.href;
-    const key = 'viatestprep_completed_' + href;
-    const isCompleted = localStorage.getItem(key) === 'true';
-    const card = btn.closest('.card');
-    
-    if (isCompleted) {
-      btn.classList.add('completed');
-      btn.querySelector('.checkbox-text').textContent = 'Completed';
-      if (card) card.classList.add('completed-card');
-    } else {
-      btn.classList.remove('completed');
-      btn.querySelector('.checkbox-text').textContent = 'Mark Complete';
-      if (card) card.classList.remove('completed-card');
-    }
-  });
-}
-
-// Wire up events for complete buttons
-document.querySelectorAll('.card-complete-btn').forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    toggleCardCompleted(this.dataset.href, e);
-  });
-});
-
-// Initial load
-updateCardProgressUI();
-
-// ====== Dynamic Study Planner Widget ======
-function updateStudyPlannerUI() {
-  const feedback = document.getElementById('calcFeedback');
-  if (!feedback) return;
-  
-  if (currentTrack === 'clear' || !currentTrack) {
-    feedback.innerHTML = `<span class="calc-feedback-icon">🎯</span><div class="calc-feedback-text">Select a score target above to get customized recommendations.<small>We'll highlight the best modules for your goal.</small></div>`;
-    return;
-  }
-  
-  let emoji = '✨';
-  let title = '';
-  let subtitle = '';
-  switch(currentTrack) {
-    case 'ielts-7.0':
-      emoji = '📚'; title = 'IELTS Band 7.0 Track';
-      subtitle = 'Focus on Core Modules, Essential Vocabulary, and foundational Grammar.';
-      break;
-    case 'ielts-7.5':
-      emoji = '🚀'; title = 'IELTS Band 7.5+ Track';
-      subtitle = 'Advanced Reading, Writing v2 templates, Speaking, and Sentence Mastery.';
-      break;
-    case 'pte-65':
-      emoji = '⚡'; title = 'PTE Academic 65 Track';
-      subtitle = 'PTE Speaking, Writing, Reading, and Listening modules, key Grammar topics, and Vocabulary Accelerator.';
-      break;
-    case 'pte-79':
-      emoji = '🏆'; title = 'PTE Academic 79+ Track';
-      subtitle = 'PTE Speaking, Writing, Reading, and Listening modules with advanced Speaking/Writing templates and drills.';
-      break;
-    case 'ukvi':
-      emoji = '🇬🇧'; title = 'UKVI General Training Track';
-      subtitle = 'Prioritize UKVI Specialist Modules (GT Letter, GT Reading) + Core Orientation.';
-      break;
-  }
-  
-  // Find all cards recommended for this track
-  const recommendedCards = [];
-  let totalHours = 0;
-  let completedCount = 0;
-  
-  document.querySelectorAll('.card').forEach(card => {
-    const recommendedList = (card.getAttribute('data-recommended') || '').split(',');
-    if (recommendedList.includes(currentTrack)) {
-      recommendedCards.push(card);
+  <!-- MULTI-STEP MODAL -->
+  <div class="modal-overlay" id="accessModal">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeAccessModal()">×</button>
       
-      const href = card.getAttribute('href');
-      if (localStorage.getItem('viatestprep_completed_' + href) === 'true') {
-        completedCount++;
-      }
-      
-      // Parse duration from card-meta
-      const metaEl = card.querySelector('.card-meta');
-      if (metaEl) {
-        const metaText = metaEl.textContent;
-        const hoursMatch = metaText.match(/(?:⏱️|⏱)\s*(\d+)\s*hr/);
-        if (hoursMatch) {
-          totalHours += parseInt(hoursMatch[1], 10);
-        }
-      }
-    }
-  });
-  
-  const totalCount = recommendedCards.length;
-  const percent = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
-  
-  const modulesListHTML = recommendedCards.map(card => {
-    const cardTitle = card.querySelector('h3').textContent;
-    const href = card.getAttribute('href');
-    const metaText = card.querySelector('.card-meta').textContent;
-    const isCompleted = localStorage.getItem('viatestprep_completed_' + href) === 'true';
-    return `
-      <div class="planner-module-row ${isCompleted ? 'completed' : ''}" onclick="toggleCardCompleted('${href}', event)">
-        <span class="row-checkbox">${isCompleted ? '✓' : ''}</span>
-        <span class="row-title">${cardTitle}</span>
-        <span class="row-meta">${metaText.split('·')[0].replace(/⏱️|⏱/, '').trim()}</span>
-      </div>
-    `;
-  }).join('');
-  
-  feedback.innerHTML = `
-    <div class="study-planner-feedback">
-      <div class="planner-header">
-        <span class="calc-feedback-icon">${emoji}</span>
-        <div class="calc-feedback-text">
-          <strong>${title}</strong>
-          <small>${subtitle}</small>
+      <!-- Step 1: Role Selection -->
+      <div class="modal-step active" id="step-role">
+        <h2 style="text-align: center;">Welcome to ViATestPrep</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-top: 0.5rem; font-size: 0.9rem;">To get started, please select your access role:</p>
+        <div class="role-cards">
+          <div class="role-card" onclick="selectRole('student')">
+            <div class="rc-icon">🎓</div>
+            <h4>I am a Student</h4>
+            <p>Self-study preparation, mock tests, and resource worksheets.</p>
+          </div>
+          <div class="role-card" onclick="selectRole('consultancy')">
+            <div class="rc-icon">🏢</div>
+            <h4>I am a Consultancy</h4>
+            <p>Institutional licenses, CRM student record tracking, and teacher score tools.</p>
+          </div>
         </div>
       </div>
-      <div class="planner-stats">
-        <div class="stat-item">
-          <strong>${totalHours} hrs</strong>
-          <span class="stat-label">Total Study Time</span>
-        </div>
-        <div class="stat-item">
-          <strong>${completedCount}/${totalCount}</strong>
-          <span class="stat-label">Modules Completed</span>
-        </div>
-      </div>
-      <div class="planner-progress-container">
-        <div class="planner-progress-bar">
-          <div class="planner-progress-fill" style="width: ${percent}%"></div>
-        </div>
-        <span class="planner-progress-text">${percent}% Done</span>
-      </div>
-      <details class="planner-modules-details">
-        <summary class="details-summary">View Required Modules (${totalCount})</summary>
-        <div class="planner-modules-list">
-          ${modulesListHTML}
-        </div>
-      </details>
-    </div>
-  `;
-}
 
-// ====== Wire Up Event Listeners ======
-// Nav filter tabs (both desktop & mobile drawer)
-document.querySelectorAll('.nav-tab').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    const filter = this.dataset.filter;
-    document.querySelectorAll('.nav-tab').forEach(b => {
-      if (b.dataset.filter === filter) {
-        b.classList.add('active');
+      <!-- Step 2: Student Options -->
+      <div class="modal-step" id="step-student">
+        <h2>Student Practice Portal</h2>
+        <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 0.4rem;">Select which practice zone you want to access:</p>
+        <div class="student-options">
+          <div class="student-option-btn" onclick="redirectStudent('hub')">
+            <h4>Whole Resource Packet</h4>
+            <p>Unlock the 16+ skill modules, worksheets, writing models, and grammar workshops.</p>
+          </div>
+          <div class="student-option-btn" onclick="redirectStudent('mocks')">
+            <h4>Just the Mock Tests</h4>
+            <p>Jump straight into the Cambridge Reading &amp; Listening practice tests with timer modes.</p>
+          </div>
+        </div>
+        <div class="beta-alert">
+          <strong>Beta Phase Notice:</strong> All resources are currently **FREE** of charge during our pre-launch phase. Student billing will be enabled once we migrate to our custom domain.
+        </div>
+        <a href="#" class="back-link" onclick="goBackToStep('role')">← Back to Role Selection</a>
+      </div>
+
+      <!-- Step 2 (Consultancy): Pricing Plans -->
+      <div class="modal-step" id="step-consultancy-pricing">
+        <h2>Institutional Plans</h2>
+        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.2rem;">Choose the license that fits your coaching center size (priced Rs. 200 cheaper than Alfa PTE):</p>
+        
+        <div class="pricing-plans">
+          <!-- Plan A -->
+          <div class="plan-card recommended" onclick="selectPlan('Plan A')">
+            <div class="recommended-badge">Best Value</div>
+            <h4>Plan A: Full Suite</h4>
+            <div class="price-box">
+              <span class="price-amount" id="planA-price">Rs. 500</span>
+              <span class="price-period">/ student / mo</span>
+            </div>
+            <ul>
+              <li>Unlimited IELTS Tests</li>
+              <li>All 16+ Study Modules</li>
+              <li>Manual Speaking Evaluator</li>
+              <li>Full CRM student tracking</li>
+            </ul>
+            <button class="plan-select-btn">Select Plan A</button>
+          </div>
+
+          <!-- Plan B -->
+          <div class="plan-card" onclick="selectPlan('Plan B')">
+            <h4>Plan B: Vault Only</h4>
+            <div class="price-box">
+              <span class="price-amount" id="planB-price">Rs. 350</span>
+              <span class="price-period">/ student / mo</span>
+            </div>
+            <ul>
+              <li>All 16+ Study Modules</li>
+              <li>Speaking Practice worksheets</li>
+              <li>No Mock Testing center</li>
+              <li>Basic CRM tracking</li>
+            </ul>
+            <button class="plan-select-btn">Select Plan B</button>
+          </div>
+
+          <!-- Plan C -->
+          <div class="plan-card" onclick="selectPlan('Plan C')">
+            <h4>Plan C: Pay Mock</h4>
+            <div class="price-box">
+              <span class="price-amount" id="planC-price">Rs. 75</span>
+              <span class="price-period">/ test ticket</span>
+            </div>
+            <ul>
+              <li>Cambridge IELTS Tests</li>
+              <li>Pay-as-you-go tickets</li>
+              <li>No study resource vault</li>
+              <li>Class average metrics</li>
+            </ul>
+            <button class="plan-select-btn">Select Plan C</button>
+          </div>
+        </div>
+
+        <div style="margin-top: 1rem; text-align: center;" class="form-group">
+          <label style="font-size: 0.72rem;">Student Volume (Adjusts Per-License Rates):</label>
+          <select id="volume-select" onchange="adjustPricingRates()" style="padding: 0.4rem; border-radius: 8px; border: 1px solid var(--border-color); font-family: inherit; font-size: 0.8rem; outline: none; margin-top: 0.2rem;">
+            <option value="small">5 - 25 Accounts (Standard)</option>
+            <option value="medium">26 - 99 Accounts (Bulk Discount)</option>
+            <option value="large">100 - 499 Accounts (Enterprise Discount)</option>
+          </select>
+        </div>
+
+        <a href="#" class="back-link" onclick="goBackToStep('role')" style="margin-top: 0.8rem;">← Back</a>
+      </div>
+
+      <!-- Step 3 (Consultancy): Payment Simulator -->
+      <div class="modal-step" id="step-checkout">
+        <h2>Complete Subscription Setup</h2>
+        <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.3rem;" id="checkout-summary">Registering for Plan A (5-25 accounts tier)</p>
+        
+        <form class="checkout-container" onsubmit="handlePaymentSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-name">Consultancy Name</label>
+              <input type="text" id="c-name" required placeholder="e.g. Nepal Education Hub" />
+            </div>
+            <div class="form-group">
+              <label for="c-email">Admin Email (Watermark)</label>
+              <input type="email" id="c-email" required placeholder="admin@consultancy.com" />
+            </div>
+          </div>
+
+          <div style="background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.25rem; margin-top: 1rem;">
+            <span style="font-size: 0.75rem; font-weight: 800; color: var(--text-muted); display: block; margin-bottom: 0.8rem;">💳 SECURE MOCK CHECKOUT</span>
+            
+            <div class="form-group full" style="margin-bottom: 1rem;">
+              <label>Card Number</label>
+              <input type="text" value="4242 4242 4242 4242" disabled style="color: #64748b; background: rgba(15,23,42,0.03);" />
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label>Expiry Date</label>
+                <input type="text" placeholder="MM/YY" required value="12/29" />
+              </div>
+              <div class="form-group">
+                <label>CVC</label>
+                <input type="password" placeholder="•••" required value="123" />
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="checkout-btn" id="payBtn">Pay &amp; Launch CRM Dashboard</button>
+        </form>
+        <a href="#" class="back-link" onclick="goBackToStep('consultancy-pricing')">← Back to Plans</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Selected states
+    let selectedPlan = '';
+    let selectedTier = 'small';
+    
+    // Pricing tiers data
+    const pricingData = {
+      small: { A: 500, B: 350, C: 75 },
+      medium: { A: 400, B: 250, C: 65 },
+      large: { A: 300, B: 180, C: 45 }
+    };
+
+    function openAccessModal() {
+      // Check if already logged in and bypass modal if preferred, but for demo we show it.
+      document.getElementById('accessModal').classList.add('active');
+    }
+
+    function closeAccessModal() {
+      document.getElementById('accessModal').classList.remove('active');
+    }
+
+    function selectRole(role) {
+      showStep('step-role', role === 'student' ? 'step-student' : 'step-consultancy-pricing');
+    }
+
+    function showStep(hideId, showId) {
+      document.getElementById(hideId).classList.remove('active');
+      document.getElementById(showId).classList.add('active');
+    }
+
+    function goBackToStep(targetId) {
+      const activeStep = document.querySelector('.modal-step.active');
+      if (activeStep) {
+        activeStep.classList.remove('active');
+      }
+      document.getElementById(targetId).classList.add('active');
+    }
+
+    function redirectStudent(target) {
+      // Set student credentials in local storage to bypass lock screen
+      localStorage.setItem('viatestprep_unlocked', 'true');
+      localStorage.setItem('viatestprep_user_role', 'student');
+      localStorage.setItem('userEmail', 'student.practice@viatestprep.local');
+      
+      closeAccessModal();
+      
+      if (target === 'hub') {
+        window.location.href = 'resources_hub.html';
       } else {
-        b.classList.remove('active');
+        window.location.href = 'ielts-practice-hub.html';
+      }
+    }
+
+    function adjustPricingRates() {
+      selectedTier = document.getElementById('volume-select').value;
+      const rates = pricingData[selectedTier];
+      
+      document.getElementById('planA-price').textContent = 'Rs. ' + rates.A;
+      document.getElementById('planB-price').textContent = 'Rs. ' + rates.B;
+      document.getElementById('planC-price').textContent = 'Rs. ' + rates.C;
+    }
+
+    function selectPlan(plan) {
+      selectedPlan = plan;
+      const rates = pricingData[selectedTier];
+      const rate = plan === 'Plan A' ? rates.A : (plan === 'Plan B' ? rates.B : rates.C);
+      
+      // Update checkout text
+      const selectText = selectedTier === 'small' ? '5-25 accounts' : (selectedTier === 'medium' ? '26-99 accounts' : '100-499 accounts');
+      const rateLabel = plan === 'Plan C' ? 'per test ticket' : 'per student / month';
+      
+      document.getElementById('checkout-summary').innerHTML = `Registering for <strong>${plan}</strong> (${selectText} tier) at <strong>Rs. ${rate}</strong> ${rateLabel}.`;
+      document.getElementById('payBtn').textContent = `Pay Rs. ${rate * (selectedTier === 'small' ? 5 : (selectedTier === 'medium' ? 26 : 100))} & Launch CRM Dashboard`;
+      
+      showStep('step-consultancy-pricing', 'step-checkout');
+    }
+
+    function handlePaymentSubmit(event) {
+      event.preventDefault();
+      
+      const cName = document.getElementById('c-name').value.trim();
+      const cEmail = document.getElementById('c-email').value.trim();
+      
+      // Simulate payment processing
+      const payButton = document.getElementById('payBtn');
+      payButton.textContent = 'Processing Payment...';
+      payButton.disabled = true;
+      payButton.style.opacity = '0.7';
+      payButton.style.background = '#8a5a00';
+      
+      setTimeout(() => {
+        // Set lock credentials
+        localStorage.setItem('viatestprep_unlocked', 'true');
+        localStorage.setItem('viatestprep_user_role', 'consultancy');
+        localStorage.setItem('viatestprep_consultancy_name', cName);
+        localStorage.setItem('viatestprep_consultancy_plan', selectedPlan);
+        localStorage.setItem('userEmail', cEmail);
+        
+        // Redirect to Consultancy Dashboard
+        window.location.href = 'consultancy_dashboard.html';
+      }, 1500);
+    }
+
+    // Auto-open modal if url query says ?action=pricing or similar
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('access') === 'true') {
+        openAccessModal();
       }
     });
-    filterCategory(filter, null);
-    
-    // Auto close drawer on mobile tab select
-    if (window.innerWidth <= 850) {
-      closeDrawer();
-    }
-  });
-});
-
-// Calc recommendation buttons
-document.querySelectorAll('#calcOptions .calc-btn').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    recommendTrack(this.dataset.track, this);
-  });
-});
-
-// Search input (both desktop & mobile drawer)
-const searchInput = document.getElementById('moduleSearch');
-const drawerSearchInput = document.getElementById('drawerModuleSearch');
-
-function syncSearch(e) {
-  const val = e.target.value;
-  if (searchInput) searchInput.value = val;
-  if (drawerSearchInput) drawerSearchInput.value = val;
-  handleSearch(val);
-}
-
-if (searchInput) searchInput.addEventListener('input', syncSearch);
-if (drawerSearchInput) drawerSearchInput.addEventListener('input', syncSearch);
-
-// Lock status button
-document.getElementById('lockStatusBtn').addEventListener('click', toggleLockState);
-
-// Lock test button in footer
-document.getElementById('lockTestBtn').addEventListener('click', function() {
-  localStorage.removeItem('viatestprep_unlocked');
-  alert('Premium resources locked. Click any lesson module to test the overlay!');
-  location.reload();
-});
-
-</script>
-
-<script src="three-effects.js"></script>
-<!-- Security script at end of body to avoid blocking DOM interactions -->
-<script src="security.js"></script>
-
+  </script>
 </body>
 </html>
