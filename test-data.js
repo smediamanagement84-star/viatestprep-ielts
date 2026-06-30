@@ -1063,7 +1063,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 1,
               "type": "FILL",
-              "text": "Basic membership includes free _________ for all staff.",
+              "text": "_________ provided for all staff.",
               "answer": "training",
               "explanation": "The transcript states: \"For example, all employees get training — even temporary staff.\"",
               "instruction": "Questions 1-5<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Working at Milo's Restaurants</h4>\n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-xs text-indigo-600 uppercase\">Benefits</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li><strong>[1]</strong> _________ provided for all staff</li>\n      <li><strong>[2]</strong> _________ during weekdays at all Milo's Restaurants</li>\n      <li><strong>[3]</strong> _________ provided after midnight</li>\n    </ul>\n  </div>\n  <div class=\"space-y-1 mt-3\">\n    <h5 class=\"font-bold text-xs text-indigo-600 uppercase\">Person specification</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Must care about maintaining a high standard of <strong>[4]</strong> _________</li>\n      <li>Must have a certificate in <strong>[5]</strong> _________</li>\n      <li>Must be prepared to work well in a team</li>\n    </ul>\n  </div>\n</div>"
@@ -1071,18 +1071,18 @@ const IELTS_TEST_DATA = {
             {
               "num": 2,
               "type": "FILL",
-              "text": "All staff receive a _________ at any of their restaurants.",
+              "text": "_________ during weekdays at all Milo's Restaurants.",
               "answer": "discount",
               "explanation": "The transcript states: \"But another benefit of working for a big company like this is that you can get a discount at any of their restaurants.\"",
-              "instruction": "Questions 1-5<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Working at Milo's Restaurants<br/>Benefits<br/>provided for all staff<br/>during weekdays at all Milo's Restaurants<br/>provided after midnight<br/>Person specification<br/>e must be prepared to work well in a team"
+              "instruction": "Questions 1-5<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Working at Milo's Restaurants</h4>\n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-xs text-indigo-600 uppercase\">Benefits</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li><strong>[1]</strong> _________ provided for all staff</li>\n      <li><strong>[2]</strong> _________ during weekdays at all Milo's Restaurants</li>\n      <li><strong>[3]</strong> _________ provided after midnight</li>\n    </ul>\n  </div>\n  <div class=\"space-y-1 mt-3\">\n    <h5 class=\"font-bold text-xs text-indigo-600 uppercase\">Person specification</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Must care about maintaining a high standard of <strong>[4]</strong> _________</li>\n      <li>Must have a certificate in <strong>[5]</strong> _________</li>\n      <li>Must be prepared to work well in a team</li>\n    </ul>\n  </div>\n</div>"
             },
             {
               "num": 3,
               "type": "FILL",
-              "text": "For late shifts ending after midnight, the company pays for a _________ home.",
+              "text": "_________ provided after midnight.",
               "answer": "taxi",
               "explanation": "The transcript states: \"the company will pay for you to get a taxi home.\"",
-              "instruction": "Questions 1-5<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Working at Milo's Restaurants<br/>Benefits<br/>provided for all staff<br/>during weekdays at all Milo's Restaurants<br/>provided after midnight<br/>Person specification<br/>e must be prepared to work well in a team"
+              "instruction": "Questions 1-5<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Working at Milo's Restaurants</h4>\n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-xs text-indigo-600 uppercase\">Benefits</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li><strong>[1]</strong> _________ provided for all staff</li>\n      <li><strong>[2]</strong> _________ during weekdays at all Milo's Restaurants</li>\n      <li><strong>[3]</strong> _________ provided after midnight</li>\n    </ul>\n  </div>\n  <div class=\"space-y-1 mt-3\">\n    <h5 class=\"font-bold text-xs text-indigo-600 uppercase\">Person specification</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Must care about maintaining a high standard of <strong>[4]</strong> _________</li>\n      <li>Must have a certificate in <strong>[5]</strong> _________</li>\n      <li>Must be prepared to work well in a team</li>\n    </ul>\n  </div>\n</div>"
             },
             {
               "num": 4,
@@ -1090,7 +1090,7 @@ const IELTS_TEST_DATA = {
               "text": "Candidate must care about maintaining a high standard of _________.",
               "answer": "service",
               "explanation": "The transcript states: \"We had to make sure we gave a really high level of service.\"",
-              "instruction": "Questions 1-5<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Working at Milo's Restaurants<br/>Benefits<br/>provided for all staff<br/>during weekdays at all Milo's Restaurants<br/>provided after midnight<br/>Person specification<br/>e must be prepared to work well in a team"
+              "instruction": "Questions 1-5<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Working at Milo's Restaurants</h4>\n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-xs text-indigo-600 uppercase\">Benefits</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li><strong>[1]</strong> _________ provided for all staff</li>\n      <li><strong>[2]</strong> _________ during weekdays at all Milo's Restaurants</li>\n      <li><strong>[3]</strong> _________ provided after midnight</li>\n    </ul>\n  </div>\n  <div class=\"space-y-1 mt-3\">\n    <h5 class=\"font-bold text-xs text-indigo-600 uppercase\">Person specification</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Must care about maintaining a high standard of <strong>[4]</strong> _________</li>\n      <li>Must have a certificate in <strong>[5]</strong> _________</li>\n      <li>Must be prepared to work well in a team</li>\n    </ul>\n  </div>\n</div>"
             },
             {
               "num": 5,
@@ -1098,7 +1098,7 @@ const IELTS_TEST_DATA = {
               "text": "Candidate must have a certificate in _________.",
               "answer": "English",
               "explanation": "The transcript states: \"So the only other thing that's required is good communication skills, so you'll need to have a certificate in English.\"",
-              "instruction": "Questions 1-5<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Working at Milo's Restaurants<br/>Benefits<br/>provided for all staff<br/>during weekdays at all Milo's Restaurants<br/>provided after midnight<br/>Person specification<br/>e must be prepared to work well in a team"
+              "instruction": "Questions 1-5<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Working at Milo's Restaurants</h4>\n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-xs text-indigo-600 uppercase\">Benefits</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li><strong>[1]</strong> _________ provided for all staff</li>\n      <li><strong>[2]</strong> _________ during weekdays at all Milo's Restaurants</li>\n      <li><strong>[3]</strong> _________ provided after midnight</li>\n    </ul>\n  </div>\n  <div class=\"space-y-1 mt-3\">\n    <h5 class=\"font-bold text-xs text-indigo-600 uppercase\">Person specification</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Must care about maintaining a high standard of <strong>[4]</strong> _________</li>\n      <li>Must have a certificate in <strong>[5]</strong> _________</li>\n      <li>Must be prepared to work well in a team</li>\n    </ul>\n  </div>\n</div>"
             },
             {
               "num": 6,
@@ -1114,7 +1114,7 @@ const IELTS_TEST_DATA = {
               "text": "Responsibilities include checking the procedures for cleaning the _________.",
               "answer": "equipment",
               "explanation": "The transcript states: \", and then things like checking all the procedures for cleaning the equipment are being followed.\"",
-              "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary £23,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
+              "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/><br/>\n<div class=\"overflow-x-auto border border-slate-200 rounded-xl\">\n  <table class=\"min-w-full text-xs text-left text-slate-700 bg-slate-50\">\n    <thead class=\"bg-slate-100 text-slate-800 uppercase text-[9px] font-black border-b border-slate-200\">\n      <tr>\n        <th class=\"px-3 py-2\">Location</th>\n        <th class=\"px-3 py-2\">Job Title</th>\n        <th class=\"px-3 py-2\">Responsibilities</th>\n        <th class=\"px-3 py-2\">Pay &amp; Conditions</th>\n      </tr>\n    </thead>\n    <tbody class=\"divide-y divide-slate-200\">\n      <tr>\n        <td class=\"px-3 py-2 font-bold\"><strong>[6]</strong> _________ Street</td>\n        <td class=\"px-3 py-2\">Breakfast supervisor</td>\n        <td class=\"px-3 py-2 space-y-1\">\n          <div>• Check portions are correct</div>\n          <div>• Check cleaning of <strong>[7]</strong> _________</div>\n        </td>\n        <td class=\"px-3 py-2\">\n          <div>• Start rate: £<strong>[8]</strong> _________ / hr</div>\n          <div>• Set up at 5:30 am</div>\n        </td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">City Road</td>\n        <td class=\"px-3 py-2\">Junior chef</td>\n        <td class=\"px-3 py-2 space-y-1\">\n          <div>• Support sous chef &amp; senior staff</div>\n          <div>• Sort out <strong>[9]</strong> _________ and stock</div>\n        </td>\n        <td class=\"px-3 py-2\">\n          <div>• Salary: £23,000 / yr</div>\n          <div>• One <strong>[10]</strong> _________ off every 4 weeks</div>\n          <div>• Closed on Mondays</div>\n        </td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
             },
             {
               "num": 8,
@@ -1122,7 +1122,7 @@ const IELTS_TEST_DATA = {
               "text": "The starting salary is £_________ per hour.",
               "answer": "9.75",
               "explanation": "The transcript confirms the answer is '9.75'.",
-              "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary £23,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
+              "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/><br/>\n<div class=\"overflow-x-auto border border-slate-200 rounded-xl\">\n  <table class=\"min-w-full text-xs text-left text-slate-700 bg-slate-50\">\n    <thead class=\"bg-slate-100 text-slate-800 uppercase text-[9px] font-black border-b border-slate-200\">\n      <tr>\n        <th class=\"px-3 py-2\">Location</th>\n        <th class=\"px-3 py-2\">Job Title</th>\n        <th class=\"px-3 py-2\">Responsibilities</th>\n        <th class=\"px-3 py-2\">Pay &amp; Conditions</th>\n      </tr>\n    </thead>\n    <tbody class=\"divide-y divide-slate-200\">\n      <tr>\n        <td class=\"px-3 py-2 font-bold\"><strong>[6]</strong> _________ Street</td>\n        <td class=\"px-3 py-2\">Breakfast supervisor</td>\n        <td class=\"px-3 py-2 space-y-1\">\n          <div>• Check portions are correct</div>\n          <div>• Check cleaning of <strong>[7]</strong> _________</div>\n        </td>\n        <td class=\"px-3 py-2\">\n          <div>• Start rate: £<strong>[8]</strong> _________ / hr</div>\n          <div>• Set up at 5:30 am</div>\n        </td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">City Road</td>\n        <td class=\"px-3 py-2\">Junior chef</td>\n        <td class=\"px-3 py-2 space-y-1\">\n          <div>• Support sous chef &amp; senior staff</div>\n          <div>• Sort out <strong>[9]</strong> _________ and stock</div>\n        </td>\n        <td class=\"px-3 py-2\">\n          <div>• Salary: £23,000 / yr</div>\n          <div>• One <strong>[10]</strong> _________ off every 4 weeks</div>\n          <div>• Closed on Mondays</div>\n        </td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
             },
             {
               "num": 9,
@@ -1130,7 +1130,7 @@ const IELTS_TEST_DATA = {
               "text": "The junior chef will be responsible for stock and sorting out all the _________.",
               "answer": "deliveries",
               "explanation": "The transcript states: \"And you'd be responsible for making sure there's enough stock each week — and sorting out all the deliveries.\"",
-              "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary £23,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
+              "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/><br/>\n<div class=\"overflow-x-auto border border-slate-200 rounded-xl\">\n  <table class=\"min-w-full text-xs text-left text-slate-700 bg-slate-50\">\n    <thead class=\"bg-slate-100 text-slate-800 uppercase text-[9px] font-black border-b border-slate-200\">\n      <tr>\n        <th class=\"px-3 py-2\">Location</th>\n        <th class=\"px-3 py-2\">Job Title</th>\n        <th class=\"px-3 py-2\">Responsibilities</th>\n        <th class=\"px-3 py-2\">Pay &amp; Conditions</th>\n      </tr>\n    </thead>\n    <tbody class=\"divide-y divide-slate-200\">\n      <tr>\n        <td class=\"px-3 py-2 font-bold\"><strong>[6]</strong> _________ Street</td>\n        <td class=\"px-3 py-2\">Breakfast supervisor</td>\n        <td class=\"px-3 py-2 space-y-1\">\n          <div>• Check portions are correct</div>\n          <div>• Check cleaning of <strong>[7]</strong> _________</div>\n        </td>\n        <td class=\"px-3 py-2\">\n          <div>• Start rate: £<strong>[8]</strong> _________ / hr</div>\n          <div>• Set up at 5:30 am</div>\n        </td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">City Road</td>\n        <td class=\"px-3 py-2\">Junior chef</td>\n        <td class=\"px-3 py-2 space-y-1\">\n          <div>• Support sous chef &amp; senior staff</div>\n          <div>• Sort out <strong>[9]</strong> _________ and stock</div>\n        </td>\n        <td class=\"px-3 py-2\">\n          <div>• Salary: £23,000 / yr</div>\n          <div>• One <strong>[10]</strong> _________ off every 4 weeks</div>\n          <div>• Closed on Mondays</div>\n        </td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
             },
             {
               "num": 10,
@@ -1138,7 +1138,7 @@ const IELTS_TEST_DATA = {
               "text": "The branch is closed on Mondays, but staff get one _________ off every four weeks.",
               "answer": "Sunday",
               "explanation": "The transcript states: \"But you do get one Sunday off every four weeks.\"",
-              "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job title sia Seige Pay and conditions include<br/>etc. are correct<br/>Making sure<br/>Start work at<br/>City Road Junior chef Supporting senior | Annual salary £23,000<br/>chefs<br/>No work ona<br/>Maintaining stock<br/>and organising<br/>>[Sp2i [Epi] 20"
+              "instruction": "Questions 6-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/><br/>\n<div class=\"overflow-x-auto border border-slate-200 rounded-xl\">\n  <table class=\"min-w-full text-xs text-left text-slate-700 bg-slate-50\">\n    <thead class=\"bg-slate-100 text-slate-800 uppercase text-[9px] font-black border-b border-slate-200\">\n      <tr>\n        <th class=\"px-3 py-2\">Location</th>\n        <th class=\"px-3 py-2\">Job Title</th>\n        <th class=\"px-3 py-2\">Responsibilities</th>\n        <th class=\"px-3 py-2\">Pay &amp; Conditions</th>\n      </tr>\n    </thead>\n    <tbody class=\"divide-y divide-slate-200\">\n      <tr>\n        <td class=\"px-3 py-2 font-bold\"><strong>[6]</strong> _________ Street</td>\n        <td class=\"px-3 py-2\">Breakfast supervisor</td>\n        <td class=\"px-3 py-2 space-y-1\">\n          <div>• Check portions are correct</div>\n          <div>• Check cleaning of <strong>[7]</strong> _________</div>\n        </td>\n        <td class=\"px-3 py-2\">\n          <div>• Start rate: £<strong>[8]</strong> _________ / hr</div>\n          <div>• Set up at 5:30 am</div>\n        </td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">City Road</td>\n        <td class=\"px-3 py-2\">Junior chef</td>\n        <td class=\"px-3 py-2 space-y-1\">\n          <div>• Support sous chef &amp; senior staff</div>\n          <div>• Sort out <strong>[9]</strong> _________ and stock</div>\n        </td>\n        <td class=\"px-3 py-2\">\n          <div>• Salary: £23,000 / yr</div>\n          <div>• One <strong>[10]</strong> _________ off every 4 weeks</div>\n          <div>• Closed on Mondays</div>\n        </td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
             }
           ]
         },
@@ -1499,7 +1499,7 @@ const IELTS_TEST_DATA = {
               "text": "Men started to wear _________ in the 18th century.",
               "answer": "suits",
               "explanation": "The transcript states: \"that was the time when suits became popular.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Pockets<br/>Reason for choice of subject"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-3 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Pockets in Clothing</h4>\n  \n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-slate-900\">History of Men's Pockets</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Pockets are popular because nothing is as <strong>[31]</strong> _________ as putting items in them.</li>\n      <li>Men started to wear <strong>[32]</strong> _________ in the 18th century.</li>\n      <li>Waistcoat and jacket pockets were sewn into the lining by a <strong>[33]</strong> _________.</li>\n      <li>Pockets were larger and plainer for men with a <strong>[34]</strong> _________ (e.g. doctors).</li>\n    </ul>\n  </div>\n  \n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-slate-900\">History of Women's Pockets</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Women's pockets were less <strong>[35]</strong> _________ than men's.</li>\n      <li>Pockets were produced in pairs using <strong>[36]</strong> _________ to link them together.</li>\n      <li>Pockets hung from the women's <strong>[37]</strong> _________ under skirts and petticoats.</li>\n      <li>Items such as <strong>[38]</strong> _________ could be reached through a gap in the skirt.</li>\n      <li>Bulky pockets were thought to ruin a woman's <strong>[39]</strong> _________.</li>\n      <li>This led to the development of the <strong>[40]</strong> _________.</li>\n    </ul>\n  </div>\n</div>"
             },
             {
               "num": 33,
@@ -1507,7 +1507,7 @@ const IELTS_TEST_DATA = {
               "text": "Waistcoat and jacket pockets were sewn in by a _________.",
               "answer": "tailor",
               "explanation": "The transcript states: \"Trousers were knee-length only and referred to as 'breeches', the waistcoats were short and the jackets were long, but all three garments were lined with material and pockets were sewn into this cloth by whichever tailor the customer used.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Pockets<br/>Reason for choice of subject"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-3 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Pockets in Clothing</h4>\n  \n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-slate-900\">History of Men's Pockets</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Pockets are popular because nothing is as <strong>[31]</strong> _________ as putting items in them.</li>\n      <li>Men started to wear <strong>[32]</strong> _________ in the 18th century.</li>\n      <li>Waistcoat and jacket pockets were sewn into the lining by a <strong>[33]</strong> _________.</li>\n      <li>Pockets were larger and plainer for men with a <strong>[34]</strong> _________ (e.g. doctors).</li>\n    </ul>\n  </div>\n  \n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-slate-900\">History of Women's Pockets</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Women's pockets were less <strong>[35]</strong> _________ than men's.</li>\n      <li>Pockets were produced in pairs using <strong>[36]</strong> _________ to link them together.</li>\n      <li>Pockets hung from the women's <strong>[37]</strong> _________ under skirts and petticoats.</li>\n      <li>Items such as <strong>[38]</strong> _________ could be reached through a gap in the skirt.</li>\n      <li>Bulky pockets were thought to ruin a woman's <strong>[39]</strong> _________.</li>\n      <li>This led to the development of the <strong>[40]</strong> _________.</li>\n    </ul>\n  </div>\n</div>"
             },
             {
               "num": 34,
@@ -1515,7 +1515,7 @@ const IELTS_TEST_DATA = {
               "text": "Pockets were larger and plainer for men with a _________.",
               "answer": "profession",
               "explanation": "The transcript states: \"Coat pockets became increasingly decorative on the outside for men who wanted to look stylish, but they were often larger but plainer if the wearer was someone with a profession who needed to carry medical instruments — a doctor or physician, for example.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Pockets<br/>Reason for choice of subject"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-3 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Pockets in Clothing</h4>\n  \n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-slate-900\">History of Men's Pockets</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Pockets are popular because nothing is as <strong>[31]</strong> _________ as putting items in them.</li>\n      <li>Men started to wear <strong>[32]</strong> _________ in the 18th century.</li>\n      <li>Waistcoat and jacket pockets were sewn into the lining by a <strong>[33]</strong> _________.</li>\n      <li>Pockets were larger and plainer for men with a <strong>[34]</strong> _________ (e.g. doctors).</li>\n    </ul>\n  </div>\n  \n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-slate-900\">History of Women's Pockets</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Women's pockets were less <strong>[35]</strong> _________ than men's.</li>\n      <li>Pockets were produced in pairs using <strong>[36]</strong> _________ to link them together.</li>\n      <li>Pockets hung from the women's <strong>[37]</strong> _________ under skirts and petticoats.</li>\n      <li>Items such as <strong>[38]</strong> _________ could be reached through a gap in the skirt.</li>\n      <li>Bulky pockets were thought to ruin a woman's <strong>[39]</strong> _________.</li>\n      <li>This led to the development of the <strong>[40]</strong> _________.</li>\n    </ul>\n  </div>\n</div>"
             },
             {
               "num": 35,
@@ -1523,7 +1523,7 @@ const IELTS_TEST_DATA = {
               "text": "Women's pockets were less _________ than men's.",
               "answer": "visible",
               "explanation": "The transcript states: \"For one thing, they weren't nearly as visible or as easy to reach as men's.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Pockets<br/>Reason for choice of subject"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-3 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Pockets in Clothing</h4>\n  \n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-slate-900\">History of Men's Pockets</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Pockets are popular because nothing is as <strong>[31]</strong> _________ as putting items in them.</li>\n      <li>Men started to wear <strong>[32]</strong> _________ in the 18th century.</li>\n      <li>Waistcoat and jacket pockets were sewn into the lining by a <strong>[33]</strong> _________.</li>\n      <li>Pockets were larger and plainer for men with a <strong>[34]</strong> _________ (e.g. doctors).</li>\n    </ul>\n  </div>\n  \n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-slate-900\">History of Women's Pockets</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Women's pockets were less <strong>[35]</strong> _________ than men's.</li>\n      <li>Pockets were produced in pairs using <strong>[36]</strong> _________ to link them together.</li>\n      <li>Pockets hung from the women's <strong>[37]</strong> _________ under skirts and petticoats.</li>\n      <li>Items such as <strong>[38]</strong> _________ could be reached through a gap in the skirt.</li>\n      <li>Bulky pockets were thought to ruin a woman's <strong>[39]</strong> _________.</li>\n      <li>This led to the development of the <strong>[40]</strong> _________.</li>\n    </ul>\n  </div>\n</div>"
             },
             {
               "num": 36,
@@ -1531,7 +1531,7 @@ const IELTS_TEST_DATA = {
               "text": "Pockets were produced in pairs using _________ to link them together.",
               "answer": "strings",
               "explanation": "The transcript confirms the answer is 'strings'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Pockets<br/>Reason for choice of subject"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-3 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Pockets in Clothing</h4>\n  \n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-slate-900\">History of Men's Pockets</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Pockets are popular because nothing is as <strong>[31]</strong> _________ as putting items in them.</li>\n      <li>Men started to wear <strong>[32]</strong> _________ in the 18th century.</li>\n      <li>Waistcoat and jacket pockets were sewn into the lining by a <strong>[33]</strong> _________.</li>\n      <li>Pockets were larger and plainer for men with a <strong>[34]</strong> _________ (e.g. doctors).</li>\n    </ul>\n  </div>\n  \n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-slate-900\">History of Women's Pockets</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Women's pockets were less <strong>[35]</strong> _________ than men's.</li>\n      <li>Pockets were produced in pairs using <strong>[36]</strong> _________ to link them together.</li>\n      <li>Pockets hung from the women's <strong>[37]</strong> _________ under skirts and petticoats.</li>\n      <li>Items such as <strong>[38]</strong> _________ could be reached through a gap in the skirt.</li>\n      <li>Bulky pockets were thought to ruin a woman's <strong>[39]</strong> _________.</li>\n      <li>This led to the development of the <strong>[40]</strong> _________.</li>\n    </ul>\n  </div>\n</div>"
             },
             {
               "num": 37,
@@ -1539,7 +1539,7 @@ const IELTS_TEST_DATA = {
               "text": "Pockets hung from the women's _________ under skirts and petticoats.",
               "answer": "waist",
               "explanation": "The transcript states: \"Trousers were knee-length only and referred to as 'breeches', the waistcoats were short and the jackets were long, but all three garments were lined with material and pockets were sewn into this cloth by whichever tailor the customer used.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Pockets<br/>Reason for choice of subject"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-3 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Pockets in Clothing</h4>\n  \n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-slate-900\">History of Men's Pockets</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Pockets are popular because nothing is as <strong>[31]</strong> _________ as putting items in them.</li>\n      <li>Men started to wear <strong>[32]</strong> _________ in the 18th century.</li>\n      <li>Waistcoat and jacket pockets were sewn into the lining by a <strong>[33]</strong> _________.</li>\n      <li>Pockets were larger and plainer for men with a <strong>[34]</strong> _________ (e.g. doctors).</li>\n    </ul>\n  </div>\n  \n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-slate-900\">History of Women's Pockets</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Women's pockets were less <strong>[35]</strong> _________ than men's.</li>\n      <li>Pockets were produced in pairs using <strong>[36]</strong> _________ to link them together.</li>\n      <li>Pockets hung from the women's <strong>[37]</strong> _________ under skirts and petticoats.</li>\n      <li>Items such as <strong>[38]</strong> _________ could be reached through a gap in the skirt.</li>\n      <li>Bulky pockets were thought to ruin a woman's <strong>[39]</strong> _________.</li>\n      <li>This led to the development of the <strong>[40]</strong> _________.</li>\n    </ul>\n  </div>\n</div>"
             },
             {
               "num": 38,
@@ -1547,7 +1547,7 @@ const IELTS_TEST_DATA = {
               "text": "Items such as _________ could be reached through a gap in the skirt.",
               "answer": "perfume",
               "explanation": "The transcript states: \"They would have an opening in the folds of their skirts through which they could reach whatever they needed, like their perfume.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Pockets<br/>Reason for choice of subject"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-3 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Pockets in Clothing</h4>\n  \n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-slate-900\">History of Men's Pockets</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Pockets are popular because nothing is as <strong>[31]</strong> _________ as putting items in them.</li>\n      <li>Men started to wear <strong>[32]</strong> _________ in the 18th century.</li>\n      <li>Waistcoat and jacket pockets were sewn into the lining by a <strong>[33]</strong> _________.</li>\n      <li>Pockets were larger and plainer for men with a <strong>[34]</strong> _________ (e.g. doctors).</li>\n    </ul>\n  </div>\n  \n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-slate-900\">History of Women's Pockets</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Women's pockets were less <strong>[35]</strong> _________ than men's.</li>\n      <li>Pockets were produced in pairs using <strong>[36]</strong> _________ to link them together.</li>\n      <li>Pockets hung from the women's <strong>[37]</strong> _________ under skirts and petticoats.</li>\n      <li>Items such as <strong>[38]</strong> _________ could be reached through a gap in the skirt.</li>\n      <li>Bulky pockets were thought to ruin a woman's <strong>[39]</strong> _________.</li>\n      <li>This led to the development of the <strong>[40]</strong> _________.</li>\n    </ul>\n  </div>\n</div>"
             },
             {
               "num": 39,
@@ -1555,7 +1555,7 @@ const IELTS_TEST_DATA = {
               "text": "Bulky pockets were thought to ruin a woman's _________.",
               "answer": "image",
               "explanation": "The transcript states: \"and the pairs of pockets became very noticeable — they stood out too much and detracted from the woman's image.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Pockets<br/>Reason for choice of subject"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-3 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Pockets in Clothing</h4>\n  \n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-slate-900\">History of Men's Pockets</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Pockets are popular because nothing is as <strong>[31]</strong> _________ as putting items in them.</li>\n      <li>Men started to wear <strong>[32]</strong> _________ in the 18th century.</li>\n      <li>Waistcoat and jacket pockets were sewn into the lining by a <strong>[33]</strong> _________.</li>\n      <li>Pockets were larger and plainer for men with a <strong>[34]</strong> _________ (e.g. doctors).</li>\n    </ul>\n  </div>\n  \n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-slate-900\">History of Women's Pockets</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Women's pockets were less <strong>[35]</strong> _________ than men's.</li>\n      <li>Pockets were produced in pairs using <strong>[36]</strong> _________ to link them together.</li>\n      <li>Pockets hung from the women's <strong>[37]</strong> _________ under skirts and petticoats.</li>\n      <li>Items such as <strong>[38]</strong> _________ could be reached through a gap in the skirt.</li>\n      <li>Bulky pockets were thought to ruin a woman's <strong>[39]</strong> _________.</li>\n      <li>This led to the development of the <strong>[40]</strong> _________.</li>\n    </ul>\n  </div>\n</div>"
             },
             {
               "num": 40,
@@ -1563,7 +1563,7 @@ const IELTS_TEST_DATA = {
               "text": "This led to the development of the _________.",
               "answer": "handbag",
               "explanation": "The transcript states: \"That was when small bags, or pouches as they were known, came into fashion and, of course, they inevitably led on to the handbag of more modern times, particularly when fashion removed pockets altogether.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Pockets<br/>Reason for choice of subject"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-3 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Pockets in Clothing</h4>\n  \n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-slate-900\">History of Men's Pockets</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Pockets are popular because nothing is as <strong>[31]</strong> _________ as putting items in them.</li>\n      <li>Men started to wear <strong>[32]</strong> _________ in the 18th century.</li>\n      <li>Waistcoat and jacket pockets were sewn into the lining by a <strong>[33]</strong> _________.</li>\n      <li>Pockets were larger and plainer for men with a <strong>[34]</strong> _________ (e.g. doctors).</li>\n    </ul>\n  </div>\n  \n  <div class=\"space-y-1\">\n    <h5 class=\"font-bold text-slate-900\">History of Women's Pockets</h5>\n    <ul class=\"list-disc pl-4 space-y-1\">\n      <li>Women's pockets were less <strong>[35]</strong> _________ than men's.</li>\n      <li>Pockets were produced in pairs using <strong>[36]</strong> _________ to link them together.</li>\n      <li>Pockets hung from the women's <strong>[37]</strong> _________ under skirts and petticoats.</li>\n      <li>Items such as <strong>[38]</strong> _________ could be reached through a gap in the skirt.</li>\n      <li>Bulky pockets were thought to ruin a woman's <strong>[39]</strong> _________.</li>\n      <li>This led to the development of the <strong>[40]</strong> _________.</li>\n    </ul>\n  </div>\n</div>"
             }
           ]
         }
@@ -2129,7 +2129,7 @@ const IELTS_TEST_DATA = {
               "text": "Heard about us from a _________.",
               "answer": "relative",
               "explanation": "The transcript states: \"DAN: | usually do that, but this time, well, | was talking to a relative the other day and he suggested it.\"",
-              "instruction": "Questions 1—4<br/>Complete the form below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Wayside Camera Club<br/>membership form<br/>Name: Dan Green<br/>Email address: dan1068@market.com<br/>Home address:<br/>Heard about us:<br/>Reasons for joining:<br/>Type of membership:"
+              "instruction": "Questions 1-4<br/>Complete the form below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Wayside Camera Club Membership Form</h4>\n  <div class=\"grid grid-cols-2 gap-2 text-xs\">\n    <div><strong>Name:</strong> Dan Green</div>\n    <div><strong>Email:</strong> dan1068@market.com</div>\n    <div class=\"col-span-2\"><strong>Home address:</strong> 52 <strong>[1]</strong> _________ Street</div>\n    <div class=\"col-span-2\"><strong>Heard about us from:</strong> a <strong>[2]</strong> _________</div>\n    <div class=\"col-span-2\"><strong>Reasons for joining:</strong> to <strong>[3]</strong> _________ with other photographers</div>\n    <div class=\"col-span-2\"><strong>Type of membership:</strong> <strong>[4]</strong> _________ membership</div>\n  </div>\n</div>"
             },
             {
               "num": 3,
@@ -2137,7 +2137,7 @@ const IELTS_TEST_DATA = {
               "text": "Reasons for joining: to _________ with other photographers.",
               "answer": "socialise",
               "explanation": "The transcript states: \"DAN: Well, also like to socialise with other photographers.\"",
-              "instruction": "Questions 1—4<br/>Complete the form below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Wayside Camera Club<br/>membership form<br/>Name: Dan Green<br/>Email address: dan1068@market.com<br/>Home address:<br/>Heard about us:<br/>Reasons for joining:<br/>Type of membership:"
+              "instruction": "Questions 1-4<br/>Complete the form below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Wayside Camera Club Membership Form</h4>\n  <div class=\"grid grid-cols-2 gap-2 text-xs\">\n    <div><strong>Name:</strong> Dan Green</div>\n    <div><strong>Email:</strong> dan1068@market.com</div>\n    <div class=\"col-span-2\"><strong>Home address:</strong> 52 <strong>[1]</strong> _________ Street</div>\n    <div class=\"col-span-2\"><strong>Heard about us from:</strong> a <strong>[2]</strong> _________</div>\n    <div class=\"col-span-2\"><strong>Reasons for joining:</strong> to <strong>[3]</strong> _________ with other photographers</div>\n    <div class=\"col-span-2\"><strong>Type of membership:</strong> <strong>[4]</strong> _________ membership</div>\n  </div>\n</div>"
             },
             {
               "num": 4,
@@ -2145,7 +2145,7 @@ const IELTS_TEST_DATA = {
               "text": "Type of membership: _________ membership.",
               "answer": "full",
               "explanation": "The transcript states: \"BREDA It's £30 a year for full membership or £20 a year if you're an associate.\"",
-              "instruction": "Questions 1—4<br/>Complete the form below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Wayside Camera Club<br/>membership form<br/>Name: Dan Green<br/>Email address: dan1068@market.com<br/>Home address:<br/>Heard about us:<br/>Reasons for joining:<br/>Type of membership:"
+              "instruction": "Questions 1-4<br/>Complete the form below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Wayside Camera Club Membership Form</h4>\n  <div class=\"grid grid-cols-2 gap-2 text-xs\">\n    <div><strong>Name:</strong> Dan Green</div>\n    <div><strong>Email:</strong> dan1068@market.com</div>\n    <div class=\"col-span-2\"><strong>Home address:</strong> 52 <strong>[1]</strong> _________ Street</div>\n    <div class=\"col-span-2\"><strong>Heard about us from:</strong> a <strong>[2]</strong> _________</div>\n    <div class=\"col-span-2\"><strong>Reasons for joining:</strong> to <strong>[3]</strong> _________ with other photographers</div>\n    <div class=\"col-span-2\"><strong>Type of membership:</strong> <strong>[4]</strong> _________ membership</div>\n  </div>\n</div>"
             },
             {
               "num": 5,
@@ -2161,7 +2161,7 @@ const IELTS_TEST_DATA = {
               "text": "Instructions: must capture the _________ as well.",
               "answer": "clouds",
               "explanation": "The transcript states: \"The instructions were to capture the clouds as well — it couldn't just be blue sky and a setting sun.\"",
-              "instruction": "Questions 5—10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
+              "instruction": "Questions 5-10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/><br/>\n<div class=\"overflow-x-auto border border-slate-200 rounded-xl\">\n  <table class=\"min-w-full text-xs text-left text-slate-700 bg-slate-50\">\n    <thead class=\"bg-slate-100 text-slate-800 uppercase text-[9px] font-black border-b border-slate-200\">\n      <tr>\n        <th class=\"px-3 py-2\">Title of Competition</th>\n        <th class=\"px-3 py-2\">Instructions</th>\n        <th class=\"px-3 py-2\">Feedback to Dan</th>\n      </tr>\n    </thead>\n    <tbody class=\"divide-y divide-slate-200\">\n      <tr>\n        <td class=\"px-3 py-2 font-bold\"><strong>[5]</strong> _________</td>\n        <td class=\"px-3 py-2\">A scene in the home</td>\n        <td class=\"px-3 py-2\">The picture's composition was not good.</td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">Beautiful Sundown</td>\n        <td class=\"px-3 py-2\">Must capture the <strong>[6]</strong> _________ as well</td>\n        <td class=\"px-3 py-2\">The <strong>[7]</strong> _________ was wrong.</td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\"><strong>[8]</strong> _________</td>\n        <td class=\"px-3 py-2\">There had to be some <strong>[9]</strong> _________ in the scene</td>\n        <td class=\"px-3 py-2\">The photograph was too <strong>[10]</strong> _________.</td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
             },
             {
               "num": 7,
@@ -2169,7 +2169,7 @@ const IELTS_TEST_DATA = {
               "text": "Feedback: the _________ wasn't right.",
               "answer": "timing",
               "explanation": "The transcript states: \"So the timing wasn't right.\"",
-              "instruction": "Questions 5—10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
+              "instruction": "Questions 5-10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/><br/>\n<div class=\"overflow-x-auto border border-slate-200 rounded-xl\">\n  <table class=\"min-w-full text-xs text-left text-slate-700 bg-slate-50\">\n    <thead class=\"bg-slate-100 text-slate-800 uppercase text-[9px] font-black border-b border-slate-200\">\n      <tr>\n        <th class=\"px-3 py-2\">Title of Competition</th>\n        <th class=\"px-3 py-2\">Instructions</th>\n        <th class=\"px-3 py-2\">Feedback to Dan</th>\n      </tr>\n    </thead>\n    <tbody class=\"divide-y divide-slate-200\">\n      <tr>\n        <td class=\"px-3 py-2 font-bold\"><strong>[5]</strong> _________</td>\n        <td class=\"px-3 py-2\">A scene in the home</td>\n        <td class=\"px-3 py-2\">The picture's composition was not good.</td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">Beautiful Sundown</td>\n        <td class=\"px-3 py-2\">Must capture the <strong>[6]</strong> _________ as well</td>\n        <td class=\"px-3 py-2\">The <strong>[7]</strong> _________ was wrong.</td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\"><strong>[8]</strong> _________</td>\n        <td class=\"px-3 py-2\">There had to be some <strong>[9]</strong> _________ in the scene</td>\n        <td class=\"px-3 py-2\">The photograph was too <strong>[10]</strong> _________.</td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
             },
             {
               "num": 8,
@@ -2177,7 +2177,7 @@ const IELTS_TEST_DATA = {
               "text": "Title of second competition entered: _________.",
               "answer": "Animal Magic",
               "explanation": "The transcript states: \"And then the third competition | entered was called 'Animal Magic'.\"",
-              "instruction": "Questions 5—10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
+              "instruction": "Questions 5-10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/><br/>\n<div class=\"overflow-x-auto border border-slate-200 rounded-xl\">\n  <table class=\"min-w-full text-xs text-left text-slate-700 bg-slate-50\">\n    <thead class=\"bg-slate-100 text-slate-800 uppercase text-[9px] font-black border-b border-slate-200\">\n      <tr>\n        <th class=\"px-3 py-2\">Title of Competition</th>\n        <th class=\"px-3 py-2\">Instructions</th>\n        <th class=\"px-3 py-2\">Feedback to Dan</th>\n      </tr>\n    </thead>\n    <tbody class=\"divide-y divide-slate-200\">\n      <tr>\n        <td class=\"px-3 py-2 font-bold\"><strong>[5]</strong> _________</td>\n        <td class=\"px-3 py-2\">A scene in the home</td>\n        <td class=\"px-3 py-2\">The picture's composition was not good.</td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">Beautiful Sundown</td>\n        <td class=\"px-3 py-2\">Must capture the <strong>[6]</strong> _________ as well</td>\n        <td class=\"px-3 py-2\">The <strong>[7]</strong> _________ was wrong.</td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\"><strong>[8]</strong> _________</td>\n        <td class=\"px-3 py-2\">There had to be some <strong>[9]</strong> _________ in the scene</td>\n        <td class=\"px-3 py-2\">The photograph was too <strong>[10]</strong> _________.</td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
             },
             {
               "num": 9,
@@ -2185,7 +2185,7 @@ const IELTS_TEST_DATA = {
               "text": "Instructions: there had to be some _________ in the scene.",
               "answer": "movement",
               "explanation": "The transcript states: \"DAN: That's what we had to show — there had to be some movement in the scene.\"",
-              "instruction": "Questions 5—10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
+              "instruction": "Questions 5-10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/><br/>\n<div class=\"overflow-x-auto border border-slate-200 rounded-xl\">\n  <table class=\"min-w-full text-xs text-left text-slate-700 bg-slate-50\">\n    <thead class=\"bg-slate-100 text-slate-800 uppercase text-[9px] font-black border-b border-slate-200\">\n      <tr>\n        <th class=\"px-3 py-2\">Title of Competition</th>\n        <th class=\"px-3 py-2\">Instructions</th>\n        <th class=\"px-3 py-2\">Feedback to Dan</th>\n      </tr>\n    </thead>\n    <tbody class=\"divide-y divide-slate-200\">\n      <tr>\n        <td class=\"px-3 py-2 font-bold\"><strong>[5]</strong> _________</td>\n        <td class=\"px-3 py-2\">A scene in the home</td>\n        <td class=\"px-3 py-2\">The picture's composition was not good.</td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">Beautiful Sundown</td>\n        <td class=\"px-3 py-2\">Must capture the <strong>[6]</strong> _________ as well</td>\n        <td class=\"px-3 py-2\">The <strong>[7]</strong> _________ was wrong.</td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\"><strong>[8]</strong> _________</td>\n        <td class=\"px-3 py-2\">There had to be some <strong>[9]</strong> _________ in the scene</td>\n        <td class=\"px-3 py-2\">The photograph was too <strong>[10]</strong> _________.</td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
             },
             {
               "num": 10,
@@ -2193,7 +2193,7 @@ const IELTS_TEST_DATA = {
               "text": "Feedback: the photograph was too _________.",
               "answer": "dark",
               "explanation": "The transcript states: \"| got a great shot of a fox in the end, but | took it at night and, well, | suspected that it was a bit dark, which is what 1 was told.\"",
-              "instruction": "Questions 5—10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/>Photography competitions<br/>Title of competition | Instructions Feedback to Dan<br/>siecle sSeaaca Panpauaenanest >}Ascene inthe home _ | The picture's composition was not good.<br/>was wrong.<br/>The photograph was too<br/>CC rn ;<br/>~>(@ p. 123] (B p.109] 55"
+              "instruction": "Questions 5-10<br/>Complete the table below.<br/>Write NO MORE THAN TWO WORDS for each answer.<br/><br/>\n<div class=\"overflow-x-auto border border-slate-200 rounded-xl\">\n  <table class=\"min-w-full text-xs text-left text-slate-700 bg-slate-50\">\n    <thead class=\"bg-slate-100 text-slate-800 uppercase text-[9px] font-black border-b border-slate-200\">\n      <tr>\n        <th class=\"px-3 py-2\">Title of Competition</th>\n        <th class=\"px-3 py-2\">Instructions</th>\n        <th class=\"px-3 py-2\">Feedback to Dan</th>\n      </tr>\n    </thead>\n    <tbody class=\"divide-y divide-slate-200\">\n      <tr>\n        <td class=\"px-3 py-2 font-bold\"><strong>[5]</strong> _________</td>\n        <td class=\"px-3 py-2\">A scene in the home</td>\n        <td class=\"px-3 py-2\">The picture's composition was not good.</td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">Beautiful Sundown</td>\n        <td class=\"px-3 py-2\">Must capture the <strong>[6]</strong> _________ as well</td>\n        <td class=\"px-3 py-2\">The <strong>[7]</strong> _________ was wrong.</td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\"><strong>[8]</strong> _________</td>\n        <td class=\"px-3 py-2\">There had to be some <strong>[9]</strong> _________ in the scene</td>\n        <td class=\"px-3 py-2\">The photograph was too <strong>[10]</strong> _________.</td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
             }
           ]
         },
@@ -2563,7 +2563,7 @@ const IELTS_TEST_DATA = {
               "text": "e Satellites are now quite _________ and therefore more widespread",
               "answer": "cheap",
               "explanation": "The transcript states: \"Well, for one thing, satellites are relatively cheap these days, compared with how they were in the past, meaning that more people can afford to put them into space.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Space Traffic Management<br/>A Space Traffic Management system<br/>e is aconcept similar to Air Traffic Control, but for satellites rather than planes."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Space Traffic Management</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>We need to develop the <strong>[31]</strong> _________ systems to prevent accidents.</li>\n    <li>A Space Traffic Management system is a concept similar to Air Traffic Control, but for satellites rather than planes.</li>\n    <li>Satellites do not need to send information back to allow their <strong>[34]</strong> _________.</li>\n    <li>Some satellites are launched for <strong>[36]</strong> _________ or commercial reasons.</li>\n    <li>The collected space debris data will be entered onto a single <strong>[39]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 33,
@@ -2571,7 +2571,7 @@ const IELTS_TEST_DATA = {
               "text": "(e.g. there are constellations made up of _________ of satellites).",
               "answer": "thousands",
               "explanation": "The transcript states: \"consisting of thousands of them designed to work together.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Space Traffic Management<br/>A Space Traffic Management system<br/>e is aconcept similar to Air Traffic Control, but for satellites rather than planes."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Space Traffic Management</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>We need to develop the <strong>[31]</strong> _________ systems to prevent accidents.</li>\n    <li>A Space Traffic Management system is a concept similar to Air Traffic Control, but for satellites rather than planes.</li>\n    <li>Satellites do not need to send information back to allow their <strong>[34]</strong> _________.</li>\n    <li>Some satellites are launched for <strong>[36]</strong> _________ or commercial reasons.</li>\n    <li>The collected space debris data will be entered onto a single <strong>[39]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 34,
@@ -2579,7 +2579,7 @@ const IELTS_TEST_DATA = {
               "text": "Satellites do not need to send information back to allow their _________.",
               "answer": "identification",
               "explanation": "The transcript states: \"But in spite of this, one thing you may be surprised to learn is that you can launch a satellite into space and, once it's out there, it doesn't have to send back any information to Earth to allow its identification.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Space Traffic Management<br/>A Space Traffic Management system<br/>e is aconcept similar to Air Traffic Control, but for satellites rather than planes."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Space Traffic Management</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>We need to develop the <strong>[31]</strong> _________ systems to prevent accidents.</li>\n    <li>A Space Traffic Management system is a concept similar to Air Traffic Control, but for satellites rather than planes.</li>\n    <li>Satellites do not need to send information back to allow their <strong>[34]</strong> _________.</li>\n    <li>Some satellites are launched for <strong>[36]</strong> _________ or commercial reasons.</li>\n    <li>The collected space debris data will be entered onto a single <strong>[39]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 35,
@@ -2587,7 +2587,7 @@ const IELTS_TEST_DATA = {
               "text": "There are few systems for _________ satellites.",
               "answer": "tracking",
               "explanation": "The transcript states: \"So while we have international systems for ensuring we know where the planes in our skies are, and to prevent them from colliding with one another, when it comes to the safety of satellites, at present we don't have anything like enough proper ways_ of tracking them.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Space Traffic Management<br/>A Space Traffic Management system<br/>e is aconcept similar to Air Traffic Control, but for satellites rather than planes."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Space Traffic Management</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>We need to develop the <strong>[31]</strong> _________ systems to prevent accidents.</li>\n    <li>A Space Traffic Management system is a concept similar to Air Traffic Control, but for satellites rather than planes.</li>\n    <li>Satellites do not need to send information back to allow their <strong>[34]</strong> _________.</li>\n    <li>Some satellites are launched for <strong>[36]</strong> _________ or commercial reasons.</li>\n    <li>The collected space debris data will be entered onto a single <strong>[39]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 36,
@@ -2595,7 +2595,7 @@ const IELTS_TEST_DATA = {
               "text": "Some satellites are launched for _________ or commercial reasons.",
               "answer": "military",
               "explanation": "The transcript states: \"For example, a satellite may be designed for military purposes, or it may have been launched for commercial reasons, and the operators don't want competitors to have information about it.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Space Traffic Management<br/>A Space Traffic Management system<br/>e is aconcept similar to Air Traffic Control, but for satellites rather than planes."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Space Traffic Management</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>We need to develop the <strong>[31]</strong> _________ systems to prevent accidents.</li>\n    <li>A Space Traffic Management system is a concept similar to Air Traffic Control, but for satellites rather than planes.</li>\n    <li>Satellites do not need to send information back to allow their <strong>[34]</strong> _________.</li>\n    <li>Some satellites are launched for <strong>[36]</strong> _________ or commercial reasons.</li>\n    <li>The collected space debris data will be entered onto a single <strong>[39]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 37,
@@ -2603,7 +2603,7 @@ const IELTS_TEST_DATA = {
               "text": "It may be hard to collect details of the object's _________ at a given",
               "answer": "location",
               "explanation": "The transcript states: \"Details are needed about the object itself, as well as about its location at a particular time — and remember that a satellite isn't very big, and it's likely to be moving at thousands of kilometres an hour.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Space Traffic Management<br/>A Space Traffic Management system<br/>e is aconcept similar to Air Traffic Control, but for satellites rather than planes."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Space Traffic Management</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>We need to develop the <strong>[31]</strong> _________ systems to prevent accidents.</li>\n    <li>A Space Traffic Management system is a concept similar to Air Traffic Control, but for satellites rather than planes.</li>\n    <li>Satellites do not need to send information back to allow their <strong>[34]</strong> _________.</li>\n    <li>Some satellites are launched for <strong>[36]</strong> _________ or commercial reasons.</li>\n    <li>The collected space debris data will be entered onto a single <strong>[39]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 38,
@@ -2611,7 +2611,7 @@ const IELTS_TEST_DATA = {
               "text": "e Scientists can only make a _________ about where the satellite will go.",
               "answer": "prediction",
               "explanation": "The transcript states: \"We don't have any sensors that can constantly follow something moving so fast, so all that the scientists can do is to put forward a prediction concerning where the satellite is heading next.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Space Traffic Management<br/>A Space Traffic Management system<br/>e is aconcept similar to Air Traffic Control, but for satellites rather than planes."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Space Traffic Management</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>We need to develop the <strong>[31]</strong> _________ systems to prevent accidents.</li>\n    <li>A Space Traffic Management system is a concept similar to Air Traffic Control, but for satellites rather than planes.</li>\n    <li>Satellites do not need to send information back to allow their <strong>[34]</strong> _________.</li>\n    <li>Some satellites are launched for <strong>[36]</strong> _________ or commercial reasons.</li>\n    <li>The collected space debris data will be entered onto a single <strong>[39]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 39,
@@ -2619,7 +2619,7 @@ const IELTS_TEST_DATA = {
               "text": "The collected space debris data will be entered onto a single _________.",
               "answer": "database",
               "explanation": "The transcript states: \"Then, as all this information's collected, it needs to be put together so it can be used, and that will involve creating a single database on which it can be entered.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Space Traffic Management<br/>A Space Traffic Management system<br/>e is aconcept similar to Air Traffic Control, but for satellites rather than planes."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Space Traffic Management</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>We need to develop the <strong>[31]</strong> _________ systems to prevent accidents.</li>\n    <li>A Space Traffic Management system is a concept similar to Air Traffic Control, but for satellites rather than planes.</li>\n    <li>Satellites do not need to send information back to allow their <strong>[34]</strong> _________.</li>\n    <li>Some satellites are launched for <strong>[36]</strong> _________ or commercial reasons.</li>\n    <li>The collected space debris data will be entered onto a single <strong>[39]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 40,
@@ -2627,7 +2627,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 31-_________",
               "answer": "trust",
               "explanation": "The transcript states: \"To cope with this, we need to develop a system like the one I've described to coordinate the work of the numerous spacecraft operators, but it's also essential that this system is one that establishes trust in the people that use it, both nationally and at a global level.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Space Traffic Management<br/>A Space Traffic Management system<br/>e is aconcept similar to Air Traffic Control, but for satellites rather than planes."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Space Traffic Management</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>We need to develop the <strong>[31]</strong> _________ systems to prevent accidents.</li>\n    <li>A Space Traffic Management system is a concept similar to Air Traffic Control, but for satellites rather than planes.</li>\n    <li>Satellites do not need to send information back to allow their <strong>[34]</strong> _________.</li>\n    <li>Some satellites are launched for <strong>[36]</strong> _________ or commercial reasons.</li>\n    <li>The collected space debris data will be entered onto a single <strong>[39]</strong> _________.</li>\n  </ul>\n</div>"
             }
           ]
         }
@@ -3311,15 +3311,15 @@ const IELTS_TEST_DATA = {
               "text": "Location: at the _________ centre in Fordham.",
               "answer": "Medical",
               "explanation": "The transcript states: \"Well, this job's in Fordham, so not too far away for you, and it's at the medical centre there.\"",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job details from employment agency<br/>Location<br/>Work involves<br/>dealing with enquiries"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Job Details from Employment Agency</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Position Title:</strong> <strong>[1]</strong> _________</li>\n    <li><strong>Location:</strong> at the <strong>[2]</strong> _________ centre in Fordham.</li>\n    <li><strong>Address:</strong> 7 <strong>[3]</strong> _________ Road (near the station).</li>\n    <li><strong>Work involves:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>dealing with enquiries</li>\n        <li>making <strong>[4]</strong> _________</li>\n        <li>maintaining the internal <strong>[5]</strong> _________</li>\n      </ul>\n    </li>\n    <li><strong>Requirements:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>they require someone with <strong>[6]</strong> _________</li>\n        <li>must stay calm under stress and be <strong>[7]</strong> _________ when interacting with public</li>\n      </ul>\n    </li>\n    <li><strong>Hours:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>7.45 am to <strong>[9]</strong> _________ pm, Monday to Friday</li>\n      </ul>\n    </li>\n    <li><strong>Contract details:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>the position is <strong>[8]</strong> _________ (to the end of September)</li>\n      </ul>\n    </li>\n    <li><strong>Staff benefits:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>free <strong>[10]</strong> _________ is available</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 3,
               "type": "FILL",
-              "text": "Address: on _________ Road.",
+              "text": "Address: 7 _________ Road (near the station).",
               "answer": "Chastons",
               "explanation": "The transcript states: \"GREG: It's quite near the station, on Chastons Road.\"",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job details from employment agency<br/>Location<br/>Work involves<br/>dealing with enquiries"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Job Details from Employment Agency</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Position Title:</strong> <strong>[1]</strong> _________</li>\n    <li><strong>Location:</strong> at the <strong>[2]</strong> _________ centre in Fordham.</li>\n    <li><strong>Address:</strong> 7 <strong>[3]</strong> _________ Road (near the station).</li>\n    <li><strong>Work involves:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>dealing with enquiries</li>\n        <li>making <strong>[4]</strong> _________</li>\n        <li>maintaining the internal <strong>[5]</strong> _________</li>\n      </ul>\n    </li>\n    <li><strong>Requirements:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>they require someone with <strong>[6]</strong> _________</li>\n        <li>must stay calm under stress and be <strong>[7]</strong> _________ when interacting with public</li>\n      </ul>\n    </li>\n    <li><strong>Hours:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>7.45 am to <strong>[9]</strong> _________ pm, Monday to Friday</li>\n      </ul>\n    </li>\n    <li><strong>Contract details:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>the position is <strong>[8]</strong> _________ (to the end of September)</li>\n      </ul>\n    </li>\n    <li><strong>Staff benefits:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>free <strong>[10]</strong> _________ is available</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 4,
@@ -3327,7 +3327,7 @@ const IELTS_TEST_DATA = {
               "text": "making _________",
               "answer": "appointments",
               "explanation": "The transcript states: \"GREG: Yes, and you'd also be involved in making appointments, whether face to face or on the phone.\"",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job details from employment agency<br/>Location<br/>Work involves<br/>dealing with enquiries"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Job Details from Employment Agency</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Position Title:</strong> <strong>[1]</strong> _________</li>\n    <li><strong>Location:</strong> at the <strong>[2]</strong> _________ centre in Fordham.</li>\n    <li><strong>Address:</strong> 7 <strong>[3]</strong> _________ Road (near the station).</li>\n    <li><strong>Work involves:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>dealing with enquiries</li>\n        <li>making <strong>[4]</strong> _________</li>\n        <li>maintaining the internal <strong>[5]</strong> _________</li>\n      </ul>\n    </li>\n    <li><strong>Requirements:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>they require someone with <strong>[6]</strong> _________</li>\n        <li>must stay calm under stress and be <strong>[7]</strong> _________ when interacting with public</li>\n      </ul>\n    </li>\n    <li><strong>Hours:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>7.45 am to <strong>[9]</strong> _________ pm, Monday to Friday</li>\n      </ul>\n    </li>\n    <li><strong>Contract details:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>the position is <strong>[8]</strong> _________ (to the end of September)</li>\n      </ul>\n    </li>\n    <li><strong>Staff benefits:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>free <strong>[10]</strong> _________ is available</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 5,
@@ -3335,7 +3335,7 @@ const IELTS_TEST_DATA = {
               "text": "maintaining the internal _________",
               "answer": "database",
               "explanation": "The transcript states: \"GREG: And another of your duties would be keeping the centre's database up-to-date.\"",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job details from employment agency<br/>Location<br/>Work involves<br/>dealing with enquiries"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Job Details from Employment Agency</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Position Title:</strong> <strong>[1]</strong> _________</li>\n    <li><strong>Location:</strong> at the <strong>[2]</strong> _________ centre in Fordham.</li>\n    <li><strong>Address:</strong> 7 <strong>[3]</strong> _________ Road (near the station).</li>\n    <li><strong>Work involves:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>dealing with enquiries</li>\n        <li>making <strong>[4]</strong> _________</li>\n        <li>maintaining the internal <strong>[5]</strong> _________</li>\n      </ul>\n    </li>\n    <li><strong>Requirements:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>they require someone with <strong>[6]</strong> _________</li>\n        <li>must stay calm under stress and be <strong>[7]</strong> _________ when interacting with public</li>\n      </ul>\n    </li>\n    <li><strong>Hours:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>7.45 am to <strong>[9]</strong> _________ pm, Monday to Friday</li>\n      </ul>\n    </li>\n    <li><strong>Contract details:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>the position is <strong>[8]</strong> _________ (to the end of September)</li>\n      </ul>\n    </li>\n    <li><strong>Staff benefits:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>free <strong>[10]</strong> _________ is available</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 6,
@@ -3343,7 +3343,7 @@ const IELTS_TEST_DATA = {
               "text": "Requirements: they require someone with _________.",
               "answer": "experience",
               "explanation": "The transcript states: \"GREG: Now when the details came in, | immediately thought of you because one thing they do require is someone with experience, and you did mention your work at the sports centre when you came in to see us.\"",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job details from employment agency<br/>Location<br/>Work involves<br/>dealing with enquiries"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Job Details from Employment Agency</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Position Title:</strong> <strong>[1]</strong> _________</li>\n    <li><strong>Location:</strong> at the <strong>[2]</strong> _________ centre in Fordham.</li>\n    <li><strong>Address:</strong> 7 <strong>[3]</strong> _________ Road (near the station).</li>\n    <li><strong>Work involves:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>dealing with enquiries</li>\n        <li>making <strong>[4]</strong> _________</li>\n        <li>maintaining the internal <strong>[5]</strong> _________</li>\n      </ul>\n    </li>\n    <li><strong>Requirements:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>they require someone with <strong>[6]</strong> _________</li>\n        <li>must stay calm under stress and be <strong>[7]</strong> _________ when interacting with public</li>\n      </ul>\n    </li>\n    <li><strong>Hours:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>7.45 am to <strong>[9]</strong> _________ pm, Monday to Friday</li>\n      </ul>\n    </li>\n    <li><strong>Contract details:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>the position is <strong>[8]</strong> _________ (to the end of September)</li>\n      </ul>\n    </li>\n    <li><strong>Staff benefits:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>free <strong>[10]</strong> _________ is available</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 7,
@@ -3351,7 +3351,7 @@ const IELTS_TEST_DATA = {
               "text": "Candidate should be calm and _________ when interacting with public.",
               "answer": "confident",
               "explanation": "The transcript states: \"GREG: Well, they say it's quite a high-pressure environment, they're always very busy, and patients are often under stress, so they want someone who can cope with that and stay calm, and at the same time be confident when interacting with the public.\"",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job details from employment agency<br/>Location<br/>Work involves<br/>dealing with enquiries"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Job Details from Employment Agency</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Position Title:</strong> <strong>[1]</strong> _________</li>\n    <li><strong>Location:</strong> at the <strong>[2]</strong> _________ centre in Fordham.</li>\n    <li><strong>Address:</strong> 7 <strong>[3]</strong> _________ Road (near the station).</li>\n    <li><strong>Work involves:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>dealing with enquiries</li>\n        <li>making <strong>[4]</strong> _________</li>\n        <li>maintaining the internal <strong>[5]</strong> _________</li>\n      </ul>\n    </li>\n    <li><strong>Requirements:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>they require someone with <strong>[6]</strong> _________</li>\n        <li>must stay calm under stress and be <strong>[7]</strong> _________ when interacting with public</li>\n      </ul>\n    </li>\n    <li><strong>Hours:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>7.45 am to <strong>[9]</strong> _________ pm, Monday to Friday</li>\n      </ul>\n    </li>\n    <li><strong>Contract details:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>the position is <strong>[8]</strong> _________ (to the end of September)</li>\n      </ul>\n    </li>\n    <li><strong>Staff benefits:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>free <strong>[10]</strong> _________ is available</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 8,
@@ -3359,7 +3359,7 @@ const IELTS_TEST_DATA = {
               "text": "Type of job contract: _________.",
               "answer": "temporary",
               "explanation": "The transcript states: \"GREG: Well, they're looking for someone from the beginning of next month, but | should tell you that this isn't a permanent job, it's temporary, so the contract would be just to the end of September.\"",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job details from employment agency<br/>Location<br/>Work involves<br/>dealing with enquiries"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Job Details from Employment Agency</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Position Title:</strong> <strong>[1]</strong> _________</li>\n    <li><strong>Location:</strong> at the <strong>[2]</strong> _________ centre in Fordham.</li>\n    <li><strong>Address:</strong> 7 <strong>[3]</strong> _________ Road (near the station).</li>\n    <li><strong>Work involves:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>dealing with enquiries</li>\n        <li>making <strong>[4]</strong> _________</li>\n        <li>maintaining the internal <strong>[5]</strong> _________</li>\n      </ul>\n    </li>\n    <li><strong>Requirements:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>they require someone with <strong>[6]</strong> _________</li>\n        <li>must stay calm under stress and be <strong>[7]</strong> _________ when interacting with public</li>\n      </ul>\n    </li>\n    <li><strong>Hours:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>7.45 am to <strong>[9]</strong> _________ pm, Monday to Friday</li>\n      </ul>\n    </li>\n    <li><strong>Contract details:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>the position is <strong>[8]</strong> _________ (to the end of September)</li>\n      </ul>\n    </li>\n    <li><strong>Staff benefits:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>free <strong>[10]</strong> _________ is available</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 9,
@@ -3367,7 +3367,7 @@ const IELTS_TEST_DATA = {
               "text": "Hours: 7.45 am to _________ pm, Monday to Friday.",
               "answer": "1.15",
               "explanation": "The transcript confirms the answer is '1.15'.",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job details from employment agency<br/>Location<br/>Work involves<br/>dealing with enquiries"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Job Details from Employment Agency</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Position Title:</strong> <strong>[1]</strong> _________</li>\n    <li><strong>Location:</strong> at the <strong>[2]</strong> _________ centre in Fordham.</li>\n    <li><strong>Address:</strong> 7 <strong>[3]</strong> _________ Road (near the station).</li>\n    <li><strong>Work involves:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>dealing with enquiries</li>\n        <li>making <strong>[4]</strong> _________</li>\n        <li>maintaining the internal <strong>[5]</strong> _________</li>\n      </ul>\n    </li>\n    <li><strong>Requirements:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>they require someone with <strong>[6]</strong> _________</li>\n        <li>must stay calm under stress and be <strong>[7]</strong> _________ when interacting with public</li>\n      </ul>\n    </li>\n    <li><strong>Hours:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>7.45 am to <strong>[9]</strong> _________ pm, Monday to Friday</li>\n      </ul>\n    </li>\n    <li><strong>Contract details:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>the position is <strong>[8]</strong> _________ (to the end of September)</li>\n      </ul>\n    </li>\n    <li><strong>Staff benefits:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>free <strong>[10]</strong> _________ is available</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 10,
@@ -3375,7 +3375,7 @@ const IELTS_TEST_DATA = {
               "text": "Staff benefits: free _________ is available.",
               "answer": "parking",
               "explanation": "The transcript states: \"is there parking available for staff at the centre.\"",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Job details from employment agency<br/>Location<br/>Work involves<br/>dealing with enquiries"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Job Details from Employment Agency</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Position Title:</strong> <strong>[1]</strong> _________</li>\n    <li><strong>Location:</strong> at the <strong>[2]</strong> _________ centre in Fordham.</li>\n    <li><strong>Address:</strong> 7 <strong>[3]</strong> _________ Road (near the station).</li>\n    <li><strong>Work involves:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>dealing with enquiries</li>\n        <li>making <strong>[4]</strong> _________</li>\n        <li>maintaining the internal <strong>[5]</strong> _________</li>\n      </ul>\n    </li>\n    <li><strong>Requirements:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>they require someone with <strong>[6]</strong> _________</li>\n        <li>must stay calm under stress and be <strong>[7]</strong> _________ when interacting with public</li>\n      </ul>\n    </li>\n    <li><strong>Hours:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>7.45 am to <strong>[9]</strong> _________ pm, Monday to Friday</li>\n      </ul>\n    </li>\n    <li><strong>Contract details:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>the position is <strong>[8]</strong> _________ (to the end of September)</li>\n      </ul>\n    </li>\n    <li><strong>Staff benefits:</strong>\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>free <strong>[10]</strong> _________ is available</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             }
           ]
         },
@@ -3739,7 +3739,7 @@ const IELTS_TEST_DATA = {
               "text": "e _________Hespoke publicly about social issues, such as _________ and education.",
               "answer": "poverty",
               "explanation": "The transcript states: \"However, as well as being a literary genius, he also gave many speeches about issues like the level of poverty in his society.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Victor Hugo and Les Misérables</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Most audience members already have a general idea of the <strong>[31]</strong> _________.</li>\n    <li>The novel has been adapted for theatre and cinema.</li>\n    <li>The Lookout room at the top of the house looks out over the <strong>[38]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 33,
@@ -3747,7 +3747,7 @@ const IELTS_TEST_DATA = {
               "text": "e Victor Hugo had to live elsewhere 1 _________ ee esssssssnsseeeun '",
               "answer": "Europe",
               "explanation": "The transcript states: \"So Victor Hugo was forced to reside in other parts of Europe.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Victor Hugo and Les Misérables</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Most audience members already have a general idea of the <strong>[31]</strong> _________.</li>\n    <li>The novel has been adapted for theatre and cinema.</li>\n    <li>The Lookout room at the top of the house looks out over the <strong>[38]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 34,
@@ -3755,7 +3755,7 @@ const IELTS_TEST_DATA = {
               "text": "e Heused his income from the sale of some _________ _________ he had written to",
               "answer": "poetry",
               "explanation": "The transcript states: \"This was a property that he bought using the money he'd made in France from the publication of a collection of his poetry.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Victor Hugo and Les Misérables</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Most audience members already have a general idea of the <strong>[31]</strong> _________.</li>\n    <li>The novel has been adapted for theatre and cinema.</li>\n    <li>The Lookout room at the top of the house looks out over the <strong>[38]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 35,
@@ -3763,7 +3763,7 @@ const IELTS_TEST_DATA = {
               "text": "The ground floor contains portraits, _________ and tapestries that he",
               "answer": "drawings",
               "explanation": "The transcript states: \"and portraits of its members still hang in rooms on the ground floor, along with drawings that he did during his travels that he felt were important to him.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Victor Hugo and Les Misérables</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Most audience members already have a general idea of the <strong>[31]</strong> _________.</li>\n    <li>The novel has been adapted for theatre and cinema.</li>\n    <li>The Lookout room at the top of the house looks out over the <strong>[38]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 36,
@@ -3771,7 +3771,7 @@ const IELTS_TEST_DATA = {
               "text": "He bought cheap _________ made of wood and turned this into beautiful",
               "answer": "furniture",
               "explanation": "The transcript states: \"The walls are covered in dark wood panelling that Victor Hugo created himself using wooden furniture that he bought in the market.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Victor Hugo and Les Misérables</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Most audience members already have a general idea of the <strong>[31]</strong> _________.</li>\n    <li>The novel has been adapted for theatre and cinema.</li>\n    <li>The Lookout room at the top of the house looks out over the <strong>[38]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 37,
@@ -3779,7 +3779,7 @@ const IELTS_TEST_DATA = {
               "text": "The first floor consists of furnished areas with wallpaper and _________",
               "answer": "lamps",
               "explanation": "The transcript states: \"There's a strong Chinese influence in these areas in things like the wallpaper pattern and the lamps — which he would have made himself by copying original versions.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Victor Hugo and Les Misérables</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Most audience members already have a general idea of the <strong>[31]</strong> _________.</li>\n    <li>The novel has been adapted for theatre and cinema.</li>\n    <li>The Lookout room at the top of the house looks out over the <strong>[38]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 38,
@@ -3787,7 +3787,7 @@ const IELTS_TEST_DATA = {
               "text": "The Lookout room looks out over the _________.",
               "answer": "harbour",
               "explanation": "The transcript states: \"And then, at the very top of the house, there's a room called the Lookout — called that because it looks out over the harbour.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Victor Hugo and Les Misérables</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Most audience members already have a general idea of the <strong>[31]</strong> _________.</li>\n    <li>The novel has been adapted for theatre and cinema.</li>\n    <li>The Lookout room at the top of the house looks out over the <strong>[38]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 39,
@@ -3795,7 +3795,7 @@ const IELTS_TEST_DATA = {
               "text": "He entertained other writers as well as poor _________ in his house.",
               "answer": "children",
               "explanation": "The transcript states: \"While living in his house on Guernsey, he entertained many other famous writers, but he also invited a large group of local children from the deprived areas of the island to dinner once a week.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Victor Hugo and Les Misérables</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Most audience members already have a general idea of the <strong>[31]</strong> _________.</li>\n    <li>The novel has been adapted for theatre and cinema.</li>\n    <li>The Lookout room at the top of the house looks out over the <strong>[38]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 40,
@@ -3803,7 +3803,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 31-_________",
               "answer": "relatives",
               "explanation": "The transcript states: \"In 1927, the house was owned by his relatives.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Victor Hugo<br/>His novel, Les Misérables<br/>e It has been adapted for theatre and cinema."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Victor Hugo and Les Misérables</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Most audience members already have a general idea of the <strong>[31]</strong> _________.</li>\n    <li>The novel has been adapted for theatre and cinema.</li>\n    <li>The Lookout room at the top of the house looks out over the <strong>[38]</strong> _________.</li>\n  </ul>\n</div>"
             }
           ]
         }
@@ -4476,7 +4476,7 @@ const IELTS_TEST_DATA = {
               "text": "Age of participant: _________.",
               "answer": "69",
               "explanation": "The transcript confirms the answer is '69'.",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Hinchingbrooke Country Park<br/>The park"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
             },
             {
               "num": 2,
@@ -4484,7 +4484,7 @@ const IELTS_TEST_DATA = {
               "text": "Wetland: lakes, ponds and a _________ _________ .",
               "answer": "stream",
               "explanation": "The transcript states: \"There are also several smaller ones, ponds and a stream that flows through the park.\"",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Hinchingbrooke Country Park<br/>The park"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
             },
             {
               "num": 3,
@@ -4492,7 +4492,7 @@ const IELTS_TEST_DATA = {
               "text": "Science: Children look at _________ _________ about plants, etc.",
               "answer": "data",
               "explanation": "The transcript states: \"They also collect and analyse data about the things 03 they see.\"",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Hinchingbrooke Country Park<br/>The park"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
             },
             {
               "num": 4,
@@ -4500,7 +4500,7 @@ const IELTS_TEST_DATA = {
               "text": "Geography: includes learning to use a _________ _________ and compass",
               "answer": "map",
               "explanation": "The transcript states: \"The park is a great environment to learn and practise reading a map and using a compass to navigate around the park.\"",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Hinchingbrooke Country Park<br/>The park"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
             },
             {
               "num": 5,
@@ -4508,7 +4508,7 @@ const IELTS_TEST_DATA = {
               "text": "Leisure and tourism: mostly concentrates on the park's _________ _________ .",
               "answer": "visitors",
               "explanation": "The transcript states: \"JOHN: That focuses on your visitors, I would imagine.\"",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Hinchingbrooke Country Park<br/>The park"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
             },
             {
               "num": 6,
@@ -4516,7 +4516,7 @@ const IELTS_TEST_DATA = {
               "text": "Music: Children make _________ _________ with natural materials, and experiment",
               "answer": "sounds",
               "explanation": "The transcript states: \"JOHN: It sounds great.\"",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Hinchingbrooke Country Park<br/>The park"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
             },
             {
               "num": 7,
@@ -4524,7 +4524,7 @@ const IELTS_TEST_DATA = {
               "text": "They give children a feeling of _________ _________ that they may not have elsewhere.",
               "answer": "freedom",
               "explanation": "The transcript states: \"azad JOHN: I would imagine they get a sense of freedom that might not be a normal part of 07 their lives.\"",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Hinchingbrooke Country Park<br/>The park"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
             },
             {
               "num": 8,
@@ -4532,7 +4532,7 @@ const IELTS_TEST_DATA = {
               "text": "Children learn new _________ _________ and gain self-confidence.",
               "answer": "skills",
               "explanation": "The transcript states: \"And very often the children discover that they can do things they didn't know they could do, and they develop new skills.\"",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Hinchingbrooke Country Park<br/>The park"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
             },
             {
               "num": 9,
@@ -4540,7 +4540,7 @@ const IELTS_TEST_DATA = {
               "text": "Cost per child: _________ £ _________ ..",
               "answer": "4.95",
               "explanation": "The transcript confirms the answer is '4.95'.",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Hinchingbrooke Country Park<br/>The park"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
             },
             {
               "num": 10,
@@ -4548,7 +4548,7 @@ const IELTS_TEST_DATA = {
               "text": "➔ IQ p. 120 I I i:J p. 99 I https://azadenglish.com Instagram: @Ali.mirzaei.azad",
               "answer": "leaders",
               "explanation": "The transcript states: \"There's no charge for leaders and other adults - as many 010 as you want to bring.\"",
-              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Hinchingbrooke Country Park<br/>The park"
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
             }
           ]
         },
@@ -4917,7 +4917,7 @@ const IELTS_TEST_DATA = {
               "text": "He realised that these must be _________.",
               "answer": "walls",
               "explanation": "The transcript states: \"He realised that these must be walls and that they must be 031 thousands of years old for them to predate the bog which subsequently grew over them.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 32,
@@ -4925,7 +4925,7 @@ const IELTS_TEST_DATA = {
               "text": "• His _________ _________ became an archaeologist and undertook an",
               "answer": "son",
               "explanation": "The transcript states: \"It wasn't until 40 years later, when Patrick Caulfield's son Seamus, who had 032 become an archaeologist by then, began to explore further.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 33,
@@ -4933,7 +4933,7 @@ const IELTS_TEST_DATA = {
               "text": "- a traditional method used by local people to dig for _________ _________ .",
               "answer": "fuel",
               "explanation": "The transcript states: \"He inserted iron probes into the bog to map the formation of the stones, a traditional method which local people had always 033 used for finding fuel buried in the bog for thousands of years.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 34,
@@ -4941,7 +4941,7 @@ const IELTS_TEST_DATA = {
               "text": "• Items are well preserved in the bog because of a lack of _________ _________ .",
               "answer": "oxygen",
               "explanation": "The transcript confirms the answer is 'oxygen'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 35,
@@ -4949,7 +4949,7 @@ const IELTS_TEST_DATA = {
               "text": "• Houses were _________ _________ in shape and had a hole in the roof.",
               "answer": "rectangular",
               "explanation": "The transcript confirms the answer is 'rectangular'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 36,
@@ -4957,7 +4957,7 @@ const IELTS_TEST_DATA = {
               "text": "- pots used for storage and to make _________ _________ .",
               "answer": "lamps",
               "explanation": "The transcript confirms the answer is 'lamps'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 37,
@@ -4965,7 +4965,7 @@ const IELTS_TEST_DATA = {
               "text": "• Each field at Ceide was large enough to support a big _________ _________ .",
               "answer": "family",
               "explanation": "The transcript confirms the answer is 'family'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 38,
@@ -4973,7 +4973,7 @@ const IELTS_TEST_DATA = {
               "text": "evidence of structures to house them during _________ _________ .",
               "answer": "winter",
               "explanation": "The transcript confirms the answer is 'winter'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 39,
@@ -4981,7 +4981,7 @@ const IELTS_TEST_DATA = {
               "text": "• a decline in _________ _________ quality",
               "answer": "soil",
               "explanation": "The transcript confirms the answer is 'soil'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 40,
@@ -4989,7 +4989,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 31-_________",
               "answer": "rain",
               "explanation": "The transcript confirms the answer is 'rain'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Ceide Fields<br/>• an important Neolithic archaeological site in the northwest of Ireland<br/>Discovery<br/>• In the 1930s, a local teacher realised that stones beneath the bog surface"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             }
           ]
         }
@@ -5640,7 +5640,7 @@ const IELTS_TEST_DATA = {
               "text": "Gary _________ (Gary Mathieson).",
               "answer": "Mathieson",
               "explanation": "The transcript states: \"COLEMAN: He's called a 'coordinator' - his name's Gary Mathieson.\"",
-              "instruction": "Questions 1-6"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 2,
@@ -5648,7 +5648,7 @@ const IELTS_TEST_DATA = {
               "text": "Level: _________ _________ ..",
               "answer": "beginners",
               "explanation": "The transcript states: \"When I first spoke to Gary on the phone, he said it was a class for beginners, but I was still worried that everyone would be better 02 than me, but we were all equally hopeless.\"",
-              "instruction": "Questions 1-6"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 3,
@@ -5656,7 +5656,7 @@ const IELTS_TEST_DATA = {
               "text": "Place: the _________ _________ .",
               "answer": "college",
               "explanation": "The transcript states: \"COLEMAN: Well, when I joined the group, they were meeting in Gary's home, but as the group got bigger, he decided to book a room at the college in town.\"",
-              "instruction": "Questions 1-6"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 4,
@@ -5664,7 +5664,7 @@ const IELTS_TEST_DATA = {
               "text": "_________ Street First floor, Room T347 Time: Thursday morning at 5 _________ . Recommended website: 'The perfect 6 _________ ' https://azadenglish.com Instagram: @Ali.mirzaei.azad Questions 7-10 Complete the table below. Write ONE WORD ONLY for each answer.",
               "answer": "New",
               "explanation": "The transcript states: \"COLEMAN: I knew a few chords, but that's all.\"",
-              "instruction": "Questions 1-6"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 5,
@@ -5672,7 +5672,7 @@ const IELTS_TEST_DATA = {
               "text": "minutes tuning guitars",
               "answer": "11",
               "explanation": "The transcript states: \"30 and that suited me well, but now we meet at 11.\"",
-              "instruction": "Questions 1-6"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 6,
@@ -5680,7 +5680,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 1-_________",
               "answer": "instrument",
               "explanation": "The transcript states: \"There's a website called 'The perfect instrument' that sells all kinds of guitars, violins and so on.\"",
-              "instruction": "Questions 1-6"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 7,
@@ -6025,7 +6025,7 @@ const IELTS_TEST_DATA = {
               "text": "Named 'bear' because of the way they _________.",
               "answer": "move",
               "explanation": "The transcript states: \"They are also sometimes called 'water bears': 'water' because that's where they thrive best, and 'bear' because of the way they move.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 32,
@@ -6033,7 +6033,7 @@ const IELTS_TEST_DATA = {
               "text": "• a _________ _________ round body and four pairs of legs",
               "answer": "short",
               "explanation": "The transcript states: \"They have a body 032 which is short, and also rounded - a bit like a barrel - and the body comprises four segments.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 33,
@@ -6041,7 +6041,7 @@ const IELTS_TEST_DATA = {
               "text": "• claws or _________ _________ for gripping",
               "answer": "discs",
               "explanation": "The transcript states: \"I should also say that some species don't have any claws; what they have are discs, and 033 these work by means of suction.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 34,
@@ -6049,7 +6049,7 @@ const IELTS_TEST_DATA = {
               "text": "• body filled with a liquid that carries both _________ _________ and blood",
               "answer": "oxygen",
               "explanation": "The transcript states: \"Instead, oxygen and also blood are transported in a fluid that fills the cavity of the body.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 35,
@@ -6057,7 +6057,7 @@ const IELTS_TEST_DATA = {
               "text": "• mouth shaped like a _________ _________ with teeth called stylets",
               "answer": "tube",
               "explanation": "The transcript confirms the answer is 'tube'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 36,
@@ -6065,7 +6065,7 @@ const IELTS_TEST_DATA = {
               "text": "• very resilient and can exist in very low or high _________ _________ ..",
               "answer": "temperatures",
               "explanation": "The transcript confirms the answer is 'temperatures'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 37,
@@ -6073,7 +6073,7 @@ const IELTS_TEST_DATA = {
               "text": "• A type of _________ _________ ensures their DNA is not damaged.",
               "answer": "protein",
               "explanation": "The transcript confirms the answer is 'protein'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 38,
@@ -6081,7 +6081,7 @@ const IELTS_TEST_DATA = {
               "text": "alive in _________ _________ .",
               "answer": "space",
               "explanation": "The transcript confirms the answer is 'space'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 39,
@@ -6089,7 +6089,7 @@ const IELTS_TEST_DATA = {
               "text": "• consume liquids, e.g., those found in moss or _________ _________ .",
               "answer": "seaweed",
               "explanation": "The transcript confirms the answer is 'seaweed'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 40,
@@ -6097,7 +6097,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 31-_________",
               "answer": "endangered",
               "explanation": "The transcript confirms the answer is 'endangered'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tardigrades<br/>• more than 1,000 species, 0. 05-1.2 millimetres long"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             }
           ]
         }
@@ -6734,7 +6734,7 @@ const IELTS_TEST_DATA = {
               "text": "Food stalls are in the area by the _________.",
               "answer": "harbour",
               "explanation": "The transcript states: \"LEON: Well, there are plenty of places to buy food in Kite Place - it's the area by the harbour.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Local food shops<br/>Where to go"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 2,
@@ -6742,7 +6742,7 @@ const IELTS_TEST_DATA = {
               "text": "• cross the _________ _________ and turn right",
               "answer": "bridge",
               "explanation": "The transcript states: \"LEON: It's at the far end of Kite Place, so you have to go over the bridge and then it's on Q2 the right.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Local food shops<br/>Where to go"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 3,
@@ -6750,7 +6750,7 @@ const IELTS_TEST_DATA = {
               "text": "• best to go before _________ _________ pm, earlier than closing time",
               "answer": "3.30",
               "explanation": "The transcript confirms the answer is '3.30'.",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Local food shops<br/>Where to go"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 4,
@@ -6758,7 +6758,7 @@ const IELTS_TEST_DATA = {
               "text": "• called _________ ' _________ .'",
               "answer": "Rose",
               "explanation": "The transcript states: \"I know, it's 'Rose'.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Local food shops<br/>Where to go"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 5,
@@ -6766,7 +6766,7 @@ const IELTS_TEST_DATA = {
               "text": "• look for the large _________ _________ outside",
               "answer": "sign",
               "explanation": "The transcript states: \"LEON: You can't miss it - there's also a big sign on the pavement so you can look Q5 for that.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Local food shops<br/>Where to go"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 6,
@@ -6774,7 +6774,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 1-_________",
               "answer": "purple",
               "explanation": "The transcript confirms the answer is 'purple'.",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>Local food shops<br/>Where to go"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 7,
@@ -6782,7 +6782,7 @@ const IELTS_TEST_DATA = {
               "text": "A local vegetable called _________.",
               "answer": "samphire",
               "explanation": "The transcript states: \"LEON: Have you ever tried samphire.\"",
-              "instruction": "Questions 7-10<br/>Complete the table below.<br/>Write ONE WORD ONLY for each answer.<br/>Shopping<br/>To buy<br/>Fish market a dozen prawns"
+              "instruction": "Questions 7-10<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 8,
@@ -6790,7 +6790,7 @@ const IELTS_TEST_DATA = {
               "text": "Organic shop beans and a _________ _________",
               "answer": "melon",
               "explanation": "The transcript states: \"I'd prefer a melon - it's bigger too.\"",
-              "instruction": "Questions 7-10<br/>Complete the table below.<br/>Write ONE WORD ONLY for each answer.<br/>Shopping<br/>To buy<br/>Fish market a dozen prawns"
+              "instruction": "Questions 7-10<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 9,
@@ -6798,7 +6798,7 @@ const IELTS_TEST_DATA = {
               "text": "spices and _________ _________",
               "answer": "coconut",
               "explanation": "The transcript states: \"The owner also sells a lot of spices there that you can put in a curry, and things like coconut.\"",
-              "instruction": "Questions 7-10<br/>Complete the table below.<br/>Write ONE WORD ONLY for each answer.<br/>Shopping<br/>To buy<br/>Fish market a dozen prawns"
+              "instruction": "Questions 7-10<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 10,
@@ -6806,7 +6806,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 1-_________",
               "answer": "strawberry",
               "explanation": "The transcript states: \"LEON: Well - not that, but they have a whole range of tarts and the best are the strawberry ones.\"",
-              "instruction": "Questions 7-10<br/>Complete the table below.<br/>Write ONE WORD ONLY for each answer.<br/>Shopping<br/>To buy<br/>Fish market a dozen prawns"
+              "instruction": "Questions 7-10<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             }
           ]
         },
@@ -7177,7 +7177,7 @@ const IELTS_TEST_DATA = {
               "text": "Threads and microfibres detach from synthetic _________.",
               "answer": "clothing",
               "explanation": "The transcript states: \"Threads and microfibres detach from synthetic clothing every time they're put in a washing machine, and 031 112 HTTPS: //azadenglish.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Microplastics<br/>Where microplastics come from"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 32,
@@ -7185,7 +7185,7 @@ const IELTS_TEST_DATA = {
               "text": "• They cause injuries to the _________ _________ of wildlife and affect their",
               "answer": "mouths",
               "explanation": "The transcript states: \"There is evidence that microplastics harm small creatures in a variety of ways, such as by damaging their mouths, or by impairing their ability to feed, for example when 032 microplastics get lodged in their digestive system.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Microplastics<br/>Where microplastics come from"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 33,
@@ -7193,7 +7193,7 @@ const IELTS_TEST_DATA = {
               "text": "• They enter the food chain, e.g., in bottled and tap water, _________ _________ .",
               "answer": "salt",
               "explanation": "The transcript states: \"What's more, salt and many kinds of seafood have also 033 been found to contain microplastics.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Microplastics<br/>Where microplastics come from"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 34,
@@ -7201,7 +7201,7 @@ const IELTS_TEST_DATA = {
               "text": "products and _________ _________ in some countries.",
               "answer": "toothpaste",
               "explanation": "The transcript states: \"034 facial cleansers and toothpaste.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Microplastics<br/>Where microplastics come from"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 35,
@@ -7209,7 +7209,7 @@ const IELTS_TEST_DATA = {
               "text": "• Microplastics enter the soil through the air, rain and _________ _________ .",
               "answer": "fertilisers",
               "explanation": "The transcript states: \"What's more, many of the fertilisers used by both farmers and gardeners 035 contain microplastics.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Microplastics<br/>Where microplastics come from"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 36,
@@ -7217,7 +7217,7 @@ const IELTS_TEST_DATA = {
               "text": "• Earthworms are important because they add _________ _________ to the soil.",
               "answer": "nutrients",
               "explanation": "The transcript states: \"they mix nutrients into 036 it.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Microplastics<br/>Where microplastics come from"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 37,
@@ -7225,7 +7225,7 @@ const IELTS_TEST_DATA = {
               "text": "_________ of plants. • The study found that microplastics caused:",
               "answer": "growth",
               "explanation": "The transcript states: \"The researchers set out to discover whether the introduction of microplastics into the soil - and the subsequent ingestion of these by earthworms - would impact soil quality and 037 ultimately inhibit plant growth.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Microplastics<br/>Where microplastics come from"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 38,
@@ -7233,7 +7233,7 @@ const IELTS_TEST_DATA = {
               "text": "_________ loss in earthworms - fewer seeds to germinate - a rise in the level of 39 _________ in the soil. The study concluded: - soil should be seen as an important natural process. - changes to soil damage both ecosystems and 40 _________ .",
               "answer": "weight",
               "explanation": "The transcript states: \"The result was that the worms 038 lost weight rapidly.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Microplastics<br/>Where microplastics come from"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 39,
@@ -7241,7 +7241,7 @@ const IELTS_TEST_DATA = {
               "text": "- a rise in the level of _________ _________ in the soil.",
               "answer": "acid",
               "explanation": "The transcript states: \"The team also discovered that there was an increase in the amount of acid found in the soil, and this was attributed 039 mainly to the microplastic particles from conventional HOPE plastic.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Microplastics<br/>Where microplastics come from"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 40,
@@ -7249,7 +7249,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 31-_________",
               "answer": "society",
               "explanation": "The transcript states: \"when soil becomes impoverished by the presence of microplastics, not only ecosystems but also the whole of 040 society are negatively impacted.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Microplastics<br/>Where microplastics come from"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             }
           ]
         }
@@ -7852,7 +7852,7 @@ const IELTS_TEST_DATA = {
               "text": "_________ . use 2 _________ in staffroom to give 3 _________ number to collect 4 _________ .. on 5 _________ floor",
               "answer": "Kaeden",
               "explanation": "The transcript states: \"KAEDEN: Hello Charlotte.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>First day at work<br/>• Name of supervisor:<br/>• Where to leave coat and bag:<br/>• See Tiffany in HR:<br/>• Location of HR office:<br/>• Supervisor's mobile number:"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 2,
@@ -7860,7 +7860,7 @@ const IELTS_TEST_DATA = {
               "text": "use _________ _________ in staffroom",
               "answer": "locker",
               "explanation": "The transcript states: \"Put your coat and rucksack in one of the lockers there.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>First day at work<br/>• Name of supervisor:<br/>• Where to leave coat and bag:<br/>• See Tiffany in HR:<br/>• Location of HR office:<br/>• Supervisor's mobile number:"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 3,
@@ -7868,7 +7868,7 @@ const IELTS_TEST_DATA = {
               "text": "to give _________ _________ number",
               "answer": "passport",
               "explanation": "The transcript states: \"CHARLOTTE: I was told to bring my passport with me.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>First day at work<br/>• Name of supervisor:<br/>• Where to leave coat and bag:<br/>• See Tiffany in HR:<br/>• Location of HR office:<br/>• Supervisor's mobile number:"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 4,
@@ -7876,7 +7876,7 @@ const IELTS_TEST_DATA = {
               "text": "to collect _________ _________ ..",
               "answer": "uniform",
               "explanation": "The transcript states: \"Tiffany will give you a uniform.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>First day at work<br/>• Name of supervisor:<br/>• Where to leave coat and bag:<br/>• See Tiffany in HR:<br/>• Location of HR office:<br/>• Supervisor's mobile number:"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 5,
@@ -7884,7 +7884,7 @@ const IELTS_TEST_DATA = {
               "text": "on _________ _________ floor",
               "answer": "third",
               "explanation": "The transcript states: \"KAEDEN: The staffroom's on the first floor, and HR are a couple of floors above that, on the third floor.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>First day at work<br/>• Name of supervisor:<br/>• Where to leave coat and bag:<br/>• See Tiffany in HR:<br/>• Location of HR office:<br/>• Supervisor's mobile number:"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 6,
@@ -7892,7 +7892,7 @@ const IELTS_TEST_DATA = {
               "text": "_________ . Responsibilities Task 1 Task 2 Notes Bakery section Check sell-by dates Change price labels Use 7 _________ labels Sushi takeaway Re-stock with Wipe preparation area Do not clean counter 8 ···················· _________ and clean the sink any knives boxes if needed Meat and fish Clean the serving Collect 9 _________ Must wear special counters area, including the for the fish from the 10 _________ weighing scales cold-room https://azadenglish.com Instagram: @Ali.mirzaei.azad",
               "answer": "0412 665 903",
               "explanation": "The transcript confirms the answer is '0412 665 903'.",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer.<br/>First day at work<br/>• Name of supervisor:<br/>• Where to leave coat and bag:<br/>• See Tiffany in HR:<br/>• Location of HR office:<br/>• Supervisor's mobile number:"
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 7,
@@ -7900,7 +7900,7 @@ const IELTS_TEST_DATA = {
               "text": "Put a _________ label on items that need a new price.",
               "answer": "yellow",
               "explanation": "The transcript states: \"When something Test4 needs a new price label, put a yellow one on the package, next to the original 07 price.\"",
-              "instruction": "Questions 7-10<br/>Complete the table below.<br/>Write ONE WORD ONLY for each answer.<br/>use 2 ........................................... in staffroom<br/>to give 3 ........................................... number<br/>to collect 4 ......................................... ..<br/>on 5 ........................................... floor<br/>Responsibilities<br/>Task 1 Task 2 Notes"
+              "instruction": "Questions 7-10<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 8,
@@ -7908,7 +7908,7 @@ const IELTS_TEST_DATA = {
               "text": "counter _________ ···················· _________ and clean the sink any knives",
               "answer": "plastic",
               "explanation": "The transcript confirms the answer is 'plastic'.",
-              "instruction": "Questions 7-10<br/>Complete the table below.<br/>Write ONE WORD ONLY for each answer.<br/>use 2 ........................................... in staffroom<br/>to give 3 ........................................... number<br/>to collect 4 ......................................... ..<br/>on 5 ........................................... floor<br/>Responsibilities<br/>Task 1 Task 2 Notes"
+              "instruction": "Questions 7-10<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 9,
@@ -7916,7 +7916,7 @@ const IELTS_TEST_DATA = {
               "text": "Meat and fish Clean the serving Collect _________ _________ Must wear special",
               "answer": "ice",
               "explanation": "The transcript states: \"Problem with a bread slicer.\"",
-              "instruction": "Questions 7-10<br/>Complete the table below.<br/>Write ONE WORD ONLY for each answer.<br/>use 2 ........................................... in staffroom<br/>to give 3 ........................................... number<br/>to collect 4 ......................................... ..<br/>on 5 ........................................... floor<br/>Responsibilities<br/>Task 1 Task 2 Notes"
+              "instruction": "Questions 7-10<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 10,
@@ -7924,7 +7924,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 1-_________",
               "answer": "gloves",
               "explanation": "The transcript states: \"But make sure you put on thermal gloves when you take anything out of the cold-room.\"",
-              "instruction": "Questions 7-10<br/>Complete the table below.<br/>Write ONE WORD ONLY for each answer.<br/>use 2 ........................................... in staffroom<br/>to give 3 ........................................... number<br/>to collect 4 ......................................... ..<br/>on 5 ........................................... floor<br/>Responsibilities<br/>Task 1 Task 2 Notes"
+              "instruction": "Questions 7-10<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             }
           ]
         },
@@ -8257,7 +8257,7 @@ const IELTS_TEST_DATA = {
               "text": "Invasive species are often in _________ with native species.",
               "answer": "competition",
               "explanation": "The transcript states: \"Invasive species are a significant contributor to the current global biodiversity crisis 031 and are often in competition with native species and may threaten their long-term survival.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 32,
@@ -8265,7 +8265,7 @@ const IELTS_TEST_DATA = {
               "text": "sources of _________ _________ for local people",
               "answer": "food",
               "explanation": "The transcript states: \"These could include selecting trees that can contribute to wildlife conservation, improve the availability of food for the 032 local community and maintain the stability of soil systems.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 33,
@@ -8273,7 +8273,7 @@ const IELTS_TEST_DATA = {
               "text": "_________ and climate change • plant trees on previously forested land which is in a bad condition, not select land which is being used for 34 _________ . Large-scale reforestation projects • Base planning decisions on information from accurate 35 _________ . • Drones are useful for identifying areas in Brazil which are endangered by keeping 36 _________ and illegal logging. Lampang Province, Northern Thailand • A forest was restored in an area damaged by mining. • A variety of native fig trees were planted, which are important for - supporting many wildlife species - increasing the 37 _________ of recovery by attracting animals and birds, e.g., 38 _________ were soon attracted to the area. Involving local communities • Destruction of mangrove forests in Madagascar made it difficult for people to make a living from 39 _________ . • The mangrove reforestation project: - provided employment for local people - restored a healthy ecosystem - protects against the higher risk of 40 _________ .",
               "answer": "disease",
               "explanation": "The transcript states: \"Test4 Using seeds with low genetic diversity generally lowers the resilience of restored forests, 033 which can make them vulnerable to disease and unable to adapt to climate change.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 34,
@@ -8281,7 +8281,7 @@ const IELTS_TEST_DATA = {
               "text": "land which is being used for _________ _________ .",
               "answer": "agriculture",
               "explanation": "The transcript states: \"Reforesting areas which are currently exploited for agriculture 034 should be avoided as this often leads to other areas being deforested.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 35,
@@ -8289,7 +8289,7 @@ const IELTS_TEST_DATA = {
               "text": "• Base planning decisions on information from accurate _________ _________ .",
               "answer": "maps",
               "explanation": "The transcript states: \"Haying detailed and up-to-date maps identjfyjng high-priority areas for intervention is essential.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 36,
@@ -8297,7 +8297,7 @@ const IELTS_TEST_DATA = {
               "text": "keeping _________ _________ and illegal logging.",
               "answer": "cattle",
               "explanation": "The transcript states: \"In Brazil, it's being used to identify and quantify how parts of the Amazon are being devastated by human activities such as rearing cattle and illegal logging.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 37,
@@ -8305,7 +8305,7 @@ const IELTS_TEST_DATA = {
               "text": "- increasing the _________ _________ of recovery by attracting animals and birds,",
               "answer": "speed",
               "explanation": "The transcript states: \"They are central to tropical reforestation projects as they accelerate the speed of the recovery process by attracting animals and birds which act as natural seed dispersers.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 38,
@@ -8313,7 +8313,7 @@ const IELTS_TEST_DATA = {
               "text": "e.g., _________ _________ were soon attracted to the area.",
               "answer": "monkeys",
               "explanation": "The transcript states: \"At this site, for example, after only three rainy seasons, monkeys started visiting to eat the fig fruits, naturally dispersing seeds through defecation.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 39,
@@ -8321,7 +8321,7 @@ const IELTS_TEST_DATA = {
               "text": "make a living from _________ _________ .",
               "answer": "fishing",
               "explanation": "The transcript states: \"Destruction of the mangrove forests 039 had a terrible impact on plant and animal life, and also badly affected the fishing industry, which was a major source of employment for local people living in coastal areas.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             },
             {
               "num": 40,
@@ -8329,7 +8329,7 @@ const IELTS_TEST_DATA = {
               "text": "Questions 31-_________",
               "answer": "flooding",
               "explanation": "The transcript states: \"The mangroves also act as a defence against the increased 040 threat of flooding caused by climate change.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/>Tree planting<br/>Reforestation projects should:<br/>• include a range of tree species"
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             }
           ]
         }
