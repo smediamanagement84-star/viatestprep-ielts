@@ -3736,7 +3736,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 32,
               "type": "FILL",
-              "text": "e _________Hespoke publicly about social issues, such as _________ and education.",
+              "text": "He spoke publicly about social issues, such as _________ and education.",
               "answer": "poverty",
               "explanation": "The transcript states: \"However, as well as being a literary genius, he also gave many speeches about issues like the level of poverty in his society.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Victor Hugo and Les Misérables</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Most audience members already have a general idea of the <strong>[31]</strong> _________.</li>\n    <li>The novel has been adapted for theatre and cinema.</li>\n    <li>The Lookout room at the top of the house looks out over the <strong>[38]</strong> _________.</li>\n  </ul>\n</div>"
@@ -3752,7 +3752,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 34,
               "type": "FILL",
-              "text": "e Heused his income from the sale of some _________ _________ he had written to",
+              "text": "He used his income from the sale of some _________ he had written to buy the house.",
               "answer": "poetry",
               "explanation": "The transcript states: \"This was a property that he bought using the money he'd made in France from the publication of a collection of his poetry.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Victor Hugo and Les Misérables</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Most audience members already have a general idea of the <strong>[31]</strong> _________.</li>\n    <li>The novel has been adapted for theatre and cinema.</li>\n    <li>The Lookout room at the top of the house looks out over the <strong>[38]</strong> _________.</li>\n  </ul>\n</div>"
@@ -4481,7 +4481,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 2,
               "type": "FILL",
-              "text": "Wetland: lakes, ponds and a _________ _________ .",
+              "text": "Wetland: lakes, ponds and a _________ .",
               "answer": "stream",
               "explanation": "The transcript states: \"There are also several smaller ones, ponds and a stream that flows through the park.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
@@ -4489,7 +4489,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 3,
               "type": "FILL",
-              "text": "Science: Children look at _________ _________ about plants, etc.",
+              "text": "Science: Children look at _________ about plants, etc.",
               "answer": "data",
               "explanation": "The transcript states: \"They also collect and analyse data about the things 03 they see.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
@@ -4497,7 +4497,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 4,
               "type": "FILL",
-              "text": "Geography: includes learning to use a _________ _________ and compass",
+              "text": "Geography: includes learning to use a _________ and compass",
               "answer": "map",
               "explanation": "The transcript states: \"The park is a great environment to learn and practise reading a map and using a compass to navigate around the park.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
@@ -4505,7 +4505,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 5,
               "type": "FILL",
-              "text": "Leisure and tourism: mostly concentrates on the park's _________ _________ .",
+              "text": "Leisure and tourism: mostly concentrates on the park's _________ .",
               "answer": "visitors",
               "explanation": "The transcript states: \"JOHN: That focuses on your visitors, I would imagine.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
@@ -4513,7 +4513,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 6,
               "type": "FILL",
-              "text": "Music: Children make _________ _________ with natural materials, and experiment",
+              "text": "Music: Children make _________ with natural materials, and experiment",
               "answer": "sounds",
               "explanation": "The transcript states: \"JOHN: It sounds great.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
@@ -4521,7 +4521,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 7,
               "type": "FILL",
-              "text": "They give children a feeling of _________ _________ that they may not have elsewhere.",
+              "text": "They give children a feeling of _________ that they may not have elsewhere.",
               "answer": "freedom",
               "explanation": "The transcript states: \"azad JOHN: I would imagine they get a sense of freedom that might not be a normal part of 07 their lives.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
@@ -4529,7 +4529,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 8,
               "type": "FILL",
-              "text": "Children learn new _________ _________ and gain self-confidence.",
+              "text": "Children learn new _________ and gain self-confidence.",
               "answer": "skills",
               "explanation": "The transcript states: \"And very often the children discover that they can do things they didn't know they could do, and they develop new skills.\"",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
@@ -4537,7 +4537,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 9,
               "type": "FILL",
-              "text": "Cost per child: _________ £ _________ ..",
+              "text": "Cost per child: £_________.",
               "answer": "4.95",
               "explanation": "The transcript confirms the answer is '4.95'.",
               "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
@@ -4922,7 +4922,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 32,
               "type": "FILL",
-              "text": "• His _________ _________ became an archaeologist and undertook an",
+              "text": "• His _________ became an archaeologist and undertook an",
               "answer": "son",
               "explanation": "The transcript states: \"It wasn't until 40 years later, when Patrick Caulfield's son Seamus, who had 032 become an archaeologist by then, began to explore further.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -4930,7 +4930,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 33,
               "type": "FILL",
-              "text": "- a traditional method used by local people to dig for _________ _________ .",
+              "text": "- a traditional method used by local people to dig for _________ .",
               "answer": "fuel",
               "explanation": "The transcript states: \"He inserted iron probes into the bog to map the formation of the stones, a traditional method which local people had always 033 used for finding fuel buried in the bog for thousands of years.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -4938,7 +4938,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 34,
               "type": "FILL",
-              "text": "• Items are well preserved in the bog because of a lack of _________ _________ .",
+              "text": "• Items are well preserved in the bog because of a lack of _________ .",
               "answer": "oxygen",
               "explanation": "The transcript confirms the answer is 'oxygen'.",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -4946,7 +4946,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 35,
               "type": "FILL",
-              "text": "• Houses were _________ _________ in shape and had a hole in the roof.",
+              "text": "• Houses were _________ in shape and had a hole in the roof.",
               "answer": "rectangular",
               "explanation": "The transcript confirms the answer is 'rectangular'.",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -4954,7 +4954,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 36,
               "type": "FILL",
-              "text": "- pots used for storage and to make _________ _________ .",
+              "text": "- pots used for storage and to make _________ .",
               "answer": "lamps",
               "explanation": "The transcript confirms the answer is 'lamps'.",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -4962,7 +4962,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 37,
               "type": "FILL",
-              "text": "• Each field at Ceide was large enough to support a big _________ _________ .",
+              "text": "• Each field at Ceide was large enough to support a big _________ .",
               "answer": "family",
               "explanation": "The transcript confirms the answer is 'family'.",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -4970,7 +4970,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 38,
               "type": "FILL",
-              "text": "evidence of structures to house them during _________ _________ .",
+              "text": "evidence of structures to house them during _________ .",
               "answer": "winter",
               "explanation": "The transcript confirms the answer is 'winter'.",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -4978,7 +4978,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 39,
               "type": "FILL",
-              "text": "• a decline in _________ _________ quality",
+              "text": "• a decline in _________ quality",
               "answer": "soil",
               "explanation": "The transcript confirms the answer is 'soil'.",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -5640,47 +5640,47 @@ const IELTS_TEST_DATA = {
               "text": "Gary _________ (Gary Mathieson).",
               "answer": "Mathieson",
               "explanation": "The transcript states: \"COLEMAN: He's called a 'coordinator' - his name's Gary Mathieson.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Dog Training Classes</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Coordinator:</strong> Gary <strong>[1]</strong> _________</li>\n    <li><strong>Level:</strong> <strong>[2]</strong> _________ class</li>\n    <li><strong>Place:</strong> the <strong>[3]</strong> _________</li>\n    <li><strong>Address:</strong> <strong>[4]</strong> _________ Street</li>\n    <li><strong>Time:</strong> Thursday morning at <strong>[5]</strong> _________ am</li>\n    <li><strong>Recommended website:</strong> 'The perfect <strong>[6]</strong> _________'</li>\n  </ul>\n</div>"
             },
             {
               "num": 2,
               "type": "FILL",
-              "text": "Level: _________ _________ ..",
+              "text": "Level: _________ ..",
               "answer": "beginners",
               "explanation": "The transcript states: \"When I first spoke to Gary on the phone, he said it was a class for beginners, but I was still worried that everyone would be better 02 than me, but we were all equally hopeless.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Dog Training Classes</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Coordinator:</strong> Gary <strong>[1]</strong> _________</li>\n    <li><strong>Level:</strong> <strong>[2]</strong> _________ class</li>\n    <li><strong>Place:</strong> the <strong>[3]</strong> _________</li>\n    <li><strong>Address:</strong> <strong>[4]</strong> _________ Street</li>\n    <li><strong>Time:</strong> Thursday morning at <strong>[5]</strong> _________ am</li>\n    <li><strong>Recommended website:</strong> 'The perfect <strong>[6]</strong> _________'</li>\n  </ul>\n</div>"
             },
             {
               "num": 3,
               "type": "FILL",
-              "text": "Place: the _________ _________ .",
+              "text": "Place: the _________ .",
               "answer": "college",
               "explanation": "The transcript states: \"COLEMAN: Well, when I joined the group, they were meeting in Gary's home, but as the group got bigger, he decided to book a room at the college in town.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Dog Training Classes</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Coordinator:</strong> Gary <strong>[1]</strong> _________</li>\n    <li><strong>Level:</strong> <strong>[2]</strong> _________ class</li>\n    <li><strong>Place:</strong> the <strong>[3]</strong> _________</li>\n    <li><strong>Address:</strong> <strong>[4]</strong> _________ Street</li>\n    <li><strong>Time:</strong> Thursday morning at <strong>[5]</strong> _________ am</li>\n    <li><strong>Recommended website:</strong> 'The perfect <strong>[6]</strong> _________'</li>\n  </ul>\n</div>"
             },
             {
               "num": 4,
               "type": "FILL",
-              "text": "_________ Street First floor, Room T347 Time: Thursday morning at 5 _________ . Recommended website: 'The perfect 6 _________ ' https://azadenglish.com Instagram: @Ali.mirzaei.azad Questions 7-10 Complete the table below. Write ONE WORD ONLY for each answer.",
+              "text": "Address: _________ Street.",
               "answer": "New",
               "explanation": "The transcript states: \"COLEMAN: I knew a few chords, but that's all.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Dog Training Classes</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Coordinator:</strong> Gary <strong>[1]</strong> _________</li>\n    <li><strong>Level:</strong> <strong>[2]</strong> _________ class</li>\n    <li><strong>Place:</strong> the <strong>[3]</strong> _________</li>\n    <li><strong>Address:</strong> <strong>[4]</strong> _________ Street</li>\n    <li><strong>Time:</strong> Thursday morning at <strong>[5]</strong> _________ am</li>\n    <li><strong>Recommended website:</strong> 'The perfect <strong>[6]</strong> _________'</li>\n  </ul>\n</div>"
             },
             {
               "num": 5,
               "type": "FILL",
-              "text": "minutes tuning guitars",
+              "text": "Time: Thursday morning at _________ am.",
               "answer": "11",
               "explanation": "The transcript states: \"30 and that suited me well, but now we meet at 11.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Dog Training Classes</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Coordinator:</strong> Gary <strong>[1]</strong> _________</li>\n    <li><strong>Level:</strong> <strong>[2]</strong> _________ class</li>\n    <li><strong>Place:</strong> the <strong>[3]</strong> _________</li>\n    <li><strong>Address:</strong> <strong>[4]</strong> _________ Street</li>\n    <li><strong>Time:</strong> Thursday morning at <strong>[5]</strong> _________ am</li>\n    <li><strong>Recommended website:</strong> 'The perfect <strong>[6]</strong> _________'</li>\n  </ul>\n</div>"
             },
             {
               "num": 6,
               "type": "FILL",
-              "text": "Questions 1-_________",
+              "text": "Recommended website: 'The perfect _________ '.",
               "answer": "instrument",
               "explanation": "The transcript states: \"There's a website called 'The perfect instrument' that sells all kinds of guitars, violins and so on.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Dog Training Classes</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Coordinator:</strong> Gary <strong>[1]</strong> _________</li>\n    <li><strong>Level:</strong> <strong>[2]</strong> _________ class</li>\n    <li><strong>Place:</strong> the <strong>[3]</strong> _________</li>\n    <li><strong>Address:</strong> <strong>[4]</strong> _________ Street</li>\n    <li><strong>Time:</strong> Thursday morning at <strong>[5]</strong> _________ am</li>\n    <li><strong>Recommended website:</strong> 'The perfect <strong>[6]</strong> _________'</li>\n  </ul>\n</div>"
             },
             {
               "num": 7,
@@ -5693,7 +5693,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 8,
               "type": "FILL",
-              "text": "is _________ _________",
+              "text": "is _________",
               "answer": "clapping",
               "explanation": "The transcript states: \"Sometimes we all just start laughing because we're so bad at keeping time, so Gary starts clapping lo help us.\"",
               "instruction": "Questions 7-10<br/>Complete the table below.<br/>Write ONE WORD ONLY for each answer.<br/>A typical 45-minute guitar lesson<br/>Time Activity"
@@ -6025,79 +6025,79 @@ const IELTS_TEST_DATA = {
               "text": "Named 'bear' because of the way they _________.",
               "answer": "move",
               "explanation": "The transcript states: \"They are also sometimes called 'water bears': 'water' because that's where they thrive best, and 'bear' because of the way they move.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Tardigrades (Water Bears)</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Named \"bear\" because of the way they <strong>[31]</strong> _________.</li>\n    <li>Physical characteristics:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>a <strong>[32]</strong> _________ round body and four pairs of legs</li>\n        <li>claws or <strong>[33]</strong> _________ for gripping</li>\n        <li>body filled with a liquid that carries both <strong>[34]</strong> _________ and blood</li>\n        <li>mouth shaped like a <strong>[35]</strong> _________ with teeth called stylets</li>\n      </ul>\n    </li>\n    <li>Resilience:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>very resilient and can exist in very low or high <strong>[36]</strong> _________</li>\n        <li>a type of <strong>[37]</strong> _________ ensures their DNA is not damaged</li>\n        <li>can stay alive in <strong>[38]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Feeding:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>consume liquids, e.g. those found in moss or <strong>[39]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Conservation status:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>currently not considered to be <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 32,
               "type": "FILL",
-              "text": "• a _________ _________ round body and four pairs of legs",
+              "text": "• a _________ round body and four pairs of legs",
               "answer": "short",
               "explanation": "The transcript states: \"They have a body 032 which is short, and also rounded - a bit like a barrel - and the body comprises four segments.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Tardigrades (Water Bears)</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Named \"bear\" because of the way they <strong>[31]</strong> _________.</li>\n    <li>Physical characteristics:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>a <strong>[32]</strong> _________ round body and four pairs of legs</li>\n        <li>claws or <strong>[33]</strong> _________ for gripping</li>\n        <li>body filled with a liquid that carries both <strong>[34]</strong> _________ and blood</li>\n        <li>mouth shaped like a <strong>[35]</strong> _________ with teeth called stylets</li>\n      </ul>\n    </li>\n    <li>Resilience:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>very resilient and can exist in very low or high <strong>[36]</strong> _________</li>\n        <li>a type of <strong>[37]</strong> _________ ensures their DNA is not damaged</li>\n        <li>can stay alive in <strong>[38]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Feeding:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>consume liquids, e.g. those found in moss or <strong>[39]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Conservation status:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>currently not considered to be <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 33,
               "type": "FILL",
-              "text": "• claws or _________ _________ for gripping",
+              "text": "• claws or _________ for gripping",
               "answer": "discs",
               "explanation": "The transcript states: \"I should also say that some species don't have any claws; what they have are discs, and 033 these work by means of suction.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Tardigrades (Water Bears)</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Named \"bear\" because of the way they <strong>[31]</strong> _________.</li>\n    <li>Physical characteristics:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>a <strong>[32]</strong> _________ round body and four pairs of legs</li>\n        <li>claws or <strong>[33]</strong> _________ for gripping</li>\n        <li>body filled with a liquid that carries both <strong>[34]</strong> _________ and blood</li>\n        <li>mouth shaped like a <strong>[35]</strong> _________ with teeth called stylets</li>\n      </ul>\n    </li>\n    <li>Resilience:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>very resilient and can exist in very low or high <strong>[36]</strong> _________</li>\n        <li>a type of <strong>[37]</strong> _________ ensures their DNA is not damaged</li>\n        <li>can stay alive in <strong>[38]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Feeding:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>consume liquids, e.g. those found in moss or <strong>[39]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Conservation status:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>currently not considered to be <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 34,
               "type": "FILL",
-              "text": "• body filled with a liquid that carries both _________ _________ and blood",
+              "text": "• body filled with a liquid that carries both _________ and blood",
               "answer": "oxygen",
               "explanation": "The transcript states: \"Instead, oxygen and also blood are transported in a fluid that fills the cavity of the body.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Tardigrades (Water Bears)</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Named \"bear\" because of the way they <strong>[31]</strong> _________.</li>\n    <li>Physical characteristics:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>a <strong>[32]</strong> _________ round body and four pairs of legs</li>\n        <li>claws or <strong>[33]</strong> _________ for gripping</li>\n        <li>body filled with a liquid that carries both <strong>[34]</strong> _________ and blood</li>\n        <li>mouth shaped like a <strong>[35]</strong> _________ with teeth called stylets</li>\n      </ul>\n    </li>\n    <li>Resilience:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>very resilient and can exist in very low or high <strong>[36]</strong> _________</li>\n        <li>a type of <strong>[37]</strong> _________ ensures their DNA is not damaged</li>\n        <li>can stay alive in <strong>[38]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Feeding:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>consume liquids, e.g. those found in moss or <strong>[39]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Conservation status:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>currently not considered to be <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 35,
               "type": "FILL",
-              "text": "• mouth shaped like a _________ _________ with teeth called stylets",
+              "text": "• mouth shaped like a _________ with teeth called stylets",
               "answer": "tube",
               "explanation": "The transcript confirms the answer is 'tube'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Tardigrades (Water Bears)</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Named \"bear\" because of the way they <strong>[31]</strong> _________.</li>\n    <li>Physical characteristics:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>a <strong>[32]</strong> _________ round body and four pairs of legs</li>\n        <li>claws or <strong>[33]</strong> _________ for gripping</li>\n        <li>body filled with a liquid that carries both <strong>[34]</strong> _________ and blood</li>\n        <li>mouth shaped like a <strong>[35]</strong> _________ with teeth called stylets</li>\n      </ul>\n    </li>\n    <li>Resilience:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>very resilient and can exist in very low or high <strong>[36]</strong> _________</li>\n        <li>a type of <strong>[37]</strong> _________ ensures their DNA is not damaged</li>\n        <li>can stay alive in <strong>[38]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Feeding:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>consume liquids, e.g. those found in moss or <strong>[39]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Conservation status:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>currently not considered to be <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 36,
               "type": "FILL",
-              "text": "• very resilient and can exist in very low or high _________ _________ ..",
+              "text": "• very resilient and can exist in very low or high _________.",
               "answer": "temperatures",
               "explanation": "The transcript confirms the answer is 'temperatures'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Tardigrades (Water Bears)</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Named \"bear\" because of the way they <strong>[31]</strong> _________.</li>\n    <li>Physical characteristics:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>a <strong>[32]</strong> _________ round body and four pairs of legs</li>\n        <li>claws or <strong>[33]</strong> _________ for gripping</li>\n        <li>body filled with a liquid that carries both <strong>[34]</strong> _________ and blood</li>\n        <li>mouth shaped like a <strong>[35]</strong> _________ with teeth called stylets</li>\n      </ul>\n    </li>\n    <li>Resilience:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>very resilient and can exist in very low or high <strong>[36]</strong> _________</li>\n        <li>a type of <strong>[37]</strong> _________ ensures their DNA is not damaged</li>\n        <li>can stay alive in <strong>[38]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Feeding:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>consume liquids, e.g. those found in moss or <strong>[39]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Conservation status:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>currently not considered to be <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 37,
               "type": "FILL",
-              "text": "• A type of _________ _________ ensures their DNA is not damaged.",
+              "text": "• A type of _________ ensures their DNA is not damaged.",
               "answer": "protein",
               "explanation": "The transcript confirms the answer is 'protein'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Tardigrades (Water Bears)</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Named \"bear\" because of the way they <strong>[31]</strong> _________.</li>\n    <li>Physical characteristics:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>a <strong>[32]</strong> _________ round body and four pairs of legs</li>\n        <li>claws or <strong>[33]</strong> _________ for gripping</li>\n        <li>body filled with a liquid that carries both <strong>[34]</strong> _________ and blood</li>\n        <li>mouth shaped like a <strong>[35]</strong> _________ with teeth called stylets</li>\n      </ul>\n    </li>\n    <li>Resilience:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>very resilient and can exist in very low or high <strong>[36]</strong> _________</li>\n        <li>a type of <strong>[37]</strong> _________ ensures their DNA is not damaged</li>\n        <li>can stay alive in <strong>[38]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Feeding:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>consume liquids, e.g. those found in moss or <strong>[39]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Conservation status:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>currently not considered to be <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 38,
               "type": "FILL",
-              "text": "alive in _________ _________ .",
+              "text": "• can stay alive in _________.",
               "answer": "space",
               "explanation": "The transcript confirms the answer is 'space'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Tardigrades (Water Bears)</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Named \"bear\" because of the way they <strong>[31]</strong> _________.</li>\n    <li>Physical characteristics:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>a <strong>[32]</strong> _________ round body and four pairs of legs</li>\n        <li>claws or <strong>[33]</strong> _________ for gripping</li>\n        <li>body filled with a liquid that carries both <strong>[34]</strong> _________ and blood</li>\n        <li>mouth shaped like a <strong>[35]</strong> _________ with teeth called stylets</li>\n      </ul>\n    </li>\n    <li>Resilience:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>very resilient and can exist in very low or high <strong>[36]</strong> _________</li>\n        <li>a type of <strong>[37]</strong> _________ ensures their DNA is not damaged</li>\n        <li>can stay alive in <strong>[38]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Feeding:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>consume liquids, e.g. those found in moss or <strong>[39]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Conservation status:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>currently not considered to be <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 39,
               "type": "FILL",
-              "text": "• consume liquids, e.g., those found in moss or _________ _________ .",
+              "text": "• consume liquids, e.g. those found in moss or _________.",
               "answer": "seaweed",
               "explanation": "The transcript confirms the answer is 'seaweed'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Tardigrades (Water Bears)</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Named \"bear\" because of the way they <strong>[31]</strong> _________.</li>\n    <li>Physical characteristics:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>a <strong>[32]</strong> _________ round body and four pairs of legs</li>\n        <li>claws or <strong>[33]</strong> _________ for gripping</li>\n        <li>body filled with a liquid that carries both <strong>[34]</strong> _________ and blood</li>\n        <li>mouth shaped like a <strong>[35]</strong> _________ with teeth called stylets</li>\n      </ul>\n    </li>\n    <li>Resilience:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>very resilient and can exist in very low or high <strong>[36]</strong> _________</li>\n        <li>a type of <strong>[37]</strong> _________ ensures their DNA is not damaged</li>\n        <li>can stay alive in <strong>[38]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Feeding:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>consume liquids, e.g. those found in moss or <strong>[39]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Conservation status:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>currently not considered to be <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 40,
               "type": "FILL",
-              "text": "Questions 31-_________",
+              "text": "• currently not considered to be _________.",
               "answer": "endangered",
               "explanation": "The transcript confirms the answer is 'endangered'.",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Tardigrades (Water Bears)</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Named \"bear\" because of the way they <strong>[31]</strong> _________.</li>\n    <li>Physical characteristics:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>a <strong>[32]</strong> _________ round body and four pairs of legs</li>\n        <li>claws or <strong>[33]</strong> _________ for gripping</li>\n        <li>body filled with a liquid that carries both <strong>[34]</strong> _________ and blood</li>\n        <li>mouth shaped like a <strong>[35]</strong> _________ with teeth called stylets</li>\n      </ul>\n    </li>\n    <li>Resilience:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>very resilient and can exist in very low or high <strong>[36]</strong> _________</li>\n        <li>a type of <strong>[37]</strong> _________ ensures their DNA is not damaged</li>\n        <li>can stay alive in <strong>[38]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Feeding:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>consume liquids, e.g. those found in moss or <strong>[39]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Conservation status:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>currently not considered to be <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             }
           ]
         }
@@ -6739,7 +6739,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 2,
               "type": "FILL",
-              "text": "• cross the _________ _________ and turn right",
+              "text": "• cross the _________ and turn right",
               "answer": "bridge",
               "explanation": "The transcript states: \"LEON: It's at the far end of Kite Place, so you have to go over the bridge and then it's on Q2 the right.\"",
               "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -6747,7 +6747,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 3,
               "type": "FILL",
-              "text": "• best to go before _________ _________ pm, earlier than closing time",
+              "text": "• best to go before _________ pm, earlier than closing time",
               "answer": "3.30",
               "explanation": "The transcript confirms the answer is '3.30'.",
               "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -6755,7 +6755,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 4,
               "type": "FILL",
-              "text": "• called _________ ' _________ .'",
+              "text": "• called _________'s'",
               "answer": "Rose",
               "explanation": "The transcript states: \"I know, it's 'Rose'.\"",
               "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -6763,7 +6763,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 5,
               "type": "FILL",
-              "text": "• look for the large _________ _________ outside",
+              "text": "• look for the large _________ outside",
               "answer": "sign",
               "explanation": "The transcript states: \"LEON: You can't miss it - there's also a big sign on the pavement so you can look Q5 for that.\"",
               "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -6787,7 +6787,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 8,
               "type": "FILL",
-              "text": "Organic shop beans and a _________ _________",
+              "text": "Organic shop beans and a _________",
               "answer": "melon",
               "explanation": "The transcript states: \"I'd prefer a melon - it's bigger too.\"",
               "instruction": "Questions 7-10<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -6795,7 +6795,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 9,
               "type": "FILL",
-              "text": "spices and _________ _________",
+              "text": "spices and _________",
               "answer": "coconut",
               "explanation": "The transcript states: \"The owner also sells a lot of spices there that you can put in a curry, and things like coconut.\"",
               "instruction": "Questions 7-10<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -7177,79 +7177,79 @@ const IELTS_TEST_DATA = {
               "text": "Threads and microfibres detach from synthetic _________.",
               "answer": "clothing",
               "explanation": "The transcript states: \"Threads and microfibres detach from synthetic clothing every time they're put in a washing machine, and 031 112 HTTPS: //azadenglish.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Microplastics in the Environment</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Threads and microfibres detach from synthetic <strong>[31]</strong> _________.</li>\n    <li>They cause injuries to the <strong>[32]</strong> _________ of wildlife.</li>\n    <li>They enter the food chain, e.g. in water, seafood, and <strong>[33]</strong> _________.</li>\n    <li>They are present in facial cleansers and <strong>[34]</strong> _________ in some countries.</li>\n    <li>Microplastics enter the soil through air, rain, and <strong>[35]</strong> _________.</li>\n    <li>Earthworms are important because they add <strong>[36]</strong> _________ to the soil.</li>\n    <li>The study investigated the impact of microplastics on the <strong>[37]</strong> _________ of plants.</li>\n    <li>The study found that microplastics caused:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li><strong>[38]</strong> _________ loss in earthworms</li>\n        <li>fewer seeds to germinate</li>\n        <li>a rise in the level of <strong>[39]</strong> _________ in the soil</li>\n      </ul>\n    </li>\n    <li>Changes to soil damage both ecosystems and <strong>[40]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 32,
               "type": "FILL",
-              "text": "• They cause injuries to the _________ _________ of wildlife and affect their",
+              "text": "They cause injuries to the _________ of wildlife.",
               "answer": "mouths",
               "explanation": "The transcript states: \"There is evidence that microplastics harm small creatures in a variety of ways, such as by damaging their mouths, or by impairing their ability to feed, for example when 032 microplastics get lodged in their digestive system.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Microplastics in the Environment</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Threads and microfibres detach from synthetic <strong>[31]</strong> _________.</li>\n    <li>They cause injuries to the <strong>[32]</strong> _________ of wildlife.</li>\n    <li>They enter the food chain, e.g. in water, seafood, and <strong>[33]</strong> _________.</li>\n    <li>They are present in facial cleansers and <strong>[34]</strong> _________ in some countries.</li>\n    <li>Microplastics enter the soil through air, rain, and <strong>[35]</strong> _________.</li>\n    <li>Earthworms are important because they add <strong>[36]</strong> _________ to the soil.</li>\n    <li>The study investigated the impact of microplastics on the <strong>[37]</strong> _________ of plants.</li>\n    <li>The study found that microplastics caused:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li><strong>[38]</strong> _________ loss in earthworms</li>\n        <li>fewer seeds to germinate</li>\n        <li>a rise in the level of <strong>[39]</strong> _________ in the soil</li>\n      </ul>\n    </li>\n    <li>Changes to soil damage both ecosystems and <strong>[40]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 33,
               "type": "FILL",
-              "text": "• They enter the food chain, e.g., in bottled and tap water, _________ _________ .",
+              "text": "They enter the food chain, e.g. in water, seafood, and _________.",
               "answer": "salt",
               "explanation": "The transcript states: \"What's more, salt and many kinds of seafood have also 033 been found to contain microplastics.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Microplastics in the Environment</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Threads and microfibres detach from synthetic <strong>[31]</strong> _________.</li>\n    <li>They cause injuries to the <strong>[32]</strong> _________ of wildlife.</li>\n    <li>They enter the food chain, e.g. in water, seafood, and <strong>[33]</strong> _________.</li>\n    <li>They are present in facial cleansers and <strong>[34]</strong> _________ in some countries.</li>\n    <li>Microplastics enter the soil through air, rain, and <strong>[35]</strong> _________.</li>\n    <li>Earthworms are important because they add <strong>[36]</strong> _________ to the soil.</li>\n    <li>The study investigated the impact of microplastics on the <strong>[37]</strong> _________ of plants.</li>\n    <li>The study found that microplastics caused:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li><strong>[38]</strong> _________ loss in earthworms</li>\n        <li>fewer seeds to germinate</li>\n        <li>a rise in the level of <strong>[39]</strong> _________ in the soil</li>\n      </ul>\n    </li>\n    <li>Changes to soil damage both ecosystems and <strong>[40]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 34,
               "type": "FILL",
-              "text": "products and _________ _________ in some countries.",
+              "text": "They are present in facial cleansers and _________.",
               "answer": "toothpaste",
               "explanation": "The transcript states: \"034 facial cleansers and toothpaste.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Microplastics in the Environment</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Threads and microfibres detach from synthetic <strong>[31]</strong> _________.</li>\n    <li>They cause injuries to the <strong>[32]</strong> _________ of wildlife.</li>\n    <li>They enter the food chain, e.g. in water, seafood, and <strong>[33]</strong> _________.</li>\n    <li>They are present in facial cleansers and <strong>[34]</strong> _________ in some countries.</li>\n    <li>Microplastics enter the soil through air, rain, and <strong>[35]</strong> _________.</li>\n    <li>Earthworms are important because they add <strong>[36]</strong> _________ to the soil.</li>\n    <li>The study investigated the impact of microplastics on the <strong>[37]</strong> _________ of plants.</li>\n    <li>The study found that microplastics caused:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li><strong>[38]</strong> _________ loss in earthworms</li>\n        <li>fewer seeds to germinate</li>\n        <li>a rise in the level of <strong>[39]</strong> _________ in the soil</li>\n      </ul>\n    </li>\n    <li>Changes to soil damage both ecosystems and <strong>[40]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 35,
               "type": "FILL",
-              "text": "• Microplastics enter the soil through the air, rain and _________ _________ .",
+              "text": "Microplastics enter the soil through air, rain, and _________.",
               "answer": "fertilisers",
               "explanation": "The transcript states: \"What's more, many of the fertilisers used by both farmers and gardeners 035 contain microplastics.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Microplastics in the Environment</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Threads and microfibres detach from synthetic <strong>[31]</strong> _________.</li>\n    <li>They cause injuries to the <strong>[32]</strong> _________ of wildlife.</li>\n    <li>They enter the food chain, e.g. in water, seafood, and <strong>[33]</strong> _________.</li>\n    <li>They are present in facial cleansers and <strong>[34]</strong> _________ in some countries.</li>\n    <li>Microplastics enter the soil through air, rain, and <strong>[35]</strong> _________.</li>\n    <li>Earthworms are important because they add <strong>[36]</strong> _________ to the soil.</li>\n    <li>The study investigated the impact of microplastics on the <strong>[37]</strong> _________ of plants.</li>\n    <li>The study found that microplastics caused:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li><strong>[38]</strong> _________ loss in earthworms</li>\n        <li>fewer seeds to germinate</li>\n        <li>a rise in the level of <strong>[39]</strong> _________ in the soil</li>\n      </ul>\n    </li>\n    <li>Changes to soil damage both ecosystems and <strong>[40]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 36,
               "type": "FILL",
-              "text": "• Earthworms are important because they add _________ _________ to the soil.",
+              "text": "Earthworms are important because they add _________ to the soil.",
               "answer": "nutrients",
               "explanation": "The transcript states: \"they mix nutrients into 036 it.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Microplastics in the Environment</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Threads and microfibres detach from synthetic <strong>[31]</strong> _________.</li>\n    <li>They cause injuries to the <strong>[32]</strong> _________ of wildlife.</li>\n    <li>They enter the food chain, e.g. in water, seafood, and <strong>[33]</strong> _________.</li>\n    <li>They are present in facial cleansers and <strong>[34]</strong> _________ in some countries.</li>\n    <li>Microplastics enter the soil through air, rain, and <strong>[35]</strong> _________.</li>\n    <li>Earthworms are important because they add <strong>[36]</strong> _________ to the soil.</li>\n    <li>The study investigated the impact of microplastics on the <strong>[37]</strong> _________ of plants.</li>\n    <li>The study found that microplastics caused:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li><strong>[38]</strong> _________ loss in earthworms</li>\n        <li>fewer seeds to germinate</li>\n        <li>a rise in the level of <strong>[39]</strong> _________ in the soil</li>\n      </ul>\n    </li>\n    <li>Changes to soil damage both ecosystems and <strong>[40]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 37,
               "type": "FILL",
-              "text": "_________ of plants. • The study found that microplastics caused:",
+              "text": "The study investigated the impact of microplastics on the _________ of plants.",
               "answer": "growth",
               "explanation": "The transcript states: \"The researchers set out to discover whether the introduction of microplastics into the soil - and the subsequent ingestion of these by earthworms - would impact soil quality and 037 ultimately inhibit plant growth.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Microplastics in the Environment</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Threads and microfibres detach from synthetic <strong>[31]</strong> _________.</li>\n    <li>They cause injuries to the <strong>[32]</strong> _________ of wildlife.</li>\n    <li>They enter the food chain, e.g. in water, seafood, and <strong>[33]</strong> _________.</li>\n    <li>They are present in facial cleansers and <strong>[34]</strong> _________ in some countries.</li>\n    <li>Microplastics enter the soil through air, rain, and <strong>[35]</strong> _________.</li>\n    <li>Earthworms are important because they add <strong>[36]</strong> _________ to the soil.</li>\n    <li>The study investigated the impact of microplastics on the <strong>[37]</strong> _________ of plants.</li>\n    <li>The study found that microplastics caused:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li><strong>[38]</strong> _________ loss in earthworms</li>\n        <li>fewer seeds to germinate</li>\n        <li>a rise in the level of <strong>[39]</strong> _________ in the soil</li>\n      </ul>\n    </li>\n    <li>Changes to soil damage both ecosystems and <strong>[40]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 38,
               "type": "FILL",
-              "text": "_________ loss in earthworms - fewer seeds to germinate - a rise in the level of 39 _________ in the soil. The study concluded: - soil should be seen as an important natural process. - changes to soil damage both ecosystems and 40 _________ .",
+              "text": "The introduction of microplastics caused _________ loss in earthworms.",
               "answer": "weight",
               "explanation": "The transcript states: \"The result was that the worms 038 lost weight rapidly.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Microplastics in the Environment</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Threads and microfibres detach from synthetic <strong>[31]</strong> _________.</li>\n    <li>They cause injuries to the <strong>[32]</strong> _________ of wildlife.</li>\n    <li>They enter the food chain, e.g. in water, seafood, and <strong>[33]</strong> _________.</li>\n    <li>They are present in facial cleansers and <strong>[34]</strong> _________ in some countries.</li>\n    <li>Microplastics enter the soil through air, rain, and <strong>[35]</strong> _________.</li>\n    <li>Earthworms are important because they add <strong>[36]</strong> _________ to the soil.</li>\n    <li>The study investigated the impact of microplastics on the <strong>[37]</strong> _________ of plants.</li>\n    <li>The study found that microplastics caused:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li><strong>[38]</strong> _________ loss in earthworms</li>\n        <li>fewer seeds to germinate</li>\n        <li>a rise in the level of <strong>[39]</strong> _________ in the soil</li>\n      </ul>\n    </li>\n    <li>Changes to soil damage both ecosystems and <strong>[40]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 39,
               "type": "FILL",
-              "text": "- a rise in the level of _________ _________ in the soil.",
+              "text": "There was a rise in the level of _________ in the soil.",
               "answer": "acid",
               "explanation": "The transcript states: \"The team also discovered that there was an increase in the amount of acid found in the soil, and this was attributed 039 mainly to the microplastic particles from conventional HOPE plastic.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Microplastics in the Environment</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Threads and microfibres detach from synthetic <strong>[31]</strong> _________.</li>\n    <li>They cause injuries to the <strong>[32]</strong> _________ of wildlife.</li>\n    <li>They enter the food chain, e.g. in water, seafood, and <strong>[33]</strong> _________.</li>\n    <li>They are present in facial cleansers and <strong>[34]</strong> _________ in some countries.</li>\n    <li>Microplastics enter the soil through air, rain, and <strong>[35]</strong> _________.</li>\n    <li>Earthworms are important because they add <strong>[36]</strong> _________ to the soil.</li>\n    <li>The study investigated the impact of microplastics on the <strong>[37]</strong> _________ of plants.</li>\n    <li>The study found that microplastics caused:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li><strong>[38]</strong> _________ loss in earthworms</li>\n        <li>fewer seeds to germinate</li>\n        <li>a rise in the level of <strong>[39]</strong> _________ in the soil</li>\n      </ul>\n    </li>\n    <li>Changes to soil damage both ecosystems and <strong>[40]</strong> _________.</li>\n  </ul>\n</div>"
             },
             {
               "num": 40,
               "type": "FILL",
-              "text": "Questions 31-_________",
+              "text": "Changes to soil damage both ecosystems and _________.",
               "answer": "society",
               "explanation": "The transcript states: \"when soil becomes impoverished by the presence of microplastics, not only ecosystems but also the whole of 040 society are negatively impacted.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Microplastics in the Environment</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Threads and microfibres detach from synthetic <strong>[31]</strong> _________.</li>\n    <li>They cause injuries to the <strong>[32]</strong> _________ of wildlife.</li>\n    <li>They enter the food chain, e.g. in water, seafood, and <strong>[33]</strong> _________.</li>\n    <li>They are present in facial cleansers and <strong>[34]</strong> _________ in some countries.</li>\n    <li>Microplastics enter the soil through air, rain, and <strong>[35]</strong> _________.</li>\n    <li>Earthworms are important because they add <strong>[36]</strong> _________ to the soil.</li>\n    <li>The study investigated the impact of microplastics on the <strong>[37]</strong> _________ of plants.</li>\n    <li>The study found that microplastics caused:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li><strong>[38]</strong> _________ loss in earthworms</li>\n        <li>fewer seeds to germinate</li>\n        <li>a rise in the level of <strong>[39]</strong> _________ in the soil</li>\n      </ul>\n    </li>\n    <li>Changes to soil damage both ecosystems and <strong>[40]</strong> _________.</li>\n  </ul>\n</div>"
             }
           ]
         }
@@ -7849,82 +7849,82 @@ const IELTS_TEST_DATA = {
             {
               "num": 1,
               "type": "FILL",
-              "text": "_________ . use 2 _________ in staffroom to give 3 _________ number to collect 4 _________ .. on 5 _________ floor",
+              "text": "Name of Charlotte's manager: _________.",
               "answer": "Kaeden",
               "explanation": "The transcript states: \"KAEDEN: Hello Charlotte.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Charlotte's Work Orientation Notes</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Charlotte's Manager:</strong> <strong>[1]</strong> _________</li>\n    <li>Use a <strong>[2]</strong> _________ in the staffroom for personal items.</li>\n    <li>Provide HR with your <strong>[3]</strong> _________ number.</li>\n    <li>Collect your <strong>[4]</strong> _________ from Tiffany.</li>\n    <li>HR is located on the <strong>[5]</strong> _________ floor.</li>\n    <li>Charlotte's contact phone number: <strong>[6]</strong> _________</li>\n  </ul>\n</div>"
             },
             {
               "num": 2,
               "type": "FILL",
-              "text": "use _________ _________ in staffroom",
+              "text": "Use a _________ in the staffroom for personal belongings.",
               "answer": "locker",
               "explanation": "The transcript states: \"Put your coat and rucksack in one of the lockers there.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Charlotte's Work Orientation Notes</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Charlotte's Manager:</strong> <strong>[1]</strong> _________</li>\n    <li>Use a <strong>[2]</strong> _________ in the staffroom for personal items.</li>\n    <li>Provide HR with your <strong>[3]</strong> _________ number.</li>\n    <li>Collect your <strong>[4]</strong> _________ from Tiffany.</li>\n    <li>HR is located on the <strong>[5]</strong> _________ floor.</li>\n    <li>Charlotte's contact phone number: <strong>[6]</strong> _________</li>\n  </ul>\n</div>"
             },
             {
               "num": 3,
               "type": "FILL",
-              "text": "to give _________ _________ number",
+              "text": "Give HR your _________ number.",
               "answer": "passport",
               "explanation": "The transcript states: \"CHARLOTTE: I was told to bring my passport with me.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Charlotte's Work Orientation Notes</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Charlotte's Manager:</strong> <strong>[1]</strong> _________</li>\n    <li>Use a <strong>[2]</strong> _________ in the staffroom for personal items.</li>\n    <li>Provide HR with your <strong>[3]</strong> _________ number.</li>\n    <li>Collect your <strong>[4]</strong> _________ from Tiffany.</li>\n    <li>HR is located on the <strong>[5]</strong> _________ floor.</li>\n    <li>Charlotte's contact phone number: <strong>[6]</strong> _________</li>\n  </ul>\n</div>"
             },
             {
               "num": 4,
               "type": "FILL",
-              "text": "to collect _________ _________ ..",
+              "text": "Collect your _________ from Tiffany.",
               "answer": "uniform",
               "explanation": "The transcript states: \"Tiffany will give you a uniform.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Charlotte's Work Orientation Notes</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Charlotte's Manager:</strong> <strong>[1]</strong> _________</li>\n    <li>Use a <strong>[2]</strong> _________ in the staffroom for personal items.</li>\n    <li>Provide HR with your <strong>[3]</strong> _________ number.</li>\n    <li>Collect your <strong>[4]</strong> _________ from Tiffany.</li>\n    <li>HR is located on the <strong>[5]</strong> _________ floor.</li>\n    <li>Charlotte's contact phone number: <strong>[6]</strong> _________</li>\n  </ul>\n</div>"
             },
             {
               "num": 5,
               "type": "FILL",
-              "text": "on _________ _________ floor",
+              "text": "HR is located on the _________ floor.",
               "answer": "third",
               "explanation": "The transcript states: \"KAEDEN: The staffroom's on the first floor, and HR are a couple of floors above that, on the third floor.\"",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Charlotte's Work Orientation Notes</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Charlotte's Manager:</strong> <strong>[1]</strong> _________</li>\n    <li>Use a <strong>[2]</strong> _________ in the staffroom for personal items.</li>\n    <li>Provide HR with your <strong>[3]</strong> _________ number.</li>\n    <li>Collect your <strong>[4]</strong> _________ from Tiffany.</li>\n    <li>HR is located on the <strong>[5]</strong> _________ floor.</li>\n    <li>Charlotte's contact phone number: <strong>[6]</strong> _________</li>\n  </ul>\n</div>"
             },
             {
               "num": 6,
               "type": "FILL",
-              "text": "_________ . Responsibilities Task 1 Task 2 Notes Bakery section Check sell-by dates Change price labels Use 7 _________ labels Sushi takeaway Re-stock with Wipe preparation area Do not clean counter 8 ···················· _________ and clean the sink any knives boxes if needed Meat and fish Clean the serving Collect 9 _________ Must wear special counters area, including the for the fish from the 10 _________ weighing scales cold-room https://azadenglish.com Instagram: @Ali.mirzaei.azad",
+              "text": "Charlotte's contact number: _________.",
               "answer": "0412 665 903",
               "explanation": "The transcript confirms the answer is '0412 665 903'.",
-              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800\">Charlotte's Work Orientation Notes</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li><strong>Charlotte's Manager:</strong> <strong>[1]</strong> _________</li>\n    <li>Use a <strong>[2]</strong> _________ in the staffroom for personal items.</li>\n    <li>Provide HR with your <strong>[3]</strong> _________ number.</li>\n    <li>Collect your <strong>[4]</strong> _________ from Tiffany.</li>\n    <li>HR is located on the <strong>[5]</strong> _________ floor.</li>\n    <li>Charlotte's contact phone number: <strong>[6]</strong> _________</li>\n  </ul>\n</div>"
             },
             {
               "num": 7,
               "type": "FILL",
-              "text": "Put a _________ label on items that need a new price.",
+              "text": "Use _________ labels on items that need a new price.",
               "answer": "yellow",
               "explanation": "The transcript states: \"When something Test4 needs a new price label, put a yellow one on the package, next to the original 07 price.\"",
-              "instruction": "Questions 7-10<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 7-10<br/>Complete the table below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"overflow-x-auto border border-slate-200 rounded-xl\">\n  <table class=\"min-w-full text-xs text-left text-slate-700 bg-slate-50\">\n    <thead class=\"bg-slate-100 text-slate-800 uppercase text-[9px] font-black border-b border-slate-200\">\n      <tr>\n        <th class=\"px-3 py-2\">Section</th>\n        <th class=\"px-3 py-2\">Responsibilities</th>\n        <th class=\"px-3 py-2\">Notes / Specific Requirements</th>\n      </tr>\n    </thead>\n    <tbody class=\"divide-y divide-slate-200\">\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">Bakery</td>\n        <td class=\"px-3 py-2\">\n          <div>• Check sell-by dates</div>\n          <div>• Change price labels</div>\n        </td>\n        <td class=\"px-3 py-2\">Use <strong>[7]</strong> _________ labels.</td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">Sushi Takeaway</td>\n        <td class=\"px-3 py-2\">\n          <div>• Re-stock with <strong>[8]</strong> _________ boxes</div>\n          <div>• Wipe preparation area</div>\n        </td>\n        <td class=\"px-3 py-2\">Do not clean any knives.</td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">Meat &amp; Fish</td>\n        <td class=\"px-3 py-2\">\n          <div>• Clean serving counters and weighing scales</div>\n        </td>\n        <td class=\"px-3 py-2\">\n          <div>• Collect <strong>[9]</strong> _________ for the fish from the cold-room</div>\n          <div>• Wear special <strong>[10]</strong> _________ when in the cold-room</div>\n        </td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
             },
             {
               "num": 8,
               "type": "FILL",
-              "text": "counter _________ ···················· _________ and clean the sink any knives",
+              "text": "Re-stock the sushi takeaway with _________ boxes.",
               "answer": "plastic",
               "explanation": "The transcript confirms the answer is 'plastic'.",
-              "instruction": "Questions 7-10<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 7-10<br/>Complete the table below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"overflow-x-auto border border-slate-200 rounded-xl\">\n  <table class=\"min-w-full text-xs text-left text-slate-700 bg-slate-50\">\n    <thead class=\"bg-slate-100 text-slate-800 uppercase text-[9px] font-black border-b border-slate-200\">\n      <tr>\n        <th class=\"px-3 py-2\">Section</th>\n        <th class=\"px-3 py-2\">Responsibilities</th>\n        <th class=\"px-3 py-2\">Notes / Specific Requirements</th>\n      </tr>\n    </thead>\n    <tbody class=\"divide-y divide-slate-200\">\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">Bakery</td>\n        <td class=\"px-3 py-2\">\n          <div>• Check sell-by dates</div>\n          <div>• Change price labels</div>\n        </td>\n        <td class=\"px-3 py-2\">Use <strong>[7]</strong> _________ labels.</td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">Sushi Takeaway</td>\n        <td class=\"px-3 py-2\">\n          <div>• Re-stock with <strong>[8]</strong> _________ boxes</div>\n          <div>• Wipe preparation area</div>\n        </td>\n        <td class=\"px-3 py-2\">Do not clean any knives.</td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">Meat &amp; Fish</td>\n        <td class=\"px-3 py-2\">\n          <div>• Clean serving counters and weighing scales</div>\n        </td>\n        <td class=\"px-3 py-2\">\n          <div>• Collect <strong>[9]</strong> _________ for the fish from the cold-room</div>\n          <div>• Wear special <strong>[10]</strong> _________ when in the cold-room</div>\n        </td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
             },
             {
               "num": 9,
               "type": "FILL",
-              "text": "Meat and fish Clean the serving Collect _________ _________ Must wear special",
+              "text": "Collect _________ for the fish from the cold-room.",
               "answer": "ice",
               "explanation": "The transcript states: \"Problem with a bread slicer.\"",
-              "instruction": "Questions 7-10<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 7-10<br/>Complete the table below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"overflow-x-auto border border-slate-200 rounded-xl\">\n  <table class=\"min-w-full text-xs text-left text-slate-700 bg-slate-50\">\n    <thead class=\"bg-slate-100 text-slate-800 uppercase text-[9px] font-black border-b border-slate-200\">\n      <tr>\n        <th class=\"px-3 py-2\">Section</th>\n        <th class=\"px-3 py-2\">Responsibilities</th>\n        <th class=\"px-3 py-2\">Notes / Specific Requirements</th>\n      </tr>\n    </thead>\n    <tbody class=\"divide-y divide-slate-200\">\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">Bakery</td>\n        <td class=\"px-3 py-2\">\n          <div>• Check sell-by dates</div>\n          <div>• Change price labels</div>\n        </td>\n        <td class=\"px-3 py-2\">Use <strong>[7]</strong> _________ labels.</td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">Sushi Takeaway</td>\n        <td class=\"px-3 py-2\">\n          <div>• Re-stock with <strong>[8]</strong> _________ boxes</div>\n          <div>• Wipe preparation area</div>\n        </td>\n        <td class=\"px-3 py-2\">Do not clean any knives.</td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">Meat &amp; Fish</td>\n        <td class=\"px-3 py-2\">\n          <div>• Clean serving counters and weighing scales</div>\n        </td>\n        <td class=\"px-3 py-2\">\n          <div>• Collect <strong>[9]</strong> _________ for the fish from the cold-room</div>\n          <div>• Wear special <strong>[10]</strong> _________ when in the cold-room</div>\n        </td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
             },
             {
               "num": 10,
               "type": "FILL",
-              "text": "Questions 1-_________",
+              "text": "Must wear special _________ when handling items in the cold-room.",
               "answer": "gloves",
               "explanation": "The transcript states: \"But make sure you put on thermal gloves when you take anything out of the cold-room.\"",
-              "instruction": "Questions 7-10<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 7-10<br/>Complete the table below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"overflow-x-auto border border-slate-200 rounded-xl\">\n  <table class=\"min-w-full text-xs text-left text-slate-700 bg-slate-50\">\n    <thead class=\"bg-slate-100 text-slate-800 uppercase text-[9px] font-black border-b border-slate-200\">\n      <tr>\n        <th class=\"px-3 py-2\">Section</th>\n        <th class=\"px-3 py-2\">Responsibilities</th>\n        <th class=\"px-3 py-2\">Notes / Specific Requirements</th>\n      </tr>\n    </thead>\n    <tbody class=\"divide-y divide-slate-200\">\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">Bakery</td>\n        <td class=\"px-3 py-2\">\n          <div>• Check sell-by dates</div>\n          <div>• Change price labels</div>\n        </td>\n        <td class=\"px-3 py-2\">Use <strong>[7]</strong> _________ labels.</td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">Sushi Takeaway</td>\n        <td class=\"px-3 py-2\">\n          <div>• Re-stock with <strong>[8]</strong> _________ boxes</div>\n          <div>• Wipe preparation area</div>\n        </td>\n        <td class=\"px-3 py-2\">Do not clean any knives.</td>\n      </tr>\n      <tr>\n        <td class=\"px-3 py-2 font-bold\">Meat &amp; Fish</td>\n        <td class=\"px-3 py-2\">\n          <div>• Clean serving counters and weighing scales</div>\n        </td>\n        <td class=\"px-3 py-2\">\n          <div>• Collect <strong>[9]</strong> _________ for the fish from the cold-room</div>\n          <div>• Wear special <strong>[10]</strong> _________ when in the cold-room</div>\n        </td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
             }
           ]
         },
@@ -8257,79 +8257,79 @@ const IELTS_TEST_DATA = {
               "text": "Invasive species are often in _________ with native species.",
               "answer": "competition",
               "explanation": "The transcript states: \"Invasive species are a significant contributor to the current global biodiversity crisis 031 and are often in competition with native species and may threaten their long-term survival.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Reforestation and Mangrove Protection</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Invasive species are often in <strong>[31]</strong> _________ with native species.</li>\n    <li>They can be sources of <strong>[32]</strong> _________ for local people.</li>\n    <li>Reforestation plays a role in reducing global <strong>[33]</strong> _________ and climate change.</li>\n    <li>Large-scale projects:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>do not select land which is being used for <strong>[34]</strong> _________</li>\n        <li>base planning decisions on information from accurate <strong>[35]</strong> _________</li>\n        <li>drones identify areas endangered by illegal logging and keeping <strong>[36]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Lampang Province, Thailand:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>attracting animals increases the <strong>[37]</strong> _________ of recovery</li>\n        <li>animals such as <strong>[38]</strong> _________ were soon attracted</li>\n      </ul>\n    </li>\n    <li>Involving local communities:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>destruction of mangrove forests made it difficult to make a living from <strong>[39]</strong> _________</li>\n        <li>mangrove reforestation protects against the higher risk of <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 32,
               "type": "FILL",
-              "text": "sources of _________ _________ for local people",
+              "text": "They can be sources of _________ for local people.",
               "answer": "food",
               "explanation": "The transcript states: \"These could include selecting trees that can contribute to wildlife conservation, improve the availability of food for the 032 local community and maintain the stability of soil systems.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Reforestation and Mangrove Protection</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Invasive species are often in <strong>[31]</strong> _________ with native species.</li>\n    <li>They can be sources of <strong>[32]</strong> _________ for local people.</li>\n    <li>Reforestation plays a role in reducing global <strong>[33]</strong> _________ and climate change.</li>\n    <li>Large-scale projects:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>do not select land which is being used for <strong>[34]</strong> _________</li>\n        <li>base planning decisions on information from accurate <strong>[35]</strong> _________</li>\n        <li>drones identify areas endangered by illegal logging and keeping <strong>[36]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Lampang Province, Thailand:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>attracting animals increases the <strong>[37]</strong> _________ of recovery</li>\n        <li>animals such as <strong>[38]</strong> _________ were soon attracted</li>\n      </ul>\n    </li>\n    <li>Involving local communities:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>destruction of mangrove forests made it difficult to make a living from <strong>[39]</strong> _________</li>\n        <li>mangrove reforestation protects against the higher risk of <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 33,
               "type": "FILL",
-              "text": "_________ and climate change • plant trees on previously forested land which is in a bad condition, not select land which is being used for 34 _________ . Large-scale reforestation projects • Base planning decisions on information from accurate 35 _________ . • Drones are useful for identifying areas in Brazil which are endangered by keeping 36 _________ and illegal logging. Lampang Province, Northern Thailand • A forest was restored in an area damaged by mining. • A variety of native fig trees were planted, which are important for - supporting many wildlife species - increasing the 37 _________ of recovery by attracting animals and birds, e.g., 38 _________ were soon attracted to the area. Involving local communities • Destruction of mangrove forests in Madagascar made it difficult for people to make a living from 39 _________ . • The mangrove reforestation project: - provided employment for local people - restored a healthy ecosystem - protects against the higher risk of 40 _________ .",
+              "text": "Reforestation plays a role in reducing global _________ and climate change.",
               "answer": "disease",
               "explanation": "The transcript states: \"Test4 Using seeds with low genetic diversity generally lowers the resilience of restored forests, 033 which can make them vulnerable to disease and unable to adapt to climate change.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Reforestation and Mangrove Protection</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Invasive species are often in <strong>[31]</strong> _________ with native species.</li>\n    <li>They can be sources of <strong>[32]</strong> _________ for local people.</li>\n    <li>Reforestation plays a role in reducing global <strong>[33]</strong> _________ and climate change.</li>\n    <li>Large-scale projects:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>do not select land which is being used for <strong>[34]</strong> _________</li>\n        <li>base planning decisions on information from accurate <strong>[35]</strong> _________</li>\n        <li>drones identify areas endangered by illegal logging and keeping <strong>[36]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Lampang Province, Thailand:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>attracting animals increases the <strong>[37]</strong> _________ of recovery</li>\n        <li>animals such as <strong>[38]</strong> _________ were soon attracted</li>\n      </ul>\n    </li>\n    <li>Involving local communities:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>destruction of mangrove forests made it difficult to make a living from <strong>[39]</strong> _________</li>\n        <li>mangrove reforestation protects against the higher risk of <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 34,
               "type": "FILL",
-              "text": "land which is being used for _________ _________ .",
+              "text": "Do not select land which is being used for _________.",
               "answer": "agriculture",
               "explanation": "The transcript states: \"Reforesting areas which are currently exploited for agriculture 034 should be avoided as this often leads to other areas being deforested.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Reforestation and Mangrove Protection</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Invasive species are often in <strong>[31]</strong> _________ with native species.</li>\n    <li>They can be sources of <strong>[32]</strong> _________ for local people.</li>\n    <li>Reforestation plays a role in reducing global <strong>[33]</strong> _________ and climate change.</li>\n    <li>Large-scale projects:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>do not select land which is being used for <strong>[34]</strong> _________</li>\n        <li>base planning decisions on information from accurate <strong>[35]</strong> _________</li>\n        <li>drones identify areas endangered by illegal logging and keeping <strong>[36]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Lampang Province, Thailand:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>attracting animals increases the <strong>[37]</strong> _________ of recovery</li>\n        <li>animals such as <strong>[38]</strong> _________ were soon attracted</li>\n      </ul>\n    </li>\n    <li>Involving local communities:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>destruction of mangrove forests made it difficult to make a living from <strong>[39]</strong> _________</li>\n        <li>mangrove reforestation protects against the higher risk of <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 35,
               "type": "FILL",
-              "text": "• Base planning decisions on information from accurate _________ _________ .",
+              "text": "Base planning decisions on information from accurate _________.",
               "answer": "maps",
               "explanation": "The transcript states: \"Haying detailed and up-to-date maps identjfyjng high-priority areas for intervention is essential.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Reforestation and Mangrove Protection</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Invasive species are often in <strong>[31]</strong> _________ with native species.</li>\n    <li>They can be sources of <strong>[32]</strong> _________ for local people.</li>\n    <li>Reforestation plays a role in reducing global <strong>[33]</strong> _________ and climate change.</li>\n    <li>Large-scale projects:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>do not select land which is being used for <strong>[34]</strong> _________</li>\n        <li>base planning decisions on information from accurate <strong>[35]</strong> _________</li>\n        <li>drones identify areas endangered by illegal logging and keeping <strong>[36]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Lampang Province, Thailand:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>attracting animals increases the <strong>[37]</strong> _________ of recovery</li>\n        <li>animals such as <strong>[38]</strong> _________ were soon attracted</li>\n      </ul>\n    </li>\n    <li>Involving local communities:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>destruction of mangrove forests made it difficult to make a living from <strong>[39]</strong> _________</li>\n        <li>mangrove reforestation protects against the higher risk of <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 36,
               "type": "FILL",
-              "text": "keeping _________ _________ and illegal logging.",
+              "text": "Drones identify areas endangered by illegal logging and keeping _________.",
               "answer": "cattle",
               "explanation": "The transcript states: \"In Brazil, it's being used to identify and quantify how parts of the Amazon are being devastated by human activities such as rearing cattle and illegal logging.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Reforestation and Mangrove Protection</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Invasive species are often in <strong>[31]</strong> _________ with native species.</li>\n    <li>They can be sources of <strong>[32]</strong> _________ for local people.</li>\n    <li>Reforestation plays a role in reducing global <strong>[33]</strong> _________ and climate change.</li>\n    <li>Large-scale projects:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>do not select land which is being used for <strong>[34]</strong> _________</li>\n        <li>base planning decisions on information from accurate <strong>[35]</strong> _________</li>\n        <li>drones identify areas endangered by illegal logging and keeping <strong>[36]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Lampang Province, Thailand:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>attracting animals increases the <strong>[37]</strong> _________ of recovery</li>\n        <li>animals such as <strong>[38]</strong> _________ were soon attracted</li>\n      </ul>\n    </li>\n    <li>Involving local communities:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>destruction of mangrove forests made it difficult to make a living from <strong>[39]</strong> _________</li>\n        <li>mangrove reforestation protects against the higher risk of <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 37,
               "type": "FILL",
-              "text": "- increasing the _________ _________ of recovery by attracting animals and birds,",
+              "text": "Attracting animals increases the _________ of recovery.",
               "answer": "speed",
               "explanation": "The transcript states: \"They are central to tropical reforestation projects as they accelerate the speed of the recovery process by attracting animals and birds which act as natural seed dispersers.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Reforestation and Mangrove Protection</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Invasive species are often in <strong>[31]</strong> _________ with native species.</li>\n    <li>They can be sources of <strong>[32]</strong> _________ for local people.</li>\n    <li>Reforestation plays a role in reducing global <strong>[33]</strong> _________ and climate change.</li>\n    <li>Large-scale projects:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>do not select land which is being used for <strong>[34]</strong> _________</li>\n        <li>base planning decisions on information from accurate <strong>[35]</strong> _________</li>\n        <li>drones identify areas endangered by illegal logging and keeping <strong>[36]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Lampang Province, Thailand:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>attracting animals increases the <strong>[37]</strong> _________ of recovery</li>\n        <li>animals such as <strong>[38]</strong> _________ were soon attracted</li>\n      </ul>\n    </li>\n    <li>Involving local communities:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>destruction of mangrove forests made it difficult to make a living from <strong>[39]</strong> _________</li>\n        <li>mangrove reforestation protects against the higher risk of <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 38,
               "type": "FILL",
-              "text": "e.g., _________ _________ were soon attracted to the area.",
+              "text": "Animals such as _________ were soon attracted to the area.",
               "answer": "monkeys",
               "explanation": "The transcript states: \"At this site, for example, after only three rainy seasons, monkeys started visiting to eat the fig fruits, naturally dispersing seeds through defecation.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Reforestation and Mangrove Protection</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Invasive species are often in <strong>[31]</strong> _________ with native species.</li>\n    <li>They can be sources of <strong>[32]</strong> _________ for local people.</li>\n    <li>Reforestation plays a role in reducing global <strong>[33]</strong> _________ and climate change.</li>\n    <li>Large-scale projects:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>do not select land which is being used for <strong>[34]</strong> _________</li>\n        <li>base planning decisions on information from accurate <strong>[35]</strong> _________</li>\n        <li>drones identify areas endangered by illegal logging and keeping <strong>[36]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Lampang Province, Thailand:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>attracting animals increases the <strong>[37]</strong> _________ of recovery</li>\n        <li>animals such as <strong>[38]</strong> _________ were soon attracted</li>\n      </ul>\n    </li>\n    <li>Involving local communities:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>destruction of mangrove forests made it difficult to make a living from <strong>[39]</strong> _________</li>\n        <li>mangrove reforestation protects against the higher risk of <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 39,
               "type": "FILL",
-              "text": "make a living from _________ _________ .",
+              "text": "Destruction of mangrove forests made it difficult to make a living from _________.",
               "answer": "fishing",
               "explanation": "The transcript states: \"Destruction of the mangrove forests 039 had a terrible impact on plant and animal life, and also badly affected the fishing industry, which was a major source of employment for local people living in coastal areas.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Reforestation and Mangrove Protection</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Invasive species are often in <strong>[31]</strong> _________ with native species.</li>\n    <li>They can be sources of <strong>[32]</strong> _________ for local people.</li>\n    <li>Reforestation plays a role in reducing global <strong>[33]</strong> _________ and climate change.</li>\n    <li>Large-scale projects:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>do not select land which is being used for <strong>[34]</strong> _________</li>\n        <li>base planning decisions on information from accurate <strong>[35]</strong> _________</li>\n        <li>drones identify areas endangered by illegal logging and keeping <strong>[36]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Lampang Province, Thailand:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>attracting animals increases the <strong>[37]</strong> _________ of recovery</li>\n        <li>animals such as <strong>[38]</strong> _________ were soon attracted</li>\n      </ul>\n    </li>\n    <li>Involving local communities:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>destruction of mangrove forests made it difficult to make a living from <strong>[39]</strong> _________</li>\n        <li>mangrove reforestation protects against the higher risk of <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             },
             {
               "num": 40,
               "type": "FILL",
-              "text": "Questions 31-_________",
+              "text": "Mangrove reforestation protects against the higher risk of _________.",
               "answer": "flooding",
               "explanation": "The transcript states: \"The mangroves also act as a defence against the increased 040 threat of flooding caused by climate change.\"",
-              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer.<br/><br/>\n<div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs\">\n  <h4 class=\"font-extrabold text-sm text-slate-800 uppercase tracking-wider text-[10px]\">Reforestation and Mangrove Protection</h4>\n  <ul class=\"list-disc pl-4 space-y-1\">\n    <li>Invasive species are often in <strong>[31]</strong> _________ with native species.</li>\n    <li>They can be sources of <strong>[32]</strong> _________ for local people.</li>\n    <li>Reforestation plays a role in reducing global <strong>[33]</strong> _________ and climate change.</li>\n    <li>Large-scale projects:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>do not select land which is being used for <strong>[34]</strong> _________</li>\n        <li>base planning decisions on information from accurate <strong>[35]</strong> _________</li>\n        <li>drones identify areas endangered by illegal logging and keeping <strong>[36]</strong> _________</li>\n      </ul>\n    </li>\n    <li>Lampang Province, Thailand:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>attracting animals increases the <strong>[37]</strong> _________ of recovery</li>\n        <li>animals such as <strong>[38]</strong> _________ were soon attracted</li>\n      </ul>\n    </li>\n    <li>Involving local communities:\n      <ul class=\"list-circle pl-4 space-y-1\">\n        <li>destruction of mangrove forests made it difficult to make a living from <strong>[39]</strong> _________</li>\n        <li>mangrove reforestation protects against the higher risk of <strong>[40]</strong> _________</li>\n      </ul>\n    </li>\n  </ul>\n</div>"
             }
           ]
         }
