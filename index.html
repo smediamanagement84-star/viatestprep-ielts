@@ -88,6 +88,10 @@
   ::-webkit-scrollbar-thumb:hover {
     background: rgba(15, 23, 42, 0.2);
   }
+  .bg-grid-dots {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
 </style>
 </head>
 <body class="relative overflow-x-hidden">
@@ -99,90 +103,158 @@
   <!-- ========================================== -->
   <!-- VIEW 1: PREMIUM GUEST LANDING PAGE         -->
   <!-- ========================================== -->
-  <div id="view-landing" class="view-container min-h-screen flex flex-col justify-between hidden">
-    <!-- Navbar -->
-    <header class="fixed top-0 left-0 right-0 h-20 bg-white/80 backdrop-blur-md border-b border-slate-100 flex items-center justify-between px-6 md:px-12 z-50">
+  <div id="view-landing" class="view-container min-h-screen flex flex-col justify-between hidden bg-[#060814] text-slate-100 relative overflow-hidden">
+    <!-- Grid Overlay -->
+    <div class="absolute inset-0 bg-grid-dots pointer-events-none opacity-40 z-0"></div>
+
+    <!-- Glowing Blobs -->
+    <div class="absolute w-[400px] h-[400px] rounded-full bg-indigo-500/10 blur-[100px] top-[-100px] right-[-50px] pointer-events-none z-0"></div>
+    <div class="absolute w-[500px] h-[500px] rounded-full bg-purple-500/10 blur-[120px] bottom-[20%] left-[-200px] pointer-events-none z-0"></div>
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 h-20 bg-[#060814]/75 backdrop-blur-lg border-b border-white/[0.06] flex items-center justify-between px-6 md:px-12 z-50">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center font-serif text-white font-extrabold text-xl shadow-lg shadow-indigo-600/25">V</div>
-        <a href="#" class="font-serif text-2xl font-extrabold tracking-tight bg-gradient-to-r from-slate-900 to-indigo-600 bg-clip-text text-transparent">ViATestPrep</a>
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center font-serif text-white font-extrabold text-xl shadow-lg shadow-indigo-500/25">V</div>
+        <a href="#" class="font-serif text-2xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-indigo-400 bg-clip-text text-transparent">ViATestPrep</a>
       </div>
-      <button onclick="openAccessModal()" class="px-6 py-2.5 bg-indigo-600 text-white font-extrabold rounded-full text-sm hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-600/25 transition">Access Platform</button>
+      <button onclick="openAccessModal()" class="px-6 py-2.5 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-extrabold rounded-full text-sm shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/35 transition duration-300 transform hover:-translate-y-0.5">Access Platform</button>
     </header>
 
     <!-- Hero Content -->
-    <main class="max-w-6xl mx-auto px-6 pt-36 pb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center flex-1">
+    <main class="max-w-6xl mx-auto px-6 pt-36 pb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center flex-1 relative z-10">
       <div class="lg:col-span-7 flex flex-col items-start text-left">
-        <span class="text-xs font-extrabold uppercase tracking-widest text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full mb-6">Commercial Coaching Portal</span>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight mb-6">
-          Master the IELTS &amp; PTE with <span class="gradient-text">Interactive Drills</span>
+        <span class="text-xs font-black uppercase tracking-widest text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 px-3.5 py-1.5 rounded-full mb-6 inline-block">🚀 Premium IELTS &amp; PTE SaaS</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
+          Master the IELTS with <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 bg-clip-text text-transparent">Interactive Drills</span>
         </h1>
-        <p class="text-slate-500 text-base md:text-lg leading-relaxed mb-8 max-w-xl">
-          The ultimate preparation ecosystem featuring 16+ skill modules, timed Cambridge mocks, live feedback scorecards, and institutional student tracking (CRM) tools.
+        <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-8 max-w-lg">
+          The ultimate cloud preparation suite. Access 16+ strategy guides, timed Cambridge mock exams, browser voice recorders, and institutional student rosters (CRM) under one single link.
         </p>
         <div class="flex flex-wrap gap-4">
-          <button onclick="openAccessModal()" class="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold rounded-full text-base shadow-xl shadow-indigo-600/20 hover:shadow-indigo-600/35 transition hover:-translate-y-0.5">
-            Access Resources &amp; Tests
+          <button onclick="openAccessModal()" class="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-extrabold rounded-full text-sm shadow-xl shadow-indigo-600/30 hover:shadow-indigo-600/40 transition-all duration-300 transform hover:-translate-y-0.5">
+            Access Portal &amp; Mocks
           </button>
-          <a href="#features" class="px-8 py-4 bg-white border border-slate-200 text-slate-800 font-bold rounded-full text-base hover:border-indigo-600 hover:text-indigo-600 transition shadow-sm">
+          <a href="#features" class="px-8 py-4 bg-white/5 border border-white/10 hover:border-white/20 text-white font-bold rounded-full text-sm transition shadow-sm hover:bg-white/10">
             Learn More
           </a>
         </div>
       </div>
-      <div class="lg:col-span-5 relative h-[400px] hidden lg:flex justify-center items-center">
-        <!-- Floating Visual Cards -->
-        <div class="float-badge absolute top-8 left-4 bg-white border border-slate-100 rounded-2xl p-5 shadow-xl shadow-slate-100/50 w-52 border-t-4 border-teal-500">
-          <span class="text-2xl mb-1 block">🎧</span>
-          <span class="font-extrabold text-sm text-slate-800 block">Sound Hunter</span>
-          <span class="text-[10px] text-slate-400 mt-1 block">Official Cambridge Audio</span>
-        </div>
-        <div class="float-badge absolute bottom-12 right-4 bg-white border border-slate-100 rounded-2xl p-5 shadow-xl shadow-slate-100/50 w-52 border-t-4 border-indigo-600" style="animation-delay:1.5s;">
-          <span class="text-2xl mb-1 block">📝</span>
-          <span class="font-extrabold text-sm text-slate-800 block">Architect Blueprint</span>
-          <span class="text-[10px] text-slate-400 mt-1 block">Essay Structures &amp; Drills</span>
-        </div>
-        <div class="float-badge absolute top-1/2 left-1/3 bg-white border border-slate-100 rounded-2xl p-5 shadow-xl shadow-slate-100/50 w-48 border-t-4 border-rose-500" style="animation-delay:3s;">
-          <span class="text-2xl mb-1 block">📊</span>
-          <span class="font-extrabold text-sm text-slate-800 block">CRM Dashboard</span>
-          <span class="text-[10px] text-slate-400 mt-1 block">Roster &amp; Grade Logs</span>
+
+      <!-- Right Column: High-Fidelity Product Showcase -->
+      <div class="lg:col-span-5 relative flex justify-center items-center">
+        <!-- Glowing aura behind dashboard -->
+        <div class="absolute w-72 h-72 bg-purple-600/15 rounded-full blur-3xl"></div>
+        
+        <!-- Dashboard Window Mockup -->
+        <div class="w-full max-w-sm bg-[#0c101f]/80 border border-white/[0.08] rounded-2xl shadow-2xl overflow-hidden backdrop-blur-md relative transform hover:scale-[1.02] transition duration-500">
+          <!-- Window header dots -->
+          <div class="h-10 bg-white/[0.02] border-b border-white/[0.06] flex items-center px-4 gap-1.5 shrink-0">
+            <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
+            <span class="text-[10px] text-slate-500 font-bold ml-2 font-mono">viatestprep.edu/portal</span>
+          </div>
+          <!-- Mock content -->
+          <div class="p-5 space-y-4 text-left">
+            <!-- Mock header metrics -->
+            <div class="grid grid-cols-2 gap-3">
+              <div class="bg-white/[0.02] border border-white/[0.05] p-3 rounded-xl">
+                <span class="text-[8px] text-slate-500 uppercase font-black tracking-wider block">Active Slots</span>
+                <span class="text-sm font-extrabold text-white mt-0.5 block">24 / 25 Students</span>
+                <div class="w-full h-1 bg-white/10 rounded-full mt-2 overflow-hidden">
+                  <div class="w-[96%] h-full bg-indigo-500 rounded-full"></div>
+                </div>
+              </div>
+              <div class="bg-white/[0.02] border border-white/[0.05] p-3 rounded-xl">
+                <span class="text-[8px] text-slate-500 uppercase font-black tracking-wider block">Class Avg Band</span>
+                <span class="text-sm font-extrabold text-emerald-400 mt-0.5 block">7.2 Band</span>
+                <span class="text-[8px] text-emerald-500/70 block mt-1">🎯 Target: 7.5</span>
+              </div>
+            </div>
+            
+            <!-- Mock Roster List -->
+            <div class="bg-white/[0.02] border border-white/[0.05] p-3.5 rounded-xl space-y-2">
+              <span class="text-[8px] text-slate-500 uppercase font-black tracking-wider block">Recent Speaking Mock Grader</span>
+              <div class="flex justify-between items-center text-[10px] border-b border-white/5 pb-2">
+                <div>
+                  <span class="font-bold text-slate-200 block">Milan Karki</span>
+                  <span class="text-[8px] text-slate-500">Cue Card: Team Conflict</span>
+                </div>
+                <span class="px-2 py-0.5 bg-emerald-500/10 text-emerald-400 font-extrabold rounded-md text-[9px] border border-emerald-500/20">Band 7.5</span>
+              </div>
+              <div class="flex justify-between items-center text-[10px]">
+                <div>
+                  <span class="font-bold text-slate-200 block">Sunita Basnet</span>
+                  <span class="text-[8px] text-slate-500">Cue Card: Skill from Relative</span>
+                </div>
+                <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 font-extrabold rounded-md text-[9px] border border-amber-500/20">Band 6.5</span>
+              </div>
+            </div>
+
+            <!-- Timers simulator -->
+            <div class="bg-white/[0.02] border border-white/[0.05] p-3.5 rounded-xl flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-red-600/15 border border-red-500/30 flex items-center justify-center text-xs animate-pulse">🔴</div>
+                <div>
+                  <span class="text-[10px] font-bold text-slate-200 block">Speaking Audio Capture</span>
+                  <span class="text-[8px] text-slate-500">Response time clock running</span>
+                </div>
+              </div>
+              <span class="font-mono text-xs font-bold text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded-md">01:42</span>
+            </div>
+          </div>
         </div>
       </div>
     </main>
 
     <!-- Features Section -->
-    <section id="features" class="bg-slate-50 border-t border-slate-100 py-20 px-6">
+    <section id="features" class="bg-[#080B19] border-t border-white/[0.04] py-24 px-6 relative z-10">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
-          <h2 class="text-3xl font-extrabold text-slate-900">Platform Key Advantages</h2>
-          <p class="text-slate-500 text-sm mt-2">Empowering students and institutions with modern educational technology.</p>
+          <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest block mb-2">Key Highlights</span>
+          <h2 class="text-3xl font-extrabold text-white">Platform Core Advantages</h2>
+          <p class="text-slate-400 text-sm mt-2 max-w-md mx-auto">Engineered to streamline preparation worksheets, mock tests, and teacher grades on a single link.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition duration-300">
-            <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">📚</div>
-            <h3 class="font-bold text-lg mb-2">16+ Study Modules</h3>
-            <p class="text-slate-500 text-xs leading-relaxed">Comprehensive interactive guides for Reading, Writing v2, Grammar tenses, Cohesive devices, and Vocabulary accelerators.</p>
+          <!-- Card 1 -->
+          <div class="bg-white/[0.02] border border-white/[0.05] rounded-3xl p-6 hover:bg-white/[0.04] hover:border-indigo-500/30 transition-all duration-300 hover:-translate-y-1">
+            <div class="w-12 h-12 bg-indigo-500/10 text-indigo-400 rounded-2xl flex items-center justify-center mb-6 border border-indigo-500/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+            </div>
+            <h3 class="font-bold text-lg text-white mb-2">16+ Study Modules</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">Comprehensive strategy blueprints and dynamic exercises for Reading, Essay Writing v2, Grammar tenses, and Vocabulary guides.</p>
           </div>
-          <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition duration-300">
-            <div class="w-12 h-12 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">⏱️</div>
-            <h3 class="font-bold text-lg mb-2">Cambridge Mock Exams</h3>
-            <p class="text-slate-500 text-xs leading-relaxed">Official Reading &amp; Listening mock tests with full timer settings, instant evaluation, and score reporting.</p>
+          <!-- Card 2 -->
+          <div class="bg-white/[0.02] border border-white/[0.05] rounded-3xl p-6 hover:bg-white/[0.04] hover:border-teal-500/30 transition-all duration-300 hover:-translate-y-1">
+            <div class="w-12 h-12 bg-teal-500/10 text-teal-400 rounded-2xl flex items-center justify-center mb-6 border border-teal-500/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h3 class="font-bold text-lg text-white mb-2">Cambridge Mock Exams</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">Official Cambridge Reading &amp; Listening exams with strict timer controls, auto-scoring worksheets, and detailed explanations.</p>
           </div>
-          <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition duration-300">
-            <div class="w-12 h-12 bg-rose-50 text-rose-600 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">🎤</div>
-            <h3 class="font-bold text-lg mb-2">Speaking Cue Recorder</h3>
-            <p class="text-slate-500 text-xs leading-relaxed">Microphone recorder with visual prep/talk countdown clocks that lets students practice and save speaking sessions locally.</p>
+          <!-- Card 3 -->
+          <div class="bg-white/[0.02] border border-white/[0.05] rounded-3xl p-6 hover:bg-white/[0.04] hover:border-rose-500/30 transition-all duration-300 hover:-translate-y-1">
+            <div class="w-12 h-12 bg-rose-500/10 text-rose-400 rounded-2xl flex items-center justify-center mb-6 border border-rose-500/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+            </div>
+            <h3 class="font-bold text-lg text-white mb-2">Speaking Cue Recorder</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">Record cue cards using HTML5 Audio. Uses prep/talk timers and synthesized beep alerts. Play back or download recordings instantly.</p>
           </div>
-          <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition duration-300">
-            <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">🏢</div>
-            <h3 class="font-bold text-lg mb-2">Institutional CRM</h3>
-            <p class="text-slate-500 text-xs leading-relaxed">Student databases, CSV exports, and 1-on-1 interview score grading forms tailored for coaching center admins.</p>
+          <!-- Card 4 -->
+          <div class="bg-white/[0.02] border border-white/[0.05] rounded-3xl p-6 hover:bg-white/[0.04] hover:border-amber-500/30 transition-all duration-300 hover:-translate-y-1">
+            <div class="w-12 h-12 bg-amber-500/10 text-amber-400 rounded-2xl flex items-center justify-center mb-6 border border-amber-500/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+            </div>
+            <h3 class="font-bold text-lg text-white mb-2">Institutional CRM</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">Manage student rosters, view active slots, CSV sync, and grade 1-on-1 speaking exams using official band descriptors.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-100 py-8 bg-white text-center text-xs text-slate-400">
-      <p>© 2026 ViATestPrep. All Rights Reserved. Unified static IELTS &amp; PTE SaaS Platform.</p>
+    <footer class="border-t border-white/[0.04] py-8 bg-[#060814] text-center text-xs text-slate-500 relative z-10">
+      <p>© 2026 ViATestPrep. All Rights Reserved. Unified Premium IELTS &amp; PTE SaaS Hub.</p>
     </footer>
   </div>
 
