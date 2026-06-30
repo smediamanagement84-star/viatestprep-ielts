@@ -3,1042 +3,1035 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>ViATestPrep — IELTS &amp; PTE Preparation Hub</title>
-<meta name="description" content="ViATestPrep's complete IELTS and PTE preparation suite. Master Reading, Listening, Writing, Speaking, Grammar, and Vocabulary with interactive lessons designed for Band 7+ and 79+ targets."/>
-<meta name="copyright" content="© 2026 ViATestPrep. All Rights Reserved."/>
+<title>ViATestPrep — IELTS &amp; PTE Preparation Portal</title>
+<script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Fraunces:wght@600;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --primary: 262, 70%, 50%; /* Indigo / Purple */
+    --primary: 262, 70%, 50%;
     --primary-raw: 99, 102, 241;
-    --gold: 40, 65%, 48%;
     --teal: 172, 83%, 30%;
     --rose: 347, 79%, 59%;
+    --gold: 40, 65%, 48%;
     --bg-main: #f8fafc;
-    --bg-modules: #f1f5f9;
     --bg-card: #ffffff;
-    --bg-card-hover: #ffffff;
     --border-color: rgba(15, 23, 42, 0.06);
     --border-hover: rgba(15, 23, 42, 0.15);
     --text-main: #0f172a;
     --text-muted: #475569;
-    --glass-navbar: rgba(255, 255, 255, 0.85);
-    --input-bg: #f8fafc;
-    --card-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
-    --accent-glow: rgba(99, 102, 241, 0.03);
-    --divider-color: rgba(15, 23, 42, 0.06);
+    --glass: rgba(255, 255, 255, 0.85);
   }
 
-  /* Reset & Core Styling */
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
   body {
     background-color: var(--bg-main);
     color: var(--text-main);
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
-    overflow-x: hidden;
-    position: relative;
   }
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 800;
-  }
-
-  /* Glow Blobs */
-  .glow-blob {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0.06;
-    pointer-events: none;
-    z-index: 0;
-  }
-  .blob-1 {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, hsl(var(--primary)) 0%, transparent 70%);
-    top: -150px;
-    right: -100px;
-  }
-  .blob-2 {
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, hsl(var(--teal)) 0%, transparent 70%);
-    bottom: 25%;
-    left: -200px;
-  }
-
-  /* Navbar */
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4.8rem;
-    background: var(--glass-navbar);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border-color);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 3rem;
-  }
-  @media (max-width: 768px) {
-    .navbar {
-      padding: 0 1.5rem;
-    }
-  }
-  .nav-left {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-  }
-  .nav-logo-mark {
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, hsl(var(--primary)), #3b0a64);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Fraunces', serif;
-    font-size: 1.35rem;
-    font-weight: 800;
-    color: #fff;
-    box-shadow: 0 6px 20px rgba(91,42,134,0.45);
-  }
-  .nav-brand {
-    font-family: 'Fraunces', serif;
-    font-size: 1.4rem;
-    font-weight: 800;
-    letter-spacing: -0.01em;
-    background: linear-gradient(to right, var(--text-main), hsl(var(--primary)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-decoration: none;
-  }
-  .nav-right-btn {
-    background: hsl(var(--primary));
-    color: #fff;
-    border: none;
-    border-radius: 999px;
-    padding: 0.6rem 1.4rem;
-    font-size: 0.85rem;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.2);
-    transition: all 0.25s ease;
-  }
-  .nav-right-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
-  }
-
-  /* Hero Section */
-  .hero {
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8rem 2rem 4rem;
-    position: relative;
-    z-index: 10;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .hero-container {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 4rem;
-    width: 100%;
-    align-items: center;
-  }
-  @media (max-width: 991px) {
-    .hero-container {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-  }
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  @media (max-width: 991px) {
-    .hero-content {
-      align-items: center;
-    }
-  }
-  .brand-tagline {
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    color: hsl(var(--primary));
-    margin-bottom: 1.2rem;
-  }
-  .hero h1 {
-    font-size: clamp(2.4rem, 5vw, 4rem);
-    line-height: 1.15;
-    color: var(--text-main);
-    letter-spacing: -0.025em;
-    margin-bottom: 1.5rem;
   }
   .gradient-text {
     background: linear-gradient(135deg, #e8a838 0%, #c8932a 50%, #e8456b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 30px rgba(200,147,42,0.15));
   }
-  .hero p {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    max-width: 580px;
-    line-height: 1.65;
-    margin-bottom: 2rem;
-  }
-  .cta-group {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  .btn-cta-primary {
-    background: linear-gradient(135deg, hsl(var(--primary)), #3b0a64);
-    color: #fff;
-    border: none;
-    border-radius: 999px;
-    padding: 1rem 2.2rem;
-    font-size: 1rem;
-    font-weight: 800;
-    cursor: pointer;
-    box-shadow: 0 10px 30px rgba(91,42,134,0.3);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .btn-cta-primary:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(91,42,134,0.45);
-  }
-  .btn-cta-secondary {
-    background: var(--bg-card);
-    color: var(--text-main);
-    border: 1px solid var(--border-color);
-    border-radius: 999px;
-    padding: 1rem 2.2rem;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s;
-    box-shadow: var(--card-shadow);
-  }
-  .btn-cta-secondary:hover {
-    border-color: hsl(var(--primary));
-    transform: translateY(-2px);
-  }
-
-  /* Floating visual cards */
-  .hero-visual {
-    position: relative;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  @media (max-width: 991px) {
-    .hero-visual {
-      display: none;
-    }
-  }
-  .float-badge {
+  .glow-blob {
     position: absolute;
-    background: #ffffff;
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    padding: 1.2rem 1.5rem;
-    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.05);
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    width: 200px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  /* Landing Visual Animations */
+  .float-badge {
     animation: floating 6s infinite alternate ease-in-out;
-  }
-  .fb-1 {
-    top: 10%;
-    left: 5%;
-    border-top: 4px solid hsl(var(--teal));
-    animation-delay: 0s;
-  }
-  .fb-2 {
-    bottom: 10%;
-    right: 5%;
-    border-top: 4px solid hsl(var(--primary));
-    animation-delay: 1.5s;
-  }
-  .fb-3 {
-    top: 50%;
-    left: 45%;
-    border-top: 4px solid hsl(var(--rose));
-    animation-delay: 3s;
-    width: 170px;
-  }
-  .fb-icon {
-    font-size: 1.8rem;
-  }
-  .fb-title {
-    font-weight: 800;
-    font-size: 1.05rem;
-  }
-  .fb-sub {
-    font-size: 0.75rem;
-    color: var(--text-muted);
   }
   @keyframes floating {
     0% { transform: translateY(0px) rotate(0deg); }
-    100% { transform: translateY(-15px) rotate(1deg); }
+    100% { transform: translateY(-15px) rotate(1.5deg); }
   }
 
-  /* Info / Features Section */
-  .features-section {
-    background-color: var(--bg-modules);
-    padding: 6rem 2rem;
-    border-top: 1px solid var(--border-color);
-    position: relative;
-    z-index: 10;
+  /* Custom Tab UI */
+  .active-tab {
+    background-color: rgba(79, 70, 229, 0.08);
+    color: #4f46e5;
+    border-bottom: 2px solid #4f46e5;
   }
-  .section-container {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .section-header {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-  .section-header h2 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-  }
-  .section-header p {
-    color: var(--text-muted);
-    font-size: 1.05rem;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-  .feature-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 24px;
-    padding: 2.2rem;
-    box-shadow: var(--card-shadow);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .feature-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--border-hover);
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.05);
-  }
-  .f-icon-box {
-    width: 50px;
-    height: 50px;
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  .fic-purple { background: rgba(99,102,241,0.1); color: hsl(var(--primary)); }
-  .fic-teal { background: rgba(13,138,122,0.1); color: hsl(var(--teal)); }
-  .fic-rose { background: rgba(232,69,107,0.1); color: hsl(var(--rose)); }
-  .fic-gold { background: rgba(200,147,42,0.1); color: hsl(var(--gold)); }
-
-  .feature-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.8rem;
-  }
-  .feature-card p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    line-height: 1.6;
+  .student-active-tab {
+    background: rgba(79, 70, 229, 0.08) !important;
+    color: #4f46e5 !important;
+    border-left: 4px solid #4f46e5 !important;
   }
 
-  /* Multi-step Modal Overlay */
+  /* Modal Overlays */
   .modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(15, 23, 42, 0.7);
     backdrop-filter: blur(8px);
-    z-index: 99999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-    opacity: 0;
-    pointer-events: none;
+    background: rgba(15, 23, 42, 0.7);
     transition: opacity 0.3s ease;
   }
-  .modal-overlay.active {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .modal-box {
-    background: #ffffff;
-    border-radius: 28px;
-    max-width: 680px;
-    width: 100%;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
-    position: relative;
-    transform: scale(0.95);
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .modal-overlay.active .modal-box {
-    transform: scale(1);
-  }
-  .modal-close-btn {
-    position: absolute;
-    top: 1.25rem;
-    right: 1.25rem;
-    background: rgba(15, 23, 42, 0.05);
-    border: none;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    font-weight: 700;
-    transition: background 0.2s;
-    z-index: 100;
-  }
-  .modal-close-btn:hover {
-    background: rgba(15, 23, 42, 0.15);
-  }
 
-  /* Modal Steps Container */
-  .modal-step {
-    display: none;
-    padding: 3rem 2.5rem;
+  /* Visual Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
   }
-  .modal-step.active {
-    display: block;
-    animation: fadeIn 0.4s ease-out;
+  ::-webkit-scrollbar-track {
+    background: transparent;
   }
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* Role Selection Styling */
-  .role-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-top: 2rem;
-  }
-  @media (max-width: 580px) {
-    .role-cards {
-      grid-template-columns: 1fr;
-    }
-  }
-  .role-card {
-    border: 2px solid var(--border-color);
-    border-radius: 20px;
-    padding: 2rem;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.25s;
-  }
-  .role-card:hover {
-    border-color: hsl(var(--primary));
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.05);
-  }
-  .role-card .rc-icon {
-    font-size: 2.8rem;
-    margin-bottom: 1rem;
-  }
-  .role-card h4 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-  .role-card p {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    line-height: 1.5;
-  }
-
-  /* Student Selection Styling */
-  .student-options {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
-    margin-top: 1.8rem;
-  }
-  @media (max-width: 500px) {
-    .student-options {
-      grid-template-columns: 1fr;
-    }
-  }
-  .student-option-btn {
-    background: var(--bg-main);
-    border: 1px solid var(--border-color);
-    padding: 1.5rem;
-    border-radius: 16px;
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.2s;
-  }
-  .student-option-btn:hover {
-    border-color: hsl(var(--primary));
-    background: #ffffff;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
-  }
-  .student-option-btn h4 {
-    margin-bottom: 0.4rem;
-    font-size: 1.05rem;
-    color: hsl(var(--primary));
-  }
-  .student-option-btn p {
-    font-size: 0.78rem;
-    color: var(--text-muted);
-    line-height: 1.4;
-  }
-  .beta-alert {
-    background: rgba(200, 147, 42, 0.05);
-    border: 1px solid rgba(200, 147, 42, 0.15);
-    border-radius: 12px;
-    padding: 1rem;
-    margin-top: 2rem;
-    font-size: 0.8rem;
-    color: #a16207;
-    line-height: 1.5;
-  }
-
-  /* Consultancy Pricing Table */
-  .pricing-plans {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-top: 1.5rem;
-  }
-  @media (max-width: 768px) {
-    .pricing-plans {
-      grid-template-columns: 1fr;
-      max-height: 350px;
-      overflow-y: auto;
-      padding-right: 0.5rem;
-    }
-  }
-  .plan-card {
-    border: 2px solid var(--border-color);
-    border-radius: 18px;
-    padding: 1.25rem 1rem;
-    text-align: center;
-    position: relative;
-    cursor: pointer;
-    transition: all 0.25s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .plan-card.recommended {
-    border-color: hsl(var(--primary));
-    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.08);
-  }
-  .recommended-badge {
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: hsl(var(--primary));
-    color: #fff;
-    font-size: 0.65rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    padding: 0.25rem 0.6rem;
-    border-radius: 999px;
-    letter-spacing: 0.05em;
-  }
-  .plan-card h4 {
-    font-size: 0.95rem;
-    margin-bottom: 0.4rem;
-  }
-  .plan-card .price-box {
-    margin: 0.8rem 0;
-  }
-  .plan-card .price-amount {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: hsl(var(--primary));
-  }
-  .plan-card .price-period {
-    font-size: 0.7rem;
-    color: var(--text-muted);
-  }
-  .plan-card ul {
-    list-style: none;
-    font-size: 0.72rem;
-    color: var(--text-muted);
-    text-align: left;
-    margin: 0.8rem 0 1.2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-  .plan-card ul li::before {
-    content: "✓ ";
-    color: #10b981;
-    font-weight: bold;
-  }
-  .plan-select-btn {
-    background: var(--input-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 0.5rem;
-    width: 100%;
-    font-size: 0.75rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .plan-card.recommended .plan-select-btn,
-  .plan-card:hover .plan-select-btn {
-    background: hsl(var(--primary));
-    color: #fff;
-    border-color: hsl(var(--primary));
-  }
-
-  /* Checkout Form Styling */
-  .checkout-container {
-    margin-top: 1.5rem;
-  }
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  @media (max-width: 500px) {
-    .form-row {
-      grid-template-columns: 1fr;
-      gap: 0.8rem;
-    }
-  }
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-  .form-group.full {
-    grid-column: span 2;
-  }
-  @media (max-width: 500px) {
-    .form-group.full {
-      grid-column: span 1;
-    }
-  }
-  .form-group label {
-    font-size: 0.78rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--text-muted);
-  }
-  .form-group input {
-    background: var(--input-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 0.65rem 0.8rem;
-    font-size: 0.88rem;
-    font-family: inherit;
-    outline: none;
-    transition: border-color 0.2s;
-  }
-  .form-group input:focus {
-    border-color: hsl(var(--primary));
-  }
-  .checkout-btn {
-    background: #10b981;
-    color: #fff;
-    border: none;
+  ::-webkit-scrollbar-thumb {
+    background: rgba(15, 23, 42, 0.1);
     border-radius: 10px;
-    padding: 0.85rem;
-    font-size: 0.95rem;
-    font-weight: 700;
-    width: 100%;
-    cursor: pointer;
-    margin-top: 1.5rem;
-    transition: background 0.2s;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
   }
-  .checkout-btn:hover {
-    background: #059669;
-  }
-  .back-link {
-    display: block;
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    text-decoration: none;
-  }
-  .back-link:hover {
-    color: hsl(var(--primary));
-  }
-
-  /* Footer */
-  footer {
-    border-top: 1px solid var(--border-color);
-    padding: 3rem 2rem;
-    text-align: center;
-    background: #ffffff;
-    font-size: 0.85rem;
-    color: var(--text-muted);
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(15, 23, 42, 0.2);
   }
 </style>
 </head>
-<body>
+<body class="relative overflow-x-hidden">
 
-  <!-- Ambient Glow Blobs -->
-  <div class="glow-blob blob-1"></div>
-  <div class="glow-blob blob-2"></div>
+  <!-- Ambient Glow Background Blobs -->
+  <div class="glow-blob w-[500px] h-[500px] bg-indigo-500/20 top-[-100px] right-[-100px]"></div>
+  <div class="glow-blob w-[600px] h-[600px] bg-teal-500/20 bottom-[10%] left-[-200px]"></div>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="nav-left">
-      <div class="nav-logo-mark">V</div>
-      <a href="#" class="nav-brand">ViATestPrep</a>
+  <!-- ========================================== -->
+  <!-- VIEW 1: PREMIUM GUEST LANDING PAGE         -->
+  <!-- ========================================== -->
+  <div id="view-landing" class="view-container min-h-screen flex flex-col justify-between hidden">
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 h-20 bg-white/80 backdrop-blur-md border-b border-slate-100 flex items-center justify-between px-6 md:px-12 z-50">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center font-serif text-white font-extrabold text-xl shadow-lg shadow-indigo-600/25">V</div>
+        <a href="#" class="font-serif text-2xl font-extrabold tracking-tight bg-gradient-to-r from-slate-900 to-indigo-600 bg-clip-text text-transparent">ViATestPrep</a>
+      </div>
+      <button onclick="openAccessModal()" class="px-6 py-2.5 bg-indigo-600 text-white font-extrabold rounded-full text-sm hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-600/25 transition">Access Platform</button>
+    </header>
+
+    <!-- Hero Content -->
+    <main class="max-w-6xl mx-auto px-6 pt-36 pb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center flex-1">
+      <div class="lg:col-span-7 flex flex-col items-start text-left">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full mb-6">Commercial Coaching Portal</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight mb-6">
+          Master the IELTS &amp; PTE with <span class="gradient-text">Interactive Drills</span>
+        </h1>
+        <p class="text-slate-500 text-base md:text-lg leading-relaxed mb-8 max-w-xl">
+          The ultimate preparation ecosystem featuring 16+ skill modules, timed Cambridge mocks, live feedback scorecards, and institutional student tracking (CRM) tools.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <button onclick="openAccessModal()" class="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold rounded-full text-base shadow-xl shadow-indigo-600/20 hover:shadow-indigo-600/35 transition hover:-translate-y-0.5">
+            Access Resources &amp; Tests
+          </button>
+          <a href="#features" class="px-8 py-4 bg-white border border-slate-200 text-slate-800 font-bold rounded-full text-base hover:border-indigo-600 hover:text-indigo-600 transition shadow-sm">
+            Learn More
+          </a>
+        </div>
+      </div>
+      <div class="lg:col-span-5 relative h-[400px] hidden lg:flex justify-center items-center">
+        <!-- Floating Visual Cards -->
+        <div class="float-badge absolute top-8 left-4 bg-white border border-slate-100 rounded-2xl p-5 shadow-xl shadow-slate-100/50 w-52 border-t-4 border-teal-500">
+          <span class="text-2xl mb-1 block">🎧</span>
+          <span class="font-extrabold text-sm text-slate-800 block">Sound Hunter</span>
+          <span class="text-[10px] text-slate-400 mt-1 block">Official Cambridge Audio</span>
+        </div>
+        <div class="float-badge absolute bottom-12 right-4 bg-white border border-slate-100 rounded-2xl p-5 shadow-xl shadow-slate-100/50 w-52 border-t-4 border-indigo-600" style="animation-delay:1.5s;">
+          <span class="text-2xl mb-1 block">📝</span>
+          <span class="font-extrabold text-sm text-slate-800 block">Architect Blueprint</span>
+          <span class="text-[10px] text-slate-400 mt-1 block">Essay Structures &amp; Drills</span>
+        </div>
+        <div class="float-badge absolute top-1/2 left-1/3 bg-white border border-slate-100 rounded-2xl p-5 shadow-xl shadow-slate-100/50 w-48 border-t-4 border-rose-500" style="animation-delay:3s;">
+          <span class="text-2xl mb-1 block">📊</span>
+          <span class="font-extrabold text-sm text-slate-800 block">CRM Dashboard</span>
+          <span class="text-[10px] text-slate-400 mt-1 block">Roster &amp; Grade Logs</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Features Section -->
+    <section id="features" class="bg-slate-50 border-t border-slate-100 py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-extrabold text-slate-900">Platform Key Advantages</h2>
+          <p class="text-slate-500 text-sm mt-2">Empowering students and institutions with modern educational technology.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition duration-300">
+            <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">📚</div>
+            <h3 class="font-bold text-lg mb-2">16+ Study Modules</h3>
+            <p class="text-slate-500 text-xs leading-relaxed">Comprehensive interactive guides for Reading, Writing v2, Grammar tenses, Cohesive devices, and Vocabulary accelerators.</p>
+          </div>
+          <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition duration-300">
+            <div class="w-12 h-12 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">⏱️</div>
+            <h3 class="font-bold text-lg mb-2">Cambridge Mock Exams</h3>
+            <p class="text-slate-500 text-xs leading-relaxed">Official Reading &amp; Listening mock tests with full timer settings, instant evaluation, and score reporting.</p>
+          </div>
+          <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition duration-300">
+            <div class="w-12 h-12 bg-rose-50 text-rose-600 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">🎤</div>
+            <h3 class="font-bold text-lg mb-2">Speaking Cue Recorder</h3>
+            <p class="text-slate-500 text-xs leading-relaxed">Microphone recorder with visual prep/talk countdown clocks that lets students practice and save speaking sessions locally.</p>
+          </div>
+          <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition duration-300">
+            <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">🏢</div>
+            <h3 class="font-bold text-lg mb-2">Institutional CRM</h3>
+            <p class="text-slate-500 text-xs leading-relaxed">Student databases, CSV exports, and 1-on-1 interview score grading forms tailored for coaching center admins.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-100 py-8 bg-white text-center text-xs text-slate-400">
+      <p>© 2026 ViATestPrep. All Rights Reserved. Unified static IELTS &amp; PTE SaaS Platform.</p>
+    </footer>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- VIEW 2: PREMIUM STUDENT PRACTICE PORTAL    -->
+  <!-- ========================================== -->
+  <div id="view-student" class="view-container min-h-screen flex flex-col hidden bg-slate-50">
+    <header class="h-20 bg-white border-b border-slate-100 px-6 flex items-center justify-between shrink-0">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-indigo-600 flex items-center justify-center font-serif text-white font-extrabold text-lg">V</div>
+        <span class="font-serif text-lg font-bold">ViATestPrep Student Hub</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-xs font-bold text-slate-400">Bypass Lock Active</span>
+        <button onclick="handleLogout()" class="text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1.5 rounded-lg hover:bg-indigo-100">Logout</button>
+      </div>
+    </header>
+
+    <div class="flex-1 flex flex-col md:flex-row overflow-hidden">
+      <!-- Student Sidebar Tabs -->
+      <aside class="w-full md:w-60 bg-white border-b md:border-r border-slate-100 p-4 flex flex-col gap-1 shrink-0">
+        <button onclick="switchStudentTab('vault')" id="s-tab-vault" class="student-active-tab w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">📚 Skill Vault</button>
+        <button onclick="switchStudentTab('mocks')" id="s-tab-mocks" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">⏱️ Cambridge Mock Exams</button>
+        <button onclick="switchStudentTab('speaking')" id="s-tab-speaking" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">🎤 Speaking practice</button>
+        <button onclick="switchStudentTab('grades')" id="s-tab-grades" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">📊 Grade Sheet &amp; Comments</button>
+      </aside>
+
+      <!-- Student Views Content -->
+      <main class="flex-1 p-6 md:p-8 overflow-y-auto">
+        <!-- Student Tab 1: Skill Builder Vault -->
+        <div id="student-vault-view" class="student-subview space-y-6">
+          <div>
+            <h2 class="text-2xl font-extrabold">16+ IELTS &amp; PTE Skill-Builder vault</h2>
+            <p class="text-xs text-slate-500 mt-1">Review core lessons, worksheets, templates, and mark items complete to track your overall target score.</p>
+          </div>
+          <!-- Target Score selector widget -->
+          <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+            <div class="md:col-span-2">
+              <span class="text-xs font-bold text-slate-400 block">Current Target Strategy</span>
+              <div class="flex gap-2 flex-wrap mt-2" id="studentTrackOptions">
+                <button onclick="selectStudentTrack('ielts-7.0')" id="st-opt-ielts70" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">IELTS 7.0</button>
+                <button onclick="selectStudentTrack('ielts-7.5')" id="st-opt-ielts75" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">IELTS 7.5+</button>
+                <button onclick="selectStudentTrack('pte-65')" id="st-opt-pte65" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">PTE 65</button>
+                <button onclick="selectStudentTrack('pte-79')" id="st-opt-pte79" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">PTE 79+</button>
+                <button onclick="selectStudentTrack('ukvi')" id="st-opt-ukvi" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">UKVI GT Track</button>
+              </div>
+            </div>
+            <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-4 text-center">
+              <span class="text-[10px] font-bold text-indigo-600 block uppercase">Vault Completion</span>
+              <span id="vault-completion-percent" class="text-3xl font-extrabold text-indigo-700 mt-1 block">0%</span>
+            </div>
+          </div>
+
+          <!-- Modules List -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="studentModulesGrid">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Student Tab 2: Cambridge Mock Exams -->
+        <div id="student-mocks-view" class="student-subview hidden space-y-6">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div>
+              <h2 class="text-2xl font-extrabold">Cambridge Practice Mock Exams</h2>
+              <p class="text-xs text-slate-500 mt-1">Official Reading &amp; Listening mocks from IELTS 18 &amp; 19 with timer controls.</p>
+            </div>
+            <!-- Mode selection -->
+            <div class="flex gap-1 bg-white p-1 rounded-xl border border-slate-200 text-xs font-bold">
+              <button onclick="setPracticeMode('exam')" id="s-mode-exam" class="px-3 py-1.5 bg-indigo-600 text-white rounded-lg transition">⏱️ Exam Mode</button>
+              <button onclick="setPracticeMode('practice')" id="s-mode-practice" class="px-3 py-1.5 text-slate-600 rounded-lg transition">💡 Practice Mode</button>
+            </div>
+          </div>
+
+          <div class="bg-indigo-50 border border-indigo-100 rounded-2xl p-4 text-xs text-indigo-700 flex gap-2" id="studentModeDesc">
+            <span>⏱️</span>
+            <div>
+              <strong>Exam Mode Active</strong>
+              <p class="text-[11px] text-slate-500 mt-0.5">Standard layout with strict 60 minute limits. No scoring answers shown until submission.</p>
+            </div>
+          </div>
+
+          <div class="space-y-4" id="studentMockGridsContainer">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Student Tab 3: Speaking Practice Room -->
+        <div id="student-speaking-view" class="student-subview hidden space-y-6">
+          <div>
+            <h2 class="text-2xl font-extrabold">IELTS speaking self-practice recorder</h2>
+            <p class="text-xs text-slate-500 mt-1">Pick custom IELTS cue card prompts, time your preparation, record your audio answer, and save/evaluate playbacks.</p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Selector -->
+            <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm">
+              <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Select prompt Card</label>
+              <select id="s-topic-select" onchange="loadStudentSpeakingTopic()" class="w-full px-3 py-2 border border-slate-200 rounded-xl text-xs bg-white focus:outline-none focus:border-indigo-500">
+                <option value="Describe a skill you learned from an older relative.">Cue Card 1: Skill Learned from Relative (Part 2)</option>
+                <option value="Describe a time you had to resolve a conflict in a team.">Cue Card 2: Team Conflict Resolution (Part 2)</option>
+                <option value="Describe a website or app you use daily and why it helps you.">Cue Card 3: Daily Website or App (Part 2)</option>
+                <option value="Part 1: Hometown & Leisure activities.">Part 1: Hometown & Free Time Prompts</option>
+                <option value="Part 3: The impact of technology and AI on future career choices.">Part 3: Future of Technology & Careers</option>
+              </select>
+              <div class="mt-4 p-4 bg-slate-50 border border-slate-100 rounded-xl min-h-[140px]">
+                <span class="text-[9px] uppercase font-bold text-slate-400">Selected Prompt</span>
+                <p id="s-topic-prompt" class="text-xs font-medium text-slate-700 leading-relaxed mt-1">Describe a skill you learned from an older relative. You should say: who you learned it from, what the skill is, how long it took, and explain how it has helped you in life.</p>
+              </div>
+            </div>
+
+            <!-- Timers -->
+            <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+              <div>
+                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Preparation & Response Clocks</label>
+                <div class="grid grid-cols-2 gap-3 text-center">
+                  <div class="bg-slate-50 border border-slate-100 p-3 rounded-xl">
+                    <span class="text-[9px] uppercase text-slate-400 block mb-1">Prep Time</span>
+                    <span id="s-prep-display" class="text-2xl font-extrabold font-mono text-amber-500">01:00</span>
+                    <button onclick="startStudentPrepTimer()" class="w-full mt-2 py-1 bg-amber-500 text-white font-bold text-[10px] rounded-lg">Start Prep</button>
+                  </div>
+                  <div class="bg-slate-50 border border-slate-100 p-3 rounded-xl">
+                    <span class="text-[9px] uppercase text-slate-400 block mb-1">Talk Time</span>
+                    <span id="s-talk-display" class="text-2xl font-extrabold font-mono text-indigo-600">02:00</span>
+                    <button onclick="startStudentTalkTimer()" class="w-full mt-2 py-1 bg-indigo-600 text-white font-bold text-[10px] rounded-lg">Start Talk</button>
+                  </div>
+                </div>
+              </div>
+              <span id="s-timer-status" class="text-center text-[10px] text-slate-400 font-semibold italic mt-4">Select a timer to begin.</span>
+            </div>
+
+            <!-- Voice Recorder -->
+            <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm flex flex-col justify-between items-center text-center">
+              <div class="w-full">
+                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Browser Audio Capture</label>
+                <div class="flex justify-center items-center gap-4 py-2">
+                  <button id="s-btn-record" onclick="toggleStudentAudioRecording()" class="w-14 h-14 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center text-lg relative">
+                    <span id="s-rec-icon">🔴</span>
+                    <span id="s-rec-pulse" class="hidden absolute inset-0 rounded-full border-4 border-red-500 animate-ping"></span>
+                  </button>
+                  <div class="text-left">
+                    <span id="s-rec-status" class="text-xs font-bold text-slate-700 block">Idle</span>
+                    <span id="s-rec-time" class="text-[10px] font-mono text-slate-400">00:00</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full mt-4 bg-slate-50 border border-slate-100 p-3 rounded-xl flex flex-col items-center gap-2">
+                <audio id="s-audio-player" controls class="w-full max-w-[200px] h-8 hidden"></audio>
+                <span id="s-no-audio-label" class="text-xs text-slate-400 py-1">No audio file captured.</span>
+                <a id="s-download-link" class="hidden w-full py-1 text-center bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold text-[10px] rounded-lg transition">⬇ Save Recording (.wav)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Student Tab 4: Graded Scorecard -->
+        <div id="student-grades-view" class="student-subview hidden space-y-6">
+          <div>
+            <h2 class="text-2xl font-extrabold">Grade Report &amp; Teacher Feedback</h2>
+            <p class="text-xs text-slate-500 mt-1">Review grades, scores, and custom recommendations logged under your profile.</p>
+          </div>
+
+          <div class="bg-white border border-slate-100 rounded-2xl shadow-sm p-6 overflow-x-auto">
+            <h3 class="font-extrabold text-sm text-slate-500 uppercase tracking-wider mb-4">Completed Mock Exams History</h3>
+            <table class="w-full text-sm text-left border-collapse" id="studentMockHistoryTable">
+              <thead>
+                <tr class="border-b border-slate-100 text-slate-400 text-xs">
+                  <th class="py-2.5">Exam Name</th>
+                  <th class="py-2.5">Module</th>
+                  <th class="py-2.5">Testing Mode</th>
+                  <th class="py-2.5">Score Details</th>
+                  <th class="py-2.5">Band Score</th>
+                  <th class="py-2.5">Date Completed</th>
+                </tr>
+              </thead>
+              <tbody id="studentHistoryBody" class="divide-y divide-slate-50 text-slate-700">
+                <!-- Populated by JS -->
+              </tbody>
+            </table>
+            <div id="noStudentHistoryLabel" class="hidden text-center text-xs text-slate-400 py-8">
+              No exams or evaluated scores logged yet. Start a mock test or complete live grading with your coach.
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
-    <button class="nav-right-btn" onclick="openAccessModal()">Access Platform</button>
-  </header>
+  </div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-container">
-      <div class="hero-content">
-        <span class="brand-tagline">Premium IELTS &amp; PTE Suite</span>
-        <h1>Master the Exams with <span class="gradient-text">Interactive Drills</span></h1>
-        <p>A comprehensive study ecosystem designed to help you score Band 7+ or 79+. Complete with visual test interfaces, official listening audio modules, essay feedback builders, and robust metrics tracking.</p>
-        <div class="cta-group">
-          <button class="btn-cta-primary" onclick="openAccessModal()">Access Resources &amp; Tests</button>
-          <a href="#features" class="btn-cta-secondary">Explore Features</a>
+  <!-- ========================================== -->
+  <!-- VIEW 3: PREMIUM CONSULTANCY CRM DASHBOARD   -->
+  <!-- ========================================== -->
+  <div id="view-consultancy" class="view-container min-h-screen flex flex-col hidden bg-slate-50">
+    <header class="h-20 bg-indigo-950 px-6 flex items-center justify-between shrink-0 text-white shadow-md">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-white text-indigo-950 flex items-center justify-center font-serif font-extrabold text-lg">V</div>
+        <div>
+          <h2 class="font-bold text-sm tracking-tight" id="crmHeaderName">Nepal Consultancy Portal</h2>
+          <span class="text-[9px] uppercase font-black text-indigo-200 tracking-wider" id="crmHeaderPlan">Growth Plan</span>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="float-badge fb-1">
-          <span class="fb-icon">🎧</span>
-          <span class="fb-title">Sound Hunter</span>
-          <span class="fb-sub">Official Cambridge Audio</span>
-        </div>
-        <div class="float-badge fb-2">
-          <span class="fb-icon">📝</span>
-          <span class="fb-title">Architect Blueprint</span>
-          <span class="fb-sub">Essay Structures &amp; Drills</span>
-        </div>
-        <div class="float-badge fb-3">
-          <span class="fb-icon">📊</span>
-          <span class="fb-title">CRM Tracking</span>
-          <span class="fb-sub">Score History &amp; Progress</span>
-        </div>
+      <div class="flex items-center gap-3">
+        <button onclick="exportCRMToCSV()" class="px-3.5 py-1.5 bg-white/10 hover:bg-white/20 text-white font-bold rounded-lg text-xs transition">Export CSV</button>
+        <label class="px-3.5 py-1.5 bg-white/10 hover:bg-white/20 text-white font-bold rounded-lg text-xs transition cursor-pointer">
+          Import CSV
+          <input type="file" onchange="importCRMFromCSV(event)" accept=".csv" class="hidden" />
+        </label>
+        <button onclick="handleLogout()" class="px-3.5 py-1.5 bg-rose-600/95 hover:bg-rose-700 text-white font-bold rounded-lg text-xs transition">Logout</button>
       </div>
+    </header>
+
+    <div class="flex-1 flex flex-col md:flex-row overflow-hidden">
+      <!-- CRM Sidebar -->
+      <aside class="w-full md:w-60 bg-white border-b md:border-r border-slate-100 p-4 flex flex-col gap-1 shrink-0">
+        <button onclick="switchCRMTab('crm')" id="c-tab-crm" class="sidebar-tab active-tab w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">👥 CRM Student Roster</button>
+        <button onclick="switchCRMTab('grader')" id="c-tab-grader" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">🎤 Live Speaking Grader</button>
+        <button onclick="switchCRMTab('vault')" id="c-tab-vault" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">📦 Material Vault</button>
+      </aside>
+
+      <!-- CRM Content View -->
+      <main class="flex-1 p-6 md:p-8 overflow-y-auto">
+        <!-- KPI Row -->
+        <section class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+          <div class="bg-white border border-slate-100 p-4 rounded-xl shadow-sm">
+            <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider">Total Enrolled</span>
+            <span id="c-kpi-total" class="text-2xl font-extrabold text-slate-800 mt-1 block">0</span>
+          </div>
+          <div class="bg-white border border-slate-100 p-4 rounded-xl shadow-sm">
+            <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider">Active Status</span>
+            <span id="c-kpi-active" class="text-2xl font-extrabold text-slate-800 mt-1 block">0</span>
+          </div>
+          <div class="bg-white border border-slate-100 p-4 rounded-xl shadow-sm">
+            <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider">Avg Mock Band</span>
+            <span id="c-kpi-avg" class="text-2xl font-extrabold text-indigo-600 mt-1 block">—</span>
+          </div>
+          <div class="bg-white border border-slate-100 p-4 rounded-xl shadow-sm">
+            <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider">Speaking Interviews Graded</span>
+            <span id="c-kpi-speaking" class="text-2xl font-extrabold text-emerald-600 mt-1 block">0</span>
+          </div>
+        </section>
+
+        <!-- CRM Tab 1: Roster -->
+        <div id="crm-roster-view" class="crm-subview space-y-4">
+          <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+            <input type="text" id="rosterSearch" oninput="renderCRMTable()" placeholder="🔍 Search students by name or email..." class="w-full sm:w-72 px-4 py-2 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-indigo-500 bg-white" />
+            <div class="flex gap-2 w-full sm:w-auto">
+              <select id="rosterStatusFilter" onchange="renderCRMTable()" class="px-3 py-2 border border-slate-200 rounded-xl text-xs bg-white focus:outline-none">
+                <option value="all">All Statuses</option>
+                <option value="Active">Active</option>
+                <option value="Completed">Completed</option>
+                <option value="Paused">Paused</option>
+              </select>
+              <button onclick="loadCRMDemoData()" class="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs transition">Seed Demo Students</button>
+              <button onclick="openCRMAddModal()" class="px-3.5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs transition">+ Register Student</button>
+            </div>
+          </div>
+
+          <div class="bg-white border border-slate-100 rounded-2xl shadow-sm overflow-hidden">
+            <table class="w-full text-sm text-left border-collapse">
+              <thead>
+                <tr class="bg-slate-50 border-b border-slate-100 text-slate-400 font-bold text-[9px] uppercase tracking-wider">
+                  <th class="p-4">Student</th>
+                  <th class="p-4">Contacts</th>
+                  <th class="p-4 text-center">Target Band</th>
+                  <th class="p-4 text-center">Status</th>
+                  <th class="p-4 text-center">Avg Score</th>
+                  <th class="p-4 text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="crmTableBody" class="divide-y divide-slate-100 text-slate-700">
+                <!-- Populated by JS -->
+              </tbody>
+            </table>
+            <div id="noRosterLabel" class="hidden text-center text-xs text-slate-400 py-12">
+              No students enrolled. Click "Register Student" or seed demo records.
+            </div>
+          </div>
+        </div>
+
+        <!-- CRM Tab 2: Grader Form -->
+        <div id="crm-grader-view" class="crm-subview hidden grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div class="lg:col-span-2 bg-white border border-slate-100 rounded-2xl shadow-sm p-6">
+            <h3 class="text-lg font-bold mb-1">🎤 Live 1-on-1 IELTS Speaking Grader</h3>
+            <p class="text-xs text-slate-400 mb-6">Conduct Speaking mock interviews and record grades across the official descriptors.</p>
+            
+            <form onsubmit="handleCRMGraderSubmit(event)" class="space-y-4">
+              <div class="form-group flex flex-col gap-1">
+                <label class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Select Student Profile</label>
+                <select id="graderStudentSelect" required class="w-full px-3 py-2 border border-slate-200 rounded-xl text-xs bg-white focus:outline-none focus:border-indigo-500">
+                  <!-- Populated by JS -->
+                </select>
+              </div>
+
+              <div class="form-group flex flex-col gap-1">
+                <label class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Cue Card Topic Prompt</label>
+                <input type="text" id="graderCueCard" placeholder="e.g. Describe a journey that was delayed..." required class="w-full px-3 py-2 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-indigo-500" />
+              </div>
+
+              <div class="border-t border-slate-100 pt-4 space-y-4">
+                <h4 class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Scoring Bands (0.0 - 9.0)</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <div class="flex justify-between text-xs font-bold mb-1">
+                      <span>Fluency &amp; Coherence</span>
+                      <span id="g-lbl-fluency" class="text-indigo-600">6.0</span>
+                    </div>
+                    <input type="range" id="g-val-fluency" min="0" max="9" step="0.5" value="6.0" oninput="updateCRMSliders()" class="w-full accent-indigo-600" />
+                  </div>
+                  <div>
+                    <div class="flex justify-between text-xs font-bold mb-1">
+                      <span>Lexical Resource</span>
+                      <span id="g-lbl-vocab" class="text-indigo-600">6.0</span>
+                    </div>
+                    <input type="range" id="g-val-vocab" min="0" max="9" step="0.5" value="6.0" oninput="updateCRMSliders()" class="w-full accent-indigo-600" />
+                  </div>
+                  <div>
+                    <div class="flex justify-between text-xs font-bold mb-1">
+                      <span>Grammatical Range</span>
+                      <span id="g-lbl-grammar" class="text-indigo-600">6.0</span>
+                    </div>
+                    <input type="range" id="g-val-grammar" min="0" max="9" step="0.5" value="6.0" oninput="updateCRMSliders()" class="w-full accent-indigo-600" />
+                  </div>
+                  <div>
+                    <div class="flex justify-between text-xs font-bold mb-1">
+                      <span>Pronunciation</span>
+                      <span id="g-lbl-pronunciation" class="text-indigo-600">6.0</span>
+                    </div>
+                    <input type="range" id="g-val-pronunciation" min="0" max="9" step="0.5" value="6.0" oninput="updateCRMSliders()" class="w-full accent-indigo-600" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-4 flex justify-between items-center">
+                <div>
+                  <span class="text-[10px] font-bold text-indigo-700 uppercase tracking-wider block">Speaking Band Output</span>
+                  <span class="text-[9px] text-slate-400">Mean average rounded to the nearest half band.</span>
+                </div>
+                <span id="graderOverallLabel" class="text-2xl font-extrabold text-indigo-700">6.0</span>
+              </div>
+
+              <div class="form-group flex flex-col gap-1">
+                <label class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Teacher Comments &amp; Recommendations</label>
+                <textarea id="graderNotes" rows="3" placeholder="Log speaking hesitations, vocab suggestions, grammatical error fixes, etc..." required class="w-full px-3 py-2 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-indigo-500"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs transition">Submit Graded Mock Score</button>
+            </form>
+          </div>
+
+          <div class="bg-white border border-slate-100 rounded-2xl shadow-sm p-5 text-xs text-slate-600 space-y-4">
+            <h4 class="font-extrabold text-slate-700 uppercase">Descriptor Guide</h4>
+            <div>
+              <strong class="text-slate-800">Fluency (FC):</strong> Focuses on speech rate, logical connectors, and hesitations.
+            </div>
+            <div>
+              <strong class="text-slate-800">Lexical Resource (LR):</strong> Focuses on vocabulary flexibility, paraphrasing, and idioms.
+            </div>
+            <div>
+              <strong class="text-slate-800">Grammar (GRA):</strong> Focuses on sentence complexity, structure diversity, and error frequency.
+            </div>
+            <div>
+              <strong class="text-slate-800">Pronunciation (PR):</strong> Focuses on phoneme clarity, stress patterns, and ease of understanding.
+            </div>
+          </div>
+        </div>
+
+        <!-- CRM Tab 3: Material Vault -->
+        <div id="crm-vault-view" class="crm-subview hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Populated by JS -->
+        </div>
+      </main>
     </div>
-  </section>
+  </div>
 
-  <!-- Features Section -->
-  <section id="features" class="features-section">
-    <div class="section-container">
-      <div class="section-header">
-        <h2>What's Inside ViATestPrep</h2>
-        <p>Everything you need to succeed, structured into simple, highly effective interactive modules.</p>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="f-icon-box fic-purple">📚</div>
-          <h3>16+ Skill-Builder Modules</h3>
-          <p>Grammar builders, vocabulary accelerators, sentence mastery courses, cohesive devices, and punctuation checklists designed to correct structural errors instantly.</p>
-        </div>
-        <div class="feature-card">
-          <div class="f-icon-box fic-teal">🎧</div>
-          <h3>Official Cambridge Mocks</h3>
-          <p>Take Cambridge IELTS 18 &amp; 19 tests with real audio. Features Exam Mode (timed layout) and Practice Mode (instant answers and explanations).</p>
-        </div>
-        <div class="feature-card">
-          <div class="f-icon-box fic-rose">🎤</div>
-          <h3>Speaking Cue-Card Practise</h3>
-          <p>Microphone integration lets students record answers directly in the browser, time their responses, and listen to playbacks to perform self-assessments.</p>
-        </div>
-        <div class="feature-card">
-          <div class="f-icon-box fic-gold">🏢</div>
-          <h3>Consultancy CRM Portal</h3>
-          <p>A specialized records management dashboard for institutions to register students, log 1-on-1 speaking interview marks, check progress, and export rosters.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- ========================================== -->
+  <!-- MODAL: ACCESS PLATFORM (ROLE SELECTION)    -->
+  <!-- ========================================== -->
+  <div class="fixed inset-0 modal-overlay z-50 flex items-center justify-center p-4 hidden" id="accessModal">
+    <div class="bg-white rounded-3xl max-w-xl w-full shadow-2xl relative overflow-hidden transition-transform duration-300 transform scale-95" id="modalBox">
+      <button onclick="closeAccessModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold flex items-center justify-center text-sm">✕</button>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 ViATestPrep. All Rights Reserved. Professional Coaching &amp; Institutional CRM Portal.</p>
-  </footer>
-
-  <!-- MULTI-STEP MODAL -->
-  <div class="modal-overlay" id="accessModal">
-    <div class="modal-box">
-      <button class="modal-close-btn" onclick="closeAccessModal()">×</button>
-      
-      <!-- Step 1: Role Selection -->
-      <div class="modal-step active" id="step-role">
-        <h2 style="text-align: center;">Welcome to ViATestPrep</h2>
-        <p style="text-align: center; color: var(--text-muted); margin-top: 0.5rem; font-size: 0.9rem;">To get started, please select your access role:</p>
-        <div class="role-cards">
-          <div class="role-card" onclick="selectRole('student')">
-            <div class="rc-icon">🎓</div>
-            <h4>I am a Student</h4>
-            <p>Self-study preparation, mock tests, and resource worksheets.</p>
+      <!-- Step 1: Selection -->
+      <div class="p-8 space-y-6" id="m-step-role">
+        <div class="text-center">
+          <h3 class="text-2xl font-extrabold">Welcome to ViATestPrep</h3>
+          <p class="text-xs text-slate-400 mt-1">Please select your role to access preparation resources and tools:</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div onclick="selectModalRole('student')" class="border-2 border-slate-100 hover:border-indigo-600 hover:shadow-lg rounded-2xl p-6 text-center cursor-pointer transition">
+            <span class="text-4xl block mb-2">🎓</span>
+            <h4 class="font-bold text-slate-800">I am a Student</h4>
+            <p class="text-[10px] text-slate-400 mt-1">Practice mock exams, utilize worksheets, templates, and microphone recordings.</p>
           </div>
-          <div class="role-card" onclick="selectRole('consultancy')">
-            <div class="rc-icon">🏢</div>
-            <h4>I am a Consultancy</h4>
-            <p>Institutional licenses, CRM student record tracking, and teacher score tools.</p>
+          <div onclick="selectModalRole('consultancy')" class="border-2 border-slate-100 hover:border-indigo-600 hover:shadow-lg rounded-2xl p-6 text-center cursor-pointer transition">
+            <span class="text-4xl block mb-2">🏢</span>
+            <h4 class="font-bold text-slate-800">I am a Consultancy</h4>
+            <p class="text-[10px] text-slate-400 mt-1">Institutional records, student CRM grid roster, and 1-on-1 interview graders.</p>
           </div>
         </div>
       </div>
 
-      <!-- Step 2: Student Options -->
-      <div class="modal-step" id="step-student">
-        <h2>Student Practice Portal</h2>
-        <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 0.4rem;">Select which practice zone you want to access:</p>
-        <div class="student-options">
-          <div class="student-option-btn" onclick="redirectStudent('hub')">
-            <h4>Whole Resource Packet</h4>
-            <p>Unlock the 16+ skill modules, worksheets, writing models, and grammar workshops.</p>
+      <!-- Step 2 (Student): Redirect options -->
+      <div class="p-8 space-y-6 hidden" id="m-step-student">
+        <div>
+          <h3 class="text-xl font-bold">Student Access Portal</h3>
+          <p class="text-xs text-slate-400 mt-1">Choose which practice workspace you want to load:</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div onclick="launchStudentRole('vault')" class="bg-slate-50 border border-slate-200 hover:border-indigo-600 rounded-xl p-5 text-center cursor-pointer transition">
+            <h4 class="font-bold text-xs text-indigo-600 uppercase">Whole Resource Packet</h4>
+            <p class="text-[10px] text-slate-500 mt-1 leading-relaxed">Full access to grammar, worksheets, vocabulary accelerators, and class sheets.</p>
           </div>
-          <div class="student-option-btn" onclick="redirectStudent('mocks')">
-            <h4>Just the Mock Tests</h4>
-            <p>Jump straight into the Cambridge Reading &amp; Listening practice tests with timer modes.</p>
+          <div onclick="launchStudentRole('mocks')" class="bg-slate-50 border border-slate-200 hover:border-indigo-600 rounded-xl p-5 text-center cursor-pointer transition">
+            <h4 class="font-bold text-xs text-indigo-600 uppercase">Just the Mock Tests</h4>
+            <p class="text-[10px] text-slate-500 mt-1 leading-relaxed">Jump straight into the official Cambridge IELTS Reading &amp; Listening exams.</p>
           </div>
         </div>
-        <div class="beta-alert">
-          <strong>Beta Phase Notice:</strong> All resources are currently **FREE** of charge during our pre-launch phase. Student billing will be enabled once we migrate to our custom domain.
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-[11px] text-amber-700 leading-relaxed">
+          <strong>Beta Notice:</strong> All student preparation resources are currently free of charge. Billing paywalls will be enabled once custom domains are linked.
         </div>
-        <a href="#" class="back-link" onclick="goBackToStep('role')">← Back to Role Selection</a>
+        <button onclick="goBackToStep('role')" class="block w-full text-center text-xs text-slate-400 hover:text-indigo-600 font-semibold underline">← Back to selection</button>
       </div>
 
       <!-- Step 2 (Consultancy): Pricing Plans -->
-      <div class="modal-step" id="step-consultancy-pricing">
-        <h2>Institutional Plans</h2>
-        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.2rem;">Choose the license that fits your coaching center size (priced Rs. 200 cheaper than Alfa PTE):</p>
-        
-        <div class="pricing-plans">
-          <!-- Plan A -->
-          <div class="plan-card recommended" onclick="selectPlan('Plan A')">
-            <div class="recommended-badge">Best Value</div>
-            <h4>Plan A: Full Suite</h4>
-            <div class="price-box">
-              <span class="price-amount" id="planA-price">Rs. 500</span>
-              <span class="price-period">/ student / mo</span>
-            </div>
-            <ul>
-              <li>Unlimited IELTS Tests</li>
-              <li>All 16+ Study Modules</li>
-              <li>Manual Speaking Evaluator</li>
-              <li>Full CRM student tracking</li>
-            </ul>
-            <button class="plan-select-btn">Select Plan A</button>
-          </div>
+      <div class="p-6 space-y-4 hidden" id="m-step-pricing">
+        <div>
+          <h3 class="text-xl font-bold">Institutional Licensing Plans</h3>
+          <p class="text-xs text-slate-400">Choose the license matching your student capacity (priced Rs. 200 cheaper than Alfa PTE):</p>
+        </div>
 
-          <!-- Plan B -->
-          <div class="plan-card" onclick="selectPlan('Plan B')">
-            <h4>Plan B: Vault Only</h4>
-            <div class="price-box">
-              <span class="price-amount" id="planB-price">Rs. 350</span>
-              <span class="price-period">/ student / mo</span>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div onclick="selectPricingPlan('Plan A')" class="border-2 border-slate-100 hover:border-indigo-600 rounded-xl p-4 text-center cursor-pointer transition relative flex flex-col justify-between" id="m-card-planA">
+            <span class="absolute top-[-8px] left-1/2 transform -translate-x-1/2 bg-indigo-600 text-white font-extrabold text-[8px] uppercase tracking-wider px-2 py-0.5 rounded-full">Recommended</span>
+            <h4 class="font-bold text-xs">Plan A: Full Suite</h4>
+            <div class="my-2">
+              <span id="m-rate-planA" class="text-lg font-bold text-indigo-600">Rs. 500</span>
+              <span class="text-[8px] text-slate-400 block">/ student / mo</span>
             </div>
-            <ul>
-              <li>All 16+ Study Modules</li>
-              <li>Speaking Practice worksheets</li>
-              <li>No Mock Testing center</li>
-              <li>Basic CRM tracking</li>
+            <ul class="text-[8px] text-left text-slate-500 space-y-1 mt-1">
+              <li>✓ IELTS mock exams</li>
+              <li>✓ 16+ skill modules</li>
+              <li>✓ CRM student roster</li>
+              <li>✓ Manual speaking evaluator</li>
             </ul>
-            <button class="plan-select-btn">Select Plan B</button>
           </div>
-
-          <!-- Plan C -->
-          <div class="plan-card" onclick="selectPlan('Plan C')">
-            <h4>Plan C: Pay Mock</h4>
-            <div class="price-box">
-              <span class="price-amount" id="planC-price">Rs. 75</span>
-              <span class="price-period">/ test ticket</span>
+          <div onclick="selectPricingPlan('Plan B')" class="border-2 border-slate-100 hover:border-indigo-600 rounded-xl p-4 text-center cursor-pointer transition flex flex-col justify-between" id="m-card-planB">
+            <h4 class="font-bold text-xs">Plan B: Vault Only</h4>
+            <div class="my-2">
+              <span id="m-rate-planB" class="text-lg font-bold text-indigo-600">Rs. 350</span>
+              <span class="text-[8px] text-slate-400 block">/ student / mo</span>
             </div>
-            <ul>
-              <li>Cambridge IELTS Tests</li>
-              <li>Pay-as-you-go tickets</li>
-              <li>No study resource vault</li>
-              <li>Class average metrics</li>
+            <ul class="text-[8px] text-left text-slate-500 space-y-1 mt-1">
+              <li>✓ 16+ skill modules</li>
+              <li>✓ Speaking cue prompts</li>
+              <li>✗ Mock test center</li>
+              <li>✓ CRM student roster</li>
             </ul>
-            <button class="plan-select-btn">Select Plan C</button>
+          </div>
+          <div onclick="selectPricingPlan('Plan C')" class="border-2 border-slate-100 hover:border-indigo-600 rounded-xl p-4 text-center cursor-pointer transition flex flex-col justify-between" id="m-card-planC">
+            <h4 class="font-bold text-xs">Plan C: Pay Mock</h4>
+            <div class="my-2">
+              <span id="m-rate-planC" class="text-lg font-bold text-indigo-600">Rs. 75</span>
+              <span class="text-[8px] text-slate-400 block">/ mock ticket</span>
+            </div>
+            <ul class="text-[8px] text-left text-slate-500 space-y-1 mt-1">
+              <li>✓ IELTS mock exams</li>
+              <li>✓ Pay-as-you-go keys</li>
+              <li>✗ Study module vault</li>
+              <li>✓ Basic class averages</li>
+            </ul>
           </div>
         </div>
 
-        <div style="margin-top: 1rem; text-align: center;" class="form-group">
-          <label style="font-size: 0.72rem;">Student Volume (Adjusts Per-License Rates):</label>
-          <select id="volume-select" onchange="adjustPricingRates()" style="padding: 0.4rem; border-radius: 8px; border: 1px solid var(--border-color); font-family: inherit; font-size: 0.8rem; outline: none; margin-top: 0.2rem;">
+        <div class="flex items-center justify-between text-xs border-t border-slate-50 pt-3">
+          <label class="font-bold text-slate-500">Student Volume Tier:</label>
+          <select id="m-volume-select" onchange="adjustModalRates()" class="px-3 py-1.5 border border-slate-200 rounded-lg text-xs bg-white outline-none">
             <option value="small">5 - 25 Accounts (Standard)</option>
             <option value="medium">26 - 99 Accounts (Bulk Discount)</option>
             <option value="large">100 - 499 Accounts (Enterprise Discount)</option>
           </select>
         </div>
 
-        <a href="#" class="back-link" onclick="goBackToStep('role')" style="margin-top: 0.8rem;">← Back</a>
+        <button onclick="goBackToStep('role')" class="block w-full text-center text-xs text-slate-400 hover:text-indigo-600 font-semibold underline mt-2">← Back</button>
       </div>
 
-      <!-- Step 3 (Consultancy): Payment Simulator -->
-      <div class="modal-step" id="step-checkout">
-        <h2>Complete Subscription Setup</h2>
-        <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.3rem;" id="checkout-summary">Registering for Plan A (5-25 accounts tier)</p>
-        
-        <form class="checkout-container" onsubmit="handlePaymentSubmit(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="c-name">Consultancy Name</label>
-              <input type="text" id="c-name" required placeholder="e.g. Nepal Education Hub" />
+      <!-- Step 3 (Consultancy): Checkout Form -->
+      <div class="p-8 space-y-4 hidden" id="m-step-checkout">
+        <div>
+          <h3 class="text-xl font-bold">Complete Subscription Setup</h3>
+          <p id="m-checkout-desc" class="text-xs text-slate-400">Registering for Plan A at Rs. 500 / student / month.</p>
+        </div>
+
+        <form onsubmit="handlePricingPaymentSubmit(event)" class="space-y-4">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex flex-col gap-1">
+              <label class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Consultancy Name</label>
+              <input type="text" id="m-checkout-name" required placeholder="e.g. Kathmandu Education Hub" class="px-3 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:bg-white outline-none focus:border-indigo-500" />
             </div>
-            <div class="form-group">
-              <label for="c-email">Admin Email (Watermark)</label>
-              <input type="email" id="c-email" required placeholder="admin@consultancy.com" />
+            <div class="flex flex-col gap-1">
+              <label class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Admin Email (Watermark)</label>
+              <input type="email" id="m-checkout-email" required placeholder="admin@consultancy.com" class="px-3 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:bg-white outline-none focus:border-indigo-500" />
             </div>
           </div>
 
-          <div style="background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.25rem; margin-top: 1rem;">
-            <span style="font-size: 0.75rem; font-weight: 800; color: var(--text-muted); display: block; margin-bottom: 0.8rem;">💳 SECURE MOCK CHECKOUT</span>
-            
-            <div class="form-group full" style="margin-bottom: 1rem;">
-              <label>Card Number</label>
-              <input type="text" value="4242 4242 4242 4242" disabled style="color: #64748b; background: rgba(15,23,42,0.03);" />
+          <div class="bg-slate-50 border border-slate-100 rounded-2xl p-4 space-y-3">
+            <span class="text-[9px] font-bold text-slate-400 uppercase block mb-1">💳 SECURE CHECKOUT SIMULATOR</span>
+            <div class="flex flex-col gap-1">
+              <label class="text-[8px] font-bold text-slate-400 uppercase">Card Number</label>
+              <input type="text" value="4242 4242 4242 4242" disabled class="px-3 py-2 border border-slate-200 rounded-xl text-xs bg-slate-100/50 text-slate-400" />
             </div>
-            
-            <div class="form-row">
-              <div class="form-group">
-                <label>Expiry Date</label>
-                <input type="text" placeholder="MM/YY" required value="12/29" />
+            <div class="grid grid-cols-2 gap-3">
+              <div class="flex flex-col gap-1">
+                <label class="text-[8px] font-bold text-slate-400 uppercase">Expiry</label>
+                <input type="text" value="12/29" disabled class="px-3 py-2 border border-slate-200 rounded-xl text-xs bg-slate-100/50 text-slate-400" />
               </div>
-              <div class="form-group">
-                <label>CVC</label>
-                <input type="password" placeholder="•••" required value="123" />
+              <div class="flex flex-col gap-1">
+                <label class="text-[8px] font-bold text-slate-400 uppercase">CVC</label>
+                <input type="text" value="123" disabled class="px-3 py-2 border border-slate-200 rounded-xl text-xs bg-slate-100/50 text-slate-400" />
               </div>
             </div>
           </div>
 
-          <button type="submit" class="checkout-btn" id="payBtn">Pay &amp; Launch CRM Dashboard</button>
+          <button type="submit" id="m-checkout-btn" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs transition">Pay &amp; Launch CRM Portal</button>
         </form>
-        <a href="#" class="back-link" onclick="goBackToStep('consultancy-pricing')">← Back to Plans</a>
+        <button onclick="goBackToStep('pricing')" class="block w-full text-center text-xs text-slate-400 hover:text-indigo-600 font-semibold underline">← Back to plans</button>
       </div>
-
     </div>
   </div>
 
+  <!-- ========================================== -->
+  <!-- ADD STUDENT MODAL (CRM)                    -->
+  <!-- ========================================== -->
+  <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" id="crmAddStudentModal">
+    <div class="bg-white rounded-2xl max-w-md w-full shadow-2xl overflow-hidden">
+      <div class="p-5 border-b border-slate-100 flex justify-between items-center">
+        <h3 class="text-sm font-extrabold" id="crmModalTitle">Register New Student</h3>
+        <button onclick="closeCRMAddModal()" class="w-8 h-8 rounded-full bg-slate-100 text-slate-500 font-bold hover:bg-slate-200 flex items-center justify-center">✕</button>
+      </div>
+      <form onsubmit="handleCRMStudentSubmit(event)" class="p-5 space-y-4">
+        <input type="hidden" id="crmStudId" />
+        <div class="flex flex-col gap-1">
+          <label class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Full Name</label>
+          <input type="text" id="crmStudName" required placeholder="e.g. Milan Karki" class="px-3 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:bg-white outline-none focus:border-indigo-500" />
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="flex flex-col gap-1">
+            <label class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Email Address</label>
+            <input type="email" id="crmStudEmail" required placeholder="name@email.com" class="px-3 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:bg-white outline-none focus:border-indigo-500" />
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Phone Number</label>
+            <input type="text" id="crmStudPhone" required placeholder="98510•••••" class="px-3 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:bg-white outline-none focus:border-indigo-500" />
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="flex flex-col gap-1">
+            <label class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Target Band</label>
+            <input type="number" id="crmStudTarget" required min="4" max="9" step="0.5" value="7.0" class="px-3 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:bg-white outline-none focus:border-indigo-500" />
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Status</label>
+            <select id="crmStudStatus" class="px-3 py-2 border border-slate-200 rounded-xl text-xs bg-white focus:outline-none">
+              <option value="Active">Active</option>
+              <option value="Completed">Completed</option>
+              <option value="Paused">Paused</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Academic Notes</label>
+          <textarea id="crmStudNotes" rows="2" placeholder="Academic weak points, target country, etc..." class="px-3 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:bg-white outline-none focus:border-indigo-500"></textarea>
+        </div>
+        <button type="submit" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs transition">Save Student Profile</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PROFILE TIMELINE VIEW SIDEBAR DRAWER (CRM) -->
+  <!-- ========================================== -->
+  <div class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex justify-end p-4 hidden" id="crmProfileDrawer" onclick="closeCRMProfileDrawer(event)">
+    <div class="bg-white rounded-2xl w-full max-w-lg shadow-2xl h-full flex flex-col justify-between overflow-hidden" onclick="event.stopPropagation()">
+      <div class="p-6 border-b border-slate-100 flex justify-between items-center shrink-0">
+        <div>
+          <h3 id="drawerName" class="text-lg font-extrabold text-slate-900">Student Profile Detail</h3>
+          <span id="drawerEmail" class="text-[10px] text-slate-500 block">name@email.com</span>
+        </div>
+        <button onclick="document.getElementById('crmProfileDrawer').classList.add('hidden')" class="w-8 h-8 rounded-full bg-slate-100 text-slate-500 font-bold hover:bg-slate-200 flex items-center justify-center">✕</button>
+      </div>
+
+      <div class="flex-1 p-6 overflow-y-auto space-y-6">
+        <!-- Target Info -->
+        <div class="grid grid-cols-3 gap-4 text-center">
+          <div class="bg-slate-50 border border-slate-100 p-3 rounded-xl">
+            <span class="text-[8px] uppercase text-slate-400 block font-bold">Target Band</span>
+            <span id="drawerTarget" class="text-xl font-extrabold text-slate-800 mt-1 block">7.0</span>
+          </div>
+          <div class="bg-slate-50 border border-slate-100 p-3 rounded-xl">
+            <span class="text-[8px] uppercase text-slate-400 block font-bold">Avg Mock score</span>
+            <span id="drawerAvg" class="text-xl font-extrabold text-indigo-600 mt-1 block">—</span>
+          </div>
+          <div class="bg-slate-50 border border-slate-100 p-3 rounded-xl">
+            <span class="text-[8px] uppercase text-slate-400 block font-bold">Contact</span>
+            <span id="drawerPhone" class="text-xs font-bold text-slate-700 mt-2 block">98510...</span>
+          </div>
+        </div>
+
+        <!-- Academic notes -->
+        <div class="bg-slate-50 border border-slate-100 rounded-xl p-4 text-xs text-slate-600">
+          <strong class="text-slate-800 uppercase tracking-wider text-[9px] block mb-1">Academic Notes &amp; Weaknesses</strong>
+          <p id="drawerNotes" class="leading-relaxed">Applying for Masters in Australia. Weak in spelling.</p>
+        </div>
+
+        <!-- Scores History Timeline -->
+        <div class="space-y-3">
+          <h4 class="font-extrabold text-xs text-slate-400 uppercase tracking-wider">Academic Timeline &amp; Test Logs</h4>
+          <div id="drawerTimeline" class="space-y-4">
+            <!-- Timeline elements populated by JS -->
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 border-t border-slate-100 shrink-0 text-center text-xs text-slate-400">
+        Student records are stored locally.
+      </div>
+    </div>
+  </div>
+
+  <script src="test-data.js"></script>
   <script>
-    // Selected states
-    let selectedPlan = '';
-    let selectedTier = 'small';
+    // Global State Databases
+    let crmStudents = [];
+    let currentStudentTab = 'vault';
+    let currentCRMTab = 'crm';
     
-    // Pricing tiers data
-    const pricingData = {
+    // Student module completion list
+    let studentTrack = 'ielts-7.5';
+    let completedModules = [];
+
+    // Modal Rates Database
+    let modalSelectedPlan = 'Plan A';
+    let modalSelectedTier = 'small';
+    const modalPricingData = {
       small: { A: 500, B: 350, C: 75 },
       medium: { A: 400, B: 250, C: 65 },
       large: { A: 300, B: 180, C: 45 }
     };
 
+    // IELTS Modules list configuration
+    const modulesConfig = [
+      { id: '00', title: 'Orientation Class 01', file: '00_IELTS_Orientation_Class_01.html', tags: 'core', desc: 'IELTS format, scoring, and myths.', time: '2 hrs', difficulty: 'Easy', badgeStyle: 'background:rgba(79,70,229,0.08);color:#4f46e5' },
+      { id: '01', title: 'Reading Detective Academy', file: '01_IELTS_Reading_Detective_Academy.html', tags: 'core,reading', desc: '14 question types and skimming strategies.', time: '8 hrs', difficulty: 'Hard', badgeStyle: 'background:rgba(13,138,122,0.08);color:#0d8a7a' },
+      { id: '02', title: 'Listening Sound Hunter', file: '02_IELTS_Listening_Sound_Hunter.html', tags: 'core,listening', desc: 'Audio sections, predictive spelling traps.', time: '6 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(26,74,138,0.08);color:#1a4a8a' },
+      { id: '03', title: 'Writing Architect Blueprint v2', file: '03_IELTS_Writing_Architect_Blueprint_v2.html', tags: 'core,writing', desc: 'Task 1 charts, task 2 essays templates.', time: '10 hrs', difficulty: 'Hard', badgeStyle: 'background:rgba(91,42,134,0.08);color:#5b2a86' },
+      { id: '04', title: 'Speaking Confident Performer', file: '04_IELTS_Speaking_Confident_Performer.html', tags: 'core,speaking', desc: 'Part 1-3 fluency templates and cue cards.', time: '8 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(232,69,107,0.08);color:#e8456b' },
+      { id: '05', title: 'Cohesive Devices Weaver', file: '05_IELTS_Cohesive_Devices_Weaver.html', tags: 'grammar', desc: 'Linking adverbs, paragraphs rewrite drills.', time: '4 hrs', difficulty: 'Easy', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
+      { id: '06', title: 'Tenses &amp; Conditionals', file: '06_IELTS_Tenses_Conditionals.html', tags: 'grammar', desc: 'Grammar tenses, conditional worksheets.', time: '5 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
+      { id: '07', title: 'Punctuation Signals', file: '07_IELTS_Punctuation_Signals.html', tags: 'grammar', desc: 'Punctuation marks, commas, semi-colons.', time: '3 hrs', difficulty: 'Easy', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
+      { id: '08', title: 'Voice &amp; Speech', file: '08_IELTS_Voice_Speech.html', tags: 'grammar,speaking', desc: 'Active/passive, direct speech rules.', time: '4 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
+      { id: '09', title: 'Sentence Mastery', file: '09_IELTS_Sentence_Mastery.html', tags: 'grammar', desc: 'Clause syntax, compound/complex drills.', time: '6 hrs', difficulty: 'Hard', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
+      { id: '10', title: 'Vocabulary Accelerator', file: '10_IELTS_Vocabulary_Accelerator.html', tags: 'core', desc: 'Academic collocations and word groups.', time: '6 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(99,102,241,0.08);color:#6366f1' },
+      { id: '12', title: 'Paraphrase Worksheet 50', file: '12_IELTS_Paraphrase_Worksheet_50.html', tags: 'core,writing', desc: '50 academic rewriting challenges.', time: '4 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(99,102,241,0.08);color:#6366f1' },
+      { id: '14', title: 'Smart Class Reels', file: '14_IELTS_Smart_Class_Reel.html', tags: 'core', desc: 'Video slides and quick study cards.', time: '3 hrs', difficulty: 'Easy', badgeStyle: 'background:rgba(99,102,241,0.08);color:#6366f1' },
+      { id: 'pte-r', title: 'PTE Reading Guide', file: 'pte-reading.html', tags: 'pte', desc: 'Paragraph orders, drag-drop fill blanks.', time: '8 hrs', difficulty: 'Hard', badgeStyle: 'background:rgba(234,88,12,0.08);color:#ea580c' },
+      { id: 'pte-w', title: 'PTE Writing Guide', file: 'pte-writing.html', tags: 'pte', desc: 'Summarize text formats, essay structures.', time: '6 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(234,88,12,0.08);color:#ea580c' },
+      { id: 'pte-l', title: 'PTE Listening Guide', file: 'pte-listening.html', tags: 'pte', desc: 'Real audio dictation, spelling fill blanks.', time: '8 hrs', difficulty: 'Hard', badgeStyle: 'background:rgba(234,88,12,0.08);color:#ea580c' },
+      { id: 'pte-s', title: 'PTE Speaking Guide', file: 'pte-speaking.html', tags: 'pte,speaking', desc: 'Read aloud, repeat sentence templates.', time: '8 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(234,88,12,0.08);color:#ea580c' }
+    ];
+
+    // ==========================================
+    // INITIAL ROUTER & STATE LOAD
+    // ==========================================
+    window.addEventListener('DOMContentLoaded', () => {
+      // Load Database from LocalStorage
+      const savedCRM = localStorage.getItem('viatestprep_students');
+      if (savedCRM) {
+        crmStudents = JSON.parse(savedCRM);
+      } else {
+        seedInitialCRMStudents();
+      }
+
+      // Check current login session
+      renderAppView();
+    });
+
+    function renderAppView() {
+      const role = localStorage.getItem('viatestprep_user_role');
+      const unlocked = localStorage.getItem('viatestprep_unlocked') === 'true';
+      
+      // Hide all view shells
+      document.querySelectorAll('.view-container').forEach(el => el.classList.add('hidden'));
+
+      if (role === 'student' && unlocked) {
+        document.getElementById('view-student').classList.remove('hidden');
+        initStudentPortal();
+      } else if (role === 'consultancy' && unlocked) {
+        document.getElementById('view-consultancy').classList.remove('hidden');
+        initConsultancyDashboard();
+      } else {
+        document.getElementById('view-landing').classList.remove('hidden');
+      }
+    }
+
+    function handleLogout() {
+      if (confirm('Are you sure you want to log out of your session?')) {
+        localStorage.removeItem('viatestprep_unlocked');
+        localStorage.removeItem('viatestprep_user_role');
+        // keep student DB intact, just wipe active sessions
+        renderAppView();
+      }
+    }
+
+    // ==========================================
+    // SEED INITIAL DATABASE
+    // ==========================================
+    function seedInitialCRMStudents() {
+      crmStudents = [
+        {
+          id: 'st-101',
+          name: 'Binod Adhikari',
+          email: 'binod@gmail.com',
+          phone: '9841398745',
+          target: 7.5,
+          status: 'Active',
+          notes: 'Wants to apply for University of Toronto. Strong vocabulary, struggles with writing structures and spelling.',
+          mockHistory: [
+            { test: 'Cambridge 18 - Test 1', date: '2026-06-12', listening: '7.5', reading: '7.0', writing: '6.5', speaking: '7.0', overall: '7.0' },
+            { test: 'Cambridge 18 - Test 2', date: '2026-06-19', listening: '8.0', reading: '7.5', writing: '7.0', speaking: '7.5', overall: '7.5' }
+          ]
+        },
+        {
+          id: 'st-102',
+          name: 'Sunita Basnet',
+          email: 'sunita.basnet@outlook.com',
+          phone: '9851088746',
+          target: 7.0,
+          status: 'Active',
+          notes: 'Focusing on UKVI academic. Needs to practice coherent weaving and punctuation signals.',
+          mockHistory: [
+            { test: 'Cambridge 18 - Test 1', date: '2026-06-15', listening: '6.5', reading: '6.5', writing: '6.0', speaking: '6.5', overall: '6.5' }
+          ]
+        },
+        {
+          id: 'st-103',
+          name: 'Ramesh Thapa',
+          email: 'ramesh.thapa@gmail.com',
+          phone: '9813958742',
+          target: 6.5,
+          status: 'Completed',
+          notes: 'Already sat for official exam. Achieved target band 7.0.',
+          mockHistory: [
+            { test: 'Cambridge 18 - Test 1', date: '2026-05-14', listening: '6.5', reading: '6.0', writing: '6.5', speaking: '6.5', overall: '6.5' },
+            { test: 'Cambridge 19 - Test 1', date: '2026-05-28', listening: '7.0', reading: '7.0', writing: '6.5', speaking: '7.5', overall: '7.0' }
+          ]
+        }
+      ];
+      localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
+    }
+
+    // ==========================================
+    // MODAL NAVIGATION (GUEST PORTAL)
+    // ==========================================
     function openAccessModal() {
-      // Check if already logged in and bypass modal if preferred, but for demo we show it.
-      document.getElementById('accessModal').classList.add('active');
+      document.getElementById('accessModal').classList.remove('hidden');
+      setTimeout(() => {
+        document.getElementById('modalBox').classList.remove('scale-95');
+      }, 50);
+      goBackToStep('role');
     }
 
     function closeAccessModal() {
-      document.getElementById('accessModal').classList.remove('active');
+      document.getElementById('modalBox').classList.add('scale-95');
+      setTimeout(() => {
+        document.getElementById('accessModal').classList.add('hidden');
+      }, 200);
     }
 
-    function selectRole(role) {
-      showStep('step-role', role === 'student' ? 'step-student' : 'step-consultancy-pricing');
+    function selectModalRole(role) {
+      if (role === 'student') {
+        showModalStep('m-step-role', 'm-step-student');
+      } else {
+        showModalStep('m-step-role', 'm-step-pricing');
+        adjustModalRates();
+      }
     }
 
-    function showStep(hideId, showId) {
-      document.getElementById(hideId).classList.remove('active');
-      document.getElementById(showId).classList.add('active');
+    function showModalStep(hideId, showId) {
+      document.getElementById(hideId).classList.add('hidden');
+      document.getElementById(showId).classList.remove('hidden');
     }
 
     function goBackToStep(targetId) {
-      const activeStep = document.querySelector('.modal-step.active');
-      if (activeStep) {
-        activeStep.classList.remove('active');
-      }
-      document.getElementById(targetId).classList.add('active');
+      document.getElementById('m-step-role').classList.add('hidden');
+      document.getElementById('m-step-student').classList.add('hidden');
+      document.getElementById('m-step-pricing').classList.add('hidden');
+      document.getElementById('m-step-checkout').classList.add('hidden');
+      
+      document.getElementById('m-step-' + targetId).classList.remove('hidden');
     }
 
-    function redirectStudent(target) {
-      // Set student credentials in local storage to bypass lock screen
+    function launchStudentRole(focusZone) {
+      // Set student credentials
       localStorage.setItem('viatestprep_unlocked', 'true');
       localStorage.setItem('viatestprep_user_role', 'student');
       localStorage.setItem('userEmail', 'student.practice@viatestprep.local');
       
       closeAccessModal();
+      renderAppView();
       
-      if (target === 'hub') {
-        window.location.href = 'resources_hub.html';
+      if (focusZone === 'mocks') {
+        switchStudentTab('mocks');
       } else {
-        window.location.href = 'ielts-practice-hub.html';
+        switchStudentTab('vault');
       }
     }
 
-    function adjustPricingRates() {
-      selectedTier = document.getElementById('volume-select').value;
-      const rates = pricingData[selectedTier];
+    function adjustModalRates() {
+      modalSelectedTier = document.getElementById('m-volume-select').value;
+      const rates = modalPricingData[modalSelectedTier];
       
-      document.getElementById('planA-price').textContent = 'Rs. ' + rates.A;
-      document.getElementById('planB-price').textContent = 'Rs. ' + rates.B;
-      document.getElementById('planC-price').textContent = 'Rs. ' + rates.C;
+      document.getElementById('m-rate-planA').textContent = 'Rs. ' + rates.A;
+      document.getElementById('m-rate-planB').textContent = 'Rs. ' + rates.B;
+      document.getElementById('m-rate-planC').textContent = 'Rs. ' + rates.C;
     }
 
-    function selectPlan(plan) {
-      selectedPlan = plan;
-      const rates = pricingData[selectedTier];
+    function selectPricingPlan(plan) {
+      modalSelectedPlan = plan;
+      const rates = modalPricingData[modalSelectedTier];
       const rate = plan === 'Plan A' ? rates.A : (plan === 'Plan B' ? rates.B : rates.C);
       
-      // Update checkout text
-      const selectText = selectedTier === 'small' ? '5-25 accounts' : (selectedTier === 'medium' ? '26-99 accounts' : '100-499 accounts');
-      const rateLabel = plan === 'Plan C' ? 'per test ticket' : 'per student / month';
+      const selectText = modalSelectedTier === 'small' ? '5-25 accounts' : (modalSelectedTier === 'medium' ? '26-99 accounts' : '100-499 accounts');
+      const rateLabel = plan === 'Plan C' ? 'per mock ticket' : 'per student / month';
       
-      document.getElementById('checkout-summary').innerHTML = `Registering for <strong>${plan}</strong> (${selectText} tier) at <strong>Rs. ${rate}</strong> ${rateLabel}.`;
-      document.getElementById('payBtn').textContent = `Pay Rs. ${rate * (selectedTier === 'small' ? 5 : (selectedTier === 'medium' ? 26 : 100))} & Launch CRM Dashboard`;
+      document.getElementById('m-checkout-desc').innerHTML = `Registering for <strong>${plan}</strong> (${selectText} tier) at <strong>Rs. ${rate}</strong> ${rateLabel}.`;
       
-      showStep('step-consultancy-pricing', 'step-checkout');
+      const totalAmount = rate * (modalSelectedTier === 'small' ? 5 : (modalSelectedTier === 'medium' ? 26 : 100));
+      document.getElementById('m-checkout-btn').textContent = `Pay Rs. ${totalAmount} & Launch CRM Portal`;
+      
+      showModalStep('m-step-pricing', 'm-step-checkout');
     }
 
-    function handlePaymentSubmit(event) {
-      event.preventDefault();
+    function handlePricingPaymentSubmit(e) {
+      e.preventDefault();
       
-      const cName = document.getElementById('c-name').value.trim();
-      const cEmail = document.getElementById('c-email').value.trim();
+      const cName = document.getElementById('m-checkout-name').value.trim();
+      const cEmail = document.getElementById('m-checkout-email').value.trim();
       
       // Simulate payment processing
-      const payButton = document.getElementById('payBtn');
-      payButton.textContent = 'Processing Payment...';
+      const payButton = document.getElementById('m-checkout-btn');
+      payButton.textContent = 'Processing Secure Payment...';
       payButton.disabled = true;
       payButton.style.opacity = '0.7';
       payButton.style.background = '#8a5a00';
@@ -1048,21 +1041,898 @@
         localStorage.setItem('viatestprep_unlocked', 'true');
         localStorage.setItem('viatestprep_user_role', 'consultancy');
         localStorage.setItem('viatestprep_consultancy_name', cName);
-        localStorage.setItem('viatestprep_consultancy_plan', selectedPlan);
+        localStorage.setItem('viatestprep_consultancy_plan', modalSelectedPlan);
         localStorage.setItem('userEmail', cEmail);
         
-        // Redirect to Consultancy Dashboard
-        window.location.href = 'consultancy_dashboard.html';
+        payButton.disabled = false;
+        payButton.style.opacity = '1';
+        payButton.style.background = '';
+        
+        closeAccessModal();
+        renderAppView();
       }, 1500);
     }
 
-    // Auto-open modal if url query says ?action=pricing or similar
-    window.addEventListener('DOMContentLoaded', () => {
-      const params = new URLSearchParams(window.location.search);
-      if (params.get('access') === 'true') {
-        openAccessModal();
+    // ==========================================
+    // VIEW 2: STUDENT PORTAL RENDER ENGINE
+    // ==========================================
+    function initStudentPortal() {
+      // Load completed modules progress
+      completedModules = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key.startsWith('viatestprep_completed_')) {
+          if (localStorage.getItem(key) === 'true') {
+            completedModules.push(key.replace('viatestprep_completed_', ''));
+          }
+        }
       }
-    });
+
+      renderStudentModules();
+      renderStudentMockExams();
+      renderStudentHistoryTable();
+      loadStudentSpeakingTopic();
+    }
+
+    function switchStudentTab(tabId) {
+      document.querySelectorAll('.student-subview').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.student-active-tab').forEach(el => {
+        el.classList.remove('student-active-tab');
+        el.classList.add('text-slate-600');
+      });
+      
+      document.getElementById('student-' + tabId + '-view').classList.remove('hidden');
+      const btn = document.getElementById('s-tab-' + tabId);
+      btn.classList.add('student-active-tab');
+      btn.classList.remove('text-slate-600');
+      
+      currentStudentTab = tabId;
+      if (tabId === 'grades') {
+        renderStudentHistoryTable();
+      }
+    }
+
+    function selectStudentTrack(track) {
+      studentTrack = track;
+      document.querySelectorAll('#studentTrackOptions button').forEach(b => {
+        b.className = "px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition";
+      });
+      
+      const activeBtnId = 'st-opt-' + track.replace('.', '');
+      const activeBtn = document.getElementById(activeBtnId);
+      if (activeBtn) {
+        activeBtn.className = "px-3 py-1.5 bg-indigo-600 text-white border border-indigo-600 text-xs font-bold rounded-lg transition";
+      }
+
+      renderStudentModules();
+    }
+
+    function renderStudentModules() {
+      const grid = document.getElementById('studentModulesGrid');
+      grid.innerHTML = '';
+
+      // Count recommended for target track
+      let totalRecCount = 0;
+      let completedRecCount = 0;
+
+      modulesConfig.forEach(m => {
+        const recommendedList = m.tags.split(',');
+        const isRecommended = recommendedList.includes(studentTrack) || m.tags.includes('core');
+        
+        if (isRecommended) {
+          totalRecCount++;
+        }
+
+        const isCompleted = completedModules.includes(m.file);
+        if (isRecommended && isCompleted) {
+          completedRecCount++;
+        }
+
+        const card = document.createElement('div');
+        card.className = `bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between ${isRecommended ? 'border-l-4 border-l-indigo-600' : ''}`;
+        
+        card.innerHTML = `
+          <div>
+            <div class="flex justify-between items-start">
+              <span style="${m.badgeStyle}" class="px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider">${m.id} · ${m.difficulty}</span>
+              <span class="text-[9px] text-slate-400 font-bold">${m.time}</span>
+            </div>
+            <h4 class="font-extrabold text-sm text-slate-800 mt-3">${escapeHtml(m.title)}</h4>
+            <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">${m.desc}</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-50 flex items-center justify-between">
+            <a href="${m.file}" target="_blank" class="text-xs font-bold text-indigo-600 hover:underline">Open Module →</a>
+            <button onclick="toggleStudentModuleComplete('${m.file}', this)" class="px-2.5 py-1 text-[10px] font-bold border rounded-lg transition ${isCompleted ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-slate-50 text-slate-600 border-slate-200'}">
+              ${isCompleted ? '✓ Done' : 'Complete'}
+            </button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      // Update completion widget
+      const percent = totalRecCount > 0 ? Math.round((completedRecCount / totalRecCount) * 100) : 0;
+      document.getElementById('vault-completion-percent').textContent = percent + '%';
+    }
+
+    function toggleStudentModuleComplete(file, button) {
+      const key = 'viatestprep_completed_' + file;
+      const isCurrentlyCompleted = localStorage.getItem(key) === 'true';
+      
+      if (isCurrentlyCompleted) {
+        localStorage.setItem(key, 'false');
+        button.textContent = 'Complete';
+        button.className = "px-2.5 py-1 text-[10px] font-bold border rounded-lg transition bg-slate-50 text-slate-600 border-slate-200";
+      } else {
+        localStorage.setItem(key, 'true');
+        button.textContent = '✓ Done';
+        button.className = "px-2.5 py-1 text-[10px] font-bold border rounded-lg transition bg-emerald-50 text-emerald-700 border-emerald-200";
+      }
+
+      initStudentPortal();
+    }
+
+    // Tab 2 Mocks
+    let studentPracticeMode = 'exam';
+    function setPracticeMode(mode) {
+      studentPracticeMode = mode;
+      document.getElementById('s-mode-exam').className = mode === 'exam' ? 'px-3 py-1.5 bg-indigo-600 text-white rounded-lg transition' : 'px-3 py-1.5 text-slate-600 rounded-lg transition';
+      document.getElementById('s-mode-practice').className = mode === 'practice' ? 'px-3 py-1.5 bg-indigo-600 text-white rounded-lg transition' : 'px-3 py-1.5 text-slate-600 rounded-lg transition';
+      
+      const desc = document.getElementById('studentModeDesc');
+      if (mode === 'exam') {
+        desc.innerHTML = `<span>⏱️</span><div><strong>Exam Mode Active</strong><p class="text-[11px] text-slate-500 mt-0.5">Standard layout with strict 60 minute limits. No scoring answers shown until submission.</p></div>`;
+      } else {
+        desc.innerHTML = `<span>💡</span><div><strong>Practice Mode Active</strong><p class="text-[11px] text-slate-500 mt-0.5">Relaxed timer. Check answers step-by-step as you complete questions with detailed explanations.</p></div>`;
+      }
+    }
+
+    function renderStudentMockExams() {
+      const container = document.getElementById('studentMockGridsContainer');
+      container.innerHTML = '';
+
+      const bookTiers = {
+        'IELTS 18': { title: 'Cambridge IELTS 18', accent: 'bg-amber-500/10 text-amber-500 border-amber-500/20', gridId: 'grid18' },
+        'IELTS 19': { title: 'Cambridge IELTS 19', accent: 'bg-cyan-500/10 text-cyan-500 border-cyan-500/20', gridId: 'grid19' },
+        'IELTS 20': { title: 'Cambridge IELTS 20', accent: 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20', gridId: 'grid20' }
+      };
+
+      // Create books sub-sections
+      Object.keys(bookTiers).forEach(bKey => {
+        const book = bookTiers[bKey];
+        const section = document.createElement('div');
+        section.className = 'space-y-3';
+        section.innerHTML = `
+          <div class="flex items-center gap-3">
+            <span class="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full border ${book.accent}">${book.title}</span>
+            <div class="flex-1 h-px bg-slate-200"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="${book.gridId}"></div>
+        `;
+        container.appendChild(section);
+      });
+
+      // Render cards
+      const counters = {};
+      Object.keys(IELTS_TEST_DATA).forEach(key => {
+        const test = IELTS_TEST_DATA[key];
+        const book = test.book || 'IELTS 18';
+        counters[book] = (counters[book] || 0) + 1;
+        
+        const cardGrid = document.getElementById(bookTiers[book].gridId);
+        if (!cardGrid) return;
+
+        const lsScore = localStorage.getItem(`score_test_${key}_listening`);
+        const rdScore = localStorage.getItem(`score_test_${key}_reading`);
+        const wrDone = localStorage.getItem(`score_test_${key}_writing`) === 'completed';
+
+        const card = document.createElement('div');
+        card.className = 'bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:border-slate-200 transition';
+        card.innerHTML = `
+          <div class="flex justify-between items-start">
+            <div>
+              <span class="text-[9px] font-bold text-slate-400">Test ${counters[book]}</span>
+              <h4 class="font-extrabold text-sm text-slate-800 mt-1">${escapeHtml(test.title)}</h4>
+              <div class="flex gap-2 text-[9px] text-slate-400 mt-1">
+                <span>⏱️ 30m Listening</span>
+                <span>• 🎧 4 Audio Sections</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-2 mt-4 pt-3 border-t border-slate-50 text-center text-xs">
+            <a href="ielts-listening-practice.html?test=${key}" class="p-2 rounded-xl bg-slate-50 border border-slate-100 hover:border-indigo-600 transition flex flex-col justify-between min-h-[60px]">
+              <span class="font-bold text-[10px]">Listening</span>
+              <span class="text-[9px] text-slate-400 mt-1 block">${lsScore ? '🟢 Band ' + lsScore : 'Not Started'}</span>
+            </a>
+            <a href="ielts-reading-practice.html?test=${key}" class="p-2 rounded-xl bg-slate-50 border border-slate-100 hover:border-indigo-600 transition flex flex-col justify-between min-h-[60px]">
+              <span class="font-bold text-[10px]">Reading</span>
+              <span class="text-[9px] text-slate-400 mt-1 block">${rdScore ? '🟢 Band ' + rdScore : 'Not Started'}</span>
+            </a>
+            <a href="ielts-writing-practice.html?test=${key}" class="p-2 rounded-xl bg-slate-50 border border-slate-100 hover:border-indigo-600 transition flex flex-col justify-between min-h-[60px]">
+              <span class="font-bold text-[10px]">Writing</span>
+              <span class="text-[9px] text-slate-400 mt-1 block">${wrDone ? '🟢 Submitted' : 'Not Started'}</span>
+            </a>
+          </div>
+        `;
+        cardGrid.appendChild(card);
+      });
+    }
+
+    // Student Tab 4 Grades
+    function renderStudentHistoryTable() {
+      const tbody = document.getElementById('studentHistoryBody');
+      const noHist = document.getElementById('noStudentHistoryLabel');
+      const table = document.getElementById('studentMockHistoryTable');
+      
+      tbody.innerHTML = '';
+      let recordsFound = false;
+
+      // 1. Scan automated mock test scores
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key.startsWith('score_test_')) {
+          recordsFound = true;
+          const parts = key.split('_');
+          const testId = parts[2];
+          const module = parts[3];
+          const score = localStorage.getItem(key);
+          const testName = IELTS_TEST_DATA[testId] ? IELTS_TEST_DATA[testId].title : `Test ${testId}`;
+
+          const tr = document.createElement('tr');
+          tr.className = 'border-b border-slate-50 hover:bg-slate-50 transition text-xs';
+          tr.innerHTML = `
+            <td class="py-3 font-bold">${testName}</td>
+            <td class="py-3 capitalize font-bold text-indigo-600">${module}</td>
+            <td class="py-3 text-slate-400">Exam Mode</td>
+            <td class="py-3 text-slate-500">—</td>
+            <td class="py-3 font-extrabold text-indigo-600">${module === 'writing' ? 'Reviewed' : 'Band ' + score}</td>
+            <td class="py-3 text-slate-400 text-[10px]">Recently</td>
+          `;
+          tbody.appendChild(tr);
+        }
+      }
+
+      // 2. Scan CRM database for speaking evaluations logged under this student's email
+      const userEmail = localStorage.getItem('userEmail');
+      if (userEmail) {
+        const studentsData = localStorage.getItem('viatestprep_students');
+        if (studentsData) {
+          const allStudents = JSON.parse(studentsData);
+          const currentStudent = allStudents.find(s => s.email && s.email.toLowerCase() === userEmail.toLowerCase());
+          if (currentStudent && currentStudent.mockHistory && currentStudent.mockHistory.length > 0) {
+            recordsFound = true;
+            currentStudent.mockHistory.forEach(h => {
+              const tr = document.createElement('tr');
+              tr.className = 'border-b border-slate-50 hover:bg-slate-50 transition bg-indigo-50/20 text-xs';
+              
+              let details = 'Speaking Graded Mock';
+              if (typeof h.speaking === 'object') {
+                details = `Fluency: ${h.speaking.fluency}, Vocab: ${h.speaking.vocab}, Grammar: ${h.speaking.grammar}, Pronunciation: ${h.speaking.pronunciation}`;
+              }
+              
+              tr.innerHTML = `
+                <td class="py-3 font-bold">${escapeHtml(h.test)}</td>
+                <td class="py-3 font-bold text-purple-600">Speaking</td>
+                <td class="py-3 text-slate-400">1-on-1 Interview</td>
+                <td class="py-3 text-slate-500 max-w-[200px] truncate" title="${escapeHtml(h.notes || '')}">${escapeHtml(h.notes || '—')}</td>
+                <td class="py-3 font-extrabold text-emerald-600" title="${details}">Band ${h.overall}</td>
+                <td class="py-3 text-slate-400 text-[10px]">${h.date}</td>
+              `;
+              tbody.appendChild(tr);
+            });
+          }
+        }
+      }
+
+      if (recordsFound) {
+        table.classList.remove('hidden');
+        noHist.classList.add('hidden');
+      } else {
+        table.classList.add('hidden');
+        noHist.classList.remove('hidden');
+      }
+    }
+
+    // Student Speaking Self-Practice Recorder Timer & audio Capture
+    let s_prepInterval;
+    let s_talkInterval;
+    let s_mediaRecorder;
+    let s_audioChunks = [];
+    let s_isRecording = false;
+    let s_recTimerInterval;
+    let s_recStartTime;
+
+    const speakingCueCards = {
+      'Describe a skill you learned from an older relative.': 'Describe a skill you learned from an older relative. You should say: who you learned it from, what the skill is, how long it took, and explain how it has helped you in life.',
+      'Describe a time you had to resolve a conflict in a team.': 'Describe a time you had to resolve a conflict in a team. You should say: what the conflict was, who was involved, how you resolved it, and what you learned from this experience.',
+      'Describe a website or app you use daily and why it helps you.': 'Describe a website or app you use daily and why it helps you. You should say: what it is, how often you use it, what its features are, and explain why it is important to you.',
+      'Part 1: Hometown & Leisure activities.': 'Part 1 Interview Questions:\n- Where is your hometown?\n- What do you like about it?\n- What do you do in your free time?\n- Do you prefer spending leisure time alone or with friends?',
+      'Part 3: The impact of technology and AI on future career choices.': 'Part 3 Discussion Prompts:\n- How has technology changed the job market in your country?\n- Do you think robots will replace humans in most professions?\n- What skills will be most valuable for future generations?'
+    };
+
+    function loadStudentSpeakingTopic() {
+      const select = document.getElementById('s-topic-select');
+      const prompt = document.getElementById('s-topic-prompt');
+      prompt.textContent = speakingCueCards[select.value] || select.value;
+      
+      clearInterval(s_prepInterval);
+      clearInterval(s_talkInterval);
+      document.getElementById('s-prep-display').textContent = '01:00';
+      document.getElementById('s-talk-display').textContent = '02:00';
+      document.getElementById('s-timer-status').textContent = 'Select a timer to begin.';
+    }
+
+    function startStudentPrepTimer() {
+      clearInterval(s_prepInterval);
+      const display = document.getElementById('s-prep-display');
+      const status = document.getElementById('s-timer-status');
+      let time = 60;
+      status.textContent = 'Preparation Clock running...';
+
+      s_prepInterval = setInterval(() => {
+        time--;
+        const mins = String(Math.floor(time / 60)).padStart(2, '0');
+        const secs = String(time % 60).padStart(2, '0');
+        display.textContent = `${mins}:${secs}`;
+
+        if (time <= 0) {
+          clearInterval(s_prepInterval);
+          status.textContent = 'Prep complete! Click "Start Talk" to record.';
+          display.textContent = '00:00';
+          playAudioBeepAlert();
+        }
+      }, 1000);
+    }
+
+    function startStudentTalkTimer() {
+      clearInterval(s_talkInterval);
+      const display = document.getElementById('s-talk-display');
+      const status = document.getElementById('s-timer-status');
+      let time = 120;
+      status.textContent = 'Response timer active! Speak now...';
+
+      s_talkInterval = setInterval(() => {
+        time--;
+        const mins = String(Math.floor(time / 60)).padStart(2, '0');
+        const secs = String(time % 60).padStart(2, '0');
+        display.textContent = `${mins}:${secs}`;
+
+        if (time <= 0) {
+          clearInterval(s_talkInterval);
+          status.textContent = 'Response Time Limit reached!';
+          display.textContent = '00:00';
+          playAudioBeepAlert();
+        }
+      }, 1000);
+    }
+
+    function playAudioBeepAlert() {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = audioCtx.createOscillator();
+        const gainNode = audioCtx.createGain();
+        oscillator.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+        oscillator.type = 'sine';
+        oscillator.frequency.setValueAtTime(650, audioCtx.currentTime);
+        gainNode.gain.setValueAtTime(0.12, audioCtx.currentTime);
+        oscillator.start();
+        oscillator.stop(audioCtx.currentTime + 0.35);
+      } catch (e) {
+        console.log('Voice timer alert failed to synthesize.', e);
+      }
+    }
+
+    function toggleStudentAudioRecording() {
+      const btn = document.getElementById('s-btn-record');
+      const recIcon = document.getElementById('s-rec-icon');
+      const pulse = document.getElementById('s-rec-pulse');
+      const status = document.getElementById('s-rec-status');
+      const timeDisplay = document.getElementById('s-rec-time');
+      const player = document.getElementById('s-audio-player');
+      const dLink = document.getElementById('s-download-link');
+      const noAudio = document.getElementById('s-no-audio-label');
+
+      if (!s_isRecording) {
+        navigator.mediaDevices.getUserMedia({ audio: true })
+          .then(stream => {
+            s_mediaRecorder = new MediaRecorder(stream);
+            s_audioChunks = [];
+
+            s_mediaRecorder.ondataavailable = event => {
+              s_audioChunks.push(event.data);
+            };
+
+            s_mediaRecorder.onstop = () => {
+              const audioBlob = new Blob(s_audioChunks, { type: 'audio/wav' });
+              const audioUrl = URL.createObjectURL(audioBlob);
+              
+              player.src = audioUrl;
+              player.classList.remove('hidden');
+              
+              dLink.href = audioUrl;
+              dLink.download = `viatestprep_speaking_practice_${Date.now()}.wav`;
+              dLink.classList.remove('hidden');
+              noAudio.classList.add('hidden');
+            };
+
+            s_mediaRecorder.start();
+            s_isRecording = true;
+            recIcon.textContent = '⏹️';
+            pulse.classList.remove('hidden');
+            status.textContent = 'Recording Voice...';
+            status.className = 'text-xs font-bold text-red-600 block animate-pulse';
+            
+            player.classList.add('hidden');
+            dLink.classList.add('hidden');
+            noAudio.classList.remove('hidden');
+
+            s_recStartTime = Date.now();
+            s_recTimerInterval = setInterval(() => {
+              const elapsed = Math.floor((Date.now() - s_recStartTime) / 1000);
+              const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+              const secs = String(elapsed % 60).padStart(2, '0');
+              timeDisplay.textContent = `${mins}:${secs}`;
+            }, 1000);
+          })
+          .catch(err => {
+            alert('Could not access microphone: ' + err.message);
+          });
+      } else {
+        if (s_mediaRecorder && s_mediaRecorder.state !== 'inactive') {
+          s_mediaRecorder.stop();
+          s_mediaRecorder.stream.getTracks().forEach(track => track.stop());
+        }
+        s_isRecording = false;
+        recIcon.textContent = '🔴';
+        pulse.classList.add('hidden');
+        status.textContent = 'Idle';
+        status.className = 'text-xs font-bold text-slate-700 block';
+        clearInterval(s_recTimerInterval);
+      }
+    }
+
+
+    // ==========================================
+    // VIEW 3: CONSULTANCY CRM PORTAL RENDER ENGINE
+    // ==========================================
+    function initConsultancyDashboard() {
+      // 1. Read header info
+      const consultancyName = localStorage.getItem('viatestprep_consultancy_name') || 'ViATestPrep';
+      const selectedPlan = localStorage.getItem('viatestprep_consultancy_plan') || 'Growth Plan';
+      
+      document.getElementById('crmHeaderName').textContent = consultancyName + ' Portal';
+      document.getElementById('crmHeaderPlan').textContent = selectedPlan;
+      
+      renderCRMTable();
+      populateCRMGraderSelect();
+      renderCRMVaultModules();
+      updateCRMSliders();
+    }
+
+    function switchCRMTab(tabId) {
+      document.querySelectorAll('.crm-subview').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.sidebar-tab').forEach(el => {
+        el.classList.remove('active-tab');
+      });
+      
+      document.getElementById('crm-' + tabId + '-view').classList.remove('hidden');
+      document.getElementById('c-tab-' + tabId).classList.add('active-tab');
+      
+      currentCRMTab = tabId;
+    }
+
+    function renderCRMTable() {
+      const search = document.getElementById('rosterSearch').value.toLowerCase();
+      const statusFilter = document.getElementById('rosterStatusFilter').value;
+      const tbody = document.getElementById('crmTableBody');
+      const noRoster = document.getElementById('noRosterLabel');
+      
+      tbody.innerHTML = '';
+      
+      const filtered = crmStudents.filter(s => {
+        const matchesSearch = s.name.toLowerCase().includes(search) || s.email.toLowerCase().includes(search);
+        const matchesStatus = statusFilter === 'all' || s.status === statusFilter;
+        return matchesSearch && matchesStatus;
+      });
+
+      if (filtered.length === 0) {
+        noRoster.classList.remove('hidden');
+      } else {
+        noRoster.classList.add('hidden');
+        
+        filtered.forEach(s => {
+          let avgMock = '—';
+          if (s.mockHistory && s.mockHistory.length > 0) {
+            const sum = s.mockHistory.reduce((acc, curr) => acc + parseFloat(curr.overall), 0);
+            avgMock = (sum / s.mockHistory.length).toFixed(1);
+          }
+
+          const tr = document.createElement('tr');
+          tr.className = 'hover:bg-slate-50 transition cursor-pointer';
+          tr.onclick = () => openCRMProfileDrawer(s.id);
+          tr.innerHTML = `
+            <td class="p-4 font-bold text-slate-800">${escapeHtml(s.name)}</td>
+            <td class="p-4 text-xs">
+              <span class="text-slate-500 block">${escapeHtml(s.email)}</span>
+              <span class="text-slate-700 font-bold block mt-0.5">${escapeHtml(s.phone)}</span>
+            </td>
+            <td class="p-4 text-center font-extrabold text-slate-800">${s.target}</td>
+            <td class="p-4 text-center">
+              <span class="px-2 py-0.5 rounded-full text-[9px] font-black uppercase border ${s.status === 'Active' ? 'bg-emerald-50 text-emerald-700 border-emerald-100' : (s.status === 'Completed' ? 'bg-indigo-50 text-indigo-700 border-indigo-100' : 'bg-slate-100 text-slate-600 border-slate-200')}">
+                ${s.status}
+              </span>
+            </td>
+            <td class="p-4 text-center font-extrabold text-indigo-600">${avgMock}</td>
+            <td class="p-4 text-right flex justify-end gap-1.5" onclick="event.stopPropagation()">
+              <button onclick="editCRMStudent('${s.id}')" class="px-2.5 py-1 border border-slate-200 rounded-lg text-xs font-bold bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200 transition">Edit</button>
+              <button onclick="deleteCRMStudent('${s.id}')" class="px-2.5 py-1 border border-slate-200 rounded-lg text-xs font-bold bg-slate-50 hover:bg-rose-50 hover:text-rose-600 hover:border-rose-200 transition">Delete</button>
+            </td>
+          `;
+          tbody.appendChild(tr);
+        });
+      }
+
+      updateCRMKPIs();
+    }
+
+    function updateCRMKPIs() {
+      document.getElementById('c-kpi-total').textContent = crmStudents.length;
+      document.getElementById('c-kpi-active').textContent = crmStudents.filter(s => s.status === 'Active').length;
+      
+      let sum = 0;
+      let count = 0;
+      let gradedSpeaking = 0;
+      
+      crmStudents.forEach(s => {
+        if (s.mockHistory) {
+          s.mockHistory.forEach(h => {
+            sum += parseFloat(h.overall);
+            count++;
+            if (h.test.includes('Speaking') || typeof h.speaking === 'object') {
+              gradedSpeaking++;
+            }
+          });
+        }
+      });
+      
+      document.getElementById('c-kpi-avg').textContent = count > 0 ? (sum / count).toFixed(1) : '—';
+      document.getElementById('c-kpi-speaking').textContent = gradedSpeaking;
+    }
+
+    function openCRMAddModal() {
+      document.getElementById('crmStudId').value = '';
+      document.getElementById('crmStudName').value = '';
+      document.getElementById('crmStudEmail').value = '';
+      document.getElementById('crmStudPhone').value = '';
+      document.getElementById('crmStudTarget').value = '7.0';
+      document.getElementById('crmStudStatus').value = 'Active';
+      document.getElementById('crmStudNotes').value = '';
+      
+      document.getElementById('crmModalTitle').textContent = 'Register New Student';
+      document.getElementById('crmAddStudentModal').classList.remove('hidden');
+    }
+
+    function closeCRMAddModal() {
+      document.getElementById('crmAddStudentModal').classList.add('hidden');
+    }
+
+    function handleCRMStudentSubmit(e) {
+      e.preventDefault();
+      
+      const id = document.getElementById('crmStudId').value;
+      const name = document.getElementById('crmStudName').value.trim();
+      const email = document.getElementById('crmStudEmail').value.trim();
+      const phone = document.getElementById('crmStudPhone').value.trim();
+      const target = parseFloat(document.getElementById('crmStudTarget').value);
+      const status = document.getElementById('crmStudStatus').value;
+      const notes = document.getElementById('crmStudNotes').value.trim();
+
+      if (id) {
+        // Edit student
+        const stud = crmStudents.find(s => s.id === id);
+        if (stud) {
+          stud.name = name;
+          stud.email = email;
+          stud.phone = phone;
+          stud.target = target;
+          stud.status = status;
+          stud.notes = notes;
+        }
+      } else {
+        // Create student
+        crmStudents.push({
+          id: 'st-' + Date.now(),
+          name,
+          email,
+          phone,
+          target,
+          status,
+          notes,
+          mockHistory: []
+        });
+      }
+
+      localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
+      renderCRMTable();
+      populateCRMGraderSelect();
+      closeCRMAddModal();
+    }
+
+    function editCRMStudent(id) {
+      const stud = crmStudents.find(s => s.id === id);
+      if (!stud) return;
+
+      document.getElementById('crmStudId').value = stud.id;
+      document.getElementById('crmStudName').value = stud.name;
+      document.getElementById('crmStudEmail').value = stud.email;
+      document.getElementById('crmStudPhone').value = stud.phone;
+      document.getElementById('crmStudTarget').value = stud.target;
+      document.getElementById('crmStudStatus').value = stud.status;
+      document.getElementById('crmStudNotes').value = stud.notes || '';
+      
+      document.getElementById('crmModalTitle').textContent = 'Modify Student Profile';
+      document.getElementById('crmAddStudentModal').classList.remove('hidden');
+    }
+
+    function deleteCRMStudent(id) {
+      if (confirm('Delete this student profile and all mock history logs?')) {
+        crmStudents = crmStudents.filter(s => s.id !== id);
+        localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
+        renderCRMTable();
+        populateCRMGraderSelect();
+      }
+    }
+
+    // CRM Tab 2 Grader
+    function populateCRMGraderSelect() {
+      const select = document.getElementById('graderStudentSelect');
+      select.innerHTML = '<option value="" disabled selected>-- Select an enrolled student --</option>';
+      
+      crmStudents.forEach(s => {
+        const option = document.createElement('option');
+        option.value = s.id;
+        option.textContent = `${s.name} (${s.email})`;
+        select.appendChild(option);
+      });
+    }
+
+    function updateCRMSliders() {
+      const f = parseFloat(document.getElementById('g-val-fluency').value);
+      const v = parseFloat(document.getElementById('g-val-vocab').value);
+      const g = parseFloat(document.getElementById('g-val-grammar').value);
+      const p = parseFloat(document.getElementById('g-val-pronunciation').value);
+      
+      document.getElementById('g-lbl-fluency').textContent = f.toFixed(1);
+      document.getElementById('g-lbl-vocab').textContent = v.toFixed(1);
+      document.getElementById('g-lbl-grammar').textContent = g.toFixed(1);
+      document.getElementById('g-lbl-pronunciation').textContent = p.toFixed(1);
+      
+      const avg = (f + v + g + p) / 4;
+      const rounded = Math.round(avg * 2) / 2;
+      document.getElementById('graderOverallLabel').textContent = rounded.toFixed(1);
+    }
+
+    function handleCRMGraderSubmit(e) {
+      e.preventDefault();
+      
+      const id = document.getElementById('graderStudentSelect').value;
+      const cueCard = document.getElementById('graderCueCard').value.trim();
+      const notes = document.getElementById('graderNotes').value.trim();
+      
+      const f = parseFloat(document.getElementById('g-val-fluency').value);
+      const v = parseFloat(document.getElementById('g-val-vocab').value);
+      const g = parseFloat(document.getElementById('g-val-grammar').value);
+      const p = parseFloat(document.getElementById('g-val-pronunciation').value);
+      
+      const stud = crmStudents.find(s => s.id === id);
+      if (!stud) {
+        alert('Invalid student.');
+        return;
+      }
+      
+      const overall = parseFloat(document.getElementById('graderOverallLabel').textContent);
+      
+      stud.mockHistory.push({
+        test: 'Speaking Interview: ' + cueCard,
+        date: new Date().toISOString().split('T')[0],
+        listening: '—',
+        reading: '—',
+        writing: '—',
+        speaking: { fluency: f, vocab: v, grammar: g, pronunciation: p },
+        overall: overall,
+        notes: notes
+      });
+
+      localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
+      renderCRMTable();
+      
+      alert(`Speaking grade band ${overall} submitted for ${stud.name}!`);
+      
+      // Reset Grader form
+      document.getElementById('graderCueCard').value = '';
+      document.getElementById('graderNotes').value = '';
+      document.getElementById('g-val-fluency').value = '6.0';
+      document.getElementById('g-val-vocab').value = '6.0';
+      document.getElementById('g-val-grammar').value = '6.0';
+      document.getElementById('g-val-pronunciation').value = '6.0';
+      updateCRMSliders();
+      
+      switchCRMTab('crm');
+    }
+
+    // CRM Tab 3: Materials Vault for Tutors
+    function renderCRMVaultModules() {
+      const grid = document.getElementById('crm-vault-view');
+      grid.innerHTML = '';
+
+      modulesConfig.forEach(m => {
+        const card = document.createElement('a');
+        card.href = m.file;
+        card.target = '_blank';
+        card.className = 'bg-white border border-slate-100 hover:border-indigo-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between';
+        
+        card.innerHTML = `
+          <div>
+            <div class="flex justify-between items-center">
+              <span style="${m.badgeStyle}" class="px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider">${m.id}</span>
+              <span class="text-[9px] text-slate-400 font-bold">${m.time}</span>
+            </div>
+            <h4 class="font-extrabold text-sm text-slate-800 mt-3">${escapeHtml(m.title)}</h4>
+            <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">${m.desc}</p>
+          </div>
+          <span class="text-xs text-indigo-600 font-bold mt-4 inline-flex items-center gap-1">Launch Module →</span>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // CRM Tab 4: Student profile details side drawer timeline
+    function openCRMProfileDrawer(studentId) {
+      const stud = crmStudents.find(s => s.id === studentId);
+      if (!stud) return;
+
+      document.getElementById('drawerName').textContent = stud.name;
+      document.getElementById('drawerEmail').textContent = stud.email;
+      document.getElementById('drawerPhone').textContent = stud.phone;
+      document.getElementById('drawerTarget').textContent = stud.target.toFixed(1);
+      document.getElementById('drawerNotes').textContent = stud.notes || 'No academic notes logged.';
+      
+      // Calculate average
+      let avg = '—';
+      if (stud.mockHistory && stud.mockHistory.length > 0) {
+        const sum = stud.mockHistory.reduce((acc, curr) => acc + parseFloat(curr.overall), 0);
+        avg = (sum / stud.mockHistory.length).toFixed(1);
+      }
+      document.getElementById('drawerAvg').textContent = avg;
+
+      // Populate Timeline
+      const timeline = document.getElementById('drawerTimeline');
+      timeline.innerHTML = '';
+
+      if (!stud.mockHistory || stud.mockHistory.length === 0) {
+        timeline.innerHTML = '<div class="text-xs text-slate-400 italic text-center py-4">No tests logged for this student.</div>';
+      } else {
+        stud.mockHistory.forEach(h => {
+          const item = document.createElement('div');
+          item.className = 'border-l-2 border-slate-100 pl-4 relative space-y-1';
+          
+          let scoreBreakdown = '';
+          if (typeof h.speaking === 'object') {
+            scoreBreakdown = `<div class="text-[10px] text-indigo-600 mt-1">FC: ${h.speaking.fluency} · LR: ${h.speaking.vocab} · GRA: ${h.speaking.grammar} · PR: ${h.speaking.pronunciation}</div>`;
+          }
+
+          item.innerHTML = `
+            <div class="w-3 h-3 rounded-full bg-indigo-600 border border-white absolute left-[-7px] top-[4px]"></div>
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-slate-800">${escapeHtml(h.test)}</span>
+              <span class="text-[9px] text-slate-400 font-semibold">${h.date}</span>
+            </div>
+            <div class="text-[10px] text-slate-500">${escapeHtml(h.notes || 'Self-study submission')}</div>
+            <div class="flex items-center gap-2 mt-1">
+              <span class="font-extrabold text-[10px] text-emerald-600">Band ${h.overall}</span>
+            </div>
+            ${scoreBreakdown}
+          `;
+          timeline.appendChild(item);
+        });
+      }
+
+      document.getElementById('crmProfileDrawer').classList.remove('hidden');
+    }
+
+    function closeCRMProfileDrawer(event) {
+      document.getElementById('crmProfileDrawer').classList.add('hidden');
+    }
+
+    // CSV File roster import/export
+    function exportCRMToCSV() {
+      if (crmStudents.length === 0) {
+        alert('No students to export.');
+        return;
+      }
+      let csv = 'ID,Name,Email,Phone,TargetBand,Status,Notes\n';
+      crmStudents.forEach(s => {
+        csv += `"${s.id}","${s.name.replace(/"/g, '""')}","${s.email.replace(/"/g, '""')}","${s.phone}","${s.target}","${s.status}","${(s.notes || '').replace(/"/g, '""')}"\n`;
+      });
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.setAttribute('download', `viatestprep_roster_${new Date().toISOString().split('T')[0]}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function importCRMFromCSV(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        const text = evt.target.result;
+        const lines = text.split('\n');
+        if (lines.length <= 1) {
+          alert('CSV file is empty.');
+          return;
+        }
+
+        let added = 0;
+        for (let i = 1; i < lines.length; i++) {
+          const line = lines[i].trim();
+          if (!line) continue;
+
+          const matches = line.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)//g) || [];
+          const clean = matches.map(v => v.replace(/^"|"$/g, '').replace(/""/g, '"'));
+
+          if (clean.length >= 6) {
+            const name = clean[1];
+            const email = clean[2];
+            const phone = clean[3];
+            const target = parseFloat(clean[4]) || 7.0;
+            const status = clean[5] || 'Active';
+            const notes = clean[6] || '';
+
+            const exists = crmStudents.find(s => s.email.toLowerCase() === email.toLowerCase());
+            if (!exists) {
+              crmStudents.push({
+                id: 'st-' + (Date.now() + i),
+                name, email, phone, target, status, notes,
+                mockHistory: []
+              });
+              added++;
+            }
+          }
+        }
+
+        localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
+        renderCRMTable();
+        populateCRMGraderSelect();
+        alert(`CSV roster parsed. Added ${added} new student profiles.`);
+      };
+      reader.readAsText(file);
+      e.target.value = '';
+    }
+
+
+    // ==========================================
+    // SEED & MISCELLANEOUS UTILITIES
+    // ==========================================
+    function loadCRMDemoData() {
+      seedInitialCRMStudents();
+      renderCRMTable();
+      populateCRMGraderSelect();
+    }
+
+    function escapeHtml(text) {
+      if (!text) return '';
+      return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
   </script>
 </body>
 </html>
