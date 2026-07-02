@@ -122,9 +122,8 @@ svg.chart{width:100%;overflow:visible}
       <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="drills">③ Steps 1-3: Drills</span>
       <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="task1">④ Step 4: Charts</span>
       <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="essays">⑤ Essay Types</span>
-      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="skeleton">⑥ Skeleton</span>
-      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="paraphrase">⑦ Step 5: Paraphrase WS</span>
-      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="templates">⑧ Step 6: Templates</span>
+      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="paraphrase">⑥ Step 5: Paraphrase WS</span>
+      <span class="nav-step cursor-pointer hover:text-blue-800" data-jump="templates">⑦ Step 6: Templates</span>
     </div>
     <div class="flex items-center gap-3">
       <div class="text-right hidden sm:block"><div class="text-[11px] uppercase tracking-widest text-stone-500">XP</div><div class="font-bold text-lg" style="color:var(--blue);font-family:'Fraunces',serif" id="xpDisplay">0</div></div>
@@ -197,29 +196,6 @@ svg.chart{width:100%;overflow:visible}
   <div class="gameboard mt-4" id="essayTypes"></div>
 </section>
 
-<!-- ⑤ SKELETON -->
-<section id="skeleton" class="mb-10">
-  <h2 class="text-2xl mb-2">⑤ Visual Essay Skeleton</h2>
-  <p class="text-stone-700 max-w-3xl text-sm mb-4">Pick the essay type. Tap each block to reveal what goes inside it.</p>
-  <div class="card p-5">
-    <div class="flex items-center gap-3 flex-wrap mb-4">
-      <label class="text-sm font-bold">Essay type:</label>
-      <select class="border border-line rounded-lg p-2 text-sm" id="skType" style="background:#fff">
-        <option value="opinion">Opinion (Agree / Disagree)</option>
-        <option value="discussion">Discussion (both views + opinion)</option>
-        <option value="advdis">Advantages / Disadvantages</option>
-        <option value="probsol">Problem / Solution</option>
-        <option value="twopart">Two-part Question</option>
-      </select>
-    </div>
-    <div class="grid gap-3" id="skBlocks"></div>
-    <div class="mt-5">
-      <div class="text-xs uppercase tracking-widest text-stone-500 mb-2">Sentence Starter Bank</div>
-      <div class="grid md:grid-cols-3 gap-3 text-sm" id="skStarters"></div>
-    </div>
-  </div>
-</section>
-
 <!-- ⑥ DRILLS -->
 <section id="drills" class="mb-10">
   <h2 class="text-2xl mb-2">⑥ Steps 1-3: Sentence-Making Drills</h2>
@@ -241,9 +217,9 @@ svg.chart{width:100%;overflow:visible}
           <h4 class="font-bold text-xs mt-1">Sentence Foundations</h4>
           <p class="text-[10px] text-stone-500 mt-1 leading-normal">Master linkers, compound-complex clauses, and relative modifiers.</p>
         </div>
-        <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center mt-3 w-full" onclick="document.getElementById('drills').scrollIntoView({behavior:'smooth'})">Go to Step 1</button>
+        <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center mt-3 w-full" onclick="document.getElementById('drills').scrollIntoView({behavior:'smooth'});openDrillModal(0)">Go to Step 1</button>
       </div>
-      
+
       <!-- Step 2 -->
       <div class="p-3 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(181,138,44,0.02)">
         <div>
@@ -251,9 +227,9 @@ svg.chart{width:100%;overflow:visible}
           <h4 class="font-bold text-xs mt-1">Academic Tone</h4>
           <p class="text-[10px] text-stone-500 mt-1 leading-normal">Upgrade claims using academic hedging and hypothetical conditionals.</p>
         </div>
-        <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center mt-3 w-full" onclick="document.getElementById('drills').scrollIntoView({behavior:'smooth'})">Go to Step 2</button>
+        <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center mt-3 w-full" onclick="document.getElementById('drills').scrollIntoView({behavior:'smooth'});openDrillModal(3)">Go to Step 2</button>
       </div>
-      
+
       <!-- Step 3 -->
       <div class="p-3 rounded-xl border border-line flex flex-col justify-between" style="background:rgba(31,122,77,0.02)">
         <div>
@@ -261,7 +237,7 @@ svg.chart{width:100%;overflow:visible}
           <h4 class="font-bold text-xs mt-1">Paragraph Parts</h4>
           <p class="text-[10px] text-stone-500 mt-1 leading-normal">Draft high-scoring thesis statements, topic lines, and concrete examples.</p>
         </div>
-        <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center mt-3 w-full" onclick="document.getElementById('drills').scrollIntoView({behavior:'smooth'})">Go to Step 3</button>
+        <button class="btn btn-ghost text-[9px] px-2 py-1 justify-center mt-3 w-full" onclick="document.getElementById('drills').scrollIntoView({behavior:'smooth'});openDrillModal(5)">Go to Step 3</button>
       </div>
       
       <!-- Step 4 -->
@@ -716,66 +692,6 @@ function openEssayModal(i){
   openModal(`<div class="num" style="background:${c.accent};width:36px;height:36px">${c.icon}</div><div><div class="font-bold text-lg">${c.n}. ${c.name}</div><div class="text-[10px] uppercase tracking-widest text-stone-500">Task 2 essay type</div></div>`,body);
   addXP(5);
 }
-// ====== SKELETON ======
-const skeletons={
-opinion:[
-{label:"INTRO",color:"#eef2fa",accent:"var(--blue)",words:"~50 words",what:"1) Paraphrase prompt. 2) State CLEAR position. 3) Preview 2 reasons.",grammar:"Present Simple + complex sentence with subordinate clause",starter:"\"It is widely accepted that… I firmly believe that… This essay will argue that…\"",trap:"'Both sides have some merit' = capped at Band 6 for Task Response."},
-{label:"BODY 1",color:"#fdf6e3",accent:"var(--gold)",words:"~95 words",what:"P-E-E-L: Topic = reason 1 + explanation + specific example + link to thesis",grammar:"1× passive + 1× conditional + 1× relative clause",starter:"\"The principal reason is… To illustrate, … This demonstrates that…\"",trap:"Listing 3 reasons without developing any of them."},
-{label:"BODY 2",color:"#fdf6e3",accent:"var(--gold)",words:"~95 words",what:"P-E-E-L: A DIFFERENT reason 2 + explanation + example + link",grammar:"Relative clause + present perfect + cohesive linker",starter:"\"A second compelling argument is… For instance, … Consequently, …\"",trap:"Body 2 weaker or shorter than Body 1."},
-{label:"CONCLUSION",color:"#fdeadf",accent:"var(--terra)",words:"~40 words",what:"Signal end + summarise + restate position in different words. No new ideas.",grammar:"Same tense as intro",starter:"\"In conclusion, … / Overall, it is evident that…\"",trap:"Introducing a new argument in the conclusion."}
-],
-discussion:[
-{label:"INTRO",color:"#eef2fa",accent:"var(--blue)",words:"~55 words",what:"Paraphrase + acknowledge both views + state YOUR lean clearly",grammar:"Concession structure ('While some… others…')",starter:"\"While some maintain that… others contend that… In my view, however,…\"",trap:"Forgetting to state your own opinion in the introduction."},
-{label:"BODY 1 (View A)",color:"#fdf6e3",accent:"var(--gold)",words:"~90 words",what:"Present View A FAIRLY with example — even if you disagree with it",grammar:"Reporting verbs: argue, contend, maintain, claim",starter:"\"On one hand, proponents argue that… A notable example is…\"",trap:"Dismissing or underdeveloping the side you disagree with."},
-{label:"BODY 2 (View B + your lean)",color:"#fdf6e3",accent:"var(--gold)",words:"~110 words",what:"Present View B + example + WHY you find it more convincing",grammar:"Comparative + concession structure",starter:"\"On the other hand… This argument carries greater weight because…\"",trap:"Burying your own stance in the last sentence."},
-{label:"CONCLUSION",color:"#fdeadf",accent:"var(--terra)",words:"~40 words",what:"Acknowledge both views briefly + restate final lean",grammar:"Modal of probability",starter:"\"In conclusion, while both views have merit, the evidence suggests that…\"",trap:"Giving a different opinion in the conclusion from the introduction."}
-],
-advdis:[
-{label:"INTRO",color:"#eef2fa",accent:"var(--blue)",words:"~50 words",what:"Paraphrase + acknowledge pros/cons exist + verdict if 'outweigh' asked",grammar:"Compound sentence with 'while' / 'although'",starter:"\"While this trend clearly brings benefits, it also presents significant drawbacks. On balance,…\"",trap:"Missing the 'outweigh' verdict if the question explicitly asks for it."},
-{label:"BODY 1 (Advantages)",color:"#eef9f3",accent:"var(--green)",words:"~95 words",what:"1–2 advantages with full P-E-E-L development + example",grammar:"Cause-effect linkers: consequently, as a result, this leads to",starter:"\"The most significant advantage is… This is because… For example,…\"",trap:"Listing 4 advantages with no examples for any of them."},
-{label:"BODY 2 (Disadvantages)",color:"#fdeadf",accent:"var(--terra)",words:"~95 words",what:"1–2 disadvantages + example. Must be approximately equal to Body 1.",grammar:"Contrast linkers: however, nonetheless, despite this",starter:"\"However, this trend is not without its drawbacks. The most notable is…\"",trap:"Disadvantages much shorter than Advantages — signals poor planning."},
-{label:"CONCLUSION",color:"#fdeadf",accent:"var(--terra)",words:"~35 words",what:"Summarise + restate verdict (if 'outweigh' was asked)",grammar:"Comparative structures",starter:"\"In conclusion, although there are valid concerns, the advantages of … outweigh the drawbacks.\"",trap:"Changing your verdict in the conclusion."}
-],
-probsol:[
-{label:"INTRO",color:"#eef2fa",accent:"var(--blue)",words:"~50 words",what:"Paraphrase the problem + signal what the essay covers (problems + solutions)",grammar:"Present Perfect for ongoing trends: 'has become', 'has increased'",starter:"\"In recent years, … has become an increasingly pressing concern. This essay will examine the causes and propose solutions.\"",trap:"Vague introduction that could apply to any topic."},
-{label:"BODY 1 (Problems/Causes)",color:"#fdeadf",accent:"var(--terra)",words:"~95 words",what:"1–2 specific problems or causes + concrete example",grammar:"Causal language: stems from, is rooted in, is largely due to",starter:"\"The most significant cause of this problem is… This is compounded by… For instance,…\"",trap:"Generic causes with no specific evidence or examples."},
-{label:"BODY 2 (Solutions)",color:"#eef9f3",accent:"var(--green)",words:"~100 words",what:"Solutions that DIRECTLY address each problem named in Body 1",grammar:"Modal verbs (should, must, could) + second conditional",starter:"\"To address these challenges, governments should… This would… For instance,…\"",trap:"Proposing solutions that have no connection to the problems you listed."},
-{label:"CONCLUSION",color:"#fdeadf",accent:"var(--terra)",words:"~35 words",what:"Recap problem + main solution + forward-looking statement",grammar:"Future-oriented language",starter:"\"In conclusion, while … remains a serious challenge, coordinated action offers a viable path forward.\"",trap:"Adding a new solution in the conclusion."}
-],
-twopart:[
-{label:"INTRO",color:"#eef2fa",accent:"var(--blue)",words:"~50 words",what:"Paraphrase + briefly preview your answers to BOTH questions",grammar:"Compound sentence",starter:"\"This essay will first explore … before examining …\"",trap:"Generic introduction that doesn't acknowledge there are two separate questions."},
-{label:"BODY 1 (Q1)",color:"#fdf6e3",accent:"var(--gold)",words:"~95 words",what:"Direct answer to Q1 + full P-E-E-L development + example",grammar:"Topic sentence that directly answers Q1",starter:"\"Regarding the first question, the most likely explanation is… For example,…\"",trap:"Drifting into Q2 before finishing Q1."},
-{label:"BODY 2 (Q2)",color:"#fdf6e3",accent:"var(--gold)",words:"~95 words",what:"Direct answer to Q2 + explanation + example. Must be equal to Body 1.",grammar:"Different grammatical structures from Body 1 — show range",starter:"\"As for the second question, … This is primarily because… A clear example is…\"",trap:"Q2 body paragraph significantly shorter than Q1."},
-{label:"CONCLUSION",color:"#fdeadf",accent:"var(--terra)",words:"~35 words",what:"Concise recap of your answers to BOTH questions",grammar:"Short, direct summary",starter:"\"In conclusion, … while …\"",trap:"Only summarising one of the two questions."}
-]
-};
-function renderSkeleton(){
-  const type=document.getElementById('skType').value;const sk=skeletons[type];const el=document.getElementById('skBlocks');el.innerHTML='';
-  sk.forEach((b,i)=>{
-    const c=document.createElement('div');c.className='pillar-sk';c.style.borderLeft=`6px solid ${b.accent}`;c.style.background=`linear-gradient(180deg,${b.color},#fff 80%)`;
-    c.innerHTML=`<div class="flex items-start justify-between gap-2 cursor-pointer" onclick="this.parentElement.querySelector('.reveal').style.display=this.parentElement.querySelector('.reveal').style.display==='none'?'block':'none'">
-      <div class="flex items-center gap-2"><div class="num" style="background:${b.accent};width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700">${i+1}</div>
-      <div><div class="font-bold">${b.label}</div><div class="text-xs text-stone-500 mono">${b.words}</div></div></div>
-      <span class="text-xs text-stone-400 mt-1">tap ↓</span></div>
-      <div class="reveal mt-3" style="display:none">
-        <div class="text-xs uppercase tracking-widest text-stone-500">What goes here</div><p class="mt-1 text-sm">${b.what}</p>
-        <div class="text-xs uppercase tracking-widest text-stone-500 mt-2" style="color:var(--blue)">Grammar to flex</div><p class="mt-1 text-sm">${b.grammar}</p>
-        <div class="text-xs uppercase tracking-widest text-stone-500 mt-2" style="color:var(--green)">Sentence opener</div><p class="mt-1 text-sm italic">${b.starter}</p>
-        <div class="text-xs uppercase tracking-widest text-stone-500 mt-2" style="color:var(--terra)">Trap</div><p class="mt-1 text-sm">${b.trap}</p>
-      </div>`;
-    el.appendChild(c);
-  });
-  const starters=[
-    {h:"Paraphrasing prompts",l:["It is widely held that…","In contemporary society,…","Many would argue that…","There is a growing consensus that…"]},
-    {h:"Stating position",l:["In my view,…","I firmly believe that…","I am inclined to agree that…","From my perspective,…"]},
-    {h:"Topic sentences",l:["The principal reason is that…","One compelling argument is…","A particularly pressing concern is…","The most significant benefit is…"]},
-    {h:"Examples",l:["For instance,…","To illustrate,…","A clear example of this is…","This can be seen in…"]},
-    {h:"Cause / effect",l:["As a result,…","Consequently,…","This stems from…","Owing to this,…"]},
-    {h:"Concluding",l:["In conclusion,…","Overall, the evidence suggests…","Ultimately,…","On balance,…"]}
-  ];
-  document.getElementById('skStarters').innerHTML=starters.map(p=>`<div class="card p-3"><div class="text-xs uppercase tracking-widest text-stone-500 font-bold mb-1">${p.h}</div>${p.l.map(x=>`<div class="text-stone-700 text-sm">• ${x}</div>`).join('')}</div>`).join('');
-}
-document.getElementById('skType').addEventListener('change',renderSkeleton);renderSkeleton();
 // ====== DRILLS ======
 const drills=[
 {n:"Step 1A",name:"Connectors & Linkers",icon:"🔗",accent:"var(--blue)",intro:"The connector must match the LOGIC between clauses — not just sound academic.",items:[{prompt:"\"Working from home reduces commute time. ____, it can also lower stress.\"",options:[{t:"In contrast",c:false,w:"Both clauses are POSITIVE — no contrast."},{t:"However",c:false,w:"'However' signals contrast; both clauses agree."},{t:"Furthermore",c:true,w:"✓ Additive: adds a second benefit to the first."},{t:"Therefore",c:false,w:"Cause-effect — reduced commute doesn't directly cause lower stress."}]},{prompt:"\"The plan was popular with parents. ____, teachers strongly opposed it.\"",options:[{t:"Furthermore",c:false,w:"The clauses CONTRAST — not additive."},{t:"However",c:true,w:"✓ Two contrasting positions — needs a contrast linker."},{t:"For example",c:false,w:"This is not an example."},{t:"In conclusion",c:false,w:"This is mid-paragraph — not a conclusion."}]}]},

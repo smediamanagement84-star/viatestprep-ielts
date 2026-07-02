@@ -555,6 +555,55 @@
       </div>
     </div>
 
+    <!-- Step 1D: Skim & Scan Proficiency Drill (10 questions) -->
+    <div class="mt-10 border-t border-line pt-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="stamp">Academy Lab</span>
+        <h3 class="text-2xl">Step 1D: Skim &amp; Scan Proficiency Drill</h3>
+      </div>
+      <p class="text-sm text-stone-600 dark:text-stone-300 mb-4">The micro-drills above train the two skills separately. This 10-question set forces you to switch between them on demand, the way the real exam does: skim first for gist and structure, then scan back in for exact details.</p>
+
+      <div class="case-file p-4 text-sm leading-relaxed mb-5" id="ss-passage">
+        <p class="mb-2"><strong>Paragraph A:</strong> Urban beekeeping, once a niche hobby confined to rural allotments, has expanded rapidly across major cities over the past two decades. London alone now hosts an estimated 7,400 registered hives, a figure that has more than tripled since 2008. Advocates argue that rooftop and balcony hives help offset the decline of wild pollinator populations, which have fallen sharply due to pesticide use and habitat loss.</p>
+        <p class="mb-2"><strong>Paragraph B:</strong> Yet a growing number of ecologists warn that the trend may be doing more harm than good. Because managed honeybee colonies can contain tens of thousands of individuals, a handful of urban hives can out-compete native solitary bees and other wild pollinators for the same limited supply of flowers. A 2019 study of Central London parks found that areas with a high density of managed hives showed a measurable drop in wild bee diversity within eighteen months.</p>
+        <p class="mb-2"><strong>Paragraph C:</strong> Beekeeping associations counter that the real issue is not the presence of hives but the shortage of flowering plants to support them. Several city councils have responded by converting road verges and unused land into wildflower meadows, a move credited with increasing nectar availability by an estimated 30 percent in pilot boroughs. Under this view, hives and wild pollinators can coexist so long as the food supply keeps pace with demand.</p>
+        <p><strong>Paragraph D:</strong> For now, most municipal governments have avoided capping hive numbers outright, opting instead to require registration and to fund pollinator-friendly planting schemes. Whether this compromise proves sustainable will likely depend on data from longer-term ecological surveys, several of which are due to report their findings within the next five years.</p>
+      </div>
+
+      <div class="feedback tip mb-5"><strong>How to attack this drill:</strong> Skim the whole passage once (aim for under 60 seconds) before answering anything. Questions 1–5 test whether you understood what each paragraph is <em>doing</em>. Questions 6–10 send you back to hunt for one specific number, name, or fact - don't re-read the whole paragraph, scan for the keyword first.</div>
+
+      <div class="gameboard" id="skimScanDrillTab1"></div>
+    </div>
+
+    <!-- Step 1E: The A/An Clue (vowel-sound technique) -->
+    <div class="mt-10 border-t border-line pt-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="stamp">Technique</span>
+        <h3 class="text-2xl">Step 1E: The A/An Clue</h3>
+      </div>
+      <p class="text-sm text-stone-600 dark:text-stone-300 mb-4">A free grammar clue that most candidates never use. It works on Sentence Completion, Summary Completion, and Note Completion tasks in both Reading and Listening.</p>
+
+      <div class="card p-6">
+        <h4 class="font-bold text-lg mb-2">Why it works</h4>
+        <p class="text-sm text-stone-700 mb-3">English requires <strong>"a"</strong> before a word that starts with a <em>consonant sound</em>, and <strong>"an"</strong> before a word that starts with a <em>vowel sound</em>. If the gap in a completion task is immediately preceded by "a" or "an", that single word already tells you something about the missing answer - before you've even found it in the passage.</p>
+
+        <div class="grid md:grid-cols-2 gap-3 mb-4">
+          <div class="p-3 rounded-lg" style="background:var(--gold-soft)">
+            <div class="font-bold text-xs uppercase tracking-widest mb-1" style="color:var(--plum)">If the gap follows "a ____"</div>
+            <p class="text-xs text-stone-700">The answer starts with a consonant <em>sound</em>: "a <u>university</u>", "a <u>one</u>-off event", "a <u>European</u> city" (note: "university", "one", and "European" all start with vowel <em>letters</em> but consonant <em>sounds</em> - /j/ and /w/).</p>
+          </div>
+          <div class="p-3 rounded-lg" style="background:#fdf0f3">
+            <div class="font-bold text-xs uppercase tracking-widest mb-1" style="color:var(--rose)">If the gap follows "an ____"</div>
+            <p class="text-xs text-stone-700">The answer starts with a vowel <em>sound</em>: "an <u>hour</u>", "an <u>honest</u> answer" (the "h" is silent), "an <u>MRI</u> scan" (said as "em").</p>
+          </div>
+        </div>
+
+        <div class="feedback bad p-3 rounded-lg text-xs leading-relaxed border-l-4 border-rose-500 mb-3"><strong>Common trap:</strong> This clue filters answers by <em>sound</em>, not spelling. "An hour" is correct because "hour" is pronounced without the h. "A university" is correct because "university" is pronounced /juː-/, a consonant sound. When you shortlist candidate words from the passage, say them aloud before you commit.</div>
+
+        <div class="feedback tip p-3 rounded-lg text-xs leading-relaxed"><strong>How to use it on test day:</strong> Before you scan the passage for the answer, glance at the word immediately before every gap. If it's "a" or "an", you've already eliminated roughly half of the plausible words in the passage - use that to move faster and to double-check an answer you're unsure about.</div>
+      </div>
+    </div>
+
     <div class="mt-10 flex justify-between items-center flex-wrap gap-2">
       <button class="btn btn-primary text-xs" onclick="document.getElementById('plan').scrollIntoView({behavior:'smooth'})">Next: Game Plan →</button>
       <a href="index.html" class="btn btn-ghost text-xs px-3 py-1.5 flex items-center gap-1">← Back to Hub</a>
@@ -1601,6 +1650,100 @@ function initMCQDrill(data, containerId) {
   });
 }
 
+// ====== STEP 1D: SKIM & SCAN PROFICIENCY DRILL (10 Qs, based on #ss-passage) ======
+const skimScanProfData = [
+  {
+    q: "Skim check - what is Paragraph A mainly doing?",
+    options: [
+      { l: "A", t: "Introducing urban beekeeping and how much it has grown.", c: true, w: "Correct! Para A sets up the topic (urban beekeeping) and gives a growth statistic - classic introduction work." },
+      { l: "B", t: "Explaining why wild bee numbers are falling.", c: false, w: "Incorrect. That's mentioned in one clause, but it's not what the paragraph is 'doing' as a whole." },
+      { l: "C", t: "Criticising city councils for ignoring pollinators.", c: false, w: "Incorrect. No criticism of councils appears in Paragraph A - that's Paragraph C's territory." },
+      { l: "D", t: "Describing a scientific study's methodology.", c: false, w: "Incorrect. The study appears in Paragraph B, not A." }
+    ]
+  },
+  {
+    q: "Skim check - what is the main concern raised in Paragraph B?",
+    options: [
+      { l: "A", t: "Urban hives are too expensive for hobbyists to maintain.", c: false, w: "Incorrect. Cost is never mentioned in Paragraph B." },
+      { l: "B", t: "Managed honeybees may be crowding out wild pollinators.", c: true, w: "Correct! Para B's core claim is that hives 'out-compete native solitary bees and other wild pollinators' for flowers." },
+      { l: "C", t: "Honeybee populations are declining faster than expected.", c: false, w: "Incorrect. Paragraph B is about honeybees potentially harming OTHER species, not declining themselves." },
+      { l: "D", t: "Councils are refusing to register new hives.", c: false, w: "Incorrect. Registration is discussed in Paragraph D, not B." }
+    ]
+  },
+  {
+    q: "Skim check - according to Paragraph C, what do beekeeping associations argue?",
+    options: [
+      { l: "A", t: "That wild bee decline is exaggerated by ecologists.", c: false, w: "Incorrect. The associations don't dispute the decline itself." },
+      { l: "B", t: "That hives should be banned from city centres.", c: false, w: "Incorrect. This is the opposite of the associations' position." },
+      { l: "C", t: "That the real problem is too few flowers, not too many hives.", c: true, w: "Correct! Para C states associations counter that 'the real issue is not the presence of hives but the shortage of flowering plants.'" },
+      { l: "D", t: "That wildflower meadows have failed to increase nectar supply.", c: false, w: "Incorrect. The passage says the opposite - nectar availability increased by roughly 30%." }
+    ]
+  },
+  {
+    q: "Skim check - what is the overall stance of municipal governments described in Paragraph D?",
+    options: [
+      { l: "A", t: "A cautious middle ground: register hives, fund planting, avoid hard caps.", c: true, w: "Correct! Para D describes governments 'opting instead to require registration and to fund pollinator-friendly planting schemes' rather than capping hives outright." },
+      { l: "B", t: "A total ban on new hive registrations.", c: false, w: "Incorrect. The passage explicitly says governments have 'avoided capping hive numbers outright.'" },
+      { l: "C", t: "Full deregulation, with no registration requirements at all.", c: false, w: "Incorrect. Registration IS required, per Paragraph D." },
+      { l: "D", t: "Handing the decision entirely to beekeeping associations.", c: false, w: "Incorrect. This isn't mentioned anywhere in the passage." }
+    ]
+  },
+  {
+    q: "Skim check - which title best captures the whole passage?",
+    options: [
+      { l: "A", t: "The History of Beekeeping in Europe", c: false, w: "Incorrect. The passage is about a current debate, not a historical survey." },
+      { l: "B", t: "Urban Beekeeping: Environmental Boon or Hidden Threat to Wild Bees?", c: true, w: "Correct! The passage weighs benefits (Para A) against a genuine ecological concern (Para B) and a proposed compromise (Paras C-D) - a balanced-debate structure this title captures." },
+      { l: "C", t: "How to Start a Rooftop Beehive in Five Steps", c: false, w: "Incorrect. This is a debate/analysis passage, not a how-to guide." },
+      { l: "D", t: "Why Pesticides Are the Greatest Threat to Bees", c: false, w: "Incorrect. Pesticides are mentioned once, in passing, in Paragraph A - not the passage's main focus." }
+    ]
+  },
+  {
+    q: "Scan check - how many registered hives does London have, according to the passage?",
+    options: [
+      { l: "A", t: "1,900", c: false, w: "Incorrect - re-scan Paragraph A for the exact figure." },
+      { l: "B", t: "7,400", c: true, w: "Correct! Paragraph A states 'an estimated 7,400 registered hives.'" },
+      { l: "C", t: "30,000", c: false, w: "Incorrect. That figure doesn't appear in the passage." },
+      { l: "D", t: "740", c: false, w: "Incorrect - check the number of zeros in Paragraph A." }
+    ]
+  },
+  {
+    q: "Scan check - since what year has London's hive count 'more than tripled'?",
+    options: [
+      { l: "A", t: "2019", c: false, w: "Incorrect. 2019 is the year of the wild-bee-diversity study in Paragraph B, not the tripling baseline." },
+      { l: "B", t: "2008", c: true, w: "Correct! Paragraph A: 'a figure that has more than tripled since 2008.'" },
+      { l: "C", t: "1998", c: false, w: "Incorrect - this figure doesn't appear in the passage." },
+      { l: "D", t: "2015", c: false, w: "Incorrect - check Paragraph A again for the exact baseline year." }
+    ]
+  },
+  {
+    q: "Scan check - within how many months did the 2019 study find a drop in wild bee diversity?",
+    options: [
+      { l: "A", t: "Six months", c: false, w: "Incorrect - re-scan Paragraph B for the exact timeframe." },
+      { l: "B", t: "Twelve months", c: false, w: "Incorrect - close, but not the figure stated." },
+      { l: "C", t: "Eighteen months", c: true, w: "Correct! Paragraph B: '...showed a measurable drop in wild bee diversity within eighteen months.'" },
+      { l: "D", t: "Two years", c: false, w: "Incorrect. The passage says months, not years, and the figure is different." }
+    ]
+  },
+  {
+    q: "Scan check - by roughly what percentage did nectar availability increase in pilot boroughs?",
+    options: [
+      { l: "A", t: "10 percent", c: false, w: "Incorrect - check Paragraph C for the exact figure." },
+      { l: "B", t: "30 percent", c: true, w: "Correct! Paragraph C: 'increasing nectar availability by an estimated 30 percent in pilot boroughs.'" },
+      { l: "C", t: "50 percent", c: false, w: "Incorrect. That figure is not in the passage." },
+      { l: "D", t: "75 percent", c: false, w: "Incorrect - re-scan Paragraph C." }
+    ]
+  },
+  {
+    q: "Scan check - within how many years are the longer-term ecological survey findings expected to report?",
+    options: [
+      { l: "A", t: "Two years", c: false, w: "Incorrect - re-scan the final sentence of Paragraph D." },
+      { l: "B", t: "Ten years", c: false, w: "Incorrect. The passage states a shorter timeframe." },
+      { l: "C", t: "Five years", c: true, w: "Correct! Paragraph D: '...several of which are due to report their findings within the next five years.'" },
+      { l: "D", t: "One year", c: false, w: "Incorrect - check Paragraph D again." }
+    ]
+  }
+];
+
 // ====== DRILL C: MATCHING DATA ======
 const matchingTab1Data = [
   { q: "a description of how a bird's physical structure helped solve a transportation issue", a: "C", keyword: "bird's physical structure / transportation issue", matchText: "redesigning the nose of the train to mimic the beak of the kingfisher bird... successfully eliminated the boom", why: "Paragraph C describes how engineers copied the kingfisher's beak (bird's physical structure) to resolve the bullet train's loud boom (transportation issue)." },
@@ -1699,6 +1842,8 @@ function initAllExpandedDrills() {
   
   initMatchingDrill(matchingTab1Data, 'matchingDrillExpandedTab1');
   initMatchingDrill(matchingTab2Data, 'matchingDrillExpandedTab2');
+
+  initMCQDrill(skimScanProfData, 'skimScanDrillTab1');
 }
 
 // Run initializer on load
@@ -1994,12 +2139,11 @@ bossQsEl.addEventListener('click',e=>{
   }
 });
 
-// Force dark mode
-function updateTheme() {
-  document.documentElement.classList.add('dark');
-  localStorage.setItem('theme', 'dark');
-}
-updateTheme();
+// NOTE: this used to force dark mode unconditionally on every load, fighting
+// theme-loader.js (which forces light) and silently breaking any element that
+// had a .dark-scoped override, e.g. .case-file rendering as unreadable dark
+// navy text on a dark navy background regardless of the page's own paper
+// theme. Removed - the page now stays on the light/paper theme it's designed for.
 </script>
 </body>
 </html>
