@@ -1,191 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IELTS Listening Simulator — ViATestPrep</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>IELTS Listening Test â€” ViATestPrep</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <style>
     * { box-sizing: border-box; }
-    body { background: #f1f5f9; color: #1e293b; font-family: "Inter", sans-serif; margin: 0; }
+    :root {
+      --paper: #fffefb;
+      --page-bg: #eae6dc;
+      --ink: #1c1a17;
+      --ink-soft: #4a453d;
+      --rule: rgba(28, 26, 23, 0.14);
+      --rule-soft: rgba(28, 26, 23, 0.08);
+      --accent: #7a2331;
+      --accent-soft: #f6e9ea;
+      --gold: #a8792f;
+    }
+    body { background: var(--page-bg); color: var(--ink); font-family: "Inter", sans-serif; margin: 0; }
 
     .site-header {
-      background: #fff; border-bottom: 1px solid #e2e8f0; height: 56px;
+      background: var(--paper); border-bottom: 1px solid var(--rule); height: 62px;
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 24px; position: sticky; top: 0; z-index: 50;
-      box-shadow: 0 1px 3px rgba(0,0,0,.04);
+      box-shadow: 0 1px 0 rgba(0,0,0,.02);
     }
-    .main-layout { display: flex; height: calc(100vh - 56px - 60px); overflow: hidden; }
+    .exit-link { padding: 6px 14px; border-radius: 8px; border: 1px solid var(--rule); font-size: 12px; font-weight: 700; color: var(--ink-soft); text-decoration: none; font-family: "Inter", sans-serif; transition: background .15s; }
+    .exit-link:hover { background: var(--rule-soft); }
+    .book-badge { font-size: 9px; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: .1em; }
+    .test-title { font-size: 14px; font-weight: 700; color: var(--ink); font-family: "Fraunces", serif; }
+    .mode-tag { font-size: 11px; color: var(--ink-soft); font-weight: 600; }
+    .timer-pill { display: flex; align-items: center; gap: 6px; background: var(--accent-soft); border: 1px solid rgba(122,35,49,.18); border-radius: 20px; padding: 5px 14px; }
+    .timer-text { font-size: 13px; font-weight: 800; font-family: "JetBrains Mono", monospace; color: var(--accent); }
+    .submit-btn { padding: 7px 18px; border-radius: 9px; background: var(--accent); color: #fff; border: none; font-size: 12px; font-weight: 700; cursor: pointer; box-shadow: 0 2px 8px rgba(122,35,49,.25); font-family: "Inter", sans-serif; transition: background .15s; }
+    .submit-btn:hover { background: #5e1a25; }
+
+    .main-layout { display: flex; height: calc(100vh - 62px - 62px); overflow: hidden; }
 
     .audio-panel {
-      width: 320px; flex-shrink: 0; background: #fff;
-      border-right: 1px solid #e2e8f0; overflow-y: auto;
-      display: flex; flex-direction: column; padding: 16px; gap: 14px;
+      width: 330px; flex-shrink: 0; background: var(--paper);
+      border-right: 1px solid var(--rule); overflow-y: auto;
+      display: flex; flex-direction: column; padding: 18px; gap: 16px;
     }
-    .section-tabs { display: flex; gap: 6px; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; }
+    .section-tabs { display: flex; gap: 6px; border-bottom: 1px solid var(--rule); padding-bottom: 12px; flex-wrap: wrap; }
     .section-tab {
-      padding: 5px 12px; border-radius: 7px; font-size: 12px; font-weight: 700;
-      cursor: pointer; border: 1px solid transparent; color: #64748b; background: none; transition: all .18s;
+      padding: 6px 13px; border-radius: 7px; font-size: 11.5px; font-weight: 700;
+      cursor: pointer; border: 1px solid var(--rule); color: var(--ink-soft); background: var(--paper); transition: all .18s; font-family: "Inter", sans-serif;
     }
-    .section-tab:hover { background: #f8fafc; color: #1e293b; }
-    .section-tab.active { background: #7c3aed; color: #fff; border-color: #7c3aed; }
+    .section-tab:hover { background: var(--rule-soft); }
+    .section-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
 
     .audio-card {
-      background: linear-gradient(135deg, #faf5ff 0%, #f0fdf4 100%);
-      border: 1px solid #e9d5ff; border-radius: 16px; padding: 16px;
+      background: linear-gradient(180deg, #fbf7ee 0%, #f6f1e4 100%);
+      border: 1px solid rgba(168,121,47,.25); border-radius: 14px; padding: 18px;
     }
-    .audio-card .sec-label { font-size: 10px; font-weight: 800; color: #7c3aed; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 2px; }
-    .audio-card h3 { font-size: 14px; font-weight: 700; color: #1e293b; margin: 0 0 12px; }
+    .audio-card .sec-label { font-size: 10px; font-weight: 800; color: var(--gold); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 3px; }
+    .audio-card h3 { font-size: 15px; font-weight: 700; color: var(--ink); margin: 0 0 14px; font-family: "Fraunces", serif; }
 
     .timeline-bar {
-      width: 100%; -webkit-appearance: none; height: 4px; border-radius: 4px;
-      background: #ddd6fe; cursor: pointer; margin-bottom: 3px; display: block;
+      -webkit-appearance: none; width: 100%; height: 4px; border-radius: 4px;
+      background: rgba(168,121,47,.25); cursor: pointer; margin-bottom: 4px; display: block;
     }
     .timeline-bar::-webkit-slider-thumb {
       -webkit-appearance: none; width: 13px; height: 13px; border-radius: 50%;
-      background: #7c3aed; cursor: pointer; box-shadow: 0 0 0 3px rgba(124,58,237,.2);
+      background: var(--gold); cursor: pointer; box-shadow: 0 0 0 3px rgba(168,121,47,.2);
     }
-    .time-labels { display: flex; justify-content: space-between; font-size: 10px; font-family: monospace; color: #94a3b8; margin-bottom: 10px; }
+    .time-labels { display: flex; justify-content: space-between; font-size: 10px; font-family: "JetBrains Mono", monospace; color: var(--ink-soft); margin-bottom: 12px; }
 
     .controls-row { display: flex; align-items: center; justify-content: space-between; }
     .play-btn {
-      width: 42px; height: 42px; border-radius: 50%; background: #7c3aed; color: #fff;
-      border: none; cursor: pointer; font-size: 17px; display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 3px 10px rgba(124,58,237,.35); transition: background .15s, transform .1s;
+      width: 42px; height: 42px; border-radius: 50%; background: var(--accent); color: #fff;
+      border: none; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 3px 10px rgba(122,35,49,.3); transition: background .15s, transform .1s;
     }
-    .play-btn:hover { background: #6d28d9; transform: scale(1.05); }
+    .play-btn:hover { background: #5e1a25; transform: scale(1.05); }
     .stop-btn {
-      width: 30px; height: 30px; border-radius: 50%; background: #f1f5f9; border: 1px solid #e2e8f0;
-      color: #94a3b8; cursor: pointer; font-size: 12px; display: flex; align-items: center; justify-content: center; transition: background .15s;
+      width: 30px; height: 30px; border-radius: 50%; background: var(--paper); border: 1px solid var(--rule);
+      color: var(--ink-soft); cursor: pointer; font-size: 12px; display: flex; align-items: center; justify-content: center; transition: background .15s;
     }
-    .stop-btn:hover { background: #e2e8f0; }
+    .stop-btn:hover { background: var(--rule-soft); }
     .speed-select {
-      background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 7px;
-      padding: 4px 8px; font-size: 11px; font-weight: 700; color: #7c3aed; cursor: pointer; outline: none;
+      background: var(--paper); border: 1px solid var(--rule); border-radius: 7px;
+      padding: 4px 8px; font-size: 11px; font-weight: 700; color: var(--accent); cursor: pointer; outline: none; font-family: "Inter", sans-serif;
     }
     .notice-box {
-      font-size: 11px; color: #0f766e; background: #f0fdfa;
-      border: 1px solid #99f6e4; border-radius: 10px; padding: 10px 12px; line-height: 1.5;
+      font-size: 11px; color: #4a4530; background: #f6f1e4;
+      border: 1px solid rgba(168,121,47,.25); border-radius: 10px; padding: 11px 13px; line-height: 1.55;
     }
     .transcript-box {
-      background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px;
-      font-size: 11px; color: #475569; max-height: 200px; overflow-y: auto; line-height: 1.6;
+      background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: 14px;
+      font-size: 12px; color: var(--ink-soft); max-height: 220px; overflow-y: auto; line-height: 1.7; font-family: "Lora", serif;
+    }
+    .transcript-box .transcript-gap { color: #a8792f; font-style: italic; border-top: 1px dashed rgba(168,121,47,.4); padding-top: 8px; margin-top: 8px; }
+
+    .questions-panel { flex: 1; overflow-y: auto; padding: 28px 30px 60px; background: var(--page-bg); }
+    .paper-sheet {
+      max-width: 720px; margin: 0 auto; background: var(--paper); border: 1px solid var(--rule);
+      border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 12px 32px rgba(28,26,23,.05);
+      padding: 34px 40px 44px;
+    }
+    .part-heading {
+      font-family: "Fraunces", serif; font-size: 20px; font-weight: 800; color: var(--ink);
+      border-bottom: 2px solid var(--ink); padding-bottom: 10px; margin-bottom: 18px; letter-spacing: .01em;
     }
 
-    .questions-panel { flex: 1; overflow-y: auto; padding: 20px 24px; background: #f1f5f9; }
-
-    /* Green instruction banner */
     .instruction-banner {
-      background: #e6f7f4; border: 1.5px solid #2db89e; border-radius: 10px;
-      padding: 14px 18px; margin-bottom: 14px; font-size: 13px; color: #065f46;
-      font-weight: 500; line-height: 1.55;
+      background: transparent; border-left: 3px solid var(--gold); border-radius: 0;
+      padding: 4px 0 4px 16px; margin: 22px 0 16px; font-size: 13.5px; color: var(--ink-soft);
+      font-family: "Lora", serif; font-style: italic; line-height: 1.6;
     }
+    .instruction-banner strong, .instruction-banner b { font-style: normal; color: var(--ink); }
 
-    /* Question card */
     .q-card {
-      background: #fff; border: 1.5px solid #e2e8f0; border-radius: 12px;
-      padding: 16px 18px; margin-bottom: 10px; transition: border-color .2s, box-shadow .2s;
+      background: var(--paper); border: 1px solid var(--rule-soft); border-radius: 10px;
+      padding: 16px 18px; margin-bottom: 12px; transition: border-color .2s, box-shadow .2s;
     }
-    .q-card:hover { border-color: #c4b5fd; }
-    .q-card.flagged { border-color: #f59e0b !important; background: #fffbeb; }
-    .q-card.answered { border-color: #a7f3d0; }
+    .q-card:hover { border-color: rgba(122,35,49,.25); }
+    .q-card.flagged { border-color: var(--gold) !important; background: #fdf8ee; }
+    .q-card.answered { border-color: rgba(122,35,49,.2); }
+    .q-card.unavailable { border-color: rgba(28,26,23,.12); background: #f4f2ec; }
 
-    .q-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
-    .q-label { font-size: 11px; font-weight: 800; color: #7c3aed; text-transform: uppercase; letter-spacing: .07em; }
-    .q-review-label { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #94a3b8; cursor: pointer; user-select: none; }
-    .q-review-label input[type="checkbox"] { accent-color: #f59e0b; width: 13px; height: 13px; }
+    .q-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; gap: 10px; }
+    .q-num-badge {
+      display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px;
+      border-radius: 50%; border: 1.5px solid var(--ink); font-family: "Fraunces", serif; font-weight: 800;
+      font-size: 12px; color: var(--ink); flex-shrink: 0;
+    }
+    .q-review-label { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #9c9385; cursor: pointer; user-select: none; }
+    .q-review-label input[type="checkbox"] { accent-color: var(--gold); width: 13px; height: 13px; }
 
-    .q-body { font-size: 14px; font-weight: 600; color: #1e293b; line-height: 1.8; }
+    .q-body { font-size: 14.5px; font-weight: 500; color: var(--ink); line-height: 1.85; font-family: "Lora", serif; }
+    .q-unavailable-note { font-size: 12.5px; color: #8a8375; font-style: italic; font-family: "Lora", serif; }
 
-    /* Inline blank input */
     .q-blank-input {
-      display: inline-block; width: 130px; border: none;
-      border-bottom: 2.5px solid #7c3aed; background: transparent;
-      color: #1e293b; font-weight: 700; font-size: 14px; font-family: inherit;
+      display: inline-block; min-width: 130px; border: none;
+      border-bottom: 2px solid var(--accent); background: transparent;
+      color: var(--ink); font-weight: 700; font-size: 14px; font-family: "Inter", sans-serif;
       padding: 0 4px 2px; outline: none; vertical-align: middle;
       transition: border-color .2s; text-align: center;
     }
-    .q-blank-input:focus { border-color: #2db89e; background: #f0fdfa; border-radius: 4px 4px 0 0; }
-    .q-blank-input::placeholder { color: #c4b5fd; font-weight: 400; font-size: 12px; }
+    .q-blank-input:focus { border-color: var(--gold); background: #f6f1e4; border-radius: 4px 4px 0 0; }
+    .q-blank-input::placeholder { color: #c9b98a; font-weight: 400; font-size: 12px; }
 
-    /* MCQ */
-    .mcq-options { display: flex; flex-direction: column; gap: 7px; margin-top: 10px; }
+    .mcq-options { display: flex; flex-direction: column; gap: 7px; margin-top: 11px; }
     .mcq-option {
-      display: flex; align-items: flex-start; gap: 9px; padding: 8px 12px;
-      border-radius: 8px; border: 1.5px solid #e2e8f0; cursor: pointer;
-      font-size: 13px; color: #334155; transition: all .15s;
+      display: flex; align-items: flex-start; gap: 10px; padding: 9px 13px;
+      border-radius: 8px; border: 1.5px solid var(--rule); cursor: pointer;
+      font-size: 13.5px; color: var(--ink-soft); font-family: "Lora", serif; transition: all .15s;
     }
-    .mcq-option:hover { background: #f5f3ff; border-color: #c4b5fd; }
-    .mcq-option.selected { background: #ede9fe; border-color: #7c3aed; color: #4c1d95; font-weight: 700; }
-    .mcq-option .opt-letter { font-weight: 800; color: #7c3aed; min-width: 16px; }
-    .mcq-option.selected .opt-letter { color: #4c1d95; }
+    .mcq-option:hover { background: var(--accent-soft); border-color: rgba(122,35,49,.3); }
+    .mcq-option.selected { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 700; }
+    .mcq-option .opt-letter { font-weight: 800; color: var(--accent); min-width: 16px; font-family: "Inter", sans-serif; }
+    .mcq-option.selected .opt-letter { color: var(--accent); }
 
     .check-btn {
-      padding: 5px 13px; background: #10b981; color: #fff; border: none;
-      border-radius: 7px; font-size: 11px; font-weight: 700; cursor: pointer; transition: background .15s;
+      padding: 6px 14px; background: #2f7a52; color: #fff; border: none;
+      border-radius: 7px; font-size: 11px; font-weight: 700; cursor: pointer; transition: background .15s; font-family: "Inter", sans-serif;
     }
-    .check-btn:hover { background: #059669; }
-    .feedback-correct { margin-top: 9px; padding: 9px 13px; border-radius: 8px; background: #ecfdf5; border: 1px solid #6ee7b7; font-size: 12px; color: #065f46; }
-    .feedback-wrong { margin-top: 9px; padding: 9px 13px; border-radius: 8px; background: #fef2f2; border: 1px solid #fca5a5; font-size: 12px; color: #991b1b; }
+    .check-btn:hover { background: #245e3f; }
+    .feedback-correct { margin-top: 10px; padding: 10px 13px; border-radius: 8px; background: #eef6f0; border: 1px solid #a9d4b8; font-size: 12px; color: #245e3f; font-family: "Inter", sans-serif; }
+    .feedback-wrong { margin-top: 10px; padding: 10px 13px; border-radius: 8px; background: #faeeec; border: 1px solid #e3b4ab; font-size: 12px; color: #8a2c1f; font-family: "Inter", sans-serif; }
 
-    /* Bottom nav */
     .bottom-nav {
-      height: 60px; background: #fff; border-top: 1px solid #e2e8f0;
+      height: 62px; background: var(--paper); border-top: 1px solid var(--rule);
       display: flex; align-items: center; justify-content: space-between; padding: 0 20px; gap: 10px;
     }
     .q-tray { display: flex; align-items: center; gap: 4px; overflow-x: auto; flex: 1; padding: 4px 0; }
     .q-tray::-webkit-scrollbar { height: 3px; }
-    .q-tray::-webkit-scrollbar-thumb { background: #ddd6fe; border-radius: 4px; }
+    .q-tray::-webkit-scrollbar-thumb { background: rgba(168,121,47,.35); border-radius: 4px; }
     .q-nav-btn {
-      width: 29px; height: 29px; border-radius: 7px; border: 1.5px solid #e2e8f0; background: #f8fafc;
-      font-size: 11px; font-weight: 700; color: #64748b; cursor: pointer;
+      width: 28px; height: 28px; border-radius: 6px; border: 1.5px solid var(--rule); background: var(--paper);
+      font-size: 11px; font-weight: 700; color: var(--ink-soft); cursor: pointer; font-family: "Inter", sans-serif;
       display: flex; align-items: center; justify-content: center; transition: all .15s; flex-shrink: 0; position: relative;
     }
-    .q-nav-btn:hover { border-color: #a78bfa; background: #faf5ff; color: #4c1d95; }
-    .q-nav-btn.answered { background: #7c3aed; border-color: #7c3aed; color: #fff; }
-    .q-nav-btn.current { box-shadow: 0 0 0 2.5px #f59e0b; }
-    .q-nav-btn.flagged::after { content: "??"; font-size: 8px; position: absolute; top: -3px; right: -3px; }
+    .q-nav-btn:hover { border-color: var(--gold); background: #f6f1e4; color: var(--ink); }
+    .q-nav-btn.answered { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .q-nav-btn.current { box-shadow: 0 0 0 2.5px var(--gold); }
+    .q-nav-btn.flagged::after { content: "\25CF"; font-size: 7px; color: var(--gold); position: absolute; top: -4px; right: -4px; }
     .nav-btns { display: flex; gap: 7px; }
     .nav-arrow {
-      padding: 6px 15px; border-radius: 9px; border: 1.5px solid #e2e8f0; background: #fff;
-      font-size: 12px; font-weight: 700; color: #475569; cursor: pointer; transition: all .15s; display: flex; align-items: center; gap: 4px;
+      padding: 7px 15px; border-radius: 9px; border: 1.5px solid var(--rule); background: var(--paper);
+      font-size: 12px; font-weight: 700; color: var(--ink-soft); cursor: pointer; transition: all .15s; display: flex; align-items: center; gap: 4px; font-family: "Inter", sans-serif;
     }
-    .nav-arrow:hover { border-color: #7c3aed; color: #7c3aed; background: #faf5ff; }
+    .nav-arrow:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
 
-    .review-card { background: #fff; border-radius: 12px; border: 1.5px solid; padding: 16px 18px; margin-bottom: 10px; }
-    .review-card.correct { border-color: #6ee7b7; background: #ecfdf5; }
-    .review-card.wrong { border-color: #fca5a5; background: #fef2f2; }
+    .review-card { background: var(--paper); border-radius: 10px; border: 1.5px solid; padding: 16px 18px; margin-bottom: 12px; }
+    .review-card.correct { border-color: #a9d4b8; background: #f6faf7; }
+    .review-card.wrong { border-color: #e3b4ab; background: #fdf6f5; }
+    .review-card.excluded { border-color: var(--rule); background: #f4f2ec; }
 
-    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: #ddd6fe; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb { background: rgba(168,121,47,.3); border-radius: 4px; }
   </style>
   <script src="security.js"></script>
-  <script src="theme-loader.js"></script>
 </head>
 
 <body>
 
   <!-- HEADER -->
   <header class="site-header">
-    <div style="display:flex;align-items:center;gap:12px;">
-      <a href="index.html" style="padding:5px 13px;border-radius:8px;border:1px solid #e2e8f0;font-size:12px;font-weight:700;color:#475569;text-decoration:none;">? Exit</a>
-      <div>
-        <div style="font-size:10px;font-weight:800;color:#7c3aed;text-transform:uppercase;letter-spacing:.07em;" id="testSetTag">Test Set</div>
-        <div style="font-size:14px;font-weight:700;color:#1e293b;" id="testTitle">Loading test...</div>
-      </div>
-    </div>
     <div style="display:flex;align-items:center;gap:14px;">
-      <span style="font-size:11px;color:#94a3b8;" id="modeIndicator">Mode: Exam</span>
-      <div style="display:flex;align-items:center;gap:6px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:20px;padding:4px 14px;">
-        <span>??</span>
-        <span style="font-size:13px;font-weight:800;font-family:monospace;color:#1e293b;" id="timerText">30:00</span>
+      <a href="index.html" class="exit-link">&larr; Exit</a>
+      <div>
+        <div class="book-badge" id="testSetTag">Test Set</div>
+        <div class="test-title" id="testTitle">Loading test...</div>
       </div>
     </div>
-    <button onclick="submitTest()" id="submitBtn" style="padding:6px 18px;border-radius:9px;background:#7c3aed;color:#fff;border:none;font-size:12px;font-weight:700;cursor:pointer;box-shadow:0 2px 8px rgba(124,58,237,.35);">Submit Test</button>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <span class="mode-tag" id="modeIndicator">Mode: Exam</span>
+      <div class="timer-pill">
+        <span style="color:var(--accent);font-size:12px;">&#9201;</span>
+        <span class="timer-text" id="timerText">30:00</span>
+      </div>
+    </div>
+    <button onclick="submitTest()" id="submitBtn" class="submit-btn">Submit Test</button>
   </header>
 
   <!-- MAIN -->
@@ -206,41 +238,44 @@
         </div>
         <div class="controls-row">
           <div style="display:flex;align-items:center;gap:8px;">
-            <button id="playBtn" class="play-btn" onclick="togglePlay()">?</button>
-            <button class="stop-btn" onclick="stopAudio()">¦</button>
+            <button id="playBtn" class="play-btn" onclick="togglePlay()">&#9654;</button>
+            <button class="stop-btn" onclick="stopAudio()">&#9632;</button>
           </div>
           <div style="display:flex;align-items:center;gap:6px;">
-            <span style="font-size:10px;font-weight:700;color:#94a3b8;text-transform:uppercase;">Speed</span>
+            <span style="font-size:10px;font-weight:700;color:var(--ink-soft);text-transform:uppercase;">Speed</span>
             <select id="audioSpeed" class="speed-select" onchange="setPlaybackSpeed(this.value)">
-              <option value="0.75">0.75×</option>
-              <option value="1.0" selected>1.0×</option>
-              <option value="1.25">1.25×</option>
-              <option value="1.5">1.5×</option>
+              <option value="0.75">0.75&times;</option>
+              <option value="1.0" selected>1.0&times;</option>
+              <option value="1.25">1.25&times;</option>
+              <option value="1.5">1.5&times;</option>
             </select>
           </div>
         </div>
       </div>
 
       <div class="notice-box">
-        <strong>? Important:</strong> In the real IELTS exam, you can only play the audio <strong>once</strong>. Use speed and scrub controls to practise.
+        <strong>Note:</strong> In the real IELTS exam, you hear the audio <strong>only once</strong>. Use the speed and scrub controls here to practise &mdash; not to simulate the real test.
       </div>
 
       <div>
-        <button onclick="toggleScratchpad()" style="font-size:11px;color:#7c3aed;background:none;border:none;cursor:pointer;font-weight:700;padding:0;">?? Scratchpad</button>
-        <div id="scratchpad" style="display:none;margin-top:8px;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:10px;">
-          <textarea id="scratchpadText" oninput="saveScratchpad()" placeholder="Write notes, spellings, guesses..." style="width:100%;height:70px;border:1px solid #e2e8f0;border-radius:7px;padding:7px;font-size:12px;resize:none;background:#f8fafc;color:#334155;outline:none;font-family:inherit;"></textarea>
+        <button onclick="toggleScratchpad()" style="font-size:11px;color:var(--accent);background:none;border:none;cursor:pointer;font-weight:700;padding:0;font-family:'Inter',sans-serif;">&#9998; Scratchpad</button>
+        <div id="scratchpad" style="display:none;margin-top:8px;background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:10px;">
+          <textarea id="scratchpadText" oninput="saveScratchpad()" placeholder="Write notes, spellings, guesses..." style="width:100%;height:70px;border:1px solid var(--rule);border-radius:7px;padding:7px;font-size:12px;resize:none;background:#faf8f2;color:var(--ink-soft);outline:none;font-family:'Inter',sans-serif;"></textarea>
         </div>
       </div>
 
       <div id="transcriptBox" class="transcript-box" style="display:none;">
-        <strong style="font-size:11px;color:#334155;display:block;margin-bottom:6px;">?? Tape Script</strong>
+        <strong style="font-size:11px;color:var(--ink);display:block;margin-bottom:6px;font-family:'Inter',sans-serif;">Tape Script</strong>
         <div id="transcriptContent"></div>
       </div>
     </div>
 
     <!-- RIGHT: Questions Panel -->
     <div class="questions-panel" id="questionsPanel">
-      <div id="questionsContainer"></div>
+      <div class="paper-sheet">
+        <div class="part-heading" id="partHeading">Part 1</div>
+        <div id="questionsContainer"></div>
+      </div>
     </div>
   </div>
 
@@ -248,13 +283,18 @@
   <footer class="bottom-nav">
     <div class="q-tray" id="bottomNavTray"></div>
     <div class="nav-btns">
-      <button class="nav-arrow" onclick="navigateQuestion(-1)">? Prev</button>
-      <button class="nav-arrow" onclick="navigateQuestion(1)">Next ?</button>
+      <button class="nav-arrow" onclick="navigateQuestion(-1)">&larr; Prev</button>
+      <button class="nav-arrow" onclick="navigateQuestion(1)">Next &rarr;</button>
     </div>
   </footer>
 
   <script src="test-data.js"></script>
   <script>
+    function formatTestId(id) {
+      var n = parseInt(id, 10);
+      return isNaN(n) ? id : (n < 10 ? '0' + n : String(n));
+    }
+
     const urlParams = new URLSearchParams(window.location.search);
     const testId = urlParams.get('test') || '1';
     const testData = IELTS_TEST_DATA[testId];
@@ -274,7 +314,7 @@
 
     function initTest() {
       document.getElementById('testTitle').textContent = testData.title;
-      document.getElementById('testSetTag').textContent = 'IELTS Academic — Test 0' + testId;
+      document.getElementById('testSetTag').textContent = 'IELTS Academic â€” Test ' + formatTestId(testId);
       document.getElementById('modeIndicator').textContent = 'Mode: ' + (currentTestMode === 'exam' ? 'Exam' : 'Practice');
 
       if (currentTestMode === 'practice') {
@@ -325,6 +365,7 @@
       var section = testData.listening.sections[currentSectionIdx];
       document.getElementById('sectionTitle').textContent = section.title;
       document.getElementById('sectionSubLabel').textContent = 'Part ' + (currentSectionIdx + 1);
+      document.getElementById('partHeading').textContent = section.title;
       audio.src = section.audio;
       audio.load();
       stopAudio();
@@ -339,14 +380,14 @@
         document.getElementById('totalDuration').textContent = fmt(audio.duration);
       }
     });
-    audio.addEventListener('ended', function() { playBtn.textContent = '?'; });
+    audio.addEventListener('ended', function() { playBtn.innerHTML = '&#9654;'; });
 
     function togglePlay() {
-      if (audio.paused) { audio.play(); playBtn.textContent = '?'; }
-      else { audio.pause(); playBtn.textContent = '?'; }
+      if (audio.paused) { audio.play(); playBtn.innerHTML = '&#10074;&#10074;'; }
+      else { audio.pause(); playBtn.innerHTML = '&#9654;'; }
     }
     function stopAudio() {
-      audio.pause(); audio.currentTime = 0; playBtn.textContent = '?';
+      audio.pause(); audio.currentTime = 0; playBtn.innerHTML = '&#9654;';
       timeline.value = 0; document.getElementById('currentTime').textContent = '0:00';
     }
     function seekAudio(pct) { if (audio.duration) audio.currentTime = (pct / 100) * audio.duration; }
@@ -372,16 +413,25 @@
         }
 
         var card = document.createElement('div');
-        card.className = 'q-card' + (flaggedQuestions[q.num] ? ' flagged' : '') + (userAnswers[q.num] ? ' answered' : '');
+        card.className = 'q-card' + (flaggedQuestions[q.num] ? ' flagged' : '') + (userAnswers[q.num] ? ' answered' : '') + (q.contentUnavailable ? ' unavailable' : '');
         card.id = 'qcard-' + q.num;
 
         var header = document.createElement('div');
         header.className = 'q-header';
-        header.innerHTML = '<span class="q-label">Question ' + q.num + '</span>' +
-          '<label class="q-review-label"><input type="checkbox" onchange="toggleFlag(' + q.num + ')" ' + (flaggedQuestions[q.num] ? 'checked' : '') + ' /> Review ??</label>';
+        header.innerHTML = '<span class="q-num-badge">' + q.num + '</span>' +
+          (q.contentUnavailable ? '' : '<label class="q-review-label"><input type="checkbox" onchange="toggleFlag(' + q.num + ')" ' + (flaggedQuestions[q.num] ? 'checked' : '') + ' /> Review</label>');
         card.appendChild(header);
 
         var body = document.createElement('div');
+
+        if (q.contentUnavailable) {
+          body.className = 'q-unavailable-note';
+          body.innerHTML = 'This question\'s source text could not be recovered during data restoration, so it is excluded from scoring. It will not count for or against your band score.';
+          card.appendChild(body);
+          container.appendChild(card);
+          return;
+        }
+
         body.className = 'q-body';
 
         if (q.type === 'FILL') {
@@ -391,7 +441,7 @@
           if (textWithInput === q.text) textWithInput = q.text + ' ' + inputHtml;
           body.innerHTML = textWithInput;
         } else if (q.type === 'MCQ') {
-          body.innerHTML = '<div style="margin-bottom:8px;">' + q.text + '</div>';
+          body.innerHTML = '<div style="margin-bottom:9px;">' + q.text + '</div>';
           var optionsDiv = document.createElement('div');
           optionsDiv.className = 'mcq-options';
           var selected = userAnswers[q.num] || '';
@@ -411,7 +461,7 @@
 
         if (currentTestMode === 'practice') {
           var practRow = document.createElement('div');
-          practRow.style.cssText = 'display:flex;justify-content:flex-end;border-top:1px solid #f1f5f9;margin-top:12px;padding-top:10px;';
+          practRow.style.cssText = 'display:flex;justify-content:flex-end;border-top:1px solid var(--rule-soft);margin-top:12px;padding-top:10px;';
           practRow.id = 'pract-actions-' + q.num;
           practRow.innerHTML = '<button class="check-btn" onclick="checkPracticeAnswer(' + q.num + ', ' + idx + ')">Check Answer</button>';
           card.appendChild(practRow);
@@ -484,10 +534,10 @@
       if (!fd) return;
       if (isCorrect) {
         fd.className = 'feedback-correct';
-        fd.innerHTML = '<strong>? Correct!</strong> ' + q.explanation;
+        fd.innerHTML = '<strong>Correct!</strong> ' + q.explanation;
       } else {
         fd.className = 'feedback-wrong';
-        fd.innerHTML = '<strong>? Incorrect</strong><br>Your answer: <span style="text-decoration:line-through;">' + escapeHtml(userAnswers[qNum] || 'None') + '</span><br>Correct: <strong style="color:#059669;">' + escapeHtml(q.answer) + '</strong><br><span style="color:#6b7280;display:block;margin-top:4px;">' + q.explanation + '</span>';
+        fd.innerHTML = '<strong>Incorrect</strong><br>Your answer: <span style="text-decoration:line-through;">' + escapeHtml(userAnswers[qNum] || 'None') + '</span><br>Correct: <strong style="color:#245e3f;">' + escapeHtml(q.answer) + '</strong><br><span style="color:#6b6558;display:block;margin-top:4px;">' + q.explanation + '</span>';
       }
     }
 
@@ -531,11 +581,12 @@
       var correctCount = 0, totalQs = 0;
       testData.listening.sections.forEach(function(sec) {
         sec.questions.forEach(function(q) {
+          if (q.contentUnavailable) return;
           totalQs++;
           if ((userAnswers[q.num] || '').trim().toLowerCase() === q.answer.trim().toLowerCase()) correctCount++;
         });
       });
-      var pct = correctCount / totalQs;
+      var pct = totalQs > 0 ? correctCount / totalQs : 0;
       var band = 4.0;
       if (pct >= 0.95) band = 9.0; else if (pct >= 0.88) band = 8.5;
       else if (pct >= 0.80) band = 8.0; else if (pct >= 0.72) band = 7.5;
@@ -563,8 +614,8 @@
       var student = allStudents.find(function(s) { return s.email && s.email.toLowerCase() === (userEmail || '').toLowerCase(); });
       if (student) {
         if (!student.mockHistory) student.mockHistory = [];
-        student.mockHistory = student.mockHistory.filter(function(h) { return h.test !== testData.title || h.listening === '—'; });
-        student.mockHistory.push({ test: testData.title, date: new Date().toISOString().split('T')[0], listening: band.toFixed(1), reading: '—', writing: '—', overall: band.toFixed(1) });
+        student.mockHistory = student.mockHistory.filter(function(h) { return h.test !== testData.title || h.listening === 'â€”'; });
+        student.mockHistory.push({ test: testData.title, date: new Date().toISOString().split('T')[0], listening: band.toFixed(1), reading: 'â€”', writing: 'â€”', overall: band.toFixed(1) });
         localStorage.setItem('viatestprep_students', JSON.stringify(allStudents));
       }
 
@@ -577,28 +628,37 @@
       var sb = document.getElementById('submitBtn'); if (sb) sb.remove();
       var returnBtn = document.createElement('a');
       returnBtn.href = 'index.html';
-      returnBtn.style.cssText = 'padding:6px 14px;border-radius:9px;background:#10b981;color:#fff;font-size:12px;font-weight:700;text-decoration:none;';
+      returnBtn.style.cssText = 'padding:7px 16px;border-radius:9px;background:#2f7a52;color:#fff;font-size:12px;font-weight:700;text-decoration:none;font-family:"Inter",sans-serif;';
       returnBtn.textContent = 'Return to Lobby';
       document.querySelector('.site-header').appendChild(returnBtn);
 
       var section = testData.listening.sections[currentSectionIdx];
       var transBox = document.getElementById('transcriptBox');
-      document.getElementById('transcriptContent').innerHTML = section.transcript;
+      document.getElementById('transcriptContent').innerHTML = section.transcript || '<em>Transcript unavailable for this section.</em>';
       transBox.style.display = 'block';
 
       var container = document.getElementById('questionsContainer');
       container.innerHTML = '';
       section.questions.forEach(function(q) {
+        var card = document.createElement('div');
+
+        if (q.contentUnavailable) {
+          card.className = 'review-card excluded';
+          card.innerHTML = '<div style="font-size:11px;font-weight:800;text-transform:uppercase;color:#8a8375;margin-bottom:6px;">Question ' + q.num + ' â€” Excluded from scoring</div>' +
+            '<p style="font-size:13px;color:#6b6558;font-family:\'Lora\',serif;font-style:italic;">This question\'s source text could not be recovered and does not count toward your score.</p>';
+          container.appendChild(card);
+          return;
+        }
+
         var uAns = (userAnswers[q.num] || '').trim();
         var cAns = q.answer.trim();
         var isCorrect = uAns.toLowerCase() === cAns.toLowerCase();
-        var card = document.createElement('div');
         card.className = 'review-card ' + (isCorrect ? 'correct' : 'wrong');
-        card.innerHTML = '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;"><span style="font-size:11px;font-weight:800;text-transform:uppercase;color:' + (isCorrect ? '#065f46' : '#991b1b') + ';">' + (isCorrect ? '?' : '?') + ' Question ' + q.num + ' — ' + (isCorrect ? 'Correct' : 'Incorrect') + '</span></div>' +
-          '<p style="font-size:14px;font-weight:600;margin:0 0 8px;">' + q.text + '</p>' +
-          '<div style="font-size:12px;color:#475569;"><div>Your answer: <strong style="color:' + (isCorrect ? '#059669' : '#dc2626') + '">' + escapeHtml(uAns || 'None') + '</strong></div>' +
-          (!isCorrect ? '<div style="margin-top:4px;">Correct: <strong style="color:#059669;">' + escapeHtml(cAns) + '</strong></div>' : '') + '</div>' +
-          '<div style="margin-top:10px;background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:10px 12px;font-size:12px;color:#64748b;"><strong style="color:#334155;display:block;margin-bottom:4px;">Explanation:</strong>' + q.explanation + '</div>';
+        card.innerHTML = '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;"><span style="font-size:11px;font-weight:800;text-transform:uppercase;color:' + (isCorrect ? '#245e3f' : '#8a2c1f') + ';">' + (isCorrect ? 'Correct' : 'Incorrect') + ' â€” Question ' + q.num + '</span></div>' +
+          '<p style="font-size:14px;font-weight:600;margin:0 0 8px;font-family:\'Lora\',serif;">' + q.text + '</p>' +
+          '<div style="font-size:12px;color:var(--ink-soft);"><div>Your answer: <strong style="color:' + (isCorrect ? '#245e3f' : '#8a2c1f') + '">' + escapeHtml(uAns || 'None') + '</strong></div>' +
+          (!isCorrect ? '<div style="margin-top:4px;">Correct: <strong style="color:#245e3f;">' + escapeHtml(cAns) + '</strong></div>' : '') + '</div>' +
+          '<div style="margin-top:10px;background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:10px 12px;font-size:12px;color:#6b6558;"><strong style="color:var(--ink);display:block;margin-bottom:4px;">Explanation:</strong>' + q.explanation + '</div>';
         container.appendChild(card);
       });
     }
