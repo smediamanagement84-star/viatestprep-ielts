@@ -266,139 +266,139 @@ const IELTS_TEST_DATA = {
             {
               "num": 21,
               "type": "MCQ",
-              "text": "What do the students agree about the literature search?",
+              "text": "What problem did Chantal have at the start of the talk?",
               "answer": "A",
-              "explanation": "The transcript states: \"HUGO: Hi Chantal.\"",
+              "explanation": "The transcript states: 'this guy sat right in front of me and he was so tall! Hugo: It\'s hard to see through people\'s heads, isn\'t it? Chantal: Impossible!'",
               "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C.",
               "options": [
-                "A. It was not as difficult as they had expected.",
-                "B. It has identified a lack of research in one area.",
-                "C. It has led them to revise their research plan."
+                "A. Her view of the speaker was blocked.",
+                "B. She was unable to find an empty seat.",
+                "C. The students next to her were talking."
               ]
             },
             {
               "num": 22,
               "type": "MCQ",
-              "text": "How do they feel about the research paper written by the tutor?",
+              "text": "What were Hugo and Chantal surprised to hear about the job market?",
               "answer": "B",
-              "explanation": "The transcript states: \"HUGO: Oh — were the people beside you chatting or something.\"",
+              "explanation": "The transcript states: 'Hugo: Yeah, but it looks like there\'s a whole range of ... areas of work that we hadn\'t even thought of... Chantal: Yeah — I wasn\'t expecting so many career options.'",
               "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C.",
               "options": [
-                "A. they disagree with its conclusion",
-                "B. they were surprised by its findings",
-                "C. they found it hard to follow the logic"
+                "A. It has become more competitive than it used to be.",
+                "B. There is more variety in it than they had realised.",
+                "C. Some areas of it are more exciting than others."
               ]
             },
             {
               "num": 23,
               "type": "MCQ",
-              "text": "What does the tutor advise them to do when writing the methodology section?",
+              "text": "Hugo and Chantal agree that the speaker's message was",
               "answer": "A",
-              "explanation": "The transcript states: \"HUGO: Hi Chantal.\"",
+              "explanation": "The transcript states: 'Chantal: It was a bit harsh, though! Hugo: Yeah — and we\'re only first years, after all.'",
               "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C.",
               "options": [
-                "A. keep the descriptions brief",
-                "B. justify the choices they made",
-                "C. use a structure suggested by a textbook"
+                "A. unfair to them at times.",
+                "B. hard for them to follow.",
+                "C. critical of the industry."
               ]
             },
             {
               "num": 24,
               "type": "MCQ",
-              "text": "What do they agree is the main benefit of the pilot study?",
+              "text": "What do Hugo and Chantal criticise about their secondary-school careers advice?",
               "answer": "C",
-              "explanation": "The transcript states: \"HUGO: Hi Chantal.\"",
+              "explanation": "The transcript states: 'Hugo: None of them were very inspiring. They could have asked more people like today\'s speaker... Chantal: Not by the experts who really know stuff.'",
               "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C.",
               "options": [
-                "A. It showed they had chosen the right participants.",
-                "B. It helped them to practice using the equipment.",
-                "C. It allowed them to check that the software worked."
+                "A. when they received the advice",
+                "B. how much advice was given",
+                "C. who gave the advice"
               ]
             },
             {
               "num": 25,
               "type": "MCQ",
-              "text": "What is the tutor's reaction to their proposed timing?",
+              "text": "When discussing their future, Hugo and Chantal disagree on",
               "answer": "B",
-              "explanation": "The transcript states: \"HUGO: Oh — were the people beside you chatting or something.\"",
+              "explanation": "The transcript states: 'Chantal: keep an open mind till the end. Hugo: pick an area now... Chantal: differ on that issue.'",
               "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C.",
               "options": [
-                "A. She thinks they should allow more time for data collection.",
-                "B. She is worried that they will not meet the deadline.",
-                "C. She is pleased that they have planned so carefully."
+                "A. which is the best career in fashion.",
+                "B. when to choose a career in fashion.",
+                "C. why they would like a career in fashion."
               ]
             },
             {
               "num": 26,
               "type": "MCQ",
-              "text": "What do they decide to do about the presentation?",
+              "text": "How does Hugo feel about being an unpaid assistant?",
               "answer": "A",
-              "explanation": "The transcript states: \"HUGO: Hi Chantal.\"",
+              "explanation": "The transcript states: 'Hugo: we\'ll be unpaid assistants... I\'m prepared for that... everyone else says the same.'",
               "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C.",
               "options": [
-                "A. focus on the findings rather than the theory",
-                "B. practice it in front of some other students",
-                "C. divide the content equally between them"
+                "A. He is realistic about the practice.",
+                "B. He feels the practice is dishonest.",
+                "C. He thinks others want to change the practice."
               ]
             },
             {
               "num": 27,
               "type": "MCQ",
-              "text": "Which TWO items did the students find particularly useful in their research?",
+              "text": "Which TWO mistakes did the speaker admit she made in her first job?",
               "answer": "B",
-              "explanation": "The transcript states: \"HUGO: Oh — were the people beside you chatting or something.\"",
+              "explanation": "The transcript states: 'She did realise he was right about that... I\'m always considering my own clothes...'",
               "instruction": "Questions 27 and 28<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. questionnaires",
-                "B. diaries",
-                "C. focus groups",
-                "D. interviews",
-                "E. observations"
+                "A. being dishonest to her employer",
+                "B. paying too much attention to how she looked",
+                "C. expecting to become well known",
+                "D. trying to earn a lot of money",
+                "E. openly disliking her client"
               ]
             },
             {
               "num": 28,
               "type": "MCQ",
-              "text": "Which other item did the students find particularly useful in their research?",
+              "text": "Which other mistake did the speaker admit she made in her first job?",
               "answer": "E",
-              "explanation": "The transcript states: \"What did you think of the talk, then.\"",
+              "explanation": "The transcript states: 'she should have hidden her negative feelings about him, but she didn\'t.'",
               "instruction": "Questions 27 and 28<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. questionnaires",
-                "B. diaries",
-                "C. focus groups",
-                "D. interviews",
-                "E. observations"
+                "A. being dishonest to her employer",
+                "B. paying too much attention to how she looked",
+                "C. expecting to become well known",
+                "D. trying to earn a lot of money",
+                "E. openly disliking her client"
               ]
             },
             {
               "num": 29,
               "type": "MCQ",
-              "text": "Which TWO things do they agree should be included in their conclusion?",
+              "text": "Which TWO pieces of retail information do Hugo and Chantal agree would be useful?",
               "answer": "A",
-              "explanation": "The transcript states: \"HUGO: Hi Chantal.\"",
+              "explanation": "The transcript states: 'Hugo: found out the garments sold there were being returned because they ... fell apart in the wash! Chantal: Yeah, it would be good to know that kind of thing.'",
               "instruction": "Questions 29 and 30<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. recommendations for further research",
-                "B. limitations of their own study",
-                "C. a summary of the main arguments",
-                "D. suggestions for practical applications",
-                "E. a list of key references"
+                "A. the reasons people return fashion items",
+                "B. how much time people have to shop for clothes",
+                "C. fashion designs people want but can\'t find",
+                "D. the best time of year for fashion buying",
+                "E. the most popular fashion sizes"
               ]
             },
             {
               "num": 30,
               "type": "MCQ",
-              "text": "Which other thing do they agree should be included in their conclusion?",
+              "text": "Which other piece of retail information do Hugo and Chantal agree would be useful?",
               "answer": "C",
-              "explanation": "The transcript states: \"HUGO: Hi Chantal.\"",
+              "explanation": "The transcript states: 'Hugo: know if there\'s a gap in the market — you know, an item that no one\'s stocking but that consumers are looking for. Chantal: Yeah, people don\'t give up searching.'",
               "instruction": "Questions 29 and 30<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. recommendations for further research",
-                "B. limitations of their own study",
-                "C. a summary of the main arguments",
-                "D. suggestions for practical applications",
-                "E. a list of key references"
+                "A. the reasons people return fashion items",
+                "B. how much time people have to shop for clothes",
+                "C. fashion designs people want but can\'t find",
+                "D. the best time of year for fashion buying",
+                "E. the most popular fashion sizes"
               ]
             }
           ]
@@ -8772,3716 +8772,1990 @@ const IELTS_TEST_DATA = {
     "title": "Cambridge IELTS 20 — Test 1",
     "book": "IELTS 20",
     "listening": {
-      "sections": [
-        {
-          "id": 1,
-          "title": "Part 1: Community Sports Hall Booking",
-          "description": "A woman phones to enquire about booking the community sports hall.",
-          "audio": "audio/IELTS_20_Test_1_Part1.m4a",
-          "questions": [
+        "sections": [
             {
-              "num": 1,
-              "type": "FILL",
-              "text": "Name of the sports hall: _________ Community Sports Hall",
-              "answer": "Millbrook",
-              "explanation": "The sports hall is called the Millbrook Community Sports Hall."
+                "id": 1,
+                "title": "Part 1: Restaurant Recommendations",
+                "description": "Conversation about recommending restaurants for a 30th birthday party.",
+                "audio": "audio/IELTS_20_Test_1_Part1.mp3",
+                "questions": [
+                    {
+                        "num": 1,
+                        "type": "FILL",
+                        "text": "The Junction: Good for people who are especially keen on _________",
+                        "answer": "fish",
+                        "explanation": "The speaker recommends The Junction for fish lovers.",
+                        "instruction": "Questions 1-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
+                    },
+                    {
+                        "num": 2,
+                        "type": "FILL",
+                        "text": "The Junction comments: The _________ is a good place for a drink",
+                        "answer": "roof",
+                        "explanation": "The roof of The Junction is recommended for a drink.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 3,
+                        "type": "FILL",
+                        "text": "Paloma: _________ food, good for sharing",
+                        "answer": "Spanish",
+                        "explanation": "Paloma serves Spanish food.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 4,
+                        "type": "FILL",
+                        "text": "Paloma comments: A limited selection of _________ food on the menu",
+                        "answer": "vegetarian",
+                        "explanation": "The menu has a limited selection of vegetarian options.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 5,
+                        "type": "FILL",
+                        "text": "The _________ restaurant",
+                        "answer": "Audley",
+                        "explanation": "The third recommended restaurant is the Audley.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 6,
+                        "type": "FILL",
+                        "text": "Audley location: At the top of a _________",
+                        "answer": "hotel",
+                        "explanation": "The Audley is located at the top of a hotel.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 7,
+                        "type": "FILL",
+                        "text": "Audley reason: All the _________ are very good",
+                        "answer": "reviews",
+                        "explanation": "All reviews for the Audley are very good.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 8,
+                        "type": "FILL",
+                        "text": "Audley reason: Only uses _________ ingredients",
+                        "answer": "local",
+                        "explanation": "The restaurant only uses local ingredients.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 9,
+                        "type": "FILL",
+                        "text": "Audley comments: Set lunch costs £ _________ per person",
+                        "answer": "30",
+                        "explanation": "The set lunch is £30 per person.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 10,
+                        "type": "FILL",
+                        "text": "Audley comments: Portions probably of _________ size",
+                        "answer": "average",
+                        "explanation": "The portions are of average size.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    }
+                ]
             },
             {
-              "num": 2,
-              "type": "FILL",
-              "text": "Hourly hire rate on weekdays: £_________",
-              "answer": "35",
-              "explanation": "Weekday hire costs £35 per hour."
+                "id": 2,
+                "title": "Part 2: Edelman Pottery",
+                "description": "A talk by a potter to a group of visitors at Edelman Pottery.",
+                "audio": "audio/IELTS_20_Test_1_Part2.mp3",
+                "questions": [
+                    {
+                        "num": 11,
+                        "type": "MCQ",
+                        "text": "Heather says pottery differs from other art forms because",
+                        "options": [
+                            "A. it lasts longer in the ground.",
+                            "B. it is practised by more people.",
+                            "C. it can be repaired more easily."
+                        ],
+                        "answer": "A",
+                        "explanation": "Heather says pottery survives in the earth long after other materials degrade.",
+                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 12,
+                        "type": "MCQ",
+                        "text": "Archaeologists sometimes identify the use of ancient pottery from",
+                        "options": [
+                            "A. the clay it was made with.",
+                            "B. the marks that are on it.",
+                            "C. the basic shape of it."
+                        ],
+                        "answer": "B",
+                        "explanation": "Marks on the pottery help archaeologists identify its use.",
+                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 13,
+                        "type": "MCQ",
+                        "text": "Some people join Heather's pottery class because they want to",
+                        "options": [
+                            "A. create an item that looks very old.",
+                            "B. find something that they are good at.",
+                            "C. make something that will outlive them."
+                        ],
+                        "answer": "C",
+                        "explanation": "Participants want to create durable items that will outlive them.",
+                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 14,
+                        "type": "MCQ",
+                        "text": "What does Heather value most about being a potter?",
+                        "options": [
+                            "A. its calming effect",
+                            "B. its messy nature",
+                            "C. its physical benefits"
+                        ],
+                        "answer": "A",
+                        "explanation": "Heather finds the calming effect of working with clay most valuable.",
+                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 15,
+                        "type": "MCQ",
+                        "text": "Most of the visitors to Edelman Pottery",
+                        "options": [
+                            "A. bring friends to join courses.",
+                            "B. have never made a pot before.",
+                            "C. try to learn techniques too quickly."
+                        ],
+                        "answer": "B",
+                        "explanation": "The majority of visitors are complete beginners who have never made a pot.",
+                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 16,
+                        "type": "MCQ",
+                        "text": "Heather reminds her visitors that they should",
+                        "options": [
+                            "A. put on their aprons.",
+                            "B. change their clothes.",
+                            "C. take off their jewellery."
+                        ],
+                        "answer": "C",
+                        "explanation": "Heather instructs them to remove any jewellery before starting.",
+                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 17,
+                        "type": "MCQ",
+                        "text": "Which TWO things does Heather explain about kilns? (Select 1 of 2)",
+                        "options": [
+                            "A. what their function is",
+                            "B. when they were invented",
+                            "C. ways of keeping them safe",
+                            "D. where to put one in your home",
+                            "E. what some people use instead of one"
+                        ],
+                        "answer": "A",
+                        "explanation": "Heather explains their primary function and alternative options.",
+                        "instruction": "Questions 17-18<br/>Choose TWO letters, A-E."
+                    },
+                    {
+                        "num": 18,
+                        "type": "MCQ",
+                        "text": "Which TWO things does Heather explain about kilns? (Select 2 of 2)",
+                        "options": [
+                            "A. what their function is",
+                            "B. when they were invented",
+                            "C. ways of keeping them safe",
+                            "D. where to put one in your home",
+                            "E. what some people use instead of one"
+                        ],
+                        "answer": "E",
+                        "explanation": "Heather outlines what some people use instead of traditional kilns.",
+                        "instruction": "Questions 17-18<br/>Choose TWO letters, A-E."
+                    },
+                    {
+                        "num": 19,
+                        "type": "MCQ",
+                        "text": "Which TWO points does Heather make about a potter's tools? (Select 1 of 2)",
+                        "options": [
+                            "A. Some are hard to hold.",
+                            "B. Some are worth buying.",
+                            "C. Some are essential items.",
+                            "D. Some have memorable names.",
+                            "E. Some are available for use by participants."
+                        ],
+                        "answer": "C",
+                        "explanation": "She notes that some tools are essential and others are provided.",
+                        "instruction": "Questions 19-20<br/>Choose TWO letters, A-E."
+                    },
+                    {
+                        "num": 20,
+                        "type": "MCQ",
+                        "text": "Which TWO points does Heather make about a potter's tools? (Select 2 of 2)",
+                        "options": [
+                            "A. Some are hard to hold.",
+                            "B. Some are worth buying.",
+                            "C. Some are essential items.",
+                            "D. Some have memorable names.",
+                            "E. Some are available for use by participants."
+                        ],
+                        "answer": "E",
+                        "explanation": "She mentions that tools are available for all participants to use.",
+                        "instruction": "Questions 19-20<br/>Choose TWO letters, A-E."
+                    }
+                ]
             },
             {
-              "num": 3,
-              "type": "FILL",
-              "text": "Hourly hire rate on weekends: £_________",
-              "answer": "50",
-              "explanation": "Weekend hire is charged at £50 per hour."
+                "id": 3,
+                "title": "Part 3: Loneliness and Mental Health",
+                "description": "Two students discuss their presentation on loneliness.",
+                "audio": "audio/IELTS_20_Test_1_Part3.mp3",
+                "questions": [
+                    {
+                        "num": 21,
+                        "type": "MCQ",
+                        "text": "Which TWO things do the students both believe are responsible for the increase in loneliness? (Select 1 of 2)",
+                        "options": [
+                            "A. social media",
+                            "B. smaller nuclear families",
+                            "C. urban design",
+                            "D. longer lifespans",
+                            "E. a mobile workforce"
+                        ],
+                        "answer": "C",
+                        "explanation": "Both students agree that urban design is a factor.",
+                        "instruction": "Questions 21-22<br/>Choose TWO letters, A-E."
+                    },
+                    {
+                        "num": 22,
+                        "type": "MCQ",
+                        "text": "Which TWO things do the students both believe are responsible for the increase in loneliness? (Select 2 of 2)",
+                        "options": [
+                            "A. social media",
+                            "B. smaller nuclear families",
+                            "C. urban design",
+                            "D. longer lifespans",
+                            "E. a mobile workforce"
+                        ],
+                        "answer": "E",
+                        "explanation": "Both students agree that a mobile workforce contributes to loneliness.",
+                        "instruction": "Questions 21-22<br/>Choose TWO letters, A-E."
+                    },
+                    {
+                        "num": 23,
+                        "type": "MCQ",
+                        "text": "Which TWO health risks associated with loneliness do the students agree are based on solid evidence? (Select 1 of 2)",
+                        "options": [
+                            "A. a weakened immune system",
+                            "B. dementia",
+                            "C. cancer",
+                            "D. obesity",
+                            "E. cardiovascular disease"
+                        ],
+                        "answer": "A",
+                        "explanation": "Solid evidence supports the link between loneliness and a weakened immune system.",
+                        "instruction": "Questions 23-24<br/>Choose TWO letters, A-E."
+                    },
+                    {
+                        "num": 24,
+                        "type": "MCQ",
+                        "text": "Which TWO health risks associated with loneliness do the students agree are based on solid evidence? (Select 2 of 2)",
+                        "options": [
+                            "A. a weakened immune system",
+                            "B. dementia",
+                            "C. cancer",
+                            "D. obesity",
+                            "E. cardiovascular disease"
+                        ],
+                        "answer": "C",
+                        "explanation": "Solid evidence supports the link between loneliness and cancer.",
+                        "instruction": "Questions 23-24<br/>Choose TWO letters, A-E."
+                    },
+                    {
+                        "num": 25,
+                        "type": "MCQ",
+                        "text": "Which TWO opinions do both the students express about the evolutionary theory of loneliness? (Select 1 of 2)",
+                        "options": [
+                            "A. It has little practical relevance.",
+                            "B. It needs further investigation.",
+                            "C. It is misleading.",
+                            "D. It should be more widely accepted.",
+                            "E. It is difficult to understand."
+                        ],
+                        "answer": "A",
+                        "explanation": "Both students think the evolutionary theory has little practical relevance.",
+                        "instruction": "Questions 25-26<br/>Choose TWO letters, A-E."
+                    },
+                    {
+                        "num": 26,
+                        "type": "MCQ",
+                        "text": "Which TWO opinions do both the students express about the evolutionary theory of loneliness? (Select 2 of 2)",
+                        "options": [
+                            "A. It has little practical relevance.",
+                            "B. It needs further investigation.",
+                            "C. It is misleading.",
+                            "D. It should be more widely accepted.",
+                            "E. It is difficult to understand."
+                        ],
+                        "answer": "B",
+                        "explanation": "Both students believe the evolutionary theory needs further investigation.",
+                        "instruction": "Questions 25-26<br/>Choose TWO letters, A-E."
+                    },
+                    {
+                        "num": 27,
+                        "type": "MCQ",
+                        "text": "When comparing loneliness to depression, the students",
+                        "options": [
+                            "A. doubt that there will ever be a medical cure for loneliness.",
+                            "B. claim that the link between loneliness and mental health is overstated.",
+                            "C. express frustration that loneliness is not taken more seriously."
+                        ],
+                        "answer": "A",
+                        "explanation": "The students doubt a medical cure will ever be found for loneliness.",
+                        "instruction": "Questions 27-30<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 28,
+                        "type": "MCQ",
+                        "text": "Why do the students decide to start their presentation with an example from their own experience?",
+                        "options": [
+                            "A. to explain how difficult loneliness can be",
+                            "B. to highlight a situation that most students will recognise",
+                            "C. to emphasise that feeling lonely is more common for men than women"
+                        ],
+                        "answer": "B",
+                        "explanation": "They start with a personal story to connect with a situation most students will recognise.",
+                        "instruction": "Questions 27-30<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 29,
+                        "type": "MCQ",
+                        "text": "The students agree that talking to strangers is a good strategy for dealing with loneliness because",
+                        "options": [
+                            "A. it creates a sense of belonging.",
+                            "B. it builds self-confidence.",
+                            "C. it makes people feel more positive."
+                        ],
+                        "answer": "A",
+                        "explanation": "Talking to strangers helps build a sense of belonging.",
+                        "instruction": "Questions 27-30<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 30,
+                        "type": "MCQ",
+                        "text": "The students find it difficult to understand why solitude is considered to be",
+                        "options": [
+                            "A. similar to loneliness.",
+                            "B. necessary for mental health.",
+                            "C. an enjoyable experience."
+                        ],
+                        "answer": "C",
+                        "explanation": "They struggle to understand why solitude is viewed as an enjoyable experience.",
+                        "instruction": "Questions 27-30<br/>Choose the correct letter, A, B or C."
+                    }
+                ]
             },
             {
-              "num": 4,
-              "type": "MCQ",
-              "text": "What is included in the hire fee?",
-              "options": [
-                "A. Catering services",
-                "B. Use of changing rooms and showers",
-                "C. Sports equipment",
-                "D. A security guard"
-              ],
-              "answer": "B",
-              "explanation": "Changing rooms and showers are included in the standard hire fee."
-            },
-            {
-              "num": 5,
-              "type": "FILL",
-              "text": "The hall can accommodate a maximum of _________ people.",
-              "answer": "120",
-              "explanation": "The maximum capacity of the hall is 120 people."
-            },
-            {
-              "num": 6,
-              "type": "FILL",
-              "text": "Minimum booking duration: _________ hours",
-              "answer": "two",
-              "explanation": "Bookings must be for a minimum of two hours."
-            },
-            {
-              "num": 7,
-              "type": "MCQ",
-              "text": "How far in advance can bookings be made?",
-              "options": [
-                "A. Up to 2 weeks",
-                "B. Up to 4 weeks",
-                "C. Up to 3 months",
-                "D. Up to 6 months"
-              ],
-              "answer": "C",
-              "explanation": "Bookings can be made up to three months in advance."
-            },
-            {
-              "num": 8,
-              "type": "FILL",
-              "text": "Cancellation notice required for a full refund: _________ hours",
-              "answer": "48",
-              "explanation": "48 hours' notice is required to receive a full refund."
-            },
-            {
-              "num": 9,
-              "type": "MCQ",
-              "text": "What equipment is available for hire at an extra cost?",
-              "options": [
-                "A. Badminton nets and rackets",
-                "B. Basketball hoops",
-                "C. A portable stage",
-                "D. Trestle tables and chairs"
-              ],
-              "answer": "D",
-              "explanation": "Trestle tables and chairs can be hired separately for events."
-            },
-            {
-              "num": 10,
-              "type": "FILL",
-              "text": "Contact name for bookings: _________",
-              "answer": "David",
-              "explanation": "The woman is told to ask for David when making a booking."
+                "id": 4,
+                "title": "Part 4: Reclaiming Urban Rivers",
+                "description": "A lecture on the reclamation and restoration of urban rivers.",
+                "audio": "audio/IELTS_20_Test_1_Part4.mp3",
+                "questions": [
+                    {
+                        "num": 31,
+                        "type": "FILL",
+                        "text": "pollution from _________ on the river bank.",
+                        "answer": "factories",
+                        "explanation": "The speaker mentions pollution coming from factories on the banks.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+                    },
+                    {
+                        "num": 32,
+                        "type": "FILL",
+                        "text": "In 1957, the River Thames in London was declared biologically _________.",
+                        "answer": "dead",
+                        "explanation": "The River Thames was declared biologically dead in 1957.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 33,
+                        "type": "FILL",
+                        "text": "Seals and even a _________ have been seen in the River Thames.",
+                        "answer": "whale",
+                        "explanation": "Seals and even a whale have been spotted in the Thames recently.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 34,
+                        "type": "FILL",
+                        "text": "Riverside warehouses are converted to restaurants and _________.",
+                        "answer": "apartments",
+                        "explanation": "Warehouses have been converted to restaurants and apartments.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 35,
+                        "type": "FILL",
+                        "text": "build a riverside _________.",
+                        "answer": "park",
+                        "explanation": "Plans include building a riverside park.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 36,
+                        "type": "FILL",
+                        "text": "display _________ projects.",
+                        "answer": "art",
+                        "explanation": "Plans include displaying art projects along the river.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 37,
+                        "type": "FILL",
+                        "text": "In Paris, _________ are created on the sides of the river every summer.",
+                        "answer": "beaches",
+                        "explanation": "Beaches are created on the banks in Paris during summer.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 38,
+                        "type": "FILL",
+                        "text": "Over 2 billion passengers already travel by _________ in cities round the world.",
+                        "answer": "ferry",
+                        "explanation": "More than 2 billion passengers travel by ferry globally.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 39,
+                        "type": "FILL",
+                        "text": "Instead of road transport, goods could be transported by large freight barges and electric _________.",
+                        "answer": "bikes",
+                        "explanation": "Barges and electric bikes are proposed for goods transport.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 40,
+                        "type": "FILL",
+                        "text": "or, in future, by _________.",
+                        "answer": "drone",
+                        "explanation": "Drones are envisioned as a future transport method.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    }
+                ]
             }
-          ],
-          "transcript": ""
-        },
-        {
-          "id": 2,
-          "title": "Part 2: Introduction to Volunteering at a Food Bank",
-          "description": "A coordinator explains the volunteering programme at a local food bank.",
-          "audio": "audio/IELTS_20_Test_1_Part2.m4a",
-          "questions": [
-            {
-              "num": 11,
-              "type": "FILL",
-              "text": "Number of households the food bank supports each week: over _________",
-              "answer": "500",
-              "explanation": "The food bank serves over 500 households per week."
-            },
-            {
-              "num": 12,
-              "type": "MCQ",
-              "text": "What is the minimum volunteer commitment required?",
-              "options": [
-                "A. One session per week",
-                "B. Two sessions per month",
-                "C. One full day per month",
-                "D. Three hours per week"
-              ],
-              "answer": "B",
-              "explanation": "Volunteers are asked to commit to at least two sessions per month."
-            },
-            {
-              "num": 13,
-              "type": "FILL",
-              "text": "Duration of a standard volunteering session: _________ hours",
-              "answer": "three",
-              "explanation": "Each session lasts approximately three hours."
-            },
-            {
-              "num": 14,
-              "type": "MCQ",
-              "text": "New volunteers are required to attend:",
-              "options": [
-                "A. A week-long training programme",
-                "B. A two-hour induction session",
-                "C. An online course before starting",
-                "D. Monthly training updates"
-              ],
-              "answer": "B",
-              "explanation": "All new volunteers must attend a two-hour induction session before their first shift."
-            },
-            {
-              "num": 15,
-              "type": "FILL",
-              "text": "Volunteers must be aged _________ or over.",
-              "answer": "18",
-              "explanation": "The minimum age for volunteering is 18."
-            },
-            {
-              "num": 16,
-              "type": "MCQ",
-              "text": "Which of these tasks do food bank volunteers perform?",
-              "options": [
-                "A. Delivering food parcels to clients' homes",
-                "B. Sorting donations, packing parcels and talking to clients",
-                "C. Fundraising in the town centre",
-                "D. Driving the food bank van"
-              ],
-              "answer": "B",
-              "explanation": "Volunteers sort donated food, pack parcels, and interact with clients at the food bank."
-            },
-            {
-              "num": 17,
-              "type": "FILL",
-              "text": "The food bank is open _________ days per week.",
-              "answer": "five",
-              "explanation": "The food bank operates five days a week."
-            },
-            {
-              "num": 18,
-              "type": "MCQ",
-              "text": "All volunteers must provide:",
-              "options": [
-                "A. A character reference only",
-                "B. Two references and proof of identity",
-                "C. A DBS check certificate",
-                "D. Proof of relevant qualifications"
-              ],
-              "answer": "B",
-              "explanation": "Two character references and proof of identity are required from all volunteers."
-            },
-            {
-              "num": 19,
-              "type": "FILL",
-              "text": "The food bank is located near the _________ station.",
-              "answer": "train",
-              "explanation": "The food bank is situated close to the train station for easy access."
-            },
-            {
-              "num": 20,
-              "type": "MCQ",
-              "text": "Donated food items must:",
-              "options": [
-                "A. Be frozen or refrigerated",
-                "B. Be in their original packaging and within date",
-                "C. Have been purchased from approved suppliers",
-                "D. Be labelled with the donor's name"
-              ],
-              "answer": "B",
-              "explanation": "All donated items must be in original sealed packaging and not past their use-by date."
-            }
-          ],
-          "transcript": ""
-        },
-        {
-          "id": 3,
-          "title": "Part 3: Group Project on Urban Planning",
-          "description": "Three students discuss their group project on sustainable urban planning.",
-          "audio": "audio/IELTS_20_Test_1_Part3.m4a",
-          "questions": [
-            {
-              "num": 21,
-              "type": "MCQ",
-              "text": "What does '15-minute city' concept mean?",
-              "options": [
-                "A. Cities that can be crossed in 15 minutes by car",
-                "B. Urban design where daily needs are reachable within 15 minutes on foot or by bike",
-                "C. Limiting car journeys to 15 minutes per day",
-                "D. Reducing commute times to under 15 minutes via public transport"
-              ],
-              "answer": "B",
-              "explanation": "The 15-minute city concept places all daily necessities within a 15-minute walk or cycle."
-            },
-            {
-              "num": 22,
-              "type": "MCQ",
-              "text": "Which city is cited as the best example of 15-minute city planning?",
-              "options": [
-                "A. Amsterdam",
-                "B. Copenhagen",
-                "C. Paris",
-                "D. Singapore"
-              ],
-              "answer": "C",
-              "explanation": "Paris under Mayor Anne Hidalgo is the most widely cited example of 15-minute city planning."
-            },
-            {
-              "num": 23,
-              "type": "FILL",
-              "text": "One student argues that green spaces should cover at least _________ % of any urban area.",
-              "answer": "30",
-              "explanation": "The student advocates for at minimum 30% green space coverage in cities."
-            },
-            {
-              "num": 24,
-              "type": "MCQ",
-              "text": "Mixed-use zoning is beneficial because:",
-              "options": [
-                "A. It reduces property taxes",
-                "B. It reduces car dependency by placing homes, offices and shops together",
-                "C. It lowers the cost of construction",
-                "D. It allows taller buildings to be constructed"
-              ],
-              "answer": "B",
-              "explanation": "Mixed-use zoning combines residential, commercial, and office spaces to reduce travel demand."
-            },
-            {
-              "num": 25,
-              "type": "MCQ",
-              "text": "One student criticises car-centric city planning because:",
-              "options": [
-                "A. It makes cities less attractive to tourists",
-                "B. It leads to noise pollution only",
-                "C. It contributes to obesity, pollution and social isolation",
-                "D. It increases property prices"
-              ],
-              "answer": "C",
-              "explanation": "Car-centric planning is linked to sedentary lifestyles, air pollution, and community fragmentation."
-            },
-            {
-              "num": 26,
-              "type": "FILL",
-              "text": "The group decides to include a case study on _________ as a model for sustainable transit.",
-              "answer": "Curitiba",
-              "explanation": "Curitiba, Brazil, is selected as their sustainable public transit case study."
-            },
-            {
-              "num": 27,
-              "type": "MCQ",
-              "text": "The group agrees that their project's main recommendation will be:",
-              "options": [
-                "A. Banning private cars in city centres",
-                "B. Integrating public transport, cycling infrastructure and green space design",
-                "C. Building more car parks",
-                "D. Reducing city populations through incentives to move to rural areas"
-              ],
-              "answer": "B",
-              "explanation": "Their recommendation focuses on integrated sustainable transport and green infrastructure."
-            },
-            {
-              "num": 28,
-              "type": "FILL",
-              "text": "One student mentions that urban _________ is a major source of carbon emissions in cities.",
-              "answer": "transport",
-              "explanation": "Transport is identified as the primary contributor to carbon emissions in urban areas."
-            },
-            {
-              "num": 29,
-              "type": "MCQ",
-              "text": "What challenge is raised about implementing 15-minute city design in existing cities?",
-              "options": [
-                "A. Residents opposing cycling lanes",
-                "B. High cost of retrofitting existing infrastructure",
-                "C. Legal restrictions on land use",
-                "D. Shortage of architects"
-              ],
-              "answer": "B",
-              "explanation": "Retrofitting existing cities is expensive and complex compared to new developments."
-            },
-            {
-              "num": 30,
-              "type": "MCQ",
-              "text": "The students conclude that the most important element of sustainable cities is:",
-              "options": [
-                "A. Affordable housing",
-                "B. Community involvement in planning decisions",
-                "C. High-speed rail links",
-                "D. Technology-driven smart city systems"
-              ],
-              "answer": "B",
-              "explanation": "They agree that inclusive community participation in planning is the most critical factor."
-            }
-          ],
-          "transcript": ""
-        },
-        {
-          "id": 4,
-          "title": "Part 4: Coral Reef Ecosystems",
-          "description": "A lecture on the ecological importance of coral reefs and threats to their survival.",
-          "audio": "audio/IELTS_20_Test_1_Part4.m4a",
-          "questions": [
-            {
-              "num": 31,
-              "type": "FILL",
-              "text": "Coral reefs cover less than _________ % of the ocean floor.",
-              "answer": "1",
-              "explanation": "Despite their importance, coral reefs cover less than 1% of the ocean floor."
-            },
-            {
-              "num": 32,
-              "type": "FILL",
-              "text": "Coral reefs support approximately _________ % of all marine species.",
-              "answer": "25",
-              "explanation": "Though tiny in area, coral reefs are home to approximately 25% of all marine species."
-            },
-            {
-              "num": 33,
-              "type": "MCQ",
-              "text": "Coral bleaching occurs when:",
-              "options": [
-                "A. Algae overgrow the coral",
-                "B. Corals expel the symbiotic algae due to heat stress",
-                "C. Water becomes too cold for coral survival",
-                "D. Pollution blocks sunlight from reaching the reef"
-              ],
-              "answer": "B",
-              "explanation": "Bleaching happens when thermal stress causes corals to expel their symbiotic zooxanthellae algae."
-            },
-            {
-              "num": 34,
-              "type": "MCQ",
-              "text": "Zooxanthellae algae are important for coral because:",
-              "options": [
-                "A. They provide camouflage from predators",
-                "B. They give coral its skeleton structure",
-                "C. They provide up to 90% of the coral's energy through photosynthesis",
-                "D. They clean the water around the reef"
-              ],
-              "answer": "C",
-              "explanation": "Zooxanthellae produce energy through photosynthesis, providing up to 90% of the coral's nutritional needs."
-            },
-            {
-              "num": 35,
-              "type": "FILL",
-              "text": "The Great Barrier Reef is located in _________.",
-              "answer": "Australia",
-              "explanation": "The Great Barrier Reef is off the northeastern coast of Australia."
-            },
-            {
-              "num": 36,
-              "type": "MCQ",
-              "text": "Ocean acidification threatens coral by:",
-              "options": [
-                "A. Raising water temperature",
-                "B. Reducing the availability of carbonate ions needed to build coral skeletons",
-                "C. Introducing invasive fish species",
-                "D. Increasing water turbidity"
-              ],
-              "answer": "B",
-              "explanation": "Acidification reduces carbonate ion availability, inhibiting the growth of coral skeletons."
-            },
-            {
-              "num": 37,
-              "type": "MCQ",
-              "text": "What human activity contributes most to coral reef decline?",
-              "options": [
-                "A. Recreational diving",
-                "B. Coastal development, pollution and climate change",
-                "C. Scientific research and sampling",
-                "D. Fish farming near reefs"
-              ],
-              "answer": "B",
-              "explanation": "Coastal development, runoff pollution, and climate change are the primary anthropogenic threats."
-            },
-            {
-              "num": 38,
-              "type": "FILL",
-              "text": "Coral can reproduce both sexually through spawning and _________ through fragmentation.",
-              "answer": "asexually",
-              "explanation": "Corals reproduce sexually via mass spawning events and asexually through fragmentation."
-            },
-            {
-              "num": 39,
-              "type": "MCQ",
-              "text": "One promising reef restoration technique involves:",
-              "options": [
-                "A. Transplanting coral fragments grown in nurseries",
-                "B. Introducing genetically engineered predators",
-                "C. Using chemical treatments to reduce bleaching",
-                "D. Covering reefs with shade cloth to reduce temperature"
-              ],
-              "answer": "A",
-              "explanation": "Coral gardening — growing fragments in nurseries and transplanting them — is a leading restoration method."
-            },
-            {
-              "num": 40,
-              "type": "FILL",
-              "text": "Limiting global warming to no more than _________ degrees Celsius is considered critical for coral survival.",
-              "answer": "1.5",
-              "explanation": "Scientists warn that global warming beyond 1.5°C will cause catastrophic, irreversible coral bleaching."
-            }
-          ],
-          "transcript": ""
-        }
-      ]
-    },
-    "reading": {
-      "passages": [
-        {
-          "title": "Passage 1: Kākāpō Conservation",
-          "text": "<p>The kākāpō is a species of large, flightless, nocturnal parrot endemic to New Zealand. It is one of the world's most endangered birds, having been brought to the brink of extinction by habitat destruction and introduced mammalian predators such as stoats, cats, and rats. Unlike other parrots, the kākāpō is heavy—males can weigh up to 4 kg—and has a unique lek-breeding system where males gather in arenas to perform booming calls to attract females.</p>\n        <p>In the late 20th century, the New Zealand Department of Conservation established the Kākāpō Recovery Programme. The key strategy was to relocate the remaining population to predator-free offshore islands, such as Codfish Island (Whenua Hou) and Anchor Island. These islands are heavily monitored, and conservationists manage every aspect of the birds' lives, including providing supplementary food, monitoring nests with infrared cameras, and hand-rearing chicks when necessary.</p>\n        <p>Genetic diversity is a critical challenge, as the population descended from a very small pool of survivors. To manage this, scientists utilize genetic testing to plan breeding pairs and reduce inbreeding. The programme has seen significant success, with the kākāpō population growing from a historic low of just 51 individuals in 1995 to over 250 today, serving as a global model for endangered species conservation.</p>",
-          "questions": [
-            {
-              "num": 1,
-              "type": "FILL",
-              "text": "The kākāpō is a flightless, nocturnal bird native to _________.",
-              "answer": "New Zealand",
-              "explanation": "The text describes the kākāpō as 'endemic to New Zealand'.",
-              "location": "Paragraph 1, Line 1"
-            },
-            {
-              "num": 2,
-              "type": "FILL",
-              "text": "Kākāpō were driven to the brink of extinction by habitat loss and _________ predators.",
-              "answer": "mammalian",
-              "explanation": "The text says they were brought to extinction by 'habitat destruction and introduced mammalian predators'.",
-              "location": "Paragraph 1, Line 2"
-            },
-            {
-              "num": 3,
-              "type": "FILL",
-              "text": "An adult male kākāpō can weigh as much as _________ kg.",
-              "answer": "4",
-              "explanation": "The text states 'males can weigh up to 4 kg'.",
-              "location": "Paragraph 1, Line 3"
-            },
-            {
-              "num": 4,
-              "type": "FILL",
-              "text": "To attract females, males perform _________ calls in breeding arenas.",
-              "answer": "booming",
-              "explanation": "The text mentions 'booming calls to attract females'.",
-              "location": "Paragraph 1, Line 3"
-            },
-            {
-              "num": 5,
-              "type": "FILL",
-              "text": "The recovery programme relocated the birds to offshore islands that are _________.",
-              "answer": "predator-free",
-              "explanation": "The text states: 'relocate the remaining population to predator-free offshore islands'.",
-              "location": "Paragraph 2, Line 2"
-            },
-            {
-              "num": 6,
-              "type": "FILL",
-              "text": "Infrared _________ are used to monitor the birds' nests.",
-              "answer": "cameras",
-              "explanation": "The text mentions 'monitoring nests with infrared cameras'.",
-              "location": "Paragraph 2, Line 3"
-            },
-            {
-              "num": 7,
-              "type": "FILL",
-              "text": "In 1995, the population of kākāpō reached a low of _________ individuals.",
-              "answer": "51",
-              "explanation": "The text states: 'growing from a historic low of just 51 individuals in 1995'.",
-              "location": "Paragraph 3, Line 3"
-            },
-            {
-              "num": 8,
-              "type": "TFNG",
-              "text": "Kākāpō can fly short distances when escaping predators.",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "FALSE",
-              "explanation": "The text describes the kākāpō as 'flightless'.",
-              "location": "Paragraph 1, Line 1"
-            },
-            {
-              "num": 9,
-              "type": "TFNG",
-              "text": "Stoats were native to New Zealand before humans arrived.",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "FALSE",
-              "explanation": "The text describes stoats as 'introduced mammalian predators'.",
-              "location": "Paragraph 1, Line 2"
-            },
-            {
-              "num": 10,
-              "type": "TFNG",
-              "text": "Codfish Island is one of the predator-free sanctuaries used by the programme.",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The text lists 'Codfish Island (Whenua Hou)' as an offshore sanctuary.",
-              "location": "Paragraph 2, Line 2"
-            },
-            {
-              "num": 11,
-              "type": "TFNG",
-              "text": "Conservationists leave the birds entirely alone during the nesting season.",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "FALSE",
-              "explanation": "The text says conservationists 'manage every aspect of the birds' lives', including monitoring nests and providing food.",
-              "location": "Paragraph 2, Line 3"
-            },
-            {
-              "num": 12,
-              "type": "TFNG",
-              "text": "Genetic testing has been banned by the New Zealand government.",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "FALSE",
-              "explanation": "The text states that 'scientists utilize genetic testing to plan breeding pairs'.",
-              "location": "Paragraph 3, Line 2"
-            },
-            {
-              "num": 13,
-              "type": "TFNG",
-              "text": "The kākāpō population is now over 250.",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The text says the population has grown 'to over 250 today'.",
-              "location": "Paragraph 3, Line 3"
-            }
-          ]
-        },
-        {
-          "title": "Passage 2: To Britain (Historic Immigration)",
-          "text": "<p>The mid-20th century witnessed a major wave of migration to the United Kingdom, particularly from Caribbean nations, India, Pakistan, and Bangladesh. The arrival of the Empire Windrush in 1948 symbolized the start of this era, carrying hundreds of West Indian passengers who had been invited by the British government to help rebuild the post-war economy, which faced severe labour shortages in sectors like transport, manufacturing, and the newly established National Health Service (NHS).</p>\n        <p>However, the transition was far from easy. Many new arrivals faced systemic discrimination in housing and employment. Despite being British subjects with legal rights to settle in the UK, immigrants often found themselves shut out of private rentals and white-collar jobs. In response, they established tight-knit communities, formed their own social clubs, and founded advocacy groups to fight for civil rights and equal treatment.</p>\n        <p>Over the decades, these communities transformed British society, contributing to its cultural, economic, and political landscape. The introduction of the Race Relations Acts in the late 1960s was a direct result of their lobbying efforts, laying the groundwork for modern multicultural Britain. Today, the legacy of this immigration wave is recognized as a defining element of the UK's diverse identity.</p>",
-          "questions": [
-            {
-              "num": 14,
-              "type": "MCQ",
-              "text": "Why did the British government invite immigrants in the post-war era?",
-              "options": [
-                "A. To establish new colony trade agreements",
-                "B. To address severe labour shortages and rebuild the economy",
-                "C. To increase tax revenue immediately",
-                "D. To populate rural parts of the country"
-              ],
-              "answer": "B",
-              "explanation": "The text says they were invited 'to help rebuild the post-war economy, which faced severe labour shortages'.",
-              "location": "Paragraph 1, Line 2"
-            },
-            {
-              "num": 15,
-              "type": "MCQ",
-              "text": "Which ship symbolized the start of this post-war migration wave in 1948?",
-              "options": [
-                "A. HMS Belfast",
-                "B. The Empire Windrush",
-                "C. Queen Mary",
-                "D. The Mayflower"
-              ],
-              "answer": "B",
-              "explanation": "The text states: 'The arrival of the Empire Windrush in 1948 symbolized the start of this era'.",
-              "location": "Paragraph 1, Line 2"
-            },
-            {
-              "num": 16,
-              "type": "MCQ",
-              "text": "What challenges did immigrants encounter upon arrival in the UK?",
-              "options": [
-                "A. Sudden changes in immigration laws that deported them",
-                "B. Systemic discrimination in housing and employment",
-                "C. A complete lack of public transport options",
-                "D. Inability to access free medical treatment in the NHS"
-              ],
-              "answer": "B",
-              "explanation": "The text states: 'Many new arrivals faced systemic discrimination in housing and employment.'",
-              "location": "Paragraph 2, Line 1"
-            },
-            {
-              "num": 17,
-              "type": "MCQ",
-              "text": "What legislative change was a direct result of immigrant advocacy in the 1960s?",
-              "options": [
-                "A. The British Nationality Act",
-                "B. The Race Relations Acts",
-                "C. The National Health Service Bill",
-                "D. The Housing and Settlement Act"
-              ],
-              "answer": "B",
-              "explanation": "The text states: 'The introduction of the Race Relations Acts in the late 1960s was a direct result of their lobbying efforts'.",
-              "location": "Paragraph 3, Line 2"
-            },
-            {
-              "num": 18,
-              "type": "FILL",
-              "text": "The Empire Windrush arrived in the year _________.",
-              "answer": "1948",
-              "explanation": "The text says 'arrival of the Empire Windrush in 1948'.",
-              "location": "Paragraph 1, Line 2"
-            },
-            {
-              "num": 19,
-              "type": "FILL",
-              "text": "The UK economy after the war faced severe _________ shortages.",
-              "answer": "labour",
-              "explanation": "The text mentions 'severe labour shortages'.",
-              "location": "Paragraph 1, Line 2"
-            },
-            {
-              "num": 20,
-              "type": "FILL",
-              "text": "Immigrants helped staff the NHS, transport, and _________ sectors.",
-              "answer": "manufacturing",
-              "explanation": "The text lists 'transport, manufacturing, and the newly established National Health Service'.",
-              "location": "Paragraph 1, Line 2"
-            },
-            {
-              "num": 21,
-              "type": "FILL",
-              "text": "Immigrants were legally British _________ with settlement rights.",
-              "answer": "subjects",
-              "explanation": "The text says 'Despite being British subjects with legal rights to settle'.",
-              "location": "Paragraph 2, Line 2"
-            },
-            {
-              "num": 22,
-              "type": "FILL",
-              "text": "Immigrants were often shut out of private _________.",
-              "answer": "rentals",
-              "explanation": "The text says they were 'shut out of private rentals'.",
-              "location": "Paragraph 2, Line 2"
-            },
-            {
-              "num": 23,
-              "type": "FILL",
-              "text": "Immigrants founded _________ groups to fight for equal treatment.",
-              "answer": "advocacy",
-              "explanation": "The text says they 'founded advocacy groups to fight for civil rights'.",
-              "location": "Paragraph 2, Line 3"
-            },
-            {
-              "num": 24,
-              "type": "TFNG",
-              "text": "Immigrants primarily took jobs as politicians in the British parliament.",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "FALSE",
-              "explanation": "The text says they worked in 'transport, manufacturing, and the National Health Service'.",
-              "location": "Paragraph 1, Line 2"
-            },
-            {
-              "num": 25,
-              "type": "TFNG",
-              "text": "White-collar jobs were easily available to the new arrivals.",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "FALSE",
-              "explanation": "The text states that they were 'shut out of private rentals and white-collar jobs.'",
-              "location": "Paragraph 2, Line 2"
-            },
-            {
-              "num": 26,
-              "type": "TFNG",
-              "text": "The first Race Relations Act was introduced in 1950.",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "FALSE",
-              "explanation": "The text states they were introduced 'in the late 1960s'.",
-              "location": "Paragraph 3, Line 2"
-            }
-          ]
-        },
-        {
-          "title": "Passage 3: The Unselfish Gene",
-          "text": "<p>For decades, evolutionary biology was dominated by the 'selfish gene' theory, which argues that natural selection acts primarily at the level of individual genes rather than the organism or species. According to this view, altruistic behaviours in animals are merely genetic strategies to ensure the survival of shared genes in relatives. However, a growing body of research is challenging this perspective, advocating for 'group selection' or 'multilevel selection' models.</p>\n        <p>These newer models propose that natural selection can operate simultaneously at multiple levels, including the group. In social species, groups containing cooperative individuals who work together for the common good may outcompete groups of selfish individuals who prioritize their own survival. For instance, in social insects like ants and bees, sterile workers sacrifice their own reproduction to support the colony, a behavior that is highly successful at the group level.</p>\n        <p>Critics of group selection argue that cooperative groups are vulnerable to 'cheaters'—selfish individuals who benefit from the group's cooperation without contributing. Over time, these cheaters should reproduce more, causing cooperation to collapse. However, proponents suggest that social groups develop mechanisms to suppress cheating, such as policing behaviors and social ostracism, ensuring that the 'unselfish gene' can persist and flourish in evolutionary history.</p>",
-          "questions": [
-            {
-              "num": 27,
-              "type": "MCQ",
-              "text": "What does the 'selfish gene' theory argue?",
-              "options": [
-                "A. Natural selection acts primarily at the group level",
-                "B. Genes force organisms to behave selfishly towards relatives",
-                "C. Natural selection acts primarily at the level of individual genes",
-                "D. Altruism is a modern human invention"
-              ],
-              "answer": "C",
-              "explanation": "The text says: 'natural selection acts primarily at the level of individual genes'.",
-              "location": "Paragraph 1, Line 1"
-            },
-            {
-              "num": 28,
-              "type": "MCQ",
-              "text": "What alternative evolutionary models are gaining support?",
-              "options": [
-                "A. Single-gene selection models",
-                "B. Group selection and multilevel selection models",
-                "C. Artificial selection and domestication models",
-                "D. Non-genetic inheritance models"
-              ],
-              "answer": "B",
-              "explanation": "The text mentions 'advocating for group selection or multilevel selection models.'",
-              "location": "Paragraph 1, Line 3"
-            },
-            {
-              "num": 29,
-              "type": "MCQ",
-              "text": "Why do sterile worker bees sacrifice reproduction, according to group selection?",
-              "options": [
-                "A. They are forced to by the queen's chemical signals",
-                "B. The behavior supports the colony, making the group highly successful",
-                "C. They lack the biological organs to reproduce",
-                "D. They seek to migrate to other hives"
-              ],
-              "answer": "B",
-              "explanation": "The text says: 'sterile workers sacrifice their own reproduction to support the colony, a behavior that is highly successful at the group level.'",
-              "location": "Paragraph 2, Line 3"
-            },
-            {
-              "num": 30,
-              "type": "MCQ",
-              "text": "What threat do 'cheaters' pose to cooperative groups?",
-              "options": [
-                "A. They introduce diseases from other groups",
-                "B. They consume group resources without contributing, potentially causing collapse",
-                "C. They cooperate too much, leading to resource depletion",
-                "D. They attract predators to the group's territory"
-              ],
-              "answer": "B",
-              "explanation": "The text says 'selfish individuals who benefit from the group's cooperation without contributing... causing cooperation to collapse.'",
-              "location": "Paragraph 3, Line 1"
-            },
-            {
-              "num": 31,
-              "type": "FILL",
-              "text": "Selfish gene theory explains altruism as a strategy to save genes in _________.",
-              "answer": "relatives",
-              "explanation": "The text states altruism is 'merely genetic strategies to ensure the survival of shared genes in relatives.'",
-              "location": "Paragraph 1, Line 2"
-            },
-            {
-              "num": 32,
-              "type": "FILL",
-              "text": "Multilevel selection argues natural selection operates _________ at different levels.",
-              "answer": "simultaneously",
-              "explanation": "The text states 'natural selection can operate simultaneously at multiple levels'.",
-              "location": "Paragraph 2, Line 1"
-            },
-            {
-              "num": 33,
-              "type": "FILL",
-              "text": "In social insects, sterile workers sacrifice their reproduction to support the _________.",
-              "answer": "colony",
-              "explanation": "The text says workers 'sacrifice their own reproduction to support the colony'.",
-              "location": "Paragraph 2, Line 3"
-            },
-            {
-              "num": 34,
-              "type": "FILL",
-              "text": "Cooperative groups suppress cheating using policing and social _________.",
-              "answer": "ostracism",
-              "explanation": "The text mentions 'policing behaviors and social ostracism'.",
-              "location": "Paragraph 3, Line 3"
-            },
-            {
-              "num": 35,
-              "type": "TFNG",
-              "text": "For decades, group selection was the dominant theory in evolutionary biology.",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "FALSE",
-              "explanation": "The text states 'evolutionary biology was dominated by the selfish gene theory'.",
-              "location": "Paragraph 1, Line 1"
-            },
-            {
-              "num": 36,
-              "type": "TFNG",
-              "text": "Altruistic behaviours are never observed in wild mammals.",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "FALSE",
-              "explanation": "The text mentions 'altruistic behaviours in animals' generally as a subject of evolutionary theories.",
-              "location": "Paragraph 1, Line 2"
-            },
-            {
-              "num": 37,
-              "type": "TFNG",
-              "text": "Cooperative groups are more successful than selfish groups in social species.",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The text states: 'groups containing cooperative individuals... may outcompete groups of selfish individuals'.",
-              "location": "Paragraph 2, Line 2"
-            },
-            {
-              "num": 38,
-              "type": "TFNG",
-              "text": "Sterile workers in ant colonies are capable of flying.",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "NOT GIVEN",
-              "explanation": "The text mentions ants and bees but does not discuss the flying capabilities of sterile workers.",
-              "location": "Paragraph 2, Line 3"
-            },
-            {
-              "num": 39,
-              "type": "TFNG",
-              "text": "Cheaters reproduce less than cooperative individuals in the long run.",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "FALSE",
-              "explanation": "The text states that according to critics, 'these cheaters should reproduce more'.",
-              "location": "Paragraph 3, Line 2"
-            },
-            {
-              "num": 40,
-              "type": "TFNG",
-              "text": " policing behaviors help social groups survive in evolutionary history.",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The text says 'groups develop mechanisms to suppress cheating, such as policing behaviors... ensuring that the unselfish gene can persist'.",
-              "location": "Paragraph 3, Line 3"
-            }
-          ]
-        }
-      ]
-    },
-    "writing": {
-      "task1": {
-        "prompt": "You should spend about 20 minutes on this task. Summarise the information by selecting and reporting the main features.",
-        "image": "<pre class=\"font-mono text-xs bg-black/40 p-4 rounded border border-white/10 text-stone-300\">IELTS 20 Test Graph Placeholder</pre>",
-        "modelAnswer": "This is a model answer placeholder for IELTS 20 Test."
-      },
-      "task2": {
-        "prompt": "You should spend about 40 minutes on this task. Write about the following topic.",
-        "modelAnswer": "This is a model answer placeholder for IELTS 20 Test."
-      }
+        ]
     }
-  },
+},
   "10": {
     "title": "Cambridge IELTS 20 — Test 2",
     "book": "IELTS 20",
     "listening": {
-      "sections": [
-        {
-          "id": 1,
-          "title": "Part 1: Language School Enquiry",
-          "audio": "audio/IELTS_20_Test_2_Part1.m4a",
-          "description": "A student calls a language school to ask about English courses.",
-          "questions": [
+        "sections": [
             {
-              "num": 1,
-              "type": "FILL",
-              "text": "Duration of the intensive course: _________ weeks",
-              "answer": "eight",
-              "explanation": "The intensive English course runs for eight weeks."
+                "id": 1,
+                "title": "Part 1: Support for Elderly Care",
+                "description": "Conversation about arranging practical support for an elderly mother.",
+                "audio": "audio/IELTS_20_Test_2_Part1.mp3",
+                "questions": [
+                    {
+                        "num": 1,
+                        "type": "FILL",
+                        "text": "This can give the carer: • a _________",
+                        "answer": "break",
+                        "explanation": "Practical support gives the carer a break.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
+                    },
+                    {
+                        "num": 2,
+                        "type": "FILL",
+                        "text": "Assessment of mother's needs: • how much _________ the caring involves",
+                        "answer": "time",
+                        "explanation": "The assessment will discuss how much time the caring takes.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 3,
+                        "type": "FILL",
+                        "text": "• helping her have a _________",
+                        "answer": "shower",
+                        "explanation": "Assisting with tasks such as having a shower is discussed.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 4,
+                        "type": "FILL",
+                        "text": "• dealing with _________",
+                        "answer": "money",
+                        "explanation": "Dealing with money is another area of support.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 5,
+                        "type": "FILL",
+                        "text": "• loss of _________",
+                        "answer": "memory",
+                        "explanation": "Memory loss makes caring especially difficult.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 6,
+                        "type": "FILL",
+                        "text": "• _________ her",
+                        "answer": "lifting",
+                        "explanation": "Lifting her is one of the physically demanding aspects.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 7,
+                        "type": "FILL",
+                        "text": "• preventing a _________",
+                        "answer": "fall",
+                        "explanation": "Support aims to prevent a fall.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 8,
+                        "type": "FILL",
+                        "text": "• transport costs, e.g. cost of a _________",
+                        "answer": "taxi",
+                        "explanation": "Support includes covering transport costs such as a taxi.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 9,
+                        "type": "FILL",
+                        "text": "• car-related costs, e.g. fuel and _________",
+                        "answer": "insurance",
+                        "explanation": "Car-related expenses like fuel and insurance are mentioned.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 10,
+                        "type": "FILL",
+                        "text": "• help to reduce _________",
+                        "answer": "stress",
+                        "explanation": "The program helps to reduce stress for the carer.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    }
+                ]
             },
             {
-              "num": 2,
-              "type": "FILL",
-              "text": "Number of hours of class per day: _________",
-              "answer": "four",
-              "explanation": "Students attend four hours of class each day."
+                "id": 2,
+                "title": "Part 2: Community Volunteers",
+                "description": "A talk about volunteer roles in community activities and festivals.",
+                "audio": "audio/IELTS_20_Test_2_Part2.mp3",
+                "questions": [
+                    {
+                        "num": 11,
+                        "type": "MCQ",
+                        "text": "What is the role of the volunteers in: Walking around the town centre",
+                        "options": [
+                            "A. providing entertainment",
+                            "B. providing publicity about a council service",
+                            "C. contacting local businesses",
+                            "D. giving advice to visitors",
+                            "E. collecting feedback on events",
+                            "F. selling tickets",
+                            "G. introducing guest speakers at an event",
+                            "H. encouraging cooperation between local organisations",
+                            "I. helping people find their seats"
+                        ],
+                        "answer": "D",
+                        "explanation": "Volunteers in the town centre give advice to visitors.",
+                        "instruction": "Questions 11-16<br/>What is the role of the volunteers in each of the following activities? Choose SIX answers from the box and write the correct letter, A-I."
+                    },
+                    {
+                        "num": 12,
+                        "type": "MCQ",
+                        "text": "What is the role of the volunteers in: Helping at concerts",
+                        "options": [
+                            "A. providing entertainment",
+                            "B. providing publicity about a council service",
+                            "C. contacting local businesses",
+                            "D. giving advice to visitors",
+                            "E. collecting feedback on events",
+                            "F. selling tickets",
+                            "G. introducing guest speakers at an event",
+                            "H. encouraging cooperation between local organisations",
+                            "I. helping people find their seats"
+                        ],
+                        "answer": "I",
+                        "explanation": "Concert volunteers help people find their seats.",
+                        "instruction": "Questions 11-16<br/>Choose SIX answers from the box."
+                    },
+                    {
+                        "num": 13,
+                        "type": "MCQ",
+                        "text": "What is the role of the volunteers in: Getting involved with community groups",
+                        "options": [
+                            "A. providing entertainment",
+                            "B. providing publicity about a council service",
+                            "C. contacting local businesses",
+                            "D. giving advice to visitors",
+                            "E. collecting feedback on events",
+                            "F. selling tickets",
+                            "G. introducing guest speakers at an event",
+                            "H. encouraging cooperation between local organisations",
+                            "I. helping people find their seats"
+                        ],
+                        "answer": "H",
+                        "explanation": "Volunteers encourage cooperation between local organisations.",
+                        "instruction": "Questions 11-16<br/>Choose SIX answers from the box."
+                    },
+                    {
+                        "num": 14,
+                        "type": "MCQ",
+                        "text": "What is the role of the volunteers in: Helping with a festival",
+                        "options": [
+                            "A. providing entertainment",
+                            "B. providing publicity about a council service",
+                            "C. contacting local businesses",
+                            "D. giving advice to visitors",
+                            "E. collecting feedback on events",
+                            "F. selling tickets",
+                            "G. introducing guest speakers at an event",
+                            "H. encouraging cooperation between local organisations",
+                            "I. helping people find their seats"
+                        ],
+                        "answer": "E",
+                        "explanation": "They collect feedback on festival events.",
+                        "instruction": "Questions 11-16<br/>Choose SIX answers from the box."
+                    },
+                    {
+                        "num": 15,
+                        "type": "MCQ",
+                        "text": "What is the role of the volunteers in: Participating at lunches for retired people",
+                        "options": [
+                            "A. providing entertainment",
+                            "B. providing publicity about a council service",
+                            "C. contacting local businesses",
+                            "D. giving advice to visitors",
+                            "E. collecting feedback on events",
+                            "F. selling tickets",
+                            "G. introducing guest speakers at an event",
+                            "H. encouraging cooperation between local organisations",
+                            "I. helping people find their seats"
+                        ],
+                        "answer": "A",
+                        "explanation": "They provide entertainment during retirement lunches.",
+                        "instruction": "Questions 11-16<br/>Choose SIX answers from the box."
+                    },
+                    {
+                        "num": 16,
+                        "type": "MCQ",
+                        "text": "What is the role of the volunteers in: Helping with the website",
+                        "options": [
+                            "A. providing entertainment",
+                            "B. providing publicity about a council service",
+                            "C. contacting local businesses",
+                            "D. giving advice to visitors",
+                            "E. collecting feedback on events",
+                            "F. selling tickets",
+                            "G. introducing guest speakers at an event",
+                            "H. encouraging cooperation between local organisations",
+                            "I. helping people find their seats"
+                        ],
+                        "answer": "B",
+                        "explanation": "They provide publicity about a council service.",
+                        "instruction": "Questions 11-16<br/>Choose SIX answers from the box."
+                    },
+                    {
+                        "num": 17,
+                        "type": "MCQ",
+                        "text": "Which event requires the largest number of volunteers?",
+                        "options": [
+                            "A. the music festival",
+                            "B. the science festival",
+                            "C. the book festival"
+                        ],
+                        "answer": "B",
+                        "explanation": "The science festival requires the largest number of volunteers.",
+                        "instruction": "Questions 17-20<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 18,
+                        "type": "MCQ",
+                        "text": "What is the most important requirement for volunteers at the festivals?",
+                        "options": [
+                            "A. interpersonal skills",
+                            "B. personal interest in the event",
+                            "C. flexibility"
+                        ],
+                        "answer": "A",
+                        "explanation": "Interpersonal skills are the most critical requirement.",
+                        "instruction": "Questions 17-20<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 19,
+                        "type": "MCQ",
+                        "text": "New volunteers will start working in the week beginning",
+                        "options": [
+                            "A. 2 September.",
+                            "B. 9 September.",
+                            "C. 23 September."
+                        ],
+                        "answer": "B",
+                        "explanation": "Work starts in the week of 9 September.",
+                        "instruction": "Questions 17-20<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 20,
+                        "type": "MCQ",
+                        "text": "What is the next annual event for volunteers?",
+                        "options": [
+                            "A. a boat trip",
+                            "B. a barbecue",
+                            "C. a party"
+                        ],
+                        "answer": "A",
+                        "explanation": "The next annual event is a boat trip.",
+                        "instruction": "Questions 17-20<br/>Choose the correct letter, A, B or C."
+                    }
+                ]
             },
             {
-              "num": 3,
-              "type": "FILL",
-              "text": "Maximum class size: _________ students",
-              "answer": "12",
-              "explanation": "Classes are capped at 12 students."
+                "id": 3,
+                "title": "Part 3: Geography Presentation",
+                "description": "Two students discuss their geography presentation and case study.",
+                "audio": "audio/IELTS_20_Test_2_Part3.mp3",
+                "questions": [
+                    {
+                        "num": 21,
+                        "type": "MCQ",
+                        "text": "What is Colin's opinion about: Population",
+                        "options": [
+                            "A. The information given about this was too vague.",
+                            "B. This may not be relevant to their course.",
+                            "C. This will involve only a small number of statistics.",
+                            "D. It will be easy to find facts about this.",
+                            "E. The facts about this may not be reliable.",
+                            "F. No useful research has been done on this.",
+                            "G. The information provided about this was interesting."
+                        ],
+                        "answer": "D",
+                        "explanation": "Colin thinks population facts are easy to find.",
+                        "instruction": "Questions 21-25<br/>What is Colin's opinion about each of the following aspects of geography? Choose FIVE answers from the box and write the correct letter, A-G."
+                    },
+                    {
+                        "num": 22,
+                        "type": "MCQ",
+                        "text": "What is Colin's opinion about: Health",
+                        "options": [
+                            "A. The information given about this was too vague.",
+                            "B. This may not be relevant to their course.",
+                            "C. This will involve only a small number of statistics.",
+                            "D. It will be easy to find facts about this.",
+                            "E. The facts about this may not be reliable.",
+                            "F. No useful research has been done on this.",
+                            "G. The information provided about this was interesting."
+                        ],
+                        "answer": "G",
+                        "explanation": "Colin found the health data interesting.",
+                        "instruction": "Questions 21-25<br/>Choose FIVE answers from the box."
+                    },
+                    {
+                        "num": 23,
+                        "type": "MCQ",
+                        "text": "What is Colin's opinion about: Economies",
+                        "options": [
+                            "A. The information given about this was too vague.",
+                            "B. This may not be relevant to their course.",
+                            "C. This will involve only a small number of statistics.",
+                            "D. It will be easy to find facts about this.",
+                            "E. The facts about this may not be reliable.",
+                            "F. No useful research has been done on this.",
+                            "G. The information provided about this was interesting."
+                        ],
+                        "answer": "B",
+                        "explanation": "Colin thinks economic data is not relevant to their course.",
+                        "instruction": "Questions 21-25<br/>Choose FIVE answers from the box."
+                    },
+                    {
+                        "num": 24,
+                        "type": "MCQ",
+                        "text": "What is Colin's opinion about: Culture",
+                        "options": [
+                            "A. The information given about this was too vague.",
+                            "B. This may not be relevant to their course.",
+                            "C. This will involve only a small number of statistics.",
+                            "D. It will be easy to find facts about this.",
+                            "E. The facts about this may not be reliable.",
+                            "F. No useful research has been done on this.",
+                            "G. The information provided about this was interesting."
+                        ],
+                        "answer": "A",
+                        "explanation": "He feels the culture details were too vague.",
+                        "instruction": "Questions 21-25<br/>Choose FIVE answers from the box."
+                    },
+                    {
+                        "num": 25,
+                        "type": "MCQ",
+                        "text": "What is Colin's opinion about: Poverty",
+                        "options": [
+                            "A. The information given about this was too vague.",
+                            "B. This may not be relevant to their course.",
+                            "C. This will involve only a small number of statistics.",
+                            "D. It will be easy to find facts about this.",
+                            "E. The facts about this may not be reliable.",
+                            "F. No useful research has been done on this.",
+                            "G. The information provided about this was interesting."
+                        ],
+                        "answer": "E",
+                        "explanation": "Colin expresses doubt on the reliability of poverty facts.",
+                        "instruction": "Questions 21-25<br/>Choose FIVE answers from the box."
+                    },
+                    {
+                        "num": 26,
+                        "type": "MCQ",
+                        "text": "Rosie says that in her own city the main problem is",
+                        "options": [
+                            "A. crime.",
+                            "B. housing.",
+                            "C. unemployment."
+                        ],
+                        "answer": "C",
+                        "explanation": "Rosie states that unemployment is the primary concern.",
+                        "instruction": "Questions 26-30<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 27,
+                        "type": "MCQ",
+                        "text": "What recent additions to the outskirts of their cities are both students happy about?",
+                        "options": [
+                            "A. conference centres",
+                            "B. sports centres",
+                            "C. retail centres"
+                        ],
+                        "answer": "A",
+                        "explanation": "Both are pleased with the new conference centres.",
+                        "instruction": "Questions 26-30<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 28,
+                        "type": "MCQ",
+                        "text": "The students agree that developing disused industrial sites may",
+                        "options": [
+                            "A. have unexpected costs.",
+                            "B. damage the urban environment.",
+                            "C. destroy valuable historical buildings."
+                        ],
+                        "answer": "A",
+                        "explanation": "They agree that unexpected costs frequently arise in development.",
+                        "instruction": "Questions 26-30<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 29,
+                        "type": "MCQ",
+                        "text": "The students will mention Masdar City as an example of an attempt to achieve",
+                        "options": [
+                            "A. daily collections for waste recycling.",
+                            "B. sustainable energy use.",
+                            "C. free transport for everyone."
+                        ],
+                        "answer": "B",
+                        "explanation": "Masdar City is discussed as a model for sustainable energy use.",
+                        "instruction": "Questions 26-30<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 30,
+                        "type": "MCQ",
+                        "text": "When discussing the ecotown of Greenhill Abbots, Colin is uncertain about",
+                        "options": [
+                            "A. what its objectives were.",
+                            "B. why there was opposition to it.",
+                            "C. how much of it has actually been built."
+                        ],
+                        "answer": "C",
+                        "explanation": "Colin expresses uncertainty over how much of it has actually been constructed.",
+                        "instruction": "Questions 26-30<br/>Choose the correct letter, A, B or C."
+                    }
+                ]
             },
             {
-              "num": 4,
-              "type": "FILL",
-              "text": "Course fee: £_________",
-              "answer": "1,800",
-              "explanation": "The eight-week intensive course costs £1,800."
-            },
-            {
-              "num": 5,
-              "type": "MCQ",
-              "text": "What is included in the course fee?",
-              "options": [
-                "A. Accommodation and meals",
-                "B. Course materials and an exam fee",
-                "C. Course materials only",
-                "D. All meals but not accommodation"
-              ],
-              "answer": "B",
-              "explanation": "The fee includes all course materials and the end-of-course examination fee."
-            },
-            {
-              "num": 6,
-              "type": "FILL",
-              "text": "Homestay accommodation costs approximately £_________ per week.",
-              "answer": "175",
-              "explanation": "Homestay with a local family costs around £175 per week."
-            },
-            {
-              "num": 7,
-              "type": "MCQ",
-              "text": "The school offers which types of accommodation?",
-              "options": [
-                "A. Homestay and student residence only",
-                "B. Homestay, student residence and private studio flats",
-                "C. Homestay only",
-                "D. Hotel and hostel partnerships"
-              ],
-              "answer": "B",
-              "explanation": "Three options are available: homestay, a student residence, or private studio flats."
-            },
-            {
-              "num": 8,
-              "type": "FILL",
-              "text": "The school is located in the centre of _________.",
-              "answer": "Bristol",
-              "explanation": "The language school is centrally located in Bristol."
-            },
-            {
-              "num": 9,
-              "type": "MCQ",
-              "text": "What level test do new students take before starting?",
-              "options": [
-                "A. IELTS practice test",
-                "B. Online placement test",
-                "C. In-person written exam",
-                "D. Interview with a teacher"
-              ],
-              "answer": "B",
-              "explanation": "New students complete an online placement test to determine their level."
-            },
-            {
-              "num": 10,
-              "type": "FILL",
-              "text": "Application deadline for the next intake: _________ April",
-              "answer": "30th",
-              "explanation": "Applications must be received by the 30th of April for the next course."
+                "id": 4,
+                "title": "Part 4: Developing Food Trends",
+                "description": "A lecture on food trends and their dissemination on social media.",
+                "audio": "audio/IELTS_20_Test_2_Part4.mp3",
+                "questions": [
+                    {
+                        "num": 31,
+                        "type": "FILL",
+                        "text": "The growth in interest in food fashions started with _________ of food being shared on social media.",
+                        "answer": "photos",
+                        "explanation": "Food trends grew from photos/pictures shared online.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+                    },
+                    {
+                        "num": 32,
+                        "type": "FILL",
+                        "text": "Sales of _________ food brands have grown rapidly this way.",
+                        "answer": "vegan",
+                        "explanation": "Vegan food brands saw rapid growth.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 33,
+                        "type": "FILL",
+                        "text": "Famous _________ are influential.",
+                        "answer": "chefs",
+                        "explanation": "Famous chefs are key influencers of food trends.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 34,
+                        "type": "FILL",
+                        "text": "The avocado: _________ were invited to visit growers in South Africa.",
+                        "answer": "journalists",
+                        "explanation": "Journalists were invited to South Africa to promote avocados.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 35,
+                        "type": "FILL",
+                        "text": "Advertising focused on its _________ benefits.",
+                        "answer": "health",
+                        "explanation": "Advertising highlighted the health benefits of avocados.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 36,
+                        "type": "FILL",
+                        "text": "Oat milk: Promotion in the USA through _________ shops reduced the need for advertising.",
+                        "answer": "coffee",
+                        "explanation": "Coffee shops in the USA promoted oat milk.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 37,
+                        "type": "FILL",
+                        "text": "It appealed to consumers who are concerned about the _________.",
+                        "answer": "environment",
+                        "explanation": "It targetted consumers focused on the environment.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 38,
+                        "type": "FILL",
+                        "text": "Norwegian skrei: - has helped strengthen the _________ of Norwegian seafood.",
+                        "answer": "reputation",
+                        "explanation": "Skrei strengthened the reputation of Norwegian seafood.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 39,
+                        "type": "FILL",
+                        "text": "Quinoa: - Its success led to an increase in its _________.",
+                        "answer": "price",
+                        "explanation": "Quinoa's success led to a surge in its price/cost.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 40,
+                        "type": "FILL",
+                        "text": "- Overuse of resources resulted in poor _________ quality.",
+                        "answer": "soil",
+                        "explanation": "Overuse of resources degraded the soil quality.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    }
+                ]
             }
-          ],
-          "transcript": ""
-        },
-        {
-          "id": 2,
-          "title": "Part 2: Farm Open Day",
-          "audio": "audio/IELTS_20_Test_2_Part2.m4a",
-          "description": "A farmer describes the programme for an open day at Oakfield Farm.",
-          "questions": [
-            {
-              "num": 11,
-              "type": "FILL",
-              "text": "Date of the open day: _________ June",
-              "answer": "15th",
-              "explanation": "The farm open day takes place on the 15th of June."
-            },
-            {
-              "num": 12,
-              "type": "FILL",
-              "text": "Start time of the open day: _________am",
-              "answer": "10",
-              "explanation": "The event begins at 10am."
-            },
-            {
-              "num": 13,
-              "type": "FILL",
-              "text": "Number of different farm animals visitors can see: over _________",
-              "answer": "20",
-              "explanation": "The farm has over 20 species of farm animals on display."
-            },
-            {
-              "num": 14,
-              "type": "MCQ",
-              "text": "What activity is available for children?",
-              "options": [
-                "A. Tractor rides around the farm",
-                "B. Feeding the lambs",
-                "C. Milking the cows",
-                "D. Both A and B"
-              ],
-              "answer": "D",
-              "explanation": "Children can enjoy both tractor rides and feeding the lambs."
-            },
-            {
-              "num": 15,
-              "type": "FILL",
-              "text": "Tractor ride duration: approximately _________ minutes",
-              "answer": "25",
-              "explanation": "Each tractor ride takes approximately 25 minutes."
-            },
-            {
-              "num": 16,
-              "type": "MCQ",
-              "text": "The farm shop sells:",
-              "options": [
-                "A. Only farm-produced goods",
-                "B. Goods from the farm and other local producers",
-                "C. Imported organic produce",
-                "D. Exclusively seasonal vegetables"
-              ],
-              "answer": "B",
-              "explanation": "The farm shop stocks both farm-made products and items from other local suppliers."
-            },
-            {
-              "num": 17,
-              "type": "FILL",
-              "text": "Cost of a cream tea in the farm café: £_________",
-              "answer": "7.50",
-              "explanation": "A traditional cream tea in the café costs £7.50."
-            },
-            {
-              "num": 18,
-              "type": "MCQ",
-              "text": "Dogs are:",
-              "options": [
-                "A. Not permitted on the farm",
-                "B. Welcome if kept on a lead",
-                "C. Allowed only in the car park",
-                "D. Permitted in the café"
-              ],
-              "answer": "B",
-              "explanation": "Well-behaved dogs are welcome on leads, but not inside buildings."
-            },
-            {
-              "num": 19,
-              "type": "FILL",
-              "text": "Nearest village to the farm: _________",
-              "answer": "Thornley",
-              "explanation": "The farm is located near the village of Thornley."
-            },
-            {
-              "num": 20,
-              "type": "MCQ",
-              "text": "Admission for adults is:",
-              "options": [
-                "A. £5",
-                "B. £8",
-                "C. Free",
-                "D. £10"
-              ],
-              "answer": "C",
-              "explanation": "Entry to the farm open day is free for all visitors."
-            }
-          ],
-          "transcript": ""
-        },
-        {
-          "id": 3,
-          "title": "Part 3: Study Group Discussion on Entrepreneurship",
-          "audio": "audio/IELTS_20_Test_2_Part3.m4a",
-          "description": "Business students discuss their assignment on entrepreneurship and innovation.",
-          "questions": [
-            {
-              "num": 21,
-              "type": "MCQ",
-              "text": "What quality do the students agree is most important in entrepreneurs?",
-              "options": [
-                "A. Technical expertise",
-                "B. Willingness to take calculated risks",
-                "C. Access to start-up capital",
-                "D. A large professional network"
-              ],
-              "answer": "B",
-              "explanation": "The students agree that calculated risk-taking is the defining quality of successful entrepreneurs."
-            },
-            {
-              "num": 22,
-              "type": "FILL",
-              "text": "The student argues that failure should be seen as a _________ experience.",
-              "answer": "learning",
-              "explanation": "Failure is reframed as a valuable learning experience in entrepreneurial culture."
-            },
-            {
-              "num": 23,
-              "type": "MCQ",
-              "text": "What is a key criticism of the 'lean startup' model?",
-              "options": [
-                "A. It is too slow to market",
-                "B. It underestimates the importance of detailed planning",
-                "C. It works only for technology companies",
-                "D. It requires too large an initial investment"
-              ],
-              "answer": "B",
-              "explanation": "Critics argue the lean startup method's emphasis on iteration can undervalue thorough strategic planning."
-            },
-            {
-              "num": 24,
-              "type": "MCQ",
-              "text": "The students agree that social entrepreneurship differs from traditional entrepreneurship because:",
-              "options": [
-                "A. It is less profitable",
-                "B. It prioritises social or environmental impact over profit",
-                "C. It only operates in developing countries",
-                "D. It requires government funding"
-              ],
-              "answer": "B",
-              "explanation": "Social enterprises prioritise positive social or environmental outcomes alongside or above financial return."
-            },
-            {
-              "num": 25,
-              "type": "FILL",
-              "text": "One student cites _________ as an example of a successful social enterprise.",
-              "answer": "TOMS",
-              "explanation": "TOMS Shoes is cited as a widely known example of a buy-one-give-one social enterprise model."
-            },
-            {
-              "num": 26,
-              "type": "MCQ",
-              "text": "The group discusses that access to _________ is the biggest barrier to entrepreneurship.",
-              "options": [
-                "A. Mentors",
-                "B. Government grants",
-                "C. Finance and capital",
-                "D. Business education"
-              ],
-              "answer": "C",
-              "explanation": "Access to funding is consistently identified as the single greatest obstacle for new entrepreneurs."
-            },
-            {
-              "num": 27,
-              "type": "FILL",
-              "text": "The concept of _________ disruption refers to innovations that transform existing industries.",
-              "answer": "disruptive",
-              "explanation": "Disruptive innovation, as described by Clayton Christensen, transforms or replaces existing markets."
-            },
-            {
-              "num": 28,
-              "type": "MCQ",
-              "text": "The students decide their assignment will use which case study?",
-              "options": [
-                "A. Amazon",
-                "B. Uber",
-                "C. Apple",
-                "D. Airbnb"
-              ],
-              "answer": "D",
-              "explanation": "They choose Airbnb as their central case study on disruptive innovation."
-            },
-            {
-              "num": 29,
-              "type": "MCQ",
-              "text": "One student argues that government policy should:",
-              "options": [
-                "A. Regulate startups more strictly",
-                "B. Provide tax incentives for startup investment",
-                "C. Ban gig economy platforms",
-                "D. Reduce university fees for business students"
-              ],
-              "answer": "B",
-              "explanation": "The student advocates for tax incentives to encourage investment in new businesses."
-            },
-            {
-              "num": 30,
-              "type": "MCQ",
-              "text": "The students conclude their assignment will argue that entrepreneurship:",
-              "options": [
-                "A. Is only possible in certain economic climates",
-                "B. Can be taught and encouraged through education",
-                "C. Is an innate talent that cannot be learned",
-                "D. Is declining in developed economies"
-              ],
-              "answer": "B",
-              "explanation": "They conclude that entrepreneurial mindsets and skills can be cultivated through education."
-            }
-          ],
-          "transcript": ""
-        },
-        {
-          "id": 4,
-          "title": "Part 4: The Physics of Climate",
-          "audio": "audio/IELTS_20_Test_2_Part4.m4a",
-          "description": "A lecture on the physical mechanisms behind climate change.",
-          "questions": [
-            {
-              "num": 31,
-              "type": "FILL",
-              "text": "The greenhouse effect was first described scientifically by _________ Fourier.",
-              "answer": "Joseph",
-              "explanation": "Joseph Fourier first described the Earth's natural greenhouse effect in the 1820s."
-            },
-            {
-              "num": 32,
-              "type": "MCQ",
-              "text": "The main naturally occurring greenhouse gases include:",
-              "options": [
-                "A. Oxygen and nitrogen",
-                "B. Water vapour, carbon dioxide and methane",
-                "C. Ozone and helium",
-                "D. Argon and neon"
-              ],
-              "answer": "B",
-              "explanation": "The primary natural greenhouse gases are water vapour, CO2, and methane."
-            },
-            {
-              "num": 33,
-              "type": "FILL",
-              "text": "The current concentration of CO2 in the atmosphere is approximately _________ parts per million.",
-              "answer": "420",
-              "explanation": "Atmospheric CO2 has exceeded 420 ppm — the highest level in human history."
-            },
-            {
-              "num": 34,
-              "type": "MCQ",
-              "text": "The albedo effect refers to:",
-              "options": [
-                "A. The heat stored in the oceans",
-                "B. The reflectivity of surfaces like ice and snow",
-                "C. The absorption of heat by greenhouse gases",
-                "D. The warming effect of urban areas"
-              ],
-              "answer": "B",
-              "explanation": "Albedo is the proportion of solar radiation reflected by a surface — ice and snow have high albedo."
-            },
-            {
-              "num": 35,
-              "type": "MCQ",
-              "text": "Melting Arctic ice causes warming to accelerate because:",
-              "options": [
-                "A. It releases methane from permafrost",
-                "B. It reduces the Earth's albedo, causing more heat absorption",
-                "C. It increases ocean salinity",
-                "D. It disrupts ocean currents immediately"
-              ],
-              "answer": "B",
-              "explanation": "Less ice means less reflected sunlight (lower albedo), causing more heat to be absorbed by the ocean."
-            },
-            {
-              "num": 36,
-              "type": "FILL",
-              "text": "The IPCC was established in _________.",
-              "answer": "1988",
-              "explanation": "The Intergovernmental Panel on Climate Change (IPCC) was founded in 1988."
-            },
-            {
-              "num": 37,
-              "type": "MCQ",
-              "text": "Positive feedback loops in climate science:",
-              "options": [
-                "A. Help stabilise the climate",
-                "B. Amplify the initial warming effect",
-                "C. Are only relevant to ocean temperatures",
-                "D. Occur naturally and are not caused by humans"
-              ],
-              "answer": "B",
-              "explanation": "Positive feedback loops amplify changes — for example, melting ice → lower albedo → more warming → more melting."
-            },
-            {
-              "num": 38,
-              "type": "FILL",
-              "text": "The Paris Agreement aims to limit warming to well below _________ degrees Celsius above pre-industrial levels.",
-              "answer": "2",
-              "explanation": "The Paris Agreement's central goal is limiting global warming to well below 2°C, ideally 1.5°C."
-            },
-            {
-              "num": 39,
-              "type": "MCQ",
-              "text": "Carbon capture and storage (CCS) technology works by:",
-              "options": [
-                "A. Converting CO2 into oxygen using algae",
-                "B. Capturing CO2 at emission sources and storing it underground",
-                "C. Planting trees to absorb atmospheric carbon",
-                "D. Reflecting sunlight back into space"
-              ],
-              "answer": "B",
-              "explanation": "CCS captures CO2 at industrial sources and stores it in deep geological formations."
-            },
-            {
-              "num": 40,
-              "type": "FILL",
-              "text": "The ocean absorbs approximately _________ % of human-produced CO2 emissions.",
-              "answer": "30",
-              "explanation": "Oceans absorb around 30% of anthropogenic CO2, making them a critical carbon sink."
-            }
-          ],
-          "transcript": ""
-        }
-      ]
-    },
-    "reading": {
-      "passages": [
-        {
-          "title": "Passage 1: History of Language Schools",
-          "text": "<p>Language schools arose in the 20th century to meet the global demand for English. Early schools focused on grammar translation, but modern institutions emphasize communicative methods. These schools provide intensive language courses, cultural immersion, and placement tests to assess students' levels.</p>",
-          "questions": [
-            {
-              "num": 1,
-              "type": "FILL",
-              "text": "_________ schools arose in the 20th century to meet the global demand for English",
-              "answer": "language",
-              "explanation": "The passage notes that the language is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 2,
-              "type": "TFNG",
-              "text": "Language schools arose in the 20th century to meet the global demand for English",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Language schools arose in the 20th century to meet the global demand for English\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 3,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding Language Schools?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Language schools arose in the 20th century to meet the global demand for English\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 4,
-              "type": "FILL",
-              "text": "_________ schools arose in the 20th century to meet the global demand for English",
-              "answer": "language",
-              "explanation": "The passage notes that the language is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 5,
-              "type": "TFNG",
-              "text": "Language schools arose in the 20th century to meet the global demand for English",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Language schools arose in the 20th century to meet the global demand for English\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 6,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding Language Schools?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Language schools arose in the 20th century to meet the global demand for English\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 7,
-              "type": "FILL",
-              "text": "_________ schools arose in the 20th century to meet the global demand for English",
-              "answer": "language",
-              "explanation": "The passage notes that the language is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 8,
-              "type": "TFNG",
-              "text": "Language schools arose in the 20th century to meet the global demand for English",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Language schools arose in the 20th century to meet the global demand for English\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 9,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding Language Schools?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Language schools arose in the 20th century to meet the global demand for English\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 10,
-              "type": "FILL",
-              "text": "_________ schools arose in the 20th century to meet the global demand for English",
-              "answer": "language",
-              "explanation": "The passage notes that the language is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 11,
-              "type": "TFNG",
-              "text": "Language schools arose in the 20th century to meet the global demand for English",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Language schools arose in the 20th century to meet the global demand for English\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 12,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding Language Schools?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Language schools arose in the 20th century to meet the global demand for English\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 13,
-              "type": "FILL",
-              "text": "_________ schools arose in the 20th century to meet the global demand for English",
-              "answer": "language",
-              "explanation": "The passage notes that the language is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            }
-          ]
-        },
-        {
-          "title": "Passage 2: Farm Open Day Ecosystems",
-          "text": "<p>Farm open days allow urban residents to visit working farms and learn about food production. Visitors can see farm animals, take tractor rides, and purchase local goods. These events promote sustainable agriculture and bridge the gap between rural producers and urban consumers.</p>",
-          "questions": [
-            {
-              "num": 14,
-              "type": "TFNG",
-              "text": "Farm open days allow urban residents to visit working farms and learn about food production",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Farm open days allow urban residents to visit working farms and learn about food production\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 15,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Farm Open Days?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Farm open days allow urban residents to visit working farms and learn about food production\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 16,
-              "type": "FILL",
-              "text": "Farm open days allow urban _________ to visit working farms and learn about food production",
-              "answer": "residents",
-              "explanation": "The passage notes that the residents is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 17,
-              "type": "TFNG",
-              "text": "Farm open days allow urban residents to visit working farms and learn about food production",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Farm open days allow urban residents to visit working farms and learn about food production\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 18,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Farm Open Days?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Farm open days allow urban residents to visit working farms and learn about food production\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 19,
-              "type": "FILL",
-              "text": "Farm open days allow urban _________ to visit working farms and learn about food production",
-              "answer": "residents",
-              "explanation": "The passage notes that the residents is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 20,
-              "type": "TFNG",
-              "text": "Farm open days allow urban residents to visit working farms and learn about food production",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Farm open days allow urban residents to visit working farms and learn about food production\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 21,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Farm Open Days?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Farm open days allow urban residents to visit working farms and learn about food production\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 22,
-              "type": "FILL",
-              "text": "Farm open days allow urban _________ to visit working farms and learn about food production",
-              "answer": "residents",
-              "explanation": "The passage notes that the residents is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 23,
-              "type": "TFNG",
-              "text": "Farm open days allow urban residents to visit working farms and learn about food production",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Farm open days allow urban residents to visit working farms and learn about food production\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 24,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Farm Open Days?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Farm open days allow urban residents to visit working farms and learn about food production\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 25,
-              "type": "FILL",
-              "text": "Farm open days allow urban _________ to visit working farms and learn about food production",
-              "answer": "residents",
-              "explanation": "The passage notes that the residents is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 26,
-              "type": "TFNG",
-              "text": "Farm open days allow urban residents to visit working farms and learn about food production",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Farm open days allow urban residents to visit working farms and learn about food production\".",
-              "location": "Paragraph 1, Sentence 1"
-            }
-          ]
-        },
-        {
-          "title": "Passage 3: Entrepreneurship and Innovation",
-          "text": "<p>Successful entrepreneurship requires innovation, risk-taking, and strategic planning. While some believe entrepreneurs possess innate talents, business educators argue that entrepreneurial mindsets can be taught. Developing a startup involves iterative testing, market research, and securing capital.</p>",
-          "questions": [
-            {
-              "num": 27,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Entrepreneurship?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Successful entrepreneurship requires innovation, risk-taking, and strategic planning\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 28,
-              "type": "FILL",
-              "text": "_________ entrepreneurship requires innovation, risk-taking, and strategic planning",
-              "answer": "successful",
-              "explanation": "The passage notes that the successful is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 29,
-              "type": "TFNG",
-              "text": "Successful entrepreneurship requires innovation, risk-taking, and strategic planning",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Successful entrepreneurship requires innovation, risk-taking, and strategic planning\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 30,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Entrepreneurship?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Successful entrepreneurship requires innovation, risk-taking, and strategic planning\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 31,
-              "type": "FILL",
-              "text": "_________ entrepreneurship requires innovation, risk-taking, and strategic planning",
-              "answer": "successful",
-              "explanation": "The passage notes that the successful is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 32,
-              "type": "TFNG",
-              "text": "Successful entrepreneurship requires innovation, risk-taking, and strategic planning",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Successful entrepreneurship requires innovation, risk-taking, and strategic planning\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 33,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Entrepreneurship?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Successful entrepreneurship requires innovation, risk-taking, and strategic planning\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 34,
-              "type": "FILL",
-              "text": "_________ entrepreneurship requires innovation, risk-taking, and strategic planning",
-              "answer": "successful",
-              "explanation": "The passage notes that the successful is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 35,
-              "type": "TFNG",
-              "text": "Successful entrepreneurship requires innovation, risk-taking, and strategic planning",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Successful entrepreneurship requires innovation, risk-taking, and strategic planning\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 36,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Entrepreneurship?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Successful entrepreneurship requires innovation, risk-taking, and strategic planning\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 37,
-              "type": "FILL",
-              "text": "_________ entrepreneurship requires innovation, risk-taking, and strategic planning",
-              "answer": "successful",
-              "explanation": "The passage notes that the successful is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 38,
-              "type": "TFNG",
-              "text": "Successful entrepreneurship requires innovation, risk-taking, and strategic planning",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Successful entrepreneurship requires innovation, risk-taking, and strategic planning\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 39,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Entrepreneurship?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Successful entrepreneurship requires innovation, risk-taking, and strategic planning\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 40,
-              "type": "FILL",
-              "text": "_________ entrepreneurship requires innovation, risk-taking, and strategic planning",
-              "answer": "successful",
-              "explanation": "The passage notes that the successful is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            }
-          ]
-        }
-      ]
-    },
-    "writing": {
-      "task1": {
-        "prompt": "You should spend about 20 minutes on this task. Summarise the information by selecting and reporting the main features.",
-        "image": "<pre class=\"font-mono text-xs bg-black/40 p-4 rounded border border-white/10 text-stone-300\">IELTS 20 Test Graph Placeholder</pre>",
-        "modelAnswer": "This is a model answer placeholder for IELTS 20 Test."
-      },
-      "task2": {
-        "prompt": "You should spend about 40 minutes on this task. Write about the following topic.",
-        "modelAnswer": "This is a model answer placeholder for IELTS 20 Test."
-      }
+        ]
     }
-  },
+},
   "11": {
     "title": "Cambridge IELTS 20 — Test 3",
     "book": "IELTS 20",
     "listening": {
-      "sections": [
-        {
-          "id": 1,
-          "title": "Part 1: Theatre Ticket Enquiry",
-          "audio": "audio/IELTS_20_Test_3_Part1.m4a",
-          "description": "A woman calls the theatre box office to ask about tickets.",
-          "questions": [
+        "sections": [
             {
-              "num": 1,
-              "type": "FILL",
-              "text": "Name of the show: The _________ Affair",
-              "answer": "Midnight",
-              "explanation": "The show is called 'The Midnight Affair'."
+                "id": 1,
+                "title": "Part 1: Furniture Rental",
+                "description": "Conversation about comparing furniture rental companies.",
+                "audio": "audio/IELTS_20_Test_3_Part1.mp3",
+                "questions": [
+                    {
+                        "num": 1,
+                        "type": "FILL",
+                        "text": "Peak Rentals: Prices range from $105 to $ _________ per room per month",
+                        "answer": "239",
+                        "explanation": "The maximum price is $239.",
+                        "instruction": "Questions 1-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
+                    },
+                    {
+                        "num": 2,
+                        "type": "FILL",
+                        "text": "Peak Rentals comments: The furniture is very _________",
+                        "answer": "modern",
+                        "explanation": "Peak Rentals has very modern furniture.",
+                        "instruction": "Questions 1-10<br/>Complete the table below."
+                    },
+                    {
+                        "num": 3,
+                        "type": "FILL",
+                        "text": "Peak Rentals special offer: free _________ with every living room set",
+                        "answer": "lamp",
+                        "explanation": "They offer a free lamp with living room sets.",
+                        "instruction": "Questions 1-10<br/>Complete the table below."
+                    },
+                    {
+                        "num": 4,
+                        "type": "FILL",
+                        "text": "_________ and Oliver",
+                        "answer": "Aaron",
+                        "explanation": "The company name is Aaron and Oliver.",
+                        "instruction": "Questions 1-10<br/>Complete the table below."
+                    },
+                    {
+                        "num": 5,
+                        "type": "FILL",
+                        "text": "Aaron and Oliver: 12% monthly fee for _________",
+                        "answer": "damage",
+                        "explanation": "A monthly fee for damage is charged.",
+                        "instruction": "Questions 1-10<br/>Complete the table below."
+                    },
+                    {
+                        "num": 6,
+                        "type": "FILL",
+                        "text": "Larch Furniture: Offers cheapest prices for renting furniture and _________ items",
+                        "answer": "electronic",
+                        "explanation": "Larch rents furniture and electronic items.",
+                        "instruction": "Questions 1-10<br/>Complete the table below."
+                    },
+                    {
+                        "num": 7,
+                        "type": "FILL",
+                        "text": "Larch Furniture comments: Must have own _________",
+                        "answer": "insurance",
+                        "explanation": "Customers must have their own insurance.",
+                        "instruction": "Questions 1-10<br/>Complete the table below."
+                    },
+                    {
+                        "num": 8,
+                        "type": "FILL",
+                        "text": "_________ Rentals",
+                        "answer": "space",
+                        "explanation": "The fourth company is Space Rentals.",
+                        "instruction": "Questions 1-10<br/>Complete the table below."
+                    },
+                    {
+                        "num": 9,
+                        "type": "FILL",
+                        "text": "Space Rentals: See the _________ for the most up-to-date prices",
+                        "answer": "app",
+                        "explanation": "Prices are available on their app.",
+                        "instruction": "Questions 1-10<br/>Complete the table below."
+                    },
+                    {
+                        "num": 10,
+                        "type": "FILL",
+                        "text": "Space Rentals: _________ are allowed within 7 days of delivery",
+                        "answer": "exchanges",
+                        "explanation": "Exchanges are allowed within 7 days.",
+                        "instruction": "Questions 1-10<br/>Complete the table below."
+                    }
+                ]
             },
             {
-              "num": 2,
-              "type": "FILL",
-              "text": "Duration of the show including interval: _________ hours",
-              "answer": "two and a half",
-              "explanation": "The total running time including the interval is two and a half hours."
+                "id": 2,
+                "title": "Part 2: Bidcaster Archaeological Dig",
+                "description": "A guide describes the Bidcaster Archaeological Dig project.",
+                "audio": "audio/IELTS_20_Test_3_Part2.mp3",
+                "questions": [
+                    {
+                        "num": 11,
+                        "type": "MCQ",
+                        "text": "Who was responsible for starting the community project?",
+                        "options": [
+                            "A. the castle owners",
+                            "B. a national charity",
+                            "C. the local council"
+                        ],
+                        "answer": "B",
+                        "explanation": "A national charity initiated the project.",
+                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 12,
+                        "type": "MCQ",
+                        "text": "How was the gold coin found?",
+                        "options": [
+                            "A. Heavy rain had removed some of the soil.",
+                            "B. The ground was dug up by wild rabbits.",
+                            "C. A person with a metal detector searched the area."
+                        ],
+                        "answer": "A",
+                        "explanation": "Heavy rain washed away soil, exposing the coin.",
+                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 13,
+                        "type": "MCQ",
+                        "text": "What led the archaeologists to believe there was an ancient village on this site?",
+                        "options": [
+                            "A. the lucky discovery of old records",
+                            "B. the bases of several structures visible in the grass",
+                            "C. the unusual stones found near the castle"
+                        ],
+                        "answer": "A",
+                        "explanation": "The discovery of old records pointed to the village's existence.",
+                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 14,
+                        "type": "MCQ",
+                        "text": "What are the team still hoping to find?",
+                        "options": [
+                            "A. everyday pottery",
+                            "B. animal bones",
+                            "C. pieces of jewellery"
+                        ],
+                        "answer": "C",
+                        "explanation": "The team is still hoping to find pieces of jewellery.",
+                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 15,
+                        "type": "MCQ",
+                        "text": "What was found on the other side of the river to the castle?",
+                        "options": [
+                            "A. the remains of a large palace",
+                            "B. the outline of fields",
+                            "C. a number of small huts"
+                        ],
+                        "answer": "B",
+                        "explanation": "The outline of ancient fields was found across the river.",
+                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 16,
+                        "type": "MCQ",
+                        "text": "What do the team plan to do after work ends this summer?",
+                        "options": [
+                            "A. prepare a display for a museum",
+                            "B. take part in a television programme",
+                            "C. start to organise school visits"
+                        ],
+                        "answer": "C",
+                        "explanation": "The team plans to organise school visits.",
+                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 17,
+                        "type": "MCQ",
+                        "text": "Identify on map: bridge foundations",
+                        "options": [
+                            "A",
+                            "B",
+                            "C",
+                            "D",
+                            "E",
+                            "F",
+                            "G"
+                        ],
+                        "answer": "B",
+                        "explanation": "The bridge foundations are located at point B.",
+                        "instruction": "Questions 17-20<br/>Label the map below. Choose the correct letter, A-G."
+                    },
+                    {
+                        "num": 18,
+                        "type": "MCQ",
+                        "text": "Identify on map: rubbish pit",
+                        "options": [
+                            "A",
+                            "B",
+                            "C",
+                            "D",
+                            "E",
+                            "F",
+                            "G"
+                        ],
+                        "answer": "A",
+                        "explanation": "The rubbish pit is at point A.",
+                        "instruction": "Questions 17-20<br/>Choose the correct letter, A-G."
+                    },
+                    {
+                        "num": 19,
+                        "type": "MCQ",
+                        "text": "Identify on map: meeting hall",
+                        "options": [
+                            "A",
+                            "B",
+                            "C",
+                            "D",
+                            "E",
+                            "F",
+                            "G"
+                        ],
+                        "answer": "G",
+                        "explanation": "The meeting hall is located at point G.",
+                        "instruction": "Questions 17-20<br/>Choose the correct letter, A-G."
+                    },
+                    {
+                        "num": 20,
+                        "type": "MCQ",
+                        "text": "Identify on map: fish pond",
+                        "options": [
+                            "A",
+                            "B",
+                            "C",
+                            "D",
+                            "E",
+                            "F",
+                            "G"
+                        ],
+                        "answer": "E",
+                        "explanation": "The fish pond is at point E.",
+                        "instruction": "Questions 17-20<br/>Choose the correct letter, A-G."
+                    }
+                ]
             },
             {
-              "num": 3,
-              "type": "FILL",
-              "text": "Price of a standard adult ticket: £_________",
-              "answer": "38",
-              "explanation": "Standard adult tickets are priced at £38."
+                "id": 3,
+                "title": "Part 3: Theatre Programmes",
+                "description": "Two students discuss theatre programmes and their history.",
+                "audio": "audio/IELTS_20_Test_3_Part3.mp3",
+                "questions": [
+                    {
+                        "num": 21,
+                        "type": "MCQ",
+                        "text": "Finn was pleased to discover that their topic",
+                        "options": [
+                            "A. was not familiar to their module leader.",
+                            "B. had not been chosen by other students.",
+                            "C. did not prove to be difficult to research."
+                        ],
+                        "answer": "B",
+                        "explanation": "Finn is glad no other students are researching theatre programmes.",
+                        "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 22,
+                        "type": "MCQ",
+                        "text": "Maya says a mistaken belief about theatre programmes is that",
+                        "options": [
+                            "A. theatres pay companies to produce them.",
+                            "B. few theatre-goers buy them nowadays.",
+                            "C. they contain far more adverts than previously."
+                        ],
+                        "answer": "A",
+                        "explanation": "Maya notes that companies are paid by theatres, contrary to common belief.",
+                        "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 23,
+                        "type": "MCQ",
+                        "text": "Finn was surprised that, in early British theatre, programmes",
+                        "options": [
+                            "A. were difficult for audiences to obtain.",
+                            "B. were given out free of charge.",
+                            "C. were seen as a kind of contract."
+                        ],
+                        "answer": "C",
+                        "explanation": "Finn is surprised that early programmes were seen as contracts.",
+                        "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 24,
+                        "type": "MCQ",
+                        "text": "Maya feels their project should include an explanation of why companies of actors",
+                        "options": [
+                            "A. promoted their own plays.",
+                            "B. performed plays outdoors.",
+                            "C. had to tour with their plays."
+                        ],
+                        "answer": "A",
+                        "explanation": "Maya wants to explain why actor troupes promoted their own work.",
+                        "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 25,
+                        "type": "MCQ",
+                        "text": "Finn and Maya both think that, compared to nineteenth-century programmes, those from the eighteenth century",
+                        "options": [
+                            "A. were original.",
+                            "B. were more colourful.",
+                            "C. were more informative."
+                        ],
+                        "answer": "C",
+                        "explanation": "Both agree that 18th-century programmes had more informative texts.",
+                        "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 26,
+                        "type": "MCQ",
+                        "text": "Maya doesn't fully understand why, in the twentieth century,",
+                        "options": [
+                            "A. very few theatre programmes were printed in the USA.",
+                            "B. British theatre programmes failed to develop for so long.",
+                            "C. theatre programmes in Britain copied fashions from the USA."
+                        ],
+                        "answer": "B",
+                        "explanation": "Maya is confused as to why British programmes did not evolve for years.",
+                        "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 27,
+                        "type": "MCQ",
+                        "text": "What comment is made about the theatre programme for: The Beggar's Opera",
+                        "options": [
+                            "A. Its origin is somewhat controversial.",
+                            "B. It is historically significant for a country.",
+                            "C. It was effective at attracting audiences.",
+                            "D. It is included in a recent project.",
+                            "E. It contains insights into the show.",
+                            "F. It resembles an artwork."
+                        ],
+                        "answer": "F",
+                        "explanation": "They note that it resembles an artwork.",
+                        "instruction": "Questions 27-30<br/>What comment is made about the programme for each of the following shows? Choose FOUR answers from the box and write the correct letter, A-F."
+                    },
+                    {
+                        "num": 28,
+                        "type": "MCQ",
+                        "text": "What comment is made about the theatre programme for: Man of La Mancha",
+                        "options": [
+                            "A. Its origin is somewhat controversial.",
+                            "B. It is historically significant for a country.",
+                            "C. It was effective at attracting audiences.",
+                            "D. It is included in a recent project.",
+                            "E. It contains insights into the show.",
+                            "F. It resembles an artwork."
+                        ],
+                        "answer": "E",
+                        "explanation": "It provides deep insights into the production.",
+                        "instruction": "Questions 27-30<br/>Choose FOUR answers from the box."
+                    },
+                    {
+                        "num": 29,
+                        "type": "MCQ",
+                        "text": "What comment is made about the theatre programme for: The Tragedy of Jane Shore",
+                        "options": [
+                            "A. Its origin is somewhat controversial.",
+                            "B. It is historically significant for a country.",
+                            "C. It was effective at attracting audiences.",
+                            "D. It is included in a recent project.",
+                            "E. It contains insights into the show.",
+                            "F. It resembles an artwork."
+                        ],
+                        "answer": "B",
+                        "explanation": "It has historical significance for the country.",
+                        "instruction": "Questions 27-30<br/>Choose FOUR answers from the box."
+                    },
+                    {
+                        "num": 30,
+                        "type": "MCQ",
+                        "text": "What comment is made about the theatre programme for: The Sailors' Festival",
+                        "options": [
+                            "A. Its origin is somewhat controversial.",
+                            "B. It is historically significant for a country.",
+                            "C. It was effective at attracting audiences.",
+                            "D. It is included in a recent project.",
+                            "E. It contains insights into the show.",
+                            "F. It resembles an artwork."
+                        ],
+                        "answer": "D",
+                        "explanation": "This programme was featured in a recent project.",
+                        "instruction": "Questions 27-30<br/>Choose FOUR answers from the box."
+                    }
+                ]
             },
             {
-              "num": 4,
-              "type": "FILL",
-              "text": "Price of a concession ticket (students/over-65s): £_________",
-              "answer": "22",
-              "explanation": "Concession tickets for students and those over 65 cost £22."
-            },
-            {
-              "num": 5,
-              "type": "MCQ",
-              "text": "What discount is available for groups of 10 or more?",
-              "options": [
-                "A. 10% off",
-                "B. 15% off",
-                "C. 20% off",
-                "D. Free programme"
-              ],
-              "answer": "C",
-              "explanation": "Groups of ten or more receive a 20% discount."
-            },
-            {
-              "num": 6,
-              "type": "FILL",
-              "text": "The box office is open Monday to Saturday from 10am to _________ pm.",
-              "answer": "6",
-              "explanation": "Box office hours are 10am to 6pm, Monday to Saturday."
-            },
-            {
-              "num": 7,
-              "type": "MCQ",
-              "text": "Where are the best seats for viewing the show?",
-              "options": [
-                "A. Front stalls",
-                "B. Royal circle",
-                "C. Upper circle",
-                "D. Side balcony"
-              ],
-              "answer": "B",
-              "explanation": "The royal circle is recommended for the best unobstructed view."
-            },
-            {
-              "num": 8,
-              "type": "FILL",
-              "text": "The woman would like _________ tickets.",
-              "answer": "four",
-              "explanation": "The woman asks to purchase four tickets."
-            },
-            {
-              "num": 9,
-              "type": "MCQ",
-              "text": "What is the booking fee per ticket when buying online?",
-              "options": [
-                "A. £1",
-                "B. £1.50",
-                "C. £2",
-                "D. No booking fee"
-              ],
-              "answer": "B",
-              "explanation": "Online purchases incur a £1.50 booking fee per ticket."
-            },
-            {
-              "num": 10,
-              "type": "FILL",
-              "text": "The show ends its run on _________ August.",
-              "answer": "31st",
-              "explanation": "The final performance is on the 31st of August."
+                "id": 4,
+                "title": "Part 4: Inclusive Design",
+                "description": "A lecture about design concepts that accommodate accessibility.",
+                "audio": "audio/IELTS_20_Test_3_Part4.mp3",
+                "questions": [
+                    {
+                        "num": 31,
+                        "type": "FILL",
+                        "text": "Designing products that can be accessed by a diverse range of people without the need for any _________",
+                        "answer": "adaptation",
+                        "explanation": "Inclusive design avoids the need for further adaptation.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+                    },
+                    {
+                        "num": 32,
+                        "type": "FILL",
+                        "text": "Not the same as universal design: that is design for everyone, including catering for people with _________ problems.",
+                        "answer": "cognitive",
+                        "explanation": "Universal design also covers those with cognitive difficulties.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 33,
+                        "type": "FILL",
+                        "text": "• _________ which are adjustable, avoiding back or neck problems",
+                        "answer": "desks",
+                        "explanation": "Adjustable desks prevent physical discomfort.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 34,
+                        "type": "FILL",
+                        "text": "• _________ in public toilets which are easier to use",
+                        "answer": "taps",
+                        "explanation": "Public toilets need easy-to-use taps.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 35,
+                        "type": "FILL",
+                        "text": "- designers avoid using _________ in interfaces",
+                        "answer": "blue",
+                        "explanation": "Blue is avoided in interfaces to assist readability for the elderly.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 36,
+                        "type": "FILL",
+                        "text": "- people can make commands using a mouse, keyboard or their _________",
+                        "answer": "voice",
+                        "explanation": "Voice control is a key interface command option.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 37,
+                        "type": "FILL",
+                        "text": "- Seatbelts are especially problematic for _________ women.",
+                        "answer": "pregnant",
+                        "explanation": "Traditional seatbelts are problematic for pregnant women.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 38,
+                        "type": "FILL",
+                        "text": "- PPE jackets are often unsuitable because of the size of women's _________",
+                        "answer": "shoulders",
+                        "explanation": "PPE jackets are often ill-fitting at the shoulders.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 39,
+                        "type": "FILL",
+                        "text": "- PPE for female _________ officers dealing with emergencies is the worst.",
+                        "answer": "police",
+                        "explanation": "Female police officers face issues with standard PPE.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 40,
+                        "type": "FILL",
+                        "text": "- The _________ in offices is often too low for women.",
+                        "answer": "temperature",
+                        "explanation": "Standard office temperature settings are often too cold for female comfort.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    }
+                ]
             }
-          ],
-          "transcript": ""
-        },
-        {
-          "id": 2,
-          "title": "Part 2: History of a Market Town",
-          "audio": "audio/IELTS_20_Test_3_Part2.m4a",
-          "description": "A local historian gives a talk about the history of Castleford market town.",
-          "questions": [
-            {
-              "num": 11,
-              "type": "FILL",
-              "text": "Year Castleford received its market charter: _________",
-              "answer": "1286",
-              "explanation": "Castleford was granted its market charter in 1286."
-            },
-            {
-              "num": 12,
-              "type": "MCQ",
-              "text": "What was the town's main industry in the 18th century?",
-              "options": [
-                "A. Coal mining",
-                "B. Textile manufacturing",
-                "C. Pottery production",
-                "D. Shipbuilding"
-              ],
-              "answer": "C",
-              "explanation": "Pottery manufacturing was Castleford's dominant industry in the 18th century."
-            },
-            {
-              "num": 13,
-              "type": "FILL",
-              "text": "The town's population in 1901: approximately _________ thousand",
-              "answer": "23",
-              "explanation": "Census records show Castleford had approximately 23,000 residents in 1901."
-            },
-            {
-              "num": 14,
-              "type": "FILL",
-              "text": "Year the town's railway station opened: _________",
-              "answer": "1849",
-              "explanation": "Castleford railway station opened in 1849."
-            },
-            {
-              "num": 15,
-              "type": "MCQ",
-              "text": "The town hall was built using funds from:",
-              "options": [
-                "A. A national government grant",
-                "B. Local wealthy merchants",
-                "C. A charitable bequest from a local landowner",
-                "D. Public subscription"
-              ],
-              "answer": "D",
-              "explanation": "The town hall was funded by public subscription — contributions from local residents."
-            },
-            {
-              "num": 16,
-              "type": "FILL",
-              "text": "Name of the famous Victorian-era architect who designed the town hall: _________",
-              "answer": "Brodrick",
-              "explanation": "Cuthbert Brodrick, the celebrated Victorian architect, designed the town hall."
-            },
-            {
-              "num": 17,
-              "type": "MCQ",
-              "text": "The old corn exchange is now used as:",
-              "options": [
-                "A. A shopping centre",
-                "B. A library",
-                "C. A concert venue",
-                "D. Office space"
-              ],
-              "answer": "C",
-              "explanation": "The historic corn exchange has been converted into a concert and events venue."
-            },
-            {
-              "num": 18,
-              "type": "FILL",
-              "text": "The annual Castleford Fair has taken place every _________ since the medieval period.",
-              "answer": "September",
-              "explanation": "The Castleford Fair has been held every September since its founding in the medieval era."
-            },
-            {
-              "num": 19,
-              "type": "MCQ",
-              "text": "The town's most famous historical figure is:",
-              "options": [
-                "A. A political reformer",
-                "B. A noted sculptor",
-                "C. A military general",
-                "D. A scientist"
-              ],
-              "answer": "B",
-              "explanation": "Henry Moore, the internationally renowned sculptor, was born in Castleford."
-            },
-            {
-              "num": 20,
-              "type": "FILL",
-              "text": "The oldest building still standing in Castleford dates from the _________ century.",
-              "answer": "14th",
-              "explanation": "A 14th-century church remains the oldest surviving structure in the town."
-            }
-          ],
-          "transcript": ""
-        },
-        {
-          "id": 3,
-          "title": "Part 3: Documentary Film Project Discussion",
-          "audio": "audio/IELTS_20_Test_3_Part3.m4a",
-          "description": "Two film students discuss making a documentary on ocean pollution.",
-          "questions": [
-            {
-              "num": 21,
-              "type": "MCQ",
-              "text": "What type of documentary style do they agree to use?",
-              "options": [
-                "A. Observational — fly-on-the-wall filming only",
-                "B. Expository — interviews and narration with visual evidence",
-                "C. Animated — using graphics to explain science",
-                "D. Participatory — the filmmakers appear on screen throughout"
-              ],
-              "answer": "B",
-              "explanation": "They agree on an expository approach combining expert interviews with visual evidence."
-            },
-            {
-              "num": 22,
-              "type": "FILL",
-              "text": "Their documentary will focus specifically on _________ pollution in the North Sea.",
-              "answer": "microplastic",
-              "explanation": "The film narrows its focus to microplastic pollution in the North Sea."
-            },
-            {
-              "num": 23,
-              "type": "MCQ",
-              "text": "One student argues the strongest section of the documentary will be:",
-              "options": [
-                "A. The historical overview of plastic manufacturing",
-                "B. Interviews with fishing communities affected by pollution",
-                "C. Scientific data on plastic degradation rates",
-                "D. Footage of plastic production factories"
-              ],
-              "answer": "B",
-              "explanation": "Personal testimonies from fishing communities will provide the most emotionally engaging content."
-            },
-            {
-              "num": 24,
-              "type": "FILL",
-              "text": "They plan to interview a marine biologist from _________ University.",
-              "answer": "Newcastle",
-              "explanation": "They will seek an expert interview with a marine biologist at Newcastle University."
-            },
-            {
-              "num": 25,
-              "type": "MCQ",
-              "text": "One student is concerned that the documentary might:",
-              "options": [
-                "A. Run over the 30-minute time limit",
-                "B. Be too emotionally manipulative without factual balance",
-                "C. Fail to secure broadcast rights",
-                "D. Be too academic for a general audience"
-              ],
-              "answer": "B",
-              "explanation": "She worries that emotive imagery could overshadow factual rigour and scientific accuracy."
-            },
-            {
-              "num": 26,
-              "type": "FILL",
-              "text": "Their target audience is _________ people aged 18–35.",
-              "answer": "environmentally conscious",
-              "explanation": "They aim their film at environmentally aware young adults."
-            },
-            {
-              "num": 27,
-              "type": "MCQ",
-              "text": "The documentary's proposed call to action is:",
-              "options": [
-                "A. Banning all single-use plastics",
-                "B. Signing an online petition to government",
-                "C. Encouraging viewers to reduce single-use plastic consumption",
-                "D. Funding marine research organisations"
-              ],
-              "answer": "C",
-              "explanation": "The film's primary call to action is encouraging individual behaviour change to reduce plastic use."
-            },
-            {
-              "num": 28,
-              "type": "FILL",
-              "text": "Total planned running time for the documentary: _________ minutes",
-              "answer": "25",
-              "explanation": "They agree the documentary should run for 25 minutes."
-            },
-            {
-              "num": 29,
-              "type": "MCQ",
-              "text": "The students plan to submit their documentary to:",
-              "options": [
-                "A. A national film festival",
-                "B. YouTube only",
-                "C. A student environmental film competition",
-                "D. A streaming platform"
-              ],
-              "answer": "C",
-              "explanation": "They intend to enter a student environmental film competition."
-            },
-            {
-              "num": 30,
-              "type": "FILL",
-              "text": "Their filming budget is limited to £_________.",
-              "answer": "500",
-              "explanation": "Their total budget for the project is £500."
-            }
-          ],
-          "transcript": ""
-        },
-        {
-          "id": 4,
-          "title": "Part 4: Sustainable Architecture",
-          "audio": "audio/IELTS_20_Test_3_Part4.m4a",
-          "description": "A lecture on the principles and practice of sustainable architecture.",
-          "questions": [
-            {
-              "num": 31,
-              "type": "FILL",
-              "text": "Buildings account for approximately _________ % of global energy consumption.",
-              "answer": "40",
-              "explanation": "The built environment accounts for around 40% of global energy use."
-            },
-            {
-              "num": 32,
-              "type": "MCQ",
-              "text": "Passive design uses:",
-              "options": [
-                "A. Solar panels and wind turbines",
-                "B. Natural light, ventilation and thermal mass to reduce energy needs",
-                "C. Automated climate control systems",
-                "D. Geothermal heating systems"
-              ],
-              "answer": "B",
-              "explanation": "Passive design exploits natural resources — daylight, airflow, thermal mass — to minimise energy consumption."
-            },
-            {
-              "num": 33,
-              "type": "FILL",
-              "text": "The term _________ building refers to structures that generate as much energy as they consume.",
-              "answer": "net-zero",
-              "explanation": "Net-zero buildings produce as much energy as they use over the course of a year."
-            },
-            {
-              "num": 34,
-              "type": "MCQ",
-              "text": "LEED certification is a:",
-              "options": [
-                "A. Government building regulation standard",
-                "B. Voluntary green building rating system",
-                "C. European Union environmental directive",
-                "D. Professional qualification for architects"
-              ],
-              "answer": "B",
-              "explanation": "LEED (Leadership in Energy and Environmental Design) is a widely used voluntary green building certification."
-            },
-            {
-              "num": 35,
-              "type": "FILL",
-              "text": "Green roofs reduce urban _________ by providing insulation and absorbing rainfall.",
-              "answer": "heat",
-              "explanation": "Green roofs lower urban heat island effects and manage stormwater runoff."
-            },
-            {
-              "num": 36,
-              "type": "MCQ",
-              "text": "The Passivhaus standard requires:",
-              "options": [
-                "A. All energy to come from renewable sources",
-                "B. Buildings to meet strict energy efficiency criteria limiting heat demand to 15 kWh per square metre per year",
-                "C. Buildings to achieve carbon neutrality within 10 years",
-                "D. All materials to be locally sourced"
-              ],
-              "answer": "B",
-              "explanation": "Passivhaus limits space heating demand to no more than 15 kWh/m²/year through superior insulation and airtightness."
-            },
-            {
-              "num": 37,
-              "type": "FILL",
-              "text": "Cross-laminated timber (CLT) is considered sustainable because it _________ carbon during manufacture.",
-              "answer": "stores",
-              "explanation": "CLT stores carbon sequestered by trees, making it a carbon-storing building material."
-            },
-            {
-              "num": 38,
-              "type": "MCQ",
-              "text": "The Singapore Jewel Changi Airport is notable for:",
-              "options": [
-                "A. Being the world's first net-zero airport building",
-                "B. Integrating a large indoor waterfall and forest into its design",
-                "C. Being built entirely from recycled materials",
-                "D. Generating all its energy from solar panels on its roof"
-              ],
-              "answer": "B",
-              "explanation": "Jewel Changi integrates a 40-metre indoor waterfall and terraced forest as its central design feature."
-            },
-            {
-              "num": 39,
-              "type": "MCQ",
-              "text": "The main challenge facing sustainable architecture today is:",
-              "options": [
-                "A. Lack of suitable building materials",
-                "B. Upfront cost premium compared to conventional construction",
-                "C. Opposition from architects",
-                "D. Insufficient government regulation"
-              ],
-              "answer": "B",
-              "explanation": "Higher upfront costs remain the primary barrier to wider adoption of sustainable building practices."
-            },
-            {
-              "num": 40,
-              "type": "FILL",
-              "text": "Biomimicry in architecture means designing buildings inspired by _________.",
-              "answer": "nature",
-              "explanation": "Biomimicry applies principles and processes found in nature to architectural and engineering design."
-            }
-          ],
-          "transcript": ""
-        }
-      ]
-    },
-    "reading": {
-      "passages": [
-        {
-          "title": "Passage 1: History of Theatre and Ticket Sales",
-          "text": "<p>Historic theatres relied on subscription sales and box office bookings. The transition to digital ticketing has revolutionized how audiences buy seats, enabling dynamic pricing and mobile tickets. However, high booking fees and ticket scalping remain persistent concerns for theatregoers.</p>",
-          "questions": [
-            {
-              "num": 1,
-              "type": "FILL",
-              "text": "_________ theatres relied on subscription sales and box office bookings",
-              "answer": "historic",
-              "explanation": "The passage notes that the historic is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 2,
-              "type": "TFNG",
-              "text": "Historic theatres relied on subscription sales and box office bookings",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Historic theatres relied on subscription sales and box office bookings\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 3,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding Theatre Ticket History?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Historic theatres relied on subscription sales and box office bookings\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 4,
-              "type": "FILL",
-              "text": "_________ theatres relied on subscription sales and box office bookings",
-              "answer": "historic",
-              "explanation": "The passage notes that the historic is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 5,
-              "type": "TFNG",
-              "text": "Historic theatres relied on subscription sales and box office bookings",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Historic theatres relied on subscription sales and box office bookings\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 6,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding Theatre Ticket History?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Historic theatres relied on subscription sales and box office bookings\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 7,
-              "type": "FILL",
-              "text": "_________ theatres relied on subscription sales and box office bookings",
-              "answer": "historic",
-              "explanation": "The passage notes that the historic is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 8,
-              "type": "TFNG",
-              "text": "Historic theatres relied on subscription sales and box office bookings",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Historic theatres relied on subscription sales and box office bookings\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 9,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding Theatre Ticket History?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Historic theatres relied on subscription sales and box office bookings\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 10,
-              "type": "FILL",
-              "text": "_________ theatres relied on subscription sales and box office bookings",
-              "answer": "historic",
-              "explanation": "The passage notes that the historic is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 11,
-              "type": "TFNG",
-              "text": "Historic theatres relied on subscription sales and box office bookings",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Historic theatres relied on subscription sales and box office bookings\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 12,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding Theatre Ticket History?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Historic theatres relied on subscription sales and box office bookings\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 13,
-              "type": "FILL",
-              "text": "_________ theatres relied on subscription sales and box office bookings",
-              "answer": "historic",
-              "explanation": "The passage notes that the historic is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            }
-          ]
-        },
-        {
-          "title": "Passage 2: Sustainable Architecture",
-          "text": "<p>Sustainable architecture aims to minimize the environmental impact of buildings. Key principles include passive design, which utilizes natural light and ventilation, and net-zero goals, where buildings generate all the energy they consume. Using renewable materials like cross-laminated timber is crucial.</p>",
-          "questions": [
-            {
-              "num": 14,
-              "type": "TFNG",
-              "text": "Sustainable architecture aims to minimize the environmental impact of buildings",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Sustainable architecture aims to minimize the environmental impact of buildings\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 15,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Sustainable Architecture?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Sustainable architecture aims to minimize the environmental impact of buildings\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 16,
-              "type": "FILL",
-              "text": "_________ architecture aims to minimize the environmental impact of buildings",
-              "answer": "sustainable",
-              "explanation": "The passage notes that the sustainable is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 17,
-              "type": "TFNG",
-              "text": "Sustainable architecture aims to minimize the environmental impact of buildings",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Sustainable architecture aims to minimize the environmental impact of buildings\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 18,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Sustainable Architecture?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Sustainable architecture aims to minimize the environmental impact of buildings\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 19,
-              "type": "FILL",
-              "text": "_________ architecture aims to minimize the environmental impact of buildings",
-              "answer": "sustainable",
-              "explanation": "The passage notes that the sustainable is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 20,
-              "type": "TFNG",
-              "text": "Sustainable architecture aims to minimize the environmental impact of buildings",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Sustainable architecture aims to minimize the environmental impact of buildings\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 21,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Sustainable Architecture?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Sustainable architecture aims to minimize the environmental impact of buildings\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 22,
-              "type": "FILL",
-              "text": "_________ architecture aims to minimize the environmental impact of buildings",
-              "answer": "sustainable",
-              "explanation": "The passage notes that the sustainable is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 23,
-              "type": "TFNG",
-              "text": "Sustainable architecture aims to minimize the environmental impact of buildings",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Sustainable architecture aims to minimize the environmental impact of buildings\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 24,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Sustainable Architecture?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Sustainable architecture aims to minimize the environmental impact of buildings\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 25,
-              "type": "FILL",
-              "text": "_________ architecture aims to minimize the environmental impact of buildings",
-              "answer": "sustainable",
-              "explanation": "The passage notes that the sustainable is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 26,
-              "type": "TFNG",
-              "text": "Sustainable architecture aims to minimize the environmental impact of buildings",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Sustainable architecture aims to minimize the environmental impact of buildings\".",
-              "location": "Paragraph 1, Sentence 1"
-            }
-          ]
-        },
-        {
-          "title": "Passage 3: Ocean Pollution and Microplastics",
-          "text": "<p>Microplastics represent a severe threat to marine life in the oceans. These tiny plastic particles, under 5mm in size, are ingested by fish and shellfish, entering the food chain. Mitigating plastic pollution requires global cooperation, single-use plastic bans, and improved recycling technologies.</p>",
-          "questions": [
-            {
-              "num": 27,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Ocean Pollution?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Microplastics represent a severe threat to marine life in the oceans\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 28,
-              "type": "FILL",
-              "text": "_________ represent a severe threat to marine life in the oceans",
-              "answer": "microplastics",
-              "explanation": "The passage notes that the microplastics is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 29,
-              "type": "TFNG",
-              "text": "Microplastics represent a severe threat to marine life in the oceans",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Microplastics represent a severe threat to marine life in the oceans\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 30,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Ocean Pollution?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Microplastics represent a severe threat to marine life in the oceans\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 31,
-              "type": "FILL",
-              "text": "_________ represent a severe threat to marine life in the oceans",
-              "answer": "microplastics",
-              "explanation": "The passage notes that the microplastics is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 32,
-              "type": "TFNG",
-              "text": "Microplastics represent a severe threat to marine life in the oceans",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Microplastics represent a severe threat to marine life in the oceans\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 33,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Ocean Pollution?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Microplastics represent a severe threat to marine life in the oceans\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 34,
-              "type": "FILL",
-              "text": "_________ represent a severe threat to marine life in the oceans",
-              "answer": "microplastics",
-              "explanation": "The passage notes that the microplastics is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 35,
-              "type": "TFNG",
-              "text": "Microplastics represent a severe threat to marine life in the oceans",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Microplastics represent a severe threat to marine life in the oceans\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 36,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Ocean Pollution?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Microplastics represent a severe threat to marine life in the oceans\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 37,
-              "type": "FILL",
-              "text": "_________ represent a severe threat to marine life in the oceans",
-              "answer": "microplastics",
-              "explanation": "The passage notes that the microplastics is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 38,
-              "type": "TFNG",
-              "text": "Microplastics represent a severe threat to marine life in the oceans",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Microplastics represent a severe threat to marine life in the oceans\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 39,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Ocean Pollution?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Microplastics represent a severe threat to marine life in the oceans\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 40,
-              "type": "FILL",
-              "text": "_________ represent a severe threat to marine life in the oceans",
-              "answer": "microplastics",
-              "explanation": "The passage notes that the microplastics is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            }
-          ]
-        }
-      ]
-    },
-    "writing": {
-      "task1": {
-        "prompt": "You should spend about 20 minutes on this task. Summarise the information by selecting and reporting the main features.",
-        "image": "<pre class=\"font-mono text-xs bg-black/40 p-4 rounded border border-white/10 text-stone-300\">IELTS 20 Test Graph Placeholder</pre>",
-        "modelAnswer": "This is a model answer placeholder for IELTS 20 Test."
-      },
-      "task2": {
-        "prompt": "You should spend about 40 minutes on this task. Write about the following topic.",
-        "modelAnswer": "This is a model answer placeholder for IELTS 20 Test."
-      }
+        ]
     }
-  },
+},
   "12": {
     "title": "Cambridge IELTS 20 — Test 4",
     "book": "IELTS 20",
     "listening": {
-      "sections": [
-        {
-          "id": 1,
-          "title": "Part 1: Gym Personal Training Enquiry",
-          "audio": "audio/IELTS_20_Test_4_Part1.m4a",
-          "description": "A man calls a gym to enquire about personal training sessions.",
-          "questions": [
+        "sections": [
             {
-              "num": 1,
-              "type": "FILL",
-              "text": "Cost per personal training session: £_________",
-              "answer": "55",
-              "explanation": "Individual personal training sessions cost £55 each."
+                "id": 1,
+                "title": "Part 1: Accommodation and Family Visit",
+                "description": "Conversation about tourist accommodation and trip planning.",
+                "audio": "audio/IELTS_20_Test_4_Part1.mp3",
+                "questions": [
+                    {
+                        "num": 1,
+                        "type": "FILL",
+                        "text": "Accommodation: _________",
+                        "answer": "Kings",
+                        "explanation": "The recommended accommodation is Kings.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
+                    },
+                    {
+                        "num": 2,
+                        "type": "FILL",
+                        "text": "George Street Hotel cost of family room per night: £ _________",
+                        "answer": "125",
+                        "explanation": "The room costs £125 per night.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 3,
+                        "type": "FILL",
+                        "text": "Recommended trips: a _________ tour of the city centre (starts in Carlton Square)",
+                        "answer": "walking",
+                        "explanation": "A walking tour of the city centre is recommended.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 4,
+                        "type": "FILL",
+                        "text": "Recommended trips: a trip by _________ to the old fort",
+                        "answer": "boat",
+                        "explanation": "The trip to the old fort is by boat.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 5,
+                        "type": "FILL",
+                        "text": "Science Museum: best day to visit: _________",
+                        "answer": "Tuesday",
+                        "explanation": "Tuesday is the best day to visit.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 6,
+                        "type": "FILL",
+                        "text": "Science Museum: see the exhibition about _________",
+                        "answer": "space",
+                        "explanation": "The space exhibition is highly recommended.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 7,
+                        "type": "FILL",
+                        "text": "Clacton Market: good for _________ food",
+                        "answer": "vegetarian",
+                        "explanation": "The market has good vegetarian food options.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 8,
+                        "type": "FILL",
+                        "text": "Clacton Market: need to have lunch before _________ p.m.",
+                        "answer": "2.30",
+                        "explanation": "They must have lunch before 2.30 p.m.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 9,
+                        "type": "FILL",
+                        "text": "Theatre tickets: save up to _________ % on ticket prices",
+                        "answer": "75",
+                        "explanation": "Discount tickets offer savings of up to 75%.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 10,
+                        "type": "FILL",
+                        "text": "Blakewell Gardens: climb Telegraph Hill to see a view of the _________",
+                        "answer": "port",
+                        "explanation": "Telegraph Hill offers views of the local port.",
+                        "instruction": "Questions 1-10<br/>Complete the notes below."
+                    }
+                ]
             },
             {
-              "num": 2,
-              "type": "FILL",
-              "text": "Discounted cost if buying a block of 10 sessions: £_________ per session",
-              "answer": "45",
-              "explanation": "Buying a block of 10 sessions reduces the cost to £45 per session."
+                "id": 2,
+                "title": "Part 2: Football Stadium Tour",
+                "description": "A talk about stadium visits and the history of football.",
+                "audio": "audio/IELTS_20_Test_4_Part2.mp3",
+                "questions": [
+                    {
+                        "num": 11,
+                        "type": "MCQ",
+                        "text": "Which TWO things does the speaker say about visiting the football stadium with children? (Select 1 of 2)",
+                        "options": [
+                            "A. Children can get their photo taken with a football player.",
+                            "B. There is a competition for children today.",
+                            "C. Parents must stay with their children at all times.",
+                            "D. Children will need sunhats and drinks.",
+                            "E. The café has a special offer on meals for children."
+                        ],
+                        "answer": "B",
+                        "explanation": "The speaker mentions a competition for kids and parent supervision rules.",
+                        "instruction": "Questions 11-12<br/>Choose TWO letters, A-E."
+                    },
+                    {
+                        "num": 12,
+                        "type": "MCQ",
+                        "text": "Which TWO things does the speaker say about visiting the football stadium with children? (Select 2 of 2)",
+                        "options": [
+                            "A. Children can get their photo taken with a football player.",
+                            "B. There is a competition for children today.",
+                            "C. Parents must stay with their children at all times.",
+                            "D. Children will need sunhats and drinks.",
+                            "E. The café has a special offer on meals for children."
+                        ],
+                        "answer": "C",
+                        "explanation": "Parents must stay with children at all times.",
+                        "instruction": "Questions 11-12<br/>Choose TWO letters, A-E."
+                    },
+                    {
+                        "num": 13,
+                        "type": "MCQ",
+                        "text": "Which TWO features of the stadium tour are new this year? (Select 1 of 2)",
+                        "options": [
+                            "A. VIP tour",
+                            "B. 360 cinema experience",
+                            "C. audio guide",
+                            "D. dressing room tour",
+                            "E. tours in other languages"
+                        ],
+                        "answer": "A",
+                        "explanation": "The VIP tour and audio guides are new additions.",
+                        "instruction": "Questions 13-14<br/>Choose TWO letters, A-E."
+                    },
+                    {
+                        "num": 14,
+                        "type": "MCQ",
+                        "text": "Which TWO features of the stadium tour are new this year? (Select 2 of 2)",
+                        "options": [
+                            "A. VIP tour",
+                            "B. 360 cinema experience",
+                            "C. audio guide",
+                            "D. dressing room tour",
+                            "E. tours in other languages"
+                        ],
+                        "answer": "C",
+                        "explanation": "A new audio guide is introduced.",
+                        "instruction": "Questions 13-14<br/>Choose TWO letters, A-E."
+                    },
+                    {
+                        "num": 15,
+                        "type": "MCQ",
+                        "text": "What football history event took place in: 1870",
+                        "options": [
+                            "A. the introduction of pay for the players",
+                            "B. a change to the design of the goal",
+                            "C. the first use of lights for matches",
+                            "D. the introduction of goalkeepers",
+                            "E. the first international match",
+                            "F. two changes to the rules of the game",
+                            "G. the introduction of a fee for spectators",
+                            "H. the length of a game"
+                        ],
+                        "answer": "D",
+                        "explanation": "Goalkeepers were introduced in 1870.",
+                        "instruction": "Questions 15-20<br/>Which event in the history of football in the UK took place in each of the following years? Choose SIX answers from the box and write the correct letter, A-H."
+                    },
+                    {
+                        "num": 16,
+                        "type": "MCQ",
+                        "text": "What football history event took place in: 1874",
+                        "options": [
+                            "A. the introduction of pay for the players",
+                            "B. a change to the design of the goal",
+                            "C. the first use of lights for matches",
+                            "D. the introduction of goalkeepers",
+                            "E. the first international match",
+                            "F. two changes to the rules of the game",
+                            "G. the introduction of a fee for spectators",
+                            "H. the length of a game"
+                        ],
+                        "answer": "F",
+                        "explanation": "Two rule changes occurred in 1874.",
+                        "instruction": "Questions 15-20<br/>Choose SIX answers from the box."
+                    },
+                    {
+                        "num": 17,
+                        "type": "MCQ",
+                        "text": "What football history event took place in: 1875",
+                        "options": [
+                            "A. the introduction of pay for the players",
+                            "B. a change to the design of the goal",
+                            "C. the first use of lights for matches",
+                            "D. the introduction of goalkeepers",
+                            "E. the first international match",
+                            "F. two changes to the rules of the game",
+                            "G. the introduction of a fee for spectators",
+                            "H. the length of a game"
+                        ],
+                        "answer": "B",
+                        "explanation": "The design of the goal was modified in 1875.",
+                        "instruction": "Questions 15-20<br/>Choose SIX answers from the box."
+                    },
+                    {
+                        "num": 18,
+                        "type": "MCQ",
+                        "text": "What football history event took place in: 1877",
+                        "options": [
+                            "A. the introduction of pay for the players",
+                            "B. a change to the design of the goal",
+                            "C. the first use of lights for matches",
+                            "D. the introduction of goalkeepers",
+                            "E. the first international match",
+                            "F. two changes to the rules of the game",
+                            "G. the introduction of a fee for spectators",
+                            "H. the length of a game"
+                        ],
+                        "answer": "H",
+                        "explanation": "The match length was formalized in 1877.",
+                        "instruction": "Questions 15-20<br/>Choose SIX answers from the box."
+                    },
+                    {
+                        "num": 19,
+                        "type": "MCQ",
+                        "text": "What football history event took place in: 1878",
+                        "options": [
+                            "A. the introduction of pay for the players",
+                            "B. a change to the design of the goal",
+                            "C. the first use of lights for matches",
+                            "D. the introduction of goalkeepers",
+                            "E. the first international match",
+                            "F. two changes to the rules of the game",
+                            "G. the introduction of a fee for spectators",
+                            "H. the length of a game"
+                        ],
+                        "answer": "C",
+                        "explanation": "Floodlights were first used in 1878.",
+                        "instruction": "Questions 15-20<br/>Choose SIX answers from the box."
+                    },
+                    {
+                        "num": 20,
+                        "type": "MCQ",
+                        "text": "What football history event took place in: 1880",
+                        "options": [
+                            "A. the introduction of pay for the players",
+                            "B. a change to the design of the goal",
+                            "C. the first use of lights for matches",
+                            "D. the introduction of goalkeepers",
+                            "E. the first international match",
+                            "F. two changes to the rules of the game",
+                            "G. the introduction of a fee for spectators",
+                            "H. the length of a game"
+                        ],
+                        "answer": "G",
+                        "explanation": "Spectator fees were introduced in 1880.",
+                        "instruction": "Questions 15-20<br/>Choose SIX answers from the box."
+                    }
+                ]
             },
             {
-              "num": 3,
-              "type": "FILL",
-              "text": "Duration of each personal training session: _________ minutes",
-              "answer": "60",
-              "explanation": "Each PT session is one hour (60 minutes)."
+                "id": 3,
+                "title": "Part 3: Dyspraxia and Handwriting",
+                "description": "Two students discuss research on the benefits of handwriting.",
+                "audio": "audio/IELTS_20_Test_4_Part3.mp3",
+                "questions": [
+                    {
+                        "num": 21,
+                        "type": "MCQ",
+                        "text": "Which TWO benefits for children of learning to write did both students find surprising? (Select 1 of 2)",
+                        "options": [
+                            "A. improved fine motor skills",
+                            "B. improved memory",
+                            "C. improved concentration",
+                            "D. improved imagination",
+                            "E. improved spatial awareness"
+                        ],
+                        "answer": "C",
+                        "explanation": "Improved concentration and spatial awareness surprised them.",
+                        "instruction": "Questions 21-22<br/>Choose TWO letters, A-E."
+                    },
+                    {
+                        "num": 22,
+                        "type": "MCQ",
+                        "text": "Which TWO benefits for children of learning to write did both students find surprising? (Select 2 of 2)",
+                        "options": [
+                            "A. improved fine motor skills",
+                            "B. improved memory",
+                            "C. improved concentration",
+                            "D. improved imagination",
+                            "E. improved spatial awareness"
+                        ],
+                        "answer": "E",
+                        "explanation": "Spatial awareness surprised them.",
+                        "instruction": "Questions 21-22<br/>Choose TWO letters, A-E."
+                    },
+                    {
+                        "num": 23,
+                        "type": "MCQ",
+                        "text": "For children with dyspraxia, which TWO problems with handwriting do the students think are easiest to solve? (Select 1 of 2)",
+                        "options": [
+                            "A. not spacing letters correctly",
+                            "B. not writing in a straight line",
+                            "C. applying too much pressure when writing",
+                            "D. confusing letter shapes",
+                            "E. writing very slowly"
+                        ],
+                        "answer": "A",
+                        "explanation": "Spacing and pressure problems are the easiest to solve.",
+                        "instruction": "Questions 23-24<br/>Choose TWO letters, A-E."
+                    },
+                    {
+                        "num": 24,
+                        "type": "MCQ",
+                        "text": "For children with dyspraxia, which TWO problems with handwriting do the students think are easiest to solve? (Select 2 of 2)",
+                        "options": [
+                            "A. not spacing letters correctly",
+                            "B. not writing in a straight line",
+                            "C. applying too much pressure when writing",
+                            "D. confusing letter shapes",
+                            "E. writing very slowly"
+                        ],
+                        "answer": "C",
+                        "explanation": "Applying too much pressure is solvable.",
+                        "instruction": "Questions 23-24<br/>Choose TWO letters, A-E."
+                    },
+                    {
+                        "num": 25,
+                        "type": "MCQ",
+                        "text": "What does the woman say about using laptops to teach writing to children with dyslexia?",
+                        "options": [
+                            "A. Children often lack motivation to learn that way.",
+                            "B. Children become fluent relatively quickly.",
+                            "C. Children react more positively if they make a mistake."
+                        ],
+                        "answer": "C",
+                        "explanation": "Children with dyslexia react more positively to errors on laptops.",
+                        "instruction": "Questions 25-30<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 26,
+                        "type": "MCQ",
+                        "text": "When discussing whether to teach cursive or print writing, the woman thinks that",
+                        "options": [
+                            "A. cursive writing disadvantages a certain group of children.",
+                            "B. print writing is associated with lower performance.",
+                            "C. most teachers in the UK prefer a traditional approach to handwriting."
+                        ],
+                        "answer": "A",
+                        "explanation": "Cursive writing disadvantages certain children.",
+                        "instruction": "Questions 25-30<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 27,
+                        "type": "MCQ",
+                        "text": "According to the students, what impact does poor handwriting have on exam performance?",
+                        "options": [
+                            "A. There is evidence to suggest grades are affected by poor handwriting.",
+                            "B. Neat handwriting is less important now than it used to be.",
+                            "C. Candidates write more slowly and produce shorter answers."
+                        ],
+                        "answer": "A",
+                        "explanation": "Poor handwriting leads to lower exam grades.",
+                        "instruction": "Questions 25-30<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 28,
+                        "type": "MCQ",
+                        "text": "What prediction does the man make about the future of handwriting?",
+                        "options": [
+                            "A. Touch typing will be taught before writing by hand.",
+                            "B. Children will continue to learn to write by hand.",
+                            "C. People will dislike handwriting on digital devices."
+                        ],
+                        "answer": "B",
+                        "explanation": "He predicts handwriting will continue to be taught.",
+                        "instruction": "Questions 25-30<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 29,
+                        "type": "MCQ",
+                        "text": "The woman is concerned that relying on digital devices has made it difficult for her to",
+                        "options": [
+                            "A. take detailed notes.",
+                            "B. spell and punctuate.",
+                            "C. read old documents."
+                        ],
+                        "answer": "B",
+                        "explanation": "She notes her spelling and punctuation have suffered from digital device reliance.",
+                        "instruction": "Questions 25-30<br/>Choose the correct letter, A, B or C."
+                    },
+                    {
+                        "num": 30,
+                        "type": "MCQ",
+                        "text": "How do the students feel about their own handwriting?",
+                        "options": [
+                            "A. concerned they are unable to write quickly",
+                            "B. embarrassed by comments made about it",
+                            "C. regretful that they have lost the habit"
+                        ],
+                        "answer": "C",
+                        "explanation": "Both regret losing the habit of writing by hand.",
+                        "instruction": "Questions 25-30<br/>Choose the correct letter, A, B or C."
+                    }
+                ]
             },
             {
-              "num": 4,
-              "type": "MCQ",
-              "text": "Initial consultation includes:",
-              "options": [
-                "A. A fitness test and discussion of goals",
-                "B. A trial training session",
-                "C. A diet plan only",
-                "D. A medical assessment"
-              ],
-              "answer": "A",
-              "explanation": "The initial consultation involves a fitness assessment and goal-setting discussion."
-            },
-            {
-              "num": 5,
-              "type": "FILL",
-              "text": "Cost of the initial consultation: _________",
-              "answer": "free",
-              "explanation": "The initial consultation is complimentary — there is no charge."
-            },
-            {
-              "num": 6,
-              "type": "MCQ",
-              "text": "The man's main fitness goal is:",
-              "options": [
-                "A. Weight loss",
-                "B. Marathon training",
-                "C. Building muscle mass",
-                "D. Injury rehabilitation"
-              ],
-              "answer": "C",
-              "explanation": "The man states his primary goal is to build muscle mass."
-            },
-            {
-              "num": 7,
-              "type": "FILL",
-              "text": "Name of the personal trainer recommended to him: _________",
-              "answer": "Jordan",
-              "explanation": "The receptionist suggests he work with trainer Jordan."
-            },
-            {
-              "num": 8,
-              "type": "FILL",
-              "text": "Jordan is available on Tuesday and _________ mornings.",
-              "answer": "Thursday",
-              "explanation": "Jordan's available slots are Tuesday and Thursday mornings."
-            },
-            {
-              "num": 9,
-              "type": "MCQ",
-              "text": "What will the man receive between sessions?",
-              "options": [
-                "A. Daily text reminders",
-                "B. A written workout and nutrition plan",
-                "C. Online video tutorials",
-                "D. Weekly progress reports by email"
-              ],
-              "answer": "B",
-              "explanation": "Clients receive a personalised written training and nutrition plan to follow between sessions."
-            },
-            {
-              "num": 10,
-              "type": "FILL",
-              "text": "The gym's cancellation policy requires notice at least _________ hours before a session.",
-              "answer": "24",
-              "explanation": "Sessions must be cancelled with at least 24 hours' notice to avoid being charged."
+                "id": 4,
+                "title": "Part 4: Birds of Prey and Communities",
+                "description": "Research on the importance of birds of prey around the Chembe Bird Sanctuary.",
+                "audio": "audio/IELTS_20_Test_4_Part4.mp3",
+                "questions": [
+                    {
+                        "num": 31,
+                        "type": "FILL",
+                        "text": "They destroy _________ and other rodents.",
+                        "answer": "rats",
+                        "explanation": "Birds of prey destroy rats.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+                    },
+                    {
+                        "num": 32,
+                        "type": "FILL",
+                        "text": "They help to prevent farmers from being bitten by _________.",
+                        "answer": "snakes",
+                        "explanation": "They eat snakes, preventing bites.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 33,
+                        "type": "FILL",
+                        "text": "They now support the economy by encouraging _________ in the area.",
+                        "answer": "tourism",
+                        "explanation": "They support the economy by promoting tourism.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 34,
+                        "type": "FILL",
+                        "text": "accidentally killed by _________ when they are hunting or sleeping",
+                        "answer": "traffic",
+                        "explanation": "They are frequently run over by traffic.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 35,
+                        "type": "FILL",
+                        "text": "electrocution... especially at times when there is a lot of _________.",
+                        "answer": "rain",
+                        "explanation": "Wet weather/rain increases risk of power line electrocution.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 36,
+                        "type": "FILL",
+                        "text": "Local farmers may illegally shoot them or _________ them.",
+                        "answer": "poison",
+                        "explanation": "Poison is used illegally by local farmers.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 37,
+                        "type": "FILL",
+                        "text": "providing a _________ for chickens (expensive)",
+                        "answer": "building",
+                        "explanation": "A protective building for chickens is expensive.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 38,
+                        "type": "FILL",
+                        "text": "frightening birds of prey by keeping a _________",
+                        "answer": "dog",
+                        "explanation": "Keeping a dog frightens birds away.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 39,
+                        "type": "FILL",
+                        "text": "frightening birds of prey by making a _________",
+                        "answer": "noise",
+                        "explanation": "Making a loud noise also scares them.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    },
+                    {
+                        "num": 40,
+                        "type": "FILL",
+                        "text": "A _________ of methods is usually most effective.",
+                        "answer": "combination",
+                        "explanation": "A combination of techniques is most effective.",
+                        "instruction": "Questions 31-40<br/>Complete the notes below."
+                    }
+                ]
             }
-          ],
-          "transcript": ""
-        },
-        {
-          "id": 2,
-          "title": "Part 2: Wildlife Trust Presentation",
-          "audio": "audio/IELTS_20_Test_4_Part2.m4a",
-          "description": "A Wildlife Trust officer presents information about the organisation's conservation work.",
-          "questions": [
-            {
-              "num": 11,
-              "type": "FILL",
-              "text": "Year the Wildlife Trust was founded: _________",
-              "answer": "1959",
-              "explanation": "The trust was established in 1959."
-            },
-            {
-              "num": 12,
-              "type": "FILL",
-              "text": "Number of nature reserves managed by the trust: over _________",
-              "answer": "100",
-              "explanation": "The trust manages over 100 nature reserves nationwide."
-            },
-            {
-              "num": 13,
-              "type": "MCQ",
-              "text": "The trust's current priority species include:",
-              "options": [
-                "A. Red kite and osprey only",
-                "B. Water vole, hedgehog and great crested newt",
-                "C. All UK native mammals",
-                "D. Migratory bird species only"
-              ],
-              "answer": "B",
-              "explanation": "The trust's priority species programme focuses on water vole, hedgehog and great crested newt."
-            },
-            {
-              "num": 14,
-              "type": "FILL",
-              "text": "Annual membership fee for an individual adult: £_________",
-              "answer": "42",
-              "explanation": "Individual adult membership costs £42 per year."
-            },
-            {
-              "num": 15,
-              "type": "MCQ",
-              "text": "What does membership include?",
-              "options": [
-                "A. Free entry to all UK nature reserves",
-                "B. A quarterly wildlife magazine and free guided walks",
-                "C. Unlimited personal conservation volunteering credits",
-                "D. Free seed and plant packs"
-              ],
-              "answer": "B",
-              "explanation": "Members receive a quarterly magazine and invitations to free guided walks."
-            },
-            {
-              "num": 16,
-              "type": "FILL",
-              "text": "The trust's 30 by _________ campaign aims to protect 30% of land for nature by 2030.",
-              "answer": "30",
-              "explanation": "The '30 by 30' campaign targets protecting 30% of UK land for nature by 2030."
-            },
-            {
-              "num": 17,
-              "type": "MCQ",
-              "text": "How are hedgehog numbers described?",
-              "options": [
-                "A. Stable",
-                "B. Increasing due to conservation efforts",
-                "C. Declining rapidly",
-                "D. Extinct in urban areas"
-              ],
-              "answer": "C",
-              "explanation": "The officer reports that hedgehog populations are declining rapidly."
-            },
-            {
-              "num": 18,
-              "type": "FILL",
-              "text": "Volunteers contributed over _________ hours last year.",
-              "answer": "50,000",
-              "explanation": "The trust benefited from over 50,000 volunteer hours in the previous year."
-            },
-            {
-              "num": 19,
-              "type": "MCQ",
-              "text": "The trust's new urban wildlife project focuses on:",
-              "options": [
-                "A. Creating wildlife corridors through gardens",
-                "B. Removing invasive species from rivers",
-                "C. Reintroducing beavers to urban waterways",
-                "D. Planting wildflower meadows in parks"
-              ],
-              "answer": "A",
-              "explanation": "The urban project aims to link gardens and green spaces to create wildlife corridors."
-            },
-            {
-              "num": 20,
-              "type": "FILL",
-              "text": "The trust's website address: www.wildlife_________local.org.uk",
-              "answer": "trust",
-              "explanation": "The website is www.wildlifetrustlocal.org.uk."
-            }
-          ],
-          "transcript": ""
-        },
-        {
-          "id": 3,
-          "title": "Part 3: Sociology Students Discussing Research on Inequality",
-          "audio": "audio/IELTS_20_Test_4_Part3.m4a",
-          "description": "Two sociology students discuss their research on income inequality.",
-          "questions": [
-            {
-              "num": 21,
-              "type": "MCQ",
-              "text": "Which measure of inequality do the students use as their primary indicator?",
-              "options": [
-                "A. GDP per capita",
-                "B. The Gini coefficient",
-                "C. The poverty line threshold",
-                "D. The Human Development Index"
-              ],
-              "answer": "B",
-              "explanation": "The Gini coefficient is selected as the primary measure of income inequality."
-            },
-            {
-              "num": 22,
-              "type": "MCQ",
-              "text": "The student argues that inequality has increased globally primarily because of:",
-              "options": [
-                "A. Wars and political instability",
-                "B. Technological change favouring skilled workers",
-                "C. Declining birth rates in wealthy countries",
-                "D. Reduced international trade"
-              ],
-              "answer": "B",
-              "explanation": "Technology-driven economic change has increasingly rewarded high-skilled workers while displacing lower-skilled ones."
-            },
-            {
-              "num": 23,
-              "type": "FILL",
-              "text": "The richest _________ % of people own more than half of global wealth.",
-              "answer": "one",
-              "explanation": "Studies show the wealthiest 1% hold over 50% of global wealth."
-            },
-            {
-              "num": 24,
-              "type": "MCQ",
-              "text": "One student argues that universal basic income (UBI) would:",
-              "options": [
-                "A. Replace all welfare benefits",
-                "B. Provide a foundation of economic security enabling risk-taking",
-                "C. Reduce incentives to work",
-                "D. Be unaffordable in any country"
-              ],
-              "answer": "B",
-              "explanation": "The student argues UBI could provide economic security that empowers people to take risks such as starting businesses."
-            },
-            {
-              "num": 25,
-              "type": "MCQ",
-              "text": "The other student's main criticism of UBI is:",
-              "options": [
-                "A. It would be too complex to administer",
-                "B. The cost and potential work disincentive effects",
-                "C. It has never been tested in any country",
-                "D. It would not reach the poorest in society"
-              ],
-              "answer": "B",
-              "explanation": "Cost concerns and the risk of reducing labour market participation are the main criticisms raised."
-            },
-            {
-              "num": 26,
-              "type": "FILL",
-              "text": "Countries like the Nordics are cited as evidence that high _________ can coexist with economic growth.",
-              "answer": "equality",
-              "explanation": "Nordic countries demonstrate that greater equality does not necessarily hinder economic performance."
-            },
-            {
-              "num": 27,
-              "type": "MCQ",
-              "text": "The students agree that intergenerational inequality is primarily perpetuated through:",
-              "options": [
-                "A. Differences in natural ability",
-                "B. Unequal access to quality education",
-                "C. Geographic factors",
-                "D. Individual work ethic"
-              ],
-              "answer": "B",
-              "explanation": "Educational inequality is identified as the primary mechanism through which inequality is passed between generations."
-            },
-            {
-              "num": 28,
-              "type": "FILL",
-              "text": "Their research focuses on inequality in the _________ labour market.",
-              "answer": "UK",
-              "explanation": "The students are researching income inequality specifically within the UK labour market."
-            },
-            {
-              "num": 29,
-              "type": "MCQ",
-              "text": "The students decide their essay's policy recommendation will focus on:",
-              "options": [
-                "A. Reducing corporation tax",
-                "B. Progressive taxation and investment in public education",
-                "C. Limiting immigration",
-                "D. Privatising public services"
-              ],
-              "answer": "B",
-              "explanation": "Their policy recommendations centre on progressive taxation combined with greater investment in public education."
-            },
-            {
-              "num": 30,
-              "type": "MCQ",
-              "text": "What does Piketty's research show about wealth inequality?",
-              "options": [
-                "A. It naturally corrects itself over time",
-                "B. It has been declining since the 1980s",
-                "C. It tends to increase when the rate of return on capital exceeds economic growth",
-                "D. It is primarily a developing-world problem"
-              ],
-              "answer": "C",
-              "explanation": "Piketty argues wealth inequality grows when r > g: the rate of return on capital exceeds the rate of economic growth."
-            }
-          ],
-          "transcript": ""
-        },
-        {
-          "id": 4,
-          "title": "Part 4: Neuroscience of Decision-Making",
-          "audio": "audio/IELTS_20_Test_4_Part4.m4a",
-          "description": "A lecture on what neuroscience reveals about how humans make decisions.",
-          "questions": [
-            {
-              "num": 31,
-              "type": "FILL",
-              "text": "The prefrontal _________ is the brain region most associated with rational decision-making.",
-              "answer": "cortex",
-              "explanation": "The prefrontal cortex is responsible for complex planning, rational reasoning and decision-making."
-            },
-            {
-              "num": 32,
-              "type": "MCQ",
-              "text": "Damasio's somatic marker hypothesis proposes that:",
-              "options": [
-                "A. All decisions are made rationally by the prefrontal cortex",
-                "B. Emotions play a critical role in guiding decision-making",
-                "C. Decisions made under stress are always inferior",
-                "D. The body does not influence thought processes"
-              ],
-              "answer": "B",
-              "explanation": "Damasio showed that emotional signals (somatic markers) are essential to effective decision-making."
-            },
-            {
-              "num": 33,
-              "type": "MCQ",
-              "text": "What did studies of patients with damage to the prefrontal cortex show?",
-              "options": [
-                "A. They made better decisions by relying on logic alone",
-                "B. They struggled to make even simple decisions effectively",
-                "C. Their IQ scores dropped significantly",
-                "D. They became more creative in problem-solving"
-              ],
-              "answer": "B",
-              "explanation": "Patients with prefrontal damage were often unable to make effective decisions despite intact reasoning abilities."
-            },
-            {
-              "num": 34,
-              "type": "FILL",
-              "text": "The _________ is the brain's primary reward and motivation centre.",
-              "answer": "striatum",
-              "explanation": "The striatum, part of the basal ganglia, plays a central role in reward processing and motivation."
-            },
-            {
-              "num": 35,
-              "type": "MCQ",
-              "text": "Dopamine's role in decision-making is to:",
-              "options": [
-                "A. Signal punishment for poor choices",
-                "B. Signal predicted reward and motivate approach behaviour",
-                "C. Regulate emotional responses to loss",
-                "D. Inhibit risky decision-making"
-              ],
-              "answer": "B",
-              "explanation": "Dopamine signals anticipated reward, motivating behaviour directed toward achieving goals."
-            },
-            {
-              "num": 36,
-              "type": "FILL",
-              "text": "Loss aversion means people feel losses approximately _________ times more strongly than equivalent gains.",
-              "answer": "twice",
-              "explanation": "Research by Kahneman and Tversky showed losses are felt approximately twice as powerfully as gains."
-            },
-            {
-              "num": 37,
-              "type": "MCQ",
-              "text": "The anchoring bias refers to:",
-              "options": [
-                "A. Sticking with the first option presented regardless of alternatives",
-                "B. Relying too heavily on the first piece of information encountered",
-                "C. Favouring decisions that benefit close social groups",
-                "D. Making decisions based on the most recent information"
-              ],
-              "answer": "B",
-              "explanation": "Anchoring causes people to over-weight initial information when making subsequent judgements."
-            },
-            {
-              "num": 38,
-              "type": "MCQ",
-              "text": "The amygdala's role in decision-making is to:",
-              "options": [
-                "A. Store long-term memories of decisions",
-                "B. Process emotional responses — particularly fear — that influence decisions",
-                "C. Calculate the mathematical probabilities of outcomes",
-                "D. Inhibit impulsive behaviour"
-              ],
-              "answer": "B",
-              "explanation": "The amygdala processes emotional responses, particularly fear and threat detection, influencing risk assessment."
-            },
-            {
-              "num": 39,
-              "type": "FILL",
-              "text": "Kahneman described two systems of thinking: System 1 (fast, intuitive) and System _________ (slow, analytical).",
-              "answer": "2",
-              "explanation": "Kahneman's dual-process theory describes System 1 as fast and intuitive, System 2 as slow and deliberate."
-            },
-            {
-              "num": 40,
-              "type": "MCQ",
-              "text": "Mindfulness-based training is shown to improve decision-making by:",
-              "options": [
-                "A. Increasing dopamine levels permanently",
-                "B. Reducing activity in the amygdala and improving prefrontal regulation",
-                "C. Eliminating the influence of emotion entirely",
-                "D. Boosting IQ scores"
-              ],
-              "answer": "B",
-              "explanation": "Mindfulness practice reduces amygdala reactivity and strengthens prefrontal cortical control over emotional responses."
-            }
-          ],
-          "transcript": ""
-        }
-      ]
-    },
-    "reading": {
-      "passages": [
-        {
-          "title": "Passage 1: Gym Personal Training History",
-          "text": "<p>Personal training has grown from an elite luxury into a mainstream fitness service. Trainers design customized workout and nutrition plans, conduct fitness assessments, and motivate clients. Proper training techniques help build muscle mass, improve cardiovascular health, and prevent injuries.</p>",
-          "questions": [
-            {
-              "num": 1,
-              "type": "FILL",
-              "text": "_________ training has grown from an elite luxury into a mainstream fitness service",
-              "answer": "personal",
-              "explanation": "The passage notes that the personal is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 2,
-              "type": "TFNG",
-              "text": "Personal training has grown from an elite luxury into a mainstream fitness service",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Personal training has grown from an elite luxury into a mainstream fitness service\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 3,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding Gym Personal Training?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Personal training has grown from an elite luxury into a mainstream fitness service\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 4,
-              "type": "FILL",
-              "text": "_________ training has grown from an elite luxury into a mainstream fitness service",
-              "answer": "personal",
-              "explanation": "The passage notes that the personal is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 5,
-              "type": "TFNG",
-              "text": "Personal training has grown from an elite luxury into a mainstream fitness service",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Personal training has grown from an elite luxury into a mainstream fitness service\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 6,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding Gym Personal Training?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Personal training has grown from an elite luxury into a mainstream fitness service\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 7,
-              "type": "FILL",
-              "text": "_________ training has grown from an elite luxury into a mainstream fitness service",
-              "answer": "personal",
-              "explanation": "The passage notes that the personal is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 8,
-              "type": "TFNG",
-              "text": "Personal training has grown from an elite luxury into a mainstream fitness service",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Personal training has grown from an elite luxury into a mainstream fitness service\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 9,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding Gym Personal Training?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Personal training has grown from an elite luxury into a mainstream fitness service\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 10,
-              "type": "FILL",
-              "text": "_________ training has grown from an elite luxury into a mainstream fitness service",
-              "answer": "personal",
-              "explanation": "The passage notes that the personal is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 11,
-              "type": "TFNG",
-              "text": "Personal training has grown from an elite luxury into a mainstream fitness service",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"Personal training has grown from an elite luxury into a mainstream fitness service\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 12,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding Gym Personal Training?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"Personal training has grown from an elite luxury into a mainstream fitness service\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 13,
-              "type": "FILL",
-              "text": "_________ training has grown from an elite luxury into a mainstream fitness service",
-              "answer": "personal",
-              "explanation": "The passage notes that the personal is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            }
-          ]
-        },
-        {
-          "title": "Passage 2: Wildlife Trust Presentation",
-          "text": "<p>The Wildlife Trust manages nature reserves to protect priority species and restore habitats. Through conservation campaigns, the trust raises public awareness about declining wildlife populations, such as hedgehogs. Volunteers contribute thousands of hours to habitat restoration.</p>",
-          "questions": [
-            {
-              "num": 14,
-              "type": "TFNG",
-              "text": "The Wildlife Trust manages nature reserves to protect priority species and restore habitats",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"The Wildlife Trust manages nature reserves to protect priority species and restore habitats\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 15,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Wildlife Trust?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"The Wildlife Trust manages nature reserves to protect priority species and restore habitats\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 16,
-              "type": "FILL",
-              "text": "The _________ Trust manages nature reserves to protect priority species and restore habitats",
-              "answer": "wildlife",
-              "explanation": "The passage notes that the wildlife is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 17,
-              "type": "TFNG",
-              "text": "The Wildlife Trust manages nature reserves to protect priority species and restore habitats",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"The Wildlife Trust manages nature reserves to protect priority species and restore habitats\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 18,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Wildlife Trust?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"The Wildlife Trust manages nature reserves to protect priority species and restore habitats\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 19,
-              "type": "FILL",
-              "text": "The _________ Trust manages nature reserves to protect priority species and restore habitats",
-              "answer": "wildlife",
-              "explanation": "The passage notes that the wildlife is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 20,
-              "type": "TFNG",
-              "text": "The Wildlife Trust manages nature reserves to protect priority species and restore habitats",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"The Wildlife Trust manages nature reserves to protect priority species and restore habitats\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 21,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Wildlife Trust?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"The Wildlife Trust manages nature reserves to protect priority species and restore habitats\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 22,
-              "type": "FILL",
-              "text": "The _________ Trust manages nature reserves to protect priority species and restore habitats",
-              "answer": "wildlife",
-              "explanation": "The passage notes that the wildlife is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 23,
-              "type": "TFNG",
-              "text": "The Wildlife Trust manages nature reserves to protect priority species and restore habitats",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"The Wildlife Trust manages nature reserves to protect priority species and restore habitats\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 24,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Wildlife Trust?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"The Wildlife Trust manages nature reserves to protect priority species and restore habitats\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 25,
-              "type": "FILL",
-              "text": "The _________ Trust manages nature reserves to protect priority species and restore habitats",
-              "answer": "wildlife",
-              "explanation": "The passage notes that the wildlife is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 26,
-              "type": "TFNG",
-              "text": "The Wildlife Trust manages nature reserves to protect priority species and restore habitats",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"The Wildlife Trust manages nature reserves to protect priority species and restore habitats\".",
-              "location": "Paragraph 1, Sentence 1"
-            }
-          ]
-        },
-        {
-          "title": "Passage 3: Neuroscience of Decision-Making",
-          "text": "<p>The prefrontal cortex is the brain region most associated with rational decision-making and cognitive control. However, neuroscience shows that emotional signals processed by the amygdala are also critical for guiding effective choices, challenging the view that logic alone drives decision-making.</p>",
-          "questions": [
-            {
-              "num": 27,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Neuroscience of Decisions?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"The prefrontal cortex is the brain region most associated with rational decision-making and cognitive control\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 28,
-              "type": "FILL",
-              "text": "The _________ cortex is the brain region most associated with rational decision-making and cognitive control",
-              "answer": "prefrontal",
-              "explanation": "The passage notes that the prefrontal is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 29,
-              "type": "TFNG",
-              "text": "The prefrontal cortex is the brain region most associated with rational decision-making and cognitive control",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"The prefrontal cortex is the brain region most associated with rational decision-making and cognitive control\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 30,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Neuroscience of Decisions?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"The prefrontal cortex is the brain region most associated with rational decision-making and cognitive control\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 31,
-              "type": "FILL",
-              "text": "The _________ cortex is the brain region most associated with rational decision-making and cognitive control",
-              "answer": "prefrontal",
-              "explanation": "The passage notes that the prefrontal is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 32,
-              "type": "TFNG",
-              "text": "The prefrontal cortex is the brain region most associated with rational decision-making and cognitive control",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"The prefrontal cortex is the brain region most associated with rational decision-making and cognitive control\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 33,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Neuroscience of Decisions?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"The prefrontal cortex is the brain region most associated with rational decision-making and cognitive control\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 34,
-              "type": "FILL",
-              "text": "The _________ cortex is the brain region most associated with rational decision-making and cognitive control",
-              "answer": "prefrontal",
-              "explanation": "The passage notes that the prefrontal is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 35,
-              "type": "TFNG",
-              "text": "The prefrontal cortex is the brain region most associated with rational decision-making and cognitive control",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"The prefrontal cortex is the brain region most associated with rational decision-making and cognitive control\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 36,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Neuroscience of Decisions?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"The prefrontal cortex is the brain region most associated with rational decision-making and cognitive control\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 37,
-              "type": "FILL",
-              "text": "The _________ cortex is the brain region most associated with rational decision-making and cognitive control",
-              "answer": "prefrontal",
-              "explanation": "The passage notes that the prefrontal is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 38,
-              "type": "TFNG",
-              "text": "The prefrontal cortex is the brain region most associated with rational decision-making and cognitive control",
-              "options": [
-                "TRUE",
-                "FALSE",
-                "NOT GIVEN"
-              ],
-              "answer": "TRUE",
-              "explanation": "The statement directly matches the text: \"The prefrontal cortex is the brain region most associated with rational decision-making and cognitive control\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 39,
-              "type": "MCQ",
-              "text": "According to paragraph 1, what is the main finding regarding  Neuroscience of Decisions?",
-              "options": [
-                "A. It has a significant negative impact on resources",
-                "B. It represents a key advancement in the field",
-                "C. It has been widely criticized by modern researchers",
-                "D. It is no longer considered relevant"
-              ],
-              "answer": "B",
-              "explanation": "The text confirms that this development is a major advancement: \"The prefrontal cortex is the brain region most associated with rational decision-making and cognitive control\".",
-              "location": "Paragraph 1, Sentence 1"
-            },
-            {
-              "num": 40,
-              "type": "FILL",
-              "text": "The _________ cortex is the brain region most associated with rational decision-making and cognitive control",
-              "answer": "prefrontal",
-              "explanation": "The passage notes that the prefrontal is essential in this context.",
-              "location": "Paragraph 1, Sentence 1"
-            }
-          ]
-        }
-      ]
-    },
-    "writing": {
-      "task1": {
-        "prompt": "You should spend about 20 minutes on this task. Summarise the information by selecting and reporting the main features.",
-        "image": "<pre class=\"font-mono text-xs bg-black/40 p-4 rounded border border-white/10 text-stone-300\">IELTS 20 Test Graph Placeholder</pre>",
-        "modelAnswer": "This is a model answer placeholder for IELTS 20 Test."
-      },
-      "task2": {
-        "prompt": "You should spend about 40 minutes on this task. Write about the following topic.",
-        "modelAnswer": "This is a model answer placeholder for IELTS 20 Test."
-      }
+        ]
     }
-  }
+}
 };

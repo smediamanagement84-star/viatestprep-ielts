@@ -6,6 +6,7 @@
 <title>ViATestPrep — IELTS &amp; PTE Preparation Portal</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Fraunces:wght@600;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
   :root {
     --primary: 262, 70%, 50%;
@@ -284,11 +285,45 @@
 
       <!-- Student Views Content -->
       <main class="flex-1 p-6 md:p-8 overflow-y-auto">
+        <!-- Expiration Lock Card Overlay -->
+        <div id="student-expiry-overlay" class="hidden flex flex-col items-center justify-center p-12 bg-white rounded-3xl border border-rose-100 text-center max-w-md mx-auto mt-16 shadow-lg shadow-rose-500/5">
+          <span class="text-4xl">⚠️</span>
+          <h3 class="font-extrabold text-slate-800 text-lg mt-4">Student Access Expired</h3>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            Your 30-day active training key has expired. Please contact your consultancy representative to renew your mock test and worksheet access.
+          </p>
+        </div>
+
+        <div id="student-active-views-container" class="space-y-6">
         <!-- Student Tab 1: Skill Builder Vault -->
         <div id="student-vault-view" class="student-subview space-y-6">
-          <div>
-            <h2 class="text-2xl font-extrabold">16+ IELTS &amp; PTE Skill-Builder vault</h2>
-            <p class="text-xs text-slate-500 mt-1">Review core lessons, worksheets, templates, and mark items complete to track your overall target score.</p>
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div>
+              <h2 class="text-2xl font-extrabold">16+ IELTS &amp; PTE Skill-Builder vault</h2>
+              <p class="text-xs text-slate-500 mt-1">Review core lessons, worksheets, templates, and mark items complete to track your overall target score.</p>
+            </div>
+            <!-- Progress Ring Widget -->
+            <div class="flex items-center gap-3 bg-white border border-slate-100 px-4 py-2 rounded-2xl shadow-sm">
+              <svg class="w-10 h-10 transform -rotate-90">
+                <circle cx="20" cy="20" r="16" stroke="#f1f5f9" stroke-width="3" fill="transparent" />
+                <circle id="vault-progress-circle" cx="20" cy="20" r="16" stroke="#4f46e5" stroke-width="3" fill="transparent" stroke-linecap="round" stroke-dasharray="100.5" stroke-dashoffset="100.5" />
+              </svg>
+              <div>
+                <span class="text-[8px] uppercase font-bold text-slate-400 block">Progress</span>
+                <span id="vault-completion-percent" class="text-sm font-black text-slate-800">0%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Search & Filter Controls -->
+          <div class="flex flex-col sm:flex-row gap-3 items-center">
+            <input type="text" id="vaultSearch" oninput="renderStudentModules()" placeholder="🔍 Search study modules..." class="w-full sm:w-64 px-4 py-2 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-indigo-500 bg-white" />
+            <div class="flex gap-1.5 overflow-x-auto py-1 w-full sm:w-auto">
+              <button onclick="filterVaultTag('all')" id="v-tag-all" class="v-tag-btn px-3 py-1.5 bg-indigo-600 text-white text-xs font-bold rounded-lg transition">All</button>
+              <button onclick="filterVaultTag('core')" id="v-tag-core" class="v-tag-btn px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 text-xs font-bold rounded-lg text-slate-600 transition">Core</button>
+              <button onclick="filterVaultTag('grammar')" id="v-tag-grammar" class="v-tag-btn px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 text-xs font-bold rounded-lg text-slate-600 transition">Grammar</button>
+              <button onclick="filterVaultTag('pte')" id="v-tag-pte" class="v-tag-btn px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 text-xs font-bold rounded-lg text-slate-600 transition">PTE Specific</button>
+            </div>
           </div>
           <!-- Target Score selector widget -->
           <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
@@ -410,6 +445,7 @@
           </div>
         </div>
 
+        </div> <!-- end of student-active-views-container -->
         <!-- Student Tab 4: Graded Scorecard -->
         <div id="student-grades-view" class="student-subview hidden space-y-6">
           <div>
@@ -471,6 +507,7 @@
         <button onclick="switchCRMTab('crm')" id="c-tab-crm" class="sidebar-tab active-tab w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">👥 CRM Student Roster</button>
         <button onclick="switchCRMTab('grader')" id="c-tab-grader" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">🎤 Live Speaking Grader</button>
         <button onclick="switchCRMTab('vault')" id="c-tab-vault" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">📦 Material Vault</button>
+        <button onclick="switchCRMTab('settings')" id="c-tab-settings" class="sidebar-tab w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">⚙️ Database Settings</button>
       </aside>
 
       <!-- CRM Content View -->
@@ -624,6 +661,25 @@
         <div id="crm-vault-view" class="crm-subview hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <!-- Populated by JS -->
         </div>
+
+        <!-- CRM Tab 4: Database Settings -->
+        <div id="crm-settings-view" class="crm-subview hidden max-w-lg bg-white border border-slate-100 rounded-2xl shadow-sm p-6 space-y-4">
+          <div>
+            <h3 class="text-sm font-extrabold text-slate-800 uppercase tracking-wider">⚙️ Backend Cloud Sync Settings</h3>
+            <p class="text-xs text-slate-500 mt-1">ViATestPrep is fully hybrid. Input your Supabase credentials below to sync student rosters, mock history, and cue card grades to your PostgreSQL cloud database. If empty, local-first offline storage is used.</p>
+          </div>
+          <div class="space-y-3">
+            <div class="flex flex-col gap-1">
+              <label class="text-[9px] font-bold text-slate-400 uppercase">Supabase Project URL</label>
+              <input type="text" id="settingSupabaseUrl" placeholder="https://your-project.supabase.co" class="px-3 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:bg-white outline-none focus:border-indigo-500 font-mono" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="text-[9px] font-bold text-slate-400 uppercase">Supabase Anon/Public Key</label>
+              <input type="password" id="settingSupabaseKey" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." class="px-3 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:bg-white outline-none focus:border-indigo-500 font-mono" />
+            </div>
+            <button onclick="saveSupabaseSettings()" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs transition">Save Cloud Configuration</button>
+          </div>
+        </div>
       </main>
     </div>
   </div>
@@ -696,6 +752,13 @@
         <div>
           <h3 class="text-xl font-bold text-slate-900">Institutional Licensing Plans</h3>
           <p class="text-xs text-slate-400">Choose the capacity license that matches your consultancy's student volume. All plans include 100% of platform features:</p>
+        </div>
+        
+        <!-- Duration Selector Tabs -->
+        <div class="flex justify-center p-1 bg-slate-100 rounded-xl max-w-[280px] mx-auto mb-4 border border-slate-200">
+          <button onclick="setPricingDuration(30)" id="dur-btn-30" class="flex-1 py-1.5 text-center text-xs font-black rounded-lg bg-white text-indigo-600 shadow-sm transition">30 Days</button>
+          <button onclick="setPricingDuration(90)" id="dur-btn-90" class="flex-1 py-1.5 text-center text-xs font-bold rounded-lg text-slate-500 hover:text-slate-900 transition flex items-center justify-center gap-0.5">90d <span class="bg-indigo-100 text-indigo-700 text-[8px] px-1 py-0.5 rounded font-black">-20%</span></button>
+          <button onclick="setPricingDuration(365)" id="dur-btn-365" class="flex-1 py-1.5 text-center text-xs font-bold rounded-lg text-slate-500 hover:text-slate-900 transition flex items-center justify-center gap-0.5">365d <span class="bg-emerald-100 text-emerald-700 text-[8px] px-1 py-0.5 rounded font-black">-25%</span></button>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -899,6 +962,149 @@
     let currentStudentTab = 'vault';
     let currentCRMTab = 'crm';
     
+    // Vault Search & Filter states
+    let vaultFilterTag = 'all';
+    
+    // Supabase Credentials State
+    let supabaseClient = null;
+
+    function initSupabase() {
+      const url = localStorage.getItem('supabase_url');
+      const key = localStorage.getItem('supabase_key');
+      if (url && key && typeof supabase !== 'undefined') {
+        supabaseClient = supabase.createClient(url, key);
+        console.log('Supabase backend client initialized.');
+      } else {
+        supabaseClient = null;
+        console.log('Supabase offline fallback active.');
+      }
+    }
+
+    function saveSupabaseSettings() {
+      const url = document.getElementById('settingSupabaseUrl').value.trim();
+      const key = document.getElementById('settingSupabaseKey').value.trim();
+      localStorage.setItem('supabase_url', url);
+      localStorage.setItem('supabase_key', key);
+      initSupabase();
+      alert('Cloud configuration settings saved successfully!');
+      if (supabaseClient) {
+        syncRosterFromCloud();
+      }
+    }
+
+    function loadSupabaseSettingsUI() {
+      const urlEl = document.getElementById('settingSupabaseUrl');
+      const keyEl = document.getElementById('settingSupabaseKey');
+      if (urlEl) urlEl.value = localStorage.getItem('supabase_url') || '';
+      if (keyEl) keyEl.value = localStorage.getItem('supabase_key') || '';
+    }
+
+    async function syncRosterFromCloud() {
+      if (!supabaseClient) return;
+      try {
+        const { data: cloudStudents, error } = await supabaseClient.from('students').select('*');
+        if (error) {
+          console.error('Cloud load error:', error);
+          return;
+        }
+        if (cloudStudents) {
+          crmStudents = cloudStudents.map(cs => ({
+            id: cs.id,
+            name: cs.name,
+            email: cs.email,
+            phone: cs.phone || '',
+            target: parseFloat(cs.target_band) || 7.0,
+            status: cs.status || 'Active',
+            access_expires_at: cs.access_expires_at || new Date(Date.now() + 30*24*60*60*1000).toISOString(),
+            notes: '',
+            mockHistory: []
+          }));
+          
+          for (let s of crmStudents) {
+            const { data: mH } = await supabaseClient.from('mock_history').select('*').eq('student_id', s.id);
+            const { data: sG } = await supabaseClient.from('speaking_grades').select('*').eq('student_id', s.id);
+            
+            s.mockHistory = [];
+            if (mH) {
+              mH.forEach(m => {
+                s.mockHistory.push({
+                  test: m.test_name,
+                  date: m.completed_at.split('T')[0],
+                  listening: m.module_type === 'listening' ? String(m.listening_band) : '—',
+                  reading: m.module_type === 'reading' ? String(m.reading_band) : '—',
+                  writing: '—',
+                  overall: m.module_type === 'listening' ? m.listening_band : m.reading_band
+                });
+              });
+            }
+            if (sG) {
+              sG.forEach(sg => {
+                s.mockHistory.push({
+                  test: 'Speaking Interview: ' + sg.cue_card_title,
+                  date: sg.created_at.split('T')[0],
+                  listening: '—',
+                  reading: '—',
+                  writing: '—',
+                  speaking: { fluency: sg.fluency_score, vocab: sg.vocab_score, grammar: sg.grammar_score, pronunciation: sg.pronunciation_score },
+                  overall: sg.overall_band,
+                  notes: sg.feedback
+                });
+              });
+            }
+          }
+          localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
+          renderCRMTable();
+          populateCRMGraderSelect();
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    let pricingDurationDays = 30;
+
+    function setPricingDuration(days) {
+      pricingDurationDays = days;
+      
+      const buttons = {
+        30: document.getElementById('dur-btn-30'),
+        90: document.getElementById('dur-btn-90'),
+        365: document.getElementById('dur-btn-365')
+      };
+      
+      Object.keys(buttons).forEach(d => {
+        const btn = buttons[d];
+        if (btn) {
+          if (parseInt(d) === days) {
+            btn.className = "flex-1 py-1.5 text-center text-xs font-black rounded-lg bg-white text-indigo-600 shadow-sm transition";
+          } else {
+            btn.className = "flex-1 py-1.5 text-center text-xs font-bold rounded-lg text-slate-500 hover:text-slate-900 transition flex items-center justify-center gap-0.5";
+          }
+        }
+      });
+      
+      const rates = {
+        30: '/ month',
+        90: '/ 90 days',
+        365: '/ 365 days'
+      };
+      
+      const prices = {
+        'Starter': days === 30 ? 5000 : (days === 90 ? 12000 : 45000),
+        'Growth': days === 30 ? 8000 : (days === 90 ? 20000 : 72000),
+        'Enterprise': days === 30 ? 24000 : (days === 90 ? 60000 : 216000)
+      };
+      
+      document.querySelector('#m-card-Starter .text-2xl').textContent = 'Rs. ' + prices['Starter'].toLocaleString();
+      document.querySelector('#m-card-Starter .text-\[9px\]').textContent = rates[days];
+      
+      document.querySelector('#m-card-Growth .text-2xl').textContent = 'Rs. ' + prices['Growth'].toLocaleString();
+      document.querySelector('#m-card-Growth .text-\[9px\]').textContent = rates[days];
+      
+      document.querySelector('#m-card-Enterprise .text-2xl').textContent = 'Rs. ' + prices['Enterprise'].toLocaleString();
+      document.querySelector('#m-card-Enterprise .text-\[9px\]').textContent = rates[days];
+    }
+    
     // Student module completion list
     let studentTrack = 'ielts-7.5';
     let completedModules = [];
@@ -937,6 +1143,10 @@
     // INITIAL ROUTER & STATE LOAD
     // ==========================================
     window.addEventListener('DOMContentLoaded', () => {
+      initSupabase();
+      if (supabaseClient) {
+        syncRosterFromCloud();
+      }
       // Load Database from LocalStorage
       const savedCRM = localStorage.getItem('viatestprep_students');
       if (savedCRM) {
@@ -1101,12 +1311,19 @@
 
     function selectPricingPlan(plan) {
       modalSelectedPlan = plan;
-      const planObj = modalPricingPlans[plan];
+      const prices = {
+        30: { 'Starter': 5000, 'Growth': 8000, 'Enterprise': 24000 },
+        90: { 'Starter': 12000, 'Growth': 20000, 'Enterprise': 60000 },
+        365: { 'Starter': 45000, 'Growth': 72000, 'Enterprise': 216000 }
+      };
       
-      document.getElementById('m-checkout-desc').innerHTML = `Registering for <strong>${planObj.name}</strong> at <strong>Rs. ${planObj.price.toLocaleString()}</strong> / month (includes up to ${planObj.students} student slots).`;
+      const planName = plan + ' Plan';
+      const capacity = plan === 'Starter' ? 10 : (plan === 'Growth' ? 25 : 100);
+      const price = prices[pricingDurationDays][plan];
       
-      const totalAmount = planObj.price;
-      document.getElementById('m-checkout-btn').textContent = `Pay Rs. ${totalAmount.toLocaleString()} & Launch CRM Portal`;
+      document.getElementById('m-checkout-desc').innerHTML = `Registering for <strong>${planName}</strong> (${pricingDurationDays} Days Access) at <strong>Rs. ${price.toLocaleString()}</strong> (includes up to ${capacity} student slots).`;
+      
+      document.getElementById('m-checkout-btn').textContent = `Pay Rs. ${price.toLocaleString()} & Launch CRM Portal`;
       
       showModalStep('m-step-pricing', 'm-step-checkout');
     }
@@ -1124,7 +1341,7 @@
       payButton.style.opacity = '0.7';
       payButton.style.background = '#8a5a00';
       
-      setTimeout(() => {
+      setTimeout(async () => {
         // Set lock credentials
         localStorage.setItem('viatestprep_unlocked', 'true');
         localStorage.setItem('viatestprep_user_role', 'consultancy');
@@ -1132,6 +1349,20 @@
         localStorage.setItem('viatestprep_consultancy_plan', modalSelectedPlan);
         localStorage.setItem('userEmail', cEmail);
         
+        if (supabaseClient) {
+          try {
+            await supabaseClient.from('consultancies').insert([{
+              name: cName,
+              email: cEmail,
+              plan_name: modalSelectedPlan,
+              duration_days: pricingDurationDays,
+              expires_at: new Date(Date.now() + pricingDurationDays*24*60*60*1000).toISOString()
+            }]);
+          } catch (err) {
+            console.error('Cloud registration sync failed:', err);
+          }
+        }
+
         payButton.disabled = false;
         payButton.style.opacity = '1';
         payButton.style.background = '';
@@ -1145,6 +1376,27 @@
     // VIEW 2: STUDENT PORTAL RENDER ENGINE
     // ==========================================
     function initStudentPortal() {
+      // Check expiration first
+      const userEmail = localStorage.getItem('userEmail') || 'binod@gmail.com';
+      const student = crmStudents.find(s => s.email && s.email.toLowerCase() === userEmail.toLowerCase());
+      
+      const overlay = document.getElementById('student-expiry-overlay');
+      const activeContainer = document.getElementById('student-active-views-container');
+      
+      if (student) {
+        if (!student.access_expires_at) {
+          student.access_expires_at = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString();
+        }
+        const expired = new Date() > new Date(student.access_expires_at);
+        if (expired) {
+          overlay.classList.remove('hidden');
+          activeContainer.classList.add('hidden');
+          return;
+        }
+      }
+      overlay.classList.add('hidden');
+      activeContainer.classList.remove('hidden');
+
       // Load completed modules progress
       completedModules = [];
       for (let i = 0; i < localStorage.length; i++) {
@@ -1195,15 +1447,35 @@
       renderStudentModules();
     }
 
+    function filterVaultTag(tag) {
+      vaultFilterTag = tag;
+      document.querySelectorAll('.v-tag-btn').forEach(btn => {
+        btn.className = "v-tag-btn px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 text-xs font-bold rounded-lg text-slate-600 transition";
+      });
+      document.getElementById('v-tag-' + tag).className = "v-tag-btn px-3 py-1.5 bg-indigo-600 text-white text-xs font-bold rounded-lg transition";
+      renderStudentModules();
+    }
+
     function renderStudentModules() {
       const grid = document.getElementById('studentModulesGrid');
       grid.innerHTML = '';
+
+      const search = (document.getElementById('vaultSearch') ? document.getElementById('vaultSearch').value.toLowerCase() : '');
 
       // Count recommended for target track
       let totalRecCount = 0;
       let completedRecCount = 0;
 
       modulesConfig.forEach(m => {
+        const matchesSearch = m.title.toLowerCase().includes(search) || m.desc.toLowerCase().includes(search);
+        if (!matchesSearch) return;
+
+        if (vaultFilterTag !== 'all') {
+          if (vaultFilterTag === 'core' && !m.tags.includes('core')) return;
+          if (vaultFilterTag === 'grammar' && !m.tags.includes('grammar')) return;
+          if (vaultFilterTag === 'pte' && !m.tags.includes('pte')) return;
+        }
+
         const recommendedList = m.tags.split(',');
         const isRecommended = recommendedList.includes(studentTrack) || m.tags.includes('core');
         
@@ -1238,9 +1510,17 @@
         grid.appendChild(card);
       });
 
-      // Update completion widget
       const percent = totalRecCount > 0 ? Math.round((completedRecCount / totalRecCount) * 100) : 0;
       document.getElementById('vault-completion-percent').textContent = percent + '%';
+      
+      const circ = document.getElementById('vault-progress-circle');
+      if (circ) {
+        const radius = 16;
+        const circumference = 2 * Math.PI * radius;
+        const offset = circumference - (percent / 100) * circumference;
+        circ.style.strokeDasharray = circumference;
+        circ.style.strokeDashoffset = offset;
+      }
     }
 
     function toggleStudentModuleComplete(file, button) {
@@ -1608,6 +1888,9 @@
       document.getElementById('c-tab-' + tabId).classList.add('active-tab');
       
       currentCRMTab = tabId;
+      if (tabId === 'settings') {
+        loadSupabaseSettingsUI();
+      }
     }
 
     function renderCRMTable() {
@@ -1716,8 +1999,8 @@
       const status = document.getElementById('crmStudStatus').value;
       const notes = document.getElementById('crmStudNotes').value.trim();
 
+      const access_expires_at = new Date(Date.now() + 30*24*60*60*1000).toISOString();
       if (id) {
-        // Edit student
         const stud = crmStudents.find(s => s.id === id);
         if (stud) {
           stud.name = name;
@@ -1727,18 +2010,19 @@
           stud.status = status;
           stud.notes = notes;
         }
+        if (supabaseClient) {
+          supabaseClient.from('students').update({ name, phone, target_band: target, status }).eq('id', id).then();
+        }
       } else {
-        // Create student
+        const newId = 'st-' + Date.now();
         crmStudents.push({
-          id: 'st-' + Date.now(),
-          name,
-          email,
-          phone,
-          target,
-          status,
-          notes,
+          id: newId,
+          name, email, phone, target, status, notes, access_expires_at,
           mockHistory: []
         });
+        if (supabaseClient) {
+          supabaseClient.from('students').insert([{ id: newId, name, email, phone, target_band: target, status, access_expires_at }]).then();
+        }
       }
 
       localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
@@ -1831,6 +2115,13 @@
         overall: overall,
         notes: notes
       });
+      if (supabaseClient) {
+        supabaseClient.from('speaking_grades').insert([{
+          student_id: id, cue_card_title: cueCard,
+          fluency_score: f, vocab_score: v, grammar_score: g, pronunciation_score: p,
+          overall_band: overall, feedback: notes
+        }]).then();
+      }
 
       localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
       renderCRMTable();
@@ -1901,13 +2192,18 @@
       if (!stud.mockHistory || stud.mockHistory.length === 0) {
         timeline.innerHTML = '<div class="text-xs text-slate-400 italic text-center py-4">No tests logged for this student.</div>';
       } else {
-        stud.mockHistory.forEach(h => {
+        stud.mockHistory.forEach((h, hIdx) => {
           const item = document.createElement('div');
           item.className = 'border-l-2 border-slate-100 pl-4 relative space-y-1';
           
           let scoreBreakdown = '';
           if (typeof h.speaking === 'object') {
             scoreBreakdown = `<div class="text-[10px] text-indigo-600 mt-1">FC: ${h.speaking.fluency} · LR: ${h.speaking.vocab} · GRA: ${h.speaking.grammar} · PR: ${h.speaking.pronunciation}</div>`;
+          }
+          
+          let graderBtn = '';
+          if (h.writing === 'Submitted' || h.writingDetails) {
+            graderBtn = `<button onclick="openWritingGrader('${stud.id}', ${hIdx})" class="px-2 py-0.5 rounded bg-indigo-50 border border-indigo-100 hover:bg-indigo-100 text-[9px] text-indigo-600 font-bold transition">Grade/Review Writing</button>`;
           }
 
           item.innerHTML = `
@@ -1917,8 +2213,9 @@
               <span class="text-[9px] text-slate-400 font-semibold">${h.date}</span>
             </div>
             <div class="text-[10px] text-slate-500">${escapeHtml(h.notes || 'Self-study submission')}</div>
-            <div class="flex items-center gap-2 mt-1">
+            <div class="flex items-center justify-between mt-1">
               <span class="font-extrabold text-[10px] text-emerald-600">Band ${h.overall}</span>
+              ${graderBtn}
             </div>
             ${scoreBreakdown}
           `;
@@ -1927,6 +2224,114 @@
       }
 
       document.getElementById('crmProfileDrawer').classList.remove('hidden');
+    }
+
+    function openWritingGrader(studentId, testIndex) {
+      const stud = crmStudents.find(s => s.id === studentId);
+      if (!stud) return;
+      const testRecord = stud.mockHistory[testIndex];
+      if (!testRecord) return;
+      
+      const timeline = document.getElementById('drawerTimeline');
+      timeline.innerHTML = `
+        <div class="space-y-4 bg-indigo-50/50 border border-indigo-100 p-4 rounded-2xl text-xs">
+          <div class="flex justify-between items-center">
+            <h5 class="font-bold text-slate-800">Grade Writing: ${escapeHtml(testRecord.test)}</h5>
+            <button onclick="openCRMProfileDrawer('${studentId}')" class="text-[10px] text-indigo-600 hover:text-indigo-800 font-bold">← Back</button>
+          </div>
+          
+          <div class="space-y-3 mt-3">
+            <div class="space-y-1">
+              <strong class="text-slate-700 block font-bold">Task 1 Essay Draft:</strong>
+              <div class="p-3 bg-white border border-slate-200 rounded-xl max-h-40 overflow-y-auto whitespace-pre-wrap text-slate-600">${escapeHtml(testRecord.writingDetails?.task1 || 'No Task 1 draft submitted.')}</div>
+            </div>
+            
+            <div class="space-y-1">
+              <strong class="text-slate-700 block font-bold">Task 2 Essay Draft:</strong>
+              <div class="p-3 bg-white border border-slate-200 rounded-xl max-h-40 overflow-y-auto whitespace-pre-wrap text-slate-600">${escapeHtml(testRecord.writingDetails?.task2 || 'No Task 2 draft submitted.')}</div>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-3 pt-2">
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Task 1 Band</label>
+                <select id="gradeTask1Band" class="w-full bg-white border border-slate-200 p-2 rounded-lg text-xs font-semibold">
+                  <option value="">Select Band</option>
+                  ${[9.0, 8.5, 8.0, 7.5, 7.0, 6.5, 6.0, 5.5, 5.0, 4.5, 4.0, 3.5, 3.0].map(b => `<option value="${b}" ${testRecord.writingDetails?.task1Band == b ? 'selected' : ''}>Band ${b}</option>`).join('')}
+                </select>
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Task 2 Band</label>
+                <select id="gradeTask2Band" class="w-full bg-white border border-slate-200 p-2 rounded-lg text-xs font-semibold">
+                  <option value="">Select Band</option>
+                  ${[9.0, 8.5, 8.0, 7.5, 7.0, 6.5, 6.0, 5.5, 5.0, 4.5, 4.0, 3.5, 3.0].map(b => `<option value="${b}" ${testRecord.writingDetails?.task2Band == b ? 'selected' : ''}>Band ${b}</option>`).join('')}
+                </select>
+              </div>
+            </div>
+            
+            <div class="space-y-1">
+              <label class="block font-bold text-slate-700">Tutor Feedback &amp; Comments</label>
+              <textarea id="gradeFeedback" class="w-full bg-white border border-slate-200 p-2 rounded-lg text-xs h-24" placeholder="Enter tutor comments...">${escapeHtml(testRecord.notes || '')}</textarea>
+            </div>
+            
+            <button onclick="submitWritingGrade('${studentId}', ${testIndex})" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold p-2.5 rounded-lg transition mt-2">Save Writing Grade</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function submitWritingGrade(studentId, testIndex) {
+      const stud = crmStudents.find(s => s.id === studentId);
+      if (!stud) return;
+      const testRecord = stud.mockHistory[testIndex];
+      if (!testRecord) return;
+      
+      const task1Band = parseFloat(document.getElementById('gradeTask1Band').value) || 0;
+      const task2Band = parseFloat(document.getElementById('gradeTask2Band').value) || 0;
+      const feedback = document.getElementById('gradeFeedback').value;
+      
+      let overallWriting = 0;
+      if (task1Band && task2Band) {
+        const rawVal = (task1Band + 2 * task2Band) / 3;
+        overallWriting = Math.round(rawVal * 2) / 2;
+      } else {
+        overallWriting = task2Band || task1Band || 0;
+      }
+      
+      if (!testRecord.writingDetails) testRecord.writingDetails = {};
+      testRecord.writingDetails.task1Band = task1Band;
+      testRecord.writingDetails.task2Band = task2Band;
+      testRecord.writing = overallWriting ? overallWriting.toFixed(1) : 'Graded';
+      testRecord.overall = overallWriting ? overallWriting.toFixed(1) : '—';
+      testRecord.notes = feedback;
+      
+      localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
+      
+      const supabaseUrl = localStorage.getItem('supabase_url');
+      const supabaseKey = localStorage.getItem('supabase_key');
+      if (supabaseUrl && supabaseKey) {
+        try {
+          const { createClient } = window['supabase'];
+          const supabaseClient = createClient(supabaseUrl, supabaseKey);
+          
+          supabaseClient.from('mock_history')
+            .update({
+              writing_band: overallWriting || null,
+              tutor_feedback: feedback
+            })
+            .eq('student_id', studentId)
+            .eq('test_name', testRecord.test)
+            .eq('module_type', 'writing')
+            .then(res => {
+              if (res.error) console.error('Supabase grade update error:', res.error);
+              else console.log('Supabase grade update success');
+            });
+        } catch (e) {
+          console.error(e);
+        }
+      }
+      
+      alert('Grade saved successfully!');
+      openCRMProfileDrawer(studentId);
     }
 
     function closeCRMProfileDrawer(event) {

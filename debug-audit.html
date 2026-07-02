@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ViATestPrep - Test Data Audit Tool</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  body { font-family: "Inter", sans-serif; background: #0f172a; color: #e2e8f0; margin: 0; }
+  .mono { font-family: "JetBrains Mono", monospace; }
+  .badge-ok { background:#064e3b;color:#34d399;border:1px solid #059669; }
+  .badge-err { background:#450a0a;color:#f87171;border:1px solid #dc2626; }
+  .badge-warn { background:#451a03;color:#fb923c;border:1px solid #ea580c; }
+  .badge-info { background:#1e3a5f;color:#60a5fa;border:1px solid #2563eb; }
+  .q-row { border-bottom: 1px solid #1e293b; }
+  .q-row:hover { background:#1e293b80; }
+  input[type=checkbox] { accent-color:#22c55e; width:15px;height:15px;cursor:pointer; }
+  .audio-mini { height:26px; width:100%; }
+  select { background:#1e293b;border:1px solid #334155;color:#e2e8f0;border-radius:6px;padding:4px 8px; }
+  .sticky-hdr { position:sticky;top:0;z-index:40;background:#0f172a;border-bottom:2px solid #7c3aed;box-shadow:0 4px 20px #00000080; }
+  ::-webkit-scrollbar { width:5px;height:5px; }
+  ::-webkit-scrollbar-thumb { background:#334155;border-radius:4px; }
+  .pill { display:inline-flex;align-items:center;gap:3px;padding:1px 7px;border-radius:999px;font-size:10px;font-weight:700;border:1px solid; }
+  details > summary { cursor:pointer; }
+</style>
+</head>
+<body>
+
+<div class="sticky-hdr px-5 py-2.5 flex items-center justify-between gap-3 flex-wrap">
+  <div>
+    <div style="font-size:9px;color:#a78bfa;font-weight:800;letter-spacing:.1em;text-transform:uppercase;">ViATestPrep Internal Tool</div>
+    <h1 style="font-size:16px;font-weight:900;color:#fff;margin:0;">Test Data Full Audit</h1>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+    <select id="testFilter" onchange="applyFilters()" style="font-size:11px;">
+      <option value="all">All Tests</option>
+    </select>
+    <select id="partFilter" onchange="applyFilters()" style="font-size:11px;">
+      <option value="all">All Parts</option>
+      <option value="0">Part 1</option>
+      <option value="1">Part 2</option>
+      <option value="2">Part 3</option>
+      <option value="3">Part 4</option>
+    </select>
+    <select id="moduleFilter" onchange="applyFilters()" style="font-size:11px;">
+      <option value="all">Both Modules</option>
+      <option value="L">Listening Only</option>
+      <option value="R">Reading Only</option>
+    </select>
+    <button onclick="markAllVisible()" style="padding:5px 12px;background:#7c3aed;border:none;color:#fff;font-size:11px;font-weight:700;border-radius:7px;cursor:pointer;">Mark All Visible OK</button>
+    <button onclick="exportReport()" style="padding:5px 12px;background:#059669;border:none;color:#fff;font-size:11px;font-weight:700;border-radius:7px;cursor:pointer;">Export Report</button>
+    <button onclick="clearAll()" style="padding:5px 12px;background:#6b7280;border:none;color:#fff;font-size:11px;font-weight:700;border-radius:7px;cursor:pointer;">Clear Checks</button>
+  </div>
+</div>
+
+<div id="summaryBar" style="padding:12px 20px;"></div>
+<div id="issuesPanel" style="padding:0 20px 10px;"></div>
+<div id="mainContent" style="padding:0 20px 60px;"></div>
+
+<script src="test-data.js"></script>
+<script>
+var reviewState = {};
+try { reviewState = JSON.parse(localStorage.getItem('viaaudit') || '{}'); } catch(e){}
+
+var KNOWN_AUDIO = [
+  "audio/IELTS_18_Test_1_Part1.m4a","audio/IELTS_18_Test_1_Part2.m4a","audio/IELTS_18_Test_1_Part3.m4a","audio/IELTS_18_Test_1_Part4.m4a",
+  "audio/IELTS_18_Test_2_Part1.m4a","audio/IELTS_18_Test_2_Part2.m4a","audio/IELTS_18_Test_2_Part3.m4a","audio/IELTS_18_Test_2_Part4.m4a",
+  "audio/IELTS_18_Test_3_Part1.m4a","audio/IELTS_18_Test_3_Part2.m4a","audio/IELTS_18_Test_3_Part3.m4a","audio/IELTS_18_Test_3_Part4.m4a",
+  "audio/IELTS_18_Test_4_Part1.m4a","audio/IELTS_18_Test_4_Part2.m4a","audio/IELTS_18_Test_4_Part3.m4a","audio/IELTS_18_Test_4_Part4.m4a",
+  "audio/IELTS_19_Test_1_Part1.m4a","audio/IELTS_19_Test_1_Part2.m4a","audio/IELTS_19_Test_1_Part3.m4a","audio/IELTS_19_Test_1_Part4.m4a",
+  "audio/IELTS_19_Test_2_Part1.m4a","audio/IELTS_19_Test_2_Part2.m4a","audio/IELTS_19_Test_2_Part3.m4a","audio/IELTS_19_Test_2_Part4.m4a",
+  "audio/IELTS_19_Test_3_Part1.m4a","audio/IELTS_19_Test_3_Part2.m4a","audio/IELTS_19_Test_3_Part3.m4a","audio/IELTS_19_Test_3_Part4.m4a",
+  "audio/IELTS_19_Test_4_Part1.m4a","audio/IELTS_19_Test_4_Part2.m4a","audio/IELTS_19_Test_4_Part3.m4a","audio/IELTS_19_Test_4_Part4.m4a",
+  "audio/IELTS_20_Test_1_Part1.mp3","audio/IELTS_20_Test_1_Part2.mp3","audio/IELTS_20_Test_1_Part3.mp3","audio/IELTS_20_Test_1_Part4.mp3",
+  "audio/IELTS_20_Test_2_Part1.mp3","audio/IELTS_20_Test_2_Part2.mp3","audio/IELTS_20_Test_2_Part3.mp3","audio/IELTS_20_Test_2_Part4.mp3",
+  "audio/IELTS_20_Test_3_Part1.mp3","audio/IELTS_20_Test_3_Part2.mp3","audio/IELTS_20_Test_3_Part3.mp3","audio/IELTS_20_Test_3_Part4.mp3",
+  "audio/IELTS_20_Test_4_Part1.mp3","audio/IELTS_20_Test_4_Part2.mp3","audio/IELTS_20_Test_4_Part3.mp3","audio/IELTS_20_Test_4_Part4.mp3"
+];
+
+function saveReview() {
+  try { localStorage.setItem('viaaudit', JSON.stringify(reviewState)); } catch(e){}
+}
+
+function check(q, tid, module, partNum) {
+  var issues = [];
+  if (!q.answer || q.answer.trim() === '') issues.push('EMPTY ANSWER');
+  if (!q.text || q.text.trim() === '') issues.push('EMPTY TEXT');
+  if (!q.explanation || q.explanation.trim() === '') issues.push('no explanation');
+  if (q.type === 'FILL' && !/_{4,}/.test(q.text)) issues.push('FILL: no blank (________)');
+  if (q.type === 'MCQ' && q.options) {
+    var letters = q.options.map(function(o){ return o.split('.')[0].trim(); });
+    var ans = q.answer || '';
+    ans.split('/').forEach(function(a){
+      if (a.trim() && !letters.includes(a.trim())) issues.push('Answer "' + a.trim() + '" not in options');
+    });
+  }
+  if (q.type === 'MCQ' && q.instruction && q.instruction.includes('TWO') && q.answer && !q.answer.includes('/')) {
+    issues.push('Choose TWO: answer needs two letters like "A/C"');
+  }
+  return issues;
+}
+
+function runChecks() {
+  var data = IELTS_TEST_DATA;
+  var allIssues = [];
+  Object.keys(data).forEach(function(tid) {
+    var test = data[tid];
+    if (test.listening && test.listening.sections) {
+      test.listening.sections.forEach(function(sec, si) {
+        if (!KNOWN_AUDIO.includes(sec.audio)) {
+          allIssues.push({ tid:tid, module:'L', part:si+1, q:'-', sev:'critical', msg:'Audio not on disk: ' + sec.audio });
+        }
+        if (!sec.questions || sec.questions.length === 0) {
+          allIssues.push({ tid:tid, module:'L', part:si+1, q:'-', sev:'critical', msg:'No questions in this part' });
+          return;
+        }
+        sec.questions.forEach(function(q) {
+          var errs = check(q, tid, 'L', si+1);
+          errs.forEach(function(e) {
+            var sev = (e.startsWith('no ')) ? 'warn' : 'critical';
+            allIssues.push({ tid:tid, module:'L', part:si+1, q:q.num, sev:sev, msg:e });
+          });
+        });
+      });
+    }
+    if (test.reading && test.reading.passages) {
+      test.reading.passages.forEach(function(pass, pi) {
+        if (!pass.text || pass.text.length < 200) {
+          allIssues.push({ tid:tid, module:'R', part:pi+1, q:'-', sev:'critical', msg:'Passage text missing or very short' });
+        }
+        if (!pass.questions || pass.questions.length === 0) {
+          allIssues.push({ tid:tid, module:'R', part:pi+1, q:'-', sev:'critical', msg:'No questions in passage' });
+          return;
+        }
+        pass.questions.forEach(function(q) {
+          var errs = check(q, tid, 'R', pi+1);
+          errs.forEach(function(e) {
+            var sev = (e.startsWith('no ')) ? 'warn' : 'critical';
+            allIssues.push({ tid:tid, module:'R', part:pi+1, q:q.num, sev:sev, msg:e });
+          });
+        });
+      });
+    }
+  });
+  return allIssues;
+}
+
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function init() {
+  var data = IELTS_TEST_DATA;
+  var tf = document.getElementById('testFilter');
+  Object.keys(data).sort(function(a,b){return parseInt(a)-parseInt(b);}).forEach(function(tid) {
+    var o = document.createElement('option');
+    o.value = tid;
+    o.textContent = 'Test ' + tid + ': ' + data[tid].title.substring(0,30);
+    tf.appendChild(o);
+  });
+
+  var allIssues = runChecks();
+  renderSummary(data, allIssues);
+  renderIssues(allIssues);
+  renderMain(data, allIssues);
+}
+
+function renderSummary(data, allIssues) {
+  var totalL = 0, totalR = 0;
+  Object.values(data).forEach(function(t) {
+    t.listening && t.listening.sections && t.listening.sections.forEach(function(s){ totalL += (s.questions||[]).length; });
+    t.reading && t.reading.passages && t.reading.passages.forEach(function(p){ totalR += (p.questions||[]).length; });
+  });
+  var critical = allIssues.filter(function(i){ return i.sev==='critical'; }).length;
+  var warn = allIssues.filter(function(i){ return i.sev==='warn'; }).length;
+
+  var totalChecked = Object.values(reviewState).filter(Boolean).length;
+  var totalQs = totalL + totalR;
+
+  document.getElementById('summaryBar').innerHTML =
+    '<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;">' +
+    card(Object.keys(data).length, 'Tests Loaded', '#fff') +
+    card(totalL, 'Listening Qs', '#a78bfa') +
+    card(totalR, 'Reading Qs', '#34d399') +
+    card(critical, critical > 0 ? 'CRITICAL ISSUES' : 'Critical Issues', critical > 0 ? '#f87171' : '#34d399') +
+    card(totalChecked + '/' + totalQs, 'Verified', '#60a5fa') +
+    '</div>';
+}
+
+function card(val, label, color) {
+  return '<div style="background:#1e293b;border:1px solid #334155;border-radius:10px;padding:12px 16px;">' +
+    '<div style="font-size:22px;font-weight:900;color:' + color + ';">' + val + '</div>' +
+    '<div style="font-size:10px;color:#94a3b8;font-weight:700;margin-top:2px;text-transform:uppercase;">' + label + '</div>' +
+    '</div>';
+}
+
+function renderIssues(allIssues) {
+  var critical = allIssues.filter(function(i){ return i.sev==='critical'; });
+  var warn = allIssues.filter(function(i){ return i.sev==='warn'; });
+  var html = '';
+
+  if (critical.length === 0) {
+    html += '<div style="background:#064e3b40;border:1px solid #059669;border-radius:10px;padding:10px 16px;font-size:12px;color:#34d399;font-weight:700;margin-bottom:10px;">No critical structural issues detected.</div>';
+  } else {
+    html += '<div style="background:#450a0a40;border:1px solid #dc2626;border-radius:10px;padding:14px 16px;margin-bottom:10px;">';
+    html += '<div style="font-size:12px;font-weight:900;color:#f87171;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;">Critical Issues (' + critical.length + ')</div>';
+    html += '<div style="display:flex;flex-direction:column;gap:6px;">';
+    critical.forEach(function(iss) {
+      html += '<div style="display:flex;align-items:center;gap:8px;font-size:11px;">' +
+        '<span class="pill badge-err">Test ' + iss.tid + '</span>' +
+        '<span class="pill badge-info">' + iss.module + '-Part' + iss.part + '</span>' +
+        (iss.q !== '-' ? '<span class="pill badge-info">Q' + iss.q + '</span>' : '') +
+        '<span style="color:#fca5a5;">' + esc(iss.msg) + '</span>' +
+        '</div>';
+    });
+    html += '</div></div>';
+  }
+
+  if (warn.length > 0) {
+    html += '<details style="margin-bottom:10px;"><summary style="background:#451a0340;border:1px solid #ea580c;border-radius:10px;padding:10px 16px;font-size:12px;font-weight:700;color:#fb923c;">Warnings (' + warn.length + ') - click to expand</summary>';
+    html += '<div style="background:#1e293b;border:1px solid #334155;border-radius:0 0 10px 10px;padding:10px 16px;display:flex;flex-direction:column;gap:5px;">';
+    warn.forEach(function(w) {
+      html += '<div style="display:flex;align-items:center;gap:8px;font-size:11px;">' +
+        '<span class="pill badge-warn">Test ' + w.tid + '</span>' +
+        '<span class="pill badge-warn">' + w.module + '-Part' + w.part + '</span>' +
+        (w.q !== '-' ? '<span class="pill badge-info">Q' + w.q + '</span>' : '') +
+        '<span style="color:#fed7aa;">' + esc(w.msg) + '</span>' +
+        '</div>';
+    });
+    html += '</div></details>';
+  }
+
+  document.getElementById('issuesPanel').innerHTML = html;
+}
+
+function renderMain(data, allIssues) {
+  var selTest = document.getElementById('testFilter').value;
+  var selPart = document.getElementById('partFilter').value;
+  var selMod = document.getElementById('moduleFilter').value;
+
+  var html = '';
+  var tids = Object.keys(data).sort(function(a,b){return parseInt(a)-parseInt(b);});
+
+  tids.forEach(function(tid) {
+    if (selTest !== 'all' && selTest !== tid) return;
+    var test = data[tid];
+    html += '<div style="margin-bottom:32px;">';
+    html += '<div style="font-size:15px;font-weight:900;color:#fff;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #334155;">' +
+      'Test ' + tid + ': ' + esc(test.title) + '</div>';
+
+    // LISTENING
+    if (selMod !== 'R' && test.listening && test.listening.sections) {
+      test.listening.sections.forEach(function(sec, si) {
+        if (selPart !== 'all' && parseInt(selPart) !== si) return;
+        var partKey = tid + '-L-' + (si+1);
+        var qs = sec.questions || [];
+        var verified = qs.filter(function(q){ return reviewState[partKey + '-' + q.num]; }).length;
+
+        var secIssues = allIssues.filter(function(i){ return i.tid===tid && i.module==='L' && i.part===(si+1); });
+        var hasCrit = secIssues.some(function(i){ return i.sev==='critical'; });
+        var borderCol = hasCrit ? '#dc2626' : verified===qs.length && qs.length>0 ? '#059669' : '#334155';
+
+        html += '<div style="background:#0f172a;border:1.5px solid ' + borderCol + ';border-radius:12px;margin-bottom:12px;overflow:hidden;" id="sec-' + partKey + '">';
+        html += '<div style="background:#1e293b;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;">';
+        html += '<div style="display:flex;align-items:center;gap:8px;">';
+        html += '<span class="pill badge-info">L-Part ' + (si+1) + '</span>';
+        html += '<span style="font-size:13px;font-weight:700;color:#fff;">' + esc(sec.title || 'Part '+(si+1)) + '</span>';
+        html += '<span style="font-size:10px;color:#64748b;">' + verified + '/' + qs.length + ' verified</span>';
+        if (hasCrit) html += '<span class="pill badge-err">ISSUES FOUND</span>';
+        else if (verified === qs.length && qs.length > 0) html += '<span class="pill badge-ok">VERIFIED</span>';
+        html += '</div>';
+        html += '<audio controls style="height:24px;flex:1;max-width:260px;" src="' + esc(sec.audio||'') + '"></audio>';
+        html += '</div>';
+
+        // Question table
+        html += '<div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;font-size:11px;">';
+        html += '<thead><tr style="background:#0f172a;color:#475569;text-transform:uppercase;font-size:9px;font-weight:800;">' +
+          '<th style="padding:6px 10px;text-align:center;width:30px;">OK</th>' +
+          '<th style="padding:6px 10px;width:30px;">Q#</th>' +
+          '<th style="padding:6px 10px;width:50px;">Type</th>' +
+          '<th style="padding:6px 10px;min-width:200px;">Question Text</th>' +
+          '<th style="padding:6px 10px;width:100px;">Answer Key</th>' +
+          '<th style="padding:6px 10px;min-width:180px;">Explanation (preview)</th>' +
+          '<th style="padding:6px 10px;width:40px;"></th>' +
+          '</tr></thead><tbody>';
+
+        qs.forEach(function(q) {
+          var rvKey = partKey + '-' + q.num;
+          var isOk = !!reviewState[rvKey];
+          var qIssues = allIssues.filter(function(i){ return i.tid===tid && i.module==='L' && i.part===(si+1) && String(i.q)===String(q.num); });
+          var hasCritQ = qIssues.some(function(i){ return i.sev==='critical'; });
+          var hasBlank = q.type !== 'FILL' || /_{4,}/.test(q.text||'');
+          var isTwoAns = q.type==='MCQ' && q.instruction && q.instruction.includes('TWO');
+
+          html += '<tr class="q-row" style="' + (hasCritQ ? 'background:#450a0a30;border-left:3px solid #dc2626;' : isOk ? 'background:#064e3b20;' : '') + '">';
+          html += '<td style="padding:6px 10px;text-align:center;"><input type="checkbox" ' + (isOk?'checked':'') + ' onchange="toggle('' + rvKey + '',this.checked)" /></td>';
+          html += '<td style="padding:6px 10px;font-weight:900;color:#a78bfa;font-family:monospace;">' + q.num + '</td>';
+          html += '<td style="padding:6px 10px;">';
+          html += '<span class="pill ' + (q.type==='FILL'?'badge-info':'') + '" style="' + (q.type!=='FILL'?'background:#4c1d9540;color:#c4b5fd;border-color:#7c3aed;':'' ) + '">' + q.type + '</span>';
+          if (isTwoAns) html += ' <span class="pill badge-warn">x2</span>';
+          html += '</td>';
+          html += '<td style="padding:6px 10px;color:#cbd5e1;max-width:300px;">';
+          if (!hasBlank) html += '<span style="color:#f87171;font-weight:700;">NO BLANK: </span>';
+          html += '<span title="' + esc(q.text||'') + '">' + esc((q.text||'').substring(0,100)) + ((q.text||'').length>100?'...':'') + '</span>';
+          if (q.options) html += '<div style="color:#475569;margin-top:2px;">' + esc(q.options.join(' | ').substring(0,80)) + '</div>';
+          html += '</td>';
+          var ansColor = hasCritQ ? '#f87171' : '#34d399';
+          html += '<td style="padding:6px 10px;font-family:monospace;font-weight:700;color:' + ansColor + ';">' + esc(q.answer||'—') + '</td>';
+          html += '<td style="padding:6px 10px;color:#475569;">' + esc((q.explanation||'').substring(0,80)) + ((q.explanation||'').length>80?'...':'') + '</td>';
+          html += '<td style="padding:6px 10px;text-align:center;">' + (hasCritQ ? '<span style="color:#f87171;font-size:14px;">!</span>' : isOk ? '<span style="color:#22c55e;">✓</span>' : '') + '</td>';
+          html += '</tr>';
+        });
+
+        html += '</tbody></table></div></div>';
+      });
+    }
+
+    // READING
+    if (selMod !== 'L' && test.reading && test.reading.passages) {
+      test.reading.passages.forEach(function(pass, pi) {
+        var partKey = tid + '-R-' + (pi+1);
+        var qs = pass.questions || [];
+        var verified = qs.filter(function(q){ return reviewState[partKey + '-' + q.num]; }).length;
+        var passIssues = allIssues.filter(function(i){ return i.tid===tid && i.module==='R' && i.part===(pi+1); });
+        var hasCrit = passIssues.some(function(i){ return i.sev==='critical'; });
+        var borderCol = hasCrit ? '#dc2626' : verified===qs.length && qs.length>0 ? '#059669' : '#334155';
+
+        html += '<div style="background:#0f172a;border:1.5px solid ' + borderCol + ';border-radius:12px;margin-bottom:12px;overflow:hidden;">';
+        html += '<div style="background:#1e293b;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;">';
+        html += '<div style="display:flex;align-items:center;gap:8px;">';
+        html += '<span class="pill badge-ok">R-Pass ' + (pi+1) + '</span>';
+        html += '<span style="font-size:13px;font-weight:700;color:#fff;">' + esc((pass.title||'').substring(0,60)) + '</span>';
+        html += '<span style="font-size:10px;color:#64748b;">' + verified + '/' + qs.length + ' verified</span>';
+        if (hasCrit) html += '<span class="pill badge-err">ISSUES</span>';
+        else if (verified===qs.length && qs.length>0) html += '<span class="pill badge-ok">VERIFIED</span>';
+        html += '</div>';
+        html += '<button onclick="toggleEl('ptxt-' + tid + '-' + pi + '')" style="background:#0f172a;border:1px solid #334155;color:#94a3b8;font-size:10px;padding:3px 10px;border-radius:6px;cursor:pointer;">Show Passage</button>';
+        html += '</div>';
+        html += '<div id="ptxt-' + tid + '-' + pi + '" style="display:none;padding:10px 14px;font-size:11px;color:#64748b;max-height:180px;overflow-y:auto;border-bottom:1px solid #1e293b;line-height:1.6;">' + esc(pass.text||'(no text)') + '</div>';
+
+        html += '<div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;font-size:11px;">';
+        html += '<thead><tr style="background:#0f172a;color:#475569;text-transform:uppercase;font-size:9px;font-weight:800;">' +
+          '<th style="padding:6px 10px;text-align:center;width:30px;">OK</th>' +
+          '<th style="padding:6px 10px;width:30px;">Q#</th>' +
+          '<th style="padding:6px 10px;width:50px;">Type</th>' +
+          '<th style="padding:6px 10px;min-width:200px;">Question Text</th>' +
+          '<th style="padding:6px 10px;width:100px;">Answer Key</th>' +
+          '<th style="padding:6px 10px;min-width:180px;">Location / Explanation</th>' +
+          '<th style="padding:6px 10px;width:40px;"></th>' +
+          '</tr></thead><tbody>';
+
+        qs.forEach(function(q) {
+          var rvKey = partKey + '-' + q.num;
+          var isOk = !!reviewState[rvKey];
+          var qIssues = allIssues.filter(function(i){ return i.tid===tid && i.module==='R' && i.part===(pi+1) && String(i.q)===String(q.num); });
+          var hasCritQ = qIssues.some(function(i){ return i.sev==='critical'; });
+          var hasBlank = q.type !== 'FILL' || /_{4,}/.test(q.text||'');
+
+          html += '<tr class="q-row" style="' + (hasCritQ?'background:#450a0a30;border-left:3px solid #dc2626;':isOk?'background:#064e3b20;':'') + '">';
+          html += '<td style="padding:6px 10px;text-align:center;"><input type="checkbox" ' + (isOk?'checked':'') + ' onchange="toggle('' + rvKey + '',this.checked)" /></td>';
+          html += '<td style="padding:6px 10px;font-weight:900;color:#34d399;font-family:monospace;">' + q.num + '</td>';
+          html += '<td style="padding:6px 10px;"><span class="pill ' + (q.type==='FILL'?'badge-info':'') + '" style="' + (q.type!=='FILL'?'background:#0f766e40;color:#5eead4;border-color:#0d9488;':'' ) + '">' + q.type + '</span></td>';
+          html += '<td style="padding:6px 10px;color:#cbd5e1;max-width:300px;">';
+          if (!hasBlank) html += '<span style="color:#f87171;font-weight:700;">NO BLANK: </span>';
+          html += '<span title="' + esc(q.text||'') + '">' + esc((q.text||'').substring(0,100)) + ((q.text||'').length>100?'...':'') + '</span>';
+          if (q.options) html += '<div style="color:#475569;margin-top:2px;">' + esc(q.options.join(' | ').substring(0,80)) + '</div>';
+          html += '</td>';
+          html += '<td style="padding:6px 10px;font-family:monospace;font-weight:700;color:#34d399;">' + esc(q.answer||'—') + '</td>';
+          html += '<td style="padding:6px 10px;color:#475569;">' + esc(((q.location||q.explanation||'')).substring(0,80)) + ((q.location||q.explanation||'').length>80?'...':'') + '</td>';
+          html += '<td style="padding:6px 10px;text-align:center;">' + (hasCritQ?'<span style="color:#f87171;">!</span>':isOk?'<span style="color:#22c55e;">✓</span>':'') + '</td>';
+          html += '</tr>';
+        });
+
+        html += '</tbody></table></div></div>';
+      });
+    }
+
+    html += '</div>';
+  });
+
+  document.getElementById('mainContent').innerHTML = html;
+}
+
+function toggle(key, val) {
+  reviewState[key] = val;
+  saveReview();
+  document.getElementById('summaryBar').querySelector && renderSummary(IELTS_TEST_DATA, runChecks());
+}
+
+function toggleEl(id) {
+  var el = document.getElementById(id);
+  if (el) el.style.display = el.style.display === 'none' ? 'block' : 'none';
+}
+
+function applyFilters() {
+  var allIssues = runChecks();
+  renderMain(IELTS_TEST_DATA, allIssues);
+}
+
+function markAllVisible() {
+  document.querySelectorAll('input[type=checkbox]').forEach(function(cb) {
+    var key = cb.getAttribute('onchange');
+    if (key) {
+      var m = key.match(/'([^']+)'/);
+      if (m) { reviewState[m[1]] = true; cb.checked = true; }
+    }
+  });
+  saveReview();
+  renderSummary(IELTS_TEST_DATA, runChecks());
+}
+
+function clearAll() {
+  if (!confirm('Clear all verification checks?')) return;
+  reviewState = {};
+  saveReview();
+  init();
+}
+
+function exportReport() {
+  var data = IELTS_TEST_DATA;
+  var allIssues = runChecks();
+  var lines = ['ViATestPrep Content Audit Report', '='.repeat(60), 'Generated: ' + new Date().toLocaleString(), ''];
+  var critical = allIssues.filter(function(i){ return i.sev==='critical'; });
+  var warn = allIssues.filter(function(i){ return i.sev==='warn'; });
+  lines.push('Critical Issues: ' + critical.length);
+  lines.push('Warnings: ' + warn.length);
+  lines.push('');
+  if (critical.length > 0) {
+    lines.push('CRITICAL:');
+    critical.forEach(function(i){ lines.push('  [Test ' + i.tid + '] ' + i.module + '-Part' + i.part + ' Q' + i.q + ': ' + i.msg); });
+    lines.push('');
+  }
+  Object.keys(data).sort(function(a,b){return parseInt(a)-parseInt(b);}).forEach(function(tid) {
+    var test = data[tid];
+    lines.push('Test ' + tid + ': ' + test.title);
+    if (test.listening && test.listening.sections) {
+      test.listening.sections.forEach(function(sec, si) {
+        var pKey = tid + '-L-' + (si+1);
+        var qs = sec.questions || [];
+        var ok = qs.filter(function(q){ return reviewState[pKey+'-'+q.num]; }).length;
+        lines.push('  L-Part' + (si+1) + ': ' + ok + '/' + qs.length + ' verified | audio: ' + (sec.audio||'MISSING'));
+        qs.forEach(function(q) {
+          var v = reviewState[pKey+'-'+q.num] ? '[OK]' : '[--]';
+          lines.push('    Q' + String(q.num).padStart(2) + ' ' + v + ' [' + q.type + '] Answer: "' + q.answer + '"');
+        });
+      });
+    }
+    if (test.reading && test.reading.passages) {
+      test.reading.passages.forEach(function(pass, pi) {
+        var pKey = tid + '-R-' + (pi+1);
+        var qs = pass.questions || [];
+        var ok = qs.filter(function(q){ return reviewState[pKey+'-'+q.num]; }).length;
+        lines.push('  R-Pass' + (pi+1) + ': ' + ok + '/' + qs.length + ' verified');
+        qs.forEach(function(q) {
+          var v = reviewState[pKey+'-'+q.num] ? '[OK]' : '[--]';
+          lines.push('    Q' + String(q.num).padStart(2) + ' ' + v + ' [' + q.type + '] Answer: "' + q.answer + '"');
+        });
+      });
+    }
+    lines.push('');
+  });
+  var blob = new Blob([lines.join('\n')], {type:'text/plain'});
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'viaaudit_' + new Date().toISOString().slice(0,10) + '.txt';
+  a.click();
+}
+
+init();
+</script>
+</body>
+</html>

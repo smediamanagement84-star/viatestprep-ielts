@@ -9,6 +9,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <style>
     :root {
       --primary: 268, 52%, 48%;
@@ -623,6 +624,60 @@
 
       // Save score to local storage
       localStorage.setItem(`score_test_${testId}_reading`, band.toFixed(1));
+
+      // Push to Supabase if client is active
+      const supabaseUrl = localStorage.getItem('supabase_url');
+      const supabaseKey = localStorage.getItem('supabase_key');
+      const userEmail = localStorage.getItem('userEmail');
+      
+      if (supabaseUrl && supabaseKey && userEmail) {
+        try {
+          const { createClient } = window['supabase'];
+          const supabaseClient = createClient(supabaseUrl, supabaseKey);
+          
+          // Look up student id by email
+          supabaseClient.from('students').select('id').eq('email', userEmail).single().then(res => {
+            if (res.data) {
+              const studentId = res.data.id;
+              // Insert into mock_history
+              supabaseClient.from('mock_history').insert({
+                student_id: studentId,
+                test_name: testData.title,
+                module_type: 'reading',
+                listening_band: null,
+                reading_band: parseFloat(band.toFixed(1))
+              }).then(insertRes => {
+                if (insertRes.error) {
+                  console.error('Supabase write error:', insertRes.error);
+                } else {
+                  console.log('Supabase write success');
+                }
+              });
+            }
+          });
+        } catch (e) {
+          console.error('Supabase client error:', e);
+        }
+      }
+      
+      // Offline Local Roster update fallback
+      let allStudents = JSON.parse(localStorage.getItem('viatestprep_students') || '[]');
+      let currentStudent = allStudents.find(s => s.email && s.email.toLowerCase() === (userEmail || '').toLowerCase());
+      if (currentStudent) {
+        if (!currentStudent.mockHistory) currentStudent.mockHistory = [];
+        // remove existing record for this test and module if any
+        currentStudent.mockHistory = currentStudent.mockHistory.filter(h => h.test !== testData.title || h.reading === '—');
+        
+        currentStudent.mockHistory.push({
+          test: testData.title,
+          date: new Date().toISOString().split('T')[0],
+          listening: '—',
+          reading: band.toFixed(1),
+          writing: '—',
+          overall: band.toFixed(1)
+        });
+        localStorage.setItem('viatestprep_students', JSON.stringify(allStudents));
+      }
 
       // Switch UI to Review Mode
       alert(`Test Submitted Successfully!\nYour Score: ${correctCount}/${totalQs}\nEstimated IELTS Band: ${band.toFixed(1)}`);

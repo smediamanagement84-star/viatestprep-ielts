@@ -6,6 +6,7 @@
 <title>IELTS Writing Simulator — ViATestPrep</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
   :root {
     --primary: 268, 52%, 48%; /* #5b2a86 */
@@ -401,6 +402,61 @@ function submitTest(autoSubmit = false) {
   
   // Set completed tag on local storage
   localStorage.setItem(`score_test_${testId}_writing`, 'completed');
+  
+  // Push to Supabase if client is active
+  const supabaseUrl = localStorage.getItem('supabase_url');
+  const supabaseKey = localStorage.getItem('supabase_key');
+  const userEmail = localStorage.getItem('userEmail');
+  
+  if (supabaseUrl && supabaseKey && userEmail) {
+    try {
+      const { createClient } = window['supabase'];
+      const supabaseClient = createClient(supabaseUrl, supabaseKey);
+      
+      // Look up student id by email
+      supabaseClient.from('students').select('id').eq('email', userEmail).single().then(res => {
+        if (res.data) {
+          const studentId = res.data.id;
+          // Insert into mock_history
+          supabaseClient.from('mock_history').insert({
+            student_id: studentId,
+            test_name: testData.title,
+            module_type: 'writing',
+            writing_task1: essayContent[1],
+            writing_task2: essayContent[2],
+            writing_band: null
+          }).then(insertRes => {
+            if (insertRes.error) {
+              console.error('Supabase write error:', insertRes.error);
+            } else {
+              console.log('Supabase write success');
+            }
+          });
+        }
+      });
+    } catch (e) {
+      console.error('Supabase client error:', e);
+    }
+  }
+  
+  // Offline Local Roster update fallback
+  let allStudents = JSON.parse(localStorage.getItem('viatestprep_students') || '[]');
+  let currentStudent = allStudents.find(s => s.email && s.email.toLowerCase() === (userEmail || '').toLowerCase());
+  if (currentStudent) {
+    if (!currentStudent.mockHistory) currentStudent.mockHistory = [];
+    currentStudent.mockHistory = currentStudent.mockHistory.filter(h => h.test !== testData.title || h.writing === undefined);
+    
+    currentStudent.mockHistory.push({
+      test: testData.title,
+      date: new Date().toISOString().split('T')[0],
+      listening: '—',
+      reading: '—',
+      writing: 'Submitted',
+      writingDetails: { task1: essayContent[1], task2: essayContent[2] },
+      overall: '—'
+    });
+    localStorage.setItem('viatestprep_students', JSON.stringify(allStudents));
+  }
   
   alert("Writing submissions recorded! You can now review the Band 9 Model Responses and export your essays to share with a tutor.");
   
