@@ -208,6 +208,28 @@
       </div>
     </main>
 
+    <!-- Stats / Trust Strip -->
+    <section class="border-t border-white/[0.06] bg-white/[0.015] py-10 px-6 relative z-10">
+      <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <span class="block text-2xl md:text-3xl font-extrabold text-white">16+</span>
+          <span class="block text-[11px] text-slate-500 font-bold uppercase tracking-widest mt-1">Study Modules</span>
+        </div>
+        <div>
+          <span class="block text-2xl md:text-3xl font-extrabold text-white">12</span>
+          <span class="block text-[11px] text-slate-500 font-bold uppercase tracking-widest mt-1">Cambridge Mock Tests</span>
+        </div>
+        <div>
+          <span class="block text-2xl md:text-3xl font-extrabold text-white">4</span>
+          <span class="block text-[11px] text-slate-500 font-bold uppercase tracking-widest mt-1">Skills Covered</span>
+        </div>
+        <div>
+          <span class="block text-2xl md:text-3xl font-extrabold text-white">1</span>
+          <span class="block text-[11px] text-slate-500 font-bold uppercase tracking-widest mt-1">Single Portal Link</span>
+        </div>
+      </div>
+    </section>
+
     <!-- Features Section -->
     <section id="features" class="bg-[#080B19] border-t border-white/[0.04] py-24 px-6 relative z-10">
       <div class="max-w-6xl mx-auto">
@@ -250,6 +272,63 @@
             <p class="text-slate-400 text-xs leading-relaxed">Manage student rosters, view active slots, CSV sync, and grade 1-on-1 speaking exams using official band descriptors.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Pricing Preview Section -->
+    <section id="pricing" class="py-24 px-6 relative z-10">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest block mb-2">Simple Pricing</span>
+          <h2 class="text-3xl font-extrabold text-white">Capacity Slot Plans for Consultancies</h2>
+          <p class="text-slate-400 text-sm mt-2 max-w-md mx-auto">Pick a plan by student seats. Every tier includes the full module vault, mock exams, and CRM.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white/[0.02] border border-white/[0.06] rounded-3xl p-7 flex flex-col">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Starter</span>
+            <div class="mt-3 flex items-baseline gap-1">
+              <span class="text-3xl font-extrabold text-white">Rs. 5,000</span>
+              <span class="text-slate-500 text-xs">/ 30 days</span>
+            </div>
+            <span class="text-xs text-slate-500 mt-1">Up to 10 students</span>
+            <ul class="mt-6 space-y-2.5 text-xs text-slate-300 flex-1">
+              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> Full 16+ module vault</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> Cambridge mock exams</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> Speaking cue recorder</li>
+            </ul>
+            <button onclick="openAccessModal()" class="mt-7 w-full py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold rounded-full text-xs transition">Get Started</button>
+          </div>
+          <div class="bg-gradient-to-b from-indigo-500/10 to-purple-600/5 border-2 border-indigo-500/40 rounded-3xl p-7 flex flex-col relative shadow-xl shadow-indigo-600/10">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] font-black uppercase tracking-widest bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-3 py-1 rounded-full">Most Popular</span>
+            <span class="text-xs font-bold text-indigo-300 uppercase tracking-widest">Growth</span>
+            <div class="mt-3 flex items-baseline gap-1">
+              <span class="text-3xl font-extrabold text-white">Rs. 8,000</span>
+              <span class="text-slate-500 text-xs">/ 30 days</span>
+            </div>
+            <span class="text-xs text-slate-400 mt-1">Up to 25 students</span>
+            <ul class="mt-6 space-y-2.5 text-xs text-slate-200 flex-1">
+              <li class="flex items-center gap-1.5"><span class="text-emerald-400 font-bold">✓</span> Everything in Starter</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-400 font-bold">✓</span> Institutional CRM &amp; Speaking Grader</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-400 font-bold">✓</span> Cloud sync across devices</li>
+            </ul>
+            <button onclick="openAccessModal()" class="mt-7 w-full py-3 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold rounded-full text-xs transition shadow-lg shadow-indigo-600/25">Get Started</button>
+          </div>
+          <div class="bg-white/[0.02] border border-white/[0.06] rounded-3xl p-7 flex flex-col">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Enterprise</span>
+            <div class="mt-3 flex items-baseline gap-1">
+              <span class="text-3xl font-extrabold text-white">Rs. 24,000</span>
+              <span class="text-slate-500 text-xs">/ 30 days</span>
+            </div>
+            <span class="text-xs text-slate-500 mt-1">Up to 100 students</span>
+            <ul class="mt-6 space-y-2.5 text-xs text-slate-300 flex-1">
+              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> Everything in Growth</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> Priority support</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> Multi-branch rosters</li>
+            </ul>
+            <button onclick="openAccessModal()" class="mt-7 w-full py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold rounded-full text-xs transition">Get Started</button>
+          </div>
+        </div>
+        <p class="text-center text-[11px] text-slate-500 mt-8">Also billed at 90-day and 365-day terms with volume discounts. Just students? <button onclick="openAccessModal()" class="text-indigo-400 hover:text-indigo-300 font-bold underline">Access the free student portal</button>.</p>
       </div>
     </section>
 
@@ -297,20 +376,31 @@
         <div id="student-active-views-container" class="space-y-6">
         <!-- Student Tab 1: Skill Builder Vault -->
         <div id="student-vault-view" class="student-subview space-y-6">
-          <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <div>
-              <h2 class="text-2xl font-extrabold">16+ IELTS &amp; PTE Skill-Builder vault</h2>
-              <p class="text-xs text-slate-500 mt-1">Review core lessons, worksheets, templates, and mark items complete to track your overall target score.</p>
+          <div>
+            <h2 class="text-2xl font-extrabold">Skill-Builder Vault</h2>
+            <p class="text-xs text-slate-500 mt-1">Review core lessons, worksheets, and templates. Mark items complete to track your target-score readiness.</p>
+          </div>
+
+          <!-- Unified control bar: target strategy + progress -->
+          <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm flex flex-col lg:flex-row lg:items-center gap-5">
+            <div class="flex-1">
+              <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Target Strategy</span>
+              <div class="flex gap-2 flex-wrap mt-2" id="studentTrackOptions">
+                <button onclick="selectStudentTrack('ielts-7.0')" id="st-opt-ielts70" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">IELTS 7.0</button>
+                <button onclick="selectStudentTrack('ielts-7.5')" id="st-opt-ielts75" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">IELTS 7.5+</button>
+                <button onclick="selectStudentTrack('pte-65')" id="st-opt-pte65" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">PTE 65</button>
+                <button onclick="selectStudentTrack('pte-79')" id="st-opt-pte79" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">PTE 79+</button>
+                <button onclick="selectStudentTrack('ukvi')" id="st-opt-ukvi" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">UKVI GT Track</button>
+              </div>
             </div>
-            <!-- Progress Ring Widget -->
-            <div class="flex items-center gap-3 bg-white border border-slate-100 px-4 py-2 rounded-2xl shadow-sm">
-              <svg class="w-10 h-10 transform -rotate-90">
-                <circle cx="20" cy="20" r="16" stroke="#f1f5f9" stroke-width="3" fill="transparent" />
-                <circle id="vault-progress-circle" cx="20" cy="20" r="16" stroke="#4f46e5" stroke-width="3" fill="transparent" stroke-linecap="round" stroke-dasharray="100.5" stroke-dashoffset="100.5" />
+            <div class="flex items-center gap-3 shrink-0 lg:pl-5 lg:border-l lg:border-slate-100">
+              <svg class="w-11 h-11 transform -rotate-90 shrink-0">
+                <circle cx="22" cy="22" r="18" stroke="#f1f5f9" stroke-width="4" fill="transparent" />
+                <circle id="vault-progress-circle" cx="22" cy="22" r="18" stroke="#4f46e5" stroke-width="4" fill="transparent" stroke-linecap="round" stroke-dasharray="113" stroke-dashoffset="113" />
               </svg>
               <div>
-                <span class="text-[8px] uppercase font-bold text-slate-400 block">Progress</span>
-                <span id="vault-completion-percent" class="text-sm font-black text-slate-800">0%</span>
+                <span class="text-[9px] uppercase font-bold text-slate-400 block tracking-wider">Vault Progress</span>
+                <span id="vault-completion-percent" class="text-lg font-black text-slate-800">0%</span>
               </div>
             </div>
           </div>
@@ -325,26 +415,9 @@
               <button onclick="filterVaultTag('pte')" id="v-tag-pte" class="v-tag-btn px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 text-xs font-bold rounded-lg text-slate-600 transition">PTE Specific</button>
             </div>
           </div>
-          <!-- Target Score selector widget -->
-          <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-            <div class="md:col-span-2">
-              <span class="text-xs font-bold text-slate-400 block">Current Target Strategy</span>
-              <div class="flex gap-2 flex-wrap mt-2" id="studentTrackOptions">
-                <button onclick="selectStudentTrack('ielts-7.0')" id="st-opt-ielts70" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">IELTS 7.0</button>
-                <button onclick="selectStudentTrack('ielts-7.5')" id="st-opt-ielts75" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">IELTS 7.5+</button>
-                <button onclick="selectStudentTrack('pte-65')" id="st-opt-pte65" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">PTE 65</button>
-                <button onclick="selectStudentTrack('pte-79')" id="st-opt-pte79" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">PTE 79+</button>
-                <button onclick="selectStudentTrack('ukvi')" id="st-opt-ukvi" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">UKVI GT Track</button>
-              </div>
-            </div>
-            <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-4 text-center">
-              <span class="text-[10px] font-bold text-indigo-600 block uppercase">Vault Completion</span>
-              <span id="vault-completion-percent" class="text-3xl font-extrabold text-indigo-700 mt-1 block">0%</span>
-            </div>
-          </div>
 
-          <!-- Modules List -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="studentModulesGrid">
+          <!-- Modules List: grouped sections, populated by JS -->
+          <div class="space-y-8" id="studentModulesGrid">
             <!-- Populated by JS -->
           </div>
         </div>
@@ -1126,9 +1199,9 @@
       { id: '03', title: 'Writing Architect Blueprint v2', file: '03_IELTS_Writing_Architects_Blueprint_v2.html', tags: 'core,writing', desc: 'Task 1 charts, task 2 essays templates.', time: '10 hrs', difficulty: 'Hard', badgeStyle: 'background:rgba(91,42,134,0.08);color:#5b2a86' },
       { id: '04', title: 'Speaking Confident Performer', file: '04_IELTS_Speaking_Confident_Performer.html', tags: 'core,speaking', desc: 'Part 1-3 fluency templates and cue cards.', time: '8 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(232,69,107,0.08);color:#e8456b' },
       { id: '05', title: 'Cohesive Devices Weaver', file: '05_IELTS_Cohesive_Devices_Weaver.html', tags: 'grammar', desc: 'Linking adverbs, paragraphs rewrite drills.', time: '4 hrs', difficulty: 'Easy', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
-      { id: '06', title: 'Tenses &amp; Conditionals', file: '06_IELTS_Tenses_Conditionals.html', tags: 'grammar', desc: 'Grammar tenses, conditional worksheets.', time: '5 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
+      { id: '06', title: 'Tenses & Conditionals', file: '06_IELTS_Tenses_Conditionals.html', tags: 'grammar', desc: 'Grammar tenses, conditional worksheets.', time: '5 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
       { id: '07', title: 'Punctuation Signals', file: '07_IELTS_Punctuation_Signals.html', tags: 'grammar', desc: 'Punctuation marks, commas, semi-colons.', time: '3 hrs', difficulty: 'Easy', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
-      { id: '08', title: 'Voice &amp; Speech', file: '08_IELTS_Voice_Speech.html', tags: 'grammar,speaking', desc: 'Active/passive, direct speech rules.', time: '4 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
+      { id: '08', title: 'Voice & Speech', file: '08_IELTS_Voice_Speech.html', tags: 'grammar,speaking', desc: 'Active/passive, direct speech rules.', time: '4 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
       { id: '09', title: 'Sentence Mastery', file: '09_IELTS_Sentence_Mastery.html', tags: 'grammar', desc: 'Clause syntax, compound/complex drills.', time: '6 hrs', difficulty: 'Hard', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
       { id: '10', title: 'Vocabulary Accelerator', file: '10_IELTS_Vocabulary_Accelerator.html', tags: 'core', desc: 'Academic collocations and word groups.', time: '6 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(99,102,241,0.08);color:#6366f1' },
       { id: '12', title: 'Paraphrase Worksheet 50', file: '12_IELTS_Paraphrase_Worksheet_50.html', tags: 'core,writing', desc: '50 academic rewriting challenges.', time: '4 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(99,102,241,0.08);color:#6366f1' },
@@ -1466,56 +1539,81 @@
       let totalRecCount = 0;
       let completedRecCount = 0;
 
-      modulesConfig.forEach(m => {
-        const matchesSearch = m.title.toLowerCase().includes(search) || m.desc.toLowerCase().includes(search);
-        if (!matchesSearch) return;
+      const moduleGroups = [
+        { key: 'core', label: 'Core Modules', icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253', iconBg: 'bg-indigo-50 text-indigo-600' },
+        { key: 'grammar', label: 'Grammar & Mechanics', icon: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z', iconBg: 'bg-amber-50 text-amber-600' },
+        { key: 'pte', label: 'PTE Modules', icon: 'M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z', iconBg: 'bg-orange-50 text-orange-600' }
+      ];
 
-        if (vaultFilterTag !== 'all') {
-          if (vaultFilterTag === 'core' && !m.tags.includes('core')) return;
-          if (vaultFilterTag === 'grammar' && !m.tags.includes('grammar')) return;
-          if (vaultFilterTag === 'pte' && !m.tags.includes('pte')) return;
-        }
+      grid.innerHTML = '';
 
-        const recommendedList = m.tags.split(',');
-        const isRecommended = recommendedList.includes(studentTrack) || m.tags.includes('core');
-        
-        if (isRecommended) {
-          totalRecCount++;
-        }
+      moduleGroups.forEach(group => {
+        const groupModules = modulesConfig.filter(m => {
+          if (!m.tags.includes(group.key)) return false;
+          const matchesSearch = m.title.toLowerCase().includes(search) || m.desc.toLowerCase().includes(search);
+          if (!matchesSearch) return false;
+          if (vaultFilterTag !== 'all' && vaultFilterTag !== group.key) return false;
+          return true;
+        });
 
-        const isCompleted = completedModules.includes(m.file);
-        if (isRecommended && isCompleted) {
-          completedRecCount++;
-        }
+        if (groupModules.length === 0) return;
 
-        const card = document.createElement('div');
-        card.className = `bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between ${isRecommended ? 'border-l-4 border-l-indigo-600' : ''}`;
-        
-        card.innerHTML = `
-          <div>
-            <div class="flex justify-between items-start">
-              <span style="${m.badgeStyle}" class="px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider">${m.id} · ${m.difficulty}</span>
-              <span class="text-[9px] text-slate-400 font-bold">${m.time}</span>
+        const section = document.createElement('div');
+        section.innerHTML = `
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-7 h-7 rounded-lg ${group.iconBg} flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="${group.icon}"></path></svg>
             </div>
-            <h4 class="font-extrabold text-sm text-slate-800 mt-3">${escapeHtml(m.title)}</h4>
-            <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">${m.desc}</p>
+            <h3 class="text-xs font-black text-slate-500 uppercase tracking-widest">${group.label}</h3>
+            <span class="text-[10px] text-slate-300 font-bold">${groupModules.length}</span>
           </div>
-          <div class="mt-4 pt-3 border-t border-slate-50 flex items-center justify-between">
-            <a href="${m.file}" target="_blank" class="text-xs font-bold text-indigo-600 hover:underline">Open Module →</a>
-            <button onclick="toggleStudentModuleComplete('${m.file}', this)" class="px-2.5 py-1 text-[10px] font-bold border rounded-lg transition ${isCompleted ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-slate-50 text-slate-600 border-slate-200'}">
-              ${isCompleted ? '✓ Done' : 'Complete'}
-            </button>
-          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" data-group="${group.key}"></div>
         `;
-        grid.appendChild(card);
+        const sectionGrid = section.querySelector(`[data-group="${group.key}"]`);
+
+        groupModules.forEach(m => {
+          const recommendedList = m.tags.split(',');
+          const isRecommended = recommendedList.includes(studentTrack) || m.tags.includes('core');
+          if (isRecommended) totalRecCount++;
+
+          const isCompleted = completedModules.includes(m.file);
+          if (isRecommended && isCompleted) completedRecCount++;
+
+          const card = document.createElement('div');
+          card.className = 'group relative bg-white border border-slate-100 rounded-2xl p-4 shadow-sm hover:shadow-md hover:border-indigo-200 transition flex flex-col';
+
+          card.innerHTML = `
+            <div class="flex items-start justify-between">
+              <div class="w-9 h-9 rounded-xl ${group.iconBg} flex items-center justify-center shrink-0">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:18px;height:18px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="${group.icon}"></path></svg>
+              </div>
+              <button onclick="toggleStudentModuleComplete('${m.file}', this)" title="${isCompleted ? 'Mark incomplete' : 'Mark complete'}" class="w-6 h-6 rounded-full border flex items-center justify-center transition ${isCompleted ? 'bg-emerald-500 border-emerald-500 text-white' : 'bg-white border-slate-200 text-transparent hover:border-emerald-300'}">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+              </button>
+            </div>
+            <h4 class="font-bold text-sm text-slate-800 mt-3">${escapeHtml(m.title)}</h4>
+            <p class="text-[11px] text-slate-500 mt-1 leading-relaxed flex-1">${m.desc}</p>
+            <div class="mt-3 pt-3 border-t border-slate-50 flex items-center justify-between">
+              <span class="text-[10px] text-slate-400 font-semibold">${m.time} &middot; ${m.difficulty}</span>
+              <a href="${m.file}" target="_blank" class="text-xs font-bold text-indigo-600 hover:text-indigo-700">Open →</a>
+            </div>
+          `;
+          sectionGrid.appendChild(card);
+        });
+
+        grid.appendChild(section);
       });
+
+      if (grid.innerHTML.trim() === '') {
+        grid.innerHTML = '<div class="text-center py-16 text-sm text-slate-400">No modules match your search.</div>';
+      }
 
       const percent = totalRecCount > 0 ? Math.round((completedRecCount / totalRecCount) * 100) : 0;
       document.getElementById('vault-completion-percent').textContent = percent + '%';
-      
+
       const circ = document.getElementById('vault-progress-circle');
       if (circ) {
-        const radius = 16;
+        const radius = 18;
         const circumference = 2 * Math.PI * radius;
         const offset = circumference - (percent / 100) * circumference;
         circ.style.strokeDasharray = circumference;
