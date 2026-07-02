@@ -6,17 +6,17 @@
 <title>IELTS GT Reading: Field Agent — UKVI Band 7+ — ViATestPrep</title>
 <style>
   :root {
-    --bg: #0d0d0d;
-    --surface: #161616;
-    --surface2: #1e1e1e;
-    --border: #2a2a2a;
-    --accent: #f59e0b;
+    --bg: #f3ecd8;
+    --surface: #fffefb;
+    --surface2: #f7f0dd;
+    --border: #e5ded0;
+    --accent: #7a2331;
     --accent2: #10b981;
     --accent3: #3b82f6;
     --red: #ef4444;
-    --text: #f0f0f0;
-    --muted: #888;
-    --pill: #252525;
+    --text: #1c1a17;
+    --muted: #766f62;
+    --pill: #efe6d0;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; line-height: 1.7; }
@@ -24,23 +24,23 @@
   /* NAV */
   nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
   .logo { font-weight: 800; font-size: 1rem; color: var(--accent); letter-spacing: 1px; cursor: pointer; }
-  .badge { background: var(--accent); color: #000; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
+  .badge { background: var(--accent); color: #fffefb; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
   .xp-display { font-size: 0.8rem; color: var(--accent); font-weight: 700; }
 
   /* PROGRESS NAV */
   .step-nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 10px 24px; display: flex; gap: 8px; overflow-x: auto; }
   .step-btn { background: none; border: 1px solid var(--border); color: var(--muted); padding: 5px 14px; border-radius: 20px; cursor: pointer; font-size: 0.78rem; white-space: nowrap; transition: all 0.2s; }
-  .step-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(245,158,11,0.08); }
+  .step-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(122,35,49,0.08); }
 
   /* HERO */
   .hero { padding: 64px 24px 48px; max-width: 800px; margin: 0 auto; }
   .module-tag { display: inline-block; background: var(--pill); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 1px; }
   .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 900; line-height: 1.2; margin-bottom: 16px; }
   .hero h1 span { color: var(--accent); }
-  .hero p { color: #bbb; font-size: 1rem; max-width: 620px; margin-bottom: 28px; }
+  .hero p { color: #766f62; font-size: 1rem; max-width: 620px; margin-bottom: 28px; }
   .hero-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
   .pill { background: var(--pill); border: 1px solid var(--border); border-radius: 20px; padding: 5px 14px; font-size: 0.8rem; color: var(--muted); }
-  .btn-primary { background: var(--accent); color: #000; border: none; padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: opacity 0.2s; }
+  .btn-primary { background: var(--accent); color: #fffefb; border: none; padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: opacity 0.2s; }
   .btn-primary:hover { opacity: 0.85; }
   .btn-ghost { background: none; border: 1px solid var(--border); color: var(--muted); padding: 12px 24px; border-radius: 8px; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; }
   .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
@@ -77,14 +77,14 @@
   .section-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
   .section-card .difficulty { display: inline-block; margin-top: 10px; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
   .diff-easy { background: rgba(16,185,129,0.15); color: var(--accent2); }
-  .diff-med { background: rgba(245,158,11,0.15); color: var(--accent); }
+  .diff-med { background: rgba(122,35,49,0.15); color: var(--accent); }
   .diff-hard { background: rgba(239,68,68,0.15); color: var(--red); }
 
   /* DRILL */
   .drill-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
   .drill-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
   .drill-label { font-size: 0.75rem; color: var(--accent); font-weight: 700; margin-bottom: 12px; letter-spacing: 1px; }
-  .passage-box { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 18px; margin: 14px 0; font-size: 0.88rem; line-height: 1.8; color: #ccc; }
+  .passage-box { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 18px; margin: 14px 0; font-size: 0.88rem; line-height: 1.8; color: #4a453d; }
   .passage-box strong { color: var(--text); }
 
   .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; }
@@ -104,11 +104,13 @@
   .tfng-btn:hover { border-color: var(--accent); }
 
   /* BOSS FIGHT */
-  .boss-header { background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-bottom: 24px; text-align: center; }
-  .boss-header h2 { font-size: 1.4rem; font-weight: 900; color: var(--accent); margin-bottom: 8px; }
-  .boss-header p { color: var(--muted); font-size: 0.9rem; }
-  .timer-display { font-size: 2rem; font-weight: 900; color: var(--accent); font-variant-numeric: tabular-nums; margin: 12px 0; }
-  .boss-passage { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; font-size: 0.88rem; line-height: 1.85; color: #ccc; }
+  .boss-header { background: linear-gradient(135deg, #7a2331 0%, #5e1a25 100%); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-bottom: 24px; text-align: center; }
+  .boss-header h2 { font-size: 1.4rem; font-weight: 900; color: #f0d9a8; margin-bottom: 8px; }
+  .boss-header p { color: rgba(255,254,251,0.75); font-size: 0.9rem; }
+  .timer-display { font-size: 2rem; font-weight: 900; color: #f0d9a8; font-variant-numeric: tabular-nums; margin: 12px 0; }
+  .boss-header .btn-primary { background: #fffefb; color: #7a2331; }
+  .boss-header .btn-primary:hover { background: #f0d9a8; }
+  .boss-passage { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; font-size: 0.88rem; line-height: 1.85; color: #4a453d; }
   .boss-passage h4 { color: var(--text); font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
   .boss-passage .section-label { color: var(--accent); font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 10px; display: block; }
 
@@ -125,12 +127,12 @@
   .plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
   .plan-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
   .plan-day { font-size: 0.72rem; color: var(--accent); font-weight: 700; letter-spacing: 1px; margin-bottom: 6px; }
-  .plan-card p { font-size: 0.82rem; color: #bbb; }
+  .plan-card p { font-size: 0.82rem; color: #766f62; }
 
   /* FOOTER */
   footer { text-align: center; padding: 40px 24px; color: var(--muted); font-size: 0.78rem; border-top: 1px solid var(--border); margin-top: 40px; }
 
-  .xp-toast { position: fixed; top: 70px; right: 20px; background: var(--accent); color: #000; font-weight: 800; padding: 8px 18px; border-radius: 20px; font-size: 0.85rem; opacity: 0; transition: opacity 0.3s; z-index: 999; pointer-events: none; }
+  .xp-toast { position: fixed; top: 70px; right: 20px; background: var(--accent); color: #fffefb; font-weight: 800; padding: 8px 18px; border-radius: 20px; font-size: 0.85rem; opacity: 0; transition: opacity 0.3s; z-index: 999; pointer-events: none; }
   .xp-toast.show { opacity: 1; }
 
   input[type="text"] { background: var(--surface2); border: 1px solid var(--border); color: var(--text); padding: 10px 14px; border-radius: 8px; width: 100%; font-size: 0.9rem; outline: none; margin: 8px 0; }
@@ -140,12 +142,12 @@
 
   @media (max-width: 600px) { .options-grid { grid-template-columns: 1fr; } .tfng-btns { flex-direction: column; } }
   .back-btn { text-decoration: none; font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--border); border-radius: 6px; color: var(--muted); transition: all 0.2s; display: inline-flex; align-items: center; }
-  .back-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(245,158,11,0.08); }
+  .back-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(122,35,49,0.08); }
 
   /* Skim & Scan Lab Styles */
   .blur-text { filter: blur(5px); transition: filter 0.3s ease; user-select: none; pointer-events: none; }
   .scan-word { cursor: pointer; transition: background-color 0.12s; border-radius: 4px; padding: 0 2px; }
-  .scan-word:hover { background-color: var(--accent); color: #000; }
+  .scan-word:hover { background-color: var(--accent); color: #fffefb; }
   .scan-word.selected-wrong { background-color: var(--red) !important; color: #fff !important; text-decoration: line-through; }
   .scan-word.selected-right { background-color: var(--accent2) !important; color: #000 !important; font-weight: bold; }
 </style>
@@ -657,7 +659,7 @@
     <div class="score-big" id="bossScoreNum">—</div>
     <div class="score-label">out of 8 · Field Agent Score</div>
     <div id="bossScoreFeedback" style="color:var(--muted);margin:16px 0;font-size:0.9rem;"></div>
-    <div id="bossAnswerKey" style="text-align:left;margin-top:20px;font-size:0.85rem;line-height:2;color:#ccc;background:var(--bg);padding:16px;border-radius:8px;border:1px solid var(--border);"></div>
+    <div id="bossAnswerKey" style="text-align:left;margin-top:20px;font-size:0.85rem;line-height:2;color:#4a453d;background:var(--bg);padding:16px;border-radius:8px;border:1px solid var(--border);"></div>
   </div>
 </section>
 

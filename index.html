@@ -57,14 +57,14 @@
 
   /* Custom Tab UI */
   .active-tab {
-    background-color: rgba(79, 70, 229, 0.08);
-    color: #4f46e5;
-    border-bottom: 2px solid #4f46e5;
+    background-color: rgba(122, 35, 49, 0.08);
+    color: #7a2331;
+    border-bottom: 2px solid #7a2331;
   }
   .student-active-tab {
-    background: rgba(79, 70, 229, 0.08) !important;
-    color: #4f46e5 !important;
-    border-left: 4px solid #4f46e5 !important;
+    background: rgba(122, 35, 49, 0.08) !important;
+    color: #7a2331 !important;
+    border-left: 4px solid #7a2331 !important;
   }
 
   /* Modal Overlays */
@@ -395,25 +395,25 @@
   <!-- ========================================== -->
   <!-- VIEW 2: PREMIUM STUDENT PRACTICE PORTAL    -->
   <!-- ========================================== -->
-  <div id="view-student" class="view-container min-h-screen flex flex-col hidden bg-slate-50">
-    <header class="h-20 bg-white border-b border-slate-100 px-6 flex items-center justify-between shrink-0">
+  <div id="view-student" class="view-container min-h-screen flex flex-col hidden bg-[#f3ecd8]">
+    <header class="h-20 bg-white border-b border-[#ece4d2] px-6 flex items-center justify-between shrink-0">
       <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-lg bg-indigo-600 flex items-center justify-center font-serif text-white font-extrabold text-lg">V</div>
+        <div class="w-9 h-9 rounded-lg bg-[#7a2331] flex items-center justify-center font-serif text-white font-extrabold text-lg">V</div>
         <span class="font-serif text-lg font-bold">ViATestPrep Student Hub</span>
       </div>
       <div class="flex items-center gap-3">
-        <span class="text-xs font-bold text-slate-400">Bypass Lock Active</span>
-        <button onclick="handleLogout()" class="text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1.5 rounded-lg hover:bg-indigo-100">Logout</button>
+        <span class="text-xs font-bold text-[#8a8171]">Bypass Lock Active</span>
+        <button onclick="handleLogout()" class="text-xs font-bold text-[#7a2331] bg-[#f3ecd8] px-3 py-1.5 rounded-lg hover:bg-[#efe0c3]">Logout</button>
       </div>
     </header>
 
     <div class="flex-1 flex flex-col md:flex-row overflow-hidden">
       <!-- Student Sidebar Tabs -->
-      <aside class="w-full md:w-60 bg-white border-b md:border-r border-slate-100 p-4 flex flex-col gap-1 shrink-0">
-        <button onclick="switchStudentTab('vault')" id="s-tab-vault" class="student-active-tab w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">📚 Skill Vault</button>
-        <button onclick="switchStudentTab('mocks')" id="s-tab-mocks" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">⏱️ Cambridge Mock Exams</button>
-        <button onclick="switchStudentTab('speaking')" id="s-tab-speaking" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">🎤 Speaking practice</button>
-        <button onclick="switchStudentTab('grades')" id="s-tab-grades" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">📊 Grade Sheet &amp; Comments</button>
+      <aside class="w-full md:w-60 bg-white border-b md:border-r border-[#ece4d2] p-4 flex flex-col gap-1 shrink-0">
+        <button onclick="switchStudentTab('vault')" id="s-tab-vault" class="student-active-tab w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">📚 Skill Vault</button>
+        <button onclick="switchStudentTab('mocks')" id="s-tab-mocks" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">⏱️ Cambridge Mock Exams</button>
+        <button onclick="switchStudentTab('speaking')" id="s-tab-speaking" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">🎤 Speaking practice</button>
+        <button onclick="switchStudentTab('grades')" id="s-tab-grades" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">📊 Grade Sheet &amp; Comments</button>
       </aside>
 
       <!-- Student Views Content -->
@@ -421,8 +421,8 @@
         <!-- Expiration Lock Card Overlay -->
         <div id="student-expiry-overlay" class="hidden flex flex-col items-center justify-center p-12 bg-white rounded-3xl border border-rose-100 text-center max-w-md mx-auto mt-16 shadow-lg shadow-rose-500/5">
           <span class="text-4xl">⚠️</span>
-          <h3 class="font-extrabold text-slate-800 text-lg mt-4">Student Access Expired</h3>
-          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+          <h3 class="font-extrabold text-[#1c1a17] text-lg mt-4">Student Access Expired</h3>
+          <p class="text-xs text-[#766f62] mt-2 leading-relaxed">
             Your 30-day active training key has expired. Please contact your consultancy representative to renew your mock test and worksheet access.
           </p>
         </div>
@@ -432,41 +432,41 @@
         <div id="student-vault-view" class="student-subview space-y-6">
           <div>
             <h2 class="text-2xl font-extrabold">Skill-Builder Vault</h2>
-            <p class="text-xs text-slate-500 mt-1">Review core lessons, worksheets, and templates. Mark items complete to track your target-score readiness.</p>
+            <p class="text-xs text-[#766f62] mt-1">Review core lessons, worksheets, and templates. Mark items complete to track your target-score readiness.</p>
           </div>
 
           <!-- Unified control bar: target strategy + progress -->
-          <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm flex flex-col lg:flex-row lg:items-center gap-5">
+          <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm flex flex-col lg:flex-row lg:items-center gap-5">
             <div class="flex-1">
-              <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Target Strategy</span>
+              <span class="text-[10px] font-bold text-[#8a8171] uppercase tracking-wider">Target Strategy</span>
               <div class="flex gap-2 flex-wrap mt-2" id="studentTrackOptions">
-                <button onclick="selectStudentTrack('ielts-7.0')" id="st-opt-ielts70" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">IELTS 7.0</button>
-                <button onclick="selectStudentTrack('ielts-7.5')" id="st-opt-ielts75" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">IELTS 7.5+</button>
-                <button onclick="selectStudentTrack('pte-65')" id="st-opt-pte65" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">PTE 65</button>
-                <button onclick="selectStudentTrack('pte-79')" id="st-opt-pte79" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">PTE 79+</button>
-                <button onclick="selectStudentTrack('ukvi')" id="st-opt-ukvi" class="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold rounded-lg transition">UKVI GT Track</button>
+                <button onclick="selectStudentTrack('ielts-7.0')" id="st-opt-ielts70" class="px-3 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-xs font-bold rounded-lg transition">IELTS 7.0</button>
+                <button onclick="selectStudentTrack('ielts-7.5')" id="st-opt-ielts75" class="px-3 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-xs font-bold rounded-lg transition">IELTS 7.5+</button>
+                <button onclick="selectStudentTrack('pte-65')" id="st-opt-pte65" class="px-3 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-xs font-bold rounded-lg transition">PTE 65</button>
+                <button onclick="selectStudentTrack('pte-79')" id="st-opt-pte79" class="px-3 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-xs font-bold rounded-lg transition">PTE 79+</button>
+                <button onclick="selectStudentTrack('ukvi')" id="st-opt-ukvi" class="px-3 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-xs font-bold rounded-lg transition">UKVI GT Track</button>
               </div>
             </div>
-            <div class="flex items-center gap-3 shrink-0 lg:pl-5 lg:border-l lg:border-slate-100">
+            <div class="flex items-center gap-3 shrink-0 lg:pl-5 lg:border-l lg:border-[#ece4d2]">
               <svg class="w-11 h-11 transform -rotate-90 shrink-0">
                 <circle cx="22" cy="22" r="18" stroke="#f1f5f9" stroke-width="4" fill="transparent" />
-                <circle id="vault-progress-circle" cx="22" cy="22" r="18" stroke="#4f46e5" stroke-width="4" fill="transparent" stroke-linecap="round" stroke-dasharray="113" stroke-dashoffset="113" />
+                <circle id="vault-progress-circle" cx="22" cy="22" r="18" stroke="#7a2331" stroke-width="4" fill="transparent" stroke-linecap="round" stroke-dasharray="113" stroke-dashoffset="113" />
               </svg>
               <div>
-                <span class="text-[9px] uppercase font-bold text-slate-400 block tracking-wider">Vault Progress</span>
-                <span id="vault-completion-percent" class="text-lg font-black text-slate-800">0%</span>
+                <span class="text-[9px] uppercase font-bold text-[#8a8171] block tracking-wider">Vault Progress</span>
+                <span id="vault-completion-percent" class="text-lg font-black text-[#1c1a17]">0%</span>
               </div>
             </div>
           </div>
 
           <!-- Search & Filter Controls -->
           <div class="flex flex-col sm:flex-row gap-3 items-center">
-            <input type="text" id="vaultSearch" oninput="renderStudentModules()" placeholder="🔍 Search study modules..." class="w-full sm:w-64 px-4 py-2 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-indigo-500 bg-white" />
+            <input type="text" id="vaultSearch" oninput="renderStudentModules()" placeholder="🔍 Search study modules..." class="w-full sm:w-64 px-4 py-2 border border-[#e5ded0] rounded-xl text-xs focus:outline-none focus:border-[#7a2331] bg-white" />
             <div class="flex gap-1.5 overflow-x-auto py-1 w-full sm:w-auto">
-              <button onclick="filterVaultTag('all')" id="v-tag-all" class="v-tag-btn px-3 py-1.5 bg-indigo-600 text-white text-xs font-bold rounded-lg transition">All</button>
-              <button onclick="filterVaultTag('core')" id="v-tag-core" class="v-tag-btn px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 text-xs font-bold rounded-lg text-slate-600 transition">Core</button>
-              <button onclick="filterVaultTag('grammar')" id="v-tag-grammar" class="v-tag-btn px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 text-xs font-bold rounded-lg text-slate-600 transition">Grammar</button>
-              <button onclick="filterVaultTag('pte')" id="v-tag-pte" class="v-tag-btn px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 text-xs font-bold rounded-lg text-slate-600 transition">PTE Specific</button>
+              <button onclick="filterVaultTag('all')" id="v-tag-all" class="v-tag-btn px-3 py-1.5 bg-[#7a2331] text-white text-xs font-bold rounded-lg transition">All</button>
+              <button onclick="filterVaultTag('core')" id="v-tag-core" class="v-tag-btn px-3 py-1.5 bg-white hover:bg-[#f3ecd8] border border-[#e5ded0] text-xs font-bold rounded-lg text-[#5c5648] transition">Core</button>
+              <button onclick="filterVaultTag('grammar')" id="v-tag-grammar" class="v-tag-btn px-3 py-1.5 bg-white hover:bg-[#f3ecd8] border border-[#e5ded0] text-xs font-bold rounded-lg text-[#5c5648] transition">Grammar</button>
+              <button onclick="filterVaultTag('pte')" id="v-tag-pte" class="v-tag-btn px-3 py-1.5 bg-white hover:bg-[#f3ecd8] border border-[#e5ded0] text-xs font-bold rounded-lg text-[#5c5648] transition">PTE Specific</button>
             </div>
           </div>
 
@@ -481,20 +481,20 @@
           <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <div>
               <h2 class="text-2xl font-extrabold">Cambridge Practice Mock Exams</h2>
-              <p class="text-xs text-slate-500 mt-1">Official Reading &amp; Listening mocks from IELTS 18 &amp; 19 with timer controls.</p>
+              <p class="text-xs text-[#766f62] mt-1">Official Reading &amp; Listening mocks from IELTS 18 &amp; 19 with timer controls.</p>
             </div>
             <!-- Mode selection -->
-            <div class="flex gap-1 bg-white p-1 rounded-xl border border-slate-200 text-xs font-bold">
-              <button onclick="setPracticeMode('exam')" id="s-mode-exam" class="px-3 py-1.5 bg-indigo-600 text-white rounded-lg transition">⏱️ Exam Mode</button>
-              <button onclick="setPracticeMode('practice')" id="s-mode-practice" class="px-3 py-1.5 text-slate-600 rounded-lg transition">💡 Practice Mode</button>
+            <div class="flex gap-1 bg-white p-1 rounded-xl border border-[#e5ded0] text-xs font-bold">
+              <button onclick="setPracticeMode('exam')" id="s-mode-exam" class="px-3 py-1.5 bg-[#7a2331] text-white rounded-lg transition">⏱️ Exam Mode</button>
+              <button onclick="setPracticeMode('practice')" id="s-mode-practice" class="px-3 py-1.5 text-[#5c5648] rounded-lg transition">💡 Practice Mode</button>
             </div>
           </div>
 
-          <div class="bg-indigo-50 border border-indigo-100 rounded-2xl p-4 text-xs text-indigo-700 flex gap-2" id="studentModeDesc">
+          <div class="bg-[#f3ecd8] border border-[#e5ded0] rounded-2xl p-4 text-xs text-[#7a2331] flex gap-2" id="studentModeDesc">
             <span>⏱️</span>
             <div>
               <strong>Exam Mode Active</strong>
-              <p class="text-[11px] text-slate-500 mt-0.5">Standard layout with strict 60 minute limits. No scoring answers shown until submission.</p>
+              <p class="text-[11px] text-[#766f62] mt-0.5">Standard layout with strict 60 minute limits. No scoring answers shown until submission.</p>
             </div>
           </div>
 
@@ -507,65 +507,65 @@
         <div id="student-speaking-view" class="student-subview hidden space-y-6">
           <div>
             <h2 class="text-2xl font-extrabold">IELTS speaking self-practice recorder</h2>
-            <p class="text-xs text-slate-500 mt-1">Pick custom IELTS cue card prompts, time your preparation, record your audio answer, and save/evaluate playbacks.</p>
+            <p class="text-xs text-[#766f62] mt-1">Pick custom IELTS cue card prompts, time your preparation, record your audio answer, and save/evaluate playbacks.</p>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <!-- Selector -->
-            <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm">
-              <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Select prompt Card</label>
-              <select id="s-topic-select" onchange="loadStudentSpeakingTopic()" class="w-full px-3 py-2 border border-slate-200 rounded-xl text-xs bg-white focus:outline-none focus:border-indigo-500">
+            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
+              <label class="block text-xs font-bold text-[#766f62] uppercase tracking-wider mb-2">Select prompt Card</label>
+              <select id="s-topic-select" onchange="loadStudentSpeakingTopic()" class="w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none focus:border-[#7a2331]">
                 <option value="Describe a skill you learned from an older relative.">Cue Card 1: Skill Learned from Relative (Part 2)</option>
                 <option value="Describe a time you had to resolve a conflict in a team.">Cue Card 2: Team Conflict Resolution (Part 2)</option>
                 <option value="Describe a website or app you use daily and why it helps you.">Cue Card 3: Daily Website or App (Part 2)</option>
                 <option value="Part 1: Hometown & Leisure activities.">Part 1: Hometown & Free Time Prompts</option>
                 <option value="Part 3: The impact of technology and AI on future career choices.">Part 3: Future of Technology & Careers</option>
               </select>
-              <div class="mt-4 p-4 bg-slate-50 border border-slate-100 rounded-xl min-h-[140px]">
-                <span class="text-[9px] uppercase font-bold text-slate-400">Selected Prompt</span>
-                <p id="s-topic-prompt" class="text-xs font-medium text-slate-700 leading-relaxed mt-1">Describe a skill you learned from an older relative. You should say: who you learned it from, what the skill is, how long it took, and explain how it has helped you in life.</p>
+              <div class="mt-4 p-4 bg-[#f3ecd8] border border-[#ece4d2] rounded-xl min-h-[140px]">
+                <span class="text-[9px] uppercase font-bold text-[#8a8171]">Selected Prompt</span>
+                <p id="s-topic-prompt" class="text-xs font-medium text-[#4a453d] leading-relaxed mt-1">Describe a skill you learned from an older relative. You should say: who you learned it from, what the skill is, how long it took, and explain how it has helped you in life.</p>
               </div>
             </div>
 
             <!-- Timers -->
-            <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm flex flex-col justify-between">
               <div>
-                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Preparation & Response Clocks</label>
+                <label class="block text-xs font-bold text-[#766f62] uppercase tracking-wider mb-3">Preparation & Response Clocks</label>
                 <div class="grid grid-cols-2 gap-3 text-center">
-                  <div class="bg-slate-50 border border-slate-100 p-3 rounded-xl">
-                    <span class="text-[9px] uppercase text-slate-400 block mb-1">Prep Time</span>
+                  <div class="bg-[#f3ecd8] border border-[#ece4d2] p-3 rounded-xl">
+                    <span class="text-[9px] uppercase text-[#8a8171] block mb-1">Prep Time</span>
                     <span id="s-prep-display" class="text-2xl font-extrabold font-mono text-amber-500">01:00</span>
                     <button onclick="startStudentPrepTimer()" class="w-full mt-2 py-1 bg-amber-500 text-white font-bold text-[10px] rounded-lg">Start Prep</button>
                   </div>
-                  <div class="bg-slate-50 border border-slate-100 p-3 rounded-xl">
-                    <span class="text-[9px] uppercase text-slate-400 block mb-1">Talk Time</span>
-                    <span id="s-talk-display" class="text-2xl font-extrabold font-mono text-indigo-600">02:00</span>
-                    <button onclick="startStudentTalkTimer()" class="w-full mt-2 py-1 bg-indigo-600 text-white font-bold text-[10px] rounded-lg">Start Talk</button>
+                  <div class="bg-[#f3ecd8] border border-[#ece4d2] p-3 rounded-xl">
+                    <span class="text-[9px] uppercase text-[#8a8171] block mb-1">Talk Time</span>
+                    <span id="s-talk-display" class="text-2xl font-extrabold font-mono text-[#7a2331]">02:00</span>
+                    <button onclick="startStudentTalkTimer()" class="w-full mt-2 py-1 bg-[#7a2331] text-white font-bold text-[10px] rounded-lg">Start Talk</button>
                   </div>
                 </div>
               </div>
-              <span id="s-timer-status" class="text-center text-[10px] text-slate-400 font-semibold italic mt-4">Select a timer to begin.</span>
+              <span id="s-timer-status" class="text-center text-[10px] text-[#8a8171] font-semibold italic mt-4">Select a timer to begin.</span>
             </div>
 
             <!-- Voice Recorder -->
-            <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm flex flex-col justify-between items-center text-center">
+            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm flex flex-col justify-between items-center text-center">
               <div class="w-full">
-                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Browser Audio Capture</label>
+                <label class="block text-xs font-bold text-[#766f62] uppercase tracking-wider mb-3">Browser Audio Capture</label>
                 <div class="flex justify-center items-center gap-4 py-2">
                   <button id="s-btn-record" onclick="toggleStudentAudioRecording()" class="w-14 h-14 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center text-lg relative">
                     <span id="s-rec-icon">🔴</span>
                     <span id="s-rec-pulse" class="hidden absolute inset-0 rounded-full border-4 border-red-500 animate-ping"></span>
                   </button>
                   <div class="text-left">
-                    <span id="s-rec-status" class="text-xs font-bold text-slate-700 block">Idle</span>
-                    <span id="s-rec-time" class="text-[10px] font-mono text-slate-400">00:00</span>
+                    <span id="s-rec-status" class="text-xs font-bold text-[#4a453d] block">Idle</span>
+                    <span id="s-rec-time" class="text-[10px] font-mono text-[#8a8171]">00:00</span>
                   </div>
                 </div>
               </div>
 
-              <div class="w-full mt-4 bg-slate-50 border border-slate-100 p-3 rounded-xl flex flex-col items-center gap-2">
+              <div class="w-full mt-4 bg-[#f3ecd8] border border-[#ece4d2] p-3 rounded-xl flex flex-col items-center gap-2">
                 <audio id="s-audio-player" controls class="w-full max-w-[200px] h-8 hidden"></audio>
-                <span id="s-no-audio-label" class="text-xs text-slate-400 py-1">No audio file captured.</span>
+                <span id="s-no-audio-label" class="text-xs text-[#8a8171] py-1">No audio file captured.</span>
                 <a id="s-download-link" class="hidden w-full py-1 text-center bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold text-[10px] rounded-lg transition">⬇ Save Recording (.wav)</a>
               </div>
             </div>
@@ -577,14 +577,14 @@
         <div id="student-grades-view" class="student-subview hidden space-y-6">
           <div>
             <h2 class="text-2xl font-extrabold">Grade Report &amp; Teacher Feedback</h2>
-            <p class="text-xs text-slate-500 mt-1">Review grades, scores, and custom recommendations logged under your profile.</p>
+            <p class="text-xs text-[#766f62] mt-1">Review grades, scores, and custom recommendations logged under your profile.</p>
           </div>
 
-          <div class="bg-white border border-slate-100 rounded-2xl shadow-sm p-6 overflow-x-auto">
-            <h3 class="font-extrabold text-sm text-slate-500 uppercase tracking-wider mb-4">Completed Mock Exams History</h3>
+          <div class="bg-white border border-[#ece4d2] rounded-2xl shadow-sm p-6 overflow-x-auto">
+            <h3 class="font-extrabold text-sm text-[#766f62] uppercase tracking-wider mb-4">Completed Mock Exams History</h3>
             <table class="w-full text-sm text-left border-collapse" id="studentMockHistoryTable">
               <thead>
-                <tr class="border-b border-slate-100 text-slate-400 text-xs">
+                <tr class="border-b border-[#ece4d2] text-[#8a8171] text-xs">
                   <th class="py-2.5">Exam Name</th>
                   <th class="py-2.5">Module</th>
                   <th class="py-2.5">Testing Mode</th>
@@ -593,11 +593,11 @@
                   <th class="py-2.5">Date Completed</th>
                 </tr>
               </thead>
-              <tbody id="studentHistoryBody" class="divide-y divide-slate-50 text-slate-700">
+              <tbody id="studentHistoryBody" class="divide-y divide-[#ece4d2] text-[#4a453d]">
                 <!-- Populated by JS -->
               </tbody>
             </table>
-            <div id="noStudentHistoryLabel" class="hidden text-center text-xs text-slate-400 py-8">
+            <div id="noStudentHistoryLabel" class="hidden text-center text-xs text-[#8a8171] py-8">
               No exams or evaluated scores logged yet. Start a mock test or complete live grading with your coach.
             </div>
           </div>
@@ -609,13 +609,13 @@
   <!-- ========================================== -->
   <!-- VIEW 3: PREMIUM CONSULTANCY CRM DASHBOARD   -->
   <!-- ========================================== -->
-  <div id="view-consultancy" class="view-container min-h-screen flex flex-col hidden bg-slate-50">
-    <header class="h-20 bg-indigo-950 px-6 flex items-center justify-between shrink-0 text-white shadow-md">
+  <div id="view-consultancy" class="view-container min-h-screen flex flex-col hidden bg-[#f3ecd8]">
+    <header class="h-20 bg-[#3d0f16] px-6 flex items-center justify-between shrink-0 text-white shadow-md">
       <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-lg bg-white text-indigo-950 flex items-center justify-center font-serif font-extrabold text-lg">V</div>
+        <div class="w-9 h-9 rounded-lg bg-white text-[#7a2331] flex items-center justify-center font-serif font-extrabold text-lg">V</div>
         <div>
           <h2 class="font-bold text-sm tracking-tight" id="crmHeaderName">Nepal Consultancy Portal</h2>
-          <span class="text-[9px] uppercase font-black text-indigo-200 tracking-wider" id="crmHeaderPlan">Growth Plan</span>
+          <span class="text-[9px] uppercase font-black text-[#f0d9a8] tracking-wider" id="crmHeaderPlan">Growth Plan</span>
         </div>
       </div>
       <div class="flex items-center gap-3">
@@ -630,31 +630,31 @@
 
     <div class="flex-1 flex flex-col md:flex-row overflow-hidden">
       <!-- CRM Sidebar -->
-      <aside class="w-full md:w-60 bg-white border-b md:border-r border-slate-100 p-4 flex flex-col gap-1 shrink-0">
-        <button onclick="switchCRMTab('crm')" id="c-tab-crm" class="sidebar-tab active-tab w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">👥 CRM Student Roster</button>
-        <button onclick="switchCRMTab('grader')" id="c-tab-grader" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">🎤 Live Speaking Grader</button>
-        <button onclick="switchCRMTab('vault')" id="c-tab-vault" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">📦 Material Vault</button>
-        <button onclick="switchCRMTab('settings')" id="c-tab-settings" class="sidebar-tab w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">⚙️ Database Settings</button>
+      <aside class="w-full md:w-60 bg-white border-b md:border-r border-[#ece4d2] p-4 flex flex-col gap-1 shrink-0">
+        <button onclick="switchCRMTab('crm')" id="c-tab-crm" class="sidebar-tab active-tab w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">👥 CRM Student Roster</button>
+        <button onclick="switchCRMTab('grader')" id="c-tab-grader" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">🎤 Live Speaking Grader</button>
+        <button onclick="switchCRMTab('vault')" id="c-tab-vault" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">📦 Material Vault</button>
+        <button onclick="switchCRMTab('settings')" id="c-tab-settings" class="sidebar-tab w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">⚙️ Database Settings</button>
       </aside>
 
       <!-- CRM Content View -->
       <main class="flex-1 p-6 md:p-8 overflow-y-auto">
         <!-- KPI Row -->
         <section class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          <div class="bg-white border border-slate-100 p-4 rounded-xl shadow-sm">
-            <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider">Total Enrolled</span>
-            <span id="c-kpi-total" class="text-2xl font-extrabold text-slate-800 mt-1 block">0</span>
+          <div class="bg-white border border-[#ece4d2] p-4 rounded-xl shadow-sm">
+            <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider">Total Enrolled</span>
+            <span id="c-kpi-total" class="text-2xl font-extrabold text-[#1c1a17] mt-1 block">0</span>
           </div>
-          <div class="bg-white border border-slate-100 p-4 rounded-xl shadow-sm">
-            <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider">Active Status</span>
-            <span id="c-kpi-active" class="text-2xl font-extrabold text-slate-800 mt-1 block">0</span>
+          <div class="bg-white border border-[#ece4d2] p-4 rounded-xl shadow-sm">
+            <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider">Active Status</span>
+            <span id="c-kpi-active" class="text-2xl font-extrabold text-[#1c1a17] mt-1 block">0</span>
           </div>
-          <div class="bg-white border border-slate-100 p-4 rounded-xl shadow-sm">
-            <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider">Avg Mock Band</span>
-            <span id="c-kpi-avg" class="text-2xl font-extrabold text-indigo-600 mt-1 block">—</span>
+          <div class="bg-white border border-[#ece4d2] p-4 rounded-xl shadow-sm">
+            <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider">Avg Mock Band</span>
+            <span id="c-kpi-avg" class="text-2xl font-extrabold text-[#7a2331] mt-1 block">—</span>
           </div>
-          <div class="bg-white border border-slate-100 p-4 rounded-xl shadow-sm">
-            <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider">Speaking Interviews Graded</span>
+          <div class="bg-white border border-[#ece4d2] p-4 rounded-xl shadow-sm">
+            <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider">Speaking Interviews Graded</span>
             <span id="c-kpi-speaking" class="text-2xl font-extrabold text-emerald-600 mt-1 block">0</span>
           </div>
         </section>
@@ -662,23 +662,23 @@
         <!-- CRM Tab 1: Roster -->
         <div id="crm-roster-view" class="crm-subview space-y-4">
           <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
-            <input type="text" id="rosterSearch" oninput="renderCRMTable()" placeholder="🔍 Search students by name or email..." class="w-full sm:w-72 px-4 py-2 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-indigo-500 bg-white" />
+            <input type="text" id="rosterSearch" oninput="renderCRMTable()" placeholder="🔍 Search students by name or email..." class="w-full sm:w-72 px-4 py-2 border border-[#e5ded0] rounded-xl text-xs focus:outline-none focus:border-[#7a2331] bg-white" />
             <div class="flex gap-2 w-full sm:w-auto">
-              <select id="rosterStatusFilter" onchange="renderCRMTable()" class="px-3 py-2 border border-slate-200 rounded-xl text-xs bg-white focus:outline-none">
+              <select id="rosterStatusFilter" onchange="renderCRMTable()" class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none">
                 <option value="all">All Statuses</option>
                 <option value="Active">Active</option>
                 <option value="Completed">Completed</option>
                 <option value="Paused">Paused</option>
               </select>
-              <button onclick="loadCRMDemoData()" class="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs transition">Seed Demo Students</button>
-              <button onclick="openCRMAddModal()" class="px-3.5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs transition">+ Register Student</button>
+              <button onclick="loadCRMDemoData()" class="px-3.5 py-2 bg-[#efe6d0] hover:bg-[#e5ded0] text-[#4a453d] font-bold rounded-xl text-xs transition">Seed Demo Students</button>
+              <button onclick="openCRMAddModal()" class="px-3.5 py-2 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-xl text-xs transition">+ Register Student</button>
             </div>
           </div>
 
-          <div class="bg-white border border-slate-100 rounded-2xl shadow-sm overflow-hidden">
+          <div class="bg-white border border-[#ece4d2] rounded-2xl shadow-sm overflow-hidden">
             <table class="w-full text-sm text-left border-collapse">
               <thead>
-                <tr class="bg-slate-50 border-b border-slate-100 text-slate-400 font-bold text-[9px] uppercase tracking-wider">
+                <tr class="bg-[#f3ecd8] border-b border-[#ece4d2] text-[#8a8171] font-bold text-[9px] uppercase tracking-wider">
                   <th class="p-4">Student</th>
                   <th class="p-4">Contacts</th>
                   <th class="p-4 text-center">Target Band</th>
@@ -687,11 +687,11 @@
                   <th class="p-4 text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody id="crmTableBody" class="divide-y divide-slate-100 text-slate-700">
+              <tbody id="crmTableBody" class="divide-y divide-[#ece4d2] text-[#4a453d]">
                 <!-- Populated by JS -->
               </tbody>
             </table>
-            <div id="noRosterLabel" class="hidden text-center text-xs text-slate-400 py-12">
+            <div id="noRosterLabel" class="hidden text-center text-xs text-[#8a8171] py-12">
               No students enrolled. Click "Register Student" or seed demo records.
             </div>
           </div>
@@ -699,87 +699,87 @@
 
         <!-- CRM Tab 2: Grader Form -->
         <div id="crm-grader-view" class="crm-subview hidden grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div class="lg:col-span-2 bg-white border border-slate-100 rounded-2xl shadow-sm p-6">
+          <div class="lg:col-span-2 bg-white border border-[#ece4d2] rounded-2xl shadow-sm p-6">
             <h3 class="text-lg font-bold mb-1">🎤 Live 1-on-1 IELTS Speaking Grader</h3>
-            <p class="text-xs text-slate-400 mb-6">Conduct Speaking mock interviews and record grades across the official descriptors.</p>
+            <p class="text-xs text-[#8a8171] mb-6">Conduct Speaking mock interviews and record grades across the official descriptors.</p>
             
             <form onsubmit="handleCRMGraderSubmit(event)" class="space-y-4">
               <div class="form-group flex flex-col gap-1">
-                <label class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Select Student Profile</label>
-                <select id="graderStudentSelect" required class="w-full px-3 py-2 border border-slate-200 rounded-xl text-xs bg-white focus:outline-none focus:border-indigo-500">
+                <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Select Student Profile</label>
+                <select id="graderStudentSelect" required class="w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none focus:border-[#7a2331]">
                   <!-- Populated by JS -->
                 </select>
               </div>
 
               <div class="form-group flex flex-col gap-1">
-                <label class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Cue Card Topic Prompt</label>
-                <input type="text" id="graderCueCard" placeholder="e.g. Describe a journey that was delayed..." required class="w-full px-3 py-2 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-indigo-500" />
+                <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Cue Card Topic Prompt</label>
+                <input type="text" id="graderCueCard" placeholder="e.g. Describe a journey that was delayed..." required class="w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs focus:outline-none focus:border-[#7a2331]" />
               </div>
 
-              <div class="border-t border-slate-100 pt-4 space-y-4">
-                <h4 class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Scoring Bands (0.0 - 9.0)</h4>
+              <div class="border-t border-[#ece4d2] pt-4 space-y-4">
+                <h4 class="text-xs font-bold text-[#7a2331] uppercase tracking-wider">Scoring Bands (0.0 - 9.0)</h4>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <div class="flex justify-between text-xs font-bold mb-1">
                       <span>Fluency &amp; Coherence</span>
-                      <span id="g-lbl-fluency" class="text-indigo-600">6.0</span>
+                      <span id="g-lbl-fluency" class="text-[#7a2331]">6.0</span>
                     </div>
-                    <input type="range" id="g-val-fluency" min="0" max="9" step="0.5" value="6.0" oninput="updateCRMSliders()" class="w-full accent-indigo-600" />
+                    <input type="range" id="g-val-fluency" min="0" max="9" step="0.5" value="6.0" oninput="updateCRMSliders()" class="w-full accent-[#7a2331]" />
                   </div>
                   <div>
                     <div class="flex justify-between text-xs font-bold mb-1">
                       <span>Lexical Resource</span>
-                      <span id="g-lbl-vocab" class="text-indigo-600">6.0</span>
+                      <span id="g-lbl-vocab" class="text-[#7a2331]">6.0</span>
                     </div>
-                    <input type="range" id="g-val-vocab" min="0" max="9" step="0.5" value="6.0" oninput="updateCRMSliders()" class="w-full accent-indigo-600" />
+                    <input type="range" id="g-val-vocab" min="0" max="9" step="0.5" value="6.0" oninput="updateCRMSliders()" class="w-full accent-[#7a2331]" />
                   </div>
                   <div>
                     <div class="flex justify-between text-xs font-bold mb-1">
                       <span>Grammatical Range</span>
-                      <span id="g-lbl-grammar" class="text-indigo-600">6.0</span>
+                      <span id="g-lbl-grammar" class="text-[#7a2331]">6.0</span>
                     </div>
-                    <input type="range" id="g-val-grammar" min="0" max="9" step="0.5" value="6.0" oninput="updateCRMSliders()" class="w-full accent-indigo-600" />
+                    <input type="range" id="g-val-grammar" min="0" max="9" step="0.5" value="6.0" oninput="updateCRMSliders()" class="w-full accent-[#7a2331]" />
                   </div>
                   <div>
                     <div class="flex justify-between text-xs font-bold mb-1">
                       <span>Pronunciation</span>
-                      <span id="g-lbl-pronunciation" class="text-indigo-600">6.0</span>
+                      <span id="g-lbl-pronunciation" class="text-[#7a2331]">6.0</span>
                     </div>
-                    <input type="range" id="g-val-pronunciation" min="0" max="9" step="0.5" value="6.0" oninput="updateCRMSliders()" class="w-full accent-indigo-600" />
+                    <input type="range" id="g-val-pronunciation" min="0" max="9" step="0.5" value="6.0" oninput="updateCRMSliders()" class="w-full accent-[#7a2331]" />
                   </div>
                 </div>
               </div>
 
-              <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-4 flex justify-between items-center">
+              <div class="bg-[#f3ecd8] border border-[#e5ded0] rounded-xl p-4 flex justify-between items-center">
                 <div>
-                  <span class="text-[10px] font-bold text-indigo-700 uppercase tracking-wider block">Speaking Band Output</span>
-                  <span class="text-[9px] text-slate-400">Mean average rounded to the nearest half band.</span>
+                  <span class="text-[10px] font-bold text-[#7a2331] uppercase tracking-wider block">Speaking Band Output</span>
+                  <span class="text-[9px] text-[#8a8171]">Mean average rounded to the nearest half band.</span>
                 </div>
-                <span id="graderOverallLabel" class="text-2xl font-extrabold text-indigo-700">6.0</span>
+                <span id="graderOverallLabel" class="text-2xl font-extrabold text-[#7a2331]">6.0</span>
               </div>
 
               <div class="form-group flex flex-col gap-1">
-                <label class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Teacher Comments &amp; Recommendations</label>
-                <textarea id="graderNotes" rows="3" placeholder="Log speaking hesitations, vocab suggestions, grammatical error fixes, etc..." required class="w-full px-3 py-2 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-indigo-500"></textarea>
+                <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Teacher Comments &amp; Recommendations</label>
+                <textarea id="graderNotes" rows="3" placeholder="Log speaking hesitations, vocab suggestions, grammatical error fixes, etc..." required class="w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs focus:outline-none focus:border-[#7a2331]"></textarea>
               </div>
 
-              <button type="submit" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs transition">Submit Graded Mock Score</button>
+              <button type="submit" class="w-full py-2.5 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-xl text-xs transition">Submit Graded Mock Score</button>
             </form>
           </div>
 
-          <div class="bg-white border border-slate-100 rounded-2xl shadow-sm p-5 text-xs text-slate-600 space-y-4">
-            <h4 class="font-extrabold text-slate-700 uppercase">Descriptor Guide</h4>
+          <div class="bg-white border border-[#ece4d2] rounded-2xl shadow-sm p-5 text-xs text-[#5c5648] space-y-4">
+            <h4 class="font-extrabold text-[#4a453d] uppercase">Descriptor Guide</h4>
             <div>
-              <strong class="text-slate-800">Fluency (FC):</strong> Focuses on speech rate, logical connectors, and hesitations.
+              <strong class="text-[#1c1a17]">Fluency (FC):</strong> Focuses on speech rate, logical connectors, and hesitations.
             </div>
             <div>
-              <strong class="text-slate-800">Lexical Resource (LR):</strong> Focuses on vocabulary flexibility, paraphrasing, and idioms.
+              <strong class="text-[#1c1a17]">Lexical Resource (LR):</strong> Focuses on vocabulary flexibility, paraphrasing, and idioms.
             </div>
             <div>
-              <strong class="text-slate-800">Grammar (GRA):</strong> Focuses on sentence complexity, structure diversity, and error frequency.
+              <strong class="text-[#1c1a17]">Grammar (GRA):</strong> Focuses on sentence complexity, structure diversity, and error frequency.
             </div>
             <div>
-              <strong class="text-slate-800">Pronunciation (PR):</strong> Focuses on phoneme clarity, stress patterns, and ease of understanding.
+              <strong class="text-[#1c1a17]">Pronunciation (PR):</strong> Focuses on phoneme clarity, stress patterns, and ease of understanding.
             </div>
           </div>
         </div>
@@ -790,21 +790,21 @@
         </div>
 
         <!-- CRM Tab 4: Database Settings -->
-        <div id="crm-settings-view" class="crm-subview hidden max-w-lg bg-white border border-slate-100 rounded-2xl shadow-sm p-6 space-y-4">
+        <div id="crm-settings-view" class="crm-subview hidden max-w-lg bg-white border border-[#ece4d2] rounded-2xl shadow-sm p-6 space-y-4">
           <div>
-            <h3 class="text-sm font-extrabold text-slate-800 uppercase tracking-wider">⚙️ Backend Cloud Sync Settings</h3>
-            <p class="text-xs text-slate-500 mt-1">ViATestPrep is fully hybrid. Input your Supabase credentials below to sync student rosters, mock history, and cue card grades to your PostgreSQL cloud database. If empty, local-first offline storage is used.</p>
+            <h3 class="text-sm font-extrabold text-[#1c1a17] uppercase tracking-wider">⚙️ Backend Cloud Sync Settings</h3>
+            <p class="text-xs text-[#766f62] mt-1">ViATestPrep is fully hybrid. Input your Supabase credentials below to sync student rosters, mock history, and cue card grades to your PostgreSQL cloud database. If empty, local-first offline storage is used.</p>
           </div>
           <div class="space-y-3">
             <div class="flex flex-col gap-1">
-              <label class="text-[9px] font-bold text-slate-400 uppercase">Supabase Project URL</label>
-              <input type="text" id="settingSupabaseUrl" placeholder="https://your-project.supabase.co" class="px-3 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:bg-white outline-none focus:border-indigo-500 font-mono" />
+              <label class="text-[9px] font-bold text-[#8a8171] uppercase">Supabase Project URL</label>
+              <input type="text" id="settingSupabaseUrl" placeholder="https://your-project.supabase.co" class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-[#f3ecd8] focus:bg-white outline-none focus:border-[#7a2331] font-mono" />
             </div>
             <div class="flex flex-col gap-1">
-              <label class="text-[9px] font-bold text-slate-400 uppercase">Supabase Anon/Public Key</label>
-              <input type="password" id="settingSupabaseKey" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." class="px-3 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:bg-white outline-none focus:border-indigo-500 font-mono" />
+              <label class="text-[9px] font-bold text-[#8a8171] uppercase">Supabase Anon/Public Key</label>
+              <input type="password" id="settingSupabaseKey" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-[#f3ecd8] focus:bg-white outline-none focus:border-[#7a2331] font-mono" />
             </div>
-            <button onclick="saveSupabaseSettings()" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs transition">Save Cloud Configuration</button>
+            <button onclick="saveSupabaseSettings()" class="w-full py-2.5 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-xl text-xs transition">Save Cloud Configuration</button>
           </div>
         </div>
       </main>

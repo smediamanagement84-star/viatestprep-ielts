@@ -7,14 +7,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f8fafc;
-    --surface: #ffffff;
-    --card: #ffffff;
-    --border: rgba(15, 23, 42, 0.08);
-    --border-hi: rgba(15, 23, 42, 0.16);
-    --text-1: #0f172a;
-    --text-2: #475569;
-    --text-3: #64748b;
+    --bg: #f3ecd8;
+    --surface: #fffefb;
+    --card: #fffefb;
+    --border: rgba(28, 26, 23, 0.12);
+    --border-hi: rgba(28, 26, 23, 0.22);
+    --text-1: #1c1a17;
+    --text-2: #4a453d;
+    --text-3: #766f62;
     --blue: #2563eb;
     --orange: #ea580c;
     --orange-dim: rgba(234, 88, 12, 0.08);
@@ -24,9 +24,9 @@
     --red-dim: rgba(220, 38, 38, 0.08);
     --purple: #7c3aed;
     --amber: #d97706;
-    --teal: #0d9488;
-    --teal-dim: rgba(13, 148, 136, 0.08);
-    --teal-glow: rgba(13, 148, 136, 0.04);
+    --teal: #7a2331;
+    --teal-dim: rgba(122, 35, 49, 0.08);
+    --teal-glow: rgba(122, 35, 49, 0.04);
     --r: 16px;
     --r-sm: 8px;
   }
@@ -161,12 +161,12 @@
   .drill-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-weight: 800; display: flex; align-items: center; gap: 6px; color: var(--text-1); }
   .drill-badge { font-size: 11px; font-weight: 700; color: var(--teal); background: var(--teal-dim); padding: 4px 10px; border-radius: 20px; }
   .dictation-panel { background: var(--bg); border: 1px solid var(--border); padding: 20px; border-radius: var(--r-sm); text-align: center; margin-bottom: 20px; }
-  .btn-audio-play { background: var(--teal); color: white; border: none; width: 54px; height: 54px; border-radius: 50%; font-size: 20px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 12px rgba(13,148,136,0.2); transition: all 0.2s; margin-bottom: 10px; }
+  .btn-audio-play { background: var(--teal); color: white; border: none; width: 54px; height: 54px; border-radius: 50%; font-size: 20px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 12px rgba(122,35,49,0.2); transition: all 0.2s; margin-bottom: 10px; }
   .btn-audio-play:hover { background: #0f766e; transform: scale(1.05); }
   .audio-status { font-size: 12px; font-weight: 700; color: var(--text-3); }
   input.dictation-input { width: 100%; padding: 14px 18px; font-family: 'Inter', sans-serif; font-size: 15px; color: var(--text-1); background: var(--surface); border: 1px solid var(--border-hi); border-radius: var(--r-sm); outline: none; transition: border-color 0.2s, box-shadow 0.2s; margin-bottom: 20px; }
-  input.dictation-input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(13,148,136,0.1); }
-  .btn-drill { background: var(--teal); color: #fff; border: none; padding: 10px 22px; border-radius: 24px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(13,148,136,0.15); }
+  input.dictation-input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(122,35,49,0.1); }
+  .btn-drill { background: var(--teal); color: #fff; border: none; padding: 10px 22px; border-radius: 24px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(122,35,49,0.15); }
   .btn-drill:hover { background: #0f766e; transform: translateY(-1px); }
   .btn-drill-secondary { background: var(--surface); color: var(--text-2); border: 1px solid var(--border-hi); padding: 10px 22px; border-radius: 24px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s; }
   .btn-drill-secondary:hover { color: var(--teal); border-color: var(--teal); }

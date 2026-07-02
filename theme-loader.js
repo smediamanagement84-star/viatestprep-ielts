@@ -21,25 +21,23 @@
   lightCSS.id = 'vtp-light-mode-overrides';
   lightCSS.textContent = `
     /* === VTP Universal Light Mode Overrides === */
+    /* NOTE: --paper/--ink/--line/--soft/--blue/--terra/--gold/--green are intentionally
+       NOT forced here anymore. Every page now defines its own paper/ink/accent/gold
+       values (maroon #7a2331 + gold #a8792f house palette) to match the rest of the
+       site, and forcing shared values here with !important previously fought those
+       per-page definitions - most visibly, forcing --green globally broke the
+       semantic "correct answer = green" feedback color on quiz pages that reuse
+       --green for both their brand accent and answer-checking UI. */
     html.light,
     :root {
-      --paper: #f8fafc !important; /* Premium light slate background */
-      --ink: #0f172a !important; /* Deep slate-900 text */
-      --line: rgba(15, 23, 42, 0.06) !important; /* Clean, ultra-thin border */
-      --soft: #f1f5f9 !important; /* Soft slate-100 fill */
-      
-      /* Elevate brand colors to vibrant, high-contrast equivalents in light mode */
-      --blue: #4f46e5 !important; /* Indigo accent */
-      --blue-d: #3730a3 !important;
-      --terra: #ea580c !important; /* Orange accent */
-      --gold: #d97706 !important; /* Amber accent */
-      --green: #059669 !important; /* Emerald accent */
+      --paper: #fffefb !important;
+      --ink: #1c1a17 !important;
     }
 
     html.light body,
     html.light {
-      background: #f8fafc !important;
-      color: #0f172a !important;
+      background: #f3ecd8 !important;
+      color: #1c1a17 !important;
     }
 
     /* Header & Footer Navigation in Mock Simulator (Clean, professional look) */
@@ -48,41 +46,41 @@
     html.light header.bg-black\/40 {
       background: #ffffff !important;
       border-bottom: 1px solid rgba(15, 23, 42, 0.06) !important;
-      color: #0f172a !important;
+      color: #1c1a17 !important;
     }
     html.light header h2,
     html.light header span,
     html.light header a,
     html.light header div {
-      color: #0f172a !important;
+      color: #1c1a17 !important;
     }
     html.light header a[class*="bg-white"],
     html.light header div[class*="bg-white"],
     html.light header button[class*="bg-white"] {
-      background: #f1f5f9 !important;
+      background: #f3ecd8 !important;
       border: 1px solid rgba(15, 23, 42, 0.08) !important;
-      color: #0f172a !important;
+      color: #1c1a17 !important;
     }
     html.light header a[class*="bg-white"]:hover,
     html.light header button[class*="bg-white"]:hover {
-      background: #e2e8f0 !important;
+      background: #e5ded0 !important;
     }
     html.light header span[class*="text-purple-400"] {
-      color: #4f46e5 !important;
+      color: #7a2331 !important;
     }
     html.light header .timer-pill,
     html.light header span#timerText {
-      color: #4f46e5 !important;
+      color: #7a2331 !important;
     }
 
     /* Main Content Layout Panels */
     html.light .audio-pane,
     html.light .passage-pane {
-      background: #f8fafc !important;
+      background: #f3ecd8 !important;
       border-right: 1px solid rgba(15, 23, 42, 0.06) !important;
     }
     html.light .questions-pane {
-      background: #f1f5f9 !important;
+      background: #f3ecd8 !important;
     }
 
     /* Bottom Nav Tray in Simulator */
@@ -90,57 +88,57 @@
     html.light div[class*="border-t"][class*="bg-black"] {
       background: #ffffff !important;
       border-top: 1px solid rgba(15, 23, 42, 0.06) !important;
-      color: #0f172a !important;
+      color: #1c1a17 !important;
     }
 
     /* Audio Player Control Card (Light theme styling) */
     html.light .audio-player-card {
       background: #ffffff !important;
-      border: 1px solid rgba(79, 70, 229, 0.12) !important;
-      box-shadow: 0 10px 30px rgba(79, 70, 229, 0.04) !important;
+      border: 1px solid rgba(122, 35, 49, 0.12) !important;
+      box-shadow: 0 10px 30px rgba(122, 35, 49, 0.04) !important;
     }
     html.light .audio-player-card select,
     html.light .audio-player-card option {
       background: #ffffff !important;
-      color: #4f46e5 !important;
+      color: #7a2331 !important;
     }
     html.light button#playBtn {
-      background-color: #4f46e5 !important;
+      background-color: #7a2331 !important;
       color: #ffffff !important;
-      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25) !important;
+      box-shadow: 0 4px 12px rgba(122, 35, 49, 0.25) !important;
     }
     html.light button#playBtn:hover {
-      background-color: #3730a3 !important;
+      background-color: #5e1a25 !important;
     }
     html.light button[onclick="stopAudio()"] {
-      background: #f1f5f9 !important;
+      background: #f3ecd8 !important;
       border: 1px solid rgba(15, 23, 42, 0.08) !important;
-      color: #475569 !important;
+      color: #4a453d !important;
     }
     html.light button[onclick="stopAudio()"]:hover {
-      background: #e2e8f0 !important;
-      color: #0f172a !important;
+      background: #e5ded0 !important;
+      color: #1c1a17 !important;
     }
     html.light .audio-player-card div[class*="bg-black/20"] {
-      background: #f1f5f9 !important;
+      background: #f3ecd8 !important;
       border: 1px solid rgba(15, 23, 42, 0.08) !important;
     }
     html.light .audio-player-card span[class*="text-stone-500"] {
-      color: #475569 !important;
+      color: #4a453d !important;
     }
     html.light #audioSpeed {
-      color: #4f46e5 !important;
+      color: #7a2331 !important;
     }
     html.light #audioSpeed option {
       background: #ffffff !important;
-      color: #0f172a !important;
+      color: #1c1a17 !important;
     }
     html.light input[type="range"]#audioTimeline {
       background: rgba(15, 23, 42, 0.08) !important;
     }
     html.light #currentTime,
     html.light #totalDuration {
-      color: #64748b !important;
+      color: #766f62 !important;
     }
 
     /* Simulator Warnings & Tips (Teal info box contrast fixes) */
@@ -203,8 +201,8 @@
 
     /* Premium Blueprint Grid Override */
     html.light .blueprint {
-      background: linear-gradient(rgba(79, 70, 229, 0.03) 1px, transparent 1px) 0 0/24px 24px,
-                  linear-gradient(90deg, rgba(79, 70, 229, 0.03) 1px, transparent 1px) 0 0/24px 24px,
+      background: linear-gradient(rgba(122, 35, 49, 0.03) 1px, transparent 1px) 0 0/24px 24px,
+                  linear-gradient(90deg, rgba(122, 35, 49, 0.03) 1px, transparent 1px) 0 0/24px 24px,
                   #ffffff !important;
       border-color: var(--blue) !important;
       color: var(--ink) !important;
@@ -212,7 +210,7 @@
 
     /* Option states in lessons */
     html.light .opt:hover {
-      background: rgba(79, 70, 229, 0.04) !important;
+      background: rgba(122, 35, 49, 0.04) !important;
       border-color: var(--blue) !important;
     }
     html.light .opt.correct {
@@ -251,39 +249,40 @@
       border: 1px solid rgba(217, 119, 6, 0.15) !important;
     }
 
-    html.light h1, html.light h2, html.light h3, html.light h4 {
-      color: #1e1b4b !important; /* Deep Indigo-950 headings */
-    }
+    /* NOTE: no longer forcing a blanket heading color here - pages define their own
+       h1-h4 colors (ink by default, with maroon/gold spans for emphasis), and the old
+       "#1e1b4b" indigo override was clobbering those with !important, most visibly
+       muting intentional light-on-maroon headings like the UKVI "Boss Fight" banner. */
 
     /* Question box and passage text visibility overrides (Highly visible & readable) */
     html.light .q-box p,
     html.light .instruction-box p {
-      color: #0f172a !important; /* High-contrast Slate-900 */
+      color: #1c1a17 !important; /* High-contrast Slate-900 */
     }
     
     html.light #passageContent p,
     html.light #passageContent span,
     html.light #passageContent li {
-      color: #334155 !important; /* Premium readable slate-700 */
+      color: #4a453d !important; /* Premium readable slate-700 */
     }
     html.light #passageContent h1,
     html.light #passageContent h2,
     html.light #passageContent h3,
     html.light #passageContent strong {
-      color: #0f172a !important; /* Bold headings and bold text */
+      color: #1c1a17 !important; /* Bold headings and bold text */
     }
 
     /* Sub-page text contrast adjustments */
-    html.light .text-stone-500, html.light .text-stone-600, html.light .text-stone-700 { color: #475569 !important; }
-    html.light .text-stone-800, html.light .text-stone-900 { color: #0f172a !important; }
-    html.light .text-gray-500, html.light .text-gray-600, html.light .text-gray-700 { color: #475569 !important; }
-    html.light .text-gray-800, html.light .text-gray-900 { color: #0f172a !important; }
-    html.light .text-slate-500, html.light .text-slate-600, html.light .text-slate-700 { color: #475569 !important; }
+    html.light .text-stone-500, html.light .text-stone-600, html.light .text-stone-700 { color: #4a453d !important; }
+    html.light .text-stone-800, html.light .text-stone-900 { color: #1c1a17 !important; }
+    html.light .text-gray-500, html.light .text-gray-600, html.light .text-gray-700 { color: #4a453d !important; }
+    html.light .text-gray-800, html.light .text-gray-900 { color: #1c1a17 !important; }
+    html.light .text-slate-500, html.light .text-slate-600, html.light .text-slate-700 { color: #4a453d !important; }
 
     /* Background overrides for Tailwind utility classes */
     html.light .bg-white { background-color: #ffffff !important; }
-    html.light .bg-gray-50, html.light .bg-gray-100, html.light .bg-stone-50, html.light .bg-stone-100 { background-color: #f1f5f9 !important; }
-    html.light .bg-slate-50, html.light .bg-slate-100 { background-color: #f1f5f9 !important; }
+    html.light .bg-gray-50, html.light .bg-gray-100, html.light .bg-stone-50, html.light .bg-stone-100 { background-color: #f3ecd8 !important; }
+    html.light .bg-slate-50, html.light .bg-slate-100 { background-color: #f3ecd8 !important; }
 
     html.light .border, html.light .border-gray-200, html.light .border-stone-200, html.light .border-slate-200 {
       border-color: rgba(15, 23, 42, 0.06) !important;
@@ -294,7 +293,7 @@
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03) !important;
     }
 
-    html.light .timer-pill { color: #4f46e5 !important; }
+    html.light .timer-pill { color: #7a2331 !important; }
 
     /* Highlight Marker Overrides */
     html.light .marker-yellow { background: linear-gradient(transparent 60%, rgba(253, 224, 71, 0.4) 60%) !important; }
@@ -309,74 +308,71 @@
     html.light .annot-cohesion { background-color: rgba(244, 114, 182, 0.3) !important; color: #9d174d !important; }
     html.light .annot-lexis { background-color: rgba(192, 132, 252, 0.3) !important; color: #6b21a8 !important; }
 
-    /* Button styling in Light Mode */
-    html.light button:not(.vtp-theme-toggle):not([class*="bg-purple"]):not([class*="bg-emerald"]):not([class*="bg-teal"]):not([class*="bg-red"]):not([class*="bg-green"]):not(.active) {
-      background: #ffffff !important;
-      border-color: rgba(15, 23, 42, 0.12) !important;
-      color: #0f172a !important;
-    }
-    html.light button:not(.vtp-theme-toggle):not([class*="bg-purple"]):not([class*="bg-emerald"]):not([class*="bg-teal"]):not([class*="bg-red"]):not([class*="bg-green"]):not(.active):hover {
-      background: #f1f5f9 !important;
-    }
+    /* NOTE: the old blanket "html.light button {...!important}" rule that lived here is
+       removed - it forced every <button> on every page to a white/slate style, which
+       silently overrode intentional maroon-filled buttons (.btn-primary, .btn-drill,
+       etc.) on every boutique lesson/PTE/UKVI page since those don't carry the
+       bg-purple/bg-emerald/... exclusion classes this rule was written against. Buttons
+       now take whatever color each page's own CSS gives them. */
 
     /* Selected Option Highlights in MCQ */
     html.light button[onclick*="selectOption"] {
       background-color: #ffffff !important;
       border-color: rgba(15, 23, 42, 0.08) !important;
-      color: #334155 !important;
+      color: #4a453d !important;
     }
     html.light button[onclick*="selectOption"]:hover {
-      background-color: #f8fafc !important;
+      background-color: #f3ecd8 !important;
       border-color: #6366f1 !important;
     }
     
     /* MCQ Selected (Translucent Indigo Glow) */
     html.light button[onclick*="selectOption"][class*="bg-purple-600/30"] {
-      background-color: rgba(79, 70, 229, 0.08) !important;
+      background-color: rgba(122, 35, 49, 0.08) !important;
       border-color: #6366f1 !important;
-      color: #4f46e5 !important;
+      color: #7a2331 !important;
       font-weight: 600 !important;
-      box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08) !important;
+      box-shadow: 0 2px 8px rgba(122, 35, 49, 0.08) !important;
     }
     html.light button[onclick*="selectOption"][class*="bg-purple-600/30"] span {
-      color: #4f46e5 !important;
+      color: #7a2331 !important;
     }
 
     /* TFNG Selected (Solid Indigo with White text) */
     html.light button[onclick*="selectOption"][class*="bg-purple-600"]:not([class*="/30"]) {
-      background-color: #4f46e5 !important;
-      border-color: #4f46e5 !important;
+      background-color: #7a2331 !important;
+      border-color: #7a2331 !important;
       color: #ffffff !important;
       font-weight: 600 !important;
-      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2) !important;
+      box-shadow: 0 4px 12px rgba(122, 35, 49, 0.2) !important;
     }
 
     /* Input blanks in mock simulator */
     html.light .input-fill {
       background: #ffffff !important;
       border-color: rgba(15, 23, 42, 0.12) !important;
-      color: #0f172a !important;
+      color: #1c1a17 !important;
     }
     html.light .input-fill:focus {
-      border-color: #4f46e5 !important;
-      box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15) !important;
+      border-color: #7a2331 !important;
+      box-shadow: 0 0 0 2px rgba(122, 35, 49, 0.15) !important;
     }
 
     /* Bottom Nav Tray Buttons */
     html.light .q-nav-btn {
       background: #ffffff !important;
       border-color: rgba(15, 23, 42, 0.08) !important;
-      color: #475569 !important;
+      color: #4a453d !important;
     }
     html.light .q-nav-btn.current {
-      border-color: #4f46e5 !important;
-      color: #4f46e5 !important;
-      box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15) !important;
+      border-color: #7a2331 !important;
+      color: #7a2331 !important;
+      box-shadow: 0 0 0 2px rgba(122, 35, 49, 0.15) !important;
     }
     html.light .q-nav-btn.answered {
-      background: rgba(79, 70, 229, 0.08) !important;
+      background: rgba(122, 35, 49, 0.08) !important;
       border-color: #6366f1 !important;
-      color: #4f46e5 !important;
+      color: #7a2331 !important;
     }
     html.light .q-nav-btn.flagged {
       border-color: #ea580c !important;

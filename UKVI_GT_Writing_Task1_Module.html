@@ -6,38 +6,38 @@
 <title>IELTS GT Writing Task 1: Letter Architect — UKVI Band 7+ — ViATestPrep</title>
 <style>
   :root {
-    --bg: #0d0d0d;
-    --surface: #161616;
-    --surface2: #1e1e1e;
-    --border: #2a2a2a;
-    --accent: #f59e0b;
+    --bg: #f3ecd8;
+    --surface: #fffefb;
+    --surface2: #f7f0dd;
+    --border: #e5ded0;
+    --accent: #7a2331;
     --accent2: #10b981;
     --accent3: #3b82f6;
     --red: #ef4444;
-    --text: #f0f0f0;
-    --muted: #888;
-    --pill: #252525;
+    --text: #1c1a17;
+    --muted: #766f62;
+    --pill: #efe6d0;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; line-height: 1.7; }
 
   nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
   .logo { font-weight: 800; font-size: 1rem; color: var(--accent); letter-spacing: 1px; cursor: pointer; }
-  .badge { background: var(--accent); color: #000; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
+  .badge { background: var(--accent); color: #fffefb; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
   .xp-display { font-size: 0.8rem; color: var(--accent); font-weight: 700; }
 
   .step-nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 10px 24px; display: flex; gap: 8px; overflow-x: auto; }
   .step-btn { background: none; border: 1px solid var(--border); color: var(--muted); padding: 5px 14px; border-radius: 20px; cursor: pointer; font-size: 0.78rem; white-space: nowrap; transition: all 0.2s; }
-  .step-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(245,158,11,0.08); }
+  .step-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(122,35,49,0.08); }
 
   .hero { padding: 64px 24px 48px; max-width: 800px; margin: 0 auto; }
   .module-tag { display: inline-block; background: var(--pill); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 1px; }
   .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 900; line-height: 1.2; margin-bottom: 16px; }
   .hero h1 span { color: var(--accent); }
-  .hero p { color: #bbb; font-size: 1rem; max-width: 620px; margin-bottom: 28px; }
+  .hero p { color: #766f62; font-size: 1rem; max-width: 620px; margin-bottom: 28px; }
   .hero-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
   .pill { background: var(--pill); border: 1px solid var(--border); border-radius: 20px; padding: 5px 14px; font-size: 0.8rem; color: var(--muted); }
-  .btn-primary { background: var(--accent); color: #000; border: none; padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: opacity 0.2s; }
+  .btn-primary { background: var(--accent); color: #fffefb; border: none; padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: opacity 0.2s; }
   .btn-primary:hover { opacity: 0.85; }
   .btn-ghost { background: none; border: 1px solid var(--border); color: var(--muted); padding: 12px 24px; border-radius: 8px; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; }
   .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
@@ -61,7 +61,7 @@
   .letter-tabs { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
   .letter-tab { background: var(--surface); border: 2px solid var(--border); border-radius: 10px; padding: 14px 20px; cursor: pointer; transition: all 0.2s; min-width: 180px; }
   .letter-tab:hover { border-color: var(--accent); }
-  .letter-tab.active-tab { border-color: var(--accent); background: rgba(245,158,11,0.08); }
+  .letter-tab.active-tab { border-color: var(--accent); background: rgba(122,35,49,0.08); }
   .letter-tab h3 { font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; }
   .letter-tab p { font-size: 0.75rem; color: var(--muted); }
   .letter-tab .lt-icon { font-size: 1.4rem; margin-bottom: 6px; }
@@ -74,7 +74,7 @@
   .bp-row { display: grid; grid-template-columns: 140px 1fr; border-bottom: 1px solid var(--border); }
   .bp-row:last-child { border-bottom: none; }
   .bp-label { background: var(--surface2); padding: 14px 16px; font-size: 0.78rem; font-weight: 700; color: var(--accent); display: flex; align-items: flex-start; }
-  .bp-content { padding: 14px 18px; font-size: 0.85rem; color: #ccc; }
+  .bp-content { padding: 14px 18px; font-size: 0.85rem; color: #4a453d; }
   .bp-content strong { color: var(--text); }
 
   /* TONE COMPARE */
@@ -84,20 +84,20 @@
   .tone-formal { color: var(--accent3); }
   .tone-semi { color: var(--accent); }
   .tone-informal { color: var(--accent2); }
-  .tone-example { font-size: 0.8rem; color: #bbb; font-style: italic; line-height: 1.6; }
+  .tone-example { font-size: 0.8rem; color: #766f62; font-style: italic; line-height: 1.6; }
 
   /* PHRASE BANK */
   .phrase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin: 16px 0; }
   .phrase-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
   .phrase-card h4 { font-size: 0.82rem; font-weight: 700; margin-bottom: 10px; color: var(--accent); }
-  .phrase-item { font-size: 0.8rem; color: #bbb; padding: 4px 0; border-bottom: 1px solid var(--border); }
+  .phrase-item { font-size: 0.8rem; color: #766f62; padding: 4px 0; border-bottom: 1px solid var(--border); }
   .phrase-item:last-child { border-bottom: none; }
   .phrase-item em { color: var(--text); font-style: normal; }
 
   /* DRILL */
   .drill-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
   .drill-label { font-size: 0.75rem; color: var(--accent); font-weight: 700; margin-bottom: 12px; letter-spacing: 1px; }
-  .prompt-box { background: var(--bg); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 8px; padding: 16px 20px; margin: 14px 0; font-size: 0.88rem; line-height: 1.7; color: #ccc; }
+  .prompt-box { background: var(--bg); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 8px; padding: 16px 20px; margin: 14px 0; font-size: 0.88rem; line-height: 1.7; color: #4a453d; }
   .prompt-box strong { color: var(--accent); }
 
   .options-list { display: flex; flex-direction: column; gap: 10px; margin: 14px 0; }
@@ -120,9 +120,11 @@
   .word-count { font-size: 0.78rem; color: var(--muted); text-align: right; margin-top: 4px; }
 
   /* BOSS FIGHT */
-  .boss-header { background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-bottom: 24px; text-align: center; }
-  .boss-header h2 { font-size: 1.4rem; font-weight: 900; color: var(--accent); margin-bottom: 8px; }
-  .timer-display { font-size: 2rem; font-weight: 900; color: var(--accent); font-variant-numeric: tabular-nums; margin: 12px 0; }
+  .boss-header { background: linear-gradient(135deg, #7a2331 0%, #5e1a25 100%); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-bottom: 24px; text-align: center; }
+  .boss-header h2 { font-size: 1.4rem; font-weight: 900; color: #f0d9a8; margin-bottom: 8px; } .boss-header p { color: rgba(255,254,251,0.75); }
+  .timer-display { font-size: 2rem; font-weight: 900; color: #f0d9a8; font-variant-numeric: tabular-nums; margin: 12px 0; }
+  .boss-header .btn-primary { background: #fffefb; color: #7a2331; }
+  .boss-header .btn-primary:hover { background: #f0d9a8; }
 
   .band-check { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 12px; }
   .band-check h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
@@ -135,16 +137,16 @@
   .plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
   .plan-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
   .plan-day { font-size: 0.72rem; color: var(--accent); font-weight: 700; letter-spacing: 1px; margin-bottom: 6px; }
-  .plan-card p { font-size: 0.82rem; color: #bbb; }
+  .plan-card p { font-size: 0.82rem; color: #766f62; }
 
-  .xp-toast { position: fixed; top: 70px; right: 20px; background: var(--accent); color: #000; font-weight: 800; padding: 8px 18px; border-radius: 20px; font-size: 0.85rem; opacity: 0; transition: opacity 0.3s; z-index: 999; pointer-events: none; }
+  .xp-toast { position: fixed; top: 70px; right: 20px; background: var(--accent); color: #fffefb; font-weight: 800; padding: 8px 18px; border-radius: 20px; font-size: 0.85rem; opacity: 0; transition: opacity 0.3s; z-index: 999; pointer-events: none; }
   .xp-toast.show { opacity: 1; }
 
   footer { text-align: center; padding: 40px 24px; color: var(--muted); font-size: 0.78rem; border-top: 1px solid var(--border); margin-top: 40px; }
 
   @media (max-width: 640px) { .tone-grid { grid-template-columns: 1fr; } .bp-row { grid-template-columns: 100px 1fr; } }
   .back-btn { text-decoration: none; font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--border); border-radius: 6px; color: var(--muted); transition: all 0.2s; display: inline-flex; align-items: center; }
-  .back-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(245,158,11,0.08); }
+  .back-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(122,35,49,0.08); }
 </style>
   <script src="security.js"></script>
   <script src="theme-loader.js"></script>
@@ -546,7 +548,7 @@ Meena
       Dear Sir or Madam,<br><br>
       I am writing to formally request a reference letter in support of my application for a position at Hartwell Engineering.<br><br>
       I worked in your organisation's accounts department from March 2022 to November 2024. During this period, I was responsible for monthly financial reporting and managed a team of three junior analysts. My performance reviews during this time were consistently rated as 'exceeding expectations'.<br><br>
-      <span id="tone-sentence" style="cursor:pointer;text-decoration:underline;text-decoration-style:dotted;color:#ccc;" onclick="checkToneError()">Hey, it would be really awesome if you could write me a reference by next Friday if possible? 😊</span><br><br>
+      <span id="tone-sentence" style="cursor:pointer;text-decoration:underline;text-decoration-style:dotted;color:#4a453d;" onclick="checkToneError()">Hey, it would be really awesome if you could write me a reference by next Friday if possible? 😊</span><br><br>
       I look forward to your response and thank you in advance for your time and consideration.<br><br>
       Yours faithfully,<br>
       K. Okafor
