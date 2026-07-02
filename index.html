@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>ViATestPrep — IELTS &amp; PTE Preparation Portal</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Fraunces:wght@600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Fraunces:ital,wght@0,600;0,800;1,600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
   :root {
@@ -93,6 +93,49 @@
     background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
     background-size: 24px 24px;
   }
+
+  /* ===== Landing page & modal: cream "exam paper" theme, matching the mock test center ===== */
+  #view-landing, #accessModal {
+    --paper: #fffefb;
+    --page-bg: #eae6dc;
+    --ink: #1c1a17;
+    --ink-soft: #4a453d;
+    --ink-muted: #6b6558;
+    --rule: rgba(28, 26, 23, 0.12);
+    --rule-soft: rgba(28, 26, 23, 0.07);
+    --lp-accent: #7a2331;
+    --lp-accent-dark: #5e1a25;
+    --lp-accent-soft: #f6e9ea;
+    --lp-gold: #a8792f;
+    --lp-gold-soft: #f6f1e4;
+    font-family: 'Inter', sans-serif;
+  }
+  .lp-serif { font-family: 'Fraunces', serif; }
+  .lp-reading { font-family: 'Lora', serif; }
+  #view-landing { background: var(--page-bg); color: var(--ink); }
+  .lp-header { background: var(--paper); border-bottom: 1px solid var(--rule); }
+  .lp-logo-badge { background: var(--lp-accent); }
+  .lp-accent { color: var(--lp-accent); }
+  .lp-gold-text { color: var(--lp-gold); }
+  .lp-muted { color: var(--ink-muted); }
+  .lp-ink-soft { color: var(--ink-soft); }
+  .lp-btn-primary { background: var(--lp-accent); color: #fff; transition: background .2s, transform .2s; }
+  .lp-btn-primary:hover { background: var(--lp-accent-dark); }
+  .lp-btn-secondary { background: var(--paper); border: 1px solid var(--rule); color: var(--ink); transition: all .2s; }
+  .lp-btn-secondary:hover { background: var(--lp-gold-soft); border-color: rgba(168,121,47,.3); }
+  .lp-badge-pill { background: var(--lp-accent-soft); color: var(--lp-accent); border: 1px solid rgba(122,35,49,.18); }
+  .lp-panel { background: var(--paper); border: 1px solid var(--rule); box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 20px 40px rgba(28,26,23,.06); }
+  .lp-section-alt { background: var(--paper); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .lp-card { background: var(--paper); border: 1px solid var(--rule); transition: all .25s; }
+  .lp-card:hover { border-color: rgba(122,35,49,.28); box-shadow: 0 14px 32px rgba(28,26,23,.07); transform: translateY(-2px); }
+  .lp-icon-badge { background: var(--lp-accent-soft); color: var(--lp-accent); }
+  .lp-icon-badge.gold { background: var(--lp-gold-soft); color: var(--lp-gold); }
+  .lp-divider { border-color: var(--rule); }
+  .lp-pricing-popular { background: linear-gradient(180deg, rgba(122,35,49,.05), rgba(168,121,47,.03)); border: 2px solid var(--lp-accent); }
+  .lp-check { color: var(--lp-accent); }
+  #accessModal .lp-panel { box-shadow: 0 25px 60px rgba(28,26,23,.18); }
+  .lp-role-card { background: var(--paper); border: 2px solid var(--rule); transition: all .25s; cursor: pointer; }
+  .lp-role-card:hover { border-color: var(--lp-accent); box-shadow: 0 14px 30px rgba(122,35,49,.1); transform: translateY(-2px); }
 </style>
 </head>
 <body class="relative overflow-x-hidden">
@@ -104,104 +147,69 @@
   <!-- ========================================== -->
   <!-- VIEW 1: PREMIUM GUEST LANDING PAGE         -->
   <!-- ========================================== -->
-  <div id="view-landing" class="view-container min-h-screen flex flex-col justify-between hidden bg-[#060814] text-slate-100 relative overflow-hidden">
-    <!-- Grid Overlay -->
-    <div class="absolute inset-0 bg-grid-dots pointer-events-none opacity-40 z-0"></div>
-
-    <!-- Glowing Blobs -->
-    <div class="absolute w-[400px] h-[400px] rounded-full bg-indigo-500/10 blur-[100px] top-[-100px] right-[-50px] pointer-events-none z-0"></div>
-    <div class="absolute w-[500px] h-[500px] rounded-full bg-purple-500/10 blur-[120px] bottom-[20%] left-[-200px] pointer-events-none z-0"></div>
-
+  <div id="view-landing" class="view-container min-h-screen flex flex-col justify-between hidden relative overflow-hidden">
     <!-- Header / Navbar -->
-    <header class="fixed top-0 left-0 right-0 h-20 bg-[#060814]/75 backdrop-blur-lg border-b border-white/[0.06] flex items-center justify-between px-6 md:px-12 z-50">
+    <header class="lp-header fixed top-0 left-0 right-0 h-20 flex items-center justify-between px-6 md:px-12 z-50">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center font-serif text-white font-extrabold text-xl shadow-lg shadow-indigo-500/25">V</div>
-        <a href="#" class="font-serif text-2xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-indigo-400 bg-clip-text text-transparent">ViATestPrep</a>
+        <div class="w-10 h-10 rounded-xl lp-logo-badge flex items-center justify-center lp-serif text-white font-extrabold text-xl">V</div>
+        <a href="#" class="lp-serif text-2xl font-extrabold tracking-tight" style="color:var(--ink)">ViATestPrep</a>
       </div>
-      <button onclick="openAccessModal()" class="px-6 py-2.5 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-extrabold rounded-full text-sm shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/35 transition duration-300 transform hover:-translate-y-0.5">Access Platform</button>
+      <div class="flex items-center gap-2 sm:gap-5">
+        <a href="#features" class="hidden sm:inline text-xs font-bold lp-muted hover:opacity-70 transition">Features</a>
+        <a href="#pricing" class="hidden sm:inline text-xs font-bold lp-muted hover:opacity-70 transition">Pricing</a>
+        <button onclick="openAccessModal()" class="lp-btn-primary px-6 py-2.5 font-extrabold rounded-full text-sm transition duration-300 transform hover:-translate-y-0.5" style="box-shadow:0 10px 24px rgba(122,35,49,.28)">Access Platform</button>
+      </div>
     </header>
 
     <!-- Hero Content -->
     <main class="max-w-6xl mx-auto px-6 pt-36 pb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center flex-1 relative z-10">
       <div class="lg:col-span-7 flex flex-col items-start text-left">
-        <span class="text-xs font-black uppercase tracking-widest text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 px-3.5 py-1.5 rounded-full mb-6 inline-block">🚀 Premium IELTS &amp; PTE SaaS</span>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
-          Master the IELTS with <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 bg-clip-text text-transparent">Interactive Drills</span>
+        <span class="lp-badge-pill text-xs font-black uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-6 inline-block">Premium IELTS &amp; PTE Prep Suite</span>
+        <h1 class="lp-serif text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6" style="color:var(--ink)">
+          Master the IELTS with <span class="lp-accent">Real Exam-Paper</span> Practice
         </h1>
-        <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-8 max-w-lg">
-          The ultimate cloud preparation suite. Access 16+ strategy guides, timed Cambridge mock exams, browser voice recorders, and institutional student rosters (CRM) under one single link.
+        <p class="lp-muted lp-reading text-sm md:text-base leading-relaxed mb-8 max-w-lg">
+          16+ strategy modules, 12 official Cambridge mock exams rebuilt to look and feel like the real printed test booklet, browser-based speaking recorders, and institutional student rosters — all under one link.
         </p>
         <div class="flex flex-wrap gap-4">
-          <button onclick="openAccessModal()" class="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-extrabold rounded-full text-sm shadow-xl shadow-indigo-600/30 hover:shadow-indigo-600/40 transition-all duration-300 transform hover:-translate-y-0.5">
+          <button onclick="openAccessModal()" class="lp-btn-primary px-8 py-4 font-extrabold rounded-full text-sm transition-all duration-300 transform hover:-translate-y-0.5" style="box-shadow:0 14px 28px rgba(122,35,49,.3)">
             Access Portal &amp; Mocks
           </button>
-          <a href="#features" class="px-8 py-4 bg-white/5 border border-white/10 hover:border-white/20 text-white font-bold rounded-full text-sm transition shadow-sm hover:bg-white/10">
-            Learn More
+          <a href="#features" class="lp-btn-secondary px-8 py-4 font-bold rounded-full text-sm transition">
+            See What's Inside
           </a>
         </div>
       </div>
 
-      <!-- Right Column: High-Fidelity Product Showcase -->
+      <!-- Right Column: Paper-style exam preview, echoing the mock test simulator -->
       <div class="lg:col-span-5 relative flex justify-center items-center">
-        <!-- Glowing aura behind dashboard -->
-        <div class="absolute w-72 h-72 bg-purple-600/15 rounded-full blur-3xl"></div>
-        
-        <!-- Dashboard Window Mockup -->
-        <div class="w-full max-w-sm bg-[#0c101f]/80 border border-white/[0.08] rounded-2xl shadow-2xl overflow-hidden backdrop-blur-md relative transform hover:scale-[1.02] transition duration-500">
-          <!-- Window header dots -->
-          <div class="h-10 bg-white/[0.02] border-b border-white/[0.06] flex items-center px-4 gap-1.5 shrink-0">
-            <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
-            <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
-            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
-            <span class="text-[10px] text-slate-500 font-bold ml-2 font-mono">viatestprep.edu/portal</span>
+        <div class="lp-panel w-full max-w-sm rounded-2xl overflow-hidden transform hover:scale-[1.02] transition duration-500">
+          <div class="h-11 flex items-center px-4 gap-2 border-b" style="border-color:var(--rule); background:var(--lp-gold-soft);">
+            <span class="text-[9px] font-black uppercase tracking-widest lp-gold-text">Part 1</span>
+            <span class="text-[11px] font-bold lp-serif ml-1" style="color:var(--ink)">Listening Test — Cambridge 18</span>
           </div>
-          <!-- Mock content -->
           <div class="p-5 space-y-4 text-left">
-            <!-- Mock header metrics -->
-            <div class="grid grid-cols-2 gap-3">
-              <div class="bg-white/[0.02] border border-white/[0.05] p-3 rounded-xl">
-                <span class="text-[8px] text-slate-500 uppercase font-black tracking-wider block">Active Slots</span>
-                <span class="text-sm font-extrabold text-white mt-0.5 block">24 / 25 Students</span>
-                <div class="w-full h-1 bg-white/10 rounded-full mt-2 overflow-hidden">
-                  <div class="w-[96%] h-full bg-indigo-500 rounded-full"></div>
-                </div>
+            <p class="text-xs lp-reading lp-ink-soft leading-relaxed italic">Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.</p>
+            <div class="space-y-3">
+              <div class="flex items-center gap-2.5">
+                <span class="w-6 h-6 rounded-full border flex items-center justify-center text-[10px] font-extrabold lp-serif shrink-0" style="border-color:var(--ink);color:var(--ink)">1</span>
+                <span class="text-xs lp-reading" style="color:var(--ink)">Postcode: <span class="inline-block w-20 border-b-2" style="border-color:var(--lp-accent)">&nbsp;</span></span>
               </div>
-              <div class="bg-white/[0.02] border border-white/[0.05] p-3 rounded-xl">
-                <span class="text-[8px] text-slate-500 uppercase font-black tracking-wider block">Class Avg Band</span>
-                <span class="text-sm font-extrabold text-emerald-400 mt-0.5 block">7.2 Band</span>
-                <span class="text-[8px] text-emerald-500/70 block mt-1">🎯 Target: 7.5</span>
+              <div class="flex items-center gap-2.5">
+                <span class="w-6 h-6 rounded-full border flex items-center justify-center text-[10px] font-extrabold lp-serif shrink-0" style="border-color:var(--ink);color:var(--ink)">2</span>
+                <span class="text-xs lp-reading" style="color:var(--ink)">Date of visit: <span class="inline-block w-20 border-b-2" style="border-color:var(--lp-accent)">&nbsp;</span></span>
               </div>
-            </div>
-            
-            <!-- Mock Roster List -->
-            <div class="bg-white/[0.02] border border-white/[0.05] p-3.5 rounded-xl space-y-2">
-              <span class="text-[8px] text-slate-500 uppercase font-black tracking-wider block">Recent Speaking Mock Grader</span>
-              <div class="flex justify-between items-center text-[10px] border-b border-white/5 pb-2">
-                <div>
-                  <span class="font-bold text-slate-200 block">Milan Karki</span>
-                  <span class="text-[8px] text-slate-500">Cue Card: Team Conflict</span>
-                </div>
-                <span class="px-2 py-0.5 bg-emerald-500/10 text-emerald-400 font-extrabold rounded-md text-[9px] border border-emerald-500/20">Band 7.5</span>
-              </div>
-              <div class="flex justify-between items-center text-[10px]">
-                <div>
-                  <span class="font-bold text-slate-200 block">Sunita Basnet</span>
-                  <span class="text-[8px] text-slate-500">Cue Card: Skill from Relative</span>
-                </div>
-                <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 font-extrabold rounded-md text-[9px] border border-amber-500/20">Band 6.5</span>
+              <div class="flex items-center gap-2.5">
+                <span class="w-6 h-6 rounded-full border flex items-center justify-center text-[10px] font-extrabold lp-serif shrink-0" style="border-color:var(--ink);color:var(--ink)">3</span>
+                <span class="text-xs lp-reading" style="color:var(--ink)">Reason for visit: <span class="inline-block w-20 border-b-2" style="border-color:var(--lp-accent)">&nbsp;</span></span>
               </div>
             </div>
-
-            <!-- Timers simulator -->
-            <div class="bg-white/[0.02] border border-white/[0.05] p-3.5 rounded-xl flex items-center justify-between">
+            <div class="pt-3.5 border-t flex items-center justify-between" style="border-color:var(--rule-soft)">
               <div class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-full bg-red-600/15 border border-red-500/30 flex items-center justify-center text-xs animate-pulse">🔴</div>
-                <div>
-                  <span class="text-[10px] font-bold text-slate-200 block">Speaking Audio Capture</span>
-                  <span class="text-[8px] text-slate-500">Response time clock running</span>
-                </div>
+                <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs" style="background:var(--lp-accent);color:#fff">▶</div>
+                <span class="text-[10px] font-bold lp-ink-soft">Section 1 Audio</span>
               </div>
-              <span class="font-mono text-xs font-bold text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded-md">01:42</span>
+              <span class="font-mono text-xs font-bold lp-accent">04:12</span>
             </div>
           </div>
         </div>
@@ -209,131 +217,177 @@
     </main>
 
     <!-- Stats / Trust Strip -->
-    <section class="border-t border-white/[0.06] bg-white/[0.015] py-10 px-6 relative z-10">
+    <section class="lp-section-alt py-10 px-6 relative z-10">
       <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <div>
-          <span class="block text-2xl md:text-3xl font-extrabold text-white">16+</span>
-          <span class="block text-[11px] text-slate-500 font-bold uppercase tracking-widest mt-1">Study Modules</span>
+          <span class="block text-2xl md:text-3xl font-extrabold lp-serif" style="color:var(--ink)">16+</span>
+          <span class="block text-[11px] lp-muted font-bold uppercase tracking-widest mt-1">Study Modules</span>
         </div>
         <div>
-          <span class="block text-2xl md:text-3xl font-extrabold text-white">12</span>
-          <span class="block text-[11px] text-slate-500 font-bold uppercase tracking-widest mt-1">Cambridge Mock Tests</span>
+          <span class="block text-2xl md:text-3xl font-extrabold lp-serif" style="color:var(--ink)">12</span>
+          <span class="block text-[11px] lp-muted font-bold uppercase tracking-widest mt-1">Cambridge Mock Tests</span>
         </div>
         <div>
-          <span class="block text-2xl md:text-3xl font-extrabold text-white">4</span>
-          <span class="block text-[11px] text-slate-500 font-bold uppercase tracking-widest mt-1">Skills Covered</span>
+          <span class="block text-2xl md:text-3xl font-extrabold lp-serif" style="color:var(--ink)">4</span>
+          <span class="block text-[11px] lp-muted font-bold uppercase tracking-widest mt-1">Skills Covered</span>
         </div>
         <div>
-          <span class="block text-2xl md:text-3xl font-extrabold text-white">1</span>
-          <span class="block text-[11px] text-slate-500 font-bold uppercase tracking-widest mt-1">Single Portal Link</span>
+          <span class="block text-2xl md:text-3xl font-extrabold lp-serif" style="color:var(--ink)">1</span>
+          <span class="block text-[11px] lp-muted font-bold uppercase tracking-widest mt-1">Single Portal Link</span>
         </div>
       </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="bg-[#080B19] border-t border-white/[0.04] py-24 px-6 relative z-10">
+    <!-- Features Section: clearly organized by audience -->
+    <section id="features" class="py-24 px-6 relative z-10">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
-          <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest block mb-2">Key Highlights</span>
-          <h2 class="text-3xl font-extrabold text-white">Platform Core Advantages</h2>
-          <p class="text-slate-400 text-sm mt-2 max-w-md mx-auto">Engineered to streamline preparation worksheets, mock tests, and teacher grades on a single link.</p>
+          <span class="text-xs font-bold lp-accent uppercase tracking-widest block mb-2">What's Inside</span>
+          <h2 class="lp-serif text-3xl font-extrabold" style="color:var(--ink)">Everything Needed to Hit Your Target Band</h2>
+          <p class="lp-muted lp-reading text-sm mt-2 max-w-lg mx-auto">One link serves two audiences — students preparing for the exam, and consultancies running classes for them.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Card 1 -->
-          <div class="bg-white/[0.02] border border-white/[0.05] rounded-3xl p-6 hover:bg-white/[0.04] hover:border-indigo-500/30 transition-all duration-300 hover:-translate-y-1">
-            <div class="w-12 h-12 bg-indigo-500/10 text-indigo-400 rounded-2xl flex items-center justify-center mb-6 border border-indigo-500/20">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-            </div>
-            <h3 class="font-bold text-lg text-white mb-2">16+ Study Modules</h3>
-            <p class="text-slate-400 text-xs leading-relaxed">Comprehensive strategy blueprints and dynamic exercises for Reading, Essay Writing v2, Grammar tenses, and Vocabulary guides.</p>
+
+        <!-- For Students -->
+        <div class="mb-14">
+          <div class="flex items-center gap-2.5 mb-6">
+            <span class="w-8 h-8 rounded-lg lp-icon-badge flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+            </span>
+            <h3 class="lp-serif text-lg font-extrabold" style="color:var(--ink)">For Students</h3>
           </div>
-          <!-- Card 2 -->
-          <div class="bg-white/[0.02] border border-white/[0.05] rounded-3xl p-6 hover:bg-white/[0.04] hover:border-teal-500/30 transition-all duration-300 hover:-translate-y-1">
-            <div class="w-12 h-12 bg-teal-500/10 text-teal-400 rounded-2xl flex items-center justify-center mb-6 border border-teal-500/20">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="lp-card rounded-3xl p-6">
+              <div class="w-12 h-12 lp-icon-badge rounded-2xl flex items-center justify-center mb-6">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+              </div>
+              <h4 class="lp-serif font-bold text-lg mb-2" style="color:var(--ink)">16+ Study Modules</h4>
+              <p class="lp-muted lp-reading text-xs leading-relaxed">Strategy blueprints and drills for Reading, Writing, Grammar, Vocabulary, and PTE-specific skills.</p>
             </div>
-            <h3 class="font-bold text-lg text-white mb-2">Cambridge Mock Exams</h3>
-            <p class="text-slate-400 text-xs leading-relaxed">Official Cambridge Reading &amp; Listening exams with strict timer controls, auto-scoring worksheets, and detailed explanations.</p>
+            <div class="lp-card rounded-3xl p-6">
+              <div class="w-12 h-12 lp-icon-badge gold rounded-2xl flex items-center justify-center mb-6">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <h4 class="lp-serif font-bold text-lg mb-2" style="color:var(--ink)">Cambridge Mock Exams</h4>
+              <p class="lp-muted lp-reading text-xs leading-relaxed">12 full Listening, Reading &amp; Writing tests rebuilt to look and feel like the real printed test booklet, with instant band scores.</p>
+            </div>
+            <div class="lp-card rounded-3xl p-6">
+              <div class="w-12 h-12 lp-icon-badge rounded-2xl flex items-center justify-center mb-6">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+              </div>
+              <h4 class="lp-serif font-bold text-lg mb-2" style="color:var(--ink)">Speaking Cue Recorder</h4>
+              <p class="lp-muted lp-reading text-xs leading-relaxed">Record cue cards with prep/talk timers and synthesized beep alerts. Play back or download instantly.</p>
+            </div>
+            <div class="lp-card rounded-3xl p-6">
+              <div class="w-12 h-12 lp-icon-badge gold rounded-2xl flex items-center justify-center mb-6">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+              </div>
+              <h4 class="lp-serif font-bold text-lg mb-2" style="color:var(--ink)">Progress Tracking</h4>
+              <p class="lp-muted lp-reading text-xs leading-relaxed">A Skill Vault that tracks module completion against your chosen target-band strategy.</p>
+            </div>
           </div>
-          <!-- Card 3 -->
-          <div class="bg-white/[0.02] border border-white/[0.05] rounded-3xl p-6 hover:bg-white/[0.04] hover:border-rose-500/30 transition-all duration-300 hover:-translate-y-1">
-            <div class="w-12 h-12 bg-rose-500/10 text-rose-400 rounded-2xl flex items-center justify-center mb-6 border border-rose-500/20">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
-            </div>
-            <h3 class="font-bold text-lg text-white mb-2">Speaking Cue Recorder</h3>
-            <p class="text-slate-400 text-xs leading-relaxed">Record cue cards using HTML5 Audio. Uses prep/talk timers and synthesized beep alerts. Play back or download recordings instantly.</p>
+        </div>
+
+        <!-- For Consultancies -->
+        <div>
+          <div class="flex items-center gap-2.5 mb-6">
+            <span class="w-8 h-8 rounded-lg lp-icon-badge gold flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+            </span>
+            <h3 class="lp-serif text-lg font-extrabold" style="color:var(--ink)">For Consultancies</h3>
           </div>
-          <!-- Card 4 -->
-          <div class="bg-white/[0.02] border border-white/[0.05] rounded-3xl p-6 hover:bg-white/[0.04] hover:border-amber-500/30 transition-all duration-300 hover:-translate-y-1">
-            <div class="w-12 h-12 bg-amber-500/10 text-amber-400 rounded-2xl flex items-center justify-center mb-6 border border-amber-500/20">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="lp-card rounded-3xl p-6">
+              <div class="w-12 h-12 lp-icon-badge gold rounded-2xl flex items-center justify-center mb-6">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+              </div>
+              <h4 class="lp-serif font-bold text-lg mb-2" style="color:var(--ink)">Institutional CRM</h4>
+              <p class="lp-muted lp-reading text-xs leading-relaxed">Manage student rosters, targets, and status. Import/export CSV across your whole class.</p>
             </div>
-            <h3 class="font-bold text-lg text-white mb-2">Institutional CRM</h3>
-            <p class="text-slate-400 text-xs leading-relaxed">Manage student rosters, view active slots, CSV sync, and grade 1-on-1 speaking exams using official band descriptors.</p>
+            <div class="lp-card rounded-3xl p-6">
+              <div class="w-12 h-12 lp-icon-badge rounded-2xl flex items-center justify-center mb-6">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <h4 class="lp-serif font-bold text-lg mb-2" style="color:var(--ink)">Speaking Grader</h4>
+              <p class="lp-muted lp-reading text-xs leading-relaxed">Grade 1-on-1 interviews live against official Fluency, Vocab, Grammar &amp; Pronunciation descriptors.</p>
+            </div>
+            <div class="lp-card rounded-3xl p-6">
+              <div class="w-12 h-12 lp-icon-badge gold rounded-2xl flex items-center justify-center mb-6">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+              </div>
+              <h4 class="lp-serif font-bold text-lg mb-2" style="color:var(--ink)">Auto-Synced Scores</h4>
+              <p class="lp-muted lp-reading text-xs leading-relaxed">Listening, Reading &amp; Writing mock results flow straight into each student's grade sheet.</p>
+            </div>
+            <div class="lp-card rounded-3xl p-6">
+              <div class="w-12 h-12 lp-icon-badge rounded-2xl flex items-center justify-center mb-6">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+              </div>
+              <h4 class="lp-serif font-bold text-lg mb-2" style="color:var(--ink)">Cloud Sync</h4>
+              <p class="lp-muted lp-reading text-xs leading-relaxed">Supabase-backed roster sync keeps every staff member's dashboard up to date across devices.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Pricing Preview Section -->
-    <section id="pricing" class="py-24 px-6 relative z-10">
+    <section id="pricing" class="lp-section-alt py-24 px-6 relative z-10">
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-16">
-          <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest block mb-2">Simple Pricing</span>
-          <h2 class="text-3xl font-extrabold text-white">Capacity Slot Plans for Consultancies</h2>
-          <p class="text-slate-400 text-sm mt-2 max-w-md mx-auto">Pick a plan by student seats. Every tier includes the full module vault, mock exams, and CRM.</p>
+          <span class="text-xs font-bold lp-accent uppercase tracking-widest block mb-2">Simple Pricing</span>
+          <h2 class="lp-serif text-3xl font-extrabold" style="color:var(--ink)">Capacity Slot Plans for Consultancies</h2>
+          <p class="lp-muted lp-reading text-sm mt-2 max-w-md mx-auto">Pick a plan by student seats. Every tier includes the full module vault, mock exams, and CRM.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-white/[0.02] border border-white/[0.06] rounded-3xl p-7 flex flex-col">
-            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Starter</span>
+          <div class="lp-card rounded-3xl p-7 flex flex-col">
+            <span class="text-xs font-bold lp-muted uppercase tracking-widest">Starter</span>
             <div class="mt-3 flex items-baseline gap-1">
-              <span class="text-3xl font-extrabold text-white">Rs. 5,000</span>
-              <span class="text-slate-500 text-xs">/ 30 days</span>
+              <span class="lp-serif text-3xl font-extrabold" style="color:var(--ink)">Rs. 5,000</span>
+              <span class="lp-muted text-xs">/ 30 days</span>
             </div>
-            <span class="text-xs text-slate-500 mt-1">Up to 10 students</span>
-            <ul class="mt-6 space-y-2.5 text-xs text-slate-300 flex-1">
-              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> Full 16+ module vault</li>
-              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> Cambridge mock exams</li>
-              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> Speaking cue recorder</li>
+            <span class="text-xs lp-muted mt-1">Up to 10 students</span>
+            <ul class="mt-6 space-y-2.5 text-xs lp-ink-soft flex-1">
+              <li class="flex items-center gap-1.5"><span class="lp-check font-bold">✓</span> Full 16+ module vault</li>
+              <li class="flex items-center gap-1.5"><span class="lp-check font-bold">✓</span> Cambridge mock exams</li>
+              <li class="flex items-center gap-1.5"><span class="lp-check font-bold">✓</span> Speaking cue recorder</li>
             </ul>
-            <button onclick="openAccessModal()" class="mt-7 w-full py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold rounded-full text-xs transition">Get Started</button>
+            <button onclick="openAccessModal()" class="lp-btn-secondary mt-7 w-full py-3 font-bold rounded-full text-xs transition">Get Started</button>
           </div>
-          <div class="bg-gradient-to-b from-indigo-500/10 to-purple-600/5 border-2 border-indigo-500/40 rounded-3xl p-7 flex flex-col relative shadow-xl shadow-indigo-600/10">
-            <span class="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] font-black uppercase tracking-widest bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-3 py-1 rounded-full">Most Popular</span>
-            <span class="text-xs font-bold text-indigo-300 uppercase tracking-widest">Growth</span>
+          <div class="lp-pricing-popular rounded-3xl p-7 flex flex-col relative">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] font-black uppercase tracking-widest text-white px-3 py-1 rounded-full" style="background:var(--lp-accent)">Most Popular</span>
+            <span class="text-xs font-bold lp-accent uppercase tracking-widest">Growth</span>
             <div class="mt-3 flex items-baseline gap-1">
-              <span class="text-3xl font-extrabold text-white">Rs. 8,000</span>
-              <span class="text-slate-500 text-xs">/ 30 days</span>
+              <span class="lp-serif text-3xl font-extrabold" style="color:var(--ink)">Rs. 8,000</span>
+              <span class="lp-muted text-xs">/ 30 days</span>
             </div>
-            <span class="text-xs text-slate-400 mt-1">Up to 25 students</span>
-            <ul class="mt-6 space-y-2.5 text-xs text-slate-200 flex-1">
-              <li class="flex items-center gap-1.5"><span class="text-emerald-400 font-bold">✓</span> Everything in Starter</li>
-              <li class="flex items-center gap-1.5"><span class="text-emerald-400 font-bold">✓</span> Institutional CRM &amp; Speaking Grader</li>
-              <li class="flex items-center gap-1.5"><span class="text-emerald-400 font-bold">✓</span> Cloud sync across devices</li>
+            <span class="text-xs lp-ink-soft mt-1">Up to 25 students</span>
+            <ul class="mt-6 space-y-2.5 text-xs lp-ink-soft flex-1">
+              <li class="flex items-center gap-1.5"><span class="lp-check font-bold">✓</span> Everything in Starter</li>
+              <li class="flex items-center gap-1.5"><span class="lp-check font-bold">✓</span> Institutional CRM &amp; Speaking Grader</li>
+              <li class="flex items-center gap-1.5"><span class="lp-check font-bold">✓</span> Cloud sync across devices</li>
             </ul>
-            <button onclick="openAccessModal()" class="mt-7 w-full py-3 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold rounded-full text-xs transition shadow-lg shadow-indigo-600/25">Get Started</button>
+            <button onclick="openAccessModal()" class="lp-btn-primary mt-7 w-full py-3 font-bold rounded-full text-xs transition" style="box-shadow:0 10px 22px rgba(122,35,49,.25)">Get Started</button>
           </div>
-          <div class="bg-white/[0.02] border border-white/[0.06] rounded-3xl p-7 flex flex-col">
-            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Enterprise</span>
+          <div class="lp-card rounded-3xl p-7 flex flex-col">
+            <span class="text-xs font-bold lp-muted uppercase tracking-widest">Enterprise</span>
             <div class="mt-3 flex items-baseline gap-1">
-              <span class="text-3xl font-extrabold text-white">Rs. 24,000</span>
-              <span class="text-slate-500 text-xs">/ 30 days</span>
+              <span class="lp-serif text-3xl font-extrabold" style="color:var(--ink)">Rs. 24,000</span>
+              <span class="lp-muted text-xs">/ 30 days</span>
             </div>
-            <span class="text-xs text-slate-500 mt-1">Up to 100 students</span>
-            <ul class="mt-6 space-y-2.5 text-xs text-slate-300 flex-1">
-              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> Everything in Growth</li>
-              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> Priority support</li>
-              <li class="flex items-center gap-1.5"><span class="text-emerald-500 font-bold">✓</span> Multi-branch rosters</li>
+            <span class="text-xs lp-muted mt-1">Up to 100 students</span>
+            <ul class="mt-6 space-y-2.5 text-xs lp-ink-soft flex-1">
+              <li class="flex items-center gap-1.5"><span class="lp-check font-bold">✓</span> Everything in Growth</li>
+              <li class="flex items-center gap-1.5"><span class="lp-check font-bold">✓</span> Priority support</li>
+              <li class="flex items-center gap-1.5"><span class="lp-check font-bold">✓</span> Multi-branch rosters</li>
             </ul>
-            <button onclick="openAccessModal()" class="mt-7 w-full py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold rounded-full text-xs transition">Get Started</button>
+            <button onclick="openAccessModal()" class="lp-btn-secondary mt-7 w-full py-3 font-bold rounded-full text-xs transition">Get Started</button>
           </div>
         </div>
-        <p class="text-center text-[11px] text-slate-500 mt-8">Also billed at 90-day and 365-day terms with volume discounts. Just students? <button onclick="openAccessModal()" class="text-indigo-400 hover:text-indigo-300 font-bold underline">Access the free student portal</button>.</p>
+        <p class="text-center text-[11px] lp-muted mt-8">Also billed at 90-day and 365-day terms with volume discounts. Just students? <button onclick="openAccessModal()" class="lp-accent font-bold underline">Access the free student portal</button>.</p>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-white/[0.04] py-8 bg-[#060814] text-center text-xs text-slate-500 relative z-10">
+    <footer class="lp-header py-8 text-center text-xs lp-muted relative z-10">
       <p>© 2026 ViATestPrep. All Rights Reserved. Unified Premium IELTS &amp; PTE SaaS Hub.</p>
     </footer>
   </div>
@@ -761,30 +815,43 @@
   <!-- MODAL: ACCESS PLATFORM (ROLE SELECTION)    -->
   <!-- ========================================== -->
   <div class="fixed inset-0 modal-overlay z-50 flex items-center justify-center p-4 hidden" id="accessModal">
-    <div class="bg-white rounded-3xl max-w-xl w-full shadow-2xl relative overflow-hidden transition-transform duration-300 transform scale-95" id="modalBox">
-      <button onclick="closeAccessModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold flex items-center justify-center text-sm">✕</button>
+    <div class="lp-panel rounded-3xl max-w-xl w-full relative overflow-hidden transition-transform duration-300 transform scale-95" id="modalBox" style="background:var(--paper);">
+      <button onclick="closeAccessModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition" style="background:var(--rule-soft);color:var(--ink-soft);">✕</button>
 
       <!-- Step 1: Selection -->
       <div class="p-8 space-y-6" id="m-step-role">
         <div class="text-center">
-          <h3 class="text-2xl font-extrabold text-slate-900">Welcome to ViATestPrep</h3>
-          <p class="text-xs text-slate-500 mt-1">Select your access portal role to load prep materials and tools:</p>
+          <span class="lp-badge-pill text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full inline-block mb-3">Welcome</span>
+          <h3 class="lp-serif text-2xl font-extrabold" style="color:var(--ink)">Who's accessing today?</h3>
+          <p class="text-xs lp-muted mt-1.5 lp-reading">Pick a role to load the right tools — you can switch anytime from the dashboard.</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div onclick="selectModalRole('student')" class="border-2 border-slate-100 hover:border-indigo-600 hover:shadow-lg rounded-2xl p-6 text-center cursor-pointer transition duration-300">
-            <span class="text-4xl block mb-2">🎓</span>
-            <h4 class="font-bold text-slate-800">I am a Student</h4>
-            <p class="text-[10px] text-slate-400 mt-1">Practice mock tests, review worksheets, checklists, and record speaking sessions.</p>
+          <div onclick="selectModalRole('student')" class="lp-role-card rounded-2xl p-6 text-left">
+            <div class="w-11 h-11 rounded-xl lp-icon-badge flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+            </div>
+            <h4 class="lp-serif font-bold text-base" style="color:var(--ink)">I am a Student</h4>
+            <ul class="text-[11px] lp-muted mt-2.5 space-y-1.5 lp-reading">
+              <li class="flex items-start gap-1.5"><span class="lp-check">✓</span> Cambridge mock exams with instant band scores</li>
+              <li class="flex items-start gap-1.5"><span class="lp-check">✓</span> 16+ study modules &amp; worksheets</li>
+              <li class="flex items-start gap-1.5"><span class="lp-check">✓</span> Speaking cue-card recorder</li>
+            </ul>
           </div>
-          <div onclick="selectModalRole('consultancy')" class="border-2 border-slate-100 hover:border-indigo-600 hover:shadow-lg rounded-2xl p-6 text-center cursor-pointer transition duration-300">
-            <span class="text-4xl block mb-2">🏢</span>
-            <h4 class="font-bold text-slate-800">I am a Consultancy</h4>
-            <p class="text-[10px] text-slate-400 mt-1">Manage institutional student rosters, import/export CSV, and grade interviews.</p>
+          <div onclick="selectModalRole('consultancy')" class="lp-role-card rounded-2xl p-6 text-left">
+            <div class="w-11 h-11 rounded-xl lp-icon-badge gold flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+            </div>
+            <h4 class="lp-serif font-bold text-base" style="color:var(--ink)">I am a Consultancy</h4>
+            <ul class="text-[11px] lp-muted mt-2.5 space-y-1.5 lp-reading">
+              <li class="flex items-start gap-1.5"><span class="lp-check">✓</span> Manage student rosters &amp; targets</li>
+              <li class="flex items-start gap-1.5"><span class="lp-check">✓</span> Grade speaking interviews live</li>
+              <li class="flex items-start gap-1.5"><span class="lp-check">✓</span> Import/export CSV, cloud sync</li>
+            </ul>
           </div>
         </div>
-        <div class="text-center pt-3 border-t border-slate-100 mt-4">
-          <button onclick="launchAdminBypass()" class="text-[10px] text-indigo-600 hover:text-indigo-700 font-semibold underline flex items-center justify-center gap-1 mx-auto transition">
-            🔧 Admin CRM Developer Bypass (Instant Access)
+        <div class="text-center pt-4" style="border-top:1px solid var(--rule);">
+          <button onclick="launchAdminBypass()" class="text-[10px] lp-muted hover:opacity-70 font-semibold underline flex items-center justify-center gap-1 mx-auto transition mt-4">
+            Admin CRM Developer Bypass (Instant Access)
           </button>
         </div>
       </div>
@@ -792,31 +859,31 @@
       <!-- Step 2 (Student): Redirect options -->
       <div class="p-8 space-y-6 hidden" id="m-step-student">
         <div>
-          <h3 class="text-xl font-bold text-slate-900">Student Access Portal</h3>
-          <p class="text-xs text-slate-400 mt-1">Please enter your email to continue and match graded records:</p>
+          <h3 class="lp-serif text-xl font-bold" style="color:var(--ink)">Student Access Portal</h3>
+          <p class="text-xs lp-muted mt-1 lp-reading">Please enter your email to continue and match graded records:</p>
         </div>
 
         <div class="flex flex-col gap-1.5">
-          <label class="text-[9px] font-black uppercase text-indigo-600 tracking-wider">Student Email Address</label>
-          <input type="email" id="m-student-email" required placeholder="e.g. binod@gmail.com" class="w-full px-3 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:bg-white outline-none focus:border-indigo-500 font-bold transition" value="binod@gmail.com" />
-          <span class="text-[9px] text-slate-400 italic">Defaulting to "binod@gmail.com" to instantly preview graded speaking scorecards.</span>
+          <label class="text-[9px] font-black uppercase lp-accent tracking-wider">Student Email Address</label>
+          <input type="email" id="m-student-email" required placeholder="e.g. binod@gmail.com" class="w-full px-3 py-2 rounded-xl text-xs font-bold transition outline-none" style="border:1px solid var(--rule);background:var(--lp-gold-soft);color:var(--ink);" value="binod@gmail.com" />
+          <span class="text-[9px] lp-muted italic">Defaulting to "binod@gmail.com" to instantly preview graded speaking scorecards.</span>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-          <div onclick="launchStudentRole('vault')" class="bg-slate-50 border border-slate-200 hover:border-indigo-600 rounded-xl p-5 text-center cursor-pointer transition duration-300">
-            <h4 class="font-bold text-xs text-indigo-600 uppercase">Whole Resource Packet</h4>
-            <p class="text-[10px] text-slate-500 mt-1 leading-relaxed">Full access to interactive grammar sheets and vocabulary guides.</p>
+          <div onclick="launchStudentRole('vault')" class="lp-role-card rounded-xl p-5 text-center">
+            <h4 class="lp-accent font-bold text-xs uppercase tracking-wide">Whole Resource Packet</h4>
+            <p class="text-[10px] lp-muted mt-1 leading-relaxed lp-reading">Full access to interactive grammar sheets and vocabulary guides.</p>
           </div>
-          <div onclick="launchStudentRole('mocks')" class="bg-slate-50 border border-slate-200 hover:border-indigo-600 rounded-xl p-5 text-center cursor-pointer transition duration-300">
-            <h4 class="font-bold text-xs text-indigo-600 uppercase">Just the Mock Tests</h4>
-            <p class="text-[10px] text-slate-500 mt-1 leading-relaxed">Jump straight into the official Cambridge IELTS practice exams.</p>
+          <div onclick="launchStudentRole('mocks')" class="lp-role-card rounded-xl p-5 text-center">
+            <h4 class="lp-accent font-bold text-xs uppercase tracking-wide">Just the Mock Tests</h4>
+            <p class="text-[10px] lp-muted mt-1 leading-relaxed lp-reading">Jump straight into the official Cambridge IELTS practice exams.</p>
           </div>
         </div>
-        <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-[11px] text-amber-700 leading-relaxed">
+        <div class="rounded-xl p-4 text-[11px] leading-relaxed" style="background:var(--lp-gold-soft);border:1px solid rgba(168,121,47,.25);color:#6b5424;">
           <strong>Beta Notice:</strong> All student preparation resources are currently free of charge. Billing paywalls will be enabled once custom domains are linked.
         </div>
         <div class="text-center pt-2">
-          <button onclick="goBackToStep('role')" class="text-xs font-bold text-indigo-600 hover:underline">← Back to selection</button>
+          <button onclick="goBackToStep('role')" class="text-xs font-bold lp-accent hover:underline">← Back to selection</button>
         </div>
       </div>
 
@@ -829,17 +896,17 @@
         
         <!-- Duration Selector Tabs -->
         <div class="flex justify-center p-1 bg-slate-100 rounded-xl max-w-[280px] mx-auto mb-4 border border-slate-200">
-          <button onclick="setPricingDuration(30)" id="dur-btn-30" class="flex-1 py-1.5 text-center text-xs font-black rounded-lg bg-white text-indigo-600 shadow-sm transition">30 Days</button>
-          <button onclick="setPricingDuration(90)" id="dur-btn-90" class="flex-1 py-1.5 text-center text-xs font-bold rounded-lg text-slate-500 hover:text-slate-900 transition flex items-center justify-center gap-0.5">90d <span class="bg-indigo-100 text-indigo-700 text-[8px] px-1 py-0.5 rounded font-black">-20%</span></button>
+          <button onclick="setPricingDuration(30)" id="dur-btn-30" class="flex-1 py-1.5 text-center text-xs font-black rounded-lg bg-white text-[#7a2331] shadow-sm transition">30 Days</button>
+          <button onclick="setPricingDuration(90)" id="dur-btn-90" class="flex-1 py-1.5 text-center text-xs font-bold rounded-lg text-slate-500 hover:text-slate-900 transition flex items-center justify-center gap-0.5">90d <span class="bg-[#f6f1e4] text-[#a8792f] text-[8px] px-1 py-0.5 rounded font-black">-20%</span></button>
           <button onclick="setPricingDuration(365)" id="dur-btn-365" class="flex-1 py-1.5 text-center text-xs font-bold rounded-lg text-slate-500 hover:text-slate-900 transition flex items-center justify-center gap-0.5">365d <span class="bg-emerald-100 text-emerald-700 text-[8px] px-1 py-0.5 rounded font-black">-25%</span></button>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
           <!-- Starter -->
-          <div onclick="selectPricingPlan('Starter')" class="bg-white/40 backdrop-blur-sm border-2 border-slate-100 hover:border-indigo-600 rounded-2xl p-5 text-center cursor-pointer transition flex flex-col justify-between hover:shadow-lg hover:shadow-indigo-600/5 duration-300" id="m-card-Starter">
+          <div onclick="selectPricingPlan('Starter')" class="bg-white/40 backdrop-blur-sm border-2 border-slate-100 hover:border-[#7a2331] rounded-2xl p-5 text-center cursor-pointer transition flex flex-col justify-between hover:shadow-lg hover:shadow-[#7a2331]/5 duration-300" id="m-card-Starter">
             <h4 class="font-bold text-xs text-slate-800">Starter Plan</h4>
             <div class="my-3">
-              <span class="text-2xl font-extrabold text-indigo-600">Rs. 5,000</span>
+              <span class="text-2xl font-extrabold text-[#7a2331]">Rs. 5,000</span>
               <span class="text-[9px] text-slate-400 block font-semibold">/ month</span>
             </div>
             <ul class="text-[9px] text-left text-slate-600 space-y-2 mt-2 border-t border-slate-50 pt-3">
@@ -850,11 +917,11 @@
             </ul>
           </div>
           <!-- Growth -->
-          <div onclick="selectPricingPlan('Growth')" class="bg-white/40 backdrop-blur-sm border-2 border-slate-100 hover:border-indigo-600 rounded-2xl p-5 text-center cursor-pointer transition relative flex flex-col justify-between hover:shadow-lg hover:shadow-indigo-600/5 duration-300" id="m-card-Growth">
-            <span class="absolute top-[-10px] left-1/2 transform -translate-x-1/2 bg-indigo-600 text-white font-extrabold text-[8px] uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-md shadow-indigo-600/25">Recommended</span>
+          <div onclick="selectPricingPlan('Growth')" class="bg-white/40 backdrop-blur-sm border-2 border-slate-100 hover:border-[#7a2331] rounded-2xl p-5 text-center cursor-pointer transition relative flex flex-col justify-between hover:shadow-lg hover:shadow-[#7a2331]/5 duration-300" id="m-card-Growth">
+            <span class="absolute top-[-10px] left-1/2 transform -translate-x-1/2 bg-[#7a2331] text-white font-extrabold text-[8px] uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-md shadow-[#7a2331]/25">Recommended</span>
             <h4 class="font-bold text-xs text-slate-800">Growth Plan</h4>
             <div class="my-3">
-              <span class="text-2xl font-extrabold text-indigo-600">Rs. 8,000</span>
+              <span class="text-2xl font-extrabold text-[#7a2331]">Rs. 8,000</span>
               <span class="text-[9px] text-slate-400 block font-semibold">/ month</span>
             </div>
             <ul class="text-[9px] text-left text-slate-600 space-y-2 mt-2 border-t border-slate-50 pt-3">
@@ -865,10 +932,10 @@
             </ul>
           </div>
           <!-- Enterprise -->
-          <div onclick="selectPricingPlan('Enterprise')" class="bg-white/40 backdrop-blur-sm border-2 border-slate-100 hover:border-indigo-600 rounded-2xl p-5 text-center cursor-pointer transition flex flex-col justify-between hover:shadow-lg hover:shadow-indigo-600/5 duration-300" id="m-card-Enterprise">
+          <div onclick="selectPricingPlan('Enterprise')" class="bg-white/40 backdrop-blur-sm border-2 border-slate-100 hover:border-[#7a2331] rounded-2xl p-5 text-center cursor-pointer transition flex flex-col justify-between hover:shadow-lg hover:shadow-[#7a2331]/5 duration-300" id="m-card-Enterprise">
             <h4 class="font-bold text-xs text-slate-800">Enterprise Plan</h4>
             <div class="my-3">
-              <span class="text-2xl font-extrabold text-indigo-600">Rs. 24,000</span>
+              <span class="text-2xl font-extrabold text-[#7a2331]">Rs. 24,000</span>
               <span class="text-[9px] text-slate-400 block font-semibold">/ month</span>
             </div>
             <ul class="text-[9px] text-left text-slate-600 space-y-2 mt-2 border-t border-slate-50 pt-3">
@@ -881,7 +948,7 @@
         </div>
 
         <div class="text-center pt-2">
-          <button onclick="goBackToStep('role')" class="text-xs font-bold text-indigo-600 hover:underline">← Back to Selection</button>
+          <button onclick="goBackToStep('role')" class="text-xs font-bold text-[#7a2331] hover:underline">← Back to Selection</button>
         </div>
       </div>
 
