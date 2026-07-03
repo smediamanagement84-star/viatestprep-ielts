@@ -785,6 +785,7 @@
         <button onclick="switchCRMTab('crm')" id="c-tab-crm" class="crm-nav-btn active-tab"><span class="crm-nav-icon">👥</span>CRM Student Roster</button>
         <button onclick="switchCRMTab('grader')" id="c-tab-grader" class="crm-nav-btn"><span class="crm-nav-icon">🎤</span>Live Speaking Grader</button>
         <button onclick="switchCRMTab('vault')" id="c-tab-vault" class="crm-nav-btn"><span class="crm-nav-icon">📦</span>Material Vault</button>
+        <button onclick="switchCRMTab('payments')" id="c-tab-payments" class="crm-nav-btn hidden"><span class="crm-nav-icon">🧾</span>Pending Payments</button>
       </aside>
 
       <!-- CRM Content View -->
@@ -987,6 +988,20 @@
         <div id="crm-vault-view" class="crm-subview hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <!-- Populated by JS -->
         </div>
+
+        <!-- CRM Tab 4 (owner-only): manual QR payments awaiting review -->
+        <div id="crm-payments-view" class="crm-subview hidden space-y-4">
+          <div class="flex justify-between items-center">
+            <div>
+              <h2 class="text-lg font-extrabold text-[#1c1a17]">Pending Payments</h2>
+              <p class="text-xs text-[#766f62] mt-0.5">Manual QR submissions awaiting verification - cross-check the reference ID against your eSewa/Khalti wallet activity before approving.</p>
+            </div>
+            <button onclick="loadPendingPayments()" class="px-3.5 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-[#5c5648] font-bold rounded-lg text-xs transition">↻ Refresh</button>
+          </div>
+          <div id="pendingPaymentsList" class="space-y-3">
+            <!-- Populated by JS -->
+          </div>
+        </div>
         </div>
 
       </main>
@@ -1178,13 +1193,24 @@
           </div>
 
           <div class="bg-[#f3ecd8] border border-[#ece4d2] rounded-2xl p-4 space-y-3">
-            <span class="text-[9px] font-bold text-[#8a8171] uppercase block mb-1">💳 Pay securely with</span>
-            <button type="button" onclick="startEsewaPayment()" id="m-pay-esewa-btn" class="w-full py-3 bg-[#60bb46] hover:bg-[#4e9c39] text-white font-bold rounded-xl text-xs transition flex items-center justify-center gap-2">
-              <span class="text-base">📱</span> Pay with eSewa
-            </button>
-            <button type="button" onclick="startKhaltiPayment()" id="m-pay-khalti-btn" class="w-full py-3 bg-[#5c2d91] hover:bg-[#4a2374] text-white font-bold rounded-xl text-xs transition flex items-center justify-center gap-2">
-              <span class="text-base">📱</span> Pay with Khalti
-            </button>
+            <span class="text-[9px] font-bold text-[#8a8171] uppercase block mb-1">💳 Pay via QR (manual verification)</span>
+            <p class="text-[10px] text-[#766f62] leading-relaxed">Scan the QR below with the eSewa or Khalti app, pay the exact amount shown above, then submit your payment details. Your account is activated once we confirm the payment - usually within a few hours.</p>
+
+            <div class="flex p-1 rounded-xl gap-1 bg-white border border-[#e5ded0]">
+              <button type="button" onclick="setManualPaymentGateway('esewa-manual')" id="m-manual-tab-esewa-manual" class="flex-1 py-1.5 text-[10px] font-black rounded-lg transition">eSewa</button>
+              <button type="button" onclick="setManualPaymentGateway('khalti-manual')" id="m-manual-tab-khalti-manual" class="flex-1 py-1.5 text-[10px] font-black rounded-lg transition">Khalti</button>
+            </div>
+
+            <div class="flex justify-center py-1">
+              <img id="m-manual-qr-img" src="esewa-qr-placeholder.svg" alt="Payment QR code" class="w-36 h-36 object-contain rounded-xl border border-[#e5ded0] bg-white" />
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <input type="text" id="m-manual-reference" placeholder="Transaction / Ref. ID" class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white outline-none focus:border-[#7a2331]" />
+              <input type="text" id="m-manual-phone" placeholder="Phone used to pay" class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white outline-none focus:border-[#7a2331]" />
+            </div>
+
+            <button type="button" onclick="submitManualPayment()" id="m-manual-submit-btn" class="w-full py-3 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-xl text-xs transition">Submit Payment for Verification</button>
             <p id="m-checkout-status" class="text-[10px] text-[#8a8171] text-center min-h-[14px]"></p>
           </div>
         </form>
@@ -1365,6 +1391,13 @@
     const SUPABASE_URL = 'https://hcmhtxfmvutxtnwdbuur.supabase.co';
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhjbWh0eGZtdnV0eHRud2RidXVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMwNDEwMjYsImV4cCI6MjA5ODYxNzAyNn0.lSW6zw5lS59dZF2MWD7kFQCtuoFtibnyS0x2nyQfZbA';
     let supabaseClient = null;
+
+    // Owner-only CRM bypass secret - deliberately NOT linked or mentioned
+    // anywhere in the UI, the only way in is knowing this URL
+    // (index.html?ownerkey=<this>). Also doubles as the credential for the
+    // owner-only "Pending Payments" admin endpoints (see loadPendingPayments).
+    // Must match OWNER_BYPASS_KEY in api/_lib/ownerAuth.js.
+    const OWNER_BYPASS_KEY = 'JW99DMjLLV9KDC4E';
 
     function initSupabase() {
       if (SUPABASE_URL && SUPABASE_ANON_KEY && typeof supabase !== 'undefined') {
@@ -1603,13 +1636,13 @@
 
       const urlParams = new URLSearchParams(window.location.search);
 
-      // Owner-only CRM bypass. Deliberately NOT linked or mentioned anywhere in
+      // Owner-only CRM bypass (OWNER_BYPASS_KEY declared above with the
+      // Supabase constants). Deliberately NOT linked or mentioned anywhere in
       // the UI - the only way in is knowing this URL. Visiting
-      // index.html?ownerkey=<the key below> logs straight into the CRM with no
+      // index.html?ownerkey=<the key> logs straight into the CRM with no
       // payment step. Client-side secrets can technically be read from page
       // source by anyone who goes looking, but this keeps it out of every menu,
       // button, and modal a normal visitor would ever see.
-      const OWNER_BYPASS_KEY = 'JW99DMjLLV9KDC4E';
       if (urlParams.get('ownerkey') === OWNER_BYPASS_KEY) {
         launchAdminBypass();
         return;
@@ -2142,6 +2175,9 @@
       document.getElementById('m-checkout-email').value = localStorage.getItem('userEmail') || '';
       const nameField = document.getElementById('m-checkout-name');
       if (!nameField.value) nameField.value = localStorage.getItem('viatestprep_consultancy_name') || '';
+      document.getElementById('m-manual-reference').value = '';
+      document.getElementById('m-manual-phone').value = '';
+      setManualPaymentGateway('esewa-manual');
 
       showModalStep('m-step-pricing', 'm-step-checkout');
     }
@@ -2244,6 +2280,62 @@
         console.error(err);
         setCheckoutStatus('❌ ' + err.message);
         esewaBtn.disabled = false; khaltiBtn.disabled = false;
+      }
+    }
+
+    // ==========================================
+    // MANUAL QR PAYMENT (interim, until a real merchant account is approved -
+    // see /api/payment/manual-submit.js). startEsewaPayment/startKhaltiPayment
+    // above are kept as-is, unused for now - re-wire the checkout buttons to
+    // them once ESEWA_MERCHANT_CODE/KHALTI_SECRET_KEY (production) are set.
+    // ==========================================
+    let manualPaymentGateway = 'esewa-manual';
+    function setManualPaymentGateway(gateway) {
+      manualPaymentGateway = gateway;
+      document.getElementById('m-manual-tab-esewa-manual').classList.toggle('active-tab', gateway === 'esewa-manual');
+      document.getElementById('m-manual-tab-khalti-manual').classList.toggle('active-tab', gateway === 'khalti-manual');
+      document.getElementById('m-manual-qr-img').src = gateway === 'esewa-manual' ? 'esewa-qr-placeholder.svg' : 'khalti-qr-placeholder.svg';
+      setCheckoutStatus('');
+    }
+
+    async function submitManualPayment() {
+      const form = await getCheckoutFormValues();
+      if (!form) return;
+
+      const referenceId = document.getElementById('m-manual-reference').value.trim();
+      const payerPhone = document.getElementById('m-manual-phone').value.trim();
+      if (!referenceId || !payerPhone) {
+        setCheckoutStatus('Please enter the transaction/reference ID and the phone number used to pay.');
+        return;
+      }
+
+      const btn = document.getElementById('m-manual-submit-btn');
+      btn.disabled = true;
+      setCheckoutStatus('Submitting for verification...');
+
+      try {
+        const res = await fetch('/api/payment/manual-submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            planName: modalSelectedPlan,
+            durationDays: pricingDurationDays,
+            consultancyName: form.consultancyName,
+            accessToken: form.accessToken,
+            gateway: manualPaymentGateway,
+            referenceId, payerPhone,
+          }),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Could not submit payment');
+
+        alert("✅ Submitted! We'll verify your payment and activate your account shortly - usually within a few hours.");
+        closeAccessModal();
+        renderAppView();
+      } catch (err) {
+        console.error(err);
+        setCheckoutStatus('❌ ' + err.message);
+        btn.disabled = false;
       }
     }
 
@@ -2903,6 +2995,13 @@
       // viatestprep_consultancy_id - see syncRosterFromCloud()). It re-renders
       // the table/grader-select itself once the real data lands.
       syncRosterFromCloud();
+
+      // Manual QR payment review (see /api/payment/manual-submit.js) is only
+      // ever relevant to the platform owner, not individual consultancies -
+      // it's every tenant's pending payments in one list.
+      const isOwnerSession = localStorage.getItem('viatestprep_consultancy_id') === '__owner__';
+      document.getElementById('c-tab-payments').classList.toggle('hidden', !isOwnerSession);
+      if (isOwnerSession) loadPendingPayments();
     }
 
     // Reads the active plan + roster size and renders the seat-capacity meter
@@ -2966,6 +3065,63 @@
       document.getElementById('c-tab-' + tabId).classList.add('active-tab');
 
       currentCRMTab = tabId;
+      if (tabId === 'payments') loadPendingPayments();
+    }
+
+    // Owner-only: manual QR payment submissions awaiting a human to
+    // cross-check against real wallet activity (see
+    // /api/payment/manual-submit.js). Interim until a real merchant account
+    // replaces the QR flow entirely.
+    async function loadPendingPayments() {
+      const list = document.getElementById('pendingPaymentsList');
+      if (!list) return;
+      list.innerHTML = '<p class="text-xs text-[#8a8171]">Loading...</p>';
+      try {
+        const res = await fetch('/api/admin/pending-orders', { headers: { 'X-Owner-Key': OWNER_BYPASS_KEY } });
+        const data = await res.json();
+        if (!data.ok) throw new Error(data.error || 'Could not load pending payments');
+
+        if (!data.orders.length) {
+          list.innerHTML = '<p class="text-xs text-[#8a8171] py-6 text-center">No payments awaiting review.</p>';
+          return;
+        }
+
+        list.innerHTML = data.orders.map(o => `
+          <div class="bg-white border border-[#e5ded0] rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div class="text-xs space-y-1">
+              <div class="font-bold text-[#1c1a17]">${escapeHtml(o.consultancy_name)} <span class="font-normal text-[#8a8171]">(${escapeHtml(o.consultancy_email)})</span></div>
+              <div class="text-[#5c5648]">${escapeHtml(o.plan_name)} plan, ${o.duration_days} days - <strong>Rs. ${Number(o.amount).toLocaleString()}</strong></div>
+              <div class="text-[#766f62]">${o.gateway === 'khalti-manual' ? 'Khalti' : 'eSewa'} · Ref: <span class="font-mono">${escapeHtml(o.reference_id || '—')}</span> · Paid from: ${escapeHtml(o.payer_phone || '—')}</div>
+              <div class="text-[9px] text-[#a8792f]">Submitted ${new Date(o.created_at).toLocaleString()}</div>
+            </div>
+            <div class="flex gap-2 shrink-0">
+              <button onclick="reviewPendingOrder('${o.id}', 'approve')" class="px-3.5 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg text-xs transition">✓ Approve</button>
+              <button onclick="reviewPendingOrder('${o.id}', 'reject')" class="px-3.5 py-1.5 bg-rose-50 hover:bg-rose-100 text-rose-600 border border-rose-200 font-bold rounded-lg text-xs transition">✕ Reject</button>
+            </div>
+          </div>
+        `).join('');
+      } catch (e) {
+        console.error(e);
+        list.innerHTML = `<p class="text-xs text-rose-600 py-6 text-center">❌ ${escapeHtml(e.message)}</p>`;
+      }
+    }
+
+    async function reviewPendingOrder(orderId, action) {
+      if (action === 'approve' && !confirm('Confirm you have verified this payment actually arrived in your eSewa/Khalti account before approving.')) return;
+      if (action === 'reject' && !confirm('Reject this payment submission?')) return;
+
+      try {
+        const res = await fetch('/api/admin/approve-order', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
+          body: JSON.stringify({ orderId, action }),
+        });
+        const data = await res.json();
+        if (!data.ok) throw new Error(data.error || 'Could not process this order');
+        loadPendingPayments();
+      } catch (e) {
+        alert('❌ ' + e.message);
+      }
     }
 
     function renderCRMTable() {

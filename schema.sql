@@ -95,18 +95,28 @@ CREATE TABLE IF NOT EXISTS speaking_grades (
 -- the transaction with eSewa/Khalti's own server-side status/lookup APIs.)
 CREATE TABLE IF NOT EXISTS orders (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  transaction_uuid TEXT UNIQUE NOT NULL,   -- our own idempotency key (esewa transaction_uuid / khalti purchase_order_id)
-  gateway TEXT NOT NULL,                   -- 'esewa' | 'khalti'
+  transaction_uuid TEXT UNIQUE NOT NULL,   -- our own idempotency key (esewa transaction_uuid / khalti purchase_order_id / manual-<random> for QR orders)
+  gateway TEXT NOT NULL,                   -- 'esewa' | 'khalti' | 'esewa-manual' | 'khalti-manual'
   gateway_ref TEXT,                        -- esewa ref_id / khalti pidx+transaction_id, filled in on verify
   plan_name TEXT NOT NULL,                 -- 'Starter', 'Growth', 'Enterprise'
   duration_days INT NOT NULL,              -- 30, 90, 365
   amount NUMERIC(10,2) NOT NULL,           -- computed server-side from PLAN_PRICES, never from client input
   consultancy_name TEXT NOT NULL,
   consultancy_email TEXT NOT NULL,
-  status TEXT NOT NULL DEFAULT 'pending',  -- 'pending' | 'paid' | 'failed'
+  status TEXT NOT NULL DEFAULT 'pending',  -- 'pending' | 'paid' | 'failed' | 'pending_review' | 'rejected'
+  -- Filled in only for '-manual' gateway orders: a consultancy scans a
+  -- personal eSewa/Khalti QR, pays directly, then self-reports what they
+  -- paid with so the owner can cross-check it against their own wallet
+  -- activity before approving. This is a stopgap until a real merchant
+  -- account exists (see /api/payment/manual-submit.js) - there is no
+  -- automated verification here, unlike the real gateway flow above.
+  reference_id TEXT,
+  payer_phone TEXT,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   verified_at TIMESTAMP WITH TIME ZONE
 );
 
 -- Run this in your Supabase SQL Editor if `orders` already exists without it:
 -- ALTER TABLE orders ADD COLUMN IF NOT EXISTS gateway_ref TEXT;
+-- ALTER TABLE orders ADD COLUMN IF NOT EXISTS reference_id TEXT;
+-- ALTER TABLE orders ADD COLUMN IF NOT EXISTS payer_phone TEXT;

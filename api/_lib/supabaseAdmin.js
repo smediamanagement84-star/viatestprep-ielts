@@ -72,6 +72,42 @@ async function markOrderFailed(transactionUuid) {
   return rows[0];
 }
 
+async function getOrderById(id) {
+  const rows = await restRequest('orders', {
+    method: 'GET',
+    query: `?id=eq.${encodeURIComponent(id)}&limit=1`,
+  });
+  return rows[0] || null;
+}
+
+// Manual QR orders awaiting a human to cross-check them against real wallet
+// activity before approving - see /api/payment/manual-submit.js and
+// /api/admin/*.
+async function listPendingReviewOrders() {
+  return restRequest('orders', {
+    method: 'GET',
+    query: '?status=eq.pending_review&order=created_at.desc',
+  });
+}
+
+async function markOrderApproved(id, gatewayRef) {
+  const rows = await restRequest('orders', {
+    method: 'PATCH',
+    query: `?id=eq.${encodeURIComponent(id)}`,
+    body: { status: 'paid', gateway_ref: gatewayRef || null, verified_at: new Date().toISOString() },
+  });
+  return rows[0];
+}
+
+async function markOrderRejected(id) {
+  const rows = await restRequest('orders', {
+    method: 'PATCH',
+    query: `?id=eq.${encodeURIComponent(id)}`,
+    body: { status: 'rejected' },
+  });
+  return rows[0];
+}
+
 async function upsertConsultancy({ name, email, plan_name, duration_days, expires_at }) {
   // Supabase PostgREST upsert via Prefer: resolution=merge-duplicates, keyed
   // on the unique `email` column from schema.sql.
@@ -183,8 +219,12 @@ async function insertMockResult(result) {
 module.exports = {
   insertOrder,
   getOrderByTransactionUuid,
+  getOrderById,
   markOrderPaid,
   markOrderFailed,
+  listPendingReviewOrders,
+  markOrderApproved,
+  markOrderRejected,
   upsertConsultancy,
   getConsultancyByEmail,
   insertConsultancyShell,
