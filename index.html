@@ -1049,7 +1049,7 @@
           <p id="m-checkout-desc" class="text-xs text-[#8a8171]">Registering for Plan A at Rs. 500 / student / month.</p>
         </div>
 
-        <form onsubmit="handlePricingPaymentSubmit(event)" class="space-y-4">
+        <form onsubmit="return false;" class="space-y-4">
           <div class="grid grid-cols-2 gap-4">
             <div class="flex flex-col gap-1">
               <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Consultancy Name</label>
@@ -1062,24 +1062,15 @@
           </div>
 
           <div class="bg-[#f3ecd8] border border-[#ece4d2] rounded-2xl p-4 space-y-3">
-            <span class="text-[9px] font-bold text-[#8a8171] uppercase block mb-1">💳 SECURE CHECKOUT SIMULATOR</span>
-            <div class="flex flex-col gap-1">
-              <label class="text-[8px] font-bold text-[#8a8171] uppercase">Card Number</label>
-              <input type="text" value="4242 4242 4242 4242" disabled class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-[#efe6d0]/50 text-[#8a8171]" />
-            </div>
-            <div class="grid grid-cols-2 gap-3">
-              <div class="flex flex-col gap-1">
-                <label class="text-[8px] font-bold text-[#8a8171] uppercase">Expiry</label>
-                <input type="text" value="12/29" disabled class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-[#efe6d0]/50 text-[#8a8171]" />
-              </div>
-              <div class="flex flex-col gap-1">
-                <label class="text-[8px] font-bold text-[#8a8171] uppercase">CVC</label>
-                <input type="text" value="123" disabled class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-[#efe6d0]/50 text-[#8a8171]" />
-              </div>
-            </div>
+            <span class="text-[9px] font-bold text-[#8a8171] uppercase block mb-1">💳 Pay securely with</span>
+            <button type="button" onclick="startEsewaPayment()" id="m-pay-esewa-btn" class="w-full py-3 bg-[#60bb46] hover:bg-[#4e9c39] text-white font-bold rounded-xl text-xs transition flex items-center justify-center gap-2">
+              <span class="text-base">📱</span> Pay with eSewa
+            </button>
+            <button type="button" onclick="startKhaltiPayment()" id="m-pay-khalti-btn" class="w-full py-3 bg-[#5c2d91] hover:bg-[#4a2374] text-white font-bold rounded-xl text-xs transition flex items-center justify-center gap-2">
+              <span class="text-base">📱</span> Pay with Khalti
+            </button>
+            <p id="m-checkout-status" class="text-[10px] text-[#8a8171] text-center min-h-[14px]"></p>
           </div>
-
-          <button type="submit" id="m-checkout-btn" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs transition">Pay &amp; Launch CRM Portal</button>
         </form>
         <button onclick="goBackToStep('pricing')" class="block w-full text-center text-xs text-[#8a8171] hover:text-[#7a2331] font-semibold underline">← Back to plans</button>
       </div>
@@ -1420,6 +1411,12 @@
 
       // Check current login session
       renderAppView();
+
+      // If we've just been redirected back from a real eSewa/Khalti payment,
+      // finish activating the account (see handlePaymentCallback above).
+      if (urlParams.get('payment')) {
+        handlePaymentCallback();
+      }
     });
 
     function renderAppView() {
@@ -1589,54 +1586,129 @@
 
       document.getElementById('m-checkout-desc').innerHTML = `Registering for <strong>${planName}</strong> (${pricingDurationDays} days access) at <strong>Rs. ${price.toLocaleString()}</strong> - up to <strong>${capacity} student seats</strong> included, full feature access, no setup fee.`;
 
-      document.getElementById('m-checkout-btn').textContent = `Pay Rs. ${price.toLocaleString()} & Launch CRM Portal`;
-
       showModalStep('m-step-pricing', 'm-step-checkout');
     }
 
-    function handlePricingPaymentSubmit(e) {
-      e.preventDefault();
-      
-      const cName = document.getElementById('m-checkout-name').value.trim();
-      const cEmail = document.getElementById('m-checkout-email').value.trim();
-      
-      // Simulate payment processing
-      const payButton = document.getElementById('m-checkout-btn');
-      payButton.textContent = 'Processing Secure Payment...';
-      payButton.disabled = true;
-      payButton.style.opacity = '0.7';
-      payButton.style.background = '#8a5a00';
-      
-      setTimeout(async () => {
-        // Set lock credentials
+    // Real payment - both buttons hand off to a serverless function that
+    // computes the price server-side (never trusts the browser), starts a
+    // real eSewa/Khalti transaction, and only activates the consultancy
+    // account after independently verifying the payment succeeded. See
+    // /api/payment/*.js. Neither function here ever sees a secret key.
+    function getCheckoutFormValues() {
+      const consultancyName = document.getElementById('m-checkout-name').value.trim();
+      const consultancyEmail = document.getElementById('m-checkout-email').value.trim();
+      if (!consultancyName || !consultancyEmail) {
+        alert('Please enter your consultancy name and admin email first.');
+        return null;
+      }
+      return { consultancyName, consultancyEmail };
+    }
+
+    function setCheckoutStatus(msg) {
+      const el = document.getElementById('m-checkout-status');
+      if (el) el.textContent = msg;
+    }
+
+    async function startEsewaPayment() {
+      const form = getCheckoutFormValues();
+      if (!form) return;
+      const esewaBtn = document.getElementById('m-pay-esewa-btn');
+      const khaltiBtn = document.getElementById('m-pay-khalti-btn');
+      esewaBtn.disabled = true; khaltiBtn.disabled = true;
+      setCheckoutStatus('Contacting eSewa...');
+
+      try {
+        const res = await fetch('/api/payment/esewa-initiate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            planName: modalSelectedPlan,
+            durationDays: pricingDurationDays,
+            consultancyName: form.consultancyName,
+            consultancyEmail: form.consultancyEmail,
+          }),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'eSewa request failed');
+
+        // eSewa requires an actual signed HTML form POST, not a fetch redirect.
+        const formEl = document.createElement('form');
+        formEl.method = 'POST';
+        formEl.action = data.formActionUrl;
+        Object.entries(data.fields).forEach(([key, value]) => {
+          const input = document.createElement('input');
+          input.type = 'hidden'; input.name = key; input.value = value;
+          formEl.appendChild(input);
+        });
+        document.body.appendChild(formEl);
+        formEl.submit();
+      } catch (err) {
+        console.error(err);
+        setCheckoutStatus('❌ ' + err.message);
+        esewaBtn.disabled = false; khaltiBtn.disabled = false;
+      }
+    }
+
+    async function startKhaltiPayment() {
+      const form = getCheckoutFormValues();
+      if (!form) return;
+      const esewaBtn = document.getElementById('m-pay-esewa-btn');
+      const khaltiBtn = document.getElementById('m-pay-khalti-btn');
+      esewaBtn.disabled = true; khaltiBtn.disabled = true;
+      setCheckoutStatus('Contacting Khalti...');
+
+      try {
+        const res = await fetch('/api/payment/khalti-initiate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            planName: modalSelectedPlan,
+            durationDays: pricingDurationDays,
+            consultancyName: form.consultancyName,
+            consultancyEmail: form.consultancyEmail,
+          }),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Khalti request failed');
+        window.location.href = data.paymentUrl;
+      } catch (err) {
+        console.error(err);
+        setCheckoutStatus('❌ ' + err.message);
+        esewaBtn.disabled = false; khaltiBtn.disabled = false;
+      }
+    }
+
+    // Handles the ?payment=success|failed redirect that /api/payment/*-verify.js
+    // sends the browser back to once it has independently confirmed (or
+    // rejected) the transaction with eSewa/Khalti.
+    function handlePaymentCallback() {
+      const params = new URLSearchParams(window.location.search);
+      const paymentStatus = params.get('payment');
+      if (!paymentStatus) return;
+
+      if (paymentStatus === 'success') {
+        const email = params.get('email') || '';
         localStorage.setItem('viatestprep_unlocked', 'true');
         localStorage.setItem('viatestprep_user_role', 'consultancy');
-        localStorage.setItem('viatestprep_consultancy_name', cName);
-        localStorage.setItem('viatestprep_consultancy_plan', modalSelectedPlan);
-        localStorage.setItem('viatestprep_consultancy_expires_at', new Date(Date.now() + pricingDurationDays*24*60*60*1000).toISOString());
-        localStorage.setItem('userEmail', cEmail);
-
+        localStorage.setItem('userEmail', email);
+        // consultancy name/plan/expiry are read back from the `consultancies`
+        // row that esewa-verify/khalti-verify wrote, not trusted from the URL.
         if (supabaseClient) {
-          try {
-            await supabaseClient.from('consultancies').insert([{
-              name: cName,
-              email: cEmail,
-              plan_name: modalSelectedPlan,
-              duration_days: pricingDurationDays,
-              expires_at: new Date(Date.now() + pricingDurationDays*24*60*60*1000).toISOString()
-            }]);
-          } catch (err) {
-            console.error('Cloud registration sync failed:', err);
-          }
+          supabaseClient.from('consultancies').select('*').eq('email', email).single().then(({ data }) => {
+            if (data) {
+              localStorage.setItem('viatestprep_consultancy_name', data.name);
+              localStorage.setItem('viatestprep_consultancy_plan', data.plan_name);
+              localStorage.setItem('viatestprep_consultancy_expires_at', data.expires_at);
+            }
+            renderAppView();
+          }).catch(() => renderAppView());
+        } else {
+          renderAppView();
         }
-
-        payButton.disabled = false;
-        payButton.style.opacity = '1';
-        payButton.style.background = '';
-        
-        closeAccessModal();
-        renderAppView();
-      }, 1500);
+      } else if (paymentStatus === 'failed') {
+        alert('Payment could not be verified. If you were charged, contact support - nothing has been activated on this account yet.');
+      }
+      window.history.replaceState({}, document.title, window.location.pathname);
     }
 
     // ==========================================
