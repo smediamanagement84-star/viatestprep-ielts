@@ -24,7 +24,7 @@ module.exports = async (req, res) => {
       return;
     }
 
-    const expired = new Date() > new Date(student.access_expires_at);
+    const expired = !!student.access_expires_at && new Date() > new Date(student.access_expires_at);
 
     res.status(200).json({
       ok: true,
@@ -33,6 +33,7 @@ module.exports = async (req, res) => {
       targetBand: student.target_band,
       status: student.status,
       accessExpiresAt: student.access_expires_at,
+      accessLevel: student.access_level || 'full',
       consultancyId: student.consultancy_id,
       expired,
     });

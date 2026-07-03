@@ -1,23 +1,25 @@
-// Looks up a consultancy's plan/expiry by email right after a successful
-// payment redirect. Done server-side with the service role key so the
-// `consultancies` table (every paying customer's name, email, plan, and
-// subscription expiry) never needs a public RLS SELECT policy for the anon
-// key to read - that would let anyone holding the anon key dump every
-// consultancy's billing info directly via the Supabase REST API, bypassing
-// this app entirely. See schema.sql's RLS section.
+// Looks up a consultancy's own plan/expiry - used right after login and
+// right after a payment redirect. Requires the caller's Supabase Auth access
+// token and derives the email from that verified token (never from a raw
+// query param) - otherwise anyone could call ?email=someone-else@x.com and
+// read that consultancy's billing info with no auth at all. Done server-side
+// with the service role key so `consultancies` never needs a public RLS
+// SELECT policy for the anon key to read directly.
+const { verifyAuthUser } = require('../_lib/authUser');
 const { getConsultancyByEmail } = require('../_lib/supabaseAdmin');
 
 module.exports = async (req, res) => {
   try {
-    const email = (req.query.email || '').trim();
-    if (!email) {
-      res.status(400).json({ ok: false, error: 'Missing email' });
+    const accessToken = req.query.accessToken || (req.body && req.body.accessToken);
+    const user = await verifyAuthUser(accessToken);
+    if (!user) {
+      res.status(401).json({ ok: false, error: 'Could not verify your login session. Please log in again.' });
       return;
     }
 
-    const data = await getConsultancyByEmail(email);
+    const data = await getConsultancyByEmail(user.email);
     if (!data) {
-      res.status(404).json({ ok: false, error: 'No consultancy found for that email' });
+      res.status(404).json({ ok: false, error: 'No consultancy found for that account' });
       return;
     }
 

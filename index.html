@@ -793,11 +793,11 @@
              consultancy's paid term has lapsed (see initConsultancyDashboard). -->
         <div id="crm-expired-overlay" class="hidden flex flex-col items-center justify-center p-12 bg-white rounded-3xl border border-rose-100 text-center max-w-md mx-auto mt-16 shadow-lg shadow-rose-500/5">
           <span class="text-4xl">🔒</span>
-          <h3 class="font-extrabold text-[#1c1a17] text-lg mt-4">Subscription Expired</h3>
-          <p class="text-xs text-[#766f62] mt-2 leading-relaxed">
+          <h3 id="crm-expired-title" class="font-extrabold text-[#1c1a17] text-lg mt-4">Subscription Expired</h3>
+          <p id="crm-expired-desc" class="text-xs text-[#766f62] mt-2 leading-relaxed">
             Your consultancy plan has expired. Renew to regain access to your student roster, speaking grader, and material vault - nothing has been deleted.
           </p>
-          <button onclick="openUpgradeFlow()" class="mt-5 px-6 py-2.5 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-xl text-xs transition">Renew Subscription</button>
+          <button onclick="openUpgradeFlow()" id="crm-expired-cta" class="mt-5 px-6 py-2.5 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-xl text-xs transition">Renew Subscription</button>
         </div>
 
         <div id="crm-active-views-container">
@@ -1033,38 +1033,61 @@
         </div>
       </div>
 
-      <!-- Step 2 (Student): Redirect options -->
-      <div class="p-8 space-y-6 hidden" id="m-step-student">
+      <!-- Step 2 (Student): Real account login/signup -->
+      <div class="p-8 space-y-5 hidden" id="m-step-student">
         <div>
-          <h3 class="lp-serif text-xl font-bold" style="color:var(--ink)">Student Access Portal</h3>
-          <p class="text-xs lp-muted mt-1 lp-reading">Please enter your email to continue and match graded records:</p>
+          <h3 class="lp-serif text-xl font-bold" style="color:var(--ink)">Student Account</h3>
+          <p class="text-xs lp-muted mt-1 lp-reading">Free for now — sign up once and your progress saves for good, across devices.</p>
         </div>
 
-        <div class="flex flex-col gap-1.5">
-          <label class="text-[9px] font-black uppercase lp-accent tracking-wider">Student Email Address</label>
-          <input type="email" id="m-student-email" required placeholder="e.g. binod@gmail.com" class="w-full px-3 py-2 rounded-xl text-xs font-bold transition outline-none" style="border:1px solid var(--rule);background:var(--lp-gold-soft);color:var(--ink);" value="binod@gmail.com" />
-          <span class="text-[9px] lp-muted italic">Defaulting to "binod@gmail.com" to instantly preview graded speaking scorecards.</span>
+        <div class="flex p-1 rounded-xl gap-1" style="background:var(--lp-gold-soft)">
+          <button type="button" onclick="setStudentAuthMode('signup')" id="m-student-tab-signup" class="flex-1 py-2 text-xs font-black rounded-lg transition">Create Free Account</button>
+          <button type="button" onclick="setStudentAuthMode('login')" id="m-student-tab-login" class="flex-1 py-2 text-xs font-black rounded-lg transition">Log In</button>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-          <div onclick="launchStudentRole('vault')" class="lp-role-card rounded-xl p-5 text-center">
-            <h4 class="lp-accent font-bold text-xs uppercase tracking-wide">Whole Resource Packet</h4>
-            <p class="text-[10px] lp-muted mt-1 leading-relaxed lp-reading">Full access to interactive grammar sheets and vocabulary guides.</p>
-          </div>
-          <div onclick="launchStudentRole('mocks')" class="lp-role-card rounded-xl p-5 text-center">
-            <h4 class="lp-accent font-bold text-xs uppercase tracking-wide">Just the Mock Tests</h4>
-            <p class="text-[10px] lp-muted mt-1 leading-relaxed lp-reading">Jump straight into the official Cambridge IELTS practice exams.</p>
-          </div>
+        <div class="space-y-3">
+          <input type="text" id="m-student-name" placeholder="Full name" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+          <input type="email" id="m-student-auth-email" required placeholder="Email address" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+          <input type="password" id="m-student-auth-password" required placeholder="Password (min. 6 characters)" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
         </div>
-        <div class="rounded-xl p-4 text-[11px] leading-relaxed" style="background:var(--lp-gold-soft);border:1px solid rgba(168,121,47,.25);color:#6b5424;">
-          <strong>Beta Notice:</strong> All student preparation resources are currently free of charge. Billing paywalls will be enabled once custom domains are linked.
-        </div>
-        <div class="text-center pt-2">
+
+        <button onclick="handleStudentAuthSubmit()" id="m-student-auth-btn" class="lp-btn-primary w-full py-3 font-extrabold rounded-full text-sm transition">Create Free Account</button>
+        <p id="m-student-auth-status" class="text-[11px] text-center min-h-[14px] lp-accent font-bold"></p>
+        <p class="text-center text-[10px] lp-muted"><button type="button" onclick="handleStudentForgotPassword()" class="underline hover:no-underline">Forgot password?</button></p>
+
+        <div class="text-center pt-1">
           <button onclick="goBackToStep('role')" class="text-xs font-bold lp-accent hover:underline">← Back to selection</button>
         </div>
       </div>
 
-      <!-- Step 2 (Consultancy): Pricing Plans -->
+      <!-- Step 2 (Consultancy): Real account login/signup, before pricing -->
+      <div class="p-8 space-y-5 hidden" id="m-step-consultancy-auth">
+        <div>
+          <h3 class="lp-serif text-xl font-bold" style="color:var(--ink)">Consultancy Account</h3>
+          <p class="text-xs lp-muted mt-1 lp-reading">Log in to manage your roster, or create an account to get started.</p>
+        </div>
+
+        <div class="flex p-1 rounded-xl gap-1" style="background:var(--lp-gold-soft)">
+          <button type="button" onclick="setConsultancyAuthMode('signup')" id="m-consultancy-tab-signup" class="flex-1 py-2 text-xs font-black rounded-lg transition">Create Account</button>
+          <button type="button" onclick="setConsultancyAuthMode('login')" id="m-consultancy-tab-login" class="flex-1 py-2 text-xs font-black rounded-lg transition">Log In</button>
+        </div>
+
+        <div class="space-y-3">
+          <input type="text" id="m-consultancy-name" placeholder="Consultancy name" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+          <input type="email" id="m-consultancy-auth-email" required placeholder="Admin email address" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+          <input type="password" id="m-consultancy-auth-password" required placeholder="Password (min. 6 characters)" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+        </div>
+
+        <button onclick="handleConsultancyAuthSubmit()" id="m-consultancy-auth-btn" class="lp-btn-primary w-full py-3 font-extrabold rounded-full text-sm transition">Create Account</button>
+        <p id="m-consultancy-auth-status" class="text-[11px] text-center min-h-[14px] lp-accent font-bold"></p>
+        <p class="text-center text-[10px] lp-muted"><button type="button" onclick="handleConsultancyForgotPassword()" class="underline hover:no-underline">Forgot password?</button></p>
+
+        <div class="text-center pt-1">
+          <button onclick="goBackToStep('role')" class="text-xs font-bold lp-accent hover:underline">← Back to selection</button>
+        </div>
+      </div>
+
+      <!-- Step 2b (Consultancy): Pricing Plans -->
       <div class="p-6 space-y-5 hidden" id="m-step-pricing">
         <div>
           <span class="text-[9px] font-black uppercase tracking-widest text-[#a8792f]">Zero setup fees · Cancel anytime</span>
@@ -1149,8 +1172,8 @@
               <input type="text" id="m-checkout-name" required placeholder="e.g. Kathmandu Education Hub" class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-[#f3ecd8] focus:bg-white outline-none focus:border-[#7a2331]" />
             </div>
             <div class="flex flex-col gap-1">
-              <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Admin Email (Watermark)</label>
-              <input type="email" id="m-checkout-email" required placeholder="admin@consultancy.com" class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-[#f3ecd8] focus:bg-white outline-none focus:border-[#7a2331]" />
+              <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Billed to (your logged-in account)</label>
+              <input type="email" id="m-checkout-email" disabled class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-[#ece4d2] text-[#766f62] outline-none" />
             </div>
           </div>
 
@@ -1210,10 +1233,17 @@
           </div>
         </div>
         <div class="flex flex-col gap-1">
+          <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Access Level</label>
+          <select id="crmStudAccessLevel" class="select-elegant px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none">
+            <option value="full">Whole Resource Packet</option>
+            <option value="mocks">Just the Mock Tests</option>
+          </select>
+        </div>
+        <div class="flex flex-col gap-1">
           <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Academic Notes</label>
           <textarea id="crmStudNotes" rows="2" placeholder="Academic weak points, target country, etc..." class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-[#f3ecd8] focus:bg-white outline-none focus:border-[#7a2331]"></textarea>
         </div>
-        <button type="submit" class="w-full py-2.5 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-xl text-xs transition">Save Student Profile</button>
+        <button type="submit" id="crmStudSubmitBtn" class="w-full py-2.5 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-xl text-xs transition">Save Student Profile</button>
       </form>
     </div>
   </div>
@@ -1381,6 +1411,7 @@
             status: cs.status || 'Active',
             access_expires_at: cs.access_expires_at || new Date(Date.now() + 30*24*60*60*1000).toISOString(),
             accessToken: cs.access_token || '',
+            accessLevel: cs.access_level || 'full',
             notes: '',
             mockHistory: []
           }));
@@ -1594,7 +1625,10 @@
         }
         localStorage.setItem('viatestprep_unlocked', 'true');
         localStorage.setItem('viatestprep_user_role', 'student');
-        localStorage.setItem('viatestprep_student_access', 'full');
+        // Set by whichever consultancy staff member registered this student
+        // (see the Access Level field in "Register Student") - "mocks" locks
+        // out the Skill Vault and Speaking Practice tabs, same as before.
+        localStorage.setItem('viatestprep_student_access', data.accessLevel === 'mocks' ? 'mocks' : 'full');
         localStorage.setItem('viatestprep_active_student_id', data.id);
         localStorage.setItem('viatestprep_active_student_name', data.name || '');
         localStorage.setItem('viatestprep_active_student_expires_at', data.accessExpiresAt || '');
@@ -1725,6 +1759,11 @@
         localStorage.removeItem('viatestprep_active_student_name');
         localStorage.removeItem('viatestprep_active_student_expires_at');
         localStorage.removeItem('viatestprep_consultancy_id');
+        // Ends the real Supabase Auth session too (self-serve students and
+        // consultancies both log in via supabaseClient.auth now) - otherwise
+        // it silently stays valid and the next login attempt on this browser
+        // could pick it back up.
+        if (supabaseClient) supabaseClient.auth.signOut();
         // keep student DB intact, just wipe active sessions
         renderAppView();
       }
@@ -1802,9 +1841,10 @@
     function selectModalRole(role) {
       if (role === 'student') {
         showModalStep('m-step-role', 'm-step-student');
+        setStudentAuthMode('signup');
       } else {
-        showModalStep('m-step-role', 'm-step-pricing');
-        adjustModalRates();
+        showModalStep('m-step-role', 'm-step-consultancy-auth');
+        setConsultancyAuthMode('signup');
       }
     }
 
@@ -1816,33 +1856,181 @@
     function goBackToStep(targetId) {
       document.getElementById('m-step-role').classList.add('hidden');
       document.getElementById('m-step-student').classList.add('hidden');
+      document.getElementById('m-step-consultancy-auth').classList.add('hidden');
       document.getElementById('m-step-pricing').classList.add('hidden');
       document.getElementById('m-step-checkout').classList.add('hidden');
-      
+
       document.getElementById('m-step-' + targetId).classList.remove('hidden');
+      if (targetId === 'pricing') adjustModalRates();
     }
 
-    function launchStudentRole(focusZone) {
-      const emailInput = document.getElementById('m-student-email');
-      const email = (emailInput && emailInput.value.trim()) || 'binod@gmail.com';
+    // ==========================================
+    // STUDENT AUTH (self-serve, real Supabase Auth account)
+    // ==========================================
+    let studentAuthMode = 'signup';
+    function setStudentAuthMode(mode) {
+      studentAuthMode = mode;
+      document.getElementById('m-student-name').classList.toggle('hidden', mode === 'login');
+      document.getElementById('m-student-tab-signup').classList.toggle('active-tab', mode === 'signup');
+      document.getElementById('m-student-tab-login').classList.toggle('active-tab', mode === 'login');
+      document.getElementById('m-student-auth-btn').textContent = mode === 'login' ? 'Log In' : 'Create Free Account';
+      setStudentAuthStatus('');
+    }
 
-      // Set student credentials
-      localStorage.setItem('viatestprep_unlocked', 'true');
-      localStorage.setItem('viatestprep_user_role', 'student');
-      localStorage.setItem('userEmail', email);
-      // "Just the Mock Tests" is a real access tier, not just a starting tab -
-      // it locks out the Skill Vault and Speaking Practice tabs (see
-      // applyStudentAccessGate). "Whole Resource Packet" gets everything.
-      localStorage.setItem('viatestprep_student_access', focusZone === 'mocks' ? 'mocks' : 'full');
+    function setStudentAuthStatus(msg) {
+      const el = document.getElementById('m-student-auth-status');
+      if (el) el.textContent = msg;
+    }
 
-      closeAccessModal();
-      renderAppView();
+    async function handleStudentAuthSubmit() {
+      if (!supabaseClient) { setStudentAuthStatus('❌ Service unavailable right now. Please try again shortly.'); return; }
+      const email = document.getElementById('m-student-auth-email').value.trim();
+      const password = document.getElementById('m-student-auth-password').value;
+      if (!email || !password) { setStudentAuthStatus('Please enter your email and password.'); return; }
 
-      if (focusZone === 'mocks') {
-        switchStudentTab('mocks');
-      } else {
-        switchStudentTab('vault');
+      const btn = document.getElementById('m-student-auth-btn');
+      btn.disabled = true;
+      try {
+        let session;
+        if (studentAuthMode === 'signup') {
+          setStudentAuthStatus('Creating your account...');
+          const { data, error } = await supabaseClient.auth.signUp({ email, password });
+          if (error) throw error;
+          if (!data.session) {
+            setStudentAuthStatus('✅ Check your email to confirm your account, then log in.');
+            setStudentAuthMode('login');
+            btn.disabled = false;
+            return;
+          }
+          session = data.session;
+        } else {
+          setStudentAuthStatus('Logging in...');
+          const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+          if (error) throw error;
+          session = data.session;
+        }
+
+        // Idempotent - safe to call on every login, not just signup, so a
+        // student row always exists even if a prior registration call failed.
+        const name = document.getElementById('m-student-name').value.trim();
+        const regRes = await fetch('/api/student/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ accessToken: session.access_token, name }),
+        });
+        const regData = await regRes.json();
+        if (regData.ok) {
+          localStorage.setItem('viatestprep_active_student_id', regData.id);
+          localStorage.setItem('viatestprep_active_student_name', regData.name || '');
+        }
+        localStorage.removeItem('viatestprep_active_student_expires_at'); // self-serve = free, no expiry yet
+        localStorage.removeItem('viatestprep_student_access'); // defaults to 'full'
+        localStorage.setItem('viatestprep_unlocked', 'true');
+        localStorage.setItem('viatestprep_user_role', 'student');
+        localStorage.setItem('userEmail', email);
+
+        closeAccessModal();
+        renderAppView();
+      } catch (err) {
+        console.error(err);
+        setStudentAuthStatus('❌ ' + (err.message || 'Something went wrong.'));
+        btn.disabled = false;
       }
+    }
+
+    async function handleStudentForgotPassword() {
+      const email = document.getElementById('m-student-auth-email').value.trim();
+      if (!email) { setStudentAuthStatus('Enter your email above first, then tap "Forgot password?" again.'); return; }
+      if (!supabaseClient) return;
+      const { error } = await supabaseClient.auth.resetPasswordForEmail(email);
+      setStudentAuthStatus(error ? '❌ ' + error.message : '✅ Password reset email sent - check your inbox.');
+    }
+
+    // ==========================================
+    // CONSULTANCY AUTH (real Supabase Auth account, required before checkout)
+    // ==========================================
+    let consultancyAuthMode = 'signup';
+    function setConsultancyAuthMode(mode) {
+      consultancyAuthMode = mode;
+      document.getElementById('m-consultancy-name').classList.toggle('hidden', mode === 'login');
+      document.getElementById('m-consultancy-tab-signup').classList.toggle('active-tab', mode === 'signup');
+      document.getElementById('m-consultancy-tab-login').classList.toggle('active-tab', mode === 'login');
+      document.getElementById('m-consultancy-auth-btn').textContent = mode === 'login' ? 'Log In' : 'Create Account';
+      setConsultancyAuthStatus('');
+    }
+
+    function setConsultancyAuthStatus(msg) {
+      const el = document.getElementById('m-consultancy-auth-status');
+      if (el) el.textContent = msg;
+    }
+
+    async function handleConsultancyAuthSubmit() {
+      if (!supabaseClient) { setConsultancyAuthStatus('❌ Service unavailable right now. Please try again shortly.'); return; }
+      const email = document.getElementById('m-consultancy-auth-email').value.trim();
+      const password = document.getElementById('m-consultancy-auth-password').value;
+      const name = document.getElementById('m-consultancy-name').value.trim();
+      if (!email || !password) { setConsultancyAuthStatus('Please enter your email and password.'); return; }
+      if (consultancyAuthMode === 'signup' && !name) { setConsultancyAuthStatus('Please enter your consultancy name.'); return; }
+
+      const btn = document.getElementById('m-consultancy-auth-btn');
+      btn.disabled = true;
+      try {
+        let session;
+        if (consultancyAuthMode === 'signup') {
+          setConsultancyAuthStatus('Creating your account...');
+          const { data, error } = await supabaseClient.auth.signUp({ email, password });
+          if (error) throw error;
+          if (!data.session) {
+            setConsultancyAuthStatus('✅ Check your email to confirm your account, then log in.');
+            setConsultancyAuthMode('login');
+            btn.disabled = false;
+            return;
+          }
+          session = data.session;
+        } else {
+          setConsultancyAuthStatus('Logging in...');
+          const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+          if (error) throw error;
+          session = data.session;
+        }
+
+        // Idempotent (see /api/consultancy/register.js) - creates a fresh
+        // unactivated row on first signup, or just claims/re-reads an
+        // existing one on login.
+        const regRes = await fetch('/api/consultancy/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ accessToken: session.access_token, name }),
+        });
+        const regData = await regRes.json();
+        if (!regData.ok) throw new Error(regData.error || 'Could not load your consultancy account.');
+
+        localStorage.setItem('viatestprep_unlocked', 'true');
+        localStorage.setItem('viatestprep_user_role', 'consultancy');
+        localStorage.setItem('userEmail', email);
+        localStorage.setItem('viatestprep_consultancy_id', regData.id);
+        localStorage.setItem('viatestprep_consultancy_name', regData.name);
+        localStorage.setItem('viatestprep_consultancy_plan', regData.planName);
+        localStorage.setItem('viatestprep_consultancy_expires_at', regData.expiresAt);
+
+        closeAccessModal();
+        // renderAppView() -> initConsultancyDashboard() shows the CRM if the
+        // plan is active, or its own "choose a plan" / "renew" lock screen if
+        // not - no need to branch on that here too (see initConsultancyDashboard).
+        renderAppView();
+      } catch (err) {
+        console.error(err);
+        setConsultancyAuthStatus('❌ ' + (err.message || 'Something went wrong.'));
+        btn.disabled = false;
+      }
+    }
+
+    async function handleConsultancyForgotPassword() {
+      const email = document.getElementById('m-consultancy-auth-email').value.trim();
+      if (!email) { setConsultancyAuthStatus('Enter your email above first, then tap "Forgot password?" again.'); return; }
+      if (!supabaseClient) return;
+      const { error } = await supabaseClient.auth.resetPasswordForEmail(email);
+      setConsultancyAuthStatus(error ? '❌ ' + error.message : '✅ Password reset email sent - check your inbox.');
     }
 
     function launchAdminBypass() {
@@ -1872,6 +2060,9 @@
       const price = PLAN_PRICES[pricingDurationDays][plan];
 
       document.getElementById('m-checkout-desc').innerHTML = `Registering for <strong>${planName}</strong> (${pricingDurationDays} days access) at <strong>Rs. ${price.toLocaleString()}</strong> - up to <strong>${capacity} student seats</strong> included, full feature access, no setup fee.`;
+      document.getElementById('m-checkout-email').value = localStorage.getItem('userEmail') || '';
+      const nameField = document.getElementById('m-checkout-name');
+      if (!nameField.value) nameField.value = localStorage.getItem('viatestprep_consultancy_name') || '';
 
       showModalStep('m-step-pricing', 'm-step-checkout');
     }
@@ -1881,14 +2072,26 @@
     // real eSewa/Khalti transaction, and only activates the consultancy
     // account after independently verifying the payment succeeded. See
     // /api/payment/*.js. Neither function here ever sees a secret key.
-    function getCheckoutFormValues() {
+    // The billed email always comes from the caller's own live Supabase Auth
+    // session (verified server-side in esewa-initiate.js/khalti-initiate.js),
+    // never from a client-typed field - otherwise anyone could initiate (and
+    // pay for) a plan under an email they don't actually own.
+    async function getCheckoutFormValues() {
       const consultancyName = document.getElementById('m-checkout-name').value.trim();
-      const consultancyEmail = document.getElementById('m-checkout-email').value.trim();
-      if (!consultancyName || !consultancyEmail) {
-        alert('Please enter your consultancy name and admin email first.');
+      if (!consultancyName) {
+        alert('Please enter your consultancy name first.');
         return null;
       }
-      return { consultancyName, consultancyEmail };
+      if (!supabaseClient) {
+        alert('Please log in to your consultancy account first.');
+        return null;
+      }
+      const { data } = await supabaseClient.auth.getSession();
+      if (!data.session) {
+        alert('Your session has expired. Please log in again before checking out.');
+        return null;
+      }
+      return { consultancyName, accessToken: data.session.access_token };
     }
 
     function setCheckoutStatus(msg) {
@@ -1897,7 +2100,7 @@
     }
 
     async function startEsewaPayment() {
-      const form = getCheckoutFormValues();
+      const form = await getCheckoutFormValues();
       if (!form) return;
       const esewaBtn = document.getElementById('m-pay-esewa-btn');
       const khaltiBtn = document.getElementById('m-pay-khalti-btn');
@@ -1912,7 +2115,7 @@
             planName: modalSelectedPlan,
             durationDays: pricingDurationDays,
             consultancyName: form.consultancyName,
-            consultancyEmail: form.consultancyEmail,
+            accessToken: form.accessToken,
           }),
         });
         const data = await res.json();
@@ -1937,7 +2140,7 @@
     }
 
     async function startKhaltiPayment() {
-      const form = getCheckoutFormValues();
+      const form = await getCheckoutFormValues();
       if (!form) return;
       const esewaBtn = document.getElementById('m-pay-esewa-btn');
       const khaltiBtn = document.getElementById('m-pay-khalti-btn');
@@ -1952,7 +2155,7 @@
             planName: modalSelectedPlan,
             durationDays: pricingDurationDays,
             consultancyName: form.consultancyName,
-            consultancyEmail: form.consultancyEmail,
+            accessToken: form.accessToken,
           }),
         });
         const data = await res.json();
@@ -1980,13 +2183,18 @@
         localStorage.setItem('userEmail', email);
         // consultancy name/plan/expiry are read back from the `consultancies`
         // row that esewa-verify/khalti-verify wrote, not trusted from the URL.
-        // Looked up via a server-side endpoint (service role key) rather than
-        // a direct anon-key select, since `consultancies` holds every paying
-        // customer's name/email/plan/expiry - the anon key must never be able
-        // to read that table directly (see schema.sql's RLS section).
-        fetch('/api/consultancy/lookup?email=' + encodeURIComponent(email))
-          .then(r => r.json())
-          .then(data => {
+        // Looked up via a server-side endpoint (service role key) using the
+        // caller's own live Supabase Auth session (persisted across the
+        // redirect to eSewa/Khalti and back, same origin) - never a raw email
+        // query param, since `consultancies` holds every paying customer's
+        // name/email/plan/expiry (see schema.sql's RLS section).
+        (async () => {
+          try {
+            if (!supabaseClient) { renderAppView(); return; }
+            const { data: sessionData } = await supabaseClient.auth.getSession();
+            if (!sessionData.session) { renderAppView(); return; }
+            const res = await fetch('/api/consultancy/lookup?accessToken=' + encodeURIComponent(sessionData.session.access_token));
+            const data = await res.json();
             if (data.ok) {
               localStorage.setItem('viatestprep_consultancy_name', data.name);
               localStorage.setItem('viatestprep_consultancy_plan', data.planName);
@@ -1997,7 +2205,11 @@
               localStorage.setItem('viatestprep_consultancy_id', data.id);
             }
             renderAppView();
-          }).catch(() => renderAppView());
+          } catch (e) {
+            console.error(e);
+            renderAppView();
+          }
+        })();
       } else if (paymentStatus === 'failed') {
         alert('Payment could not be verified. If you were charged, contact support - nothing has been activated on this account yet.');
       }
@@ -2586,6 +2798,15 @@
       const overlay = document.getElementById('crm-expired-overlay');
       const activeContainer = document.getElementById('crm-active-views-container');
       if (expiresAt && new Date() > new Date(expiresAt)) {
+        // A brand-new signup (never paid) has plan_name 'None' and an
+        // already-lapsed expires_at (see insertConsultancyShell) - distinct
+        // copy from an actual renewal so it doesn't read as an error.
+        const neverActivated = (localStorage.getItem('viatestprep_consultancy_plan') || '') === 'None';
+        document.getElementById('crm-expired-title').textContent = neverActivated ? 'Choose a Plan to Get Started' : 'Subscription Expired';
+        document.getElementById('crm-expired-desc').textContent = neverActivated
+          ? 'Your consultancy account is set up - pick a plan to unlock your student roster, speaking grader, and material vault.'
+          : 'Your consultancy plan has expired. Renew to regain access to your student roster, speaking grader, and material vault - nothing has been deleted.';
+        document.getElementById('crm-expired-cta').textContent = neverActivated ? 'Choose a Plan' : 'Renew Subscription';
         overlay.classList.remove('hidden');
         activeContainer.classList.add('hidden');
         return;
@@ -2760,12 +2981,12 @@
     function openCRMAddModal() {
       const rawPlan = (localStorage.getItem('viatestprep_consultancy_plan') || 'Growth').replace(' Plan', '');
       const capacity = PLAN_CAPACITY[rawPlan] || 25;
+      // Hard block, not a confirm()-to-override warning: a plan's seat cap is
+      // a real limit now, consistent with CSV import (see importCRMFromCSV).
       if (rawPlan !== 'Developer Bypass' && crmStudents.length >= capacity) {
-        const proceed = confirm(`You've reached your ${rawPlan} plan's ${capacity}-student capacity.\n\nClick "Cancel" to upgrade your plan, or "OK" to register this student anyway.`);
-        if (!proceed) {
-          openUpgradeFlow();
-          return;
-        }
+        alert(`You've reached your ${rawPlan} plan's ${capacity}-student capacity. Upgrade your plan to register more students.`);
+        openUpgradeFlow();
+        return;
       }
 
       document.getElementById('crmStudId').value = '';
@@ -2774,8 +2995,9 @@
       document.getElementById('crmStudPhone').value = '';
       document.getElementById('crmStudTarget').value = '7.0';
       document.getElementById('crmStudStatus').value = 'Active';
+      document.getElementById('crmStudAccessLevel').value = 'full';
       document.getElementById('crmStudNotes').value = '';
-      
+
       document.getElementById('crmModalTitle').textContent = 'Register New Student';
       document.getElementById('crmAddStudentModal').classList.remove('hidden');
     }
@@ -2793,6 +3015,7 @@
       const phone = document.getElementById('crmStudPhone').value.trim();
       const target = parseFloat(document.getElementById('crmStudTarget').value);
       const status = document.getElementById('crmStudStatus').value;
+      const accessLevel = document.getElementById('crmStudAccessLevel').value;
       const notes = document.getElementById('crmStudNotes').value.trim();
 
       const access_expires_at = new Date(Date.now() + 30*24*60*60*1000).toISOString();
@@ -2804,12 +3027,24 @@
           stud.phone = phone;
           stud.target = target;
           stud.status = status;
+          stud.accessLevel = accessLevel;
           stud.notes = notes;
         }
         if (supabaseClient) {
-          supabaseClient.from('students').update({ name, phone, target_band: target, status }).eq('id', id).then();
+          supabaseClient.from('students').update({ name, phone, target_band: target, status, access_level: accessLevel }).eq('id', id).then();
         }
       } else {
+        // Hard cap re-check: guards CRM-only "Save" flows (e.g. reopening the
+        // modal in another tab) that skip openCRMAddModal()'s own gate.
+        const rawPlan = (localStorage.getItem('viatestprep_consultancy_plan') || 'Growth').replace(' Plan', '');
+        const capacity = PLAN_CAPACITY[rawPlan] || 25;
+        if (rawPlan !== 'Developer Bypass' && crmStudents.length >= capacity) {
+          alert(`You've reached your ${rawPlan} plan's ${capacity}-student capacity. Upgrade your plan to register more students.`);
+          closeCRMAddModal();
+          openUpgradeFlow();
+          return;
+        }
+
         const newId = 'st-' + Date.now();
         const studentId = nextStudentDisplayId();
         // The secret half of this student's own "?student=<token>" login
@@ -2820,14 +3055,14 @@
         const isRealConsultancy = consultancyId && consultancyId !== '__owner__';
         crmStudents.push({
           id: newId, studentId, accessToken,
-          name, email, phone, target, status, notes, access_expires_at,
+          name, email, phone, target, status, accessLevel, notes, access_expires_at,
           mockHistory: []
         });
         if (supabaseClient) {
           supabaseClient.from('students').insert([{
             id: newId, student_id: studentId, name, email, phone,
             target_band: target, status, access_expires_at,
-            access_token: accessToken,
+            access_token: accessToken, access_level: accessLevel,
             ...(isRealConsultancy ? { consultancy_id: consultancyId } : {}),
           }]).then(({ error }) => { if (error) console.error('Supabase student insert error:', error); });
         }
@@ -2871,8 +3106,9 @@
       document.getElementById('crmStudPhone').value = stud.phone;
       document.getElementById('crmStudTarget').value = stud.target;
       document.getElementById('crmStudStatus').value = stud.status;
+      document.getElementById('crmStudAccessLevel').value = stud.accessLevel || 'full';
       document.getElementById('crmStudNotes').value = stud.notes || '';
-      
+
       document.getElementById('crmModalTitle').textContent = 'Modify Student Profile';
       document.getElementById('crmAddStudentModal').classList.remove('hidden');
     }
@@ -3245,7 +3481,7 @@
 
             crmStudents.push({
               id: newId, studentId, accessToken,
-              name, email, phone, target, status, notes, access_expires_at,
+              name, email, phone, target, status, accessLevel: 'full', notes, access_expires_at,
               mockHistory: []
             });
             added++;
@@ -3254,7 +3490,7 @@
               supabaseClient.from('students').insert([{
                 id: newId, student_id: studentId, name, email, phone,
                 target_band: target, status, access_expires_at,
-                access_token: accessToken,
+                access_token: accessToken, access_level: 'full',
                 ...(isRealConsultancy ? { consultancy_id: consultancyId } : {}),
               }]).then(({ error }) => { if (error) console.error('Supabase CSV import insert error:', error); });
             }

@@ -3,11 +3,20 @@ CREATE TABLE IF NOT EXISTS consultancies (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   name TEXT NOT NULL,
   email TEXT UNIQUE NOT NULL,
-  plan_name TEXT NOT NULL,          -- 'Starter', 'Growth', 'Enterprise'
-  duration_days INT NOT NULL,       -- 30, 90, 365
+  plan_name TEXT NOT NULL,          -- 'Starter', 'Growth', 'Enterprise', or 'None' before first payment
+  duration_days INT NOT NULL,       -- 30, 90, 365, or 0 before first payment
   expires_at TIMESTAMP WITH TIME ZONE NOT NULL,
+  -- Ties this row to a real Supabase Auth account (email+password login),
+  -- set by /api/consultancy/register.js right after signup. Lets the CRM
+  -- know which row is "mine" from a verified session instead of trusting a
+  -- client-typed email - the previous design let anyone who knew a paying
+  -- consultancy's email initiate a checkout that overwrote their plan.
+  owner_user_id UUID REFERENCES auth.users(id),
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
+
+-- Run this in your Supabase SQL Editor if `consultancies` already exists without it:
+-- ALTER TABLE consultancies ADD COLUMN IF NOT EXISTS owner_user_id UUID REFERENCES auth.users(id);
 
 -- 2. Students Table
 CREATE TABLE IF NOT EXISTS students (
@@ -19,19 +28,31 @@ CREATE TABLE IF NOT EXISTS students (
   student_id TEXT UNIQUE,           -- display ID shown in the CRM, e.g. 'VTP-0001'
   target_band NUMERIC(2,1) DEFAULT 7.0,
   status TEXT DEFAULT 'Active',     -- 'Active', 'Completed', 'Paused'
-  access_expires_at TIMESTAMP WITH TIME ZONE NOT NULL,
+  -- NULL means "no expiry" - used by self-serve free accounts, which have no
+  -- paid term yet. Consultancy-managed students always get a real date.
+  access_expires_at TIMESTAMP WITH TIME ZONE,
+  access_level TEXT DEFAULT 'full', -- 'full' or 'mocks' - set by the consultancy when registering a student
   -- The secret half of a student's personal "?student=<token>" login link.
   -- Generated client-side (crypto.randomUUID()) when a consultancy adds the
   -- student in the CRM. Anyone holding this token can log in as this student
   -- (same trust model as the site's owner-bypass key) - it is only ever
   -- shown to CRM staff via "Copy Access Link", never listed anywhere public.
   access_token TEXT UNIQUE,
+  -- Set for self-serve students who signed up themselves (real Supabase Auth
+  -- account, email+password) rather than being added by a consultancy.
+  -- consultancy_id is NULL for these; a student row only ever has one of
+  -- consultancy_id (consultancy-managed) or auth_user_id (self-serve) as its
+  -- real "owner", never both.
+  auth_user_id UUID REFERENCES auth.users(id),
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Run these in your Supabase SQL Editor if `students` already exists without them:
 -- ALTER TABLE students ADD COLUMN IF NOT EXISTS access_token TEXT UNIQUE;
 -- ALTER TABLE students ADD COLUMN IF NOT EXISTS student_id TEXT UNIQUE;
+-- ALTER TABLE students ADD COLUMN IF NOT EXISTS access_level TEXT DEFAULT 'full';
+-- ALTER TABLE students ADD COLUMN IF NOT EXISTS auth_user_id UUID REFERENCES auth.users(id);
+-- ALTER TABLE students ALTER COLUMN access_expires_at DROP NOT NULL;
 
 -- 3. Mock Test History Table (Reading / Listening / Writing scores and essays)
 CREATE TABLE IF NOT EXISTS mock_history (

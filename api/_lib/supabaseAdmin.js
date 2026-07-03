@@ -97,6 +97,36 @@ async function getConsultancyByEmail(email) {
   return rows[0] || null;
 }
 
+// Creates a brand-new, unactivated consultancy row (no plan yet, already
+// "expired" so the CRM lock screen shows immediately) tied to a real Supabase
+// Auth account. Used by /api/consultancy/register.js right after signup.
+async function insertConsultancyShell({ name, email, owner_user_id }) {
+  const rows = await restRequest('consultancies', {
+    method: 'POST',
+    body: {
+      name, email, owner_user_id,
+      plan_name: 'None',
+      duration_days: 0,
+      expires_at: new Date(0).toISOString(),
+    },
+  });
+  return rows[0];
+}
+
+// Attaches a Supabase Auth account to an existing consultancies row that was
+// created before real login existed (a legacy email-only row from a payment
+// made prior to this feature). Only ever sets owner_user_id - never touches
+// plan_name/expires_at, so a first login can't accidentally reset a paying
+// customer's active subscription.
+async function claimConsultancyOwner(id, owner_user_id) {
+  const rows = await restRequest('consultancies', {
+    method: 'PATCH',
+    query: `?id=eq.${encodeURIComponent(id)}`,
+    body: { owner_user_id },
+  });
+  return rows[0];
+}
+
 // Looks up a single student by their private access_token (the secret half of
 // their "?student=<token>" login link). Done server-side with the service role
 // key so we never need a public RLS SELECT policy on the whole `students`
@@ -118,6 +148,33 @@ async function getStudentById(id) {
   return rows[0] || null;
 }
 
+// Self-serve students (consultancy_id NULL) are looked up by their Supabase
+// Auth id, not an access_token - they log in with their own email+password.
+async function getStudentByAuthUserId(userId) {
+  const rows = await restRequest('students', {
+    method: 'GET',
+    query: `?auth_user_id=eq.${encodeURIComponent(userId)}&limit=1`,
+  });
+  return rows[0] || null;
+}
+
+// Creates a free, self-serve student row - no consultancy, no expiry (there's
+// no paid plan for individuals yet; access_expires_at stays NULL, which every
+// expiry check in this app treats as "never expires").
+async function insertSelfServeStudent({ name, email, auth_user_id, student_id }) {
+  const rows = await restRequest('students', {
+    method: 'POST',
+    body: {
+      name, email, auth_user_id, student_id,
+      consultancy_id: null,
+      access_expires_at: null,
+      access_level: 'full',
+      status: 'Active',
+    },
+  });
+  return rows[0];
+}
+
 async function insertMockResult(result) {
   const rows = await restRequest('mock_history', { method: 'POST', body: result });
   return rows[0];
@@ -130,7 +187,11 @@ module.exports = {
   markOrderFailed,
   upsertConsultancy,
   getConsultancyByEmail,
+  insertConsultancyShell,
+  claimConsultancyOwner,
   getStudentByAccessToken,
   getStudentById,
+  getStudentByAuthUserId,
+  insertSelfServeStudent,
   insertMockResult,
 };

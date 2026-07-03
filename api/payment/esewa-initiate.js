@@ -9,6 +9,7 @@
 const crypto = require('crypto');
 const { resolveAmount, PLAN_CAPACITY } = require('../_lib/plans');
 const { insertOrder } = require('../_lib/supabaseAdmin');
+const { verifyAuthUser } = require('../_lib/authUser');
 
 // eSewa's own published UAT/sandbox test credentials - meant to be used by
 // any developer testing against their rc-epay sandbox, not a real secret.
@@ -24,10 +25,20 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const { planName, durationDays, consultancyName, consultancyEmail } = req.body || {};
+    const { planName, durationDays, consultancyName, accessToken } = req.body || {};
 
-    if (!planName || !durationDays || !consultancyName || !consultancyEmail) {
-      res.status(400).json({ error: 'Missing planName, durationDays, consultancyName, or consultancyEmail' });
+    // The email being charged comes from the caller's own verified login
+    // session, never from a client-typed field - otherwise anyone could pay
+    // for (or downgrade) a plan under an email they don't actually own.
+    const user = await verifyAuthUser(accessToken);
+    if (!user) {
+      res.status(401).json({ error: 'Please log in to your consultancy account before checking out.' });
+      return;
+    }
+    const consultancyEmail = user.email;
+
+    if (!planName || !durationDays || !consultancyName) {
+      res.status(400).json({ error: 'Missing planName, durationDays, or consultancyName' });
       return;
     }
     if (!PLAN_CAPACITY[planName]) {
