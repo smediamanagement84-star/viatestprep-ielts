@@ -3311,7 +3311,7 @@
             target_band: target, status, access_expires_at,
             access_token: accessToken, access_level: accessLevel,
             ...(isRealConsultancy ? { consultancy_id: consultancyId } : {}),
-          }]).then(({ error }) => { if (error) console.error('Supabase student insert error:', error); });
+          }]).then(({ error }) => { warnIfSupabaseWriteFailed(error, `Registering ${name}`); });
         }
       }
 
@@ -3728,7 +3728,8 @@
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const validStatuses = ['Active', 'Completed', 'Paused'];
 
-        let added = 0, skippedCapacity = 0, skippedInvalid = 0, skippedDuplicate = 0;
+        let added = 0, skippedCapacity = 0, skippedInvalid = 0, skippedDuplicate = 0, cloudSyncFailures = 0, lastCloudError = '';
+        const insertPromises = [];
         for (let i = 1; i < lines.length; i++) {
           if (!isUnlimited && crmStudents.length >= capacity) { skippedCapacity++; continue; }
 
@@ -3764,28 +3765,49 @@
             added++;
 
             if (supabaseClient) {
-              supabaseClient.from('students').insert([{
-                id: newId, student_id: studentId, name, email, phone,
-                target_band: target, status, access_expires_at,
-                access_token: accessToken, access_level: 'full',
-                ...(isRealConsultancy ? { consultancy_id: consultancyId } : {}),
-              }]).then(({ error }) => { if (error) console.error('Supabase CSV import insert error:', error); });
+              insertPromises.push(
+                supabaseClient.from('students').insert([{
+                  id: newId, student_id: studentId, name, email, phone,
+                  target_band: target, status, access_expires_at,
+                  access_token: accessToken, access_level: 'full',
+                  ...(isRealConsultancy ? { consultancy_id: consultancyId } : {}),
+                }]).then(({ error }) => {
+                  if (error) {
+                    console.error('Supabase CSV import insert error:', error);
+                    cloudSyncFailures++;
+                    lastCloudError = error.message || String(error);
+                  }
+                })
+              );
             }
           } else {
             skippedInvalid++;
           }
         }
 
-        localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
-        renderCRMTable();
-        populateCRMGraderSelect();
-        updateCRMCapacityWidget();
+        // Wait for every cloud insert to finish (or fail) before summarizing -
+        // otherwise this alert would always report 0 failures, since none of
+        // the async inserts above have resolved yet at this point.
+        Promise.all(insertPromises).then(() => {
+          localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
+          renderCRMTable();
+          populateCRMGraderSelect();
+          updateCRMCapacityWidget();
 
-        let msg = `CSV roster parsed. Added ${added} new student profile${added === 1 ? '' : 's'}.`;
-        if (skippedDuplicate) msg += ` ${skippedDuplicate} skipped (already on roster).`;
-        if (skippedInvalid) msg += ` ${skippedInvalid} skipped (missing name or invalid email).`;
-        if (skippedCapacity) msg += ` ${skippedCapacity} skipped - plan seat limit (${capacity}) reached. Upgrade to import the rest.`;
-        alert(msg);
+          let msg = `CSV roster parsed. Added ${added} new student profile${added === 1 ? '' : 's'}.`;
+          if (skippedDuplicate) msg += ` ${skippedDuplicate} skipped (already on roster).`;
+          if (skippedInvalid) msg += ` ${skippedInvalid} skipped (missing name or invalid email).`;
+          if (skippedCapacity) msg += ` ${skippedCapacity} skipped - plan seat limit (${capacity}) reached. Upgrade to import the rest.`;
+          if (cloudSyncFailures) {
+            msg += `\n\n⚠️ ${cloudSyncFailures} student${cloudSyncFailures === 1 ? '' : 's'} saved locally but FAILED to sync to the cloud: ${lastCloudError}`;
+            if (/column .* does not exist/i.test(lastCloudError)) {
+              msg += '\n\nRun run-this-migration.sql in your Supabase SQL Editor, then re-import.';
+            } else {
+              msg += '\n\nTheir access links will not work until this is fixed.';
+            }
+          }
+          alert(msg);
+        });
       };
       reader.readAsText(file);
       e.target.value = '';
@@ -3810,6 +3832,23 @@
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
+    }
+
+    // A Supabase write silently failing used to just log to the browser
+    // console - a student would still show up fine in the local roster table
+    // (that array is updated in memory regardless), but their access link
+    // would never actually work since the row never made it to the cloud,
+    // with nothing telling the consultancy why. Surfaces it as a real alert
+    // instead, with a specific hint when it looks like a missing-column
+    // schema issue (see run-this-migration.sql).
+    function warnIfSupabaseWriteFailed(error, context) {
+      if (!error) return;
+      console.error(`Supabase write failed (${context}):`, error);
+      const msg = String(error.message || error);
+      const schemaHint = /column .* does not exist/i.test(msg)
+        ? '\n\nThis looks like the database is missing a column this app needs - run run-this-migration.sql in your Supabase SQL Editor, then try again.'
+        : '';
+      alert(`⚠️ ${context} saved locally, but the cloud sync failed:\n\n${msg}${schemaHint}\n\nAccess links / cross-device sync won't work for this record until it's fixed.`);
     }
   </script>
 </body>
