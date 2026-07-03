@@ -7,7 +7,7 @@
 // claim to (via accessToken) - otherwise anyone could POST an arbitrary
 // {email} here and create student rows for people who never signed up.
 const { verifyAuthUser } = require('../_lib/authUser');
-const { getStudentByAuthUserId, insertSelfServeStudent } = require('../_lib/supabaseAdmin');
+const { getStudentByAuthUserId, insertSelfServeStudent, friendlyDbError } = require('../_lib/supabaseAdmin');
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') {
@@ -40,6 +40,6 @@ module.exports = async (req, res) => {
     res.status(200).json({ ok: true, id: row.id, name: row.name });
   } catch (err) {
     console.error('student/register error:', err);
-    res.status(500).json({ ok: false, error: 'Could not create your student account. Please try again in a moment.' });
+    res.status(500).json({ ok: false, error: friendlyDbError(err) || 'Could not create your student account. Please try again in a moment.' });
   }
 };

@@ -41,6 +41,20 @@ async function restRequest(table, { method = 'GET', query = '', body, headers = 
   return data;
 }
 
+// Turns "column X does not exist" (Postgres code 42703, thrown by
+// restRequest above whenever a query touches a column this session's
+// features expect but the live database doesn't have yet) into an
+// actionable message instead of a generic "something went wrong" - this is
+// purely an operational hint (which migration to run), not sensitive, so
+// it's safe to send to the client rather than only logging it server-side.
+function friendlyDbError(err) {
+  const msg = String((err && err.message) || err);
+  if (msg.includes('42703') || /column .* does not exist/i.test(msg)) {
+    return 'Database schema is out of date - run run-this-migration.sql in your Supabase SQL Editor (see the repo root), then try again.';
+  }
+  return null;
+}
+
 async function insertOrder(order) {
   const rows = await restRequest('orders', { method: 'POST', body: order });
   return rows[0];
@@ -234,4 +248,5 @@ module.exports = {
   getStudentByAuthUserId,
   insertSelfServeStudent,
   insertMockResult,
+  friendlyDbError,
 };

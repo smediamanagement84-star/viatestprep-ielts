@@ -6,7 +6,7 @@
 // with the service role key so `consultancies` never needs a public RLS
 // SELECT policy for the anon key to read directly.
 const { verifyAuthUser } = require('../_lib/authUser');
-const { getConsultancyByEmail } = require('../_lib/supabaseAdmin');
+const { getConsultancyByEmail, friendlyDbError } = require('../_lib/supabaseAdmin');
 
 module.exports = async (req, res) => {
   try {
@@ -32,6 +32,6 @@ module.exports = async (req, res) => {
     });
   } catch (err) {
     console.error('consultancy/lookup error:', err);
-    res.status(500).json({ ok: false, error: 'Could not look up consultancy. Please try again in a moment.' });
+    res.status(500).json({ ok: false, error: friendlyDbError(err) || 'Could not look up consultancy. Please try again in a moment.' });
   }
 };

@@ -6,7 +6,7 @@
 // attaching owner_user_id - its plan_name/expires_at are never touched here,
 // so a first login can't accidentally reset an active subscription.
 const { verifyAuthUser } = require('../_lib/authUser');
-const { getConsultancyByEmail, insertConsultancyShell, claimConsultancyOwner } = require('../_lib/supabaseAdmin');
+const { getConsultancyByEmail, insertConsultancyShell, claimConsultancyOwner, friendlyDbError } = require('../_lib/supabaseAdmin');
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') {
@@ -42,6 +42,6 @@ module.exports = async (req, res) => {
     });
   } catch (err) {
     console.error('consultancy/register error:', err);
-    res.status(500).json({ ok: false, error: 'Could not set up your consultancy account. Please try again in a moment.' });
+    res.status(500).json({ ok: false, error: friendlyDbError(err) || 'Could not set up your consultancy account. Please try again in a moment.' });
   }
 };
