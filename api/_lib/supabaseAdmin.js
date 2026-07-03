@@ -84,10 +84,39 @@ async function upsertConsultancy({ name, email, plan_name, duration_days, expire
   return rows[0];
 }
 
+// Looks up a single student by their private access_token (the secret half of
+// their "?student=<token>" login link). Done server-side with the service role
+// key so we never need a public RLS SELECT policy on the whole `students`
+// table just to support this one lookup - that would let anyone holding the
+// anon key page through every consultancy's entire roster.
+async function getStudentByAccessToken(token) {
+  const rows = await restRequest('students', {
+    method: 'GET',
+    query: `?access_token=eq.${encodeURIComponent(token)}&limit=1`,
+  });
+  return rows[0] || null;
+}
+
+async function getStudentById(id) {
+  const rows = await restRequest('students', {
+    method: 'GET',
+    query: `?id=eq.${encodeURIComponent(id)}&limit=1`,
+  });
+  return rows[0] || null;
+}
+
+async function insertMockResult(result) {
+  const rows = await restRequest('mock_history', { method: 'POST', body: result });
+  return rows[0];
+}
+
 module.exports = {
   insertOrder,
   getOrderByTransactionUuid,
   markOrderPaid,
   markOrderFailed,
   upsertConsultancy,
+  getStudentByAccessToken,
+  getStudentById,
+  insertMockResult,
 };

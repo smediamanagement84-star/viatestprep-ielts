@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IELTS Listening Test — ViATestPrep</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@600;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <style>
     * { box-sizing: border-box; }
     :root {
@@ -596,27 +595,26 @@
 
       localStorage.setItem('score_test_' + testId + '_listening', band.toFixed(1));
 
-      var supabaseUrl = localStorage.getItem('supabase_url');
-      var supabaseKey = localStorage.getItem('supabase_key');
-      var userEmail = localStorage.getItem('userEmail');
-      if (supabaseUrl && supabaseKey && userEmail) {
-        try {
-          var sc = supabase.createClient(supabaseUrl, supabaseKey);
-          sc.from('students').select('id').eq('email', userEmail).single().then(function(res) {
-            if (res.data) {
-              sc.from('mock_history').insert({ student_id: res.data.id, test_name: testData.title, module_type: 'listening', listening_band: parseFloat(band.toFixed(1)), reading_band: null }).then(function(r) { if (r.error) console.error(r.error); });
-            }
-          });
-        } catch(e) { console.error(e); }
-      }
-
-      var allStudents = JSON.parse(localStorage.getItem('viatestprep_students') || '[]');
-      var student = allStudents.find(function(s) { return s.email && s.email.toLowerCase() === (userEmail || '').toLowerCase(); });
-      if (student) {
-        if (!student.mockHistory) student.mockHistory = [];
-        student.mockHistory = student.mockHistory.filter(function(h) { return h.test !== testData.title || h.listening === '—'; });
-        student.mockHistory.push({ test: testData.title, date: new Date().toISOString().split('T')[0], listening: band.toFixed(1), reading: '—', writing: '—', overall: band.toFixed(1) });
-        localStorage.setItem('viatestprep_students', JSON.stringify(allStudents));
+      // Auto-syncs this result into the student's CRM profile - but only if
+      // this browser is logged in as a real roster student (i.e. they got
+      // here via their own private "?student=<token>" link on the portal,
+      // see attemptStudentTokenLogin in index.html). Same-origin localStorage
+      // makes viatestprep_active_student_id visible here without needing to
+      // pass anything through the URL. Anonymous "free trial" visitors have
+      // no active student id, so nothing gets recorded for them - same as
+      // before, they just see their score on this page.
+      var activeStudentId = localStorage.getItem('viatestprep_active_student_id');
+      if (activeStudentId) {
+        fetch('/api/mock/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            studentId: activeStudentId,
+            testName: testData.title,
+            moduleType: 'listening',
+            listeningBand: parseFloat(band.toFixed(1))
+          })
+        }).catch(function(e) { console.error('Could not sync listening result to CRM:', e); });
       }
 
       alert('Test Submitted!\nYour Score: ' + correctCount + '/' + totalQs + '\nEstimated IELTS Band: ' + band.toFixed(1));

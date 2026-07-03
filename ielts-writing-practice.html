@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>IELTS Writing Test — ViATestPrep</title>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@600;800&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
   * { box-sizing: border-box; }
   :root {
@@ -385,48 +384,24 @@ function submitTest(autoSubmit = false) {
 
   localStorage.setItem(`score_test_${testId}_writing`, 'completed');
 
-  const supabaseUrl = localStorage.getItem('supabase_url');
-  const supabaseKey = localStorage.getItem('supabase_key');
-  const userEmail = localStorage.getItem('userEmail');
-
-  if (supabaseUrl && supabaseKey && userEmail) {
-    try {
-      const { createClient } = window['supabase'];
-      const supabaseClient = createClient(supabaseUrl, supabaseKey);
-      supabaseClient.from('students').select('id').eq('email', userEmail).single().then(res => {
-        if (res.data) {
-          supabaseClient.from('mock_history').insert({
-            student_id: res.data.id,
-            test_name: testData.title,
-            module_type: 'writing',
-            writing_task1: essayContent[1],
-            writing_task2: essayContent[2],
-            writing_band: null
-          }).then(insertRes => {
-            if (insertRes.error) console.error('Supabase write error:', insertRes.error);
-          });
-        }
-      });
-    } catch (e) {
-      console.error('Supabase client error:', e);
-    }
-  }
-
-  let allStudents = JSON.parse(localStorage.getItem('viatestprep_students') || '[]');
-  let currentStudent = allStudents.find(s => s.email && s.email.toLowerCase() === (userEmail || '').toLowerCase());
-  if (currentStudent) {
-    if (!currentStudent.mockHistory) currentStudent.mockHistory = [];
-    currentStudent.mockHistory = currentStudent.mockHistory.filter(h => h.test !== testData.title || h.writing === undefined);
-    currentStudent.mockHistory.push({
-      test: testData.title,
-      date: new Date().toISOString().split('T')[0],
-      listening: '—',
-      reading: '—',
-      writing: 'Submitted',
-      writingDetails: { task1: essayContent[1], task2: essayContent[2] },
-      overall: '—'
-    });
-    localStorage.setItem('viatestprep_students', JSON.stringify(allStudents));
+  // Auto-syncs the draft essays into the student's CRM profile (unscored -
+  // writing_band stays null until a tutor grades it via the CRM's Writing
+  // Grader) - but only if this browser is logged in as a real roster student
+  // (see attemptStudentTokenLogin in index.html). Anonymous "free trial"
+  // visitors have no active student id, so nothing gets recorded for them.
+  const activeStudentId = localStorage.getItem('viatestprep_active_student_id');
+  if (activeStudentId) {
+    fetch('/api/mock/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        studentId: activeStudentId,
+        testName: testData.title,
+        moduleType: 'writing',
+        writingTask1: essayContent[1],
+        writingTask2: essayContent[2]
+      })
+    }).catch(e => console.error('Could not sync writing submission to CRM:', e));
   }
 
   alert("Writing submissions recorded! You can now review the Band 9 Model Responses and export your essays to share with a tutor.");

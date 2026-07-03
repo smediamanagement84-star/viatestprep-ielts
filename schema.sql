@@ -16,11 +16,22 @@ CREATE TABLE IF NOT EXISTS students (
   name TEXT NOT NULL,
   email TEXT UNIQUE NOT NULL,
   phone TEXT,
+  student_id TEXT UNIQUE,           -- display ID shown in the CRM, e.g. 'VTP-0001'
   target_band NUMERIC(2,1) DEFAULT 7.0,
   status TEXT DEFAULT 'Active',     -- 'Active', 'Completed', 'Paused'
   access_expires_at TIMESTAMP WITH TIME ZONE NOT NULL,
+  -- The secret half of a student's personal "?student=<token>" login link.
+  -- Generated client-side (crypto.randomUUID()) when a consultancy adds the
+  -- student in the CRM. Anyone holding this token can log in as this student
+  -- (same trust model as the site's owner-bypass key) - it is only ever
+  -- shown to CRM staff via "Copy Access Link", never listed anywhere public.
+  access_token TEXT UNIQUE,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
+
+-- Run these in your Supabase SQL Editor if `students` already exists without them:
+-- ALTER TABLE students ADD COLUMN IF NOT EXISTS access_token TEXT UNIQUE;
+-- ALTER TABLE students ADD COLUMN IF NOT EXISTS student_id TEXT UNIQUE;
 
 -- 3. Mock Test History Table (Reading / Listening / Writing scores and essays)
 CREATE TABLE IF NOT EXISTS mock_history (

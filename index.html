@@ -55,6 +55,83 @@
     100% { transform: translateY(-15px) rotate(1.5deg); }
   }
 
+  /* Ambient blobs drift slowly instead of sitting static */
+  .glow-blob { animation: drift 18s infinite alternate ease-in-out; }
+  .glow-blob:nth-of-type(2) { animation-duration: 22s; animation-delay: -6s; }
+  @keyframes drift {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(30px, -25px) scale(1.08); }
+    100% { transform: translate(-20px, 15px) scale(0.96); }
+  }
+
+  /* Scroll-reveal system: elements start hidden/offset, JS flips .in-view
+     via IntersectionObserver. Falls back to visible if JS never runs. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s cubic-bezier(.2,.7,.3,1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+  /* Hero load-in: staggered via --hero-delay custom prop per element */
+  .hero-in {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: heroIn .8s cubic-bezier(.2,.7,.3,1) forwards;
+    animation-delay: var(--hero-delay, 0ms);
+  }
+  @keyframes heroIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Sticky header gains blur/shadow once the page has scrolled past the hero */
+  .lp-header { transition: background .3s, box-shadow .3s, backdrop-filter .3s; }
+  .lp-header.lp-header-scrolled {
+    background: rgba(255, 254, 251, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 0 var(--rule), 0 12px 24px rgba(28,26,23,.05);
+  }
+
+  /* Scroll progress bar, landing page only */
+  #lp-scroll-progress {
+    position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+    background: linear-gradient(90deg, var(--lp-accent, #7a2331), var(--lp-gold, #a8792f));
+    z-index: 60; transition: width .1s linear;
+  }
+
+  /* CTA button gains a light sweep on hover, on top of existing hover styles */
+  .lp-btn-primary { position: relative; overflow: hidden; }
+  .lp-btn-primary::after {
+    content: ''; position: absolute; top: 0; left: -60%; width: 40%; height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,.35), transparent);
+    transform: skewX(-20deg); transition: left .6s ease;
+  }
+  .lp-btn-primary:hover::after { left: 130%; }
+
+  /* Subtle animated ring pulse behind the primary hero CTA to draw the eye */
+  .lp-cta-pulse { position: relative; }
+  .lp-cta-pulse::before {
+    content: ''; position: absolute; inset: 0; border-radius: 9999px;
+    box-shadow: 0 0 0 0 rgba(122,35,49,.35);
+    animation: ctaPulse 2.6s infinite;
+    pointer-events: none;
+  }
+  @keyframes ctaPulse {
+    0%   { box-shadow: 0 0 0 0 rgba(122,35,49,.35); }
+    70%  { box-shadow: 0 0 0 14px rgba(122,35,49,0); }
+    100% { box-shadow: 0 0 0 0 rgba(122,35,49,0); }
+  }
+
+  /* Hero exam-preview panel gets a gentle pointer-driven tilt (desktop only) */
+  .lp-tilt { transition: transform .15s ease-out; will-change: transform; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .glow-blob, .float-badge, .lp-cta-pulse::before { animation: none !important; }
+    .reveal, .hero-in { opacity: 1 !important; transform: none !important; animation: none !important; transition: none !important; }
+    .lp-tilt { transform: none !important; }
+  }
+
   /* Custom Tab UI */
   .active-tab {
     background-color: rgba(122, 35, 49, 0.08);
@@ -209,8 +286,9 @@
   <!-- VIEW 1: PREMIUM GUEST LANDING PAGE         -->
   <!-- ========================================== -->
   <div id="view-landing" class="view-container min-h-screen flex flex-col justify-between hidden relative overflow-hidden">
+    <div id="lp-scroll-progress"></div>
     <!-- Header / Navbar -->
-    <header class="lp-header fixed top-0 left-0 right-0 h-20 flex items-center justify-between px-6 md:px-12 z-50">
+    <header id="lp-header" class="lp-header fixed top-0 left-0 right-0 h-20 flex items-center justify-between px-6 md:px-12 z-50">
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-xl lp-logo-badge flex items-center justify-center lp-serif text-white font-extrabold text-xl">V</div>
         <a href="#" class="lp-serif text-2xl font-extrabold tracking-tight" style="color:var(--ink)">ViATestPrep</a>
@@ -225,17 +303,19 @@
     <!-- Hero Content -->
     <main class="max-w-6xl mx-auto px-6 pt-36 pb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center flex-1 relative z-10">
       <div class="lg:col-span-7 flex flex-col items-start text-left">
-        <span class="lp-badge-pill text-xs font-black uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-6 inline-block">Premium IELTS &amp; PTE Prep Suite</span>
-        <h1 class="lp-serif text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6" style="color:var(--ink)">
+        <span class="hero-in lp-badge-pill text-xs font-black uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-6 inline-block" style="--hero-delay:0ms">Premium IELTS &amp; PTE Prep Suite</span>
+        <h1 class="hero-in lp-serif text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6" style="--hero-delay:120ms;color:var(--ink)">
           Master the IELTS with <span class="lp-accent">Real Exam-Paper</span> Practice
         </h1>
-        <p class="lp-muted lp-reading text-sm md:text-base leading-relaxed mb-8 max-w-lg">
+        <p class="hero-in lp-muted lp-reading text-sm md:text-base leading-relaxed mb-8 max-w-lg" style="--hero-delay:240ms">
           16+ strategy modules, 12 official Cambridge mock exams rebuilt to look and feel like the real printed test booklet, browser-based speaking recorders, and institutional student rosters — all under one link.
         </p>
-        <div class="flex flex-wrap gap-4">
-          <button onclick="openAccessModal()" class="lp-btn-primary px-8 py-4 font-extrabold rounded-full text-sm transition-all duration-300 transform hover:-translate-y-0.5" style="box-shadow:0 14px 28px rgba(122,35,49,.3)">
-            Access Portal &amp; Mocks
-          </button>
+        <div class="hero-in flex flex-wrap gap-4" style="--hero-delay:360ms">
+          <span class="lp-cta-pulse rounded-full inline-block">
+            <button onclick="openAccessModal()" class="lp-btn-primary relative px-8 py-4 font-extrabold rounded-full text-sm transition-all duration-300 transform hover:-translate-y-0.5" style="box-shadow:0 14px 28px rgba(122,35,49,.3)">
+              Access Portal &amp; Mocks
+            </button>
+          </span>
           <a href="#features" class="lp-btn-secondary px-8 py-4 font-bold rounded-full text-sm transition">
             See What's Inside
           </a>
@@ -243,8 +323,8 @@
       </div>
 
       <!-- Right Column: Paper-style exam preview, echoing the mock test simulator -->
-      <div class="lg:col-span-5 relative flex justify-center items-center">
-        <div class="lp-panel w-full max-w-sm rounded-2xl overflow-hidden transform hover:scale-[1.02] transition duration-500">
+      <div class="hero-in lg:col-span-5 relative flex justify-center items-center" style="--hero-delay:200ms">
+        <div id="lp-hero-panel" class="lp-panel lp-tilt w-full max-w-sm rounded-2xl overflow-hidden">
           <div class="h-11 flex items-center px-4 gap-2 border-b" style="border-color:var(--rule); background:var(--lp-gold-soft);">
             <span class="text-[9px] font-black uppercase tracking-widest lp-gold-text">Part 1</span>
             <span class="text-[11px] font-bold lp-serif ml-1" style="color:var(--ink)">Listening Test — Cambridge 18</span>
@@ -280,20 +360,20 @@
     <!-- Stats / Trust Strip -->
     <section class="lp-section-alt py-10 px-6 relative z-10">
       <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div>
-          <span class="block text-2xl md:text-3xl font-extrabold lp-serif" style="color:var(--ink)">16+</span>
+        <div class="reveal" style="--reveal-delay:0ms">
+          <span class="lp-stat-num block text-2xl md:text-3xl font-extrabold lp-serif" style="color:var(--ink)" data-count="16" data-suffix="+">0</span>
           <span class="block text-[11px] lp-muted font-bold uppercase tracking-widest mt-1">Study Modules</span>
         </div>
-        <div>
-          <span class="block text-2xl md:text-3xl font-extrabold lp-serif" style="color:var(--ink)">12</span>
+        <div class="reveal" style="--reveal-delay:80ms">
+          <span class="lp-stat-num block text-2xl md:text-3xl font-extrabold lp-serif" style="color:var(--ink)" data-count="12" data-suffix="">0</span>
           <span class="block text-[11px] lp-muted font-bold uppercase tracking-widest mt-1">Cambridge Mock Tests</span>
         </div>
-        <div>
-          <span class="block text-2xl md:text-3xl font-extrabold lp-serif" style="color:var(--ink)">4</span>
+        <div class="reveal" style="--reveal-delay:160ms">
+          <span class="lp-stat-num block text-2xl md:text-3xl font-extrabold lp-serif" style="color:var(--ink)" data-count="4" data-suffix="">0</span>
           <span class="block text-[11px] lp-muted font-bold uppercase tracking-widest mt-1">Skills Covered</span>
         </div>
-        <div>
-          <span class="block text-2xl md:text-3xl font-extrabold lp-serif" style="color:var(--ink)">1</span>
+        <div class="reveal" style="--reveal-delay:240ms">
+          <span class="lp-stat-num block text-2xl md:text-3xl font-extrabold lp-serif" style="color:var(--ink)" data-count="1" data-suffix="">0</span>
           <span class="block text-[11px] lp-muted font-bold uppercase tracking-widest mt-1">Single Portal Link</span>
         </div>
       </div>
@@ -302,7 +382,7 @@
     <!-- Features Section: clearly organized by audience -->
     <section id="features" class="py-24 px-6 relative z-10">
       <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-16">
+        <div class="text-center mb-16 reveal">
           <span class="text-xs font-bold lp-accent uppercase tracking-widest block mb-2">What's Inside</span>
           <h2 class="lp-serif text-3xl font-extrabold" style="color:var(--ink)">Everything Needed to Hit Your Target Band</h2>
           <p class="lp-muted lp-reading text-sm mt-2 max-w-lg mx-auto">One link serves two audiences — students preparing for the exam, and consultancies running classes for them.</p>
@@ -317,28 +397,28 @@
             <h3 class="lp-serif text-lg font-extrabold" style="color:var(--ink)">For Students</h3>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="lp-card rounded-3xl p-6">
+            <div class="lp-card reveal rounded-3xl p-6" style="--reveal-delay:0ms">
               <div class="w-12 h-12 lp-icon-badge rounded-2xl flex items-center justify-center mb-6">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
               </div>
               <h4 class="lp-serif font-bold text-lg mb-2" style="color:var(--ink)">16+ Study Modules</h4>
               <p class="lp-muted lp-reading text-xs leading-relaxed">Strategy blueprints and drills for Reading, Writing, Grammar, Vocabulary, and PTE-specific skills.</p>
             </div>
-            <div class="lp-card rounded-3xl p-6">
+            <div class="lp-card reveal rounded-3xl p-6" style="--reveal-delay:90ms">
               <div class="w-12 h-12 lp-icon-badge gold rounded-2xl flex items-center justify-center mb-6">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               </div>
               <h4 class="lp-serif font-bold text-lg mb-2" style="color:var(--ink)">Cambridge Mock Exams</h4>
               <p class="lp-muted lp-reading text-xs leading-relaxed">12 full Listening, Reading &amp; Writing tests rebuilt to look and feel like the real printed test booklet, with instant band scores.</p>
             </div>
-            <div class="lp-card rounded-3xl p-6">
+            <div class="lp-card reveal rounded-3xl p-6" style="--reveal-delay:180ms">
               <div class="w-12 h-12 lp-icon-badge rounded-2xl flex items-center justify-center mb-6">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
               </div>
               <h4 class="lp-serif font-bold text-lg mb-2" style="color:var(--ink)">Speaking Cue Recorder</h4>
               <p class="lp-muted lp-reading text-xs leading-relaxed">Record cue cards with prep/talk timers and synthesized beep alerts. Play back or download instantly.</p>
             </div>
-            <div class="lp-card rounded-3xl p-6">
+            <div class="lp-card reveal rounded-3xl p-6" style="--reveal-delay:270ms">
               <div class="w-12 h-12 lp-icon-badge gold rounded-2xl flex items-center justify-center mb-6">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
               </div>
@@ -357,28 +437,28 @@
             <h3 class="lp-serif text-lg font-extrabold" style="color:var(--ink)">For Consultancies</h3>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="lp-card rounded-3xl p-6">
+            <div class="lp-card reveal rounded-3xl p-6" style="--reveal-delay:0ms">
               <div class="w-12 h-12 lp-icon-badge gold rounded-2xl flex items-center justify-center mb-6">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
               </div>
               <h4 class="lp-serif font-bold text-lg mb-2" style="color:var(--ink)">Institutional CRM</h4>
               <p class="lp-muted lp-reading text-xs leading-relaxed">Manage student rosters, targets, and status. Import/export CSV across your whole class.</p>
             </div>
-            <div class="lp-card rounded-3xl p-6">
+            <div class="lp-card reveal rounded-3xl p-6" style="--reveal-delay:90ms">
               <div class="w-12 h-12 lp-icon-badge rounded-2xl flex items-center justify-center mb-6">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               </div>
               <h4 class="lp-serif font-bold text-lg mb-2" style="color:var(--ink)">Speaking Grader</h4>
               <p class="lp-muted lp-reading text-xs leading-relaxed">Grade 1-on-1 interviews live against official Fluency, Vocab, Grammar &amp; Pronunciation descriptors.</p>
             </div>
-            <div class="lp-card rounded-3xl p-6">
+            <div class="lp-card reveal rounded-3xl p-6" style="--reveal-delay:180ms">
               <div class="w-12 h-12 lp-icon-badge gold rounded-2xl flex items-center justify-center mb-6">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
               </div>
               <h4 class="lp-serif font-bold text-lg mb-2" style="color:var(--ink)">Auto-Synced Scores</h4>
               <p class="lp-muted lp-reading text-xs leading-relaxed">Listening, Reading &amp; Writing mock results flow straight into each student's grade sheet.</p>
             </div>
-            <div class="lp-card rounded-3xl p-6">
+            <div class="lp-card reveal rounded-3xl p-6" style="--reveal-delay:270ms">
               <div class="w-12 h-12 lp-icon-badge rounded-2xl flex items-center justify-center mb-6">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
               </div>
@@ -393,13 +473,13 @@
     <!-- Pricing Preview Section -->
     <section id="pricing" class="lp-section-alt py-24 px-6 relative z-10">
       <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-16">
+        <div class="text-center mb-16 reveal">
           <span class="text-xs font-bold lp-accent uppercase tracking-widest block mb-2">One Price. Every Feature. No Surprises.</span>
           <h2 class="lp-serif text-3xl font-extrabold" style="color:var(--ink)">Less than the cost of one student's tuition. Serves your whole class.</h2>
           <p class="lp-muted lp-reading text-sm mt-2 max-w-lg mx-auto">Every plan unlocks the entire platform — 16+ modules, Cambridge mock exams, the CRM roster, and the live speaking grader. You only ever pay for classroom seats.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="lp-card rounded-3xl p-7 flex flex-col">
+          <div class="lp-card reveal rounded-3xl p-7 flex flex-col" style="--reveal-delay:0ms">
             <span class="text-xs font-bold lp-muted uppercase tracking-widest">Starter</span>
             <div class="mt-3 flex items-baseline gap-1">
               <span class="lp-serif text-3xl font-extrabold" style="color:var(--ink)">Rs. 5,000</span>
@@ -414,7 +494,7 @@
             </ul>
             <button onclick="openAccessModal()" class="lp-btn-secondary mt-7 w-full py-3 font-bold rounded-full text-xs transition">Get Started</button>
           </div>
-          <div class="lp-pricing-popular rounded-3xl p-7 flex flex-col relative">
+          <div class="lp-pricing-popular reveal rounded-3xl p-7 flex flex-col relative" style="--reveal-delay:60ms">
             <span class="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] font-black uppercase tracking-widest text-white px-3 py-1 rounded-full whitespace-nowrap" style="background:var(--lp-accent)">★ Best Value</span>
             <span class="text-xs font-bold lp-accent uppercase tracking-widest">Growth</span>
             <div class="mt-3 flex items-baseline gap-1">
@@ -430,7 +510,7 @@
             </ul>
             <button onclick="openAccessModal()" class="lp-btn-primary mt-7 w-full py-3 font-bold rounded-full text-xs transition" style="box-shadow:0 10px 22px rgba(122,35,49,.25)">Get Started</button>
           </div>
-          <div class="lp-card rounded-3xl p-7 flex flex-col">
+          <div class="lp-card reveal rounded-3xl p-7 flex flex-col" style="--reveal-delay:120ms">
             <span class="text-xs font-bold lp-muted uppercase tracking-widest">Enterprise</span>
             <div class="mt-3 flex items-baseline gap-1">
               <span class="lp-serif text-3xl font-extrabold" style="color:var(--ink)">Rs. 24,000</span>
@@ -1209,6 +1289,24 @@
         localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
       }
     }
+
+    // Same idea, for the access_token every student needs for their personal
+    // "?student=<token>" login link - backfills any record (demo seed data,
+    // students created before this feature existed) that doesn't have one yet.
+    // Does NOT push the backfilled token to Supabase itself here; it'll go up
+    // the next time that student's row is otherwise saved/updated from the CRM.
+    function ensureStudentAccessTokens() {
+      let changed = false;
+      crmStudents.forEach(s => {
+        if (!s.accessToken) {
+          s.accessToken = crypto.randomUUID();
+          changed = true;
+        }
+      });
+      if (changed) {
+        localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
+      }
+    }
     
     // Vault Search & Filter states
     let vaultFilterTag = 'all';
@@ -1235,10 +1333,27 @@
       }
     }
 
+    // Loads this consultancy's own roster from Supabase - and only this
+    // consultancy's. It used to select the entire `students` table with no
+    // filter at all and run on every single page load (even for anonymous
+    // landing-page visitors), which meant any browser with the public anon
+    // key could pull down every consultancy's full roster - names, emails,
+    // phone numbers. Now it's scoped to viatestprep_consultancy_id and only
+    // ever called from initConsultancyDashboard(), i.e. after a consultancy
+    // has actually logged in (paid session or owner bypass).
     async function syncRosterFromCloud() {
       if (!supabaseClient) return;
+      const consultancyId = localStorage.getItem('viatestprep_consultancy_id');
+      // The owner bypass intentionally sees every tenant's roster for support
+      // purposes - that's a deliberate admin capability of a secret-URL-only
+      // login, not a leak. Any other consultancy session without a known id
+      // (e.g. stale/legacy session) sees nothing rather than everything.
+      const isOwner = consultancyId === '__owner__';
+      if (!consultancyId) return;
       try {
-        const { data: cloudStudents, error } = await supabaseClient.from('students').select('*');
+        let query = supabaseClient.from('students').select('*');
+        if (!isOwner) query = query.eq('consultancy_id', consultancyId);
+        const { data: cloudStudents, error } = await query;
         if (error) {
           console.error('Cloud load error:', error);
           return;
@@ -1252,6 +1367,7 @@
             target: parseFloat(cs.target_band) || 7.0,
             status: cs.status || 'Active',
             access_expires_at: cs.access_expires_at || new Date(Date.now() + 30*24*60*60*1000).toISOString(),
+            accessToken: cs.access_token || '',
             notes: '',
             mockHistory: []
           }));
@@ -1263,6 +1379,18 @@
             s.mockHistory = [];
             if (mH) {
               mH.forEach(m => {
+                if (m.module_type === 'writing') {
+                  s.mockHistory.push({
+                    test: m.test_name,
+                    date: m.completed_at.split('T')[0],
+                    listening: '—',
+                    reading: '—',
+                    writing: m.writing_band != null ? String(m.writing_band) : 'Submitted',
+                    writingDetails: { task1: m.writing_task1 || '', task2: m.writing_task2 || '' },
+                    overall: m.writing_band != null ? m.writing_band : '—'
+                  });
+                  return;
+                }
                 s.mockHistory.push({
                   test: m.test_name,
                   date: m.completed_at.split('T')[0],
@@ -1384,9 +1512,14 @@
     // ==========================================
     window.addEventListener('DOMContentLoaded', () => {
       initSupabase();
-      if (supabaseClient) {
-        syncRosterFromCloud();
-      }
+      // NOTE: cloud roster sync intentionally does NOT run here anymore. It
+      // used to run unconditionally for every single visitor (including
+      // anonymous landing-page traffic), pulling every consultancy's entire
+      // student roster - names, emails, phone numbers - into that visitor's
+      // browser with no tenant filter at all. It's now called only from
+      // initConsultancyDashboard(), scoped to the logged-in consultancy's own
+      // students (see syncRosterFromCloud()).
+
       // Load Database from LocalStorage
       const savedCRM = localStorage.getItem('viatestprep_students');
       if (savedCRM) {
@@ -1395,6 +1528,9 @@
         seedInitialCRMStudents();
       }
       ensureStudentDisplayIds();
+      ensureStudentAccessTokens();
+
+      const urlParams = new URLSearchParams(window.location.search);
 
       // Owner-only CRM bypass. Deliberately NOT linked or mentioned anywhere in
       // the UI - the only way in is knowing this URL. Visiting
@@ -1403,9 +1539,19 @@
       // source by anyone who goes looking, but this keeps it out of every menu,
       // button, and modal a normal visitor would ever see.
       const OWNER_BYPASS_KEY = 'JW99DMjLLV9KDC4E';
-      const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.get('ownerkey') === OWNER_BYPASS_KEY) {
         launchAdminBypass();
+        return;
+      }
+
+      // Per-student personal login link. A consultancy generates this from
+      // "Copy Access Link" in the CRM roster - the only way a specific
+      // student can land straight in their own tracked portal session,
+      // instead of the old generic "Access the free student portal" flow
+      // that gave every visitor an identical, untracked session.
+      const studentToken = urlParams.get('student');
+      if (studentToken) {
+        attemptStudentTokenLogin(studentToken);
         return;
       }
 
@@ -1418,6 +1564,36 @@
         handlePaymentCallback();
       }
     });
+
+    // Resolves a student's private ?student=<token> link via /api/student/login
+    // (looked up server-side, service-role-backed - see that file for why),
+    // then starts a real, tracked student session tied to their actual roster
+    // row instead of a generic anonymous one.
+    async function attemptStudentTokenLogin(token) {
+      try {
+        const res = await fetch('/api/student/login?token=' + encodeURIComponent(token));
+        const data = await res.json();
+        if (!data.ok) {
+          alert('This access link is invalid or has been revoked. Contact your consultancy for a new one.');
+          window.history.replaceState({}, document.title, window.location.pathname);
+          renderAppView();
+          return;
+        }
+        localStorage.setItem('viatestprep_unlocked', 'true');
+        localStorage.setItem('viatestprep_user_role', 'student');
+        localStorage.setItem('viatestprep_student_access', 'full');
+        localStorage.setItem('viatestprep_active_student_id', data.id);
+        localStorage.setItem('viatestprep_active_student_name', data.name || '');
+        localStorage.setItem('viatestprep_active_student_expires_at', data.accessExpiresAt || '');
+        window.history.replaceState({}, document.title, window.location.pathname);
+        renderAppView();
+      } catch (err) {
+        console.error('Student token login failed:', err);
+        alert('Could not verify your access link right now. Please try again in a moment.');
+        window.history.replaceState({}, document.title, window.location.pathname);
+        renderAppView();
+      }
+    }
 
     function renderAppView() {
       const role = localStorage.getItem('viatestprep_user_role');
@@ -1434,6 +1610,97 @@
         initConsultancyDashboard();
       } else {
         document.getElementById('view-landing').classList.remove('hidden');
+        initLandingMotion();
+      }
+    }
+
+    // Drives every landing-page motion effect: scroll-reveal on sections/cards,
+    // stat count-up, header blur-on-scroll, scroll progress bar, and a subtle
+    // pointer-driven tilt on the hero exam-preview panel. Runs once per page
+    // load (renderAppView() can re-show the landing view after a logout, so
+    // this guards against re-binding duplicate listeners/observers).
+    let landingMotionInitialized = false;
+    function initLandingMotion() {
+      if (landingMotionInitialized) return;
+      landingMotionInitialized = true;
+
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // --- Scroll-reveal ---
+      const revealEls = document.querySelectorAll('#view-landing .reveal');
+      if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+        revealEls.forEach(el => el.classList.add('in-view'));
+      } else {
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(el => revealObserver.observe(el));
+      }
+
+      // --- Stat count-up (only once each number first scrolls into view) ---
+      const statEls = document.querySelectorAll('#view-landing .lp-stat-num[data-count]');
+      const animateCount = (el) => {
+        const target = parseInt(el.getAttribute('data-count'), 10) || 0;
+        const suffix = el.getAttribute('data-suffix') || '';
+        if (prefersReducedMotion || target <= 1) {
+          el.textContent = target + suffix;
+          return;
+        }
+        const duration = 900;
+        const start = performance.now();
+        const tick = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.round(eased * target) + suffix;
+          if (progress < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      };
+      if ('IntersectionObserver' in window) {
+        const statObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animateCount(entry.target);
+              statObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.6 });
+        statEls.forEach(el => statObserver.observe(el));
+      } else {
+        statEls.forEach(animateCount);
+      }
+
+      // --- Header blur/shadow once scrolled past the hero, + scroll progress bar ---
+      const header = document.getElementById('lp-header');
+      const progressBar = document.getElementById('lp-scroll-progress');
+      const onScroll = () => {
+        if (header) header.classList.toggle('lp-header-scrolled', window.scrollY > 40);
+        if (progressBar) {
+          const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+          const pct = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+          progressBar.style.width = pct + '%';
+        }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // --- Pointer-driven tilt on the hero exam-preview panel (desktop only) ---
+      const heroPanel = document.getElementById('lp-hero-panel');
+      if (heroPanel && !prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
+        heroPanel.addEventListener('mousemove', (e) => {
+          const rect = heroPanel.getBoundingClientRect();
+          const px = (e.clientX - rect.left) / rect.width - 0.5;
+          const py = (e.clientY - rect.top) / rect.height - 0.5;
+          heroPanel.style.transform = `perspective(800px) rotateX(${(-py * 8).toFixed(2)}deg) rotateY(${(px * 10).toFixed(2)}deg) scale(1.02)`;
+        });
+        heroPanel.addEventListener('mouseleave', () => {
+          heroPanel.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)';
+        });
       }
     }
 
@@ -1441,6 +1708,10 @@
       if (confirm('Are you sure you want to log out of your session?')) {
         localStorage.removeItem('viatestprep_unlocked');
         localStorage.removeItem('viatestprep_user_role');
+        localStorage.removeItem('viatestprep_active_student_id');
+        localStorage.removeItem('viatestprep_active_student_name');
+        localStorage.removeItem('viatestprep_active_student_expires_at');
+        localStorage.removeItem('viatestprep_consultancy_id');
         // keep student DB intact, just wipe active sessions
         renderAppView();
       }
@@ -1568,7 +1839,10 @@
       localStorage.setItem('viatestprep_consultancy_name', 'Kathmandu Admin HQ');
       localStorage.setItem('viatestprep_consultancy_plan', 'Developer Bypass');
       localStorage.setItem('userEmail', 'admin@viatestprep.local');
-      
+      // Sentinel, not a real consultancy row - lets the owner see every
+      // tenant's roster for support purposes (see syncRosterFromCloud()).
+      localStorage.setItem('viatestprep_consultancy_id', '__owner__');
+
       closeAccessModal();
       renderAppView();
     }
@@ -1699,6 +1973,10 @@
               localStorage.setItem('viatestprep_consultancy_name', data.name);
               localStorage.setItem('viatestprep_consultancy_plan', data.plan_name);
               localStorage.setItem('viatestprep_consultancy_expires_at', data.expires_at);
+              // Real tenant id - every student this consultancy adds gets
+              // tagged with it, and syncRosterFromCloud() filters by it so
+              // this consultancy only ever sees its own roster.
+              localStorage.setItem('viatestprep_consultancy_id', data.id);
             }
             renderAppView();
           }).catch(() => renderAppView());
@@ -1715,18 +1993,22 @@
     // VIEW 2: STUDENT PORTAL RENDER ENGINE
     // ==========================================
     function initStudentPortal() {
-      // Check expiration first
-      const userEmail = localStorage.getItem('userEmail') || 'binod@gmail.com';
-      const student = crmStudents.find(s => s.email && s.email.toLowerCase() === userEmail.toLowerCase());
-      
+      // Identity comes from viatestprep_active_student_id, set once by
+      // attemptStudentTokenLogin() when the student opened their own private
+      // "?student=<token>" link (see DOMContentLoaded). This used to try to
+      // match a hardcoded fallback email ('binod@gmail.com') against a local
+      // roster copy the student's own browser usually didn't even have - it
+      // never actually identified a real logged-in student. A visitor who
+      // came in through the anonymous "Access the free student portal" flow
+      // has no active-student id at all and gets an untracked trial session
+      // with no expiry, same as before.
+      const activeExpiresAt = localStorage.getItem('viatestprep_active_student_expires_at');
+
       const overlay = document.getElementById('student-expiry-overlay');
       const activeContainer = document.getElementById('student-active-views-container');
-      
-      if (student) {
-        if (!student.access_expires_at) {
-          student.access_expires_at = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString();
-        }
-        const expired = new Date() > new Date(student.access_expires_at);
+
+      if (activeExpiresAt) {
+        const expired = new Date() > new Date(activeExpiresAt);
         if (expired) {
           overlay.classList.remove('hidden');
           activeContainer.classList.add('hidden');
@@ -1783,6 +2065,9 @@
     function handleLogout_silent() {
       localStorage.removeItem('viatestprep_unlocked');
       localStorage.removeItem('viatestprep_user_role');
+      localStorage.removeItem('viatestprep_active_student_id');
+      localStorage.removeItem('viatestprep_active_student_name');
+      localStorage.removeItem('viatestprep_active_student_expires_at');
     }
 
     function switchStudentTab(tabId) {
@@ -2280,6 +2565,11 @@
       renderCRMVaultModules();
       updateCRMSliders();
       updateCRMCapacityWidget();
+
+      // Pull this consultancy's own roster + progress from Supabase (scoped by
+      // viatestprep_consultancy_id - see syncRosterFromCloud()). It re-renders
+      // the table/grader-select itself once the real data lands.
+      syncRosterFromCloud();
     }
 
     // Reads the active plan + roster size and renders the seat-capacity meter
@@ -2397,6 +2687,7 @@
             </td>
             <td class="p-4 text-center font-extrabold text-[#7a2331]">${avgMock}</td>
             <td class="p-4 text-right flex justify-end gap-1.5" onclick="event.stopPropagation()">
+              <button onclick="copyStudentAccessLink('${s.id}')" title="Copy this student's personal login link" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-xs font-bold bg-[#f3ecd8] hover:bg-[#f3ecd8] hover:text-[#7a2331] hover:border-[#e5ded0] transition">🔗 Access Link</button>
               <button onclick="editCRMStudent('${s.id}')" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-xs font-bold bg-[#f3ecd8] hover:bg-[#f3ecd8] hover:text-[#7a2331] hover:border-[#e5ded0] transition">Edit</button>
               <button onclick="deleteCRMStudent('${s.id}')" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-xs font-bold bg-[#f3ecd8] hover:bg-rose-50 hover:text-rose-600 hover:border-rose-200 transition">Delete</button>
             </td>
@@ -2488,13 +2779,24 @@
       } else {
         const newId = 'st-' + Date.now();
         const studentId = nextStudentDisplayId();
+        // The secret half of this student's own "?student=<token>" login
+        // link - generated once here, shown to staff via "Copy Access Link",
+        // never displayed anywhere a non-staff visitor would see.
+        const accessToken = crypto.randomUUID();
+        const consultancyId = localStorage.getItem('viatestprep_consultancy_id');
+        const isRealConsultancy = consultancyId && consultancyId !== '__owner__';
         crmStudents.push({
-          id: newId, studentId,
+          id: newId, studentId, accessToken,
           name, email, phone, target, status, notes, access_expires_at,
           mockHistory: []
         });
         if (supabaseClient) {
-          supabaseClient.from('students').insert([{ id: newId, student_id: studentId, name, email, phone, target_band: target, status, access_expires_at }]).then();
+          supabaseClient.from('students').insert([{
+            id: newId, student_id: studentId, name, email, phone,
+            target_band: target, status, access_expires_at,
+            access_token: accessToken,
+            ...(isRealConsultancy ? { consultancy_id: consultancyId } : {}),
+          }]).then(({ error }) => { if (error) console.error('Supabase student insert error:', error); });
         }
       }
 
@@ -2502,6 +2804,28 @@
       renderCRMTable();
       populateCRMGraderSelect();
       closeCRMAddModal();
+    }
+
+    // The only way a specific roster student gets into their own tracked
+    // portal session: this link carries their private access_token, which
+    // /api/student/login.js exchanges for a real session (see
+    // attemptStudentTokenLogin in the DOMContentLoaded handler). Anyone
+    // holding this exact link can log in as this student, so it's only ever
+    // surfaced here, to CRM staff, on demand - never listed anywhere else.
+    function copyStudentAccessLink(id) {
+      const stud = crmStudents.find(s => s.id === id);
+      if (!stud) return;
+      if (!stud.accessToken) {
+        alert("This student doesn't have an access link yet. Try refreshing the CRM.");
+        return;
+      }
+      const link = `${window.location.origin}${window.location.pathname}?student=${stud.accessToken}`;
+      const done = () => alert(`Access link copied for ${stud.name}!\n\nSend this to them directly - it logs them straight into their own portal, and everything they do there (mock scores, speaking practice) will show up in this roster automatically.`);
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(link).then(done).catch(() => prompt('Copy this link:', link));
+      } else {
+        prompt('Copy this link:', link);
+      }
     }
 
     function editCRMStudent(id) {
@@ -2779,31 +3103,18 @@
       testRecord.notes = feedback;
       
       localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
-      
-      const supabaseUrl = localStorage.getItem('supabase_url');
-      const supabaseKey = localStorage.getItem('supabase_key');
-      if (supabaseUrl && supabaseKey) {
-        try {
-          const { createClient } = window['supabase'];
-          const supabaseClient = createClient(supabaseUrl, supabaseKey);
-          
-          supabaseClient.from('mock_history')
-            .update({
-              writing_band: overallWriting || null,
-              tutor_feedback: feedback
-            })
-            .eq('student_id', studentId)
-            .eq('test_name', testRecord.test)
-            .eq('module_type', 'writing')
-            .then(res => {
-              if (res.error) console.error('Supabase grade update error:', res.error);
-              else console.log('Supabase grade update success');
-            });
-        } catch (e) {
-          console.error(e);
-        }
+
+      if (supabaseClient) {
+        supabaseClient.from('mock_history')
+          .update({ writing_band: overallWriting || null })
+          .eq('student_id', studentId)
+          .eq('test_name', testRecord.test)
+          .eq('module_type', 'writing')
+          .then(res => {
+            if (res.error) console.error('Supabase grade update error:', res.error);
+          });
       }
-      
+
       alert('Grade saved successfully!');
       openCRMProfileDrawer(studentId);
     }
