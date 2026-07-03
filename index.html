@@ -1370,11 +1370,38 @@
       if (SUPABASE_URL && SUPABASE_ANON_KEY && typeof supabase !== 'undefined') {
         supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
         console.log('Supabase backend client initialized.');
+
+        // Catches the case a manual signUp()/signInWithPassword() call in
+        // handleStudentAuthSubmit/handleConsultancyAuthSubmit doesn't cover:
+        // a student clicking the "confirm your email" link. That link lands
+        // the browser back on this page with an access token in the URL
+        // hash - supabase-js parses it automatically and fires SIGNED_IN
+        // here, but nothing used to listen for it, so confirming never
+        // actually created the student's row or unlocked the portal. This
+        // also acts as a general safety net for the manual-login path.
+        supabaseClient.auth.onAuthStateChange((event, session) => {
+          if (event === 'SIGNED_IN' && session) {
+            const role = session.user.user_metadata && session.user.user_metadata.role;
+            if (role === 'consultancy') {
+              finishConsultancySession(session, session.user.user_metadata.name || '');
+            } else if (role === 'student') {
+              finishStudentSession(session, session.user.user_metadata.name || '');
+            }
+            // Unknown/missing role metadata (e.g. an account created before
+            // this metadata existed) - nothing to auto-finish; the explicit
+            // login form flow still handles it.
+          }
+        });
       } else {
         supabaseClient = null;
         console.log('Supabase offline fallback active.');
       }
     }
+
+    // Dedupes finishStudentSession/finishConsultancySession so the explicit
+    // "I just clicked submit" path and the onAuthStateChange safety net don't
+    // both race to register + redirect for the exact same sign-in.
+    let lastFinishedAuthToken = null;
 
     // Loads this consultancy's own roster from Supabase - and only this
     // consultancy's. It used to select the entire `students` table with no
@@ -1890,11 +1917,22 @@
 
       const btn = document.getElementById('m-student-auth-btn');
       btn.disabled = true;
+      const name = document.getElementById('m-student-name').value.trim();
       try {
         let session;
         if (studentAuthMode === 'signup') {
           setStudentAuthStatus('Creating your account...');
-          const { data, error } = await supabaseClient.auth.signUp({ email, password });
+          // user_metadata.role survives even if the confirmation-email path
+          // is taken (see the onAuthStateChange listener in initSupabase) -
+          // that's a separate page load with no memory of studentAuthMode.
+          // emailRedirectTo makes sure the confirmation link brings them back
+          // here rather than whatever default Site URL is set in the
+          // Supabase dashboard (must also be added to that project's
+          // Redirect URLs allowlist, or Supabase will ignore it).
+          const { data, error } = await supabaseClient.auth.signUp({
+            email, password,
+            options: { data: { role: 'student', name }, emailRedirectTo: window.location.origin + window.location.pathname },
+          });
           if (error) throw error;
           if (!data.session) {
             setStudentAuthStatus('✅ Check your email to confirm your account, then log in.');
@@ -1910,9 +1948,24 @@
           session = data.session;
         }
 
-        // Idempotent - safe to call on every login, not just signup, so a
-        // student row always exists even if a prior registration call failed.
-        const name = document.getElementById('m-student-name').value.trim();
+        await finishStudentSession(session, name);
+      } catch (err) {
+        console.error(err);
+        setStudentAuthStatus('❌ ' + (err.message || 'Something went wrong.'));
+        btn.disabled = false;
+      }
+    }
+
+    // Shared by the manual login/signup form above and the onAuthStateChange
+    // listener in initSupabase (which catches the "clicked the confirmation
+    // email link" case, where there's no form submit to hang this off of).
+    async function finishStudentSession(session, name) {
+      if (lastFinishedAuthToken === session.access_token) return;
+      lastFinishedAuthToken = session.access_token;
+
+      // Idempotent - safe to call on every login, not just signup, so a
+      // student row always exists even if a prior registration call failed.
+      try {
         const regRes = await fetch('/api/student/register', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -1923,19 +1976,18 @@
           localStorage.setItem('viatestprep_active_student_id', regData.id);
           localStorage.setItem('viatestprep_active_student_name', regData.name || '');
         }
-        localStorage.removeItem('viatestprep_active_student_expires_at'); // self-serve = free, no expiry yet
-        localStorage.removeItem('viatestprep_student_access'); // defaults to 'full'
-        localStorage.setItem('viatestprep_unlocked', 'true');
-        localStorage.setItem('viatestprep_user_role', 'student');
-        localStorage.setItem('userEmail', email);
-
-        closeAccessModal();
-        renderAppView();
-      } catch (err) {
-        console.error(err);
-        setStudentAuthStatus('❌ ' + (err.message || 'Something went wrong.'));
-        btn.disabled = false;
+      } catch (e) {
+        console.error('Could not register student account:', e);
       }
+
+      localStorage.removeItem('viatestprep_active_student_expires_at'); // self-serve = free, no expiry yet
+      localStorage.removeItem('viatestprep_student_access'); // defaults to 'full'
+      localStorage.setItem('viatestprep_unlocked', 'true');
+      localStorage.setItem('viatestprep_user_role', 'student');
+      localStorage.setItem('userEmail', session.user.email);
+
+      closeAccessModal();
+      renderAppView();
     }
 
     async function handleStudentForgotPassword() {
@@ -1978,7 +2030,17 @@
         let session;
         if (consultancyAuthMode === 'signup') {
           setConsultancyAuthStatus('Creating your account...');
-          const { data, error } = await supabaseClient.auth.signUp({ email, password });
+          // user_metadata.role/name survive even if the confirmation-email
+          // path is taken (see the onAuthStateChange listener in
+          // initSupabase) - that's a separate page load with no memory of
+          // consultancyAuthMode. emailRedirectTo makes sure the confirmation
+          // link brings them back here rather than whatever default Site URL
+          // is set in the Supabase dashboard (must also be added to that
+          // project's Redirect URLs allowlist, or Supabase will ignore it).
+          const { data, error } = await supabaseClient.auth.signUp({
+            email, password,
+            options: { data: { role: 'consultancy', name }, emailRedirectTo: window.location.origin + window.location.pathname },
+          });
           if (error) throw error;
           if (!data.session) {
             setConsultancyAuthStatus('✅ Check your email to confirm your account, then log in.');
@@ -1994,6 +2056,22 @@
           session = data.session;
         }
 
+        await finishConsultancySession(session, name);
+      } catch (err) {
+        console.error(err);
+        setConsultancyAuthStatus('❌ ' + (err.message || 'Something went wrong.'));
+        btn.disabled = false;
+      }
+    }
+
+    // Shared by the manual login/signup form above and the onAuthStateChange
+    // listener in initSupabase (which catches the "clicked the confirmation
+    // email link" case, where there's no form submit to hang this off of).
+    async function finishConsultancySession(session, name) {
+      if (lastFinishedAuthToken === session.access_token) return;
+      lastFinishedAuthToken = session.access_token;
+
+      try {
         // Idempotent (see /api/consultancy/register.js) - creates a fresh
         // unactivated row on first signup, or just claims/re-reads an
         // existing one on login.
@@ -2007,7 +2085,7 @@
 
         localStorage.setItem('viatestprep_unlocked', 'true');
         localStorage.setItem('viatestprep_user_role', 'consultancy');
-        localStorage.setItem('userEmail', email);
+        localStorage.setItem('userEmail', session.user.email);
         localStorage.setItem('viatestprep_consultancy_id', regData.id);
         localStorage.setItem('viatestprep_consultancy_name', regData.name);
         localStorage.setItem('viatestprep_consultancy_plan', regData.planName);
@@ -2018,10 +2096,11 @@
         // plan is active, or its own "choose a plan" / "renew" lock screen if
         // not - no need to branch on that here too (see initConsultancyDashboard).
         renderAppView();
-      } catch (err) {
-        console.error(err);
-        setConsultancyAuthStatus('❌ ' + (err.message || 'Something went wrong.'));
-        btn.disabled = false;
+      } catch (e) {
+        console.error('Could not finish consultancy sign-in:', e);
+        setConsultancyAuthStatus('❌ ' + (e.message || 'Could not load your consultancy account.'));
+        const btn = document.getElementById('m-consultancy-auth-btn');
+        if (btn) btn.disabled = false;
       }
     }
 
