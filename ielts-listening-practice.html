@@ -574,7 +574,26 @@
     }
 
     function submitTest(autoSubmit) {
-      if (!autoSubmit && !confirm('Are you sure you want to submit the test?')) return;
+      if (!autoSubmit) {
+        // Real completion gate, not just a confirm() dialog - every question
+        // must be answered before a student can submit manually. Auto-submit
+        // (timer expiry) bypasses this since there's no more time left
+        // regardless. Same "answered" check already used for the
+        // question-nav button styling.
+        var totalUnanswered = 0, totalAll = 0;
+        testData.listening.sections.forEach(function(sec) {
+          sec.questions.forEach(function(q) {
+            if (q.contentUnavailable) return;
+            totalAll++;
+            if (!userAnswers[q.num]) totalUnanswered++;
+          });
+        });
+        if (totalUnanswered > 0) {
+          alert('You have ' + totalUnanswered + ' unanswered question' + (totalUnanswered === 1 ? '' : 's') + ' left (out of ' + totalAll + '). Please answer every question before submitting, or wait for the timer to run out to auto-submit as-is.');
+          return;
+        }
+        if (!confirm('Are you sure you want to submit the test?')) return;
+      }
       clearInterval(timerInterval);
       audio.pause();
       var correctCount = 0, totalQs = 0;

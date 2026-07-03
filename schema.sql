@@ -64,7 +64,17 @@ CREATE TABLE IF NOT EXISTS mock_history (
   reading_band NUMERIC(2,1),
   writing_task1 TEXT,
   writing_task2 TEXT,
-  writing_band NUMERIC(2,1),
+  writing_band NUMERIC(2,1),         -- combined overall Writing band: (task1 + 2*task2)/3, IELTS-rounded
+  -- Per-task bands + structured feedback from the automated rule-based
+  -- grader (api/_lib/writingGrader.js) - no AI/LLM involved, purely text
+  -- statistics (word count, structure, cohesive devices, lexical diversity,
+  -- sentence complexity) scored against real IELTS band descriptor proxies.
+  -- A tutor can review/override these via the CRM's Writing Grader, which
+  -- flips writing_auto_graded to false once they save their own scores.
+  writing_task1_band NUMERIC(2,1),
+  writing_task2_band NUMERIC(2,1),
+  writing_feedback TEXT,             -- JSON-encoded { task1, task2, overallBand, disclaimer } from writingGrader.js
+  writing_auto_graded BOOLEAN DEFAULT true,
   completed_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
@@ -72,6 +82,10 @@ CREATE TABLE IF NOT EXISTS mock_history (
 -- ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS writing_task1 TEXT;
 -- ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS writing_task2 TEXT;
 -- ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS writing_band NUMERIC(2,1);
+-- ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS writing_task1_band NUMERIC(2,1);
+-- ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS writing_task2_band NUMERIC(2,1);
+-- ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS writing_feedback TEXT;
+-- ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS writing_auto_graded BOOLEAN DEFAULT true;
 
 -- 4. Speaking Grades Table (Manual recordings and grades from 1-on-1 grader)
 CREATE TABLE IF NOT EXISTS speaking_grades (

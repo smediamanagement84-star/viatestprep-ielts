@@ -1484,13 +1484,25 @@
             if (mH) {
               mH.forEach(m => {
                 if (m.module_type === 'writing') {
+                  // writing_band is now set automatically at submission time
+                  // by the rule-based grader (api/_lib/writingGrader.js), so
+                  // this is only ever 'Submitted' for essays saved before
+                  // that feature existed. writing_auto_graded lets the CRM
+                  // distinguish "still the automated score" from "a tutor
+                  // has reviewed and overridden it" (see submitWritingGrade).
+                  let autoFeedback = null;
+                  try { autoFeedback = m.writing_feedback ? JSON.parse(m.writing_feedback) : null; } catch (e) { /* ignore malformed feedback */ }
                   s.mockHistory.push({
                     test: m.test_name,
                     date: m.completed_at.split('T')[0],
                     listening: '—',
                     reading: '—',
                     writing: m.writing_band != null ? String(m.writing_band) : 'Submitted',
-                    writingDetails: { task1: m.writing_task1 || '', task2: m.writing_task2 || '' },
+                    writingDetails: {
+                      task1: m.writing_task1 || '', task2: m.writing_task2 || '',
+                      task1Band: m.writing_task1_band, task2Band: m.writing_task2_band,
+                      autoGraded: m.writing_auto_graded !== false, autoFeedback,
+                    },
                     overall: m.writing_band != null ? m.writing_band : '—'
                   });
                   return;
@@ -3542,7 +3554,25 @@
       if (!stud) return;
       const testRecord = stud.mockHistory[testIndex];
       if (!testRecord) return;
-      
+
+      const wd = testRecord.writingDetails || {};
+      const isAutoGraded = wd.autoGraded !== false && wd.task1Band != null;
+      const statusBadge = isAutoGraded
+        ? `<span class="px-2 py-0.5 rounded-full text-[9px] font-black uppercase bg-amber-50 text-amber-700 border border-amber-200">🤖 Automated score - not yet tutor-reviewed</span>`
+        : `<span class="px-2 py-0.5 rounded-full text-[9px] font-black uppercase bg-emerald-50 text-emerald-700 border border-emerald-100">✓ Tutor-reviewed</span>`;
+
+      const allAutoNotes = wd.autoFeedback ? [
+        ...(wd.autoFeedback.task1 ? Object.values(wd.autoFeedback.task1.notes).flat() : []),
+        ...(wd.autoFeedback.task2 ? Object.values(wd.autoFeedback.task2.notes).flat() : []),
+      ] : [];
+      const autoFeedbackBlock = allAutoNotes.length ? `
+        <div class="space-y-1">
+          <strong class="text-[#4a453d] block font-bold">Automated Feedback (rule-based, not AI)</strong>
+          <ul class="p-3 bg-white border border-[#e5ded0] rounded-xl text-[#5c5648] list-disc pl-6 space-y-1">
+            ${allAutoNotes.map(n => `<li>${escapeHtml(n)}</li>`).join('')}
+          </ul>
+        </div>` : '';
+
       const timeline = document.getElementById('drawerTimeline');
       timeline.innerHTML = `
         <div class="space-y-4 bg-[#f3ecd8]/50 border border-[#e5ded0] p-4 rounded-2xl text-xs">
@@ -3550,18 +3580,21 @@
             <h5 class="font-bold text-[#1c1a17]">Grade Writing: ${escapeHtml(testRecord.test)}</h5>
             <button onclick="openCRMProfileDrawer('${studentId}')" class="text-[10px] text-[#7a2331] hover:text-[#5e1a25] font-bold">← Back</button>
           </div>
-          
+          <div>${statusBadge}</div>
+
           <div class="space-y-3 mt-3">
             <div class="space-y-1">
               <strong class="text-[#4a453d] block font-bold">Task 1 Essay Draft:</strong>
               <div class="p-3 bg-white border border-[#e5ded0] rounded-xl max-h-40 overflow-y-auto whitespace-pre-wrap text-[#5c5648]">${escapeHtml(testRecord.writingDetails?.task1 || 'No Task 1 draft submitted.')}</div>
             </div>
-            
+
             <div class="space-y-1">
               <strong class="text-[#4a453d] block font-bold">Task 2 Essay Draft:</strong>
               <div class="p-3 bg-white border border-[#e5ded0] rounded-xl max-h-40 overflow-y-auto whitespace-pre-wrap text-[#5c5648]">${escapeHtml(testRecord.writingDetails?.task2 || 'No Task 2 draft submitted.')}</div>
             </div>
-            
+
+            ${autoFeedbackBlock}
+
             <div class="grid grid-cols-2 gap-3 pt-2">
               <div>
                 <label class="block font-bold text-[#4a453d] mb-1">Task 1 Band</label>
@@ -3611,15 +3644,24 @@
       if (!testRecord.writingDetails) testRecord.writingDetails = {};
       testRecord.writingDetails.task1Band = task1Band;
       testRecord.writingDetails.task2Band = task2Band;
+      testRecord.writingDetails.autoGraded = false; // a tutor has now reviewed/confirmed this score
       testRecord.writing = overallWriting ? overallWriting.toFixed(1) : 'Graded';
       testRecord.overall = overallWriting ? overallWriting.toFixed(1) : '—';
       testRecord.notes = feedback;
-      
+
       localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
 
       if (supabaseClient) {
+        // Saving here always means a tutor has reviewed it, whether they
+        // kept the automated bands as-is or changed them - so
+        // writing_auto_graded flips to false either way.
         supabaseClient.from('mock_history')
-          .update({ writing_band: overallWriting || null })
+          .update({
+            writing_band: overallWriting || null,
+            writing_task1_band: task1Band || null,
+            writing_task2_band: task2Band || null,
+            writing_auto_graded: false,
+          })
           .eq('student_id', studentId)
           .eq('test_name', testRecord.test)
           .eq('module_type', 'writing')

@@ -12,6 +12,7 @@
 // this app's client-side-secret design. Genuine per-request auth would need
 // real Supabase Auth + RLS, which is a larger change than this pass covers.
 const { getStudentById, insertMockResult } = require('../_lib/supabaseAdmin');
+const { gradeWritingSubmission } = require('../_lib/writingGrader');
 
 const VALID_MODULES = ['listening', 'reading', 'writing'];
 
@@ -22,7 +23,7 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const { studentId, testName, moduleType, listeningBand, readingBand, writingTask1, writingTask2, writingBand } = req.body || {};
+    const { studentId, testName, moduleType, listeningBand, readingBand, writingTask1, writingTask2 } = req.body || {};
 
     if (!studentId || !testName || !VALID_MODULES.includes(moduleType)) {
       res.status(400).json({ ok: false, error: 'Missing or invalid studentId, testName, or moduleType' });
@@ -35,6 +36,15 @@ module.exports = async (req, res) => {
       return;
     }
 
+    // Writing is graded here, server-side, so the score is consistent
+    // regardless of which client submitted it and can't be spoofed by
+    // editing client-side JS - see writingGrader.js for the (non-AI,
+    // rule-based) scoring method.
+    let graded = null;
+    if (moduleType === 'writing') {
+      graded = gradeWritingSubmission(writingTask1, writingTask2);
+    }
+
     const row = await insertMockResult({
       student_id: studentId,
       test_name: testName,
@@ -43,10 +53,14 @@ module.exports = async (req, res) => {
       reading_band: moduleType === 'reading' ? readingBand : null,
       writing_task1: moduleType === 'writing' ? (writingTask1 || null) : null,
       writing_task2: moduleType === 'writing' ? (writingTask2 || null) : null,
-      writing_band: moduleType === 'writing' ? (writingBand ?? null) : null,
+      writing_band: graded ? graded.overallBand : null,
+      writing_task1_band: graded && graded.task1 ? graded.task1.band : null,
+      writing_task2_band: graded && graded.task2 ? graded.task2.band : null,
+      writing_feedback: graded ? JSON.stringify(graded) : null,
+      writing_auto_graded: moduleType === 'writing' ? true : null,
     });
 
-    res.status(200).json({ ok: true, id: row.id });
+    res.status(200).json({ ok: true, id: row.id, graded });
   } catch (err) {
     console.error('mock/submit error:', err);
     res.status(500).json({ ok: false, error: 'Could not save mock result. Please try again in a moment.' });

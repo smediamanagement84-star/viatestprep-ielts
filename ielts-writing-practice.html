@@ -56,6 +56,20 @@
   #modelAnswerBox strong.label { color: #245e3f; font-size: 13px; display: flex; align-items: center; gap: 6px; font-family: "Inter", sans-serif; }
   #modelAnswerText { font-family: "Lora", serif; font-size: 13px; line-height: 1.8; color: var(--ink-soft); margin-top: 10px; }
 
+  #writingResultsBox { display: none; margin-bottom: 18px; padding: 18px 20px; border-radius: 12px; border: 1px solid var(--rule); background: var(--paper); }
+  #writingResultsBox .wr-overall { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+  #writingResultsBox .wr-overall-band { font-family: "Fraunces", serif; font-size: 32px; font-weight: 800; color: var(--accent); }
+  #writingResultsBox .wr-overall-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); }
+  #writingResultsBox .wr-disclaimer { font-size: 11px; color: var(--ink-soft); line-height: 1.6; padding: 10px 12px; background: var(--accent-soft); border-radius: 8px; margin-bottom: 14px; }
+  #writingResultsBox .wr-task { border-top: 1px solid var(--rule-soft); padding-top: 12px; margin-top: 12px; }
+  #writingResultsBox .wr-task-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  #writingResultsBox .wr-task-title { font-size: 13px; font-weight: 800; color: var(--ink); }
+  #writingResultsBox .wr-task-band { font-size: 13px; font-weight: 800; color: var(--accent); }
+  #writingResultsBox .wr-criteria { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; font-size: 11.5px; color: var(--ink-soft); margin-bottom: 8px; }
+  #writingResultsBox .wr-criteria span.name { color: var(--ink); font-weight: 600; }
+  #writingResultsBox .wr-notes { font-size: 11.5px; color: var(--ink-soft); line-height: 1.6; margin: 0; padding-left: 18px; }
+  #writingResultsBox .wr-notes li { margin-bottom: 4px; }
+
   .editor-pane { width: 50%; height: 100%; overflow-y: auto; background: var(--page-bg); padding: 28px 30px; display: flex; flex-direction: column; }
   .editor-sheet { max-width: 560px; margin: 0 auto; background: var(--paper); border: 1px solid var(--rule); border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 12px 32px rgba(28,26,23,.05); padding: 26px 30px 30px; flex: 1; display: flex; flex-direction: column; width: 100%; }
 
@@ -139,6 +153,8 @@
 
   <div class="editor-pane">
     <div class="editor-sheet">
+      <div id="writingResultsBox"></div>
+
       <div style="display:flex;justify-content:space-between;align-items:center;">
         <label for="essayInput" class="editor-label">Type your response below</label>
         <button onclick="clearEssay()" class="clear-link">Clear editor</button>
@@ -239,6 +255,7 @@ function initTest() {
       }
       if (timeRemaining <= 0) {
         clearInterval(timerInterval);
+        document.getElementById('essayInput').disabled = true;
         alert('Time is up! Submitting writing responses automatically.');
         submitTest(true);
       }
@@ -337,6 +354,11 @@ function calculateWordCount() {
   }
 }
 
+function wordCountOf(text) {
+  const t = (text || '').trim();
+  return t === '' ? 0 : t.split(/\s+/).length;
+}
+
 function clearEssay() {
   if (confirm("Clear all text inside the editor for this task? This cannot be undone.")) {
     document.getElementById('essayInput').value = '';
@@ -371,44 +393,74 @@ ${essayContent[2] || '[No draft entered]'}`;
   URL.revokeObjectURL(url);
 }
 
-function submitTest(autoSubmit = false) {
+async function submitTest(autoSubmit = false) {
+  essayContent[currentTask] = document.getElementById('essayInput').value;
+
   if (!autoSubmit) {
-    if (!confirm("Are you sure you want to submit your writing exam? This will freeze your drafts and show the Band 9 Model responses.")) return;
+    // Real completion gate, not just a confirm() dialog - both tasks must
+    // meet their minimum word count before a student can submit manually.
+    // Auto-submit (timer expiry) bypasses this since there's no more time
+    // left to write regardless.
+    const t1Words = wordCountOf(essayContent[1]);
+    const t2Words = wordCountOf(essayContent[2]);
+    const missing = [];
+    if (t1Words < 150) missing.push(`Task 1: ${t1Words}/150 words`);
+    if (t2Words < 250) missing.push(`Task 2: ${t2Words}/250 words`);
+    if (missing.length) {
+      alert('You cannot submit yet - both tasks need to reach their minimum word count first:\n\n' + missing.join('\n') + '\n\nKeep writing, or wait for the timer to run out to auto-submit as-is.');
+      return;
+    }
+    if (!confirm("Are you sure you want to submit your writing exam? This will freeze your drafts and grade your responses.")) return;
   }
 
   clearInterval(timerInterval);
+  document.getElementById('essayInput').disabled = true;
+  const submitBtnEl = document.getElementById('submitBtn');
+  if (submitBtnEl) { submitBtnEl.disabled = true; submitBtnEl.textContent = 'Grading...'; }
 
-  essayContent[currentTask] = document.getElementById('essayInput').value;
   localStorage.setItem(`autosave_test_${testId}_writing_task1`, essayContent[1]);
   localStorage.setItem(`autosave_test_${testId}_writing_task2`, essayContent[2]);
-
   localStorage.setItem(`score_test_${testId}_writing`, 'completed');
 
-  // Auto-syncs the draft essays into the student's CRM profile (unscored -
-  // writing_band stays null until a tutor grades it via the CRM's Writing
-  // Grader) - but only if this browser is logged in as a real roster student
-  // (see attemptStudentTokenLogin in index.html). Anonymous "free trial"
-  // visitors have no active student id, so nothing gets recorded for them.
+  // Auto-syncs the draft essays + auto-grade into the student's CRM profile
+  // - but only if this browser is logged in as a real roster student (see
+  // attemptStudentTokenLogin in index.html). Anonymous "free trial" visitors
+  // still get graded (see the /api/writing/grade fallback below), just
+  // nothing is recorded for them since there's no student row to attach it to.
   const activeStudentId = localStorage.getItem('viatestprep_active_student_id');
-  if (activeStudentId) {
-    fetch('/api/mock/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        studentId: activeStudentId,
-        testName: testData.title,
-        moduleType: 'writing',
-        writingTask1: essayContent[1],
-        writingTask2: essayContent[2]
-      })
-    }).catch(e => console.error('Could not sync writing submission to CRM:', e));
+  let graded = null;
+  try {
+    if (activeStudentId) {
+      const res = await fetch('/api/mock/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          studentId: activeStudentId,
+          testName: testData.title,
+          moduleType: 'writing',
+          writingTask1: essayContent[1],
+          writingTask2: essayContent[2]
+        })
+      });
+      const data = await res.json();
+      graded = data.graded;
+    } else {
+      const res = await fetch('/api/writing/grade', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ writingTask1: essayContent[1], writingTask2: essayContent[2] })
+      });
+      const data = await res.json();
+      if (data.ok) graded = data.graded;
+    }
+  } catch (e) {
+    console.error('Could not grade/sync writing submission:', e);
   }
 
-  alert("Writing submissions recorded! You can now review the Band 9 Model Responses and export your essays to share with a tutor.");
+  renderWritingResults(graded);
 
-  document.getElementById('essayInput').disabled = true;
   document.getElementById('modelAnswerBox').style.display = 'block';
-  document.getElementById('submitBtn').remove();
+  if (submitBtnEl) submitBtnEl.remove();
 
   const header = document.querySelector('.site-header');
   const returnBtn = document.createElement('a');
@@ -416,6 +468,53 @@ function submitTest(autoSubmit = false) {
   returnBtn.style.cssText = 'padding:7px 16px;border-radius:9px;background:#2f7a52;color:#fff;font-size:12px;font-weight:700;text-decoration:none;';
   returnBtn.textContent = "Return to Lobby";
   header.appendChild(returnBtn);
+}
+
+function escapeHtml(str) {
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// Renders the automated (non-AI, rule-based) band + per-criterion feedback
+// from api/_lib/writingGrader.js. `graded` can be null if grading failed
+// (e.g. a network error) - shows a fallback message rather than nothing.
+function renderWritingResults(graded) {
+  const box = document.getElementById('writingResultsBox');
+  if (!graded) {
+    box.innerHTML = `<div class="wr-disclaimer">Your drafts were saved, but automated grading could not be reached just now. Export your essay and share it with a tutor for review.</div>`;
+    box.style.display = 'block';
+    return;
+  }
+
+  const criterionLabel = { taskAchievement: 'Task Achievement', coherenceCohesion: 'Coherence &amp; Cohesion', lexicalResource: 'Lexical Resource', grammaticalRange: 'Grammatical Range &amp; Accuracy' };
+
+  function taskBlock(task, title) {
+    if (!task) return `<div class="wr-task"><div class="wr-task-header"><span class="wr-task-title">${title}</span><span class="wr-task-band">Not submitted</span></div></div>`;
+    const criteriaHtml = Object.entries(task.criteria).map(([key, band]) =>
+      `<div><span class="name">${criterionLabel[key]}:</span> Band ${band.toFixed(1)}</div>`
+    ).join('');
+    const allNotes = Object.values(task.notes).flat();
+    const notesHtml = allNotes.length
+      ? `<ul class="wr-notes">${allNotes.map(n => `<li>${escapeHtml(n)}</li>`).join('')}</ul>`
+      : `<p class="wr-notes" style="padding-left:0;">No specific issues flagged for this task.</p>`;
+    return `
+      <div class="wr-task">
+        <div class="wr-task-header"><span class="wr-task-title">${title} (${task.wordCount} words)</span><span class="wr-task-band">Band ${task.band.toFixed(1)}</span></div>
+        <div class="wr-criteria">${criteriaHtml}</div>
+        ${notesHtml}
+      </div>`;
+  }
+
+  box.innerHTML = `
+    <div class="wr-overall">
+      <span class="wr-overall-band">${graded.overallBand != null ? graded.overallBand.toFixed(1) : '—'}</span>
+      <span class="wr-overall-label">Automated Writing Band Estimate</span>
+    </div>
+    <div class="wr-disclaimer">${escapeHtml(graded.disclaimer)}</div>
+    ${taskBlock(graded.task1, 'Task 1')}
+    ${taskBlock(graded.task2, 'Task 2')}
+  `;
+  box.style.display = 'block';
+  box.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 initTest();

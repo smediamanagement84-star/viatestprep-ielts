@@ -487,6 +487,24 @@
 
     function submitTest(autoSubmit = false) {
       if (!autoSubmit) {
+        // Real completion gate, not just a confirm() dialog - every question
+        // must be answered before a student can submit manually. Auto-submit
+        // (timer expiry) bypasses this since there's no more time left
+        // regardless. Same "answered" check already used for the
+        // question-nav button styling (line ~419).
+        let totalQs = 0, answered = 0;
+        testData.reading.passages.forEach(p => {
+          p.questions.forEach(q => {
+            if (q.contentUnavailable) return;
+            totalQs++;
+            if (userAnswers[q.num]) answered++;
+          });
+        });
+        if (answered < totalQs) {
+          const remaining = totalQs - answered;
+          alert(`You have ${remaining} unanswered question${remaining === 1 ? '' : 's'} left (out of ${totalQs}). Please answer every question before submitting, or wait for the timer to run out to auto-submit as-is.`);
+          return;
+        }
         if (!confirm('Are you sure you want to submit the test? You will see your total band score immediately.')) return;
       }
 
