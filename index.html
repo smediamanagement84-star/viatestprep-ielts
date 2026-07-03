@@ -67,6 +67,67 @@
     border-left: 4px solid #7a2331 !important;
   }
 
+  /* Elegant custom dropdown - progressively enhances native <select> so it keeps
+     full keyboard/accessibility/form behavior, just without the default browser
+     chrome that reads as "basic" against the rest of the paper-themed UI. */
+  .select-elegant {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23a8792f' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.9rem center;
+    padding-right: 2.25rem !important;
+    cursor: pointer;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  .select-elegant:hover {
+    border-color: #a8792f !important;
+  }
+  .select-elegant:focus {
+    border-color: #7a2331 !important;
+    box-shadow: 0 0 0 3px rgba(122, 35, 49, 0.1);
+    outline: none;
+  }
+
+  /* CRM sidebar nav - icon chip + label, clearer active/hover states than a
+     plain text row with a thin border. */
+  .crm-nav-btn {
+    display: flex; align-items: center; gap: 0.65rem;
+    width: 100%; text-align: left; padding: 0.65rem 0.85rem;
+    border-radius: 0.75rem; font-size: 0.75rem; font-weight: 700;
+    color: #5c5648; transition: background .15s, color .15s;
+  }
+  .crm-nav-btn .crm-nav-icon {
+    width: 30px; height: 30px; border-radius: 0.6rem; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; font-size: 0.9rem;
+    background: #f3ecd8; transition: background .15s, color .15s;
+  }
+  .crm-nav-btn:hover { background: #f3ecd8; }
+  .crm-nav-btn.active-tab {
+    background: linear-gradient(90deg, rgba(122,35,49,0.08), rgba(122,35,49,0.02));
+    color: #7a2331 !important;
+    border-left: none !important;
+    box-shadow: inset 3px 0 0 #7a2331;
+  }
+  .crm-nav-btn.active-tab .crm-nav-icon { background: #7a2331; color: #fff; }
+
+  /* CRM KPI cards with an icon badge + subtle depth, replacing flat white boxes */
+  .crm-kpi-card {
+    background: #fffefb;
+    border: 1px solid #ece4d2;
+    border-radius: 1rem;
+    padding: 1.1rem 1.25rem;
+    box-shadow: 0 1px 2px rgba(28,26,23,.03), 0 8px 20px rgba(28,26,23,.03);
+    display: flex; align-items: center; gap: 0.9rem;
+    transition: box-shadow .2s, transform .2s;
+  }
+  .crm-kpi-card:hover { box-shadow: 0 1px 2px rgba(28,26,23,.04), 0 14px 28px rgba(28,26,23,.06); transform: translateY(-1px); }
+  .crm-kpi-icon {
+    width: 42px; height: 42px; border-radius: 0.85rem; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; font-size: 1.15rem;
+  }
+
   /* Modal Overlays */
   .modal-overlay {
     backdrop-filter: blur(8px);
@@ -523,7 +584,7 @@
             <!-- Selector -->
             <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
               <label class="block text-xs font-bold text-[#766f62] uppercase tracking-wider mb-2">Select prompt Card</label>
-              <select id="s-topic-select" onchange="loadStudentSpeakingTopic()" class="w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none focus:border-[#7a2331]">
+              <select id="s-topic-select" onchange="loadStudentSpeakingTopic()" class="select-elegant w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none focus:border-[#7a2331]">
                 <option value="Describe a skill you learned from an older relative.">Cue Card 1: Skill Learned from Relative (Part 2)</option>
                 <option value="Describe a time you had to resolve a conflict in a team.">Cue Card 2: Team Conflict Resolution (Part 2)</option>
                 <option value="Describe a website or app you use daily and why it helps you.">Cue Card 3: Daily Website or App (Part 2)</option>
@@ -619,48 +680,51 @@
   <!-- VIEW 3: PREMIUM CONSULTANCY CRM DASHBOARD   -->
   <!-- ========================================== -->
   <div id="view-consultancy" class="view-container min-h-screen flex flex-col hidden bg-[#f3ecd8]">
-    <header class="h-20 bg-[#3d0f16] px-6 flex items-center justify-between shrink-0 text-white shadow-md">
+    <header class="h-20 px-6 flex items-center justify-between shrink-0 text-white shadow-md" style="background:linear-gradient(135deg,#4a1119,#2a0a0f)">
       <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-lg bg-white text-[#7a2331] flex items-center justify-center font-serif font-extrabold text-lg">V</div>
+        <div class="w-10 h-10 rounded-xl bg-white text-[#7a2331] flex items-center justify-center font-serif font-extrabold text-lg shadow-inner">V</div>
         <div>
           <h2 class="font-bold text-sm tracking-tight" id="crmHeaderName">Nepal Consultancy Portal</h2>
           <span class="text-[9px] uppercase font-black text-[#f0d9a8] tracking-wider" id="crmHeaderPlan">Growth Plan</span>
         </div>
       </div>
       <div class="flex items-center gap-3">
-        <button onclick="exportCRMToCSV()" class="px-3.5 py-1.5 bg-white/10 hover:bg-white/20 text-white font-bold rounded-lg text-xs transition">Export CSV</button>
-        <label class="px-3.5 py-1.5 bg-white/10 hover:bg-white/20 text-white font-bold rounded-lg text-xs transition cursor-pointer">
-          Import CSV
+        <button onclick="exportCRMToCSV()" class="px-3.5 py-1.5 bg-white/10 hover:bg-white/20 border border-white/10 text-white font-bold rounded-lg text-xs transition flex items-center gap-1.5">⬇ Export CSV</button>
+        <label class="px-3.5 py-1.5 bg-white/10 hover:bg-white/20 border border-white/10 text-white font-bold rounded-lg text-xs transition cursor-pointer flex items-center gap-1.5">
+          ⬆ Import CSV
           <input type="file" onchange="importCRMFromCSV(event)" accept=".csv" class="hidden" />
         </label>
-        <button onclick="handleLogout()" class="px-3.5 py-1.5 bg-rose-600/95 hover:bg-rose-700 text-white font-bold rounded-lg text-xs transition">Logout</button>
+        <button onclick="handleLogout()" class="px-3.5 py-1.5 bg-rose-600/90 hover:bg-rose-600 text-white font-bold rounded-lg text-xs transition">Logout</button>
       </div>
     </header>
 
     <div class="flex-1 flex flex-col md:flex-row overflow-hidden">
       <!-- CRM Sidebar -->
-      <aside class="w-full md:w-60 bg-white border-b md:border-r border-[#ece4d2] p-4 flex flex-col gap-1 shrink-0">
-        <button onclick="switchCRMTab('crm')" id="c-tab-crm" class="sidebar-tab active-tab w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">👥 CRM Student Roster</button>
-        <button onclick="switchCRMTab('grader')" id="c-tab-grader" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">🎤 Live Speaking Grader</button>
-        <button onclick="switchCRMTab('vault')" id="c-tab-vault" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">📦 Material Vault</button>
-        <button onclick="switchCRMTab('settings')" id="c-tab-settings" class="sidebar-tab w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">⚙️ Database Settings</button>
+      <aside class="w-full md:w-64 bg-white border-b md:border-r border-[#ece4d2] p-4 flex flex-col gap-1 shrink-0">
+        <span class="text-[9px] font-black uppercase tracking-widest text-[#c9c0ac] px-2 mb-1">Workspace</span>
+        <button onclick="switchCRMTab('crm')" id="c-tab-crm" class="crm-nav-btn active-tab"><span class="crm-nav-icon">👥</span>CRM Student Roster</button>
+        <button onclick="switchCRMTab('grader')" id="c-tab-grader" class="crm-nav-btn"><span class="crm-nav-icon">🎤</span>Live Speaking Grader</button>
+        <button onclick="switchCRMTab('vault')" id="c-tab-vault" class="crm-nav-btn"><span class="crm-nav-icon">📦</span>Material Vault</button>
       </aside>
 
       <!-- CRM Content View -->
       <main class="flex-1 p-6 md:p-8 overflow-y-auto">
         <!-- Subscription & Seat Capacity -->
-        <section id="crm-capacity-card" class="bg-white border border-[#ece4d2] rounded-2xl shadow-sm p-4 mb-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-          <div class="shrink-0">
-            <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider block">Current Plan</span>
-            <span id="c-cap-plan" class="text-sm font-extrabold text-[#7a2331]">Growth Plan</span>
-            <span id="c-cap-renewal" class="text-[10px] text-[#8a8171] block mt-0.5">Renews in — days</span>
+        <section id="crm-capacity-card" class="rounded-2xl shadow-sm p-5 mb-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-5" style="background:linear-gradient(135deg,#fffefb,#f9f2df);border:1px solid #ece0c4">
+          <div class="shrink-0 flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center text-lg shrink-0" style="background:rgba(122,35,49,.1);color:#7a2331">👑</div>
+            <div>
+              <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider block">Current Plan</span>
+              <span id="c-cap-plan" class="text-sm font-extrabold text-[#7a2331]">Growth Plan</span>
+              <span id="c-cap-renewal" class="text-[10px] text-[#8a8171] block mt-0.5">Renews in — days</span>
+            </div>
           </div>
           <div class="flex-1 min-w-[180px]">
             <div class="flex justify-between items-baseline mb-1">
               <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider">Seats Used</span>
               <span id="c-cap-count" class="text-xs font-extrabold text-[#1c1a17]">0 / 25 students</span>
             </div>
-            <div class="w-full h-2.5 bg-[#efe6d0] rounded-full overflow-hidden">
+            <div class="w-full h-3 bg-white border border-[#ece0c4] rounded-full overflow-hidden shadow-inner">
               <div id="c-cap-bar" class="h-full rounded-full transition-all duration-300" style="width:0%;background:#1f7a4d"></div>
             </div>
           </div>
@@ -672,21 +736,33 @@
 
         <!-- KPI Row -->
         <section class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          <div class="bg-white border border-[#ece4d2] p-4 rounded-xl shadow-sm">
-            <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider">Total Enrolled</span>
-            <span id="c-kpi-total" class="text-2xl font-extrabold text-[#1c1a17] mt-1 block">0</span>
+          <div class="crm-kpi-card">
+            <div class="crm-kpi-icon" style="background:rgba(122,35,49,.08);color:#7a2331">👥</div>
+            <div>
+              <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider">Total Enrolled</span>
+              <span id="c-kpi-total" class="text-2xl font-extrabold text-[#1c1a17] block leading-tight">0</span>
+            </div>
           </div>
-          <div class="bg-white border border-[#ece4d2] p-4 rounded-xl shadow-sm">
-            <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider">Active Status</span>
-            <span id="c-kpi-active" class="text-2xl font-extrabold text-[#1c1a17] mt-1 block">0</span>
+          <div class="crm-kpi-card">
+            <div class="crm-kpi-icon" style="background:rgba(31,122,77,.1);color:#1f7a4d">✓</div>
+            <div>
+              <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider">Active Status</span>
+              <span id="c-kpi-active" class="text-2xl font-extrabold text-[#1c1a17] block leading-tight">0</span>
+            </div>
           </div>
-          <div class="bg-white border border-[#ece4d2] p-4 rounded-xl shadow-sm">
-            <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider">Avg Mock Band</span>
-            <span id="c-kpi-avg" class="text-2xl font-extrabold text-[#7a2331] mt-1 block">—</span>
+          <div class="crm-kpi-card">
+            <div class="crm-kpi-icon" style="background:rgba(168,121,47,.12);color:#a8792f">🎯</div>
+            <div>
+              <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider">Avg Mock Band</span>
+              <span id="c-kpi-avg" class="text-2xl font-extrabold text-[#7a2331] block leading-tight">—</span>
+            </div>
           </div>
-          <div class="bg-white border border-[#ece4d2] p-4 rounded-xl shadow-sm">
-            <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider">Speaking Interviews Graded</span>
-            <span id="c-kpi-speaking" class="text-2xl font-extrabold text-emerald-600 mt-1 block">0</span>
+          <div class="crm-kpi-card">
+            <div class="crm-kpi-icon" style="background:rgba(16,185,129,.1);color:#059669">🎤</div>
+            <div>
+              <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider">Speaking Graded</span>
+              <span id="c-kpi-speaking" class="text-2xl font-extrabold text-emerald-600 block leading-tight">0</span>
+            </div>
           </div>
         </section>
 
@@ -695,7 +771,7 @@
           <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
             <input type="text" id="rosterSearch" oninput="renderCRMTable()" placeholder="🔍 Search by name, email, or Student ID..." class="w-full sm:w-72 px-4 py-2 border border-[#e5ded0] rounded-xl text-xs focus:outline-none focus:border-[#7a2331] bg-white" />
             <div class="flex gap-2 w-full sm:w-auto">
-              <select id="rosterStatusFilter" onchange="renderCRMTable()" class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none">
+              <select id="rosterStatusFilter" onchange="renderCRMTable()" class="select-elegant px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none">
                 <option value="all">All Statuses</option>
                 <option value="Active">Active</option>
                 <option value="Completed">Completed</option>
@@ -737,7 +813,7 @@
             <form onsubmit="handleCRMGraderSubmit(event)" class="space-y-4">
               <div class="form-group flex flex-col gap-1">
                 <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Select Student Profile</label>
-                <select id="graderStudentSelect" required class="w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none focus:border-[#7a2331]">
+                <select id="graderStudentSelect" required class="select-elegant w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none focus:border-[#7a2331]">
                   <!-- Populated by JS -->
                 </select>
               </div>
@@ -820,24 +896,6 @@
           <!-- Populated by JS -->
         </div>
 
-        <!-- CRM Tab 4: Database Settings -->
-        <div id="crm-settings-view" class="crm-subview hidden max-w-lg bg-white border border-[#ece4d2] rounded-2xl shadow-sm p-6 space-y-4">
-          <div>
-            <h3 class="text-sm font-extrabold text-[#1c1a17] uppercase tracking-wider">⚙️ Backend Cloud Sync Settings</h3>
-            <p class="text-xs text-[#766f62] mt-1">ViATestPrep is fully hybrid. Input your Supabase credentials below to sync student rosters, mock history, and cue card grades to your PostgreSQL cloud database. If empty, local-first offline storage is used.</p>
-          </div>
-          <div class="space-y-3">
-            <div class="flex flex-col gap-1">
-              <label class="text-[9px] font-bold text-[#8a8171] uppercase">Supabase Project URL</label>
-              <input type="text" id="settingSupabaseUrl" placeholder="https://your-project.supabase.co" class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-[#f3ecd8] focus:bg-white outline-none focus:border-[#7a2331] font-mono" />
-            </div>
-            <div class="flex flex-col gap-1">
-              <label class="text-[9px] font-bold text-[#8a8171] uppercase">Supabase Anon/Public Key</label>
-              <input type="password" id="settingSupabaseKey" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-[#f3ecd8] focus:bg-white outline-none focus:border-[#7a2331] font-mono" />
-            </div>
-            <button onclick="saveSupabaseSettings()" class="w-full py-2.5 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-xl text-xs transition">Save Cloud Configuration</button>
-          </div>
-        </div>
       </main>
     </div>
   </div>
@@ -1060,7 +1118,7 @@
           </div>
           <div class="flex flex-col gap-1">
             <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Status</label>
-            <select id="crmStudStatus" class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none">
+            <select id="crmStudStatus" class="select-elegant px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none">
               <option value="Active">Active</option>
               <option value="Completed">Completed</option>
               <option value="Paused">Paused</option>
@@ -1165,37 +1223,25 @@
     let vaultFilterTag = 'all';
     
     // Supabase Credentials State
+    // Platform infrastructure, not a per-consultancy setting - previously this
+    // was a self-service "paste your Supabase URL/key" panel exposed to every
+    // logged-in consultancy, which made no sense (they don't have their own
+    // Supabase project, and it invited each login to point the shared app at
+    // a different database). The anon key below is safe to ship client-side -
+    // it's the public key, access is enforced by Supabase Row Level Security
+    // policies, not by keeping this string secret.
+    const SUPABASE_URL = 'https://hcmhtxfmvutxtnwdbuur.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhjbWh0eGZtdnV0eHRud2RidXVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMwNDEwMjYsImV4cCI6MjA5ODYxNzAyNn0.lSW6zw5lS59dZF2MWD7kFQCtuoFtibnyS0x2nyQfZbA';
     let supabaseClient = null;
 
     function initSupabase() {
-      const url = localStorage.getItem('supabase_url');
-      const key = localStorage.getItem('supabase_key');
-      if (url && key && typeof supabase !== 'undefined') {
-        supabaseClient = supabase.createClient(url, key);
+      if (SUPABASE_URL && SUPABASE_ANON_KEY && typeof supabase !== 'undefined') {
+        supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
         console.log('Supabase backend client initialized.');
       } else {
         supabaseClient = null;
         console.log('Supabase offline fallback active.');
       }
-    }
-
-    function saveSupabaseSettings() {
-      const url = document.getElementById('settingSupabaseUrl').value.trim();
-      const key = document.getElementById('settingSupabaseKey').value.trim();
-      localStorage.setItem('supabase_url', url);
-      localStorage.setItem('supabase_key', key);
-      initSupabase();
-      alert('Cloud configuration settings saved successfully!');
-      if (supabaseClient) {
-        syncRosterFromCloud();
-      }
-    }
-
-    function loadSupabaseSettingsUI() {
-      const urlEl = document.getElementById('settingSupabaseUrl');
-      const keyEl = document.getElementById('settingSupabaseKey');
-      if (urlEl) urlEl.value = localStorage.getItem('supabase_url') || '';
-      if (keyEl) keyEl.value = localStorage.getItem('supabase_key') || '';
     }
 
     async function syncRosterFromCloud() {
@@ -2217,17 +2263,14 @@
 
     function switchCRMTab(tabId) {
       document.querySelectorAll('.crm-subview').forEach(el => el.classList.add('hidden'));
-      document.querySelectorAll('.sidebar-tab').forEach(el => {
+      document.querySelectorAll('.crm-nav-btn').forEach(el => {
         el.classList.remove('active-tab');
       });
-      
+
       document.getElementById('crm-' + tabId + '-view').classList.remove('hidden');
       document.getElementById('c-tab-' + tabId).classList.add('active-tab');
-      
+
       currentCRMTab = tabId;
-      if (tabId === 'settings') {
-        loadSupabaseSettingsUI();
-      }
     }
 
     function renderCRMTable() {
@@ -2256,13 +2299,19 @@
             avgMock = (sum / s.mockHistory.length).toFixed(1);
           }
 
+          const initials = s.name.trim().split(/\s+/).slice(0, 2).map(w => w[0]).join('').toUpperCase();
           const tr = document.createElement('tr');
           tr.className = 'hover:bg-[#f3ecd8] transition cursor-pointer';
           tr.onclick = () => openCRMProfileDrawer(s.id);
           tr.innerHTML = `
             <td class="p-4 font-bold text-[#1c1a17]">
-              ${escapeHtml(s.name)}
-              <span class="block text-[9px] font-mono font-bold text-[#a8792f] mt-0.5">${escapeHtml(s.studentId || '—')}</span>
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full flex items-center justify-center text-xs font-black shrink-0" style="background:rgba(122,35,49,.08);color:#7a2331">${escapeHtml(initials)}</div>
+                <div>
+                  ${escapeHtml(s.name)}
+                  <span class="block text-[9px] font-mono font-bold text-[#a8792f] mt-0.5">${escapeHtml(s.studentId || '—')}</span>
+                </div>
+              </div>
             </td>
             <td class="p-4 text-xs">
               <span class="text-[#766f62] block">${escapeHtml(s.email)}</span>
@@ -2607,14 +2656,14 @@
             <div class="grid grid-cols-2 gap-3 pt-2">
               <div>
                 <label class="block font-bold text-[#4a453d] mb-1">Task 1 Band</label>
-                <select id="gradeTask1Band" class="w-full bg-white border border-[#e5ded0] p-2 rounded-lg text-xs font-semibold">
+                <select id="gradeTask1Band" class="select-elegant w-full bg-white border border-[#e5ded0] p-2 rounded-lg text-xs font-semibold">
                   <option value="">Select Band</option>
                   ${[9.0, 8.5, 8.0, 7.5, 7.0, 6.5, 6.0, 5.5, 5.0, 4.5, 4.0, 3.5, 3.0].map(b => `<option value="${b}" ${testRecord.writingDetails?.task1Band == b ? 'selected' : ''}>Band ${b}</option>`).join('')}
                 </select>
               </div>
               <div>
                 <label class="block font-bold text-[#4a453d] mb-1">Task 2 Band</label>
-                <select id="gradeTask2Band" class="w-full bg-white border border-[#e5ded0] p-2 rounded-lg text-xs font-semibold">
+                <select id="gradeTask2Band" class="select-elegant w-full bg-white border border-[#e5ded0] p-2 rounded-lg text-xs font-semibold">
                   <option value="">Select Band</option>
                   ${[9.0, 8.5, 8.0, 7.5, 7.0, 6.5, 6.0, 5.5, 5.0, 4.5, 4.0, 3.5, 3.0].map(b => `<option value="${b}" ${testRecord.writingDetails?.task2Band == b ? 'selected' : ''}>Band ${b}</option>`).join('')}
                 </select>
