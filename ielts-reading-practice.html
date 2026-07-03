@@ -395,7 +395,7 @@
           }).join('')}</div>`;
         } else if (q.type === 'FILL') {
           const val = userAnswers[q.num] || '';
-          answerHtml = `<input type="text" oninput="handleInput(${q.num}, this.value)" class="input-fill" value="${val}" placeholder="Type your answer here..." />`;
+          answerHtml = `<input type="text" oninput="handleInput(${q.num}, this.value)" class="input-fill" value="${escapeHtml(val)}" placeholder="Type your answer here..." />`;
         }
         qBox.insertAdjacentHTML('beforeend', answerHtml);
 
@@ -478,7 +478,7 @@
         fdContainer.className = 'feedback-box wrong';
         fdContainer.innerHTML = `
           <div style="font-weight:700;margin-bottom:4px;">Incorrect</div>
-          <p style="margin:0;">Your answer: <span style="text-decoration:line-through;">${userAnswers[qNum] || 'None'}</span></p>
+          <p style="margin:0;">Your answer: <span style="text-decoration:line-through;">${escapeHtml(userAnswers[qNum] || 'None')}</span></p>
           <p style="margin:4px 0 6px;">Correct answer: <strong>${q.answer}</strong></p>
           <div><strong>Explanation:</strong> ${q.explanation}</div>
         `;
@@ -669,6 +669,10 @@
           }
         }
       }
+    }
+
+    function escapeHtml(str) {
+      return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
     }
 
     initTest();

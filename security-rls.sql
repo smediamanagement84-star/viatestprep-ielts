@@ -1,0 +1,110 @@
+-- Row Level Security policies for the viatestprep-ielts Supabase project.
+--
+-- WHY THIS FILE EXISTS: index.html embeds the Supabase "anon" key directly in
+-- client-side JavaScript (necessary - there is no login wall in front of the
+-- static site). That key is public: anyone who opens dev tools can copy it
+-- and call this project's REST API (https://<project>.supabase.co/rest/v1/...)
+-- directly, completely bypassing the app's own JS logic (tenant filters,
+-- capacity checks, "only service_role writes this table" conventions, etc).
+--
+-- By default, a Postgres table with NO Row Level Security enabled lets the
+-- anon key do whatever the anon role's grants allow - which in a fresh
+-- Supabase project is typically full SELECT/INSERT/UPDATE/DELETE. If RLS has
+-- never been explicitly turned on for these tables, that is almost certainly
+-- the current state: anyone with the anon key could, right now, read every
+-- consultancy's billing info, or POST a row straight into `orders` claiming
+-- status='paid' and grant themselves a free subscription without ever
+-- touching eSewa/Khalti.
+--
+-- Run this whole file in the Supabase SQL Editor. It is safe to re-run.
+
+-- ===========================================================================
+-- PART 1 - safe to apply right now, no further app changes needed.
+-- Nothing in index.html or the standalone test pages touches `orders` or
+-- `consultancies` via the anon key anymore (see /api/consultancy/lookup.js
+-- and the payment endpoints, which all use the service_role key server-side).
+-- ===========================================================================
+
+ALTER TABLE orders ENABLE ROW LEVEL SECURITY;
+-- No policies at all = default deny for every role except service_role
+-- (service_role bypasses RLS entirely, which is what the payment endpoints
+-- rely on). The anon key gets zero access to this table, in either direction.
+
+ALTER TABLE consultancies ENABLE ROW LEVEL SECURITY;
+-- Same story: only /api/consultancy/lookup.js and /api/payment/*-verify.js
+-- (service_role) ever need to touch this table.
+
+-- ===========================================================================
+-- PART 2 - students / mock_history / speaking_grades.
+--
+-- These tables are read and written directly from the browser via the anon
+-- key today (the CRM's "Register Student", CSV import, roster sync, speaking
+-- grader, etc). The app tries to scope this to "your own consultancy's
+-- students" using an application-layer `.eq('consultancy_id', ...)` filter -
+-- but that is NOT a real security boundary. The anon key carries no identity
+-- at all, so a policy cannot say "only see rows belonging to the caller's own
+-- consultancy" - there is no way to know who's calling. A client can always
+-- just... not send that filter, and read/write every consultancy's students.
+--
+-- There are only two honest options here:
+--
+--   OPTION A (real isolation): give consultancies actual login sessions
+--   (Supabase Auth), add a `consultancies.owner_user_id UUID` column, and
+--   write policies keyed on auth.uid(). This is the only way to make
+--   "consultancy A cannot touch consultancy B's data" a real, enforced
+--   guarantee rather than a UI convention. Uncomment the block below once
+--   that's in place.
+--
+--   OPTION B (status quo, documented risk): leave RLS disabled on these
+--   three tables. The app's tenant filtering stays a soft, cooperative
+--   convention - fine for casual use, not a real security boundary against
+--   someone who deliberately extracts the anon key and calls the REST API
+--   directly. This is the current behavior; this file does not change it.
+--
+-- Pick one and tell Claude which - the auth.uid()-based policies below are
+-- ready to enable once real consultancy login exists.
+
+-- -- Example of what OPTION A's policies would look like once
+-- -- consultancies.owner_user_id exists and consultancies can log in via
+-- -- Supabase Auth:
+--
+-- ALTER TABLE students ENABLE ROW LEVEL SECURITY;
+-- CREATE POLICY "consultancy reads own students" ON students
+--   FOR SELECT USING (
+--     consultancy_id IN (SELECT id FROM consultancies WHERE owner_user_id = auth.uid())
+--   );
+-- CREATE POLICY "consultancy writes own students" ON students
+--   FOR INSERT WITH CHECK (
+--     consultancy_id IN (SELECT id FROM consultancies WHERE owner_user_id = auth.uid())
+--   );
+-- CREATE POLICY "consultancy updates own students" ON students
+--   FOR UPDATE USING (
+--     consultancy_id IN (SELECT id FROM consultancies WHERE owner_user_id = auth.uid())
+--   );
+-- CREATE POLICY "consultancy deletes own students" ON students
+--   FOR DELETE USING (
+--     consultancy_id IN (SELECT id FROM consultancies WHERE owner_user_id = auth.uid())
+--   );
+-- -- A logged-in student (self-serve auth) reading/updating only their own row:
+-- CREATE POLICY "student reads own row" ON students
+--   FOR SELECT USING (auth_user_id = auth.uid());
+--
+-- ALTER TABLE mock_history ENABLE ROW LEVEL SECURITY;
+-- CREATE POLICY "scoped to owning student's consultancy" ON mock_history
+--   FOR ALL USING (
+--     student_id IN (
+--       SELECT id FROM students WHERE consultancy_id IN (
+--         SELECT id FROM consultancies WHERE owner_user_id = auth.uid()
+--       ) OR auth_user_id = auth.uid()
+--     )
+--   );
+--
+-- ALTER TABLE speaking_grades ENABLE ROW LEVEL SECURITY;
+-- CREATE POLICY "scoped to owning student's consultancy" ON speaking_grades
+--   FOR ALL USING (
+--     student_id IN (
+--       SELECT id FROM students WHERE consultancy_id IN (
+--         SELECT id FROM consultancies WHERE owner_user_id = auth.uid()
+--       )
+--     )
+--   );

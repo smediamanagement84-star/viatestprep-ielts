@@ -69,14 +69,16 @@ module.exports = async (req, res) => {
     const khaltiJson = await khaltiRes.json();
 
     if (!khaltiRes.ok || !khaltiJson.payment_url) {
+      // Full response logged server-side only - it can include Khalti account
+      // config details that shouldn't be echoed back to the browser.
       console.error('khalti-initiate: khalti API rejected request', khaltiJson);
-      res.status(502).json({ error: 'Khalti rejected the payment request', detail: khaltiJson });
+      res.status(502).json({ error: 'Khalti rejected the payment request. Please try again or contact support.' });
       return;
     }
 
     res.status(200).json({ paymentUrl: khaltiJson.payment_url, pidx: khaltiJson.pidx });
   } catch (err) {
     console.error('khalti-initiate error:', err);
-    res.status(500).json({ error: 'Could not start Khalti payment', detail: String(err.message || err) });
+    res.status(500).json({ error: 'Could not start Khalti payment. Please try again in a moment.' });
   }
 };

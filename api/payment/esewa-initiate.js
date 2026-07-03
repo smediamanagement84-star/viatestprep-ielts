@@ -85,6 +85,6 @@ module.exports = async (req, res) => {
     });
   } catch (err) {
     console.error('esewa-initiate error:', err);
-    res.status(500).json({ error: 'Could not start eSewa payment', detail: String(err.message || err) });
+    res.status(500).json({ error: 'Could not start eSewa payment. Please try again in a moment.' });
   }
 };

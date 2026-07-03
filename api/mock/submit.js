@@ -49,6 +49,6 @@ module.exports = async (req, res) => {
     res.status(200).json({ ok: true, id: row.id });
   } catch (err) {
     console.error('mock/submit error:', err);
-    res.status(500).json({ ok: false, error: 'Could not save mock result', detail: String(err.message || err) });
+    res.status(500).json({ ok: false, error: 'Could not save mock result. Please try again in a moment.' });
   }
 };

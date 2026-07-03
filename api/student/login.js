@@ -38,6 +38,6 @@ module.exports = async (req, res) => {
     });
   } catch (err) {
     console.error('student/login error:', err);
-    res.status(500).json({ ok: false, error: 'Could not verify access link', detail: String(err.message || err) });
+    res.status(500).json({ ok: false, error: 'Could not verify access link. Please try again in a moment.' });
   }
 };

@@ -789,6 +789,18 @@
 
       <!-- CRM Content View -->
       <main class="flex-1 p-6 md:p-8 overflow-y-auto">
+        <!-- Subscription expiry lock - shown instead of the roster once the
+             consultancy's paid term has lapsed (see initConsultancyDashboard). -->
+        <div id="crm-expired-overlay" class="hidden flex flex-col items-center justify-center p-12 bg-white rounded-3xl border border-rose-100 text-center max-w-md mx-auto mt-16 shadow-lg shadow-rose-500/5">
+          <span class="text-4xl">🔒</span>
+          <h3 class="font-extrabold text-[#1c1a17] text-lg mt-4">Subscription Expired</h3>
+          <p class="text-xs text-[#766f62] mt-2 leading-relaxed">
+            Your consultancy plan has expired. Renew to regain access to your student roster, speaking grader, and material vault - nothing has been deleted.
+          </p>
+          <button onclick="openUpgradeFlow()" class="mt-5 px-6 py-2.5 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-xl text-xs transition">Renew Subscription</button>
+        </div>
+
+        <div id="crm-active-views-container">
         <!-- Subscription & Seat Capacity -->
         <section id="crm-capacity-card" class="rounded-2xl shadow-sm p-5 mb-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-5" style="background:linear-gradient(135deg,#fffefb,#f9f2df);border:1px solid #ece0c4">
           <div class="shrink-0 flex items-center gap-3">
@@ -974,6 +986,7 @@
         <!-- CRM Tab 3: Material Vault -->
         <div id="crm-vault-view" class="crm-subview hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <!-- Populated by JS -->
+        </div>
         </div>
 
       </main>
@@ -1967,12 +1980,17 @@
         localStorage.setItem('userEmail', email);
         // consultancy name/plan/expiry are read back from the `consultancies`
         // row that esewa-verify/khalti-verify wrote, not trusted from the URL.
-        if (supabaseClient) {
-          supabaseClient.from('consultancies').select('*').eq('email', email).single().then(({ data }) => {
-            if (data) {
+        // Looked up via a server-side endpoint (service role key) rather than
+        // a direct anon-key select, since `consultancies` holds every paying
+        // customer's name/email/plan/expiry - the anon key must never be able
+        // to read that table directly (see schema.sql's RLS section).
+        fetch('/api/consultancy/lookup?email=' + encodeURIComponent(email))
+          .then(r => r.json())
+          .then(data => {
+            if (data.ok) {
               localStorage.setItem('viatestprep_consultancy_name', data.name);
-              localStorage.setItem('viatestprep_consultancy_plan', data.plan_name);
-              localStorage.setItem('viatestprep_consultancy_expires_at', data.expires_at);
+              localStorage.setItem('viatestprep_consultancy_plan', data.planName);
+              localStorage.setItem('viatestprep_consultancy_expires_at', data.expiresAt);
               // Real tenant id - every student this consultancy adds gets
               // tagged with it, and syncRosterFromCloud() filters by it so
               // this consultancy only ever sees its own roster.
@@ -1980,9 +1998,6 @@
             }
             renderAppView();
           }).catch(() => renderAppView());
-        } else {
-          renderAppView();
-        }
       } else if (paymentStatus === 'failed') {
         alert('Payment could not be verified. If you were charged, contact support - nothing has been activated on this account yet.');
       }
@@ -2560,6 +2575,24 @@
       document.getElementById('crmHeaderName').textContent = consultancyName + ' Portal';
       document.getElementById('crmHeaderPlan').textContent = selectedPlan;
 
+      // Gate on subscription expiry - this used to be purely cosmetic (a label
+      // in the capacity widget saying "Subscription expired - renew now" while
+      // the roster stayed fully usable forever). The Developer Bypass account
+      // has no expires_at at all and is intentionally exempt. Note this is a
+      // client-side check only (same trust model as the rest of this app) - a
+      // determined user could edit their own localStorage to defeat it, but it
+      // stops the normal "I paid once, it just kept working indefinitely" case.
+      const expiresAt = localStorage.getItem('viatestprep_consultancy_expires_at');
+      const overlay = document.getElementById('crm-expired-overlay');
+      const activeContainer = document.getElementById('crm-active-views-container');
+      if (expiresAt && new Date() > new Date(expiresAt)) {
+        overlay.classList.remove('hidden');
+        activeContainer.classList.add('hidden');
+        return;
+      }
+      overlay.classList.add('hidden');
+      activeContainer.classList.remove('hidden');
+
       renderCRMTable();
       populateCRMGraderSelect();
       renderCRMVaultModules();
@@ -2850,6 +2883,15 @@
         localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
         renderCRMTable();
         populateCRMGraderSelect();
+        // This used to only remove the student locally - the row stayed in
+        // Supabase and silently reappeared on the next cloud sync. `mock_history`
+        // and `speaking_grades` cascade-delete automatically (ON DELETE CASCADE
+        // in schema.sql).
+        if (supabaseClient) {
+          supabaseClient.from('students').delete().eq('id', id).then(({ error }) => {
+            if (error) console.error('Supabase student delete error:', error);
+          });
+        }
       }
     }
 
@@ -3124,6 +3166,15 @@
     }
 
     // CSV File roster import/export
+    // Neutralizes CSV/formula injection: a cell whose content starts with
+    // =, +, -, @ (or tab/CR) is interpreted as a formula by Excel/Sheets when
+    // the file is opened - prefixing it with an apostrophe forces those tools
+    // to treat it as plain text instead of executing it.
+    function sanitizeCsvCell(value) {
+      const str = String(value == null ? '' : value);
+      return /^[=+\-@\t\r]/.test(str) ? "'" + str : str;
+    }
+
     function exportCRMToCSV() {
       if (crmStudents.length === 0) {
         alert('No students to export.');
@@ -3131,7 +3182,8 @@
       }
       let csv = 'ID,Name,Email,Phone,TargetBand,Status,Notes\n';
       crmStudents.forEach(s => {
-        csv += `"${s.id}","${s.name.replace(/"/g, '""')}","${s.email.replace(/"/g, '""')}","${s.phone}","${s.target}","${s.status}","${(s.notes || '').replace(/"/g, '""')}"\n`;
+        const cells = [s.id, s.name, s.email, s.phone, s.target, s.status, s.notes || ''];
+        csv += cells.map(c => `"${sanitizeCsvCell(c).replace(/"/g, '""')}"`).join(',') + '\n';
       });
       const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
       const link = document.createElement('a');
@@ -3155,8 +3207,18 @@
           return;
         }
 
-        let added = 0;
+        const rawPlan = (localStorage.getItem('viatestprep_consultancy_plan') || 'Growth').replace(' Plan', '');
+        const isUnlimited = rawPlan === 'Developer Bypass';
+        const capacity = PLAN_CAPACITY[rawPlan] || 25;
+        const consultancyId = localStorage.getItem('viatestprep_consultancy_id');
+        const isRealConsultancy = consultancyId && consultancyId !== '__owner__';
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const validStatuses = ['Active', 'Completed', 'Paused'];
+
+        let added = 0, skippedCapacity = 0, skippedInvalid = 0, skippedDuplicate = 0;
         for (let i = 1; i < lines.length; i++) {
+          if (!isUnlimited && crmStudents.length >= capacity) { skippedCapacity++; continue; }
+
           const line = lines[i].trim();
           if (!line) continue;
 
@@ -3164,29 +3226,53 @@
           const clean = matches.map(v => v.replace(/^"|"$/g, '').replace(/""/g, '"'));
 
           if (clean.length >= 6) {
-            const name = clean[1];
-            const email = clean[2];
-            const phone = clean[3];
+            const name = clean[1].trim();
+            const email = clean[2].trim();
+            const phone = clean[3].trim();
             const target = parseFloat(clean[4]) || 7.0;
-            const status = clean[5] || 'Active';
+            const status = validStatuses.includes(clean[5]) ? clean[5] : 'Active';
             const notes = clean[6] || '';
 
+            if (!name || !emailPattern.test(email)) { skippedInvalid++; continue; }
+
             const exists = crmStudents.find(s => s.email.toLowerCase() === email.toLowerCase());
-            if (!exists) {
-              crmStudents.push({
-                id: 'st-' + (Date.now() + i),
-                name, email, phone, target, status, notes,
-                mockHistory: []
-              });
-              added++;
+            if (exists) { skippedDuplicate++; continue; }
+
+            const newId = 'st-' + (Date.now() + i);
+            const studentId = nextStudentDisplayId();
+            const accessToken = crypto.randomUUID();
+            const access_expires_at = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString();
+
+            crmStudents.push({
+              id: newId, studentId, accessToken,
+              name, email, phone, target, status, notes, access_expires_at,
+              mockHistory: []
+            });
+            added++;
+
+            if (supabaseClient) {
+              supabaseClient.from('students').insert([{
+                id: newId, student_id: studentId, name, email, phone,
+                target_band: target, status, access_expires_at,
+                access_token: accessToken,
+                ...(isRealConsultancy ? { consultancy_id: consultancyId } : {}),
+              }]).then(({ error }) => { if (error) console.error('Supabase CSV import insert error:', error); });
             }
+          } else {
+            skippedInvalid++;
           }
         }
 
         localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
         renderCRMTable();
         populateCRMGraderSelect();
-        alert(`CSV roster parsed. Added ${added} new student profiles.`);
+        updateCRMCapacityWidget();
+
+        let msg = `CSV roster parsed. Added ${added} new student profile${added === 1 ? '' : 's'}.`;
+        if (skippedDuplicate) msg += ` ${skippedDuplicate} skipped (already on roster).`;
+        if (skippedInvalid) msg += ` ${skippedInvalid} skipped (missing name or invalid email).`;
+        if (skippedCapacity) msg += ` ${skippedCapacity} skipped - plan seat limit (${capacity}) reached. Upgrade to import the rest.`;
+        alert(msg);
       };
       reader.readAsText(file);
       e.target.value = '';

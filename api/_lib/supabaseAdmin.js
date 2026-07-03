@@ -84,6 +84,19 @@ async function upsertConsultancy({ name, email, plan_name, duration_days, expire
   return rows[0];
 }
 
+// Looks up a consultancy by email - used right after a payment redirect to
+// read back the real plan/expiry the *-verify endpoint wrote. Server-side
+// only, so `consultancies` never needs an anon-readable RLS policy (see
+// schema.sql) - that table holds every paying customer's name, email, plan,
+// and subscription expiry.
+async function getConsultancyByEmail(email) {
+  const rows = await restRequest('consultancies', {
+    method: 'GET',
+    query: `?email=eq.${encodeURIComponent(email)}&limit=1`,
+  });
+  return rows[0] || null;
+}
+
 // Looks up a single student by their private access_token (the secret half of
 // their "?student=<token>" login link). Done server-side with the service role
 // key so we never need a public RLS SELECT policy on the whole `students`
@@ -116,6 +129,7 @@ module.exports = {
   markOrderPaid,
   markOrderFailed,
   upsertConsultancy,
+  getConsultancyByEmail,
   getStudentByAccessToken,
   getStudentById,
   insertMockResult,
