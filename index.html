@@ -1431,6 +1431,58 @@
       }
     }
 
+    // Fixed top banner used to surface the outcome of an email-link landing
+    // (confirmation, password reset) - the only feedback path that isn't
+    // already covered by a form's own status line, since arriving here fresh
+    // off an email link means no modal is open yet for that text to go into.
+    function showAuthNotice(message, isError) {
+      let el = document.getElementById('auth-notice-banner');
+      if (!el) {
+        el = document.createElement('div');
+        el.id = 'auth-notice-banner';
+        el.style.cssText = 'position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:9999;max-width:min(92vw,480px);padding:12px 20px;border-radius:12px;font:600 13px/1.4 -apple-system,sans-serif;box-shadow:0 8px 24px rgba(0,0,0,.18);text-align:center;';
+        document.body.appendChild(el);
+      }
+      el.textContent = message;
+      el.style.background = isError ? '#fee2e2' : '#dcfce7';
+      el.style.color = isError ? '#991b1b' : '#166534';
+      el.style.display = 'block';
+      clearTimeout(el._hideTimer);
+      el._hideTimer = setTimeout(() => { el.style.display = 'none'; }, isError ? 10000 : 6000);
+    }
+
+    function hideAuthNotice() {
+      const el = document.getElementById('auth-notice-banner');
+      if (el) { clearTimeout(el._hideTimer); el.style.display = 'none'; }
+    }
+
+    // Supabase confirmation/reset links land back here either with a session
+    // in the URL hash (success - supabase-js auto-parses it and fires
+    // SIGNED_IN, see onAuthStateChange above) or with #error=... (the link
+    // was already used or expired - e.g. a corporate mail scanner "safe
+    // links" prefetch can burn a one-time confirmation link before the real
+    // user ever clicks it). Neither case had any visible feedback before:
+    // a burned link silently dropped the visitor on the plain landing page
+    // with no explanation, and a valid one only had somewhere to show
+    // progress/errors once a form's modal was manually opened - which never
+    // happens on this "arrived via email" page load.
+    function handleAuthRedirectFeedback() {
+      const hashParams = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+      const error = hashParams.get('error') || new URLSearchParams(window.location.search).get('error');
+      if (error) {
+        const description = (hashParams.get('error_description') || '').replace(/\+/g, ' ');
+        showAuthNotice(
+          (description || 'That link is invalid or has expired.') + ' Please try logging in, or sign up again to get a new link.',
+          true
+        );
+        window.history.replaceState({}, document.title, window.location.pathname);
+        return;
+      }
+      if (hashParams.has('access_token')) {
+        showAuthNotice('Confirming your account...', false);
+      }
+    }
+
     // Dedupes finishStudentSession/finishConsultancySession so the explicit
     // "I just clicked submit" path and the onAuthStateChange safety net don't
     // both race to register + redirect for the exact same sign-in.
@@ -1628,6 +1680,7 @@
     // ==========================================
     window.addEventListener('DOMContentLoaded', () => {
       initSupabase();
+      handleAuthRedirectFeedback();
       // NOTE: cloud roster sync intentionally does NOT run here anymore. It
       // used to run unconditionally for every single visitor (including
       // anonymous landing-page traffic), pulling every consultancy's entire
@@ -2031,6 +2084,7 @@
       localStorage.setItem('viatestprep_user_role', 'student');
       localStorage.setItem('userEmail', session.user.email);
 
+      hideAuthNotice();
       closeAccessModal();
       renderAppView();
     }
@@ -2136,6 +2190,7 @@
         localStorage.setItem('viatestprep_consultancy_plan', regData.planName);
         localStorage.setItem('viatestprep_consultancy_expires_at', regData.expiresAt);
 
+        hideAuthNotice();
         closeAccessModal();
         // renderAppView() -> initConsultancyDashboard() shows the CRM if the
         // plan is active, or its own "choose a plan" / "renew" lock screen if
@@ -2143,7 +2198,12 @@
         renderAppView();
       } catch (e) {
         console.error('Could not finish consultancy sign-in:', e);
-        setConsultancyAuthStatus('❌ ' + (e.message || 'Could not load your consultancy account.'));
+        const message = e.message || 'Could not load your consultancy account.';
+        setConsultancyAuthStatus('❌ ' + message);
+        // Also shown as a banner - this runs after clicking the email
+        // confirmation link too, where the modal (and its status line) was
+        // never opened, so setConsultancyAuthStatus above is invisible.
+        showAuthNotice(message, true);
         const btn = document.getElementById('m-consultancy-auth-btn');
         if (btn) btn.disabled = false;
       }
