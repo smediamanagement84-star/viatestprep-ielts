@@ -134,6 +134,24 @@
     .q-body { font-size: 14.5px; font-weight: 500; color: var(--ink); line-height: 1.85; font-family: "Lora", serif; }
     .q-unavailable-note { font-size: 12.5px; color: #8a8375; font-style: italic; font-family: "Lora", serif; }
 
+    .form-panel {
+      background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 10px;
+      margin-bottom: 16px; overflow: hidden;
+    }
+    .form-row { padding: 11px 18px; border-bottom: 1px solid var(--rule-soft); transition: background .15s; }
+    .form-row:last-child { border-bottom: none; }
+    .form-row:hover { background: var(--accent-soft); }
+    .form-row.flagged { background: #fdf8ee; }
+    .form-row-main { display: flex; align-items: baseline; gap: 12px; }
+    .form-row-num {
+      display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px;
+      border-radius: 50%; border: 1.5px solid var(--ink); font-family: "Fraunces", serif; font-weight: 800;
+      font-size: 11px; color: var(--ink); flex-shrink: 0;
+    }
+    .form-row-body { flex: 1; font-size: 14.5px; font-weight: 500; color: var(--ink); line-height: 1.7; font-family: "Lora", serif; }
+    .form-row-review { flex-shrink: 0; }
+    .form-row-practice { display: flex; align-items: center; gap: 10px; margin-top: 9px; padding-left: 34px; }
+
     .q-blank-input {
       display: inline-block; min-width: 130px; border: none;
       border-bottom: 2px solid var(--accent); background: transparent;
@@ -143,6 +161,29 @@
     }
     .q-blank-input:focus { border-color: var(--gold); background: #f6f1e4; border-radius: 4px 4px 0 0; }
     .q-blank-input::placeholder { color: #c9b98a; font-weight: 400; font-size: 12px; }
+
+    .diagram-panel {
+      background: var(--paper); border: 1px solid var(--rule); border-radius: 10px;
+      padding: 16px; margin: 0 0 16px; text-align: center;
+    }
+    .diagram-panel img { max-width: 100%; height: auto; border-radius: 4px; }
+
+    .matching-row {
+      display: flex; align-items: center; justify-content: space-between; gap: 14px;
+      padding: 11px 16px; border-bottom: 1px solid var(--rule-soft);
+    }
+    .matching-row:last-child { border-bottom: none; }
+    .matching-row.flagged { background: #fdf8ee; }
+    .matching-row-label { display: flex; align-items: baseline; gap: 12px; flex: 1; }
+    .matching-row-body { font-size: 14.5px; font-weight: 500; color: var(--ink); font-family: "Lora", serif; }
+    .letter-choice-row { display: flex; gap: 6px; flex-shrink: 0; }
+    .letter-btn {
+      width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--rule);
+      background: var(--paper); font-size: 12.5px; font-weight: 800; color: var(--ink-soft);
+      cursor: pointer; font-family: "Inter", sans-serif; transition: all .15s;
+    }
+    .letter-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .letter-btn.selected { background: var(--accent); border-color: var(--accent); color: #fff; }
 
     .mcq-options { display: flex; flex-direction: column; gap: 7px; margin-top: 11px; }
     .mcq-option {
@@ -398,6 +439,9 @@
       var container = document.getElementById('questionsContainer');
       container.innerHTML = '';
       var lastInstruction = null;
+      var formPanel = null;
+      var matchPanel = null;
+      var diagramShown = false;
 
       section.questions.forEach(function(q, idx) {
         if (q.instruction && q.instruction.trim()) {
@@ -407,10 +451,107 @@
             banner.innerHTML = q.instruction;
             container.appendChild(banner);
             lastInstruction = q.instruction;
+            formPanel = null;
+            matchPanel = null;
           }
         } else {
           lastInstruction = null;
+          formPanel = null;
+          matchPanel = null;
         }
+
+        if (q.type === 'MATCHING' && !q.contentUnavailable) {
+          if (section.diagram && !diagramShown) {
+            var diagramDiv = document.createElement('div');
+            diagramDiv.className = 'diagram-panel';
+            diagramDiv.innerHTML = section.diagram;
+            container.appendChild(diagramDiv);
+            diagramShown = true;
+          }
+          if (!matchPanel) {
+            matchPanel = document.createElement('div');
+            matchPanel.className = 'form-panel';
+            container.appendChild(matchPanel);
+          }
+
+          var mRow = document.createElement('div');
+          mRow.className = 'matching-row' + (flaggedQuestions[q.num] ? ' flagged' : '');
+          mRow.id = 'qcard-' + q.num;
+
+          var selectedLetter = userAnswers[q.num] || '';
+          var labelDiv = document.createElement('div');
+          labelDiv.className = 'matching-row-label';
+          labelDiv.innerHTML = '<span class="form-row-num">' + q.num + '</span><span class="matching-row-body">' + q.text + '</span>';
+          mRow.appendChild(labelDiv);
+
+          var lettersDiv = document.createElement('div');
+          lettersDiv.className = 'letter-choice-row';
+          q.options.forEach(function(letter) {
+            var btn = document.createElement('button');
+            btn.className = 'letter-btn' + (selectedLetter === letter ? ' selected' : '');
+            btn.textContent = letter;
+            btn.onclick = function() { selectOption(q.num, letter); };
+            lettersDiv.appendChild(btn);
+          });
+          mRow.appendChild(lettersDiv);
+
+          matchPanel.appendChild(mRow);
+
+          if (currentTestMode === 'practice') {
+            var mPractRow = document.createElement('div');
+            mPractRow.style.cssText = 'padding:0 16px 11px;display:flex;justify-content:flex-end;';
+            mPractRow.innerHTML = '<button class="check-btn" onclick="checkPracticeAnswer(' + q.num + ', ' + idx + ')">Check Answer</button>';
+            matchPanel.appendChild(mPractRow);
+            var mFeedback = document.createElement('div');
+            mFeedback.id = 'pract-feedback-' + q.num;
+            mFeedback.style.cssText = 'padding:0 16px 11px;';
+            matchPanel.appendChild(mFeedback);
+          }
+          return;
+        }
+
+        matchPanel = null;
+
+        if (q.type === 'FILL' && !q.contentUnavailable) {
+          if (!formPanel) {
+            formPanel = document.createElement('div');
+            formPanel.className = 'form-panel';
+            container.appendChild(formPanel);
+          }
+
+          var row = document.createElement('div');
+          row.className = 'form-row' + (flaggedQuestions[q.num] ? ' flagged' : '') + (userAnswers[q.num] ? ' answered' : '');
+          row.id = 'qcard-' + q.num;
+
+          var val = (userAnswers[q.num] || '').replace(/"/g, '&quot;');
+          var inputHtml = '<input type="text" class="q-blank-input" oninput="handleInput(' + q.num + ', this.value)" value="' + val + '" placeholder="(' + q.num + ')" id="input-' + q.num + '" />';
+          var textWithInput = q.text.replace(/________+/g, inputHtml);
+          if (textWithInput === q.text) textWithInput = q.text + ' ' + inputHtml;
+
+          var main = document.createElement('div');
+          main.className = 'form-row-main';
+          main.innerHTML = '<span class="form-row-num">' + q.num + '</span>' +
+            '<span class="form-row-body">' + textWithInput + '</span>' +
+            '<label class="q-review-label form-row-review"><input type="checkbox" onchange="toggleFlag(' + q.num + ')" ' + (flaggedQuestions[q.num] ? 'checked' : '') + ' /> Review</label>';
+          row.appendChild(main);
+
+          if (currentTestMode === 'practice') {
+            var practRow = document.createElement('div');
+            practRow.className = 'form-row-practice';
+            practRow.id = 'pract-actions-' + q.num;
+            practRow.innerHTML = '<button class="check-btn" onclick="checkPracticeAnswer(' + q.num + ', ' + idx + ')">Check Answer</button>';
+            row.appendChild(practRow);
+            var feedbackDiv = document.createElement('div');
+            feedbackDiv.id = 'pract-feedback-' + q.num;
+            feedbackDiv.style.marginLeft = '34px';
+            row.appendChild(feedbackDiv);
+          }
+
+          formPanel.appendChild(row);
+          return;
+        }
+
+        formPanel = null;
 
         var card = document.createElement('div');
         card.className = 'q-card' + (flaggedQuestions[q.num] ? ' flagged' : '') + (userAnswers[q.num] ? ' answered' : '') + (q.contentUnavailable ? ' unavailable' : '');
@@ -434,13 +575,7 @@
 
         body.className = 'q-body';
 
-        if (q.type === 'FILL') {
-          var val = (userAnswers[q.num] || '').replace(/"/g, '&quot;');
-          var inputHtml = '<input type="text" class="q-blank-input" oninput="handleInput(' + q.num + ', this.value)" value="' + val + '" placeholder="(' + q.num + ')" id="input-' + q.num + '" />';
-          var textWithInput = q.text.replace(/________+/g, inputHtml);
-          if (textWithInput === q.text) textWithInput = q.text + ' ' + inputHtml;
-          body.innerHTML = textWithInput;
-        } else if (q.type === 'MCQ') {
+        if (q.type === 'MCQ') {
           body.innerHTML = '<div style="margin-bottom:9px;">' + q.text + '</div>';
           var optionsDiv = document.createElement('div');
           optionsDiv.className = 'mcq-options';
