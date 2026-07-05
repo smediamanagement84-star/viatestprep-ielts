@@ -37,74 +37,61 @@ ALTER TABLE consultancies ENABLE ROW LEVEL SECURITY;
 -- ===========================================================================
 -- PART 2 - students / mock_history / speaking_grades.
 --
--- These tables are read and written directly from the browser via the anon
--- key today (the CRM's "Register Student", CSV import, roster sync, speaking
--- grader, etc). The app tries to scope this to "your own consultancy's
--- students" using an application-layer `.eq('consultancy_id', ...)` filter -
--- but that is NOT a real security boundary. The anon key carries no identity
--- at all, so a policy cannot say "only see rows belonging to the caller's own
--- consultancy" - there is no way to know who's calling. A client can always
--- just... not send that filter, and read/write every consultancy's students.
+-- OPTION A (real isolation) is now enabled: a consultancy's own login session
+-- (real Supabase Auth, since consultancies.owner_user_id exists and consultancy
+-- signup/login is real - see api/consultancy/register.js) can only ever read
+-- or write its own students, scored via auth.uid(). A self-serve student
+-- (their own Supabase Auth account) can read their own row.
 --
--- There are only two honest options here:
---
---   OPTION A (real isolation): give consultancies actual login sessions
---   (Supabase Auth), add a `consultancies.owner_user_id UUID` column, and
---   write policies keyed on auth.uid(). This is the only way to make
---   "consultancy A cannot touch consultancy B's data" a real, enforced
---   guarantee rather than a UI convention. Uncomment the block below once
---   that's in place.
---
---   OPTION B (status quo, documented risk): leave RLS disabled on these
---   three tables. The app's tenant filtering stays a soft, cooperative
---   convention - fine for casual use, not a real security boundary against
---   someone who deliberately extracts the anon key and calls the REST API
---   directly. This is the current behavior; this file does not change it.
---
--- Pick one and tell Claude which - the auth.uid()-based policies below are
--- ready to enable once real consultancy login exists.
+-- This does NOT cover the CRM's owner-bypass mode (index.html's "?ownerkey="
+-- link, consultancyId === '__owner__') - that mode has no real Supabase Auth
+-- session at all (auth.uid() is null for it), by design, since it's meant to
+-- work from a bare secret-URL with no login step. Under these policies its
+-- direct anon-key reads/writes to these three tables would just silently
+-- return nothing / be rejected. That mode has been moved to a service-role-
+-- backed admin API instead (api/admin/roster.js, student.js, speaking-grade.js,
+-- writing-grade.js - all gated by the same OWNER_BYPASS_KEY, which bypasses
+-- RLS the same way every other /api/admin/* and /api/consultancy/* endpoint
+-- already does), so it keeps working under RLS rather than depending on these
+-- tables staying wide open.
 
--- -- Example of what OPTION A's policies would look like once
--- -- consultancies.owner_user_id exists and consultancies can log in via
--- -- Supabase Auth:
---
--- ALTER TABLE students ENABLE ROW LEVEL SECURITY;
--- CREATE POLICY "consultancy reads own students" ON students
---   FOR SELECT USING (
---     consultancy_id IN (SELECT id FROM consultancies WHERE owner_user_id = auth.uid())
---   );
--- CREATE POLICY "consultancy writes own students" ON students
---   FOR INSERT WITH CHECK (
---     consultancy_id IN (SELECT id FROM consultancies WHERE owner_user_id = auth.uid())
---   );
--- CREATE POLICY "consultancy updates own students" ON students
---   FOR UPDATE USING (
---     consultancy_id IN (SELECT id FROM consultancies WHERE owner_user_id = auth.uid())
---   );
--- CREATE POLICY "consultancy deletes own students" ON students
---   FOR DELETE USING (
---     consultancy_id IN (SELECT id FROM consultancies WHERE owner_user_id = auth.uid())
---   );
--- -- A logged-in student (self-serve auth) reading/updating only their own row:
--- CREATE POLICY "student reads own row" ON students
---   FOR SELECT USING (auth_user_id = auth.uid());
---
--- ALTER TABLE mock_history ENABLE ROW LEVEL SECURITY;
--- CREATE POLICY "scoped to owning student's consultancy" ON mock_history
---   FOR ALL USING (
---     student_id IN (
---       SELECT id FROM students WHERE consultancy_id IN (
---         SELECT id FROM consultancies WHERE owner_user_id = auth.uid()
---       ) OR auth_user_id = auth.uid()
---     )
---   );
---
--- ALTER TABLE speaking_grades ENABLE ROW LEVEL SECURITY;
--- CREATE POLICY "scoped to owning student's consultancy" ON speaking_grades
---   FOR ALL USING (
---     student_id IN (
---       SELECT id FROM students WHERE consultancy_id IN (
---         SELECT id FROM consultancies WHERE owner_user_id = auth.uid()
---       )
---     )
---   );
+ALTER TABLE students ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "consultancy reads own students" ON students
+  FOR SELECT USING (
+    consultancy_id IN (SELECT id FROM consultancies WHERE owner_user_id = auth.uid())
+  );
+CREATE POLICY "consultancy writes own students" ON students
+  FOR INSERT WITH CHECK (
+    consultancy_id IN (SELECT id FROM consultancies WHERE owner_user_id = auth.uid())
+  );
+CREATE POLICY "consultancy updates own students" ON students
+  FOR UPDATE USING (
+    consultancy_id IN (SELECT id FROM consultancies WHERE owner_user_id = auth.uid())
+  );
+CREATE POLICY "consultancy deletes own students" ON students
+  FOR DELETE USING (
+    consultancy_id IN (SELECT id FROM consultancies WHERE owner_user_id = auth.uid())
+  );
+-- A logged-in student (self-serve auth) reading their own row:
+CREATE POLICY "student reads own row" ON students
+  FOR SELECT USING (auth_user_id = auth.uid());
+
+ALTER TABLE mock_history ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "scoped to owning student's consultancy" ON mock_history
+  FOR ALL USING (
+    student_id IN (
+      SELECT id FROM students WHERE consultancy_id IN (
+        SELECT id FROM consultancies WHERE owner_user_id = auth.uid()
+      ) OR auth_user_id = auth.uid()
+    )
+  );
+
+ALTER TABLE speaking_grades ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "scoped to owning student's consultancy" ON speaking_grades
+  FOR ALL USING (
+    student_id IN (
+      SELECT id FROM students WHERE consultancy_id IN (
+        SELECT id FROM consultancies WHERE owner_user_id = auth.uid()
+      )
+    )
+  );

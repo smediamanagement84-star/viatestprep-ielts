@@ -1431,10 +1431,74 @@
       }
     }
 
+    // Fixed top banner used to surface the outcome of an email-link landing
+    // (confirmation, password reset) - the only feedback path that isn't
+    // already covered by a form's own status line, since arriving here fresh
+    // off an email link means no modal is open yet for that text to go into.
+    function showAuthNotice(message, isError) {
+      let el = document.getElementById('auth-notice-banner');
+      if (!el) {
+        el = document.createElement('div');
+        el.id = 'auth-notice-banner';
+        el.style.cssText = 'position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:9999;max-width:min(92vw,480px);padding:12px 20px;border-radius:12px;font:600 13px/1.4 -apple-system,sans-serif;box-shadow:0 8px 24px rgba(0,0,0,.18);text-align:center;';
+        document.body.appendChild(el);
+      }
+      el.textContent = message;
+      el.style.background = isError ? '#fee2e2' : '#dcfce7';
+      el.style.color = isError ? '#991b1b' : '#166534';
+      el.style.display = 'block';
+      clearTimeout(el._hideTimer);
+      el._hideTimer = setTimeout(() => { el.style.display = 'none'; }, isError ? 10000 : 6000);
+    }
+
+    function hideAuthNotice() {
+      const el = document.getElementById('auth-notice-banner');
+      if (el) { clearTimeout(el._hideTimer); el.style.display = 'none'; }
+    }
+
+    // Supabase confirmation/reset links land back here either with a session
+    // in the URL hash (success - supabase-js auto-parses it and fires
+    // SIGNED_IN, see onAuthStateChange above) or with #error=... (the link
+    // was already used or expired - e.g. a corporate mail scanner "safe
+    // links" prefetch can burn a one-time confirmation link before the real
+    // user ever clicks it). Neither case had any visible feedback before:
+    // a burned link silently dropped the visitor on the plain landing page
+    // with no explanation, and a valid one only had somewhere to show
+    // progress/errors once a form's modal was manually opened - which never
+    // happens on this "arrived via email" page load.
+    function handleAuthRedirectFeedback() {
+      const hashParams = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+      const error = hashParams.get('error') || new URLSearchParams(window.location.search).get('error');
+      if (error) {
+        const description = (hashParams.get('error_description') || '').replace(/\+/g, ' ');
+        showAuthNotice(
+          (description || 'That link is invalid or has expired.') + ' Please try logging in, or sign up again to get a new link.',
+          true
+        );
+        window.history.replaceState({}, document.title, window.location.pathname);
+        return;
+      }
+      if (hashParams.has('access_token')) {
+        showAuthNotice('Confirming your account...', false);
+      }
+    }
+
     // Dedupes finishStudentSession/finishConsultancySession so the explicit
     // "I just clicked submit" path and the onAuthStateChange safety net don't
     // both race to register + redirect for the exact same sign-in.
     let lastFinishedAuthToken = null;
+
+    // Buckets an array of rows by one of their fields, e.g. groupBy(rows,
+    // 'student_id') -> { [studentId]: [rows...] }. Used to fan out the
+    // owner-bypass's single bulk roster fetch back into per-student lists
+    // without one query per student (see syncRosterFromCloud below).
+    function groupBy(rows, key) {
+      const out = {};
+      (rows || []).forEach(row => {
+        (out[row[key]] = out[row[key]] || []).push(row);
+      });
+      return out;
+    }
 
     // Loads this consultancy's own roster from Supabase - and only this
     // consultancy's. It used to select the entire `students` table with no
@@ -1445,7 +1509,6 @@
     // ever called from initConsultancyDashboard(), i.e. after a consultancy
     // has actually logged in (paid session or owner bypass).
     async function syncRosterFromCloud() {
-      if (!supabaseClient) return;
       const consultancyId = localStorage.getItem('viatestprep_consultancy_id');
       // The owner bypass intentionally sees every tenant's roster for support
       // purposes - that's a deliberate admin capability of a secret-URL-only
@@ -1454,13 +1517,33 @@
       const isOwner = consultancyId === '__owner__';
       if (!consultancyId) return;
       try {
-        let query = supabaseClient.from('students').select('*');
-        if (!isOwner) query = query.eq('consultancy_id', consultancyId);
-        const { data: cloudStudents, error } = await query;
-        if (error) {
-          console.error('Cloud load error:', error);
-          return;
+        let cloudStudents, mockHistoryByStudent, speakingGradesByStudent;
+
+        if (isOwner) {
+          // The owner bypass has no real Supabase Auth session, so it can't
+          // rely on RLS letting its anon-key requests through (see
+          // security-rls.sql) - this goes through a service-role-backed
+          // admin endpoint instead, one bulk fetch instead of per-student
+          // queries.
+          const res = await fetch('/api/admin/roster', { headers: { 'X-Owner-Key': OWNER_BYPASS_KEY } });
+          const data = await res.json();
+          if (!data.ok) {
+            console.error('Cloud load error:', data.error);
+            return;
+          }
+          cloudStudents = data.students;
+          mockHistoryByStudent = groupBy(data.mockHistory, 'student_id');
+          speakingGradesByStudent = groupBy(data.speakingGrades, 'student_id');
+        } else {
+          if (!supabaseClient) return;
+          const { data, error } = await supabaseClient.from('students').select('*').eq('consultancy_id', consultancyId);
+          if (error) {
+            console.error('Cloud load error:', error);
+            return;
+          }
+          cloudStudents = data;
         }
+
         if (cloudStudents) {
           crmStudents = cloudStudents.map(cs => ({
             id: cs.id,
@@ -1477,9 +1560,15 @@
           }));
           
           for (let s of crmStudents) {
-            const { data: mH } = await supabaseClient.from('mock_history').select('*').eq('student_id', s.id);
-            const { data: sG } = await supabaseClient.from('speaking_grades').select('*').eq('student_id', s.id);
-            
+            let mH, sG;
+            if (isOwner) {
+              mH = mockHistoryByStudent[s.id] || [];
+              sG = speakingGradesByStudent[s.id] || [];
+            } else {
+              ({ data: mH } = await supabaseClient.from('mock_history').select('*').eq('student_id', s.id));
+              ({ data: sG } = await supabaseClient.from('speaking_grades').select('*').eq('student_id', s.id));
+            }
+
             s.mockHistory = [];
             if (mH) {
               mH.forEach(m => {
@@ -1628,6 +1717,7 @@
     // ==========================================
     window.addEventListener('DOMContentLoaded', () => {
       initSupabase();
+      handleAuthRedirectFeedback();
       // NOTE: cloud roster sync intentionally does NOT run here anymore. It
       // used to run unconditionally for every single visitor (including
       // anonymous landing-page traffic), pulling every consultancy's entire
@@ -1657,6 +1747,16 @@
       // button, and modal a normal visitor would ever see.
       if (urlParams.get('ownerkey') === OWNER_BYPASS_KEY) {
         launchAdminBypass();
+        return;
+      }
+
+      // Same idea as ownerkey above, but for jumping straight into the
+      // student portal (Skill Vault included) instead of the CRM - for
+      // checking student-facing features without registering a real student
+      // or waiting on a confirmation email. Untracked (no active-student id),
+      // same as the old anonymous "Access the free student portal" flow.
+      if (urlParams.get('studentkey') === OWNER_BYPASS_KEY) {
+        launchStudentBypass();
         return;
       }
 
@@ -2031,6 +2131,7 @@
       localStorage.setItem('viatestprep_user_role', 'student');
       localStorage.setItem('userEmail', session.user.email);
 
+      hideAuthNotice();
       closeAccessModal();
       renderAppView();
     }
@@ -2117,10 +2218,10 @@
       lastFinishedAuthToken = session.access_token;
 
       try {
-        // Idempotent (see /api/consultancy/register.js) - creates a fresh
+        // Idempotent (see /api/consultancy/account.js) - creates a fresh
         // unactivated row on first signup, or just claims/re-reads an
         // existing one on login.
-        const regRes = await fetch('/api/consultancy/register', {
+        const regRes = await fetch('/api/consultancy/account', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ accessToken: session.access_token, name }),
@@ -2136,6 +2237,7 @@
         localStorage.setItem('viatestprep_consultancy_plan', regData.planName);
         localStorage.setItem('viatestprep_consultancy_expires_at', regData.expiresAt);
 
+        hideAuthNotice();
         closeAccessModal();
         // renderAppView() -> initConsultancyDashboard() shows the CRM if the
         // plan is active, or its own "choose a plan" / "renew" lock screen if
@@ -2143,7 +2245,12 @@
         renderAppView();
       } catch (e) {
         console.error('Could not finish consultancy sign-in:', e);
-        setConsultancyAuthStatus('❌ ' + (e.message || 'Could not load your consultancy account.'));
+        const message = e.message || 'Could not load your consultancy account.';
+        setConsultancyAuthStatus('❌ ' + message);
+        // Also shown as a banner - this runs after clicking the email
+        // confirmation link too, where the modal (and its status line) was
+        // never opened, so setConsultancyAuthStatus above is invisible.
+        showAuthNotice(message, true);
         const btn = document.getElementById('m-consultancy-auth-btn');
         if (btn) btn.disabled = false;
       }
@@ -2167,6 +2274,20 @@
       // Sentinel, not a real consultancy row - lets the owner see every
       // tenant's roster for support purposes (see syncRosterFromCloud()).
       localStorage.setItem('viatestprep_consultancy_id', '__owner__');
+
+      closeAccessModal();
+      renderAppView();
+    }
+
+    function launchStudentBypass() {
+      // Set developer bypass credentials - full access, no expiry, no roster
+      // row (see initStudentPortal - it's fine without an active-student id).
+      localStorage.setItem('viatestprep_unlocked', 'true');
+      localStorage.setItem('viatestprep_user_role', 'student');
+      localStorage.setItem('userEmail', 'admin@viatestprep.local');
+      localStorage.setItem('viatestprep_student_access', 'full');
+      localStorage.removeItem('viatestprep_active_student_id');
+      localStorage.removeItem('viatestprep_active_student_expires_at');
 
       closeAccessModal();
       renderAppView();
@@ -2376,7 +2497,7 @@
             if (!supabaseClient) { renderAppView(); return; }
             const { data: sessionData } = await supabaseClient.auth.getSession();
             if (!sessionData.session) { renderAppView(); return; }
-            const res = await fetch('/api/consultancy/lookup?accessToken=' + encodeURIComponent(sessionData.session.access_token));
+            const res = await fetch('/api/consultancy/account?accessToken=' + encodeURIComponent(sessionData.session.access_token));
             const data = await res.json();
             if (data.ok) {
               localStorage.setItem('viatestprep_consultancy_name', data.name);
@@ -3089,7 +3210,7 @@
       if (!list) return;
       list.innerHTML = '<p class="text-xs text-[#8a8171]">Loading...</p>';
       try {
-        const res = await fetch('/api/admin/pending-orders', { headers: { 'X-Owner-Key': OWNER_BYPASS_KEY } });
+        const res = await fetch('/api/admin/orders', { headers: { 'X-Owner-Key': OWNER_BYPASS_KEY } });
         const data = await res.json();
         if (!data.ok) throw new Error(data.error || 'Could not load pending payments');
 
@@ -3123,7 +3244,7 @@
       if (action === 'reject' && !confirm('Reject this payment submission?')) return;
 
       try {
-        const res = await fetch('/api/admin/approve-order', {
+        const res = await fetch('/api/admin/orders', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
           body: JSON.stringify({ orderId, action }),
@@ -3265,6 +3386,10 @@
       const accessLevel = document.getElementById('crmStudAccessLevel').value;
       const notes = document.getElementById('crmStudNotes').value.trim();
 
+      const consultancyId = localStorage.getItem('viatestprep_consultancy_id');
+      const isOwnerSession = consultancyId === '__owner__';
+      const isRealConsultancy = consultancyId && !isOwnerSession;
+
       const access_expires_at = new Date(Date.now() + 30*24*60*60*1000).toISOString();
       if (id) {
         const stud = crmStudents.find(s => s.id === id);
@@ -3277,8 +3402,18 @@
           stud.accessLevel = accessLevel;
           stud.notes = notes;
         }
-        if (supabaseClient) {
-          supabaseClient.from('students').update({ name, phone, target_band: target, status, access_level: accessLevel }).eq('id', id).then();
+        const fields = { name, phone, target_band: target, status, access_level: accessLevel };
+        if (isOwnerSession) {
+          // The owner bypass has no real Supabase Auth session, so its
+          // anon-key writes are blocked by RLS (see security-rls.sql) - this
+          // goes through a service-role-backed admin endpoint instead.
+          fetch('/api/admin/roster', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
+            body: JSON.stringify({ action: 'update_student', id, fields }),
+          }).then(r => r.json()).then(d => { warnIfSupabaseWriteFailed(d.ok ? null : { message: d.error }, `Updating ${name}`); });
+        } else if (supabaseClient) {
+          supabaseClient.from('students').update(fields).eq('id', id).then();
         }
       } else {
         // Hard cap re-check: guards CRM-only "Save" flows (e.g. reopening the
@@ -3298,20 +3433,25 @@
         // link - generated once here, shown to staff via "Copy Access Link",
         // never displayed anywhere a non-staff visitor would see.
         const accessToken = crypto.randomUUID();
-        const consultancyId = localStorage.getItem('viatestprep_consultancy_id');
-        const isRealConsultancy = consultancyId && consultancyId !== '__owner__';
         crmStudents.push({
           id: newId, studentId, accessToken,
           name, email, phone, target, status, accessLevel, notes, access_expires_at,
           mockHistory: []
         });
-        if (supabaseClient) {
-          supabaseClient.from('students').insert([{
-            id: newId, student_id: studentId, name, email, phone,
-            target_band: target, status, access_expires_at,
-            access_token: accessToken, access_level: accessLevel,
-            ...(isRealConsultancy ? { consultancy_id: consultancyId } : {}),
-          }]).then(({ error }) => { warnIfSupabaseWriteFailed(error, `Registering ${name}`); });
+        const fields = {
+          id: newId, student_id: studentId, name, email, phone,
+          target_band: target, status, access_expires_at,
+          access_token: accessToken, access_level: accessLevel,
+          ...(isRealConsultancy ? { consultancy_id: consultancyId } : {}),
+        };
+        if (isOwnerSession) {
+          fetch('/api/admin/roster', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
+            body: JSON.stringify({ action: 'create_student', fields }),
+          }).then(r => r.json()).then(d => { warnIfSupabaseWriteFailed(d.ok ? null : { message: d.error }, `Registering ${name}`); });
+        } else if (supabaseClient) {
+          supabaseClient.from('students').insert([fields]).then(({ error }) => { warnIfSupabaseWriteFailed(error, `Registering ${name}`); });
         }
       }
 
@@ -3370,7 +3510,17 @@
         // Supabase and silently reappeared on the next cloud sync. `mock_history`
         // and `speaking_grades` cascade-delete automatically (ON DELETE CASCADE
         // in schema.sql).
-        if (supabaseClient) {
+        if (localStorage.getItem('viatestprep_consultancy_id') === '__owner__') {
+          // No real Supabase Auth session for RLS to match (see
+          // security-rls.sql) - goes through the service-role admin endpoint.
+          fetch('/api/admin/roster', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
+            body: JSON.stringify({ action: 'delete_student', id }),
+          }).then(r => r.json()).then(d => {
+            if (!d.ok) console.error('Admin student delete error:', d.error);
+          });
+        } else if (supabaseClient) {
           supabaseClient.from('students').delete().eq('id', id).then(({ error }) => {
             if (error) console.error('Supabase student delete error:', error);
           });
@@ -3437,12 +3587,23 @@
         overall: overall,
         notes: notes
       });
-      if (supabaseClient) {
-        supabaseClient.from('speaking_grades').insert([{
-          student_id: id, cue_card_title: cueCard,
-          fluency_score: f, vocab_score: v, grammar_score: g, pronunciation_score: p,
-          overall_band: overall, feedback: notes
-        }]).then();
+      const gradeFields = {
+        student_id: id, cue_card_title: cueCard,
+        fluency_score: f, vocab_score: v, grammar_score: g, pronunciation_score: p,
+        overall_band: overall, feedback: notes
+      };
+      if (localStorage.getItem('viatestprep_consultancy_id') === '__owner__') {
+        // No real Supabase Auth session for RLS to match (see
+        // security-rls.sql) - goes through the service-role admin endpoint.
+        fetch('/api/admin/roster', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
+          body: JSON.stringify({ action: 'speaking_grade', fields: gradeFields }),
+        }).then(r => r.json()).then(d => {
+          if (!d.ok) console.error('Admin speaking grade error:', d.error);
+        });
+      } else if (supabaseClient) {
+        supabaseClient.from('speaking_grades').insert([gradeFields]).then();
       }
 
       localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
@@ -3651,17 +3812,28 @@
 
       localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
 
-      if (supabaseClient) {
-        // Saving here always means a tutor has reviewed it, whether they
-        // kept the automated bands as-is or changed them - so
-        // writing_auto_graded flips to false either way.
+      // Saving here always means a tutor has reviewed it, whether they
+      // kept the automated bands as-is or changed them - so
+      // writing_auto_graded flips to false either way.
+      const gradeFields = {
+        writing_band: overallWriting || null,
+        writing_task1_band: task1Band || null,
+        writing_task2_band: task2Band || null,
+        writing_auto_graded: false,
+      };
+      if (localStorage.getItem('viatestprep_consultancy_id') === '__owner__') {
+        // No real Supabase Auth session for RLS to match (see
+        // security-rls.sql) - goes through the service-role admin endpoint.
+        fetch('/api/admin/roster', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
+          body: JSON.stringify({ action: 'writing_grade', studentId, testName: testRecord.test, fields: gradeFields }),
+        }).then(r => r.json()).then(d => {
+          if (!d.ok) console.error('Admin grade update error:', d.error);
+        });
+      } else if (supabaseClient) {
         supabaseClient.from('mock_history')
-          .update({
-            writing_band: overallWriting || null,
-            writing_task1_band: task1Band || null,
-            writing_task2_band: task2Band || null,
-            writing_auto_graded: false,
-          })
+          .update(gradeFields)
           .eq('student_id', studentId)
           .eq('test_name', testRecord.test)
           .eq('module_type', 'writing')
@@ -3724,7 +3896,8 @@
         const isUnlimited = rawPlan === 'Developer Bypass';
         const capacity = PLAN_CAPACITY[rawPlan] || 25;
         const consultancyId = localStorage.getItem('viatestprep_consultancy_id');
-        const isRealConsultancy = consultancyId && consultancyId !== '__owner__';
+        const isOwnerSession = consultancyId === '__owner__';
+        const isRealConsultancy = consultancyId && !isOwnerSession;
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const validStatuses = ['Active', 'Completed', 'Paused'];
 
@@ -3764,14 +3937,31 @@
             });
             added++;
 
-            if (supabaseClient) {
+            const fields = {
+              id: newId, student_id: studentId, name, email, phone,
+              target_band: target, status, access_expires_at,
+              access_token: accessToken, access_level: 'full',
+              ...(isRealConsultancy ? { consultancy_id: consultancyId } : {}),
+            };
+            if (isOwnerSession) {
+              // No real Supabase Auth session for RLS to match (see
+              // security-rls.sql) - goes through the service-role admin endpoint.
               insertPromises.push(
-                supabaseClient.from('students').insert([{
-                  id: newId, student_id: studentId, name, email, phone,
-                  target_band: target, status, access_expires_at,
-                  access_token: accessToken, access_level: 'full',
-                  ...(isRealConsultancy ? { consultancy_id: consultancyId } : {}),
-                }]).then(({ error }) => {
+                fetch('/api/admin/roster', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
+                  body: JSON.stringify({ action: 'create_student', fields }),
+                }).then(r => r.json()).then(d => {
+                  if (!d.ok) {
+                    console.error('Admin CSV import insert error:', d.error);
+                    cloudSyncFailures++;
+                    lastCloudError = d.error || 'Unknown error';
+                  }
+                })
+              );
+            } else if (supabaseClient) {
+              insertPromises.push(
+                supabaseClient.from('students').insert([fields]).then(({ error }) => {
                   if (error) {
                     console.error('Supabase CSV import insert error:', error);
                     cloudSyncFailures++;

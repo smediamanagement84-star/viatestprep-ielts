@@ -230,6 +230,56 @@ async function insertMockResult(result) {
   return rows[0];
 }
 
+// Everything below backs the CRM's owner-bypass mode (index.html's
+// "?ownerkey=" link, consultancyId === '__owner__') now that RLS is enabled
+// on students/mock_history/speaking_grades (see security-rls.sql). That mode
+// has no real Supabase Auth session for auth.uid()-based policies to match,
+// so its cross-tenant reads/writes go through here (service role, bypasses
+// RLS) instead of the anon key directly from the browser.
+async function listAllStudents() {
+  return restRequest('students', { method: 'GET' });
+}
+
+async function listAllMockHistory() {
+  return restRequest('mock_history', { method: 'GET' });
+}
+
+async function listAllSpeakingGrades() {
+  return restRequest('speaking_grades', { method: 'GET' });
+}
+
+async function insertStudentAdmin(fields) {
+  const rows = await restRequest('students', { method: 'POST', body: fields });
+  return rows[0];
+}
+
+async function updateStudentAdmin(id, fields) {
+  const rows = await restRequest('students', {
+    method: 'PATCH',
+    query: `?id=eq.${encodeURIComponent(id)}`,
+    body: fields,
+  });
+  return rows[0];
+}
+
+async function deleteStudentAdmin(id) {
+  await restRequest('students', { method: 'DELETE', query: `?id=eq.${encodeURIComponent(id)}` });
+}
+
+async function insertSpeakingGradeAdmin(fields) {
+  const rows = await restRequest('speaking_grades', { method: 'POST', body: fields });
+  return rows[0];
+}
+
+async function updateWritingGradeAdmin(studentId, testName, fields) {
+  const rows = await restRequest('mock_history', {
+    method: 'PATCH',
+    query: `?student_id=eq.${encodeURIComponent(studentId)}&test_name=eq.${encodeURIComponent(testName)}&module_type=eq.writing`,
+    body: fields,
+  });
+  return rows[0];
+}
+
 module.exports = {
   insertOrder,
   getOrderByTransactionUuid,
@@ -249,4 +299,12 @@ module.exports = {
   insertSelfServeStudent,
   insertMockResult,
   friendlyDbError,
+  listAllStudents,
+  listAllMockHistory,
+  listAllSpeakingGrades,
+  insertStudentAdmin,
+  updateStudentAdmin,
+  deleteStudentAdmin,
+  insertSpeakingGradeAdmin,
+  updateWritingGradeAdmin,
 };
