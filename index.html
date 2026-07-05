@@ -2218,10 +2218,10 @@
       lastFinishedAuthToken = session.access_token;
 
       try {
-        // Idempotent (see /api/consultancy/register.js) - creates a fresh
+        // Idempotent (see /api/consultancy/account.js) - creates a fresh
         // unactivated row on first signup, or just claims/re-reads an
         // existing one on login.
-        const regRes = await fetch('/api/consultancy/register', {
+        const regRes = await fetch('/api/consultancy/account', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ accessToken: session.access_token, name }),
@@ -2497,7 +2497,7 @@
             if (!supabaseClient) { renderAppView(); return; }
             const { data: sessionData } = await supabaseClient.auth.getSession();
             if (!sessionData.session) { renderAppView(); return; }
-            const res = await fetch('/api/consultancy/lookup?accessToken=' + encodeURIComponent(sessionData.session.access_token));
+            const res = await fetch('/api/consultancy/account?accessToken=' + encodeURIComponent(sessionData.session.access_token));
             const data = await res.json();
             if (data.ok) {
               localStorage.setItem('viatestprep_consultancy_name', data.name);
@@ -3210,7 +3210,7 @@
       if (!list) return;
       list.innerHTML = '<p class="text-xs text-[#8a8171]">Loading...</p>';
       try {
-        const res = await fetch('/api/admin/pending-orders', { headers: { 'X-Owner-Key': OWNER_BYPASS_KEY } });
+        const res = await fetch('/api/admin/orders', { headers: { 'X-Owner-Key': OWNER_BYPASS_KEY } });
         const data = await res.json();
         if (!data.ok) throw new Error(data.error || 'Could not load pending payments');
 
@@ -3244,7 +3244,7 @@
       if (action === 'reject' && !confirm('Reject this payment submission?')) return;
 
       try {
-        const res = await fetch('/api/admin/approve-order', {
+        const res = await fetch('/api/admin/orders', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
           body: JSON.stringify({ orderId, action }),
@@ -3407,10 +3407,10 @@
           // The owner bypass has no real Supabase Auth session, so its
           // anon-key writes are blocked by RLS (see security-rls.sql) - this
           // goes through a service-role-backed admin endpoint instead.
-          fetch('/api/admin/student', {
+          fetch('/api/admin/roster', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
-            body: JSON.stringify({ action: 'update', id, fields }),
+            body: JSON.stringify({ action: 'update_student', id, fields }),
           }).then(r => r.json()).then(d => { warnIfSupabaseWriteFailed(d.ok ? null : { message: d.error }, `Updating ${name}`); });
         } else if (supabaseClient) {
           supabaseClient.from('students').update(fields).eq('id', id).then();
@@ -3445,10 +3445,10 @@
           ...(isRealConsultancy ? { consultancy_id: consultancyId } : {}),
         };
         if (isOwnerSession) {
-          fetch('/api/admin/student', {
+          fetch('/api/admin/roster', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
-            body: JSON.stringify({ action: 'create', fields }),
+            body: JSON.stringify({ action: 'create_student', fields }),
           }).then(r => r.json()).then(d => { warnIfSupabaseWriteFailed(d.ok ? null : { message: d.error }, `Registering ${name}`); });
         } else if (supabaseClient) {
           supabaseClient.from('students').insert([fields]).then(({ error }) => { warnIfSupabaseWriteFailed(error, `Registering ${name}`); });
@@ -3513,10 +3513,10 @@
         if (localStorage.getItem('viatestprep_consultancy_id') === '__owner__') {
           // No real Supabase Auth session for RLS to match (see
           // security-rls.sql) - goes through the service-role admin endpoint.
-          fetch('/api/admin/student', {
+          fetch('/api/admin/roster', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
-            body: JSON.stringify({ action: 'delete', id }),
+            body: JSON.stringify({ action: 'delete_student', id }),
           }).then(r => r.json()).then(d => {
             if (!d.ok) console.error('Admin student delete error:', d.error);
           });
@@ -3595,10 +3595,10 @@
       if (localStorage.getItem('viatestprep_consultancy_id') === '__owner__') {
         // No real Supabase Auth session for RLS to match (see
         // security-rls.sql) - goes through the service-role admin endpoint.
-        fetch('/api/admin/speaking-grade', {
+        fetch('/api/admin/roster', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
-          body: JSON.stringify(gradeFields),
+          body: JSON.stringify({ action: 'speaking_grade', fields: gradeFields }),
         }).then(r => r.json()).then(d => {
           if (!d.ok) console.error('Admin speaking grade error:', d.error);
         });
@@ -3824,10 +3824,10 @@
       if (localStorage.getItem('viatestprep_consultancy_id') === '__owner__') {
         // No real Supabase Auth session for RLS to match (see
         // security-rls.sql) - goes through the service-role admin endpoint.
-        fetch('/api/admin/writing-grade', {
+        fetch('/api/admin/roster', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
-          body: JSON.stringify({ studentId, testName: testRecord.test, fields: gradeFields }),
+          body: JSON.stringify({ action: 'writing_grade', studentId, testName: testRecord.test, fields: gradeFields }),
         }).then(r => r.json()).then(d => {
           if (!d.ok) console.error('Admin grade update error:', d.error);
         });
@@ -3947,10 +3947,10 @@
               // No real Supabase Auth session for RLS to match (see
               // security-rls.sql) - goes through the service-role admin endpoint.
               insertPromises.push(
-                fetch('/api/admin/student', {
+                fetch('/api/admin/roster', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
-                  body: JSON.stringify({ action: 'create', fields }),
+                  body: JSON.stringify({ action: 'create_student', fields }),
                 }).then(r => r.json()).then(d => {
                   if (!d.ok) {
                     console.error('Admin CSV import insert error:', d.error);
