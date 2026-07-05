@@ -1713,6 +1713,16 @@
         return;
       }
 
+      // Same idea as ownerkey above, but for jumping straight into the
+      // student portal (Skill Vault included) instead of the CRM - for
+      // checking student-facing features without registering a real student
+      // or waiting on a confirmation email. Untracked (no active-student id),
+      // same as the old anonymous "Access the free student portal" flow.
+      if (urlParams.get('studentkey') === OWNER_BYPASS_KEY) {
+        launchStudentBypass();
+        return;
+      }
+
       // Per-student personal login link. A consultancy generates this from
       // "Copy Access Link" in the CRM roster - the only way a specific
       // student can land straight in their own tracked portal session,
@@ -2227,6 +2237,20 @@
       // Sentinel, not a real consultancy row - lets the owner see every
       // tenant's roster for support purposes (see syncRosterFromCloud()).
       localStorage.setItem('viatestprep_consultancy_id', '__owner__');
+
+      closeAccessModal();
+      renderAppView();
+    }
+
+    function launchStudentBypass() {
+      // Set developer bypass credentials - full access, no expiry, no roster
+      // row (see initStudentPortal - it's fine without an active-student id).
+      localStorage.setItem('viatestprep_unlocked', 'true');
+      localStorage.setItem('viatestprep_user_role', 'student');
+      localStorage.setItem('userEmail', 'admin@viatestprep.local');
+      localStorage.setItem('viatestprep_student_access', 'full');
+      localStorage.removeItem('viatestprep_active_student_id');
+      localStorage.removeItem('viatestprep_active_student_expires_at');
 
       closeAccessModal();
       renderAppView();
