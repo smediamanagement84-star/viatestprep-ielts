@@ -2327,6 +2327,598 @@ const UNIQUE_TEST_DATA = {
       "modelAnswer": "Reducing crime is a persistent challenge for governments everywhere, and opinions differ sharply on the best approach. While some argue that longer prison sentences are the most effective deterrent, others believe that alternative approaches offer better long-term results. This essay will examine both views before presenting my own opinion.\n\nThose who favour longer prison sentences argue that removing offenders from society for extended periods directly prevents them from committing further crimes during that time, and that the threat of a lengthy sentence may deter potential offenders from committing crimes in the first place. Proponents also argue that longer sentences reflect the seriousness with which society treats particular offences, offering a sense of justice to victims and their families.\n\nOn the other hand, critics of this approach point to research suggesting that the certainty of being caught deters crime far more effectively than the severity of the eventual punishment, meaning that resources spent extending prison terms might achieve more if redirected toward policing and detection instead. Critics also argue that prisons, particularly overcrowded ones, can function as \"schools for crime,\" where inmates serving long sentences alongside hardened offenders emerge more entrenched in criminal networks than before, rather than rehabilitated. Alternative approaches, such as investment in education, vocational training, and mental health and addiction treatment programmes, address underlying causes of criminal behaviour that longer sentences alone do not resolve.\n\nIn my view, while lengthy sentences remain appropriate for the most serious violent offences, relying on longer sentences as a primary crime-reduction strategy for less serious offences is likely to prove less effective than a combined approach: consistent, well-resourced policing to increase the likelihood of being caught, alongside rehabilitation and social programmes that address the root causes driving people toward crime in the first place."
     }
   }
+},
+"u5": {
+  "title": "ViaTestPrep Original Practice Test 5",
+  "book": "Unique Test",
+  "reading": {
+    "passages": [
+      {
+        "title": "Mapping the Ocean Floor: A Race Against Time",
+        "text": "<h1>Mapping the Ocean Floor: A Race Against Time</h1>\n<p><b>A</b>&nbsp; It is a curious fact of modern science that humanity possesses more detailed, higher-resolution maps of the surface of the Moon and Mars than it does of the floor of its own oceans. Roughly seventy percent of the Earth's surface lies beneath the sea, yet until remarkably recently, only a small fraction of the seafloor had been mapped in anything like the detail routinely available for dry land. An ambitious international effort launched in the past decade aims to close this gap before the end of the current decade, a race against time that has quietly gathered pace across dozens of countries, involving research institutions, navies, and private companies that would once have had little reason to share data with one another.</p>\n<p><b>B</b>&nbsp; Understanding the shape of the ocean floor matters for reasons well beyond simple curiosity. Detailed bathymetric maps, as seafloor depth charts are known, are essential for predicting how tsunamis will travel and where they are likely to strike hardest, since underwater ridges and trenches channel and amplify wave energy in ways that flat, open water does not. Shipping companies rely on accurate depth data to avoid running vessels aground on uncharted seamounts, submarine cables carrying the bulk of the world's internet traffic must be routed around underwater hazards, and climate scientists use seafloor topography to model ocean currents that transport heat around the planet.</p>\n<p><b>C</b>&nbsp; Modern seafloor mapping relies primarily on a technique called multibeam sonar, in which a ship-mounted device emits a fan of sound pulses toward the seabed and measures precisely how long each pulse takes to bounce back, building up a detailed three-dimensional picture of the terrain directly beneath the vessel's path. A single ship can only survey a narrow strip of ocean at a time, however, meaning that thoroughly mapping the world's oceans using ships alone would take many centuries at the current pace of survey work, a fact that has pushed the mapping community toward a wider range of tools and greater international cooperation.</p>\n<p><b>D</b>&nbsp; Recognising the scale of the challenge, marine scientists and technology companies launched a coordinated global initiative in 2017, bringing together data from research vessels, naval surveys, commercial shipping companies, and even citizen-contributed sonar readings from smaller vessels, into a single shared database intended to produce a complete, publicly available map of the entire ocean floor by 2030. Achieving this ambitious target has required not just new data collection but also the painstaking task of persuading governments and private companies holding decades of previously unshared survey data to contribute it to the shared public dataset.</p>\n<p><b>E</b>&nbsp; The difficulties involved in this undertaking should not be underestimated. Beyond a few hundred metres, sunlight cannot penetrate seawater at all, ruling out simple visual or photographic survey techniques for the vast majority of the ocean's volume, while the crushing pressure at extreme depths, exceeding a thousand times atmospheric pressure in the deepest trenches, demands specialised, expensive equipment capable of surviving conditions that would instantly destroy standard instruments. Weather, ship availability, and the sheer remoteness of much of the open ocean, far from any coastline or port, further slow the pace of new data collection in many of the least-explored regions.</p>\n<p><b>F</b>&nbsp; Where new mapping has been completed, the results have often been genuinely surprising. Newly surveyed regions have revealed previously unknown underwater mountains, some rising higher from the seafloor than any mountain on land measured from its base, along with vast canyon systems and volcanic ridges that had never appeared on any chart before, discoveries with direct implications for marine biodiversity, since many of these newly mapped seamounts turn out to host rich and previously undocumented ecosystems.</p>\n<p><b>G</b>&nbsp; As demand grows for deep-sea mineral resources and international bodies debate how to regulate potential seabed mining, having an accurate, complete map of the ocean floor has taken on new urgency well beyond scientific curiosity, providing the essential baseline data against which any future environmental impact, whether from mining, climate change, or shifting ocean currents, can ultimately be measured and understood, a foundation that, once complete, will be far cheaper to maintain than it has been to build.</p>",
+        "questions": [
+          {
+            "num": 1,
+            "type": "HEADING",
+            "text": "Paragraph A",
+            "answer": "vi",
+            "explanation": "Paragraph A notes humanity has \"more detailed, higher-resolution maps of the surface of the Moon and Mars than it does of the floor of its own oceans.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Discoveries that have revealed previously unknown undersea terrain<br/>ii.&nbsp; A single technology's most significant limitation<br/>iii.&nbsp; Combining data sources through global cooperation<br/>iv.&nbsp; Extreme conditions that complicate data collection<br/>v.&nbsp; Practical reasons an accurate seafloor map is valuable<br/>vi.&nbsp; A surprising comparison with other planetary bodies<br/>vii.&nbsp; New urgency created by interest in seabed resources<br/>viii.&nbsp; National governments competing to claim seabed territory<br/>ix.&nbsp; The invention of sonar technology during wartime",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 2,
+            "type": "HEADING",
+            "text": "Paragraph B",
+            "answer": "v",
+            "explanation": "Paragraph B lists reasons mapping matters, including that \"climate scientists use seafloor topography to model ocean currents.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Discoveries that have revealed previously unknown undersea terrain<br/>ii.&nbsp; A single technology's most significant limitation<br/>iii.&nbsp; Combining data sources through global cooperation<br/>iv.&nbsp; Extreme conditions that complicate data collection<br/>v.&nbsp; Practical reasons an accurate seafloor map is valuable<br/>vi.&nbsp; A surprising comparison with other planetary bodies<br/>vii.&nbsp; New urgency created by interest in seabed resources<br/>viii.&nbsp; National governments competing to claim seabed territory<br/>ix.&nbsp; The invention of sonar technology during wartime",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 3,
+            "type": "HEADING",
+            "text": "Paragraph C",
+            "answer": "ii",
+            "explanation": "Paragraph C explains multibeam sonar but notes \"mapping the world's oceans using ships alone would take many centuries at the current pace.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Discoveries that have revealed previously unknown undersea terrain<br/>ii.&nbsp; A single technology's most significant limitation<br/>iii.&nbsp; Combining data sources through global cooperation<br/>iv.&nbsp; Extreme conditions that complicate data collection<br/>v.&nbsp; Practical reasons an accurate seafloor map is valuable<br/>vi.&nbsp; A surprising comparison with other planetary bodies<br/>vii.&nbsp; New urgency created by interest in seabed resources<br/>viii.&nbsp; National governments competing to claim seabed territory<br/>ix.&nbsp; The invention of sonar technology during wartime",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 4,
+            "type": "HEADING",
+            "text": "Paragraph D",
+            "answer": "iii",
+            "explanation": "Paragraph D describes an initiative \"bringing together data from research vessels, naval surveys, commercial shipping companies, and even citizen-contributed sonar readings from smaller vessels.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Discoveries that have revealed previously unknown undersea terrain<br/>ii.&nbsp; A single technology's most significant limitation<br/>iii.&nbsp; Combining data sources through global cooperation<br/>iv.&nbsp; Extreme conditions that complicate data collection<br/>v.&nbsp; Practical reasons an accurate seafloor map is valuable<br/>vi.&nbsp; A surprising comparison with other planetary bodies<br/>vii.&nbsp; New urgency created by interest in seabed resources<br/>viii.&nbsp; National governments competing to claim seabed territory<br/>ix.&nbsp; The invention of sonar technology during wartime",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 5,
+            "type": "HEADING",
+            "text": "Paragraph E",
+            "answer": "iv",
+            "explanation": "Paragraph E describes how \"the crushing pressure at extreme depths, exceeding a thousand times atmospheric pressure in the deepest trenches, demands specialised, expensive equipment.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Discoveries that have revealed previously unknown undersea terrain<br/>ii.&nbsp; A single technology's most significant limitation<br/>iii.&nbsp; Combining data sources through global cooperation<br/>iv.&nbsp; Extreme conditions that complicate data collection<br/>v.&nbsp; Practical reasons an accurate seafloor map is valuable<br/>vi.&nbsp; A surprising comparison with other planetary bodies<br/>vii.&nbsp; New urgency created by interest in seabed resources<br/>viii.&nbsp; National governments competing to claim seabed territory<br/>ix.&nbsp; The invention of sonar technology during wartime",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 6,
+            "type": "HEADING",
+            "text": "Paragraph F",
+            "answer": "i",
+            "explanation": "Paragraph F states newly surveyed regions \"have revealed previously unknown underwater mountains, some rising higher from the seafloor than any mountain on land measured from its base.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Discoveries that have revealed previously unknown undersea terrain<br/>ii.&nbsp; A single technology's most significant limitation<br/>iii.&nbsp; Combining data sources through global cooperation<br/>iv.&nbsp; Extreme conditions that complicate data collection<br/>v.&nbsp; Practical reasons an accurate seafloor map is valuable<br/>vi.&nbsp; A surprising comparison with other planetary bodies<br/>vii.&nbsp; New urgency created by interest in seabed resources<br/>viii.&nbsp; National governments competing to claim seabed territory<br/>ix.&nbsp; The invention of sonar technology during wartime",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 7,
+            "type": "HEADING",
+            "text": "Paragraph G",
+            "answer": "vii",
+            "explanation": "Paragraph G notes \"demand grows for deep-sea mineral resources and international bodies debate how to regulate potential seabed mining.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Discoveries that have revealed previously unknown undersea terrain<br/>ii.&nbsp; A single technology's most significant limitation<br/>iii.&nbsp; Combining data sources through global cooperation<br/>iv.&nbsp; Extreme conditions that complicate data collection<br/>v.&nbsp; Practical reasons an accurate seafloor map is valuable<br/>vi.&nbsp; A surprising comparison with other planetary bodies<br/>vii.&nbsp; New urgency created by interest in seabed resources<br/>viii.&nbsp; National governments competing to claim seabed territory<br/>ix.&nbsp; The invention of sonar technology during wartime",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 8,
+            "type": "TFNG",
+            "text": "A single ship can survey the entire ocean floor within a few decades using multibeam sonar alone.",
+            "answer": "FALSE",
+            "explanation": "The passage states mapping the oceans using ships alone \"would take many centuries at the current pace of survey work.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 8-9<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 9,
+            "type": "TFNG",
+            "text": "The global mapping initiative only uses data collected by dedicated research vessels.",
+            "answer": "FALSE",
+            "explanation": "The passage states it brings together data \"from research vessels, naval surveys, commercial shipping companies, and even citizen-contributed sonar readings.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 8-9<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 10,
+            "type": "FILL",
+            "text": "Multibeam sonar measures precisely how long each sound pulse takes to _________.",
+            "answer": "bounce back",
+            "explanation": "The passage states it \"measures precisely how long each pulse takes to bounce back.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 10-11<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 11,
+            "type": "FILL",
+            "text": "The pressure in the deepest ocean trenches can exceed a thousand times _________ pressure.",
+            "answer": "atmospheric",
+            "explanation": "The passage states pressure can exceed \"a thousand times atmospheric pressure in the deepest trenches.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 10-11<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 12,
+            "type": "MCQ",
+            "text": "According to the passage, why has persuading governments and companies to share data been necessary?",
+            "answer": "B",
+            "explanation": "The passage states this involved \"persuading governments and private companies holding decades of previously unshared survey data to contribute it to the shared public dataset.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Because most survey data had never been collected before 2017.",
+              "B. Because decades of previously unshared survey data needed to be contributed to the shared dataset.",
+              "C. Because international law required it.",
+              "D. Because satellite data alone was considered sufficient."
+            ]
+          },
+          {
+            "num": 13,
+            "type": "MCQ",
+            "text": "What does the passage suggest about the importance of seafloor mapping in relation to deep-sea mining?",
+            "answer": "B",
+            "explanation": "The passage states mapping provides \"the essential baseline data against which any future environmental impact, whether from mining, climate change, or shifting ocean currents, can ultimately be measured and understood.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. It has become irrelevant now that mining technology exists.",
+              "B. It provides essential baseline data for measuring future environmental impact.",
+              "C. It has ended all international debate about seabed regulation.",
+              "D. It is now less urgent than in the past."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "The Psychology of Nostalgia",
+        "text": "<h1>The Psychology of Nostalgia</h1>\n<p>For much of the twentieth century, nostalgia carried a distinctly negative connotation within psychology and medicine. The term itself was coined in the seventeenth century by a Swiss physician describing a debilitating homesickness observed in soldiers stationed far from home, and for centuries afterward nostalgia was treated primarily as a psychological affliction, something closer to a mild illness than a normal, healthy emotional experience. Only in the past two decades has a substantial body of research begun to paint a considerably more positive picture, one that treats nostalgia not as a disorder to be cured but as a normal, and often valuable, part of everyday emotional experience.</p>\n<p>Modern psychological studies typically define nostalgia as a sentimental longing for one's own personal past, frequently triggered by a piece of music, a particular smell, an old photograph, or a conversation with an old friend. Unlike simple memory recall, nostalgic reflection tends to focus disproportionately on positive, emotionally significant experiences, often involving close relationships, meaningful achievements, or formative life transitions, while unpleasant details of the same period tend to fade into the background or be omitted from the recollection entirely.</p>\n<p>Researchers have found that deliberately inducing nostalgic reflection in laboratory settings, for instance by asking participants to recall and write about a cherished memory, produces measurable psychological benefits. Participants who engaged in nostalgic reflection reported increased feelings of social connectedness, greater self-esteem, and a stronger sense of meaning in life compared with control groups asked to think about a mundane, emotionally neutral event. Nostalgic reflection has also been shown, in several studies, to temporarily counteract feelings of loneliness and to help participants cope more effectively with immediate stress.</p>\n<p>One particularly consistent finding is that people appear to turn to nostalgia more frequently during difficult periods of their lives, precisely when its psychological benefits might be most needed. Cold physical environments, feelings of social exclusion, and general life uncertainty have all been shown in experimental studies to increase the frequency of spontaneous nostalgic reflection, suggesting the emotion may function as a kind of built-in psychological coping mechanism, activated automatically in response to discomfort or threat rather than a random or purely recreational indulgence.</p>\n<p>This reframing has practical implications well beyond academic psychology. Some clinicians now use structured nostalgic reflection as a therapeutic tool with patients experiencing depression or social isolation, encouraging them to actively recall and discuss cherished memories as a way of temporarily boosting mood and reinforcing a sense of continuity and meaning in their own life story. Nostalgia-based interventions have shown particular promise among elderly patients with early-stage dementia, for whom long-term autobiographical memories often remain more accessible than more recent ones, providing a way to engage meaningfully even as other cognitive abilities decline.</p>\n<p>Marketing researchers, meanwhile, have long recognised nostalgia's commercial potential, and the past decade has seen a marked increase in advertising and product design that deliberately evokes earlier decades, from revived clothing styles to remade films and video games. Psychologists studying this trend suggest that nostalgic marketing works precisely because it taps into the same feelings of connectedness and meaning documented in laboratory studies, rather than through mere visual novelty, making consumers feel warmly disposed toward a brand that appears to share, or deliberately evoke, a fondly remembered personal or cultural past.</p>\n<p>Not every finding in this area points in a uniformly positive direction, however, and researchers continue to debate exactly where the boundary between healthy reflection and unhelpful avoidance ultimately lies. A small minority of researchers caution that excessive reliance on nostalgic reflection, particularly among individuals struggling to adapt to significant life changes, could in principle discourage genuine engagement with present circumstances in favour of comfortable retreat into memory. For most people, though, the accumulating evidence suggests that nostalgia, once dismissed as a symptom to be treated, functions instead as a normal and often genuinely beneficial part of everyday emotional life, one that psychology spent far longer misunderstanding than the emotion itself perhaps deserved.</p>",
+        "questions": [
+          {
+            "num": 14,
+            "type": "TFNG",
+            "text": "The term \"nostalgia\" was originally used to describe a condition observed in soldiers.",
+            "answer": "TRUE",
+            "explanation": "The passage states the term described \"a debilitating homesickness observed in soldiers stationed far from home.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 15,
+            "type": "TFNG",
+            "text": "Nostalgic reflection tends to focus equally on positive and negative details of the past.",
+            "answer": "FALSE",
+            "explanation": "The passage states nostalgic reflection \"tends to focus disproportionately on positive, emotionally significant experiences, often involving close relationships, meaningful achievements, or formative life transitions, while unpleasant details of the same period tend to fade into the background or be omitted from the recollection entirely.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 16,
+            "type": "TFNG",
+            "text": "Participants who engaged in nostalgic reflection reported lower self-esteem than control groups.",
+            "answer": "FALSE",
+            "explanation": "The passage states participants \"reported increased feelings of social connectedness, greater self-esteem, and a stronger sense of meaning in life.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 17,
+            "type": "TFNG",
+            "text": "People tend to experience nostalgia more often during comfortable, untroubled periods of life.",
+            "answer": "FALSE",
+            "explanation": "The passage states people \"turn to nostalgia more frequently during difficult periods of their lives.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 18,
+            "type": "TFNG",
+            "text": "Nostalgia-based interventions have shown particular promise among elderly patients with early-stage dementia.",
+            "answer": "TRUE",
+            "explanation": "The passage states such interventions \"have shown particular promise among elderly patients with early-stage dementia.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 19,
+            "type": "FILL",
+            "text": "The term nostalgia was coined in the seventeenth century by a Swiss _________.",
+            "answer": "physician",
+            "explanation": "The passage states it was \"coined in the seventeenth century by a Swiss physician.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 20,
+            "type": "FILL",
+            "text": "Cold physical environments, social exclusion, and life uncertainty have all been shown to increase the frequency of spontaneous nostalgic _________.",
+            "answer": "reflection",
+            "explanation": "The passage states these factors \"increase the frequency of spontaneous nostalgic reflection.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 21,
+            "type": "FILL",
+            "text": "Nostalgia may function as a kind of built-in psychological coping _________.",
+            "answer": "mechanism",
+            "explanation": "The passage suggests nostalgia may function \"as a kind of built-in psychological coping mechanism.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 22,
+            "type": "FILL",
+            "text": "For elderly patients with dementia, long-term autobiographical memories often remain more _________ than more recent ones.",
+            "answer": "accessible",
+            "explanation": "The passage states such memories \"often remain more accessible than more recent ones.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 23,
+            "type": "FILL",
+            "text": "Marketing researchers have long recognised nostalgia's commercial _________.",
+            "answer": "potential",
+            "explanation": "The passage states marketers \"have long recognised nostalgia's commercial potential.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 24,
+            "type": "MCQ",
+            "text": "How did psychology and medicine generally view nostalgia for much of the twentieth century?",
+            "answer": "C",
+            "explanation": "The passage states nostalgia \"was treated primarily as a psychological affliction, something closer to a mild illness.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. As a purely commercial marketing tool.",
+              "B. As a sign of exceptional creativity.",
+              "C. As a psychological affliction similar to a mild illness.",
+              "D. As an entirely positive, healthy emotion."
+            ]
+          },
+          {
+            "num": 25,
+            "type": "MCQ",
+            "text": "According to the passage, why does nostalgic marketing work, according to psychologists?",
+            "answer": "B",
+            "explanation": "The passage states it works because it \"taps into the same feelings of connectedness and meaning documented in laboratory studies, rather than through mere visual novelty.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. It relies purely on visual novelty.",
+              "B. It taps into the same feelings of connectedness and meaning found in laboratory studies.",
+              "C. It only works on elderly consumers.",
+              "D. It has no measurable effect on consumer behaviour."
+            ]
+          },
+          {
+            "num": 26,
+            "type": "MCQ",
+            "text": "What caution do a minority of researchers raise about nostalgic reflection?",
+            "answer": "A",
+            "explanation": "The passage states excessive reliance on nostalgia \"could in principle discourage genuine engagement with present circumstances in favour of comfortable retreat into memory.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. It could discourage engagement with present circumstances in some cases.",
+              "B. It has been scientifically disproven as a coping mechanism.",
+              "C. It is only relevant to marketing research.",
+              "D. It should never be used in therapy."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Automation and the Future of Middle-Skill Jobs",
+        "text": "<h1>Automation and the Future of Middle-Skill Jobs</h1>\n<p>Discussions of automation and the future of work have tended to focus on two extreme scenarios: either robots and artificial intelligence will eliminate vast numbers of jobs, leading to widespread unemployment, or they will simply create new categories of work to replace the old ones, much as previous waves of technological change eventually did. A growing body of labour economics research suggests that the real picture is more specific and, in some ways, more troubling than either extreme: automation appears to be hollowing out the middle of the job market in particular, while leaving both the top and bottom relatively intact.</p>\n<p>This pattern, which economists term job polarisation, describes a labour market increasingly divided between two growing groups. At one end, highly educated professionals in fields such as law, medicine, engineering, and management have generally seen their employment prospects and relative wages hold steady or improve, since their work typically involves precisely the kind of complex judgement, creativity, and interpersonal negotiation that current automation technology still struggles to replicate reliably. At the other end, many lower-paid service roles, including care work, cleaning, and food preparation, have also proven surprisingly resistant to automation, partly because these jobs require physical dexterity and adaptability to unpredictable environments that remain difficult and expensive to automate, and partly because such roles are often simply not profitable enough to justify the substantial upfront investment automation would require.</p>\n<p>It is the jobs in between these two extremes that have proven most vulnerable. Many traditional middle-skill occupations, including routine manufacturing and assembly line work, data entry, bookkeeping, and various clerical and administrative roles, involve tasks that are repetitive and follow predictable, well-defined rules, precisely the characteristics that make a task straightforward to automate using current technology. Employment in many of these occupations has declined steadily across most wealthy economies over the past three decades, a trend that began well before the recent surge of interest in artificial intelligence and has, if anything, accelerated as machine learning techniques have matured.</p>\n<p>The consequences of this polarisation extend beyond simple job counts. Workers displaced from middle-skill occupations frequently struggle to move directly into the growing high-skill category, since doing so typically requires additional years of costly formal education that many displaced workers, often already supporting families, cannot easily undertake mid-career. Some economists have documented a troubling pattern in which displaced middle-skill workers instead move downward into lower-paid service roles, contributing directly to widening income inequality even in economies where the overall unemployment rate remains comparatively low and headline economic indicators appear broadly healthy.</p>\n<p>Some regions and demographic groups have been affected far more severely than others. Manufacturing-dependent towns that once relied heavily on a small number of large factories have, in several well-documented cases, experienced years of sustained economic decline following automation and outsourcing, with the local service economy contracting as unemployed factory workers reduce their own spending, creating a self-reinforcing cycle of local decline that broader national economic growth figures can mask entirely. Younger workers just entering the labour market, and older workers with fewer remaining years to justify retraining, have both proven particularly vulnerable to these localised effects.</p>\n<p>Policy responses to this challenge remain fragmented and, by most measures, insufficient to the scale of the problem. Proposed interventions range from expanded and more accessible vocational retraining programmes, to direct wage subsidies intended to support workers during the transition to a new occupation, to more radical ideas such as a universal basic income intended to provide a stable floor of support regardless of employment status. Few of these proposals have yet been tested at a national scale large enough to draw firm conclusions about their long-term effectiveness in genuinely reversing the specific pattern of middle-skill hollowing that current evidence increasingly suggests is under way.</p>\n<p>Whatever combination of policies ultimately proves most effective, the underlying economic pattern appears unlikely to reverse on its own. As automation technology continues to improve, the range of tasks it can perform reliably and cheaply will almost certainly continue expanding, placing sustained pressure on precisely the kind of routine, rule-based, middle-skill work that has historically formed a stable pathway into a secure, comfortable, middle-class livelihood.</p>",
+        "questions": [
+          {
+            "num": 27,
+            "type": "TFNG",
+            "text": "Research suggests automation affects all levels of the job market equally.",
+            "answer": "FALSE",
+            "explanation": "The passage states automation \"appears to be hollowing out the middle of the job market in particular, while leaving both the top and bottom relatively intact.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 28,
+            "type": "TFNG",
+            "text": "Highly educated professionals have generally seen their employment prospects decline due to automation.",
+            "answer": "FALSE",
+            "explanation": "The passage states such professionals \"have generally seen their employment prospects and relative wages hold steady or improve.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 29,
+            "type": "TFNG",
+            "text": "Low-paid service roles such as care work have proven resistant to automation.",
+            "answer": "TRUE",
+            "explanation": "The passage states such roles \"have also proven surprisingly resistant to automation.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 30,
+            "type": "TFNG",
+            "text": "The decline in middle-skill employment began only after the recent surge of interest in artificial intelligence.",
+            "answer": "FALSE",
+            "explanation": "The passage states this decline \"began well before the recent surge of interest in artificial intelligence.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 31,
+            "type": "TFNG",
+            "text": "Workers displaced from middle-skill jobs generally move easily into high-skill occupations.",
+            "answer": "FALSE",
+            "explanation": "The passage states displaced workers \"frequently struggle to move directly into the growing high-skill category.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 32,
+            "type": "TFNG",
+            "text": "National unemployment statistics always clearly reveal the local economic decline caused by factory automation.",
+            "answer": "FALSE",
+            "explanation": "The passage states local decline can occur even in economies where \"broader national economic growth figures can mask entirely\" such local effects.",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 33,
+            "type": "TFNG",
+            "text": "A universal basic income has already been tested at a national scale large enough to confirm its long-term effectiveness.",
+            "answer": "FALSE",
+            "explanation": "The passage states: \"Few of these proposals have yet been tested at a national scale large enough to draw firm conclusions.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 34,
+            "type": "FILL",
+            "text": "Economists term the division of the labour market into two growing groups job _________.",
+            "answer": "polarisation",
+            "explanation": "The passage names this pattern \"job polarisation.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 35,
+            "type": "FILL",
+            "text": "Middle-skill tasks are often repetitive and follow predictable, well-defined _________.",
+            "answer": "rules",
+            "explanation": "The passage states such tasks \"follow predictable, well-defined rules.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 36,
+            "type": "FILL",
+            "text": "Displaced workers moving into lower-paid service roles contribute directly to widening income _________.",
+            "answer": "inequality",
+            "explanation": "The passage states this contributes \"directly to widening income inequality.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 37,
+            "type": "FILL",
+            "text": "Manufacturing-dependent towns have experienced a self-reinforcing cycle of local _________.",
+            "answer": "decline",
+            "explanation": "The passage describes \"a self-reinforcing cycle of local decline.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 38,
+            "type": "MCQ",
+            "text": "According to the passage, why have middle-skill jobs proven especially vulnerable to automation?",
+            "answer": "A",
+            "explanation": "The passage states such jobs involve tasks that are \"repetitive and follow predictable, well-defined rules, precisely the characteristics that make a task straightforward to automate.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Their tasks are repetitive and follow predictable, well-defined rules.",
+              "B. They pay significantly higher wages than other jobs.",
+              "C. They require extensive formal education.",
+              "D. They are located mainly in rural areas."
+            ]
+          },
+          {
+            "num": 39,
+            "type": "MCQ",
+            "text": "What challenge do displaced middle-skill workers frequently face, according to the passage?",
+            "answer": "B",
+            "explanation": "The passage states moving to high-skill work \"typically requires additional years of costly formal education that many displaced workers, often already supporting families, cannot easily undertake mid-career.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. A complete absence of any alternative jobs.",
+              "B. The cost and time required for further formal education.",
+              "C. A legal requirement to remain in their original industry.",
+              "D. A shortage of universal basic income programmes."
+            ]
+          },
+          {
+            "num": 40,
+            "type": "MCQ",
+            "text": "What is the passage's overall conclusion about the future of middle-skill jobs?",
+            "answer": "C",
+            "explanation": "The passage concludes automation will keep \"placing sustained pressure on precisely the kind of routine, rule-based, middle-skill work\" that has provided stable livelihoods.",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Middle-skill jobs will fully recover once policy catches up.",
+              "B. Automation will soon slow down and reverse job polarisation.",
+              "C. Continued pressure on routine, rule-based middle-skill work is likely to persist.",
+              "D. Universal basic income has already solved the problem."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "writing": {
+    "task1": {
+      "prompt": "The pie charts below show the sources of electricity generation in Country X in 2000 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "image": "<img src=\"images/writing_unique5_p1.png\" class=\"max-w-full h-auto mx-auto rounded-xl shadow-lg border border-white/10 bg-white\" alt=\"Writing Task 1 Chart\" />",
+      "modelAnswer": "The pie charts compare the sources of electricity generation in Country X in 2000 and 2020.\n\nOverall, the country's electricity mix shifted substantially away from coal and toward renewable sources over the twenty-year period, while natural gas increased only moderately and nuclear power remained unchanged.\n\nIn 2000, coal was overwhelmingly the dominant source, accounting for 55% of electricity generation, more than double the combined share of hydropower and wind and solar, which stood at 12% and 3% respectively. Natural gas contributed a further 25%, while nuclear power made up the remaining 5%.\n\nBy 2020, the picture had changed dramatically. Coal's share had fallen to just 20%, while wind and solar had expanded tenfold, from 3% to 30%, becoming joint-largest source alongside natural gas, which itself rose modestly to 30%. Hydropower's share also increased slightly, from 12% to 15%, while nuclear power's contribution remained unchanged at 5% across both years.\n\nIn summary, Country X's electricity generation moved away from coal toward a more balanced mix dominated by natural gas and wind and solar power, with renewable sources collectively accounting for a much larger share of generation by 2020 than they had in 2000."
+    },
+    "task2": {
+      "prompt": "Some people believe that children should be taught how to manage money at school. To what extent do you agree or disagree?",
+      "modelAnswer": "Financial literacy is a skill that affects almost every adult decision, from budgeting a monthly salary to managing debt responsibly, yet it is rarely taught explicitly in most school curricula. I strongly agree that schools should teach children how to manage money, for several reasons.\n\nFirstly, many important financial habits are formed early in life and can be difficult to change later on. A child who learns from an early age how to budget, save a portion of any money they receive, and understand the difference between genuine needs and simple wants is far more likely to carry these habits into adulthood than someone first encountering such concepts as a stressed adult already juggling bills and, in many cases, existing debt.\n\nSecondly, schools are already well placed to teach this material fairly and consistently to all students, regardless of their family background. Not every child grows up in a household where parents feel confident discussing money matters openly, whether due to their own limited financial knowledge or simple discomfort with the subject, meaning that without school-based instruction, many children would receive little or no structured financial education at all. A formal curriculum, taught by a trained teacher, would help ensure that financial literacy does not depend entirely on the particular household a child happens to grow up in.\n\nSome might argue that school timetables are already overcrowded with essential academic subjects, and that financial matters are best left to parents or learned through direct life experience. However, subjects such as mathematics already provide a natural setting into which practical financial topics, calculating interest, comparing loan terms, or planning a simple budget, could be integrated without requiring an entirely separate subject or significant additional teaching time.\n\nIn conclusion, given how directly financial skills affect long-term wellbeing and how unevenly they are currently taught within individual families, I firmly believe schools have both the opportunity and the responsibility to teach children how to manage money."
+    }
+  }
 }
 };
 
