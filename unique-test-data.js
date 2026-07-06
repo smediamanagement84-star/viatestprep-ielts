@@ -5393,7 +5393,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "B",
             "explanation": "The passage states \"more recent and often larger studies attempting to replicate this specific finding have failed to reproduce it convincingly.\"",
             "location": "Passage 1",
-            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "instruction": "Question 12<br/>Choose the correct letter, A, B, C or D.",
             "options": [
               "A. All studies confirm a strong, consistent link between the two.",
               "B. More recent, larger studies have often failed to replicate an earlier reported link.",
@@ -5403,18 +5403,13 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 13,
-            "type": "MCQ",
-            "text": "What is the passage's overall conclusion about yawning research?",
-            "answer": "C",
-            "explanation": "The passage concludes \"no single, fully agreed explanation yet accounts convincingly for every one of its several distinct triggers and apparent social functions.\"",
+            "type": "MATCHING_INFO",
+            "text": "a statement that no single explanation yet convincingly accounts for every one of yawning's distinct triggers and functions",
+            "answer": "G",
+            "explanation": "Paragraph G concludes \"no single, fully agreed explanation yet accounts convincingly for every one of its several distinct triggers and apparent social functions.\"",
             "location": "Passage 1",
-            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
-            "options": [
-              "A. The exact function of yawning has now been fully and conclusively explained.",
-              "B. Yawning is driven purely by a single respiratory mechanism.",
-              "C. No single explanation yet accounts for all of yawning's triggers and functions.",
-              "D. Yawning has only recently been discovered in non-human species."
-            ]
+            "instruction": "Question 13<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-G.",
+            "options": ["A", "B", "C", "D", "E", "F", "G"]
           }
         ]
       },
@@ -5499,7 +5494,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "congestion",
             "explanation": "The passage states such vehicles \"contribute measurably to local traffic congestion in many cities.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 19-21<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 20,
@@ -5508,7 +5503,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "lanes",
             "explanation": "The passage states drivers are forced \"to double-park temporarily in traffic lanes.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 19-21<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 21,
@@ -5517,25 +5512,27 @@ const UNIQUE_TEST_DATA = {
             "answer": "quotas",
             "explanation": "The passage refers to \"demanding productivity quotas, limited routine breaks.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 19-21<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 22,
-            "type": "FILL",
-            "text": "Some companies now offer a small financial discount or loyalty reward for accepting a longer delivery _________.",
-            "answer": "window",
-            "explanation": "The passage refers to customers accepting \"a longer, several-day delivery window.\"",
+            "type": "ENDINGS",
+            "text": "Some companies now offer a small financial discount or loyalty reward for accepting",
+            "answer": "D",
+            "explanation": "The passage refers to customers accepting \"a longer, several-day delivery window rather than paying extra for guaranteed rapid delivery.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 22-23<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F.<br/><br/><b>List of Endings</b><br/>A.&nbsp; more packaging material per item than consolidated shipments<br/>B.&nbsp; a guaranteed minimum wage and full health insurance<br/>C.&nbsp; a fully consolidated, single daily delivery route<br/>D.&nbsp; a longer, several-day delivery window<br/>E.&nbsp; a permanent reduction in delivery vehicle emissions<br/>F.&nbsp; delivery workers, city residents, and the wider environment",
+            "options": ["A", "B", "C", "D", "E", "F"]
           },
           {
             "num": 23,
-            "type": "FILL",
-            "text": "Fast delivery costs are ultimately absorbed elsewhere, spread across delivery workers, city residents, and the wider _________.",
-            "answer": "environment",
+            "type": "ENDINGS",
+            "text": "Fast delivery's true costs are ultimately absorbed elsewhere, spread across",
+            "answer": "F",
             "explanation": "The passage states costs are \"spread across delivery workers, city residents, and the wider environment.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 22-23<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F.<br/><br/><b>List of Endings</b><br/>A.&nbsp; more packaging material per item than consolidated shipments<br/>B.&nbsp; a guaranteed minimum wage and full health insurance<br/>C.&nbsp; a fully consolidated, single daily delivery route<br/>D.&nbsp; a longer, several-day delivery window<br/>E.&nbsp; a permanent reduction in delivery vehicle emissions<br/>F.&nbsp; delivery workers, city residents, and the wider environment",
+            "options": ["A", "B", "C", "D", "E", "F"]
           },
           {
             "num": 24,
@@ -5724,33 +5721,23 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 38,
-            "type": "MCQ",
-            "text": "According to sceptics described in the passage, why do AI systems not qualify as genuinely creative?",
-            "answer": "B",
-            "explanation": "The passage states sceptics believe creativity requires qualities \"none of which a statistical pattern-matching system, however sophisticated its underlying architecture, can be said to genuinely possess in any philosophically meaningful sense.\"",
+            "type": "MATCHING_FEATURES",
+            "text": "Believe that genuine creativity requires intention, self-directed motivation, and some form of lived subjective experience.",
+            "answer": "A",
+            "explanation": "The passage states sceptics believe creativity \"requires genuine intention, self-directed motivation, and some form of lived subjective experience.\"",
             "location": "Passage 3",
-            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
-            "options": [
-              "A. Because AI systems are too slow to produce output.",
-              "B. Because AI systems lack genuine intention and lived subjective experience.",
-              "C. Because AI systems cannot process large datasets.",
-              "D. Because AI-generated output is always easily distinguishable from human work."
-            ]
+            "instruction": "Questions 38-39<br/>Look at the following statements and the list of groups below.<br/>Match each statement with the correct group, A or B.<br/><br/><b>List of Groups</b><br/>A.&nbsp; Sceptics of AI creativity<br/>B.&nbsp; Those who push back against this sceptical view",
+            "options": ["A", "B"]
           },
           {
             "num": 39,
-            "type": "MCQ",
-            "text": "What practical, empirical approach to evaluating creativity does the passage describe?",
-            "answer": "C",
-            "explanation": "The passage describes asking \"does a given output actually meet independently established, well-recognised creative standards, regardless of the precise underlying process.\"",
+            "type": "MATCHING_FEATURES",
+            "text": "Point out that human artists likewise draw extensively on existing works and cultural influences absorbed over years of training.",
+            "answer": "B",
+            "explanation": "The passage states this group points out that human artists \"likewise draw extensively, whether consciously or not, on existing works, techniques, and cultural influences absorbed gradually over years of their own individual training and exposure.\"",
             "location": "Passage 3",
-            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
-            "options": [
-              "A. Asking only whether a human or AI produced the work.",
-              "B. Measuring the computational power used to generate the output.",
-              "C. Assessing whether the output meets recognised creative standards regardless of its origin.",
-              "D. Relying solely on the length of time taken to produce the work."
-            ]
+            "instruction": "Questions 38-39<br/>Look at the following statements and the list of groups below.<br/>Match each statement with the correct group, A or B.<br/><br/><b>List of Groups</b><br/>A.&nbsp; Sceptics of AI creativity<br/>B.&nbsp; Those who push back against this sceptical view",
+            "options": ["A", "B"]
           },
           {
             "num": 40,
@@ -5759,7 +5746,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "D",
             "explanation": "The passage states this \"may end up depending less on any further technical advances in the underlying systems themselves, and more on how human societies collectively choose, over time, to define and culturally value the concept of creativity itself.\"",
             "location": "Passage 3",
-            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "instruction": "Question 40<br/>Choose the correct letter, A, B, C or D.",
             "options": [
               "A. Further technical advances in AI systems alone.",
               "B. A single global legal ruling on the issue.",
