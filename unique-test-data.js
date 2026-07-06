@@ -2919,6 +2919,598 @@ const UNIQUE_TEST_DATA = {
       "modelAnswer": "Financial literacy is a skill that affects almost every adult decision, from budgeting a monthly salary to managing debt responsibly, yet it is rarely taught explicitly in most school curricula. I strongly agree that schools should teach children how to manage money, for several reasons.\n\nFirstly, many important financial habits are formed early in life and can be difficult to change later on. A child who learns from an early age how to budget, save a portion of any money they receive, and understand the difference between genuine needs and simple wants is far more likely to carry these habits into adulthood than someone first encountering such concepts as a stressed adult already juggling bills and, in many cases, existing debt.\n\nSecondly, schools are already well placed to teach this material fairly and consistently to all students, regardless of their family background. Not every child grows up in a household where parents feel confident discussing money matters openly, whether due to their own limited financial knowledge or simple discomfort with the subject, meaning that without school-based instruction, many children would receive little or no structured financial education at all. A formal curriculum, taught by a trained teacher, would help ensure that financial literacy does not depend entirely on the particular household a child happens to grow up in.\n\nSome might argue that school timetables are already overcrowded with essential academic subjects, and that financial matters are best left to parents or learned through direct life experience. However, subjects such as mathematics already provide a natural setting into which practical financial topics, calculating interest, comparing loan terms, or planning a simple budget, could be integrated without requiring an entirely separate subject or significant additional teaching time.\n\nIn conclusion, given how directly financial skills affect long-term wellbeing and how unevenly they are currently taught within individual families, I firmly believe schools have both the opportunity and the responsibility to teach children how to manage money."
     }
   }
+},
+"u6": {
+  "title": "ViaTestPrep Original Practice Test 6",
+  "book": "Unique Test",
+  "reading": {
+    "passages": [
+      {
+        "title": "The Domestication of the Cat: An Unusual History",
+        "text": "<h1>The Domestication of the Cat: An Unusual History</h1>\n<p><b>A</b>&nbsp; Of all the animals that share our homes today, the domestic cat has arguably the strangest history of domestication. Unlike dogs, which were selectively bred by humans over thousands of years for specific traits and tasks such as hunting, herding, or guarding, cats appear to have domesticated themselves, gradually adapting to life alongside humans with remarkably little deliberate human intervention for most of that history, a process quite unlike the story of almost any other animal now living closely alongside people.</p>\n<p><b>B</b>&nbsp; The story begins roughly ten thousand years ago in the Fertile Crescent, a region spanning parts of the modern Middle East, at around the same time that humans in the area were transitioning from nomadic hunting and gathering to settled agriculture. This shift proved unexpectedly significant for the ancestors of the modern house cat. Newly established grain stores, essential for surviving the period between harvests, attracted large populations of rodents drawn to the stockpiled food, and those rodent populations in turn attracted the attention of wildcats living in the surrounding area.</p>\n<p><b>C</b>&nbsp; What followed was less a deliberate act of domestication than a gradual, mutually beneficial arrangement. Wildcats that were more tolerant of proximity to humans could exploit this abundant, concentrated food source without needing to compete over larger hunting territories, while the humans benefited from having fewer rodents destroying their vital grain reserves. Over many generations, natural selection appears to have favoured individual wildcats with a genetic predisposition toward calmer, less fearful temperaments around human settlements, without any person ever deliberately selecting or breeding cats for this trait, at least not during the earliest phases of this relationship.</p>\n<p><b>D</b>&nbsp; Genetic research comparing modern domestic cats with their closest wild relative, a subspecies of wildcat still found across parts of Africa and the Middle East, has revealed a level of genetic similarity far closer than that between domestic dogs and wolves. Where thousands of years of deliberate selective breeding have produced dramatic physical and behavioural differences between wolves and, say, a sheepdog or a chihuahua, the genetic gap between a wildcat and a typical house cat remains comparatively narrow, reflecting a domestication process driven mainly by natural selection for tameness rather than intensive human-directed breeding for specific tasks or appearances.</p>\n<p><b>E</b>&nbsp; This more limited domestication process left cats considerably less physically and behaviourally altered from their wild ancestors than most other domesticated species. While selective breeding in more recent centuries has produced a wide range of coat colours, patterns, and body types among modern cat breeds, the fundamental hunting behaviour, independence, and territorial instincts of the domestic cat remain remarkably close to those observed in wild cat species, a fact immediately apparent to anyone who has watched a well-fed house cat stalk and pounce on a toy with the same intensity a wild predator might direct at genuine prey.</p>\n<p><b>F</b>&nbsp; The cat's usefulness as a rodent-control specialist ensured its spread far beyond its original Middle Eastern range. Ancient Egyptian civilisation held cats in particularly high regard, with archaeological and artistic evidence suggesting cats were widely valued, sometimes even venerated, for their pest-control abilities and general presence within households. From there, cats travelled aboard trading and, later, exploratory sailing ships as valuable pest controllers, protecting stored food supplies from rodents during long ocean voyages, gradually spreading the domestic cat to virtually every inhabited continent over the following centuries.</p>\n<p><b>G</b>&nbsp; This unusual domestication history has practical implications for how modern cat behaviour and welfare are understood today. Unlike dogs, which have been bred over millennia to read human social cues, cooperate closely with human handlers, and often actively seek human approval, cats retain considerably more behavioural independence and self-sufficiency, a trait some owners mistake for aloofness or a lack of genuine attachment. Animal behaviourists increasingly argue that understanding cats requires accounting for this genetic and behavioural legacy directly, recognising that the modern house cat, however comfortably it may curl up on a sofa each evening, remains considerably closer to its wild ancestor, genetically and behaviourally, than almost any other animal living so intimately within human homes, a legacy of self-domestication rather than deliberate human design.</p>",
+        "questions": [
+          {
+            "num": 1,
+            "type": "HEADING",
+            "text": "Paragraph A",
+            "answer": "v",
+            "explanation": "Paragraph A states cats \"appear to have domesticated themselves, gradually adapting to life alongside humans with remarkably little deliberate human intervention for most of that history.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A domestication process driven by natural selection rather than breeding<br/>ii.&nbsp; Why cats retain much of their wild ancestor's behaviour<br/>iii.&nbsp; A rodent problem that drew wild animals toward human settlements<br/>iv.&nbsp; Spreading around the world as valued pest controllers<br/>v.&nbsp; An animal that tamed itself rather than being deliberately bred<br/>vi.&nbsp; Genetic evidence of a comparatively light touch of domestication<br/>vii.&nbsp; Rethinking cat behaviour in light of this history<br/>viii.&nbsp; Comparing the intelligence of cats and dogs<br/>ix.&nbsp; Attempts to breed a fully wild-free domestic cat",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 2,
+            "type": "HEADING",
+            "text": "Paragraph B",
+            "answer": "iii",
+            "explanation": "Paragraph B states grain stores \"attracted large populations of rodents drawn to the stockpiled food, and those rodent populations in turn attracted the attention of wildcats living in the surrounding area.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A domestication process driven by natural selection rather than breeding<br/>ii.&nbsp; Why cats retain much of their wild ancestor's behaviour<br/>iii.&nbsp; A rodent problem that drew wild animals toward human settlements<br/>iv.&nbsp; Spreading around the world as valued pest controllers<br/>v.&nbsp; An animal that tamed itself rather than being deliberately bred<br/>vi.&nbsp; Genetic evidence of a comparatively light touch of domestication<br/>vii.&nbsp; Rethinking cat behaviour in light of this history<br/>viii.&nbsp; Comparing the intelligence of cats and dogs<br/>ix.&nbsp; Attempts to breed a fully wild-free domestic cat",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 3,
+            "type": "HEADING",
+            "text": "Paragraph C",
+            "answer": "i",
+            "explanation": "Paragraph C states \"natural selection appears to have favoured individual wildcats with a genetic predisposition toward calmer, less fearful temperaments around human settlements.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A domestication process driven by natural selection rather than breeding<br/>ii.&nbsp; Why cats retain much of their wild ancestor's behaviour<br/>iii.&nbsp; A rodent problem that drew wild animals toward human settlements<br/>iv.&nbsp; Spreading around the world as valued pest controllers<br/>v.&nbsp; An animal that tamed itself rather than being deliberately bred<br/>vi.&nbsp; Genetic evidence of a comparatively light touch of domestication<br/>vii.&nbsp; Rethinking cat behaviour in light of this history<br/>viii.&nbsp; Comparing the intelligence of cats and dogs<br/>ix.&nbsp; Attempts to breed a fully wild-free domestic cat",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 4,
+            "type": "HEADING",
+            "text": "Paragraph D",
+            "answer": "vi",
+            "explanation": "Paragraph D states \"the genetic gap between a wildcat and a typical house cat remains comparatively narrow.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A domestication process driven by natural selection rather than breeding<br/>ii.&nbsp; Why cats retain much of their wild ancestor's behaviour<br/>iii.&nbsp; A rodent problem that drew wild animals toward human settlements<br/>iv.&nbsp; Spreading around the world as valued pest controllers<br/>v.&nbsp; An animal that tamed itself rather than being deliberately bred<br/>vi.&nbsp; Genetic evidence of a comparatively light touch of domestication<br/>vii.&nbsp; Rethinking cat behaviour in light of this history<br/>viii.&nbsp; Comparing the intelligence of cats and dogs<br/>ix.&nbsp; Attempts to breed a fully wild-free domestic cat",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 5,
+            "type": "HEADING",
+            "text": "Paragraph E",
+            "answer": "ii",
+            "explanation": "Paragraph E states \"the fundamental hunting behaviour, independence, and territorial instincts of the domestic cat remain remarkably close to those observed in wild cat species.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A domestication process driven by natural selection rather than breeding<br/>ii.&nbsp; Why cats retain much of their wild ancestor's behaviour<br/>iii.&nbsp; A rodent problem that drew wild animals toward human settlements<br/>iv.&nbsp; Spreading around the world as valued pest controllers<br/>v.&nbsp; An animal that tamed itself rather than being deliberately bred<br/>vi.&nbsp; Genetic evidence of a comparatively light touch of domestication<br/>vii.&nbsp; Rethinking cat behaviour in light of this history<br/>viii.&nbsp; Comparing the intelligence of cats and dogs<br/>ix.&nbsp; Attempts to breed a fully wild-free domestic cat",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 6,
+            "type": "HEADING",
+            "text": "Paragraph F",
+            "answer": "iv",
+            "explanation": "Paragraph F describes cats travelling \"aboard trading and, later, exploratory sailing ships as valuable pest controllers.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A domestication process driven by natural selection rather than breeding<br/>ii.&nbsp; Why cats retain much of their wild ancestor's behaviour<br/>iii.&nbsp; A rodent problem that drew wild animals toward human settlements<br/>iv.&nbsp; Spreading around the world as valued pest controllers<br/>v.&nbsp; An animal that tamed itself rather than being deliberately bred<br/>vi.&nbsp; Genetic evidence of a comparatively light touch of domestication<br/>vii.&nbsp; Rethinking cat behaviour in light of this history<br/>viii.&nbsp; Comparing the intelligence of cats and dogs<br/>ix.&nbsp; Attempts to breed a fully wild-free domestic cat",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 7,
+            "type": "HEADING",
+            "text": "Paragraph G",
+            "answer": "vii",
+            "explanation": "Paragraph G states \"Animal behaviourists increasingly argue that understanding cats requires accounting for this genetic and behavioural legacy directly.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A domestication process driven by natural selection rather than breeding<br/>ii.&nbsp; Why cats retain much of their wild ancestor's behaviour<br/>iii.&nbsp; A rodent problem that drew wild animals toward human settlements<br/>iv.&nbsp; Spreading around the world as valued pest controllers<br/>v.&nbsp; An animal that tamed itself rather than being deliberately bred<br/>vi.&nbsp; Genetic evidence of a comparatively light touch of domestication<br/>vii.&nbsp; Rethinking cat behaviour in light of this history<br/>viii.&nbsp; Comparing the intelligence of cats and dogs<br/>ix.&nbsp; Attempts to breed a fully wild-free domestic cat",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 8,
+            "type": "TFNG",
+            "text": "Dogs were domesticated through a similar self-domestication process as cats.",
+            "answer": "FALSE",
+            "explanation": "The passage states: \"Unlike dogs, which were selectively bred by humans over thousands of years for specific traits and tasks such as hunting, herding, or guarding, cats appear to have domesticated themselves, gradually adapting to life alongside humans with remarkably little deliberate human intervention for most of that history.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 8-9<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 9,
+            "type": "TFNG",
+            "text": "The genetic difference between wolves and modern dogs is smaller than that between wildcats and modern house cats.",
+            "answer": "FALSE",
+            "explanation": "The passage states selective breeding \"produced dramatic physical and behavioural differences between wolves and, say, a sheepdog or a chihuahua,\" while the wildcat-house cat gap \"remains comparatively narrow.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 8-9<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 10,
+            "type": "FILL",
+            "text": "Ancient Egyptian civilisation held cats in particularly high regard, sometimes even _________ them.",
+            "answer": "venerated",
+            "explanation": "The passage states cats were \"widely valued, sometimes even venerated, for their pest-control abilities.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 10-11<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 11,
+            "type": "FILL",
+            "text": "Cats travelled aboard trading and sailing ships as valuable pest controllers, protecting stored food supplies from _________ during long ocean voyages.",
+            "answer": "rodents",
+            "explanation": "The passage states cats protected \"stored food supplies from rodents during long ocean voyages.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 10-11<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 12,
+            "type": "MCQ",
+            "text": "According to the passage, what initially attracted wildcats to human settlements?",
+            "answer": "B",
+            "explanation": "The passage states grain stores \"attracted large populations of rodents drawn to the stockpiled food, and those rodent populations in turn attracted the attention of wildcats living in the surrounding area.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Deliberate feeding by early farmers.",
+              "B. Rodents drawn to newly established grain stores.",
+              "C. Warmth from human dwellings.",
+              "D. Domesticated dogs living alongside humans."
+            ]
+          },
+          {
+            "num": 13,
+            "type": "MCQ",
+            "text": "What do animal behaviourists suggest about understanding modern cat behaviour?",
+            "answer": "B",
+            "explanation": "The passage states behaviourists argue \"understanding cats requires accounting for this genetic and behavioural legacy directly.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. It requires no reference to cats' evolutionary history.",
+              "B. It requires accounting for cats' genetic and behavioural legacy from their wild ancestors.",
+              "C. It shows cats behave identically to dogs.",
+              "D. It proves cats are not truly domesticated at all."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Urban Heat Islands and How Cities Are Fighting Back",
+        "text": "<h1>Urban Heat Islands and How Cities Are Fighting Back</h1>\n<p>Step off a train in the centre of a large city on a summer afternoon and the air often feels noticeably hotter than it did in the surrounding countryside just an hour earlier. This is not merely a subjective impression: densely built urban areas can register temperatures several degrees higher than nearby rural areas experiencing identical weather conditions, a well-documented phenomenon known as the urban heat island effect, one that is becoming increasingly relevant as more of the world's population moves into cities.</p>\n<p>Several interacting factors combine to produce this effect. Concrete, asphalt, and other common building materials absorb and retain considerably more solar heat during the day than natural vegetation and soil do, releasing that stored heat slowly back into the surrounding air well after sunset, a process that keeps city centres considerably warmer overnight than the countryside. The sheer density of buildings in a typical city centre also reduces airflow at street level, trapping warm air between structures rather than allowing it to disperse naturally, while the near-total replacement of vegetation with hard, impermeable surfaces eliminates the natural cooling effect that plants provide through evaporation and transpiration of water from soil and leaves.</p>\n<p>Waste heat generated directly by human activity compounds the problem further still. Vehicle engines, industrial processes, and, somewhat ironically, the millions of air conditioning units that city residents rely on to cope with high indoor temperatures, all release additional heat directly into the urban environment, meaning that measures individuals take to cool their own immediate surroundings can incrementally worsen conditions for the wider neighbourhood.</p>\n<p>The consequences extend well beyond simple discomfort. Elevated urban temperatures have been directly linked to increased rates of heat-related illness and mortality during periods of extreme heat, with the effect falling disproportionately on elderly residents, those with limited access to air conditioning, and people in poorly ventilated, lower-income housing, groups already more vulnerable to a range of other health and economic pressures. Higher urban temperatures have also been shown to increase overall electricity demand for cooling, placing additional strain on power grids at precisely the moments they are already under the greatest pressure, occasionally contributing to cascading power outages during severe heatwaves.</p>\n<p>In response, a growing number of cities have introduced deliberate design measures intended to counteract the urban heat island effect directly. Reflective or \"cool\" roofing materials, engineered to reflect rather than absorb sunlight, have been mandated or incentivised in several major cities, reducing the amount of solar heat individual buildings absorb during daylight hours without requiring any change to a building's underlying structure. Expanding urban tree cover has proven similarly effective, since trees provide direct shade over streets and buildings while also cooling surrounding air through the evaporation of water from their leaves, and several cities have set ambitious municipal tree-planting targets specifically to combat rising urban temperatures.</p>\n<p>Green roofs, in which a layer of soil and vegetation is deliberately installed atop a building rather than conventional roofing material, represent a more architecturally involved intervention, but have been shown in several studies to meaningfully reduce both a building's internal temperature and its immediate surrounding air temperature, while offering the additional benefit of absorbing rainwater that would otherwise overwhelm urban drainage systems during heavy storms. Some cities have gone further still, redesigning street layouts specifically to preserve corridors that channel cooling breezes through dense urban areas, an approach that requires careful, long-term urban planning rather than a single, quickly implemented technical fix.</p>\n<p>No single intervention fully eliminates the urban heat island effect on its own, and researchers generally agree that a combination of reflective surfaces, expanded vegetation, and thoughtful urban design offers the most effective overall strategy. As global temperatures continue to rise and an increasing proportion of the world's population comes to live in dense urban environments, addressing this compounding, self-reinforcing effect is likely to become an increasingly urgent priority for city planners rather than the largely optional consideration it has often been treated as in the past, particularly in cities where extreme heat was historically a rare event rather than a routine summer occurrence.</p>",
+        "questions": [
+          {
+            "num": 14,
+            "type": "TFNG",
+            "text": "Building materials such as concrete release stored heat quickly after sunset.",
+            "answer": "FALSE",
+            "explanation": "The passage states such materials release \"stored heat slowly back into the surrounding air well after sunset.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 15,
+            "type": "TFNG",
+            "text": "Dense building layouts help warm air disperse more quickly at street level.",
+            "answer": "FALSE",
+            "explanation": "The passage states density \"reduces airflow at street level, trapping warm air between structures rather than allowing it to disperse naturally.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 16,
+            "type": "TFNG",
+            "text": "Air conditioning units release heat directly into the urban environment.",
+            "answer": "TRUE",
+            "explanation": "The passage states air conditioning units \"release additional heat directly into the urban environment.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 17,
+            "type": "TFNG",
+            "text": "Elderly residents are less affected by elevated urban temperatures than younger residents.",
+            "answer": "FALSE",
+            "explanation": "The passage states the effect falls \"disproportionately on elderly residents, those with limited access to air conditioning.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 18,
+            "type": "TFNG",
+            "text": "Green roofs can help absorb rainwater during heavy storms.",
+            "answer": "TRUE",
+            "explanation": "The passage states green roofs offer \"the additional benefit of absorbing rainwater that would otherwise overwhelm urban drainage systems.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 19,
+            "type": "FILL",
+            "text": "Reflective or \"cool\" roofing materials are engineered to reflect rather than _________ sunlight.",
+            "answer": "absorb",
+            "explanation": "The passage states such materials are \"engineered to reflect rather than absorb sunlight.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 20,
+            "type": "FILL",
+            "text": "Trees cool surrounding air through the evaporation of water from their _________.",
+            "answer": "leaves",
+            "explanation": "The passage states trees cool air \"through the evaporation of water from their leaves.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 21,
+            "type": "FILL",
+            "text": "Green roofs involve installing a layer of soil and _________ atop a building.",
+            "answer": "vegetation",
+            "explanation": "The passage describes green roofs as ones where \"a layer of soil and vegetation is deliberately installed atop a building rather than conventional roofing material.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 22,
+            "type": "FILL",
+            "text": "Some cities have redesigned street layouts to preserve corridors that channel cooling _________ through dense urban areas.",
+            "answer": "breezes",
+            "explanation": "The passage refers to \"corridors that channel cooling breezes through dense urban areas.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 23,
+            "type": "FILL",
+            "text": "Researchers generally agree a combination of reflective surfaces, expanded vegetation, and thoughtful urban _________ offers the most effective strategy.",
+            "answer": "design",
+            "explanation": "The passage states researchers agree on \"reflective surfaces, expanded vegetation, and thoughtful urban design.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 24,
+            "type": "MCQ",
+            "text": "According to the passage, what is somewhat ironic about air conditioning use in cities?",
+            "answer": "C",
+            "explanation": "The passage notes air conditioning units, used to cope with heat, \"release additional heat directly into the urban environment,\" worsening the problem.",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. It is banned in most major cities.",
+              "B. It has no effect on urban temperatures.",
+              "C. It can worsen the very heat problem it is meant to solve.",
+              "D. It only affects rural areas."
+            ]
+          },
+          {
+            "num": 25,
+            "type": "MCQ",
+            "text": "What advantage do reflective \"cool\" roofing materials offer, according to the passage?",
+            "answer": "B",
+            "explanation": "The passage states cool roofing materials work by \"reducing the amount of solar heat individual buildings absorb during daylight hours without requiring any change to a building's underlying structure.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. They eliminate the need for urban tree planting.",
+              "B. They reduce heat absorption without requiring structural changes.",
+              "C. They are cheaper than all other cooling interventions.",
+              "D. They increase a building's internal temperature."
+            ]
+          },
+          {
+            "num": 26,
+            "type": "MCQ",
+            "text": "What is the passage's overall conclusion about tackling the urban heat island effect?",
+            "answer": "A",
+            "explanation": "The passage concludes \"a combination of reflective surfaces, expanded vegetation, and thoughtful urban design offers the most effective overall strategy.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. A combination of several different measures is likely to be most effective.",
+              "B. A single technical fix will fully resolve the problem.",
+              "C. The effect cannot be meaningfully reduced by any current method.",
+              "D. Only tree planting has been shown to have any effect."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "The Reproducibility Crisis in Psychological Research",
+        "text": "<h1>The Reproducibility Crisis in Psychological Research</h1>\n<p>In 2015, a large international team of researchers set out to test something psychology as a discipline had rarely examined rigorously about itself: whether its own published findings could actually be reproduced. The team selected one hundred studies published in top psychology journals and attempted to repeat each experiment as closely as the original methodology allowed, comparing the new results against the original findings. The outcome, published to considerable unease within the discipline, was that fewer than half of the studies produced a statistically significant result matching the original finding, despite using the same procedures and considerably larger sample sizes than many of the original studies had employed.</p>\n<p>This finding, now widely referred to as psychology's reproducibility crisis, prompted intense debate about why so many published findings failed to replicate. Several contributing factors have since been identified, and most researchers agree that outright fraud, while it does occur occasionally and has been documented in a small number of high-profile cases, accounts for only a small fraction of the problem. Far more significant, according to most analyses, are subtler and more widespread issues in how research is conducted, analysed, and published.</p>\n<p>One major contributing factor is a practice researchers have termed \"p-hacking,\" in which a researcher, often without any deliberate intention to deceive, tries multiple different ways of analysing a dataset, perhaps testing several different statistical models or excluding certain data points under various justifications, until one particular approach happens to produce a statistically significant result, which is then reported as though it had been the single planned analysis all along. Because chance alone will occasionally produce a significant-looking result if enough different analyses are attempted, this practice can generate published findings that reflect essentially random statistical noise rather than any genuine underlying effect.</p>\n<p>A second, closely related problem is what researchers call publication bias. Academic journals have historically shown a strong preference for publishing studies that report positive, statistically significant findings over studies that find no effect at all, even when a null result is scientifically just as informative and legitimate. This creates a powerful incentive for researchers, whose career advancement often depends heavily on a strong publication record, to actively pursue and report positive findings while abandoning or shelving studies that fail to find the effect a researcher was originally hoping to detect, distorting the overall published scientific record in ways that are difficult to detect from outside a particular research group.</p>\n<p>Sample size has also emerged as a persistent and underappreciated issue. Many older psychology studies relied on comparatively small samples, sometimes fewer than thirty participants, which can produce results that appear statistically significant purely by chance far more often than researchers at the time generally appreciated. Combined with the fact that researchers were, until recently, rarely required to publish their full raw datasets or detailed analysis code alongside a paper, independent verification of a specific finding's statistical robustness was often simply impossible for other researchers to attempt without first quietly relying on the original researcher's word.</p>\n<p>In response to these accumulating concerns, the discipline has begun implementing several concrete structural reforms. Many journals now strongly encourage or explicitly require \"pre-registration,\" in which researchers publicly specify their hypotheses and precise planned analysis methods before actually collecting any data, directly closing off the option to quietly try multiple analyses after the fact and report only the most favourable result. Requirements to share raw data and full analysis code alongside published papers have also become considerably more common, allowing independent researchers to directly check a given analysis rather than relying on trust in the original research team's own reported figures.</p>\n<p>These reforms have not been universally welcomed within the field, with some established researchers arguing that pre-registration in particular can unduly constrain legitimate exploratory research, in which genuinely interesting and unexpected patterns are sometimes discovered only after data has already been collected and examined from multiple angles. Even prominent critics of these specific concerns, however, tend to agree that psychology as a discipline emerged from its reproducibility crisis considerably more methodologically rigorous, and arguably more scientifically credible, than it had been beforehand, even if the process of confronting the problem proved genuinely uncomfortable for a great many individual researchers along the way.</p>",
+        "questions": [
+          {
+            "num": 27,
+            "type": "TFNG",
+            "text": "More than half of the studies in the 2015 replication project produced a result matching the original finding.",
+            "answer": "FALSE",
+            "explanation": "The passage states \"fewer than half of the studies produced a statistically significant result matching the original finding.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 28,
+            "type": "TFNG",
+            "text": "The replication studies generally used smaller sample sizes than the original studies.",
+            "answer": "FALSE",
+            "explanation": "The passage states replications used \"considerably larger sample sizes than many of the original studies had employed.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 29,
+            "type": "TFNG",
+            "text": "Most researchers believe outright fraud accounts for the majority of failed replications.",
+            "answer": "FALSE",
+            "explanation": "The passage states fraud \"accounts for only a small fraction of the problem.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 30,
+            "type": "TFNG",
+            "text": "P-hacking always involves a deliberate intention to deceive.",
+            "answer": "FALSE",
+            "explanation": "The passage states p-hacking happens \"often without any deliberate intention to deceive.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 31,
+            "type": "TFNG",
+            "text": "Journals have historically preferred publishing studies with positive, statistically significant findings.",
+            "answer": "TRUE",
+            "explanation": "The passage states journals \"have historically shown a strong preference for publishing studies that report positive, statistically significant findings.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 32,
+            "type": "TFNG",
+            "text": "Pre-registration has been universally welcomed by all researchers in the field.",
+            "answer": "FALSE",
+            "explanation": "The passage states these reforms \"have not been universally welcomed within the field, with some established researchers arguing\" against aspects of them.",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 33,
+            "type": "TFNG",
+            "text": "A majority of psychology journals have been shut down as a result of the reproducibility crisis.",
+            "answer": "NOT GIVEN",
+            "explanation": "The passage discusses reforms such as pre-registration and data sharing but gives no information about journals being shut down.",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 34,
+            "type": "FILL",
+            "text": "The 2015 replication project selected one hundred studies published in top psychology _________.",
+            "answer": "journals",
+            "explanation": "The passage states the team selected \"one hundred studies published in top psychology journals.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 35,
+            "type": "FILL",
+            "text": "Many older psychology studies relied on comparatively small _________, sometimes fewer than thirty participants.",
+            "answer": "samples",
+            "explanation": "The passage states older studies \"relied on comparatively small samples, sometimes fewer than thirty participants.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 36,
+            "type": "FILL",
+            "text": "In pre-registration, researchers publicly specify their hypotheses and planned analysis methods before collecting any _________.",
+            "answer": "data",
+            "explanation": "The passage states researchers specify methods \"before actually collecting any data.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 37,
+            "type": "FILL",
+            "text": "Some researchers argue pre-registration can unduly constrain legitimate _________ research.",
+            "answer": "exploratory",
+            "explanation": "The passage states critics worry it \"can unduly constrain legitimate exploratory research.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 38,
+            "type": "MCQ",
+            "text": "What is \"p-hacking,\" according to the passage?",
+            "answer": "B",
+            "explanation": "The passage describes p-hacking as when a researcher \"tries multiple different ways of analysing a dataset, perhaps testing several different statistical models or excluding certain data points under various justifications, until one particular approach happens to produce a statistically significant result.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Deliberately fabricating an entire dataset.",
+              "B. Trying multiple analyses until one produces a significant result, then reporting only that one.",
+              "C. Refusing to publish any study with a null result.",
+              "D. Increasing a study's sample size before analysis."
+            ]
+          },
+          {
+            "num": 39,
+            "type": "MCQ",
+            "text": "According to the passage, what does publication bias create an incentive for?",
+            "answer": "A",
+            "explanation": "The passage states it creates an incentive \"to actively pursue and report positive findings while abandoning or shelving studies that fail to find the effect.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Pursuing and reporting positive findings while abandoning null results.",
+              "B. Publishing only studies with small sample sizes.",
+              "C. Requiring all studies to be pre-registered.",
+              "D. Reducing the number of journals in the field."
+            ]
+          },
+          {
+            "num": 40,
+            "type": "MCQ",
+            "text": "What is the passage's overall conclusion about psychology following the reproducibility crisis?",
+            "answer": "C",
+            "explanation": "The passage concludes \"psychology as a discipline emerged from its reproducibility crisis considerably more methodologically rigorous, and arguably more scientifically credible, than it had been beforehand.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. The discipline has abandoned empirical research entirely.",
+              "B. The crisis revealed psychology to be entirely fraudulent.",
+              "C. The discipline emerged more methodologically rigorous as a result.",
+              "D. The reforms have had no lasting effect on research practice."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "writing": {
+    "task1": {
+      "prompt": "The table below shows average monthly household spending by category in three countries. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "image": "<img src=\"images/writing_unique6_p1.png\" class=\"max-w-full h-auto mx-auto rounded-xl shadow-lg border border-white/10 bg-white\" alt=\"Writing Task 1 Table\" />",
+      "modelAnswer": "The table compares average monthly household spending across five categories in the United States, Germany, and India, expressed in US dollars.\n\nOverall, households in the United States spent considerably more than those in Germany or India across every single category, while Indian households recorded by far the lowest spending figures throughout.\n\nHousing represented the largest single expense in all three countries, but the gap between countries was striking: American households spent $1,450 per month on housing, compared with $980 in Germany and just $210 in India, meaning American housing costs were nearly seven times higher than Indian housing costs. A broadly similar pattern held for food spending, with the United States recording the highest figure at $640, Germany somewhat lower at $520, and India considerably lower still at $180.\n\nSpending on transport and healthcare followed the same general ranking, with the United States highest in both categories at $510 and $430 respectively, Germany in the middle, and India lowest. The gap between countries was especially pronounced for healthcare spending, where American households spent more than seven times as much as Indian households. Leisure spending showed the smallest relative gap between the United States and Germany, at $310 and $280 respectively, though India's figure of $50 remained far below both.\n\nIn summary, household spending was consistently highest in the United States and lowest in India across all five categories, with Germany occupying an intermediate position throughout, and the size of the gap between countries varied considerably depending on the specific spending category."
+    },
+    "task2": {
+      "prompt": "Many people argue that unpaid internships exploit young workers, while others see them as valuable experience. Discuss both views and give your own opinion.",
+      "modelAnswer": "Unpaid internships have become a common feature of many industries, particularly in fields such as media, fashion, and the arts, where competition for entry-level positions is especially intense. Opinions on this practice are sharply divided: some view unpaid internships as a form of exploitation, while others regard them as a valuable, if imperfect, stepping stone into a competitive career. This essay will examine both perspectives before offering my own view.\n\nThose who consider unpaid internships exploitative point out that interns frequently perform substantive, genuinely valuable work for an organisation without receiving any financial compensation in return, effectively subsidising the employer's operations at the intern's own expense. This arrangement, critics argue, disproportionately disadvantages young people from lower-income backgrounds, who often cannot afford to work for free for weeks or months at a time, while wealthier candidates who can rely on family financial support gain a significant, and fundamentally unfair, advantage in accessing these same career-launching opportunities.\n\nOn the other hand, defenders of unpaid internships argue that they provide genuinely valuable practical experience, professional network connections, and skills that a young person entering a competitive industry might struggle to gain in any other realistic way. Some organisations, particularly smaller non-profits or independent creative studios with genuinely limited budgets, argue they simply could not afford to offer as many entry-level opportunities at all if required to pay every intern a full wage, meaning that banning unpaid internships outright could, in their view, reduce the total number of opportunities available to young people rather than improving conditions for those who do find a placement.\n\nIn my opinion, while unpaid internships can occasionally provide valuable experience, the practice as commonly implemented does raise serious fairness concerns that are difficult to dismiss. A reasonable middle path would involve requiring at least a modest living-wage stipend for internships involving substantive work, while preserving genuinely short, clearly educational placements that involve primarily observation and mentorship rather than the substantive labour many current unpaid internships actually demand of participants."
+    }
+  }
 }
 };
 
