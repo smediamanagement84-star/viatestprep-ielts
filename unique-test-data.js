@@ -739,7 +739,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "B",
             "explanation": "The passage describes it as \"a small device covered in beeswax and mounted on a computer-controlled arm, capable of performing a waggle dance with a precisely programmed angle and duration but incapable of producing any scent cues of its own.\"",
             "location": "Passage 1",
-            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "instruction": "Question 12<br/>Choose the correct letter, A, B, C or D.",
             "options": [
               "A. It could produce scent cues but not perform accurate dances.",
               "B. It could perform a dance of a set angle and duration but produced no scent.",
@@ -749,18 +749,13 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 13,
-            "type": "MCQ",
-            "text": "According to the passage, why is the waggle dance considered a sophisticated form of communication?",
-            "answer": "A",
-            "explanation": "The passage states it \"involves an abstract, arbitrary code, an angle standing for a compass direction rather than a physical resemblance to it.\"",
+            "type": "MATCHING_INFO",
+            "text": "a reference to a long-running dispute among entomologists over which explanation of the dance was correct",
+            "answer": "E",
+            "explanation": "Paragraph E states the dispute became known among entomologists as \"the dance language controversy.\"",
             "location": "Passage 1",
-            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
-            "options": [
-              "A. It uses a code that has no physical resemblance to the information it conveys.",
-              "B. It can be performed by robots as well as bees.",
-              "C. It was the first form of animal communication ever discovered.",
-              "D. It only works in complete darkness."
-            ]
+            "instruction": "Question 13<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-G.",
+            "options": ["A", "B", "C", "D", "E", "F", "G"]
           }
         ]
       },
@@ -840,21 +835,23 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 19,
-            "type": "FILL",
-            "text": "In hydroponic systems, plant roots are suspended in a thin film of circulating _________.",
-            "answer": "nutrient solution",
-            "explanation": "The passage states roots are \"suspended in a thin film of circulating nutrient solution.\"",
+            "type": "MATCHING_FEATURES",
+            "text": "Roots are suspended in a thin film of circulating liquid.",
+            "answer": "A",
+            "explanation": "The passage states hydroponic roots are \"suspended in a thin film of circulating nutrient solution.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 19-20<br/>Look at the following statements and the list of growing methods below.<br/>Match each statement with the correct method, A or B.<br/><br/><b>List of Methods</b><br/>A.&nbsp; Hydroponics<br/>B.&nbsp; Aeroponics",
+            "options": ["A", "B"]
           },
           {
             "num": 20,
-            "type": "FILL",
-            "text": "In aeroponic systems, roots are periodically misted with a _________.",
-            "answer": "nutrient spray",
-            "explanation": "The passage states roots are \"misted periodically with a nutrient spray.\"",
+            "type": "MATCHING_FEATURES",
+            "text": "Roots are periodically misted rather than kept immersed in liquid.",
+            "answer": "B",
+            "explanation": "The passage states aeroponic roots are \"misted periodically with a nutrient spray,\" rather than suspended in circulating liquid.",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 19-20<br/>Look at the following statements and the list of growing methods below.<br/>Match each statement with the correct method, A or B.<br/><br/><b>List of Methods</b><br/>A.&nbsp; Hydroponics<br/>B.&nbsp; Aeroponics",
+            "options": ["A", "B"]
           },
           {
             "num": 21,
@@ -863,7 +860,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "herbicides",
             "explanation": "The passage states this \"largely eliminates the need for herbicides.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 21-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 22,
@@ -872,7 +869,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "ninety",
             "explanation": "The passage states Singapore \"imports over ninety percent of its food.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 21-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 23,
@@ -881,7 +878,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "restaurants",
             "explanation": "The passage states they supply \"premium, pesticide-free greens to high-end restaurants and grocery chains.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 21-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 24,
@@ -1034,21 +1031,23 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 34,
-            "type": "FILL",
-            "text": "In the Finland trial, the government selected _________ unemployed citizens at random.",
-            "answer": "two thousand",
-            "explanation": "The passage states the government \"selected two thousand unemployed citizens at random.\"",
+            "type": "MATCHING_FEATURES",
+            "text": "Recipients kept receiving payments even after finding work.",
+            "answer": "A",
+            "explanation": "The passage states: \"recipients kept receiving the payment even if they found work,\" describing the Finland trial.",
             "location": "Passage 3",
-            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 34-35<br/>Look at the following statements and the list of trials below.<br/>Match each statement with the correct trial, A or B.<br/><br/><b>List of Trials</b><br/>A.&nbsp; The Finland trial<br/>B.&nbsp; The Kenya trial",
+            "options": ["A", "B"]
           },
           {
             "num": 35,
-            "type": "FILL",
-            "text": "Recipients in Kenya used the money for starting small businesses, repairing homes, and paying children's _________.",
-            "answer": "school fees",
-            "explanation": "The passage states recipients used money for \"paying for children's school fees.\"",
+            "type": "MATCHING_FEATURES",
+            "text": "Recipients used the money mainly for starting small businesses and repairing homes.",
+            "answer": "B",
+            "explanation": "The passage states recipients in this trial \"used the money overwhelmingly for practical purposes, including starting small businesses, repairing homes, and paying for children's school fees,\" describing the Kenya trial.",
             "location": "Passage 3",
-            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 34-35<br/>Look at the following statements and the list of trials below.<br/>Match each statement with the correct trial, A or B.<br/><br/><b>List of Trials</b><br/>A.&nbsp; The Finland trial<br/>B.&nbsp; The Kenya trial",
+            "options": ["A", "B"]
           },
           {
             "num": 36,
@@ -1057,7 +1056,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "bureaucracy",
             "explanation": "The passage states costs could be offset by \"reduced spending on the administrative bureaucracy needed to run means-tested benefit systems.\"",
             "location": "Passage 3",
-            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 36-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 37,
@@ -1066,7 +1065,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "housing",
             "explanation": "The passage states prices could rise \"particularly housing in areas with fixed supply.\"",
             "location": "Passage 3",
-            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 36-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 38,
