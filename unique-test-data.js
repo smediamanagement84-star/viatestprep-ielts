@@ -1735,6 +1735,598 @@ const UNIQUE_TEST_DATA = {
       "modelAnswer": "In many parts of the world, the difference in income and wealth between the richest and poorest members of society has been widening for several decades. This essay will consider the main problems this trend creates before suggesting some possible solutions.\n\nA growing wealth gap creates several serious problems. Socially, extreme inequality can undermine a sense of shared national identity, as the very wealthy and the very poor increasingly live in separate neighbourhoods, attend different schools, and have little everyday contact with one another. This separation can breed resentment and reduce public support for policies that benefit society as a whole, since those with the most resources may feel they have little to gain from investing in shared public services. Economically, a large concentration of wealth in relatively few hands can also reduce overall consumer spending, since wealthy individuals typically spend a smaller proportion of their income than lower earners do, potentially slowing broader economic growth. Politically, extreme wealth concentration risks giving a small number of individuals disproportionate influence over government policy, undermining the principle that political influence should not simply be purchased.\n\nSeveral solutions could help address this widening gap. Progressive taxation, in which higher earners pay a proportionally larger share of their income in tax, is among the most direct tools available to governments, and the resulting revenue can fund public services, such as education and healthcare, that disproportionately benefit lower-income households. Raising minimum wages in line with the actual cost of living can also ensure that economic growth translates into meaningful income gains for the lowest-paid workers, rather than being captured almost entirely by those at the top. Finally, expanding access to high-quality education and vocational training gives people from disadvantaged backgrounds a genuine opportunity to move into better-paid work over time.\n\nIn conclusion, while a growing wealth gap creates real social, economic, and political problems, a combination of fairer taxation, higher minimum wages, and expanded access to education could meaningfully narrow it over time."
     }
   }
+},
+"u4": {
+  "title": "ViaTestPrep Original Practice Test 4",
+  "book": "Unique Test",
+  "reading": {
+    "passages": [
+      {
+        "title": "The Architecture of Termite Mounds",
+        "text": "<h1>The Architecture of Termite Mounds</h1>\n<p><b>A</b>&nbsp; In the savannas of Africa and Australia, mounds of hardened earth rise several metres above the ground, built entirely by insects barely the size of a grain of rice. Relative to the size of their builders, some termite mounds are taller, proportionally, than any structure humans have ever constructed, equivalent to a human-built tower several kilometres high. What makes these structures particularly remarkable is not merely their size, but the fact that they are built without blueprints, without a supervising architect, and without any individual termite possessing anything resembling an overall plan of the finished structure, a fact that has made termite mounds a subject of fascination for biologists and engineers alike.</p>\n<p><b>B</b>&nbsp; A termite mound is constructed from a mixture of soil, chewed wood fibre, and saliva, which termites carry to the mound in small mouthfuls and deposit at specific points before the mixture hardens into a material nearly as durable as concrete. Some mounds, once abandoned, have been found still standing decades later, their walls having weathered seasonal rains far better than many buildings made from conventional construction materials.</p>\n<p><b>C</b>&nbsp; Perhaps the most studied feature of termite mounds is their ventilation system. Many species build a network of internal chimneys and tunnels that harness temperature differences between the sun-warmed exterior of the mound and the cooler underground nest to drive a continuous, passive flow of air, without the termites expending any energy of their own to power it. Warm air rises through central chimneys and escapes near the top, drawing cooler air in through channels near the base, a process that keeps the temperature deep within the mound remarkably stable even as the temperature outside swings dramatically between day and night.</p>\n<p><b>D</b>&nbsp; Beneath the visible mound lies a far more extensive network of underground chambers and tunnels, some of which house fungus gardens that certain termite species cultivate deliberately, feeding the fungus with chewed plant matter and later consuming the fungus itself as a primary food source, a form of agriculture that predates human farming by tens of millions of years. This underground network can extend many metres beyond the footprint of the visible mound, allowing termites to forage for food over a surprisingly wide area while remaining largely protected from surface predators and the heat of the sun.</p>\n<p><b>E</b>&nbsp; The absence of centralised planning in mound construction has fascinated biologists for decades. Individual termites do not follow instructions from a queen or any other coordinating authority regarding where to place each mouthful of building material. Instead, construction appears to proceed through a process known as stigmergy, in which a termite deposits material partly in response to chemical cues left by the deposits of other termites that came before it, gradually reinforcing certain locations over others until distinct structures such as chimneys and pillars emerge from what began as an undirected process, without any termite ever perceiving the mound's overall design.</p>\n<p><b>F</b>&nbsp; This decentralised building strategy has increasingly attracted the attention of human architects and engineers. The Eastgate Centre, a large office and shopping complex in Harare, Zimbabwe, was explicitly designed by drawing on principles observed in termite mound ventilation, using a similar passive airflow strategy to regulate internal temperature without conventional air conditioning, reportedly consuming a small fraction of the energy that an equivalent building relying on mechanical cooling would require. Several other building projects around the world have since incorporated similar biologically inspired ventilation principles, part of a broader design movement that looks to natural structures refined over millions of years of evolution for solutions to distinctly modern engineering problems.</p>\n<p><b>G</b>&nbsp; Termite mounds ultimately offer a striking illustration of how remarkably complex, well-adapted structures can emerge from simple, local rules followed by many individual agents, without any single participant understanding or directing the outcome as a whole, an outcome that would typically require an experienced human project manager if attempted through conventional, centrally directed construction. For engineers interested in designing resilient, energy-efficient systems, and for biologists interested in the origins of complex collective behaviour, the humble termite mound continues to offer lessons that a top-down, centrally planned approach to construction might never have revealed.</p>",
+        "questions": [
+          {
+            "num": 1,
+            "type": "HEADING",
+            "text": "Paragraph A",
+            "answer": "vi",
+            "explanation": "Paragraph A notes mounds are \"taller, proportionally, than any structure humans have ever constructed.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Farming practices that predate human agriculture<br/>ii.&nbsp; A building material that outlasts many human structures<br/>iii.&nbsp; A cooling system that requires no external power source<br/>iv.&nbsp; Complex structures without any single directing mind<br/>v.&nbsp; Human engineers borrowing solutions from nature<br/>vi.&nbsp; A scale of construction remarkable relative to the builder's size<br/>vii.&nbsp; Lessons for understanding decentralised systems in general<br/>viii.&nbsp; Termite species that have gone extinct<br/>ix.&nbsp; Comparing termite and ant colony structures",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 2,
+            "type": "HEADING",
+            "text": "Paragraph B",
+            "answer": "ii",
+            "explanation": "Paragraph B notes abandoned mounds \"have been found still standing decades later, their walls having weathered seasonal rains far better than many buildings.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Farming practices that predate human agriculture<br/>ii.&nbsp; A building material that outlasts many human structures<br/>iii.&nbsp; A cooling system that requires no external power source<br/>iv.&nbsp; Complex structures without any single directing mind<br/>v.&nbsp; Human engineers borrowing solutions from nature<br/>vi.&nbsp; A scale of construction remarkable relative to the builder's size<br/>vii.&nbsp; Lessons for understanding decentralised systems in general<br/>viii.&nbsp; Termite species that have gone extinct<br/>ix.&nbsp; Comparing termite and ant colony structures",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 3,
+            "type": "HEADING",
+            "text": "Paragraph C",
+            "answer": "iii",
+            "explanation": "Paragraph C describes a system that drives \"a continuous, passive flow of air, without the termites expending any energy of their own to power it.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Farming practices that predate human agriculture<br/>ii.&nbsp; A building material that outlasts many human structures<br/>iii.&nbsp; A cooling system that requires no external power source<br/>iv.&nbsp; Complex structures without any single directing mind<br/>v.&nbsp; Human engineers borrowing solutions from nature<br/>vi.&nbsp; A scale of construction remarkable relative to the builder's size<br/>vii.&nbsp; Lessons for understanding decentralised systems in general<br/>viii.&nbsp; Termite species that have gone extinct<br/>ix.&nbsp; Comparing termite and ant colony structures",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 4,
+            "type": "HEADING",
+            "text": "Paragraph D",
+            "answer": "i",
+            "explanation": "Paragraph D describes fungus cultivation as \"a form of agriculture that predates human farming by tens of millions of years.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Farming practices that predate human agriculture<br/>ii.&nbsp; A building material that outlasts many human structures<br/>iii.&nbsp; A cooling system that requires no external power source<br/>iv.&nbsp; Complex structures without any single directing mind<br/>v.&nbsp; Human engineers borrowing solutions from nature<br/>vi.&nbsp; A scale of construction remarkable relative to the builder's size<br/>vii.&nbsp; Lessons for understanding decentralised systems in general<br/>viii.&nbsp; Termite species that have gone extinct<br/>ix.&nbsp; Comparing termite and ant colony structures",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 5,
+            "type": "HEADING",
+            "text": "Paragraph E",
+            "answer": "iv",
+            "explanation": "Paragraph E explains structures emerge \"without any termite ever perceiving the mound's overall design.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Farming practices that predate human agriculture<br/>ii.&nbsp; A building material that outlasts many human structures<br/>iii.&nbsp; A cooling system that requires no external power source<br/>iv.&nbsp; Complex structures without any single directing mind<br/>v.&nbsp; Human engineers borrowing solutions from nature<br/>vi.&nbsp; A scale of construction remarkable relative to the builder's size<br/>vii.&nbsp; Lessons for understanding decentralised systems in general<br/>viii.&nbsp; Termite species that have gone extinct<br/>ix.&nbsp; Comparing termite and ant colony structures",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 6,
+            "type": "HEADING",
+            "text": "Paragraph F",
+            "answer": "v",
+            "explanation": "Paragraph F describes how the Eastgate Centre \"was explicitly designed by drawing on principles observed in termite mound ventilation.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Farming practices that predate human agriculture<br/>ii.&nbsp; A building material that outlasts many human structures<br/>iii.&nbsp; A cooling system that requires no external power source<br/>iv.&nbsp; Complex structures without any single directing mind<br/>v.&nbsp; Human engineers borrowing solutions from nature<br/>vi.&nbsp; A scale of construction remarkable relative to the builder's size<br/>vii.&nbsp; Lessons for understanding decentralised systems in general<br/>viii.&nbsp; Termite species that have gone extinct<br/>ix.&nbsp; Comparing termite and ant colony structures",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 7,
+            "type": "HEADING",
+            "text": "Paragraph G",
+            "answer": "vii",
+            "explanation": "Paragraph G concludes with lessons for \"biologists interested in the origins of complex collective behaviour.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Farming practices that predate human agriculture<br/>ii.&nbsp; A building material that outlasts many human structures<br/>iii.&nbsp; A cooling system that requires no external power source<br/>iv.&nbsp; Complex structures without any single directing mind<br/>v.&nbsp; Human engineers borrowing solutions from nature<br/>vi.&nbsp; A scale of construction remarkable relative to the builder's size<br/>vii.&nbsp; Lessons for understanding decentralised systems in general<br/>viii.&nbsp; Termite species that have gone extinct<br/>ix.&nbsp; Comparing termite and ant colony structures",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 8,
+            "type": "TFNG",
+            "text": "Termite mounds require the termites to expend energy to actively pump air through the ventilation system.",
+            "answer": "FALSE",
+            "explanation": "The passage states the airflow is \"a continuous, passive flow of air, without the termites expending any energy of their own to power it.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 8-9<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 9,
+            "type": "TFNG",
+            "text": "Some termite species deliberately cultivate fungus as a food source.",
+            "answer": "TRUE",
+            "explanation": "The passage states certain species \"cultivate deliberately, feeding the fungus with chewed plant matter and later consuming the fungus itself as a primary food source.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 8-9<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 10,
+            "type": "FILL",
+            "text": "Termite mounds are built from a mixture of soil, chewed wood fibre, and _________.",
+            "answer": "saliva",
+            "explanation": "The passage states mounds are made from \"soil, chewed wood fibre, and saliva.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 10-11<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 11,
+            "type": "FILL",
+            "text": "The Eastgate Centre is located in _________, Zimbabwe.",
+            "answer": "Harare",
+            "explanation": "The passage states it is \"a large office and shopping complex in Harare, Zimbabwe.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 10-11<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 12,
+            "type": "MCQ",
+            "text": "According to the passage, how does construction of a termite mound proceed without central planning?",
+            "answer": "C",
+            "explanation": "The passage states construction proceeds through \"stigmergy, in which a termite deposits material partly in response to chemical cues left by the deposits of other termites that came before it.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. A queen termite issues instructions to all workers.",
+              "B. Termites follow a shared mental blueprint of the mound.",
+              "C. Termites respond to chemical cues left by earlier deposits, a process called stigmergy.",
+              "D. Termites communicate directly through sound signals."
+            ]
+          },
+          {
+            "num": 13,
+            "type": "MCQ",
+            "text": "What did the Eastgate Centre borrow from termite mound design?",
+            "answer": "B",
+            "explanation": "The passage states it uses \"a similar passive airflow strategy to regulate internal temperature without conventional air conditioning.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Its overall exterior shape.",
+              "B. A passive airflow strategy to regulate temperature without conventional air conditioning.",
+              "C. The use of chewed wood fibre as a building material.",
+              "D. An underground fungus-farming system."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Why Some Languages Are Dying Out",
+        "text": "<h1>Why Some Languages Are Dying Out</h1>\n<p>Of the roughly seven thousand languages currently spoken around the world, linguists estimate that a substantial proportion, by some counts nearly half, are likely to fall out of use before the end of this century. Unlike species extinction, which typically unfolds over geological timescales, language loss can happen within a handful of generations, sometimes within the lifetime of a single speaker who watches their language pass from a fluent parent to an unfamiliar grandchild, a shift that can occur almost invisibly from one generation to the next until suddenly no children are learning the language at all.</p>\n<p>The mechanisms behind this decline are varied, but several patterns recur across very different regions and cultures. Economic pressure is perhaps the most consistent factor: parents frequently choose to raise children in a dominant national or regional language, reasoning, often correctly, that fluency in that language will open up far greater opportunities for education and employment than fluency in a smaller local language ever could. Government policy has historically compounded this pressure in many countries, particularly through school systems that actively discouraged or outright banned the use of minority languages in classrooms for much of the twentieth century, a practice that has left lasting damage even in places where such policies have since been reversed.</p>\n<p>Urbanisation adds a further layer of pressure. As younger generations increasingly move from rural villages, where a minority language might still be the primary means of everyday communication, into cities where a dominant national language predominates in schools, workplaces, and media, opportunities to use a smaller language in daily life diminish sharply, even among people who still technically consider themselves native speakers.</p>\n<p>Not every case of language decline follows this same pattern, however. Some languages have persisted for centuries with speaker populations in the low thousands, protected by geographic isolation or strong community identity, while other languages with speaker populations in the hundreds of thousands have nonetheless gone into steep decline within a generation or two once a dominant national language became firmly entrenched in schools and media. Population size alone, in other words, is a poor predictor of a language's long-term survival prospects.</p>\n<p>The consequences of language loss extend well beyond communication itself. Linguists argue that each language encodes a distinct way of categorising and describing the world, including specialised vocabulary for local plants, weather patterns, and social relationships that may have no direct equivalent in a dominant replacement language. When such a language disappears, researchers lose access to whatever unique linguistic or cultural knowledge it encoded, in some cases including practical ecological knowledge, such as detailed local classifications of medicinal plants, that had been refined and transmitted orally over many generations.</p>\n<p>In response, a range of language revitalisation efforts have emerged around the world over the past few decades, with mixed but occasionally striking success. Some indigenous communities have established immersion schools specifically intended to raise a new generation of fluent child speakers, while linguists working in partnership with elderly remaining speakers have in several cases produced detailed dictionaries, grammars, and audio recordings intended to preserve a language even if active daily use continues to decline. Hebrew stands as perhaps the most frequently cited example of a large-scale revival, having been restored from a language used mainly for religious and scholarly purposes into the everyday first language of millions of speakers over the course of roughly a century, although linguists caution that Hebrew's revival benefited from unusually favourable circumstances, including a strong shared cultural motivation and coordinated state support, that are not easily replicated for every endangered language.</p>\n<p>Whether such efforts can meaningfully slow the broader global trend remains uncertain, but they have at minimum demonstrated that language loss, while common, is not always irreversible, provided a community retains sufficient documentation, institutional support, and collective will to reverse the decline before the last fluent speakers are gone, and before the knowledge held only in that language disappears along with them.</p>",
+        "questions": [
+          {
+            "num": 14,
+            "type": "TFNG",
+            "text": "Language loss typically takes place over a much longer timescale than species extinction.",
+            "answer": "FALSE",
+            "explanation": "The passage states language loss \"can happen within a handful of generations,\" unlike species extinction which \"typically unfolds over geological timescales.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 15,
+            "type": "TFNG",
+            "text": "Many twentieth-century school systems actively discouraged the use of minority languages in classrooms.",
+            "answer": "TRUE",
+            "explanation": "The passage states school systems \"actively discouraged or outright banned the use of minority languages in classrooms for much of the twentieth century.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 16,
+            "type": "TFNG",
+            "text": "A language with a large number of speakers is always safe from decline.",
+            "answer": "FALSE",
+            "explanation": "The passage states languages \"with speaker populations in the hundreds of thousands have nonetheless gone into steep decline within a generation or two.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 17,
+            "type": "TFNG",
+            "text": "Every endangered language includes specialised vocabulary describing local medicinal plants.",
+            "answer": "NOT GIVEN",
+            "explanation": "The passage gives this as one possible example of encoded knowledge (\"in some cases including practical ecological knowledge, such as detailed local classifications of medicinal plants\") but does not state it is true of every endangered language.",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 18,
+            "type": "TFNG",
+            "text": "Hebrew's revival is considered easy to replicate for any endangered language.",
+            "answer": "FALSE",
+            "explanation": "The passage states linguists \"caution that Hebrew's revival benefited from unusually favourable circumstances, including a strong shared cultural motivation and coordinated state support, that are not easily replicated for every endangered language.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 19,
+            "type": "FILL",
+            "text": "Linguists estimate that nearly _________ of the world's roughly seven thousand languages may fall out of use by the end of this century.",
+            "answer": "half",
+            "explanation": "The passage states \"by some counts nearly half\" of languages are likely to fall out of use.",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 20,
+            "type": "FILL",
+            "text": "As younger generations move to cities, opportunities to use a smaller language in daily life _________ sharply.",
+            "answer": "diminish",
+            "explanation": "The passage states such opportunities \"diminish sharply\" after urbanisation.",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 21,
+            "type": "FILL",
+            "text": "Some communities have established _________ schools intended to raise a new generation of fluent child speakers.",
+            "answer": "immersion",
+            "explanation": "The passage refers to \"immersion schools specifically intended to raise a new generation of fluent child speakers.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 22,
+            "type": "FILL",
+            "text": "Linguists have worked with elderly remaining speakers to produce dictionaries, grammars, and audio _________.",
+            "answer": "recordings",
+            "explanation": "The passage refers to producing \"dictionaries, grammars, and audio recordings.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 23,
+            "type": "FILL",
+            "text": "Hebrew was restored from a language used mainly for religious and scholarly purposes over the course of roughly a _________.",
+            "answer": "century",
+            "explanation": "The passage states this revival happened \"over the course of roughly a century.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 24,
+            "type": "MCQ",
+            "text": "According to the passage, what is the most consistent factor behind language decline?",
+            "answer": "A",
+            "explanation": "The passage states: \"Economic pressure is perhaps the most consistent factor.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Economic pressure to use a dominant language for opportunity.",
+              "B. A shortage of trained linguists.",
+              "C. Natural disasters affecting rural communities.",
+              "D. A lack of written scripts for minority languages."
+            ]
+          },
+          {
+            "num": 25,
+            "type": "MCQ",
+            "text": "What does the passage suggest is a poor predictor of a language's long-term survival?",
+            "answer": "B",
+            "explanation": "The passage states: \"Population size alone, in other words, is a poor predictor of a language's long-term survival prospects.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Geographic isolation.",
+              "B. The size of the speaker population.",
+              "C. Government policy.",
+              "D. Community identity."
+            ]
+          },
+          {
+            "num": 26,
+            "type": "MCQ",
+            "text": "What do revitalisation efforts described in the passage demonstrate?",
+            "answer": "C",
+            "explanation": "The passage states such efforts have shown \"language loss, while common, is not always irreversible.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Language loss can never be reversed.",
+              "B. Government support is never necessary for revival.",
+              "C. Language loss is not always irreversible, given sufficient support.",
+              "D. All endangered languages will inevitably be revived."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "The Placebo Effect: What Modern Medicine Still Doesn't Understand",
+        "text": "<h1>The Placebo Effect: What Modern Medicine Still Doesn't Understand</h1>\n<p>In clinical trials for new medications, researchers routinely give one group of participants the actual drug being tested and another group an inert substance, commonly a sugar pill, that has no active pharmacological ingredient at all. What continues to puzzle medical researchers is that participants given the inert substance frequently report genuine improvements in their symptoms, a phenomenon known as the placebo effect, and this improvement can sometimes be substantial enough to complicate the interpretation of trial results.</p>\n<p>The placebo effect is not simply a matter of patients imagining relief that is not really there or exaggerating their symptoms out of politeness toward researchers. Brain imaging studies have documented measurable physiological changes in placebo responders, including the release of the body's own natural pain-relieving chemicals in patients given a placebo for pain relief, changes that closely mirror, though rarely fully match, those produced by actual painkilling medication. In other words, the expectation of relief appears capable of triggering at least some of the same biological mechanisms that an active drug would trigger directly.</p>\n<p>Several factors appear to influence how strong a given placebo response will be. The method of administration matters considerably: a placebo injection typically produces a stronger response than a placebo pill, and a more expensive-looking placebo pill has, in several studies, produced a stronger response than an identical but cheaper-looking one, suggesting that a patient's expectations about a treatment's likely effectiveness, shaped partly by superficial cues, play a meaningful role in the size of the resulting effect. The relationship between a patient and their treating clinician appears to matter as well; a warm, attentive, and confident clinical manner has been shown in multiple studies to produce a stronger placebo response than a rushed or indifferent one, even when the treatment being administered is identical in both cases.</p>\n<p>Perhaps the most puzzling recent finding is that placebos can, under certain conditions, still produce a measurable effect even when patients are explicitly told they are receiving an inactive substance, a phenomenon researchers have termed the \"open-label placebo effect.\" In several trials involving conditions such as chronic lower back pain and irritable bowel syndrome, participants who were informed clearly and repeatedly that the pills they were taking contained no active medication nonetheless reported meaningfully greater symptom relief than a comparable group given no treatment at all, suggesting that the ritual of treatment itself, rather than any active deception about its contents, may account for at least part of the effect.</p>\n<p>This poses a considerable practical dilemma for medical researchers. On one hand, some clinicians have suggested that carefully designed placebo treatments might have a legitimate, if limited, role in managing certain conditions, particularly where conventional treatments carry significant side effects or have proven only partially effective. On the other hand, prescribing a treatment understood by the clinician to have no direct pharmacological effect raises significant ethical questions about patient consent and professional honesty, questions that the open-label placebo research has only partially addressed, since even fully informed patients still appear to derive some benefit under specific conditions.</p>\n<p>The existence of a robust placebo effect also complicates the design and interpretation of clinical trials themselves. Because any new drug must demonstrate a benefit meaningfully greater than what a placebo alone would produce, a particularly strong placebo response within a trial's control group can make it considerably harder to demonstrate that an experimental drug's effects exceed what expectation and ritual alone might achieve, a challenge that has reportedly complicated the development of new treatments for several conditions, depression among them, where placebo response rates in clinical trials have been unusually high in recent decades.</p>\n<p>Ultimately, the placebo effect stands as a reminder that the boundary between psychological expectation and measurable physiological change is far blurrier than a simple mind-body distinction might suggest, and that modern medicine, for all its sophistication, still has much to learn about precisely how belief and expectation translate into the biological processes that determine whether a patient actually gets better.</p>",
+        "questions": [
+          {
+            "num": 27,
+            "type": "TFNG",
+            "text": "Patients who respond to a placebo are simply imagining relief that does not really exist.",
+            "answer": "FALSE",
+            "explanation": "The passage states the placebo effect \"is not simply a matter of patients imagining relief that is not really there.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 28,
+            "type": "TFNG",
+            "text": "Brain imaging has shown that placebo responders release the body's own natural pain-relieving chemicals.",
+            "answer": "TRUE",
+            "explanation": "The passage states imaging documented \"the release of the body's own natural pain-relieving chemicals in patients given a placebo for pain relief.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 29,
+            "type": "TFNG",
+            "text": "A placebo injection typically produces a weaker response than a placebo pill.",
+            "answer": "FALSE",
+            "explanation": "The passage states \"a placebo injection typically produces a stronger response than a placebo pill.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 30,
+            "type": "TFNG",
+            "text": "A more expensive-looking placebo pill has produced a stronger response than a cheaper-looking one in some studies.",
+            "answer": "TRUE",
+            "explanation": "The passage states \"a more expensive-looking placebo pill has, in several studies, produced a stronger response than an identical but cheaper-looking one.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 31,
+            "type": "TFNG",
+            "text": "Open-label placebos have been shown to have no effect at all once patients know the pills are inactive.",
+            "answer": "FALSE",
+            "explanation": "The passage states participants informed the pills contained no active medication \"nonetheless reported meaningfully greater symptom relief than a comparable group given no treatment at all.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 32,
+            "type": "TFNG",
+            "text": "Placebo response rates in clinical trials for depression have been unusually low in recent decades.",
+            "answer": "FALSE",
+            "explanation": "The passage states \"placebo response rates in clinical trials have been unusually high in recent decades\" for conditions including depression.",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 33,
+            "type": "TFNG",
+            "text": "All clinicians agree that prescribing placebo treatments is ethically acceptable.",
+            "answer": "NOT GIVEN",
+            "explanation": "The passage states some clinicians see a possible role for placebos and notes ethical questions remain, but does not state whether all clinicians agree on acceptability.",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 34,
+            "type": "FILL",
+            "text": "A warm, attentive, and confident clinical manner produces a stronger placebo response than a rushed or _________ one.",
+            "answer": "indifferent",
+            "explanation": "The passage states this is true compared with \"a rushed or indifferent one.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 35,
+            "type": "FILL",
+            "text": "Researchers have termed the effect of placebos working even when patients know they are inactive the \"open-label placebo _________.\"",
+            "answer": "effect",
+            "explanation": "The passage names this the \"open-label placebo effect.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 36,
+            "type": "FILL",
+            "text": "Open-label placebo trials have involved conditions such as chronic lower back pain and irritable bowel _________.",
+            "answer": "syndrome",
+            "explanation": "The passage mentions \"conditions such as chronic lower back pain and irritable bowel syndrome.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 37,
+            "type": "FILL",
+            "text": "A strong placebo response in a trial's control group can make it harder to demonstrate a new drug's effects exceed what expectation and _________ alone might achieve.",
+            "answer": "ritual",
+            "explanation": "The passage refers to \"what expectation and ritual alone might achieve.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 38,
+            "type": "MCQ",
+            "text": "According to the passage, what does the open-label placebo research suggest?",
+            "answer": "B",
+            "explanation": "The passage states this suggests \"the ritual of treatment itself, rather than any active deception about its contents, may account for at least part of the effect.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Placebos only work when patients are deceived.",
+              "B. The ritual of treatment itself may account for part of the placebo effect.",
+              "C. Placebos have no measurable physiological basis.",
+              "D. Open-label placebos are illegal in most countries."
+            ]
+          },
+          {
+            "num": 39,
+            "type": "MCQ",
+            "text": "Why does a strong placebo response complicate clinical trial design, according to the passage?",
+            "answer": "A",
+            "explanation": "The passage states a new drug \"must demonstrate a benefit meaningfully greater than what a placebo alone would produce,\" which a strong placebo response makes harder.",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. It becomes harder to show a drug's effect exceeds the placebo response.",
+              "B. It makes placebos illegal to use in trials.",
+              "C. It eliminates the need for control groups.",
+              "D. It automatically disqualifies a drug from approval."
+            ]
+          },
+          {
+            "num": 40,
+            "type": "MCQ",
+            "text": "What is the passage's overall conclusion about the placebo effect?",
+            "answer": "C",
+            "explanation": "The passage concludes modern medicine \"still has much to learn about precisely how belief and expectation translate into the biological processes that determine whether a patient actually gets better.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. It has been fully explained by modern neuroscience.",
+              "B. It proves that most illnesses are psychological in origin.",
+              "C. Medicine still has much to learn about how belief affects biological processes.",
+              "D. It should be banned from use in clinical trials."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "writing": {
+    "task1": {
+      "prompt": "The line graph below shows annual sales of electric vehicles in three countries between 2015 and 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "image": "<img src=\"images/writing_unique4_p1.png\" class=\"max-w-full h-auto mx-auto rounded-xl shadow-lg border border-white/10 bg-white\" alt=\"Writing Task 1 Chart\" />",
+      "modelAnswer": "The line graph illustrates annual sales of electric vehicles in China, the United States, and Germany between 2015 and 2023.\n\nOverall, all three countries recorded substantial growth in electric vehicle sales over the period, but China's growth was by far the most dramatic, resulting in a much larger market than either of the other two countries by the end of the period.\n\nIn 2015, sales were relatively modest across all three countries, with China at 200,000 vehicles, the United States at 115,000, and Germany at just 25,000. Growth in the United States and Germany remained comparatively steady over the following years, with the United States reaching 630,000 vehicles by 2021 and Germany reaching 350,000 in the same year.\n\nChina's sales, by contrast, grew only modestly until 2019, reaching just over 1 million vehicles, before rising extremely sharply in the final years of the period. By 2021, Chinese sales had reached 3.3 million vehicles, more than five times the American figure, and by 2023 this figure had climbed further still to 6.8 million, nearly five times the combined total of the United States and Germany that year.\n\nIn summary, while all three countries saw electric vehicle sales rise substantially between 2015 and 2023, China's growth accelerated dramatically after 2019, leaving it far ahead of both the United States and Germany by the end of the period."
+    },
+    "task2": {
+      "prompt": "Some people think that the best way to reduce crime is to give longer prison sentences. Others believe there are better alternative ways of reducing crime. Discuss both views and give your own opinion.",
+      "modelAnswer": "Reducing crime is a persistent challenge for governments everywhere, and opinions differ sharply on the best approach. While some argue that longer prison sentences are the most effective deterrent, others believe that alternative approaches offer better long-term results. This essay will examine both views before presenting my own opinion.\n\nThose who favour longer prison sentences argue that removing offenders from society for extended periods directly prevents them from committing further crimes during that time, and that the threat of a lengthy sentence may deter potential offenders from committing crimes in the first place. Proponents also argue that longer sentences reflect the seriousness with which society treats particular offences, offering a sense of justice to victims and their families.\n\nOn the other hand, critics of this approach point to research suggesting that the certainty of being caught deters crime far more effectively than the severity of the eventual punishment, meaning that resources spent extending prison terms might achieve more if redirected toward policing and detection instead. Critics also argue that prisons, particularly overcrowded ones, can function as \"schools for crime,\" where inmates serving long sentences alongside hardened offenders emerge more entrenched in criminal networks than before, rather than rehabilitated. Alternative approaches, such as investment in education, vocational training, and mental health and addiction treatment programmes, address underlying causes of criminal behaviour that longer sentences alone do not resolve.\n\nIn my view, while lengthy sentences remain appropriate for the most serious violent offences, relying on longer sentences as a primary crime-reduction strategy for less serious offences is likely to prove less effective than a combined approach: consistent, well-resourced policing to increase the likelihood of being caught, alongside rehabilitation and social programmes that address the root causes driving people toward crime in the first place."
+    }
+  }
 }
 };
 
