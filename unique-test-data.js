@@ -4695,6 +4695,598 @@ const UNIQUE_TEST_DATA = {
       "modelAnswer": "Scientific research requires substantial and sustained funding, and there is ongoing debate about whether governments or private companies are better positioned to provide it. This essay will examine both perspectives before presenting my own view.\n\nThose who favour government funding argue that public bodies are better placed to support long-term, fundamental research whose practical applications may not become apparent for decades, if ever, research that private companies, answerable to shareholders expecting a reasonably timely return on investment, are often reluctant to fund. Government funding, allocated through independent peer-review panels rather than a single company's commercial interests, can also support research into areas offering little obvious profit potential, such as rare diseases affecting a relatively small number of patients, or long-term environmental monitoring, that might otherwise receive minimal research attention if left entirely to companies pursuing profit.\n\nOn the other hand, proponents of private funding point out that companies frequently possess strong practical incentives to translate research findings into genuinely usable products relatively quickly, since a company's own commercial survival directly depends on successfully doing so. Private funding can also move considerably faster than many government grant processes, which often involve lengthy application and review procedures that can delay promising research by months or even years, and companies are often willing to invest very heavily in narrow, specific, and high-potential-value areas of applied research, such as vaccine development or renewable battery technology, more rapidly than typical government funding cycles generally allow.\n\nIn my opinion, the most effective research ecosystems rely on a genuine combination of both funding sources rather than favouring one model exclusively over the other. Government funding remains essential for the kind of foundational, long-horizon research that underpins nearly all later commercial innovation, while private investment plays an equally valuable role in translating those foundational discoveries into practical products and applications more rapidly and efficiently than government funding alone has generally proven able to achieve."
     }
   }
+},
+"u9": {
+  "title": "ViaTestPrep Original Practice Test 9",
+  "book": "Unique Test",
+  "reading": {
+    "passages": [
+      {
+        "title": "The Science of Muscle Memory",
+        "text": "<h1>The Science of Muscle Memory</h1>\n<p><b>A</b>&nbsp; Anyone who has ever climbed back onto a bicycle after years away from cycling, only to find the skill returns almost instantly, has experienced what is commonly called muscle memory. The term is a familiar one, used casually to describe how a well-practised physical skill seems to persist in the body long after conscious effort to maintain it has stopped. Strictly speaking, however, the phrase is something of a misnomer, since muscles themselves possess no capacity to store memories in any meaningful sense at all.</p>\n<p><b>B</b>&nbsp; What is actually happening during skill retention takes place primarily within the nervous system rather than within muscle tissue itself. Repeated practice of a physical movement, such as a tennis serve or a piano scale, gradually strengthens and refines specific neural pathways connecting the brain's motor cortex, a region primarily responsible for planning voluntary movement, with the cerebellum and basal ganglia, structures involved in fine motor coordination and the smooth, largely automatic execution of a well-learned physical sequence. Over the course of extended practice, this circuit becomes increasingly efficient, eventually allowing a complex movement to be executed rapidly and accurately with minimal ongoing conscious attention.</p>\n<p><b>C</b>&nbsp; This form of motor memory displays a genuinely striking degree of durability compared with other kinds of memory. Declarative memories, facts and specific events a person can consciously recall and describe in words, tend to fade relatively quickly without periodic reinforcement or review. Well-practised motor skills, by contrast, often persist for years or even decades with little or no active maintenance, a durability that has led some researchers to describe procedural motor memory as functioning through a fundamentally different neurological storage mechanism than the one underlying conscious, declarative recall.</p>\n<p><b>D</b>&nbsp; More recently, however, researchers studying muscle physiology directly have identified a separate mechanism that operates within the muscle tissue itself, giving the popular term \"muscle memory\" a genuine, literal biological basis after all, quite apart from anything happening in the nervous system. When a muscle undergoes sustained strength training, individual muscle fibres actually acquire additional cell nuclei, structures that direct a cell's protein production, allowing the muscle to grow larger and stronger over time. Remarkably, when that same muscle later shrinks due to prolonged inactivity, for instance following an injury or an extended period without training, these additional nuclei appear to persist within the muscle fibre for a surprisingly long period afterward, considerably longer than the muscle mass and strength they originally helped build.</p>\n<p><b>E</b>&nbsp; This retained cellular apparatus appears to provide a genuine physical advantage during retraining. Experiments comparing previously trained muscle that has since atrophied through disuse with muscle that has genuinely never been trained at all have found that the previously trained muscle regains its former strength considerably faster once training resumes, even after a substantial gap during which noticeable strength was completely lost in both cases. Researchers attribute this accelerated recovery directly to the retained additional nuclei, which appear to allow muscle fibres to resume efficient protein production and rebuild muscle mass more rapidly than fibres that must first acquire this additional cellular machinery for the very first time.</p>\n<p><b>F</b>&nbsp; These findings carry genuinely practical significance for athletes recovering from injury, individuals returning to structured exercise after a long absence, and older adults hoping to rebuild strength lost through age-related muscle decline. Rather than starting entirely from scratch, individuals with substantial prior training experience appear to retain a genuine physiological advantage at the cellular level, one that can meaningfully accelerate their return to a previous level of fitness compared with someone attempting the same movements and training regimen for the very first time.</p>\n<p><b>G</b>&nbsp; Taken together, contemporary research on so-called muscle memory reveals it to be considerably more complex and scientifically interesting than the everyday, casual use of the term might initially suggest. Two genuinely distinct biological mechanisms, refined neural pathways governing coordinated movement, and retained cellular machinery within muscle fibres themselves, both appear to contribute independently to the same familiar, everyday experience: a previously well-practised physical skill returning with unexpectedly little conscious effort, sometimes even after many years of complete inactivity.</p>",
+        "questions": [
+          {
+            "num": 1,
+            "type": "HEADING",
+            "text": "Paragraph A",
+            "answer": "i",
+            "explanation": "Paragraph A states the phrase is \"something of a misnomer, since muscles themselves possess no capacity to store memories.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A popular term that turns out to be scientifically inaccurate<br/>ii.&nbsp; Strengthening pathways between brain regions through repetition<br/>iii.&nbsp; Why practical skills tend to last longer than memorised facts<br/>iv.&nbsp; A literal cellular explanation for a figurative phrase<br/>v.&nbsp; Evidence that previously trained muscle recovers strength faster<br/>vi.&nbsp; Practical value for recovery and rehabilitation<br/>vii.&nbsp; Two distinct mechanisms contributing to the same experience<br/>viii.&nbsp; Comparing muscle memory across different animal species<br/>ix.&nbsp; Attempts to eliminate muscle memory in athletes",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 2,
+            "type": "HEADING",
+            "text": "Paragraph B",
+            "answer": "ii",
+            "explanation": "Paragraph B states practice \"gradually strengthens and refines specific neural pathways connecting the brain's motor cortex, a region primarily responsible for planning voluntary movement, with the cerebellum and basal ganglia.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A popular term that turns out to be scientifically inaccurate<br/>ii.&nbsp; Strengthening pathways between brain regions through repetition<br/>iii.&nbsp; Why practical skills tend to last longer than memorised facts<br/>iv.&nbsp; A literal cellular explanation for a figurative phrase<br/>v.&nbsp; Evidence that previously trained muscle recovers strength faster<br/>vi.&nbsp; Practical value for recovery and rehabilitation<br/>vii.&nbsp; Two distinct mechanisms contributing to the same experience<br/>viii.&nbsp; Comparing muscle memory across different animal species<br/>ix.&nbsp; Attempts to eliminate muscle memory in athletes",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 3,
+            "type": "HEADING",
+            "text": "Paragraph C",
+            "answer": "iii",
+            "explanation": "Paragraph C states \"Declarative memories, facts and specific events a person can consciously recall and describe in words, tend to fade relatively quickly without periodic reinforcement or review.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A popular term that turns out to be scientifically inaccurate<br/>ii.&nbsp; Strengthening pathways between brain regions through repetition<br/>iii.&nbsp; Why practical skills tend to last longer than memorised facts<br/>iv.&nbsp; A literal cellular explanation for a figurative phrase<br/>v.&nbsp; Evidence that previously trained muscle recovers strength faster<br/>vi.&nbsp; Practical value for recovery and rehabilitation<br/>vii.&nbsp; Two distinct mechanisms contributing to the same experience<br/>viii.&nbsp; Comparing muscle memory across different animal species<br/>ix.&nbsp; Attempts to eliminate muscle memory in athletes",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 4,
+            "type": "HEADING",
+            "text": "Paragraph D",
+            "answer": "iv",
+            "explanation": "Paragraph D describes a mechanism giving the popular term muscle memory \"a genuine, literal biological basis after all, quite apart from anything happening in the nervous system.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A popular term that turns out to be scientifically inaccurate<br/>ii.&nbsp; Strengthening pathways between brain regions through repetition<br/>iii.&nbsp; Why practical skills tend to last longer than memorised facts<br/>iv.&nbsp; A literal cellular explanation for a figurative phrase<br/>v.&nbsp; Evidence that previously trained muscle recovers strength faster<br/>vi.&nbsp; Practical value for recovery and rehabilitation<br/>vii.&nbsp; Two distinct mechanisms contributing to the same experience<br/>viii.&nbsp; Comparing muscle memory across different animal species<br/>ix.&nbsp; Attempts to eliminate muscle memory in athletes",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 5,
+            "type": "HEADING",
+            "text": "Paragraph E",
+            "answer": "v",
+            "explanation": "Paragraph E states \"the previously trained muscle regains its former strength considerably faster once training resumes.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A popular term that turns out to be scientifically inaccurate<br/>ii.&nbsp; Strengthening pathways between brain regions through repetition<br/>iii.&nbsp; Why practical skills tend to last longer than memorised facts<br/>iv.&nbsp; A literal cellular explanation for a figurative phrase<br/>v.&nbsp; Evidence that previously trained muscle recovers strength faster<br/>vi.&nbsp; Practical value for recovery and rehabilitation<br/>vii.&nbsp; Two distinct mechanisms contributing to the same experience<br/>viii.&nbsp; Comparing muscle memory across different animal species<br/>ix.&nbsp; Attempts to eliminate muscle memory in athletes",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 6,
+            "type": "HEADING",
+            "text": "Paragraph F",
+            "answer": "vi",
+            "explanation": "Paragraph F states the findings carry \"practical significance for athletes recovering from injury, individuals returning to structured exercise after a long absence, and older adults.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A popular term that turns out to be scientifically inaccurate<br/>ii.&nbsp; Strengthening pathways between brain regions through repetition<br/>iii.&nbsp; Why practical skills tend to last longer than memorised facts<br/>iv.&nbsp; A literal cellular explanation for a figurative phrase<br/>v.&nbsp; Evidence that previously trained muscle recovers strength faster<br/>vi.&nbsp; Practical value for recovery and rehabilitation<br/>vii.&nbsp; Two distinct mechanisms contributing to the same experience<br/>viii.&nbsp; Comparing muscle memory across different animal species<br/>ix.&nbsp; Attempts to eliminate muscle memory in athletes",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 7,
+            "type": "HEADING",
+            "text": "Paragraph G",
+            "answer": "vii",
+            "explanation": "Paragraph G states \"Two genuinely distinct biological mechanisms, refined neural pathways governing coordinated movement, and retained cellular machinery within muscle fibres themselves, both appear to contribute independently to the same familiar, everyday experience.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A popular term that turns out to be scientifically inaccurate<br/>ii.&nbsp; Strengthening pathways between brain regions through repetition<br/>iii.&nbsp; Why practical skills tend to last longer than memorised facts<br/>iv.&nbsp; A literal cellular explanation for a figurative phrase<br/>v.&nbsp; Evidence that previously trained muscle recovers strength faster<br/>vi.&nbsp; Practical value for recovery and rehabilitation<br/>vii.&nbsp; Two distinct mechanisms contributing to the same experience<br/>viii.&nbsp; Comparing muscle memory across different animal species<br/>ix.&nbsp; Attempts to eliminate muscle memory in athletes",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 8,
+            "type": "TFNG",
+            "text": "Declarative memories generally persist for longer without reinforcement than well-practised motor skills.",
+            "answer": "FALSE",
+            "explanation": "The passage states declarative memories \"tend to fade relatively quickly without periodic reinforcement or review.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 8-9<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 9,
+            "type": "TFNG",
+            "text": "Additional muscle nuclei acquired during strength training disappear as soon as the muscle begins to shrink.",
+            "answer": "FALSE",
+            "explanation": "The passage states these nuclei \"appear to persist within the muscle fibre for a surprisingly long period afterward, considerably longer than the muscle mass and strength they originally helped build.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 8-9<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 10,
+            "type": "FILL",
+            "text": "Muscle fibres acquire additional cell _________ during sustained strength training.",
+            "answer": "nuclei",
+            "explanation": "The passage states fibres \"actually acquire additional cell nuclei.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 10-11<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 11,
+            "type": "FILL",
+            "text": "Retained additional nuclei allow muscle fibres to resume efficient _________ production.",
+            "answer": "protein",
+            "explanation": "The passage states nuclei allow fibres \"to resume efficient protein production.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 10-11<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 12,
+            "type": "MCQ",
+            "text": "According to the passage, why is the phrase 'muscle memory' considered a misnomer?",
+            "answer": "A",
+            "explanation": "The passage states \"muscles themselves possess no capacity to store memories in any meaningful sense at all.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Because muscles have no capacity to store memories in any meaningful sense.",
+              "B. Because muscles never grow larger through training.",
+              "C. Because the nervous system plays no role in motor skills.",
+              "D. Because motor skills cannot be relearned after a long absence."
+            ]
+          },
+          {
+            "num": 13,
+            "type": "MCQ",
+            "text": "What does the passage conclude about the two mechanisms underlying muscle memory?",
+            "answer": "B",
+            "explanation": "The passage states \"Two genuinely distinct biological mechanisms, refined neural pathways governing coordinated movement, and retained cellular machinery within muscle fibres themselves, both appear to contribute independently to the same familiar, everyday experience.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Only one of the two mechanisms has been confirmed by research.",
+              "B. Both mechanisms appear to contribute independently to the same everyday experience.",
+              "C. The neural mechanism has been shown to be irrelevant.",
+              "D. The cellular mechanism only applies to elite athletes."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "How Coral Reefs Are Adapting to Warmer Oceans",
+        "text": "<h1>How Coral Reefs Are Adapting to Warmer Oceans</h1>\n<p>Coral reefs are frequently described as among the ecosystems most vulnerable to a warming climate, and the statistics documenting their global decline over recent decades are genuinely alarming. Rising ocean temperatures trigger a process called bleaching, in which corals expel the colourful, nutrient-providing algae living symbiotically within their tissue, leaving the coral colony pale and, if the stressful conditions persist for long enough, at serious risk of starving to death entirely. Yet amid this broadly troubling picture, marine biologists have identified a range of genuinely encouraging examples of coral populations adapting to warmer waters in ways that offer at least some cause for cautious optimism.</p>\n<p>One particularly striking example comes from reefs in the Persian Gulf, where corals routinely survive water temperatures that would trigger severe, often fatal bleaching in most other coral populations studied elsewhere in the world. Researchers studying these unusually heat-tolerant corals have found that they host a distinct variety of symbiotic algae, one specifically adapted to tolerate higher temperatures than the algae varieties more commonly found in cooler reef systems elsewhere, suggesting that at least some existing coral populations already possess considerably greater innate thermal tolerance than was previously assumed.</p>\n<p>Beyond simple existing variation between different coral populations, researchers have also documented corals apparently adapting to warming conditions in real time. Some coral colonies exposed repeatedly to sub-lethal heat stress, warming significant enough to trigger a mild, non-fatal bleaching response but not severe enough to kill the coral outright, appear to develop somewhat greater resilience to subsequent heat stress events, a phenomenon researchers have termed thermal priming, or occasionally coral \"training.\" The precise underlying mechanism responsible for this improved resilience remains only partially understood, though researchers suspect it may involve genuine physiological changes within the coral itself, potentially alongside shifts in the specific composition of its resident algal community toward more heat-tolerant algal strains.</p>\n<p>This emerging understanding has directly inspired several active conservation strategies. Some marine biologists have begun deliberately breeding corals sourced specifically from unusually heat-tolerant natural populations, such as those found in the Persian Gulf, with corals from more thermally sensitive populations elsewhere, hoping to produce offspring combining useful heat tolerance with broader genetic diversity better suited to a wider range of reef environments and conditions. Other research teams have experimented with deliberately exposing young coral colonies to carefully controlled, gradually increasing heat stress under laboratory conditions, hoping to condition greater resilience before ultimately transplanting these hardened corals onto degraded natural reef sites in need of active restoration.</p>\n<p>Not every marine biologist studying this field remains equally optimistic about how much these adaptive mechanisms can ultimately achieve, however. Critics of an overly optimistic framing point out that the pace of ongoing ocean warming may well be outstripping the rate at which natural coral adaptation, or even accelerated selective breeding programmes, can realistically keep pace, particularly if global greenhouse gas emissions continue rising largely unchecked in the coming decades. Even genuinely heat-tolerant coral populations, these researchers caution, still face a range of other serious threats entirely unrelated to temperature, including ocean acidification, coastal pollution, and physical damage from increasingly destructive storms, that heat tolerance alone does absolutely nothing to address.</p>\n<p>Consequently, most marine biologists working directly in this field now frame coral adaptation research as a genuinely valuable complement to, rather than any kind of realistic substitute for, the much broader and more fundamental global effort required to reduce greenhouse gas emissions and directly slow the pace of ocean warming itself. Assisted evolution and selective breeding programmes may meaningfully help buy coral reefs additional time to survive, researchers generally agree, but they cannot substitute entirely for addressing the fundamental underlying cause of reef decline in the first place.</p>\n<p>The story of coral adaptation therefore illustrates a recurring and genuinely important pattern increasingly observed across many different areas of climate science more broadly: genuine biological resilience, however remarkable and scientifically interesting it undoubtedly is, operates within real, finite limits, and depends heavily on the specific pace and ultimate scale of the environmental change organisms are actually being asked to adapt to and survive.</p>",
+        "questions": [
+          {
+            "num": 14,
+            "type": "TFNG",
+            "text": "Coral bleaching occurs when corals expel the algae living within their tissue.",
+            "answer": "TRUE",
+            "explanation": "The passage states bleaching occurs when \"corals expel the colourful, nutrient-providing algae living symbiotically within their tissue.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 15,
+            "type": "TFNG",
+            "text": "Corals in the Persian Gulf host the same type of algae found in most other reef systems worldwide.",
+            "answer": "FALSE",
+            "explanation": "The passage states these corals \"host a distinct variety of symbiotic algae, one specifically adapted to tolerate higher temperatures.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 16,
+            "type": "TFNG",
+            "text": "The precise mechanism behind thermal priming is fully understood by researchers.",
+            "answer": "FALSE",
+            "explanation": "The passage states \"The precise underlying mechanism responsible for this improved resilience remains only partially understood.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 17,
+            "type": "TFNG",
+            "text": "All marine biologists agree that coral adaptation research alone can fully solve the problem of reef decline.",
+            "answer": "FALSE",
+            "explanation": "The passage states most biologists frame this research \"as a genuinely valuable complement to, rather than any kind of realistic substitute for,\" reducing emissions.",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 18,
+            "type": "TFNG",
+            "text": "Heat-tolerant corals are immune to threats such as ocean acidification and pollution.",
+            "answer": "FALSE",
+            "explanation": "The passage states heat-tolerant corals \"still face a range of other serious threats entirely unrelated to temperature, including ocean acidification, coastal pollution, and physical damage from increasingly destructive storms, that heat tolerance alone does absolutely nothing to address.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 19,
+            "type": "FILL",
+            "text": "Researchers have termed the phenomenon of improved resilience after mild heat stress thermal _________.",
+            "answer": "priming",
+            "explanation": "The passage names this phenomenon \"thermal priming.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 20,
+            "type": "FILL",
+            "text": "Some marine biologists have begun deliberately breeding corals sourced from unusually heat-tolerant natural _________.",
+            "answer": "populations",
+            "explanation": "The passage refers to breeding \"corals sourced specifically from unusually heat-tolerant natural populations.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 21,
+            "type": "FILL",
+            "text": "Some research teams expose young coral colonies to gradually increasing heat stress under controlled _________ conditions.",
+            "answer": "laboratory",
+            "explanation": "The passage refers to \"carefully controlled, gradually increasing heat stress under laboratory conditions.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 22,
+            "type": "FILL",
+            "text": "Critics point out that the pace of ocean warming may be outstripping the rate of natural coral _________.",
+            "answer": "adaptation",
+            "explanation": "The passage states critics worry \"the pace of ongoing ocean warming may well be outstripping the rate at which natural coral adaptation, or even accelerated selective breeding programmes, can realistically keep pace.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 23,
+            "type": "FILL",
+            "text": "Assisted evolution programmes may help buy coral reefs additional _________ to survive.",
+            "answer": "time",
+            "explanation": "The passage states such programmes \"may meaningfully help buy coral reefs additional time to survive.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 24,
+            "type": "MCQ",
+            "text": "According to the passage, what makes Persian Gulf corals unusual?",
+            "answer": "B",
+            "explanation": "The passage states they \"host a distinct variety of symbiotic algae, one specifically adapted to tolerate higher temperatures.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. They have no symbiotic algae at all.",
+              "B. They host a distinct, more heat-tolerant variety of symbiotic algae.",
+              "C. They are immune to all forms of environmental stress.",
+              "D. They are found only in laboratory conditions."
+            ]
+          },
+          {
+            "num": 25,
+            "type": "MCQ",
+            "text": "What concern do critics raise about coral adaptation research, according to the passage?",
+            "answer": "A",
+            "explanation": "The passage states critics worry \"the pace of ongoing ocean warming may well be outstripping the rate at which natural coral adaptation, or even accelerated selective breeding programmes, can realistically keep pace.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Ocean warming may be outpacing the rate of coral adaptation.",
+              "B. Coral adaptation has already fully solved reef decline.",
+              "C. Selective breeding programmes are illegal in most countries.",
+              "D. Heat-tolerant corals no longer exist in the wild."
+            ]
+          },
+          {
+            "num": 26,
+            "type": "MCQ",
+            "text": "What is the passage's overall conclusion about coral adaptation research?",
+            "answer": "C",
+            "explanation": "The passage concludes it functions \"as a genuinely valuable complement to, rather than any kind of realistic substitute for,\" reducing emissions.",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. It has made reducing emissions unnecessary.",
+              "B. It has been entirely unsuccessful and should be abandoned.",
+              "C. It is a valuable complement to, not a substitute for, reducing emissions.",
+              "D. It only applies to corals in the Persian Gulf."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "The Ethics of Gene Editing in Human Embryos",
+        "text": "<h1>The Ethics of Gene Editing in Human Embryos</h1>\n<p>In 2018, a Chinese researcher announced the birth of twin girls whose embryonic DNA he had directly edited using a gene-editing technique to disable a specific gene, intending to make the children resistant to HIV infection. The announcement was met with near-universal condemnation from the international scientific community, not primarily because the underlying editing technology itself was regarded as impossible or fundamentally unworkable, but because the vast majority of practising scientists believed such an experiment was being conducted recklessly, prematurely, and without anything resembling adequate prior safety testing or established ethical oversight.</p>\n<p>The core technology involved, a precise gene-editing tool that allows scientists to target and modify specific DNA sequences with considerably greater precision and dramatically lower cost than earlier genetic engineering methods, has legitimately transformed biomedical research since its widespread adoption roughly a decade ago. Editing genes within a fully developed adult patient's cells to treat an existing disease, so-called somatic gene editing, is now already relatively well established and increasingly accepted for a growing number of serious genetic conditions, since any resulting genetic changes affect only that individual patient and are not passed on to their own future children.</p>\n<p>Editing a human embryo's genes, however, raises an entirely distinct and considerably more serious set of ethical questions, since any genetic changes made at this extremely early developmental stage will be present in essentially every cell of the resulting individual's body, including their own reproductive cells, meaning any such edit would be passed down to all of that person's future descendants as well. This category of edit, known as germline editing, therefore affects not only the individual embryo being directly edited but every subsequent generation descended from that eventual person, a form of genetic change with consequences extending well beyond any single patient's own individual medical treatment.</p>\n<p>Advocates for permitting germline editing under carefully controlled and closely regulated circumstances argue that the technology could eventually eliminate devastating inherited genetic diseases entirely from a family line, potentially sparing many future generations from conditions that currently cause tremendous individual and family suffering. For genetic diseases caused by a single, well-understood, clearly identified gene, proponents argue, germline editing could in principle offer a permanent, one-time genetic solution considerably more effective than any treatment currently available to patients who inherit these serious conditions.</p>\n<p>Critics raise several serious and, so far, largely unresolved concerns. Technically, current gene-editing methods, however impressively precise compared with older techniques, still occasionally produce unintended \"off-target\" edits elsewhere in the genome, unwanted changes to genes other than the one specifically targeted for editing, and the full long-term consequences of such unintended edits, particularly effects that might only become apparent decades later or even in subsequent affected generations, remain very largely unknown and are, by their nature, extremely difficult to study safely in advance. Ethically, critics further argue that an embryo obviously cannot itself provide informed consent to a permanent genetic modification that will affect not only their own life but the lives of all their future descendants as well, a concern that applies with particular force to edits made for reasons of enhancement rather than for treating or preventing a clearly serious, well-defined disease.</p>\n<p>This last distinction, between using gene editing to treat or prevent serious disease versus using the same underlying technology to enhance normal, healthy human traits such as height, physical appearance, or general cognitive ability, has emerged as an especially contentious ethical fault line running through this entire debate. While a clear majority of scientists and prominent bioethicists surveyed on this question generally oppose enhancement-focused editing on ethical grounds, they remain considerably more divided over precisely where a clear, workable, and ethically defensible line separating legitimate disease treatment from illegitimate enhancement ought to be drawn in specific, real-world cases.</p>\n<p>In the years since the 2018 controversy, most countries with meaningful biomedical research capacity have moved to explicitly prohibit reproductive germline editing outright, while nonetheless generally continuing to permit editing of embryos for basic laboratory research purposes only, provided any edited embryo is never actually implanted to establish an ongoing pregnancy. Whether this current cautious regulatory consensus proves durable over time, or whether mounting public and scientific pressure eventually pushes toward permitting at least some tightly restricted therapeutic uses of germline editing, remains a genuinely open and actively contested question likely to occupy bioethicists, practising scientists, and national governments alike for a good many years still to come.</p>",
+        "questions": [
+          {
+            "num": 27,
+            "type": "TFNG",
+            "text": "The 2018 announcement was condemned mainly because scientists believed the editing technology itself was impossible.",
+            "answer": "FALSE",
+            "explanation": "The passage states condemnation was \"not primarily because the underlying editing technology itself was regarded as impossible or fundamentally unworkable.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 28,
+            "type": "TFNG",
+            "text": "Somatic gene editing changes are passed on to a patient's future children.",
+            "answer": "FALSE",
+            "explanation": "The passage states somatic edits affect \"only that individual patient and are not passed on to their own future children.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 29,
+            "type": "TFNG",
+            "text": "Germline edits affect only the specific embryo being edited and no future generations.",
+            "answer": "FALSE",
+            "explanation": "The passage states germline editing \"affects not only the individual embryo being directly edited but every subsequent generation descended from that eventual person.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 30,
+            "type": "TFNG",
+            "text": "Current gene-editing methods can still occasionally produce unintended edits elsewhere in the genome.",
+            "answer": "TRUE",
+            "explanation": "The passage states current methods still occasionally produce unintended off-target edits, \"unwanted changes to genes other than the one specifically targeted for editing.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 31,
+            "type": "TFNG",
+            "text": "An embryo can provide informed consent to a permanent genetic modification.",
+            "answer": "FALSE",
+            "explanation": "The passage states \"an embryo obviously cannot itself provide informed consent to a permanent genetic modification.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 32,
+            "type": "TFNG",
+            "text": "Scientists and bioethicists are in complete agreement about where to draw the line between disease treatment and enhancement.",
+            "answer": "FALSE",
+            "explanation": "The passage states they \"remain considerably more divided over precisely where a clear, workable, and ethically defensible line separating legitimate disease treatment from illegitimate enhancement ought to be drawn.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 33,
+            "type": "TFNG",
+            "text": "Most countries with meaningful biomedical research capacity currently permit reproductive germline editing without restriction.",
+            "answer": "FALSE",
+            "explanation": "The passage states most such countries \"have moved to explicitly prohibit reproductive germline editing outright.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 34,
+            "type": "FILL",
+            "text": "The 2018 researcher intended to make the children resistant to _________ infection.",
+            "answer": "HIV",
+            "explanation": "The passage states the aim was \"to make the children resistant to HIV infection.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 35,
+            "type": "FILL",
+            "text": "Editing a fully developed adult patient's cells to treat disease is known as _________ gene editing.",
+            "answer": "somatic",
+            "explanation": "The passage refers to \"so-called somatic gene editing.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 36,
+            "type": "FILL",
+            "text": "Editing that affects an embryo's reproductive cells and all future descendants is known as _________ editing.",
+            "answer": "germline",
+            "explanation": "The passage states \"This category of edit, known as germline editing, therefore affects not only the individual embryo being directly edited but every subsequent generation descended from that eventual person.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 37,
+            "type": "FILL",
+            "text": "Most countries continue to permit editing of embryos for basic laboratory _________ purposes only.",
+            "answer": "research",
+            "explanation": "The passage states countries continue permitting editing of embryos for research purposes only, \"provided any edited embryo is never actually implanted to establish an ongoing pregnancy.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 38,
+            "type": "MCQ",
+            "text": "According to the passage, why do advocates support germline editing under controlled circumstances?",
+            "answer": "A",
+            "explanation": "The passage states advocates argue it \"could eventually eliminate devastating inherited genetic diseases entirely from a family line.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. It could eliminate devastating inherited genetic diseases from a family line permanently.",
+              "B. It has no technical risks whatsoever.",
+              "C. It is currently legal in every country.",
+              "D. It requires no embryo to ever be edited."
+            ]
+          },
+          {
+            "num": 39,
+            "type": "MCQ",
+            "text": "What is a key ethical concern critics raise about germline editing, according to the passage?",
+            "answer": "C",
+            "explanation": "The passage states critics argue \"an embryo obviously cannot itself provide informed consent to a permanent genetic modification.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. It is too expensive for most hospitals to perform.",
+              "B. It has never been attempted in any country.",
+              "C. An embryo cannot provide informed consent to a permanent modification affecting future generations.",
+              "D. It only affects somatic cells, not reproductive cells."
+            ]
+          },
+          {
+            "num": 40,
+            "type": "MCQ",
+            "text": "What does the passage suggest about the current regulatory situation for germline editing?",
+            "answer": "B",
+            "explanation": "The passage states most countries \"have moved to explicitly prohibit reproductive germline editing outright,\" while permitting only non-implanted research edits, and whether this consensus persists \"remains a genuinely open and actively contested question.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. It has been permanently and universally resolved in favour of permitting the practice.",
+              "B. Most countries prohibit reproductive use while the long-term regulatory consensus remains open to future change.",
+              "C. No country currently allows any form of embryo research whatsoever.",
+              "D. All countries have identical regulations on this issue."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "writing": {
+    "task1": {
+      "prompt": "The pie chart below shows the breakdown of Country Y's municipal waste by disposal method in 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "image": "<img src=\"images/writing_unique9_p1.png\" class=\"max-w-full h-auto mx-auto rounded-xl shadow-lg border border-white/10 bg-white\" alt=\"Writing Task 1 Chart\" />",
+      "modelAnswer": "The pie chart shows how Country Y's municipal waste was disposed of across four different methods in 2023.\n\nOverall, landfill was by far the most common disposal method, accounting for nearly half of all waste, while composting represented the smallest proportion of the four methods shown.\n\nLandfill accounted for 45% of total waste disposal, almost double the proportion sent for recycling, which stood at 25%. Together, these two methods accounted for the significant majority of all waste generated in the country, some 70% of the total between them.\n\nIncineration accounted for a further 20% of waste disposal, roughly four-fifths of the proportion recycled, while composting made up the smallest share at just 10%, less than a quarter of the proportion sent to landfill.\n\nIn summary, landfill was clearly the dominant waste disposal method in Country Y in 2023, considerably ahead of recycling, incineration, and composting, which together accounted for just over half of total waste disposal between them."
+    },
+    "task2": {
+      "prompt": "Some people think that unpaid community service should be a compulsory part of high school education. To what extent do you agree or disagree?",
+      "modelAnswer": "Whether unpaid community service should be a mandatory component of high school education is a question that provokes strong and often conflicting opinions. In my view, I largely agree that some form of compulsory community service offers genuine educational value, although I believe certain conditions must be met for the policy to succeed.\n\nThose in favour of compulsory community service argue that it exposes teenagers to perspectives and life circumstances considerably different from their own, potentially fostering greater empathy and a stronger sense of civic responsibility than classroom instruction alone can realistically provide. Direct, hands-on experience volunteering at a homeless shelter, an elderly care facility, or an environmental conservation project, for instance, can teach practical lessons about community needs and social responsibility that a purely theoretical civics lesson delivered in a traditional classroom setting may struggle to convey with anything like the same lasting impact.\n\nHowever, making such service strictly compulsory does raise legitimate concerns worth taking seriously. Critics reasonably point out that genuinely meaningful volunteering typically stems from authentic personal motivation, and that forcing reluctant, disengaged students to participate purely to satisfy a graduation requirement risks producing exactly the kind of resentful, minimal-effort participation that undermines the very values the programme is ostensibly meant to instil in the first place. There is also a legitimate practical concern regarding students from lower-income families, who may already be working part-time jobs specifically to help support their own households financially, and for whom an additional mandatory unpaid time commitment could impose genuine and unfair additional hardship.\n\nOn balance, I believe compulsory community service can be genuinely valuable, provided schools offer meaningful choice over which specific type of service a student ultimately performs, and provided reasonable accommodations are made for students already facing significant financial or family pressures on their available time outside school. Implemented thoughtfully and flexibly along these lines, rather than as a rigid, one-size-fits-all requirement applied identically to every student, mandatory community service could meaningfully broaden students' understanding of their communities without becoming an unfair or ultimately counterproductive burden for those students least able to comfortably absorb it."
+    }
+  }
 }
 };
 
