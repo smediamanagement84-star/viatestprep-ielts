@@ -1330,7 +1330,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "B",
             "explanation": "The passage states \"in the vast majority of species the mother dies shortly after her eggs hatch.\"",
             "location": "Passage 1",
-            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "instruction": "Question 12<br/>Choose the correct letter, A, B, C or D.",
             "options": [
               "A. Mothers teach their young to hunt before dying.",
               "B. Mothers typically die shortly after their eggs hatch.",
@@ -1340,18 +1340,13 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 13,
-            "type": "MCQ",
-            "text": "What do the findings about octopus intelligence suggest, according to the passage?",
-            "answer": "C",
-            "explanation": "The passage states \"sophisticated problem-solving does not require a single, centralised seat of intelligence.\"",
+            "type": "MATCHING_INFO",
+            "text": "an example of an octopus squeezing its body through a gap barely wider than its own eyeball",
+            "answer": "E",
+            "explanation": "Paragraph E describes captive octopuses \"squeezing their soft, boneless bodies through gaps barely wider than their eyeballs to escape enclosures.\"",
             "location": "Passage 1",
-            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
-            "options": [
-              "A. Centralised brains are the only route to sophisticated behaviour.",
-              "B. Extended social learning is essential for intelligence.",
-              "C. Sophisticated problem-solving does not require a centralised seat of intelligence.",
-              "D. Octopuses evolved via the same route as primates."
-            ]
+            "instruction": "Question 13<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-G.",
+            "options": ["A", "B", "C", "D", "E", "F", "G"]
           }
         ]
       },
@@ -1431,21 +1426,23 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 19,
-            "type": "FILL",
-            "text": "The fashion industry's carbon emissions are said to be comparable to the combined emissions of international aviation and _________.",
-            "answer": "shipping",
-            "explanation": "The passage states emissions are \"comparable to the combined emissions of international aviation and shipping.\"",
+            "type": "ENDINGS",
+            "text": "Low prices in fast fashion are achieved primarily by minimising",
+            "answer": "A",
+            "explanation": "The passage states low prices are achieved \"primarily through minimising labour costs in the countries where the clothes are actually manufactured.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 19-20<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F.<br/><br/><b>List of Endings</b><br/>A.&nbsp; labour costs in the countries where the clothes are manufactured<br/>B.&nbsp; in landfill or incinerated rather than recycled<br/>C.&nbsp; the price of raw cotton on international markets<br/>D.&nbsp; government subsidies for textile exporters<br/>E.&nbsp; the cost of retail packaging and store displays<br/>F.&nbsp; international shipping and customs fees",
+            "options": ["A", "B", "C", "D", "E", "F"]
           },
           {
             "num": 20,
-            "type": "FILL",
-            "text": "Fast fashion garments are typically made from cheap _________ fibres.",
-            "answer": "synthetic",
-            "explanation": "The passage states garments are \"typically made from cheap synthetic fibres.\"",
+            "type": "ENDINGS",
+            "text": "The vast majority of discarded fast fashion clothing ends up",
+            "answer": "B",
+            "explanation": "The passage states \"the vast majority of discarded clothing ending up in landfill or incinerated rather than recycled.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 19-20<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F.<br/><br/><b>List of Endings</b><br/>A.&nbsp; labour costs in the countries where the clothes are manufactured<br/>B.&nbsp; in landfill or incinerated rather than recycled<br/>C.&nbsp; the price of raw cotton on international markets<br/>D.&nbsp; government subsidies for textile exporters<br/>E.&nbsp; the cost of retail packaging and store displays<br/>F.&nbsp; international shipping and customs fees",
+            "options": ["A", "B", "C", "D", "E", "F"]
           },
           {
             "num": 21,
@@ -1454,7 +1451,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "greenwashing",
             "explanation": "The passage states critics describe such measures as \"greenwashing.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 21-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 22,
@@ -1463,7 +1460,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "convenient",
             "explanation": "The passage states apps \"have made buying and reselling used clothing far more convenient.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 21-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 23,
@@ -1472,21 +1469,21 @@ const UNIQUE_TEST_DATA = {
             "answer": "slow",
             "explanation": "The passage refers to shoppers seeking out \"slow fashion\" brands.",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 21-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 24,
             "type": "MCQ",
-            "text": "According to the passage, how is low pricing in fast fashion primarily achieved?",
-            "answer": "C",
-            "explanation": "The passage states low prices are achieved \"primarily through minimising labour costs in the countries where the clothes are actually manufactured.\"",
+            "text": "According to the passage, what is the fashion industry's overall carbon footprint said to be comparable to?",
+            "answer": "B",
+            "explanation": "The passage states emissions are \"comparable to the combined emissions of international aviation and shipping.\"",
             "location": "Passage 2",
             "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
             "options": [
-              "A. By using only recycled materials.",
-              "B. By reducing the number of new designs released.",
-              "C. By minimising labour costs in manufacturing countries.",
-              "D. By eliminating international shipping costs."
+              "A. The combined emissions of the construction industry alone.",
+              "B. The combined emissions of international aviation and shipping.",
+              "C. The emissions produced by household heating worldwide.",
+              "D. A negligible share of global emissions overall."
             ]
           },
           {
@@ -1630,7 +1627,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "twenty",
             "explanation": "The passage states naps \"sometimes as brief as twenty minutes\" show measurable improvements.",
             "location": "Passage 3",
-            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 34-35<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 35,
@@ -1639,25 +1636,27 @@ const UNIQUE_TEST_DATA = {
             "answer": "controls",
             "explanation": "The passage states this is permitted \"provided at least one pilot remains awake and at the controls at all times.\"",
             "location": "Passage 3",
-            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 34-35<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 36,
-            "type": "FILL",
-            "text": "Aviation regulators calculate mandatory rest periods according to the time of day a flight _________.",
-            "answer": "departs",
-            "explanation": "The passage states rest periods are \"calculated according to the time of day a flight departs.\"",
+            "type": "MATCHING_FEATURES",
+            "text": "Mandatory rest periods are calculated according to the time of day a shift begins.",
+            "answer": "B",
+            "explanation": "The passage states aviation regulators calculate rest periods \"according to the time of day a flight departs,\" describing pilots.",
             "location": "Passage 3",
-            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 36-37<br/>Look at the following statements and the list of professions below.<br/>Match each statement with the correct profession, A or B.<br/><br/><b>List of Professions</b><br/>A.&nbsp; Junior doctors<br/>B.&nbsp; Airline pilots",
+            "options": ["A", "B"]
           },
           {
             "num": 37,
-            "type": "FILL",
-            "text": "Some countries cap continuous hospital duty at somewhere between sixteen and _________ hours.",
-            "answer": "twenty-four",
-            "explanation": "The passage states duty is capped \"at somewhere between sixteen and twenty-four hours.\"",
+            "type": "MATCHING_FEATURES",
+            "text": "Continuous duty is capped at somewhere between sixteen and twenty-four hours.",
+            "answer": "A",
+            "explanation": "The passage states \"several countries have introduced binding limits on hospital shift lengths for junior doctors, typically capping continuous duty at somewhere between sixteen and twenty-four hours.\"",
             "location": "Passage 3",
-            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 36-37<br/>Look at the following statements and the list of professions below.<br/>Match each statement with the correct profession, A or B.<br/><br/><b>List of Professions</b><br/>A.&nbsp; Junior doctors<br/>B.&nbsp; Airline pilots",
+            "options": ["A", "B"]
           },
           {
             "num": 38,

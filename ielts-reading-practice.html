@@ -384,11 +384,7 @@
           answerHtml = `<div class="tfng-row">${q.options.map(opt => `
             <button onclick="selectOption(${q.num}, '${opt}')" class="tfng-btn ${selected === opt ? 'selected' : ''}">${opt}</button>
           `).join('')}</div>`;
-        } else if (q.type === 'MCQ' || q.type === 'ENDINGS') {
-          // ENDINGS (Matching Sentence Endings) is rendered identically to
-          // MCQ - a stem followed by lettered options - since the only
-          // difference is that the options are sentence-completion fragments
-          // rather than full standalone statements.
+        } else if (q.type === 'MCQ') {
           const selected = userAnswers[q.num] || '';
           answerHtml = `<div class="mcq-options">${q.options.map(opt => {
             const dotIdx = opt.indexOf('.');
@@ -404,14 +400,16 @@
         } else if (q.type === 'FILL') {
           const val = userAnswers[q.num] || '';
           answerHtml = `<input type="text" oninput="handleInput(${q.num}, this.value)" class="input-fill" value="${escapeHtml(val)}" placeholder="Type your answer here..." />`;
-        } else if (q.type === 'HEADING' || q.type === 'MATCHING_INFO' || q.type === 'MATCHING_FEATURES') {
-          // These three share one bare-letter-button UI: Matching Headings
+        } else if (q.type === 'HEADING' || q.type === 'MATCHING_INFO' || q.type === 'MATCHING_FEATURES' || q.type === 'ENDINGS') {
+          // These four share one bare-letter-button UI: Matching Headings
           // uses roman numerals (i, ii, iii...), Matching Information uses
           // paragraph letters (A-G), Matching Features uses a short fixed
-          // list of feature letters (A-E) - in every case the full option
-          // list (headings / features) is shown once via the shared
-          // instruction box (see lastInstruction dedup above), and each
-          // question here just needs its own bare answer buttons.
+          // list of feature letters (A-E), and Matching Sentence Endings
+          // uses letters for a bank of possible endings (A-F) - in every
+          // case the full option list (headings / features / endings) is
+          // shown once via the shared instruction box (see lastInstruction
+          // dedup above), and each question here just needs its own bare
+          // answer buttons, not the full text repeated per question.
           const selected = userAnswers[q.num] || '';
           answerHtml = `<div class="tfng-row">${q.options.map(opt => `
             <button onclick="selectOption(${q.num}, '${opt}')" class="tfng-btn ${selected === opt ? 'selected' : ''}">${opt}</button>
