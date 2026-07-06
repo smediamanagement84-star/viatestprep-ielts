@@ -1143,6 +1143,598 @@ const UNIQUE_TEST_DATA = {
       "modelAnswer": "The question of whether university education should be free or fee-paying divides opinion across many countries. Some argue that free tuition guarantees equal access to higher education regardless of family income, while others maintain that charging fees is a fairer and more sustainable way to fund universities. This essay will examine both perspectives before presenting my own view.\n\nThose in favour of free university education argue that it removes financial barriers that might otherwise prevent talented students from disadvantaged backgrounds from pursuing a degree. When tuition is free, a student's decision to attend university depends on academic ability and personal motivation rather than on whether their family can afford the cost, which in turn allows a country to make fuller use of its population's talent. Countries that have adopted this model, funding universities largely through general taxation, often point to a more socially mobile society as a key benefit.\n\nOn the other hand, those who support tuition fees contend that university education, unlike primary or secondary schooling, disproportionately benefits the individual graduate through higher lifetime earnings, and that it is therefore reasonable to ask students, or the graduates they later become, to contribute to its cost. Fees also generate direct revenue that universities can reinvest in staff, facilities, and research, potentially raising the quality of education on offer, particularly in countries where general tax revenue is already stretched across competing public priorities such as healthcare.\n\nIn my view, a moderate compromise best balances these concerns. Fully free university education without any contribution from graduates places a heavy burden on general taxpayers, many of whom never attend university themselves, while very high fees risk deterring capable students from low-income backgrounds. Income-contingent loan systems, where graduates repay a percentage of their income only once they are earning above a certain threshold, appear to combine reasonable access with a fair, ability-linked contribution towards cost."
     }
   }
+},
+"u3": {
+  "title": "ViaTestPrep Original Practice Test 3",
+  "book": "Unique Test",
+  "reading": {
+    "passages": [
+      {
+        "title": "The Octopus: Intelligence Without a Central Brain",
+        "text": "<h1>The Octopus: Intelligence Without a Central Brain</h1>\n<p><b>A</b>&nbsp; Among the animal kingdom's most puzzling problem-solvers is a creature with no bones, a lifespan often shorter than two years, and a nervous system that barely resembles that of any other intelligent species. The octopus can navigate mazes, recognise individual human faces, unscrew jar lids from the inside, and appears capable of a kind of observational learning, yet it achieves all this without anything resembling the centralised, densely folded brain found in primates, dolphins, or even crows. Understanding how is forcing biologists to reconsider what intelligence actually requires, and whether a single, centralised brain is really a prerequisite for the kind of flexible problem-solving once assumed to be the preserve of vertebrates alone.</p>\n<p><b>B</b>&nbsp; The most striking anomaly lies in the distribution of the octopus's neurons. Roughly two-thirds of its five hundred million neurons are not located in the central brain at all, but distributed along the length of its eight arms, each of which contains a substantial cluster of nerve cells capable of processing information with only loose oversight from the centre. In effect, an octopus's arms behave less like the limbs of a puppet controlled entirely from above and more like semi-autonomous agents that can sense, decide, and act with a considerable degree of independence.</p>\n<p><b>C</b>&nbsp; This decentralised arrangement has been demonstrated in striking experiments. A severed octopus arm, disconnected from the central brain entirely, will still recoil from a painful stimulus and can even continue reaching toward a food reward for some time, behaviour that would be impossible for a severed human limb, which has no local capacity for decision-making once cut off from the spinal cord. Researchers studying intact animals have found that arms sometimes appear to explore a crevice or manipulate an object seemingly independently of what the rest of the animal, including its eyes, is attending to at that moment.</p>\n<p><b>D</b>&nbsp; The octopus's skin adds a further layer of decentralised processing. Specialised pigment cells called chromatophores allow the animal to change colour and pattern within a fraction of a second, blending almost seamlessly into surrounding rock, sand, or coral. Remarkably, the skin itself contains light-sensitive proteins similar to those found in eyes, leading some researchers to suggest that an octopus may be able to detect changes in ambient light directly through its skin, quite apart from the visual information gathered by its actual eyes.</p>\n<p><b>E</b>&nbsp; This distributed anatomy has not prevented octopuses from displaying behaviour that looks unmistakably intelligent by conventional standards. Captive individuals have repeatedly been observed unscrewing the lids of jars to reach food sealed inside, squeezing their soft, boneless bodies through gaps barely wider than their eyeballs to escape enclosures, and in a few well-documented aquarium cases, appearing to recognise and behave differently toward specific human keepers who had treated them well or poorly in the past, at times even directing jets of water at keepers they seemed to particularly dislike.</p>\n<p><b>F</b>&nbsp; What makes this intelligence particularly puzzling is the octopus's short and solitary life history. Most species live for only one or two years, and in the vast majority of species the mother dies shortly after her eggs hatch, meaning young octopuses never encounter a parent from whom they might learn survival skills. Other famously intelligent animals, chimpanzees, elephants, and crows among them, tend to live for decades in social groups, acquiring much of their behavioural sophistication gradually through observation of relatives. An octopus, by contrast, must apparently arrive at hatching already equipped with most of the cognitive tools it will ever need, hatching directly into open water with no parent nearby to guide it through the dangers of its first weeks of life.</p>\n<p><b>G</b>&nbsp; Taken together, these findings suggest that sophisticated problem-solving does not require a single, centralised seat of intelligence, nor does it require the extended social learning that produces intelligence in many vertebrates. The octopus appears to have arrived at cognitive sophistication by an entirely different evolutionary route from the one that produced primate or corvid intelligence, a reminder that the underlying biological architecture of a mind can vary far more radically than the impressive behaviour it ultimately produces, and that nature appears to have discovered more than one workable blueprint for producing a capable mind.</p>",
+        "questions": [
+          {
+            "num": 1,
+            "type": "HEADING",
+            "text": "Paragraph A",
+            "answer": "iv",
+            "explanation": "Paragraph A frames the octopus as a creature that is \"forcing biologists to reconsider what intelligence actually requires.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Behaviour that would be impossible without genuine problem-solving ability<br/>ii.&nbsp; A skin that may sense light independently of the eyes<br/>iii.&nbsp; Why intelligence without long life or social learning is puzzling<br/>iv.&nbsp; A creature that undermines assumptions about what intelligence requires<br/>v.&nbsp; Neurons distributed far beyond the central brain<br/>vi.&nbsp; Evidence that isolated limbs can act without central instruction<br/>vii.&nbsp; A different evolutionary path to a capable mind<br/>viii.&nbsp; Comparing octopus intelligence with that of dolphins<br/>ix.&nbsp; Efforts to breed longer-lived octopuses in captivity",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 2,
+            "type": "HEADING",
+            "text": "Paragraph B",
+            "answer": "v",
+            "explanation": "Paragraph B explains that \"two-thirds of its five hundred million neurons are not located in the central brain at all, but distributed along the length of its eight arms.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Behaviour that would be impossible without genuine problem-solving ability<br/>ii.&nbsp; A skin that may sense light independently of the eyes<br/>iii.&nbsp; Why intelligence without long life or social learning is puzzling<br/>iv.&nbsp; A creature that undermines assumptions about what intelligence requires<br/>v.&nbsp; Neurons distributed far beyond the central brain<br/>vi.&nbsp; Evidence that isolated limbs can act without central instruction<br/>vii.&nbsp; A different evolutionary path to a capable mind<br/>viii.&nbsp; Comparing octopus intelligence with that of dolphins<br/>ix.&nbsp; Efforts to breed longer-lived octopuses in captivity",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 3,
+            "type": "HEADING",
+            "text": "Paragraph C",
+            "answer": "vi",
+            "explanation": "Paragraph C describes how \"A severed octopus arm, disconnected from the central brain entirely, will still recoil from a painful stimulus.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Behaviour that would be impossible without genuine problem-solving ability<br/>ii.&nbsp; A skin that may sense light independently of the eyes<br/>iii.&nbsp; Why intelligence without long life or social learning is puzzling<br/>iv.&nbsp; A creature that undermines assumptions about what intelligence requires<br/>v.&nbsp; Neurons distributed far beyond the central brain<br/>vi.&nbsp; Evidence that isolated limbs can act without central instruction<br/>vii.&nbsp; A different evolutionary path to a capable mind<br/>viii.&nbsp; Comparing octopus intelligence with that of dolphins<br/>ix.&nbsp; Efforts to breed longer-lived octopuses in captivity",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 4,
+            "type": "HEADING",
+            "text": "Paragraph D",
+            "answer": "ii",
+            "explanation": "Paragraph D suggests \"an octopus may be able to detect changes in ambient light directly through its skin, quite apart from the visual information gathered by its actual eyes.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Behaviour that would be impossible without genuine problem-solving ability<br/>ii.&nbsp; A skin that may sense light independently of the eyes<br/>iii.&nbsp; Why intelligence without long life or social learning is puzzling<br/>iv.&nbsp; A creature that undermines assumptions about what intelligence requires<br/>v.&nbsp; Neurons distributed far beyond the central brain<br/>vi.&nbsp; Evidence that isolated limbs can act without central instruction<br/>vii.&nbsp; A different evolutionary path to a capable mind<br/>viii.&nbsp; Comparing octopus intelligence with that of dolphins<br/>ix.&nbsp; Efforts to breed longer-lived octopuses in captivity",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 5,
+            "type": "HEADING",
+            "text": "Paragraph E",
+            "answer": "i",
+            "explanation": "Paragraph E lists behaviours such as \"unscrewing the lids of jars to reach food sealed inside\" as evidence of genuine problem-solving.",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Behaviour that would be impossible without genuine problem-solving ability<br/>ii.&nbsp; A skin that may sense light independently of the eyes<br/>iii.&nbsp; Why intelligence without long life or social learning is puzzling<br/>iv.&nbsp; A creature that undermines assumptions about what intelligence requires<br/>v.&nbsp; Neurons distributed far beyond the central brain<br/>vi.&nbsp; Evidence that isolated limbs can act without central instruction<br/>vii.&nbsp; A different evolutionary path to a capable mind<br/>viii.&nbsp; Comparing octopus intelligence with that of dolphins<br/>ix.&nbsp; Efforts to breed longer-lived octopuses in captivity",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 6,
+            "type": "HEADING",
+            "text": "Paragraph F",
+            "answer": "iii",
+            "explanation": "Paragraph F notes that \"young octopuses never encounter a parent from whom they might learn survival skills.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Behaviour that would be impossible without genuine problem-solving ability<br/>ii.&nbsp; A skin that may sense light independently of the eyes<br/>iii.&nbsp; Why intelligence without long life or social learning is puzzling<br/>iv.&nbsp; A creature that undermines assumptions about what intelligence requires<br/>v.&nbsp; Neurons distributed far beyond the central brain<br/>vi.&nbsp; Evidence that isolated limbs can act without central instruction<br/>vii.&nbsp; A different evolutionary path to a capable mind<br/>viii.&nbsp; Comparing octopus intelligence with that of dolphins<br/>ix.&nbsp; Efforts to breed longer-lived octopuses in captivity",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 7,
+            "type": "HEADING",
+            "text": "Paragraph G",
+            "answer": "vii",
+            "explanation": "Paragraph G concludes the octopus \"appears to have arrived at cognitive sophistication by an entirely different evolutionary route.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Behaviour that would be impossible without genuine problem-solving ability<br/>ii.&nbsp; A skin that may sense light independently of the eyes<br/>iii.&nbsp; Why intelligence without long life or social learning is puzzling<br/>iv.&nbsp; A creature that undermines assumptions about what intelligence requires<br/>v.&nbsp; Neurons distributed far beyond the central brain<br/>vi.&nbsp; Evidence that isolated limbs can act without central instruction<br/>vii.&nbsp; A different evolutionary path to a capable mind<br/>viii.&nbsp; Comparing octopus intelligence with that of dolphins<br/>ix.&nbsp; Efforts to breed longer-lived octopuses in captivity",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 8,
+            "type": "TFNG",
+            "text": "A severed octopus arm is capable of reacting to a painful stimulus without any input from the central brain.",
+            "answer": "TRUE",
+            "explanation": "The passage states: \"A severed octopus arm, disconnected from the central brain entirely, will still recoil from a painful stimulus.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 8-9<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 9,
+            "type": "TFNG",
+            "text": "Most octopus species live for more than ten years.",
+            "answer": "FALSE",
+            "explanation": "The passage states: \"Most species live for only one or two years.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 8-9<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 10,
+            "type": "FILL",
+            "text": "Roughly two-thirds of an octopus's neurons are distributed along its eight _________.",
+            "answer": "arms",
+            "explanation": "The passage states neurons are \"distributed along the length of its eight arms.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 10-11<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 11,
+            "type": "FILL",
+            "text": "Chromatophores allow an octopus to change colour and pattern within a fraction of a _________.",
+            "answer": "second",
+            "explanation": "The passage states this happens \"within a fraction of a second.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 10-11<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 12,
+            "type": "MCQ",
+            "text": "According to the passage, what is unusual about the way octopus mothers care for their young?",
+            "answer": "B",
+            "explanation": "The passage states \"in the vast majority of species the mother dies shortly after her eggs hatch.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Mothers teach their young to hunt before dying.",
+              "B. Mothers typically die shortly after their eggs hatch.",
+              "C. Mothers live for several decades alongside their young.",
+              "D. Mothers raise their young in social groups."
+            ]
+          },
+          {
+            "num": 13,
+            "type": "MCQ",
+            "text": "What do the findings about octopus intelligence suggest, according to the passage?",
+            "answer": "C",
+            "explanation": "The passage states \"sophisticated problem-solving does not require a single, centralised seat of intelligence.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Centralised brains are the only route to sophisticated behaviour.",
+              "B. Extended social learning is essential for intelligence.",
+              "C. Sophisticated problem-solving does not require a centralised seat of intelligence.",
+              "D. Octopuses evolved via the same route as primates."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "The Economics of Fast Fashion",
+        "text": "<h1>The Economics of Fast Fashion</h1>\n<p>Over the past two decades, the time it takes for a clothing trend to travel from a fashion show runway to a shop rail has collapsed from months to, in some cases, mere days. This acceleration, commonly referred to as fast fashion, has transformed clothing from a durable good replaced occasionally into something closer to a disposable product, replaced every few wears. The business model behind this shift has proven enormously profitable, but it has also drawn sustained criticism from labour rights groups, environmental campaigners, and increasingly, consumers themselves, many of whom now expect the brands they buy from to account publicly for how and where their clothes are made.</p>\n<p>The economic logic of fast fashion rests on speed and volume rather than durability or exclusivity. Where traditional clothing retailers might release two or four collections a year, some fast fashion companies now introduce new designs on a weekly or even daily basis, deliberately encouraging shoppers to check back frequently and purchase items before a particular style disappears from shelves. Prices are kept extremely low, often lower in real terms than equivalent garments cost several decades ago, a feat achieved partly through automation and bulk purchasing, but primarily through minimising labour costs in the countries where the clothes are actually manufactured.</p>\n<p>This reliance on low-cost labour has placed the industry under sustained scrutiny. Investigations by journalists and labour organisations have repeatedly documented garment workers, overwhelmingly women, in countries such as Bangladesh, Cambodia, and Vietnam, working long shifts for wages that fall well below a level generally considered sufficient to cover basic living costs in those countries. The collapse of the Rana Plaza garment factory building in Bangladesh in 2013, which killed over eleven hundred workers, brought international attention to unsafe working conditions throughout the supply chain and prompted some retailers to sign binding safety agreements, though critics argue that enforcement has remained inconsistent across the industry as a whole.</p>\n<p>The environmental toll of rapid clothing turnover is similarly significant. The fashion industry as a whole is estimated to be responsible for a meaningful share of global carbon emissions, comparable to the combined emissions of international aviation and shipping, driven largely by energy-intensive textile production and the vast distances finished garments travel from factory to retailer. Because fast fashion garments are typically made from cheap synthetic fibres, produced to be worn only a handful of times before being discarded, the amount of textile waste generated annually has grown dramatically, with the vast majority of discarded clothing ending up in landfill or incinerated rather than recycled, since separating blended synthetic fabrics for genuine recycling remains technically difficult and expensive.</p>\n<p>Some companies have responded to this criticism with sustainability initiatives, including garment take-back schemes, clothing lines made partly from recycled materials, and public commitments to reduce water usage in production. Critics, however, frequently describe such measures as a form of \"greenwashing,\" pointing out that a company's overall environmental footprint continues to grow as long as the total volume of clothing it produces and sells keeps increasing year on year, regardless of what percentage of any individual garment is technically recycled.</p>\n<p>Consumer attitudes appear to be shifting gradually, if unevenly. Second-hand clothing marketplaces, once associated mainly with charity shops, have grown rapidly as smartphone apps have made buying and reselling used clothing far more convenient, and a small but growing segment of shoppers now actively seeks out \"slow fashion\" brands that emphasise durability and ethical manufacturing over rock-bottom prices. Whether this shift represents a genuine change in mainstream purchasing habits or remains confined to a relatively affluent, environmentally conscious minority is, at present, difficult to determine with confidence, not least because overall global clothing production has continued rising even as second-hand sales have grown.</p>\n<p>Ultimately, the fast fashion model exposes a tension between consumer demand for novelty and affordability on one hand, and the social and environmental costs of that demand on the other. Resolving this tension, whether through stronger regulation, changing consumer habits, or genuine innovation in sustainable materials and manufacturing, remains one of the more pressing unresolved questions facing the global clothing industry today.</p>",
+        "questions": [
+          {
+            "num": 14,
+            "type": "TFNG",
+            "text": "Some fast fashion companies introduce new designs as often as once a day.",
+            "answer": "TRUE",
+            "explanation": "The passage states some companies \"introduce new designs on a weekly or even daily basis.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 15,
+            "type": "TFNG",
+            "text": "Fast fashion clothing is generally more expensive in real terms than clothing was several decades ago.",
+            "answer": "FALSE",
+            "explanation": "The passage states prices are \"often lower in real terms than equivalent garments cost several decades ago.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 16,
+            "type": "TFNG",
+            "text": "The Rana Plaza factory collapse occurred in Vietnam.",
+            "answer": "FALSE",
+            "explanation": "The passage states the Rana Plaza collapse occurred \"in Bangladesh in 2013.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 17,
+            "type": "TFNG",
+            "text": "All fast fashion retailers have consistently enforced the safety agreements signed after the Rana Plaza collapse.",
+            "answer": "FALSE",
+            "explanation": "The passage states \"critics argue that enforcement has remained inconsistent across the industry as a whole.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 18,
+            "type": "TFNG",
+            "text": "Most discarded fast fashion clothing is currently recycled into new garments.",
+            "answer": "FALSE",
+            "explanation": "The passage states \"the vast majority of discarded clothing ending up in landfill or incinerated rather than recycled.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 19,
+            "type": "FILL",
+            "text": "The fashion industry's carbon emissions are said to be comparable to the combined emissions of international aviation and _________.",
+            "answer": "shipping",
+            "explanation": "The passage states emissions are \"comparable to the combined emissions of international aviation and shipping.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 20,
+            "type": "FILL",
+            "text": "Fast fashion garments are typically made from cheap _________ fibres.",
+            "answer": "synthetic",
+            "explanation": "The passage states garments are \"typically made from cheap synthetic fibres.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 21,
+            "type": "FILL",
+            "text": "Critics describe some corporate sustainability measures as a form of _________.",
+            "answer": "greenwashing",
+            "explanation": "The passage states critics describe such measures as \"greenwashing.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 22,
+            "type": "FILL",
+            "text": "Smartphone apps have made buying and reselling used clothing far more _________.",
+            "answer": "convenient",
+            "explanation": "The passage states apps \"have made buying and reselling used clothing far more convenient.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 23,
+            "type": "FILL",
+            "text": "A growing segment of shoppers now seeks out brands that emphasise durability and ethical manufacturing, sometimes described as _________ fashion.",
+            "answer": "slow",
+            "explanation": "The passage refers to shoppers seeking out \"slow fashion\" brands.",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 24,
+            "type": "MCQ",
+            "text": "According to the passage, how is low pricing in fast fashion primarily achieved?",
+            "answer": "C",
+            "explanation": "The passage states low prices are achieved \"primarily through minimising labour costs in the countries where the clothes are actually manufactured.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. By using only recycled materials.",
+              "B. By reducing the number of new designs released.",
+              "C. By minimising labour costs in manufacturing countries.",
+              "D. By eliminating international shipping costs."
+            ]
+          },
+          {
+            "num": 25,
+            "type": "MCQ",
+            "text": "What do critics argue about corporate sustainability initiatives in fast fashion?",
+            "answer": "B",
+            "explanation": "The passage states critics argue a company's \"overall environmental footprint continues to grow as long as the total volume of clothing it produces and sells keeps increasing.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. They have completely solved the industry's environmental problems.",
+              "B. Their impact is limited if overall production volume keeps rising.",
+              "C. They are required by international law.",
+              "D. They have eliminated the use of synthetic fibres."
+            ]
+          },
+          {
+            "num": 26,
+            "type": "MCQ",
+            "text": "What does the passage suggest about the future of consumer attitudes toward fast fashion?",
+            "answer": "D",
+            "explanation": "The passage states whether the shift is genuine or confined to a minority \"is, at present, difficult to determine with confidence.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Fast fashion will be completely replaced by second-hand clothing within a decade.",
+              "B. Consumer attitudes have already fully shifted toward sustainability.",
+              "C. Second-hand marketplaces will soon be banned.",
+              "D. It is currently difficult to determine whether the shift is a lasting mainstream change."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Sleep Deprivation and Decision-Making in High-Stakes Professions",
+        "text": "<h1>Sleep Deprivation and Decision-Making in High-Stakes Professions</h1>\n<p>Few professions demand sound judgement under pressure quite like medicine, aviation, and emergency response, and in all three, practitioners have historically been expected to function effectively after extended periods without sleep. Junior doctors on overnight hospital shifts, airline pilots on long-haul routes, and firefighters called out repeatedly through the night have long accepted chronic sleep disruption as an unavoidable feature of the job. Only in the past few decades has a substantial body of research begun to quantify precisely how much cognitive performance deteriorates under these conditions, and the findings have prompted significant changes to how several of these professions are regulated, changes that were, in many cases, resisted at first by practitioners who had spent their entire careers under the older, more demanding norms.</p>\n<p>Laboratory studies consistently show that the effects of prolonged wakefulness on cognitive performance are strikingly similar to those produced by alcohol intoxication. In one frequently cited study, participants who had been awake for around seventeen to nineteen hours performed on a range of cognitive and motor tasks at a level comparable to individuals with a blood alcohol concentration around the legal driving limit in many countries, despite having consumed no alcohol whatsoever. After twenty-four hours without sleep, performance on the same tasks deteriorated further still, to a level comparable with blood alcohol concentrations regarded as significantly impaired in most jurisdictions.</p>\n<p>What makes this particularly concerning in high-stakes professions is that sleep-deprived individuals are frequently poor judges of their own impairment. Surveys of hospital residents and airline pilots have repeatedly found that self-reported confidence in one's own alertness and decision-making ability does not decline at anything like the rate that objective performance actually does, meaning that a sleep-deprived professional may feel entirely capable of handling a complex situation at precisely the moment their judgement has become significantly compromised.</p>\n<p>The consequences of this gap between perceived and actual capability have been documented in several serious incidents. Medical research has linked extended shifts among junior doctors to measurably higher rates of diagnostic errors and needle-stick injuries, the latter posing a direct risk of infection to the exhausted doctor as well as to patients. Aviation investigators have similarly identified fatigue as a contributing factor in a number of serious incidents, prompting international aviation regulators to introduce strict limits on the number of consecutive hours a pilot may remain on duty, alongside mandatory rest periods calculated according to the time of day a flight departs, since fatigue accumulates differently depending on a pilot's usual sleep schedule.</p>\n<p>In response to mounting evidence, several countries have introduced binding limits on hospital shift lengths for junior doctors, typically capping continuous duty at somewhere between sixteen and twenty-four hours, alongside mandatory rest periods between shifts. These reforms have not been universally welcomed within the medical profession itself; some senior physicians argue that shorter shifts increase the number of handovers between doctors, during which critical patient information can be lost or miscommunicated, potentially introducing a different category of risk even as they reduce fatigue-related errors.</p>\n<p>Fatigue researchers have also explored countermeasures beyond simply limiting shift length. Strategically timed short naps, sometimes as brief as twenty minutes, have been shown to produce measurable, if temporary, improvements in alertness and reaction time among sleep-deprived subjects, and several airlines now permit pilots to take supervised \"controlled rest\" naps in the cockpit during long-haul flights, provided at least one pilot remains awake and at the controls at all times. Caffeine, unsurprisingly, remains the most widely used countermeasure of all, though its effectiveness diminishes with habitual use and it does little to address the underlying sleep debt driving the impairment.</p>\n<p>Ultimately, the challenge facing high-stakes professions is reconciling operational demands, hospitals must be staffed overnight, flights must depart on schedule, emergencies do not occur only during convenient daylight hours, with a body of evidence showing unambiguously that human cognitive performance cannot simply be willed into remaining sharp indefinitely. Whether through stricter regulation, smarter scheduling, or a cultural shift away from treating exhaustion as a badge of professional dedication, the gap between how these professions have traditionally operated and what sleep science now recommends remains far from fully closed.</p>",
+        "questions": [
+          {
+            "num": 27,
+            "type": "TFNG",
+            "text": "After seventeen to nineteen hours awake, performance on cognitive tasks became comparable to that of someone who had consumed alcohol, even though participants had not actually drunk any.",
+            "answer": "TRUE",
+            "explanation": "The passage states participants performed \"at a level comparable to individuals with a blood alcohol concentration around the legal driving limit in many countries, despite having consumed no alcohol whatsoever.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 28,
+            "type": "TFNG",
+            "text": "Performance continued to worsen after twenty-four hours without sleep.",
+            "answer": "TRUE",
+            "explanation": "The passage states: \"After twenty-four hours without sleep, performance on the same tasks deteriorated further still.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 29,
+            "type": "TFNG",
+            "text": "Sleep-deprived professionals generally rate their own alertness accurately.",
+            "answer": "FALSE",
+            "explanation": "The passage states self-reported confidence \"does not decline at anything like the rate that objective performance actually does.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 30,
+            "type": "TFNG",
+            "text": "Extended shifts among junior doctors have been linked to higher rates of diagnostic errors.",
+            "answer": "TRUE",
+            "explanation": "The passage states research \"linked extended shifts among junior doctors to measurably higher rates of diagnostic errors.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 31,
+            "type": "TFNG",
+            "text": "All senior physicians support the introduction of shorter hospital shifts.",
+            "answer": "FALSE",
+            "explanation": "The passage states \"some senior physicians argue that shorter shifts increase the number of handovers between doctors.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 32,
+            "type": "TFNG",
+            "text": "Caffeine fully resolves the underlying sleep debt that causes cognitive impairment.",
+            "answer": "FALSE",
+            "explanation": "The passage states caffeine \"does little to address the underlying sleep debt driving the impairment.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 33,
+            "type": "TFNG",
+            "text": "A majority of pilots have personally experienced a controlled rest nap resulting in a serious incident.",
+            "answer": "NOT GIVEN",
+            "explanation": "The passage describes controlled rest naps as a permitted countermeasure but gives no information about how many pilots have used them or any resulting incidents.",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 34,
+            "type": "FILL",
+            "text": "Short naps as brief as _________ minutes have been shown to produce temporary improvements in alertness.",
+            "answer": "twenty",
+            "explanation": "The passage states naps \"sometimes as brief as twenty minutes\" show measurable improvements.",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 35,
+            "type": "FILL",
+            "text": "Some airlines permit pilots to take supervised \"controlled rest\" naps provided at least one pilot remains awake and at the _________ at all times.",
+            "answer": "controls",
+            "explanation": "The passage states this is permitted \"provided at least one pilot remains awake and at the controls at all times.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 36,
+            "type": "FILL",
+            "text": "Aviation regulators calculate mandatory rest periods according to the time of day a flight _________.",
+            "answer": "departs",
+            "explanation": "The passage states rest periods are \"calculated according to the time of day a flight departs.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 37,
+            "type": "FILL",
+            "text": "Some countries cap continuous hospital duty at somewhere between sixteen and _________ hours.",
+            "answer": "twenty-four",
+            "explanation": "The passage states duty is capped \"at somewhere between sixteen and twenty-four hours.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 38,
+            "type": "MCQ",
+            "text": "According to the passage, why might shorter hospital shifts introduce a new category of risk?",
+            "answer": "B",
+            "explanation": "The passage states shorter shifts \"increase the number of handovers between doctors, during which critical patient information can be lost or miscommunicated.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. They reduce the number of doctors available overall.",
+              "B. They increase handovers, during which patient information can be lost.",
+              "C. They require doctors to work at night more often.",
+              "D. They eliminate the need for rest periods entirely."
+            ]
+          },
+          {
+            "num": 39,
+            "type": "MCQ",
+            "text": "What is suggested about caffeine as a countermeasure to sleep deprivation?",
+            "answer": "A",
+            "explanation": "The passage states caffeine's \"effectiveness diminishes with habitual use and it does little to address the underlying sleep debt.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Its effectiveness decreases with regular use and does not address sleep debt.",
+              "B. It is more effective than short naps in every case.",
+              "C. It has been banned in most high-stakes professions.",
+              "D. It fully restores normal cognitive performance."
+            ]
+          },
+          {
+            "num": 40,
+            "type": "MCQ",
+            "text": "What is the passage's overall conclusion about high-stakes professions and sleep?",
+            "answer": "C",
+            "explanation": "The passage concludes \"the gap between how these professions have traditionally operated and what sleep science now recommends remains far from fully closed.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. The problem has now been fully solved through regulation.",
+              "B. Sleep science findings have had no real impact on these professions.",
+              "C. A significant gap remains between traditional practice and what sleep science recommends.",
+              "D. Caffeine has made shift limits unnecessary."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "writing": {
+    "task1": {
+      "prompt": "The bar chart below shows the average number of hours per week that men and women spent on domestic chores in three countries in 2000 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "image": "<img src=\"images/writing_unique3_p1.png\" class=\"max-w-full h-auto mx-auto rounded-xl shadow-lg border border-white/10 bg-white\" alt=\"Writing Task 1 Chart\" />",
+      "modelAnswer": "The bar chart illustrates the average number of hours per week that men and women spent on domestic chores in the UK, Japan, and Sweden in 2000 and 2020.\n\nOverall, women consistently did more housework than men in all three countries across both years, although the size of this gap narrowed considerably by 2020, particularly in the UK and Sweden.\n\nIn the UK, men's weekly hours on chores rose from 6 in 2000 to 10 in 2020, while women's fell from 16 to 13, narrowing the gap from 10 hours to just 3 hours. Sweden showed a broadly similar pattern, with men's hours rising from 9 to 12 and women's easing slightly from 14 to 13, leaving the smallest gender gap of the three countries by 2020, at only one hour.\n\nJapan displayed by far the largest and most persistent gap. In 2000, Japanese women spent 20 hours a week on chores compared with just 2 hours for men, a gap of 18 hours. Although this narrowed somewhat by 2020, with men's hours rising to 4 and women's falling to 17, a substantial 13-hour gap remained, far exceeding the gap recorded in either the UK or Sweden in the same year.\n\nIn summary, while all three countries moved toward a more even division of domestic labour between 2000 and 2020, Japan retained a markedly larger gender gap than the UK or Sweden throughout."
+    },
+    "task2": {
+      "prompt": "In many countries, the gap between the rich and the poor is increasing. What problems does this cause, and what solutions can you suggest?",
+      "modelAnswer": "In many parts of the world, the difference in income and wealth between the richest and poorest members of society has been widening for several decades. This essay will consider the main problems this trend creates before suggesting some possible solutions.\n\nA growing wealth gap creates several serious problems. Socially, extreme inequality can undermine a sense of shared national identity, as the very wealthy and the very poor increasingly live in separate neighbourhoods, attend different schools, and have little everyday contact with one another. This separation can breed resentment and reduce public support for policies that benefit society as a whole, since those with the most resources may feel they have little to gain from investing in shared public services. Economically, a large concentration of wealth in relatively few hands can also reduce overall consumer spending, since wealthy individuals typically spend a smaller proportion of their income than lower earners do, potentially slowing broader economic growth. Politically, extreme wealth concentration risks giving a small number of individuals disproportionate influence over government policy, undermining the principle that political influence should not simply be purchased.\n\nSeveral solutions could help address this widening gap. Progressive taxation, in which higher earners pay a proportionally larger share of their income in tax, is among the most direct tools available to governments, and the resulting revenue can fund public services, such as education and healthcare, that disproportionately benefit lower-income households. Raising minimum wages in line with the actual cost of living can also ensure that economic growth translates into meaningful income gains for the lowest-paid workers, rather than being captured almost entirely by those at the top. Finally, expanding access to high-quality education and vocational training gives people from disadvantaged backgrounds a genuine opportunity to move into better-paid work over time.\n\nIn conclusion, while a growing wealth gap creates real social, economic, and political problems, a combination of fairer taxation, higher minimum wages, and expanded access to education could meaningfully narrow it over time."
+    }
+  }
 }
 };
 
