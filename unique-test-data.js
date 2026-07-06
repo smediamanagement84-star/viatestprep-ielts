@@ -3083,7 +3083,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "B",
             "explanation": "The passage states grain stores \"attracted large populations of rodents drawn to the stockpiled food, and those rodent populations in turn attracted the attention of wildcats living in the surrounding area.\"",
             "location": "Passage 1",
-            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "instruction": "Question 12<br/>Choose the correct letter, A, B, C or D.",
             "options": [
               "A. Deliberate feeding by early farmers.",
               "B. Rodents drawn to newly established grain stores.",
@@ -3093,18 +3093,13 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 13,
-            "type": "MCQ",
-            "text": "What do animal behaviourists suggest about understanding modern cat behaviour?",
-            "answer": "B",
-            "explanation": "The passage states behaviourists argue \"understanding cats requires accounting for this genetic and behavioural legacy directly.\"",
+            "type": "MATCHING_INFO",
+            "text": "a direct genetic comparison showing the wildcat-to-house-cat gap is narrower than the wolf-to-dog gap",
+            "answer": "D",
+            "explanation": "Paragraph D states \"the genetic gap between a wildcat and a typical house cat remains comparatively narrow,\" unlike the dramatic dog-wolf difference produced by selective breeding.",
             "location": "Passage 1",
-            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
-            "options": [
-              "A. It requires no reference to cats' evolutionary history.",
-              "B. It requires accounting for cats' genetic and behavioural legacy from their wild ancestors.",
-              "C. It shows cats behave identically to dogs.",
-              "D. It proves cats are not truly domesticated at all."
-            ]
+            "instruction": "Question 13<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-G.",
+            "options": ["A", "B", "C", "D", "E", "F", "G"]
           }
         ]
       },
@@ -3184,21 +3179,23 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 19,
-            "type": "FILL",
-            "text": "Reflective or \"cool\" roofing materials are engineered to reflect rather than _________ sunlight.",
-            "answer": "absorb",
-            "explanation": "The passage states such materials are \"engineered to reflect rather than absorb sunlight.\"",
+            "type": "MATCHING_FEATURES",
+            "text": "Reflect rather than absorb sunlight, without requiring any change to a building's structure.",
+            "answer": "A",
+            "explanation": "The passage states such materials are \"engineered to reflect rather than absorb sunlight,\" reducing \"the amount of solar heat individual buildings absorb during daylight hours without requiring any change to a building's underlying structure.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 19-20<br/>Look at the following statements and the list of interventions below.<br/>Match each statement with the correct intervention, A or B.<br/><br/><b>List of Interventions</b><br/>A.&nbsp; Reflective \"cool\" roofs<br/>B.&nbsp; Green roofs",
+            "options": ["A", "B"]
           },
           {
             "num": 20,
-            "type": "FILL",
-            "text": "Trees cool surrounding air through the evaporation of water from their _________.",
-            "answer": "leaves",
-            "explanation": "The passage states trees cool air \"through the evaporation of water from their leaves.\"",
+            "type": "MATCHING_FEATURES",
+            "text": "Help absorb rainwater that would otherwise overwhelm urban drainage systems during heavy storms.",
+            "answer": "B",
+            "explanation": "The passage states green roofs offer \"the additional benefit of absorbing rainwater that would otherwise overwhelm urban drainage systems during heavy storms.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 19-20<br/>Look at the following statements and the list of interventions below.<br/>Match each statement with the correct intervention, A or B.<br/><br/><b>List of Interventions</b><br/>A.&nbsp; Reflective \"cool\" roofs<br/>B.&nbsp; Green roofs",
+            "options": ["A", "B"]
           },
           {
             "num": 21,
@@ -3207,7 +3204,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "vegetation",
             "explanation": "The passage describes green roofs as ones where \"a layer of soil and vegetation is deliberately installed atop a building rather than conventional roofing material.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 21-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 22,
@@ -3216,7 +3213,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "breezes",
             "explanation": "The passage refers to \"corridors that channel cooling breezes through dense urban areas.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 21-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 23,
@@ -3225,7 +3222,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "design",
             "explanation": "The passage states researchers agree on \"reflective surfaces, expanded vegetation, and thoughtful urban design.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 21-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 24,
@@ -3245,16 +3242,16 @@ const UNIQUE_TEST_DATA = {
           {
             "num": 25,
             "type": "MCQ",
-            "text": "What advantage do reflective \"cool\" roofing materials offer, according to the passage?",
+            "text": "According to the passage, how do trees help cool the surrounding air?",
             "answer": "B",
-            "explanation": "The passage states cool roofing materials work by \"reducing the amount of solar heat individual buildings absorb during daylight hours without requiring any change to a building's underlying structure.\"",
+            "explanation": "The passage states trees cool air \"through the evaporation of water from their leaves,\" in addition to providing direct shade.",
             "location": "Passage 2",
             "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
             "options": [
-              "A. They eliminate the need for urban tree planting.",
-              "B. They reduce heat absorption without requiring structural changes.",
-              "C. They are cheaper than all other cooling interventions.",
-              "D. They increase a building's internal temperature."
+              "A. By absorbing carbon dioxide from passing vehicles.",
+              "B. Through the evaporation of water from their leaves, as well as providing shade.",
+              "C. By reflecting sunlight away from nearby buildings.",
+              "D. By reducing the number of vehicles on nearby streets."
             ]
           },
           {
@@ -3285,7 +3282,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "FALSE",
             "explanation": "The passage states \"fewer than half of the studies produced a statistically significant result matching the original finding.\"",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 27-29<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
@@ -3299,7 +3296,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "FALSE",
             "explanation": "The passage states replications used \"considerably larger sample sizes than many of the original studies had employed.\"",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 27-29<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
@@ -3313,7 +3310,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "FALSE",
             "explanation": "The passage states fraud \"accounts for only a small fraction of the problem.\"",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 27-29<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
@@ -3322,31 +3319,23 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 30,
-            "type": "TFNG",
-            "text": "P-hacking always involves a deliberate intention to deceive.",
-            "answer": "FALSE",
-            "explanation": "The passage states p-hacking happens \"often without any deliberate intention to deceive.\"",
+            "type": "MATCHING_FEATURES",
+            "text": "Involves trying multiple different analyses until one happens to produce a significant result.",
+            "answer": "A",
+            "explanation": "The passage describes p-hacking as when a researcher \"tries multiple different ways of analysing a dataset, perhaps testing several different statistical models or excluding certain data points under various justifications, until one particular approach happens to produce a statistically significant result.\"",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
-            "options": [
-              "TRUE",
-              "FALSE",
-              "NOT GIVEN"
-            ]
+            "instruction": "Questions 30-31<br/>Look at the following statements and the list of problems below.<br/>Match each statement with the correct problem, A or B.<br/><br/><b>List of Problems</b><br/>A.&nbsp; P-hacking<br/>B.&nbsp; Publication bias",
+            "options": ["A", "B"]
           },
           {
             "num": 31,
-            "type": "TFNG",
-            "text": "Journals have historically preferred publishing studies with positive, statistically significant findings.",
-            "answer": "TRUE",
-            "explanation": "The passage states journals \"have historically shown a strong preference for publishing studies that report positive, statistically significant findings.\"",
+            "type": "MATCHING_FEATURES",
+            "text": "Involves journals showing a strong historical preference for publishing statistically significant findings.",
+            "answer": "B",
+            "explanation": "The passage states journals \"have historically shown a strong preference for publishing studies that report positive, statistically significant findings over studies that find no effect at all.\"",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
-            "options": [
-              "TRUE",
-              "FALSE",
-              "NOT GIVEN"
-            ]
+            "instruction": "Questions 30-31<br/>Look at the following statements and the list of problems below.<br/>Match each statement with the correct problem, A or B.<br/><br/><b>List of Problems</b><br/>A.&nbsp; P-hacking<br/>B.&nbsp; Publication bias",
+            "options": ["A", "B"]
           },
           {
             "num": 32,
@@ -3355,7 +3344,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "FALSE",
             "explanation": "The passage states these reforms \"have not been universally welcomed within the field, with some established researchers arguing\" against aspects of them.",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 32-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
@@ -3369,7 +3358,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "NOT GIVEN",
             "explanation": "The passage discusses reforms such as pre-registration and data sharing but gives no information about journals being shut down.",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 32-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
