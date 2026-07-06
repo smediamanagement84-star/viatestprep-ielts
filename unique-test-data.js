@@ -4103,6 +4103,598 @@ const UNIQUE_TEST_DATA = {
       "modelAnswer": "Social media has become deeply embedded in daily life for billions of people worldwide, and opinion remains sharply divided over whether its overall impact on society has been positive or negative. This essay will examine both perspectives before presenting my own view.\n\nThose who view social media's impact positively point to its unprecedented ability to connect people across vast distances, allowing families and friends separated by geography to maintain close relationships far more easily than previous generations could. Social media has also given a public voice to groups and causes that previously struggled to gain mainstream media attention, enabling rapid organisation around social and political movements and allowing ordinary individuals to reach large audiences without needing access to traditional media gatekeepers such as newspapers or television broadcasters.\n\nOn the other hand, critics point to a growing body of research linking heavy social media use, particularly among teenagers, to increased rates of anxiety, depression, and poor sleep, effects researchers attribute partly to constant social comparison and partly to the deliberately engineered, attention-capturing design of many popular platforms. Critics also point to social media's well-documented role in accelerating the spread of misinformation, since sensational or emotionally provocative content often spreads far more quickly than carefully verified information, with serious real-world consequences during public health emergencies, elections, and periods of social unrest.\n\nIn my opinion, social media itself is best understood as a powerful, largely neutral tool whose ultimate impact depends heavily on how it is designed, regulated, and used, rather than being inherently positive or negative in itself. Meaningful reform, including stronger content moderation, greater platform transparency about how algorithms select and prioritise content, and improved digital literacy education in schools, could help preserve social media's genuine connective and organisational benefits while meaningfully reducing its documented harms, particularly among younger and more psychologically vulnerable users."
     }
   }
+},
+"u8": {
+  "title": "ViaTestPrep Original Practice Test 8",
+  "book": "Unique Test",
+  "reading": {
+    "passages": [
+      {
+        "title": "The Surprising Intelligence of Crows",
+        "text": "<h1>The Surprising Intelligence of Crows</h1>\n<p><b>A</b>&nbsp; A crow's brain weighs only a few grams, a tiny fraction of the mass of a chimpanzee's brain, and yet a growing body of research suggests that crows and their close relatives, collectively known as corvids, rival many primates in certain measures of cognitive ability. This finding has forced biologists to reconsider a long-standing assumption that sophisticated intelligence requires a large brain built along the same basic architecture found in humans and other primates.</p>\n<p><b>B</b>&nbsp; Perhaps the most celebrated evidence of corvid intelligence comes from the New Caledonian crow, a species found on islands in the South Pacific that has been observed manufacturing genuine tools from twigs and leaves in the wild. These crows strip leaves from twigs and bend them into hook shapes capable of extracting insect larvae from deep within tree bark, and in some documented cases, individual birds have been observed using one tool to retrieve a second, more useful tool from a location otherwise out of reach, a multi-step sequence requiring the bird to hold a future goal in mind while working through an intermediate step.</p>\n<p><b>C</b>&nbsp; Laboratory experiments have further probed the limits of corvid problem-solving ability. In one widely cited series of experiments, inspired directly by an ancient fable in which a thirsty crow drops stones into a narrow-necked pitcher to raise the water level within reach, researchers presented captive crows with a floating food reward in a tube of water alongside a supply of stones. Several crow species readily solved the puzzle, dropping stones into the water until the level rose enough to bring the food within reach, and in follow-up variations, crows consistently selected larger stones over smaller ones when both were available, suggesting the birds understood, rather than merely stumbled upon, the underlying physical principle involved.</p>\n<p><b>D</b>&nbsp; Corvids also display a striking degree of social sophistication. Multiple studies have documented that crows can recognise and remember individual human faces for years afterward, reacting with alarm to a person who had previously trapped or handled them roughly, even when that person is wearing different clothing or encountered in an unfamiliar location. In one particularly striking demonstration, researchers found that crows that had witnessed a specific individual mistreating another crow would subsequently scold or mob that same person on sight, and this apparent knowledge spread to other crows in the vicinity that had not directly witnessed the original incident, suggesting some capacity for social learning about specific individual threats.</p>\n<p><b>E</b>&nbsp; Corvids appear capable of a degree of future planning that was, until relatively recently, assumed to be a uniquely human cognitive achievement. Many corvid species cache food for later retrieval, hiding thousands of individual food items across a large territory and later recalling the specific locations with remarkable accuracy. More strikingly still, researchers have found that crows and ravens will actively re-hide a cached food item if they notice a rival bird watching them do it the first time, apparently anticipating that the rival will attempt to steal the food and adjusting their behaviour specifically to prevent this outcome, a behaviour that appears to require reasoning about what another individual has and has not observed.</p>\n<p><b>F</b>&nbsp; The neurological basis for these abilities differs markedly from that of primates. Corvid brains lack the layered, folded cortex characteristic of mammalian brains entirely, relying instead on a structure called the pallium, which achieves an extremely high density of neurons packed into a comparatively small volume through an entirely different underlying architecture. This suggests that the neural circuitry required for sophisticated cognition can apparently evolve along more than one distinct anatomical pathway, since birds and mammals diverged from a common ancestor roughly three hundred million years ago, long before either lineage had developed anything resembling advanced cognition.</p>\n<p><b>G</b>&nbsp; These findings collectively challenge any simple assumption that sophisticated cognition necessarily requires a large brain built along a single, particular structural blueprint. Corvid intelligence appears to be a clear case of convergent evolution, in which two very distantly related lineages arrived independently at broadly comparable cognitive capabilities via entirely different neurological routes, a finding that continues to reshape how biologists think about the relationship between brain structure, brain size, and the underlying nature of intelligence itself.</p>",
+        "questions": [
+          {
+            "num": 1,
+            "type": "HEADING",
+            "text": "Paragraph A",
+            "answer": "iv",
+            "explanation": "Paragraph A notes a crow's tiny brain yet crows \"rival many primates in certain measures of cognitive ability.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Learning about a specific threat without witnessing it directly<br/>ii.&nbsp; A different brain structure achieving comparable results<br/>iii.&nbsp; Solving a puzzle inspired by an ancient fable<br/>iv.&nbsp; A small brain that performs far above expectations<br/>v.&nbsp; Crafting and using tools with multiple steps<br/>vi.&nbsp; Anticipating theft and adjusting behaviour accordingly<br/>vii.&nbsp; Rethinking what intelligence requires across species<br/>viii.&nbsp; Comparing crow intelligence with dolphin intelligence<br/>ix.&nbsp; Training crows to perform in captivity",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 2,
+            "type": "HEADING",
+            "text": "Paragraph B",
+            "answer": "v",
+            "explanation": "Paragraph B describes crows \"using one tool to retrieve a second, more useful tool from a location otherwise out of reach.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Learning about a specific threat without witnessing it directly<br/>ii.&nbsp; A different brain structure achieving comparable results<br/>iii.&nbsp; Solving a puzzle inspired by an ancient fable<br/>iv.&nbsp; A small brain that performs far above expectations<br/>v.&nbsp; Crafting and using tools with multiple steps<br/>vi.&nbsp; Anticipating theft and adjusting behaviour accordingly<br/>vii.&nbsp; Rethinking what intelligence requires across species<br/>viii.&nbsp; Comparing crow intelligence with dolphin intelligence<br/>ix.&nbsp; Training crows to perform in captivity",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 3,
+            "type": "HEADING",
+            "text": "Paragraph C",
+            "answer": "iii",
+            "explanation": "Paragraph C describes experiments \"inspired directly by an ancient fable in which a thirsty crow drops stones into a narrow-necked pitcher.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Learning about a specific threat without witnessing it directly<br/>ii.&nbsp; A different brain structure achieving comparable results<br/>iii.&nbsp; Solving a puzzle inspired by an ancient fable<br/>iv.&nbsp; A small brain that performs far above expectations<br/>v.&nbsp; Crafting and using tools with multiple steps<br/>vi.&nbsp; Anticipating theft and adjusting behaviour accordingly<br/>vii.&nbsp; Rethinking what intelligence requires across species<br/>viii.&nbsp; Comparing crow intelligence with dolphin intelligence<br/>ix.&nbsp; Training crows to perform in captivity",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 4,
+            "type": "HEADING",
+            "text": "Paragraph D",
+            "answer": "i",
+            "explanation": "Paragraph D states knowledge of a threatening individual \"spread to other crows in the vicinity that had not directly witnessed the original incident.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Learning about a specific threat without witnessing it directly<br/>ii.&nbsp; A different brain structure achieving comparable results<br/>iii.&nbsp; Solving a puzzle inspired by an ancient fable<br/>iv.&nbsp; A small brain that performs far above expectations<br/>v.&nbsp; Crafting and using tools with multiple steps<br/>vi.&nbsp; Anticipating theft and adjusting behaviour accordingly<br/>vii.&nbsp; Rethinking what intelligence requires across species<br/>viii.&nbsp; Comparing crow intelligence with dolphin intelligence<br/>ix.&nbsp; Training crows to perform in captivity",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 5,
+            "type": "HEADING",
+            "text": "Paragraph E",
+            "answer": "vi",
+            "explanation": "Paragraph E describes crows that \"will actively re-hide a cached food item if they notice a rival bird watching them do it.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Learning about a specific threat without witnessing it directly<br/>ii.&nbsp; A different brain structure achieving comparable results<br/>iii.&nbsp; Solving a puzzle inspired by an ancient fable<br/>iv.&nbsp; A small brain that performs far above expectations<br/>v.&nbsp; Crafting and using tools with multiple steps<br/>vi.&nbsp; Anticipating theft and adjusting behaviour accordingly<br/>vii.&nbsp; Rethinking what intelligence requires across species<br/>viii.&nbsp; Comparing crow intelligence with dolphin intelligence<br/>ix.&nbsp; Training crows to perform in captivity",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 6,
+            "type": "HEADING",
+            "text": "Paragraph F",
+            "answer": "ii",
+            "explanation": "Paragraph F describes corvid brains relying \"on a structure called the pallium,\" an entirely different architecture from the mammalian cortex.",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Learning about a specific threat without witnessing it directly<br/>ii.&nbsp; A different brain structure achieving comparable results<br/>iii.&nbsp; Solving a puzzle inspired by an ancient fable<br/>iv.&nbsp; A small brain that performs far above expectations<br/>v.&nbsp; Crafting and using tools with multiple steps<br/>vi.&nbsp; Anticipating theft and adjusting behaviour accordingly<br/>vii.&nbsp; Rethinking what intelligence requires across species<br/>viii.&nbsp; Comparing crow intelligence with dolphin intelligence<br/>ix.&nbsp; Training crows to perform in captivity",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 7,
+            "type": "HEADING",
+            "text": "Paragraph G",
+            "answer": "vii",
+            "explanation": "Paragraph G states the findings \"reshape how biologists think about the relationship between brain structure, brain size, and the underlying nature of intelligence itself.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; Learning about a specific threat without witnessing it directly<br/>ii.&nbsp; A different brain structure achieving comparable results<br/>iii.&nbsp; Solving a puzzle inspired by an ancient fable<br/>iv.&nbsp; A small brain that performs far above expectations<br/>v.&nbsp; Crafting and using tools with multiple steps<br/>vi.&nbsp; Anticipating theft and adjusting behaviour accordingly<br/>vii.&nbsp; Rethinking what intelligence requires across species<br/>viii.&nbsp; Comparing crow intelligence with dolphin intelligence<br/>ix.&nbsp; Training crows to perform in captivity",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 8,
+            "type": "TFNG",
+            "text": "New Caledonian crows have been observed using one tool to retrieve another tool from an otherwise inaccessible location.",
+            "answer": "TRUE",
+            "explanation": "The passage states birds have been observed \"using one tool to retrieve a second, more useful tool from a location otherwise out of reach.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 8-9<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 9,
+            "type": "TFNG",
+            "text": "In the stone-dropping experiments, crows selected stones at random regardless of size.",
+            "answer": "FALSE",
+            "explanation": "The passage states \"crows consistently selected larger stones over smaller ones when both were available.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 8-9<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 10,
+            "type": "FILL",
+            "text": "Crows can recognise and remember individual human _________ for years afterward.",
+            "answer": "faces",
+            "explanation": "The passage states crows \"recognise and remember individual human faces for years afterward.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 10-11<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 11,
+            "type": "FILL",
+            "text": "Corvid brains rely on a structure called the _________, which achieves a high density of neurons in a small volume.",
+            "answer": "pallium",
+            "explanation": "The passage states corvid brains rely \"on a structure called the pallium.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 10-11<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 12,
+            "type": "MCQ",
+            "text": "According to the passage, what did researchers observe about crows and cached food?",
+            "answer": "B",
+            "explanation": "The passage states \"crows and ravens will actively re-hide a cached food item if they notice a rival bird watching them do it the first time.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Crows never cache food for later use.",
+              "B. Crows will re-hide food if they notice a rival watching them cache it.",
+              "C. Crows always forget where they cached food.",
+              "D. Crows only cache food in captivity, not in the wild."
+            ]
+          },
+          {
+            "num": 13,
+            "type": "MCQ",
+            "text": "What do these findings suggest about the evolution of intelligence, according to the passage?",
+            "answer": "C",
+            "explanation": "The passage states \"the neural circuitry required for sophisticated cognition can apparently evolve along more than one distinct anatomical pathway.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Intelligence can only evolve through a single brain structure.",
+              "B. Birds and mammals share an identical brain structure.",
+              "C. Sophisticated cognition can evolve via more than one distinct anatomical pathway.",
+              "D. Intelligence requires a large brain in absolute terms."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Fast Food Chains and the Standardisation of Taste",
+        "text": "<h1>Fast Food Chains and the Standardisation of Taste</h1>\n<p>Bite into a particular fast food chain's signature burger in Tokyo, Toronto, or Cape Town, and, allowing for minor regional variations in menu, the experience is engineered to taste remarkably, almost eerily, similar in each location. This consistency is no accident; it represents the outcome of decades of deliberate industrial effort by major fast food chains to standardise flavour itself into something that can be reliably reproduced at enormous scale across thousands of outlets and dozens of countries, an achievement that required rethinking food production almost as an industrial engineering problem.</p>\n<p>Achieving this consistency requires controlling variables that traditional cooking has never needed to control with anything approaching this level of precision. Ingredient suppliers are typically required to meet extremely detailed specifications covering everything from the precise fat content of ground beef to the exact dimensions and internal temperature of a frozen potato at the moment it enters a fryer, ensuring that a batch of fries prepared in one country tastes essentially identical to a batch prepared on the opposite side of the world using entirely different local suppliers and, in many cases, entirely different regional agricultural conditions.</p>\n<p>Flavour chemistry plays a central, if largely invisible, role in this process. Many familiar fast food flavours rely partly on carefully engineered flavour compounds, developed and tested extensively by food scientists, that reinforce and stabilise a dish's core taste profile regardless of natural variation in the underlying raw ingredients, which can otherwise vary considerably in flavour depending on factors such as an animal's diet, growing conditions, and even the specific season during which produce was harvested. This scientific approach allows a chain to guarantee an extremely consistent taste experience regardless of which specific farm, region, or even country originally supplied a particular ingredient batch.</p>\n<p>This standardisation has proved enormously commercially successful, in part because it directly addresses a form of psychological risk aversion well documented among consumers. Diners in an unfamiliar city or country, uncertain about the quality or hygiene standards of unfamiliar local restaurants, frequently gravitate toward familiar international chains specifically because the experience on offer is entirely predictable, removing the risk of an unpleasant, unfamiliar, or simply disappointing meal in an unfamiliar setting. This same predictability that reassures international travellers, however, has drawn sustained criticism from food writers and cultural commentators, who argue that standardisation gradually erodes distinctive local and regional food cultures in favour of an increasingly homogenised, placeless approach to eating.</p>\n<p>Nutritionists have raised a related but distinct set of concerns. Achieving very specific, consistent flavour profiles at the lowest possible cost per unit frequently involves high levels of salt, sugar, and refined fat, ingredients that are comparatively cheap, shelf-stable, and reliably effective at producing broadly palatable flavour across nearly all human cultures and individual taste preferences, but whose habitual overconsumption has been linked in numerous studies to significantly elevated rates of obesity, heart disease, and type 2 diabetes when consumed frequently over an extended period.</p>\n<p>In response to mounting public criticism and shifting consumer preferences, several major chains have introduced reformulated menu items marketed specifically as healthier alternatives, incorporating measures such as reduced sodium content, grilled rather than fried preparation methods, and the addition of vegetable or salad-based options previously largely absent from core menus. Nutrition researchers and independent food journalists frequently note, however, that such changes have generally occurred incrementally and selectively rather than through any wholesale reformulation of a chain's genuinely best-selling, flagship menu items, which typically remain fundamentally unchanged from their original formulations for decades at a stretch.</p>\n<p>Fast food standardisation therefore illustrates a broader and recurring tension within global food systems: the same rigorous engineering and quality-control processes that guarantee predictability, consistency, and food safety at an enormous global scale also tend to favour flavour profiles optimised primarily for mass consumer appeal and low production cost, a combination that has not, at least so far, generally aligned very closely with the specific dietary patterns that nutrition researchers most consistently recommend for long-term public health, despite years of incremental reformulation efforts across the industry.</p>",
+        "questions": [
+          {
+            "num": 14,
+            "type": "TFNG",
+            "text": "Fast food ingredient suppliers must meet extremely detailed specifications.",
+            "answer": "TRUE",
+            "explanation": "The passage states suppliers \"are typically required to meet extremely detailed specifications covering everything from the precise fat content of ground beef to the exact dimensions and internal temperature of a frozen potato.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 15,
+            "type": "TFNG",
+            "text": "Natural ingredient flavour never varies according to an animal's diet or growing conditions.",
+            "answer": "FALSE",
+            "explanation": "The passage states ingredients \"can otherwise vary considerably in flavour depending on factors such as an animal's diet, growing conditions, and even the specific season.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 16,
+            "type": "TFNG",
+            "text": "Diners in unfamiliar cities sometimes choose familiar chains because the experience is predictable.",
+            "answer": "TRUE",
+            "explanation": "The passage states diners \"frequently gravitate toward familiar international chains specifically because the experience on offer is entirely predictable.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 17,
+            "type": "TFNG",
+            "text": "Nutritionists have raised no concerns about the ingredients typically used in fast food flavour profiles.",
+            "answer": "FALSE",
+            "explanation": "The passage states achieving consistent flavour \"frequently involves high levels of salt, sugar, and refined fat,\" which nutritionists have linked to health concerns.",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 18,
+            "type": "TFNG",
+            "text": "Most major fast food chains have completely reformulated their best-selling, flagship menu items in recent years.",
+            "answer": "FALSE",
+            "explanation": "The passage states flagship items \"typically remain fundamentally unchanged from their original formulations for decades at a stretch.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 19,
+            "type": "FILL",
+            "text": "Many familiar fast food flavours rely partly on carefully engineered flavour _________.",
+            "answer": "compounds",
+            "explanation": "The passage refers to \"carefully engineered flavour compounds, developed and tested extensively by food scientists.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 20,
+            "type": "FILL",
+            "text": "Standardisation has drawn criticism from commentators who argue it erodes distinctive local and regional food _________.",
+            "answer": "cultures",
+            "explanation": "The passage states critics argue standardisation \"gradually erodes distinctive local and regional food cultures.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 21,
+            "type": "FILL",
+            "text": "Salt, sugar, and refined fat are comparatively cheap and _________.",
+            "answer": "shelf-stable",
+            "explanation": "The passage describes these ingredients as \"comparatively cheap, shelf-stable, and reliably effective.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 22,
+            "type": "FILL",
+            "text": "Some chains have introduced reformulated menu items marketed specifically as healthier _________.",
+            "answer": "alternatives",
+            "explanation": "The passage refers to items \"marketed specifically as healthier alternatives.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 23,
+            "type": "FILL",
+            "text": "Reformulation measures have included reduced sodium content and _________ rather than fried preparation methods.",
+            "answer": "grilled",
+            "explanation": "The passage mentions \"grilled rather than fried preparation methods.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 24,
+            "type": "MCQ",
+            "text": "According to the passage, why do international chains appeal to travellers in unfamiliar cities?",
+            "answer": "B",
+            "explanation": "The passage states this is \"because the experience on offer is entirely predictable, removing the risk of an unpleasant, unfamiliar, or simply disappointing meal.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Because they are always cheaper than local restaurants.",
+              "B. Because the experience is predictable, reducing the risk of a disappointing meal.",
+              "C. Because local restaurants are legally required to be more expensive.",
+              "D. Because international chains only operate in tourist areas."
+            ]
+          },
+          {
+            "num": 25,
+            "type": "MCQ",
+            "text": "What have nutrition researchers noted about menu reformulation efforts, according to the passage?",
+            "answer": "C",
+            "explanation": "The passage states such changes \"have generally occurred incrementally and selectively rather than through any wholesale reformulation\" of flagship items.",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. They have completely transformed every chain's flagship products.",
+              "B. They have had no effect on any menu items at all.",
+              "C. They have occurred incrementally rather than through wholesale reformulation of flagship items.",
+              "D. They have been mandated by international law."
+            ]
+          },
+          {
+            "num": 26,
+            "type": "MCQ",
+            "text": "What tension does the passage identify in fast food standardisation?",
+            "answer": "A",
+            "explanation": "The passage states the same processes \"also tend to favour flavour profiles optimised primarily for mass consumer appeal and low production cost, a combination that has not, at least so far, generally aligned very closely with the specific dietary patterns that nutrition researchers most consistently recommend for long-term public health.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Consistency and quality-control processes favour flavours that are not well aligned with recommended diets.",
+              "B. Local and international restaurants have identical health outcomes.",
+              "C. Reformulation has fully resolved all nutritional concerns.",
+              "D. Consumers no longer value predictability in dining."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Why Expert Predictions Are Often Wrong",
+        "text": "<h1>Why Expert Predictions Are Often Wrong</h1>\n<p>In the late 1980s, a psychologist embarked on an ambitious two-decade research project that would ultimately upend how seriously the public, and many professionals, ought to regard confident-sounding expert predictions. Over roughly twenty years, the researcher collected some eighty thousand individual predictions from nearly three hundred professional experts, economists, political analysts, and journalists among them, about specific political and economic events, then patiently waited to compare those predictions against what actually happened, a methodology far more rigorous than anything previously attempted in this particular area of research.</p>\n<p>The results, published in a widely discussed book, were considerably less flattering to the assembled experts than most of the participants themselves would presumably have predicted. On average, the experts performed only marginally better than random chance would predict, and strikingly, experts who had the highest public profiles, appearing frequently on television and being quoted regularly in major newspapers, tended, on average, to perform somewhat worse than their far less famous, less frequently consulted academic colleagues working in the very same fields.</p>\n<p>A key factor distinguishing more accurate forecasters from less accurate ones turned out to have little to do with formal academic credentials, political ideology, or even specific subject-matter expertise as conventionally measured. Instead, the researcher found that a specific cognitive style predicted accuracy far more reliably than any other single factor identified in the entire dataset. Experts who approached questions by drawing on many different sources of evidence and analytical perspectives, adjusting their views incrementally as new evidence emerged, consistently outperformed experts who instead approached a question from a single overarching theoretical framework and interpreted essentially all new evidence primarily through the lens of that one dominant framework.</p>\n<p>The researcher termed these two contrasting styles \"foxes\" and \"hedgehogs,\" borrowing a distinction from an old and much-quoted essay describing foxes as creatures that know many different, often only loosely connected things, while a hedgehog knows one single big and powerful thing extremely well. Hedgehog-style experts, confident in a single unifying theory capable of explaining a huge range of events, tended to force complex, messy real-world developments into that one favoured explanatory framework regardless of genuine fit, while fox-style experts remained considerably more willing to say, in effect, \"I don't know\" or to substantially revise a previous confident prediction once new, genuinely contradictory evidence had clearly emerged.</p>\n<p>Several deeper psychological mechanisms appear to help explain why hedgehog-style experts, despite their frequently impressive academic credentials, performed comparatively poorly in this research. Confidence in a single unifying theoretical framework can make disconfirming evidence, information that runs directly counter to a favoured theory's clear predictions, considerably easier to dismiss, explain away, or simply reinterpret after the fact as somehow still consistent with the original theory, a pattern psychologists term motivated reasoning. Media appearances may compound this particular tendency further still, since television and print interviews typically reward experts for offering bold, simple, confidently stated predictions rather than the nuanced, appropriately hedged, probability-based assessments that the underlying research suggests are actually more likely to prove accurate over time.</p>\n<p>These findings carry significant practical implications for how forecasts of all kinds, not merely political or economic predictions specifically, ought to be evaluated by non-expert audiences going forward. Rather than placing excessive weight on a forecaster's confidence, credentials, or media prominence, considerable weight should arguably be placed instead on their demonstrated willingness to update specific predictions in light of genuinely new evidence, and on their measurable track record of appropriately calibrated accuracy over a meaningful and sufficiently large number of past predictions, factors that remain almost entirely invisible during a typical brief television or radio appearance.</p>\n<p>Perhaps the most genuinely useful and lasting practical lesson from this substantial body of research is deceptively simple: genuine predictive skill correlates only weakly with the confidence, certainty, and simple narrative clarity with which a given prediction happens to be delivered to any particular audience, and may in certain identifiable cases even correlate somewhat negatively with those same superficially persuasive qualities, a finding with obvious implications for how audiences might learn to evaluate confident-sounding experts more sceptically.</p>",
+        "questions": [
+          {
+            "num": 27,
+            "type": "TFNG",
+            "text": "The research project collected predictions over a period of roughly twenty years.",
+            "answer": "TRUE",
+            "explanation": "The passage states: \"Over roughly twenty years, the researcher collected some eighty thousand individual predictions from nearly three hundred professional experts.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 28,
+            "type": "TFNG",
+            "text": "Experts performed dramatically better than random chance overall.",
+            "answer": "FALSE",
+            "explanation": "The passage states \"the experts performed only marginally better than random chance would predict.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 29,
+            "type": "TFNG",
+            "text": "Experts with the highest public profiles tended to perform better than their less famous colleagues.",
+            "answer": "FALSE",
+            "explanation": "The passage states high-profile experts \"tended, on average, to perform somewhat worse than their far less famous, less frequently consulted academic colleagues working in the very same fields.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 30,
+            "type": "TFNG",
+            "text": "Forecasting accuracy was most strongly linked to formal academic credentials.",
+            "answer": "FALSE",
+            "explanation": "The passage states accuracy \"turned out to have little to do with formal academic credentials, political ideology, or even specific subject-matter expertise.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 31,
+            "type": "TFNG",
+            "text": "\"Hedgehog\" experts were more willing than \"fox\" experts to substantially revise a prediction after contradictory evidence emerged.",
+            "answer": "FALSE",
+            "explanation": "The passage states fox-style experts remained \"considerably more willing\" than hedgehog-style experts \"to substantially revise a previous confident prediction once new, genuinely contradictory evidence had clearly emerged.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 32,
+            "type": "TFNG",
+            "text": "Media appearances tend to reward nuanced, appropriately hedged predictions over bold, simple ones.",
+            "answer": "FALSE",
+            "explanation": "The passage states media interviews \"typically reward experts for offering bold, simple, confidently stated predictions rather than the nuanced, appropriately hedged, probability-based assessments.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 33,
+            "type": "TFNG",
+            "text": "All three hundred experts in the study worked exclusively in economics.",
+            "answer": "FALSE",
+            "explanation": "The passage states the experts included \"economists, political analysts, and journalists among them.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 34,
+            "type": "FILL",
+            "text": "The researcher collected some eighty thousand individual predictions from nearly three hundred professional _________.",
+            "answer": "experts",
+            "explanation": "The passage states predictions came \"from nearly three hundred professional experts.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 35,
+            "type": "FILL",
+            "text": "The researcher termed the two contrasting cognitive styles \"foxes\" and \"_________.\"",
+            "answer": "hedgehogs",
+            "explanation": "The passage states the researcher termed the styles \"foxes\" and \"hedgehogs,\" borrowing a distinction from an old essay.",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 36,
+            "type": "FILL",
+            "text": "Confidence in a single theory can make disconfirming evidence easier to dismiss, a pattern psychologists term motivated _________.",
+            "answer": "reasoning",
+            "explanation": "The passage names this pattern \"motivated reasoning.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 37,
+            "type": "FILL",
+            "text": "Weight should be placed on a forecaster's demonstrated willingness to update predictions and their measurable track record of appropriately calibrated _________.",
+            "answer": "accuracy",
+            "explanation": "The passage refers to \"their measurable track record of appropriately calibrated accuracy.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 38,
+            "type": "MCQ",
+            "text": "According to the passage, what distinguished more accurate forecasters from less accurate ones?",
+            "answer": "A",
+            "explanation": "The passage states accurate forecasters drew \"on many different sources of evidence and analytical perspectives, adjusting their views incrementally as new evidence emerged.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Drawing on many sources of evidence and adjusting views incrementally.",
+              "B. Holding a single unifying theoretical framework.",
+              "C. Having the highest media profile.",
+              "D. Having the most advanced academic credentials."
+            ]
+          },
+          {
+            "num": 39,
+            "type": "MCQ",
+            "text": "What does the passage suggest about \"hedgehog\" style experts?",
+            "answer": "C",
+            "explanation": "The passage states hedgehog experts \"tended to force complex, messy real-world developments into that one favoured explanatory framework regardless of genuine fit.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. They always outperformed fox-style experts.",
+              "B. They never appeared in the media.",
+              "C. They tended to force events into one favoured explanatory framework.",
+              "D. They were exclusively academic economists."
+            ]
+          },
+          {
+            "num": 40,
+            "type": "MCQ",
+            "text": "What is the passage's overall conclusion about evaluating expert predictions?",
+            "answer": "B",
+            "explanation": "The passage concludes \"genuine predictive skill correlates only weakly with the confidence, certainty, and simple narrative clarity\" of a prediction.",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Confidence is the best indicator of predictive accuracy.",
+              "B. Predictive skill correlates only weakly with a prediction's confidence and narrative clarity.",
+              "C. Only credentialed academics should be trusted to make predictions.",
+              "D. Television appearances improve the accuracy of expert predictions."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "writing": {
+    "task1": {
+      "prompt": "The line graph below shows average life expectancy in three countries between 1950 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "image": "<img src=\"images/writing_unique8_p1.png\" class=\"max-w-full h-auto mx-auto rounded-xl shadow-lg border border-white/10 bg-white\" alt=\"Writing Task 1 Chart\" />",
+      "modelAnswer": "The line graph illustrates changes in average life expectancy in Japan, Brazil, and Nigeria between 1950 and 2020.\n\nOverall, life expectancy rose in all three countries over the seventy-year period, though Japan maintained the highest figure throughout while Nigeria consistently recorded the lowest, and the gap between the three countries narrowed only modestly over time.\n\nJapan started the period with a life expectancy of 61 years in 1950, already considerably higher than either Brazil or Nigeria, and rose steadily to 72 years by 1970 before growth slowed somewhat, eventually reaching 84 years by 2020. Brazil began at a much lower 45 years in 1950 but grew rapidly during the middle of the period, climbing to 66 years by 1990 and eventually reaching 75 years by 2020, narrowing its gap with Japan considerably compared to the start of the period.\n\nNigeria recorded the lowest life expectancy throughout the entire period, starting at just 36 years in 1950 and rising only gradually, reaching 55 years by 2020, an increase of 19 years but still 29 years behind Japan's figure in the same year, a considerably larger absolute gap than existed in 1950.\n\nIn summary, while all three countries saw life expectancy rise substantially between 1950 and 2020, Japan remained consistently ahead throughout, Brazil narrowed its gap with Japan considerably, and Nigeria's slower growth left it trailing further behind both other countries by the end of the period than proportionally it had been at the start."
+    },
+    "task2": {
+      "prompt": "Some people believe that scientific research should be funded by governments, while others think private companies should fund it. Discuss both views and give your own opinion.",
+      "modelAnswer": "Scientific research requires substantial and sustained funding, and there is ongoing debate about whether governments or private companies are better positioned to provide it. This essay will examine both perspectives before presenting my own view.\n\nThose who favour government funding argue that public bodies are better placed to support long-term, fundamental research whose practical applications may not become apparent for decades, if ever, research that private companies, answerable to shareholders expecting a reasonably timely return on investment, are often reluctant to fund. Government funding, allocated through independent peer-review panels rather than a single company's commercial interests, can also support research into areas offering little obvious profit potential, such as rare diseases affecting a relatively small number of patients, or long-term environmental monitoring, that might otherwise receive minimal research attention if left entirely to companies pursuing profit.\n\nOn the other hand, proponents of private funding point out that companies frequently possess strong practical incentives to translate research findings into genuinely usable products relatively quickly, since a company's own commercial survival directly depends on successfully doing so. Private funding can also move considerably faster than many government grant processes, which often involve lengthy application and review procedures that can delay promising research by months or even years, and companies are often willing to invest very heavily in narrow, specific, and high-potential-value areas of applied research, such as vaccine development or renewable battery technology, more rapidly than typical government funding cycles generally allow.\n\nIn my opinion, the most effective research ecosystems rely on a genuine combination of both funding sources rather than favouring one model exclusively over the other. Government funding remains essential for the kind of foundational, long-horizon research that underpins nearly all later commercial innovation, while private investment plays an equally valuable role in translating those foundational discoveries into practical products and applications more rapidly and efficiently than government funding alone has generally proven able to achieve."
+    }
+  }
 }
 };
 
