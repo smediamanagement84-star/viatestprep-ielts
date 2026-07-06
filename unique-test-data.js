@@ -3664,7 +3664,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "B",
             "explanation": "The passage states this suggests \"they possess something closer to an internal map, not merely a directional sense.\"",
             "location": "Passage 1",
-            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "instruction": "Question 12<br/>Choose the correct letter, A, B, C or D.",
             "options": [
               "A. Birds rely solely on visual landmarks.",
               "B. Birds possess something closer to an internal map rather than a fixed compass bearing.",
@@ -3674,18 +3674,13 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 13,
-            "type": "MCQ",
-            "text": "What is notable about young birds undertaking their first migration, according to the passage?",
-            "answer": "B",
-            "explanation": "The passage states some species complete \"their first migratory journey correctly without ever having made the trip before or having any adult present to guide them.\"",
+            "type": "MATCHING_INFO",
+            "text": "a description of specialised retinal proteins that let birds perceive variations in magnetic field strength and angle",
+            "answer": "C",
+            "explanation": "Paragraph C states specialised proteins \"appear to allow them to perceive subtle variations in magnetic field strength and angle, effectively providing something akin to a built-in compass.\"",
             "location": "Passage 1",
-            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
-            "options": [
-              "A. They always travel with experienced adult birds.",
-              "B. Some species appear to complete their first migration correctly through innate, inherited knowledge alone.",
-              "C. They rely entirely on visual landmarks.",
-              "D. They cannot navigate accurately without satellite tracking."
-            ]
+            "instruction": "Question 13<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-G.",
+            "options": ["A", "B", "C", "D", "E", "F", "G"]
           }
         ]
       },
@@ -3700,7 +3695,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "FALSE",
             "explanation": "The passage states: \"Only a relatively small proportion of donated clothing is actually resold within the country where it was originally donated.\"",
             "location": "Passage 2",
-            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 14-16<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
@@ -3714,7 +3709,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "TRUE",
             "explanation": "The passage states: \"Market traders, tailors who alter and repair imported garments for individual customers, and transport workers moving bales from ports to inland markets all derive a livelihood from this trade.\"",
             "location": "Passage 2",
-            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 14-16<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
@@ -3728,7 +3723,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "FALSE",
             "explanation": "The passage states \"a small number of governments in the region have proposed or implemented import restrictions and tariffs on second-hand clothing specifically intended to protect domestic manufacturing.\"",
             "location": "Passage 2",
-            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 14-16<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
@@ -3737,31 +3732,23 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 17,
-            "type": "TFNG",
-            "text": "Some imported bales contain garments too poor in quality to be resold at all.",
-            "answer": "TRUE",
-            "explanation": "The passage states traders report bales contain garments \"of such poor quality, damaged, heavily worn, or made from cheap synthetic fabric that rapidly degrades, that they cannot realistically be resold at all.\"",
+            "type": "MATCHING_FEATURES",
+            "text": "Collectively export millions of tonnes of used clothing annually.",
+            "answer": "A",
+            "explanation": "The passage states \"Wealthy countries collectively export millions of tonnes of used clothing annually.\"",
             "location": "Passage 2",
-            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
-            "options": [
-              "TRUE",
-              "FALSE",
-              "NOT GIVEN"
-            ]
+            "instruction": "Questions 17-18<br/>Look at the following statements and the list of countries below.<br/>Match each statement with the correct group, A or B.<br/><br/><b>List of Countries</b><br/>A.&nbsp; Wealthy exporting countries<br/>B.&nbsp; Receiving countries",
+            "options": ["A", "B"]
           },
           {
             "num": 18,
-            "type": "TFNG",
-            "text": "Receiving countries generally have advanced, large-scale waste management infrastructure for textile waste.",
-            "answer": "FALSE",
+            "type": "MATCHING_FEATURES",
+            "text": "Frequently lack the large-scale, formal waste management infrastructure needed to handle textile waste responsibly.",
+            "answer": "B",
             "explanation": "The passage states these countries \"frequently lack the large-scale, formal waste management infrastructure needed to handle this discarded material responsibly.\"",
             "location": "Passage 2",
-            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
-            "options": [
-              "TRUE",
-              "FALSE",
-              "NOT GIVEN"
-            ]
+            "instruction": "Questions 17-18<br/>Look at the following statements and the list of countries below.<br/>Match each statement with the correct group, A or B.<br/><br/><b>List of Countries</b><br/>A.&nbsp; Wealthy exporting countries<br/>B.&nbsp; Receiving countries",
+            "options": ["A", "B"]
           },
           {
             "num": 19,
@@ -3959,21 +3946,23 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 34,
-            "type": "FILL",
-            "text": "Large-scale longitudinal research assesses the same groups of individuals repeatedly at intervals sometimes spanning fifty _________ or more.",
-            "answer": "years",
+            "type": "ENDINGS",
+            "text": "Large-scale longitudinal research assesses the same individuals repeatedly at intervals that can span",
+            "answer": "A",
             "explanation": "The passage states assessments occur \"at intervals sometimes spanning fifty years or more.\"",
             "location": "Passage 3",
-            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 34-35<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F.<br/><br/><b>List of Endings</b><br/>A.&nbsp; fifty years or more<br/>B.&nbsp; penalising impulsive or highly volatile behaviour<br/>C.&nbsp; relying primarily on genetic testing<br/>D.&nbsp; only measuring personality once in early adulthood<br/>E.&nbsp; eliminating the need for follow-up assessments<br/>F.&nbsp; rewarding impulsive and unpredictable decision-making",
+            "options": ["A", "B", "C", "D", "E", "F"]
           },
           {
             "num": 35,
-            "type": "FILL",
-            "text": "Typical adult social roles reward dependability and self-control while penalising _________ or highly volatile behaviour.",
-            "answer": "impulsive",
-            "explanation": "The passage states such roles penalise \"impulsive or highly volatile behaviour.\"",
+            "type": "ENDINGS",
+            "text": "Typical adult social roles reward dependability and self-control while",
+            "answer": "B",
+            "explanation": "The passage states such roles reward \"dependability and self-control while actively penalising impulsive or highly volatile behaviour over time.\"",
             "location": "Passage 3",
-            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 34-35<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F.<br/><br/><b>List of Endings</b><br/>A.&nbsp; fifty years or more<br/>B.&nbsp; penalising impulsive or highly volatile behaviour<br/>C.&nbsp; relying primarily on genetic testing<br/>D.&nbsp; only measuring personality once in early adulthood<br/>E.&nbsp; eliminating the need for follow-up assessments<br/>F.&nbsp; rewarding impulsive and unpredictable decision-making",
+            "options": ["A", "B", "C", "D", "E", "F"]
           },
           {
             "num": 36,
@@ -3982,7 +3971,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "transitions",
             "explanation": "The passage states \"personality tends to change more noticeably during major life transitions, entering the workforce for the first time, marriage, parenthood, or retirement, than during more settled, comparatively stable periods of adult life.\"",
             "location": "Passage 3",
-            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 36-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 37,
@@ -3991,7 +3980,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "development",
             "explanation": "The passage refers to implications \"for approaches to therapy and self-directed personal development.\"",
             "location": "Passage 3",
-            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 36-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 38,
