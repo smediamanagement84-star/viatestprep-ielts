@@ -5287,6 +5287,598 @@ const UNIQUE_TEST_DATA = {
       "modelAnswer": "Whether unpaid community service should be a mandatory component of high school education is a question that provokes strong and often conflicting opinions. In my view, I largely agree that some form of compulsory community service offers genuine educational value, although I believe certain conditions must be met for the policy to succeed.\n\nThose in favour of compulsory community service argue that it exposes teenagers to perspectives and life circumstances considerably different from their own, potentially fostering greater empathy and a stronger sense of civic responsibility than classroom instruction alone can realistically provide. Direct, hands-on experience volunteering at a homeless shelter, an elderly care facility, or an environmental conservation project, for instance, can teach practical lessons about community needs and social responsibility that a purely theoretical civics lesson delivered in a traditional classroom setting may struggle to convey with anything like the same lasting impact.\n\nHowever, making such service strictly compulsory does raise legitimate concerns worth taking seriously. Critics reasonably point out that genuinely meaningful volunteering typically stems from authentic personal motivation, and that forcing reluctant, disengaged students to participate purely to satisfy a graduation requirement risks producing exactly the kind of resentful, minimal-effort participation that undermines the very values the programme is ostensibly meant to instil in the first place. There is also a legitimate practical concern regarding students from lower-income families, who may already be working part-time jobs specifically to help support their own households financially, and for whom an additional mandatory unpaid time commitment could impose genuine and unfair additional hardship.\n\nOn balance, I believe compulsory community service can be genuinely valuable, provided schools offer meaningful choice over which specific type of service a student ultimately performs, and provided reasonable accommodations are made for students already facing significant financial or family pressures on their available time outside school. Implemented thoughtfully and flexibly along these lines, rather than as a rigid, one-size-fits-all requirement applied identically to every student, mandatory community service could meaningfully broaden students' understanding of their communities without becoming an unfair or ultimately counterproductive burden for those students least able to comfortably absorb it."
     }
   }
+},
+"u10": {
+  "title": "ViaTestPrep Original Practice Test 10",
+  "book": "Unique Test",
+  "reading": {
+    "passages": [
+      {
+        "title": "The Contagious Mystery of Yawning",
+        "text": "<h1>The Contagious Mystery of Yawning</h1>\n<p><b>A</b>&nbsp; Few human behaviours are as universally familiar, or as scientifically puzzling, as the yawn. Nearly every vertebrate species studied so far, from fish and reptiles to birds and every mammal examined, produces some recognisable version of the same distinctive open-mouthed, deep-inhalation gesture, and human infants have been observed yawning inside the womb weeks before birth, well before the lungs are ever actually used for breathing. Despite this remarkable universality across species and even before birth itself, scientists still do not fully agree on precisely why yawning happens at all, a genuine gap in understanding that seems almost surprising given how ordinary and unremarkable the behaviour feels in everyday life.</p>\n<p><b>B</b>&nbsp; For much of the twentieth century, the dominant explanation held that yawning serves a straightforward respiratory function, drawing in extra oxygen or expelling a build-up of carbon dioxide from the bloodstream. This tidy explanation, though intuitive, has not survived careful experimental testing particularly well. Researchers have found that having participants breathe pure, oxygen-enriched air does not reduce their subsequent yawning frequency, and conversely, exposing participants to air artificially enriched with additional carbon dioxide does not measurably increase how often they yawn either, findings that directly undermine the simple respiratory explanation that once seemed so intuitively obvious.</p>\n<p><b>C</b>&nbsp; An alternative theory that has gained considerable scientific support in recent decades proposes that yawning primarily functions to cool the brain. According to this view, the deep inhalation and pronounced jaw stretch involved in a yawn increases blood flow to the face and skull, while the intake of cooler ambient air helps lower the temperature of blood flowing directly to the brain, a genuinely useful function given that the human brain operates markedly less efficiently outside a fairly narrow optimal temperature range. Supporting this theory, one study found that participants yawned considerably less frequently in outdoor conditions where the air temperature exceeded their own body temperature, a scenario in which inhaling ambient air would provide no meaningful cooling benefit whatsoever, compared with milder conditions where inhaled air was genuinely cooler than the body.</p>\n<p><b>D</b>&nbsp; One of the most socially intriguing aspects of yawning is its contagious quality. Simply watching another person yawn, hearing a recorded yawning sound, or even just reading a written description of yawning, precisely as this passage is currently doing to at least some readers, reliably triggers yawning in a meaningful proportion of observers. This contagious effect is not limited to humans, either; several studies have documented dogs yawning in direct response to watching their own human owners yawn, and some researchers have proposed that contagious yawning may be linked to empathy and social bonding between individuals, though this particular connection remains genuinely debated within the field rather than firmly established.</p>\n<p><b>E</b>&nbsp; Evidence for a link between contagious yawning and empathy remains distinctly mixed. Some studies have reported that individuals scoring higher on standard measures of empathy show greater susceptibility to contagious yawning, while other, more recent and often larger studies attempting to replicate this specific finding have failed to reproduce it convincingly, leaving the precise relationship between yawning contagion and empathy as a genuinely open and actively contested question within the current research literature rather than a settled scientific fact.</p>\n<p><b>F</b>&nbsp; Yawning also reliably appears at specific, predictable transitional moments rather than being driven purely by simple tiredness alone. People yawn noticeably more often shortly after waking up and again shortly before falling asleep, moments precisely bracketing a transition between two very different states of alertness, and many people report yawning frequently before an unfamiliar stressful event, such as public speaking or, among some athletes, immediately before competing, moments not obviously associated with tiredness or tissue-level oxygen deprivation at all.</p>\n<p><b>G</b>&nbsp; Taken together, contemporary yawning research illustrates how an exceptionally common, seemingly trivial everyday behaviour can conceal genuinely unresolved scientific complexity beneath its deceptively simple surface. Despite yawning's universality across nearly the entire vertebrate lineage and its appearance even before birth, no single, fully agreed explanation yet accounts convincingly for every one of its several distinct triggers and apparent social functions, leaving yawning a strangely persistent scientific mystery hiding in plain sight within one of the most mundane behaviours human beings display.</p>",
+        "questions": [
+          {
+            "num": 1,
+            "type": "HEADING",
+            "text": "Paragraph A",
+            "answer": "vi",
+            "explanation": "Paragraph A notes infants \"have been observed yawning inside the womb weeks before birth,\" and that \"scientists still do not fully agree on precisely why yawning happens at all.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A widely-held explanation that experiments failed to support<br/>ii.&nbsp; Evidence linking yawning to regulating brain temperature<br/>iii.&nbsp; A behaviour observed even in other species watching humans<br/>iv.&nbsp; Conflicting evidence on a proposed link to empathy<br/>v.&nbsp; Yawning tied to shifts between different states of alertness<br/>vi.&nbsp; A universal, unresolved puzzle beginning before birth<br/>vii.&nbsp; A common behaviour that still lacks a single agreed explanation<br/>viii.&nbsp; Cultural differences in attitudes toward yawning in public<br/>ix.&nbsp; Training methods used to suppress yawning in professional settings",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 2,
+            "type": "HEADING",
+            "text": "Paragraph B",
+            "answer": "i",
+            "explanation": "Paragraph B states experiments testing the respiratory theory found results that \"directly undermine the simple respiratory explanation that once seemed so intuitively obvious.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A widely-held explanation that experiments failed to support<br/>ii.&nbsp; Evidence linking yawning to regulating brain temperature<br/>iii.&nbsp; A behaviour observed even in other species watching humans<br/>iv.&nbsp; Conflicting evidence on a proposed link to empathy<br/>v.&nbsp; Yawning tied to shifts between different states of alertness<br/>vi.&nbsp; A universal, unresolved puzzle beginning before birth<br/>vii.&nbsp; A common behaviour that still lacks a single agreed explanation<br/>viii.&nbsp; Cultural differences in attitudes toward yawning in public<br/>ix.&nbsp; Training methods used to suppress yawning in professional settings",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 3,
+            "type": "HEADING",
+            "text": "Paragraph C",
+            "answer": "ii",
+            "explanation": "Paragraph C states \"the deep inhalation and pronounced jaw stretch involved in a yawn increases blood flow to the face and skull, while the intake of cooler ambient air helps lower the temperature of blood flowing directly to the brain.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A widely-held explanation that experiments failed to support<br/>ii.&nbsp; Evidence linking yawning to regulating brain temperature<br/>iii.&nbsp; A behaviour observed even in other species watching humans<br/>iv.&nbsp; Conflicting evidence on a proposed link to empathy<br/>v.&nbsp; Yawning tied to shifts between different states of alertness<br/>vi.&nbsp; A universal, unresolved puzzle beginning before birth<br/>vii.&nbsp; A common behaviour that still lacks a single agreed explanation<br/>viii.&nbsp; Cultural differences in attitudes toward yawning in public<br/>ix.&nbsp; Training methods used to suppress yawning in professional settings",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 4,
+            "type": "HEADING",
+            "text": "Paragraph D",
+            "answer": "iii",
+            "explanation": "Paragraph D notes \"several studies have documented dogs yawning in direct response to watching their own human owners yawn.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A widely-held explanation that experiments failed to support<br/>ii.&nbsp; Evidence linking yawning to regulating brain temperature<br/>iii.&nbsp; A behaviour observed even in other species watching humans<br/>iv.&nbsp; Conflicting evidence on a proposed link to empathy<br/>v.&nbsp; Yawning tied to shifts between different states of alertness<br/>vi.&nbsp; A universal, unresolved puzzle beginning before birth<br/>vii.&nbsp; A common behaviour that still lacks a single agreed explanation<br/>viii.&nbsp; Cultural differences in attitudes toward yawning in public<br/>ix.&nbsp; Training methods used to suppress yawning in professional settings",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 5,
+            "type": "HEADING",
+            "text": "Paragraph E",
+            "answer": "iv",
+            "explanation": "Paragraph E states \"Evidence for a link between contagious yawning and empathy remains distinctly mixed.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A widely-held explanation that experiments failed to support<br/>ii.&nbsp; Evidence linking yawning to regulating brain temperature<br/>iii.&nbsp; A behaviour observed even in other species watching humans<br/>iv.&nbsp; Conflicting evidence on a proposed link to empathy<br/>v.&nbsp; Yawning tied to shifts between different states of alertness<br/>vi.&nbsp; A universal, unresolved puzzle beginning before birth<br/>vii.&nbsp; A common behaviour that still lacks a single agreed explanation<br/>viii.&nbsp; Cultural differences in attitudes toward yawning in public<br/>ix.&nbsp; Training methods used to suppress yawning in professional settings",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 6,
+            "type": "HEADING",
+            "text": "Paragraph F",
+            "answer": "v",
+            "explanation": "Paragraph F states yawning \"appears at specific, predictable transitional moments\" bracketing \"a transition between two very different states of alertness.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A widely-held explanation that experiments failed to support<br/>ii.&nbsp; Evidence linking yawning to regulating brain temperature<br/>iii.&nbsp; A behaviour observed even in other species watching humans<br/>iv.&nbsp; Conflicting evidence on a proposed link to empathy<br/>v.&nbsp; Yawning tied to shifts between different states of alertness<br/>vi.&nbsp; A universal, unresolved puzzle beginning before birth<br/>vii.&nbsp; A common behaviour that still lacks a single agreed explanation<br/>viii.&nbsp; Cultural differences in attitudes toward yawning in public<br/>ix.&nbsp; Training methods used to suppress yawning in professional settings",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 7,
+            "type": "HEADING",
+            "text": "Paragraph G",
+            "answer": "vii",
+            "explanation": "Paragraph G concludes \"no single, fully agreed explanation yet accounts convincingly for every one of its several distinct triggers.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A widely-held explanation that experiments failed to support<br/>ii.&nbsp; Evidence linking yawning to regulating brain temperature<br/>iii.&nbsp; A behaviour observed even in other species watching humans<br/>iv.&nbsp; Conflicting evidence on a proposed link to empathy<br/>v.&nbsp; Yawning tied to shifts between different states of alertness<br/>vi.&nbsp; A universal, unresolved puzzle beginning before birth<br/>vii.&nbsp; A common behaviour that still lacks a single agreed explanation<br/>viii.&nbsp; Cultural differences in attitudes toward yawning in public<br/>ix.&nbsp; Training methods used to suppress yawning in professional settings",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 8,
+            "type": "TFNG",
+            "text": "Breathing pure oxygen has been shown to reduce how often people yawn.",
+            "answer": "FALSE",
+            "explanation": "The passage states \"having participants breathe pure, oxygen-enriched air does not reduce their subsequent yawning frequency.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 8-9<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 9,
+            "type": "TFNG",
+            "text": "Dogs have been observed yawning in response to watching their owners yawn.",
+            "answer": "TRUE",
+            "explanation": "The passage states \"several studies have documented dogs yawning in direct response to watching their own human owners yawn.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 8-9<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 10,
+            "type": "FILL",
+            "text": "One study found participants yawned less frequently when outdoor air temperature exceeded their own body _________.",
+            "answer": "temperature",
+            "explanation": "The passage states this occurred when \"air temperature exceeded their own body temperature.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 10-11<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 11,
+            "type": "FILL",
+            "text": "People yawn noticeably more often shortly after waking up and again shortly before falling _________.",
+            "answer": "asleep",
+            "explanation": "The passage states this happens \"shortly before falling asleep.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 10-11<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 12,
+            "type": "MCQ",
+            "text": "According to the passage, what has recent research found regarding yawning and empathy?",
+            "answer": "B",
+            "explanation": "The passage states \"more recent and often larger studies attempting to replicate this specific finding have failed to reproduce it convincingly.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. All studies confirm a strong, consistent link between the two.",
+              "B. More recent, larger studies have often failed to replicate an earlier reported link.",
+              "C. Empathy has been shown to have no relationship to any human behaviour.",
+              "D. Contagious yawning has only ever been observed in humans."
+            ]
+          },
+          {
+            "num": 13,
+            "type": "MCQ",
+            "text": "What is the passage's overall conclusion about yawning research?",
+            "answer": "C",
+            "explanation": "The passage concludes \"no single, fully agreed explanation yet accounts convincingly for every one of its several distinct triggers and apparent social functions.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. The exact function of yawning has now been fully and conclusively explained.",
+              "B. Yawning is driven purely by a single respiratory mechanism.",
+              "C. No single explanation yet accounts for all of yawning's triggers and functions.",
+              "D. Yawning has only recently been discovered in non-human species."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "The Hidden Costs of Fast Delivery",
+        "text": "<h1>The Hidden Costs of Fast Delivery</h1>\n<p>Ordering a product online in the morning and having it arrive at the front door by the afternoon has, within little more than a decade, shifted from a remarkable novelty to something many consumers now regard as a fairly ordinary baseline expectation. This dramatic shift toward ever-faster delivery has been made possible by enormous investment in warehousing, logistics software, and delivery fleets, but a growing body of research suggests that the true costs of this convenience are considerably higher, and far more widely distributed, than the price paid at checkout might suggest, with much of the actual burden falling on parties entirely absent from that specific transaction.</p>\n<p>The environmental toll of rapid, on-demand delivery is the most extensively studied hidden cost. Achieving delivery within a single day or, increasingly, within just a few hours, generally requires shipping smaller, individual orders far more frequently rather than consolidating multiple customer orders into fewer, larger, more fuel-efficient shipments, a pattern that significantly increases the total number of delivery vehicle trips required per unit of goods actually delivered. Some studies estimate that this fragmentation of delivery into smaller, more frequent trips can substantially increase the overall carbon emissions associated with a given quantity of goods compared with slower, consolidated delivery methods that allow far more efficient route planning and fuller vehicle loads per trip.</p>\n<p>Urban traffic congestion represents a second, closely related cost, one that falls disproportionately on city residents regardless of whether they personally use fast-delivery services at all. Delivery vehicles making frequent, individual stops throughout the day contribute measurably to local traffic congestion in many cities, particularly in dense urban commercial districts where kerb space for legal, temporary parking is already extremely limited, forcing many delivery drivers to double-park temporarily in traffic lanes, further slowing local traffic flow for other road users who receive no benefit whatsoever from that specific delivery.</p>\n<p>Labour conditions within the fast-delivery sector have also attracted sustained scrutiny from journalists and labour rights researchers. Meeting extremely tight, algorithmically generated delivery windows frequently places considerable pressure on drivers and warehouse workers alike, with several investigations documenting demanding productivity quotas, limited routine breaks, and, in the case of many gig-economy delivery drivers specifically, an absence of the standard employment benefits, such as guaranteed minimum wages, sick pay, or health insurance, that traditional full-time delivery employees have historically received as a matter of course.</p>\n<p>Packaging waste constitutes a further significant and highly visible cost. Individual items shipped separately and rapidly typically require more packaging material per item overall than the same goods would require if shipped together in a single, consolidated, less time-sensitive order, and rapid delivery timelines generally leave logistics companies with little practical opportunity to consolidate multiple items from a single customer's simultaneous orders into one combined shipment or package, meaning that customers frequently receive several separate parcels on the very same day for items that could easily have been shipped together under less time-pressured conditions.</p>\n<p>In response to mounting criticism on several of these specific fronts, some companies have introduced optional slower-delivery choices at checkout, occasionally offering customers a small financial discount or a loyalty reward in exchange for voluntarily accepting a longer, several-day delivery window rather than paying extra for guaranteed rapid delivery. Consumer uptake of these genuinely more sustainable delivery options has, however, remained relatively modest so far, suggesting that the deeply ingrained convenience of near-instant gratification continues to outweigh most individual consumers' documented environmental and social concerns when the two considerations are placed directly in competition with one another at the actual moment of checkout.</p>\n<p>Fast delivery therefore illustrates a now-familiar pattern increasingly observed across many different areas of modern digital commerce: a service that feels essentially costless and entirely frictionless to the individual consumer at the specific moment of purchase, but which in practice generates cumulative environmental, social, and infrastructural costs that are simply absorbed elsewhere, spread across delivery workers, city residents, and the wider environment, rather than reflected transparently in the advertised price the ordering customer actually sees and pays at checkout.</p>",
+        "questions": [
+          {
+            "num": 14,
+            "type": "TFNG",
+            "text": "Fast delivery generally requires consolidating multiple orders into fewer, larger shipments.",
+            "answer": "FALSE",
+            "explanation": "The passage states fast delivery \"generally requires shipping smaller, individual orders far more frequently rather than consolidating multiple customer orders.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 15,
+            "type": "TFNG",
+            "text": "Urban traffic congestion caused by delivery vehicles only affects people who use fast-delivery services themselves.",
+            "answer": "FALSE",
+            "explanation": "The passage states this cost \"falls disproportionately on city residents regardless of whether they personally use fast-delivery services at all.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 16,
+            "type": "TFNG",
+            "text": "Many gig-economy delivery drivers receive the same standard employment benefits as traditional full-time employees.",
+            "answer": "FALSE",
+            "explanation": "The passage states many gig-economy drivers face \"an absence of the standard employment benefits, such as guaranteed minimum wages, sick pay, or health insurance.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 17,
+            "type": "TFNG",
+            "text": "Items shipped separately and rapidly typically require less packaging material overall than consolidated shipments.",
+            "answer": "FALSE",
+            "explanation": "The passage states such items \"typically require more packaging material per item overall than the same goods would require if shipped together.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 18,
+            "type": "TFNG",
+            "text": "Consumer uptake of slower, more sustainable delivery options has been very high so far.",
+            "answer": "FALSE",
+            "explanation": "The passage states uptake \"has, however, remained relatively modest so far.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 19,
+            "type": "FILL",
+            "text": "Delivery vehicles making frequent stops contribute measurably to local traffic _________ in many cities.",
+            "answer": "congestion",
+            "explanation": "The passage states such vehicles \"contribute measurably to local traffic congestion in many cities.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 20,
+            "type": "FILL",
+            "text": "Limited kerb space forces many delivery drivers to double-park temporarily in traffic _________.",
+            "answer": "lanes",
+            "explanation": "The passage states drivers are forced \"to double-park temporarily in traffic lanes.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 21,
+            "type": "FILL",
+            "text": "Investigations have documented demanding productivity _________ placed on drivers and warehouse workers.",
+            "answer": "quotas",
+            "explanation": "The passage refers to \"demanding productivity quotas, limited routine breaks.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 22,
+            "type": "FILL",
+            "text": "Some companies now offer a small financial discount or loyalty reward for accepting a longer delivery _________.",
+            "answer": "window",
+            "explanation": "The passage refers to customers accepting \"a longer, several-day delivery window.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 23,
+            "type": "FILL",
+            "text": "Fast delivery costs are ultimately absorbed elsewhere, spread across delivery workers, city residents, and the wider _________.",
+            "answer": "environment",
+            "explanation": "The passage states costs are \"spread across delivery workers, city residents, and the wider environment.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 24,
+            "type": "MCQ",
+            "text": "According to the passage, why does fragmenting delivery into smaller, more frequent trips increase emissions?",
+            "answer": "A",
+            "explanation": "The passage states this pattern \"significantly increases the total number of delivery vehicle trips required per unit of goods actually delivered.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. It significantly increases the total number of delivery vehicle trips per unit of goods delivered.",
+              "B. It eliminates the need for any vehicles at all.",
+              "C. It reduces the total distance travelled by all vehicles combined.",
+              "D. It only affects deliveries made by bicycle."
+            ]
+          },
+          {
+            "num": 25,
+            "type": "MCQ",
+            "text": "What does the passage suggest about consumer choices between fast and slower delivery?",
+            "answer": "C",
+            "explanation": "The passage states convenience \"continues to outweigh most individual consumers' documented environmental and social concerns\" at checkout.",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Consumers always choose the slower, more sustainable option when offered.",
+              "B. Fast delivery options have been banned in most countries.",
+              "C. Convenience tends to outweigh environmental and social concerns at checkout.",
+              "D. Slower delivery options are no longer available anywhere."
+            ]
+          },
+          {
+            "num": 26,
+            "type": "MCQ",
+            "text": "What is the passage's overall conclusion about the true cost of fast delivery?",
+            "answer": "B",
+            "explanation": "The passage concludes fast delivery \"generates cumulative environmental, social, and infrastructural costs that are simply absorbed elsewhere, spread across delivery workers, city residents, and the wider environment, rather than reflected transparently in the advertised price.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. The advertised price already fully reflects all associated costs.",
+              "B. Real costs are absorbed elsewhere rather than reflected in the price the customer pays.",
+              "C. Fast delivery has no meaningful costs beyond the price paid at checkout.",
+              "D. Only environmental costs are relevant to this discussion."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Can Artificial Intelligence Be Creative?",
+        "text": "<h1>Can Artificial Intelligence Be Creative?</h1>\n<p>When an artificial intelligence system generates a passable poem, composes an original piece of music, or produces a striking digital painting from little more than a short text description, a familiar question resurfaces with renewed urgency: can a machine genuinely be creative, or is it merely producing a sophisticated statistical remix of patterns already present somewhere in its training data? The question turns out to hinge as much on how creativity itself is precisely defined as on any specific technical detail of how these particular systems actually operate internally.</p>\n<p>Modern generative artificial intelligence systems capable of producing text, images, or music are typically trained on truly enormous datasets of existing human-created work, learning to identify and internalise statistical patterns and stylistic relationships within that training data rather than being explicitly programmed with fixed, hand-crafted creative rules. When subsequently prompted to generate something new, these systems produce output by predicting, one element at a time, what is statistically likely to plausibly follow given the specific patterns absorbed during training, combined with the particular prompt supplied by a human user at that moment.</p>\n<p>Sceptics argue that this underlying process disqualifies such systems from genuine creativity almost by definition, regardless of how impressive or superficially novel any particular output might appear to a human observer. On this view, authentic creativity requires genuine intention, self-directed motivation, and some form of lived subjective experience providing the emotional or conceptual substance being meaningfully expressed, none of which a statistical pattern-matching system, however sophisticated its underlying architecture, can be said to genuinely possess in any philosophically meaningful sense. From this perspective, an AI system is best understood as an unusually sophisticated remixing tool rather than a genuinely creative agent operating with any authentic purpose of its own.</p>\n<p>Others push back firmly against this sceptical framing, pointing out that human creativity itself does not obviously arise from nothing at all, entirely independent of prior influence or exposure. Human artists, musicians, and writers likewise draw extensively, whether consciously or not, on existing works, techniques, and cultural influences absorbed gradually over years of their own individual training and exposure, synthesising and recombining these absorbed influences into something that, while genuinely new in its specific final form, is nonetheless assembled substantially from pre-existing raw material rather than conjured from nowhere. From this alternative perspective, the underlying difference between human and machine creativity may be one of degree and underlying mechanism rather than any absolute, categorical difference in kind.</p>\n<p>A more practically useful, if admittedly less philosophically satisfying, approach sidesteps the difficult question of machine intention almost entirely and instead asks a more measurable, empirical question: does a given output actually meet independently established, well-recognised creative standards, regardless of the precise underlying process that originally produced it? Under this evaluative framework, researchers have found that human judges, when a piece's actual origin (human or AI) is deliberately concealed from them during evaluation, frequently cannot reliably distinguish AI-generated creative work from human-generated work, and in several documented studies, judges have on occasion rated specific AI-generated pieces as more creative or more aesthetically pleasing than comparable human-created work they were simultaneously evaluating.</p>\n<p>These particular findings, however, raise a further complication rather than settling the underlying question entirely. A human evaluator's inability to reliably distinguish AI-generated work from human-generated work demonstrates only that the AI's output is convincingly humanlike in its surface qualities, not that any genuine underlying creative process, whatever exactly that might ultimately require or involve, was actually taking place inside the system that produced it. Critics reasonably argue that judging creativity by output alone, entirely independent of process, risks quietly redefining creativity as nothing more than the ability to convincingly imitate creative-seeming output, a definition many philosophers and artists would still regard as a considerably impoverished one.</p>\n<p>This unresolved debate carries genuine practical significance well beyond abstract academic philosophy, particularly for copyright law, artistic credit, and cultural attitudes toward AI-assisted creative work more broadly. Whether AI-generated output ultimately comes to be regarded as authentically creative in its own right, as a fundamentally new category of tool-assisted human creativity requiring its own distinct framework, or as something else again entirely, may end up depending less on any further technical advances in the underlying systems themselves, and more on how human societies collectively choose, over time, to define and culturally value the concept of creativity itself going forward.</p>",
+        "questions": [
+          {
+            "num": 27,
+            "type": "TFNG",
+            "text": "Modern generative AI systems are typically programmed with fixed, hand-crafted creative rules rather than trained on data.",
+            "answer": "FALSE",
+            "explanation": "The passage states these systems learn patterns \"rather than being explicitly programmed with fixed, hand-crafted creative rules.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 28,
+            "type": "TFNG",
+            "text": "Sceptics believe genuine creativity requires intention and lived subjective experience.",
+            "answer": "TRUE",
+            "explanation": "The passage states sceptics argue creativity \"requires genuine intention, self-directed motivation, and some form of lived subjective experience.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 29,
+            "type": "TFNG",
+            "text": "Human artists never draw on existing works or cultural influences when creating something new.",
+            "answer": "FALSE",
+            "explanation": "The passage states human artists \"likewise draw extensively, whether consciously or not, on existing works, techniques, and cultural influences absorbed gradually over years of their own individual training and exposure.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 30,
+            "type": "TFNG",
+            "text": "In some studies, human judges could not reliably distinguish AI-generated creative work from human-generated work.",
+            "answer": "TRUE",
+            "explanation": "The passage states judges \"frequently cannot reliably distinguish AI-generated creative work from human-generated work.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 31,
+            "type": "TFNG",
+            "text": "Judges in some studies rated AI-generated pieces as less creative than human-created work in every single case.",
+            "answer": "FALSE",
+            "explanation": "The passage states judges \"have on occasion rated specific AI-generated pieces as more creative or more aesthetically pleasing than comparable human-created work.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 32,
+            "type": "TFNG",
+            "text": "An inability to distinguish AI from human work proves that genuine creative processes occurred inside the AI system.",
+            "answer": "FALSE",
+            "explanation": "The passage states this inability \"demonstrates only that the AI's output is convincingly humanlike in its surface qualities, not that any genuine underlying creative process, whatever exactly that might ultimately require or involve, was actually taking place inside the system that produced it.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 33,
+            "type": "TFNG",
+            "text": "This debate has no practical relevance to copyright law or artistic credit.",
+            "answer": "FALSE",
+            "explanation": "The passage states the debate \"carries genuine practical significance well beyond abstract academic philosophy, particularly for copyright law, artistic credit.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 34,
+            "type": "FILL",
+            "text": "Generative AI systems predict, one element at a time, what is statistically likely to plausibly _________.",
+            "answer": "follow",
+            "explanation": "The passage states systems predict \"what is statistically likely to plausibly follow.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 35,
+            "type": "FILL",
+            "text": "Sceptics view an AI system as an unusually sophisticated remixing _________ rather than a genuinely creative agent.",
+            "answer": "tool",
+            "explanation": "The passage describes an AI system as \"an unusually sophisticated remixing tool rather than a genuinely creative agent.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 36,
+            "type": "FILL",
+            "text": "Some argue the difference between human and machine creativity may be one of degree and underlying _________ rather than an absolute difference in kind.",
+            "answer": "mechanism",
+            "explanation": "The passage states the difference \"may be one of degree and underlying mechanism rather than any absolute, categorical difference in kind.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 37,
+            "type": "FILL",
+            "text": "Critics argue judging creativity by output alone risks redefining creativity as merely the ability to convincingly _________ creative-seeming output.",
+            "answer": "imitate",
+            "explanation": "The passage states this risks \"redefining creativity as nothing more than the ability to convincingly imitate creative-seeming output.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 38,
+            "type": "MCQ",
+            "text": "According to sceptics described in the passage, why do AI systems not qualify as genuinely creative?",
+            "answer": "B",
+            "explanation": "The passage states sceptics believe creativity requires qualities \"none of which a statistical pattern-matching system, however sophisticated its underlying architecture, can be said to genuinely possess in any philosophically meaningful sense.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Because AI systems are too slow to produce output.",
+              "B. Because AI systems lack genuine intention and lived subjective experience.",
+              "C. Because AI systems cannot process large datasets.",
+              "D. Because AI-generated output is always easily distinguishable from human work."
+            ]
+          },
+          {
+            "num": 39,
+            "type": "MCQ",
+            "text": "What practical, empirical approach to evaluating creativity does the passage describe?",
+            "answer": "C",
+            "explanation": "The passage describes asking \"does a given output actually meet independently established, well-recognised creative standards, regardless of the precise underlying process.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Asking only whether a human or AI produced the work.",
+              "B. Measuring the computational power used to generate the output.",
+              "C. Assessing whether the output meets recognised creative standards regardless of its origin.",
+              "D. Relying solely on the length of time taken to produce the work."
+            ]
+          },
+          {
+            "num": 40,
+            "type": "MCQ",
+            "text": "What does the passage suggest will most influence how AI creativity is ultimately regarded?",
+            "answer": "D",
+            "explanation": "The passage states this \"may end up depending less on any further technical advances in the underlying systems themselves, and more on how human societies collectively choose, over time, to define and culturally value the concept of creativity itself.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Further technical advances in AI systems alone.",
+              "B. A single global legal ruling on the issue.",
+              "C. The processing speed of future AI models.",
+              "D. How human societies collectively choose to define and value creativity."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "writing": {
+    "task1": {
+      "prompt": "The bar chart below shows average daily screen time across three age groups in 2010 and 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "image": "<img src=\"images/writing_unique10_p1.png\" class=\"max-w-full h-auto mx-auto rounded-xl shadow-lg border border-white/10 bg-white\" alt=\"Writing Task 1 Chart\" />",
+      "modelAnswer": "The bar chart compares average daily screen time across three age groups in 2010 and 2023.\n\nOverall, screen time increased substantially for all three age groups over the thirteen-year period, with teenagers recording the highest figures in both years and seniors consistently recording the lowest.\n\nIn 2010, teenagers averaged 4 hours of screen time per day, compared with 3 hours for adults aged 25 to 40 and just 1 hour for seniors aged 65 and over. By 2023, all three figures had risen considerably: teenagers' screen time had doubled to 8 hours per day, adults' had doubled to 6 hours, and seniors' had tripled to 3 hours.\n\nWhile seniors recorded the smallest absolute increase of the three groups, rising by just 2 hours compared with a 4-hour increase for both teenagers and adults, their screen time nonetheless tripled in relative terms, the largest proportional increase of any group shown.\n\nIn summary, screen time rose substantially across all three age groups between 2010 and 2023, with teenagers remaining the heaviest users of screens throughout, adults following a broadly similar pattern of growth, and seniors recording the lowest usage in both years despite experiencing the largest proportional increase."
+    },
+    "task2": {
+      "prompt": "Some people believe that space exploration is a waste of money that could be better spent solving problems on Earth. To what extent do you agree or disagree?",
+      "modelAnswer": "Space exploration programmes routinely cost governments many billions of dollars, prompting some to argue that this money would be far better directed toward pressing problems here on Earth, such as poverty, disease, and climate change. While I understand the appeal of this argument, I largely disagree that space exploration represents wasted spending.\n\nThose who consider space exploration wasteful point to the sheer scale of unmet need much closer to home. Billions of people worldwide still lack reliable access to clean water, basic healthcare, or quality education, and critics reasonably ask how spending vast sums to send astronauts to the Moon or robotic probes to distant planets can be justified while such fundamental problems remain unresolved on the very planet we already inhabit. From this perspective, redirecting even a modest fraction of space agency budgets toward these more immediate and demonstrably solvable problems could produce far greater and more immediate human benefit.\n\nHowever, this argument overlooks the substantial practical benefits that space exploration has already delivered well beyond the specific missions themselves. Satellite technology developed initially for space programmes now underpins global communications, weather forecasting, and precision agriculture, applications directly benefiting billions of people on Earth in entirely practical, everyday ways that have nothing directly to do with space travel itself. Space agency research has also produced numerous unrelated technological spin-offs, from water purification systems originally designed for astronauts to medical imaging techniques, that have gone on to meaningfully benefit fields entirely unconnected to space travel itself.\n\nFurthermore, the amounts spent on space exploration are frequently exaggerated relative to overall government budgets; most national space agencies actually receive a comparatively small fraction of total government spending, meaning that redirecting this specific funding would likely make only a marginal difference to genuinely massive global problems like poverty or climate change, which arguably require fundamentally different, far larger-scale policy solutions entirely separate from any single agency's specific budget.\n\nIn conclusion, while problems here on Earth undeniably deserve urgent, sustained attention and resources, I do not believe space exploration meaningfully competes with solving them. The practical technological benefits, scientific knowledge, and international scientific cooperation it generates justify its continuation, even as governments simultaneously pursue solutions to pressing terrestrial problems through other, separate funding streams."
+    }
+  }
 }
 };
 
