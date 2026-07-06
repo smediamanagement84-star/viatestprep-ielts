@@ -4245,7 +4245,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "B",
             "explanation": "The passage states \"crows and ravens will actively re-hide a cached food item if they notice a rival bird watching them do it the first time.\"",
             "location": "Passage 1",
-            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "instruction": "Question 12<br/>Choose the correct letter, A, B, C or D.",
             "options": [
               "A. Crows never cache food for later use.",
               "B. Crows will re-hide food if they notice a rival watching them cache it.",
@@ -4255,18 +4255,13 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 13,
-            "type": "MCQ",
-            "text": "What do these findings suggest about the evolution of intelligence, according to the passage?",
-            "answer": "C",
-            "explanation": "The passage states \"the neural circuitry required for sophisticated cognition can apparently evolve along more than one distinct anatomical pathway.\"",
+            "type": "MATCHING_INFO",
+            "text": "a specific figure for how long ago birds and mammals diverged from a common evolutionary ancestor",
+            "answer": "F",
+            "explanation": "Paragraph F states \"birds and mammals diverged from a common ancestor roughly three hundred million years ago, long before either lineage had developed anything resembling advanced cognition.\"",
             "location": "Passage 1",
-            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
-            "options": [
-              "A. Intelligence can only evolve through a single brain structure.",
-              "B. Birds and mammals share an identical brain structure.",
-              "C. Sophisticated cognition can evolve via more than one distinct anatomical pathway.",
-              "D. Intelligence requires a large brain in absolute terms."
-            ]
+            "instruction": "Question 13<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-G.",
+            "options": ["A", "B", "C", "D", "E", "F", "G"]
           }
         ]
       },
@@ -4281,7 +4276,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "TRUE",
             "explanation": "The passage states suppliers \"are typically required to meet extremely detailed specifications covering everything from the precise fat content of ground beef to the exact dimensions and internal temperature of a frozen potato.\"",
             "location": "Passage 2",
-            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 14-16<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
@@ -4295,7 +4290,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "FALSE",
             "explanation": "The passage states ingredients \"can otherwise vary considerably in flavour depending on factors such as an animal's diet, growing conditions, and even the specific season.\"",
             "location": "Passage 2",
-            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 14-16<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
@@ -4309,7 +4304,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "TRUE",
             "explanation": "The passage states diners \"frequently gravitate toward familiar international chains specifically because the experience on offer is entirely predictable.\"",
             "location": "Passage 2",
-            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 14-16<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
@@ -4318,31 +4313,23 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 17,
-            "type": "TFNG",
-            "text": "Nutritionists have raised no concerns about the ingredients typically used in fast food flavour profiles.",
-            "answer": "FALSE",
-            "explanation": "The passage states achieving consistent flavour \"frequently involves high levels of salt, sugar, and refined fat,\" which nutritionists have linked to health concerns.",
+            "type": "ENDINGS",
+            "text": "Nutritionists have linked the habitual overconsumption of salt, sugar, and refined fat to",
+            "answer": "B",
+            "explanation": "The passage states habitual overconsumption \"has been linked in numerous studies to significantly elevated rates of obesity, heart disease, and type 2 diabetes.\"",
             "location": "Passage 2",
-            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
-            "options": [
-              "TRUE",
-              "FALSE",
-              "NOT GIVEN"
-            ]
+            "instruction": "Questions 17-18<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F.<br/><br/><b>List of Endings</b><br/>A.&nbsp; incrementally and selectively rather than through wholesale change<br/>B.&nbsp; significantly elevated rates of obesity, heart disease, and type 2 diabetes<br/>C.&nbsp; a complete ban on salt and sugar in all recipes<br/>D.&nbsp; immediate global closure of underperforming outlets<br/>E.&nbsp; reduced ingredient sourcing costs across all suppliers<br/>F.&nbsp; a substantial increase in flagship item prices",
+            "options": ["A", "B", "C", "D", "E", "F"]
           },
           {
             "num": 18,
-            "type": "TFNG",
-            "text": "Most major fast food chains have completely reformulated their best-selling, flagship menu items in recent years.",
-            "answer": "FALSE",
-            "explanation": "The passage states flagship items \"typically remain fundamentally unchanged from their original formulations for decades at a stretch.\"",
+            "type": "ENDINGS",
+            "text": "Reformulation of flagship menu items has generally occurred",
+            "answer": "A",
+            "explanation": "The passage states such changes \"have generally occurred incrementally and selectively rather than through any wholesale reformulation of a chain's genuinely best-selling, flagship menu items.\"",
             "location": "Passage 2",
-            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
-            "options": [
-              "TRUE",
-              "FALSE",
-              "NOT GIVEN"
-            ]
+            "instruction": "Questions 17-18<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F.<br/><br/><b>List of Endings</b><br/>A.&nbsp; incrementally and selectively rather than through wholesale change<br/>B.&nbsp; significantly elevated rates of obesity, heart disease, and type 2 diabetes<br/>C.&nbsp; a complete ban on salt and sugar in all recipes<br/>D.&nbsp; immediate global closure of underperforming outlets<br/>E.&nbsp; reduced ingredient sourcing costs across all suppliers<br/>F.&nbsp; a substantial increase in flagship item prices",
+            "options": ["A", "B", "C", "D", "E", "F"]
           },
           {
             "num": 19,
@@ -4576,33 +4563,23 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 38,
-            "type": "MCQ",
-            "text": "According to the passage, what distinguished more accurate forecasters from less accurate ones?",
+            "type": "MATCHING_FEATURES",
+            "text": "Draws on many different sources of evidence and analytical perspectives, adjusting views incrementally as new evidence emerges.",
             "answer": "A",
-            "explanation": "The passage states accurate forecasters drew \"on many different sources of evidence and analytical perspectives, adjusting their views incrementally as new evidence emerged.\"",
+            "explanation": "The passage states these experts drew \"on many different sources of evidence and analytical perspectives, adjusting their views incrementally as new evidence emerged.\"",
             "location": "Passage 3",
-            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
-            "options": [
-              "A. Drawing on many sources of evidence and adjusting views incrementally.",
-              "B. Holding a single unifying theoretical framework.",
-              "C. Having the highest media profile.",
-              "D. Having the most advanced academic credentials."
-            ]
+            "instruction": "Questions 38-39<br/>Look at the following statements and the list of cognitive styles below.<br/>Match each statement with the correct style, A or B.<br/><br/><b>List of Cognitive Styles</b><br/>A.&nbsp; Fox-style experts<br/>B.&nbsp; Hedgehog-style experts",
+            "options": ["A", "B"]
           },
           {
             "num": 39,
-            "type": "MCQ",
-            "text": "What does the passage suggest about \"hedgehog\" style experts?",
-            "answer": "C",
-            "explanation": "The passage states hedgehog experts \"tended to force complex, messy real-world developments into that one favoured explanatory framework regardless of genuine fit.\"",
+            "type": "MATCHING_FEATURES",
+            "text": "Tends to force complex, messy real-world developments into one single favoured explanatory framework regardless of genuine fit.",
+            "answer": "B",
+            "explanation": "The passage states these experts \"tended to force complex, messy real-world developments into that one favoured explanatory framework regardless of genuine fit.\"",
             "location": "Passage 3",
-            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
-            "options": [
-              "A. They always outperformed fox-style experts.",
-              "B. They never appeared in the media.",
-              "C. They tended to force events into one favoured explanatory framework.",
-              "D. They were exclusively academic economists."
-            ]
+            "instruction": "Questions 38-39<br/>Look at the following statements and the list of cognitive styles below.<br/>Match each statement with the correct style, A or B.<br/><br/><b>List of Cognitive Styles</b><br/>A.&nbsp; Fox-style experts<br/>B.&nbsp; Hedgehog-style experts",
+            "options": ["A", "B"]
           },
           {
             "num": 40,
@@ -4611,7 +4588,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "B",
             "explanation": "The passage concludes \"genuine predictive skill correlates only weakly with the confidence, certainty, and simple narrative clarity\" of a prediction.",
             "location": "Passage 3",
-            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "instruction": "Question 40<br/>Choose the correct letter, A, B, C or D.",
             "options": [
               "A. Confidence is the best indicator of predictive accuracy.",
               "B. Predictive skill correlates only weakly with a prediction's confidence and narrative clarity.",
