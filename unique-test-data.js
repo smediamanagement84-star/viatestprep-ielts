@@ -2502,7 +2502,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "B",
             "explanation": "The passage states this involved \"persuading governments and private companies holding decades of previously unshared survey data to contribute it to the shared public dataset.\"",
             "location": "Passage 1",
-            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "instruction": "Question 12<br/>Choose the correct letter, A, B, C or D.",
             "options": [
               "A. Because most survey data had never been collected before 2017.",
               "B. Because decades of previously unshared survey data needed to be contributed to the shared dataset.",
@@ -2512,18 +2512,13 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 13,
-            "type": "MCQ",
-            "text": "What does the passage suggest about the importance of seafloor mapping in relation to deep-sea mining?",
-            "answer": "B",
-            "explanation": "The passage states mapping provides \"the essential baseline data against which any future environmental impact, whether from mining, climate change, or shifting ocean currents, can ultimately be measured and understood.\"",
+            "type": "MATCHING_INFO",
+            "text": "a statement that sunlight cannot penetrate seawater at all beyond a certain depth",
+            "answer": "E",
+            "explanation": "Paragraph E states \"Beyond a few hundred metres, sunlight cannot penetrate seawater at all, ruling out simple visual or photographic survey techniques.\"",
             "location": "Passage 1",
-            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
-            "options": [
-              "A. It has become irrelevant now that mining technology exists.",
-              "B. It provides essential baseline data for measuring future environmental impact.",
-              "C. It has ended all international debate about seabed regulation.",
-              "D. It is now less urgent than in the past."
-            ]
+            "instruction": "Question 13<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-G.",
+            "options": ["A", "B", "C", "D", "E", "F", "G"]
           }
         ]
       },
@@ -2603,21 +2598,23 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 19,
-            "type": "FILL",
-            "text": "The term nostalgia was coined in the seventeenth century by a Swiss _________.",
-            "answer": "physician",
+            "type": "ENDINGS",
+            "text": "The term nostalgia was coined in the seventeenth century by a Swiss",
+            "answer": "A",
             "explanation": "The passage states it was \"coined in the seventeenth century by a Swiss physician.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 19-20<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F.<br/><br/><b>List of Endings</b><br/>A.&nbsp; physician describing homesickness in soldiers<br/>B.&nbsp; increase the frequency of spontaneous nostalgic reflection<br/>C.&nbsp; philosopher studying memory and imagination<br/>D.&nbsp; reduce a person's overall life satisfaction<br/>E.&nbsp; composer inspired by folk music traditions<br/>F.&nbsp; eliminate the need for further psychological research",
+            "options": ["A", "B", "C", "D", "E", "F"]
           },
           {
             "num": 20,
-            "type": "FILL",
-            "text": "Cold physical environments, social exclusion, and life uncertainty have all been shown to increase the frequency of spontaneous nostalgic _________.",
-            "answer": "reflection",
+            "type": "ENDINGS",
+            "text": "Cold physical environments, social exclusion, and life uncertainty have all been shown to",
+            "answer": "B",
             "explanation": "The passage states these factors \"increase the frequency of spontaneous nostalgic reflection.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 19-20<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F.<br/><br/><b>List of Endings</b><br/>A.&nbsp; physician describing homesickness in soldiers<br/>B.&nbsp; increase the frequency of spontaneous nostalgic reflection<br/>C.&nbsp; philosopher studying memory and imagination<br/>D.&nbsp; reduce a person's overall life satisfaction<br/>E.&nbsp; composer inspired by folk music traditions<br/>F.&nbsp; eliminate the need for further psychological research",
+            "options": ["A", "B", "C", "D", "E", "F"]
           },
           {
             "num": 21,
@@ -2626,7 +2623,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "mechanism",
             "explanation": "The passage suggests nostalgia may function \"as a kind of built-in psychological coping mechanism.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 21-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 22,
@@ -2635,7 +2632,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "accessible",
             "explanation": "The passage states such memories \"often remain more accessible than more recent ones.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 21-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 23,
@@ -2644,7 +2641,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "potential",
             "explanation": "The passage states marketers \"have long recognised nostalgia's commercial potential.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 21-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 24,
@@ -2704,7 +2701,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "FALSE",
             "explanation": "The passage states automation \"appears to be hollowing out the middle of the job market in particular, while leaving both the top and bottom relatively intact.\"",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Question 27<br/>Does the following statement agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
@@ -2713,31 +2710,23 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 28,
-            "type": "TFNG",
-            "text": "Highly educated professionals have generally seen their employment prospects decline due to automation.",
-            "answer": "FALSE",
-            "explanation": "The passage states such professionals \"have generally seen their employment prospects and relative wages hold steady or improve.\"",
+            "type": "MATCHING_FEATURES",
+            "text": "Have generally seen employment prospects and relative wages hold steady or improve.",
+            "answer": "A",
+            "explanation": "The passage states highly educated professionals \"have generally seen their employment prospects and relative wages hold steady or improve.\"",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
-            "options": [
-              "TRUE",
-              "FALSE",
-              "NOT GIVEN"
-            ]
+            "instruction": "Questions 28-29<br/>Look at the following statements and the list of worker groups below.<br/>Match each statement with the correct group, A or B.<br/><br/><b>List of Worker Groups</b><br/>A.&nbsp; Highly educated professionals<br/>B.&nbsp; Lower-paid service workers",
+            "options": ["A", "B"]
           },
           {
             "num": 29,
-            "type": "TFNG",
-            "text": "Low-paid service roles such as care work have proven resistant to automation.",
-            "answer": "TRUE",
-            "explanation": "The passage states such roles \"have also proven surprisingly resistant to automation.\"",
+            "type": "MATCHING_FEATURES",
+            "text": "Have proven resistant to automation partly because their work requires physical dexterity and adaptability.",
+            "answer": "B",
+            "explanation": "The passage states such roles \"have also proven surprisingly resistant to automation, partly because these jobs require physical dexterity and adaptability to unpredictable environments.\"",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
-            "options": [
-              "TRUE",
-              "FALSE",
-              "NOT GIVEN"
-            ]
+            "instruction": "Questions 28-29<br/>Look at the following statements and the list of worker groups below.<br/>Match each statement with the correct group, A or B.<br/><br/><b>List of Worker Groups</b><br/>A.&nbsp; Highly educated professionals<br/>B.&nbsp; Lower-paid service workers",
+            "options": ["A", "B"]
           },
           {
             "num": 30,
@@ -2746,7 +2735,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "FALSE",
             "explanation": "The passage states this decline \"began well before the recent surge of interest in artificial intelligence.\"",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 30-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
@@ -2760,7 +2749,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "FALSE",
             "explanation": "The passage states displaced workers \"frequently struggle to move directly into the growing high-skill category.\"",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 30-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
@@ -2774,7 +2763,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "FALSE",
             "explanation": "The passage states local decline can occur even in economies where \"broader national economic growth figures can mask entirely\" such local effects.",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 30-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
@@ -2788,7 +2777,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "FALSE",
             "explanation": "The passage states: \"Few of these proposals have yet been tested at a national scale large enough to draw firm conclusions.\"",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 30-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
