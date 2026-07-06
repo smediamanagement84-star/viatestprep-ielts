@@ -1921,7 +1921,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "C",
             "explanation": "The passage states construction proceeds through \"stigmergy, in which a termite deposits material partly in response to chemical cues left by the deposits of other termites that came before it.\"",
             "location": "Passage 1",
-            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "instruction": "Question 12<br/>Choose the correct letter, A, B, C or D.",
             "options": [
               "A. A queen termite issues instructions to all workers.",
               "B. Termites follow a shared mental blueprint of the mound.",
@@ -1931,18 +1931,13 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 13,
-            "type": "MCQ",
-            "text": "What did the Eastgate Centre borrow from termite mound design?",
+            "type": "MATCHING_INFO",
+            "text": "a reference to abandoned mounds that have remained standing for decades after being deserted",
             "answer": "B",
-            "explanation": "The passage states it uses \"a similar passive airflow strategy to regulate internal temperature without conventional air conditioning.\"",
+            "explanation": "Paragraph B states some abandoned mounds \"have been found still standing decades later, their walls having weathered seasonal rains far better than many buildings made from conventional construction materials.\"",
             "location": "Passage 1",
-            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
-            "options": [
-              "A. Its overall exterior shape.",
-              "B. A passive airflow strategy to regulate temperature without conventional air conditioning.",
-              "C. The use of chewed wood fibre as a building material.",
-              "D. An underground fungus-farming system."
-            ]
+            "instruction": "Question 13<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-G.",
+            "options": ["A", "B", "C", "D", "E", "F", "G"]
           }
         ]
       },
@@ -2022,21 +2017,23 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 19,
-            "type": "FILL",
-            "text": "Linguists estimate that nearly _________ of the world's roughly seven thousand languages may fall out of use by the end of this century.",
-            "answer": "half",
+            "type": "ENDINGS",
+            "text": "By some counts, nearly half of the world's languages are likely to",
+            "answer": "A",
             "explanation": "The passage states \"by some counts nearly half\" of languages are likely to fall out of use.",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 19-20<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F.<br/><br/><b>List of Endings</b><br/>A.&nbsp; fall out of use by the end of this century<br/>B.&nbsp; diminish sharply as families move to cities<br/>C.&nbsp; be officially banned by national governments<br/>D.&nbsp; increase in use due to internet access<br/>E.&nbsp; remain exactly as widely spoken as before<br/>F.&nbsp; be studied more closely by linguists",
+            "options": ["A", "B", "C", "D", "E", "F"]
           },
           {
             "num": 20,
-            "type": "FILL",
-            "text": "As younger generations move to cities, opportunities to use a smaller language in daily life _________ sharply.",
-            "answer": "diminish",
+            "type": "ENDINGS",
+            "text": "As younger generations move to cities, opportunities to use a smaller language in daily life",
+            "answer": "B",
             "explanation": "The passage states such opportunities \"diminish sharply\" after urbanisation.",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 19-20<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F.<br/><br/><b>List of Endings</b><br/>A.&nbsp; fall out of use by the end of this century<br/>B.&nbsp; diminish sharply as families move to cities<br/>C.&nbsp; be officially banned by national governments<br/>D.&nbsp; increase in use due to internet access<br/>E.&nbsp; remain exactly as widely spoken as before<br/>F.&nbsp; be studied more closely by linguists",
+            "options": ["A", "B", "C", "D", "E", "F"]
           },
           {
             "num": 21,
@@ -2045,7 +2042,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "immersion",
             "explanation": "The passage refers to \"immersion schools specifically intended to raise a new generation of fluent child speakers.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 21-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 22,
@@ -2054,7 +2051,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "recordings",
             "explanation": "The passage refers to producing \"dictionaries, grammars, and audio recordings.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 21-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 23,
@@ -2063,7 +2060,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "century",
             "explanation": "The passage states this revival happened \"over the course of roughly a century.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 21-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 24,
@@ -2123,7 +2120,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "FALSE",
             "explanation": "The passage states the placebo effect \"is not simply a matter of patients imagining relief that is not really there.\"",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 27-28<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
@@ -2137,7 +2134,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "TRUE",
             "explanation": "The passage states imaging documented \"the release of the body's own natural pain-relieving chemicals in patients given a placebo for pain relief.\"",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 27-28<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
@@ -2146,31 +2143,23 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 29,
-            "type": "TFNG",
-            "text": "A placebo injection typically produces a weaker response than a placebo pill.",
-            "answer": "FALSE",
-            "explanation": "The passage states \"a placebo injection typically produces a stronger response than a placebo pill.\"",
+            "type": "MATCHING_FEATURES",
+            "text": "Typically produces a weaker placebo response than the other method of administration.",
+            "answer": "A",
+            "explanation": "The passage states \"a placebo injection typically produces a stronger response than a placebo pill,\" meaning the pill produces the weaker response.",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
-            "options": [
-              "TRUE",
-              "FALSE",
-              "NOT GIVEN"
-            ]
+            "instruction": "Questions 29-30<br/>Look at the following statements and the list of placebo forms below.<br/>Match each statement with the correct form, A or B.<br/><br/><b>List of Placebo Forms</b><br/>A.&nbsp; Placebo pill<br/>B.&nbsp; Placebo injection",
+            "options": ["A", "B"]
           },
           {
             "num": 30,
-            "type": "TFNG",
-            "text": "A more expensive-looking placebo pill has produced a stronger response than a cheaper-looking one in some studies.",
-            "answer": "TRUE",
-            "explanation": "The passage states \"a more expensive-looking placebo pill has, in several studies, produced a stronger response than an identical but cheaper-looking one.\"",
+            "type": "MATCHING_FEATURES",
+            "text": "Typically produces a stronger placebo response than the other method of administration.",
+            "answer": "B",
+            "explanation": "The passage states \"a placebo injection typically produces a stronger response than a placebo pill.\"",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
-            "options": [
-              "TRUE",
-              "FALSE",
-              "NOT GIVEN"
-            ]
+            "instruction": "Questions 29-30<br/>Look at the following statements and the list of placebo forms below.<br/>Match each statement with the correct form, A or B.<br/><br/><b>List of Placebo Forms</b><br/>A.&nbsp; Placebo pill<br/>B.&nbsp; Placebo injection",
+            "options": ["A", "B"]
           },
           {
             "num": 31,
@@ -2179,7 +2168,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "FALSE",
             "explanation": "The passage states participants informed the pills contained no active medication \"nonetheless reported meaningfully greater symptom relief than a comparable group given no treatment at all.\"",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 31-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
@@ -2193,7 +2182,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "FALSE",
             "explanation": "The passage states \"placebo response rates in clinical trials have been unusually high in recent decades\" for conditions including depression.",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 31-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
@@ -2207,7 +2196,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "NOT GIVEN",
             "explanation": "The passage states some clinicians see a possible role for placebos and notes ethical questions remain, but does not state whether all clinicians agree on acceptability.",
             "location": "Passage 3",
-            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "instruction": "Questions 31-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
             "options": [
               "TRUE",
               "FALSE",
