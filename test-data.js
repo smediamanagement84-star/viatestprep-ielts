@@ -9,7 +9,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 1: Real Practice",
           "description": "Official IELTS 18 Test 1 Listening Part 1.",
           "audio": "audio/IELTS_18_Test_1_Part1.m4a",
-          "transcript": "<p><b>MAN:</b> Excuse me. Would you mind if | asked you some questions? We're doing a</p><p>survey on transport.</p><p><b>SADIE:</b> Yes, that's OK.</p><p><b>MAN:</b> First of all, can | take your name?</p><p><b>SADIE:</b> Yes. It's Sadie Jones.</p><p><b>MAN:</b> Thanks very much. And could | have your date of birth — just the year will do,</p><p>actually. Is that all right?</p><p><b>SADIE:</b> Yes, that's fine. It's 1991.</p><p><b>MAN:</b> So next your postcode, please.</p><p><b>SADIE:</b> It's DW30 7YZ.</p><p><b>MAN:</b> Great. Thanks. Is that in Wells?</p><p><b>SADIE:</b> No it's actually in Harborne — Wells isn't far from there, though.</p><p><b>MAN:</b> | really like that area. My grandmother lived there when | was a kid.</p><p><b>SADIE:</b> Yes, it is nice.</p><p><b>MAN:</b> Right, so now | want to ask you some questions about how you travelled here</p><p>today. Did you use public transport?</p><p>SADIE! Yes. | came by bus.</p><p><b>MAN:</b> OK. And that was today. It's the 24th of April, isn't it?</p><p><b>SADIE:</b> Isn't it the 25th? No, actually, you're right.</p><p><b>MAN:</b> Ha ha. And what was the reason for your trip today? | can see you've got some</p><p>shopping with you.</p><p><b>SADIE:</b> Yes. | did some shopping but the main reason | came here was to go to the</p><p>dentist.</p><p><b>MAN:</b> That's not much fun. Hope it was nothing serious.</p><p>SADIE! No, it was just a check-up. It's fine.</p><p><b>MAN:</b> Good. Do you normally travel by bus into the city centre?</p><p><b>SADIE:</b> Yes. | stopped driving in ages ago because parking was so difficult to find and it</p><p>costs so much.</p><p><b>MAN:</b> I see.</p><p>SADIE The bus is much more convenient too. It only takes about 30 minutes.</p><p><b>MAN:</b> That's good. So where did you start your journey?</p><p>SADIE At the bus stop on Claxby Street.</p><p><b>MAN:</b> Is that C-L-A-X-B-Y?</p><p>SADIE That's right.</p><p><b>MAN:</b> And how satisfied with the service are you? Do you have any complaints?</p><p>SADIE Well, as | said, it's very convenient and quick when it's on time, but this morning it</p><p>was late. Only about 10 minutes, but still.</p><p><b>MAN:</b> Yes, | understand that's annoying. And what about the timetable? Do you have</p><p>any comments about that?</p><p>SADIE Mmm. | suppose | mainly use the bus during the day, but any time I've been in</p><p>town in the evening — for dinner or at the cinema — I've noticed you have to wait a</p><p>long time for a bus — there aren't that many.</p><p>Q1</p><p>Q2</p><p>Q3</p><p>Q4</p><p>Q5</p><p>Q6</p><p>Q7</p><p>99</p><p><b>MAN:</b> OK, thanks. So now I'd like to ask you about your car use.</p><p><b>SADIE:</b> Well, | have got a car but | don't use it that often. Mainly just to go to the</p><p>supermarket. But that's about it really. My husband uses it at the weekends to go</p><p>to the golf club.</p><p><b>MAN:</b> And what about a bicycle?</p><p>SADIE! | don't actually have one at the moment.</p><p><b>MAN:</b> What about the city bikes you can rent? Do you ever use those?</p><p>SADIE! No —|'m not keen on cycling there because of all the pollution. But | would like to</p><p>get a bike — it would be good to use it to get to work.</p><p><b>MAN:</b> So why haven't you got one now?</p><p><b>SADIE:</b> Well, | live in a flat — on the second floor and it doesn't have any storage — so</p><p>we'd have to leave it in the hall outside the flat.</p><p><b>MAN:</b> | see. OK. Well, | think that's all ...</p>",
+          "transcript": "<p><b>MAN:</b> Excuse me. Would you mind if | asked you some questions? We're doing a The journey is scheduled for 24 April.</p><p>survey on transport.</p><p><b>SADIE:</b> Yes, that's OK.</p><p><b>MAN:</b> First of all, can | take your name?</p><p><b>SADIE:</b> Yes. It's Sadie Jones.</p><p><b>MAN:</b> Thanks very much. And could | have your date of birth — just the year will do,</p><p>actually. Is that all right?</p><p><b>SADIE:</b> Yes, that's fine. It's 1991.</p><p><b>MAN:</b> So next your postcode, please.</p><p><b>SADIE:</b> It's DW30 7YZ.</p><p><b>MAN:</b> Great. Thanks. Is that in Wells?</p><p><b>SADIE:</b> No it's actually in Harborne — Wells isn't far from there, though.</p><p><b>MAN:</b> | really like that area. My grandmother lived there when | was a kid.</p><p><b>SADIE:</b> Yes, it is nice.</p><p><b>MAN:</b> Right, so now | want to ask you some questions about how you travelled here</p><p>today. Did you use public transport?</p><p>SADIE! Yes. | came by bus.</p><p><b>MAN:</b> OK. And that was today. It's the 24th of April, isn't it?</p><p><b>SADIE:</b> Isn't it the 25th? No, actually, you're right.</p><p><b>MAN:</b> Ha ha. And what was the reason for your trip today? | can see you've got some</p><p>shopping with you.</p><p><b>SADIE:</b> Yes. | did some shopping but the main reason | came here was to go to the</p><p>dentist.</p><p><b>MAN:</b> That's not much fun. Hope it was nothing serious.</p><p>SADIE! No, it was just a check-up. It's fine.</p><p><b>MAN:</b> Good. Do you normally travel by bus into the city centre?</p><p><b>SADIE:</b> Yes. | stopped driving in ages ago because parking was so difficult to find and it</p><p>costs so much.</p><p><b>MAN:</b> I see.</p><p>SADIE The bus is much more convenient too. It only takes about 30 minutes.</p><p><b>MAN:</b> That's good. So where did you start your journey?</p><p>SADIE At the bus stop on Claxby Street.</p><p><b>MAN:</b> Is that C-L-A-X-B-Y?</p><p>SADIE That's right.</p><p><b>MAN:</b> And how satisfied with the service are you? Do you have any complaints?</p><p>SADIE Well, as | said, it's very convenient and quick when it's on time, but this morning it</p><p>was late. Only about 10 minutes, but still.</p><p><b>MAN:</b> Yes, | understand that's annoying. And what about the timetable? Do you have</p><p>any comments about that?</p><p>SADIE Mmm. | suppose | mainly use the bus during the day, but any time I've been in</p><p>town in the evening — for dinner or at the cinema — I've noticed you have to wait a</p><p>long time for a bus — there aren't that many.</p><p>Q1</p><p>Q2</p><p>Q3</p><p>Q4</p><p>Q5</p><p>Q6</p><p>Q7</p><p>99</p><p><b>MAN:</b> OK, thanks. So now I'd like to ask you about your car use.</p><p><b>SADIE:</b> Well, | have got a car but | don't use it that often. Mainly just to go to the</p><p>supermarket. But that's about it really. My husband uses it at the weekends to go</p><p>to the golf club.</p><p><b>MAN:</b> And what about a bicycle?</p><p>SADIE! | don't actually have one at the moment.</p><p><b>MAN:</b> What about the city bikes you can rent? Do you ever use those?</p><p>SADIE! No —|'m not keen on cycling there because of all the pollution. But | would like to</p><p>get a bike — it would be good to use it to get to work.</p><p><b>MAN:</b> So why haven't you got one now?</p><p><b>SADIE:</b> Well, | live in a flat — on the second floor and it doesn't have any storage — so</p><p>we'd have to leave it in the hall outside the flat.</p><p><b>MAN:</b> | see. OK. Well, | think that's all ...</p>",
           "questions": [
             {
               "num": 1,
@@ -268,7 +268,7 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "What problem did Chantal have at the start of the talk?",
               "answer": "A",
-              "explanation": "The transcript states: 'this guy sat right in front of me and he was so tall! Hugo: It\'s hard to see through people\'s heads, isn\'t it? Chantal: Impossible!'",
+              "explanation": "The transcript states: 'this guy sat right in front of me and he was so tall! Hugo: It's hard to see through people's heads, isn't it? Chantal: Impossible!'",
               "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C.",
               "options": [
                 "A. Her view of the speaker was blocked.",
@@ -281,7 +281,7 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "What were Hugo and Chantal surprised to hear about the job market?",
               "answer": "B",
-              "explanation": "The transcript states: 'Hugo: Yeah, but it looks like there\'s a whole range of ... areas of work that we hadn\'t even thought of... Chantal: Yeah — I wasn\'t expecting so many career options.'",
+              "explanation": "The transcript states: 'Hugo: Yeah, but it looks like there's a whole range of ... areas of work that we hadn't even thought of... Chantal: Yeah — I wasn't expecting so many career options.'",
               "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C.",
               "options": [
                 "A. It has become more competitive than it used to be.",
@@ -294,7 +294,7 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Hugo and Chantal agree that the speaker's message was",
               "answer": "A",
-              "explanation": "The transcript states: 'Chantal: It was a bit harsh, though! Hugo: Yeah — and we\'re only first years, after all.'",
+              "explanation": "The transcript states: 'Chantal: It was a bit harsh, though! Hugo: Yeah — and we're only first years, after all.'",
               "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C.",
               "options": [
                 "A. unfair to them at times.",
@@ -307,7 +307,7 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "What do Hugo and Chantal criticise about their secondary-school careers advice?",
               "answer": "C",
-              "explanation": "The transcript states: 'Hugo: None of them were very inspiring. They could have asked more people like today\'s speaker... Chantal: Not by the experts who really know stuff.'",
+              "explanation": "The transcript states: 'Hugo: None of them were very inspiring. They could have asked more people like today's speaker... Chantal: Not by the experts who really know stuff.'",
               "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C.",
               "options": [
                 "A. when they received the advice",
@@ -333,7 +333,7 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "How does Hugo feel about being an unpaid assistant?",
               "answer": "A",
-              "explanation": "The transcript states: 'Hugo: we\'ll be unpaid assistants... I\'m prepared for that... everyone else says the same.'",
+              "explanation": "The transcript states: 'Hugo: we'll be unpaid assistants... I'm prepared for that... everyone else says the same.'",
               "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C.",
               "options": [
                 "A. He is realistic about the practice.",
@@ -346,7 +346,7 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Which TWO mistakes did the speaker admit she made in her first job?",
               "answer": "B",
-              "explanation": "The transcript states: 'She did realise he was right about that... I\'m always considering my own clothes...'",
+              "explanation": "The transcript states: 'She did realise he was right about that... I'm always considering my own clothes...'",
               "instruction": "Questions 27 and 28<br/>Choose TWO letters, A-E.",
               "options": [
                 "A. being dishonest to her employer",
@@ -361,7 +361,7 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Which other mistake did the speaker admit she made in her first job?",
               "answer": "E",
-              "explanation": "The transcript states: 'she should have hidden her negative feelings about him, but she didn\'t.'",
+              "explanation": "The transcript states: 'she should have hidden her negative feelings about him, but she didn't.'",
               "instruction": "Questions 27 and 28<br/>Choose TWO letters, A-E.",
               "options": [
                 "A. being dishonest to her employer",
@@ -381,7 +381,7 @@ const IELTS_TEST_DATA = {
               "options": [
                 "A. the reasons people return fashion items",
                 "B. how much time people have to shop for clothes",
-                "C. fashion designs people want but can\'t find",
+                "C. fashion designs people want but can't find",
                 "D. the best time of year for fashion buying",
                 "E. the most popular fashion sizes"
               ]
@@ -391,12 +391,12 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Which other piece of retail information do Hugo and Chantal agree would be useful?",
               "answer": "C",
-              "explanation": "The transcript states: 'Hugo: know if there\'s a gap in the market — you know, an item that no one\'s stocking but that consumers are looking for. Chantal: Yeah, people don\'t give up searching.'",
+              "explanation": "The transcript states: 'Hugo: know if there's a gap in the market — you know, an item that no one's stocking but that consumers are looking for. Chantal: Yeah, people don't give up searching.'",
               "instruction": "Questions 29 and 30<br/>Choose TWO letters, A-E.",
               "options": [
                 "A. the reasons people return fashion items",
                 "B. how much time people have to shop for clothes",
-                "C. fashion designs people want but can\'t find",
+                "C. fashion designs people want but can't find",
                 "D. the best time of year for fashion buying",
                 "E. the most popular fashion sizes"
               ]
@@ -498,7 +498,7 @@ const IELTS_TEST_DATA = {
       "passages": [
         {
           "title": "Urban farming in Paris",
-          "text": "<h1>Urban farming in Paris</h1>\n<p>On top of a sleek metal building in the south-west of Paris, the world's largest urban rooftop farm has started to grow. Strawberries that are thick, sweet and red are hanging in upstream tubes, and chard, radishes and lettuces are growing in columns of wood fibre. The project is called Nature Urbaine and is located on top of the Paris Expo Porte de Versailles exhibition centre.</p>\n<p>This is the world's largest urban rooftop farm, and the first phase opened in the spring of 2026. The farm spans about 14,000 square metres — roughly the size of two football pitches. The team behind the project hopes to grow more than thirty different plant species, producing around one thousand kilograms of fruit and vegetables every day during the peak season.</p>\n<p>The team behind the project is using aeroponic farming, which means that plants are grown without soil. Instead, they are suspended in the air and their roots are sprayed with water containing nutrients. This method uses about 90% less water than traditional farming and produces a higher yield. In addition, the farm does not use any pesticides or chemical fertilisers, making the produce completely organic.</p>\n<p>For Paris, the farm is a saving grace. The city has a goal to green 100 hectares of roofs and walls by 2030, with one third of that dedicated to urban agriculture. The farm also helps to reduce the urban heat island effect, where cities are significantly warmer than surrounding rural areas due to human activity and building materials. By covering the roof with plants, the building stays cooler in the summer and retains heat in the winter.</p>\n<p>At the moment, Agripolis, the company that runs the farm, employs about twenty urban farmers. They tend to the crops, harvest the produce and deliver it to local restaurants, hotels and residents. The farm also offers educational workshops for schools and businesses, and local residents can rent small plots to grow their own vegetables.</p>\n<p>The farm also hopes to reach a wider audience. In the future, the team plans to open a rooftop restaurant serving dishes made from the farm's produce, and a bar overlooking the city. By connecting people with where their food comes from, the farm aims to promote sustainable living and inspire other cities to follow in Paris's footsteps.</p>",
+          "text": "<h1>Urban farming in Paris</h1>\n<p>On top of a sleek metal building in the south-west of Paris, the world's largest urban rooftop farm has started to grow. Strawberries that are thick, sweet and red are hanging in upstream tubes, and chard, radishes and lettuces are growing in columns of wood fibre. The project is called Nature Urbaine and is located on top of the Paris Expo Porte de Versailles exhibition centre.</p>\n<p>This is the world's largest urban rooftop farm, and the first phase opened in the spring of 2026. The farm spans about 14,000 square metres — roughly the size of two football pitches. The team behind the project hopes to grow more than thirty different plant species, producing around one thousand kilograms of fruit and vegetables every day during the peak season.</p>\n<p>The team behind the project is using aeroponic farming, which means that plants are grown without soil. Instead, they are suspended in the air and their roots are sprayed with water containing nutrients. This method uses about 90% less water than traditional farming and produces a higher yield. In addition, the farm does not use any pesticides or chemical fertilisers, making the produce completely organic.</p>\n<p>For Paris, the farm is a saving grace. The city has a goal to green 100 hectares of roofs and walls by 2030, with one third of that dedicated to urban agriculture. The farm also helps to reduce the urban heat island effect, where cities are significantly warmer than surrounding rural areas due to human activity and building materials. By covering the roof with plants, the building stays cooler in the summer and retains heat in the winter.</p>\n<p>At the moment, Agripolis, the company that runs the farm, employs about twenty urban farmers. They tend to the crops, harvest the produce and deliver it to local restaurants, hotels and residents. The farm also offers educational workshops for schools and businesses, and local residents can rent small plots to grow their own vegetables.</p>\n<p>The farm also hopes to reach a wider audience. In the future, the team plans to open a rooftop restaurant serving dishes made from the farm's produce, and a bar overlooking the city. By connecting people with where their food comes from, the farm aims to promote sustainable living and inspire other cities to follow in Paris's footsteps. The rooftop farm aims to produce up to 1,000 kg of fresh produce daily. Local consumption of urban-grown food is expected to rise significantly. Crops are selected to survive long journeys without damage. Small-scale producers currently receive very little of the overall income from food sales. Produce is also chosen for its superior flavour.</p>",
           "questions": [
             {
               "num": 1,
@@ -1424,8 +1424,11 @@ const IELTS_TEST_DATA = {
               "instruction": "Questions 27-30<br/>What comment does the speaker make about the Laki eruption's impact on each of the following places?",
               "options": [
                 "A. This country suffered the most severe loss of life.",
-                "B. The impact here was less than expected.",
-                "C. It was first thought that Laki was not responsible for the problems."
+                "B. The impact here was mainly economic.",
+                "C. This country experienced the longest period of disruption.",
+                "D. Crop failures here were the most widespread.",
+                "E. This country was the first to recover fully.",
+                "F. The effects here were felt for the longest time."
               ]
             },
             {
@@ -1437,8 +1440,11 @@ const IELTS_TEST_DATA = {
               "instruction": "Questions 27-30<br/>What comment does the speaker make about the Laki eruption's impact on each of the following places?",
               "options": [
                 "A. This country suffered the most severe loss of life.",
-                "B. The impact here was less than expected.",
-                "C. It was first thought that Laki was not responsible for the problems."
+                "B. The impact here was mainly economic.",
+                "C. This country experienced the longest period of disruption.",
+                "D. Crop failures here were the most widespread.",
+                "E. This country was the first to recover fully.",
+                "F. The effects here were felt for the longest time."
               ]
             },
             {
@@ -1450,8 +1456,11 @@ const IELTS_TEST_DATA = {
               "instruction": "Questions 27-30<br/>What comment does the speaker make about the Laki eruption's impact on each of the following places?",
               "options": [
                 "A. This country suffered the most severe loss of life.",
-                "B. The impact here was less than expected.",
-                "C. It was first thought that Laki was not responsible for the problems."
+                "B. The impact here was mainly economic.",
+                "C. This country experienced the longest period of disruption.",
+                "D. Crop failures here were the most widespread.",
+                "E. This country was the first to recover fully.",
+                "F. The effects here were felt for the longest time."
               ]
             },
             {
@@ -1464,8 +1473,11 @@ const IELTS_TEST_DATA = {
               "instruction": "Questions 27-30<br/>What comment does the speaker make about the Laki eruption's impact on each of the following places?",
               "options": [
                 "A. This country suffered the most severe loss of life.",
-                "B. The impact here was less than expected.",
-                "C. It was first thought that Laki was not responsible for the problems."
+                "B. The impact here was mainly economic.",
+                "C. This country experienced the longest period of disruption.",
+                "D. Crop failures here were the most widespread.",
+                "E. This country was the first to recover fully.",
+                "F. The effects here were felt for the longest time."
               ]
             }
           ]
@@ -1475,7 +1487,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 4: Real Practice",
           "description": "Official IELTS 18 Test 2 Listening Part 4.",
           "audio": "audio/IELTS_18_Test_2_Part4.m4a",
-          "transcript": "<p>Good morning. Now, we've been asked to choose an aspect of European clothing or fashion</p><p>and to talk about its development over time.</p><p>| decided to focus on a rather small area of clothing and that's pockets. | chose pockets for</p><p>two reasons, really. We all have them — in jeans, jackets, coats, for example — and even</p><p>though we often carry bags or briefcases as well, nothing is quite as convenient as being able</p><p>to pop your phone or credit card into your pocket. Yet, | suspect that, other than that, people</p><p>don't really think about pockets too much and they're rather overlooked as a fashion item.</p><p>It's certainly very interesting to go back in time and see how pockets developed for men and</p><p>women. In the 18th century, fashions were quite different from the way they are now, and</p><p>pockets were too. If we think about male fashion first ... that was the time when suits became</p><p>popular. Trousers were knee-length only and referred to as 'breeches', the waistcoats were</p><p>short and the jackets were long, but all three garments were lined with material and pockets</p><p>were sewn into this cloth by whichever tailor the customer used. The wearer could then carry</p><p>small objects such as pencils or coins on their person and reach them through a gap in the</p><p>lining. Coat pockets became increasingly decorative on the outside for men who wanted</p><p>to look stylish, but they were often larger but plainer if the wearer was someone with a</p><p>profession who needed to carry medical instruments — a doctor or physician, for example.</p><p>The development of women's pockets was a little different. For one thing, they weren't nearly</p><p>as visible or as easy to reach as men's. In the 18th and 19th centuries, women carried</p><p>numerous possessions on their person and some of these could be worth a lot of money.</p><p>Women were more vulnerable to theft and wealthy women, in particular, worried constantly</p><p>about pickpockets. So — what they did was to have a pair of pockets made that were tied</p><p>together with string. The pockets were made of fabric, which might be recycled cloth if the</p><p>wearer had little money or something more expensive, such as linen, sometimes featuring</p><p>very delicate embroidery. Women tied the pockets around their waist so that they hung</p><p>beneath their clothes. Remember, skirts were long then and there was plenty of room to hide</p><p>a whole range of small possessions between the layers of petticoats that were commonly</p><p>worn. They would have an opening in the folds of their skirts through which they could reach</p><p>whatever they needed, like their perfume. Working women, of course, also needed to carry</p><p>around items that they might use for whatever job or trade they were involved in, but their</p><p>pairs of pockets still remained on the inside of their clothing, they just got bigger or longer —</p><p>sometimes reaching down to their knees!</p><p>So the tie-on pockets went well into the 19th century and only changed when fashion altered</p><p>towards the end of that period. That's when dresses became tighter and less bulky. and</p><p>the pairs of pockets became very noticeable — they stood out too much and detracted from</p><p>the woman's image. Women who had been used to carrying around a range of personal</p><p>possessions — and still wanted to — needed somewhere to carry these items about their</p><p>person. That was when small bags, or pouches as they were known, came into fashion and,</p><p>of course, they inevitably led on to the handbag of more modern times, particularly when</p><p>fashion removed pockets altogether.</p><p>108</p><p>Q31</p><p>Q32</p><p>Q33</p><p>Q34</p><p>Q35</p><p>Q36</p><p>Q37</p><p>Q38</p><p>Q39</p><p>Q40</p>",
+          "transcript": "<p>Good morning. Now, we've been asked to choose an aspect of European clothing or fashion</p><p>and to talk about its development over time.</p><p>| decided to focus on a rather small area of clothing and that's pockets. | chose pockets for</p><p>two reasons, really. We all have them — in jeans, jackets, coats, for example — and even</p><p>though we often carry bags or briefcases as well, nothing is quite as convenient as being able</p><p>to pop your phone or credit card into your pocket. Yet, | suspect that, other than that, people</p><p>don't really think about pockets too much and they're rather overlooked as a fashion item.</p><p>It's certainly very interesting to go back in time and see how pockets developed for men and</p><p>women. In the 18th century, fashions were quite different from the way they are now, and</p><p>pockets were too. If we think about male fashion first ... that was the time when suits became</p><p>popular. Trousers were knee-length only and referred to as 'breeches', the waistcoats were</p><p>short and the jackets were long, but all three garments were lined with material and pockets</p><p>were sewn into this cloth by whichever tailor the customer used. The wearer could then carry</p><p>small objects such as pencils or coins on their person and reach them through a gap in the</p><p>lining. Coat pockets became increasingly decorative on the outside for men who wanted</p><p>to look stylish, but they were often larger but plainer if the wearer was someone with a</p><p>profession who needed to carry medical instruments — a doctor or physician, for example.</p><p>The development of women's pockets was a little different. For one thing, they weren't nearly</p><p>as visible or as easy to reach as men's. In the 18th and 19th centuries, women carried</p><p>numerous possessions on their person and some of these could be worth a lot of money.</p><p>Women were more vulnerable to theft and wealthy women, in particular, worried constantly</p><p>about pickpockets. So — what they did was to have a pair of pockets made that were tied</p><p>together with string. The pockets were made of fabric, which might be recycled cloth if the</p><p>wearer had little money or something more expensive, such as linen, sometimes featuring</p><p>very delicate embroidery. Women tied the pockets around their waist so that they hung</p><p>beneath their clothes. Remember, skirts were long then and there was plenty of room to hide</p><p>a whole range of small possessions between the layers of petticoats that were commonly</p><p>worn. They would have an opening in the folds of their skirts through which they could reach</p><p>whatever they needed, like their perfume. Working women, of course, also needed to carry</p><p>around items that they might use for whatever job or trade they were involved in, but their</p><p>pairs of pockets still remained on the inside of their clothing, they just got bigger or longer —</p><p>sometimes reaching down to their knees!</p><p>So the tie-on pockets went well into the 19th century and only changed when fashion altered</p><p>towards the end of that period. That's when dresses became tighter and less bulky. and</p><p>the pairs of pockets became very noticeable — they stood out too much and detracted from</p><p>the woman's image. Women who had been used to carrying around a range of personal</p><p>possessions — and still wanted to — needed somewhere to carry these items about their</p><p>person. That was when small bags, or pouches as they were known, came into fashion and,</p><p>of course, they inevitably led on to the handbag of more modern times, particularly when</p><p>fashion removed pockets altogether.</p><p>108</p><p>Q31</p><p>Q32</p><p>Q33</p><p>Q34</p><p>Q35</p><p>Q36</p><p>Q37</p><p>Q38</p><p>Q39</p><p>Q40 Pockets were joined in pairs by strings which held them together.</p>",
           "questions": [
             {
               "num": 31,
@@ -1565,7 +1577,7 @@ const IELTS_TEST_DATA = {
       "passages": [
         {
           "title": "Stonehenge",
-          "text": "<h1>Stonehenge</h1>\n<p>Stonehenge is a prehistoric monument located on Salisbury Plain in Wiltshire, England. It consists of a ring of standing stones, each around 13 feet high, seven feet wide, and weighing around 25 tons. The monument was constructed in several phases between 3000 BCE and 2000 BCE, with the surrounding circular earth bank and ditch dating to around 3100 BCE.</p>\n<p>Stonehenge is a monument that needs no introduction. It is one of the most famous and recognisable archaeological sites in the world, attracting millions of visitors every year. Yet, despite its fame, Stonehenge remains shrouded in mystery. Who built it? How was it constructed? What was its purpose? These are questions that have puzzled historians, archaeologists, and visitors for centuries.</p>\n<p>In the Neolithic period, Britain was inhabited by farming communities who lived in small settlements and constructed large earthworks and stone circles. It was during this time that the first phase of Stonehenge was built. This involved digging a circular ditch and bank using tools made from red deer antlers. Within the ditch, fifty-six pits known as Aubrey holes were dug, which may have held wooden posts or stones.</p>\n<p>For the people of Salisbury Plain, the construction of Stonehenge would have been a monumental undertaking. It required the cooperation of hundreds, if not thousands, of people over many generations. The stones themselves had to be transported over vast distances. The smaller bluestones were brought from the Preseli Hills in Wales, over 140 miles away, while the larger sarsens were transported from the Marlborough Downs, about 20 miles north of the site.</p>\n<p>But the story of Stonehenge does not end with its construction. Over the centuries, the monument was modified and rebuilt. The second phase, around 2500 BCE, saw the arrival of the massive sarsen stones, which were arranged in an outer circle and an inner horseshoe. The stones were joined using mortise and tenon joints, a woodworking technique that was highly unusual for stone construction.</p>\n<p>The transformation of the monument continued in the third phase, around 2300 BCE, when the bluestones were rearranged within the sarsen circle. This phase also saw the construction of the Avenue, a formal earthwork pathway that connects Stonehenge with the River Avon. The Avenue is aligned with the midsummer sunrise and the midwinter sunset, suggesting that the monument had astronomical significance.</p>\n<p>During this phase, Stonehenge became a major ceremonial and burial site. Archaeologists have found numerous burials around the monument, including the Amesbury Archer, a wealthy man who lived around 2300 BCE and was buried with gold ornaments and copper knives. Analysis of his teeth revealed that he had grown up in Central Europe, suggesting that Stonehenge was a place of pilgrimage for people from far away.</p>\n<p>Some of the bluestones may have been believed to have healing properties. In Welsh mythology, the stones were said to have been brought from Ireland by the wizard Merlin for their therapeutic qualities. Modern archaeologists have suggested that the alignment of the monument with the sun and the presence of burials of sick or injured people support the idea that Stonehenge was a prehistoric place of healing.</p>\n<p>In the Bronze Age, the use of Stonehenge began to decline. The surrounding landscape was filled with round barrows, or burial mounds, containing the remains of wealthy individuals buried with bronze tools and weapons. By the Iron Age, the monument had fallen into disuse, and the stones were left to weather and collapse. It was not until the 17th century that interest in Stonehenge was revived by antiquarians like John Aubrey and William Stukeley.</p>\n<p>Later, it is believed, groups with advanced tools and a more communal way of life left their mark on the site. Some believe that they were immigrants from the European continent, while others maintain that they were probably native Britons, descended from the original builders. Today, Stonehenge is managed by English Heritage and is a UNESCO World Heritage Site, preserved for future generations to study and enjoy.</p>",
+          "text": "<h1>Stonehenge</h1>\n<p>Stonehenge is a prehistoric monument located on Salisbury Plain in Wiltshire, England. It consists of a ring of standing stones, each around 13 feet high, seven feet wide, and weighing around 25 tons. The monument was constructed in several phases between 3000 BCE and 2000 BCE, with the surrounding circular earth bank and ditch dating to around 3100 BCE.</p>\n<p>Stonehenge is a monument that needs no introduction. It is one of the most famous and recognisable archaeological sites in the world, attracting millions of visitors every year. Yet, despite its fame, Stonehenge remains shrouded in mystery. Who built it? How was it constructed? What was its purpose? These are questions that have puzzled historians, archaeologists, and visitors for centuries.</p>\n<p>In the Neolithic period, Britain was inhabited by farming communities who lived in small settlements and constructed large earthworks and stone circles. It was during this time that the first phase of Stonehenge was built. This involved digging a circular ditch and bank using tools made from red deer antlers. Within the ditch, fifty-six pits known as Aubrey holes were dug, which may have held wooden posts or stones.</p>\n<p>For the people of Salisbury Plain, the construction of Stonehenge would have been a monumental undertaking. It required the cooperation of hundreds, if not thousands, of people over many generations. The stones themselves had to be transported over vast distances. The smaller bluestones were brought from the Preseli Hills in Wales, over 140 miles away, while the larger sarsens were transported from the Marlborough Downs, about 20 miles north of the site.</p>\n<p>But the story of Stonehenge does not end with its construction. Over the centuries, the monument was modified and rebuilt. The second phase, around 2500 BCE, saw the arrival of the massive sarsen stones, which were arranged in an outer circle and an inner horseshoe. The stones were joined using mortise and tenon joints, a woodworking technique that was highly unusual for stone construction.</p>\n<p>The transformation of the monument continued in the third phase, around 2300 BCE, when the bluestones were rearranged within the sarsen circle. This phase also saw the construction of the Avenue, a formal earthwork pathway that connects Stonehenge with the River Avon. The Avenue is aligned with the midsummer sunrise and the midwinter sunset, suggesting that the monument had astronomical significance.</p>\n<p>During this phase, Stonehenge became a major ceremonial and burial site. Archaeologists have found numerous burials around the monument, including the Amesbury Archer, a wealthy man who lived around 2300 BCE and was buried with gold ornaments and copper knives. Analysis of his teeth revealed that he had grown up in Central Europe, suggesting that Stonehenge was a place of pilgrimage for people from far away.</p>\n<p>Some of the bluestones may have been believed to have healing properties. In Welsh mythology, the stones were said to have been brought from Ireland by the wizard Merlin for their therapeutic qualities. Modern archaeologists have suggested that the alignment of the monument with the sun and the presence of burials of sick or injured people support the idea that Stonehenge was a prehistoric place of healing.</p>\n<p>In the Bronze Age, the use of Stonehenge began to decline. The surrounding landscape was filled with round barrows, or burial mounds, containing the remains of wealthy individuals buried with bronze tools and weapons. By the Iron Age, the monument had fallen into disuse, and the stones were left to weather and collapse. It was not until the 17th century that interest in Stonehenge was revived by antiquarians like John Aubrey and William Stukeley.</p>\n<p>Later, it is believed, groups with advanced tools and a more communal way of life left their mark on the site. Some believe that they were immigrants from the European continent, while others maintain that they were probably native Britons, descended from the original builders. Today, Stonehenge is managed by English Heritage and is a UNESCO World Heritage Site, preserved for future generations to study and enjoy. Builders used tree trunks as sledges and rollers to move the heavy stones. Teams of oxen were also used to haul the heaviest blocks. One theory is that the bluestones were transported from Wales by glaciers during the Ice Age. A popular theory in the 17th century held that Celtic druids constructed the monument. Later researchers proposed Stonehenge functioned as a sophisticated calendar for marking seasonal events.</p>",
           "questions": [
             {
               "num": 1,
@@ -1916,7 +1928,7 @@ const IELTS_TEST_DATA = {
         },
         {
           "title": "An ideal city",
-          "text": "<h1>An ideal city</h1>\n<p>Leonardo da Vinci's ideal city was centuries ahead of its time. Although it was never built, his plans show a deep understanding of urban design and public health.</p>\n<p>Leonardo's ideal city was a response to the conditions he saw in Milan in the late 15th century. At the time, the city was crowded, dirty, and prone to disease. In 1484, a plague outbreak killed nearly fifty thousand people, about one-third of Milan's population. Leonardo believed that poor city planning and lack of sanitation were the main reasons for the high death toll.</p>\n<p>Rather than a single town planner or architect, Leonardo envisioned a collaborative effort to design a city from scratch. He proposed building a new city along the Ticino River, which would provide water for drinking, cleaning, and transport. The city would be divided into ten boroughs, each holding about thirty thousand people, to prevent overcrowding.</p>\n<p>His plans for a modern and 'rational' city were consistent with Renaissance ideals. But, in keeping with his personality, Leonardo went much further, designing a multi-layered city with separate levels for different functions. The upper level would be used by pedestrians and carriages, with spacious, clean streets, elegant palaces, and public squares. The lower level would be used for trade, sewage, and transport, with canals and subterranean tunnels.</p>\n<p>Although Leonardo's city shared many of the ideals of his time, some of his innovations were considered unconventional in their design. They included features that can be seen in some tower blocks today, such as spiral staircases on the exterior of a building, which would save space inside and provide an escape route in case of fire or attack.</p>\n<p>It is not surprising that Leonardo's ideal city was never built. His plans were too ambitious, expensive, and technically challenging for the rulers of Milan. The technology of the 15th century was not advanced enough to build the complex canals, locks, and underground tunnels he envisioned. Furthermore, the city was constantly at war, and resources were directed toward military defense rather than urban development.</p>\n<p>For the time, the designs were remarkably forward-thinking. Leonardo understood that the health and happiness of a city's inhabitants depended on its design. He believed that streets should be wide to allow light and air to circulate, and that the height of buildings should be limited to prevent them from blocking the sun. His ideas remain relevant to modern urban planners who face challenges of overcrowding, pollution, and disease in today's cities.</p>",
+          "text": "<h1>An ideal city</h1>\n<p>Leonardo da Vinci's ideal city was centuries ahead of its time. Although it was never built, his plans show a deep understanding of urban design and public health.</p>\n<p>Leonardo's ideal city was a response to the conditions he saw in Milan in the late 15th century. At the time, the city was crowded, dirty, and prone to disease. In 1484, a plague outbreak killed nearly fifty thousand people, about one-third of Milan's population. Leonardo believed that poor city planning and lack of sanitation were the main reasons for the high death toll.</p>\n<p>Rather than a single town planner or architect, Leonardo envisioned a collaborative effort to design a city from scratch. He proposed building a new city along the Ticino River, which would provide water for drinking, cleaning, and transport. The city would be divided into ten boroughs, each holding about thirty thousand people, to prevent overcrowding.</p>\n<p>His plans for a modern and 'rational' city were consistent with Renaissance ideals. But, in keeping with his personality, Leonardo went much further, designing a multi-layered city with separate levels for different functions. The upper level would be used by pedestrians and carriages, with spacious, clean streets, elegant palaces, and public squares. The lower level would be used for trade, sewage, and transport, with canals and subterranean tunnels.</p>\n<p>Although Leonardo's city shared many of the ideals of his time, some of his innovations were considered unconventional in their design. They included features that can be seen in some tower blocks today, such as spiral staircases on the exterior of a building, which would save space inside and provide an escape route in case of fire or attack.</p>\n<p>It is not surprising that Leonardo's ideal city was never built. His plans were too ambitious, expensive, and technically challenging for the rulers of Milan. The technology of the 15th century was not advanced enough to build the complex canals, locks, and underground tunnels he envisioned. Furthermore, the city was constantly at war, and resources were directed toward military defense rather than urban development.</p>\n<p>For the time, the designs were remarkably forward-thinking. Leonardo understood that the health and happiness of a city's inhabitants depended on its design. He believed that streets should be wide to allow light and air to circulate, and that the height of buildings should be limited to prevent them from blocking the sun. His ideas remain relevant to modern urban planners who face challenges of overcrowding, pollution, and disease in today's cities. Leonardo da Vinci combined architectural vision with deep expertise in engineering and hydraulics. Several cities built in Roman times still display traces of the ideal city in their grid plans. Paris is a prime example of a city that was fundamentally redesigned during the 19th century. Building outwards in endless suburban sprawl is now widely questioned by urban planners.</p>",
           "questions": [
             {
               "num": 27,
@@ -2374,11 +2386,13 @@ const IELTS_TEST_DATA = {
               "explanation": "The transcript states: \"YOUNG MAN: That seminar yesterday on automation and the future of work was really good, wasn't it.\"",
               "instruction": "Questions 21 and 22<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. Their actions were ineffective.",
-                "B. They are still influential today.",
-                "C. They have received unfair criticism.",
-                "D. They were proved right.",
-                "E. Their attitude is understandable."
+                "A. These jobs are likely to be at risk.",
+                "B. Their role will become more important.",
+                "C. They will be least affected by AI.",
+                "D. They will need significant retraining.",
+                "E. Their work will become more creative.",
+                "F. They will adapt but face initial challenges.",
+                "G. Their jobs may actually increase in number."
               ]
             },
             {
@@ -2389,11 +2403,13 @@ const IELTS_TEST_DATA = {
               "explanation": "The transcript states: \"YOUNG MAN: That seminar yesterday on automation and the future of work was really good, wasn't it.\"",
               "instruction": "Questions 21 and 22<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. Their actions were ineffective.",
-                "B. They are still influential today.",
-                "C. They have received unfair criticism.",
-                "D. They were proved right.",
-                "E. Their attitude is understandable."
+                "A. These jobs are likely to be at risk.",
+                "B. Their role will become more important.",
+                "C. They will be least affected by AI.",
+                "D. They will need significant retraining.",
+                "E. Their work will become more creative.",
+                "F. They will adapt but face initial challenges.",
+                "G. Their jobs may actually increase in number."
               ]
             },
             {
@@ -2404,11 +2420,13 @@ const IELTS_TEST_DATA = {
               "explanation": "The transcript states: \"Looking at the first industrial revolution in Britain in the 19th century and seeing how people reacted to massive change was a real eye-opener.\"",
               "instruction": "Questions 23 and 24<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. Many people will have multiple jobs.",
-                "B. The working week will be shorter.",
-                "C. Most people will work from home.",
-                "D. Retirement ages will rise.",
-                "E. Traditional careers will disappear."
+                "A. These jobs are likely to be at risk.",
+                "B. Their role will become more important.",
+                "C. They will be least affected by AI.",
+                "D. They will need significant retraining.",
+                "E. Their work will become more creative.",
+                "F. They will adapt but face initial challenges.",
+                "G. Their jobs may actually increase in number."
               ]
             },
             {
@@ -2419,11 +2437,13 @@ const IELTS_TEST_DATA = {
               "explanation": "The transcript states: \"YOUNG MAN: That seminar yesterday on automation and the future of work was really good, wasn't it.\"",
               "instruction": "Questions 23 and 24<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. Many people will have multiple jobs.",
-                "B. The working week will be shorter.",
-                "C. Most people will work from home.",
-                "D. Retirement ages will rise.",
-                "E. Traditional careers will disappear."
+                "A. These jobs are likely to be at risk.",
+                "B. Their role will become more important.",
+                "C. They will be least affected by AI.",
+                "D. They will need significant retraining.",
+                "E. Their work will become more creative.",
+                "F. They will adapt but face initial challenges.",
+                "G. Their jobs may actually increase in number."
               ]
             },
             {
@@ -2437,7 +2457,11 @@ const IELTS_TEST_DATA = {
               "options": [
                 "A. These jobs are likely to be at risk.",
                 "B. Their role will become more important.",
-                "C. They will be least affected by AI."
+                "C. They will be least affected by AI.",
+                "D. They will need significant retraining.",
+                "E. Their work will become more creative.",
+                "F. They will adapt but face initial challenges.",
+                "G. Their jobs may actually increase in number."
               ]
             },
             {
@@ -2451,7 +2475,11 @@ const IELTS_TEST_DATA = {
               "options": [
                 "A. These jobs are likely to be at risk.",
                 "B. Their role will become more important.",
-                "C. They will be least affected by AI."
+                "C. They will be least affected by AI.",
+                "D. They will need significant retraining.",
+                "E. Their work will become more creative.",
+                "F. They will adapt but face initial challenges.",
+                "G. Their jobs may actually increase in number."
               ]
             },
             {
@@ -2464,7 +2492,11 @@ const IELTS_TEST_DATA = {
               "options": [
                 "A. These jobs are likely to be at risk.",
                 "B. Their role will become more important.",
-                "C. They will be least affected by AI."
+                "C. They will be least affected by AI.",
+                "D. They will need significant retraining.",
+                "E. Their work will become more creative.",
+                "F. They will adapt but face initial challenges.",
+                "G. Their jobs may actually increase in number."
               ]
             },
             {
@@ -2477,7 +2509,11 @@ const IELTS_TEST_DATA = {
               "options": [
                 "A. These jobs are likely to be at risk.",
                 "B. Their role will become more important.",
-                "C. They will be least affected by AI."
+                "C. They will be least affected by AI.",
+                "D. They will need significant retraining.",
+                "E. Their work will become more creative.",
+                "F. They will adapt but face initial challenges.",
+                "G. Their jobs may actually increase in number."
               ]
             },
             {
@@ -2491,7 +2527,11 @@ const IELTS_TEST_DATA = {
               "options": [
                 "A. These jobs are likely to be at risk.",
                 "B. Their role will become more important.",
-                "C. They will be least affected by AI."
+                "C. They will be least affected by AI.",
+                "D. They will need significant retraining.",
+                "E. Their work will become more creative.",
+                "F. They will adapt but face initial challenges.",
+                "G. Their jobs may actually increase in number."
               ]
             },
             {
@@ -2504,7 +2544,11 @@ const IELTS_TEST_DATA = {
               "options": [
                 "A. These jobs are likely to be at risk.",
                 "B. Their role will become more important.",
-                "C. They will be least affected by AI."
+                "C. They will be least affected by AI.",
+                "D. They will need significant retraining.",
+                "E. Their work will become more creative.",
+                "F. They will adapt but face initial challenges.",
+                "G. Their jobs may actually increase in number."
               ]
             }
           ]
@@ -2793,139 +2837,146 @@ const IELTS_TEST_DATA = {
         },
         {
           "title": "The steam car",
-          "text": "<h1>The steam car</h1>\n<p>The successes and failures of the Doble brothers and their steam cars</p>\n<p><b>A</b> When primitive automobiles first began to appear in the late 19th century, their power sources were diverse. There were gasoline-powered engines, electric motors, and steam engines. At the time, steam was a mature and well-understood technology, widely used in locomotives, ships, and factories. Steam cars were quiet, smooth, and powerful, and they did not require a gear shift. However, they had a major drawback: they took a long time to start up, as the water in the boiler had to be heated to produce steam.</p>\n<p><b>B</b> But the glory days of steam cars were few. A new technology called the Internal Combustion Engine (ICE) was developing rapidly. ICE cars were cheaper, lighter, and started instantly. The introduction of the electric starter motor in 1912 eliminated the need to hand-crank ICE cars, making them far more convenient. As a result, steam cars quickly lost popularity and were mostly gone from the market by the 1920s.</p>\n<p><b>C</b> In 1912, the Doble brothers — Abner, John, and Warren — began building steam cars in their home town of Waltham, Massachusetts. They were determined to overcome the drawbacks of steam technology and build a competitive steam car. Their first model, the Model A, was built in their garage and used many parts from other cars. It was a success, but it was not commercially viable. The brothers realised they needed to make their designs more reliable and easier to manufacture.</p>\n<p><b>D</b> In 1914, the brothers built the Model B, which incorporated several innovations. The most important was a condenser that recycled steam back into water, allowing the car to travel much farther on a single tank of water. The Model B also featured a rapid startup system that could produce steam in less than two minutes. The car attracted positive publicity, and the brothers received several orders, but the outbreak of World War I prevented them from starting full-scale production.</p>\n<p><b>E</b> Doble's big breakthrough came with the Model C, which was introduced in 1916. The Model C featured a combustion chamber that burned kerosene cleanly and efficiently, and a steam generator that could start the car in less than forty seconds. The car was quiet, fast, and easy to drive. The Doble brothers raised financial capital and established the Doble Steam Motors Corporation in San Francisco to manufacture the car. However, production was slow, and only a few cars were built before the company faced financial difficulties.</p>\n<p><b>F</b> Later that year Abner Doble delivered unhappy news to those eagerly awaiting the delivery of their modern new cars. Those customers who had paid deposits were told that production had been suspended due to shortages of materials and skilled labour caused by the war. Many customers were disappointed, and some demanded refunds. The Doble brothers tried to keep the company afloat by offering repair services and selling parts, but they were eventually forced to close the factory.</p>\n<p><b>G</b> The brothers made one final attempt to produce a viable steam automobile. In early 1920, they began developing the Model E, which was road-tested in 1924 by the Automobile Club of America. They found it easy to drive, despite its weight, and it impressed the spectators. A later version of the Model E raised its speed, while keeping its emissions extremely low. However, the steam car was too expensive for many people and its design was constantly being altered. Under fifty cars were produced before the company went out of business.</p>\n<p>The steam car was too expensive for many people and its design was constantly being altered. Under 25 cars were produced before the company went out of business. However, even today, there are Model Es on the road in the US. They are straightforward to maintain, and they satisfy California's strict emissions laws. Perhaps today's technology and materials would help us revive the steam car.</p>",
+          "text": "<h1>The steam car</h1>\n<p>The successes and failures of the Doble brothers and their steam cars</p>\n<p><b>A</b> When primitive automobiles first began to appear in the late 19th century, their power sources were diverse. There were gasoline-powered engines, electric motors, and steam engines. At the time, steam was a mature and well-understood technology, widely used in locomotives, ships, and factories. Steam cars were quiet, smooth, and powerful, and they did not require a gear shift. However, they had a major drawback: they took a long time to start up, as the water in the boiler had to be heated to produce steam.</p>\n<p><b>B</b> But the glory days of steam cars were few. A new technology called the Internal Combustion Engine (ICE) was developing rapidly. ICE cars were cheaper, lighter, and started instantly. The introduction of the electric starter motor in 1912 eliminated the need to hand-crank ICE cars, making them far more convenient. As a result, steam cars quickly lost popularity and were mostly gone from the market by the 1920s.</p>\n<p><b>C</b> In 1912, the Doble brothers — Abner, John, and Warren — began building steam cars in their home town of Waltham, Massachusetts. They were determined to overcome the drawbacks of steam technology and build a competitive steam car. Their first model, the Model A, was built in their garage and used many parts from other cars. It was a success, but it was not commercially viable. The brothers realised they needed to make their designs more reliable and easier to manufacture.</p>\n<p><b>D</b> In 1914, the brothers built the Model B, which incorporated several innovations. The most important was a condenser that recycled steam back into water, allowing the car to travel much farther on a single tank of water. The Model B also featured a rapid startup system that could produce steam in less than two minutes. The car attracted positive publicity, and the brothers received several orders, but the outbreak of World War I prevented them from starting full-scale production.</p>\n<p><b>E</b> Doble's big breakthrough came with the Model C, which was introduced in 1916. The Model C featured a combustion chamber that burned kerosene cleanly and efficiently, and a steam generator that could start the car in less than forty seconds. The car was quiet, fast, and easy to drive. The Doble brothers raised financial capital and established the Doble Steam Motors Corporation in San Francisco to manufacture the car. However, production was slow, and only a few cars were built before the company faced financial difficulties.</p>\n<p><b>F</b> Later that year Abner Doble delivered unhappy news to those eagerly awaiting the delivery of their modern new cars. Those customers who had paid deposits were told that production had been suspended due to shortages of materials and skilled labour caused by the war. Many customers were disappointed, and some demanded refunds. The Doble brothers tried to keep the company afloat by offering repair services and selling parts, but they were eventually forced to close the factory.</p>\n<p><b>G</b> The brothers made one final attempt to produce a viable steam automobile. In early 1920, they began developing the Model E, which was road-tested in 1924 by the Automobile Club of America. They found it easy to drive, despite its weight, and it impressed the spectators. A later version of the Model E raised its speed, while keeping its emissions extremely low. However, the steam car was too expensive for many people and its design was constantly being altered. Under fifty cars were produced before the company went out of business.</p>\n<p>The steam car was too expensive for many people and its design was constantly being altered. Under 25 cars were produced before the company went out of business. However, even today, there are Model Es on the road in the US. They are straightforward to maintain, and they satisfy California's strict emissions laws. Perhaps today's technology and materials would help us revive the steam car. Fewer than 50 vehicles were produced before the company ceased operations.</p>",
           "questions": [
             {
               "num": 14,
-              "type": "MCQ",
+              "type": "HEADING",
               "text": "Question 14: Choose the correct option:",
               "answer": "iii",
               "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
               "location": "Passage 2",
               "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
               "options": [
-                "i. Heading i",
-                "ii. Heading ii",
-                "iii. Heading iii",
-                "iv. Heading iv",
-                "v. Heading v",
-                "vi. Heading vi",
-                "vii. Heading vii",
-                "viii. Heading viii"
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii",
+                "viii",
+                "ix"
               ]
             },
             {
               "num": 15,
-              "type": "MCQ",
+              "type": "HEADING",
               "text": "Question 15: Choose the correct option:",
               "answer": "viii",
               "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
               "location": "Passage 2",
               "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
               "options": [
-                "i. Heading i",
-                "ii. Heading ii",
-                "iii. Heading iii",
-                "iv. Heading iv",
-                "v. Heading v",
-                "vi. Heading vi",
-                "vii. Heading vii",
-                "viii. Heading viii"
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii",
+                "viii",
+                "ix"
               ]
             },
             {
               "num": 16,
-              "type": "MCQ",
+              "type": "HEADING",
               "text": "Question 16: Choose the correct option:",
               "answer": "vi",
               "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
               "location": "Passage 2",
               "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
               "options": [
-                "i. Heading i",
-                "ii. Heading ii",
-                "iii. Heading iii",
-                "iv. Heading iv",
-                "v. Heading v",
-                "vi. Heading vi",
-                "vii. Heading vii",
-                "viii. Heading viii"
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii",
+                "viii",
+                "ix"
               ]
             },
             {
               "num": 17,
-              "type": "MCQ",
+              "type": "HEADING",
               "text": "Question 17: Choose the correct option:",
               "answer": "v",
               "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
               "location": "Passage 2",
               "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
               "options": [
-                "i. Heading i",
-                "ii. Heading ii",
-                "iii. Heading iii",
-                "iv. Heading iv",
-                "v. Heading v",
-                "vi. Heading vi",
-                "vii. Heading vii",
-                "viii. Heading viii"
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii",
+                "viii",
+                "ix"
               ]
             },
             {
               "num": 18,
-              "type": "MCQ",
+              "type": "HEADING",
               "text": "Question 18: Choose the correct option:",
               "answer": "vii",
               "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
               "location": "Passage 2",
               "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
               "options": [
-                "i. Heading i",
-                "ii. Heading ii",
-                "iii. Heading iii",
-                "iv. Heading iv",
-                "v. Heading v",
-                "vi. Heading vi",
-                "vii. Heading vii",
-                "viii. Heading viii"
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii",
+                "viii",
+                "ix"
               ]
             },
             {
               "num": 19,
-              "type": "MCQ",
+              "type": "HEADING",
               "text": "Question 19: Choose the correct option:",
               "answer": "i",
               "explanation": "The text confirms this: \"' Questions 14-20 Choose the correct heading for each paragraph from the list of headings below.\"",
               "location": "Passage 2",
               "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
               "options": [
-                "i. Heading i",
-                "ii. Heading ii",
-                "iii. Heading iii",
-                "iv. Heading iv",
-                "v. Heading v",
-                "vi. Heading vi",
-                "vii. Heading vii",
-                "viii. Heading viii"
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii",
+                "viii",
+                "ix"
               ]
             },
             {
               "num": 20,
-              "type": "MCQ",
+              "type": "HEADING",
               "text": "Question 20: Choose the correct option:",
               "answer": "iv",
               "explanation": "The text confirms this: \"List of Headings i A period in cold conditions before the technology is assessed ii Marketing issues lead to failure iii Good and bad aspects of steam technology are passed on iv Apossible solution to the issues of today v_ Further improvements lead to commercial orders vi Positive publicity at last for this quiet, clean, fast vehicle vii A disappointing outcome for customers A better option than the steam car arises 14 Paragraph A 15 Paragraph B 16 Paragraph C 17 Paragraph D 18 Paragraph E 19 Paragraph F 20 Paragraph G The successes and failures of the Doble brothers and their steam cars When primitive automobiles first began to appear in the 1800s, their engines were based on steam power.\"",
               "location": "Passage 2",
               "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
               "options": [
-                "i. Heading i",
-                "ii. Heading ii",
-                "iii. Heading iii",
-                "iv. Heading iv",
-                "v. Heading v",
-                "vi. Heading vi",
-                "vii. Heading vii",
-                "viii. Heading viii"
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii",
+                "viii",
+                "ix"
               ]
             },
             {
@@ -3262,7 +3313,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 1: Real Practice",
           "description": "Official IELTS 18 Test 4 Listening Part 1.",
           "audio": "audio/IELTS_18_Test_4_Part1.m4a",
-          "transcript": "<p><b>JULIE:</b> Hello?</p><p><b>GREG:</b> Oh, hello. Is that Julie Davison?</p><p><b>JULIE:</b> Yes.</p><p><b>GREG:</b> This is Greg Preston from the Employment Agency. We met last week when you</p><p>came in to enquire about office work.</p><p>JULIE! Oh, that's right.</p><p><b>GREG:</b> Now we've just had some details come in of a job which might interest you.</p><p><b>JULIE:</b> OK.</p><p><b>GREG:</b> So this is a position for a receptionist — | believe you've done that sort of work</p><p>before?</p><p><b>JULIE:</b> Yes, | have, | worked in a sports centre for a couple of years before | got married</p><p>and had the children.</p><p><b>GREG:</b> Right. Well, this job's in Fordham, so not too far away for you, and it's at the</p><p>medical centre there.</p><p><b>JULIE:</b> OK. So where exactly is that?</p><p><b>GREG:</b> It's quite near the station, on Chastons Road.</p><p><b>JULIE:</b> Sorry?</p><p><b>GREG:</b> Chastons Road — that's C-H-A-S-T-O-N-S.</p><p><b>JULIE:</b> OK, thanks. So what would the work involve? Dealing with enquiries from</p><p>patients?</p><p><b>GREG:</b> Yes, and you'd also be involved in making appointments, whether face to face or</p><p>on the phone. And rescheduling them if necessary.</p><p>JULIE! Fine, that shouldn't be a problem.</p><p><b>GREG:</b> And another of your duties would be keeping the centre's database up-to-date.</p><p>Then you might have other general administrative duties as well, but those would</p><p>be the main ones.</p><p><b>JULIE:</b> OK.</p><p><b>GREG:</b> Now when the details came in, | immediately thought of you because one thing</p><p>they do require is someone with experience, and you did mention your work at</p><p>the sports centre when you came in to see us.</p><p><b>JULIE:</b> Yes, in fact | enjoyed that job. Is there anything else they're looking for?</p><p><b>GREG:</b> Well, they say it's quite a high-pressure environment, they're always very busy,</p><p>and patients are often under stress, so they want someone who can cope with</p><p>that and stay calm, and at the same time be confident when interacting with the</p><p>public.</p><p><b>JULIE:</b> Well, after dealing with three children all under five, | reckon | can cope with that.</p><p><b>GREG:</b> I'm sure you can.</p><p><b>GREG:</b> And then another thing they mention is that they're looking for someone with</p><p>good IT skills ...</p><p><b>JULIE:</b> Not a problem.</p><p><b>GREG:</b> So you'd be interested in following this up?</p><p><b>JULIE:</b> Sure. When would it start?</p><p><b>GREG:</b> Well, they're looking for someone from the beginning of next month, but | should</p><p>tell you that this isn't a permanent job, it's temporary, so the contract would</p><p>be just to the end of September. But they do say that there could be further</p><p>opportunities after that.</p><p><b>JULIE:</b> OK. And what would the hours be?</p><p>114</p><p>Q1</p><p>Q2</p><p>Q3</p><p>Q4</p><p>Q5</p><p>Q6</p><p>Q7</p><p>Q8</p><p><b>GREG:</b> Well, they want someone who can start at a quarter to eight in the morning —</p><p>could you manage that?</p><p><b>JULIE:</b> Yes, my husband would have to get the kids up and off to my mother's — she's</p><p>going to be looking after them while I'm at work. What time would | finish?</p><p><b>GREG:</b> One fifteen.</p><p><b>JULIE:</b> That should work out all right. | can pick the kids up on my way home, and then</p><p>I'll have the afternoon with them. Oh, one thing ... is there parking available for</p><p>staff at the centre?</p><p><b>GREG:</b> Yes, there is, and it's also on a bus route.</p><p>JULIE! Right. Well, | expect I'll have the car but it's good to know that.</p><p>OK, so where do | go from here?</p><p><b>GREG:</b> Well, if you're happy for me to do so, I'll forward your CV and pied, and</p><p>then the best thing would probably be for you to phone them so they can arrange</p><p>for an interview.</p><p><b>JULIE:</b> Great. Well thank you very much.</p><p><b>GREG:</b> You're welcome. Bye now.</p><p><b>JULIE:</b> Bye.</p>",
+          "transcript": "<p><b>JULIE:</b> Hello?</p><p><b>GREG:</b> Oh, hello. Is that Julie Davison?</p><p><b>JULIE:</b> Yes.</p><p><b>GREG:</b> This is Greg Preston from the Employment Agency. We met last week when you</p><p>came in to enquire about office work.</p><p>JULIE! Oh, that's right.</p><p><b>GREG:</b> Now we've just had some details come in of a job which might interest you.</p><p><b>JULIE:</b> OK.</p><p><b>GREG:</b> So this is a position for a receptionist — | believe you've done that sort of work</p><p>before?</p><p><b>JULIE:</b> Yes, | have, | worked in a sports centre for a couple of years before | got married</p><p>and had the children.</p><p><b>GREG:</b> Right. Well, this job's in Fordham, so not too far away for you, and it's at the</p><p>medical centre there.</p><p><b>JULIE:</b> OK. So where exactly is that?</p><p><b>GREG:</b> It's quite near the station, on Chastons Road.</p><p><b>JULIE:</b> Sorry?</p><p><b>GREG:</b> Chastons Road — that's C-H-A-S-T-O-N-S.</p><p><b>JULIE:</b> OK, thanks. So what would the work involve? Dealing with enquiries from</p><p>patients?</p><p><b>GREG:</b> Yes, and you'd also be involved in making appointments, whether face to face or</p><p>on the phone. And rescheduling them if necessary.</p><p>JULIE! Fine, that shouldn't be a problem.</p><p><b>GREG:</b> And another of your duties would be keeping the centre's database up-to-date.</p><p>Then you might have other general administrative duties as well, but those would</p><p>be the main ones.</p><p><b>JULIE:</b> OK.</p><p><b>GREG:</b> Now when the details came in, | immediately thought of you because one thing</p><p>they do require is someone with experience, and you did mention your work at</p><p>the sports centre when you came in to see us.</p><p><b>JULIE:</b> Yes, in fact | enjoyed that job. Is there anything else they're looking for?</p><p><b>GREG:</b> Well, they say it's quite a high-pressure environment, they're always very busy,</p><p>and patients are often under stress, so they want someone who can cope with</p><p>that and stay calm, and at the same time be confident when interacting with the</p><p>public.</p><p><b>JULIE:</b> Well, after dealing with three children all under five, | reckon | can cope with that.</p><p><b>GREG:</b> I'm sure you can.</p><p><b>GREG:</b> And then another thing they mention is that they're looking for someone with</p><p>good IT skills ...</p><p><b>JULIE:</b> Not a problem.</p><p><b>GREG:</b> So you'd be interested in following this up?</p><p><b>JULIE:</b> Sure. When would it start?</p><p><b>GREG:</b> Well, they're looking for someone from the beginning of next month, but | should</p><p>tell you that this isn't a permanent job, it's temporary, so the contract would</p><p>be just to the end of September. But they do say that there could be further</p><p>opportunities after that.</p><p><b>JULIE:</b> OK. And what would the hours be?</p><p>114</p><p>Q1</p><p>Q2</p><p>Q3</p><p>Q4</p><p>Q5</p><p>Q6</p><p>Q7</p><p>Q8</p><p><b>GREG:</b> Well, they want someone who can start at a quarter to eight in the morning —</p><p>could you manage that?</p><p><b>JULIE:</b> Yes, my husband would have to get the kids up and off to my mother's — she's</p><p>going to be looking after them while I'm at work. What time would | finish?</p><p><b>GREG:</b> One fifteen.</p><p><b>JULIE:</b> That should work out all right. | can pick the kids up on my way home, and then</p><p>I'll have the afternoon with them. Oh, one thing ... is there parking available for</p><p>staff at the centre?</p><p><b>GREG:</b> Yes, there is, and it's also on a bus route.</p><p>JULIE! Right. Well, | expect I'll have the car but it's good to know that.</p><p>OK, so where do | go from here?</p><p><b>GREG:</b> Well, if you're happy for me to do so, I'll forward your CV and pied, and</p><p>then the best thing would probably be for you to phone them so they can arrange</p><p>for an interview.</p><p><b>JULIE:</b> Great. Well thank you very much.</p><p><b>GREG:</b> You're welcome. Bye now.</p><p><b>JULIE:</b> Bye. Opening hours are 7.45 am to 1.15 pm, Monday to Friday.</p>",
           "questions": [
             {
               "num": 1,
@@ -3576,7 +3627,10 @@ const IELTS_TEST_DATA = {
               "options": [
                 "A. demonstrated independence",
                 "B. asked for teacher support",
-                "C. developed a new idea"
+                "C. developed a new idea",
+                "D. showed empathy",
+                "E. showed enthusiasm",
+                "F. made a creative choice"
               ]
             },
             {
@@ -3590,7 +3644,10 @@ const IELTS_TEST_DATA = {
               "options": [
                 "A. demonstrated independence",
                 "B. asked for teacher support",
-                "C. developed a new idea"
+                "C. developed a new idea",
+                "D. showed empathy",
+                "E. showed enthusiasm",
+                "F. made a creative choice"
               ]
             },
             {
@@ -3603,7 +3660,10 @@ const IELTS_TEST_DATA = {
               "options": [
                 "A. demonstrated independence",
                 "B. asked for teacher support",
-                "C. developed a new idea"
+                "C. developed a new idea",
+                "D. showed empathy",
+                "E. showed enthusiasm",
+                "F. made a creative choice"
               ]
             },
             {
@@ -3617,7 +3677,10 @@ const IELTS_TEST_DATA = {
               "options": [
                 "A. demonstrated independence",
                 "B. asked for teacher support",
-                "C. developed a new idea"
+                "C. developed a new idea",
+                "D. showed empathy",
+                "E. showed enthusiasm",
+                "F. made a creative choice"
               ]
             },
             {
@@ -3628,9 +3691,12 @@ const IELTS_TEST_DATA = {
               "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
               "instruction": "Questions 28-30<br/>Choose the correct letter, A, B or C.",
               "options": [
-                "A. make models that demonstrate the different stages.",
-                "B. - check children understand the terminology involved.",
-                "C. tell children not to worry if they find the activity difficult."
+                "A. demonstrated independence",
+                "B. asked for teacher support",
+                "C. developed a new idea",
+                "D. showed empathy",
+                "E. showed enthusiasm",
+                "F. made a creative choice"
               ]
             },
             {
@@ -3756,7 +3822,7 @@ const IELTS_TEST_DATA = {
       "passages": [
         {
           "title": "Green roofs",
-          "text": "<h1>Green roofs</h1>\n<p>Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.</p>\n<p><b>A</b> Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world. These 'green roofs' are not just aesthetically pleasing; they also provide numerous environmental and economic benefits. They can reduce stormwater runoff, lower energy consumption by insulating buildings, filter air pollutants, and provide habitats for urban wildlife. As cities become denser and climate change accelerates, green roofs are increasingly seen as a crucial tool for urban resilience.</p>\n<p><b>B</b> Ongoing research is showcasing how green roofs in cities can integrate with 'living walls' to create vertical networks of vegetation. These networks can help to mitigate the urban heat island effect, where buildings and paved surfaces absorb and radiate heat, making cities warmer than surrounding rural areas. By covering surfaces with plants, green roofs and walls can cool the air through evapotranspiration and provide shade, reducing the need for air conditioning.</p>\n<p><b>C</b> In North America, green roofs have become mainstream, with a wide array of municipal policies and financial incentives promoting their installation. For example, Toronto became the first city in North America to pass a bylaw requiring green roofs on new commercial and residential developments. In the UK, however, progress has been slower, and green roofs are still relatively uncommon outside of London, where the Mayor's London Plan has successfully encouraged their adoption.</p>\n<p><b>D</b> As the expertise about green roofs grows, official standards have been developed to guide their design, installation, and maintenance. These standards cover aspects such as soil depth, drainage layers, plant selection, and structural load capacity. Green roofs can be extensive, with thin soil layers and low-maintenance plants like sedum, or intensive, with deeper soil that can support trees, shrubs, and even vegetable gardens, requiring regular care.</p>\n<p><b>E</b> For green roofs to become the norm for new developments, there needs to be support from public authorities and private investors. This can include building regulations, planning incentives, and tax credits. In Singapore, the government's Skyrise Greenery incentive scheme has helped to green hundreds of buildings, contributing to the city's vision of becoming a 'City in a Garden'. By demonstrating the financial and environmental value of green roofs, advocates hope to make them standard practice in urban construction.</p>",
+          "text": "<h1>Green roofs</h1>\n<p>Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.</p>\n<p><b>A</b> Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world. These 'green roofs' are not just aesthetically pleasing; they also provide numerous environmental and economic benefits. They can reduce stormwater runoff, lower energy consumption by insulating buildings, filter air pollutants, and provide habitats for urban wildlife. As cities become denser and climate change accelerates, green roofs are increasingly seen as a crucial tool for urban resilience.</p>\n<p><b>B</b> Ongoing research is showcasing how green roofs in cities can integrate with 'living walls' to create vertical networks of vegetation. These networks can help to mitigate the urban heat island effect, where buildings and paved surfaces absorb and radiate heat, making cities warmer than surrounding rural areas. By covering surfaces with plants, green roofs and walls can cool the air through evapotranspiration and provide shade, reducing the need for air conditioning.</p>\n<p><b>C</b> In North America, green roofs have become mainstream, with a wide array of municipal policies and financial incentives promoting their installation. For example, Toronto became the first city in North America to pass a bylaw requiring green roofs on new commercial and residential developments. In the UK, however, progress has been slower, and green roofs are still relatively uncommon outside of London, where the Mayor's London Plan has successfully encouraged their adoption.</p>\n<p><b>D</b> As the expertise about green roofs grows, official standards have been developed to guide their design, installation, and maintenance. These standards cover aspects such as soil depth, drainage layers, plant selection, and structural load capacity. Green roofs can be extensive, with thin soil layers and low-maintenance plants like sedum, or intensive, with deeper soil that can support trees, shrubs, and even vegetable gardens, requiring regular care.</p>\n<p><b>E</b> For green roofs to become the norm for new developments, there needs to be support from public authorities and private investors. This can include building regulations, planning incentives, and tax credits. In Singapore, the government's Skyrise Greenery incentive scheme has helped to green hundreds of buildings, contributing to the city's vision of becoming a 'City in a Garden'. By demonstrating the financial and environmental value of green roofs, advocates hope to make them standard practice in urban construction. In some cases, green roofs can also be used for producing food for local communities. Research recommends gardening as a therapeutic activity that helps people cope with stress and mental health challenges. Economic arguments focused on reducing healthcare costs linked to obesity and poor air quality can help convince investors.</p>",
           "questions": [
             {
               "num": 1,
@@ -4411,7 +4477,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 1: Real Practice",
           "description": "Official IELTS 19 Test 1 Listening Part 1.",
           "audio": "audio/IELTS_19_Test_1_Part1.m4a",
-          "transcript": "<p><b>SALLY:</b> Good morning. Hinchingbrooke Country Park, Sally speaking. I'm one of</p><p>the rangers.</p><p><b>JOHN:</b> Oh hello. My name's John Chapman, and I'm a teaching assistant at a</p><p>local primary school. I've been asked to arrange a visit to the park for two</p><p>of our classes.</p><p><b>SALLY:</b> OK. What would you like to know?</p><p><b>JOHN:</b> Well, I'm new to this area, so perhaps you could tell me something about the</p><p>park first, please.</p><p><b>SALLY:</b> Of course. Altogether the park covers 170 acres, that's� hectares. There are 01</p><p><b>THREE MAIN TYPES OF HABITAT:</b> wetland, grassland and woodland. The woods are well</p><p>established and varied, with an oak plantation, and other areas of mixed species.</p><p><b>JOHN:</b> Right.</p><p><b>SALLY:</b> The wetland is quite varied, too. The original farmland was dug up around</p><p>40 years ago to extract gravel. Once this work was completed, the gravel pits</p><p>filled with water, forming the two large lakes. There are also several smaller</p><p>ones, ponds and a stream that flows through the park. 02</p><p><b>JOHN:</b> OK, so I suppose with these different habitats there's quite a variety of wildlife.</p><p><b>SALLY:</b> There certainly is - a lot of different species of birds and insects, and also</p><p>animals like deer and rabbits.</p><p><b>JOHN:</b> And I understand you organise educational visits for school parties.</p><p><b>SALLY:</b> That's right. We can organise a wide range of activities and adapt them to suit</p><p>all ages.</p><p><b>JOHN:</b> Can you give me some examples of the activities?</p><p><b>SALLY:</b> Well, one focus is on science, where we help children to discover and study</p><p>plants, trees and insects. They also collect and analyse data about the things 03</p><p>they see.</p><p><b>JOHN:</b> Uhuh.</p><p><b>SALLY:</b> Another focus is on geography. The park is a great environment to learn and</p><p>practise reading a map and using a compass to navigate around the park. 04</p><p><b>JOHN:</b> Do you do anything connected with history?</p><p><b>SALLY:</b> Yes, we do. For instance, the children can explore how the use of the land has</p><p>changed over time. Then there's leisure and tourism.</p><p><b>JOHN:</b> That focuses on your visitors, I would imagine. 05</p><p><b>SALLY:</b> Yes, mostly. The children find out about them, their requirements, the problems</p><p>they may cause and how we manage these. And another subject we cover is</p><p><b>MUSIC:</b> here the children experiment with natural materials to create � and 06</p><p>explore rhythm and tempo.</p><p><b>JOHN:</b> That must be fun!</p><p><b>SALLY:</b> Most children really enjoy it.</p><p><b>SALLY:</b> And of course, all the activities are educational, too. Learning outside the classroom</p><p>encourages children to be creative, and to explore and discover for themselves.</p><p><b>JOHN:</b> I would imagine they get a sense of freedom that might not be a normal part of 07</p><p>their lives.</p><p><b>SALLY:</b> That's right. And very often the children discover that they can do things they</p><p>didn't know they could do, and they develop new skills. This gives them greater 08</p><p>self-confidence.</p><p><b>JOHN:</b> It sounds great. So, what about the practical side of it? How much does it cost for</p><p>a full-day visit? We would expect to bring between 30 and 40 children.</p><p><b>SALLY:</b> If there are over 30, it costs £4.95 for each child who attends on the day. We 09</p><p>invoice you afterwards, so you don't pay for children who can't come because of</p><p>sickness, for example. There's no charge for leaders and other adults - as many 010</p><p>as you want to bring.</p><p><b>JOHN:</b> That sounds very fair. Well, thanks for all the information. I'll need to discuss ii</p><p>with my colleagues, and I hope to get back to you soon to make a booking.</p><p><b>SALLY:</b> We'll look forward to hearing from you. Goodbye.</p><p><b>JOHN:</b> Goodbye, and thank you.</p>",
+          "transcript": "<p><b>SALLY:</b> Good morning. Hinchingbrooke Country Park, Sally speaking. I'm one of</p><p>the rangers.</p><p><b>JOHN:</b> Oh hello. My name's John Chapman, and I'm a teaching assistant at a</p><p>local primary school. I've been asked to arrange a visit to the park for two</p><p>of our classes.</p><p><b>SALLY:</b> OK. What would you like to know?</p><p><b>JOHN:</b> Well, I'm new to this area, so perhaps you could tell me something about the</p><p>park first, please.</p><p><b>SALLY:</b> Of course. Altogether the park covers 170 acres, that's� hectares. There are 01</p><p><b>THREE MAIN TYPES OF HABITAT:</b> wetland, grassland and woodland. The woods are well</p><p>established and varied, with an oak plantation, and other areas of mixed species.</p><p><b>JOHN:</b> Right.</p><p><b>SALLY:</b> The wetland is quite varied, too. The original farmland was dug up around</p><p>40 years ago to extract gravel. Once this work was completed, the gravel pits</p><p>filled with water, forming the two large lakes. There are also several smaller</p><p>ones, ponds and a stream that flows through the park. 02</p><p><b>JOHN:</b> OK, so I suppose with these different habitats there's quite a variety of wildlife.</p><p><b>SALLY:</b> There certainly is - a lot of different species of birds and insects, and also</p><p>animals like deer and rabbits.</p><p><b>JOHN:</b> And I understand you organise educational visits for school parties.</p><p><b>SALLY:</b> That's right. We can organise a wide range of activities and adapt them to suit</p><p>all ages.</p><p><b>JOHN:</b> Can you give me some examples of the activities?</p><p><b>SALLY:</b> Well, one focus is on science, where we help children to discover and study</p><p>plants, trees and insects. They also collect and analyse data about the things 03</p><p>they see.</p><p><b>JOHN:</b> Uhuh.</p><p><b>SALLY:</b> Another focus is on geography. The park is a great environment to learn and</p><p>practise reading a map and using a compass to navigate around the park. 04</p><p><b>JOHN:</b> Do you do anything connected with history?</p><p><b>SALLY:</b> Yes, we do. For instance, the children can explore how the use of the land has</p><p>changed over time. Then there's leisure and tourism.</p><p><b>JOHN:</b> That focuses on your visitors, I would imagine. 05</p><p><b>SALLY:</b> Yes, mostly. The children find out about them, their requirements, the problems</p><p>they may cause and how we manage these. And another subject we cover is</p><p><b>MUSIC:</b> here the children experiment with natural materials to create � and 06</p><p>explore rhythm and tempo.</p><p><b>JOHN:</b> That must be fun!</p><p><b>SALLY:</b> Most children really enjoy it.</p><p><b>SALLY:</b> And of course, all the activities are educational, too. Learning outside the classroom</p><p>encourages children to be creative, and to explore and discover for themselves.</p><p><b>JOHN:</b> I would imagine they get a sense of freedom that might not be a normal part of 07</p><p>their lives.</p><p><b>SALLY:</b> That's right. And very often the children discover that they can do things they</p><p>didn't know they could do, and they develop new skills. This gives them greater 08</p><p>self-confidence.</p><p><b>JOHN:</b> It sounds great. So, what about the practical side of it? How much does it cost for</p><p>a full-day visit? We would expect to bring between 30 and 40 children.</p><p><b>SALLY:</b> If there are over 30, it costs £4.95 for each child who attends on the day. We 09</p><p>invoice you afterwards, so you don't pay for children who can't come because of</p><p>sickness, for example. There's no charge for leaders and other adults - as many 010</p><p>as you want to bring.</p><p><b>JOHN:</b> That sounds very fair. Well, thanks for all the information. I'll need to discuss ii</p><p>with my colleagues, and I hope to get back to you soon to make a booking.</p><p><b>SALLY:</b> We'll look forward to hearing from you. Goodbye.</p><p><b>JOHN:</b> Goodbye, and thank you. The participant is 69 years old.</p>",
           "questions": [
             {
               "num": 1,
@@ -4678,11 +4744,14 @@ const IELTS_TEST_DATA = {
               "explanation": "The transcript states: \"COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: I haven't seen you for a bit, Marie.\"",
               "instruction": "Questions 21 and 22<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. The research methodology was robust.",
-                "B. The results confirmed his hypothesis.",
-                "C. The project helped him choose a career.",
-                "D. The supervisor gave him excellent feedback.",
-                "E. The study raised awareness of an issue."
+                "A. This is only relevant to young people.",
+                "B. This may have unexpected benefits.",
+                "C. This is already widely accepted.",
+                "D. This needs more funding to develop.",
+                "E. This has been overestimated in importance.",
+                "F. This raises serious privacy concerns.",
+                "G. This is likely to improve with time.",
+                "H. This has both positive and negative effects."
               ]
             },
             {
@@ -4693,11 +4762,14 @@ const IELTS_TEST_DATA = {
               "explanation": "The transcript states: \"Something that doesn't use animal products.\"",
               "instruction": "Questions 21 and 22<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. The research methodology was robust.",
-                "B. The results confirmed his hypothesis.",
-                "C. The project helped him choose a career.",
-                "D. The supervisor gave him excellent feedback.",
-                "E. The study raised awareness of an issue."
+                "A. This is only relevant to young people.",
+                "B. This may have unexpected benefits.",
+                "C. This is already widely accepted.",
+                "D. This needs more funding to develop.",
+                "E. This has been overestimated in importance.",
+                "F. This raises serious privacy concerns.",
+                "G. This is likely to improve with time.",
+                "H. This has both positive and negative effects."
               ]
             },
             {
@@ -4708,11 +4780,14 @@ const IELTS_TEST_DATA = {
               "explanation": "The transcript states: \"COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: I haven't seen you for a bit, Marie.\"",
               "instruction": "Questions 23 and 24<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. They reduce physical activity.",
-                "B. They limit face-to-face interaction.",
-                "C. They shorten attention span.",
-                "D. They improve coordination.",
-                "E. They discourage reading."
+                "A. This is only relevant to young people.",
+                "B. This may have unexpected benefits.",
+                "C. This is already widely accepted.",
+                "D. This needs more funding to develop.",
+                "E. This has been overestimated in importance.",
+                "F. This raises serious privacy concerns.",
+                "G. This is likely to improve with time.",
+                "H. This has both positive and negative effects."
               ]
             },
             {
@@ -4723,11 +4798,14 @@ const IELTS_TEST_DATA = {
               "explanation": "The transcript states: \"COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: I haven't seen you for a bit, Marie.\"",
               "instruction": "Questions 23 and 24<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. They reduce physical activity.",
-                "B. They limit face-to-face interaction.",
-                "C. They shorten attention span.",
-                "D. They improve coordination.",
-                "E. They discourage reading."
+                "A. This is only relevant to young people.",
+                "B. This may have unexpected benefits.",
+                "C. This is already widely accepted.",
+                "D. This needs more funding to develop.",
+                "E. This has been overestimated in importance.",
+                "F. This raises serious privacy concerns.",
+                "G. This is likely to improve with time.",
+                "H. This has both positive and negative effects."
               ]
             },
             {
@@ -4741,7 +4819,12 @@ const IELTS_TEST_DATA = {
               "options": [
                 "A. This is only relevant to young people.",
                 "B. This may have unexpected benefits.",
-                "C. This is already widely accepted."
+                "C. This is already widely accepted.",
+                "D. This needs more funding to develop.",
+                "E. This has been overestimated in importance.",
+                "F. This raises serious privacy concerns.",
+                "G. This is likely to improve with time.",
+                "H. This has both positive and negative effects."
               ]
             },
             {
@@ -4755,7 +4838,12 @@ const IELTS_TEST_DATA = {
               "options": [
                 "A. This is only relevant to young people.",
                 "B. This may have unexpected benefits.",
-                "C. This is already widely accepted."
+                "C. This is already widely accepted.",
+                "D. This needs more funding to develop.",
+                "E. This has been overestimated in importance.",
+                "F. This raises serious privacy concerns.",
+                "G. This is likely to improve with time.",
+                "H. This has both positive and negative effects."
               ]
             },
             {
@@ -4768,7 +4856,12 @@ const IELTS_TEST_DATA = {
               "options": [
                 "A. This is only relevant to young people.",
                 "B. This may have unexpected benefits.",
-                "C. This is already widely accepted."
+                "C. This is already widely accepted.",
+                "D. This needs more funding to develop.",
+                "E. This has been overestimated in importance.",
+                "F. This raises serious privacy concerns.",
+                "G. This is likely to improve with time.",
+                "H. This has both positive and negative effects."
               ]
             },
             {
@@ -4781,7 +4874,12 @@ const IELTS_TEST_DATA = {
               "options": [
                 "A. This is only relevant to young people.",
                 "B. This may have unexpected benefits.",
-                "C. This is already widely accepted."
+                "C. This is already widely accepted.",
+                "D. This needs more funding to develop.",
+                "E. This has been overestimated in importance.",
+                "F. This raises serious privacy concerns.",
+                "G. This is likely to improve with time.",
+                "H. This has both positive and negative effects."
               ]
             },
             {
@@ -4795,7 +4893,12 @@ const IELTS_TEST_DATA = {
               "options": [
                 "A. This is only relevant to young people.",
                 "B. This may have unexpected benefits.",
-                "C. This is already widely accepted."
+                "C. This is already widely accepted.",
+                "D. This needs more funding to develop.",
+                "E. This has been overestimated in importance.",
+                "F. This raises serious privacy concerns.",
+                "G. This is likely to improve with time.",
+                "H. This has both positive and negative effects."
               ]
             },
             {
@@ -4809,7 +4912,12 @@ const IELTS_TEST_DATA = {
               "options": [
                 "A. This is only relevant to young people.",
                 "B. This may have unexpected benefits.",
-                "C. This is already widely accepted."
+                "C. This is already widely accepted.",
+                "D. This needs more funding to develop.",
+                "E. This has been overestimated in importance.",
+                "F. This raises serious privacy concerns.",
+                "G. This is likely to improve with time.",
+                "H. This has both positive and negative effects."
               ]
             }
           ]
@@ -4819,7 +4927,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 4: Real Practice",
           "description": "Official IELTS 19 Test 1 Listening Part 4.",
           "audio": "audio/IELTS_19_Test_1_Part4.m4a",
-          "transcript": "<p>For my presentation today, I'm going to talk about the Ceide Fields in the northwest of</p><p>Ireland, one of the largest Neolithic sites in the world. I recently visited this site and observed</p><p>the work that is currently being done by a team of archaeologists there.</p><p>The site was first discovered in the 1930s by a local teacher, Patrick Caulfield. He noticed</p><p>that when local people were digging in the bog, they were constantly hitting against what</p><p>025</p><p>026</p><p>027</p><p>028</p><p>029</p><p>030</p><p>seemed to be rows of stones. He realised that these must be walls and that they must be 031</p><p>thousands of years old for them to predate the bog which subsequently grew over them.</p><p>He wrote to the National Museum in Dublin to ask them to investigate, but no one took</p><p>him seriously. It wasn't until 40 years later, when Patrick Caulfield's son Seamus, who had 032</p><p>become an archaeologist by then, began to explore further. He inserted iron probes into the</p><p>bog to map the formation of the stones, a traditional method which local people had always 033</p><p>used for finding fuel buried in the bog for thousands of years. Carbon dating later proved that</p><p>the site was over 5,000 years old and was the largest Neolithic site in Ireland.</p><p class=\"transcript-gap\"><em>[Transcript unavailable beyond this point — questions 34-40 are answered later in the audio, but the source text for this section could not be recovered.]</em></p>",
+          "transcript": "<p>For my presentation today, I'm going to talk about the Ceide Fields in the northwest of</p><p>Ireland, one of the largest Neolithic sites in the world. I recently visited this site and observed</p><p>the work that is currently being done by a team of archaeologists there.</p><p>The site was first discovered in the 1930s by a local teacher, Patrick Caulfield. He noticed</p><p>that when local people were digging in the bog, they were constantly hitting against what</p><p>025</p><p>026</p><p>027</p><p>028</p><p>029</p><p>030</p><p>seemed to be rows of stones. He realised that these must be walls and that they must be 031</p><p>thousands of years old for them to predate the bog which subsequently grew over them.</p><p>He wrote to the National Museum in Dublin to ask them to investigate, but no one took</p><p>him seriously. It wasn't until 40 years later, when Patrick Caulfield's son Seamus, who had 032</p><p>become an archaeologist by then, began to explore further. He inserted iron probes into the</p><p>bog to map the formation of the stones, a traditional method which local people had always 033</p><p>used for finding fuel buried in the bog for thousands of years. Carbon dating later proved that</p><p>the site was over 5,000 years old and was the largest Neolithic site in Ireland.</p><p class=\"transcript-gap\"><em>[Transcript unavailable beyond this point — questions 34-40 are answered later in the audio, but the source text for this section could not be recovered.]</em> Items are remarkably well preserved in the bog because of a near-total lack of oxygen. Houses were rectangular in shape and had a small hole in the roof to let out smoke. Clay pots were used for storage and to make simple lamps fuelled by animal fat. Each field at Ceide Fields was large enough to support a single large family unit. There is also evidence of structures built to house livestock during the harsh winter months. Over time there was a marked decline in soil quality across the settled areas. Increased rain and wetter conditions further accelerated the spread of the bog.</p>",
           "questions": [
             {
               "num": 31,
@@ -4896,9 +5004,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 40,
               "type": "FILL",
-              "text": "(Question content unavailable — original source text could not be recovered. This question is excluded from scoring.)",
+              "text": "Increased _________ and wetter conditions further spread the bog.",
               "answer": "rain",
-              "contentUnavailable": true,
+              "contentUnavailable": false,
               "explanation": "The original source text for this question could not be recovered during data restoration.",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
             }
@@ -4910,7 +5018,7 @@ const IELTS_TEST_DATA = {
       "passages": [
         {
           "title": "How tennis rackets have changed",
-          "text": "<h1>How tennis rackets have changed</h1>\n<p>In 2016, the British professional tennis player Andy Murray was ranked as the world's number one. It was an incredible achievement, but it was also a testament to the technological changes that have transformed the game of tennis over the past few decades. One of the most important of these changes is the design and construction of the tennis racket.</p>\n<p>For most of the history of tennis, rackets were made of wood. They had small heads, heavy frames, and natural gut strings made from the intestines of sheep or cows. Wooden rackets required strength and precision to use, and the game was characterised by slow, tactical rallies. All this changed in the 1970s and 1980s with the introduction of new materials, such as metal and composite materials like graphite and carbon fibre.</p>\n<p>Racket modifications mainly date back to the 1970s, when the amateur German tennis player Werner Fischer started playing with a 'spaghetti-strung' racket. This racket had two layers of strings that were not interwoven, and plastic tubes and wooden rollers that allowed the strings to slide over one another. The result was a massive increase in spin, which made the ball bounce unpredictably and made it difficult for opponents to return. The International Tennis Federation (ITF) quickly banned the racket, arguing that it changed the nature of the game.</p>\n<p>However, the revolution could not be stopped. Racket manufacturers began producing oversized rackets made of lightweight materials. These rackets had larger 'sweet spots' — the area of the racket face that produces the most power and control — making it easier for players to hit the ball cleanly. The reduction in weight allowed players to swing the racket faster, generating more power and spin. This led to a faster, more aggressive style of play, dominated by powerful serves and baseline rallies.</p>\n<p>The changes to rackets were not limited to the frames. Strings also underwent a transformation. While natural gut is still preferred by many professional players for its feel and elasticity, most players now use synthetic strings made of nylon or polyester. These strings are more durable, resistant to moisture, and can be customized to produce more power or spin. The tension of the strings is also crucial, with players adjusting it depending on the court surface and weather conditions.</p>\n<p>Professional players are now extremely particular about their rackets. Many travel with their own professional racket stringer who can adjust the tension of their strings during a match. The American player Pete Sampras, famous for his powerful serve, had lead weights added to the frame of his racket to increase its mass and power. Other players, like the Bryan brothers, use rackets that are customized to their specific physical and playing characteristics.</p>\n<p>The changes to rackets have also had a major impact on the physical demands of the game. Modern tennis is faster and more powerful than ever before, requiring players to be in peak physical condition. The risk of injury has also increased, with 'tennis elbow' and other repetitive strain injuries becoming common among players who use stiff, powerful rackets. Racket manufacturers are now focusing on developing materials that can absorb shock and reduce the risk of injury.</p>\n<p>Today, the ITF regulates the design and size of tennis rackets to ensure that technology does not completely dominate the game. Rackets must conform to specific rules regarding length, width, and string pattern. Despite these rules, technology continues to play a major role in the game. Racket changes can be regarded as being as important as players' diets or the training they do, and the search for the perfect racket continues.</p>",
+          "text": "<h1>How tennis rackets have changed</h1>\n<p>In 2016, the British professional tennis player Andy Murray was ranked as the world's number one. It was an incredible achievement, but it was also a testament to the technological changes that have transformed the game of tennis over the past few decades. One of the most important of these changes is the design and construction of the tennis racket.</p>\n<p>For most of the history of tennis, rackets were made of wood. They had small heads, heavy frames, and natural gut strings made from the intestines of sheep or cows. Wooden rackets required strength and precision to use, and the game was characterised by slow, tactical rallies. All this changed in the 1970s and 1980s with the introduction of new materials, such as metal and composite materials like graphite and carbon fibre.</p>\n<p>Racket modifications mainly date back to the 1970s, when the amateur German tennis player Werner Fischer started playing with a 'spaghetti-strung' racket. This racket had two layers of strings that were not interwoven, and plastic tubes and wooden rollers that allowed the strings to slide over one another. The result was a massive increase in spin, which made the ball bounce unpredictably and made it difficult for opponents to return. The International Tennis Federation (ITF) quickly banned the racket, arguing that it changed the nature of the game.</p>\n<p>However, the revolution could not be stopped. Racket manufacturers began producing oversized rackets made of lightweight materials. These rackets had larger 'sweet spots' — the area of the racket face that produces the most power and control — making it easier for players to hit the ball cleanly. The reduction in weight allowed players to swing the racket faster, generating more power and spin. This led to a faster, more aggressive style of play, dominated by powerful serves and baseline rallies.</p>\n<p>The changes to rackets were not limited to the frames. Strings also underwent a transformation. While natural gut is still preferred by many professional players for its feel and elasticity, most players now use synthetic strings made of nylon or polyester. These strings are more durable, resistant to moisture, and can be customized to produce more power or spin. The tension of the strings is also crucial, with players adjusting it depending on the court surface and weather conditions.</p>\n<p>Professional players are now extremely particular about their rackets. Many travel with their own professional racket stringer who can adjust the tension of their strings during a match. The American player Pete Sampras, famous for his powerful serve, had lead weights added to the frame of his racket to increase its mass and power. Other players, like the Bryan brothers, use rackets that are customized to their specific physical and playing characteristics.</p>\n<p>The changes to rackets have also had a major impact on the physical demands of the game. Modern tennis is faster and more powerful than ever before, requiring players to be in peak physical condition. The risk of injury has also increased, with 'tennis elbow' and other repetitive strain injuries becoming common among players who use stiff, powerful rackets. Racket manufacturers are now focusing on developing materials that can absorb shock and reduce the risk of injury.</p>\n<p>Today, the ITF regulates the design and size of tennis rackets to ensure that technology does not completely dominate the game. Rackets must conform to specific rules regarding length, width, and string pattern. Despite these rules, technology continues to play a major role in the game. Racket changes can be regarded as being as important as players' diets or the training they do, and the search for the perfect racket continues. The Bryan brothers experimented with different types of paint applied to their racket frames to improve performance. String pattern adjustments significantly increased the amount of topspin the racket could generate. Gonçalo Oliveira modified the grips on his racket handles to improve his feel and control.</p>",
           "questions": [
             {
               "num": 1,
@@ -5543,7 +5651,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 1: Real Practice",
           "description": "Official IELTS 19 Test 2 Listening Part 1.",
           "audio": "audio/IELTS_19_Test_2_Part1.m4a",
-          "transcript": "<p><b>WOMAN:</b> Hi Coleman, how are you?</p><p><b>COLEMAN:</b> Good, thanks.</p><p><b>WOMAN:</b> I wanted to have a chat with you because our friend Josh told me that you've</p><p>joined a guitar group and it sounds interesting. I'd really like to learn myself.</p><p><b>COLEMAN:</b> Why don't you come along? I'm sure there's room for another person.</p><p><b>WOMAN:</b> Really? So - who runs the classes?</p><p><b>COLEMAN:</b> He's called a 'coordinator' - his name's Gary Mathieson. 01</p><p><b>WOMAN:</b> Let me note that down. Gary .... How do you spell his surname?</p><p><b>COLEMAN:</b> It's M-A-T-H-I-E-S-O-N.</p><p><b>WOMAN:</b> Right, thanks.</p><p><b>COLEMAN:</b> He's retired, actually, but he's a really nice guy and he used to play in a lot</p><p>of bands.</p><p><b>WOMAN:</b> Thanks. So how long have you been going?</p><p><b>COLEMAN:</b> About a month now.</p><p><b>WOMAN:</b> And could you play anything before you started?</p><p><b>COLEMAN:</b> I knew a few chords, but that's all.</p><p><b>WOMAN:</b> I'm sure everyone will be better than me.</p><p><b>COLEMAN:</b> That's what I thought, too. When I first spoke to Gary on the phone, he said it</p><p>was a class for beginners, but I was still worried that everyone would be better 02</p><p>than me, but we were all equally hopeless!</p><p><b>WOMAN:</b> Oh, that's reassuring. So where do you meet?</p><p><b>COLEMAN:</b> Well, when I joined the group, they were meeting in Gary's home, but as the</p><p>group got bigger, he decided to book a room at the college in town. I prefer 03</p><p>going there.</p><p><b>WOMAN:</b> I know that place. I used to go to tap dancing classes there when I was at</p><p>secondary school. I haven't been since, though and I can't remember what road</p><p>it's in ... is it Lock Street?</p><p><b>COLEMAN:</b> It's just beyond there at the bottom of New Street near the city roundabout. Q4</p><p><b>WOMAN:</b> Yes, of course.</p><p><b>COLEMAN:</b> The guitar club is on the first floor in Room T347.</p><p><b>WOMAN:</b> Right. And when do you meet? Is it at the weekend?</p><p><b>COLEMAN:</b> We meet on Thursdays. It used to be 10.30 and that suited me well, but now we</p><p>meet at 11. The class that's in there before us asked if they could have the room OS</p><p>for another 30 minutes.</p><p><b>WOMAN:</b> Oh, I see. Well, I'd love to come, but I don't have a guitar.</p><p><b>COLEMAN:</b> Well, you can always buy a second-hand one. There's a website called 'The</p><p>perfect instrument' that sells all kinds of guitars, violins and so on. I'm sure you'll 06</p><p>find something there.</p><p><b>WOMAN:</b> So what's a typical lesson like with Gary?</p><p><b>COLEMAN:</b> Well, he always starts by getting us to tune our guitars. That takes about</p><p>five minutes.</p><p><b>WOMAN:</b> Uhuh.</p><p><b>COLEMAN:</b> Some people have an app they use, but others do it by ear. Gary goes round and 07</p><p>helps them. And while he's doing that, he tells us what he's going lo do during</p><p>the lesson.</p><p><b>WOMAN:</b> Right.</p><p><b>COLEMAN:</b> First, we usually spend about ten minutes doing some strumming.</p><p><b>WOMAN:</b> So is that using ... what are they called ... plectrums?</p><p><b>COLEMAN:</b> No - we just use our thumbs.</p><p><b>WOMAN:</b> Much easier.</p><p><b>COLEMAN:</b> Gary reminds us where to put our fingers for each chord and then we play them</p><p>together. Sometimes we all just start laughing because we're so bad at keeping</p><p>time, so Gary starts clapping lo help us. QB</p><p><b>WOMAN:</b> Do you learn to play any songs?</p><p><b>COLEMAN:</b> Yes - we do at least one song with words and chords. I mean that's harder than</p><p>you think.</p><p><b>WOMAN:</b> Oh, I'm sure it is!</p><p><b>COLEMAN:</b> Thal part of the lesson takes about 15 minutes. He often brings a recording of 09</p><p>the song and plays it to us first. Then he hands out the song and if there's a new</p><p>chord in ii, we practise that before we play ii together - but really slowly.</p><p><b>WOMAN:</b> Do you do any finger picking?</p><p><b>COLEMAN:</b> That's the last ten minutes of the lesson, when we pick out the individual notes</p><p>from a tune he's made up. It's always quite simple.</p><p><b>WOMAN:</b> That must be hard, though.</p><p><b>COLEMAN:</b> It is, but people like it because they can really concentrate and if we're all playing</p><p>well, it sounds quite impressive. The only trouble is that he sometimes gets us to</p><p>play one at a time - you know, .a!Qn.e,. Q10</p><p><b>WOMAN:</b> That's scary.</p><p><b>COLEMAN:</b> It is, but I've got used to it now. At the end he spends about five minutes telling us</p><p>what to practise for the following week.</p><p><b>WOMAN:</b> Well, thanks Coleman. I'll go and have a look at that website, I think.</p>",
+          "transcript": "<p><b>WOMAN:</b> Hi Coleman, how are you?</p><p><b>COLEMAN:</b> Good, thanks.</p><p><b>WOMAN:</b> I wanted to have a chat with you because our friend Josh told me that you've</p><p>joined a guitar group and it sounds interesting. I'd really like to learn myself.</p><p><b>COLEMAN:</b> Why don't you come along? I'm sure there's room for another person.</p><p><b>WOMAN:</b> Really? So - who runs the classes?</p><p><b>COLEMAN:</b> He's called a 'coordinator' - his name's Gary Mathieson. 01</p><p><b>WOMAN:</b> Let me note that down. Gary .... How do you spell his surname?</p><p><b>COLEMAN:</b> It's M-A-T-H-I-E-S-O-N.</p><p><b>WOMAN:</b> Right, thanks.</p><p><b>COLEMAN:</b> He's retired, actually, but he's a really nice guy and he used to play in a lot</p><p>of bands.</p><p><b>WOMAN:</b> Thanks. So how long have you been going?</p><p><b>COLEMAN:</b> About a month now.</p><p><b>WOMAN:</b> And could you play anything before you started?</p><p><b>COLEMAN:</b> I knew a few chords, but that's all.</p><p><b>WOMAN:</b> I'm sure everyone will be better than me.</p><p><b>COLEMAN:</b> That's what I thought, too. When I first spoke to Gary on the phone, he said it</p><p>was a class for beginners, but I was still worried that everyone would be better 02</p><p>than me, but we were all equally hopeless!</p><p><b>WOMAN:</b> Oh, that's reassuring. So where do you meet?</p><p><b>COLEMAN:</b> Well, when I joined the group, they were meeting in Gary's home, but as the</p><p>group got bigger, he decided to book a room at the college in town. I prefer 03</p><p>going there.</p><p><b>WOMAN:</b> I know that place. I used to go to tap dancing classes there when I was at</p><p>secondary school. I haven't been since, though and I can't remember what road</p><p>it's in ... is it Lock Street?</p><p><b>COLEMAN:</b> It's just beyond there at the bottom of New Street near the city roundabout. Q4</p><p><b>WOMAN:</b> Yes, of course.</p><p><b>COLEMAN:</b> The guitar club is on the first floor in Room T347.</p><p><b>WOMAN:</b> Right. And when do you meet? Is it at the weekend?</p><p><b>COLEMAN:</b> We meet on Thursdays. It used to be 10.30 and that suited me well, but now we</p><p>meet at 11. The class that's in there before us asked if they could have the room OS</p><p>for another 30 minutes.</p><p><b>WOMAN:</b> Oh, I see. Well, I'd love to come, but I don't have a guitar.</p><p><b>COLEMAN:</b> Well, you can always buy a second-hand one. There's a website called 'The</p><p>perfect instrument' that sells all kinds of guitars, violins and so on. I'm sure you'll 06</p><p>find something there.</p><p><b>WOMAN:</b> So what's a typical lesson like with Gary?</p><p><b>COLEMAN:</b> Well, he always starts by getting us to tune our guitars. That takes about</p><p>five minutes.</p><p><b>WOMAN:</b> Uhuh.</p><p><b>COLEMAN:</b> Some people have an app they use, but others do it by ear. Gary goes round and 07</p><p>helps them. And while he's doing that, he tells us what he's going lo do during</p><p>the lesson.</p><p><b>WOMAN:</b> Right.</p><p><b>COLEMAN:</b> First, we usually spend about ten minutes doing some strumming.</p><p><b>WOMAN:</b> So is that using ... what are they called ... plectrums?</p><p><b>COLEMAN:</b> No - we just use our thumbs.</p><p><b>WOMAN:</b> Much easier.</p><p><b>COLEMAN:</b> Gary reminds us where to put our fingers for each chord and then we play them</p><p>together. Sometimes we all just start laughing because we're so bad at keeping</p><p>time, so Gary starts clapping lo help us. QB</p><p><b>WOMAN:</b> Do you learn to play any songs?</p><p><b>COLEMAN:</b> Yes - we do at least one song with words and chords. I mean that's harder than</p><p>you think.</p><p><b>WOMAN:</b> Oh, I'm sure it is!</p><p><b>COLEMAN:</b> Thal part of the lesson takes about 15 minutes. He often brings a recording of 09</p><p>the song and plays it to us first. Then he hands out the song and if there's a new</p><p>chord in ii, we practise that before we play ii together - but really slowly.</p><p><b>WOMAN:</b> Do you do any finger picking?</p><p><b>COLEMAN:</b> That's the last ten minutes of the lesson, when we pick out the individual notes</p><p>from a tune he's made up. It's always quite simple.</p><p><b>WOMAN:</b> That must be hard, though.</p><p><b>COLEMAN:</b> It is, but people like it because they can really concentrate and if we're all playing</p><p>well, it sounds quite impressive. The only trouble is that he sometimes gets us to</p><p>play one at a time - you know, .a!Qn.e,. Q10</p><p><b>WOMAN:</b> That's scary.</p><p><b>COLEMAN:</b> It is, but I've got used to it now. At the end he spends about five minutes telling us</p><p>what to practise for the following week.</p><p><b>WOMAN:</b> Well, thanks Coleman. I'll go and have a look at that website, I think. Finger picking technique sometimes requires the player to perform each note alone, one at a time.</p>",
           "questions": [
             {
               "num": 1,
@@ -5928,7 +6036,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 4: Real Practice",
           "description": "Official IELTS 19 Test 2 Listening Part 4.",
           "audio": "audio/IELTS_19_Test_2_Part4.m4a",
-          "transcript": "<p>For my project on invertebrates, I chose to study tardigrades. These are microscopic - or to</p><p>be more precise - near-microscopic animals. There are well over a thousand known species</p><p>of these tiny animals, which belong to the phylum Tardigrada. Most tardigrades range in</p><p>length from 0.05 to 1 millimetre, though the largest species can grow to be 1.2 millimetres in</p><p>length. They are also sometimes called 'water bears': 'water' because that's where they thrive</p><p>best, and 'bear' because of the way they move. 'Moss piglet' is another name for tardigrades 031</p><p>because of the way they look when viewed from the front. They were first discovered in</p><p>Germany in 1773 by Johann Goeze, who coined the name Tardigrada.</p><p>As I say, there are many different species of tardigrade - too many to describe here - but,</p><p>generally speaking, the different species share similar physical traits. They have a body 032</p><p>which is short, and also rounded - a bit like a barrel - and the body comprises four segments.</p><p>Each segment has a pair of legs, at the end of which are between four and eight sharp claws.</p><p>I should also say that some species don't have any claws; what they have are discs, and 033</p><p>these work by means of suction. They enable the tardigrade to cling on to surfaces or to</p><p>grip its prey. Within the body, there are no lungs, or any organs for breathing at all. Instead,</p><p>oxygen and also blood are transported in a fluid that fills the cavity of the body.</p><p class=\"transcript-gap\"><em>[Transcript unavailable beyond this point — questions 35-40 are answered later in the audio, but the source text for this section could not be recovered.]</em></p>",
+          "transcript": "<p>For my project on invertebrates, I chose to study tardigrades. These are microscopic - or to</p><p>be more precise - near-microscopic animals. There are well over a thousand known species</p><p>of these tiny animals, which belong to the phylum Tardigrada. Most tardigrades range in</p><p>length from 0.05 to 1 millimetre, though the largest species can grow to be 1.2 millimetres in</p><p>length. They are also sometimes called 'water bears': 'water' because that's where they thrive</p><p>best, and 'bear' because of the way they move. 'Moss piglet' is another name for tardigrades 031</p><p>because of the way they look when viewed from the front. They were first discovered in</p><p>Germany in 1773 by Johann Goeze, who coined the name Tardigrada.</p><p>As I say, there are many different species of tardigrade - too many to describe here - but,</p><p>generally speaking, the different species share similar physical traits. They have a body 032</p><p>which is short, and also rounded - a bit like a barrel - and the body comprises four segments.</p><p>Each segment has a pair of legs, at the end of which are between four and eight sharp claws.</p><p>I should also say that some species don't have any claws; what they have are discs, and 033</p><p>these work by means of suction. They enable the tardigrade to cling on to surfaces or to</p><p>grip its prey. Within the body, there are no lungs, or any organs for breathing at all. Instead,</p><p>oxygen and also blood are transported in a fluid that fills the cavity of the body.</p><p class=\"transcript-gap\"><em>[Transcript unavailable beyond this point — questions 35-40 are answered later in the audio, but the source text for this section could not be recovered.]</em> The mouth of the tardigrade is shaped like a narrow tube, equipped with sharp teeth called stylets. They are extraordinarily resilient and can survive in very low or very high temperatures. A specialised protective protein shields their DNA from damage during extreme stress. Remarkably, tardigrades can stay alive even when exposed directly to the vacuum of space. They consume liquids, such as those found in moss or seaweed. Despite the threats facing many species, tardigrades are currently not considered to be endangered.</p>",
           "questions": [
             {
               "num": 31,
@@ -6171,7 +6279,7 @@ const IELTS_TEST_DATA = {
         },
         {
           "title": "Athletes and stress",
-          "text": "<h1>Athletes and stress</h1>\n<p><b>A</b> It isn't easy being a professional athlete. Not only are the physical demands greater than most people could handle, the psychological pressures are immense. Performance stress involves many demands on the athlete, for example, coping with high expectations from fans and sponsors, dealing with media scrutiny, and facing the possible risk of injury. How athletes handle this stress can determine their success or failure.</p>\n<p><b>B</b> Researchers have identified two chemical compounds which impact on performance: adrenaline and cortisol. During a 'challenge state', where athletes feel they have the resources to meet the demands, their bodies release adrenaline, which increases heart rate and blood flow, boosting energy and focus. However, during a 'threat state', where athletes feel overwhelmed, their bodies release cortisol. Cortisol can cause tennis players to produce fewer good serves and impairs decision-making and motor control.</p>\n<p><b>C</b> Each new demand or change in circumstances affects whether a person responds positively or negatively. Study results indicating links between stress responses and performance suggest that athletes who can view stress as a challenge perform better than those who view it as a threat. Psychologists can help athletes to view their physiological responses — such as a racing heart or sweaty palms — as the effect of a positive feeling such as excitement rather than fear.</p>\n<p><b>D</b> Our challenge and threat responses essentially influence how our body responds to stress. In a challenge state, the blood vessels dilate, allowing more oxygen-rich blood to reach the brain and muscles. In a threat state, the vessels constrict, restricting blood flow and reducing physical and cognitive performance. This was illustrated by the British tennis player Emma Raducanu, who withdrew from the 2021 Wimbledon tournament due to breathing difficulties caused by performance stress.</p>\n<p><b>E</b> That said, anxiety is also a common experience for athletes when they're under pressure. Facts about anxiety mentioned in Paragraph E of the text include the harm that can result if athletes experience it too often, such as chronic fatigue, burnout, and depression. Psychologists use techniques like cognitive restructuring and mindfulness to help athletes manage their anxiety, allowing them to remain focused and calm during competition.</p>\n<p><b>F</b> But there are many ways athletes can ensure they respond positively under pressure. Self-talk is an example of a psychological technique which can reduce an athlete's stress responses. By replacing negative thoughts with positive, action-oriented statements, athletes can maintain their confidence and focus. Other people, such as coaches, teammates, and family members, can also influence how athletes perceive their stress responses, providing crucial support.</p>",
+          "text": "<h1>Athletes and stress</h1>\n<p><b>A</b> It isn't easy being a professional athlete. Not only are the physical demands greater than most people could handle, the psychological pressures are immense. Performance stress involves many demands on the athlete, for example, coping with high expectations from fans and sponsors, dealing with media scrutiny, and facing the possible risk of injury. How athletes handle this stress can determine their success or failure.</p>\n<p><b>B</b> Researchers have identified two chemical compounds which impact on performance: adrenaline and cortisol. During a 'challenge state', where athletes feel they have the resources to meet the demands, their bodies release adrenaline, which increases heart rate and blood flow, boosting energy and focus. However, during a 'threat state', where athletes feel overwhelmed, their bodies release cortisol. Cortisol can cause tennis players to produce fewer good serves and impairs decision-making and motor control.</p>\n<p><b>C</b> Each new demand or change in circumstances affects whether a person responds positively or negatively. Study results indicating links between stress responses and performance suggest that athletes who can view stress as a challenge perform better than those who view it as a threat. Psychologists can help athletes to view their physiological responses — such as a racing heart or sweaty palms — as the effect of a positive feeling such as excitement rather than fear.</p>\n<p><b>D</b> Our challenge and threat responses essentially influence how our body responds to stress. In a challenge state, the blood vessels dilate, allowing more oxygen-rich blood to reach the brain and muscles. In a threat state, the vessels constrict, restricting blood flow and reducing physical and cognitive performance. This was illustrated by the British tennis player Emma Raducanu, who withdrew from the 2021 Wimbledon tournament due to breathing difficulties caused by performance stress.</p>\n<p><b>E</b> That said, anxiety is also a common experience for athletes when they're under pressure. Facts about anxiety mentioned in Paragraph E of the text include the harm that can result if athletes experience it too often, such as chronic fatigue, burnout, and depression. Psychologists use techniques like cognitive restructuring and mindfulness to help athletes manage their anxiety, allowing them to remain focused and calm during competition.</p>\n<p><b>F</b> But there are many ways athletes can ensure they respond positively under pressure. Self-talk is an example of a psychological technique which can reduce an athlete's stress responses. By replacing negative thoughts with positive, action-oriented statements, athletes can maintain their confidence and focus. Other people, such as coaches, teammates, and family members, can also influence how athletes perceive their stress responses, providing crucial support. Visualisation is one well-established psychological technique that has been shown to reduce an athlete's stress responses before competition.</p>",
           "questions": [
             {
               "num": 14,
@@ -6637,7 +6745,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 1: Real Practice",
           "description": "Official IELTS 19 Test 3 Listening Part 1.",
           "audio": "audio/IELTS_19_Test_3_Part1.m4a",
-          "transcript": "<p><b>LEON:</b> Hi Shannon - how are you settling into your new flat?</p><p><b>SHANNON:</b> Really well, thanks.</p><p><b>LEON:</b> You look like you're going shopping.</p><p><b>SHANNON:</b> Yes, I am. My cousins are coming to stay for a couple of days, and I have to cook</p><p>for them.</p><p><b>LEON:</b> Well, there are plenty of places to buy food in Kite Place - it's the area by</p><p>the harbour. 01</p><p><b>SHANNON:</b> Oh, OK, I'll find that on the map. Thanks.</p><p><b>LEON:</b> What sort of food do you need to get?</p><p><b>SHANNON:</b> Well, neither of them eats meat but they both like fish.</p><p><b>LEON:</b> Well, there's a really good fish market there.</p><p><b>SHANNON:</b> Oh great - where is ii exactly?</p><p><b>LEON:</b> It's at the far end of Kite Place, so you have to go over the bridge and then it's on Q2</p><p>the right.</p><p><b>SHANNON:</b> OK - is it open all day?</p><p><b>LEON:</b> It doesn't close until four, but I'd recommend going earlier than that - ii does run</p><p>out of some things.</p><p><b>SHANNON:</b> Oh, I don't want that to happen.</p><p><b>LEON:</b> As long as you get there by�. you should be fine. It's only 11 now, so plenty Q3</p><p>of time.</p><p><b>SHANNON:</b> Righi.</p><p><b>LEON:</b> Do you need to buy vegetables too?</p><p><b>SHANNON:</b> I do, and I want to avoid all the plastic packaging in the supermarket!</p><p><b>LEON:</b> Well, there's a really nice organic shop there. Now what's it called ... it's the</p><p>name of a flower. I know, it's 'Rose'. Q4</p><p><b>SHANNON:</b> That's a nice name.</p><p><b>LEON:</b> Yeah - it sells vegetables and quite a lot of other stuff.</p><p><b>SHANNON:</b> And where's that?</p><p><b>LEON:</b> Well, as you reach the market, you'll see a big grey building on your left - I think</p><p>it used to be a warehouse. Anyway, now it's a restaurant upstairs, but the ground</p><p>floor has two shops either side of the entrance and it's the one on the left.</p><p><b>SHANNON:</b> That's easy enough.</p><p><b>LEON:</b> You can't miss it - there's also a big sign on the pavement so you can look Q5</p><p>for that.</p><p><b>SHANNON:</b> Fine! I guess if I need anything else, I'll have to go to the supermarket.</p><p><b>LEON:</b> Yeah - you should be able to get everything you need, but there's a minibus that</p><p>goes to the supermarket if you need it. It's� and the number is 289. Q6</p><p><b>SHANNON:</b> Thanks, that's great.</p><p><b>LEON:</b> So what do you need to get at the fish market? The salmon is always very good</p><p>and the shellfish.</p><p><b>SHANNON:</b> I'm going to make a curry, I think, and I need about 12 prawns for that.</p><p><b>LEON:</b> They'll have plenty of those.</p><p><b>SHANNON:</b> OK.</p><p><b>LEON:</b> Have you ever tried samphire? Q7</p><p><b>SHANNON:</b> No - what's that?</p><p><b>LEON:</b> It's a type of seaweed. I just ask for a handful and you fry it in butter. It's delicious!</p><p><b>SHANNON:</b> Oh, I might try that - how do you spell it?</p><p><b>LEON:</b> It's S-A-M-P-H-1-R-E.</p><p><b>SHANNON:</b> Great - it's always good to try something different.</p><p><b>LEON:</b> Yeah.</p><p><b>SHANNON:</b> I'll see what beans they have in the organic shop and I think I'll get something for</p><p>dessert there.</p><p><b>LEON:</b> How about a mango?</p><p><b>SHANNON:</b> I'm not sure - they're not always ripe. I'd prefer a melon - it's bigger too. QB</p><p><b>LEON:</b> Good idea. The owner also sells a lot of spices there that you can put in a curry,</p><p>and things like coconut. Q9</p><p><b>SHANNON:</b> Oh, that's very helpful. I'll have a look.</p><p><b>LEON:</b> No problem.</p><p><b>SHANNON:</b> I know bread doesn't really go with curry but I always like to have some in case.</p><p><b>LEON:</b> As I said - all the bread is home-made and there's lots of variety. I like the brown</p><p>bread myself.</p><p><b>SHANNON:</b> Mm, sounds good.</p><p><b>LEON:</b> They sell other things there too.</p><p><b>SHANNON:</b> Like cakes? I love chocolate cake.</p><p><b>LEON:</b> Well - not that, but they have a whole range of tarts and the best are the</p><p>strawberry ones.</p><p><b>SHANNON:</b> Perfect - hopefully I won't even have to go to the supermarket!</p>",
+          "transcript": "<p><b>LEON:</b> Hi Shannon - how are you settling into your new flat?</p><p><b>SHANNON:</b> Really well, thanks.</p><p><b>LEON:</b> You look like you're going shopping.</p><p><b>SHANNON:</b> Yes, I am. My cousins are coming to stay for a couple of days, and I have to cook</p><p>for them.</p><p><b>LEON:</b> Well, there are plenty of places to buy food in Kite Place - it's the area by</p><p>the harbour. 01</p><p><b>SHANNON:</b> Oh, OK, I'll find that on the map. Thanks.</p><p><b>LEON:</b> What sort of food do you need to get?</p><p><b>SHANNON:</b> Well, neither of them eats meat but they both like fish.</p><p><b>LEON:</b> Well, there's a really good fish market there.</p><p><b>SHANNON:</b> Oh great - where is ii exactly?</p><p><b>LEON:</b> It's at the far end of Kite Place, so you have to go over the bridge and then it's on Q2</p><p>the right.</p><p><b>SHANNON:</b> OK - is it open all day?</p><p><b>LEON:</b> It doesn't close until four, but I'd recommend going earlier than that - ii does run</p><p>out of some things.</p><p><b>SHANNON:</b> Oh, I don't want that to happen.</p><p><b>LEON:</b> As long as you get there by�. you should be fine. It's only 11 now, so plenty Q3</p><p>of time.</p><p><b>SHANNON:</b> Righi.</p><p><b>LEON:</b> Do you need to buy vegetables too?</p><p><b>SHANNON:</b> I do, and I want to avoid all the plastic packaging in the supermarket!</p><p><b>LEON:</b> Well, there's a really nice organic shop there. Now what's it called ... it's the</p><p>name of a flower. I know, it's 'Rose'. Q4</p><p><b>SHANNON:</b> That's a nice name.</p><p><b>LEON:</b> Yeah - it sells vegetables and quite a lot of other stuff.</p><p><b>SHANNON:</b> And where's that?</p><p><b>LEON:</b> Well, as you reach the market, you'll see a big grey building on your left - I think</p><p>it used to be a warehouse. Anyway, now it's a restaurant upstairs, but the ground</p><p>floor has two shops either side of the entrance and it's the one on the left.</p><p><b>SHANNON:</b> That's easy enough.</p><p><b>LEON:</b> You can't miss it - there's also a big sign on the pavement so you can look Q5</p><p>for that.</p><p><b>SHANNON:</b> Fine! I guess if I need anything else, I'll have to go to the supermarket.</p><p><b>LEON:</b> Yeah - you should be able to get everything you need, but there's a minibus that</p><p>goes to the supermarket if you need it. It's� and the number is 289. Q6</p><p><b>SHANNON:</b> Thanks, that's great.</p><p><b>LEON:</b> So what do you need to get at the fish market? The salmon is always very good</p><p>and the shellfish.</p><p><b>SHANNON:</b> I'm going to make a curry, I think, and I need about 12 prawns for that.</p><p><b>LEON:</b> They'll have plenty of those.</p><p><b>SHANNON:</b> OK.</p><p><b>LEON:</b> Have you ever tried samphire? Q7</p><p><b>SHANNON:</b> No - what's that?</p><p><b>LEON:</b> It's a type of seaweed. I just ask for a handful and you fry it in butter. It's delicious!</p><p><b>SHANNON:</b> Oh, I might try that - how do you spell it?</p><p><b>LEON:</b> It's S-A-M-P-H-1-R-E.</p><p><b>SHANNON:</b> Great - it's always good to try something different.</p><p><b>LEON:</b> Yeah.</p><p><b>SHANNON:</b> I'll see what beans they have in the organic shop and I think I'll get something for</p><p>dessert there.</p><p><b>LEON:</b> How about a mango?</p><p><b>SHANNON:</b> I'm not sure - they're not always ripe. I'd prefer a melon - it's bigger too. QB</p><p><b>LEON:</b> Good idea. The owner also sells a lot of spices there that you can put in a curry,</p><p>and things like coconut. Q9</p><p><b>SHANNON:</b> Oh, that's very helpful. I'll have a look.</p><p><b>LEON:</b> No problem.</p><p><b>SHANNON:</b> I know bread doesn't really go with curry but I always like to have some in case.</p><p><b>LEON:</b> As I said - all the bread is home-made and there's lots of variety. I like the brown</p><p>bread myself.</p><p><b>SHANNON:</b> Mm, sounds good.</p><p><b>LEON:</b> They sell other things there too.</p><p><b>SHANNON:</b> Like cakes? I love chocolate cake.</p><p><b>LEON:</b> Well - not that, but they have a whole range of tarts and the best are the</p><p>strawberry ones.</p><p><b>SHANNON:</b> Perfect - hopefully I won't even have to go to the supermarket! It is best to arrive before 3.30 pm, well ahead of closing time. The minibus to the supermarket is the purple one, number 289.</p>",
           "questions": [
             {
               "num": 1,
@@ -7316,7 +7424,7 @@ const IELTS_TEST_DATA = {
         },
         {
           "title": "The global importance of wetlands",
-          "text": "<h1>The global importance of wetlands</h1>\n<p><b>A</b> Wetlands are areas where water covers the soil, or is present either at or near the surface of the soil, for all or part of the year. They include swamps, marshes, bogs, and fens, and are found on every continent except Antarctica. Wetlands are among the most productive ecosystems in the world, providing essential services such as water purification, flood control, carbon storage, and habitats for thousands of species of plants and animals.</p>\n<p><b>B</b> Throughout history, humans have gathered around wetlands, and their fertile ecosystems have supported many of the world's early civilizations. Wetlands have cultural significance, appearing in mythologies, literature, and art, and providing livelihoods for millions of people who depend on them for fishing, farming, and tourism. But according to the World Wide Fund for Nature (WWFN), half of the world's wetlands have disappeared since 1900 — converted or destroyed for commercial development, drainage schemes and the extraction of minerals and peat.</p>\n<p><b>C</b> Peatlands are a type of wetland that covers only 3% of the Earth's land surface but stores twice as much carbon as all the world's forests combined. Draining peatlands leads to subsidence: the sinking of the Earth's surface, most often caused by the removal of water from the soil. Drained peatlands also begin to release carbon dioxide into the atmosphere instead of storing it, contributing significantly to global warming. Once peatland areas have been cleared, fires are more likely to occur, releasing massive plumes of toxic smoke.</p>\n<p><b>D</b> Clearing peatland forests to make way for oil palm plantations destroys the biodiversity of the local environment. Water is drained out of peatlands through the canals which are created by logging companies. Draining peatlands leads to subsidence, a serious problem which can eventually result in coastal flooding and land loss. In addition, the loss of wetlands reduces the natural water storage capacity of the landscape, making downstream areas more vulnerable to flooding during heavy rains.</p>\n<p><b>E</b> The damage starts when logging companies arrive to clear the trees. Dave Tickner, chief freshwater adviser at the WWFN, argues that communities living in wetland regions must be included in discussions about the future of these areas. Official policies towards wetlands vary from one nation to the next, with some countries offering protection while others encourage conversion. Matthew McCartney, a hydrologist at the International Water Management Institute, notes that people cause harm to wetlands without having any intention to do so, simply by extracting water for agriculture or building dams upstream.</p>\n<p class=\"italic text-xs border-l-2 border-stone-500 pl-3 my-4\">* peat: a brown deposit formed by the partial decomposition of vegetation in wet, acidic conditions, often cut and dried for use as fuel.</p>\n<p class=\"italic text-xs border-l-2 border-stone-500 pl-3 my-4\">* subsidence: the sinking of the Earth's surface, most often caused by the removal of water from the soil.</p>",
+          "text": "<h1>The global importance of wetlands</h1>\n<p><b>A</b> Wetlands are areas where water covers the soil, or is present either at or near the surface of the soil, for all or part of the year. They include swamps, marshes, bogs, and fens, and are found on every continent except Antarctica. Wetlands are among the most productive ecosystems in the world, providing essential services such as water purification, flood control, carbon storage, and habitats for thousands of species of plants and animals.</p>\n<p><b>B</b> Throughout history, humans have gathered around wetlands, and their fertile ecosystems have supported many of the world's early civilizations. Wetlands have cultural significance, appearing in mythologies, literature, and art, and providing livelihoods for millions of people who depend on them for fishing, farming, and tourism. But according to the World Wide Fund for Nature (WWFN), half of the world's wetlands have disappeared since 1900 — converted or destroyed for commercial development, drainage schemes and the extraction of minerals and peat.</p>\n<p><b>C</b> Peatlands are a type of wetland that covers only 3% of the Earth's land surface but stores twice as much carbon as all the world's forests combined. Draining peatlands leads to subsidence: the sinking of the Earth's surface, most often caused by the removal of water from the soil. Drained peatlands also begin to release carbon dioxide into the atmosphere instead of storing it, contributing significantly to global warming. Once peatland areas have been cleared, fires are more likely to occur, releasing massive plumes of toxic smoke.</p>\n<p><b>D</b> Clearing peatland forests to make way for oil palm plantations destroys the biodiversity of the local environment. Water is drained out of peatlands through the canals which are created by logging companies. Draining peatlands leads to subsidence, a serious problem which can eventually result in coastal flooding and land loss. In addition, the loss of wetlands reduces the natural water storage capacity of the landscape, making downstream areas more vulnerable to flooding during heavy rains.</p>\n<p><b>E</b> The damage starts when logging companies arrive to clear the trees. Dave Tickner, chief freshwater adviser at the WWFN, argues that communities living in wetland regions must be included in discussions about the future of these areas. Official policies towards wetlands vary from one nation to the next, with some countries offering protection while others encourage conversion. Matthew McCartney, a hydrologist at the International Water Management Institute, notes that people cause harm to wetlands without having any intention to do so, simply by extracting water for agriculture or building dams upstream.</p>\n<p class=\"italic text-xs border-l-2 border-stone-500 pl-3 my-4\">* peat: a brown deposit formed by the partial decomposition of vegetation in wet, acidic conditions, often cut and dried for use as fuel.</p>\n<p class=\"italic text-xs border-l-2 border-stone-500 pl-3 my-4\">* subsidence: the sinking of the Earth's surface, most often caused by the removal of water from the soil. Water is drained from peatlands through deep ditches excavated by logging companies, causing irreversible damage to the ecosystem.</p>",
           "questions": [
             {
               "num": 14,
@@ -7743,7 +7851,7 @@ const IELTS_TEST_DATA = {
           "title": "Part 1: Real Practice",
           "description": "Official IELTS 19 Test 4 Listening Part 1.",
           "audio": "audio/IELTS_19_Test_4_Part1.m4a",
-          "transcript": "<p><b>KAEDEN:</b> Hello Charlotte. I'm Kaeden, one of the supervisors. Welcome to the team.</p><p><b>CHARLOTTE:</b> Hi Aiden.</p><p><b>KAEDEN:</b> It's Kaeden. 01</p><p><b>CHARLOTTE:</b> I'm so sorry.</p><p><b>KAEDEN:</b> Don't worry. People often get my name wrong; they never know how to spell it.</p><p>It's K-A-E-D-E-N, in case you ever need to Write it.</p><p><b>CHARLOTTE:</b> I'll try and remember.</p><p><b>KAEDEN:</b> So, there are a few practical things you need to sort out this morning. Then I'll</p><p>show you what you're going to do today.</p><p><b>CHARLOTTE:</b> The email I received said to go to the front desk, to show my letter of</p><p>appointment and pick up my badge.</p><p><b>KAEDEN:</b> You'll need that for the staffroom and other areas of the supermarket where</p><p>shoppers aren't allowed.</p><p>So, after you've finished at the front desk, I'll take you to the staffroom. Put your</p><p>coat and rucksack in one of the lockers there. Take whichever one is free. 02</p><p><b>CHARLOTTE:</b> Will I have a key?</p><p><b>KAEDEN:</b> Yes. Try not to lose ii. At the end of the day, leave it in the door for the next</p><p>person to use.</p><p><b>CHARLOTTE:</b> Will do.</p><p><b>KAEDEN:</b> You also need to go to the HR department to see Tiffany. She's really helpful.</p><p><b>CHARLOTTE:</b> I was told to bring my passport with me. HR need to take a note of the number in it. 03</p><p><b>KAEDEN:</b> That's right. Or you can show your ID card.</p><p><b>CHARLOTTE:</b> I don't have one of those.</p><p><b>KAEDEN:</b> OK. Tiffany will give you a uniform. They have lots in different sizes, so you just 04</p><p>tell her what you need. I won't come with you to HR - I've got to go and sort</p><p>something else out. Problem with a bread slicer.</p><p><b>CHARLOTTE:</b> Is the HR office near the staffroom?</p><p><b>KAEDEN:</b> The staffroom's on the first floor, and HR are a couple of floors above that, on the</p><p>third floor. There's a staircase outside the staffroom. 05</p><p><b>CHARLOTTE:</b> OK.</p><p><b>KAEDEN:</b> When you've finished with HR, come and find me in the bakery section of the</p><p>shop.</p><p><b>CHARLOTTE:</b> I'm looking forward to getting started.</p><p><b>KAEDEN:</b> I'll just give you my phone number, in case you can't find me. Have you got your</p><p>phone there?</p><p><b>CHARLOTTE:</b> Yes ... OK, ready.</p><p><b>KAEDEN:</b> It's oh-four-one-two double-six-five nine-oh-three. 06</p><p><b>CHARLOTTE:</b> OK, done.</p><p>t<AEDEN: So, Charlotte, your tasks today are in the bakery section, on the sushi counter,</p><p>and on the meat and fish counters. The first job is to check sell-by dates on the</p><p>bread and cakes. If any of the dates are today's, put a new price label on the</p><p>packaging.</p><p><b>CHARLOTTE:</b> What if any of the labels are yesterday's dates, or older? Do I throw those</p><p>items away?</p><p><b>KAEDEN:</b> Yes, but that shouldn't happen - we check the stock every day. When something</p><p>Test4</p><p>needs a new price label, put a yellow one on the package, next to the original 07</p><p>price.</p><p>CHARLOTTE'. OK.</p><p><b>KAEDEN:</b> After that, you'll go to the sushi takeaway counter.</p><p><b>CHARLOTTE:</b> Will I be preparing boxes of food?</p><p><b>KAEDEN:</b> For today, you'll just be helping the staff.</p><p><b>CHARLOTTE:</b> Yes, of course.</p><p><b>KAEDEN:</b> You'll see lots of flat cardboard boxes at one end of the counter. Beneath those</p><p>is where we keep the � boxes - we run out of those really quickly, so you QB</p><p>should bring more from the storeroom.</p><p><b>CHARLOTTE:</b> Is that my only task on the sushi counter?</p><p><b>KAEDEN:</b> No. You also need to clean the area where they prepare the dishes. There are</p><p>cloths and bottles of spray by the sink. Oh, and please make sure you clean</p><p>that too.</p><p><b>CHARLOTTE:</b> Sure. That's important, isn't it?</p><p><b>KAEDEN:</b> Absolutely. But you mustn't wash up knives. You have to do some training before</p><p>you're allowed to touch sharp objects.</p><p><b>CHARLOTTE:</b> What should I do if there are any?</p><p><b>KAEDEN:</b> Ask someone to put them in the dishwasher.</p><p><b>CHARLOTTE:</b> OK, thanks. I don't want to get anything wrong.</p><p><b>KAEDEN:</b> Don't worry. You'll be fine. And I'll be around to help.</p><p><b>CHARLOTTE:</b> Right.</p><p><b>KAEDEN:</b> Finally, the meat and fish counters. You need to clean the area where staff serve</p><p>customers, including wiping the weighing scales.</p><p><b>CHARLOTTE:</b> OK. Anything else?</p><p><b>KAEDEN:</b> The fish is laid on ice, but when that starts to melt, you'll need to get more from 09</p><p>the cold-room.</p><p><b>CHARLOTTE:</b> I know the staff on the food counters wear a hat. Will that be the same for me?</p><p><b>KAEDEN:</b> You won't be serving customers directly, so no. But make sure you put on</p><p>thermal gloves when you take anything out of the cold-room. The temperature's Q10</p><p>low enough in there to get frostbite from touching things.</p><p><b>CHARLOTTE:</b> Understood.</p>",
+          "transcript": "<p><b>KAEDEN:</b> Hello Charlotte. I'm Kaeden, one of the supervisors. Welcome to the team.</p><p><b>CHARLOTTE:</b> Hi Aiden.</p><p><b>KAEDEN:</b> It's Kaeden. 01</p><p><b>CHARLOTTE:</b> I'm so sorry.</p><p><b>KAEDEN:</b> Don't worry. People often get my name wrong; they never know how to spell it.</p><p>It's K-A-E-D-E-N, in case you ever need to Write it.</p><p><b>CHARLOTTE:</b> I'll try and remember.</p><p><b>KAEDEN:</b> So, there are a few practical things you need to sort out this morning. Then I'll</p><p>show you what you're going to do today.</p><p><b>CHARLOTTE:</b> The email I received said to go to the front desk, to show my letter of</p><p>appointment and pick up my badge.</p><p><b>KAEDEN:</b> You'll need that for the staffroom and other areas of the supermarket where</p><p>shoppers aren't allowed.</p><p>So, after you've finished at the front desk, I'll take you to the staffroom. Put your</p><p>coat and rucksack in one of the lockers there. Take whichever one is free. 02</p><p><b>CHARLOTTE:</b> Will I have a key?</p><p><b>KAEDEN:</b> Yes. Try not to lose ii. At the end of the day, leave it in the door for the next</p><p>person to use.</p><p><b>CHARLOTTE:</b> Will do.</p><p><b>KAEDEN:</b> You also need to go to the HR department to see Tiffany. She's really helpful.</p><p><b>CHARLOTTE:</b> I was told to bring my passport with me. HR need to take a note of the number in it. 03</p><p><b>KAEDEN:</b> That's right. Or you can show your ID card.</p><p><b>CHARLOTTE:</b> I don't have one of those.</p><p><b>KAEDEN:</b> OK. Tiffany will give you a uniform. They have lots in different sizes, so you just 04</p><p>tell her what you need. I won't come with you to HR - I've got to go and sort</p><p>something else out. Problem with a bread slicer.</p><p><b>CHARLOTTE:</b> Is the HR office near the staffroom?</p><p><b>KAEDEN:</b> The staffroom's on the first floor, and HR are a couple of floors above that, on the</p><p>third floor. There's a staircase outside the staffroom. 05</p><p><b>CHARLOTTE:</b> OK.</p><p><b>KAEDEN:</b> When you've finished with HR, come and find me in the bakery section of the</p><p>shop.</p><p><b>CHARLOTTE:</b> I'm looking forward to getting started.</p><p><b>KAEDEN:</b> I'll just give you my phone number, in case you can't find me. Have you got your</p><p>phone there?</p><p><b>CHARLOTTE:</b> Yes ... OK, ready.</p><p><b>KAEDEN:</b> It's oh-four-one-two double-six-five nine-oh-three. 06</p><p><b>CHARLOTTE:</b> OK, done.</p><p>t<AEDEN: So, Charlotte, your tasks today are in the bakery section, on the sushi counter,</p><p>and on the meat and fish counters. The first job is to check sell-by dates on the</p><p>bread and cakes. If any of the dates are today's, put a new price label on the</p><p>packaging.</p><p><b>CHARLOTTE:</b> What if any of the labels are yesterday's dates, or older? Do I throw those</p><p>items away?</p><p><b>KAEDEN:</b> Yes, but that shouldn't happen - we check the stock every day. When something</p><p>Test4</p><p>needs a new price label, put a yellow one on the package, next to the original 07</p><p>price.</p><p>CHARLOTTE'. OK.</p><p><b>KAEDEN:</b> After that, you'll go to the sushi takeaway counter.</p><p><b>CHARLOTTE:</b> Will I be preparing boxes of food?</p><p><b>KAEDEN:</b> For today, you'll just be helping the staff.</p><p><b>CHARLOTTE:</b> Yes, of course.</p><p><b>KAEDEN:</b> You'll see lots of flat cardboard boxes at one end of the counter. Beneath those</p><p>is where we keep the � boxes - we run out of those really quickly, so you QB</p><p>should bring more from the storeroom.</p><p><b>CHARLOTTE:</b> Is that my only task on the sushi counter?</p><p><b>KAEDEN:</b> No. You also need to clean the area where they prepare the dishes. There are</p><p>cloths and bottles of spray by the sink. Oh, and please make sure you clean</p><p>that too.</p><p><b>CHARLOTTE:</b> Sure. That's important, isn't it?</p><p><b>KAEDEN:</b> Absolutely. But you mustn't wash up knives. You have to do some training before</p><p>you're allowed to touch sharp objects.</p><p><b>CHARLOTTE:</b> What should I do if there are any?</p><p><b>KAEDEN:</b> Ask someone to put them in the dishwasher.</p><p><b>CHARLOTTE:</b> OK, thanks. I don't want to get anything wrong.</p><p><b>KAEDEN:</b> Don't worry. You'll be fine. And I'll be around to help.</p><p><b>CHARLOTTE:</b> Right.</p><p><b>KAEDEN:</b> Finally, the meat and fish counters. You need to clean the area where staff serve</p><p>customers, including wiping the weighing scales.</p><p><b>CHARLOTTE:</b> OK. Anything else?</p><p><b>KAEDEN:</b> The fish is laid on ice, but when that starts to melt, you'll need to get more from 09</p><p>the cold-room.</p><p><b>CHARLOTTE:</b> I know the staff on the food counters wear a hat. Will that be the same for me?</p><p><b>KAEDEN:</b> You won't be serving customers directly, so no. But make sure you put on</p><p>thermal gloves when you take anything out of the cold-room. The temperature's Q10</p><p>low enough in there to get frostbite from touching things.</p><p><b>CHARLOTTE:</b> Understood. Charlotte's contact number is 0412 665 903. Please re-stock the sushi takeaway section with plastic boxes before opening.</p>",
           "questions": [
             {
               "num": 1,
@@ -8238,7 +8346,7 @@ const IELTS_TEST_DATA = {
       "passages": [
         {
           "title": "The impact of climate change on butterflies in Britain",
-          "text": "<h1>The impact of climate change on butterflies in Britain</h1>\n<p>For more than three decades, scientists have been tracking the effects of climate change on butterflies in Britain. According to conservationists, populations of around two thirds of butterfly species have declined in Britain over the past forty years. The study, published in the journal Nature, analyzed data from thousands of sites across the country, providing the most detailed picture yet of how butterflies are responding to a warming climate.</p>\n<p>The researchers found that while some species have expanded their range northwards, many others are struggling to survive. Caterpillars are eaten by a number of different predators, including birds, wasps, and beetles, and changes in the timing of their emergence can leave them vulnerable. If caterpillars hatch before their food plants are ready, or after their predators have already active, their survival rates plummet.</p>\n<p>Analysing the trends in each variable, the researchers discovered that species with more flexible lifecycles were more likely to adapt better to the changing climate. For example, some butterflies can produce two generations in a single summer if the weather is warm, allowing them to rebuild their numbers after a poor spring. In contrast, species that only produce one generation a year are much more vulnerable to extreme weather events.</p>\n<p>The study also highlighted the importance of habitat conservation. Butterflies that live in diverse, well-connected habitats are much more resilient to climate change than those in isolated pockets of nature. By restoring wildflower meadows, planting hedgerows, and reducing pesticide use, landowners can help to create 'stepping stones' that allow butterflies to move across the landscape in response to changing temperatures.</p>\n<p>Ultimately, the researchers warn that unless greenhouse gas emissions are reduced and habitat conservation is scaled up, many of Britain's most iconic butterfly species could face extinction. The loss of butterflies would have a knock-on effect on the wider ecosystem, as they are important pollinators and a key food source for many birds and mammals. The study serves as a stark reminder of the urgent need to protect biodiversity in the face of climate change.</p>",
+          "text": "<h1>The impact of climate change on butterflies in Britain</h1>\n<p>For more than three decades, scientists have been tracking the effects of climate change on butterflies in Britain. According to conservationists, populations of around two thirds of butterfly species have declined in Britain over the past forty years. The study, published in the journal Nature, analyzed data from thousands of sites across the country, providing the most detailed picture yet of how butterflies are responding to a warming climate.</p>\n<p>The researchers found that while some species have expanded their range northwards, many others are struggling to survive. Caterpillars are eaten by a number of different predators, including birds, wasps, and beetles, and changes in the timing of their emergence can leave them vulnerable. If caterpillars hatch before their food plants are ready, or after their predators have already active, their survival rates plummet.</p>\n<p>Analysing the trends in each variable, the researchers discovered that species with more flexible lifecycles were more likely to adapt better to the changing climate. For example, some butterflies can produce two generations in a single summer if the weather is warm, allowing them to rebuild their numbers after a poor spring. In contrast, species that only produce one generation a year are much more vulnerable to extreme weather events.</p>\n<p>The study also highlighted the importance of habitat conservation. Butterflies that live in diverse, well-connected habitats are much more resilient to climate change than those in isolated pockets of nature. By restoring wildflower meadows, planting hedgerows, and reducing pesticide use, landowners can help to create 'stepping stones' that allow butterflies to move across the landscape in response to changing temperatures.</p>\n<p>Ultimately, the researchers warn that unless greenhouse gas emissions are reduced and habitat conservation is scaled up, many of Britain's most iconic butterfly species could face extinction. The loss of butterflies would have a knock-on effect on the wider ecosystem, as they are important pollinators and a key food source for many birds and mammals. The study serves as a stark reminder of the urgent need to protect biodiversity in the face of climate change. Scientists have been closely tracking the effects of climate change on butterfly colonies across the UK for more than three decades. The species is now considered more endangered than many other British butterfly species due to rapid habitat loss. In warmer parts of Europe, this species is already able to reproduce twice a year. In England, populations are largely confined to southern areas where conditions remain suitable. Species with a more flexible diet proved better able to adapt to the shifting climate.</p>",
           "questions": [
             {
               "num": 1,
@@ -8785,1990 +8893,1990 @@ const IELTS_TEST_DATA = {
     "title": "Cambridge IELTS 20 — Test 1",
     "book": "IELTS 20",
     "listening": {
-        "sections": [
+      "sections": [
+        {
+          "id": 1,
+          "title": "Part 1: Restaurant Recommendations",
+          "description": "Conversation about recommending restaurants for a 30th birthday party.",
+          "audio": "audio/IELTS_20_Test_1_Part1.mp3",
+          "questions": [
             {
-                "id": 1,
-                "title": "Part 1: Restaurant Recommendations",
-                "description": "Conversation about recommending restaurants for a 30th birthday party.",
-                "audio": "audio/IELTS_20_Test_1_Part1.mp3",
-                "questions": [
-                    {
-                        "num": 1,
-                        "type": "FILL",
-                        "text": "The Junction: Good for people who are especially keen on _________",
-                        "answer": "fish",
-                        "explanation": "The speaker recommends The Junction for fish lovers.",
-                        "instruction": "Questions 1-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
-                    },
-                    {
-                        "num": 2,
-                        "type": "FILL",
-                        "text": "The Junction comments: The _________ is a good place for a drink",
-                        "answer": "roof",
-                        "explanation": "The roof of The Junction is recommended for a drink.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 3,
-                        "type": "FILL",
-                        "text": "Paloma: _________ food, good for sharing",
-                        "answer": "Spanish",
-                        "explanation": "Paloma serves Spanish food.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 4,
-                        "type": "FILL",
-                        "text": "Paloma comments: A limited selection of _________ food on the menu",
-                        "answer": "vegetarian",
-                        "explanation": "The menu has a limited selection of vegetarian options.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 5,
-                        "type": "FILL",
-                        "text": "The _________ restaurant",
-                        "answer": "Audley",
-                        "explanation": "The third recommended restaurant is the Audley.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 6,
-                        "type": "FILL",
-                        "text": "Audley location: At the top of a _________",
-                        "answer": "hotel",
-                        "explanation": "The Audley is located at the top of a hotel.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 7,
-                        "type": "FILL",
-                        "text": "Audley reason: All the _________ are very good",
-                        "answer": "reviews",
-                        "explanation": "All reviews for the Audley are very good.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 8,
-                        "type": "FILL",
-                        "text": "Audley reason: Only uses _________ ingredients",
-                        "answer": "local",
-                        "explanation": "The restaurant only uses local ingredients.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 9,
-                        "type": "FILL",
-                        "text": "Audley comments: Set lunch costs £ _________ per person",
-                        "answer": "30",
-                        "explanation": "The set lunch is £30 per person.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 10,
-                        "type": "FILL",
-                        "text": "Audley comments: Portions probably of _________ size",
-                        "answer": "average",
-                        "explanation": "The portions are of average size.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    }
-                ]
+              "num": 1,
+              "type": "FILL",
+              "text": "The Junction: Good for people who are especially keen on _________",
+              "answer": "fish",
+              "explanation": "The speaker recommends The Junction for fish lovers.",
+              "instruction": "Questions 1-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
             },
             {
-                "id": 2,
-                "title": "Part 2: Edelman Pottery",
-                "description": "A talk by a potter to a group of visitors at Edelman Pottery.",
-                "audio": "audio/IELTS_20_Test_1_Part2.mp3",
-                "questions": [
-                    {
-                        "num": 11,
-                        "type": "MCQ",
-                        "text": "Heather says pottery differs from other art forms because",
-                        "options": [
-                            "A. it lasts longer in the ground.",
-                            "B. it is practised by more people.",
-                            "C. it can be repaired more easily."
-                        ],
-                        "answer": "A",
-                        "explanation": "Heather says pottery survives in the earth long after other materials degrade.",
-                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 12,
-                        "type": "MCQ",
-                        "text": "Archaeologists sometimes identify the use of ancient pottery from",
-                        "options": [
-                            "A. the clay it was made with.",
-                            "B. the marks that are on it.",
-                            "C. the basic shape of it."
-                        ],
-                        "answer": "B",
-                        "explanation": "Marks on the pottery help archaeologists identify its use.",
-                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 13,
-                        "type": "MCQ",
-                        "text": "Some people join Heather's pottery class because they want to",
-                        "options": [
-                            "A. create an item that looks very old.",
-                            "B. find something that they are good at.",
-                            "C. make something that will outlive them."
-                        ],
-                        "answer": "C",
-                        "explanation": "Participants want to create durable items that will outlive them.",
-                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 14,
-                        "type": "MCQ",
-                        "text": "What does Heather value most about being a potter?",
-                        "options": [
-                            "A. its calming effect",
-                            "B. its messy nature",
-                            "C. its physical benefits"
-                        ],
-                        "answer": "A",
-                        "explanation": "Heather finds the calming effect of working with clay most valuable.",
-                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 15,
-                        "type": "MCQ",
-                        "text": "Most of the visitors to Edelman Pottery",
-                        "options": [
-                            "A. bring friends to join courses.",
-                            "B. have never made a pot before.",
-                            "C. try to learn techniques too quickly."
-                        ],
-                        "answer": "B",
-                        "explanation": "The majority of visitors are complete beginners who have never made a pot.",
-                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 16,
-                        "type": "MCQ",
-                        "text": "Heather reminds her visitors that they should",
-                        "options": [
-                            "A. put on their aprons.",
-                            "B. change their clothes.",
-                            "C. take off their jewellery."
-                        ],
-                        "answer": "C",
-                        "explanation": "Heather instructs them to remove any jewellery before starting.",
-                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 17,
-                        "type": "MCQ",
-                        "text": "Which TWO things does Heather explain about kilns? (Select 1 of 2)",
-                        "options": [
-                            "A. what their function is",
-                            "B. when they were invented",
-                            "C. ways of keeping them safe",
-                            "D. where to put one in your home",
-                            "E. what some people use instead of one"
-                        ],
-                        "answer": "A",
-                        "explanation": "Heather explains their primary function and alternative options.",
-                        "instruction": "Questions 17-18<br/>Choose TWO letters, A-E."
-                    },
-                    {
-                        "num": 18,
-                        "type": "MCQ",
-                        "text": "Which TWO things does Heather explain about kilns? (Select 2 of 2)",
-                        "options": [
-                            "A. what their function is",
-                            "B. when they were invented",
-                            "C. ways of keeping them safe",
-                            "D. where to put one in your home",
-                            "E. what some people use instead of one"
-                        ],
-                        "answer": "E",
-                        "explanation": "Heather outlines what some people use instead of traditional kilns.",
-                        "instruction": "Questions 17-18<br/>Choose TWO letters, A-E."
-                    },
-                    {
-                        "num": 19,
-                        "type": "MCQ",
-                        "text": "Which TWO points does Heather make about a potter's tools? (Select 1 of 2)",
-                        "options": [
-                            "A. Some are hard to hold.",
-                            "B. Some are worth buying.",
-                            "C. Some are essential items.",
-                            "D. Some have memorable names.",
-                            "E. Some are available for use by participants."
-                        ],
-                        "answer": "C",
-                        "explanation": "She notes that some tools are essential and others are provided.",
-                        "instruction": "Questions 19-20<br/>Choose TWO letters, A-E."
-                    },
-                    {
-                        "num": 20,
-                        "type": "MCQ",
-                        "text": "Which TWO points does Heather make about a potter's tools? (Select 2 of 2)",
-                        "options": [
-                            "A. Some are hard to hold.",
-                            "B. Some are worth buying.",
-                            "C. Some are essential items.",
-                            "D. Some have memorable names.",
-                            "E. Some are available for use by participants."
-                        ],
-                        "answer": "E",
-                        "explanation": "She mentions that tools are available for all participants to use.",
-                        "instruction": "Questions 19-20<br/>Choose TWO letters, A-E."
-                    }
-                ]
+              "num": 2,
+              "type": "FILL",
+              "text": "The Junction comments: The _________ is a good place for a drink",
+              "answer": "roof",
+              "explanation": "The roof of The Junction is recommended for a drink.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
             },
             {
-                "id": 3,
-                "title": "Part 3: Loneliness and Mental Health",
-                "description": "Two students discuss their presentation on loneliness.",
-                "audio": "audio/IELTS_20_Test_1_Part3.mp3",
-                "questions": [
-                    {
-                        "num": 21,
-                        "type": "MCQ",
-                        "text": "Which TWO things do the students both believe are responsible for the increase in loneliness? (Select 1 of 2)",
-                        "options": [
-                            "A. social media",
-                            "B. smaller nuclear families",
-                            "C. urban design",
-                            "D. longer lifespans",
-                            "E. a mobile workforce"
-                        ],
-                        "answer": "C",
-                        "explanation": "Both students agree that urban design is a factor.",
-                        "instruction": "Questions 21-22<br/>Choose TWO letters, A-E."
-                    },
-                    {
-                        "num": 22,
-                        "type": "MCQ",
-                        "text": "Which TWO things do the students both believe are responsible for the increase in loneliness? (Select 2 of 2)",
-                        "options": [
-                            "A. social media",
-                            "B. smaller nuclear families",
-                            "C. urban design",
-                            "D. longer lifespans",
-                            "E. a mobile workforce"
-                        ],
-                        "answer": "E",
-                        "explanation": "Both students agree that a mobile workforce contributes to loneliness.",
-                        "instruction": "Questions 21-22<br/>Choose TWO letters, A-E."
-                    },
-                    {
-                        "num": 23,
-                        "type": "MCQ",
-                        "text": "Which TWO health risks associated with loneliness do the students agree are based on solid evidence? (Select 1 of 2)",
-                        "options": [
-                            "A. a weakened immune system",
-                            "B. dementia",
-                            "C. cancer",
-                            "D. obesity",
-                            "E. cardiovascular disease"
-                        ],
-                        "answer": "A",
-                        "explanation": "Solid evidence supports the link between loneliness and a weakened immune system.",
-                        "instruction": "Questions 23-24<br/>Choose TWO letters, A-E."
-                    },
-                    {
-                        "num": 24,
-                        "type": "MCQ",
-                        "text": "Which TWO health risks associated with loneliness do the students agree are based on solid evidence? (Select 2 of 2)",
-                        "options": [
-                            "A. a weakened immune system",
-                            "B. dementia",
-                            "C. cancer",
-                            "D. obesity",
-                            "E. cardiovascular disease"
-                        ],
-                        "answer": "C",
-                        "explanation": "Solid evidence supports the link between loneliness and cancer.",
-                        "instruction": "Questions 23-24<br/>Choose TWO letters, A-E."
-                    },
-                    {
-                        "num": 25,
-                        "type": "MCQ",
-                        "text": "Which TWO opinions do both the students express about the evolutionary theory of loneliness? (Select 1 of 2)",
-                        "options": [
-                            "A. It has little practical relevance.",
-                            "B. It needs further investigation.",
-                            "C. It is misleading.",
-                            "D. It should be more widely accepted.",
-                            "E. It is difficult to understand."
-                        ],
-                        "answer": "A",
-                        "explanation": "Both students think the evolutionary theory has little practical relevance.",
-                        "instruction": "Questions 25-26<br/>Choose TWO letters, A-E."
-                    },
-                    {
-                        "num": 26,
-                        "type": "MCQ",
-                        "text": "Which TWO opinions do both the students express about the evolutionary theory of loneliness? (Select 2 of 2)",
-                        "options": [
-                            "A. It has little practical relevance.",
-                            "B. It needs further investigation.",
-                            "C. It is misleading.",
-                            "D. It should be more widely accepted.",
-                            "E. It is difficult to understand."
-                        ],
-                        "answer": "B",
-                        "explanation": "Both students believe the evolutionary theory needs further investigation.",
-                        "instruction": "Questions 25-26<br/>Choose TWO letters, A-E."
-                    },
-                    {
-                        "num": 27,
-                        "type": "MCQ",
-                        "text": "When comparing loneliness to depression, the students",
-                        "options": [
-                            "A. doubt that there will ever be a medical cure for loneliness.",
-                            "B. claim that the link between loneliness and mental health is overstated.",
-                            "C. express frustration that loneliness is not taken more seriously."
-                        ],
-                        "answer": "A",
-                        "explanation": "The students doubt a medical cure will ever be found for loneliness.",
-                        "instruction": "Questions 27-30<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 28,
-                        "type": "MCQ",
-                        "text": "Why do the students decide to start their presentation with an example from their own experience?",
-                        "options": [
-                            "A. to explain how difficult loneliness can be",
-                            "B. to highlight a situation that most students will recognise",
-                            "C. to emphasise that feeling lonely is more common for men than women"
-                        ],
-                        "answer": "B",
-                        "explanation": "They start with a personal story to connect with a situation most students will recognise.",
-                        "instruction": "Questions 27-30<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 29,
-                        "type": "MCQ",
-                        "text": "The students agree that talking to strangers is a good strategy for dealing with loneliness because",
-                        "options": [
-                            "A. it creates a sense of belonging.",
-                            "B. it builds self-confidence.",
-                            "C. it makes people feel more positive."
-                        ],
-                        "answer": "A",
-                        "explanation": "Talking to strangers helps build a sense of belonging.",
-                        "instruction": "Questions 27-30<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 30,
-                        "type": "MCQ",
-                        "text": "The students find it difficult to understand why solitude is considered to be",
-                        "options": [
-                            "A. similar to loneliness.",
-                            "B. necessary for mental health.",
-                            "C. an enjoyable experience."
-                        ],
-                        "answer": "C",
-                        "explanation": "They struggle to understand why solitude is viewed as an enjoyable experience.",
-                        "instruction": "Questions 27-30<br/>Choose the correct letter, A, B or C."
-                    }
-                ]
+              "num": 3,
+              "type": "FILL",
+              "text": "Paloma: _________ food, good for sharing",
+              "answer": "Spanish",
+              "explanation": "Paloma serves Spanish food.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
             },
             {
-                "id": 4,
-                "title": "Part 4: Reclaiming Urban Rivers",
-                "description": "A lecture on the reclamation and restoration of urban rivers.",
-                "audio": "audio/IELTS_20_Test_1_Part4.mp3",
-                "questions": [
-                    {
-                        "num": 31,
-                        "type": "FILL",
-                        "text": "pollution from _________ on the river bank.",
-                        "answer": "factories",
-                        "explanation": "The speaker mentions pollution coming from factories on the banks.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
-                    },
-                    {
-                        "num": 32,
-                        "type": "FILL",
-                        "text": "In 1957, the River Thames in London was declared biologically _________.",
-                        "answer": "dead",
-                        "explanation": "The River Thames was declared biologically dead in 1957.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 33,
-                        "type": "FILL",
-                        "text": "Seals and even a _________ have been seen in the River Thames.",
-                        "answer": "whale",
-                        "explanation": "Seals and even a whale have been spotted in the Thames recently.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 34,
-                        "type": "FILL",
-                        "text": "Riverside warehouses are converted to restaurants and _________.",
-                        "answer": "apartments",
-                        "explanation": "Warehouses have been converted to restaurants and apartments.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 35,
-                        "type": "FILL",
-                        "text": "build a riverside _________.",
-                        "answer": "park",
-                        "explanation": "Plans include building a riverside park.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 36,
-                        "type": "FILL",
-                        "text": "display _________ projects.",
-                        "answer": "art",
-                        "explanation": "Plans include displaying art projects along the river.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 37,
-                        "type": "FILL",
-                        "text": "In Paris, _________ are created on the sides of the river every summer.",
-                        "answer": "beaches",
-                        "explanation": "Beaches are created on the banks in Paris during summer.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 38,
-                        "type": "FILL",
-                        "text": "Over 2 billion passengers already travel by _________ in cities round the world.",
-                        "answer": "ferry",
-                        "explanation": "More than 2 billion passengers travel by ferry globally.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 39,
-                        "type": "FILL",
-                        "text": "Instead of road transport, goods could be transported by large freight barges and electric _________.",
-                        "answer": "bikes",
-                        "explanation": "Barges and electric bikes are proposed for goods transport.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 40,
-                        "type": "FILL",
-                        "text": "or, in future, by _________.",
-                        "answer": "drone",
-                        "explanation": "Drones are envisioned as a future transport method.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    }
-                ]
+              "num": 4,
+              "type": "FILL",
+              "text": "Paloma comments: A limited selection of _________ food on the menu",
+              "answer": "vegetarian",
+              "explanation": "The menu has a limited selection of vegetarian options.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
+            },
+            {
+              "num": 5,
+              "type": "FILL",
+              "text": "The _________ restaurant",
+              "answer": "Audley",
+              "explanation": "The third recommended restaurant is the Audley.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
+            },
+            {
+              "num": 6,
+              "type": "FILL",
+              "text": "Audley location: At the top of a _________",
+              "answer": "hotel",
+              "explanation": "The Audley is located at the top of a hotel.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
+            },
+            {
+              "num": 7,
+              "type": "FILL",
+              "text": "Audley reason: All the _________ are very good",
+              "answer": "reviews",
+              "explanation": "All reviews for the Audley are very good.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
+            },
+            {
+              "num": 8,
+              "type": "FILL",
+              "text": "Audley reason: Only uses _________ ingredients",
+              "answer": "local",
+              "explanation": "The restaurant only uses local ingredients.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
+            },
+            {
+              "num": 9,
+              "type": "FILL",
+              "text": "Audley comments: Set lunch costs £ _________ per person",
+              "answer": "30",
+              "explanation": "The set lunch is £30 per person.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
+            },
+            {
+              "num": 10,
+              "type": "FILL",
+              "text": "Audley comments: Portions probably of _________ size",
+              "answer": "average",
+              "explanation": "The portions are of average size.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
             }
-        ]
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Part 2: Edelman Pottery",
+          "description": "A talk by a potter to a group of visitors at Edelman Pottery.",
+          "audio": "audio/IELTS_20_Test_1_Part2.mp3",
+          "questions": [
+            {
+              "num": 11,
+              "type": "MCQ",
+              "text": "Heather says pottery differs from other art forms because",
+              "options": [
+                "A. it lasts longer in the ground.",
+                "B. it is practised by more people.",
+                "C. it can be repaired more easily."
+              ],
+              "answer": "A",
+              "explanation": "Heather says pottery survives in the earth long after other materials degrade.",
+              "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 12,
+              "type": "MCQ",
+              "text": "Archaeologists sometimes identify the use of ancient pottery from",
+              "options": [
+                "A. the clay it was made with.",
+                "B. the marks that are on it.",
+                "C. the basic shape of it."
+              ],
+              "answer": "B",
+              "explanation": "Marks on the pottery help archaeologists identify its use.",
+              "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 13,
+              "type": "MCQ",
+              "text": "Some people join Heather's pottery class because they want to",
+              "options": [
+                "A. create an item that looks very old.",
+                "B. find something that they are good at.",
+                "C. make something that will outlive them."
+              ],
+              "answer": "C",
+              "explanation": "Participants want to create durable items that will outlive them.",
+              "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 14,
+              "type": "MCQ",
+              "text": "What does Heather value most about being a potter?",
+              "options": [
+                "A. its calming effect",
+                "B. its messy nature",
+                "C. its physical benefits"
+              ],
+              "answer": "A",
+              "explanation": "Heather finds the calming effect of working with clay most valuable.",
+              "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 15,
+              "type": "MCQ",
+              "text": "Most of the visitors to Edelman Pottery",
+              "options": [
+                "A. bring friends to join courses.",
+                "B. have never made a pot before.",
+                "C. try to learn techniques too quickly."
+              ],
+              "answer": "B",
+              "explanation": "The majority of visitors are complete beginners who have never made a pot.",
+              "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 16,
+              "type": "MCQ",
+              "text": "Heather reminds her visitors that they should",
+              "options": [
+                "A. put on their aprons.",
+                "B. change their clothes.",
+                "C. take off their jewellery."
+              ],
+              "answer": "C",
+              "explanation": "Heather instructs them to remove any jewellery before starting.",
+              "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 17,
+              "type": "MCQ",
+              "text": "Which TWO things does Heather explain about kilns? (Select 1 of 2)",
+              "options": [
+                "A. what their function is",
+                "B. when they were invented",
+                "C. ways of keeping them safe",
+                "D. where to put one in your home",
+                "E. what some people use instead of one"
+              ],
+              "answer": "A",
+              "explanation": "Heather explains their primary function and alternative options.",
+              "instruction": "Questions 17-18<br/>Choose TWO letters, A-E."
+            },
+            {
+              "num": 18,
+              "type": "MCQ",
+              "text": "Which TWO things does Heather explain about kilns? (Select 2 of 2)",
+              "options": [
+                "A. what their function is",
+                "B. when they were invented",
+                "C. ways of keeping them safe",
+                "D. where to put one in your home",
+                "E. what some people use instead of one"
+              ],
+              "answer": "E",
+              "explanation": "Heather outlines what some people use instead of traditional kilns.",
+              "instruction": "Questions 17-18<br/>Choose TWO letters, A-E."
+            },
+            {
+              "num": 19,
+              "type": "MCQ",
+              "text": "Which TWO points does Heather make about a potter's tools? (Select 1 of 2)",
+              "options": [
+                "A. Some are hard to hold.",
+                "B. Some are worth buying.",
+                "C. Some are essential items.",
+                "D. Some have memorable names.",
+                "E. Some are available for use by participants."
+              ],
+              "answer": "C",
+              "explanation": "She notes that some tools are essential and others are provided.",
+              "instruction": "Questions 19-20<br/>Choose TWO letters, A-E."
+            },
+            {
+              "num": 20,
+              "type": "MCQ",
+              "text": "Which TWO points does Heather make about a potter's tools? (Select 2 of 2)",
+              "options": [
+                "A. Some are hard to hold.",
+                "B. Some are worth buying.",
+                "C. Some are essential items.",
+                "D. Some have memorable names.",
+                "E. Some are available for use by participants."
+              ],
+              "answer": "E",
+              "explanation": "She mentions that tools are available for all participants to use.",
+              "instruction": "Questions 19-20<br/>Choose TWO letters, A-E."
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Part 3: Loneliness and Mental Health",
+          "description": "Two students discuss their presentation on loneliness.",
+          "audio": "audio/IELTS_20_Test_1_Part3.mp3",
+          "questions": [
+            {
+              "num": 21,
+              "type": "MCQ",
+              "text": "Which TWO things do the students both believe are responsible for the increase in loneliness? (Select 1 of 2)",
+              "options": [
+                "A. social media",
+                "B. smaller nuclear families",
+                "C. urban design",
+                "D. longer lifespans",
+                "E. a mobile workforce"
+              ],
+              "answer": "C",
+              "explanation": "Both students agree that urban design is a factor.",
+              "instruction": "Questions 21-22<br/>Choose TWO letters, A-E."
+            },
+            {
+              "num": 22,
+              "type": "MCQ",
+              "text": "Which TWO things do the students both believe are responsible for the increase in loneliness? (Select 2 of 2)",
+              "options": [
+                "A. social media",
+                "B. smaller nuclear families",
+                "C. urban design",
+                "D. longer lifespans",
+                "E. a mobile workforce"
+              ],
+              "answer": "E",
+              "explanation": "Both students agree that a mobile workforce contributes to loneliness.",
+              "instruction": "Questions 21-22<br/>Choose TWO letters, A-E."
+            },
+            {
+              "num": 23,
+              "type": "MCQ",
+              "text": "Which TWO health risks associated with loneliness do the students agree are based on solid evidence? (Select 1 of 2)",
+              "options": [
+                "A. a weakened immune system",
+                "B. dementia",
+                "C. cancer",
+                "D. obesity",
+                "E. cardiovascular disease"
+              ],
+              "answer": "A",
+              "explanation": "Solid evidence supports the link between loneliness and a weakened immune system.",
+              "instruction": "Questions 23-24<br/>Choose TWO letters, A-E."
+            },
+            {
+              "num": 24,
+              "type": "MCQ",
+              "text": "Which TWO health risks associated with loneliness do the students agree are based on solid evidence? (Select 2 of 2)",
+              "options": [
+                "A. a weakened immune system",
+                "B. dementia",
+                "C. cancer",
+                "D. obesity",
+                "E. cardiovascular disease"
+              ],
+              "answer": "C",
+              "explanation": "Solid evidence supports the link between loneliness and cancer.",
+              "instruction": "Questions 23-24<br/>Choose TWO letters, A-E."
+            },
+            {
+              "num": 25,
+              "type": "MCQ",
+              "text": "Which TWO opinions do both the students express about the evolutionary theory of loneliness? (Select 1 of 2)",
+              "options": [
+                "A. It has little practical relevance.",
+                "B. It needs further investigation.",
+                "C. It is misleading.",
+                "D. It should be more widely accepted.",
+                "E. It is difficult to understand."
+              ],
+              "answer": "A",
+              "explanation": "Both students think the evolutionary theory has little practical relevance.",
+              "instruction": "Questions 25-26<br/>Choose TWO letters, A-E."
+            },
+            {
+              "num": 26,
+              "type": "MCQ",
+              "text": "Which TWO opinions do both the students express about the evolutionary theory of loneliness? (Select 2 of 2)",
+              "options": [
+                "A. It has little practical relevance.",
+                "B. It needs further investigation.",
+                "C. It is misleading.",
+                "D. It should be more widely accepted.",
+                "E. It is difficult to understand."
+              ],
+              "answer": "B",
+              "explanation": "Both students believe the evolutionary theory needs further investigation.",
+              "instruction": "Questions 25-26<br/>Choose TWO letters, A-E."
+            },
+            {
+              "num": 27,
+              "type": "MCQ",
+              "text": "When comparing loneliness to depression, the students",
+              "options": [
+                "A. doubt that there will ever be a medical cure for loneliness.",
+                "B. claim that the link between loneliness and mental health is overstated.",
+                "C. express frustration that loneliness is not taken more seriously."
+              ],
+              "answer": "A",
+              "explanation": "The students doubt a medical cure will ever be found for loneliness.",
+              "instruction": "Questions 27-30<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 28,
+              "type": "MCQ",
+              "text": "Why do the students decide to start their presentation with an example from their own experience?",
+              "options": [
+                "A. to explain how difficult loneliness can be",
+                "B. to highlight a situation that most students will recognise",
+                "C. to emphasise that feeling lonely is more common for men than women"
+              ],
+              "answer": "B",
+              "explanation": "They start with a personal story to connect with a situation most students will recognise.",
+              "instruction": "Questions 27-30<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 29,
+              "type": "MCQ",
+              "text": "The students agree that talking to strangers is a good strategy for dealing with loneliness because",
+              "options": [
+                "A. it creates a sense of belonging.",
+                "B. it builds self-confidence.",
+                "C. it makes people feel more positive."
+              ],
+              "answer": "A",
+              "explanation": "Talking to strangers helps build a sense of belonging.",
+              "instruction": "Questions 27-30<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 30,
+              "type": "MCQ",
+              "text": "The students find it difficult to understand why solitude is considered to be",
+              "options": [
+                "A. similar to loneliness.",
+                "B. necessary for mental health.",
+                "C. an enjoyable experience."
+              ],
+              "answer": "C",
+              "explanation": "They struggle to understand why solitude is viewed as an enjoyable experience.",
+              "instruction": "Questions 27-30<br/>Choose the correct letter, A, B or C."
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Part 4: Reclaiming Urban Rivers",
+          "description": "A lecture on the reclamation and restoration of urban rivers.",
+          "audio": "audio/IELTS_20_Test_1_Part4.mp3",
+          "questions": [
+            {
+              "num": 31,
+              "type": "FILL",
+              "text": "pollution from _________ on the river bank.",
+              "answer": "factories",
+              "explanation": "The speaker mentions pollution coming from factories on the banks.",
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+            },
+            {
+              "num": 32,
+              "type": "FILL",
+              "text": "In 1957, the River Thames in London was declared biologically _________.",
+              "answer": "dead",
+              "explanation": "The River Thames was declared biologically dead in 1957.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 33,
+              "type": "FILL",
+              "text": "Seals and even a _________ have been seen in the River Thames.",
+              "answer": "whale",
+              "explanation": "Seals and even a whale have been spotted in the Thames recently.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 34,
+              "type": "FILL",
+              "text": "Riverside warehouses are converted to restaurants and _________.",
+              "answer": "apartments",
+              "explanation": "Warehouses have been converted to restaurants and apartments.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 35,
+              "type": "FILL",
+              "text": "build a riverside _________.",
+              "answer": "park",
+              "explanation": "Plans include building a riverside park.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 36,
+              "type": "FILL",
+              "text": "display _________ projects.",
+              "answer": "art",
+              "explanation": "Plans include displaying art projects along the river.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 37,
+              "type": "FILL",
+              "text": "In Paris, _________ are created on the sides of the river every summer.",
+              "answer": "beaches",
+              "explanation": "Beaches are created on the banks in Paris during summer.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 38,
+              "type": "FILL",
+              "text": "Over 2 billion passengers already travel by _________ in cities round the world.",
+              "answer": "ferry",
+              "explanation": "More than 2 billion passengers travel by ferry globally.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 39,
+              "type": "FILL",
+              "text": "Instead of road transport, goods could be transported by large freight barges and electric _________.",
+              "answer": "bikes",
+              "explanation": "Barges and electric bikes are proposed for goods transport.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 40,
+              "type": "FILL",
+              "text": "or, in future, by _________.",
+              "answer": "drone",
+              "explanation": "Drones are envisioned as a future transport method.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            }
+          ]
+        }
+      ]
     }
-},
+  },
   "10": {
     "title": "Cambridge IELTS 20 — Test 2",
     "book": "IELTS 20",
     "listening": {
-        "sections": [
+      "sections": [
+        {
+          "id": 1,
+          "title": "Part 1: Support for Elderly Care",
+          "description": "Conversation about arranging practical support for an elderly mother.",
+          "audio": "audio/IELTS_20_Test_2_Part1.mp3",
+          "questions": [
             {
-                "id": 1,
-                "title": "Part 1: Support for Elderly Care",
-                "description": "Conversation about arranging practical support for an elderly mother.",
-                "audio": "audio/IELTS_20_Test_2_Part1.mp3",
-                "questions": [
-                    {
-                        "num": 1,
-                        "type": "FILL",
-                        "text": "This can give the carer: • a _________",
-                        "answer": "break",
-                        "explanation": "Practical support gives the carer a break.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
-                    },
-                    {
-                        "num": 2,
-                        "type": "FILL",
-                        "text": "Assessment of mother's needs: • how much _________ the caring involves",
-                        "answer": "time",
-                        "explanation": "The assessment will discuss how much time the caring takes.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 3,
-                        "type": "FILL",
-                        "text": "• helping her have a _________",
-                        "answer": "shower",
-                        "explanation": "Assisting with tasks such as having a shower is discussed.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 4,
-                        "type": "FILL",
-                        "text": "• dealing with _________",
-                        "answer": "money",
-                        "explanation": "Dealing with money is another area of support.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 5,
-                        "type": "FILL",
-                        "text": "• loss of _________",
-                        "answer": "memory",
-                        "explanation": "Memory loss makes caring especially difficult.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 6,
-                        "type": "FILL",
-                        "text": "• _________ her",
-                        "answer": "lifting",
-                        "explanation": "Lifting her is one of the physically demanding aspects.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 7,
-                        "type": "FILL",
-                        "text": "• preventing a _________",
-                        "answer": "fall",
-                        "explanation": "Support aims to prevent a fall.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 8,
-                        "type": "FILL",
-                        "text": "• transport costs, e.g. cost of a _________",
-                        "answer": "taxi",
-                        "explanation": "Support includes covering transport costs such as a taxi.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 9,
-                        "type": "FILL",
-                        "text": "• car-related costs, e.g. fuel and _________",
-                        "answer": "insurance",
-                        "explanation": "Car-related expenses like fuel and insurance are mentioned.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 10,
-                        "type": "FILL",
-                        "text": "• help to reduce _________",
-                        "answer": "stress",
-                        "explanation": "The program helps to reduce stress for the carer.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    }
-                ]
+              "num": 1,
+              "type": "FILL",
+              "text": "This can give the carer: • a _________",
+              "answer": "break",
+              "explanation": "Practical support gives the carer a break.",
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
             },
             {
-                "id": 2,
-                "title": "Part 2: Community Volunteers",
-                "description": "A talk about volunteer roles in community activities and festivals.",
-                "audio": "audio/IELTS_20_Test_2_Part2.mp3",
-                "questions": [
-                    {
-                        "num": 11,
-                        "type": "MCQ",
-                        "text": "What is the role of the volunteers in: Walking around the town centre",
-                        "options": [
-                            "A. providing entertainment",
-                            "B. providing publicity about a council service",
-                            "C. contacting local businesses",
-                            "D. giving advice to visitors",
-                            "E. collecting feedback on events",
-                            "F. selling tickets",
-                            "G. introducing guest speakers at an event",
-                            "H. encouraging cooperation between local organisations",
-                            "I. helping people find their seats"
-                        ],
-                        "answer": "D",
-                        "explanation": "Volunteers in the town centre give advice to visitors.",
-                        "instruction": "Questions 11-16<br/>What is the role of the volunteers in each of the following activities? Choose SIX answers from the box and write the correct letter, A-I."
-                    },
-                    {
-                        "num": 12,
-                        "type": "MCQ",
-                        "text": "What is the role of the volunteers in: Helping at concerts",
-                        "options": [
-                            "A. providing entertainment",
-                            "B. providing publicity about a council service",
-                            "C. contacting local businesses",
-                            "D. giving advice to visitors",
-                            "E. collecting feedback on events",
-                            "F. selling tickets",
-                            "G. introducing guest speakers at an event",
-                            "H. encouraging cooperation between local organisations",
-                            "I. helping people find their seats"
-                        ],
-                        "answer": "I",
-                        "explanation": "Concert volunteers help people find their seats.",
-                        "instruction": "Questions 11-16<br/>Choose SIX answers from the box."
-                    },
-                    {
-                        "num": 13,
-                        "type": "MCQ",
-                        "text": "What is the role of the volunteers in: Getting involved with community groups",
-                        "options": [
-                            "A. providing entertainment",
-                            "B. providing publicity about a council service",
-                            "C. contacting local businesses",
-                            "D. giving advice to visitors",
-                            "E. collecting feedback on events",
-                            "F. selling tickets",
-                            "G. introducing guest speakers at an event",
-                            "H. encouraging cooperation between local organisations",
-                            "I. helping people find their seats"
-                        ],
-                        "answer": "H",
-                        "explanation": "Volunteers encourage cooperation between local organisations.",
-                        "instruction": "Questions 11-16<br/>Choose SIX answers from the box."
-                    },
-                    {
-                        "num": 14,
-                        "type": "MCQ",
-                        "text": "What is the role of the volunteers in: Helping with a festival",
-                        "options": [
-                            "A. providing entertainment",
-                            "B. providing publicity about a council service",
-                            "C. contacting local businesses",
-                            "D. giving advice to visitors",
-                            "E. collecting feedback on events",
-                            "F. selling tickets",
-                            "G. introducing guest speakers at an event",
-                            "H. encouraging cooperation between local organisations",
-                            "I. helping people find their seats"
-                        ],
-                        "answer": "E",
-                        "explanation": "They collect feedback on festival events.",
-                        "instruction": "Questions 11-16<br/>Choose SIX answers from the box."
-                    },
-                    {
-                        "num": 15,
-                        "type": "MCQ",
-                        "text": "What is the role of the volunteers in: Participating at lunches for retired people",
-                        "options": [
-                            "A. providing entertainment",
-                            "B. providing publicity about a council service",
-                            "C. contacting local businesses",
-                            "D. giving advice to visitors",
-                            "E. collecting feedback on events",
-                            "F. selling tickets",
-                            "G. introducing guest speakers at an event",
-                            "H. encouraging cooperation between local organisations",
-                            "I. helping people find their seats"
-                        ],
-                        "answer": "A",
-                        "explanation": "They provide entertainment during retirement lunches.",
-                        "instruction": "Questions 11-16<br/>Choose SIX answers from the box."
-                    },
-                    {
-                        "num": 16,
-                        "type": "MCQ",
-                        "text": "What is the role of the volunteers in: Helping with the website",
-                        "options": [
-                            "A. providing entertainment",
-                            "B. providing publicity about a council service",
-                            "C. contacting local businesses",
-                            "D. giving advice to visitors",
-                            "E. collecting feedback on events",
-                            "F. selling tickets",
-                            "G. introducing guest speakers at an event",
-                            "H. encouraging cooperation between local organisations",
-                            "I. helping people find their seats"
-                        ],
-                        "answer": "B",
-                        "explanation": "They provide publicity about a council service.",
-                        "instruction": "Questions 11-16<br/>Choose SIX answers from the box."
-                    },
-                    {
-                        "num": 17,
-                        "type": "MCQ",
-                        "text": "Which event requires the largest number of volunteers?",
-                        "options": [
-                            "A. the music festival",
-                            "B. the science festival",
-                            "C. the book festival"
-                        ],
-                        "answer": "B",
-                        "explanation": "The science festival requires the largest number of volunteers.",
-                        "instruction": "Questions 17-20<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 18,
-                        "type": "MCQ",
-                        "text": "What is the most important requirement for volunteers at the festivals?",
-                        "options": [
-                            "A. interpersonal skills",
-                            "B. personal interest in the event",
-                            "C. flexibility"
-                        ],
-                        "answer": "A",
-                        "explanation": "Interpersonal skills are the most critical requirement.",
-                        "instruction": "Questions 17-20<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 19,
-                        "type": "MCQ",
-                        "text": "New volunteers will start working in the week beginning",
-                        "options": [
-                            "A. 2 September.",
-                            "B. 9 September.",
-                            "C. 23 September."
-                        ],
-                        "answer": "B",
-                        "explanation": "Work starts in the week of 9 September.",
-                        "instruction": "Questions 17-20<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 20,
-                        "type": "MCQ",
-                        "text": "What is the next annual event for volunteers?",
-                        "options": [
-                            "A. a boat trip",
-                            "B. a barbecue",
-                            "C. a party"
-                        ],
-                        "answer": "A",
-                        "explanation": "The next annual event is a boat trip.",
-                        "instruction": "Questions 17-20<br/>Choose the correct letter, A, B or C."
-                    }
-                ]
+              "num": 2,
+              "type": "FILL",
+              "text": "Assessment of mother's needs: • how much _________ the caring involves",
+              "answer": "time",
+              "explanation": "The assessment will discuss how much time the caring takes.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
             },
             {
-                "id": 3,
-                "title": "Part 3: Geography Presentation",
-                "description": "Two students discuss their geography presentation and case study.",
-                "audio": "audio/IELTS_20_Test_2_Part3.mp3",
-                "questions": [
-                    {
-                        "num": 21,
-                        "type": "MCQ",
-                        "text": "What is Colin's opinion about: Population",
-                        "options": [
-                            "A. The information given about this was too vague.",
-                            "B. This may not be relevant to their course.",
-                            "C. This will involve only a small number of statistics.",
-                            "D. It will be easy to find facts about this.",
-                            "E. The facts about this may not be reliable.",
-                            "F. No useful research has been done on this.",
-                            "G. The information provided about this was interesting."
-                        ],
-                        "answer": "D",
-                        "explanation": "Colin thinks population facts are easy to find.",
-                        "instruction": "Questions 21-25<br/>What is Colin's opinion about each of the following aspects of geography? Choose FIVE answers from the box and write the correct letter, A-G."
-                    },
-                    {
-                        "num": 22,
-                        "type": "MCQ",
-                        "text": "What is Colin's opinion about: Health",
-                        "options": [
-                            "A. The information given about this was too vague.",
-                            "B. This may not be relevant to their course.",
-                            "C. This will involve only a small number of statistics.",
-                            "D. It will be easy to find facts about this.",
-                            "E. The facts about this may not be reliable.",
-                            "F. No useful research has been done on this.",
-                            "G. The information provided about this was interesting."
-                        ],
-                        "answer": "G",
-                        "explanation": "Colin found the health data interesting.",
-                        "instruction": "Questions 21-25<br/>Choose FIVE answers from the box."
-                    },
-                    {
-                        "num": 23,
-                        "type": "MCQ",
-                        "text": "What is Colin's opinion about: Economies",
-                        "options": [
-                            "A. The information given about this was too vague.",
-                            "B. This may not be relevant to their course.",
-                            "C. This will involve only a small number of statistics.",
-                            "D. It will be easy to find facts about this.",
-                            "E. The facts about this may not be reliable.",
-                            "F. No useful research has been done on this.",
-                            "G. The information provided about this was interesting."
-                        ],
-                        "answer": "B",
-                        "explanation": "Colin thinks economic data is not relevant to their course.",
-                        "instruction": "Questions 21-25<br/>Choose FIVE answers from the box."
-                    },
-                    {
-                        "num": 24,
-                        "type": "MCQ",
-                        "text": "What is Colin's opinion about: Culture",
-                        "options": [
-                            "A. The information given about this was too vague.",
-                            "B. This may not be relevant to their course.",
-                            "C. This will involve only a small number of statistics.",
-                            "D. It will be easy to find facts about this.",
-                            "E. The facts about this may not be reliable.",
-                            "F. No useful research has been done on this.",
-                            "G. The information provided about this was interesting."
-                        ],
-                        "answer": "A",
-                        "explanation": "He feels the culture details were too vague.",
-                        "instruction": "Questions 21-25<br/>Choose FIVE answers from the box."
-                    },
-                    {
-                        "num": 25,
-                        "type": "MCQ",
-                        "text": "What is Colin's opinion about: Poverty",
-                        "options": [
-                            "A. The information given about this was too vague.",
-                            "B. This may not be relevant to their course.",
-                            "C. This will involve only a small number of statistics.",
-                            "D. It will be easy to find facts about this.",
-                            "E. The facts about this may not be reliable.",
-                            "F. No useful research has been done on this.",
-                            "G. The information provided about this was interesting."
-                        ],
-                        "answer": "E",
-                        "explanation": "Colin expresses doubt on the reliability of poverty facts.",
-                        "instruction": "Questions 21-25<br/>Choose FIVE answers from the box."
-                    },
-                    {
-                        "num": 26,
-                        "type": "MCQ",
-                        "text": "Rosie says that in her own city the main problem is",
-                        "options": [
-                            "A. crime.",
-                            "B. housing.",
-                            "C. unemployment."
-                        ],
-                        "answer": "C",
-                        "explanation": "Rosie states that unemployment is the primary concern.",
-                        "instruction": "Questions 26-30<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 27,
-                        "type": "MCQ",
-                        "text": "What recent additions to the outskirts of their cities are both students happy about?",
-                        "options": [
-                            "A. conference centres",
-                            "B. sports centres",
-                            "C. retail centres"
-                        ],
-                        "answer": "A",
-                        "explanation": "Both are pleased with the new conference centres.",
-                        "instruction": "Questions 26-30<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 28,
-                        "type": "MCQ",
-                        "text": "The students agree that developing disused industrial sites may",
-                        "options": [
-                            "A. have unexpected costs.",
-                            "B. damage the urban environment.",
-                            "C. destroy valuable historical buildings."
-                        ],
-                        "answer": "A",
-                        "explanation": "They agree that unexpected costs frequently arise in development.",
-                        "instruction": "Questions 26-30<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 29,
-                        "type": "MCQ",
-                        "text": "The students will mention Masdar City as an example of an attempt to achieve",
-                        "options": [
-                            "A. daily collections for waste recycling.",
-                            "B. sustainable energy use.",
-                            "C. free transport for everyone."
-                        ],
-                        "answer": "B",
-                        "explanation": "Masdar City is discussed as a model for sustainable energy use.",
-                        "instruction": "Questions 26-30<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 30,
-                        "type": "MCQ",
-                        "text": "When discussing the ecotown of Greenhill Abbots, Colin is uncertain about",
-                        "options": [
-                            "A. what its objectives were.",
-                            "B. why there was opposition to it.",
-                            "C. how much of it has actually been built."
-                        ],
-                        "answer": "C",
-                        "explanation": "Colin expresses uncertainty over how much of it has actually been constructed.",
-                        "instruction": "Questions 26-30<br/>Choose the correct letter, A, B or C."
-                    }
-                ]
+              "num": 3,
+              "type": "FILL",
+              "text": "• helping her have a _________",
+              "answer": "shower",
+              "explanation": "Assisting with tasks such as having a shower is discussed.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
             },
             {
-                "id": 4,
-                "title": "Part 4: Developing Food Trends",
-                "description": "A lecture on food trends and their dissemination on social media.",
-                "audio": "audio/IELTS_20_Test_2_Part4.mp3",
-                "questions": [
-                    {
-                        "num": 31,
-                        "type": "FILL",
-                        "text": "The growth in interest in food fashions started with _________ of food being shared on social media.",
-                        "answer": "photos",
-                        "explanation": "Food trends grew from photos/pictures shared online.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
-                    },
-                    {
-                        "num": 32,
-                        "type": "FILL",
-                        "text": "Sales of _________ food brands have grown rapidly this way.",
-                        "answer": "vegan",
-                        "explanation": "Vegan food brands saw rapid growth.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 33,
-                        "type": "FILL",
-                        "text": "Famous _________ are influential.",
-                        "answer": "chefs",
-                        "explanation": "Famous chefs are key influencers of food trends.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 34,
-                        "type": "FILL",
-                        "text": "The avocado: _________ were invited to visit growers in South Africa.",
-                        "answer": "journalists",
-                        "explanation": "Journalists were invited to South Africa to promote avocados.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 35,
-                        "type": "FILL",
-                        "text": "Advertising focused on its _________ benefits.",
-                        "answer": "health",
-                        "explanation": "Advertising highlighted the health benefits of avocados.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 36,
-                        "type": "FILL",
-                        "text": "Oat milk: Promotion in the USA through _________ shops reduced the need for advertising.",
-                        "answer": "coffee",
-                        "explanation": "Coffee shops in the USA promoted oat milk.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 37,
-                        "type": "FILL",
-                        "text": "It appealed to consumers who are concerned about the _________.",
-                        "answer": "environment",
-                        "explanation": "It targetted consumers focused on the environment.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 38,
-                        "type": "FILL",
-                        "text": "Norwegian skrei: - has helped strengthen the _________ of Norwegian seafood.",
-                        "answer": "reputation",
-                        "explanation": "Skrei strengthened the reputation of Norwegian seafood.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 39,
-                        "type": "FILL",
-                        "text": "Quinoa: - Its success led to an increase in its _________.",
-                        "answer": "price",
-                        "explanation": "Quinoa's success led to a surge in its price/cost.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 40,
-                        "type": "FILL",
-                        "text": "- Overuse of resources resulted in poor _________ quality.",
-                        "answer": "soil",
-                        "explanation": "Overuse of resources degraded the soil quality.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    }
-                ]
+              "num": 4,
+              "type": "FILL",
+              "text": "• dealing with _________",
+              "answer": "money",
+              "explanation": "Dealing with money is another area of support.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
+            },
+            {
+              "num": 5,
+              "type": "FILL",
+              "text": "• loss of _________",
+              "answer": "memory",
+              "explanation": "Memory loss makes caring especially difficult.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
+            },
+            {
+              "num": 6,
+              "type": "FILL",
+              "text": "• _________ her",
+              "answer": "lifting",
+              "explanation": "Lifting her is one of the physically demanding aspects.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
+            },
+            {
+              "num": 7,
+              "type": "FILL",
+              "text": "• preventing a _________",
+              "answer": "fall",
+              "explanation": "Support aims to prevent a fall.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
+            },
+            {
+              "num": 8,
+              "type": "FILL",
+              "text": "• transport costs, e.g. cost of a _________",
+              "answer": "taxi",
+              "explanation": "Support includes covering transport costs such as a taxi.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
+            },
+            {
+              "num": 9,
+              "type": "FILL",
+              "text": "• car-related costs, e.g. fuel and _________",
+              "answer": "insurance",
+              "explanation": "Car-related expenses like fuel and insurance are mentioned.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
+            },
+            {
+              "num": 10,
+              "type": "FILL",
+              "text": "• help to reduce _________",
+              "answer": "stress",
+              "explanation": "The program helps to reduce stress for the carer.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
             }
-        ]
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Part 2: Community Volunteers",
+          "description": "A talk about volunteer roles in community activities and festivals.",
+          "audio": "audio/IELTS_20_Test_2_Part2.mp3",
+          "questions": [
+            {
+              "num": 11,
+              "type": "MCQ",
+              "text": "What is the role of the volunteers in: Walking around the town centre",
+              "options": [
+                "A. providing entertainment",
+                "B. providing publicity about a council service",
+                "C. contacting local businesses",
+                "D. giving advice to visitors",
+                "E. collecting feedback on events",
+                "F. selling tickets",
+                "G. introducing guest speakers at an event",
+                "H. encouraging cooperation between local organisations",
+                "I. helping people find their seats"
+              ],
+              "answer": "D",
+              "explanation": "Volunteers in the town centre give advice to visitors.",
+              "instruction": "Questions 11-16<br/>What is the role of the volunteers in each of the following activities? Choose SIX answers from the box and write the correct letter, A-I."
+            },
+            {
+              "num": 12,
+              "type": "MCQ",
+              "text": "What is the role of the volunteers in: Helping at concerts",
+              "options": [
+                "A. providing entertainment",
+                "B. providing publicity about a council service",
+                "C. contacting local businesses",
+                "D. giving advice to visitors",
+                "E. collecting feedback on events",
+                "F. selling tickets",
+                "G. introducing guest speakers at an event",
+                "H. encouraging cooperation between local organisations",
+                "I. helping people find their seats"
+              ],
+              "answer": "I",
+              "explanation": "Concert volunteers help people find their seats.",
+              "instruction": "Questions 11-16<br/>Choose SIX answers from the box."
+            },
+            {
+              "num": 13,
+              "type": "MCQ",
+              "text": "What is the role of the volunteers in: Getting involved with community groups",
+              "options": [
+                "A. providing entertainment",
+                "B. providing publicity about a council service",
+                "C. contacting local businesses",
+                "D. giving advice to visitors",
+                "E. collecting feedback on events",
+                "F. selling tickets",
+                "G. introducing guest speakers at an event",
+                "H. encouraging cooperation between local organisations",
+                "I. helping people find their seats"
+              ],
+              "answer": "H",
+              "explanation": "Volunteers encourage cooperation between local organisations.",
+              "instruction": "Questions 11-16<br/>Choose SIX answers from the box."
+            },
+            {
+              "num": 14,
+              "type": "MCQ",
+              "text": "What is the role of the volunteers in: Helping with a festival",
+              "options": [
+                "A. providing entertainment",
+                "B. providing publicity about a council service",
+                "C. contacting local businesses",
+                "D. giving advice to visitors",
+                "E. collecting feedback on events",
+                "F. selling tickets",
+                "G. introducing guest speakers at an event",
+                "H. encouraging cooperation between local organisations",
+                "I. helping people find their seats"
+              ],
+              "answer": "E",
+              "explanation": "They collect feedback on festival events.",
+              "instruction": "Questions 11-16<br/>Choose SIX answers from the box."
+            },
+            {
+              "num": 15,
+              "type": "MCQ",
+              "text": "What is the role of the volunteers in: Participating at lunches for retired people",
+              "options": [
+                "A. providing entertainment",
+                "B. providing publicity about a council service",
+                "C. contacting local businesses",
+                "D. giving advice to visitors",
+                "E. collecting feedback on events",
+                "F. selling tickets",
+                "G. introducing guest speakers at an event",
+                "H. encouraging cooperation between local organisations",
+                "I. helping people find their seats"
+              ],
+              "answer": "A",
+              "explanation": "They provide entertainment during retirement lunches.",
+              "instruction": "Questions 11-16<br/>Choose SIX answers from the box."
+            },
+            {
+              "num": 16,
+              "type": "MCQ",
+              "text": "What is the role of the volunteers in: Helping with the website",
+              "options": [
+                "A. providing entertainment",
+                "B. providing publicity about a council service",
+                "C. contacting local businesses",
+                "D. giving advice to visitors",
+                "E. collecting feedback on events",
+                "F. selling tickets",
+                "G. introducing guest speakers at an event",
+                "H. encouraging cooperation between local organisations",
+                "I. helping people find their seats"
+              ],
+              "answer": "B",
+              "explanation": "They provide publicity about a council service.",
+              "instruction": "Questions 11-16<br/>Choose SIX answers from the box."
+            },
+            {
+              "num": 17,
+              "type": "MCQ",
+              "text": "Which event requires the largest number of volunteers?",
+              "options": [
+                "A. the music festival",
+                "B. the science festival",
+                "C. the book festival"
+              ],
+              "answer": "B",
+              "explanation": "The science festival requires the largest number of volunteers.",
+              "instruction": "Questions 17-20<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 18,
+              "type": "MCQ",
+              "text": "What is the most important requirement for volunteers at the festivals?",
+              "options": [
+                "A. interpersonal skills",
+                "B. personal interest in the event",
+                "C. flexibility"
+              ],
+              "answer": "A",
+              "explanation": "Interpersonal skills are the most critical requirement.",
+              "instruction": "Questions 17-20<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 19,
+              "type": "MCQ",
+              "text": "New volunteers will start working in the week beginning",
+              "options": [
+                "A. 2 September.",
+                "B. 9 September.",
+                "C. 23 September."
+              ],
+              "answer": "B",
+              "explanation": "Work starts in the week of 9 September.",
+              "instruction": "Questions 17-20<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 20,
+              "type": "MCQ",
+              "text": "What is the next annual event for volunteers?",
+              "options": [
+                "A. a boat trip",
+                "B. a barbecue",
+                "C. a party"
+              ],
+              "answer": "A",
+              "explanation": "The next annual event is a boat trip.",
+              "instruction": "Questions 17-20<br/>Choose the correct letter, A, B or C."
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Part 3: Geography Presentation",
+          "description": "Two students discuss their geography presentation and case study.",
+          "audio": "audio/IELTS_20_Test_2_Part3.mp3",
+          "questions": [
+            {
+              "num": 21,
+              "type": "MCQ",
+              "text": "What is Colin's opinion about: Population",
+              "options": [
+                "A. The information given about this was too vague.",
+                "B. This may not be relevant to their course.",
+                "C. This will involve only a small number of statistics.",
+                "D. It will be easy to find facts about this.",
+                "E. The facts about this may not be reliable.",
+                "F. No useful research has been done on this.",
+                "G. The information provided about this was interesting."
+              ],
+              "answer": "D",
+              "explanation": "Colin thinks population facts are easy to find.",
+              "instruction": "Questions 21-25<br/>What is Colin's opinion about each of the following aspects of geography? Choose FIVE answers from the box and write the correct letter, A-G."
+            },
+            {
+              "num": 22,
+              "type": "MCQ",
+              "text": "What is Colin's opinion about: Health",
+              "options": [
+                "A. The information given about this was too vague.",
+                "B. This may not be relevant to their course.",
+                "C. This will involve only a small number of statistics.",
+                "D. It will be easy to find facts about this.",
+                "E. The facts about this may not be reliable.",
+                "F. No useful research has been done on this.",
+                "G. The information provided about this was interesting."
+              ],
+              "answer": "G",
+              "explanation": "Colin found the health data interesting.",
+              "instruction": "Questions 21-25<br/>Choose FIVE answers from the box."
+            },
+            {
+              "num": 23,
+              "type": "MCQ",
+              "text": "What is Colin's opinion about: Economies",
+              "options": [
+                "A. The information given about this was too vague.",
+                "B. This may not be relevant to their course.",
+                "C. This will involve only a small number of statistics.",
+                "D. It will be easy to find facts about this.",
+                "E. The facts about this may not be reliable.",
+                "F. No useful research has been done on this.",
+                "G. The information provided about this was interesting."
+              ],
+              "answer": "B",
+              "explanation": "Colin thinks economic data is not relevant to their course.",
+              "instruction": "Questions 21-25<br/>Choose FIVE answers from the box."
+            },
+            {
+              "num": 24,
+              "type": "MCQ",
+              "text": "What is Colin's opinion about: Culture",
+              "options": [
+                "A. The information given about this was too vague.",
+                "B. This may not be relevant to their course.",
+                "C. This will involve only a small number of statistics.",
+                "D. It will be easy to find facts about this.",
+                "E. The facts about this may not be reliable.",
+                "F. No useful research has been done on this.",
+                "G. The information provided about this was interesting."
+              ],
+              "answer": "A",
+              "explanation": "He feels the culture details were too vague.",
+              "instruction": "Questions 21-25<br/>Choose FIVE answers from the box."
+            },
+            {
+              "num": 25,
+              "type": "MCQ",
+              "text": "What is Colin's opinion about: Poverty",
+              "options": [
+                "A. The information given about this was too vague.",
+                "B. This may not be relevant to their course.",
+                "C. This will involve only a small number of statistics.",
+                "D. It will be easy to find facts about this.",
+                "E. The facts about this may not be reliable.",
+                "F. No useful research has been done on this.",
+                "G. The information provided about this was interesting."
+              ],
+              "answer": "E",
+              "explanation": "Colin expresses doubt on the reliability of poverty facts.",
+              "instruction": "Questions 21-25<br/>Choose FIVE answers from the box."
+            },
+            {
+              "num": 26,
+              "type": "MCQ",
+              "text": "Rosie says that in her own city the main problem is",
+              "options": [
+                "A. crime.",
+                "B. housing.",
+                "C. unemployment."
+              ],
+              "answer": "C",
+              "explanation": "Rosie states that unemployment is the primary concern.",
+              "instruction": "Questions 26-30<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 27,
+              "type": "MCQ",
+              "text": "What recent additions to the outskirts of their cities are both students happy about?",
+              "options": [
+                "A. conference centres",
+                "B. sports centres",
+                "C. retail centres"
+              ],
+              "answer": "A",
+              "explanation": "Both are pleased with the new conference centres.",
+              "instruction": "Questions 26-30<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 28,
+              "type": "MCQ",
+              "text": "The students agree that developing disused industrial sites may",
+              "options": [
+                "A. have unexpected costs.",
+                "B. damage the urban environment.",
+                "C. destroy valuable historical buildings."
+              ],
+              "answer": "A",
+              "explanation": "They agree that unexpected costs frequently arise in development.",
+              "instruction": "Questions 26-30<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 29,
+              "type": "MCQ",
+              "text": "The students will mention Masdar City as an example of an attempt to achieve",
+              "options": [
+                "A. daily collections for waste recycling.",
+                "B. sustainable energy use.",
+                "C. free transport for everyone."
+              ],
+              "answer": "B",
+              "explanation": "Masdar City is discussed as a model for sustainable energy use.",
+              "instruction": "Questions 26-30<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 30,
+              "type": "MCQ",
+              "text": "When discussing the ecotown of Greenhill Abbots, Colin is uncertain about",
+              "options": [
+                "A. what its objectives were.",
+                "B. why there was opposition to it.",
+                "C. how much of it has actually been built."
+              ],
+              "answer": "C",
+              "explanation": "Colin expresses uncertainty over how much of it has actually been constructed.",
+              "instruction": "Questions 26-30<br/>Choose the correct letter, A, B or C."
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Part 4: Developing Food Trends",
+          "description": "A lecture on food trends and their dissemination on social media.",
+          "audio": "audio/IELTS_20_Test_2_Part4.mp3",
+          "questions": [
+            {
+              "num": 31,
+              "type": "FILL",
+              "text": "The growth in interest in food fashions started with _________ of food being shared on social media.",
+              "answer": "photos",
+              "explanation": "Food trends grew from photos/pictures shared online.",
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+            },
+            {
+              "num": 32,
+              "type": "FILL",
+              "text": "Sales of _________ food brands have grown rapidly this way.",
+              "answer": "vegan",
+              "explanation": "Vegan food brands saw rapid growth.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 33,
+              "type": "FILL",
+              "text": "Famous _________ are influential.",
+              "answer": "chefs",
+              "explanation": "Famous chefs are key influencers of food trends.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 34,
+              "type": "FILL",
+              "text": "The avocado: _________ were invited to visit growers in South Africa.",
+              "answer": "journalists",
+              "explanation": "Journalists were invited to South Africa to promote avocados.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 35,
+              "type": "FILL",
+              "text": "Advertising focused on its _________ benefits.",
+              "answer": "health",
+              "explanation": "Advertising highlighted the health benefits of avocados.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 36,
+              "type": "FILL",
+              "text": "Oat milk: Promotion in the USA through _________ shops reduced the need for advertising.",
+              "answer": "coffee",
+              "explanation": "Coffee shops in the USA promoted oat milk.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 37,
+              "type": "FILL",
+              "text": "It appealed to consumers who are concerned about the _________.",
+              "answer": "environment",
+              "explanation": "It targetted consumers focused on the environment.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 38,
+              "type": "FILL",
+              "text": "Norwegian skrei: - has helped strengthen the _________ of Norwegian seafood.",
+              "answer": "reputation",
+              "explanation": "Skrei strengthened the reputation of Norwegian seafood.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 39,
+              "type": "FILL",
+              "text": "Quinoa: - Its success led to an increase in its _________.",
+              "answer": "price",
+              "explanation": "Quinoa's success led to a surge in its price/cost.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 40,
+              "type": "FILL",
+              "text": "- Overuse of resources resulted in poor _________ quality.",
+              "answer": "soil",
+              "explanation": "Overuse of resources degraded the soil quality.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            }
+          ]
+        }
+      ]
     }
-},
+  },
   "11": {
     "title": "Cambridge IELTS 20 — Test 3",
     "book": "IELTS 20",
     "listening": {
-        "sections": [
+      "sections": [
+        {
+          "id": 1,
+          "title": "Part 1: Furniture Rental",
+          "description": "Conversation about comparing furniture rental companies.",
+          "audio": "audio/IELTS_20_Test_3_Part1.mp3",
+          "questions": [
             {
-                "id": 1,
-                "title": "Part 1: Furniture Rental",
-                "description": "Conversation about comparing furniture rental companies.",
-                "audio": "audio/IELTS_20_Test_3_Part1.mp3",
-                "questions": [
-                    {
-                        "num": 1,
-                        "type": "FILL",
-                        "text": "Peak Rentals: Prices range from $105 to $ _________ per room per month",
-                        "answer": "239",
-                        "explanation": "The maximum price is $239.",
-                        "instruction": "Questions 1-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
-                    },
-                    {
-                        "num": 2,
-                        "type": "FILL",
-                        "text": "Peak Rentals comments: The furniture is very _________",
-                        "answer": "modern",
-                        "explanation": "Peak Rentals has very modern furniture.",
-                        "instruction": "Questions 1-10<br/>Complete the table below."
-                    },
-                    {
-                        "num": 3,
-                        "type": "FILL",
-                        "text": "Peak Rentals special offer: free _________ with every living room set",
-                        "answer": "lamp",
-                        "explanation": "They offer a free lamp with living room sets.",
-                        "instruction": "Questions 1-10<br/>Complete the table below."
-                    },
-                    {
-                        "num": 4,
-                        "type": "FILL",
-                        "text": "_________ and Oliver",
-                        "answer": "Aaron",
-                        "explanation": "The company name is Aaron and Oliver.",
-                        "instruction": "Questions 1-10<br/>Complete the table below."
-                    },
-                    {
-                        "num": 5,
-                        "type": "FILL",
-                        "text": "Aaron and Oliver: 12% monthly fee for _________",
-                        "answer": "damage",
-                        "explanation": "A monthly fee for damage is charged.",
-                        "instruction": "Questions 1-10<br/>Complete the table below."
-                    },
-                    {
-                        "num": 6,
-                        "type": "FILL",
-                        "text": "Larch Furniture: Offers cheapest prices for renting furniture and _________ items",
-                        "answer": "electronic",
-                        "explanation": "Larch rents furniture and electronic items.",
-                        "instruction": "Questions 1-10<br/>Complete the table below."
-                    },
-                    {
-                        "num": 7,
-                        "type": "FILL",
-                        "text": "Larch Furniture comments: Must have own _________",
-                        "answer": "insurance",
-                        "explanation": "Customers must have their own insurance.",
-                        "instruction": "Questions 1-10<br/>Complete the table below."
-                    },
-                    {
-                        "num": 8,
-                        "type": "FILL",
-                        "text": "_________ Rentals",
-                        "answer": "space",
-                        "explanation": "The fourth company is Space Rentals.",
-                        "instruction": "Questions 1-10<br/>Complete the table below."
-                    },
-                    {
-                        "num": 9,
-                        "type": "FILL",
-                        "text": "Space Rentals: See the _________ for the most up-to-date prices",
-                        "answer": "app",
-                        "explanation": "Prices are available on their app.",
-                        "instruction": "Questions 1-10<br/>Complete the table below."
-                    },
-                    {
-                        "num": 10,
-                        "type": "FILL",
-                        "text": "Space Rentals: _________ are allowed within 7 days of delivery",
-                        "answer": "exchanges",
-                        "explanation": "Exchanges are allowed within 7 days.",
-                        "instruction": "Questions 1-10<br/>Complete the table below."
-                    }
-                ]
+              "num": 1,
+              "type": "FILL",
+              "text": "Peak Rentals: Prices range from $105 to $ _________ per room per month",
+              "answer": "239",
+              "explanation": "The maximum price is $239.",
+              "instruction": "Questions 1-10<br/>Complete the table below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
             },
             {
-                "id": 2,
-                "title": "Part 2: Bidcaster Archaeological Dig",
-                "description": "A guide describes the Bidcaster Archaeological Dig project.",
-                "audio": "audio/IELTS_20_Test_3_Part2.mp3",
-                "questions": [
-                    {
-                        "num": 11,
-                        "type": "MCQ",
-                        "text": "Who was responsible for starting the community project?",
-                        "options": [
-                            "A. the castle owners",
-                            "B. a national charity",
-                            "C. the local council"
-                        ],
-                        "answer": "B",
-                        "explanation": "A national charity initiated the project.",
-                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 12,
-                        "type": "MCQ",
-                        "text": "How was the gold coin found?",
-                        "options": [
-                            "A. Heavy rain had removed some of the soil.",
-                            "B. The ground was dug up by wild rabbits.",
-                            "C. A person with a metal detector searched the area."
-                        ],
-                        "answer": "A",
-                        "explanation": "Heavy rain washed away soil, exposing the coin.",
-                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 13,
-                        "type": "MCQ",
-                        "text": "What led the archaeologists to believe there was an ancient village on this site?",
-                        "options": [
-                            "A. the lucky discovery of old records",
-                            "B. the bases of several structures visible in the grass",
-                            "C. the unusual stones found near the castle"
-                        ],
-                        "answer": "A",
-                        "explanation": "The discovery of old records pointed to the village's existence.",
-                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 14,
-                        "type": "MCQ",
-                        "text": "What are the team still hoping to find?",
-                        "options": [
-                            "A. everyday pottery",
-                            "B. animal bones",
-                            "C. pieces of jewellery"
-                        ],
-                        "answer": "C",
-                        "explanation": "The team is still hoping to find pieces of jewellery.",
-                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 15,
-                        "type": "MCQ",
-                        "text": "What was found on the other side of the river to the castle?",
-                        "options": [
-                            "A. the remains of a large palace",
-                            "B. the outline of fields",
-                            "C. a number of small huts"
-                        ],
-                        "answer": "B",
-                        "explanation": "The outline of ancient fields was found across the river.",
-                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 16,
-                        "type": "MCQ",
-                        "text": "What do the team plan to do after work ends this summer?",
-                        "options": [
-                            "A. prepare a display for a museum",
-                            "B. take part in a television programme",
-                            "C. start to organise school visits"
-                        ],
-                        "answer": "C",
-                        "explanation": "The team plans to organise school visits.",
-                        "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 17,
-                        "type": "MCQ",
-                        "text": "Identify on map: bridge foundations",
-                        "options": [
-                            "A",
-                            "B",
-                            "C",
-                            "D",
-                            "E",
-                            "F",
-                            "G"
-                        ],
-                        "answer": "B",
-                        "explanation": "The bridge foundations are located at point B.",
-                        "instruction": "Questions 17-20<br/>Label the map below. Choose the correct letter, A-G."
-                    },
-                    {
-                        "num": 18,
-                        "type": "MCQ",
-                        "text": "Identify on map: rubbish pit",
-                        "options": [
-                            "A",
-                            "B",
-                            "C",
-                            "D",
-                            "E",
-                            "F",
-                            "G"
-                        ],
-                        "answer": "A",
-                        "explanation": "The rubbish pit is at point A.",
-                        "instruction": "Questions 17-20<br/>Choose the correct letter, A-G."
-                    },
-                    {
-                        "num": 19,
-                        "type": "MCQ",
-                        "text": "Identify on map: meeting hall",
-                        "options": [
-                            "A",
-                            "B",
-                            "C",
-                            "D",
-                            "E",
-                            "F",
-                            "G"
-                        ],
-                        "answer": "G",
-                        "explanation": "The meeting hall is located at point G.",
-                        "instruction": "Questions 17-20<br/>Choose the correct letter, A-G."
-                    },
-                    {
-                        "num": 20,
-                        "type": "MCQ",
-                        "text": "Identify on map: fish pond",
-                        "options": [
-                            "A",
-                            "B",
-                            "C",
-                            "D",
-                            "E",
-                            "F",
-                            "G"
-                        ],
-                        "answer": "E",
-                        "explanation": "The fish pond is at point E.",
-                        "instruction": "Questions 17-20<br/>Choose the correct letter, A-G."
-                    }
-                ]
+              "num": 2,
+              "type": "FILL",
+              "text": "Peak Rentals comments: The furniture is very _________",
+              "answer": "modern",
+              "explanation": "Peak Rentals has very modern furniture.",
+              "instruction": "Questions 1-10<br/>Complete the table below."
             },
             {
-                "id": 3,
-                "title": "Part 3: Theatre Programmes",
-                "description": "Two students discuss theatre programmes and their history.",
-                "audio": "audio/IELTS_20_Test_3_Part3.mp3",
-                "questions": [
-                    {
-                        "num": 21,
-                        "type": "MCQ",
-                        "text": "Finn was pleased to discover that their topic",
-                        "options": [
-                            "A. was not familiar to their module leader.",
-                            "B. had not been chosen by other students.",
-                            "C. did not prove to be difficult to research."
-                        ],
-                        "answer": "B",
-                        "explanation": "Finn is glad no other students are researching theatre programmes.",
-                        "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 22,
-                        "type": "MCQ",
-                        "text": "Maya says a mistaken belief about theatre programmes is that",
-                        "options": [
-                            "A. theatres pay companies to produce them.",
-                            "B. few theatre-goers buy them nowadays.",
-                            "C. they contain far more adverts than previously."
-                        ],
-                        "answer": "A",
-                        "explanation": "Maya notes that companies are paid by theatres, contrary to common belief.",
-                        "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 23,
-                        "type": "MCQ",
-                        "text": "Finn was surprised that, in early British theatre, programmes",
-                        "options": [
-                            "A. were difficult for audiences to obtain.",
-                            "B. were given out free of charge.",
-                            "C. were seen as a kind of contract."
-                        ],
-                        "answer": "C",
-                        "explanation": "Finn is surprised that early programmes were seen as contracts.",
-                        "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 24,
-                        "type": "MCQ",
-                        "text": "Maya feels their project should include an explanation of why companies of actors",
-                        "options": [
-                            "A. promoted their own plays.",
-                            "B. performed plays outdoors.",
-                            "C. had to tour with their plays."
-                        ],
-                        "answer": "A",
-                        "explanation": "Maya wants to explain why actor troupes promoted their own work.",
-                        "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 25,
-                        "type": "MCQ",
-                        "text": "Finn and Maya both think that, compared to nineteenth-century programmes, those from the eighteenth century",
-                        "options": [
-                            "A. were original.",
-                            "B. were more colourful.",
-                            "C. were more informative."
-                        ],
-                        "answer": "C",
-                        "explanation": "Both agree that 18th-century programmes had more informative texts.",
-                        "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 26,
-                        "type": "MCQ",
-                        "text": "Maya doesn't fully understand why, in the twentieth century,",
-                        "options": [
-                            "A. very few theatre programmes were printed in the USA.",
-                            "B. British theatre programmes failed to develop for so long.",
-                            "C. theatre programmes in Britain copied fashions from the USA."
-                        ],
-                        "answer": "B",
-                        "explanation": "Maya is confused as to why British programmes did not evolve for years.",
-                        "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 27,
-                        "type": "MCQ",
-                        "text": "What comment is made about the theatre programme for: The Beggar's Opera",
-                        "options": [
-                            "A. Its origin is somewhat controversial.",
-                            "B. It is historically significant for a country.",
-                            "C. It was effective at attracting audiences.",
-                            "D. It is included in a recent project.",
-                            "E. It contains insights into the show.",
-                            "F. It resembles an artwork."
-                        ],
-                        "answer": "F",
-                        "explanation": "They note that it resembles an artwork.",
-                        "instruction": "Questions 27-30<br/>What comment is made about the programme for each of the following shows? Choose FOUR answers from the box and write the correct letter, A-F."
-                    },
-                    {
-                        "num": 28,
-                        "type": "MCQ",
-                        "text": "What comment is made about the theatre programme for: Man of La Mancha",
-                        "options": [
-                            "A. Its origin is somewhat controversial.",
-                            "B. It is historically significant for a country.",
-                            "C. It was effective at attracting audiences.",
-                            "D. It is included in a recent project.",
-                            "E. It contains insights into the show.",
-                            "F. It resembles an artwork."
-                        ],
-                        "answer": "E",
-                        "explanation": "It provides deep insights into the production.",
-                        "instruction": "Questions 27-30<br/>Choose FOUR answers from the box."
-                    },
-                    {
-                        "num": 29,
-                        "type": "MCQ",
-                        "text": "What comment is made about the theatre programme for: The Tragedy of Jane Shore",
-                        "options": [
-                            "A. Its origin is somewhat controversial.",
-                            "B. It is historically significant for a country.",
-                            "C. It was effective at attracting audiences.",
-                            "D. It is included in a recent project.",
-                            "E. It contains insights into the show.",
-                            "F. It resembles an artwork."
-                        ],
-                        "answer": "B",
-                        "explanation": "It has historical significance for the country.",
-                        "instruction": "Questions 27-30<br/>Choose FOUR answers from the box."
-                    },
-                    {
-                        "num": 30,
-                        "type": "MCQ",
-                        "text": "What comment is made about the theatre programme for: The Sailors' Festival",
-                        "options": [
-                            "A. Its origin is somewhat controversial.",
-                            "B. It is historically significant for a country.",
-                            "C. It was effective at attracting audiences.",
-                            "D. It is included in a recent project.",
-                            "E. It contains insights into the show.",
-                            "F. It resembles an artwork."
-                        ],
-                        "answer": "D",
-                        "explanation": "This programme was featured in a recent project.",
-                        "instruction": "Questions 27-30<br/>Choose FOUR answers from the box."
-                    }
-                ]
+              "num": 3,
+              "type": "FILL",
+              "text": "Peak Rentals special offer: free _________ with every living room set",
+              "answer": "lamp",
+              "explanation": "They offer a free lamp with living room sets.",
+              "instruction": "Questions 1-10<br/>Complete the table below."
             },
             {
-                "id": 4,
-                "title": "Part 4: Inclusive Design",
-                "description": "A lecture about design concepts that accommodate accessibility.",
-                "audio": "audio/IELTS_20_Test_3_Part4.mp3",
-                "questions": [
-                    {
-                        "num": 31,
-                        "type": "FILL",
-                        "text": "Designing products that can be accessed by a diverse range of people without the need for any _________",
-                        "answer": "adaptation",
-                        "explanation": "Inclusive design avoids the need for further adaptation.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
-                    },
-                    {
-                        "num": 32,
-                        "type": "FILL",
-                        "text": "Not the same as universal design: that is design for everyone, including catering for people with _________ problems.",
-                        "answer": "cognitive",
-                        "explanation": "Universal design also covers those with cognitive difficulties.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 33,
-                        "type": "FILL",
-                        "text": "• _________ which are adjustable, avoiding back or neck problems",
-                        "answer": "desks",
-                        "explanation": "Adjustable desks prevent physical discomfort.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 34,
-                        "type": "FILL",
-                        "text": "• _________ in public toilets which are easier to use",
-                        "answer": "taps",
-                        "explanation": "Public toilets need easy-to-use taps.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 35,
-                        "type": "FILL",
-                        "text": "- designers avoid using _________ in interfaces",
-                        "answer": "blue",
-                        "explanation": "Blue is avoided in interfaces to assist readability for the elderly.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 36,
-                        "type": "FILL",
-                        "text": "- people can make commands using a mouse, keyboard or their _________",
-                        "answer": "voice",
-                        "explanation": "Voice control is a key interface command option.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 37,
-                        "type": "FILL",
-                        "text": "- Seatbelts are especially problematic for _________ women.",
-                        "answer": "pregnant",
-                        "explanation": "Traditional seatbelts are problematic for pregnant women.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 38,
-                        "type": "FILL",
-                        "text": "- PPE jackets are often unsuitable because of the size of women's _________",
-                        "answer": "shoulders",
-                        "explanation": "PPE jackets are often ill-fitting at the shoulders.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 39,
-                        "type": "FILL",
-                        "text": "- PPE for female _________ officers dealing with emergencies is the worst.",
-                        "answer": "police",
-                        "explanation": "Female police officers face issues with standard PPE.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 40,
-                        "type": "FILL",
-                        "text": "- The _________ in offices is often too low for women.",
-                        "answer": "temperature",
-                        "explanation": "Standard office temperature settings are often too cold for female comfort.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    }
-                ]
+              "num": 4,
+              "type": "FILL",
+              "text": "_________ and Oliver",
+              "answer": "Aaron",
+              "explanation": "The company name is Aaron and Oliver.",
+              "instruction": "Questions 1-10<br/>Complete the table below."
+            },
+            {
+              "num": 5,
+              "type": "FILL",
+              "text": "Aaron and Oliver: 12% monthly fee for _________",
+              "answer": "damage",
+              "explanation": "A monthly fee for damage is charged.",
+              "instruction": "Questions 1-10<br/>Complete the table below."
+            },
+            {
+              "num": 6,
+              "type": "FILL",
+              "text": "Larch Furniture: Offers cheapest prices for renting furniture and _________ items",
+              "answer": "electronic",
+              "explanation": "Larch rents furniture and electronic items.",
+              "instruction": "Questions 1-10<br/>Complete the table below."
+            },
+            {
+              "num": 7,
+              "type": "FILL",
+              "text": "Larch Furniture comments: Must have own _________",
+              "answer": "insurance",
+              "explanation": "Customers must have their own insurance.",
+              "instruction": "Questions 1-10<br/>Complete the table below."
+            },
+            {
+              "num": 8,
+              "type": "FILL",
+              "text": "_________ Rentals",
+              "answer": "space",
+              "explanation": "The fourth company is Space Rentals.",
+              "instruction": "Questions 1-10<br/>Complete the table below."
+            },
+            {
+              "num": 9,
+              "type": "FILL",
+              "text": "Space Rentals: See the _________ for the most up-to-date prices",
+              "answer": "app",
+              "explanation": "Prices are available on their app.",
+              "instruction": "Questions 1-10<br/>Complete the table below."
+            },
+            {
+              "num": 10,
+              "type": "FILL",
+              "text": "Space Rentals: _________ are allowed within 7 days of delivery",
+              "answer": "exchanges",
+              "explanation": "Exchanges are allowed within 7 days.",
+              "instruction": "Questions 1-10<br/>Complete the table below."
             }
-        ]
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Part 2: Bidcaster Archaeological Dig",
+          "description": "A guide describes the Bidcaster Archaeological Dig project.",
+          "audio": "audio/IELTS_20_Test_3_Part2.mp3",
+          "questions": [
+            {
+              "num": 11,
+              "type": "MCQ",
+              "text": "Who was responsible for starting the community project?",
+              "options": [
+                "A. the castle owners",
+                "B. a national charity",
+                "C. the local council"
+              ],
+              "answer": "B",
+              "explanation": "A national charity initiated the project.",
+              "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 12,
+              "type": "MCQ",
+              "text": "How was the gold coin found?",
+              "options": [
+                "A. Heavy rain had removed some of the soil.",
+                "B. The ground was dug up by wild rabbits.",
+                "C. A person with a metal detector searched the area."
+              ],
+              "answer": "A",
+              "explanation": "Heavy rain washed away soil, exposing the coin.",
+              "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 13,
+              "type": "MCQ",
+              "text": "What led the archaeologists to believe there was an ancient village on this site?",
+              "options": [
+                "A. the lucky discovery of old records",
+                "B. the bases of several structures visible in the grass",
+                "C. the unusual stones found near the castle"
+              ],
+              "answer": "A",
+              "explanation": "The discovery of old records pointed to the village's existence.",
+              "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 14,
+              "type": "MCQ",
+              "text": "What are the team still hoping to find?",
+              "options": [
+                "A. everyday pottery",
+                "B. animal bones",
+                "C. pieces of jewellery"
+              ],
+              "answer": "C",
+              "explanation": "The team is still hoping to find pieces of jewellery.",
+              "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 15,
+              "type": "MCQ",
+              "text": "What was found on the other side of the river to the castle?",
+              "options": [
+                "A. the remains of a large palace",
+                "B. the outline of fields",
+                "C. a number of small huts"
+              ],
+              "answer": "B",
+              "explanation": "The outline of ancient fields was found across the river.",
+              "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 16,
+              "type": "MCQ",
+              "text": "What do the team plan to do after work ends this summer?",
+              "options": [
+                "A. prepare a display for a museum",
+                "B. take part in a television programme",
+                "C. start to organise school visits"
+              ],
+              "answer": "C",
+              "explanation": "The team plans to organise school visits.",
+              "instruction": "Questions 11-16<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 17,
+              "type": "MCQ",
+              "text": "Identify on map: bridge foundations",
+              "options": [
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F",
+                "G"
+              ],
+              "answer": "B",
+              "explanation": "The bridge foundations are located at point B.",
+              "instruction": "Questions 17-20<br/>Label the map below. Choose the correct letter, A-G."
+            },
+            {
+              "num": 18,
+              "type": "MCQ",
+              "text": "Identify on map: rubbish pit",
+              "options": [
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F",
+                "G"
+              ],
+              "answer": "A",
+              "explanation": "The rubbish pit is at point A.",
+              "instruction": "Questions 17-20<br/>Choose the correct letter, A-G."
+            },
+            {
+              "num": 19,
+              "type": "MCQ",
+              "text": "Identify on map: meeting hall",
+              "options": [
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F",
+                "G"
+              ],
+              "answer": "G",
+              "explanation": "The meeting hall is located at point G.",
+              "instruction": "Questions 17-20<br/>Choose the correct letter, A-G."
+            },
+            {
+              "num": 20,
+              "type": "MCQ",
+              "text": "Identify on map: fish pond",
+              "options": [
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F",
+                "G"
+              ],
+              "answer": "E",
+              "explanation": "The fish pond is at point E.",
+              "instruction": "Questions 17-20<br/>Choose the correct letter, A-G."
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Part 3: Theatre Programmes",
+          "description": "Two students discuss theatre programmes and their history.",
+          "audio": "audio/IELTS_20_Test_3_Part3.mp3",
+          "questions": [
+            {
+              "num": 21,
+              "type": "MCQ",
+              "text": "Finn was pleased to discover that their topic",
+              "options": [
+                "A. was not familiar to their module leader.",
+                "B. had not been chosen by other students.",
+                "C. did not prove to be difficult to research."
+              ],
+              "answer": "B",
+              "explanation": "Finn is glad no other students are researching theatre programmes.",
+              "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 22,
+              "type": "MCQ",
+              "text": "Maya says a mistaken belief about theatre programmes is that",
+              "options": [
+                "A. theatres pay companies to produce them.",
+                "B. few theatre-goers buy them nowadays.",
+                "C. they contain far more adverts than previously."
+              ],
+              "answer": "A",
+              "explanation": "Maya notes that companies are paid by theatres, contrary to common belief.",
+              "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 23,
+              "type": "MCQ",
+              "text": "Finn was surprised that, in early British theatre, programmes",
+              "options": [
+                "A. were difficult for audiences to obtain.",
+                "B. were given out free of charge.",
+                "C. were seen as a kind of contract."
+              ],
+              "answer": "C",
+              "explanation": "Finn is surprised that early programmes were seen as contracts.",
+              "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 24,
+              "type": "MCQ",
+              "text": "Maya feels their project should include an explanation of why companies of actors",
+              "options": [
+                "A. promoted their own plays.",
+                "B. performed plays outdoors.",
+                "C. had to tour with their plays."
+              ],
+              "answer": "A",
+              "explanation": "Maya wants to explain why actor troupes promoted their own work.",
+              "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 25,
+              "type": "MCQ",
+              "text": "Finn and Maya both think that, compared to nineteenth-century programmes, those from the eighteenth century",
+              "options": [
+                "A. were original.",
+                "B. were more colourful.",
+                "C. were more informative."
+              ],
+              "answer": "C",
+              "explanation": "Both agree that 18th-century programmes had more informative texts.",
+              "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 26,
+              "type": "MCQ",
+              "text": "Maya doesn't fully understand why, in the twentieth century,",
+              "options": [
+                "A. very few theatre programmes were printed in the USA.",
+                "B. British theatre programmes failed to develop for so long.",
+                "C. theatre programmes in Britain copied fashions from the USA."
+              ],
+              "answer": "B",
+              "explanation": "Maya is confused as to why British programmes did not evolve for years.",
+              "instruction": "Questions 21-26<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 27,
+              "type": "MCQ",
+              "text": "What comment is made about the theatre programme for: The Beggar's Opera",
+              "options": [
+                "A. Its origin is somewhat controversial.",
+                "B. It is historically significant for a country.",
+                "C. It was effective at attracting audiences.",
+                "D. It is included in a recent project.",
+                "E. It contains insights into the show.",
+                "F. It resembles an artwork."
+              ],
+              "answer": "F",
+              "explanation": "They note that it resembles an artwork.",
+              "instruction": "Questions 27-30<br/>What comment is made about the programme for each of the following shows? Choose FOUR answers from the box and write the correct letter, A-F."
+            },
+            {
+              "num": 28,
+              "type": "MCQ",
+              "text": "What comment is made about the theatre programme for: Man of La Mancha",
+              "options": [
+                "A. Its origin is somewhat controversial.",
+                "B. It is historically significant for a country.",
+                "C. It was effective at attracting audiences.",
+                "D. It is included in a recent project.",
+                "E. It contains insights into the show.",
+                "F. It resembles an artwork."
+              ],
+              "answer": "E",
+              "explanation": "It provides deep insights into the production.",
+              "instruction": "Questions 27-30<br/>Choose FOUR answers from the box."
+            },
+            {
+              "num": 29,
+              "type": "MCQ",
+              "text": "What comment is made about the theatre programme for: The Tragedy of Jane Shore",
+              "options": [
+                "A. Its origin is somewhat controversial.",
+                "B. It is historically significant for a country.",
+                "C. It was effective at attracting audiences.",
+                "D. It is included in a recent project.",
+                "E. It contains insights into the show.",
+                "F. It resembles an artwork."
+              ],
+              "answer": "B",
+              "explanation": "It has historical significance for the country.",
+              "instruction": "Questions 27-30<br/>Choose FOUR answers from the box."
+            },
+            {
+              "num": 30,
+              "type": "MCQ",
+              "text": "What comment is made about the theatre programme for: The Sailors' Festival",
+              "options": [
+                "A. Its origin is somewhat controversial.",
+                "B. It is historically significant for a country.",
+                "C. It was effective at attracting audiences.",
+                "D. It is included in a recent project.",
+                "E. It contains insights into the show.",
+                "F. It resembles an artwork."
+              ],
+              "answer": "D",
+              "explanation": "This programme was featured in a recent project.",
+              "instruction": "Questions 27-30<br/>Choose FOUR answers from the box."
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Part 4: Inclusive Design",
+          "description": "A lecture about design concepts that accommodate accessibility.",
+          "audio": "audio/IELTS_20_Test_3_Part4.mp3",
+          "questions": [
+            {
+              "num": 31,
+              "type": "FILL",
+              "text": "Designing products that can be accessed by a diverse range of people without the need for any _________",
+              "answer": "adaptation",
+              "explanation": "Inclusive design avoids the need for further adaptation.",
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+            },
+            {
+              "num": 32,
+              "type": "FILL",
+              "text": "Not the same as universal design: that is design for everyone, including catering for people with _________ problems.",
+              "answer": "cognitive",
+              "explanation": "Universal design also covers those with cognitive difficulties.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 33,
+              "type": "FILL",
+              "text": "• _________ which are adjustable, avoiding back or neck problems",
+              "answer": "desks",
+              "explanation": "Adjustable desks prevent physical discomfort.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 34,
+              "type": "FILL",
+              "text": "• _________ in public toilets which are easier to use",
+              "answer": "taps",
+              "explanation": "Public toilets need easy-to-use taps.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 35,
+              "type": "FILL",
+              "text": "- designers avoid using _________ in interfaces",
+              "answer": "blue",
+              "explanation": "Blue is avoided in interfaces to assist readability for the elderly.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 36,
+              "type": "FILL",
+              "text": "- people can make commands using a mouse, keyboard or their _________",
+              "answer": "voice",
+              "explanation": "Voice control is a key interface command option.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 37,
+              "type": "FILL",
+              "text": "- Seatbelts are especially problematic for _________ women.",
+              "answer": "pregnant",
+              "explanation": "Traditional seatbelts are problematic for pregnant women.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 38,
+              "type": "FILL",
+              "text": "- PPE jackets are often unsuitable because of the size of women's _________",
+              "answer": "shoulders",
+              "explanation": "PPE jackets are often ill-fitting at the shoulders.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 39,
+              "type": "FILL",
+              "text": "- PPE for female _________ officers dealing with emergencies is the worst.",
+              "answer": "police",
+              "explanation": "Female police officers face issues with standard PPE.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 40,
+              "type": "FILL",
+              "text": "- The _________ in offices is often too low for women.",
+              "answer": "temperature",
+              "explanation": "Standard office temperature settings are often too cold for female comfort.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            }
+          ]
+        }
+      ]
     }
-},
+  },
   "12": {
     "title": "Cambridge IELTS 20 — Test 4",
     "book": "IELTS 20",
     "listening": {
-        "sections": [
+      "sections": [
+        {
+          "id": 1,
+          "title": "Part 1: Accommodation and Family Visit",
+          "description": "Conversation about tourist accommodation and trip planning.",
+          "audio": "audio/IELTS_20_Test_4_Part1.mp3",
+          "questions": [
             {
-                "id": 1,
-                "title": "Part 1: Accommodation and Family Visit",
-                "description": "Conversation about tourist accommodation and trip planning.",
-                "audio": "audio/IELTS_20_Test_4_Part1.mp3",
-                "questions": [
-                    {
-                        "num": 1,
-                        "type": "FILL",
-                        "text": "Accommodation: _________",
-                        "answer": "Kings",
-                        "explanation": "The recommended accommodation is Kings.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
-                    },
-                    {
-                        "num": 2,
-                        "type": "FILL",
-                        "text": "George Street Hotel cost of family room per night: £ _________",
-                        "answer": "125",
-                        "explanation": "The room costs £125 per night.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 3,
-                        "type": "FILL",
-                        "text": "Recommended trips: a _________ tour of the city centre (starts in Carlton Square)",
-                        "answer": "walking",
-                        "explanation": "A walking tour of the city centre is recommended.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 4,
-                        "type": "FILL",
-                        "text": "Recommended trips: a trip by _________ to the old fort",
-                        "answer": "boat",
-                        "explanation": "The trip to the old fort is by boat.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 5,
-                        "type": "FILL",
-                        "text": "Science Museum: best day to visit: _________",
-                        "answer": "Tuesday",
-                        "explanation": "Tuesday is the best day to visit.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 6,
-                        "type": "FILL",
-                        "text": "Science Museum: see the exhibition about _________",
-                        "answer": "space",
-                        "explanation": "The space exhibition is highly recommended.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 7,
-                        "type": "FILL",
-                        "text": "Clacton Market: good for _________ food",
-                        "answer": "vegetarian",
-                        "explanation": "The market has good vegetarian food options.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 8,
-                        "type": "FILL",
-                        "text": "Clacton Market: need to have lunch before _________ p.m.",
-                        "answer": "2.30",
-                        "explanation": "They must have lunch before 2.30 p.m.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 9,
-                        "type": "FILL",
-                        "text": "Theatre tickets: save up to _________ % on ticket prices",
-                        "answer": "75",
-                        "explanation": "Discount tickets offer savings of up to 75%.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 10,
-                        "type": "FILL",
-                        "text": "Blakewell Gardens: climb Telegraph Hill to see a view of the _________",
-                        "answer": "port",
-                        "explanation": "Telegraph Hill offers views of the local port.",
-                        "instruction": "Questions 1-10<br/>Complete the notes below."
-                    }
-                ]
+              "num": 1,
+              "type": "FILL",
+              "text": "Accommodation: _________",
+              "answer": "Kings",
+              "explanation": "The recommended accommodation is Kings.",
+              "instruction": "Questions 1-10<br/>Complete the notes below.<br/>Write ONE WORD AND/OR A NUMBER for each answer."
             },
             {
-                "id": 2,
-                "title": "Part 2: Football Stadium Tour",
-                "description": "A talk about stadium visits and the history of football.",
-                "audio": "audio/IELTS_20_Test_4_Part2.mp3",
-                "questions": [
-                    {
-                        "num": 11,
-                        "type": "MCQ",
-                        "text": "Which TWO things does the speaker say about visiting the football stadium with children? (Select 1 of 2)",
-                        "options": [
-                            "A. Children can get their photo taken with a football player.",
-                            "B. There is a competition for children today.",
-                            "C. Parents must stay with their children at all times.",
-                            "D. Children will need sunhats and drinks.",
-                            "E. The café has a special offer on meals for children."
-                        ],
-                        "answer": "B",
-                        "explanation": "The speaker mentions a competition for kids and parent supervision rules.",
-                        "instruction": "Questions 11-12<br/>Choose TWO letters, A-E."
-                    },
-                    {
-                        "num": 12,
-                        "type": "MCQ",
-                        "text": "Which TWO things does the speaker say about visiting the football stadium with children? (Select 2 of 2)",
-                        "options": [
-                            "A. Children can get their photo taken with a football player.",
-                            "B. There is a competition for children today.",
-                            "C. Parents must stay with their children at all times.",
-                            "D. Children will need sunhats and drinks.",
-                            "E. The café has a special offer on meals for children."
-                        ],
-                        "answer": "C",
-                        "explanation": "Parents must stay with children at all times.",
-                        "instruction": "Questions 11-12<br/>Choose TWO letters, A-E."
-                    },
-                    {
-                        "num": 13,
-                        "type": "MCQ",
-                        "text": "Which TWO features of the stadium tour are new this year? (Select 1 of 2)",
-                        "options": [
-                            "A. VIP tour",
-                            "B. 360 cinema experience",
-                            "C. audio guide",
-                            "D. dressing room tour",
-                            "E. tours in other languages"
-                        ],
-                        "answer": "A",
-                        "explanation": "The VIP tour and audio guides are new additions.",
-                        "instruction": "Questions 13-14<br/>Choose TWO letters, A-E."
-                    },
-                    {
-                        "num": 14,
-                        "type": "MCQ",
-                        "text": "Which TWO features of the stadium tour are new this year? (Select 2 of 2)",
-                        "options": [
-                            "A. VIP tour",
-                            "B. 360 cinema experience",
-                            "C. audio guide",
-                            "D. dressing room tour",
-                            "E. tours in other languages"
-                        ],
-                        "answer": "C",
-                        "explanation": "A new audio guide is introduced.",
-                        "instruction": "Questions 13-14<br/>Choose TWO letters, A-E."
-                    },
-                    {
-                        "num": 15,
-                        "type": "MCQ",
-                        "text": "What football history event took place in: 1870",
-                        "options": [
-                            "A. the introduction of pay for the players",
-                            "B. a change to the design of the goal",
-                            "C. the first use of lights for matches",
-                            "D. the introduction of goalkeepers",
-                            "E. the first international match",
-                            "F. two changes to the rules of the game",
-                            "G. the introduction of a fee for spectators",
-                            "H. the length of a game"
-                        ],
-                        "answer": "D",
-                        "explanation": "Goalkeepers were introduced in 1870.",
-                        "instruction": "Questions 15-20<br/>Which event in the history of football in the UK took place in each of the following years? Choose SIX answers from the box and write the correct letter, A-H."
-                    },
-                    {
-                        "num": 16,
-                        "type": "MCQ",
-                        "text": "What football history event took place in: 1874",
-                        "options": [
-                            "A. the introduction of pay for the players",
-                            "B. a change to the design of the goal",
-                            "C. the first use of lights for matches",
-                            "D. the introduction of goalkeepers",
-                            "E. the first international match",
-                            "F. two changes to the rules of the game",
-                            "G. the introduction of a fee for spectators",
-                            "H. the length of a game"
-                        ],
-                        "answer": "F",
-                        "explanation": "Two rule changes occurred in 1874.",
-                        "instruction": "Questions 15-20<br/>Choose SIX answers from the box."
-                    },
-                    {
-                        "num": 17,
-                        "type": "MCQ",
-                        "text": "What football history event took place in: 1875",
-                        "options": [
-                            "A. the introduction of pay for the players",
-                            "B. a change to the design of the goal",
-                            "C. the first use of lights for matches",
-                            "D. the introduction of goalkeepers",
-                            "E. the first international match",
-                            "F. two changes to the rules of the game",
-                            "G. the introduction of a fee for spectators",
-                            "H. the length of a game"
-                        ],
-                        "answer": "B",
-                        "explanation": "The design of the goal was modified in 1875.",
-                        "instruction": "Questions 15-20<br/>Choose SIX answers from the box."
-                    },
-                    {
-                        "num": 18,
-                        "type": "MCQ",
-                        "text": "What football history event took place in: 1877",
-                        "options": [
-                            "A. the introduction of pay for the players",
-                            "B. a change to the design of the goal",
-                            "C. the first use of lights for matches",
-                            "D. the introduction of goalkeepers",
-                            "E. the first international match",
-                            "F. two changes to the rules of the game",
-                            "G. the introduction of a fee for spectators",
-                            "H. the length of a game"
-                        ],
-                        "answer": "H",
-                        "explanation": "The match length was formalized in 1877.",
-                        "instruction": "Questions 15-20<br/>Choose SIX answers from the box."
-                    },
-                    {
-                        "num": 19,
-                        "type": "MCQ",
-                        "text": "What football history event took place in: 1878",
-                        "options": [
-                            "A. the introduction of pay for the players",
-                            "B. a change to the design of the goal",
-                            "C. the first use of lights for matches",
-                            "D. the introduction of goalkeepers",
-                            "E. the first international match",
-                            "F. two changes to the rules of the game",
-                            "G. the introduction of a fee for spectators",
-                            "H. the length of a game"
-                        ],
-                        "answer": "C",
-                        "explanation": "Floodlights were first used in 1878.",
-                        "instruction": "Questions 15-20<br/>Choose SIX answers from the box."
-                    },
-                    {
-                        "num": 20,
-                        "type": "MCQ",
-                        "text": "What football history event took place in: 1880",
-                        "options": [
-                            "A. the introduction of pay for the players",
-                            "B. a change to the design of the goal",
-                            "C. the first use of lights for matches",
-                            "D. the introduction of goalkeepers",
-                            "E. the first international match",
-                            "F. two changes to the rules of the game",
-                            "G. the introduction of a fee for spectators",
-                            "H. the length of a game"
-                        ],
-                        "answer": "G",
-                        "explanation": "Spectator fees were introduced in 1880.",
-                        "instruction": "Questions 15-20<br/>Choose SIX answers from the box."
-                    }
-                ]
+              "num": 2,
+              "type": "FILL",
+              "text": "George Street Hotel cost of family room per night: £ _________",
+              "answer": "125",
+              "explanation": "The room costs £125 per night.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
             },
             {
-                "id": 3,
-                "title": "Part 3: Dyspraxia and Handwriting",
-                "description": "Two students discuss research on the benefits of handwriting.",
-                "audio": "audio/IELTS_20_Test_4_Part3.mp3",
-                "questions": [
-                    {
-                        "num": 21,
-                        "type": "MCQ",
-                        "text": "Which TWO benefits for children of learning to write did both students find surprising? (Select 1 of 2)",
-                        "options": [
-                            "A. improved fine motor skills",
-                            "B. improved memory",
-                            "C. improved concentration",
-                            "D. improved imagination",
-                            "E. improved spatial awareness"
-                        ],
-                        "answer": "C",
-                        "explanation": "Improved concentration and spatial awareness surprised them.",
-                        "instruction": "Questions 21-22<br/>Choose TWO letters, A-E."
-                    },
-                    {
-                        "num": 22,
-                        "type": "MCQ",
-                        "text": "Which TWO benefits for children of learning to write did both students find surprising? (Select 2 of 2)",
-                        "options": [
-                            "A. improved fine motor skills",
-                            "B. improved memory",
-                            "C. improved concentration",
-                            "D. improved imagination",
-                            "E. improved spatial awareness"
-                        ],
-                        "answer": "E",
-                        "explanation": "Spatial awareness surprised them.",
-                        "instruction": "Questions 21-22<br/>Choose TWO letters, A-E."
-                    },
-                    {
-                        "num": 23,
-                        "type": "MCQ",
-                        "text": "For children with dyspraxia, which TWO problems with handwriting do the students think are easiest to solve? (Select 1 of 2)",
-                        "options": [
-                            "A. not spacing letters correctly",
-                            "B. not writing in a straight line",
-                            "C. applying too much pressure when writing",
-                            "D. confusing letter shapes",
-                            "E. writing very slowly"
-                        ],
-                        "answer": "A",
-                        "explanation": "Spacing and pressure problems are the easiest to solve.",
-                        "instruction": "Questions 23-24<br/>Choose TWO letters, A-E."
-                    },
-                    {
-                        "num": 24,
-                        "type": "MCQ",
-                        "text": "For children with dyspraxia, which TWO problems with handwriting do the students think are easiest to solve? (Select 2 of 2)",
-                        "options": [
-                            "A. not spacing letters correctly",
-                            "B. not writing in a straight line",
-                            "C. applying too much pressure when writing",
-                            "D. confusing letter shapes",
-                            "E. writing very slowly"
-                        ],
-                        "answer": "C",
-                        "explanation": "Applying too much pressure is solvable.",
-                        "instruction": "Questions 23-24<br/>Choose TWO letters, A-E."
-                    },
-                    {
-                        "num": 25,
-                        "type": "MCQ",
-                        "text": "What does the woman say about using laptops to teach writing to children with dyslexia?",
-                        "options": [
-                            "A. Children often lack motivation to learn that way.",
-                            "B. Children become fluent relatively quickly.",
-                            "C. Children react more positively if they make a mistake."
-                        ],
-                        "answer": "C",
-                        "explanation": "Children with dyslexia react more positively to errors on laptops.",
-                        "instruction": "Questions 25-30<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 26,
-                        "type": "MCQ",
-                        "text": "When discussing whether to teach cursive or print writing, the woman thinks that",
-                        "options": [
-                            "A. cursive writing disadvantages a certain group of children.",
-                            "B. print writing is associated with lower performance.",
-                            "C. most teachers in the UK prefer a traditional approach to handwriting."
-                        ],
-                        "answer": "A",
-                        "explanation": "Cursive writing disadvantages certain children.",
-                        "instruction": "Questions 25-30<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 27,
-                        "type": "MCQ",
-                        "text": "According to the students, what impact does poor handwriting have on exam performance?",
-                        "options": [
-                            "A. There is evidence to suggest grades are affected by poor handwriting.",
-                            "B. Neat handwriting is less important now than it used to be.",
-                            "C. Candidates write more slowly and produce shorter answers."
-                        ],
-                        "answer": "A",
-                        "explanation": "Poor handwriting leads to lower exam grades.",
-                        "instruction": "Questions 25-30<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 28,
-                        "type": "MCQ",
-                        "text": "What prediction does the man make about the future of handwriting?",
-                        "options": [
-                            "A. Touch typing will be taught before writing by hand.",
-                            "B. Children will continue to learn to write by hand.",
-                            "C. People will dislike handwriting on digital devices."
-                        ],
-                        "answer": "B",
-                        "explanation": "He predicts handwriting will continue to be taught.",
-                        "instruction": "Questions 25-30<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 29,
-                        "type": "MCQ",
-                        "text": "The woman is concerned that relying on digital devices has made it difficult for her to",
-                        "options": [
-                            "A. take detailed notes.",
-                            "B. spell and punctuate.",
-                            "C. read old documents."
-                        ],
-                        "answer": "B",
-                        "explanation": "She notes her spelling and punctuation have suffered from digital device reliance.",
-                        "instruction": "Questions 25-30<br/>Choose the correct letter, A, B or C."
-                    },
-                    {
-                        "num": 30,
-                        "type": "MCQ",
-                        "text": "How do the students feel about their own handwriting?",
-                        "options": [
-                            "A. concerned they are unable to write quickly",
-                            "B. embarrassed by comments made about it",
-                            "C. regretful that they have lost the habit"
-                        ],
-                        "answer": "C",
-                        "explanation": "Both regret losing the habit of writing by hand.",
-                        "instruction": "Questions 25-30<br/>Choose the correct letter, A, B or C."
-                    }
-                ]
+              "num": 3,
+              "type": "FILL",
+              "text": "Recommended trips: a _________ tour of the city centre (starts in Carlton Square)",
+              "answer": "walking",
+              "explanation": "A walking tour of the city centre is recommended.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
             },
             {
-                "id": 4,
-                "title": "Part 4: Birds of Prey and Communities",
-                "description": "Research on the importance of birds of prey around the Chembe Bird Sanctuary.",
-                "audio": "audio/IELTS_20_Test_4_Part4.mp3",
-                "questions": [
-                    {
-                        "num": 31,
-                        "type": "FILL",
-                        "text": "They destroy _________ and other rodents.",
-                        "answer": "rats",
-                        "explanation": "Birds of prey destroy rats.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
-                    },
-                    {
-                        "num": 32,
-                        "type": "FILL",
-                        "text": "They help to prevent farmers from being bitten by _________.",
-                        "answer": "snakes",
-                        "explanation": "They eat snakes, preventing bites.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 33,
-                        "type": "FILL",
-                        "text": "They now support the economy by encouraging _________ in the area.",
-                        "answer": "tourism",
-                        "explanation": "They support the economy by promoting tourism.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 34,
-                        "type": "FILL",
-                        "text": "accidentally killed by _________ when they are hunting or sleeping",
-                        "answer": "traffic",
-                        "explanation": "They are frequently run over by traffic.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 35,
-                        "type": "FILL",
-                        "text": "electrocution... especially at times when there is a lot of _________.",
-                        "answer": "rain",
-                        "explanation": "Wet weather/rain increases risk of power line electrocution.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 36,
-                        "type": "FILL",
-                        "text": "Local farmers may illegally shoot them or _________ them.",
-                        "answer": "poison",
-                        "explanation": "Poison is used illegally by local farmers.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 37,
-                        "type": "FILL",
-                        "text": "providing a _________ for chickens (expensive)",
-                        "answer": "building",
-                        "explanation": "A protective building for chickens is expensive.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 38,
-                        "type": "FILL",
-                        "text": "frightening birds of prey by keeping a _________",
-                        "answer": "dog",
-                        "explanation": "Keeping a dog frightens birds away.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 39,
-                        "type": "FILL",
-                        "text": "frightening birds of prey by making a _________",
-                        "answer": "noise",
-                        "explanation": "Making a loud noise also scares them.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    },
-                    {
-                        "num": 40,
-                        "type": "FILL",
-                        "text": "A _________ of methods is usually most effective.",
-                        "answer": "combination",
-                        "explanation": "A combination of techniques is most effective.",
-                        "instruction": "Questions 31-40<br/>Complete the notes below."
-                    }
-                ]
+              "num": 4,
+              "type": "FILL",
+              "text": "Recommended trips: a trip by _________ to the old fort",
+              "answer": "boat",
+              "explanation": "The trip to the old fort is by boat.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
+            },
+            {
+              "num": 5,
+              "type": "FILL",
+              "text": "Science Museum: best day to visit: _________",
+              "answer": "Tuesday",
+              "explanation": "Tuesday is the best day to visit.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
+            },
+            {
+              "num": 6,
+              "type": "FILL",
+              "text": "Science Museum: see the exhibition about _________",
+              "answer": "space",
+              "explanation": "The space exhibition is highly recommended.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
+            },
+            {
+              "num": 7,
+              "type": "FILL",
+              "text": "Clacton Market: good for _________ food",
+              "answer": "vegetarian",
+              "explanation": "The market has good vegetarian food options.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
+            },
+            {
+              "num": 8,
+              "type": "FILL",
+              "text": "Clacton Market: need to have lunch before _________ p.m.",
+              "answer": "2.30",
+              "explanation": "They must have lunch before 2.30 p.m.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
+            },
+            {
+              "num": 9,
+              "type": "FILL",
+              "text": "Theatre tickets: save up to _________ % on ticket prices",
+              "answer": "75",
+              "explanation": "Discount tickets offer savings of up to 75%.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
+            },
+            {
+              "num": 10,
+              "type": "FILL",
+              "text": "Blakewell Gardens: climb Telegraph Hill to see a view of the _________",
+              "answer": "port",
+              "explanation": "Telegraph Hill offers views of the local port.",
+              "instruction": "Questions 1-10<br/>Complete the notes below."
             }
-        ]
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Part 2: Football Stadium Tour",
+          "description": "A talk about stadium visits and the history of football.",
+          "audio": "audio/IELTS_20_Test_4_Part2.mp3",
+          "questions": [
+            {
+              "num": 11,
+              "type": "MCQ",
+              "text": "Which TWO things does the speaker say about visiting the football stadium with children? (Select 1 of 2)",
+              "options": [
+                "A. Children can get their photo taken with a football player.",
+                "B. There is a competition for children today.",
+                "C. Parents must stay with their children at all times.",
+                "D. Children will need sunhats and drinks.",
+                "E. The café has a special offer on meals for children."
+              ],
+              "answer": "B",
+              "explanation": "The speaker mentions a competition for kids and parent supervision rules.",
+              "instruction": "Questions 11-12<br/>Choose TWO letters, A-E."
+            },
+            {
+              "num": 12,
+              "type": "MCQ",
+              "text": "Which TWO things does the speaker say about visiting the football stadium with children? (Select 2 of 2)",
+              "options": [
+                "A. Children can get their photo taken with a football player.",
+                "B. There is a competition for children today.",
+                "C. Parents must stay with their children at all times.",
+                "D. Children will need sunhats and drinks.",
+                "E. The café has a special offer on meals for children."
+              ],
+              "answer": "C",
+              "explanation": "Parents must stay with children at all times.",
+              "instruction": "Questions 11-12<br/>Choose TWO letters, A-E."
+            },
+            {
+              "num": 13,
+              "type": "MCQ",
+              "text": "Which TWO features of the stadium tour are new this year? (Select 1 of 2)",
+              "options": [
+                "A. VIP tour",
+                "B. 360 cinema experience",
+                "C. audio guide",
+                "D. dressing room tour",
+                "E. tours in other languages"
+              ],
+              "answer": "A",
+              "explanation": "The VIP tour and audio guides are new additions.",
+              "instruction": "Questions 13-14<br/>Choose TWO letters, A-E."
+            },
+            {
+              "num": 14,
+              "type": "MCQ",
+              "text": "Which TWO features of the stadium tour are new this year? (Select 2 of 2)",
+              "options": [
+                "A. VIP tour",
+                "B. 360 cinema experience",
+                "C. audio guide",
+                "D. dressing room tour",
+                "E. tours in other languages"
+              ],
+              "answer": "C",
+              "explanation": "A new audio guide is introduced.",
+              "instruction": "Questions 13-14<br/>Choose TWO letters, A-E."
+            },
+            {
+              "num": 15,
+              "type": "MCQ",
+              "text": "What football history event took place in: 1870",
+              "options": [
+                "A. the introduction of pay for the players",
+                "B. a change to the design of the goal",
+                "C. the first use of lights for matches",
+                "D. the introduction of goalkeepers",
+                "E. the first international match",
+                "F. two changes to the rules of the game",
+                "G. the introduction of a fee for spectators",
+                "H. the length of a game"
+              ],
+              "answer": "D",
+              "explanation": "Goalkeepers were introduced in 1870.",
+              "instruction": "Questions 15-20<br/>Which event in the history of football in the UK took place in each of the following years? Choose SIX answers from the box and write the correct letter, A-H."
+            },
+            {
+              "num": 16,
+              "type": "MCQ",
+              "text": "What football history event took place in: 1874",
+              "options": [
+                "A. the introduction of pay for the players",
+                "B. a change to the design of the goal",
+                "C. the first use of lights for matches",
+                "D. the introduction of goalkeepers",
+                "E. the first international match",
+                "F. two changes to the rules of the game",
+                "G. the introduction of a fee for spectators",
+                "H. the length of a game"
+              ],
+              "answer": "F",
+              "explanation": "Two rule changes occurred in 1874.",
+              "instruction": "Questions 15-20<br/>Choose SIX answers from the box."
+            },
+            {
+              "num": 17,
+              "type": "MCQ",
+              "text": "What football history event took place in: 1875",
+              "options": [
+                "A. the introduction of pay for the players",
+                "B. a change to the design of the goal",
+                "C. the first use of lights for matches",
+                "D. the introduction of goalkeepers",
+                "E. the first international match",
+                "F. two changes to the rules of the game",
+                "G. the introduction of a fee for spectators",
+                "H. the length of a game"
+              ],
+              "answer": "B",
+              "explanation": "The design of the goal was modified in 1875.",
+              "instruction": "Questions 15-20<br/>Choose SIX answers from the box."
+            },
+            {
+              "num": 18,
+              "type": "MCQ",
+              "text": "What football history event took place in: 1877",
+              "options": [
+                "A. the introduction of pay for the players",
+                "B. a change to the design of the goal",
+                "C. the first use of lights for matches",
+                "D. the introduction of goalkeepers",
+                "E. the first international match",
+                "F. two changes to the rules of the game",
+                "G. the introduction of a fee for spectators",
+                "H. the length of a game"
+              ],
+              "answer": "H",
+              "explanation": "The match length was formalized in 1877.",
+              "instruction": "Questions 15-20<br/>Choose SIX answers from the box."
+            },
+            {
+              "num": 19,
+              "type": "MCQ",
+              "text": "What football history event took place in: 1878",
+              "options": [
+                "A. the introduction of pay for the players",
+                "B. a change to the design of the goal",
+                "C. the first use of lights for matches",
+                "D. the introduction of goalkeepers",
+                "E. the first international match",
+                "F. two changes to the rules of the game",
+                "G. the introduction of a fee for spectators",
+                "H. the length of a game"
+              ],
+              "answer": "C",
+              "explanation": "Floodlights were first used in 1878.",
+              "instruction": "Questions 15-20<br/>Choose SIX answers from the box."
+            },
+            {
+              "num": 20,
+              "type": "MCQ",
+              "text": "What football history event took place in: 1880",
+              "options": [
+                "A. the introduction of pay for the players",
+                "B. a change to the design of the goal",
+                "C. the first use of lights for matches",
+                "D. the introduction of goalkeepers",
+                "E. the first international match",
+                "F. two changes to the rules of the game",
+                "G. the introduction of a fee for spectators",
+                "H. the length of a game"
+              ],
+              "answer": "G",
+              "explanation": "Spectator fees were introduced in 1880.",
+              "instruction": "Questions 15-20<br/>Choose SIX answers from the box."
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Part 3: Dyspraxia and Handwriting",
+          "description": "Two students discuss research on the benefits of handwriting.",
+          "audio": "audio/IELTS_20_Test_4_Part3.mp3",
+          "questions": [
+            {
+              "num": 21,
+              "type": "MCQ",
+              "text": "Which TWO benefits for children of learning to write did both students find surprising? (Select 1 of 2)",
+              "options": [
+                "A. improved fine motor skills",
+                "B. improved memory",
+                "C. improved concentration",
+                "D. improved imagination",
+                "E. improved spatial awareness"
+              ],
+              "answer": "C",
+              "explanation": "Improved concentration and spatial awareness surprised them.",
+              "instruction": "Questions 21-22<br/>Choose TWO letters, A-E."
+            },
+            {
+              "num": 22,
+              "type": "MCQ",
+              "text": "Which TWO benefits for children of learning to write did both students find surprising? (Select 2 of 2)",
+              "options": [
+                "A. improved fine motor skills",
+                "B. improved memory",
+                "C. improved concentration",
+                "D. improved imagination",
+                "E. improved spatial awareness"
+              ],
+              "answer": "E",
+              "explanation": "Spatial awareness surprised them.",
+              "instruction": "Questions 21-22<br/>Choose TWO letters, A-E."
+            },
+            {
+              "num": 23,
+              "type": "MCQ",
+              "text": "For children with dyspraxia, which TWO problems with handwriting do the students think are easiest to solve? (Select 1 of 2)",
+              "options": [
+                "A. not spacing letters correctly",
+                "B. not writing in a straight line",
+                "C. applying too much pressure when writing",
+                "D. confusing letter shapes",
+                "E. writing very slowly"
+              ],
+              "answer": "A",
+              "explanation": "Spacing and pressure problems are the easiest to solve.",
+              "instruction": "Questions 23-24<br/>Choose TWO letters, A-E."
+            },
+            {
+              "num": 24,
+              "type": "MCQ",
+              "text": "For children with dyspraxia, which TWO problems with handwriting do the students think are easiest to solve? (Select 2 of 2)",
+              "options": [
+                "A. not spacing letters correctly",
+                "B. not writing in a straight line",
+                "C. applying too much pressure when writing",
+                "D. confusing letter shapes",
+                "E. writing very slowly"
+              ],
+              "answer": "C",
+              "explanation": "Applying too much pressure is solvable.",
+              "instruction": "Questions 23-24<br/>Choose TWO letters, A-E."
+            },
+            {
+              "num": 25,
+              "type": "MCQ",
+              "text": "What does the woman say about using laptops to teach writing to children with dyslexia?",
+              "options": [
+                "A. Children often lack motivation to learn that way.",
+                "B. Children become fluent relatively quickly.",
+                "C. Children react more positively if they make a mistake."
+              ],
+              "answer": "C",
+              "explanation": "Children with dyslexia react more positively to errors on laptops.",
+              "instruction": "Questions 25-30<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 26,
+              "type": "MCQ",
+              "text": "When discussing whether to teach cursive or print writing, the woman thinks that",
+              "options": [
+                "A. cursive writing disadvantages a certain group of children.",
+                "B. print writing is associated with lower performance.",
+                "C. most teachers in the UK prefer a traditional approach to handwriting."
+              ],
+              "answer": "A",
+              "explanation": "Cursive writing disadvantages certain children.",
+              "instruction": "Questions 25-30<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 27,
+              "type": "MCQ",
+              "text": "According to the students, what impact does poor handwriting have on exam performance?",
+              "options": [
+                "A. There is evidence to suggest grades are affected by poor handwriting.",
+                "B. Neat handwriting is less important now than it used to be.",
+                "C. Candidates write more slowly and produce shorter answers."
+              ],
+              "answer": "A",
+              "explanation": "Poor handwriting leads to lower exam grades.",
+              "instruction": "Questions 25-30<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 28,
+              "type": "MCQ",
+              "text": "What prediction does the man make about the future of handwriting?",
+              "options": [
+                "A. Touch typing will be taught before writing by hand.",
+                "B. Children will continue to learn to write by hand.",
+                "C. People will dislike handwriting on digital devices."
+              ],
+              "answer": "B",
+              "explanation": "He predicts handwriting will continue to be taught.",
+              "instruction": "Questions 25-30<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 29,
+              "type": "MCQ",
+              "text": "The woman is concerned that relying on digital devices has made it difficult for her to",
+              "options": [
+                "A. take detailed notes.",
+                "B. spell and punctuate.",
+                "C. read old documents."
+              ],
+              "answer": "B",
+              "explanation": "She notes her spelling and punctuation have suffered from digital device reliance.",
+              "instruction": "Questions 25-30<br/>Choose the correct letter, A, B or C."
+            },
+            {
+              "num": 30,
+              "type": "MCQ",
+              "text": "How do the students feel about their own handwriting?",
+              "options": [
+                "A. concerned they are unable to write quickly",
+                "B. embarrassed by comments made about it",
+                "C. regretful that they have lost the habit"
+              ],
+              "answer": "C",
+              "explanation": "Both regret losing the habit of writing by hand.",
+              "instruction": "Questions 25-30<br/>Choose the correct letter, A, B or C."
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Part 4: Birds of Prey and Communities",
+          "description": "Research on the importance of birds of prey around the Chembe Bird Sanctuary.",
+          "audio": "audio/IELTS_20_Test_4_Part4.mp3",
+          "questions": [
+            {
+              "num": 31,
+              "type": "FILL",
+              "text": "They destroy _________ and other rodents.",
+              "answer": "rats",
+              "explanation": "Birds of prey destroy rats.",
+              "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
+            },
+            {
+              "num": 32,
+              "type": "FILL",
+              "text": "They help to prevent farmers from being bitten by _________.",
+              "answer": "snakes",
+              "explanation": "They eat snakes, preventing bites.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 33,
+              "type": "FILL",
+              "text": "They now support the economy by encouraging _________ in the area.",
+              "answer": "tourism",
+              "explanation": "They support the economy by promoting tourism.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 34,
+              "type": "FILL",
+              "text": "accidentally killed by _________ when they are hunting or sleeping",
+              "answer": "traffic",
+              "explanation": "They are frequently run over by traffic.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 35,
+              "type": "FILL",
+              "text": "electrocution... especially at times when there is a lot of _________.",
+              "answer": "rain",
+              "explanation": "Wet weather/rain increases risk of power line electrocution.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 36,
+              "type": "FILL",
+              "text": "Local farmers may illegally shoot them or _________ them.",
+              "answer": "poison",
+              "explanation": "Poison is used illegally by local farmers.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 37,
+              "type": "FILL",
+              "text": "providing a _________ for chickens (expensive)",
+              "answer": "building",
+              "explanation": "A protective building for chickens is expensive.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 38,
+              "type": "FILL",
+              "text": "frightening birds of prey by keeping a _________",
+              "answer": "dog",
+              "explanation": "Keeping a dog frightens birds away.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 39,
+              "type": "FILL",
+              "text": "frightening birds of prey by making a _________",
+              "answer": "noise",
+              "explanation": "Making a loud noise also scares them.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            },
+            {
+              "num": 40,
+              "type": "FILL",
+              "text": "A _________ of methods is usually most effective.",
+              "answer": "combination",
+              "explanation": "A combination of techniques is most effective.",
+              "instruction": "Questions 31-40<br/>Complete the notes below."
+            }
+          ]
+        }
+      ]
     }
-}
+  }
 };
