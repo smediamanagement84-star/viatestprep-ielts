@@ -3511,6 +3511,598 @@ const UNIQUE_TEST_DATA = {
       "modelAnswer": "Unpaid internships have become a common feature of many industries, particularly in fields such as media, fashion, and the arts, where competition for entry-level positions is especially intense. Opinions on this practice are sharply divided: some view unpaid internships as a form of exploitation, while others regard them as a valuable, if imperfect, stepping stone into a competitive career. This essay will examine both perspectives before offering my own view.\n\nThose who consider unpaid internships exploitative point out that interns frequently perform substantive, genuinely valuable work for an organisation without receiving any financial compensation in return, effectively subsidising the employer's operations at the intern's own expense. This arrangement, critics argue, disproportionately disadvantages young people from lower-income backgrounds, who often cannot afford to work for free for weeks or months at a time, while wealthier candidates who can rely on family financial support gain a significant, and fundamentally unfair, advantage in accessing these same career-launching opportunities.\n\nOn the other hand, defenders of unpaid internships argue that they provide genuinely valuable practical experience, professional network connections, and skills that a young person entering a competitive industry might struggle to gain in any other realistic way. Some organisations, particularly smaller non-profits or independent creative studios with genuinely limited budgets, argue they simply could not afford to offer as many entry-level opportunities at all if required to pay every intern a full wage, meaning that banning unpaid internships outright could, in their view, reduce the total number of opportunities available to young people rather than improving conditions for those who do find a placement.\n\nIn my opinion, while unpaid internships can occasionally provide valuable experience, the practice as commonly implemented does raise serious fairness concerns that are difficult to dismiss. A reasonable middle path would involve requiring at least a modest living-wage stipend for internships involving substantive work, while preserving genuinely short, clearly educational placements that involve primarily observation and mentorship rather than the substantive labour many current unpaid internships actually demand of participants."
     }
   }
+},
+"u7": {
+  "title": "ViaTestPrep Original Practice Test 7",
+  "book": "Unique Test",
+  "reading": {
+    "passages": [
+      {
+        "title": "Why Migratory Birds Rarely Get Lost",
+        "text": "<h1>Why Migratory Birds Rarely Get Lost</h1>\n<p><b>A</b>&nbsp; Every autumn, an Arctic tern departing its breeding grounds in the far north sets off on a journey that will eventually take it to the edge of Antarctica and back again, a round trip of well over seventy thousand kilometres, making it the longest annual migration of any animal on Earth. What has puzzled biologists for far longer than they have been able to answer it is not simply how the bird survives such an extraordinary distance, but how it manages, time after time, to navigate accurately across open ocean with no fixed landmarks whatsoever, arriving reliably at precisely the same nesting sites year after year, often to within a matter of metres of where it nested the previous season.</p>\n<p><b>B</b>&nbsp; Early theories assumed migratory birds relied primarily on visual landmarks, following coastlines, mountain ranges, or river systems much as a human traveller without modern instruments might. While visual cues undoubtedly play some role, particularly during the final stages of a journey when a bird approaches a familiar nesting site, this explanation alone cannot account for species that cross vast stretches of featureless open ocean, far from any coastline, and still arrive at the correct destination with remarkable precision.</p>\n<p><b>C</b>&nbsp; A more complete picture began to emerge once researchers established that many migratory birds can directly detect the Earth's magnetic field, a sense entirely absent in humans. Specialised proteins found in the retinas of certain migratory bird species appear to allow them to perceive subtle variations in magnetic field strength and angle, effectively providing something akin to a built-in compass that functions regardless of visibility, cloud cover, or time of day, a capability that would explain how birds maintain a consistent heading even over open water at night.</p>\n<p><b>D</b>&nbsp; Magnetic sensing alone, however, does not fully explain how birds pinpoint a specific nesting site rather than merely maintaining a rough compass direction. Experiments involving birds displaced artificially from their normal migratory route, sometimes transported hundreds of kilometres off course by researchers before release, have shown that many species can nonetheless correct their heading and still arrive at the intended destination, suggesting they possess something closer to an internal map, not merely a directional sense, allowing them to calculate their position relative to a known destination rather than simply following a fixed compass bearing regardless of circumstance.</p>\n<p><b>E</b>&nbsp; Researchers have proposed that this mapping ability may rely on a combination of magnetic field variation across different geographic regions, distinctive celestial patterns such as the position of stars at night or the sun's position during the day, and, in coastal or lake-adjacent species, distinctive smells carried on prevailing winds that birds appear able to associate with specific locations. No single explanation has been shown to account for the navigational precision observed across all migratory species, and different species likely rely on differing combinations of these cues depending on their typical migratory route and habitat.</p>\n<p><b>F</b>&nbsp; Young birds undertaking their very first migration present a particularly striking puzzle, since many species migrate alone rather than following experienced adults capable of showing them the correct route directly. Some studies suggest young birds of certain species are born with an innate, genetically inherited sense of the general compass direction and approximate distance required for their species' migration, essentially completing their first migratory journey correctly without ever having made the trip before or having any adult present to guide them, a genuinely remarkable feat for a young animal navigating entirely by inherited instinct alone.</p>\n<p><b>G</b>&nbsp; Modern tracking technology, including miniaturised satellite tags light enough to be carried by even fairly small birds without significantly hindering flight, has allowed researchers to record migratory routes in unprecedented detail over the past two decades, revealing individual variation in routes taken between different birds of the same species that earlier, less precise tracking methods could never have detected. This granular data continues to refine scientific understanding of exactly which navigational cues matter most at each specific stage of a migratory journey, even as the fundamental mystery of how birds combine several distinct senses into a single, remarkably reliable navigational system remains only partially resolved.</p>",
+        "questions": [
+          {
+            "num": 1,
+            "type": "HEADING",
+            "text": "Paragraph A",
+            "answer": "vii",
+            "explanation": "Paragraph A asks \"how it manages, time after time, to navigate accurately across open ocean with no fixed landmarks whatsoever.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; An innate sense that guides birds on their very first journey<br/>ii.&nbsp; Technology revealing new detail about individual variation<br/>iii.&nbsp; A sense entirely absent in humans<br/>iv.&nbsp; Evidence that birds calculate position rather than follow a fixed direction<br/>v.&nbsp; An explanation that works only for part of the journey<br/>vi.&nbsp; Combining multiple cues to build an internal map<br/>vii.&nbsp; An extraordinary journey that raises a basic question<br/>viii.&nbsp; Comparing bird navigation with human seafaring traditions<br/>ix.&nbsp; Efforts to breed birds that no longer migrate",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 2,
+            "type": "HEADING",
+            "text": "Paragraph B",
+            "answer": "v",
+            "explanation": "Paragraph B states visual cues \"cannot account for species that cross vast stretches of featureless open ocean.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; An innate sense that guides birds on their very first journey<br/>ii.&nbsp; Technology revealing new detail about individual variation<br/>iii.&nbsp; A sense entirely absent in humans<br/>iv.&nbsp; Evidence that birds calculate position rather than follow a fixed direction<br/>v.&nbsp; An explanation that works only for part of the journey<br/>vi.&nbsp; Combining multiple cues to build an internal map<br/>vii.&nbsp; An extraordinary journey that raises a basic question<br/>viii.&nbsp; Comparing bird navigation with human seafaring traditions<br/>ix.&nbsp; Efforts to breed birds that no longer migrate",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 3,
+            "type": "HEADING",
+            "text": "Paragraph C",
+            "answer": "iii",
+            "explanation": "Paragraph C describes magnetic field detection as \"a sense entirely absent in humans.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; An innate sense that guides birds on their very first journey<br/>ii.&nbsp; Technology revealing new detail about individual variation<br/>iii.&nbsp; A sense entirely absent in humans<br/>iv.&nbsp; Evidence that birds calculate position rather than follow a fixed direction<br/>v.&nbsp; An explanation that works only for part of the journey<br/>vi.&nbsp; Combining multiple cues to build an internal map<br/>vii.&nbsp; An extraordinary journey that raises a basic question<br/>viii.&nbsp; Comparing bird navigation with human seafaring traditions<br/>ix.&nbsp; Efforts to breed birds that no longer migrate",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 4,
+            "type": "HEADING",
+            "text": "Paragraph D",
+            "answer": "iv",
+            "explanation": "Paragraph D states displaced birds' behaviour suggests \"they possess something closer to an internal map, not merely a directional sense.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; An innate sense that guides birds on their very first journey<br/>ii.&nbsp; Technology revealing new detail about individual variation<br/>iii.&nbsp; A sense entirely absent in humans<br/>iv.&nbsp; Evidence that birds calculate position rather than follow a fixed direction<br/>v.&nbsp; An explanation that works only for part of the journey<br/>vi.&nbsp; Combining multiple cues to build an internal map<br/>vii.&nbsp; An extraordinary journey that raises a basic question<br/>viii.&nbsp; Comparing bird navigation with human seafaring traditions<br/>ix.&nbsp; Efforts to breed birds that no longer migrate",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 5,
+            "type": "HEADING",
+            "text": "Paragraph E",
+            "answer": "vi",
+            "explanation": "Paragraph E proposes \"a combination of magnetic field variation across different geographic regions, distinctive celestial patterns such as the position of stars at night or the sun's position during the day, and, in coastal or lake-adjacent species, distinctive smells carried on prevailing winds.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; An innate sense that guides birds on their very first journey<br/>ii.&nbsp; Technology revealing new detail about individual variation<br/>iii.&nbsp; A sense entirely absent in humans<br/>iv.&nbsp; Evidence that birds calculate position rather than follow a fixed direction<br/>v.&nbsp; An explanation that works only for part of the journey<br/>vi.&nbsp; Combining multiple cues to build an internal map<br/>vii.&nbsp; An extraordinary journey that raises a basic question<br/>viii.&nbsp; Comparing bird navigation with human seafaring traditions<br/>ix.&nbsp; Efforts to breed birds that no longer migrate",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 6,
+            "type": "HEADING",
+            "text": "Paragraph F",
+            "answer": "i",
+            "explanation": "Paragraph F describes young birds \"born with an innate, genetically inherited sense of the general compass direction and approximate distance required for their species' migration.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; An innate sense that guides birds on their very first journey<br/>ii.&nbsp; Technology revealing new detail about individual variation<br/>iii.&nbsp; A sense entirely absent in humans<br/>iv.&nbsp; Evidence that birds calculate position rather than follow a fixed direction<br/>v.&nbsp; An explanation that works only for part of the journey<br/>vi.&nbsp; Combining multiple cues to build an internal map<br/>vii.&nbsp; An extraordinary journey that raises a basic question<br/>viii.&nbsp; Comparing bird navigation with human seafaring traditions<br/>ix.&nbsp; Efforts to breed birds that no longer migrate",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 7,
+            "type": "HEADING",
+            "text": "Paragraph G",
+            "answer": "ii",
+            "explanation": "Paragraph G describes tracking technology \"revealing individual variation in routes taken between different birds of the same species.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; An innate sense that guides birds on their very first journey<br/>ii.&nbsp; Technology revealing new detail about individual variation<br/>iii.&nbsp; A sense entirely absent in humans<br/>iv.&nbsp; Evidence that birds calculate position rather than follow a fixed direction<br/>v.&nbsp; An explanation that works only for part of the journey<br/>vi.&nbsp; Combining multiple cues to build an internal map<br/>vii.&nbsp; An extraordinary journey that raises a basic question<br/>viii.&nbsp; Comparing bird navigation with human seafaring traditions<br/>ix.&nbsp; Efforts to breed birds that no longer migrate",
+            "options": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi",
+              "vii",
+              "viii",
+              "ix"
+            ]
+          },
+          {
+            "num": 8,
+            "type": "TFNG",
+            "text": "Visual landmarks fully explain how migratory birds navigate across open ocean.",
+            "answer": "FALSE",
+            "explanation": "The passage states this \"explanation alone cannot account for species that cross vast stretches of featureless open ocean.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 8-9<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 9,
+            "type": "TFNG",
+            "text": "Birds displaced hundreds of kilometres off course by researchers were unable to correct their heading.",
+            "answer": "FALSE",
+            "explanation": "The passage states \"many species can nonetheless correct their heading and still arrive at the intended destination.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 8-9<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 10,
+            "type": "FILL",
+            "text": "Specialised proteins found in the retinas of certain migratory birds allow them to perceive variations in magnetic field strength and _________.",
+            "answer": "angle",
+            "explanation": "The passage states these proteins allow birds \"to perceive subtle variations in magnetic field strength and angle.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 10-11<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 11,
+            "type": "FILL",
+            "text": "Modern tracking uses miniaturised _________ tags light enough to be carried by even fairly small birds.",
+            "answer": "satellite",
+            "explanation": "The passage refers to \"miniaturised satellite tags light enough to be carried by even fairly small birds.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 10-11<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 12,
+            "type": "MCQ",
+            "text": "According to the passage, what do experiments with displaced birds suggest?",
+            "answer": "B",
+            "explanation": "The passage states this suggests \"they possess something closer to an internal map, not merely a directional sense.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Birds rely solely on visual landmarks.",
+              "B. Birds possess something closer to an internal map rather than a fixed compass bearing.",
+              "C. Birds cannot navigate at all once displaced.",
+              "D. Birds abandon migration once displaced."
+            ]
+          },
+          {
+            "num": 13,
+            "type": "MCQ",
+            "text": "What is notable about young birds undertaking their first migration, according to the passage?",
+            "answer": "B",
+            "explanation": "The passage states some species complete \"their first migratory journey correctly without ever having made the trip before or having any adult present to guide them.\"",
+            "location": "Passage 1",
+            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. They always travel with experienced adult birds.",
+              "B. Some species appear to complete their first migration correctly through innate, inherited knowledge alone.",
+              "C. They rely entirely on visual landmarks.",
+              "D. They cannot navigate accurately without satellite tracking."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "The Global Trade in Second-Hand Clothing",
+        "text": "<h1>The Global Trade in Second-Hand Clothing</h1>\n<p>A garment discarded in a wealthy country rarely simply disappears. Instead, a vast proportion of used clothing donated to charity shops and collection bins embarks on a long international journey, passing through sorting facilities, wholesale traders, and shipping containers before frequently ending up for sale in open-air markets thousands of kilometres away, most commonly across parts of West and East Africa, where a thriving second-hand clothing trade has developed over several decades, employing large numbers of people at every stage from sorting to final resale.</p>\n<p>The scale of this trade is considerable. Wealthy countries collectively export millions of tonnes of used clothing annually, a figure that has grown substantially as fast fashion has increased the sheer volume of garments produced and subsequently discarded worldwide. Only a relatively small proportion of donated clothing is actually resold within the country where it was originally donated; the remainder is typically sorted by quality and fabric type, then exported in large compressed bales to importers overseas, who in turn sell the clothing on to local traders operating market stalls.</p>\n<p>For many communities in the receiving countries, this trade provides a genuinely important source of affordable clothing and local employment. Market traders, tailors who alter and repair imported garments for individual customers, and transport workers moving bales from ports to inland markets all derive a livelihood from this trade, and the low prices charged for good-quality second-hand clothing make it accessible to households that could not otherwise afford new garments at retail prices.</p>\n<p>This trade has, however, drawn increasingly vocal criticism from a range of directions. Some local textile manufacturers in receiving countries argue that the volume of cheap imported second-hand clothing has made it extremely difficult for domestic clothing manufacturing industries to compete on price, a factor several economists cite as one contributor, among several others, to the decline of local textile manufacturing across a number of African countries in recent decades. In response, a small number of governments in the region have proposed or implemented import restrictions and tariffs on second-hand clothing specifically intended to protect domestic manufacturing, though such measures remain contested and have faced resistance from traders whose livelihoods depend directly on the existing trade.</p>\n<p>A separate concern involves the sheer quality of what is actually being exported. Traders in several receiving countries report that a meaningful proportion of imported bales contain garments of such poor quality, damaged, heavily worn, or made from cheap synthetic fabric that rapidly degrades, that they cannot realistically be resold at all, leaving traders to dispose of unsellable garments themselves, often through informal burning or dumping, since receiving countries frequently lack the large-scale, formal waste management infrastructure needed to handle this discarded material responsibly. Environmental researchers have documented significant textile waste accumulating in and around several major second-hand clothing markets, raising serious concerns about the environmental toll ultimately borne by receiving countries for a waste problem originating almost entirely in wealthier exporting nations thousands of kilometres away.</p>\n<p>Reform proposals under discussion include stricter quality standards for exported clothing bales, intended to reduce the proportion of genuinely unsellable garments included, alongside increased investment in domestic textile recycling infrastructure within receiving countries themselves, reducing reliance on informal burning or open dumping as the only practical disposal method currently available to local traders. Some campaigners in wealthier exporting countries have also called for a broader reduction in fast fashion overproduction at its source, arguing that no amount of downstream reform in receiving countries can fully offset an ever-growing volume of low-quality garments entering the global second-hand trade each year.</p>\n<p>Ultimately, the global trade in second-hand clothing illustrates a familiar and recurring pattern in international commerce: a trade that provides genuine, tangible economic benefits to some participants along its supply chain while simultaneously generating serious environmental and economic costs for others, with the overall balance of costs and benefits often falling most heavily on precisely those countries with the least influence over how the trade itself is structured or ultimately regulated.</p>",
+        "questions": [
+          {
+            "num": 14,
+            "type": "TFNG",
+            "text": "Most donated clothing is resold within the country where it was originally donated.",
+            "answer": "FALSE",
+            "explanation": "The passage states: \"Only a relatively small proportion of donated clothing is actually resold within the country where it was originally donated.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 15,
+            "type": "TFNG",
+            "text": "The second-hand clothing trade provides employment for local traders and transport workers.",
+            "answer": "TRUE",
+            "explanation": "The passage states: \"Market traders, tailors who alter and repair imported garments for individual customers, and transport workers moving bales from ports to inland markets all derive a livelihood from this trade.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 16,
+            "type": "TFNG",
+            "text": "All governments in receiving countries have banned second-hand clothing imports entirely.",
+            "answer": "FALSE",
+            "explanation": "The passage states \"a small number of governments in the region have proposed or implemented import restrictions and tariffs on second-hand clothing specifically intended to protect domestic manufacturing.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 17,
+            "type": "TFNG",
+            "text": "Some imported bales contain garments too poor in quality to be resold at all.",
+            "answer": "TRUE",
+            "explanation": "The passage states traders report bales contain garments \"of such poor quality, damaged, heavily worn, or made from cheap synthetic fabric that rapidly degrades, that they cannot realistically be resold at all.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 18,
+            "type": "TFNG",
+            "text": "Receiving countries generally have advanced, large-scale waste management infrastructure for textile waste.",
+            "answer": "FALSE",
+            "explanation": "The passage states these countries \"frequently lack the large-scale, formal waste management infrastructure needed to handle this discarded material responsibly.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 14-18<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 19,
+            "type": "FILL",
+            "text": "Donated clothing is typically sorted by quality and fabric type, then exported in large compressed _________.",
+            "answer": "bales",
+            "explanation": "The passage states clothing is \"exported in large compressed bales to importers overseas.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 20,
+            "type": "FILL",
+            "text": "Some local textile manufacturers argue cheap imports have made it difficult for domestic manufacturing to _________ on price.",
+            "answer": "compete",
+            "explanation": "The passage states imports have made it \"extremely difficult for domestic clothing manufacturing industries to compete on price.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 21,
+            "type": "FILL",
+            "text": "Unsellable garments are often disposed of through informal burning or _________.",
+            "answer": "dumping",
+            "explanation": "The passage refers to disposal \"through informal burning or dumping.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 22,
+            "type": "FILL",
+            "text": "Reform proposals include stricter _________ standards for exported clothing bales.",
+            "answer": "quality",
+            "explanation": "The passage refers to \"stricter quality standards for exported clothing bales.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 23,
+            "type": "FILL",
+            "text": "Some campaigners have called for a broader reduction in fast fashion _________ at its source.",
+            "answer": "overproduction",
+            "explanation": "The passage refers to \"a broader reduction in fast fashion overproduction at its source.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 24,
+            "type": "MCQ",
+            "text": "According to the passage, why do some governments in receiving countries restrict second-hand clothing imports?",
+            "answer": "B",
+            "explanation": "The passage states restrictions are \"specifically intended to protect domestic manufacturing.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. To increase tax revenue from tourism.",
+              "B. To protect domestic textile manufacturing industries.",
+              "C. To comply with international shipping law.",
+              "D. To reduce the price of new clothing."
+            ]
+          },
+          {
+            "num": 25,
+            "type": "MCQ",
+            "text": "What does the passage suggest about the environmental costs of the second-hand clothing trade?",
+            "answer": "C",
+            "explanation": "The passage states this raises concerns about \"the environmental toll ultimately borne by receiving countries for a waste problem originating almost entirely in wealthier exporting nations.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. They fall mainly on the exporting countries.",
+              "B. They have been fully resolved by import tariffs.",
+              "C. They fall disproportionately on receiving countries despite originating elsewhere.",
+              "D. They are no longer a significant concern for researchers."
+            ]
+          },
+          {
+            "num": 26,
+            "type": "MCQ",
+            "text": "What is the passage's overall conclusion about the global second-hand clothing trade?",
+            "answer": "A",
+            "explanation": "The passage concludes it is \"a trade that provides genuine, tangible economic benefits to some participants along its supply chain while simultaneously generating serious environmental and economic costs for others.\"",
+            "location": "Passage 2",
+            "instruction": "Questions 24-26<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. It creates real benefits for some participants alongside real costs for others.",
+              "B. It has been entirely beneficial for all parties involved.",
+              "C. It has been completely banned in most receiving countries.",
+              "D. It no longer plays any meaningful economic role."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Can Personality Really Change? New Findings from Longitudinal Studies",
+        "text": "<h1>Can Personality Really Change? New Findings from Longitudinal Studies</h1>\n<p>For much of the twentieth century, a dominant assumption within personality psychology held that adult personality traits, such as how outgoing, anxious, or conscientious a person tends to be, were essentially fixed by early adulthood and remained largely stable for the rest of a person's life. This assumption shaped how psychologists studied personality for decades, and it fed into a wider cultural belief that a person's fundamental character, once formed, is essentially fixed. Longitudinal studies tracking the same individuals over many decades have since told a more complicated and, in some ways, more encouraging story, one with genuine practical implications for anyone hoping to change aspects of their own character later in life.</p>\n<p>Large-scale longitudinal research, in which the same groups of individuals are assessed repeatedly at intervals sometimes spanning fifty years or more, has consistently found that personality traits do continue to shift meaningfully across the entire adult lifespan, not just during adolescence and early adulthood as earlier researchers had generally assumed. These changes tend to follow broadly consistent patterns across large populations, even though the specific pace and direction of change for any single individual naturally varies considerably from person to person.</p>\n<p>One of the most robust findings to emerge from this research is a general pattern researchers term the maturity principle. On average, most people become somewhat more conscientious, more emotionally stable, and more agreeable as they move through adulthood, a pattern observed with reasonable consistency across multiple different countries and cultural contexts studied by researchers, suggesting the pattern reflects something more fundamental about typical human development than any single culture's particular expectations of how adults ought to behave.</p>\n<p>Researchers have proposed several possible explanations for why personality tends to shift in this particular direction. One prominent theory holds that taking on typical adult social roles, stable employment, long-term romantic partnerships, and, for many people, raising children, actively encourages the development of traits like conscientiousness and emotional stability, since each of these roles rewards dependability and self-control while actively penalising impulsive or highly volatile behaviour over time. Under this view, personality change results substantially from the cumulative practical demands of adult life rather than from any purely internal, independent process of psychological maturation occurring regardless of a person's particular life circumstances.</p>\n<p>Not all personality change follows this broadly positive average pattern, however. A meaningful minority of individuals show little change at all over many decades, while a smaller group show change in the opposite direction from the general average trend, becoming measurably less conscientious or less emotionally stable over time, patterns some researchers have linked to major disruptive life events, including significant unemployment, family breakdown, serious illness, or profound social isolation, that can measurably reverse an individual's typical developmental trajectory rather than simply pausing it temporarily.</p>\n<p>A further complicating factor is that the specific pace of change is not constant across a person's life. Several major longitudinal studies suggest personality tends to change more noticeably during major life transitions, entering the workforce for the first time, marriage, parenthood, or retirement, than during more settled, comparatively stable periods of adult life, indicating that significant change in circumstance, rather than the simple passage of chronological time alone, may be the more important underlying driver of measurable personality change throughout adulthood.</p>\n<p>These collective findings carry meaningful practical implications well beyond academic psychology, particularly for approaches to therapy and self-directed personal development. If personality genuinely remains changeable throughout adulthood rather than being essentially fixed after a certain age, this suggests that deliberate efforts to change specific problematic traits, whether through structured therapy, sustained behavioural practice, or significant changes in life circumstances, may have a genuinely realistic prospect of success at almost any life stage, challenging the older, more deterministic assumption that a person's fundamental character is effectively fixed by early adulthood and essentially immune to later, deliberate change, an assumption the accumulated longitudinal evidence no longer appears to support.</p>",
+        "questions": [
+          {
+            "num": 27,
+            "type": "TFNG",
+            "text": "Twentieth-century psychologists generally believed adult personality traits changed dramatically throughout life.",
+            "answer": "FALSE",
+            "explanation": "The passage states the dominant assumption was that traits \"were essentially fixed by early adulthood and remained largely stable for the rest of a person's life.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 28,
+            "type": "TFNG",
+            "text": "Longitudinal studies have found personality change occurs only during adolescence.",
+            "answer": "FALSE",
+            "explanation": "The passage states traits \"continue to shift meaningfully across the entire adult lifespan, not just during adolescence and early adulthood.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 29,
+            "type": "TFNG",
+            "text": "The maturity principle describes a general tendency for people to become more conscientious and emotionally stable with age.",
+            "answer": "TRUE",
+            "explanation": "The passage states \"most people become somewhat more conscientious, more emotionally stable, and more agreeable as they move through adulthood.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 30,
+            "type": "TFNG",
+            "text": "The maturity principle has only been observed in a single country.",
+            "answer": "FALSE",
+            "explanation": "The passage states the pattern is \"observed with reasonable consistency across multiple different countries and cultural contexts.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 31,
+            "type": "TFNG",
+            "text": "All individuals show exactly the same pattern and pace of personality change.",
+            "answer": "FALSE",
+            "explanation": "The passage states \"the specific pace and direction of change for any single individual naturally varies considerably from person to person.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 32,
+            "type": "TFNG",
+            "text": "Major disruptive life events have been linked to personality change in the opposite direction from the general average trend.",
+            "answer": "TRUE",
+            "explanation": "The passage links such change to \"major disruptive life events, including significant unemployment, family breakdown, serious illness, or profound social isolation.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 33,
+            "type": "TFNG",
+            "text": "Personality change happens at a perfectly constant rate throughout adult life.",
+            "answer": "FALSE",
+            "explanation": "The passage states \"the specific pace of change is not constant across a person's life.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "num": 34,
+            "type": "FILL",
+            "text": "Large-scale longitudinal research assesses the same groups of individuals repeatedly at intervals sometimes spanning fifty _________ or more.",
+            "answer": "years",
+            "explanation": "The passage states assessments occur \"at intervals sometimes spanning fifty years or more.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 35,
+            "type": "FILL",
+            "text": "Typical adult social roles reward dependability and self-control while penalising _________ or highly volatile behaviour.",
+            "answer": "impulsive",
+            "explanation": "The passage states such roles penalise \"impulsive or highly volatile behaviour.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 36,
+            "type": "FILL",
+            "text": "Personality tends to change more noticeably during major life _________ than during stable periods.",
+            "answer": "transitions",
+            "explanation": "The passage states \"personality tends to change more noticeably during major life transitions, entering the workforce for the first time, marriage, parenthood, or retirement, than during more settled, comparatively stable periods of adult life.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 37,
+            "type": "FILL",
+            "text": "These findings carry meaningful practical implications for approaches to therapy and self-directed personal _________.",
+            "answer": "development",
+            "explanation": "The passage refers to implications \"for approaches to therapy and self-directed personal development.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 34-37<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+          },
+          {
+            "num": 38,
+            "type": "MCQ",
+            "text": "According to the passage, what is one proposed explanation for the maturity principle?",
+            "answer": "A",
+            "explanation": "The passage states adult roles \"actively encourages the development of traits like conscientiousness and emotional stability.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Adult social roles reward dependability and penalise impulsive behaviour.",
+              "B. Personality is entirely determined by genetics.",
+              "C. Personality change only occurs in a single culture.",
+              "D. Retirement has no effect on personality."
+            ]
+          },
+          {
+            "num": 39,
+            "type": "MCQ",
+            "text": "What does the passage suggest about individuals experiencing major disruptive life events?",
+            "answer": "C",
+            "explanation": "The passage states such events \"can measurably reverse an individual's typical developmental trajectory rather than simply pausing it temporarily.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Their personality remains completely unaffected.",
+              "B. They always become more conscientious as a result.",
+              "C. Their personality trajectory can measurably reverse rather than merely pause.",
+              "D. They are excluded from longitudinal studies."
+            ]
+          },
+          {
+            "num": 40,
+            "type": "MCQ",
+            "text": "What is the passage's overall conclusion about the possibility of changing one's personality?",
+            "answer": "B",
+            "explanation": "The passage concludes deliberate efforts to change traits \"may have a genuinely realistic prospect of success at almost any life stage.\"",
+            "location": "Passage 3",
+            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "options": [
+              "A. Personality is fixed by early adulthood and cannot be changed.",
+              "B. Deliberate efforts to change personality may realistically succeed at almost any life stage.",
+              "C. Only therapy can produce any meaningful personality change.",
+              "D. Personality change is purely random and cannot be studied."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "writing": {
+    "task1": {
+      "prompt": "The bar chart below shows the percentage of the urban population using bicycles as their main method of commuting in four cities in 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "image": "<img src=\"images/writing_unique7_p1.png\" class=\"max-w-full h-auto mx-auto rounded-xl shadow-lg border border-white/10 bg-white\" alt=\"Writing Task 1 Chart\" />",
+      "modelAnswer": "The bar chart illustrates the percentage of the urban population using bicycles as their main method of commuting in four cities in 2023.\n\nOverall, cycling rates varied dramatically between the four cities, with the two European cities recording far higher rates of bicycle commuting than either Tokyo or Los Angeles.\n\nAmsterdam recorded the highest proportion of bicycle commuters, at 38%, closely followed by Copenhagen at 35%. These two cities were clearly in a category of their own, with more than a third of their urban populations relying on cycling as their main commute method, more than double the proportion recorded in any other city shown.\n\nTokyo recorded a considerably lower figure of 14%, still a meaningful proportion of commuters but far below the levels seen in Amsterdam and Copenhagen. Los Angeles recorded by far the lowest rate of bicycle commuting, at just 2%, a figure roughly nineteen times lower than Amsterdam's.\n\nIn summary, bicycle commuting rates were highest by a wide margin in the two European cities, considerably lower in Tokyo, and lowest of all in Los Angeles, illustrating substantial variation in cycling culture and infrastructure between the four cities compared."
+    },
+    "task2": {
+      "prompt": "Some people think social media has had a mostly negative impact on society, while others believe its effects are mostly positive. Discuss both views and give your own opinion.",
+      "modelAnswer": "Social media has become deeply embedded in daily life for billions of people worldwide, and opinion remains sharply divided over whether its overall impact on society has been positive or negative. This essay will examine both perspectives before presenting my own view.\n\nThose who view social media's impact positively point to its unprecedented ability to connect people across vast distances, allowing families and friends separated by geography to maintain close relationships far more easily than previous generations could. Social media has also given a public voice to groups and causes that previously struggled to gain mainstream media attention, enabling rapid organisation around social and political movements and allowing ordinary individuals to reach large audiences without needing access to traditional media gatekeepers such as newspapers or television broadcasters.\n\nOn the other hand, critics point to a growing body of research linking heavy social media use, particularly among teenagers, to increased rates of anxiety, depression, and poor sleep, effects researchers attribute partly to constant social comparison and partly to the deliberately engineered, attention-capturing design of many popular platforms. Critics also point to social media's well-documented role in accelerating the spread of misinformation, since sensational or emotionally provocative content often spreads far more quickly than carefully verified information, with serious real-world consequences during public health emergencies, elections, and periods of social unrest.\n\nIn my opinion, social media itself is best understood as a powerful, largely neutral tool whose ultimate impact depends heavily on how it is designed, regulated, and used, rather than being inherently positive or negative in itself. Meaningful reform, including stronger content moderation, greater platform transparency about how algorithms select and prioritise content, and improved digital literacy education in schools, could help preserve social media's genuine connective and organisational benefits while meaningfully reducing its documented harms, particularly among younger and more psychologically vulnerable users."
+    }
+  }
 }
 };
 
