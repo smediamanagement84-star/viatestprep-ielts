@@ -19,7 +19,7 @@ const UNIQUE_TEST_DATA = {
               "type": "HEADING",
               "text": "Paragraph A",
               "answer": "iii",
-              "explanation": "Paragraph A introduces the core problem it addresses: \"the sun does not always shine and the wind does not always blow, yet demand for power rarely lets up,\" a mismatch that chemical batteries alone struggle to solve.",
+              "explanation": "Paragraph A introduces the core problem it addresses: \"the sun does not always shine and the wind does not always blow, yet demand for power rarely lets up.\"",
               "location": "Passage 1",
               "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A cheaper way to build on existing infrastructure<br/>ii.&nbsp; An idea with surprisingly old origins<br/>iii.&nbsp; Why chemical storage alone cannot meet demand<br/>iv.&nbsp; The basic mechanics of turning weight into power<br/>v.&nbsp; The practical benefits of storing energy mechanically<br/>vi.&nbsp; Obstacles that limit wider adoption<br/>vii.&nbsp; A shared vision for the technology's future role<br/>viii.&nbsp; The environmental cost of battery manufacturing<br/>ix.&nbsp; Government subsidies for renewable energy",
               "options": ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix"]
@@ -29,7 +29,7 @@ const UNIQUE_TEST_DATA = {
               "type": "HEADING",
               "text": "Paragraph B",
               "answer": "iv",
-              "explanation": "Paragraph B explains how the technology works: \"surplus power is used to hoist an extremely heavy weight upward... the weight is released and allowed to descend slowly, its motion driving a generator.\"",
+              "explanation": "Paragraph B explains how the technology works: \"surplus power is used to hoist an extremely heavy weight upward.\"",
               "location": "Passage 1",
               "instruction": "Questions 1-7<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A cheaper way to build on existing infrastructure<br/>ii.&nbsp; An idea with surprisingly old origins<br/>iii.&nbsp; Why chemical storage alone cannot meet demand<br/>iv.&nbsp; The basic mechanics of turning weight into power<br/>v.&nbsp; The practical benefits of storing energy mechanically<br/>vi.&nbsp; Obstacles that limit wider adoption<br/>vii.&nbsp; A shared vision for the technology's future role<br/>viii.&nbsp; The environmental cost of battery manufacturing<br/>ix.&nbsp; Government subsidies for renewable energy",
               "options": ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix"]
@@ -89,7 +89,7 @@ const UNIQUE_TEST_DATA = {
               "type": "TFNG",
               "text": "Lithium-ion batteries typically last longer than the mechanical components of a gravity battery.",
               "answer": "FALSE",
-              "explanation": "The passage states the mechanical components \"can be expected to last three to five decades... roughly double the working life of a typical lithium-ion installation.\"",
+              "explanation": "The passage states the mechanical components \"can be expected to last three to five decades with only routine maintenance, roughly double the working life of a typical lithium-ion installation.\"",
               "location": "Passage 1",
               "instruction": "Questions 8-9<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": ["TRUE", "FALSE", "NOT GIVEN"]
@@ -129,7 +129,7 @@ const UNIQUE_TEST_DATA = {
               "answer": "B",
               "explanation": "The passage states: \"Gravity batteries store far less energy for their size and weight than chemical batteries do, so a very large mass or a very tall structure is needed to store even a modest amount of electricity.\"",
               "location": "Passage 1",
-              "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+              "instruction": "Question 12<br/>Choose the correct letter, A, B, C or D.",
               "options": [
                 "A. To reduce the cost of construction.",
                 "B. Because they store less energy per unit of size than chemical batteries.",
@@ -139,18 +139,13 @@ const UNIQUE_TEST_DATA = {
             },
             {
               "num": 13,
-              "type": "MCQ",
-              "text": "What do most experts believe about the future role of gravity batteries?",
-              "answer": "C",
-              "explanation": "The passage states: \"Most experts do not see gravity batteries as a wholesale replacement for chemical storage, but rather as a complementary technology.\"",
+              "type": "MATCHING_INFO",
+              "text": "a comparison between the modest weights that once powered a single clock face and the far larger weights now proposed by modern engineers",
+              "answer": "F",
+              "explanation": "Paragraph F states \"clock towers built centuries earlier relied on slowly descending weights to power their mechanisms\" and contrasts this with \"modern engineers are now proposing weights of many thousands of tonnes, controlled by computerised motors capable of responding to grid signals within moments, rather than the modest weights that once powered a single clock face or mine lift.\"",
               "location": "Passage 1",
-              "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
-              "options": [
-                "A. They will completely replace lithium-ion batteries.",
-                "B. They will be used only in Europe and Africa.",
-                "C. They will play a complementary role alongside chemical storage.",
-                "D. They will be abandoned in favour of pumped-hydro storage."
-              ]
+              "instruction": "Question 13<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-G.",
+              "options": ["A", "B", "C", "D", "E", "F", "G"]
             }
           ]
         },
@@ -173,7 +168,7 @@ const UNIQUE_TEST_DATA = {
               "type": "TFNG",
               "text": "Mycorrhizal fungi take sugars from tree roots without providing anything in return.",
               "answer": "FALSE",
-              "explanation": "The passage states the relationship is an exchange: \"in exchange for a steady supply of sugars produced by the tree... the fungus extends the root system's effective surface area many times over.\"",
+              "explanation": "The passage states the relationship is an exchange: \"in exchange for a steady supply of sugars produced by the tree through photosynthesis, the fungus extends the root system's effective surface area many times over.\"",
               "location": "Passage 2",
               "instruction": "Questions 14-16<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": ["TRUE", "FALSE", "NOT GIVEN"]
@@ -226,33 +221,23 @@ const UNIQUE_TEST_DATA = {
             },
             {
               "num": 21,
-              "type": "MCQ",
-              "text": "According to the passage, what may explain how neighbouring trees respond to an insect attack before insects reach them?",
-              "answer": "B",
-              "explanation": "The passage states: \"distress signals, or the chemicals themselves, are able to travel through the shared fungal threads, effectively giving the wider forest advance warning of a threat.\"",
+              "type": "MATCHING_FEATURES",
+              "text": "Receives a share of carbon from its neighbour during the summer months.",
+              "answer": "A",
+              "explanation": "The passage states Douglas fir seedlings \"have been shown to receive a measurable share of their carbon from the birch during the summer months.\"",
               "location": "Passage 2",
-              "instruction": "Questions 21-23<br/>Choose the correct letter, A, B, C or D.",
-              "options": [
-                "A. The trees release oxygen that repels insects.",
-                "B. Distress signals or chemicals travel through shared fungal threads.",
-                "C. Insects avoid areas with large hub trees.",
-                "D. Neighbouring trees grow thicker bark automatically."
-              ]
+              "instruction": "Questions 21-22<br/>Look at the following statements and the list of entities below.<br/>Match each statement with the correct entity, A or B.<br/><br/><b>List of Entities</b><br/>A.&nbsp; Douglas fir seedling<br/>B.&nbsp; Paper birch tree",
+              "options": ["A", "B"]
             },
             {
               "num": 22,
-              "type": "MCQ",
-              "text": "What change in forestry practice does the passage describe?",
-              "answer": "C",
-              "explanation": "The passage states: \"A small but growing number of forestry programmes now recommend deliberately leaving a proportion of large, well-connected trees standing during a harvest.\"",
+              "type": "MATCHING_FEATURES",
+              "text": "Receives carbon from its neighbour in autumn, once its own leaves have been shed.",
+              "answer": "B",
+              "explanation": "The passage states they \"reverse the flow in autumn once the birch has shed its leaves and the evergreen fir becomes the main photosynthesising partner in the pair.\"",
               "location": "Passage 2",
-              "instruction": "Questions 21-23<br/>Choose the correct letter, A, B, C or D.",
-              "options": [
-                "A. Banning all logging in old forests.",
-                "B. Removing hub trees first to protect seedlings.",
-                "C. Deliberately leaving some large, connected trees standing during harvesting.",
-                "D. Replanting only a single tree species after logging."
-              ]
+              "instruction": "Questions 21-22<br/>Look at the following statements and the list of entities below.<br/>Match each statement with the correct entity, A or B.<br/><br/><b>List of Entities</b><br/>A.&nbsp; Douglas fir seedling<br/>B.&nbsp; Paper birch tree",
+              "options": ["A", "B"]
             },
             {
               "num": 23,
@@ -261,7 +246,7 @@ const UNIQUE_TEST_DATA = {
               "answer": "B",
               "explanation": "The passage states: \"most experiments demonstrating carbon or chemical transfer have so far been conducted on a relatively small scale, often involving only a handful of trees.\"",
               "location": "Passage 2",
-              "instruction": "Questions 21-23<br/>Choose the correct letter, A, B, C or D.",
+              "instruction": "Question 23<br/>Choose the correct letter, A, B, C or D.",
               "options": [
                 "A. That the fungal connections themselves do not really exist.",
                 "B. That most experiments have involved only a small number of trees.",
@@ -271,13 +256,13 @@ const UNIQUE_TEST_DATA = {
             },
             {
               "num": 24,
-              "type": "TFNG",
+              "type": "YNNG",
               "text": "Some scientists dispute whether underground fungal connections between trees actually exist.",
-              "answer": "FALSE",
-              "explanation": "The passage states: \"few dispute that the underground fungal connections themselves are real and widespread; the debate concerns... how much influence they exert.\"",
+              "answer": "NO",
+              "explanation": "The passage states: \"few dispute that the underground fungal connections themselves are real and widespread; the debate concerns not their existence, but exactly how much influence they exert.\"",
               "location": "Passage 2",
-              "instruction": "Questions 24-25<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
-              "options": ["TRUE", "FALSE", "NOT GIVEN"]
+              "instruction": "Questions 24-25<br/>Do the following statements agree with the claims of the writer?<br/>Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if there is no information on this",
+              "options": ["YES", "NO", "NOT GIVEN"]
             },
             {
               "num": 25,
@@ -286,7 +271,7 @@ const UNIQUE_TEST_DATA = {
               "answer": "TRUE",
               "explanation": "The passage states the fungus improves the tree's \"ability to draw up scarce nutrients from the soil, particularly phosphorus and nitrogen.\"",
               "location": "Passage 2",
-              "instruction": "Questions 24-25<br/>Do the following statements agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+              "instruction": "Question 25<br/>Does the following statement agree with the information given in the passage?<br/>Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": ["TRUE", "FALSE", "NOT GIVEN"]
             },
             {
@@ -306,7 +291,7 @@ const UNIQUE_TEST_DATA = {
           "questions": [
             {
               "num": 27,
-              "type": "TFNG",
+              "type": "YNNG",
               "text": "The writer believes traffic congestion has no real economic cost.",
               "answer": "NO",
               "explanation": "The passage states congestion costs \"tens of billions of dollars every year in lost productivity, wasted fuel, and delayed deliveries.\"",
@@ -316,7 +301,7 @@ const UNIQUE_TEST_DATA = {
             },
             {
               "num": 28,
-              "type": "TFNG",
+              "type": "YNNG",
               "text": "According to the passage, congestion pricing has been shown to reduce traffic volumes in cities that use it.",
               "answer": "YES",
               "explanation": "The passage states \"traffic volumes within charging zones have typically fallen by between ten and thirty percent within the first few years of implementation.\"",
@@ -326,7 +311,7 @@ const UNIQUE_TEST_DATA = {
             },
             {
               "num": 29,
-              "type": "TFNG",
+              "type": "YNNG",
               "text": "The writer suggests that revenue from congestion charges is mainly kept as general government income rather than reinvested.",
               "answer": "NO",
               "explanation": "The passage states cities \"report using a substantial share of the income to fund improvements to bus services, cycling infrastructure, or public transport subsidies.\"",
@@ -384,7 +369,7 @@ const UNIQUE_TEST_DATA = {
             },
             {
               "num": 34,
-              "type": "TFNG",
+              "type": "YNNG",
               "text": "Delivery vehicles and buses are always charged the full congestion fee in every scheme discussed.",
               "answer": "NO",
               "explanation": "The passage states these vehicles \"are frequently exempted from the charge or discounted.\"",
@@ -394,7 +379,7 @@ const UNIQUE_TEST_DATA = {
             },
             {
               "num": 35,
-              "type": "TFNG",
+              "type": "YNNG",
               "text": "The writer believes a single city's congestion pricing results can be reliably applied to predict outcomes in any other city.",
               "answer": "NO",
               "explanation": "The passage states researchers \"caution against treating any single city's results as directly applicable elsewhere.\"",
@@ -428,7 +413,7 @@ const UNIQUE_TEST_DATA = {
             },
             {
               "num": 38,
-              "type": "TFNG",
+              "type": "YNNG",
               "text": "The passage indicates that interest in congestion pricing is decreasing as more evidence becomes available.",
               "answer": "NO",
               "explanation": "The passage states \"interest in congestion pricing continues to grow, and several other major cities are now studying whether to introduce similar schemes.\"",
@@ -447,7 +432,7 @@ const UNIQUE_TEST_DATA = {
             },
             {
               "num": 40,
-              "type": "TFNG",
+              "type": "YNNG",
               "text": "There is now reasonably strong evidence that congestion pricing can reduce traffic.",
               "answer": "YES",
               "explanation": "The passage states this is \"a point on which there is now reasonably strong evidence.\"",

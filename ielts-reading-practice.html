@@ -376,12 +376,19 @@
         qBox.appendChild(textEl);
 
         let answerHtml = '';
-        if (q.type === 'TFNG') {
+        if (q.type === 'TFNG' || q.type === 'YNNG') {
+          // YNNG (Yes/No/Not Given, for writer's-views passages) renders
+          // identically to TFNG (True/False/Not Given, for factual passages) -
+          // the button labels come straight from q.options either way.
           const selected = userAnswers[q.num] || '';
           answerHtml = `<div class="tfng-row">${q.options.map(opt => `
             <button onclick="selectOption(${q.num}, '${opt}')" class="tfng-btn ${selected === opt ? 'selected' : ''}">${opt}</button>
           `).join('')}</div>`;
-        } else if (q.type === 'MCQ') {
+        } else if (q.type === 'MCQ' || q.type === 'ENDINGS') {
+          // ENDINGS (Matching Sentence Endings) is rendered identically to
+          // MCQ - a stem followed by lettered options - since the only
+          // difference is that the options are sentence-completion fragments
+          // rather than full standalone statements.
           const selected = userAnswers[q.num] || '';
           answerHtml = `<div class="mcq-options">${q.options.map(opt => {
             const dotIdx = opt.indexOf('.');
@@ -397,13 +404,14 @@
         } else if (q.type === 'FILL') {
           const val = userAnswers[q.num] || '';
           answerHtml = `<input type="text" oninput="handleInput(${q.num}, this.value)" class="input-fill" value="${escapeHtml(val)}" placeholder="Type your answer here..." />`;
-        } else if (q.type === 'HEADING') {
-          // Matching Headings: q.options is just the bare roman numerals
-          // (i, ii, iii...) for this one paragraph's button row - the actual
-          // heading text for every numeral is shown once, above the whole
-          // question group, via the shared instruction box (see
-          // lastInstruction dedup above) rather than repeated on every
-          // question.
+        } else if (q.type === 'HEADING' || q.type === 'MATCHING_INFO' || q.type === 'MATCHING_FEATURES') {
+          // These three share one bare-letter-button UI: Matching Headings
+          // uses roman numerals (i, ii, iii...), Matching Information uses
+          // paragraph letters (A-G), Matching Features uses a short fixed
+          // list of feature letters (A-E) - in every case the full option
+          // list (headings / features) is shown once via the shared
+          // instruction box (see lastInstruction dedup above), and each
+          // question here just needs its own bare answer buttons.
           const selected = userAnswers[q.num] || '';
           answerHtml = `<div class="tfng-row">${q.options.map(opt => `
             <button onclick="selectOption(${q.num}, '${opt}')" class="tfng-btn ${selected === opt ? 'selected' : ''}">${opt}</button>
