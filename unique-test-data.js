@@ -4814,7 +4814,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "A",
             "explanation": "The passage states \"muscles themselves possess no capacity to store memories in any meaningful sense at all.\"",
             "location": "Passage 1",
-            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
+            "instruction": "Question 12<br/>Choose the correct letter, A, B, C or D.",
             "options": [
               "A. Because muscles have no capacity to store memories in any meaningful sense.",
               "B. Because muscles never grow larger through training.",
@@ -4824,18 +4824,13 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 13,
-            "type": "MCQ",
-            "text": "What does the passage conclude about the two mechanisms underlying muscle memory?",
-            "answer": "B",
-            "explanation": "The passage states \"Two genuinely distinct biological mechanisms, refined neural pathways governing coordinated movement, and retained cellular machinery within muscle fibres themselves, both appear to contribute independently to the same familiar, everyday experience.\"",
+            "type": "MATCHING_INFO",
+            "text": "a statement that two entirely distinct biological mechanisms each contribute independently to the same everyday experience",
+            "answer": "G",
+            "explanation": "Paragraph G states \"Two genuinely distinct biological mechanisms, refined neural pathways governing coordinated movement, and retained cellular machinery within muscle fibres themselves, both appear to contribute independently to the same familiar, everyday experience.\"",
             "location": "Passage 1",
-            "instruction": "Questions 12-13<br/>Choose the correct letter, A, B, C or D.",
-            "options": [
-              "A. Only one of the two mechanisms has been confirmed by research.",
-              "B. Both mechanisms appear to contribute independently to the same everyday experience.",
-              "C. The neural mechanism has been shown to be irrelevant.",
-              "D. The cellular mechanism only applies to elite athletes."
-            ]
+            "instruction": "Question 13<br/>Reading Passage 1 has seven paragraphs, A-G.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-G.",
+            "options": ["A", "B", "C", "D", "E", "F", "G"]
           }
         ]
       },
@@ -4920,7 +4915,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "priming",
             "explanation": "The passage names this phenomenon \"thermal priming.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 19-21<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 20,
@@ -4929,7 +4924,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "populations",
             "explanation": "The passage refers to breeding \"corals sourced specifically from unusually heat-tolerant natural populations.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 19-21<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 21,
@@ -4938,25 +4933,27 @@ const UNIQUE_TEST_DATA = {
             "answer": "laboratory",
             "explanation": "The passage refers to \"carefully controlled, gradually increasing heat stress under laboratory conditions.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 19-21<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
           },
           {
             "num": 22,
-            "type": "FILL",
-            "text": "Critics point out that the pace of ocean warming may be outstripping the rate of natural coral _________.",
-            "answer": "adaptation",
+            "type": "ENDINGS",
+            "text": "Critics point out that the pace of ocean warming may be outstripping the rate of",
+            "answer": "C",
             "explanation": "The passage states critics worry \"the pace of ongoing ocean warming may well be outstripping the rate at which natural coral adaptation, or even accelerated selective breeding programmes, can realistically keep pace.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 22-23<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F.<br/><br/><b>List of Endings</b><br/>A.&nbsp; ocean acidification and coastal pollution alone<br/>B.&nbsp; global agreement on emissions targets<br/>C.&nbsp; natural coral adaptation or accelerated selective breeding programmes<br/>D.&nbsp; algae reproduction in cooler reef systems<br/>E.&nbsp; new marine protected area designations<br/>F.&nbsp; additional time to survive, though not a substitute for reducing emissions",
+            "options": ["A", "B", "C", "D", "E", "F"]
           },
           {
             "num": 23,
-            "type": "FILL",
-            "text": "Assisted evolution programmes may help buy coral reefs additional _________ to survive.",
-            "answer": "time",
-            "explanation": "The passage states such programmes \"may meaningfully help buy coral reefs additional time to survive.\"",
+            "type": "ENDINGS",
+            "text": "Assisted evolution and selective breeding programmes may meaningfully help buy coral reefs",
+            "answer": "F",
+            "explanation": "The passage states such programmes \"may meaningfully help buy coral reefs additional time to survive,\" but \"cannot substitute entirely for addressing the fundamental underlying cause of reef decline.\"",
             "location": "Passage 2",
-            "instruction": "Questions 19-23<br/>Complete the sentences below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer."
+            "instruction": "Questions 22-23<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F.<br/><br/><b>List of Endings</b><br/>A.&nbsp; ocean acidification and coastal pollution alone<br/>B.&nbsp; global agreement on emissions targets<br/>C.&nbsp; natural coral adaptation or accelerated selective breeding programmes<br/>D.&nbsp; algae reproduction in cooler reef systems<br/>E.&nbsp; new marine protected area designations<br/>F.&nbsp; additional time to survive, though not a substitute for reducing emissions",
+            "options": ["A", "B", "C", "D", "E", "F"]
           },
           {
             "num": 24,
@@ -5145,33 +5142,23 @@ const UNIQUE_TEST_DATA = {
           },
           {
             "num": 38,
-            "type": "MCQ",
-            "text": "According to the passage, why do advocates support germline editing under controlled circumstances?",
+            "type": "MATCHING_FEATURES",
+            "text": "Argue that the technology could eventually eliminate devastating inherited genetic diseases entirely from a family line.",
             "answer": "A",
-            "explanation": "The passage states advocates argue it \"could eventually eliminate devastating inherited genetic diseases entirely from a family line.\"",
+            "explanation": "The passage states advocates argue germline editing \"could eventually eliminate devastating inherited genetic diseases entirely from a family line.\"",
             "location": "Passage 3",
-            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
-            "options": [
-              "A. It could eliminate devastating inherited genetic diseases from a family line permanently.",
-              "B. It has no technical risks whatsoever.",
-              "C. It is currently legal in every country.",
-              "D. It requires no embryo to ever be edited."
-            ]
+            "instruction": "Questions 38-39<br/>Look at the following statements and the list of groups below.<br/>Match each statement with the correct group, A or B.<br/><br/><b>List of Groups</b><br/>A.&nbsp; Advocates of germline editing<br/>B.&nbsp; Critics of germline editing",
+            "options": ["A", "B"]
           },
           {
             "num": 39,
-            "type": "MCQ",
-            "text": "What is a key ethical concern critics raise about germline editing, according to the passage?",
-            "answer": "C",
+            "type": "MATCHING_FEATURES",
+            "text": "Argue that an embryo cannot itself provide informed consent to a permanent genetic modification affecting future generations.",
+            "answer": "B",
             "explanation": "The passage states critics argue \"an embryo obviously cannot itself provide informed consent to a permanent genetic modification.\"",
             "location": "Passage 3",
-            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
-            "options": [
-              "A. It is too expensive for most hospitals to perform.",
-              "B. It has never been attempted in any country.",
-              "C. An embryo cannot provide informed consent to a permanent modification affecting future generations.",
-              "D. It only affects somatic cells, not reproductive cells."
-            ]
+            "instruction": "Questions 38-39<br/>Look at the following statements and the list of groups below.<br/>Match each statement with the correct group, A or B.<br/><br/><b>List of Groups</b><br/>A.&nbsp; Advocates of germline editing<br/>B.&nbsp; Critics of germline editing",
+            "options": ["A", "B"]
           },
           {
             "num": 40,
@@ -5180,7 +5167,7 @@ const UNIQUE_TEST_DATA = {
             "answer": "B",
             "explanation": "The passage states most countries \"have moved to explicitly prohibit reproductive germline editing outright,\" while permitting only non-implanted research edits, and whether this consensus persists \"remains a genuinely open and actively contested question.\"",
             "location": "Passage 3",
-            "instruction": "Questions 38-40<br/>Choose the correct letter, A, B, C or D.",
+            "instruction": "Question 40<br/>Choose the correct letter, A, B, C or D.",
             "options": [
               "A. It has been permanently and universally resolved in favour of permitting the practice.",
               "B. Most countries prohibit reproductive use while the long-term regulatory consensus remains open to future change.",
