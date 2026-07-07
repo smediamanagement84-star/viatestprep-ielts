@@ -99,6 +99,38 @@
     .tfng-btn:hover { border-color: var(--accent); }
     .tfng-btn.selected { background: var(--accent); border-color: var(--accent); color: #fff; }
 
+    /* IELTS Mirror Enhancement Styles */
+    .timer-pill.timer-flash {
+      animation: ielts-flash-red 1s infinite !important;
+    }
+    @keyframes ielts-flash-red {
+      0%, 100% { background-color: #f6e9ea; border-color: rgba(122,35,49,.18); color: #7a2331; }
+      50% { background-color: #7a2331; border-color: #7a2331; color: #ffffff; }
+    }
+    mark.ielts-highlight {
+      background-color: #fff59d !important;
+      color: #000000 !important;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    .heading-chip {
+      user-select: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .heading-chip:active {
+      cursor: grabbing;
+      transform: scale(0.96);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    .heading-drop-slot {
+      transition: background-color 0.2s, border-color 0.2s;
+    }
+    .heading-drop-slot.drag-over {
+      background-color: #e0f2f1 !important;
+      border-color: #00796b !important;
+      color: #00796b !important;
+    }
+
     .mcq-options { display: flex; flex-direction: column; gap: 7px; }
     .mcq-option { display: flex; align-items: flex-start; gap: 10px; padding: 9px 12px; border-radius: 8px; border: 1.5px solid var(--rule); cursor: pointer; font-size: 13px; color: var(--ink-soft); font-family: "Lora", serif; transition: all .15s; }
     .mcq-option:hover { background: var(--accent-soft); border-color: rgba(122,35,49,.3); }
@@ -310,9 +342,28 @@
       const s = Math.abs(timeRemaining) % 60;
       const timerText = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
       const timerDisplay = document.getElementById('timerText');
+      const timerPill = timerDisplay.parentElement;
       timerDisplay.textContent = timerText;
-      if (!countUp && timeRemaining < 300) {
-        timerDisplay.parentElement.style.color = '#8a2c1f';
+      
+      if (!countUp) {
+        if (timeRemaining <= 300) {
+          timerPill.className = 'timer-pill timer-flash';
+          timerPill.style.backgroundColor = '';
+          timerPill.style.borderColor = '';
+          timerPill.style.color = '';
+        } else if (timeRemaining <= 600) {
+          timerPill.className = 'timer-pill';
+          timerPill.style.backgroundColor = '#fff3e0';
+          timerPill.style.borderColor = '#ffe0b2';
+          timerPill.style.color = '#e65100';
+          timerDisplay.style.color = '#e65100';
+        } else {
+          timerPill.className = 'timer-pill';
+          timerPill.style.backgroundColor = '';
+          timerPill.style.borderColor = '';
+          timerPill.style.color = '';
+          timerDisplay.style.color = '';
+        }
       }
     }
 
@@ -325,9 +376,178 @@
       setTimeout(() => scrollToQuestion(currentQuestionNum), 100);
     }
 
+    // Highlighting functionality
+    let highlightsStorage = {};
+    document.addEventListener('DOMContentLoaded', () => {
+      const passageContent = document.getElementById('passageContent');
+      
+      // Floating highlighter menu
+      const floatMenu = document.createElement('div');
+      floatMenu.id = 'ielts-highlighter-menu';
+      floatMenu.style.cssText = 'position: absolute; display: none; background: var(--paper); border: 1.5px solid var(--accent); border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000; padding: 4px; gap: 4px;';
+      floatMenu.innerHTML = `
+        <button id="btn-highlight-yellow" style="padding: 4px 10px; background: #fffde7; border: 1px solid #fdd835; border-radius: 4px; font-size: 11px; font-weight: 700; cursor: pointer; color: #000; font-family: \'Inter\', sans-serif;">Highlight</button>
+        <button id="btn-clear-highlight" style="padding: 4px 10px; background: #f5f5f5; border: 1px solid #bdbdbd; border-radius: 4px; font-size: 11px; font-weight: 700; cursor: pointer; color: #333; font-family: \'Inter\', sans-serif;">Clear</button>
+      `;
+      document.body.appendChild(floatMenu);
+      
+      let lastRange = null;
+      
+      passageContent.addEventListener('mouseup', (e) => {
+        const selection = window.getSelection();
+        if (selection.rangeCount > 0 && !selection.isCollapsed) {
+          const range = selection.getRangeAt(0);
+          if (passageContent.contains(range.commonAncestorContainer)) {
+            lastRange = range.cloneRange();
+            const rect = range.getBoundingClientRect();
+            floatMenu.style.left = `${rect.left + window.scrollX}px`;
+            floatMenu.style.top = `${rect.top + window.scrollY - 35}px`;
+            floatMenu.style.display = 'flex';
+          }
+        } else {
+          floatMenu.style.display = 'none';
+        }
+      });
+      
+      document.addEventListener('mousedown', (e) => {
+        if (!floatMenu.contains(e.target)) {
+          setTimeout(() => {
+            const selection = window.getSelection();
+            if (selection.isCollapsed) {
+              floatMenu.style.display = 'none';
+            }
+          }, 100);
+        }
+      });
+      
+      document.getElementById('btn-highlight-yellow').addEventListener('click', () => {
+        if (lastRange) {
+          const mark = document.createElement('mark');
+          mark.className = 'ielts-highlight';
+          try {
+            lastRange.surroundContents(mark);
+            savePassageHighlights();
+          } catch (err) {
+            console.warn("Could not wrap selection: crosses tag boundaries.");
+          }
+          window.getSelection().removeAllRanges();
+          floatMenu.style.display = 'none';
+        }
+      });
+      
+      document.getElementById('btn-clear-highlight').addEventListener('click', () => {
+        const selection = window.getSelection();
+        if (selection.rangeCount > 0) {
+          const container = selection.getRangeAt(0).commonAncestorContainer;
+          let node = container;
+          while (node && node !== passageContent) {
+            if (node.nodeName === 'MARK' && node.classList.contains('ielts-highlight')) {
+              const parent = node.parentNode;
+              while (node.firstChild) {
+                parent.insertBefore(node.firstChild, node);
+              }
+              parent.removeChild(node);
+              savePassageHighlights();
+              break;
+            }
+            node = node.parentNode;
+          }
+          window.getSelection().removeAllRanges();
+          floatMenu.style.display = 'none';
+        }
+      });
+      
+      function savePassageHighlights() {
+        const key = `highlights_${testId}_${currentPassageIdx}`;
+        highlightsStorage[key] = passageContent.innerHTML;
+      }
+    });
+
     function renderPassage() {
       const passage = testData.reading.passages[currentPassageIdx];
-      document.getElementById('passageContent').innerHTML = passage.text;
+      const passageContent = document.getElementById('passageContent');
+      const key = `highlights_${testId}_${currentPassageIdx}`;
+      if (highlightsStorage[key]) {
+        passageContent.innerHTML = highlightsStorage[key];
+      } else {
+        passageContent.innerHTML = passage.text;
+      }
+    }
+
+    // MCQ_MULTI: Checkbox multi-select handler
+    function handleMultiSelect(nums, maxCount, checkbox) {
+      const checkedBoxes = Array.from(document.querySelectorAll(`input[name="group-${nums[0]}"]:checked`));
+      if (checkedBoxes.length > maxCount) {
+        checkbox.checked = false;
+        alert(`You can only select up to ${maxCount} options for this question.`);
+        return;
+      }
+      
+      // Update userAnswers for the nums
+      nums.forEach((n, idx) => {
+        userAnswers[n] = checkedBoxes[idx] ? checkedBoxes[idx].value : '';
+        // Update bottom nav tray status
+        document.querySelectorAll('.q-nav-btn').forEach(btn => {
+          if (parseInt(btn.textContent) === n) {
+            if (userAnswers[n]) btn.classList.add('answered'); else btn.classList.remove('answered');
+          }
+        });
+      });
+      renderQuestionsAndNav();
+    }
+
+    // Practice mode group check handler
+    function checkPracticeAnswerGroup(nums, idx) {
+      const passage = testData.reading.passages[currentPassageIdx];
+      let allCorrect = true;
+      const feedbackTexts = [];
+      
+      nums.forEach(n => {
+        const q = passage.questions.find(x => x.num === n);
+        if (!q) return;
+        const uAns = (userAnswers[n] || '').trim().toLowerCase();
+        const cAns = q.answer.trim().toLowerCase();
+        if (uAns !== cAns) allCorrect = false;
+        feedbackTexts.push(`Question ${n}: Answer is <strong>${q.answer}</strong>. ${q.explanation}`);
+      });
+      
+      const fd = document.getElementById(`pract-feedback-${nums[0]}`);
+      if (!fd) return;
+      
+      if (allCorrect) {
+        fd.className = 'feedback-correct';
+        fd.innerHTML = `<strong>Correct!</strong><br>${feedbackTexts.join('<br>')}`;
+      } else {
+        fd.className = 'feedback-wrong';
+        fd.innerHTML = `<strong>Some answers are incorrect.</strong><br>${feedbackTexts.join('<br>')}`;
+      }
+    }
+
+    // Drag-and-Drop Matching Headings helpers
+    function dragHeading(ev) {
+      ev.dataTransfer.setData("text/plain", ev.target.getAttribute("data-val"));
+    }
+    
+    function allowDropHeading(ev) {
+      ev.preventDefault();
+      ev.target.classList.add('drag-over');
+    }
+
+    function leaveDropHeading(ev) {
+      ev.target.classList.remove('drag-over');
+    }
+    
+    function dropHeading(ev, qNum) {
+      ev.preventDefault();
+      ev.target.classList.remove('drag-over');
+      const val = ev.dataTransfer.getData("text/plain");
+      if (val) {
+        selectOption(qNum, val);
+      }
+    }
+    
+    function clearHeadingSelection(qNum) {
+      selectOption(qNum, '');
     }
 
     function renderQuestionsAndNav() {
@@ -335,8 +555,47 @@
       const qContainer = document.getElementById('questionsContainer');
       qContainer.innerHTML = '';
 
+      // ── PRE-PROCESS CHOOSE TWO/THREE GROUPS ──
+      const rawQuestions = passage.questions;
+      const displayQuestions = [];
+      let i = 0;
+      while (i < rawQuestions.length) {
+        const q = rawQuestions[i];
+        const isChooseMulti = q.instruction && 
+          (q.instruction.toLowerCase().includes('choose two') || q.instruction.toLowerCase().includes('choose three'));
+        
+        if (isChooseMulti && q.type === 'MCQ') {
+          const matchText = q.instruction;
+          const group = [q];
+          let j = i + 1;
+          while (j < rawQuestions.length && rawQuestions[j].instruction === matchText && rawQuestions[j].type === 'MCQ') {
+            group.push(rawQuestions[j]);
+            j++;
+          }
+          if (group.length > 1) {
+            const selectCount = matchText.toLowerCase().includes('choose three') ? 3 : 2;
+            displayQuestions.push({
+              isGroup: true,
+              questions: group,
+              selectCount: selectCount,
+              instruction: q.instruction,
+              num: q.num,
+              numEnd: group[group.length - 1].num,
+              options: q.options,
+              type: 'MCQ_MULTI'
+            });
+            i = j;
+            continue;
+          }
+        }
+        displayQuestions.push(q);
+        i++;
+      }
+
       let lastInstruction = null;
-      passage.questions.forEach((q, idx) => {
+      let headingPoolRendered = false;
+
+      displayQuestions.forEach((q, idx) => {
         if (q.instruction && q.instruction.trim()) {
           if (q.instruction !== lastInstruction) {
             const instBox = document.createElement('div');
@@ -352,12 +611,18 @@
         const qBox = document.createElement('div');
         qBox.className = 'q-box';
         qBox.id = `qbox-${q.num}`;
-        if (flaggedQuestions[q.num]) qBox.classList.add('flagged');
+        if (q.isGroup) {
+          const isFlagged = q.questions.some(x => flaggedQuestions[x.num]);
+          if (isFlagged) qBox.classList.add('flagged');
+        } else {
+          if (flaggedQuestions[q.num]) qBox.classList.add('flagged');
+        }
         if (q.contentUnavailable) qBox.classList.add('unavailable');
 
         const headerRow = document.createElement('div');
         headerRow.className = 'q-header-row';
-        headerRow.innerHTML = `<span class="q-num-badge">${q.num}</span>` +
+        const displayNumStr = q.isGroup ? `${q.num} – ${q.numEnd}` : q.num;
+        headerRow.innerHTML = `<span class="q-num-badge" style="border-radius:12px; padding:2px 8px; width:auto; height:auto; min-width:24px;">${displayNumStr}</span>` +
           (q.contentUnavailable ? '' : `<label class="q-review-label"><input type="checkbox" onchange="toggleFlag(${q.num})" ${flaggedQuestions[q.num] ? 'checked' : ''} /> Review</label>`);
         qBox.appendChild(headerRow);
 
@@ -370,10 +635,17 @@
           return;
         }
 
-        const textEl = document.createElement('p');
-        textEl.className = 'q-text';
-        textEl.innerHTML = q.text;
-        qBox.appendChild(textEl);
+        if (!q.isGroup) {
+          const textEl = document.createElement('p');
+          textEl.className = 'q-text';
+          textEl.innerHTML = q.text;
+          qBox.appendChild(textEl);
+        } else {
+          const textEl = document.createElement('p');
+          textEl.className = 'q-text';
+          textEl.innerHTML = `Choose <strong>${q.selectCount}</strong> letters, A-E.`;
+          qBox.appendChild(textEl);
+        }
 
         let answerHtml = '';
         if (q.type === 'TFNG') {
@@ -394,27 +666,69 @@
               </button>
             `;
           }).join('')}</div>`;
+        } else if (q.type === 'MCQ_MULTI') {
+          const nums = q.questions.map(x => x.num);
+          const currentAnswers = nums.map(n => userAnswers[n]).filter(Boolean);
+          answerHtml = `<div class="mcq-options">`;
+          q.options.forEach(opt => {
+            const dotIdx = opt.indexOf('.');
+            const letter = dotIdx !== -1 ? opt.slice(0, dotIdx).trim() : opt.trim();
+            const text = dotIdx !== -1 ? opt.slice(dotIdx + 1) : '';
+            const isChecked = currentAnswers.includes(letter);
+            answerHtml += `
+              <label class="mcq-option ${isChecked ? 'selected' : ''}" style="display:flex; align-items:center; gap:10px; cursor:pointer;">
+                <input type="checkbox" name="group-${q.num}" value="${letter}" ${isChecked ? 'checked' : ''} 
+                  onchange="handleMultiSelect(${JSON.stringify(nums)}, ${q.selectCount}, this)" 
+                  style="accent-color:var(--accent); width:16px; height:16px;" />
+                <span class="opt-letter" style="margin-left:5px;">${letter}.</span><span>${text}</span>
+              </label>
+            `;
+          });
+          answerHtml += `</div>`;
         } else if (q.type === 'FILL') {
           const val = userAnswers[q.num] || '';
           answerHtml = `<input type="text" oninput="handleInput(${q.num}, this.value)" class="input-fill" value="${escapeHtml(val)}" placeholder="Type your answer here..." />`;
         } else if (q.type === 'HEADING') {
-          // Matching Headings: q.options is just the bare roman numerals
-          // (i, ii, iii...) for this one paragraph's button row - the actual
-          // heading text for every numeral is shown once, above the whole
-          // question group, via the shared instruction box (see
-          // lastInstruction dedup above) rather than repeated on every
-          // question.
-          const selected = userAnswers[q.num] || '';
-          answerHtml = `<div class="tfng-row">${q.options.map(opt => `
-            <button onclick="selectOption(${q.num}, '${opt}')" class="tfng-btn ${selected === opt ? 'selected' : ''}">${opt}</button>
-          `).join('')}</div>`;
+          if (!headingPoolRendered) {
+            const poolEl = document.createElement('div');
+            poolEl.className = 'heading-chips-pool';
+            poolEl.style.cssText = 'display:flex; flex-wrap:wrap; gap:8px; margin:15px 0; padding:12px; border:2px dashed var(--rule); border-radius:8px; background:#fbfaf7;';
+            poolEl.innerHTML = `<div style="width:100%; font-size:11px; font-weight:700; color:var(--ink-soft); margin-bottom:6px; text-transform:uppercase; font-family:\'Inter\';">Headings Pool (Drag numbers below):</div>`;
+            q.options.forEach(opt => {
+              poolEl.innerHTML += `
+                <div draggable="true" ondragstart="dragHeading(event)" class="heading-chip" data-val="${opt}" 
+                  style="padding:6px 12px; background:var(--paper); border:1.5px solid var(--accent); border-radius:6px; font-weight:800; cursor:grab; color:var(--accent); font-family:\'Inter\', sans-serif; font-size:12px;">
+                  ${opt}
+                </div>
+              `;
+            });
+            qContainer.appendChild(poolEl);
+            headingPoolRendered = true;
+          }
+          
+          const val = userAnswers[q.num] || '';
+          answerHtml = `
+            <div style="display:flex; align-items:center; gap:10px; margin-top:8px;">
+              <span class="q-text" style="margin:0;">Paragraph ${q.text.replace(/Paragraph\s+/i, '')}</span>
+              <div class="heading-drop-slot" ondragover="allowDropHeading(event)" ondragleave="leaveDropHeading(event)" ondrop="dropHeading(event, ${q.num})" 
+                style="display:inline-flex; align-items:center; gap:6px; min-width:130px; height:32px; border:2px dashed ${val ? 'var(--accent)' : 'var(--gold)'}; border-radius:6px; background:${val ? 'var(--accent-soft)' : '#fffdf5'}; color:${val ? 'var(--accent)' : 'var(--gold)'}; font-weight:800; font-size:13px; padding:0 10px;">
+                ${val || '[ Drop Heading ]'}
+                ${val ? `<span onclick="clearHeadingSelection(${q.num})" style="cursor:pointer; font-weight:800; color:#888; margin-left:6px; font-size:14px; font-family:\'Inter\';">&times;</span>` : ''}
+              </div>
+            </div>
+          `;
         }
-        qBox.insertAdjacentHTML('beforeend', answerHtml);
+        
+        qBox.appendChild(document.createRange().createContextualFragment(answerHtml));
 
         if (currentTestMode === 'practice') {
+          const actionHtml = q.isGroup 
+            ? `<button onclick="checkPracticeAnswerGroup(${JSON.stringify(q.questions.map(x=>x.num))}, ${idx})" class="check-btn">Check Answers</button>`
+            : `<button onclick="checkPracticeAnswer(${q.num}, ${idx})" class="check-btn">Check Answer</button>`;
+          
           qBox.insertAdjacentHTML('beforeend', `
             <div style="display:flex;justify-content:flex-end;border-top:1px solid var(--rule-soft);margin-top:10px;padding-top:10px;" id="pract-actions-${q.num}">
-              <button onclick="checkPracticeAnswer(${q.num}, ${idx})" class="check-btn">Check Answer</button>
+              ${actionHtml}
             </div>
             <div id="pract-feedback-${q.num}"></div>
           `);

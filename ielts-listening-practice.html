@@ -179,6 +179,16 @@
     .q-nav-btn.answered { background: var(--accent); border-color: var(--accent); color: #fff; }
     .q-nav-btn.current { box-shadow: 0 0 0 2.5px var(--gold); }
     .q-nav-btn.flagged::after { content: "\25CF"; font-size: 7px; color: var(--gold); position: absolute; top: -4px; right: -4px; }
+
+    /* IELTS Mirror Enhancement Styles */
+    .timer-pill.timer-flash {
+      animation: ielts-flash-red 1s infinite !important;
+    }
+    @keyframes ielts-flash-red {
+      0%, 100% { background-color: #f6e9ea; border-color: rgba(122,35,49,.18); color: #7a2331; }
+      50% { background-color: #7a2331; border-color: #7a2331; color: #ffffff; }
+    }
+
     .nav-btns { display: flex; gap: 7px; }
     .nav-arrow {
       padding: 7px 15px; border-radius: 9px; border: 1.5px solid var(--rule); background: var(--paper);
@@ -312,6 +322,7 @@
     const playBtn = document.getElementById('playBtn');
     const timeline = document.getElementById('audioTimeline');
 
+    let reviewTimerInterval;
     function initTest() {
       document.getElementById('testTitle').textContent = testData.title;
       document.getElementById('testSetTag').textContent = 'IELTS Academic — Test ' + formatTestId(testId);
@@ -328,6 +339,18 @@
           updateTimerDisplay(false);
           if (timeRemaining <= 0) { clearInterval(timerInterval); alert('Time is up!'); submitTest(true); }
         }, 1000);
+
+        // Hide controls in Exam Mode
+        document.getElementById('audioTimeline').style.display = 'none';
+        document.querySelector('.stop-btn').style.display = 'none';
+        document.getElementById('audioSpeed').parentElement.style.display = 'none';
+        document.querySelector('.notice-box').style.display = 'none';
+
+        var card = document.querySelector('.audio-card');
+        var banner = document.createElement('div');
+        banner.style.cssText = 'font-size:11px; color:#c62828; background:#ffebee; border:1px solid #ffcdd2; padding:8px; border-radius:6px; margin-top:10px; font-weight:700; text-align:center;';
+        banner.textContent = 'Exam Mode Locked: Audio plays once. Scrubber & speed controls disabled.';
+        card.appendChild(banner);
       }
 
       var tabTray = document.getElementById('sectionTabs');
@@ -347,7 +370,30 @@
     function updateTimerDisplay(countUp) {
       var m = Math.floor(Math.abs(timeRemaining) / 60);
       var s = Math.abs(timeRemaining) % 60;
-      document.getElementById('timerText').textContent = String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+      var timerDisplay = document.getElementById('timerText');
+      var timerPill = timerDisplay.parentElement;
+      timerDisplay.textContent = String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+
+      if (!countUp) {
+        if (timeRemaining <= 300) {
+          timerPill.className = 'timer-pill timer-flash';
+          timerPill.style.backgroundColor = '';
+          timerPill.style.borderColor = '';
+          timerPill.style.color = '';
+        } else if (timeRemaining <= 600) {
+          timerPill.className = 'timer-pill';
+          timerPill.style.backgroundColor = '#fff3e0';
+          timerPill.style.borderColor = '#ffe0b2';
+          timerPill.style.color = '#e65100';
+          timerDisplay.style.color = '#e65100';
+        } else {
+          timerPill.className = 'timer-pill';
+          timerPill.style.backgroundColor = '';
+          timerPill.style.borderColor = '';
+          timerPill.style.color = '';
+          timerDisplay.style.color = '';
+        }
+      }
     }
 
     function switchSection(idx, btnEl) {
@@ -380,7 +426,63 @@
         document.getElementById('totalDuration').textContent = fmt(audio.duration);
       }
     });
-    audio.addEventListener('ended', function() { playBtn.innerHTML = '&#9654;'; });
+
+    function startListeningReviewPeriod() {
+      audio.pause();
+      const overlay = document.createElement('div');
+      overlay.id = 'listening-review-overlay';
+      overlay.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.55); backdrop-filter:blur(3px); z-index:2000; display:flex; align-items:center; justify-content:center;';
+      
+      let reviewTimeLeft = 120; // 2 minutes
+      overlay.innerHTML = `
+        <div style="background:var(--paper); border:2px solid var(--accent); border-radius:12px; padding:30px; max-width:480px; width:90%; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.25);">
+          <h2 style="font-family:\'Fraunces\', serif; font-size:24px; color:var(--accent); margin-top:0;">Listening Review Time</h2>
+          <p style="font-size:14px; color:var(--ink-soft); line-height:1.6; margin-bottom:20px;">
+            The audio playback has finished. You now have <strong>2 minutes</strong> to review and finalize your answers before the Listening test is automatically submitted.
+          </p>
+          <div id="review-countdown-clock" style="font-family:\'JetBrains Mono\', monospace; font-size:36px; font-weight:800; color:var(--gold); margin-bottom:25px;">02:00</div>
+          <button onclick="submitTest(true)" class="submit-btn" style="width:100%; padding:12px; font-size:14px; background:var(--accent); color:#fff; border:none; border-radius:8px; cursor:pointer;">Submit Test Now</button>
+        </div>
+      `;
+      document.body.appendChild(overlay);
+      
+      const clock = document.getElementById('review-countdown-clock');
+      reviewTimerInterval = setInterval(function() {
+        reviewTimeLeft--;
+        const m = Math.floor(reviewTimeLeft / 60);
+        const s = reviewTimeLeft % 60;
+        clock.textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+        
+        if (reviewTimeLeft <= 0) {
+          clearInterval(reviewTimerInterval);
+          document.body.removeChild(overlay);
+          alert('Review period has ended. Submitting test.');
+          submitTest(true);
+        }
+      }, 1000);
+    }
+
+    audio.addEventListener('ended', function() {
+      playBtn.innerHTML = '&#9654;';
+      if (currentSectionIdx < testData.listening.sections.length - 1) {
+        setTimeout(function() {
+          var nextIdx = currentSectionIdx + 1;
+          var tabBtn = document.querySelectorAll('.section-tab')[nextIdx];
+          if (tabBtn) {
+            var nextSec = testData.listening.sections[nextIdx];
+            if (nextSec.questions && nextSec.questions.length > 0) {
+              currentQuestionNum = nextSec.questions[0].num;
+            }
+            switchSection(nextIdx, tabBtn);
+            togglePlay();
+          }
+        }, 1500);
+      } else {
+        if (currentTestMode === 'exam') {
+          startListeningReviewPeriod();
+        }
+      }
+    });
 
     function togglePlay() {
       if (audio.paused) { audio.play(); playBtn.innerHTML = '&#10074;&#10074;'; }
@@ -393,13 +495,95 @@
     function seekAudio(pct) { if (audio.duration) audio.currentTime = (pct / 100) * audio.duration; }
     function setPlaybackSpeed(s) { audio.playbackRate = parseFloat(s); }
 
+    // MCQ_MULTI checkbox handler for Listening
+    function handleMultiSelect(nums, maxCount, checkbox) {
+      const checkedBoxes = Array.from(document.querySelectorAll(`input[name="group-${nums[0]}"]:checked`));
+      if (checkedBoxes.length > maxCount) {
+        checkbox.checked = false;
+        alert(`You can only select up to ${maxCount} options for this question.`);
+        return;
+      }
+      
+      nums.forEach((n, idx) => {
+        userAnswers[n] = checkedBoxes[idx] ? checkedBoxes[idx].value : '';
+        document.querySelectorAll('.q-nav-btn').forEach(btn => {
+          if (parseInt(btn.textContent) === n) {
+            if (userAnswers[n]) btn.classList.add('answered'); else btn.classList.remove('answered');
+          }
+        });
+      });
+      renderQuestions();
+    }
+
+    // MCQ_MULTI practice check handler for Listening
+    function checkPracticeAnswerGroup(nums, idx) {
+      var section = testData.listening.sections[currentSectionIdx];
+      var allCorrect = true;
+      var feedbackTexts = [];
+      nums.forEach(function(n) {
+        var q = section.questions.find(function(x) { return x.num === n; });
+        if (!q) return;
+        var uAns = (userAnswers[n] || '').trim().toLowerCase();
+        var cAns = q.answer.trim().toLowerCase();
+        if (uAns !== cAns) allCorrect = false;
+        feedbackTexts.push('Question ' + n + ': Answer is <strong>' + q.answer + '</strong>. ' + q.explanation);
+      });
+      var fd = document.getElementById('pract-feedback-' + nums[0]);
+      if (!fd) return;
+      if (allCorrect) {
+        fd.className = 'feedback-correct';
+        fd.innerHTML = '<strong>Correct!</strong><br>' + feedbackTexts.join('<br>');
+      } else {
+        fd.className = 'feedback-wrong';
+        fd.innerHTML = '<strong>Incorrect</strong><br>' + feedbackTexts.join('<br>');
+      }
+    }
+
     function renderQuestions() {
       var section = testData.listening.sections[currentSectionIdx];
       var container = document.getElementById('questionsContainer');
       container.innerHTML = '';
+
+      // ── PRE-PROCESS MCQ_MULTI GROUPS ──
+      var rawQuestions = section.questions;
+      var displayQuestions = [];
+      var i = 0;
+      while (i < rawQuestions.length) {
+        var q = rawQuestions[i];
+        var isChooseMulti = q.instruction && 
+          (q.instruction.toLowerCase().includes('choose two') || q.instruction.toLowerCase().includes('choose three'));
+        
+        if (isChooseMulti && q.type === 'MCQ') {
+          var matchText = q.instruction;
+          var group = [q];
+          var j = i + 1;
+          while (j < rawQuestions.length && rawQuestions[j].instruction === matchText && rawQuestions[j].type === 'MCQ') {
+            group.push(rawQuestions[j]);
+            j++;
+          }
+          if (group.length > 1) {
+            var selectCount = matchText.toLowerCase().includes('choose three') ? 3 : 2;
+            displayQuestions.push({
+              isGroup: true,
+              questions: group,
+              selectCount: selectCount,
+              instruction: q.instruction,
+              num: q.num,
+              numEnd: group[group.length - 1].num,
+              options: q.options,
+              type: 'MCQ_MULTI'
+            });
+            i = j;
+            continue;
+          }
+        }
+        displayQuestions.push(q);
+        i++;
+      }
+
       var lastInstruction = null;
 
-      section.questions.forEach(function(q, idx) {
+      displayQuestions.forEach(function(q, idx) {
         if (q.instruction && q.instruction.trim()) {
           if (q.instruction !== lastInstruction) {
             var banner = document.createElement('div');
@@ -413,17 +597,28 @@
         }
 
         var card = document.createElement('div');
-        card.className = 'q-card' + (flaggedQuestions[q.num] ? ' flagged' : '') + (userAnswers[q.num] ? ' answered' : '') + (q.contentUnavailable ? ' unavailable' : '');
+        var isCardFlagged = false;
+        var isCardAnswered = false;
+        
+        if (q.isGroup) {
+          isCardFlagged = q.questions.some(function(x) { return flaggedQuestions[x.num]; });
+          isCardAnswered = q.questions.some(function(x) { return userAnswers[x.num]; });
+        } else {
+          isCardFlagged = flaggedQuestions[q.num];
+          isCardAnswered = userAnswers[q.num];
+        }
+
+        card.className = 'q-card' + (isCardFlagged ? ' flagged' : '') + (isCardAnswered ? ' answered' : '') + (q.contentUnavailable ? ' unavailable' : '');
         card.id = 'qcard-' + q.num;
 
         var header = document.createElement('div');
         header.className = 'q-header';
-        header.innerHTML = '<span class="q-num-badge">' + q.num + '</span>' +
+        var displayNumStr = q.isGroup ? (q.num + ' – ' + q.numEnd) : q.num;
+        header.innerHTML = '<span class="q-num-badge" style="border-radius:12px; padding:2px 8px; width:auto; height:auto; min-width:24px;">' + displayNumStr + '</span>' +
           (q.contentUnavailable ? '' : '<label class="q-review-label"><input type="checkbox" onchange="toggleFlag(' + q.num + ')" ' + (flaggedQuestions[q.num] ? 'checked' : '') + ' /> Review</label>');
         card.appendChild(header);
 
         var body = document.createElement('div');
-
         if (q.contentUnavailable) {
           body.className = 'q-unavailable-note';
           body.innerHTML = 'This question\'s source text could not be recovered during data restoration, so it is excluded from scoring. It will not count for or against your band score.';
@@ -456,6 +651,26 @@
             optionsDiv.appendChild(optEl);
           });
           body.appendChild(optionsDiv);
+        } else if (q.type === 'MCQ_MULTI') {
+          body.innerHTML = '<div style="margin-bottom:9px;">Choose <strong>' + q.selectCount + '</strong> letters, A-E.</div>';
+          var optionsDiv = document.createElement('div');
+          optionsDiv.className = 'mcq-options';
+          var nums = q.questions.map(function(x) { return x.num; });
+          var currentAnswers = nums.map(function(n) { return userAnswers[n]; }).filter(Boolean);
+          q.options.forEach(function(opt) {
+            var dotIdx = opt.indexOf('.');
+            var letter = dotIdx !== -1 ? opt.slice(0, dotIdx).trim() : opt.trim();
+            var text = dotIdx !== -1 ? opt.slice(dotIdx + 1).trim() : '';
+            var isChecked = currentAnswers.includes(letter);
+            var optEl = document.createElement('label');
+            optEl.className = 'mcq-option' + (isChecked ? ' selected' : '');
+            optEl.style.cssText = 'display:flex; align-items:center; gap:10px; cursor:pointer;';
+            optEl.innerHTML = '<input type="checkbox" name="group-' + q.num + '" value="' + letter + '" ' + (isChecked ? 'checked' : '') + ' style="accent-color:var(--accent); width:16px; height:16px;" />' +
+              '<span class="opt-letter" style="margin-left:5px;">' + letter + '.</span><span>' + text + '</span>';
+            optEl.querySelector('input').onchange = function() { handleMultiSelect(nums, q.selectCount, this); };
+            optionsDiv.appendChild(optEl);
+          });
+          body.appendChild(optionsDiv);
         }
         card.appendChild(body);
 
@@ -463,7 +678,12 @@
           var practRow = document.createElement('div');
           practRow.style.cssText = 'display:flex;justify-content:flex-end;border-top:1px solid var(--rule-soft);margin-top:12px;padding-top:10px;';
           practRow.id = 'pract-actions-' + q.num;
-          practRow.innerHTML = '<button class="check-btn" onclick="checkPracticeAnswer(' + q.num + ', ' + idx + ')">Check Answer</button>';
+          
+          var buttonHtml = q.isGroup 
+            ? '<button class="check-btn" onclick="checkPracticeAnswerGroup(' + JSON.stringify(q.questions.map(function(x){return x.num;})) + ', ' + idx + ')">Check Answers</button>'
+            : '<button class="check-btn" onclick="checkPracticeAnswer(' + q.num + ', ' + idx + ')">Check Answer</button>';
+          
+          practRow.innerHTML = buttonHtml;
           card.appendChild(practRow);
           var feedbackDiv = document.createElement('div');
           feedbackDiv.id = 'pract-feedback-' + q.num;

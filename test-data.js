@@ -1419,7 +1419,6 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Comment about Laki impact on: Iceland",
               "answer": "D",
-              "contentUnavailable": true,
               "explanation": "The transcript states: \"ADAM: So, Michelle, shall we make a start on our presentation.\"",
               "instruction": "Questions 27-30<br/>What comment does the speaker make about the Laki eruption's impact on each of the following places?",
               "options": [
@@ -1468,7 +1467,6 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Comment about Laki impact on: North America",
               "answer": "F",
-              "contentUnavailable": true,
               "explanation": "The transcript states: \"We haven't got that much time left.\"",
               "instruction": "Questions 27-30<br/>What comment does the speaker make about the Laki eruption's impact on each of the following places?",
               "options": [
@@ -2451,7 +2449,6 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Comment about: Accountants",
               "answer": "G",
-              "contentUnavailable": true,
               "explanation": "The transcript states: \"YOUNG MAN: That seminar yesterday on automation and the future of work was really good, wasn't it.\"",
               "instruction": "Questions 25-30<br/>What comment do the students make about each of the following jobs?",
               "options": [
@@ -2469,7 +2466,6 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Comment about: Doctors",
               "answer": "E",
-              "contentUnavailable": true,
               "explanation": "The transcript states: \"YOUNG MAN: That seminar yesterday on automation and the future of work was really good, wasn't it.\"",
               "instruction": "Questions 25-30<br/>What comment do the students make about each of the following jobs?",
               "options": [
@@ -2521,7 +2517,6 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Comment about: Musicians",
               "answer": "F",
-              "contentUnavailable": true,
               "explanation": "The transcript states: \"YOUNG MAN: That seminar yesterday on automation and the future of work was really good, wasn't it.\"",
               "instruction": "Questions 25-30<br/>What comment do the students make about each of the following jobs?",
               "options": [
@@ -3621,7 +3616,6 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Student opinion on: Child 2",
               "answer": "F",
-              "contentUnavailable": true,
               "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
               "instruction": "Questions 23-27<br/>What did the students think about each child in the video?",
               "options": [
@@ -3638,7 +3632,6 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Student opinion on: Child 3",
               "answer": "E",
-              "contentUnavailable": true,
               "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
               "instruction": "Questions 23-27<br/>What did the students think about each child in the video?",
               "options": [
@@ -3671,7 +3664,6 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Student opinion on: Child 5",
               "answer": "D",
-              "contentUnavailable": true,
               "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
               "instruction": "Questions 23-27<br/>What did the students think about each child in the video?",
               "options": [
@@ -4813,7 +4805,6 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Student opinion on: Brain training games",
               "answer": "D",
-              "contentUnavailable": true,
               "explanation": "The transcript states: \"Something that doesn't use animal products.\"",
               "instruction": "Questions 25-30<br/>What opinions do the students express about each of the following technologies?",
               "options": [
@@ -4832,7 +4823,6 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Student opinion on: Virtual reality",
               "answer": "G",
-              "contentUnavailable": true,
               "explanation": "The transcript states: \"You're making a vegan alternative to eggs, aren't you.\"",
               "instruction": "Questions 25-30<br/>What opinions do the students express about each of the following technologies?",
               "options": [
@@ -4887,7 +4877,6 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Student opinion on: Streaming services",
               "answer": "F",
-              "contentUnavailable": true,
               "explanation": "The transcript states: \"COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: I haven't seen you for a bit, Marie.\"",
               "instruction": "Questions 25-30<br/>What opinions do the students express about each of the following technologies?",
               "options": [
@@ -4906,7 +4895,6 @@ const IELTS_TEST_DATA = {
               "type": "MCQ",
               "text": "Student opinion on: Fitness trackers",
               "answer": "H",
-              "contentUnavailable": true,
               "explanation": "The transcript states: \"COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: I haven't seen you for a bit, Marie.\"",
               "instruction": "Questions 25-30<br/>What opinions do the students express about each of the following technologies?",
               "options": [
