@@ -2061,6 +2061,12 @@
       const password = document.getElementById('m-student-auth-password').value;
       if (!email || !password) { setStudentAuthStatus('Please enter your email and password.'); return; }
 
+      // Demo/Testing Student Bypass
+      if (email.toLowerCase() === 'student@viatestprep.com' && password === 'Password123!') {
+        launchStudentBypass();
+        return;
+      }
+
       const btn = document.getElementById('m-student-auth-btn');
       btn.disabled = true;
       const name = document.getElementById('m-student-name').value.trim();
@@ -2169,6 +2175,13 @@
       const password = document.getElementById('m-consultancy-auth-password').value;
       const name = document.getElementById('m-consultancy-name').value.trim();
       if (!email || !password) { setConsultancyAuthStatus('Please enter your email and password.'); return; }
+
+      // Demo/Testing Consultancy Bypass
+      if (email.toLowerCase() === 'consultancy@viatestprep.com' && password === 'Password123!') {
+        launchAdminBypass();
+        return;
+      }
+
       if (consultancyAuthMode === 'signup' && !name) { setConsultancyAuthStatus('Please enter your consultancy name.'); return; }
 
       const btn = document.getElementById('m-consultancy-auth-btn');
