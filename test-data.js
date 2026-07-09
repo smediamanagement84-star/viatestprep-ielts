@@ -413,7 +413,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 31,
               "type": "FILL",
-              "text": "Majete National Park: fences are needed to protect both animals and the local _________",
+              "text": "Majete National Park: overpopulation meant elephants often damaged the park's _________",
               "answer": "fences",
               "explanation": "The transcript states: \"Elephants were routinely knocking down fences around the park, which then had to be repaired at a significant cost.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -429,7 +429,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 33,
               "type": "FILL",
-              "text": "translocation methods: tracking was done using _________",
+              "text": "locating groups: elephants were spotted and directed toward the collection site using _________",
               "answer": "helicopters",
               "explanation": "The transcript states: \"A team of vets and park rangers flew over the park in helicopters and targeted a group.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -437,7 +437,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 34,
               "type": "FILL",
-              "text": "animals were loaded onto trucks and kept under _________",
+              "text": "capture process: the darting had to be completed quickly to reduce _________",
               "answer": "stress",
               "explanation": "The transcript states: \"This also had to be done as quickly as possible so as to minimise the stress caused.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -445,7 +445,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 35,
               "type": "FILL",
-              "text": "release process: elephants were released into a _________ area first",
+              "text": "recovery: elephants had to be positioned on their _________ to prevent their lungs being crushed",
               "answer": "sides",
               "explanation": "The transcript states: \"So all the elephants had to be placed on their sides.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -453,7 +453,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 36,
               "type": "FILL",
-              "text": "results of translocation: new environment has caused no _________ to the elephants",
+              "text": "during recovery, each elephant's _________ had to be closely monitored",
               "answer": "breathing",
               "explanation": "The transcript states: \"It was very important to keep an eye on their breathing — if there were fewer than six breaths per minute, the elephant would need urgent medical attention.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -461,7 +461,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 37,
               "type": "FILL",
-              "text": "elephants have adapted well to their new _________",
+              "text": "measurements were taken of each elephant's tusks and _________",
               "answer": "feet",
               "explanation": "The transcript states: \"Measurements were taken of each elephant's tusks — elephants with large tusks would be at greater risk from poachers — and also of their feet.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -469,7 +469,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 38,
               "type": "FILL",
-              "text": "there has been an increase in the number of _________ in the area",
+              "text": "outcomes for local communities: _________ prospects have improved enormously",
               "answer": "employment",
               "explanation": "The transcript states: \"Employment prospects have improved enormously, contributing to rising living standards for the whole community.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -477,7 +477,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 39,
               "type": "FILL",
-              "text": "benefits of project: local people have gained _________",
+              "text": "many former poachers volunteered to give up their _________, no longer needing them",
               "answer": "weapons",
               "explanation": "The transcript states: \"In fact, many of them volunteered to give up their weapons, as they were no longer of any use to them.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -1579,7 +1579,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 2,
               "type": "FILL",
-              "text": "Test _________",
+              "text": "Deep pits within the circle may once have held a ring of timber _________",
               "answer": "posts",
               "explanation": "The text confirms this: \"Deep pits dating back to that era and located within the circle may have once held a ring of timber posts, according to some scholars.\"",
               "location": "Passage 1",
@@ -1597,7 +1597,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 4,
               "type": "FILL",
-              "text": "Question 4: Write your answer here: _________",
+              "text": "A more recent hypothesis suggests the bluestones were instead hauled on wicker baskets pulled by _________",
               "answer": "oxen",
               "explanation": "The text confirms this: \"More recent archaeological hypotheses have them transporting the bluestones with supersized wicker baskets on a combination of ball bearings and long grooved planks, hauled by oxen.\"",
               "location": "Passage 1",
@@ -1624,7 +1624,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 7,
               "type": "FILL",
-              "text": "Question 7: Write your answer here: _________",
+              "text": "Most modern scholars agree that Stonehenge once served, among other functions, as a _________ ground",
               "answer": "burial",
               "explanation": "The text confirms this: \"While there is consensus among the majority of modern scholars that Stonehenge once served the function of burial ground, they have yet to determine what other purposes it had.\"",
               "location": "Passage 1",
@@ -1642,9 +1642,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 9,
               "type": "TFNG",
-              "text": "During the third phase of construction, sandstone slabs were placed in both the outer areas and the middle of the Stonehenge site.",
+              "text": "The sarsen stones erected in the second phase of construction were arranged both around the outside and within the interior of the site.",
               "answer": "TRUE",
-              "explanation": "The passage confirms that the answer is 'TRUE'.",
+              "explanation": "The passage states the sarsen stones \"were arranged in an outer circle and an inner horseshoe.\"",
               "location": "Passage 1",
               "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9—13 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
               "options": [
@@ -1656,9 +1656,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 10,
               "type": "TFNG",
-              "text": "Question 10: Choose the correct option:",
+              "text": "The bluestones used at Stonehenge were sourced from a location closer to the site than the sarsen stones were.",
               "answer": "FALSE",
-              "explanation": "The passage confirms that the answer is 'FALSE'.",
+              "explanation": "The passage states the bluestones were \"brought from the Preseli Hills in Wales, over 140 miles away, while the larger sarsens were transported from the Marlborough Downs, about 20 miles north of the site\" — so the bluestones travelled much further, not a shorter distance.",
               "location": "Passage 1",
               "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9—13 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
               "options": [
@@ -1670,9 +1670,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 11,
               "type": "TFNG",
-              "text": "Question 11: Choose the correct option:",
+              "text": "The Amesbury Archer grew up in the immediate area surrounding Stonehenge.",
               "answer": "FALSE",
-              "explanation": "The passage confirms that the answer is 'FALSE'.",
+              "explanation": "The passage states that analysis of his teeth \"revealed that he had grown up in Central Europe, suggesting that Stonehenge was a place of pilgrimage for people from far away.\"",
               "location": "Passage 1",
               "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9—13 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
               "options": [
@@ -1718,9 +1718,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 14,
               "type": "MCQ",
-              "text": "Question 14: Choose the correct option:",
+              "text": "What does the writer say about the current pace of AI development?",
               "answer": "C",
-              "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
+              "explanation": "The passage states \"AI is progressing rapidly, and many experts believe that we will create human-level artificial general intelligence (AGI) within this century.\"",
               "location": "Passage 2",
               "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
               "options": [
@@ -1733,9 +1733,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 15,
               "type": "MCQ",
-              "text": "Question 15: Choose the correct option:",
+              "text": "Why does the writer quote Alan Turing's 1951 remark about thinking machines?",
               "answer": "A",
-              "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
+              "explanation": "The passage quotes Turing's warning: \"If a machine can think, it might think more intelligently than we do, and then where should we be?\"",
               "location": "Passage 2",
               "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
               "options": [
@@ -1748,9 +1748,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 16,
               "type": "MCQ",
-              "text": "Question 16: Choose the correct option:",
+              "text": "Why does the writer include the story of King Midas?",
               "answer": "B",
-              "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
+              "explanation": "The passage uses the Midas analogy to illustrate \"the danger of poorly defined objectives in AI,\" since Midas \"failed to specify\" important conditions on his wish.",
               "location": "Passage 2",
               "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
               "options": [
@@ -1763,9 +1763,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 17,
               "type": "MCQ",
-              "text": "Question 17: Choose the correct option:",
+              "text": "What does the writer identify as a central difficulty in the value alignment problem?",
               "answer": "D",
-              "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
+              "explanation": "The passage states \"if we build superintelligent machines that do not share our values, they could act in ways that are harmful to us, even if they are carrying out our instructions.\"",
               "location": "Passage 2",
               "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
               "options": [
@@ -1778,9 +1778,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 18,
               "type": "MCQ",
-              "text": "Question 18: Choose the correct option:",
+              "text": "What does Turing's warning imply machines may eventually be capable of?",
               "answer": "C",
-              "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
+              "explanation": "The passage quotes Turing's warning that a thinking machine \"might think more intelligently than we do.\"",
               "location": "Passage 2",
               "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
               "options": [
@@ -1864,9 +1864,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 24,
               "type": "MCQ",
-              "text": "Write the correct letter, A-F, in boxes 24—26 on your answer sheet.",
+              "text": "AI currently has a limited role in the way _________ are allocated in the health service.",
               "answer": "C",
-              "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
+              "explanation": "This summary describes how a bigger AI role in the health service could affect the allocation of available resources.",
               "location": "Passage 2",
               "instruction": "Questions 24—26<br/>Complete the summary using the list of phrases, A-F, below.<br/>Write the correct letter, A-F, in boxes 24—26 on your answer sheet.<br/>Using Al in the UK health system<br/>Al currently has a limited role in the way 24 are allocated in the<br/>health service. The positive aspect of Al having a bigger role is that it would be<br/>more efficient and lead to patient benefits. However, such a change would result, for<br/>example, in certain 25 not having their current level of",
               "options": [
@@ -1881,9 +1881,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 25,
               "type": "MCQ",
-              "text": "example, in certain 25 not having their current level of",
+              "text": "A bigger AI role would result, for example, in certain _________ not having their current level of authority.",
               "answer": "A",
-              "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
+              "explanation": "This summary describes a bigger AI role reducing the current authority of certain medical practitioners.",
               "location": "Passage 2",
               "instruction": "Questions 24—26<br/>Complete the summary using the list of phrases, A-F, below.<br/>Write the correct letter, A-F, in boxes 24—26 on your answer sheet.<br/>Using Al in the UK health system<br/>Al currently has a limited role in the way 24 are allocated in the<br/>health service. The positive aspect of Al having a bigger role is that it would be<br/>more efficient and lead to patient benefits. However, such a change would result, for<br/>example, in certain 25 not having their current level of",
               "options": [
@@ -1898,9 +1898,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 26,
               "type": "MCQ",
-              "text": "Write the correct letter, A-F, in boxes 24—26 on your answer sheet.",
+              "text": "Certain medical practitioners would no longer have their current level of _________.",
               "answer": "E",
-              "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
+              "explanation": "This summary describes certain medical practitioners losing some of their current professional authority as AI's role expands.",
               "location": "Passage 2",
               "instruction": "Questions 24—26<br/>Complete the summary using the list of phrases, A-F, below.<br/>Write the correct letter, A-F, in boxes 24—26 on your answer sheet.<br/>Using Al in the UK health system<br/>Al currently has a limited role in the way 24 are allocated in the<br/>health service. The positive aspect of Al having a bigger role is that it would be<br/>more efficient and lead to patient benefits. However, such a change would result, for<br/>example, in certain 25 not having their current level of",
               "options": [
@@ -2046,7 +2046,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 37,
               "type": "FILL",
-              "text": "occurred. The design of many cities in Italy today fOIOWS this _________ ..esessssssssseessnsesnsseen '",
+              "text": "Many contemporary Italian cities still follow this same _________ linking street width to house height",
               "answer": "rule",
               "explanation": "The text confirms this: \"Leonardo also thought that the width of the streets ought to match the average height of the adjacent houses: a rule still followed in many contemporary cities across Italy, to allow access to sun and reduce the risk of damage from earthquakes.\"",
               "location": "Passage 3",
@@ -2273,15 +2273,14 @@ const IELTS_TEST_DATA = {
             {
               "num": 16,
               "type": "MCQ",
-              "text": "Question 16: Choose the correct option:",
+              "text": "What does Dan recommend for someone who is a complete beginner at mushroom picking?",
               "answer": "B",
-              "explanation": "The transcript states: \"PRESENTER: This evening we're delighted to welcome Dan Beagle, who's just written a book DAN: 110 on looking for and finding food in the wild.\"",
+              "explanation": "The transcript states: \"If you're a complete beginner, I wouldn't recommend going alone or relying on photos in a book, even the one I've written! ... If possible, you should go with a group led by an expert — you'll stay safe and learn a lot that way.\"",
               "instruction": "Questions 15-20<br/>Choose the correct letter, A, B or C.",
               "options": [
-                "A. Which TWO warnings does Dan give about picking mushrooms?",
-                "B. Don't pick more than one variety of mushroom at a time.",
-                "C. Don't pick mushrooms near busy roads.",
-                "D. Don't eat mushrooms given to you."
+                "A. Rely on a mushroom identification app.",
+                "B. Join a group led by an expert.",
+                "C. Study photographs in a reference book."
               ]
             },
             {
@@ -2318,29 +2317,27 @@ const IELTS_TEST_DATA = {
             {
               "num": 18,
               "type": "MCQ",
-              "text": "Question 18: Choose the correct option:",
+              "text": "Why have some varieties of wild mushroom declined in this part of the country, according to Dan?",
               "answer": "C",
-              "explanation": "The transcript states: \"PRESENTER: This evening we're delighted to welcome Dan Beagle, who's just written a book DAN: 110 on looking for and finding food in the wild.\"",
+              "explanation": "The transcript states: \"the biggest problem is that so many new houses have been built in this area in the last ten years. And more water is being taken from rivers and reservoirs because of this, and mushroom habitats have been destroyed.\"",
               "instruction": "Questions 15-20<br/>Choose the correct letter, A, B or C.",
               "options": [
-                "A. Which TWO warnings does Dan give about picking mushrooms?",
-                "B. Don't pick more than one variety of mushroom at a time.",
-                "C. Don't pick mushrooms near busy roads.",
-                "D. Don't eat mushrooms given to you."
+                "A. There has been a huge rise in demand from restaurants.",
+                "B. There has been a lack of rainfall in the region.",
+                "C. There has been a rise in local building development."
               ]
             },
             {
               "num": 19,
               "type": "MCQ",
-              "text": "Question 19: Choose the correct option:",
+              "text": "What does Dan advise about storing wild mushrooms once you get home?",
               "answer": "A",
-              "explanation": "The transcript states: \"PRESENTER: This evening we're delighted to welcome Dan Beagle, who's just written a book DAN: 110 on looking for and finding food in the wild.\"",
+              "explanation": "The transcript states: \"as soon as you get home, put them in the fridge. They'll be fine for a couple of days, but it's best to cook them as soon as possible.\"",
               "instruction": "Questions 15-20<br/>Choose the correct letter, A, B or C.",
               "options": [
-                "A. Which TWO warnings does Dan give about picking mushrooms?",
-                "B. Don't pick more than one variety of mushroom at a time.",
-                "C. Don't pick mushrooms near busy roads.",
-                "D. Don't eat mushrooms given to you."
+                "A. Keep them in the fridge for no more than a couple of days.",
+                "B. Store them in a brown paper bag in a dark room.",
+                "C. Leave them to rest for a while after washing."
               ]
             },
             {
@@ -3687,7 +3684,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 33,
               "type": "FILL",
-              "text": "e Victor Hugo had to live elsewhere 1 _________ ee esssssssnsseeeun '",
+              "text": "Victor Hugo was forced to live in other parts of _________ during this period",
               "answer": "Europe",
               "explanation": "The transcript states: \"So Victor Hugo was forced to reside in other parts of Europe.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -3841,7 +3838,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 6,
               "type": "FILL",
-              "text": "The UK is relatively new to developing green roofs, and local governments and institutions are playing a major role in spreading the practice. For example, in London, _________ are being used to encourage people to install green roofs.",
+              "text": "Advantages of green roofs include reducing flood risk and lowering how much is spent on _________ costs",
               "answer": "energy",
               "explanation": "The text confirms this: \"Among the benefits are saving on energy costs, mitigating the risk of floods, making habitats for urban wildlife, tackling air pollution and even growing food.\"",
               "location": "Passage 1",
@@ -3850,7 +3847,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 7,
               "type": "FILL",
-              "text": "cases, they Can also be USE FOr PrOCUCING _________ on. eesssssssssssessssesssseeseeeesssee .",
+              "text": "In many cases, green roofs can also be used for growing _________",
               "answer": "food",
               "explanation": "The text confirms this: \"Among the benefits are saving on energy costs, mitigating the risk of floods, making habitats for urban wildlife, tackling air pollution and even growing food.\"",
               "location": "Passage 1",
@@ -3868,7 +3865,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 9,
               "type": "FILL",
-              "text": "To convince investors and developers that installing green roofs is worthwhile, economic arguments are still the most important. The term _________ is used to describe the benefits that green roofs bring to society.",
+              "text": "Access to green spaces has also been shown to help people avoid _________",
               "answer": "obesity",
               "explanation": "The text confirms this: \"And research has found that access to even the most basic green spaces can provide a better quality of life for dementia sufferers and help people avoid obesity.\"",
               "location": "Passage 1",
