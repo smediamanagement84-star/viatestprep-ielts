@@ -1046,6 +1046,15 @@
             </ul>
           </div>
         </div>
+
+        <!-- Developer / QA Quick Bypass -->
+        <div class="pt-5 border-t border-[#ece4d2] text-center space-y-2 mt-4">
+          <span class="text-[9px] font-black uppercase tracking-widest text-[#a8792f] block">Developer / QA Quick Bypass</span>
+          <div class="flex gap-2 justify-center">
+            <button onclick="launchStudentBypass()" class="px-3.5 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-[10px] font-extrabold rounded-lg text-[#5c5648] transition">🔑 Student Bypass</button>
+            <button onclick="launchAdminBypass()" class="px-3.5 py-1.5 bg-[#7a2331] hover:bg-[#5e1a25] text-[10px] font-extrabold rounded-lg text-white transition">🔑 Admin / Consultancy Bypass</button>
+          </div>
+        </div>
       </div>
 
       <!-- Step 2 (Student): Real account login/signup -->
@@ -2061,6 +2070,12 @@
       const password = document.getElementById('m-student-auth-password').value;
       if (!email || !password) { setStudentAuthStatus('Please enter your email and password.'); return; }
 
+      // Demo/Testing Student Bypass
+      if (email.toLowerCase() === 'student@viatestprep.com' && password === 'Password123!') {
+        launchStudentBypass();
+        return;
+      }
+
       const btn = document.getElementById('m-student-auth-btn');
       btn.disabled = true;
       const name = document.getElementById('m-student-name').value.trim();
@@ -2169,6 +2184,13 @@
       const password = document.getElementById('m-consultancy-auth-password').value;
       const name = document.getElementById('m-consultancy-name').value.trim();
       if (!email || !password) { setConsultancyAuthStatus('Please enter your email and password.'); return; }
+
+      // Demo/Testing Consultancy Bypass
+      if (email.toLowerCase() === 'consultancy@viatestprep.com' && password === 'Password123!') {
+        launchAdminBypass();
+        return;
+      }
+
       if (consultancyAuthMode === 'signup' && !name) { setConsultancyAuthStatus('Please enter your consultancy name.'); return; }
 
       const btn = document.getElementById('m-consultancy-auth-btn');
@@ -2275,6 +2297,7 @@
       // Sentinel, not a real consultancy row - lets the owner see every
       // tenant's roster for support purposes (see syncRosterFromCloud()).
       localStorage.setItem('viatestprep_consultancy_id', '__owner__');
+      localStorage.removeItem('viatestprep_consultancy_expires_at');
 
       closeAccessModal();
       renderAppView();
