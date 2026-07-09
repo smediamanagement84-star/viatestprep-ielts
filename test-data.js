@@ -3711,9 +3711,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 2,
               "type": "MCQ",
-              "text": "Question 2: Choose the correct option:",
+              "text": "a reference to a city where green roofs have been promoted for many years",
               "answer": "C",
-              "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
+              "explanation": "Paragraph C states \"Toronto became the first city in North America to pass a bylaw requiring green roofs on new commercial and residential developments,\" and notes London's long-running promotion of green roofs.",
               "location": "Passage 1",
               "instruction": "Questions 1-5<br/>Reading Passage 1 has five paragraphs, A-E.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-E, in boxes 1—5 on your answer sheet.<br/>NB You may use any letter more than once.<br/>mention of several challenges to be overcome before a green roof can be installed<br/>reference to a city where green roofs have been promoted for many years<br/>a belief that existing green roofs should be used as a model for new ones<br/>- WS DN =| examples of how green roofs can work in combination with other green urban<br/>initiatives",
               "options": [
@@ -3727,9 +3727,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 3,
               "type": "MCQ",
-              "text": "Question 3: Choose the correct option:",
+              "text": "a belief that existing green roofs should be used as a model for new developments",
               "answer": "E",
-              "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
+              "explanation": "Paragraph E states advocates hope that \"demonstrating the financial and environmental value of green roofs\" will help \"make them standard practice in urban construction.\"",
               "location": "Passage 1",
               "instruction": "Questions 1-5<br/>Reading Passage 1 has five paragraphs, A-E.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-E, in boxes 1—5 on your answer sheet.<br/>NB You may use any letter more than once.<br/>mention of several challenges to be overcome before a green roof can be installed<br/>reference to a city where green roofs have been promoted for many years<br/>a belief that existing green roofs should be used as a model for new ones<br/>- WS DN =| examples of how green roofs can work in combination with other green urban<br/>initiatives",
               "options": [
@@ -3743,9 +3743,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 4,
               "type": "MCQ",
-              "text": "Question 4: Choose the correct option:",
+              "text": "examples of how green roofs can work in combination with other green urban initiatives",
               "answer": "B",
-              "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
+              "explanation": "Paragraph B describes how green roofs \"can integrate with 'living walls' to create vertical networks of vegetation\" that help mitigate the urban heat island effect.",
               "location": "Passage 1",
               "instruction": "Questions 1-5<br/>Reading Passage 1 has five paragraphs, A-E.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-E, in boxes 1—5 on your answer sheet.<br/>NB You may use any letter more than once.<br/>mention of several challenges to be overcome before a green roof can be installed<br/>reference to a city where green roofs have been promoted for many years<br/>a belief that existing green roofs should be used as a model for new ones<br/>- WS DN =| examples of how green roofs can work in combination with other green urban<br/>initiatives",
               "options": [
@@ -3811,61 +3811,65 @@ const IELTS_TEST_DATA = {
             {
               "num": 10,
               "type": "MCQ",
-              "text": "Write the correct letters in boxes 10 and 11 on your answer sheet.",
+              "text": "Which TWO advantages of using larger, newer buildings for green roofs are mentioned? (Select first advantage)",
               "answer": "C",
-              "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
+              "explanation": "Larger modern buildings offer greater roof capacity, giving green roofs more storage capacity and a larger area for growing plants.",
               "location": "Passage 1",
-              "instruction": "Questions 10 and 11<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 10 and 11 on your answer sheet.<br/>Which TWO advantages of using newer buildings for green roofs are mentioned in<br/>Paragraph C of the passage?<br/>a longer growing season for edible produce<br/>more economical use of water<br/>greater water-storage capacity<br/>ability to cultivate more plant types<br/>a large surface area for growing plants moQgw YD",
+              "instruction": "Questions 10 and 11<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. the UK",
-                "B. London",
-                "C. North America",
-                "D. Singapore"
+                "A. a longer growing season for edible produce",
+                "B. more economical use of water",
+                "C. greater water-storage capacity",
+                "D. ability to cultivate more plant types",
+                "E. a large surface area for growing plants"
               ]
             },
             {
               "num": 11,
               "type": "MCQ",
-              "text": "Write the correct letters in boxes 10 and 11 on your answer sheet.",
-              "answer": "D",
-              "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
+              "text": "Which TWO advantages of using larger, newer buildings for green roofs are mentioned? (Select second advantage)",
+              "answer": "E",
+              "explanation": "Larger modern buildings offer greater roof capacity, giving green roofs more storage capacity and a larger area for growing plants.",
               "location": "Passage 1",
-              "instruction": "Questions 10 and 11<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 10 and 11 on your answer sheet.<br/>Which TWO advantages of using newer buildings for green roofs are mentioned in<br/>Paragraph C of the passage?<br/>a longer growing season for edible produce<br/>more economical use of water<br/>greater water-storage capacity<br/>ability to cultivate more plant types<br/>a large surface area for growing plants moQgw YD",
+              "instruction": "Questions 10 and 11<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. the UK",
-                "B. London",
-                "C. North America",
-                "D. Singapore"
+                "A. a longer growing season for edible produce",
+                "B. more economical use of water",
+                "C. greater water-storage capacity",
+                "D. ability to cultivate more plant types",
+                "E. a large surface area for growing plants"
               ]
             },
             {
               "num": 12,
               "type": "MCQ",
-              "text": "Write the correct letters in boxes 12 and 13 on your answer sheet.",
+              "text": "Which TWO aims of newer variations on the green roof concept are mentioned? (Select first aim)",
               "answer": "A",
-              "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
+              "explanation": "Newer green-roof variations include biodiverse roofs, designed to provide habitats for a wide range of species, and biosolar roofs, which combine planting with power generation.",
               "location": "Passage 1",
-              "instruction": "Questions 12 and 13<br/>Choose TWO letters, A—E.<br/>Write the correct letters in boxes 12 and 13 on your answer sheet.<br/>Which TWO aims of new variations on the concept of green roofs are mentioned in<br/>Paragraph E of the passage?<br/>to provide habitats for a wide range of species<br/>to grow plants successfully even in the wettest climates<br/>to regulate the temperature of the immediate environment<br/>to generate power from a sustainable source<br/>to collect water to supply other buildings moagqup<br/>> [Sp]<br/>Test 4",
+              "instruction": "Questions 12 and 13<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. the UK",
-                "B. London",
-                "C. North America",
-                "D. Singapore"
+                "A. to provide habitats for a wide range of species",
+                "B. to grow plants successfully even in the wettest climates",
+                "C. to regulate the temperature of the immediate environment",
+                "D. to generate power from a sustainable source",
+                "E. to collect water to supply other buildings"
               ]
             },
             {
               "num": 13,
               "type": "MCQ",
-              "text": "Write the correct letters in boxes 12 and 13 on your answer sheet.",
+              "text": "Which TWO aims of newer variations on the green roof concept are mentioned? (Select second aim)",
               "answer": "D",
-              "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
+              "explanation": "Newer green-roof variations include biodiverse roofs, designed to provide habitats for a wide range of species, and biosolar roofs, which combine planting with power generation.",
               "location": "Passage 1",
-              "instruction": "Questions 12 and 13<br/>Choose TWO letters, A—E.<br/>Write the correct letters in boxes 12 and 13 on your answer sheet.<br/>Which TWO aims of new variations on the concept of green roofs are mentioned in<br/>Paragraph E of the passage?<br/>to provide habitats for a wide range of species<br/>to grow plants successfully even in the wettest climates<br/>to regulate the temperature of the immediate environment<br/>to generate power from a sustainable source<br/>to collect water to supply other buildings moagqup<br/>> [Sp]<br/>Test 4",
+              "instruction": "Questions 12 and 13<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. the UK",
-                "B. London",
-                "C. North America",
-                "D. Singapore"
+                "A. to provide habitats for a wide range of species",
+                "B. to grow plants successfully even in the wettest climates",
+                "C. to regulate the temperature of the immediate environment",
+                "D. to generate power from a sustainable source",
+                "E. to collect water to supply other buildings"
               ]
             }
           ]
@@ -3892,9 +3896,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 15,
               "type": "MCQ",
-              "text": "Question 15: Choose the correct option:",
+              "text": "According to the second paragraph, teachers who encourage students to embrace challenges want students to",
               "answer": "C",
-              "explanation": "The text confirms this: \"Over the past century, a powerful idea has taken root in the educational landscape.\"",
+              "explanation": "The passage states teachers encourage students \"to embrace challenges, persist in the face of setbacks, and view failure as an opportunity to learn,\" reflecting confidence that they can succeed.",
               "location": "Passage 2",
               "instruction": "Questions 14-16<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 14-16 on your answer sheet.",
               "options": [
@@ -3907,9 +3911,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 16,
               "type": "MCQ",
-              "text": "Write the correct letter in boxes 14-16 on your answer sheet.",
+              "text": "According to the passage, students with a fixed mindset",
               "answer": "D",
-              "explanation": "The text confirms this: \"Over the past century, a powerful idea has taken root in the educational landscape.\"",
+              "explanation": "The passage states students with a fixed mindset \"believed they were born with a certain amount of ability and could do nothing to change it,\" a belief that discourages them from pushing past perceived limits.",
               "location": "Passage 2",
               "instruction": "Questions 14-16<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 14-16 on your answer sheet.",
               "options": [
@@ -4136,9 +4140,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 31,
               "type": "MCQ",
-              "text": "Write the correct letter, A-J, in boxes 31-36 on your answer sheet.",
+              "text": "One of the remarkable things about Wegener, from a _________, is that he proposed a theory of continental drift despite not being a geologist.",
               "answer": "I",
-              "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
+              "explanation": "The book examines Wegener's life through the biographer's own research into his diaries, letters, field notebooks and publications, noting he proposed continental drift despite training in atmospheric physics, not geology.",
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A—J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
               "options": [
@@ -4157,9 +4161,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 32,
               "type": "MCQ",
-              "text": "Question 32: Choose the correct option:",
+              "text": "Wegener's own _________ were limited mainly to atmospheric physics and meteorology, rather than geology.",
               "answer": "F",
-              "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
+              "explanation": "The passage states \"it was largely a sideline to his interest in atmospheric physics and meteorology,\" and that \"he was a pioneer in the use of weather balloons to study the upper atmosphere.\"",
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A—J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
               "options": [
@@ -4178,9 +4182,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 33,
               "type": "MCQ",
-              "text": "Question 33: Choose the correct option:",
+              "text": "By the time Wegener proposed his theory in 1912, he was already a person of some _________",
               "answer": "A",
-              "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
+              "explanation": "By 1912, Wegener already had a public reputation from his balloon-flight record and his Greenland expeditions, before his continental drift theory brought him wider, more controversial attention.",
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A—J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
               "options": [
@@ -4199,9 +4203,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 34,
               "type": "MCQ",
-              "text": "OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34",
+              "text": "Six years earlier, Wegener had set a _________ of over 52 hours in a hot-air balloon with his brother Kurt.",
               "answer": "C",
-              "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
+              "explanation": "The passage states \"In 1906, he and his brother Kurt set a world record for the longest continuous balloon flight, staying aloft for over fifty-two hours.\"",
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A—J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
               "options": [
@@ -4220,9 +4224,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 35,
               "type": "MCQ",
-              "text": "Question 35: Choose the correct option:",
+              "text": "He was also known for his well-publicised but _________, through his expeditions to Greenland.",
               "answer": "H",
-              "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
+              "explanation": "The passage describes several Greenland expeditions, including one where \"Mylius-Erichsen and two others died during the return journey,\" and the expedition on which Wegener himself later died.",
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A—J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
               "options": [
@@ -4241,9 +4245,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 36,
               "type": "MCQ",
-              "text": "Write the correct letter, A-J, in boxes 31-36 on your answer sheet.",
+              "text": "His work on the thermodynamics of the atmosphere had also brought him to the attention of a _________ of German scientists.",
               "answer": "E",
-              "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
+              "explanation": "The passage notes his textbook on atmospheric thermodynamics \"was a standard work for decades,\" reflecting his standing within the German scientific community even before his continental drift theory.",
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A—J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
               "options": [
