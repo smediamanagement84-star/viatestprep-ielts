@@ -2259,15 +2259,14 @@ const IELTS_TEST_DATA = {
             {
               "num": 15,
               "type": "MCQ",
-              "text": "Questions 15-20",
-              "answer": "C",
-              "explanation": "The transcript states: \"PRESENTER: This evening we're delighted to welcome Dan Beagle, who's just written a book DAN: 110 on looking for and finding food in the wild.\"",
+              "text": "What does Dan say about picking mushrooms in local parks?",
+              "answer": "B",
+              "explanation": "The transcript states: \"you need to be there first thing in the morning, as there's likely be a lot of competition — not just from people but wildlife too.\"",
               "instruction": "Questions 15-20<br/>Choose the correct letter, A, B or C.",
               "options": [
-                "A. Which TWO warnings does Dan give about picking mushrooms?",
-                "B. Don't pick more than one variety of mushroom at a time.",
-                "C. Don't pick mushrooms near busy roads.",
-                "D. Don't eat mushrooms given to you."
+                "A. Only search in wooded areas of the park.",
+                "B. Try to get there early in the morning.",
+                "C. Bring a mushroom identification guide."
               ]
             },
             {
@@ -2343,15 +2342,14 @@ const IELTS_TEST_DATA = {
             {
               "num": 20,
               "type": "MCQ",
-              "text": "Questions 11-20",
+              "text": "What does Dan advise about trying new varieties of wild mushroom?",
               "answer": "A",
-              "explanation": "The transcript states: \"PRESENTER: This evening we're delighted to welcome Dan Beagle, who's just written a book DAN: 110 on looking for and finding food in the wild.\"",
+              "explanation": "The transcript states: \"just be aware that some people can react badly to certain varieties so it's a good idea not to eat huge quantities to begin with.\"",
               "instruction": "Questions 15-20<br/>Choose the correct letter, A, B or C.",
               "options": [
-                "A. Which TWO warnings does Dan give about picking mushrooms?",
-                "B. Don't pick more than one variety of mushroom at a time.",
-                "C. Don't pick mushrooms near busy roads.",
-                "D. Don't eat mushrooms given to you."
+                "A. Be adventurous, but avoid eating large quantities of a new variety at first.",
+                "B. Stick to only one variety of mushroom at a time.",
+                "C. Always cook new varieties for a long time before eating."
               ]
             }
           ]
