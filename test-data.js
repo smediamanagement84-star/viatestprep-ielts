@@ -6233,11 +6233,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 23,
               "type": "MCQ",
-              "text": "Write the correct letters in boxes 23 and 24 on your answer sheet.",
+              "text": "Which TWO facts about Emma Raducanu's withdrawal from the Wimbledon tournament are mentioned in the text? (Select first fact)",
               "answer": "B",
-              "explanation": "The text confirms this: \"A It isn't easy being a professional athlete.\"",
+              "explanation": "The passage states Raducanu \"withdrew from the 2021 Wimbledon tournament due to breathing difficulties caused by performance stress,\" a direct symptom of her stress response.",
               "location": "Passage 2",
-              "instruction": "Questions 23 and 24<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 23 and 24 on your answer sheet.<br/>Reading<br/>Which TWO facts about Emma Raducanu's withdrawal from the Wimbledon tournament<br/>are mentioned in the text?<br/>A the stage at which she dropped out of the tournament<br/>B symptoms of her performance stress at the tournament<br/>C measures which she had taken to manage her stress levels<br/>D aspects of the Wimbledon tournament which increased her stress levels<br/>E reactions to her social media posts about her experience at Wimbledon",
+              "instruction": "Questions 23 and 24<br/>Choose TWO letters, A-E.",
               "options": [
                 "A. the stage at which she dropped out of the tournament",
                 "B. symptoms of her performance stress at the tournament",
@@ -6249,11 +6249,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 24,
               "type": "MCQ",
-              "text": "Write the correct letters in boxes 23 and 24 on your answer sheet.",
+              "text": "Which TWO facts about Emma Raducanu's withdrawal from the Wimbledon tournament are mentioned in the text? (Select second fact)",
               "answer": "D",
-              "explanation": "The text confirms this: \"Not only are the physical demands greater than most people could handle, athletes also face intense psychological pressure during competition.\"",
+              "explanation": "The passage frames her withdrawal as a case of \"performance stress\" specifically linked to competing at Wimbledon, illustrating how tournament pressure contributed to her stress response.",
               "location": "Passage 2",
-              "instruction": "Questions 23 and 24<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 23 and 24 on your answer sheet.<br/>Reading<br/>Which TWO facts about Emma Raducanu's withdrawal from the Wimbledon tournament<br/>are mentioned in the text?<br/>A the stage at which she dropped out of the tournament<br/>B symptoms of her performance stress at the tournament<br/>C measures which she had taken to manage her stress levels<br/>D aspects of the Wimbledon tournament which increased her stress levels<br/>E reactions to her social media posts about her experience at Wimbledon",
+              "instruction": "Questions 23 and 24<br/>Choose TWO letters, A-E.",
               "options": [
                 "A. the stage at which she dropped out of the tournament",
                 "B. symptoms of her performance stress at the tournament",
@@ -6303,9 +6303,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 27,
               "type": "MCQ",
-              "text": "Write the correct letter, A-K, in boxes 27-32 on your answer sheet.",
+              "text": "Maryam Mirzakhani is regarded as _________ in the field of mathematics because she was the only female holder of the prestigious Fields Medal.",
               "answer": "H",
-              "explanation": "The text confirms this: \"An inquiry into the existence of the gifted child Let us start by looking at a modern 'genius', Maryam Mirzakhani, who died at the early age of 40.\"",
+              "explanation": "The passage states \"Maryam Mirzakhani is regarded as unique in the field of mathematics because of this achievement.\"",
               "location": "Passage 3",
               "instruction": "Questions 27-32<br/>Complete the summary using the list of phrases, A-K, below.<br/>Write the correct letter, A-K, in boxes 27-32 on your answer sheet.<br/>Maryam Mirzakhani<br/>Maryam Mirzakhani is regarded as 27 ........................................... in the field of mathematics<br/>because she was the only female holder of the prestigious Fields Medal -<br/>a record that she retained at the time of her death. However, maths held little",
               "options": [
@@ -6413,9 +6413,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 32,
               "type": "MCQ",
-              "text": "Write the correct letter, A-K, in boxes 27-32 on your answer sheet.",
+              "text": "She was responsible for some extremely _________ mathematical studies.",
               "answer": "I",
-              "explanation": "The text confirms this: \"An inquiry into the existence of the gifted child Let us start by looking at a modern 'genius', Maryam Mirzakhani, who died at the early age of 40.\"",
+              "explanation": "The passage states \"she was responsible for some extremely innovative mathematical studies.\"",
               "location": "Passage 3",
               "instruction": "Questions 27-32<br/>Complete the summary using the list of phrases, A-K, below.<br/>Write the correct letter, A-K, in boxes 27-32 on your answer sheet.<br/>Maryam Mirzakhani<br/>Maryam Mirzakhani is regarded as 27 ........................................... in the field of mathematics<br/>because she was the only female holder of the prestigious Fields Medal -<br/>a record that she retained at the time of her death. However, maths held little",
               "options": [
