@@ -2642,9 +2642,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 3,
               "type": "MCQ",
-              "text": "Question 3: Choose the correct option:",
+              "text": "an explanation of why concrete's particular properties make it difficult to find a comparable substitute",
               "answer": "C",
-              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
+              "explanation": "Paragraph C states \"concrete and steel have similar thermal expansion properties, so steel can be used to reinforce concrete, making it far stronger and more flexible as a building material than it could be on its own,\" concluding \"Making anything with similar properties is going to be very difficult.\"",
               "location": "Passage 1",
               "instruction": "Questions 1-4<br/>Reading Passage 1 has eight sections, A-H.<br/>Which section contains the following information?<br/>Write the correct letter, A-H, in boxes 1-4 on your answer sheet.",
               "options": [
@@ -2696,7 +2696,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 7,
               "type": "FILL",
-              "text": "Question 7: Write your answer here: _________",
+              "text": "In one process, _________ of solid wood are glued together crosswise to create building blocks.",
               "answer": "layers",
               "explanation": "The text confirms this: \"An adhesive is used to stick layers of solid-sawn timber together, crosswise, to form building blocks.\"",
               "location": "Passage 1",
@@ -2794,136 +2794,73 @@ const IELTS_TEST_DATA = {
           "questions": [
             {
               "num": 14,
-              "type": "MCQ",
-              "text": "Question 14: Choose the correct option:",
+              "type": "HEADING",
+              "text": "Paragraph A",
               "answer": "iii",
-              "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
+              "explanation": "Paragraph A outlines both the appealing qualities of steam cars (quiet, smooth, powerful, no gear shift) and their major drawback (slow to start up).",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
-              "options": [
-                "i. Heading i",
-                "ii. Heading ii",
-                "iii. Heading iii",
-                "iv. Heading iv",
-                "v. Heading v",
-                "vi. Heading vi",
-                "vii. Heading vii",
-                "viii. Heading viii"
-              ]
+              "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
+              "options": ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"]
             },
             {
               "num": 15,
-              "type": "MCQ",
-              "text": "Question 15: Choose the correct option:",
+              "type": "HEADING",
+              "text": "Paragraph B",
               "answer": "viii",
-              "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
+              "explanation": "Paragraph B describes how the Internal Combustion Engine, cheaper and starting instantly, quickly overtook steam cars, which had mostly disappeared from the market by the 1920s.",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
-              "options": [
-                "i. Heading i",
-                "ii. Heading ii",
-                "iii. Heading iii",
-                "iv. Heading iv",
-                "v. Heading v",
-                "vi. Heading vi",
-                "vii. Heading vii",
-                "viii. Heading viii"
-              ]
+              "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
+              "options": ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"]
             },
             {
               "num": 16,
-              "type": "MCQ",
-              "text": "Question 16: Choose the correct option:",
+              "type": "HEADING",
+              "text": "Paragraph C",
               "answer": "vi",
-              "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
+              "explanation": "Paragraph C describes the Doble brothers' first steam car model, built in their garage from parts of other cars — a success, but not yet commercially viable.",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
-              "options": [
-                "i. Heading i",
-                "ii. Heading ii",
-                "iii. Heading iii",
-                "iv. Heading iv",
-                "v. Heading v",
-                "vi. Heading vi",
-                "vii. Heading vii",
-                "viii. Heading viii"
-              ]
+              "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
+              "options": ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"]
             },
             {
               "num": 17,
-              "type": "MCQ",
-              "text": "Question 17: Choose the correct option:",
+              "type": "HEADING",
+              "text": "Paragraph D",
               "answer": "v",
-              "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
+              "explanation": "Paragraph D describes the Model B's condenser innovation and rapid startup system, which attracted positive publicity and several customer orders.",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
-              "options": [
-                "i. Heading i",
-                "ii. Heading ii",
-                "iii. Heading iii",
-                "iv. Heading iv",
-                "v. Heading v",
-                "vi. Heading vi",
-                "vii. Heading vii",
-                "viii. Heading viii"
-              ]
+              "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
+              "options": ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"]
             },
             {
               "num": 18,
-              "type": "MCQ",
-              "text": "Question 18: Choose the correct option:",
+              "type": "HEADING",
+              "text": "Paragraph E",
               "answer": "vii",
-              "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
+              "explanation": "Paragraph E describes the Model C, which was \"quiet, fast, and easy to drive,\" prompting the Doble brothers to found the Doble Steam Motors Corporation.",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
-              "options": [
-                "i. Heading i",
-                "ii. Heading ii",
-                "iii. Heading iii",
-                "iv. Heading iv",
-                "v. Heading v",
-                "vi. Heading vi",
-                "vii. Heading vii",
-                "viii. Heading viii"
-              ]
+              "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
+              "options": ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"]
             },
             {
               "num": 19,
-              "type": "MCQ",
-              "text": "Question 19: Choose the correct option:",
+              "type": "HEADING",
+              "text": "Paragraph F",
               "answer": "i",
-              "explanation": "The text confirms this: \"' Questions 14-20 Choose the correct heading for each paragraph from the list of headings below.\"",
+              "explanation": "Paragraph F describes how customers who had paid deposits were told production was suspended due to wartime shortages, leaving many disappointed and demanding refunds.",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
-              "options": [
-                "i. Heading i",
-                "ii. Heading ii",
-                "iii. Heading iii",
-                "iv. Heading iv",
-                "v. Heading v",
-                "vi. Heading vi",
-                "vii. Heading vii",
-                "viii. Heading viii"
-              ]
+              "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
+              "options": ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"]
             },
             {
               "num": 20,
-              "type": "MCQ",
-              "text": "Question 20: Choose the correct option:",
+              "type": "HEADING",
+              "text": "Paragraph G",
               "answer": "iv",
-              "explanation": "The text confirms this: \"List of Headings i A period in cold conditions before the technology is assessed ii Marketing issues lead to failure iii Good and bad aspects of steam technology are passed on iv Apossible solution to the issues of today v_ Further improvements lead to commercial orders vi Positive publicity at last for this quiet, clean, fast vehicle vii A disappointing outcome for customers A better option than the steam car arises 14 Paragraph A 15 Paragraph B 16 Paragraph C 17 Paragraph D 18 Paragraph E 19 Paragraph F 20 Paragraph G The successes and failures of the Doble brothers and their steam cars When primitive automobiles first began to appear in the 1800s, their engines were based on steam power.\"",
+              "explanation": "Paragraph G notes that Model Es still run today, meeting California's strict emissions laws, suggesting modern technology and materials could help revive the steam car.",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
-              "options": [
-                "i. Heading i",
-                "ii. Heading ii",
-                "iii. Heading iii",
-                "iv. Heading iv",
-                "v. Heading v",
-                "vi. Heading vi",
-                "vii. Heading vii",
-                "viii. Heading viii"
-              ]
+              "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
+              "options": ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"]
             },
             {
               "num": 21,
@@ -3066,9 +3003,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 31,
               "type": "MCQ",
-              "text": "Write the correct letter, A-I, in boxes 31-35 on your answer sheet.",
+              "text": "According to Professor John Hattie, there is very little indication that streaming leads to _________",
               "answer": "H",
-              "explanation": "The text confirms this: \"Picture this scene.\"",
+              "explanation": "The passage states: \"there is very little indication that streaming leads to higher achievements.\"",
               "location": "Passage 3",
               "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
               "options": [
@@ -3086,9 +3023,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 32,
               "type": "MCQ",
-              "text": "students placed in the 32 , especially where a large proportion of",
+              "text": "He points out that the most significant impact of streaming is on students placed in the _________",
               "answer": "D",
-              "explanation": "The text confirms this: \"It's an English literature lesson in a UK school, and the teacher has just read an extract from Shakespeare's Romeo and Juliet with a class of 15-year-olds.\"",
+              "explanation": "The passage states: \"the most significant impact is on those students placed in the bottom sets.\"",
               "location": "Passage 3",
               "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
               "options": [
@@ -3106,9 +3043,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 33,
               "type": "MCQ",
-              "text": "Question 33: Choose the correct option:",
+              "text": "This impact is especially strong where a large proportion of these students come from _________",
               "answer": "F",
-              "explanation": "The text confirms this: \"It's an English literature lesson in a UK school, and the teacher has just read an extract from Shakespeare's Romeo and Juliet with a class of 15-year-olds.\"",
+              "explanation": "The passage states this impact is greatest \"especially where a large proportion of students are from disadvantaged backgrounds.\"",
               "location": "Passage 3",
               "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
               "options": [
@@ -3126,9 +3063,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 34,
               "type": "MCQ",
-              "text": "Cece \\ . Meanwhile, for the 34",
+              "text": "Meanwhile, for the _________, streaming appears to offer only minimal advantage",
               "answer": "E",
-              "explanation": "The text confirms this: \"Picture this scene.\"",
+              "explanation": "The passage states \"for the brightest pupils, there appears to be only minimal advantage.\"",
               "location": "Passage 3",
               "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
               "options": [
@@ -3146,9 +3083,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 35,
               "type": "MCQ",
-              "text": "Write the correct letter, A-I, in boxes 31-35 on your answer sheet.",
+              "text": "Critics also argue streaming systems can be particularly unfair to _________, who may be locked into a lower class based on early performance",
               "answer": "B",
-              "explanation": "The text confirms this: \"For three students, even these literacy demands are beyond them.\"",
+              "explanation": "The passage states critics argue \"streaming can be harmful, as it locks children into a specific level and makes it difficult for them to move up if their performance improves.\"",
               "location": "Passage 3",
               "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
               "options": [
@@ -3166,11 +3103,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 36,
               "type": "TFNG",
-              "text": "Question 36: Choose the correct option:",
+              "text": "According to Hattie, class grouping is a more important factor in student achievement than teacher collaboration.",
               "answer": "FALSE",
-              "explanation": "The passage confirms that the answer is 'FALSE'.",
+              "explanation": "The passage states Hattie identifies \"collective teacher efficacy\" as the most effective factor, suggesting \"the focus should be on teacher training and collaboration rather than class grouping.\"",
               "location": "Passage 3",
-              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
+              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -3180,11 +3117,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 37,
               "type": "TFNG",
-              "text": "Question 37: Choose the correct option:",
+              "text": "Scaffolding techniques were first developed specifically for use in mixed-ability classrooms.",
               "answer": "NOT GIVEN",
-              "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
+              "explanation": "The passage describes scaffolding as a differentiation technique but gives no information on where or when it was first developed.",
               "location": "Passage 3",
-              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
+              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -3194,11 +3131,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 38,
               "type": "TFNG",
-              "text": "Question 38: Choose the correct option:",
+              "text": "High-achieving students who help their peers can strengthen their own understanding of the material.",
               "answer": "TRUE",
-              "explanation": "The passage confirms that the answer is 'TRUE'.",
+              "explanation": "The passage states that by helping their peers, \"high-achieving students can consolidate their own learning and develop empathy and communication skills.\"",
               "location": "Passage 3",
-              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
+              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -3208,11 +3145,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 39,
               "type": "TFNG",
-              "text": "Question 39: Choose the correct option:",
+              "text": "According to the writer, peer explanations are usually less effective than a teacher's own explanation.",
               "answer": "FALSE",
-              "explanation": "The passage confirms that the answer is 'FALSE'.",
+              "explanation": "The writer states a classmate's explanation \"is often simpler and more relatable than the one I would give,\" the opposite of this claim.",
               "location": "Passage 3",
-              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
+              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -3222,11 +3159,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 40,
               "type": "TFNG",
-              "text": "Question 40: Choose the correct option:",
+              "text": "The writer cites specific test-score data measuring the benefits of peer learning.",
               "answer": "NOT GIVEN",
-              "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
+              "explanation": "The writer describes peer learning favourably but gives no specific test-score figures to quantify its benefits.",
               "location": "Passage 3",
-              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
+              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
