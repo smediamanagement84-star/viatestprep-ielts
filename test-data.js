@@ -6910,10 +6910,10 @@ const IELTS_TEST_DATA = {
             {
               "num": 26,
               "type": "MCQ",
-              "text": "Questions 26-30",
+              "text": "Use twelve mice that are all the same _________ , rather than a mixture of old and young.",
               "answer": "C",
-              "explanation": "The transcript states: \"CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: Hi Jake.\"",
-              "instruction": "Questions 26-30.<br/>A size<br/>B escape<br/>C age<br/>water<br/>E cereal<br/>F calculations<br/>G changes<br/>colour",
+              "explanation": "The transcript states: \"I'd say about 12. And all young ones, not a mixture of old and young.\"",
+              "instruction": "Questions 26-30<br/>Complete the notes below.<br/><br/><b>List of Answers</b><br/>A.&nbsp; size<br/>B.&nbsp; escape<br/>C.&nbsp; age<br/>D.&nbsp; water<br/>E.&nbsp; cereal<br/>F.&nbsp; calculations<br/>G.&nbsp; changes<br/>H.&nbsp; colour",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -6931,7 +6931,7 @@ const IELTS_TEST_DATA = {
               "text": "Divide the mice into two groups, each with a different 27 _________ .",
               "answer": "H",
               "explanation": "The transcript states: \"CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: Hi Jake.\"",
-              "instruction": "Questions 26-30.<br/>A size<br/>B escape<br/>C age<br/>water<br/>E cereal<br/>F calculations<br/>G changes<br/>colour",
+              "instruction": "Questions 26-30<br/>Complete the notes below.<br/><br/><b>List of Answers</b><br/>A.&nbsp; size<br/>B.&nbsp; escape<br/>C.&nbsp; age<br/>D.&nbsp; water<br/>E.&nbsp; cereal<br/>F.&nbsp; calculations<br/>G.&nbsp; changes<br/>H.&nbsp; colour",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -6949,7 +6949,7 @@ const IELTS_TEST_DATA = {
               "text": "Feed group B the same, but also sugar contained in 28 _________ .",
               "answer": "E",
               "explanation": "The transcript states: \"CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: Hi Jake.\"",
-              "instruction": "Questions 26-30.<br/>A size<br/>B escape<br/>C age<br/>water<br/>E cereal<br/>F calculations<br/>G changes<br/>colour",
+              "instruction": "Questions 26-30<br/>Complete the notes below.<br/><br/><b>List of Answers</b><br/>A.&nbsp; size<br/>B.&nbsp; escape<br/>C.&nbsp; age<br/>D.&nbsp; water<br/>E.&nbsp; cereal<br/>F.&nbsp; calculations<br/>G.&nbsp; changes<br/>H.&nbsp; colour",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -6967,7 +6967,7 @@ const IELTS_TEST_DATA = {
               "text": "Place them in a weighing chamber to prevent 29 _________ .",
               "answer": "B",
               "explanation": "The transcript states: \"It's harder than I expected, but I've got some great classes.\"",
-              "instruction": "Questions 26-30.<br/>A size<br/>B escape<br/>C age<br/>water<br/>E cereal<br/>F calculations<br/>G changes<br/>colour",
+              "instruction": "Questions 26-30<br/>Complete the notes below.<br/><br/><b>List of Answers</b><br/>A.&nbsp; size<br/>B.&nbsp; escape<br/>C.&nbsp; age<br/>D.&nbsp; water<br/>E.&nbsp; cereal<br/>F.&nbsp; calculations<br/>G.&nbsp; changes<br/>H.&nbsp; colour",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -6982,10 +6982,10 @@ const IELTS_TEST_DATA = {
             {
               "num": 30,
               "type": "MCQ",
-              "text": "Questions 21-30",
+              "text": "Once weight gain has been measured, work out the average for each group along with the standard deviation, using suitable _________ .",
               "answer": "F",
-              "explanation": "The transcript states: \"And as part of my teaching practice, I have to design an experiment for them to do.\"",
-              "instruction": "Questions 26-30.<br/>A size<br/>B escape<br/>C age<br/>water<br/>E cereal<br/>F calculations<br/>G changes<br/>colour",
+              "explanation": "The transcript states: \"once we've measured the weight gain of each mouse we can work out the average for each group, as well as the standard deviation.\"",
+              "instruction": "Questions 26-30<br/>Complete the notes below.<br/><br/><b>List of Answers</b><br/>A.&nbsp; size<br/>B.&nbsp; escape<br/>C.&nbsp; age<br/>D.&nbsp; water<br/>E.&nbsp; cereal<br/>F.&nbsp; calculations<br/>G.&nbsp; changes<br/>H.&nbsp; colour",
               "options": [
                 "A. Option A",
                 "B. Option B",
