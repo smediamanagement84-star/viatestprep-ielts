@@ -413,7 +413,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 31,
               "type": "FILL",
-              "text": "Majete National Park: fences are needed to protect both animals and the local _________",
+              "text": "Majete National Park: overpopulation meant elephants often damaged the park's _________",
               "answer": "fences",
               "explanation": "The transcript states: \"Elephants were routinely knocking down fences around the park, which then had to be repaired at a significant cost.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -429,7 +429,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 33,
               "type": "FILL",
-              "text": "translocation methods: tracking was done using _________",
+              "text": "locating groups: elephants were spotted and directed toward the collection site using _________",
               "answer": "helicopters",
               "explanation": "The transcript states: \"A team of vets and park rangers flew over the park in helicopters and targeted a group.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -437,7 +437,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 34,
               "type": "FILL",
-              "text": "animals were loaded onto trucks and kept under _________",
+              "text": "capture process: the darting had to be completed quickly to reduce _________",
               "answer": "stress",
               "explanation": "The transcript states: \"This also had to be done as quickly as possible so as to minimise the stress caused.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -445,7 +445,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 35,
               "type": "FILL",
-              "text": "release process: elephants were released into a _________ area first",
+              "text": "recovery: elephants had to be positioned on their _________ to prevent their lungs being crushed",
               "answer": "sides",
               "explanation": "The transcript states: \"So all the elephants had to be placed on their sides.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -453,7 +453,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 36,
               "type": "FILL",
-              "text": "results of translocation: new environment has caused no _________ to the elephants",
+              "text": "during recovery, each elephant's _________ had to be closely monitored",
               "answer": "breathing",
               "explanation": "The transcript states: \"It was very important to keep an eye on their breathing — if there were fewer than six breaths per minute, the elephant would need urgent medical attention.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -461,7 +461,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 37,
               "type": "FILL",
-              "text": "elephants have adapted well to their new _________",
+              "text": "measurements were taken of each elephant's tusks and _________",
               "answer": "feet",
               "explanation": "The transcript states: \"Measurements were taken of each elephant's tusks — elephants with large tusks would be at greater risk from poachers — and also of their feet.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -469,7 +469,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 38,
               "type": "FILL",
-              "text": "there has been an increase in the number of _________ in the area",
+              "text": "outcomes for local communities: _________ prospects have improved enormously",
               "answer": "employment",
               "explanation": "The transcript states: \"Employment prospects have improved enormously, contributing to rising living standards for the whole community.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -477,7 +477,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 39,
               "type": "FILL",
-              "text": "benefits of project: local people have gained _________",
+              "text": "many former poachers volunteered to give up their _________, no longer needing them",
               "answer": "weapons",
               "explanation": "The transcript states: \"In fact, many of them volunteered to give up their weapons, as they were no longer of any use to them.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -1589,7 +1589,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 2,
               "type": "FILL",
-              "text": "Test _________",
+              "text": "Deep pits within the circle may once have held a ring of timber _________",
               "answer": "posts",
               "explanation": "The text confirms this: \"Deep pits dating back to that era and located within the circle may have once held a ring of timber posts, according to some scholars.\"",
               "location": "Passage 1",
@@ -1607,7 +1607,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 4,
               "type": "FILL",
-              "text": "Question 4: Write your answer here: _________",
+              "text": "A more recent hypothesis suggests the bluestones were instead hauled on wicker baskets pulled by _________",
               "answer": "oxen",
               "explanation": "The text confirms this: \"More recent archaeological hypotheses have them transporting the bluestones with supersized wicker baskets on a combination of ball bearings and long grooved planks, hauled by oxen.\"",
               "location": "Passage 1",
@@ -1634,7 +1634,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 7,
               "type": "FILL",
-              "text": "Question 7: Write your answer here: _________",
+              "text": "Most modern scholars agree that Stonehenge once served, among other functions, as a _________ ground",
               "answer": "burial",
               "explanation": "The text confirms this: \"While there is consensus among the majority of modern scholars that Stonehenge once served the function of burial ground, they have yet to determine what other purposes it had.\"",
               "location": "Passage 1",
@@ -1652,9 +1652,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 9,
               "type": "TFNG",
-              "text": "During the third phase of construction, sandstone slabs were placed in both the outer areas and the middle of the Stonehenge site.",
+              "text": "The sarsen stones erected in the second phase of construction were arranged both around the outside and within the interior of the site.",
               "answer": "TRUE",
-              "explanation": "The passage confirms that the answer is 'TRUE'.",
+              "explanation": "The passage states the sarsen stones \"were arranged in an outer circle and an inner horseshoe.\"",
               "location": "Passage 1",
               "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9—13 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
               "options": [
@@ -1666,9 +1666,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 10,
               "type": "TFNG",
-              "text": "Question 10: Choose the correct option:",
+              "text": "The bluestones used at Stonehenge were sourced from a location closer to the site than the sarsen stones were.",
               "answer": "FALSE",
-              "explanation": "The passage confirms that the answer is 'FALSE'.",
+              "explanation": "The passage states the bluestones were \"brought from the Preseli Hills in Wales, over 140 miles away, while the larger sarsens were transported from the Marlborough Downs, about 20 miles north of the site\" — so the bluestones travelled much further, not a shorter distance.",
               "location": "Passage 1",
               "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9—13 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
               "options": [
@@ -1680,9 +1680,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 11,
               "type": "TFNG",
-              "text": "Question 11: Choose the correct option:",
+              "text": "The Amesbury Archer grew up in the immediate area surrounding Stonehenge.",
               "answer": "FALSE",
-              "explanation": "The passage confirms that the answer is 'FALSE'.",
+              "explanation": "The passage states that analysis of his teeth \"revealed that he had grown up in Central Europe, suggesting that Stonehenge was a place of pilgrimage for people from far away.\"",
               "location": "Passage 1",
               "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9—13 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
               "options": [
@@ -1728,9 +1728,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 14,
               "type": "MCQ",
-              "text": "Question 14: Choose the correct option:",
+              "text": "What does the writer say about the current pace of AI development?",
               "answer": "C",
-              "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
+              "explanation": "The passage states \"AI is progressing rapidly, and many experts believe that we will create human-level artificial general intelligence (AGI) within this century.\"",
               "location": "Passage 2",
               "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
               "options": [
@@ -1743,9 +1743,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 15,
               "type": "MCQ",
-              "text": "Question 15: Choose the correct option:",
+              "text": "Why does the writer quote Alan Turing's 1951 remark about thinking machines?",
               "answer": "A",
-              "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
+              "explanation": "The passage quotes Turing's warning: \"If a machine can think, it might think more intelligently than we do, and then where should we be?\"",
               "location": "Passage 2",
               "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
               "options": [
@@ -1758,9 +1758,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 16,
               "type": "MCQ",
-              "text": "Question 16: Choose the correct option:",
+              "text": "Why does the writer include the story of King Midas?",
               "answer": "B",
-              "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
+              "explanation": "The passage uses the Midas analogy to illustrate \"the danger of poorly defined objectives in AI,\" since Midas \"failed to specify\" important conditions on his wish.",
               "location": "Passage 2",
               "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
               "options": [
@@ -1773,9 +1773,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 17,
               "type": "MCQ",
-              "text": "Question 17: Choose the correct option:",
+              "text": "What does the writer identify as a central difficulty in the value alignment problem?",
               "answer": "D",
-              "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
+              "explanation": "The passage states \"if we build superintelligent machines that do not share our values, they could act in ways that are harmful to us, even if they are carrying out our instructions.\"",
               "location": "Passage 2",
               "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
               "options": [
@@ -1788,9 +1788,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 18,
               "type": "MCQ",
-              "text": "Question 18: Choose the correct option:",
+              "text": "What does Turing's warning imply machines may eventually be capable of?",
               "answer": "C",
-              "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
+              "explanation": "The passage quotes Turing's warning that a thinking machine \"might think more intelligently than we do.\"",
               "location": "Passage 2",
               "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
               "options": [
@@ -1874,9 +1874,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 24,
               "type": "MCQ",
-              "text": "Write the correct letter, A-F, in boxes 24—26 on your answer sheet.",
+              "text": "AI currently has a limited role in the way _________ are allocated in the health service.",
               "answer": "C",
-              "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
+              "explanation": "This summary describes how a bigger AI role in the health service could affect the allocation of available resources.",
               "location": "Passage 2",
               "instruction": "Questions 24—26<br/>Complete the summary using the list of phrases, A-F, below.<br/>Write the correct letter, A-F, in boxes 24—26 on your answer sheet.<br/>Using Al in the UK health system<br/>Al currently has a limited role in the way 24 are allocated in the<br/>health service. The positive aspect of Al having a bigger role is that it would be<br/>more efficient and lead to patient benefits. However, such a change would result, for<br/>example, in certain 25 not having their current level of",
               "options": [
@@ -1891,9 +1891,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 25,
               "type": "MCQ",
-              "text": "example, in certain 25 not having their current level of",
+              "text": "A bigger AI role would result, for example, in certain _________ not having their current level of authority.",
               "answer": "A",
-              "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
+              "explanation": "This summary describes a bigger AI role reducing the current authority of certain medical practitioners.",
               "location": "Passage 2",
               "instruction": "Questions 24—26<br/>Complete the summary using the list of phrases, A-F, below.<br/>Write the correct letter, A-F, in boxes 24—26 on your answer sheet.<br/>Using Al in the UK health system<br/>Al currently has a limited role in the way 24 are allocated in the<br/>health service. The positive aspect of Al having a bigger role is that it would be<br/>more efficient and lead to patient benefits. However, such a change would result, for<br/>example, in certain 25 not having their current level of",
               "options": [
@@ -1908,9 +1908,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 26,
               "type": "MCQ",
-              "text": "Write the correct letter, A-F, in boxes 24—26 on your answer sheet.",
+              "text": "Certain medical practitioners would no longer have their current level of _________.",
               "answer": "E",
-              "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
+              "explanation": "This summary describes certain medical practitioners losing some of their current professional authority as AI's role expands.",
               "location": "Passage 2",
               "instruction": "Questions 24—26<br/>Complete the summary using the list of phrases, A-F, below.<br/>Write the correct letter, A-F, in boxes 24—26 on your answer sheet.<br/>Using Al in the UK health system<br/>Al currently has a limited role in the way 24 are allocated in the<br/>health service. The positive aspect of Al having a bigger role is that it would be<br/>more efficient and lead to patient benefits. However, such a change would result, for<br/>example, in certain 25 not having their current level of",
               "options": [
@@ -2056,7 +2056,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 37,
               "type": "FILL",
-              "text": "occurred. The design of many cities in Italy today fOIOWS this _________ ..esessssssssseessnsesnsseen '",
+              "text": "Many contemporary Italian cities still follow this same _________ linking street width to house height",
               "answer": "rule",
               "explanation": "The text confirms this: \"Leonardo also thought that the width of the streets ought to match the average height of the adjacent houses: a rule still followed in many contemporary cities across Italy, to allow access to sun and reduce the risk of damage from earthquakes.\"",
               "location": "Passage 3",
@@ -2269,29 +2269,27 @@ const IELTS_TEST_DATA = {
             {
               "num": 15,
               "type": "MCQ",
-              "text": "Questions 15-20",
-              "answer": "C",
-              "explanation": "The transcript states: \"PRESENTER: This evening we're delighted to welcome Dan Beagle, who's just written a book DAN: 110 on looking for and finding food in the wild.\"",
+              "text": "What does Dan say about picking mushrooms in local parks?",
+              "answer": "B",
+              "explanation": "The transcript states: \"you need to be there first thing in the morning, as there's likely be a lot of competition — not just from people but wildlife too.\"",
               "instruction": "Questions 15-20<br/>Choose the correct letter, A, B or C.",
               "options": [
-                "A. Which TWO warnings does Dan give about picking mushrooms?",
-                "B. Don't pick more than one variety of mushroom at a time.",
-                "C. Don't pick mushrooms near busy roads.",
-                "D. Don't eat mushrooms given to you."
+                "A. Only search in wooded areas of the park.",
+                "B. Try to get there early in the morning.",
+                "C. Bring a mushroom identification guide."
               ]
             },
             {
               "num": 16,
               "type": "MCQ",
-              "text": "Question 16: Choose the correct option:",
+              "text": "What does Dan recommend for someone who is a complete beginner at mushroom picking?",
               "answer": "B",
-              "explanation": "The transcript states: \"PRESENTER: This evening we're delighted to welcome Dan Beagle, who's just written a book DAN: 110 on looking for and finding food in the wild.\"",
+              "explanation": "The transcript states: \"If you're a complete beginner, I wouldn't recommend going alone or relying on photos in a book, even the one I've written! ... If possible, you should go with a group led by an expert — you'll stay safe and learn a lot that way.\"",
               "instruction": "Questions 15-20<br/>Choose the correct letter, A, B or C.",
               "options": [
-                "A. Which TWO warnings does Dan give about picking mushrooms?",
-                "B. Don't pick more than one variety of mushroom at a time.",
-                "C. Don't pick mushrooms near busy roads.",
-                "D. Don't eat mushrooms given to you."
+                "A. Rely on a mushroom identification app.",
+                "B. Join a group led by an expert.",
+                "C. Study photographs in a reference book."
               ]
             },
             {
@@ -2328,43 +2326,40 @@ const IELTS_TEST_DATA = {
             {
               "num": 18,
               "type": "MCQ",
-              "text": "Question 18: Choose the correct option:",
+              "text": "Why have some varieties of wild mushroom declined in this part of the country, according to Dan?",
               "answer": "C",
-              "explanation": "The transcript states: \"PRESENTER: This evening we're delighted to welcome Dan Beagle, who's just written a book DAN: 110 on looking for and finding food in the wild.\"",
+              "explanation": "The transcript states: \"the biggest problem is that so many new houses have been built in this area in the last ten years. And more water is being taken from rivers and reservoirs because of this, and mushroom habitats have been destroyed.\"",
               "instruction": "Questions 15-20<br/>Choose the correct letter, A, B or C.",
               "options": [
-                "A. Which TWO warnings does Dan give about picking mushrooms?",
-                "B. Don't pick more than one variety of mushroom at a time.",
-                "C. Don't pick mushrooms near busy roads.",
-                "D. Don't eat mushrooms given to you."
+                "A. There has been a huge rise in demand from restaurants.",
+                "B. There has been a lack of rainfall in the region.",
+                "C. There has been a rise in local building development."
               ]
             },
             {
               "num": 19,
               "type": "MCQ",
-              "text": "Question 19: Choose the correct option:",
+              "text": "What does Dan advise about storing wild mushrooms once you get home?",
               "answer": "A",
-              "explanation": "The transcript states: \"PRESENTER: This evening we're delighted to welcome Dan Beagle, who's just written a book DAN: 110 on looking for and finding food in the wild.\"",
+              "explanation": "The transcript states: \"as soon as you get home, put them in the fridge. They'll be fine for a couple of days, but it's best to cook them as soon as possible.\"",
               "instruction": "Questions 15-20<br/>Choose the correct letter, A, B or C.",
               "options": [
-                "A. Which TWO warnings does Dan give about picking mushrooms?",
-                "B. Don't pick more than one variety of mushroom at a time.",
-                "C. Don't pick mushrooms near busy roads.",
-                "D. Don't eat mushrooms given to you."
+                "A. Keep them in the fridge for no more than a couple of days.",
+                "B. Store them in a brown paper bag in a dark room.",
+                "C. Leave them to rest for a while after washing."
               ]
             },
             {
               "num": 20,
               "type": "MCQ",
-              "text": "Questions 11-20",
+              "text": "What does Dan advise about trying new varieties of wild mushroom?",
               "answer": "A",
-              "explanation": "The transcript states: \"PRESENTER: This evening we're delighted to welcome Dan Beagle, who's just written a book DAN: 110 on looking for and finding food in the wild.\"",
+              "explanation": "The transcript states: \"just be aware that some people can react badly to certain varieties so it's a good idea not to eat huge quantities to begin with.\"",
               "instruction": "Questions 15-20<br/>Choose the correct letter, A, B or C.",
               "options": [
-                "A. Which TWO warnings does Dan give about picking mushrooms?",
-                "B. Don't pick more than one variety of mushroom at a time.",
-                "C. Don't pick mushrooms near busy roads.",
-                "D. Don't eat mushrooms given to you."
+                "A. Be adventurous, but avoid eating large quantities of a new variety at first.",
+                "B. Stick to only one variety of mushroom at a time.",
+                "C. Always cook new varieties for a long time before eating."
               ]
             }
           ]
@@ -2684,9 +2679,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 3,
               "type": "MCQ",
-              "text": "Question 3: Choose the correct option:",
+              "text": "an explanation of why concrete's particular properties make it difficult to find a comparable substitute",
               "answer": "C",
-              "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
+              "explanation": "Paragraph C states \"concrete and steel have similar thermal expansion properties, so steel can be used to reinforce concrete, making it far stronger and more flexible as a building material than it could be on its own,\" concluding \"Making anything with similar properties is going to be very difficult.\"",
               "location": "Passage 1",
               "instruction": "Questions 1-4<br/>Reading Passage 1 has eight sections, A-H.<br/>Which section contains the following information?<br/>Write the correct letter, A-H, in boxes 1-4 on your answer sheet.",
               "options": [
@@ -2738,7 +2733,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 7,
               "type": "FILL",
-              "text": "Question 7: Write your answer here: _________",
+              "text": "In one process, _________ of solid wood are glued together crosswise to create building blocks.",
               "answer": "layers",
               "explanation": "The text confirms this: \"An adhesive is used to stick layers of solid-sawn timber together, crosswise, to form building blocks.\"",
               "location": "Passage 1",
@@ -2837,142 +2832,72 @@ const IELTS_TEST_DATA = {
             {
               "num": 14,
               "type": "HEADING",
-              "text": "Question 14: Choose the correct option:",
+              "text": "Paragraph A",
               "answer": "iii",
-              "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
+              "explanation": "Paragraph A outlines both the appealing qualities of steam cars (quiet, smooth, powerful, no gear shift) and their major drawback (slow to start up).",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
-              "options": [
-                "i",
-                "ii",
-                "iii",
-                "iv",
-                "v",
-                "vi",
-                "vii",
-                "viii",
-                "ix"
-              ]
+              "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
+              "options": ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"]
             },
             {
               "num": 15,
               "type": "HEADING",
-              "text": "Question 15: Choose the correct option:",
+              "text": "Paragraph B",
               "answer": "viii",
-              "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
+              "explanation": "Paragraph B describes how the Internal Combustion Engine, cheaper and starting instantly, quickly overtook steam cars, which had mostly disappeared from the market by the 1920s.",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
-              "options": [
-                "i",
-                "ii",
-                "iii",
-                "iv",
-                "v",
-                "vi",
-                "vii",
-                "viii",
-                "ix"
-              ]
+              "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
+              "options": ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"]
             },
             {
               "num": 16,
               "type": "HEADING",
-              "text": "Question 16: Choose the correct option:",
+              "text": "Paragraph C",
               "answer": "vi",
-              "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
+              "explanation": "Paragraph C describes the Doble brothers' first steam car model, built in their garage from parts of other cars — a success, but not yet commercially viable.",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
-              "options": [
-                "i",
-                "ii",
-                "iii",
-                "iv",
-                "v",
-                "vi",
-                "vii",
-                "viii",
-                "ix"
-              ]
+              "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
+              "options": ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"]
             },
             {
               "num": 17,
               "type": "HEADING",
-              "text": "Question 17: Choose the correct option:",
+              "text": "Paragraph D",
               "answer": "v",
-              "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
+              "explanation": "Paragraph D describes the Model B's condenser innovation and rapid startup system, which attracted positive publicity and several customer orders.",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
-              "options": [
-                "i",
-                "ii",
-                "iii",
-                "iv",
-                "v",
-                "vi",
-                "vii",
-                "viii",
-                "ix"
-              ]
+              "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
+              "options": ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"]
             },
             {
               "num": 18,
               "type": "HEADING",
-              "text": "Question 18: Choose the correct option:",
+              "text": "Paragraph E",
               "answer": "vii",
-              "explanation": "The text confirms this: \"Write the correct number, i—viii, in boxes 14—20 on your answer sheet.\"",
+              "explanation": "Paragraph E describes the Model C, which was \"quiet, fast, and easy to drive,\" prompting the Doble brothers to found the Doble Steam Motors Corporation.",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
-              "options": [
-                "i",
-                "ii",
-                "iii",
-                "iv",
-                "v",
-                "vi",
-                "vii",
-                "viii",
-                "ix"
-              ]
+              "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
+              "options": ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"]
             },
             {
               "num": 19,
               "type": "HEADING",
-              "text": "Question 19: Choose the correct option:",
+              "text": "Paragraph F",
               "answer": "i",
-              "explanation": "The text confirms this: \"' Questions 14-20 Choose the correct heading for each paragraph from the list of headings below.\"",
+              "explanation": "Paragraph F describes how customers who had paid deposits were told production was suspended due to wartime shortages, leaving many disappointed and demanding refunds.",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
-              "options": [
-                "i",
-                "ii",
-                "iii",
-                "iv",
-                "v",
-                "vi",
-                "vii",
-                "viii",
-                "ix"
-              ]
+              "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
+              "options": ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"]
             },
             {
               "num": 20,
               "type": "HEADING",
-              "text": "Question 20: Choose the correct option:",
+              "text": "Paragraph G",
               "answer": "iv",
-              "explanation": "The text confirms this: \"List of Headings i A period in cold conditions before the technology is assessed ii Marketing issues lead to failure iii Good and bad aspects of steam technology are passed on iv Apossible solution to the issues of today v_ Further improvements lead to commercial orders vi Positive publicity at last for this quiet, clean, fast vehicle vii A disappointing outcome for customers A better option than the steam car arises 14 Paragraph A 15 Paragraph B 16 Paragraph C 17 Paragraph D 18 Paragraph E 19 Paragraph F 20 Paragraph G The successes and failures of the Doble brothers and their steam cars When primitive automobiles first began to appear in the 1800s, their engines were based on steam power.\"",
+              "explanation": "Paragraph G notes that Model Es still run today, meeting California's strict emissions laws, suggesting modern technology and materials could help revive the steam car.",
               "location": "Passage 2",
-              "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car.",
-              "options": [
-                "i",
-                "ii",
-                "iii",
-                "iv",
-                "v",
-                "vi",
-                "vii",
-                "viii",
-                "ix"
-              ]
+              "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
+              "options": ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"]
             },
             {
               "num": 21,
@@ -3115,9 +3040,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 31,
               "type": "MCQ",
-              "text": "Write the correct letter, A-I, in boxes 31-35 on your answer sheet.",
+              "text": "According to Professor John Hattie, there is very little indication that streaming leads to _________",
               "answer": "H",
-              "explanation": "The text confirms this: \"Picture this scene.\"",
+              "explanation": "The passage states: \"there is very little indication that streaming leads to higher achievements.\"",
               "location": "Passage 3",
               "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
               "options": [
@@ -3135,9 +3060,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 32,
               "type": "MCQ",
-              "text": "students placed in the 32 , especially where a large proportion of",
+              "text": "He points out that the most significant impact of streaming is on students placed in the _________",
               "answer": "D",
-              "explanation": "The text confirms this: \"It's an English literature lesson in a UK school, and the teacher has just read an extract from Shakespeare's Romeo and Juliet with a class of 15-year-olds.\"",
+              "explanation": "The passage states: \"the most significant impact is on those students placed in the bottom sets.\"",
               "location": "Passage 3",
               "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
               "options": [
@@ -3155,9 +3080,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 33,
               "type": "MCQ",
-              "text": "Question 33: Choose the correct option:",
+              "text": "This impact is especially strong where a large proportion of these students come from _________",
               "answer": "F",
-              "explanation": "The text confirms this: \"It's an English literature lesson in a UK school, and the teacher has just read an extract from Shakespeare's Romeo and Juliet with a class of 15-year-olds.\"",
+              "explanation": "The passage states this impact is greatest \"especially where a large proportion of students are from disadvantaged backgrounds.\"",
               "location": "Passage 3",
               "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
               "options": [
@@ -3175,9 +3100,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 34,
               "type": "MCQ",
-              "text": "Cece \\ . Meanwhile, for the 34",
+              "text": "Meanwhile, for the _________, streaming appears to offer only minimal advantage",
               "answer": "E",
-              "explanation": "The text confirms this: \"Picture this scene.\"",
+              "explanation": "The passage states \"for the brightest pupils, there appears to be only minimal advantage.\"",
               "location": "Passage 3",
               "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
               "options": [
@@ -3195,9 +3120,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 35,
               "type": "MCQ",
-              "text": "Write the correct letter, A-I, in boxes 31-35 on your answer sheet.",
+              "text": "Critics also argue streaming systems can be particularly unfair to _________, who may be locked into a lower class based on early performance",
               "answer": "B",
-              "explanation": "The text confirms this: \"For three students, even these literacy demands are beyond them.\"",
+              "explanation": "The passage states critics argue \"streaming can be harmful, as it locks children into a specific level and makes it difficult for them to move up if their performance improves.\"",
               "location": "Passage 3",
               "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
               "options": [
@@ -3215,11 +3140,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 36,
               "type": "TFNG",
-              "text": "Question 36: Choose the correct option:",
+              "text": "According to Hattie, class grouping is a more important factor in student achievement than teacher collaboration.",
               "answer": "FALSE",
-              "explanation": "The passage confirms that the answer is 'FALSE'.",
+              "explanation": "The passage states Hattie identifies \"collective teacher efficacy\" as the most effective factor, suggesting \"the focus should be on teacher training and collaboration rather than class grouping.\"",
               "location": "Passage 3",
-              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
+              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -3229,11 +3154,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 37,
               "type": "TFNG",
-              "text": "Question 37: Choose the correct option:",
+              "text": "Scaffolding techniques were first developed specifically for use in mixed-ability classrooms.",
               "answer": "NOT GIVEN",
-              "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
+              "explanation": "The passage describes scaffolding as a differentiation technique but gives no information on where or when it was first developed.",
               "location": "Passage 3",
-              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
+              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -3243,11 +3168,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 38,
               "type": "TFNG",
-              "text": "Question 38: Choose the correct option:",
+              "text": "High-achieving students who help their peers can strengthen their own understanding of the material.",
               "answer": "TRUE",
-              "explanation": "The passage confirms that the answer is 'TRUE'.",
+              "explanation": "The passage states that by helping their peers, \"high-achieving students can consolidate their own learning and develop empathy and communication skills.\"",
               "location": "Passage 3",
-              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
+              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -3257,11 +3182,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 39,
               "type": "TFNG",
-              "text": "Question 39: Choose the correct option:",
+              "text": "According to the writer, peer explanations are usually less effective than a teacher's own explanation.",
               "answer": "FALSE",
-              "explanation": "The passage confirms that the answer is 'FALSE'.",
+              "explanation": "The writer states a classmate's explanation \"is often simpler and more relatable than the one I would give,\" the opposite of this claim.",
               "location": "Passage 3",
-              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
+              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -3271,11 +3196,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 40,
               "type": "TFNG",
-              "text": "Question 40: Choose the correct option:",
+              "text": "The writer cites specific test-score data measuring the benefits of peer learning.",
               "answer": "NOT GIVEN",
-              "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
+              "explanation": "The writer describes peer learning favourably but gives no specific test-score figures to quantify its benefits.",
               "location": "Passage 3",
-              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write",
+              "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
                 "TRUE",
                 "FALSE",
@@ -3745,7 +3670,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 33,
               "type": "FILL",
-              "text": "e Victor Hugo had to live elsewhere 1 _________ ee esssssssnsseeeun '",
+              "text": "Victor Hugo was forced to live in other parts of _________ during this period",
               "answer": "Europe",
               "explanation": "The transcript states: \"So Victor Hugo was forced to reside in other parts of Europe.\"",
               "instruction": "Questions 31-40<br/>Complete the notes below.<br/>Write ONE WORD ONLY for each answer."
@@ -3835,9 +3760,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 2,
               "type": "MCQ",
-              "text": "Question 2: Choose the correct option:",
+              "text": "a reference to a city where green roofs have been promoted for many years",
               "answer": "C",
-              "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
+              "explanation": "Paragraph C states \"Toronto became the first city in North America to pass a bylaw requiring green roofs on new commercial and residential developments,\" and notes London's long-running promotion of green roofs.",
               "location": "Passage 1",
               "instruction": "Questions 1-5<br/>Reading Passage 1 has five paragraphs, A-E.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-E, in boxes 1—5 on your answer sheet.<br/>NB You may use any letter more than once.<br/>mention of several challenges to be overcome before a green roof can be installed<br/>reference to a city where green roofs have been promoted for many years<br/>a belief that existing green roofs should be used as a model for new ones<br/>- WS DN =| examples of how green roofs can work in combination with other green urban<br/>initiatives",
               "options": [
@@ -3851,9 +3776,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 3,
               "type": "MCQ",
-              "text": "Question 3: Choose the correct option:",
+              "text": "a belief that existing green roofs should be used as a model for new developments",
               "answer": "E",
-              "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
+              "explanation": "Paragraph E states advocates hope that \"demonstrating the financial and environmental value of green roofs\" will help \"make them standard practice in urban construction.\"",
               "location": "Passage 1",
               "instruction": "Questions 1-5<br/>Reading Passage 1 has five paragraphs, A-E.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-E, in boxes 1—5 on your answer sheet.<br/>NB You may use any letter more than once.<br/>mention of several challenges to be overcome before a green roof can be installed<br/>reference to a city where green roofs have been promoted for many years<br/>a belief that existing green roofs should be used as a model for new ones<br/>- WS DN =| examples of how green roofs can work in combination with other green urban<br/>initiatives",
               "options": [
@@ -3867,9 +3792,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 4,
               "type": "MCQ",
-              "text": "Question 4: Choose the correct option:",
+              "text": "examples of how green roofs can work in combination with other green urban initiatives",
               "answer": "B",
-              "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
+              "explanation": "Paragraph B describes how green roofs \"can integrate with 'living walls' to create vertical networks of vegetation\" that help mitigate the urban heat island effect.",
               "location": "Passage 1",
               "instruction": "Questions 1-5<br/>Reading Passage 1 has five paragraphs, A-E.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-E, in boxes 1—5 on your answer sheet.<br/>NB You may use any letter more than once.<br/>mention of several challenges to be overcome before a green roof can be installed<br/>reference to a city where green roofs have been promoted for many years<br/>a belief that existing green roofs should be used as a model for new ones<br/>- WS DN =| examples of how green roofs can work in combination with other green urban<br/>initiatives",
               "options": [
@@ -3899,7 +3824,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 6,
               "type": "FILL",
-              "text": "The UK is relatively new to developing green roofs, and local governments and institutions are playing a major role in spreading the practice. For example, in London, _________ are being used to encourage people to install green roofs.",
+              "text": "Advantages of green roofs include reducing flood risk and lowering how much is spent on _________ costs",
               "answer": "energy",
               "explanation": "The text confirms this: \"Among the benefits are saving on energy costs, mitigating the risk of floods, making habitats for urban wildlife, tackling air pollution and even growing food.\"",
               "location": "Passage 1",
@@ -3908,7 +3833,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 7,
               "type": "FILL",
-              "text": "cases, they Can also be USE FOr PrOCUCING _________ on. eesssssssssssessssesssseeseeeesssee .",
+              "text": "In many cases, green roofs can also be used for growing _________",
               "answer": "food",
               "explanation": "The text confirms this: \"Among the benefits are saving on energy costs, mitigating the risk of floods, making habitats for urban wildlife, tackling air pollution and even growing food.\"",
               "location": "Passage 1",
@@ -3926,7 +3851,7 @@ const IELTS_TEST_DATA = {
             {
               "num": 9,
               "type": "FILL",
-              "text": "To convince investors and developers that installing green roofs is worthwhile, economic arguments are still the most important. The term _________ is used to describe the benefits that green roofs bring to society.",
+              "text": "Access to green spaces has also been shown to help people avoid _________",
               "answer": "obesity",
               "explanation": "The text confirms this: \"And research has found that access to even the most basic green spaces can provide a better quality of life for dementia sufferers and help people avoid obesity.\"",
               "location": "Passage 1",
@@ -3935,61 +3860,65 @@ const IELTS_TEST_DATA = {
             {
               "num": 10,
               "type": "MCQ",
-              "text": "Write the correct letters in boxes 10 and 11 on your answer sheet.",
+              "text": "Which TWO advantages of using larger, newer buildings for green roofs are mentioned? (Select first advantage)",
               "answer": "C",
-              "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
+              "explanation": "Larger modern buildings offer greater roof capacity, giving green roofs more storage capacity and a larger area for growing plants.",
               "location": "Passage 1",
-              "instruction": "Questions 10 and 11<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 10 and 11 on your answer sheet.<br/>Which TWO advantages of using newer buildings for green roofs are mentioned in<br/>Paragraph C of the passage?<br/>a longer growing season for edible produce<br/>more economical use of water<br/>greater water-storage capacity<br/>ability to cultivate more plant types<br/>a large surface area for growing plants moQgw YD",
+              "instruction": "Questions 10 and 11<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. the UK",
-                "B. London",
-                "C. North America",
-                "D. Singapore"
+                "A. a longer growing season for edible produce",
+                "B. more economical use of water",
+                "C. greater water-storage capacity",
+                "D. ability to cultivate more plant types",
+                "E. a large surface area for growing plants"
               ]
             },
             {
               "num": 11,
               "type": "MCQ",
-              "text": "Write the correct letters in boxes 10 and 11 on your answer sheet.",
-              "answer": "D",
-              "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
+              "text": "Which TWO advantages of using larger, newer buildings for green roofs are mentioned? (Select second advantage)",
+              "answer": "E",
+              "explanation": "Larger modern buildings offer greater roof capacity, giving green roofs more storage capacity and a larger area for growing plants.",
               "location": "Passage 1",
-              "instruction": "Questions 10 and 11<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 10 and 11 on your answer sheet.<br/>Which TWO advantages of using newer buildings for green roofs are mentioned in<br/>Paragraph C of the passage?<br/>a longer growing season for edible produce<br/>more economical use of water<br/>greater water-storage capacity<br/>ability to cultivate more plant types<br/>a large surface area for growing plants moQgw YD",
+              "instruction": "Questions 10 and 11<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. the UK",
-                "B. London",
-                "C. North America",
-                "D. Singapore"
+                "A. a longer growing season for edible produce",
+                "B. more economical use of water",
+                "C. greater water-storage capacity",
+                "D. ability to cultivate more plant types",
+                "E. a large surface area for growing plants"
               ]
             },
             {
               "num": 12,
               "type": "MCQ",
-              "text": "Write the correct letters in boxes 12 and 13 on your answer sheet.",
+              "text": "Which TWO aims of newer variations on the green roof concept are mentioned? (Select first aim)",
               "answer": "A",
-              "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
+              "explanation": "Newer green-roof variations include biodiverse roofs, designed to provide habitats for a wide range of species, and biosolar roofs, which combine planting with power generation.",
               "location": "Passage 1",
-              "instruction": "Questions 12 and 13<br/>Choose TWO letters, A—E.<br/>Write the correct letters in boxes 12 and 13 on your answer sheet.<br/>Which TWO aims of new variations on the concept of green roofs are mentioned in<br/>Paragraph E of the passage?<br/>to provide habitats for a wide range of species<br/>to grow plants successfully even in the wettest climates<br/>to regulate the temperature of the immediate environment<br/>to generate power from a sustainable source<br/>to collect water to supply other buildings moagqup<br/>> [Sp]<br/>Test 4",
+              "instruction": "Questions 12 and 13<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. the UK",
-                "B. London",
-                "C. North America",
-                "D. Singapore"
+                "A. to provide habitats for a wide range of species",
+                "B. to grow plants successfully even in the wettest climates",
+                "C. to regulate the temperature of the immediate environment",
+                "D. to generate power from a sustainable source",
+                "E. to collect water to supply other buildings"
               ]
             },
             {
               "num": 13,
               "type": "MCQ",
-              "text": "Write the correct letters in boxes 12 and 13 on your answer sheet.",
+              "text": "Which TWO aims of newer variations on the green roof concept are mentioned? (Select second aim)",
               "answer": "D",
-              "explanation": "The text confirms this: \"Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world.\"",
+              "explanation": "Newer green-roof variations include biodiverse roofs, designed to provide habitats for a wide range of species, and biosolar roofs, which combine planting with power generation.",
               "location": "Passage 1",
-              "instruction": "Questions 12 and 13<br/>Choose TWO letters, A—E.<br/>Write the correct letters in boxes 12 and 13 on your answer sheet.<br/>Which TWO aims of new variations on the concept of green roofs are mentioned in<br/>Paragraph E of the passage?<br/>to provide habitats for a wide range of species<br/>to grow plants successfully even in the wettest climates<br/>to regulate the temperature of the immediate environment<br/>to generate power from a sustainable source<br/>to collect water to supply other buildings moagqup<br/>> [Sp]<br/>Test 4",
+              "instruction": "Questions 12 and 13<br/>Choose TWO letters, A-E.",
               "options": [
-                "A. the UK",
-                "B. London",
-                "C. North America",
-                "D. Singapore"
+                "A. to provide habitats for a wide range of species",
+                "B. to grow plants successfully even in the wettest climates",
+                "C. to regulate the temperature of the immediate environment",
+                "D. to generate power from a sustainable source",
+                "E. to collect water to supply other buildings"
               ]
             }
           ]
@@ -4016,9 +3945,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 15,
               "type": "MCQ",
-              "text": "Question 15: Choose the correct option:",
+              "text": "According to the second paragraph, teachers who encourage students to embrace challenges want students to",
               "answer": "C",
-              "explanation": "The text confirms this: \"Over the past century, a powerful idea has taken root in the educational landscape.\"",
+              "explanation": "The passage states teachers encourage students \"to embrace challenges, persist in the face of setbacks, and view failure as an opportunity to learn,\" reflecting confidence that they can succeed.",
               "location": "Passage 2",
               "instruction": "Questions 14-16<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 14-16 on your answer sheet.",
               "options": [
@@ -4031,9 +3960,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 16,
               "type": "MCQ",
-              "text": "Write the correct letter in boxes 14-16 on your answer sheet.",
+              "text": "According to the passage, students with a fixed mindset",
               "answer": "D",
-              "explanation": "The text confirms this: \"Over the past century, a powerful idea has taken root in the educational landscape.\"",
+              "explanation": "The passage states students with a fixed mindset \"believed they were born with a certain amount of ability and could do nothing to change it,\" a belief that discourages them from pushing past perceived limits.",
               "location": "Passage 2",
               "instruction": "Questions 14-16<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 14-16 on your answer sheet.",
               "options": [
@@ -4260,9 +4189,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 31,
               "type": "MCQ",
-              "text": "Write the correct letter, A-J, in boxes 31-36 on your answer sheet.",
+              "text": "One of the remarkable things about Wegener, from a _________, is that he proposed a theory of continental drift despite not being a geologist.",
               "answer": "I",
-              "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
+              "explanation": "The book examines Wegener's life through the biographer's own research into his diaries, letters, field notebooks and publications, noting he proposed continental drift despite training in atmospheric physics, not geology.",
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A—J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
               "options": [
@@ -4281,9 +4210,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 32,
               "type": "MCQ",
-              "text": "Question 32: Choose the correct option:",
+              "text": "Wegener's own _________ were limited mainly to atmospheric physics and meteorology, rather than geology.",
               "answer": "F",
-              "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
+              "explanation": "The passage states \"it was largely a sideline to his interest in atmospheric physics and meteorology,\" and that \"he was a pioneer in the use of weather balloons to study the upper atmosphere.\"",
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A—J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
               "options": [
@@ -4302,9 +4231,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 33,
               "type": "MCQ",
-              "text": "Question 33: Choose the correct option:",
+              "text": "By the time Wegener proposed his theory in 1912, he was already a person of some _________",
               "answer": "A",
-              "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
+              "explanation": "By 1912, Wegener already had a public reputation from his balloon-flight record and his Greenland expeditions, before his continental drift theory brought him wider, more controversial attention.",
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A—J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
               "options": [
@@ -4323,9 +4252,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 34,
               "type": "MCQ",
-              "text": "OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34",
+              "text": "Six years earlier, Wegener had set a _________ of over 52 hours in a hot-air balloon with his brother Kurt.",
               "answer": "C",
-              "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
+              "explanation": "The passage states \"In 1906, he and his brother Kurt set a world record for the longest continuous balloon flight, staying aloft for over fifty-two hours.\"",
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A—J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
               "options": [
@@ -4344,9 +4273,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 35,
               "type": "MCQ",
-              "text": "Question 35: Choose the correct option:",
+              "text": "He was also known for his well-publicised but _________, through his expeditions to Greenland.",
               "answer": "H",
-              "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
+              "explanation": "The passage describes several Greenland expeditions, including one where \"Mylius-Erichsen and two others died during the return journey,\" and the expedition on which Wegener himself later died.",
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A—J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
               "options": [
@@ -4365,9 +4294,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 36,
               "type": "MCQ",
-              "text": "Write the correct letter, A-J, in boxes 31-36 on your answer sheet.",
+              "text": "His work on the thermodynamics of the atmosphere had also brought him to the attention of a _________ of German scientists.",
               "answer": "E",
-              "explanation": "The text confirms this: \"Alfred Wegener: science, exploration and the theory of continental drift by Mott T Greene Introduction This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'.\"",
+              "explanation": "The passage notes his textbook on atmospheric thermodynamics \"was a standard work for decades,\" reflecting his standing within the German scientific community even before his continental drift theory.",
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A—J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>Wegener's life and work<br/>One of the remarkable things about Wegener from a 31 is that<br/>although he proposed a theory of continental drift, he was not a geologist. His<br/>were limited to atmospheric physics. However, at the time he<br/>proposed his theory of continental drift in 1912, he was already a person of<br/>OP wiierinuiaivciccerriecnniemannion . Six years previously, there had been his 34<br/>of 52 hours in a hot-air balloon, followed by his well-publicised but<br/>thermodynamics, he had also come to the attention of a 36<br/>German scientists.<br/>modest fame vast range C record-breaking<br/>achievement<br/>research methods select group F professional interests<br/>scientific debate hazardous I biographer's<br/>exploration perspective<br/>narrow investigation<br/>Reading",
               "options": [
@@ -5011,9 +4940,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 1,
               "type": "TFNG",
-              "text": "Question 1: Choose the correct option:",
+              "text": "Wooden rackets allowed players to hit with greater power than modern rackets do.",
               "answer": "FALSE",
-              "explanation": "The passage confirms that the answer is 'FALSE'.",
+              "explanation": "The passage states wooden-racket play \"was characterised by slow, tactical rallies,\" while lightweight modern rackets allow players to swing faster, \"generating more power and spin.\"",
               "location": "Passage 1",
               "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
@@ -5025,9 +4954,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 2,
               "type": "TFNG",
-              "text": "Question 2: Choose the correct option:",
+              "text": "The International Tennis Federation still permits players to use spaghetti-strung rackets today.",
               "answer": "FALSE",
-              "explanation": "The passage confirms that the answer is 'FALSE'.",
+              "explanation": "The passage states the ITF \"quickly banned the racket, arguing that it changed the nature of the game.\"",
               "location": "Passage 1",
               "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
@@ -5039,9 +4968,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 3,
               "type": "TFNG",
-              "text": "Question 3: Choose the correct option:",
+              "text": "Most of the world's top players travel with their own professional racket stringer.",
               "answer": "NOT GIVEN",
-              "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
+              "explanation": "The passage states \"many travel with their own professional racket stringer,\" but does not specify whether this applies to most top players.",
               "location": "Passage 1",
               "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
@@ -5053,9 +4982,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 4,
               "type": "TFNG",
-              "text": "Question 4: Choose the correct option:",
+              "text": "Pete Sampras added lead weights to his racket in order to reduce its overall mass.",
               "answer": "FALSE",
-              "explanation": "The passage confirms that the answer is 'FALSE'.",
+              "explanation": "The passage states Sampras \"had lead weights added to the frame of his racket to increase its mass and power,\" the opposite of reducing it.",
               "location": "Passage 1",
               "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
@@ -5067,9 +4996,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 5,
               "type": "TFNG",
-              "text": "Question 5: Choose the correct option:",
+              "text": "Werner Fischer's spaghetti-strung racket was later approved for professional competition after further modifications.",
               "answer": "NOT GIVEN",
-              "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
+              "explanation": "The passage states the racket was banned but gives no information about any later approval or modification.",
               "location": "Passage 1",
               "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
@@ -5081,9 +5010,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 6,
               "type": "TFNG",
-              "text": "Question 6: Choose the correct option:",
+              "text": "The weather can affect how professional players adjust the strings on their rackets.",
               "answer": "TRUE",
-              "explanation": "The passage confirms that the answer is 'TRUE'.",
+              "explanation": "The passage states players adjust string tension \"depending on the court surface and weather conditions.\"",
               "location": "Passage 1",
               "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
@@ -5095,9 +5024,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 7,
               "type": "TFNG",
-              "text": "People had expected Andy Murray to become the world's top tennis player for at least five years before 2016. The change that Andy Murray made to his rackets attracted a lot of attention. Most of the world's top players take a professional racket stringer on tour with them. Mike and Bob Bryan use rackets that are light in compari son to the majority of rackets. Werner Fischer played with a spaghetti-strung racket that he designed himself. The weather can affect how professional players adjust the strings on their rackets. It was believed that the change Pete Sampras made to his rackets contributed to his strong serve.",
+              "text": "It was believed that the change Pete Sampras made to his rackets contributed to his strong serve.",
               "answer": "TRUE",
-              "explanation": "The passage confirms that the answer is 'TRUE'.",
+              "explanation": "The passage describes Sampras as \"famous for his powerful serve\" and states he added lead weights to his racket's frame \"to increase its mass and power.\"",
               "location": "Passage 1",
               "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
@@ -5277,11 +5206,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 20,
               "type": "MCQ",
-              "text": "Write the correct letters in boxes 20 and 21 on your answer sheet.",
+              "text": "Which TWO of the following statements does the writer make about inhabitants of the Mediterranean region in the ancient world? (Select first statement)",
               "answer": "B",
-              "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\"",
+              "explanation": "Paragraph B states pirates hid \"in coves and bays,\" evading vessels that had to stay close to land, suggesting local knowledge helped them escape capture.",
               "location": "Passage 2",
-              "instruction": "Questions 20 and 21<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 20 and 21 on your answer sheet.<br/>Which TWO of the following statements does the writer make about inhabitants of the<br/>Mediterranean region in the ancient world?",
+              "instruction": "Questions 20 and 21<br/>Choose TWO letters, A-E.",
               "options": [
                 "A. They often used stolen vessels to carry out pirate attacks.",
                 "B. They managed to escape capture by the authorities because they knew the area so well.",
@@ -5293,11 +5222,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 21,
               "type": "MCQ",
-              "text": "Write the correct letters in boxes 20 and 21 on your answer sheet.",
+              "text": "Which TWO of the following statements does the writer make about inhabitants of the Mediterranean region in the ancient world? (Select second statement)",
               "answer": "D",
-              "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\"",
+              "explanation": "Paragraph E states piracy was a legitimate livelihood \"particularly for inhabitants of poor or isolated regions who depended more on the sea than on farming.\"",
               "location": "Passage 2",
-              "instruction": "Questions 20 and 21<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 20 and 21 on your answer sheet.<br/>Which TWO of the following statements does the writer make about inhabitants of the<br/>Mediterranean region in the ancient world?",
+              "instruction": "Questions 20 and 21<br/>Choose TWO letters, A-E.",
               "options": [
                 "A. They often used stolen vessels to carry out pirate attacks.",
                 "B. They managed to escape capture by the authorities because they knew the area so well.",
@@ -5309,11 +5238,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 22,
               "type": "MCQ",
-              "text": "Write the correct letters in boxes 22 and 23 on your answer sheet.",
+              "text": "Which TWO of the following statements does the writer make about piracy and ancient Greece? (Select first statement)",
               "answer": "C",
-              "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\"",
+              "explanation": "Paragraph C states \"Important officials and even kings were known to occasionally take part in piracy or profit from it.\"",
               "location": "Passage 2",
-              "instruction": "Questions 22 and 23<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 22 and 23 on your answer sheet.<br/>Which TWO of the following statements does the writer make about piracy and<br/>ancient Greece?<br/>A The state estimated that very few people were involved in piracy.<br/>B Attitudes towards piracy changed shortly after the Iliad and the Odyssey<br/>were written.<br/>C Important officials were known to occasionally take part in piracy.<br/>D Every citizen regarded pirate attacks on cities as unacceptable.<br/>E A favourable view of piracy is evident in certain ancient Greek texts.",
+              "instruction": "Questions 22 and 23<br/>Choose TWO letters, A-E.",
               "options": [
                 "A. The state estimated that very few people were involved in piracy.",
                 "B. Attitudes towards piracy changed shortly after the Iliad and the Odyssey were written.",
@@ -5434,9 +5363,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 31,
               "type": "MCQ",
-              "text": "Write the correct letter, A-J, in boxes 31-36 on your answer sheet.",
+              "text": "Although people have _________ to misinformation, there is debate about precisely how and when we label something as true or untrue.",
               "answer": "G",
-              "explanation": "See Passage 3 for the supporting evidence for this answer.",
+              "explanation": "This summary opens by noting that although misinformation is a frequent, familiar occurrence, exactly how and when the brain labels it as untrue remains debated.",
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A-J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>What happens when people encounter misinformation?<br/>Although people have 31 ........................................... to misinformation, there is debate about<br/>precisely how and when we label something as true or untrue. The philosophers<br/>Descartes and Spinoza had 32 ........................................... about how people engage with<br/>information. While Descartes believed that people accept or reject information<br/>after considering whether it is true or not, Spinoza argued that people accepted<br/>a// information they encountered (and by default misinformation) and did not<br/>verify or reject it until afterwards. Moreover, Spinoza believed that a distinct",
               "options": [
@@ -5539,9 +5468,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 36,
               "type": "MCQ",
-              "text": "Write the correct letter, A-J, in boxes 31-36 on your answer sheet.",
+              "text": "This is consistent with the fact that the resources for scepticism and the resources for perceiving and encoding information are in _________ in the brain.",
               "answer": "C",
-              "explanation": "The text confirms this: \"com recently have been empirically tested in robust ways.\"",
+              "explanation": "This summary concludes that scepticism and initial perception/encoding are supported by separate neural resources located in different parts of the brain, consistent with Spinoza's two-stage account.",
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A-J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>What happens when people encounter misinformation?<br/>Although people have 31 ........................................... to misinformation, there is debate about<br/>precisely how and when we label something as true or untrue. The philosophers<br/>Descartes and Spinoza had 32 ........................................... about how people engage with<br/>information. While Descartes believed that people accept or reject information<br/>after considering whether it is true or not, Spinoza argued that people accepted<br/>a// information they encountered (and by default misinformation) and did not<br/>verify or reject it until afterwards. Moreover, Spinoza believed that a distinct",
               "options": [
@@ -6393,11 +6322,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 23,
               "type": "MCQ",
-              "text": "Write the correct letters in boxes 23 and 24 on your answer sheet.",
+              "text": "Which TWO facts about Emma Raducanu's withdrawal from the Wimbledon tournament are mentioned in the text? (Select first fact)",
               "answer": "B",
-              "explanation": "The text confirms this: \"A It isn't easy being a professional athlete.\"",
+              "explanation": "The passage states Raducanu \"withdrew from the 2021 Wimbledon tournament due to breathing difficulties caused by performance stress,\" a direct symptom of her stress response.",
               "location": "Passage 2",
-              "instruction": "Questions 23 and 24<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 23 and 24 on your answer sheet.<br/>Reading<br/>Which TWO facts about Emma Raducanu's withdrawal from the Wimbledon tournament<br/>are mentioned in the text?<br/>A the stage at which she dropped out of the tournament<br/>B symptoms of her performance stress at the tournament<br/>C measures which she had taken to manage her stress levels<br/>D aspects of the Wimbledon tournament which increased her stress levels<br/>E reactions to her social media posts about her experience at Wimbledon",
+              "instruction": "Questions 23 and 24<br/>Choose TWO letters, A-E.",
               "options": [
                 "A. the stage at which she dropped out of the tournament",
                 "B. symptoms of her performance stress at the tournament",
@@ -6409,11 +6338,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 24,
               "type": "MCQ",
-              "text": "Write the correct letters in boxes 23 and 24 on your answer sheet.",
+              "text": "Which TWO facts about Emma Raducanu's withdrawal from the Wimbledon tournament are mentioned in the text? (Select second fact)",
               "answer": "D",
-              "explanation": "The text confirms this: \"Not only are the physical demands greater than most people could handle, athletes also face intense psychological pressure during competition.\"",
+              "explanation": "The passage frames her withdrawal as a case of \"performance stress\" specifically linked to competing at Wimbledon, illustrating how tournament pressure contributed to her stress response.",
               "location": "Passage 2",
-              "instruction": "Questions 23 and 24<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 23 and 24 on your answer sheet.<br/>Reading<br/>Which TWO facts about Emma Raducanu's withdrawal from the Wimbledon tournament<br/>are mentioned in the text?<br/>A the stage at which she dropped out of the tournament<br/>B symptoms of her performance stress at the tournament<br/>C measures which she had taken to manage her stress levels<br/>D aspects of the Wimbledon tournament which increased her stress levels<br/>E reactions to her social media posts about her experience at Wimbledon",
+              "instruction": "Questions 23 and 24<br/>Choose TWO letters, A-E.",
               "options": [
                 "A. the stage at which she dropped out of the tournament",
                 "B. symptoms of her performance stress at the tournament",
@@ -6463,9 +6392,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 27,
               "type": "MCQ",
-              "text": "Write the correct letter, A-K, in boxes 27-32 on your answer sheet.",
+              "text": "Maryam Mirzakhani is regarded as _________ in the field of mathematics because she was the only female holder of the prestigious Fields Medal.",
               "answer": "H",
-              "explanation": "The text confirms this: \"An inquiry into the existence of the gifted child Let us start by looking at a modern 'genius', Maryam Mirzakhani, who died at the early age of 40.\"",
+              "explanation": "The passage states \"Maryam Mirzakhani is regarded as unique in the field of mathematics because of this achievement.\"",
               "location": "Passage 3",
               "instruction": "Questions 27-32<br/>Complete the summary using the list of phrases, A-K, below.<br/>Write the correct letter, A-K, in boxes 27-32 on your answer sheet.<br/>Maryam Mirzakhani<br/>Maryam Mirzakhani is regarded as 27 ........................................... in the field of mathematics<br/>because she was the only female holder of the prestigious Fields Medal -<br/>a record that she retained at the time of her death. However, maths held little",
               "options": [
@@ -6573,9 +6502,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 32,
               "type": "MCQ",
-              "text": "Write the correct letter, A-K, in boxes 27-32 on your answer sheet.",
+              "text": "She was responsible for some extremely _________ mathematical studies.",
               "answer": "I",
-              "explanation": "The text confirms this: \"An inquiry into the existence of the gifted child Let us start by looking at a modern 'genius', Maryam Mirzakhani, who died at the early age of 40.\"",
+              "explanation": "The passage states \"she was responsible for some extremely innovative mathematical studies.\"",
               "location": "Passage 3",
               "instruction": "Questions 27-32<br/>Complete the summary using the list of phrases, A-K, below.<br/>Write the correct letter, A-K, in boxes 27-32 on your answer sheet.<br/>Maryam Mirzakhani<br/>Maryam Mirzakhani is regarded as 27 ........................................... in the field of mathematics<br/>because she was the only female holder of the prestigious Fields Medal -<br/>a record that she retained at the time of her death. However, maths held little",
               "options": [
@@ -7070,10 +6999,10 @@ const IELTS_TEST_DATA = {
             {
               "num": 26,
               "type": "MCQ",
-              "text": "Questions 26-30",
+              "text": "Use twelve mice that are all the same _________ , rather than a mixture of old and young.",
               "answer": "C",
-              "explanation": "The transcript states: \"CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: Hi Jake.\"",
-              "instruction": "Questions 26-30.<br/>A size<br/>B escape<br/>C age<br/>water<br/>E cereal<br/>F calculations<br/>G changes<br/>colour",
+              "explanation": "The transcript states: \"I'd say about 12. And all young ones, not a mixture of old and young.\"",
+              "instruction": "Questions 26-30<br/>Complete the notes below.<br/><br/><b>List of Answers</b><br/>A.&nbsp; size<br/>B.&nbsp; escape<br/>C.&nbsp; age<br/>D.&nbsp; water<br/>E.&nbsp; cereal<br/>F.&nbsp; calculations<br/>G.&nbsp; changes<br/>H.&nbsp; colour",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -7091,7 +7020,7 @@ const IELTS_TEST_DATA = {
               "text": "Divide the mice into two groups, each with a different 27 _________ .",
               "answer": "H",
               "explanation": "The transcript states: \"CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: Hi Jake.\"",
-              "instruction": "Questions 26-30.<br/>A size<br/>B escape<br/>C age<br/>water<br/>E cereal<br/>F calculations<br/>G changes<br/>colour",
+              "instruction": "Questions 26-30<br/>Complete the notes below.<br/><br/><b>List of Answers</b><br/>A.&nbsp; size<br/>B.&nbsp; escape<br/>C.&nbsp; age<br/>D.&nbsp; water<br/>E.&nbsp; cereal<br/>F.&nbsp; calculations<br/>G.&nbsp; changes<br/>H.&nbsp; colour",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -7109,7 +7038,7 @@ const IELTS_TEST_DATA = {
               "text": "Feed group B the same, but also sugar contained in 28 _________ .",
               "answer": "E",
               "explanation": "The transcript states: \"CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: Hi Jake.\"",
-              "instruction": "Questions 26-30.<br/>A size<br/>B escape<br/>C age<br/>water<br/>E cereal<br/>F calculations<br/>G changes<br/>colour",
+              "instruction": "Questions 26-30<br/>Complete the notes below.<br/><br/><b>List of Answers</b><br/>A.&nbsp; size<br/>B.&nbsp; escape<br/>C.&nbsp; age<br/>D.&nbsp; water<br/>E.&nbsp; cereal<br/>F.&nbsp; calculations<br/>G.&nbsp; changes<br/>H.&nbsp; colour",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -7127,7 +7056,7 @@ const IELTS_TEST_DATA = {
               "text": "Place them in a weighing chamber to prevent 29 _________ .",
               "answer": "B",
               "explanation": "The transcript states: \"It's harder than I expected, but I've got some great classes.\"",
-              "instruction": "Questions 26-30.<br/>A size<br/>B escape<br/>C age<br/>water<br/>E cereal<br/>F calculations<br/>G changes<br/>colour",
+              "instruction": "Questions 26-30<br/>Complete the notes below.<br/><br/><b>List of Answers</b><br/>A.&nbsp; size<br/>B.&nbsp; escape<br/>C.&nbsp; age<br/>D.&nbsp; water<br/>E.&nbsp; cereal<br/>F.&nbsp; calculations<br/>G.&nbsp; changes<br/>H.&nbsp; colour",
               "options": [
                 "A. Option A",
                 "B. Option B",
@@ -7142,10 +7071,10 @@ const IELTS_TEST_DATA = {
             {
               "num": 30,
               "type": "MCQ",
-              "text": "Questions 21-30",
+              "text": "Once weight gain has been measured, work out the average for each group along with the standard deviation, using suitable _________ .",
               "answer": "F",
-              "explanation": "The transcript states: \"And as part of my teaching practice, I have to design an experiment for them to do.\"",
-              "instruction": "Questions 26-30.<br/>A size<br/>B escape<br/>C age<br/>water<br/>E cereal<br/>F calculations<br/>G changes<br/>colour",
+              "explanation": "The transcript states: \"once we've measured the weight gain of each mouse we can work out the average for each group, as well as the standard deviation.\"",
+              "instruction": "Questions 26-30<br/>Complete the notes below.<br/><br/><b>List of Answers</b><br/>A.&nbsp; size<br/>B.&nbsp; escape<br/>C.&nbsp; age<br/>D.&nbsp; water<br/>E.&nbsp; cereal<br/>F.&nbsp; calculations<br/>G.&nbsp; changes<br/>H.&nbsp; colour",
               "options": [
                 "A. Option A",
                 "B. Option B",

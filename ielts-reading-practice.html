@@ -648,7 +648,10 @@
         }
 
         let answerHtml = '';
-        if (q.type === 'TFNG') {
+        if (q.type === 'TFNG' || q.type === 'YNNG') {
+          // YNNG (Yes/No/Not Given, for writer's-views passages) renders
+          // identically to TFNG (True/False/Not Given, for factual passages) -
+          // the button labels come straight from q.options either way.
           const selected = userAnswers[q.num] || '';
           answerHtml = `<div class="tfng-row">${q.options.map(opt => `
             <button onclick="selectOption(${q.num}, '${opt}')" class="tfng-btn ${selected === opt ? 'selected' : ''}">${opt}</button>
@@ -696,7 +699,7 @@
             poolEl.innerHTML = `<div style="width:100%; font-size:11px; font-weight:700; color:var(--ink-soft); margin-bottom:6px; text-transform:uppercase; font-family:\'Inter\';">Headings Pool (Drag numbers below):</div>`;
             q.options.forEach(opt => {
               poolEl.innerHTML += `
-                <div draggable="true" ondragstart="dragHeading(event)" class="heading-chip" data-val="${opt}" 
+                <div draggable="true" ondragstart="dragHeading(event)" class="heading-chip" data-val="${opt}"
                   style="padding:6px 12px; background:var(--paper); border:1.5px solid var(--accent); border-radius:6px; font-weight:800; cursor:grab; color:var(--accent); font-family:\'Inter\', sans-serif; font-size:12px;">
                   ${opt}
                 </div>
@@ -705,18 +708,31 @@
             qContainer.appendChild(poolEl);
             headingPoolRendered = true;
           }
-          
+
           const val = userAnswers[q.num] || '';
           answerHtml = `
             <div style="display:flex; align-items:center; gap:10px; margin-top:8px;">
               <span class="q-text" style="margin:0;">Paragraph ${q.text.replace(/Paragraph\s+/i, '')}</span>
-              <div class="heading-drop-slot" ondragover="allowDropHeading(event)" ondragleave="leaveDropHeading(event)" ondrop="dropHeading(event, ${q.num})" 
+              <div class="heading-drop-slot" ondragover="allowDropHeading(event)" ondragleave="leaveDropHeading(event)" ondrop="dropHeading(event, ${q.num})"
                 style="display:inline-flex; align-items:center; gap:6px; min-width:130px; height:32px; border:2px dashed ${val ? 'var(--accent)' : 'var(--gold)'}; border-radius:6px; background:${val ? 'var(--accent-soft)' : '#fffdf5'}; color:${val ? 'var(--accent)' : 'var(--gold)'}; font-weight:800; font-size:13px; padding:0 10px;">
                 ${val || '[ Drop Heading ]'}
                 ${val ? `<span onclick="clearHeadingSelection(${q.num})" style="cursor:pointer; font-weight:800; color:#888; margin-left:6px; font-size:14px; font-family:\'Inter\';">&times;</span>` : ''}
               </div>
             </div>
           `;
+        } else if (q.type === 'MATCHING_INFO' || q.type === 'MATCHING_FEATURES' || q.type === 'ENDINGS') {
+          // These three share one bare-letter-button UI: Matching Information
+          // uses paragraph letters (A-G), Matching Features uses a short fixed
+          // list of feature letters (A-E), and Matching Sentence Endings uses
+          // letters for a bank of possible endings (A-F) - in every case the
+          // full option list (features / endings) is shown once via the shared
+          // instruction box (see lastInstruction dedup above), and each
+          // question here just needs its own bare answer buttons, not the
+          // full text repeated per question.
+          const selected = userAnswers[q.num] || '';
+          answerHtml = `<div class="tfng-row">${q.options.map(opt => `
+            <button onclick="selectOption(${q.num}, '${opt}')" class="tfng-btn ${selected === opt ? 'selected' : ''}">${opt}</button>
+          `).join('')}</div>`;
         }
         
         qBox.appendChild(document.createRange().createContextualFragment(answerHtml));
