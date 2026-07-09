@@ -4851,9 +4851,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 1,
               "type": "TFNG",
-              "text": "Question 1: Choose the correct option:",
+              "text": "Wooden rackets allowed players to hit with greater power than modern rackets do.",
               "answer": "FALSE",
-              "explanation": "The passage confirms that the answer is 'FALSE'.",
+              "explanation": "The passage states wooden-racket play \"was characterised by slow, tactical rallies,\" while lightweight modern rackets allow players to swing faster, \"generating more power and spin.\"",
               "location": "Passage 1",
               "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
@@ -4865,9 +4865,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 2,
               "type": "TFNG",
-              "text": "Question 2: Choose the correct option:",
+              "text": "The International Tennis Federation still permits players to use spaghetti-strung rackets today.",
               "answer": "FALSE",
-              "explanation": "The passage confirms that the answer is 'FALSE'.",
+              "explanation": "The passage states the ITF \"quickly banned the racket, arguing that it changed the nature of the game.\"",
               "location": "Passage 1",
               "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
@@ -4879,9 +4879,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 3,
               "type": "TFNG",
-              "text": "Question 3: Choose the correct option:",
+              "text": "Most of the world's top players travel with their own professional racket stringer.",
               "answer": "NOT GIVEN",
-              "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
+              "explanation": "The passage states \"many travel with their own professional racket stringer,\" but does not specify whether this applies to most top players.",
               "location": "Passage 1",
               "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
@@ -4893,9 +4893,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 4,
               "type": "TFNG",
-              "text": "Question 4: Choose the correct option:",
+              "text": "Pete Sampras added lead weights to his racket in order to reduce its overall mass.",
               "answer": "FALSE",
-              "explanation": "The passage confirms that the answer is 'FALSE'.",
+              "explanation": "The passage states Sampras \"had lead weights added to the frame of his racket to increase its mass and power,\" the opposite of reducing it.",
               "location": "Passage 1",
               "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
@@ -4907,9 +4907,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 5,
               "type": "TFNG",
-              "text": "Question 5: Choose the correct option:",
+              "text": "Werner Fischer's spaghetti-strung racket was later approved for professional competition after further modifications.",
               "answer": "NOT GIVEN",
-              "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
+              "explanation": "The passage states the racket was banned but gives no information about any later approval or modification.",
               "location": "Passage 1",
               "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
@@ -4921,9 +4921,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 6,
               "type": "TFNG",
-              "text": "Question 6: Choose the correct option:",
+              "text": "The weather can affect how professional players adjust the strings on their rackets.",
               "answer": "TRUE",
-              "explanation": "The passage confirms that the answer is 'TRUE'.",
+              "explanation": "The passage states players adjust string tension \"depending on the court surface and weather conditions.\"",
               "location": "Passage 1",
               "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
@@ -4935,9 +4935,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 7,
               "type": "TFNG",
-              "text": "People had expected Andy Murray to become the world's top tennis player for at least five years before 2016. The change that Andy Murray made to his rackets attracted a lot of attention. Most of the world's top players take a professional racket stringer on tour with them. Mike and Bob Bryan use rackets that are light in compari son to the majority of rackets. Werner Fischer played with a spaghetti-strung racket that he designed himself. The weather can affect how professional players adjust the strings on their rackets. It was believed that the change Pete Sampras made to his rackets contributed to his strong serve.",
+              "text": "It was believed that the change Pete Sampras made to his rackets contributed to his strong serve.",
               "answer": "TRUE",
-              "explanation": "The passage confirms that the answer is 'TRUE'.",
+              "explanation": "The passage describes Sampras as \"famous for his powerful serve\" and states he added lead weights to his racket's frame \"to increase its mass and power.\"",
               "location": "Passage 1",
               "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
               "options": [
@@ -5117,11 +5117,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 20,
               "type": "MCQ",
-              "text": "Write the correct letters in boxes 20 and 21 on your answer sheet.",
+              "text": "Which TWO of the following statements does the writer make about inhabitants of the Mediterranean region in the ancient world? (Select first statement)",
               "answer": "B",
-              "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\"",
+              "explanation": "Paragraph B states pirates hid \"in coves and bays,\" evading vessels that had to stay close to land, suggesting local knowledge helped them escape capture.",
               "location": "Passage 2",
-              "instruction": "Questions 20 and 21<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 20 and 21 on your answer sheet.<br/>Which TWO of the following statements does the writer make about inhabitants of the<br/>Mediterranean region in the ancient world?",
+              "instruction": "Questions 20 and 21<br/>Choose TWO letters, A-E.",
               "options": [
                 "A. They often used stolen vessels to carry out pirate attacks.",
                 "B. They managed to escape capture by the authorities because they knew the area so well.",
@@ -5133,11 +5133,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 21,
               "type": "MCQ",
-              "text": "Write the correct letters in boxes 20 and 21 on your answer sheet.",
+              "text": "Which TWO of the following statements does the writer make about inhabitants of the Mediterranean region in the ancient world? (Select second statement)",
               "answer": "D",
-              "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\"",
+              "explanation": "Paragraph E states piracy was a legitimate livelihood \"particularly for inhabitants of poor or isolated regions who depended more on the sea than on farming.\"",
               "location": "Passage 2",
-              "instruction": "Questions 20 and 21<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 20 and 21 on your answer sheet.<br/>Which TWO of the following statements does the writer make about inhabitants of the<br/>Mediterranean region in the ancient world?",
+              "instruction": "Questions 20 and 21<br/>Choose TWO letters, A-E.",
               "options": [
                 "A. They often used stolen vessels to carry out pirate attacks.",
                 "B. They managed to escape capture by the authorities because they knew the area so well.",
@@ -5149,11 +5149,11 @@ const IELTS_TEST_DATA = {
             {
               "num": 22,
               "type": "MCQ",
-              "text": "Write the correct letters in boxes 22 and 23 on your answer sheet.",
+              "text": "Which TWO of the following statements does the writer make about piracy and ancient Greece? (Select first statement)",
               "answer": "C",
-              "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\"",
+              "explanation": "Paragraph C states \"Important officials and even kings were known to occasionally take part in piracy or profit from it.\"",
               "location": "Passage 2",
-              "instruction": "Questions 22 and 23<br/>Choose TWO letters, A-E.<br/>Write the correct letters in boxes 22 and 23 on your answer sheet.<br/>Which TWO of the following statements does the writer make about piracy and<br/>ancient Greece?<br/>A The state estimated that very few people were involved in piracy.<br/>B Attitudes towards piracy changed shortly after the Iliad and the Odyssey<br/>were written.<br/>C Important officials were known to occasionally take part in piracy.<br/>D Every citizen regarded pirate attacks on cities as unacceptable.<br/>E A favourable view of piracy is evident in certain ancient Greek texts.",
+              "instruction": "Questions 22 and 23<br/>Choose TWO letters, A-E.",
               "options": [
                 "A. The state estimated that very few people were involved in piracy.",
                 "B. Attitudes towards piracy changed shortly after the Iliad and the Odyssey were written.",
@@ -5274,9 +5274,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 31,
               "type": "MCQ",
-              "text": "Write the correct letter, A-J, in boxes 31-36 on your answer sheet.",
+              "text": "Although people have _________ to misinformation, there is debate about precisely how and when we label something as true or untrue.",
               "answer": "G",
-              "explanation": "See Passage 3 for the supporting evidence for this answer.",
+              "explanation": "This summary opens by noting that although misinformation is a frequent, familiar occurrence, exactly how and when the brain labels it as untrue remains debated.",
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A-J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>What happens when people encounter misinformation?<br/>Although people have 31 ........................................... to misinformation, there is debate about<br/>precisely how and when we label something as true or untrue. The philosophers<br/>Descartes and Spinoza had 32 ........................................... about how people engage with<br/>information. While Descartes believed that people accept or reject information<br/>after considering whether it is true or not, Spinoza argued that people accepted<br/>a// information they encountered (and by default misinformation) and did not<br/>verify or reject it until afterwards. Moreover, Spinoza believed that a distinct",
               "options": [
@@ -5379,9 +5379,9 @@ const IELTS_TEST_DATA = {
             {
               "num": 36,
               "type": "MCQ",
-              "text": "Write the correct letter, A-J, in boxes 31-36 on your answer sheet.",
+              "text": "This is consistent with the fact that the resources for scepticism and the resources for perceiving and encoding information are in _________ in the brain.",
               "answer": "C",
-              "explanation": "The text confirms this: \"com recently have been empirically tested in robust ways.\"",
+              "explanation": "This summary concludes that scepticism and initial perception/encoding are supported by separate neural resources located in different parts of the brain, consistent with Spinoza's two-stage account.",
               "location": "Passage 3",
               "instruction": "Questions 31-36<br/>Complete the summary using the list of phrases, A-J, below.<br/>Write the correct letter, A-J, in boxes 31-36 on your answer sheet.<br/>What happens when people encounter misinformation?<br/>Although people have 31 ........................................... to misinformation, there is debate about<br/>precisely how and when we label something as true or untrue. The philosophers<br/>Descartes and Spinoza had 32 ........................................... about how people engage with<br/>information. While Descartes believed that people accept or reject information<br/>after considering whether it is true or not, Spinoza argued that people accepted<br/>a// information they encountered (and by default misinformation) and did not<br/>verify or reject it until afterwards. Moreover, Spinoza believed that a distinct",
               "options": [
