@@ -1,5 +1,5 @@
 // IELTS Test Data - Auto-generated
-// Last updated: 2026-07-12T13:44:20.659Z
+// Last updated: 2026-07-12T15:32:46.010Z
 
 const IELTS_TEST_DATA = {
  "1": {
@@ -9156,65 +9156,65 @@ const IELTS_TEST_DATA = {
       {
        "num": 7,
        "type": "FILL",
-       "text": "Question 7: Choose the correct option:",
+       "text": "diet consists of fern fronds, various parts of a tree and _________",
        "answer": "bulbs",
        "explanation": "The passage says that kakapo eat only plants. Their food includes leaves, roots, bark, bulbs, and fern fronds. The answer is 'bulbs'. This means that kakapo eat parts of plants called bulbs. The correct answer is 'bulbs' because the passage says that the kakapo's diet includes 'the leaves, roots and bark of trees as well as bulbs, and fern fronds.' This shows that bulbs are one of the food types that kakapo eat.",
        "location": "Passage 1",
-       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet."
+       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/><br/><b>New Zealand's kakapo</b><br/><br/><b>A type of parrot:</b><br/>• diet consists of fern fronds, various parts of a tree and 7 _________<br/>• nests are created in 8 _________ where eggs are laid.<br/><br/><b>Arrival of Polynesian settlers</b><br/>• the 9 _________ of the kakapo were used to make clothes.<br/><br/><b>Arrival of European colonisers</b><br/>• 10 _________ were an animal which they introduced that ate the kakapo's food sources.<br/><br/><b>Protecting kakapo</b><br/>• Richard Henry, a conservationist, tried to protect the kakapo.<br/>• a definite sighting of female kakapo on Rakiura Island was reported in the year 11 _________<br/>• the Recovery Plan included an increase in 12 _________<br/>• a current goal of the Recovery Plan is to maintain the involvement of 13 _________ in kakapo protection."
       },
       {
        "num": 8,
        "type": "FILL",
-       "text": "Question 8: Choose the correct option:",
+       "text": "nests are created in _________ where eggs are laid.",
        "answer": "soil",
        "explanation": "The passage explains that the kakapo lays its eggs in the ground. This ground is called 'soil', and the mother bird moves the soil while taking care of the eggs. The answer is 'soil'. This means that the kakapo lays its eggs in the ground. The correct answer is 'soil' because the passage says that the female kakapo lays her eggs in the ground, which is called 'soil'. This shows where they make their nests for the eggs.",
        "location": "Passage 1",
-       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet."
+       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/><br/><b>New Zealand's kakapo</b><br/><br/><b>A type of parrot:</b><br/>• diet consists of fern fronds, various parts of a tree and 7 _________<br/>• nests are created in 8 _________ where eggs are laid.<br/><br/><b>Arrival of Polynesian settlers</b><br/>• the 9 _________ of the kakapo were used to make clothes.<br/><br/><b>Arrival of European colonisers</b><br/>• 10 _________ were an animal which they introduced that ate the kakapo's food sources.<br/><br/><b>Protecting kakapo</b><br/>• Richard Henry, a conservationist, tried to protect the kakapo.<br/>• a definite sighting of female kakapo on Rakiura Island was reported in the year 11 _________<br/>• the Recovery Plan included an increase in 12 _________<br/>• a current goal of the Recovery Plan is to maintain the involvement of 13 _________ in kakapo protection."
       },
       {
        "num": 9,
        "type": "FILL",
-       "text": "Question 9: Choose the correct option:",
+       "text": "the _________ of the kakapo were used to make clothes.",
        "answer": "feathers",
        "explanation": "The passage says that early settlers could easily catch kakapos because they could not fly. They used the meat for food and took the feathers to make soft jackets. The answer 'feathers' means the soft covering on the body of the kakapo parrot. The correct answer is 'feathers' because the passage states that the first Polynesian settlers used the kakapo's feathers to make soft cloaks. This shows that feathers were an important part of the kakapo's value to early settlers.",
        "location": "Passage 1",
-       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet."
+       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/><br/><b>New Zealand's kakapo</b><br/><br/><b>A type of parrot:</b><br/>• diet consists of fern fronds, various parts of a tree and 7 _________<br/>• nests are created in 8 _________ where eggs are laid.<br/><br/><b>Arrival of Polynesian settlers</b><br/>• the 9 _________ of the kakapo were used to make clothes.<br/><br/><b>Arrival of European colonisers</b><br/>• 10 _________ were an animal which they introduced that ate the kakapo's food sources.<br/><br/><b>Protecting kakapo</b><br/>• Richard Henry, a conservationist, tried to protect the kakapo.<br/>• a definite sighting of female kakapo on Rakiura Island was reported in the year 11 _________<br/>• the Recovery Plan included an increase in 12 _________<br/>• a current goal of the Recovery Plan is to maintain the involvement of 13 _________ in kakapo protection."
       },
       {
        "num": 10,
        "type": "FILL",
-       "text": "Question 10: Choose the correct option:",
+       "text": "_________ were an animal which they introduced that ate the kakapo's food sources.",
        "answer": "deer",
        "explanation": "The passage says that many animals lost their homes because forests were cut down. Introduced animals like deer ate the remaining food that other animals, like the kakapo, needed to survive. The answer 'deer' means that these animals were brought to New Zealand by people. They caused problems for the kakapo by eating the food that the kakapo needed. The correct answer is 'deer' because the passage explains that when Europeans came to New Zealand, they brought deer. These deer ate the food that the kakapo required to live, which is why they are mentioned as a problem for the kakapo.",
        "location": "Passage 1",
-       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet."
+       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/><br/><b>New Zealand's kakapo</b><br/><br/><b>A type of parrot:</b><br/>• diet consists of fern fronds, various parts of a tree and 7 _________<br/>• nests are created in 8 _________ where eggs are laid.<br/><br/><b>Arrival of Polynesian settlers</b><br/>• the 9 _________ of the kakapo were used to make clothes.<br/><br/><b>Arrival of European colonisers</b><br/>• 10 _________ were an animal which they introduced that ate the kakapo's food sources.<br/><br/><b>Protecting kakapo</b><br/>• Richard Henry, a conservationist, tried to protect the kakapo.<br/>• a definite sighting of female kakapo on Rakiura Island was reported in the year 11 _________<br/>• the Recovery Plan included an increase in 12 _________<br/>• a current goal of the Recovery Plan is to maintain the involvement of 13 _________ in kakapo protection."
       },
       {
        "num": 11,
        "type": "FILL",
-       "text": "Question 11: Choose the correct option:",
+       "text": "a definite sighting of female kakapo on Rakiura Island was reported in the year _________",
        "answer": "1980",
        "explanation": "The passage says that in 1980, people found out that female kakapos were on the island. This was important for helping the kakapo survive. The answer is 1980. This was the year when people saw female kakapos on Rakiura Island for the first time after some time. The correct answer is 1980 because the passage states that in 1977, a large population of males was found, and it was confirmed that females were also present in the year 1980. This is an important event in the recovery of the kakapo population.",
        "location": "Passage 1",
-       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet."
+       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/><br/><b>New Zealand's kakapo</b><br/><br/><b>A type of parrot:</b><br/>• diet consists of fern fronds, various parts of a tree and 7 _________<br/>• nests are created in 8 _________ where eggs are laid.<br/><br/><b>Arrival of Polynesian settlers</b><br/>• the 9 _________ of the kakapo were used to make clothes.<br/><br/><b>Arrival of European colonisers</b><br/>• 10 _________ were an animal which they introduced that ate the kakapo's food sources.<br/><br/><b>Protecting kakapo</b><br/>• Richard Henry, a conservationist, tried to protect the kakapo.<br/>• a definite sighting of female kakapo on Rakiura Island was reported in the year 11 _________<br/>• the Recovery Plan included an increase in 12 _________<br/>• a current goal of the Recovery Plan is to maintain the involvement of 13 _________ in kakapo protection."
       },
       {
        "num": 12,
        "type": "FILL",
-       "text": "Question 12: Choose the correct option:",
+       "text": "the Recovery Plan included an increase in _________",
        "answer": "funding",
        "explanation": "The passage says that in 1996, they made a new plan to help the kakapo birds. They got more money, or funding, to help with the plan. The answer is 'funding'. This means money that is given to help with a project or cause. The correct answer is 'funding' because the passage discusses how a new Recovery Plan for the kakapo was launched in 1996, which included a larger amount of money or funding. This funding was important to help manage and protect the kakapo and its habitat.",
        "location": "Passage 1",
-       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet."
+       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/><br/><b>New Zealand's kakapo</b><br/><br/><b>A type of parrot:</b><br/>• diet consists of fern fronds, various parts of a tree and 7 _________<br/>• nests are created in 8 _________ where eggs are laid.<br/><br/><b>Arrival of Polynesian settlers</b><br/>• the 9 _________ of the kakapo were used to make clothes.<br/><br/><b>Arrival of European colonisers</b><br/>• 10 _________ were an animal which they introduced that ate the kakapo's food sources.<br/><br/><b>Protecting kakapo</b><br/>• Richard Henry, a conservationist, tried to protect the kakapo.<br/>• a definite sighting of female kakapo on Rakiura Island was reported in the year 11 _________<br/>• the Recovery Plan included an increase in 12 _________<br/>• a current goal of the Recovery Plan is to maintain the involvement of 13 _________ in kakapo protection."
       },
       {
        "num": 13,
        "type": "FILL",
-       "text": "Question 13: Choose the correct option:",
+       "text": "a current goal of the Recovery Plan is to maintain the involvement of _________ in kakapo protection.",
        "answer": "stakeholders",
        "explanation": "The passage says that the Recovery Plan has important goals. One goal is to make sure that stakeholders, or the people who care about the kakapo, help to protect it. The answer is 'stakeholders'. This means people or groups who have an interest in keeping the kakapo safe. The correct answer is 'stakeholders' because the passage says that one of the goals of the kakapo Recovery Plan is to ensure that stakeholders continue to be involved in the protection of the kakapo. This shows that it's very important for these groups or people to be part of saving the kakapo.",
        "location": "Passage 1",
-       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet."
+       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/><br/><b>New Zealand's kakapo</b><br/><br/><b>A type of parrot:</b><br/>• diet consists of fern fronds, various parts of a tree and 7 _________<br/>• nests are created in 8 _________ where eggs are laid.<br/><br/><b>Arrival of Polynesian settlers</b><br/>• the 9 _________ of the kakapo were used to make clothes.<br/><br/><b>Arrival of European colonisers</b><br/>• 10 _________ were an animal which they introduced that ate the kakapo's food sources.<br/><br/><b>Protecting kakapo</b><br/>• Richard Henry, a conservationist, tried to protect the kakapo.<br/>• a definite sighting of female kakapo on Rakiura Island was reported in the year 11 _________<br/>• the Recovery Plan included an increase in 12 _________<br/>• a current goal of the Recovery Plan is to maintain the involvement of 13 _________ in kakapo protection."
       }
      ]
     },
@@ -9315,29 +9315,29 @@ const IELTS_TEST_DATA = {
       {
        "num": 24,
        "type": "FILL",
-       "text": "Question 24: Choose the correct option:",
+       "text": "For hundreds of years, the only tree that was more popular in Britain than elm was _________.",
        "answer": "oak",
        "explanation": "The passage says that for a long time, elm was almost as popular as oak, which was the most preferred hardwood tree in Britain. The answer is \"oak.\" This means that oak was the tree that was more popular than elm in Britain. The correct answer is \"oak\" because the passage says that for many years, elm was almost the most popular tree in Britain, but oak was slightly more popular. This is important because it shows the history and significance of these trees in British culture.",
        "location": "Passage 2",
-       "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 24-26 on your answer sheet."
+       "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>Uses of a popular tree</b><br/>For hundreds of years, the only tree that was more popular in Britain than elm was 24 _________. Starting in the Bronze Age, many tools were made from elm and people also used it to make weapons. In the 18th century, it was grown to provide wood for boxes and 25 _________. Due to its strength, elm was often used for mining equipment and the Cutty Sark's 26 _________ was also constructed from elm."
       },
       {
        "num": 25,
        "type": "FILL",
-       "text": "Question 25: Choose the correct option:",
+       "text": "In the 18th century, it was grown to provide wood for boxes and _________.",
        "answer": "flooring",
        "explanation": "The passage explains that in the 18th century, people started to plant more elm trees, and the wood from these trees was used to make storage crates and flooring, showing its importance. The answer is 'flooring'. This means the wood from the elm tree was used to make the floor in buildings or other places. The correct answer is 'flooring' because the passage talks about how elm wood was used for making storage boxes and also for flooring in the 18th century. This shows that elm was valuable for these kinds of uses.",
        "location": "Passage 2",
-       "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 24-26 on your answer sheet."
+       "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>Uses of a popular tree</b><br/>For hundreds of years, the only tree that was more popular in Britain than elm was 24 _________. Starting in the Bronze Age, many tools were made from elm and people also used it to make weapons. In the 18th century, it was grown to provide wood for boxes and 25 _________. Due to its strength, elm was often used for mining equipment and the Cutty Sark's 26 _________ was also constructed from elm."
       },
       {
        "num": 26,
        "type": "FILL",
-       "text": "Question 26: Choose the correct option:",
+       "text": "Due to its strength, elm was often used for mining equipment and the Cutty Sark's _________ was also constructed from elm.",
        "answer": "keel",
        "explanation": "The passage tells us that elm wood was strong and used for things that needed to take a lot of force, like the keel of ships and mining tools. The answer 'keel' means the bottom part of a ship that helps it stay stable in the water. The correct answer is 'keel' because the passage mentions that elm wood was used to build the keel of the famous sailing ship Cutty Sark. This shows how important elm wood was for making strong and useful parts of boats.",
        "location": "Passage 2",
-       "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 24-26 on your answer sheet."
+       "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>Uses of a popular tree</b><br/>For hundreds of years, the only tree that was more popular in Britain than elm was 24 _________. Starting in the Bronze Age, many tools were made from elm and people also used it to make weapons. In the 18th century, it was grown to provide wood for boxes and 25 _________. Due to its strength, elm was often used for mining equipment and the Cutty Sark's 26 _________ was also constructed from elm."
       }
      ]
     },
@@ -10097,56 +10097,56 @@ const IELTS_TEST_DATA = {
       {
        "num": 1,
        "type": "FILL",
-       "text": "Question 1: Choose the correct option:",
+       "text": "look similar to dugongs, but with a differently shaped _________",
        "answer": "Tail",
        "explanation": "The passage says that the manatee's tail is broad and round. This describes how the tail of a manatee looks and how it is not the same as the dugong's tail, which is shaped differently. The answer is 'Tail.' This means the back part of the manatee that looks different from the dugong's tail. The correct answer is 'Tail' because the passage says that manatees have a 'broad, rounded tail,' while dugongs have a tail that is fluked, like a whale's. This shows how their tails are different in shape.",
        "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this"
+       "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/><br/><b>Manatees</b><br/><br/><b>Appearance</b><br/>• look similar to dugongs, but with a differently shaped 1 _________<br/><br/><b>Movement</b><br/>• have fewer neck bones than most mammals<br/>• need to use their 2 _________ to help to turn their bodies around in order to look sideways<br/>• sense vibrations in the water by means of 3 _________ on their skin<br/><br/><b>Feeding</b><br/>• eat mainly aquatic vegetation, such as 4 _________<br/>• grasp and pull up plants with their 5 _________<br/><br/><b>Breathing</b><br/>• come to the surface for air every 2-4 minutes when awake and every 15-20 while sleeping<br/>• may regulate the 6 _________ of their bodies by using muscles of diaphragm to store air internally"
       },
       {
        "num": 2,
        "type": "FILL",
-       "text": "Question 2: Choose the correct option:",
+       "text": "need to use their _________ to help to turn their bodies around in order to look sideways",
        "answer": "Flippers",
        "explanation": "The passage says that when a manatee wants to see something to its left or right, it has to turn its whole body. It uses its flippers to help steer while it swims. The answer is 'Flippers'. Flippers are the body parts that manatees use to help turn their bodies. The correct answer is 'Flippers' because the passage explains that manatees have to use their flippers to turn their bodies in order to look sideways since they cannot move their heads that way. Flippers help them steer while swimming.",
        "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this"
+       "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/><br/><b>Manatees</b><br/><br/><b>Appearance</b><br/>• look similar to dugongs, but with a differently shaped 1 _________<br/><br/><b>Movement</b><br/>• have fewer neck bones than most mammals<br/>• need to use their 2 _________ to help to turn their bodies around in order to look sideways<br/>• sense vibrations in the water by means of 3 _________ on their skin<br/><br/><b>Feeding</b><br/>• eat mainly aquatic vegetation, such as 4 _________<br/>• grasp and pull up plants with their 5 _________<br/><br/><b>Breathing</b><br/>• come to the surface for air every 2-4 minutes when awake and every 15-20 while sleeping<br/>• may regulate the 6 _________ of their bodies by using muscles of diaphragm to store air internally"
       },
       {
        "num": 3,
        "type": "FILL",
-       "text": "Question 3: Choose the correct option:",
+       "text": "sense vibrations in the water by means of _________ on their skin",
        "answer": "Hairs",
        "explanation": "The passage explains that manatees have some hairs on their bodies. These hairs are important because they help manatees feel vibrations in the water. The answer 'Hairs' means the little soft parts on the skin of manatees that help them to sense or feel things. The correct answer is 'Hairs' because the passage specifically talks about how manatees have hairs that help them sense vibrations in the water. This is important for their movement and awareness of their environment.",
        "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this"
+       "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/><br/><b>Manatees</b><br/><br/><b>Appearance</b><br/>• look similar to dugongs, but with a differently shaped 1 _________<br/><br/><b>Movement</b><br/>• have fewer neck bones than most mammals<br/>• need to use their 2 _________ to help to turn their bodies around in order to look sideways<br/>• sense vibrations in the water by means of 3 _________ on their skin<br/><br/><b>Feeding</b><br/>• eat mainly aquatic vegetation, such as 4 _________<br/>• grasp and pull up plants with their 5 _________<br/><br/><b>Breathing</b><br/>• come to the surface for air every 2-4 minutes when awake and every 15-20 while sleeping<br/>• may regulate the 6 _________ of their bodies by using muscles of diaphragm to store air internally"
       },
       {
        "num": 4,
        "type": "FILL",
-       "text": "Question 4: Choose the correct option:",
+       "text": "eat mainly aquatic vegetation, such as _________",
        "answer": "Seagrasses",
        "explanation": "The passage explains that manatees eat a lot of seagrasses and other plants found in the water, which are an important part of their food. The answer is 'Seagrasses'. This means that seagrasses are a type of plant that manatees eat most of the time. The correct answer is 'seagrasses' because the passage says that manatees eat mainly aquatic plants, and specifically mentions that 'Seagrasses and other marine plants make up most of a manatee's diet.' This shows that seagrasses are a key part of what manatees eat.",
        "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this"
+       "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/><br/><b>Manatees</b><br/><br/><b>Appearance</b><br/>• look similar to dugongs, but with a differently shaped 1 _________<br/><br/><b>Movement</b><br/>• have fewer neck bones than most mammals<br/>• need to use their 2 _________ to help to turn their bodies around in order to look sideways<br/>• sense vibrations in the water by means of 3 _________ on their skin<br/><br/><b>Feeding</b><br/>• eat mainly aquatic vegetation, such as 4 _________<br/>• grasp and pull up plants with their 5 _________<br/><br/><b>Breathing</b><br/>• come to the surface for air every 2-4 minutes when awake and every 15-20 while sleeping<br/>• may regulate the 6 _________ of their bodies by using muscles of diaphragm to store air internally"
       },
       {
        "num": 5,
        "type": "FILL",
-       "text": "Question 5: Choose the correct option:",
+       "text": "grasp and pull up plants with their _________",
        "answer": "Lips",
        "explanation": "The passage says that manatees do not have certain teeth for grabbing food. Instead, they have lips that work like hands to help them take food from the ground in the water. The answer 'lips' means that manatees use their lips to grab and pull food. The correct answer is 'lips' because manatees don't have front teeth like other animals to grab food; instead, they use their lips, which act like hands to help them pull plants from the water.",
        "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this"
+       "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/><br/><b>Manatees</b><br/><br/><b>Appearance</b><br/>• look similar to dugongs, but with a differently shaped 1 _________<br/><br/><b>Movement</b><br/>• have fewer neck bones than most mammals<br/>• need to use their 2 _________ to help to turn their bodies around in order to look sideways<br/>• sense vibrations in the water by means of 3 _________ on their skin<br/><br/><b>Feeding</b><br/>• eat mainly aquatic vegetation, such as 4 _________<br/>• grasp and pull up plants with their 5 _________<br/><br/><b>Breathing</b><br/>• come to the surface for air every 2-4 minutes when awake and every 15-20 while sleeping<br/>• may regulate the 6 _________ of their bodies by using muscles of diaphragm to store air internally"
       },
       {
        "num": 6,
        "type": "FILL",
-       "text": "Question 6: Choose the correct option:",
+       "text": "may regulate the _________ of their bodies by using muscles of diaphragm to store air internally",
        "answer": "Buoyancy",
        "explanation": "The passage says that manatees use muscles in their body to help change how they float in the water. The answer 'buoyancy' means how something floats in water. In this case, it is about how manatees manage to float in the water. The correct answer is 'buoyancy' because the passage explains that manatees use their diaphragm and breathing to help adjust their buoyancy, which means how they float. It shows how they use their muscles to help them stay at the right level in the water.",
        "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this"
+       "instruction": "Questions 1-6<br/>Complete the notes below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/><br/><b>Manatees</b><br/><br/><b>Appearance</b><br/>• look similar to dugongs, but with a differently shaped 1 _________<br/><br/><b>Movement</b><br/>• have fewer neck bones than most mammals<br/>• need to use their 2 _________ to help to turn their bodies around in order to look sideways<br/>• sense vibrations in the water by means of 3 _________ on their skin<br/><br/><b>Feeding</b><br/>• eat mainly aquatic vegetation, such as 4 _________<br/>• grasp and pull up plants with their 5 _________<br/><br/><b>Breathing</b><br/>• come to the surface for air every 2-4 minutes when awake and every 15-20 while sleeping<br/>• may regulate the 6 _________ of their bodies by using muscles of diaphragm to store air internally"
       },
       {
        "num": 7,
@@ -10309,119 +10309,119 @@ const IELTS_TEST_DATA = {
       {
        "num": 17,
        "type": "FILL",
-       "text": "Question 17: Choose the correct option:",
+       "text": "Many people think that procrastination is the result of _________.",
        "answer": "Laziness",
        "explanation": "The passage says that many people think procrastination comes from laziness, but this is not true. Procrastination is really connected to how we feel about tasks. The answer is 'laziness'. This means that some people think procrastination happens because a person is lazy. The correct answer is 'laziness' because many people believe that procrastination comes from being lazy. However, the passage explains that this is a misconception. Procrastination is not really caused by laziness, but by problems with managing our mood and feelings about tasks.",
        "location": "Passage 2",
-       "instruction": "Questions 14-18<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-G, in boxes 14-18 on your answer sheet."
+       "instruction": "Questions 17-22<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>What makes us procrastinate?</b><br/>Many people think that procrastination is the result of 17 _________. Others believe it to be the result of an inability to organise time efficiently. But scientific studies suggest that procrastination is actually due to poor mood management. The tasks we are most likely to put off are those that could damage our self-esteem or cause us to feel 18 _________ when we think about them. Research comparing chronic procrastinators with other people even found differences in the brain regions associated with regulating emotions and identifying 19 _________. Emotionally loaded and difficult tasks often cause us to procrastinate. Getting ready to take 20 _________ might be a typical example of one such task. People who are likely to procrastinate tend to be either those with low self-esteem or 21 _________. Procrastination is only a short-term measure for managing emotions. It's often followed by a feeling of 22 _________ , which worsens our mood and leads to more procrastination."
       },
       {
        "num": 18,
        "type": "FILL",
-       "text": "Question 18: Choose the correct option:",
+       "text": "The tasks we are most likely to put off are those that could damage our self-esteem or cause us to feel _________ when we think about them.",
        "answer": "Anxious",
        "explanation": "The passage says that when we worry about how a task might affect us, like feeling less good about ourselves, we can feel anxious. This anxiety makes us want to skip doing the task. The answer 'anxious' means feeling worried or nervous about something. The correct answer is 'anxious' because procrastination often happens when people think about tasks that might hurt their self-esteem or make them feel bad. The passage explains that thinking about these tasks can make us feel anxious, which leads us to avoid them.",
        "location": "Passage 2",
-       "instruction": "Questions 14-18<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-G, in boxes 14-18 on your answer sheet."
+       "instruction": "Questions 17-22<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>What makes us procrastinate?</b><br/>Many people think that procrastination is the result of 17 _________. Others believe it to be the result of an inability to organise time efficiently. But scientific studies suggest that procrastination is actually due to poor mood management. The tasks we are most likely to put off are those that could damage our self-esteem or cause us to feel 18 _________ when we think about them. Research comparing chronic procrastinators with other people even found differences in the brain regions associated with regulating emotions and identifying 19 _________. Emotionally loaded and difficult tasks often cause us to procrastinate. Getting ready to take 20 _________ might be a typical example of one such task. People who are likely to procrastinate tend to be either those with low self-esteem or 21 _________. Procrastination is only a short-term measure for managing emotions. It's often followed by a feeling of 22 _________ , which worsens our mood and leads to more procrastination."
       },
       {
        "num": 19,
        "type": "FILL",
-       "text": "Question 19: Choose the correct option:",
+       "text": "Research comparing chronic procrastinators with other people even found differences in the brain regions associated with regulating emotions and identifying _________.",
        "answer": "Threats",
        "explanation": "The passage says that studies using brain scans found that procrastinators have different brain areas that deal with feeling threats and managing emotions. This means that they might find tasks more scary or challenging than others, which contributes to why they put off doing them. The answer is 'threats'. The correct answer is 'threats' because the passage explains that when we think about tasks, they can make us feel bad or scared about ourselves, which leads to procrastination. The word 'threats' describes those feelings that can affect how we see ourselves.",
        "location": "Passage 2",
-       "instruction": "Questions 19-23<br/>Look at the following statements (Questions 19-23) and the list of people below.<br/>Match each statement with the correct person, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 19-23 on your answer sheet."
+       "instruction": "Questions 17-22<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>What makes us procrastinate?</b><br/>Many people think that procrastination is the result of 17 _________. Others believe it to be the result of an inability to organise time efficiently. But scientific studies suggest that procrastination is actually due to poor mood management. The tasks we are most likely to put off are those that could damage our self-esteem or cause us to feel 18 _________ when we think about them. Research comparing chronic procrastinators with other people even found differences in the brain regions associated with regulating emotions and identifying 19 _________. Emotionally loaded and difficult tasks often cause us to procrastinate. Getting ready to take 20 _________ might be a typical example of one such task. People who are likely to procrastinate tend to be either those with low self-esteem or 21 _________. Procrastination is only a short-term measure for managing emotions. It's often followed by a feeling of 22 _________ , which worsens our mood and leads to more procrastination."
       },
       {
        "num": 20,
        "type": "FILL",
-       "text": "Question 20: Choose the correct option:",
+       "text": "Getting ready to take _________ might be a typical example of one such task.",
        "answer": "Exams",
        "explanation": "The passage explains that some tasks, like getting ready for exams, are very hard and make people feel strong emotions. Because of this, many people want to avoid doing them, which is called procrastination. The answer is 'exams'. This means the tests that students take to show what they know. The correct answer is 'exams' because the passage talks about tasks that are hard and cause people to feel stressed. Studying for exams is one of those hard tasks that people often put off. This procrastination happens because thinking about these exams can make people feel anxious or low in self-esteem.",
        "location": "Passage 2",
-       "instruction": "Questions 19-23<br/>Look at the following statements (Questions 19-23) and the list of people below.<br/>Match each statement with the correct person, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 19-23 on your answer sheet."
+       "instruction": "Questions 17-22<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>What makes us procrastinate?</b><br/>Many people think that procrastination is the result of 17 _________. Others believe it to be the result of an inability to organise time efficiently. But scientific studies suggest that procrastination is actually due to poor mood management. The tasks we are most likely to put off are those that could damage our self-esteem or cause us to feel 18 _________ when we think about them. Research comparing chronic procrastinators with other people even found differences in the brain regions associated with regulating emotions and identifying 19 _________. Emotionally loaded and difficult tasks often cause us to procrastinate. Getting ready to take 20 _________ might be a typical example of one such task. People who are likely to procrastinate tend to be either those with low self-esteem or 21 _________. Procrastination is only a short-term measure for managing emotions. It's often followed by a feeling of 22 _________ , which worsens our mood and leads to more procrastination."
       },
       {
        "num": 21,
        "type": "FILL",
-       "text": "Question 21: Choose the correct option:",
+       "text": "People who are likely to procrastinate tend to be either those with low self-esteem or _________.",
        "answer": "Perfectionists",
        "explanation": "The passage says that perfectionists are people who are very concerned about how their work is seen. This worry makes them likely to delay or avoid doing their tasks. The answer 'perfectionists' means people who want everything to be perfect. They worry about how others will judge their work. The correct answer is 'perfectionists' because the passage explains that this group of people tends to procrastinate. They feel worried about their work being judged, which makes them avoid starting or finishing tasks. This is a key reason why procrastination happens.",
        "location": "Passage 2",
-       "instruction": "Questions 19-23<br/>Look at the following statements (Questions 19-23) and the list of people below.<br/>Match each statement with the correct person, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 19-23 on your answer sheet."
+       "instruction": "Questions 17-22<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>What makes us procrastinate?</b><br/>Many people think that procrastination is the result of 17 _________. Others believe it to be the result of an inability to organise time efficiently. But scientific studies suggest that procrastination is actually due to poor mood management. The tasks we are most likely to put off are those that could damage our self-esteem or cause us to feel 18 _________ when we think about them. Research comparing chronic procrastinators with other people even found differences in the brain regions associated with regulating emotions and identifying 19 _________. Emotionally loaded and difficult tasks often cause us to procrastinate. Getting ready to take 20 _________ might be a typical example of one such task. People who are likely to procrastinate tend to be either those with low self-esteem or 21 _________. Procrastination is only a short-term measure for managing emotions. It's often followed by a feeling of 22 _________ , which worsens our mood and leads to more procrastination."
       },
       {
        "num": 22,
        "type": "FILL",
-       "text": "Question 22: Choose the correct option:",
+       "text": "Procrastination is only a short-term measure for managing emotions. It's often followed by a feeling of _________ , which worsens our mood and leads to more procrastination.",
        "answer": "Guilt",
        "explanation": "The passage says that after we avoid doing tasks, we might feel better for a little while, but then we feel guilty. This guilt makes us feel worse and encourages us to keep procrastinating. The answer is 'Guilt'. This means feeling bad or sorry for something you did or didn't do. The correct answer is 'guilt' because the passage explains that after procrastination, people often feel guilty about not completing their tasks, which makes their negative mood worse and encourages them to procrastinate again.",
        "location": "Passage 2",
-       "instruction": "Questions 19-23<br/>Look at the following statements (Questions 19-23) and the list of people below.<br/>Match each statement with the correct person, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 19-23 on your answer sheet."
+       "instruction": "Questions 17-22<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>What makes us procrastinate?</b><br/>Many people think that procrastination is the result of 17 _________. Others believe it to be the result of an inability to organise time efficiently. But scientific studies suggest that procrastination is actually due to poor mood management. The tasks we are most likely to put off are those that could damage our self-esteem or cause us to feel 18 _________ when we think about them. Research comparing chronic procrastinators with other people even found differences in the brain regions associated with regulating emotions and identifying 19 _________. Emotionally loaded and difficult tasks often cause us to procrastinate. Getting ready to take 20 _________ might be a typical example of one such task. People who are likely to procrastinate tend to be either those with low self-esteem or 21 _________. Procrastination is only a short-term measure for managing emotions. It's often followed by a feeling of 22 _________ , which worsens our mood and leads to more procrastination."
       },
       {
        "num": 23,
        "type": "MCQ",
-       "text": "Question 23: Choose the correct option:",
+       "text": "Which TWO comparisons between employees who often procrastinate and those who do not are mentioned in the text? (Select first answer)",
        "answer": "A",
        "explanation": "The passage indicates option A is correct.",
        "location": "Passage 2",
        "instruction": "Questions 19-23<br/>Look at the following statements (Questions 19-23) and the list of people below.<br/>Match each statement with the correct person, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 19-23 on your answer sheet.",
        "options": [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E"
+        "A. Their salaries are lower.",
+        "B. The quality of their work is inferior.",
+        "C. They don't keep their jobs for as long.",
+        "D. They don't enjoy their working lives as much.",
+        "E. They have poorer relationships with colleagues."
        ]
       },
       {
        "num": 24,
        "type": "MCQ",
-       "text": "Which&nbsp; TWO &nbsp;comparisons between employees who often procrastinate and those who do not are mentioned in the text?",
+       "text": "Which TWO comparisons between employees who often procrastinate and those who do not are mentioned in the text? (Select second answer)",
        "answer": "C",
        "explanation": "The passage indicates option C is correct.",
        "location": "Passage 2",
        "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 24-26 on your answer sheet.",
        "options": [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E"
+        "A. Their salaries are lower.",
+        "B. The quality of their work is inferior.",
+        "C. They don't keep their jobs for as long.",
+        "D. They don't enjoy their working lives as much.",
+        "E. They have poorer relationships with colleagues."
        ]
       },
       {
        "num": 25,
        "type": "MCQ",
-       "text": "Question 25: Choose the correct option:",
+       "text": "Which TWO recommendations for getting out of a cycle of procrastination does the writer give? (Select first answer)",
        "answer": "A",
        "explanation": "The passage indicates option A is correct.",
        "location": "Passage 2",
        "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 24-26 on your answer sheet.",
        "options": [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E"
+        "A. not judging ourselves harshly",
+        "B. setting ourselves manageable aims",
+        "C. rewarding ourselves for tasks achieved",
+        "D. prioritising tasks according to their importance",
+        "E. avoiding things that stop us concentrating on our tasks"
        ]
       },
       {
        "num": 26,
        "type": "MCQ",
-       "text": "Which&nbsp; TWO &nbsp;recommendations for getting out of a cycle of procrastination does the writer give?",
+       "text": "Which TWO recommendations for getting out of a cycle of procrastination does the writer give? (Select second answer)",
        "answer": "E",
        "explanation": "The passage indicates option E is correct.",
        "location": "Passage 2",
        "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 24-26 on your answer sheet.",
        "options": [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E"
+        "A. not judging ourselves harshly",
+        "B. setting ourselves manageable aims",
+        "C. rewarding ourselves for tasks achieved",
+        "D. prioritising tasks according to their importance",
+        "E. avoiding things that stop us concentrating on our tasks"
        ]
       }
      ]
@@ -11227,65 +11227,65 @@ const IELTS_TEST_DATA = {
       {
        "num": 1,
        "type": "FILL",
-       "text": "Question 1: Choose the correct option:",
+       "text": "People conserved the nutritional value of _________ , using a method of freezing then drying.",
        "answer": "potatoes",
        "explanation": "The passage tells us that people froze potatoes and then dried them to keep them nutritious. This method helped them store the potatoes for later use. The answer is 'potatoes.' This means that long ago, people in South America used freezing and drying to keep potatoes good to eat later. The correct answer is 'potatoes' because the passage explains how people in South America, two thousand years ago, froze potatoes to keep their nutritional value. This is a key part of the history of frozen food.",
        "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this"
+       "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>The history of frozen food</b><br/><br/><b>2,000 years ago, South America</b><br/>• People conserved the nutritional value of 1 _________ , using a method of freezing then drying.<br/><br/><b>1851, USA</b><br/>• 2 _________ adapted trains.<br/><br/><b>1880, Australia</b><br/>• Two kinds of 3 _________ were the first frozen food shipped to England.<br/><br/><b>1917 onwards, USA</b><br/>• Clarence Birdseye introduced innovations including:<br/>- quick-freezing methods, so that 4 _________ did not spoil the food.<br/>- packaging products with 5 _________ , so the product was visible.<br/><br/><b>Early 1940s, USA</b><br/>• Frozen food became popular because of a shortage of 6 _________ sources.<br/><br/><b>1950s, USA</b><br/>• A large number of homes now had a 7 _________"
       },
       {
        "num": 2,
        "type": "FILL",
-       "text": "Question 2: Choose the correct option:",
+       "text": "_________ adapted trains.",
        "answer": "butter",
        "explanation": "The passage tells us that in 1851, trains started using ice in special cars to keep butter cold when they transported it from one city to another. The answer is 'butter'. This means that butter was a type of food that was kept cool by ice during transport. The correct answer is 'butter' because in the passage, it explains that in 1851, railroads began using ice in insulated rail cars to keep butter cool while shipping it from one place to another. This shows how butter was an important food that benefited from refrigeration.",
        "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this"
+       "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>The history of frozen food</b><br/><br/><b>2,000 years ago, South America</b><br/>• People conserved the nutritional value of 1 _________ , using a method of freezing then drying.<br/><br/><b>1851, USA</b><br/>• 2 _________ adapted trains.<br/><br/><b>1880, Australia</b><br/>• Two kinds of 3 _________ were the first frozen food shipped to England.<br/><br/><b>1917 onwards, USA</b><br/>• Clarence Birdseye introduced innovations including:<br/>- quick-freezing methods, so that 4 _________ did not spoil the food.<br/>- packaging products with 5 _________ , so the product was visible.<br/><br/><b>Early 1940s, USA</b><br/>• Frozen food became popular because of a shortage of 6 _________ sources.<br/><br/><b>1950s, USA</b><br/>• A large number of homes now had a 7 _________"
       },
       {
        "num": 3,
        "type": "FILL",
-       "text": "Question 3: Choose the correct option:",
+       "text": "Two kinds of _________ were the first frozen food shipped to England.",
        "answer": "meat",
        "explanation": "The passage says that in 1880, frozen beef and mutton were shipped from Australia to England, which shows that meat was one of the first frozen foods. The answer is 'meat'. The correct answer is 'meat' because in the passage, it states that in 1880, a shipment of frozen Australian beef and mutton (which are types of meat) was sent to England. This shows that the first frozen foods that were exported were types of meat.",
        "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this"
+       "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>The history of frozen food</b><br/><br/><b>2,000 years ago, South America</b><br/>• People conserved the nutritional value of 1 _________ , using a method of freezing then drying.<br/><br/><b>1851, USA</b><br/>• 2 _________ adapted trains.<br/><br/><b>1880, Australia</b><br/>• Two kinds of 3 _________ were the first frozen food shipped to England.<br/><br/><b>1917 onwards, USA</b><br/>• Clarence Birdseye introduced innovations including:<br/>- quick-freezing methods, so that 4 _________ did not spoil the food.<br/>- packaging products with 5 _________ , so the product was visible.<br/><br/><b>Early 1940s, USA</b><br/>• Frozen food became popular because of a shortage of 6 _________ sources.<br/><br/><b>1950s, USA</b><br/>• A large number of homes now had a 7 _________"
       },
       {
        "num": 4,
        "type": "FILL",
-       "text": "Question 4: Choose the correct option:",
+       "text": "quick-freezing methods, so that _________ did not spoil the food.",
        "answer": "crystals",
        "explanation": "The passage explains that when food is frozen, tiny solid pieces called crystals can form inside it. If the ice expands, it can break the food's cells. This makes the food not taste or feel good. The answer is 'crystals'. Crystals are tiny, solid formations that can form when food is frozen. The correct answer is 'crystals' because in the passage, it states that during the freezing process, 'crystals formed within the cells of the food'. These crystals can cause problems by spoiling the flavor and texture of the food.",
        "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this"
+       "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>The history of frozen food</b><br/><br/><b>2,000 years ago, South America</b><br/>• People conserved the nutritional value of 1 _________ , using a method of freezing then drying.<br/><br/><b>1851, USA</b><br/>• 2 _________ adapted trains.<br/><br/><b>1880, Australia</b><br/>• Two kinds of 3 _________ were the first frozen food shipped to England.<br/><br/><b>1917 onwards, USA</b><br/>• Clarence Birdseye introduced innovations including:<br/>- quick-freezing methods, so that 4 _________ did not spoil the food.<br/>- packaging products with 5 _________ , so the product was visible.<br/><br/><b>Early 1940s, USA</b><br/>• Frozen food became popular because of a shortage of 6 _________ sources.<br/><br/><b>1950s, USA</b><br/>• A large number of homes now had a 7 _________"
       },
       {
        "num": 5,
        "type": "FILL",
-       "text": "Question 5: Choose the correct option:",
+       "text": "packaging products with _________ , so the product was visible.",
        "answer": "cellophane",
        "explanation": "The passage explains that Birdseye started using cellophane for wrapping food. This clear material helped shoppers check the food's quality before buying it. The answer is 'cellophane'. This means a clear plastic that people can see through. The correct answer is 'cellophane' because it is mentioned in the passage that Birdseye introduced the use of cellophane as the first transparent material for food packaging. This allowed people to see the quality of the frozen food they were buying.",
        "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this"
+       "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>The history of frozen food</b><br/><br/><b>2,000 years ago, South America</b><br/>• People conserved the nutritional value of 1 _________ , using a method of freezing then drying.<br/><br/><b>1851, USA</b><br/>• 2 _________ adapted trains.<br/><br/><b>1880, Australia</b><br/>• Two kinds of 3 _________ were the first frozen food shipped to England.<br/><br/><b>1917 onwards, USA</b><br/>• Clarence Birdseye introduced innovations including:<br/>- quick-freezing methods, so that 4 _________ did not spoil the food.<br/>- packaging products with 5 _________ , so the product was visible.<br/><br/><b>Early 1940s, USA</b><br/>• Frozen food became popular because of a shortage of 6 _________ sources.<br/><br/><b>1950s, USA</b><br/>• A large number of homes now had a 7 _________"
       },
       {
        "num": 6,
        "type": "FILL",
-       "text": "Question 6: Choose the correct option:",
+       "text": "Frozen food became popular because of a shortage of _________ sources.",
        "answer": "tin",
        "explanation": "The passage says that during the war, people could not get canned food easily because they were saving tin for the war. So, frozen food was easier to find and inexpensive. The answer is 'tin'. This means the metal that was not available during the early 1940s because it was being used for the war. The correct answer is 'tin' because during World War II, canned foods were rationed to save tin for making weapons and other war materials. This led to more people buying frozen food instead since it was available and not limited like canned food.",
        "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this"
+       "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>The history of frozen food</b><br/><br/><b>2,000 years ago, South America</b><br/>• People conserved the nutritional value of 1 _________ , using a method of freezing then drying.<br/><br/><b>1851, USA</b><br/>• 2 _________ adapted trains.<br/><br/><b>1880, Australia</b><br/>• Two kinds of 3 _________ were the first frozen food shipped to England.<br/><br/><b>1917 onwards, USA</b><br/>• Clarence Birdseye introduced innovations including:<br/>- quick-freezing methods, so that 4 _________ did not spoil the food.<br/>- packaging products with 5 _________ , so the product was visible.<br/><br/><b>Early 1940s, USA</b><br/>• Frozen food became popular because of a shortage of 6 _________ sources.<br/><br/><b>1950s, USA</b><br/>• A large number of homes now had a 7 _________"
       },
       {
        "num": 7,
        "type": "FILL",
-       "text": "Question 7: Choose the correct option:",
+       "text": "A large number of homes now had a _________",
        "answer": "refrigerator",
        "explanation": "The passage says that by the 1950s, refrigerators were made better and cheaper, so many families could buy them. The answer is 'refrigerator'. A refrigerator is a machine that keeps food cold and fresh. The correct answer is 'refrigerator' because the passage explains that in the 1950s, many families had refrigerators at home, which allowed them to store and enjoy frozen food. This development made frozen food more convenient for families, leading to a large increase in their use.",
        "location": "Passage 1",
-       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet."
+       "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>The history of frozen food</b><br/><br/><b>2,000 years ago, South America</b><br/>• People conserved the nutritional value of 1 _________ , using a method of freezing then drying.<br/><br/><b>1851, USA</b><br/>• 2 _________ adapted trains.<br/><br/><b>1880, Australia</b><br/>• Two kinds of 3 _________ were the first frozen food shipped to England.<br/><br/><b>1917 onwards, USA</b><br/>• Clarence Birdseye introduced innovations including:<br/>- quick-freezing methods, so that 4 _________ did not spoil the food.<br/>- packaging products with 5 _________ , so the product was visible.<br/><br/><b>Early 1940s, USA</b><br/>• Frozen food became popular because of a shortage of 6 _________ sources.<br/><br/><b>1950s, USA</b><br/>• A large number of homes now had a 7 _________"
       },
       {
        "num": 8,
@@ -11494,93 +11494,93 @@ const IELTS_TEST_DATA = {
       {
        "num": 20,
        "type": "MCQ",
-       "text": "Question 20: Choose the correct option:",
+       "text": "Which TWO of these causes of damage to coral reefs are mentioned by the writer of the text? (Select first answer)",
        "answer": "C",
        "explanation": "The passage indicates option C is correct.",
        "location": "Passage 2",
        "instruction": "Questions 19-23<br/>Look at the following statements (Questions 19-23) and the list of people below.<br/>Match each statement with the correct person, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 19-23 on your answer sheet.",
        "options": [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E"
+        "A. a rising number of extreme storms",
+        "B. the removal of too many fish from the sea",
+        "C. the contamination of the sea from waste",
+        "D. increased disease among marine species",
+        "E. alterations in the usual flow of water in the seas"
        ]
       },
       {
        "num": 21,
        "type": "MCQ",
-       "text": "Which&nbsp; TWO &nbsp;of these causes of damage to coral reefs are mentioned by the writer of the text?",
+       "text": "Which TWO of these causes of damage to coral reefs are mentioned by the writer of the text? (Select second answer)",
        "answer": "E",
        "explanation": "The passage indicates option E is correct.",
        "location": "Passage 2",
        "instruction": "Questions 19-23<br/>Look at the following statements (Questions 19-23) and the list of people below.<br/>Match each statement with the correct person, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 19-23 on your answer sheet.",
        "options": [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E"
+        "A. a rising number of extreme storms",
+        "B. the removal of too many fish from the sea",
+        "C. the contamination of the sea from waste",
+        "D. increased disease among marine species",
+        "E. alterations in the usual flow of water in the seas"
        ]
       },
       {
        "num": 22,
        "type": "MCQ",
-       "text": "Question 22: Choose the correct option:",
+       "text": "Which TWO of the following statements are true of the researchers at London Zoo? (Select first answer)",
        "answer": "B",
        "explanation": "The passage indicates option B is correct.",
        "location": "Passage 2",
        "instruction": "Questions 19-23<br/>Look at the following statements (Questions 19-23) and the list of people below.<br/>Match each statement with the correct person, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 19-23 on your answer sheet.",
        "options": [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E"
+        "A. They are hoping to expand the numbers of different corals being bred in laboratories.",
+        "B. They want to identify corals that can cope well with the changed sea conditions.",
+        "C. They are looking at ways of creating artificial reefs that corals could grow on.",
+        "D. They are trying out methods that would speed up reproduction in some corals.",
+        "E. They are investigating materials that might protect reefs from higher temperatures."
        ]
       },
       {
        "num": 23,
        "type": "MCQ",
-       "text": "Which TWO &nbsp;of the following statements are true of the researchers at London Zoo?",
+       "text": "Which TWO of the following statements are true of the researchers at London Zoo? (Select second answer)",
        "answer": "D",
        "explanation": "The passage indicates option D is correct.",
        "location": "Passage 2",
        "instruction": "Questions 19-23<br/>Look at the following statements (Questions 19-23) and the list of people below.<br/>Match each statement with the correct person, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 19-23 on your answer sheet.",
        "options": [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E"
+        "A. They are hoping to expand the numbers of different corals being bred in laboratories.",
+        "B. They want to identify corals that can cope well with the changed sea conditions.",
+        "C. They are looking at ways of creating artificial reefs that corals could grow on.",
+        "D. They are trying out methods that would speed up reproduction in some corals.",
+        "E. They are investigating materials that might protect reefs from higher temperatures."
        ]
       },
       {
        "num": 24,
        "type": "FILL",
-       "text": "Question 24: Choose the correct option:",
+       "text": "Corals have a number of _________ which they use to collect their food.",
        "answer": "tentacles",
        "explanation": "The passage explains that corals are made of small animals called polyps. These polyps have arms called 'tentacles' that they use to catch their food from the water. The answer 'tentacles' means the small arms that corals use to catch food. The correct answer is 'tentacles' because the passage says that corals are made of tiny animals, called polyps, and these polyps have 'tentacles for capturing small marine creatures in the sea water'. This shows that 'tentacles' are the parts of the coral that help them collect their food.",
        "location": "Passage 2",
-       "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 24-26 on your answer sheet."
+       "instruction": "Questions 24-26<br/>Complete the sentences below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/>24 Corals have a number of 24 _________ which they use to collect their food.<br/>25 Algae gain 25 _________ from being inside the coral.<br/>26 Increases in the warmth of the sea water can remove the 26 _________ from coral."
       },
       {
        "num": 25,
        "type": "FILL",
-       "text": "Question 25: Choose the correct option:",
+       "text": "Algae gain _________ from being inside the coral.",
        "answer": "protection",
        "explanation": "The passage talks about how corals and algae work together. The algae are safe or get protection when they live inside the corals. The answer means safety or something that keeps you safe. The correct answer is 'protection' because the passage explains that algae live inside corals and they get protection from these corals. This relationship is important for both the corals and the algae.",
        "location": "Passage 2",
-       "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 24-26 on your answer sheet."
+       "instruction": "Questions 24-26<br/>Complete the sentences below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/>24 Corals have a number of 24 _________ which they use to collect their food.<br/>25 Algae gain 25 _________ from being inside the coral.<br/>26 Increases in the warmth of the sea water can remove the 26 _________ from coral."
       },
       {
        "num": 26,
        "type": "FILL",
-       "text": "Question 26: Choose the correct option:",
+       "text": "Increases in the warmth of the sea water can remove the _________ from coral.",
        "answer": "colour",
        "explanation": "The passage says that when the ocean gets warmer, it causes events that take the color away from coral reefs, and this can eventually harm or kill them. The answer is 'colour'. It means the different colors that corals have. The correct answer is 'colour' because the passage explains that rising ocean temperatures cause bleaching events that strip reefs of their colour, which means they lose their beautiful colors.",
        "location": "Passage 2",
-       "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 24-26 on your answer sheet."
+       "instruction": "Questions 24-26<br/>Complete the sentences below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/>24 Corals have a number of 24 _________ which they use to collect their food.<br/>25 Algae gain 25 _________ from being inside the coral.<br/>26 Increases in the warmth of the sea water can remove the 26 _________ from coral."
       }
      ]
     },
@@ -12333,65 +12333,65 @@ const IELTS_TEST_DATA = {
       {
        "num": 1,
        "type": "FILL",
-       "text": "Question 1: Choose the correct option:",
+       "text": "studied art, then worked as a _________ in various places in the USA",
        "answer": "Teacher",
        "explanation": "The passage says that after studying art, Georgia O'Keeffe worked as a teacher and taught art to students in different types of schools. The answer is 'Teacher'. This means that Georgia O'Keeffe worked as someone who taught art to students. The correct answer is 'Teacher' because the passage explains that Georgia O'Keeffe taught in elementary schools, high schools, and colleges from 1911 to 1918 after she studied art. The text says she became an art teacher, which supports that she worked as a teacher.",
        "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this"
+       "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>The life and work of Georgia O'Keeffe</b><br/><br/>• studied art, then worked as a 1 _________ in various places in the USA<br/>• created drawings using 2 _________ which were exhibited in New York<br/>• moved to New York and became famous for her paintings of the city's 3 _________<br/>• produced a series of innovative close-up paintings of 4 _________<br/>• went to New Mexico and was initially inspired to paint the many 5 _________ that could be found there<br/>• continued to paint various features that together formed the dramatic 6 _________ of New Mexico for over forty years<br/>• travelled widely by plane in later years, and painted pictures of clouds and 7 _________ seen from above"
       },
       {
        "num": 2,
        "type": "FILL",
-       "text": "Question 2: Choose the correct option:",
+       "text": "created drawings using _________ which were exhibited in New York",
        "answer": "Charcoal",
        "explanation": "The passage says that during her time as a teacher, O'Keeffe started to use charcoal to make new types of drawings. These new drawings helped change her art. The answer is 'charcoal.' This means that Georgia O'Keeffe used charcoal to create her drawings. The correct answer is 'charcoal' because the passage explains that during her time as an art teacher, O'Keeffe began to experiment with creating abstract compositions in charcoal. These drawings were important because they led her art in a new direction and were exhibited in New York City.",
        "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this"
+       "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>The life and work of Georgia O'Keeffe</b><br/><br/>• studied art, then worked as a 1 _________ in various places in the USA<br/>• created drawings using 2 _________ which were exhibited in New York<br/>• moved to New York and became famous for her paintings of the city's 3 _________<br/>• produced a series of innovative close-up paintings of 4 _________<br/>• went to New Mexico and was initially inspired to paint the many 5 _________ that could be found there<br/>• continued to paint various features that together formed the dramatic 6 _________ of New Mexico for over forty years<br/>• travelled widely by plane in later years, and painted pictures of clouds and 7 _________ seen from above"
       },
       {
        "num": 3,
        "type": "FILL",
-       "text": "Question 3: Choose the correct option:",
+       "text": "moved to New York and became famous for her paintings of the city's _________",
        "answer": "skyscrapers",
        "explanation": "The passage explains that in the 1920s, Georgia O'Keeffe became a well-known artist for painting tall buildings called skyscrapers in New York City. The answer is 'skyscrapers'. This means tall buildings in a city. The correct answer is 'skyscrapers' because it refers to the buildings that Georgia O'Keeffe painted when she became famous in New York City. In the passage, it says she was recognized for her paintings of the city's 'soaring skyscrapers'.",
        "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this"
+       "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>The life and work of Georgia O'Keeffe</b><br/><br/>• studied art, then worked as a 1 _________ in various places in the USA<br/>• created drawings using 2 _________ which were exhibited in New York<br/>• moved to New York and became famous for her paintings of the city's 3 _________<br/>• produced a series of innovative close-up paintings of 4 _________<br/>• went to New Mexico and was initially inspired to paint the many 5 _________ that could be found there<br/>• continued to paint various features that together formed the dramatic 6 _________ of New Mexico for over forty years<br/>• travelled widely by plane in later years, and painted pictures of clouds and 7 _________ seen from above"
       },
       {
        "num": 4,
        "type": "FILL",
-       "text": "Question 4: Choose the correct option:",
+       "text": "produced a series of innovative close-up paintings of _________",
        "answer": "Flowers",
        "explanation": "The passage says that O'Keeffe made very large pictures of flowers starting in 1924. These pictures make people feel like they are inside the image. The answer is 'Flowers.' This is the word that describes the subjects O'Keeffe painted closely, making them very large in her artwork. The correct answer is 'Flowers' because the passage explains that O'Keeffe created innovative paintings that focused on flowers, using a technique that made the flowers look very big and detailed. These close-up images were important in her work and helped her become famous.",
        "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this"
+       "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>The life and work of Georgia O'Keeffe</b><br/><br/>• studied art, then worked as a 1 _________ in various places in the USA<br/>• created drawings using 2 _________ which were exhibited in New York<br/>• moved to New York and became famous for her paintings of the city's 3 _________<br/>• produced a series of innovative close-up paintings of 4 _________<br/>• went to New Mexico and was initially inspired to paint the many 5 _________ that could be found there<br/>• continued to paint various features that together formed the dramatic 6 _________ of New Mexico for over forty years<br/>• travelled widely by plane in later years, and painted pictures of clouds and 7 _________ seen from above"
       },
       {
        "num": 5,
        "type": "FILL",
-       "text": "Question 5: Choose the correct option:",
+       "text": "went to New Mexico and was initially inspired to paint the many _________ that could be found there",
        "answer": "Bones",
        "explanation": "The passage is saying that when O'Keeffe first got to New Mexico, the many white bones she found in the rough land made her want to create new art. The answer is 'Bones'. This means that Georgia O'Keeffe was inspired to paint things like cow bones when she went to New Mexico. The correct answer is 'Bones' because the passage says that O'Keeffe found inspiration from the sun-bleached bones in the rugged land of New Mexico. This new inspiration affected her artwork, especially at the beginning of her time there.",
        "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this"
+       "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>The life and work of Georgia O'Keeffe</b><br/><br/>• studied art, then worked as a 1 _________ in various places in the USA<br/>• created drawings using 2 _________ which were exhibited in New York<br/>• moved to New York and became famous for her paintings of the city's 3 _________<br/>• produced a series of innovative close-up paintings of 4 _________<br/>• went to New Mexico and was initially inspired to paint the many 5 _________ that could be found there<br/>• continued to paint various features that together formed the dramatic 6 _________ of New Mexico for over forty years<br/>• travelled widely by plane in later years, and painted pictures of clouds and 7 _________ seen from above"
       },
       {
        "num": 6,
        "type": "FILL",
-       "text": "Question 6: Choose the correct option:",
+       "text": "continued to paint various features that together formed the dramatic _________ of New Mexico for over forty years",
        "answer": "Landscape",
        "explanation": "The passage talks about how the amazing outdoor views of New Mexico, with its special shapes and bright colors, inspired Georgia O'Keeffe for over forty years. The answer is 'Landscape'. This means the natural scenery or outside view of an area. The correct answer is 'Landscape' because the passage talks about how Georgia O'Keeffe painted the beautiful and dramatic outside views of New Mexico for many years. It mentions that she found inspiration in the region's spectacular landscape, which included its unique shapes and colors.",
        "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this"
+       "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>The life and work of Georgia O'Keeffe</b><br/><br/>• studied art, then worked as a 1 _________ in various places in the USA<br/>• created drawings using 2 _________ which were exhibited in New York<br/>• moved to New York and became famous for her paintings of the city's 3 _________<br/>• produced a series of innovative close-up paintings of 4 _________<br/>• went to New Mexico and was initially inspired to paint the many 5 _________ that could be found there<br/>• continued to paint various features that together formed the dramatic 6 _________ of New Mexico for over forty years<br/>• travelled widely by plane in later years, and painted pictures of clouds and 7 _________ seen from above"
       },
       {
        "num": 7,
        "type": "FILL",
-       "text": "Question 7: Choose the correct option:",
+       "text": "travelled widely by plane in later years, and painted pictures of clouds and _________ seen from above",
        "answer": "Rivers",
        "explanation": "The passage talks about how Georgia O'Keeffe, when she flew in planes, created two important series of paintings. One series was about rivers seen from above, and the other was about the sky above the clouds. The answer is 'Rivers,' which are bodies of water that flow and can be seen from above when flying in a plane. The correct answer is 'Rivers' because the excerpt mentions that flying inspired O'Keeffe to paint aerial views of rivers. This means that she created paintings that showed rivers from a high viewpoint, which connects directly to the content of the passage about her later work.",
        "location": "Passage 1",
-       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet."
+       "instruction": "Questions 1-7<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>The life and work of Georgia O'Keeffe</b><br/><br/>• studied art, then worked as a 1 _________ in various places in the USA<br/>• created drawings using 2 _________ which were exhibited in New York<br/>• moved to New York and became famous for her paintings of the city's 3 _________<br/>• produced a series of innovative close-up paintings of 4 _________<br/>• went to New Mexico and was initially inspired to paint the many 5 _________ that could be found there<br/>• continued to paint various features that together formed the dramatic 6 _________ of New Mexico for over forty years<br/>• travelled widely by plane in later years, and painted pictures of clouds and 7 _________ seen from above"
       },
       {
        "num": 8,
@@ -12554,47 +12554,47 @@ const IELTS_TEST_DATA = {
       {
        "num": 18,
        "type": "FILL",
-       "text": "Question 18: Choose the correct option:",
+       "text": "The stormwater-management programme in Miami Beach has involved the installation of efficient _________.",
        "answer": "Pumps",
        "explanation": "The passage explains that Miami Beach created new pumps to take away a lot of water quickly to help stop flooding. This shows how they are trying to adapt to climate change. The answer is 'pumps'. Pumps are machines that move water from one place to another. The correct answer is 'pumps' because the passage specifically mentions that Miami Beach set up new pumps to remove water as part of their stormwater-management programme. This is important because it helps the city manage flooding caused by rising sea levels.",
        "location": "Passage 2",
-       "instruction": "Questions 14-18<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-G, in boxes 14-18 on your answer sheet."
+       "instruction": "Questions 18-22<br/>Complete the sentences below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/>18 The stormwater-management programme in Miami Beach has involved the installation of efficient 18 _________.<br/>19 The construction of 19 _________ was the first stage of a project to ensure the success of mangroves in Indonesia.<br/>20 As a response to rising floodwaters in the Mekong Delta, a not-for-profit organisation has been building houses that can 20 _________.<br/>21 Rising sea levels in Bangladesh have made it necessary to introduce various 21 _________ that are suitable for areas of high salt content.<br/>22 A project in LA has increased the number of 22 _________ on the city's streets."
       },
       {
        "num": 19,
        "type": "FILL",
-       "text": "Question 19: Choose the correct option:",
+       "text": "The construction of _________ was the first stage of a project to ensure the success of mangroves in Indonesia.",
        "answer": "Dams",
        "explanation": "The passage says that Wetlands International built 'semi-permeable dams' using bamboo and wood. These dams help make good conditions for mangroves, which are important for protecting the coast. The answer 'dams' means structures that hold back water, helping with flood control and supporting the growth of mangroves. The correct answer is 'dams' because the passage explains that in Indonesia, there was a need for a different strategy to support mangrove growth. Wetlands International built 'semi-permeable dams' to help create good conditions for mangroves to grow back naturally.",
        "location": "Passage 2",
-       "instruction": "Questions 19-23<br/>Look at the following statements (Questions 19-23) and the list of people below.<br/>Match each statement with the correct person, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 19-23 on your answer sheet."
+       "instruction": "Questions 18-22<br/>Complete the sentences below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/>18 The stormwater-management programme in Miami Beach has involved the installation of efficient 18 _________.<br/>19 The construction of 19 _________ was the first stage of a project to ensure the success of mangroves in Indonesia.<br/>20 As a response to rising floodwaters in the Mekong Delta, a not-for-profit organisation has been building houses that can 20 _________.<br/>21 Rising sea levels in Bangladesh have made it necessary to introduce various 21 _________ that are suitable for areas of high salt content.<br/>22 A project in LA has increased the number of 22 _________ on the city's streets."
       },
       {
        "num": 20,
        "type": "FILL",
-       "text": "Question 20: Choose the correct option:",
+       "text": "As a response to rising floodwaters in the Mekong Delta, a not-for-profit organisation has been building houses that can _________.",
        "answer": "Float",
        "explanation": "The passage talks about a time when the water in the rice fields of the Mekong Delta in Vietnam rose. During this time, four small houses also rose with the water. In this area, houses are usually built on tall supports called stilts, but these houses were built so they could float on the water instead. The answer is 'float'. This means that instead of staying on the ground, the houses can move up and down with the water, like a boat. The correct answer is 'float' because the passage describes how the houses in the Mekong Delta are designed to rise with the water. This is different from traditional houses that are built on stilts, as these floating houses can adapt to changing water levels, making them suitable for areas that experience flooding.",
        "location": "Passage 2",
-       "instruction": "Questions 19-23<br/>Look at the following statements (Questions 19-23) and the list of people below.<br/>Match each statement with the correct person, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 19-23 on your answer sheet."
+       "instruction": "Questions 18-22<br/>Complete the sentences below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/>18 The stormwater-management programme in Miami Beach has involved the installation of efficient 18 _________.<br/>19 The construction of 19 _________ was the first stage of a project to ensure the success of mangroves in Indonesia.<br/>20 As a response to rising floodwaters in the Mekong Delta, a not-for-profit organisation has been building houses that can 20 _________.<br/>21 Rising sea levels in Bangladesh have made it necessary to introduce various 21 _________ that are suitable for areas of high salt content.<br/>22 A project in LA has increased the number of 22 _________ on the city's streets."
       },
       {
        "num": 21,
        "type": "FILL",
-       "text": "Question 21: Choose the correct option:",
+       "text": "Rising sea levels in Bangladesh have made it necessary to introduce various _________ that are suitable for areas of high salt content.",
        "answer": "Crops",
        "explanation": "The passage says that many people in Bangladesh are affected by salty soil and water because of rising sea levels. A project helps farmers grow special vegetables that can grow in salty soil, which makes it easier for them to farm. The answer is 'crops'. The correct answer is 'crops' because the passage talks about a project in Bangladesh helping farmers grow plants that can survive in salty soil due to rising sea levels. These plants are called 'salt-tolerant crops', which include different vegetables that are better for salty fields.",
        "location": "Passage 2",
-       "instruction": "Questions 19-23<br/>Look at the following statements (Questions 19-23) and the list of people below.<br/>Match each statement with the correct person, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 19-23 on your answer sheet."
+       "instruction": "Questions 18-22<br/>Complete the sentences below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/>18 The stormwater-management programme in Miami Beach has involved the installation of efficient 18 _________.<br/>19 The construction of 19 _________ was the first stage of a project to ensure the success of mangroves in Indonesia.<br/>20 As a response to rising floodwaters in the Mekong Delta, a not-for-profit organisation has been building houses that can 20 _________.<br/>21 Rising sea levels in Bangladesh have made it necessary to introduce various 21 _________ that are suitable for areas of high salt content.<br/>22 A project in LA has increased the number of 22 _________ on the city's streets."
       },
       {
        "num": 22,
        "type": "FILL",
-       "text": "Question 22: Choose the correct option:",
+       "text": "A project in LA has increased the number of _________ on the city's streets.",
        "answer": "Trees",
        "explanation": "The passage talks about a program in Los Angeles called Cool Streets LA. This program includes different projects to help make the city cooler. One important part of it is planting trees. The answer is 'Trees.' This word refers to the plants that were mentioned in the Cool Streets LA program that helps to improve the environment of the city. The correct answer is 'Trees' because the passage clearly states that part of the Cool Streets LA program involves the planting of trees. This is an important action taken to lower the city's temperature and improve urban living conditions.",
        "location": "Passage 2",
-       "instruction": "Questions 19-23<br/>Look at the following statements (Questions 19-23) and the list of people below.<br/>Match each statement with the correct person, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 19-23 on your answer sheet."
+       "instruction": "Questions 18-22<br/>Complete the sentences below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/>18 The stormwater-management programme in Miami Beach has involved the installation of efficient 18 _________.<br/>19 The construction of 19 _________ was the first stage of a project to ensure the success of mangroves in Indonesia.<br/>20 As a response to rising floodwaters in the Mekong Delta, a not-for-profit organisation has been building houses that can 20 _________.<br/>21 Rising sea levels in Bangladesh have made it necessary to introduce various 21 _________ that are suitable for areas of high salt content.<br/>22 A project in LA has increased the number of 22 _________ on the city's streets."
       },
       {
        "num": 23,
@@ -12839,38 +12839,38 @@ const IELTS_TEST_DATA = {
       {
        "num": 37,
        "type": "FILL",
-       "text": "Question 37: Choose the correct option:",
+       "text": "This has led to a rise in the deaths of other predators, particularly _________.",
        "answer": "Jackals",
        "explanation": "The passage tells us that when farmers got guard dogs to protect their animals from cheetahs, more jackals were killed by the dogs and by people than before. The answer 'Jackals' means a type of wild animal that is mentioned in the passage. The correct answer is 'Jackals' because the passage talks about how guard dogs protect livestock from cheetahs but also mentions that the use of guard dogs has increased the number of jackals that are killed. This is specifically stated in the part of the passage discussing unintended consequences.",
        "location": "Passage 3",
-       "instruction": "Questions 36-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this"
+       "instruction": "Questions 37-40<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>Unintended ecological effects of using guard dogs</b><br/>In Namibia, livestock guard dogs have been used to protect domestic animals from attacks by cheetahs. This has led to a rise in the deaths of other predators, particularly 37 _________. In addition, it has been suggested that the dogs could have 38 _________ which may affect other species, and that they may reduce the amount of 39 _________ available to certain wild animals. On the other hand, these dogs may help birds by protecting their nests. These might otherwise be threatened by predators such as 40 ________."
       },
       {
        "num": 38,
        "type": "FILL",
-       "text": "Question 38: Choose the correct option:",
+       "text": "In addition, it has been suggested that the dogs could have _________ which may affect other species, ...",
        "answer": "Diseases",
        "explanation": "The passage means that guard dogs can make wild animals sick, even those that are rare and need protection. The answer is 'Diseases'. This means that the guard dogs can make wild animals sick. The correct answer is 'Diseases' because the passage talks about how guard dogs can spread diseases to wild animals. This shows that their presence can have harmful effects on other species.",
        "location": "Passage 3",
-       "instruction": "Questions 36-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this"
+       "instruction": "Questions 37-40<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>Unintended ecological effects of using guard dogs</b><br/>In Namibia, livestock guard dogs have been used to protect domestic animals from attacks by cheetahs. This has led to a rise in the deaths of other predators, particularly 37 _________. In addition, it has been suggested that the dogs could have 38 _________ which may affect other species, and that they may reduce the amount of 39 _________ available to certain wild animals. On the other hand, these dogs may help birds by protecting their nests. These might otherwise be threatened by predators such as 40 ________."
       },
       {
        "num": 39,
        "type": "FILL",
-       "text": "Question 39: Choose the correct option:",
+       "text": "and that they may reduce the amount of _________ available to certain wild animals.",
        "answer": "Food",
        "explanation": "The passage says that guard dogs can take away food needed by other animals that eat meat. The answer is 'Food'. The correct answer is 'Food' because the passage talks about guard dogs possibly competing with other carnivores for resources like food. This is mentioned in the section discussing unintended ecological effects of using guard dogs.",
        "location": "Passage 3",
-       "instruction": "Questions 36-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this"
+       "instruction": "Questions 37-40<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>Unintended ecological effects of using guard dogs</b><br/>In Namibia, livestock guard dogs have been used to protect domestic animals from attacks by cheetahs. This has led to a rise in the deaths of other predators, particularly 37 _________. In addition, it has been suggested that the dogs could have 38 _________ which may affect other species, and that they may reduce the amount of 39 _________ available to certain wild animals. On the other hand, these dogs may help birds by protecting their nests. These might otherwise be threatened by predators such as 40 ________."
       },
       {
        "num": 40,
        "type": "FILL",
-       "text": "Question 40: Choose the correct option:",
+       "text": "On the other hand, these dogs may help birds by protecting their nests. These might otherwise be threatened by predators such as _________.",
        "answer": "Foxes",
        "explanation": "The passage talks about how guard dogs can help protect birds. These birds make their nests on the ground. Normally, foxes come and attack these nests. But with guard dogs around, the birds are safer. The answer refers to 'foxes', which are animals that can harm bird nests by eating the eggs or chicks inside them. The correct answer is 'foxes' because in the excerpt, it clearly states that guard dogs help protect birds' nests from predators like foxes. Therefore, foxes are the animals that threaten the nests mentioned in the passage.",
        "location": "Passage 3",
-       "instruction": "Questions 36-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this"
+       "instruction": "Questions 37-40<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/><br/><b>Unintended ecological effects of using guard dogs</b><br/>In Namibia, livestock guard dogs have been used to protect domestic animals from attacks by cheetahs. This has led to a rise in the deaths of other predators, particularly 37 _________. In addition, it has been suggested that the dogs could have 38 _________ which may affect other species, and that they may reduce the amount of 39 _________ available to certain wild animals. On the other hand, these dogs may help birds by protecting their nests. These might otherwise be threatened by predators such as 40 ________."
       }
      ]
     }
