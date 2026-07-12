@@ -617,7 +617,9 @@
     
     function clearHeadingSelection(qNum) {
       selectOption(qNum, '');
-       // ── FILL_GROUP: detect if a FILL question's instruction contains a
+    }
+    
+    // ── FILL_GROUP: detect if a FILL question's instruction contains a
     // static summary/table preview (has ..........  dot-run placeholders)
     // and group all FILL questions sharing that instruction together.
     function isFillGroupInstruction(inst) {
