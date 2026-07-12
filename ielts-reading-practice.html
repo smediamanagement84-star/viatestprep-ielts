@@ -143,6 +143,45 @@
     }
     .input-fill:focus { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(122,35,49,.1); }
 
+    /* Inline fill inputs inside summary/notes/table preview blocks */
+    .fill-group-card {
+      border: 1px solid var(--rule-soft); background: var(--paper); border-radius: 10px;
+      padding: 18px 20px; margin-bottom: 12px;
+    }
+    .fill-group-card.has-flagged { border-color: var(--gold); background: #fdf8ee; }
+    .fill-group-body {
+      font-family: "Lora", serif; font-size: 14px; line-height: 2.1; color: var(--ink-soft);
+    }
+    .fill-group-body br { display: block; margin: 0; }
+    .inline-fill-wrap {
+      display: inline-flex; align-items: center; gap: 4px;
+      vertical-align: middle; margin: 0 2px;
+    }
+    .inline-q-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 20px; height: 20px; border-radius: 50%;
+      border: 1.5px solid var(--accent); font-family: "Fraunces", serif; font-weight: 800;
+      font-size: 10px; color: var(--accent); flex-shrink: 0; background: var(--paper);
+    }
+    .inline-fill {
+      display: inline-block; width: 130px; background: var(--paper);
+      border: none; border-bottom: 2px solid var(--ink); border-radius: 0;
+      padding: 1px 6px; color: var(--ink); outline: none;
+      font-family: "Inter", sans-serif; font-size: 13px; font-weight: 600;
+      transition: border-color 0.2s; vertical-align: middle;
+    }
+    .inline-fill:focus { border-bottom-color: var(--accent); }
+    .inline-flag-label {
+      display: inline-flex; align-items: center; gap: 3px;
+      font-size: 10px; color: #9c9385; cursor: pointer; vertical-align: middle;
+      margin-left: 3px; user-select: none;
+    }
+    .inline-flag-label input { accent-color: var(--gold); width: 11px; height: 11px; }
+    .fill-group-footer {
+      display: flex; justify-content: flex-end; border-top: 1px solid var(--rule-soft);
+      margin-top: 14px; padding-top: 10px; gap: 8px;
+    }
+
     .check-btn { padding: 6px 14px; background: #2f7a52; color: #fff; border: none; border-radius: 7px; font-size: 11px; font-weight: 700; cursor: pointer; font-family: "Inter", sans-serif; }
     .check-btn:hover { background: #245e3f; }
     .feedback-box { margin-top: 10px; padding: 11px 13px; border-radius: 8px; font-size: 12px; font-family: "Inter", sans-serif; }
@@ -496,7 +535,7 @@
       renderQuestionsAndNav();
     }
 
-    // Practice mode group check handler
+    // Practice mode group check handler (for MCQ_MULTI choose-two/three)
     function checkPracticeAnswerGroup(nums, idx) {
       const passage = testData.reading.passages[currentPassageIdx];
       let allCorrect = true;
@@ -521,6 +560,36 @@
         fd.className = 'feedback-wrong';
         fd.innerHTML = `<strong>Some answers are incorrect.</strong><br>${feedbackTexts.join('<br>')}`;
       }
+    }
+
+    // Practice mode check handler for FILL_GROUP cards
+    function checkFillGroup(nums, firstNum) {
+      const passage = testData.reading.passages[currentPassageIdx];
+      let allCorrect = true;
+      const feedbackLines = [];
+
+      nums.forEach(n => {
+        const q = passage.questions.find(x => x.num === n);
+        if (!q) return;
+        const uAns = (userAnswers[n] || '').trim().toLowerCase();
+        const cAns = q.answer.trim().toLowerCase();
+        const correct = uAns === cAns;
+        if (!correct) allCorrect = false;
+        feedbackLines.push(
+          `<div style="margin-bottom:4px;">
+            <strong>Q${n}:</strong> ` +
+            (correct
+              ? `<span style="color:#245e3f;">✓ Correct — <em>${q.answer}</em></span>`
+              : `<span style="color:#8a2c1f;">✗ Your answer: <s>${q.answer ? (userAnswers[n] || 'none') : 'none'}</s> → Correct: <strong>${q.answer}</strong></span>`) +
+            (q.explanation ? `<br><span style="color:#6b6558;font-size:11px;">${q.explanation}</span>` : '') +
+          `</div>`
+        );
+      });
+
+      const fd = document.getElementById(`pract-feedback-${firstNum}`);
+      if (!fd) return;
+      fd.className = `feedback-box ${allCorrect ? 'correct' : 'wrong'}`;
+      fd.innerHTML = `<div style="font-weight:700;margin-bottom:8px;">${allCorrect ? '✓ All correct!' : 'Some answers need review'}</div>` + feedbackLines.join('');
     }
 
     // Drag-and-Drop Matching Headings helpers
@@ -548,6 +617,11 @@
     
     function clearHeadingSelection(qNum) {
       selectOption(qNum, '');
+       // ── FILL_GROUP: detect if a FILL question's instruction contains a
+    // static summary/table preview (has ..........  dot-run placeholders)
+    // and group all FILL questions sharing that instruction together.
+    function isFillGroupInstruction(inst) {
+      return inst && /\.{5,}/.test(inst);
     }
 
     function renderQuestionsAndNav() {
@@ -555,15 +629,41 @@
       const qContainer = document.getElementById('questionsContainer');
       qContainer.innerHTML = '';
 
-      // ── PRE-PROCESS CHOOSE TWO/THREE GROUPS ──
+      // ── PRE-PROCESS: CHOOSE TWO/THREE and FILL_GROUP ──
       const rawQuestions = passage.questions;
       const displayQuestions = [];
+      // Track which question numbers are already absorbed into a FILL_GROUP
+      const fillGroupAbsorbed = new Set();
       let i = 0;
       while (i < rawQuestions.length) {
         const q = rawQuestions[i];
-        const isChooseMulti = q.instruction && 
+
+        // FILL_GROUP: multiple FILL questions sharing an instruction that contains
+        // the static summary/table preview (detected by ...... dots in inst text).
+        if (q.type === 'FILL' && isFillGroupInstruction(q.instruction)) {
+          const matchInst = q.instruction;
+          const group = [q];
+          let j = i + 1;
+          while (j < rawQuestions.length && rawQuestions[j].type === 'FILL' && rawQuestions[j].instruction === matchInst) {
+            group.push(rawQuestions[j]);
+            j++;
+          }
+          group.forEach(gq => fillGroupAbsorbed.add(gq.num));
+          displayQuestions.push({
+            isFillGroup: true,
+            questions: group,
+            instruction: matchInst,
+            num: group[0].num,
+            numEnd: group[group.length - 1].num,
+            type: 'FILL_GROUP'
+          });
+          i = j;
+          continue;
+        }
+
+        // CHOOSE TWO/THREE: MCQ questions sharing a multi-select instruction
+        const isChooseMulti = q.instruction &&
           (q.instruction.toLowerCase().includes('choose two') || q.instruction.toLowerCase().includes('choose three'));
-        
         if (isChooseMulti && q.type === 'MCQ') {
           const matchText = q.instruction;
           const group = [q];
@@ -596,6 +696,88 @@
       let headingPoolRendered = false;
 
       displayQuestions.forEach((q, idx) => {
+
+        // ── FILL_GROUP: render the instruction's summary/table text once,
+        // with live input fields embedded in place of the ...... placeholders.
+        if (q.type === 'FILL_GROUP') {
+          const hasFlagged = q.questions.some(gq => flaggedQuestions[gq.num]);
+          const card = document.createElement('div');
+          card.className = 'fill-group-card' + (hasFlagged ? ' has-flagged' : '');
+          // anchor for scroll-to-question (use first question number)
+          card.id = `qbox-${q.num}`;
+
+          // Strip the preamble lines (Questions N-M / Complete the ... / Choose ONE WORD...)
+          // to get just the body text of the summary/table, keeping title line(s).
+          // We split on <br/> variants, drop lines that are purely instructional boilerplate
+          // ("Questions", "Complete the", "Choose", "Write your"), then reassemble.
+          const instLines = q.instruction.replace(/<br\s*\/?>/gi, '\n').split('\n');
+          const boilerplateRe = /^(questions\s+\d|complete the|choose (one|two|three)|write your)/i;
+          const bodyLines = instLines.filter(l => !boilerplateRe.test(l.trim()));
+          let bodyHtml = bodyLines.join('<br/>');
+
+          // Replace each `N ...........` placeholder with an inline input widget.
+          // Matches: digits followed by optional spaces then 5+ dots.
+          bodyHtml = bodyHtml.replace(/(\d+)\s*\.{5,}/g, (match, numStr) => {
+            const qNum = parseInt(numStr, 10);
+            const gq = q.questions.find(x => x.num === qNum);
+            if (!gq) return match; // leave unchanged if not in group
+            const val = escapeHtml(userAnswers[qNum] || '');
+            const isFlagged = !!flaggedQuestions[qNum];
+            return `<span class="inline-fill-wrap" id="qbox-anchor-${qNum}">
+              <span class="inline-q-num">${qNum}</span>
+              <input type="text" class="inline-fill" value="${val}"
+                oninput="handleInput(${qNum}, this.value)"
+                placeholder="..." />
+              <label class="inline-flag-label" title="Mark for review">
+                <input type="checkbox" onchange="toggleFlag(${qNum})"
+                  ${isFlagged ? 'checked' : ''} />
+                Review
+              </label>
+            </span>`;
+          });
+
+          // Build header row showing range (Q first – last)
+          const rangeLabel = q.num === q.numEnd ? `${q.num}` : `${q.num} – ${q.numEnd}`;
+          card.innerHTML = `
+            <div class="q-header-row" style="margin-bottom:12px;">
+              <span class="q-num-badge" style="border-radius:12px;padding:2px 8px;width:auto;height:auto;min-width:24px;">${rangeLabel}</span>
+              <span style="font-size:11px;color:#9c9385;font-weight:600;">Fill in the blanks</span>
+            </div>
+            <div class="fill-group-body">${bodyHtml}</div>
+          `;
+
+          // Practice mode: Check All button + combined feedback
+          if (currentTestMode === 'practice') {
+            const nums = q.questions.map(x => x.num);
+            const footer = document.createElement('div');
+            footer.className = 'fill-group-footer';
+            footer.innerHTML = `
+              <button onclick="checkFillGroup(${JSON.stringify(nums)}, '${q.num}')" class="check-btn">Check Answers</button>
+            `;
+            card.appendChild(footer);
+            const fb = document.createElement('div');
+            fb.id = `pract-feedback-${q.num}`;
+            card.appendChild(fb);
+          }
+
+          qContainer.appendChild(card);
+          // Set up anchors for each sub-question so bottom nav scroll works
+          q.questions.forEach(gq => {
+            // The inline-fill-wrap already has id qbox-anchor-{num},
+            // but q-nav-btn scrollToQuestion uses qbox-{num}.
+            // We create invisible sentinel elements for the first question
+            // (already done by card.id) and the rest.
+            if (gq.num !== q.num) {
+              const sentinel = document.createElement('div');
+              sentinel.id = `qbox-${gq.num}`;
+              sentinel.style.cssText = 'position:absolute;pointer-events:none;height:0;overflow:hidden;';
+              card.appendChild(sentinel);
+            }
+          });
+          return;
+        }
+
+        // ── All other question types ──
         if (q.instruction && q.instruction.trim()) {
           if (q.instruction !== lastInstruction) {
             const instBox = document.createElement('div');
@@ -696,11 +878,11 @@
             const poolEl = document.createElement('div');
             poolEl.className = 'heading-chips-pool';
             poolEl.style.cssText = 'display:flex; flex-wrap:wrap; gap:8px; margin:15px 0; padding:12px; border:2px dashed var(--rule); border-radius:8px; background:#fbfaf7;';
-            poolEl.innerHTML = `<div style="width:100%; font-size:11px; font-weight:700; color:var(--ink-soft); margin-bottom:6px; text-transform:uppercase; font-family:\'Inter\';">Headings Pool (Drag numbers below):</div>`;
+            poolEl.innerHTML = `<div style="width:100%; font-size:11px; font-weight:700; color:var(--ink-soft); margin-bottom:6px; text-transform:uppercase; font-family:'Inter';">Headings Pool (Drag numbers below):</div>`;
             q.options.forEach(opt => {
               poolEl.innerHTML += `
                 <div draggable="true" ondragstart="dragHeading(event)" class="heading-chip" data-val="${opt}"
-                  style="padding:6px 12px; background:var(--paper); border:1.5px solid var(--accent); border-radius:6px; font-weight:800; cursor:grab; color:var(--accent); font-family:\'Inter\', sans-serif; font-size:12px;">
+                  style="padding:6px 12px; background:var(--paper); border:1.5px solid var(--accent); border-radius:6px; font-weight:800; cursor:grab; color:var(--accent); font-family:'Inter', sans-serif; font-size:12px;">
                   ${opt}
                 </div>
               `;
@@ -716,7 +898,7 @@
               <div class="heading-drop-slot" ondragover="allowDropHeading(event)" ondragleave="leaveDropHeading(event)" ondrop="dropHeading(event, ${q.num})"
                 style="display:inline-flex; align-items:center; gap:6px; min-width:130px; height:32px; border:2px dashed ${val ? 'var(--accent)' : 'var(--gold)'}; border-radius:6px; background:${val ? 'var(--accent-soft)' : '#fffdf5'}; color:${val ? 'var(--accent)' : 'var(--gold)'}; font-weight:800; font-size:13px; padding:0 10px;">
                 ${val || '[ Drop Heading ]'}
-                ${val ? `<span onclick="clearHeadingSelection(${q.num})" style="cursor:pointer; font-weight:800; color:#888; margin-left:6px; font-size:14px; font-family:\'Inter\';">&times;</span>` : ''}
+                ${val ? `<span onclick="clearHeadingSelection(${q.num})" style="cursor:pointer; font-weight:800; color:#888; margin-left:6px; font-size:14px; font-family:'Inter';">&times;</span>` : ''}
               </div>
             </div>
           `;
