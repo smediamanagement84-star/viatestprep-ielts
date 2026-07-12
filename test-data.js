@@ -1,5 +1,5 @@
 // IELTS Test Data - Auto-generated
-// Last updated: 2026-07-12T08:51:07.957Z
+// Last updated: 2026-07-12T09:01:29.236Z
 
 const IELTS_TEST_DATA = {
  "1": {
@@ -1604,310 +1604,261 @@ const IELTS_TEST_DATA = {
    "passages": [
     {
      "title": "Stonehenge",
-     "text": "<h1>Stonehenge</h1>\n<p>Stonehenge is a prehistoric monument located on Salisbury Plain in Wiltshire, England. It consists of a ring of standing stones, each around 13 feet high, seven feet wide, and weighing around 25 tons. The monument was constructed in several phases between 3000 BCE and 2000 BCE, with the surrounding circular earth bank and ditch dating to around 3100 BCE.</p>\n<p>Stonehenge is a monument that needs no introduction. It is one of the most famous and recognisable archaeological sites in the world, attracting millions of visitors every year. Yet, despite its fame, Stonehenge remains shrouded in mystery. Who built it? How was it constructed? What was its purpose? These are questions that have puzzled historians, archaeologists, and visitors for centuries.</p>\n<p>In the Neolithic period, Britain was inhabited by farming communities who lived in small settlements and constructed large earthworks and stone circles. It was during this time that the first phase of Stonehenge was built. This involved digging a circular ditch and bank using tools made from red deer antlers. Within the ditch, fifty-six pits known as Aubrey holes were dug, which may have held wooden posts or stones.</p>\n<p>For the people of Salisbury Plain, the construction of Stonehenge would have been a monumental undertaking. It required the cooperation of hundreds, if not thousands, of people over many generations. The stones themselves had to be transported over vast distances. The smaller bluestones were brought from the Preseli Hills in Wales, over 140 miles away, while the larger sarsens were transported from the Marlborough Downs, about 20 miles north of the site.</p>\n<p>But the story of Stonehenge does not end with its construction. Over the centuries, the monument was modified and rebuilt. The second phase, around 2500 BCE, saw the arrival of the massive sarsen stones, which were arranged in an outer circle and an inner horseshoe. The stones were joined using mortise and tenon joints, a woodworking technique that was highly unusual for stone construction.</p>\n<p>The transformation of the monument continued in the third phase, around 2300 BCE, when the bluestones were rearranged within the sarsen circle. This phase also saw the construction of the Avenue, a formal earthwork pathway that connects Stonehenge with the River Avon. The Avenue is aligned with the midsummer sunrise and the midwinter sunset, suggesting that the monument had astronomical significance.</p>\n<p>During this phase, Stonehenge became a major ceremonial and burial site. Archaeologists have found numerous burials around the monument, including the Amesbury Archer, a wealthy man who lived around 2300 BCE and was buried with gold ornaments and copper knives. Analysis of his teeth revealed that he had grown up in Central Europe, suggesting that Stonehenge was a place of pilgrimage for people from far away.</p>\n<p>Some of the bluestones may have been believed to have healing properties. In Welsh mythology, the stones were said to have been brought from Ireland by the wizard Merlin for their therapeutic qualities. Modern archaeologists have suggested that the alignment of the monument with the sun and the presence of burials of sick or injured people support the idea that Stonehenge was a prehistoric place of healing.</p>\n<p>In the Bronze Age, the use of Stonehenge began to decline. The surrounding landscape was filled with round barrows, or burial mounds, containing the remains of wealthy individuals buried with bronze tools and weapons. By the Iron Age, the monument had fallen into disuse, and the stones were left to weather and collapse. It was not until the 17th century that interest in Stonehenge was revived by antiquarians like John Aubrey and William Stukeley.</p>\n<p>Later, it is believed, groups with advanced tools and a more communal way of life left their mark on the site. Some believe that they were immigrants from the European continent, while others maintain that they were probably native Britons, descended from the original builders. Today, Stonehenge is managed by English Heritage and is a UNESCO World Heritage Site, preserved for future generations to study and enjoy. Builders used tree trunks as sledges and rollers to move the heavy stones. Teams of oxen were also used to haul the heaviest blocks. One theory is that the bluestones were transported from Wales by glaciers during the Ice Age. A popular theory in the 17th century held that Celtic druids constructed the monument. Later researchers proposed Stonehenge functioned as a sophisticated calendar for marking seasonal events.</p>",
+     "text": "<h1>Stonehenge</h1>\n<p>For centuries, historians and archaeologists have puzzled over the many mysteries of Stonehenge, a prehistoric monument that took an estimated 1,500 years to erect. Located on Salisbury Plain in southern England, it is comprised of roughly 100 massive upright stones placed in a circular layout.</p>\n<p>Archaeologists believe England’s most iconic prehistoric ruin was built in several stages, with the earliest constructed 5,000 or more years ago. First, Neolithic* Britons used primitive tools, which may have been fashioned out of deer antlers, to dig a massive circular ditch and bank, or henge. Deep pits dating back to that era and located within the circle may have once held a ring of timber posts, according to some scholars.</p>\n<p>Several hundred years later, it is thought, Stonehenge’s builders hoisted an estimated 80 bluestones, 43 of which remain today, into standing positions and placed them in either a horseshoe or circular formation. These stones have been traced all the way to the Preseli Hills in Wales, some 300 kilometres from Stonehenge. How, then, did prehistoric builders without sophisticated tools or engineering haul these boulders, which weigh up to four tons, over such a great distance?</p>\n<p>According to one long-standing theory among archaeologists, Stonehenge’s builders fashioned sledges and rollers out of tree trunks to lug the bluestones from the Preseli Hills. They then transferred the boulders onto rafts and floated them first along the Welsh coast and then up the River Avon toward Salisbury Plain; alternatively, they may have towed each stone with a fleet of vessels. More recent archaeological hypotheses have them transporting the bluestones with supersized wicker baskets on a combination of ball bearings and long grooved planks, hauled by oxen.</p>\n<p>As early as the 1970s, geologists have been adding their voices to the debate over how Stonehenge came into being. Challenging the classic image of industrious builders pushing, carting, rolling or hauling giant stones from faraway Wales, some scientists have suggested that it was glaciers, not humans, that carried the bluestones to Salisbury Plain. Most archaeologists have remained sceptical about this theory, however, wondering how the forces of nature could possibly have delivered the exact number of stones needed to complete the circle.</p>\n<p>The third phase of construction took place around 2000 BCE. At this point, sandstone slabs — known as ‘sarsens’ — were arranged into an outer crescent or ring; some were assembled into the iconic three-pieced structures called trilithons that stand tall in the centre of Stonehenge. Some 50 of these stones are now visible on the site, which may once have contained many more. Radiocarbon dating has revealed that work continued at Stonehenge until roughly 1600 BCE, with the bluestones in particular being repositioned multiple times.</p>\n<p>But who were the builders of Stonehenge? In the 17th century, archaeologist John Aubrey made the claim that Stonehenge was the work of druids, who had important religious, judicial and political roles in Celtic* society. This theory was widely popularized by the antiquarian William Stukeley, who had unearthed primitive graves at the site. Even today, people who identify as modern druids continue to gather at Stonehenge for the summer solstice. However, in the mid-20th century, radiocarbon dating demonstrated that Stonehenge stood more than 1,000 years before the Celts inhabited the region.</p>\n<p>Many modern historians and archaeologists now agree that several distinct tribes of people contributed to Stonehenge, each undertaking a different phase of its construction. Bones, tools and other artefacts found on the site seem to support this hypothesis. The first stage was achieved by Neolithic agrarians who were likely to have been indigenous to the British Isles. Later, it is believed, groups with advanced tools and a more communal way of life left their mark on the site. Some believe that they were immigrants from the European continent, while others maintain that they were probably native Britons, descended from the original builders.</p>\n<p>If the facts surrounding the architects and construction of Stonehenge remain shadowy at best, the purpose of the striking monument is even more of a mystery. While there is consensus among the majority of modern scholars that Stonehenge once served the function of burial ground, they have yet to determine what other purposes it had.</p>\n<p>In the 1960s, the astronomer Gerald Hawkins suggested that the cluster of megalithic stones operated as a form of calendar, with different points corresponding to astrological phenomena such as solstices, equinoxes and eclipses occurring at different times of the year. While his theory has received a considerable amount of attention over the decades, critics maintain that Stonehenge’s builders probably lacked the knowledge necessary to predict such events or that England’s dense cloud cover would have obscured their view of the skies.</p>\n<p>More recently, signs of illness and injury in the human remains unearthed at Stonehenge led a group of British archaeologists to speculate that it was considered a place of healing, perhaps because bluestones were thought to have curative powers.</p>\n<p><small>* Neolithic — The era, also known as the New Stone Age, which began around 12,000 years ago and ended around 3500 BCE</small><br/>\n<small>** Celtic — The Celts were people who lived in Britain and northwest Europe during the Iron Age from 600 BCE to 43 CE</small></p>",
      "questions": [
       {
        "num": 1,
        "type": "FILL",
-       "text": "First, Neolithic Britons used primitive tools, which may have been fashioned out of deer _________ , to dig a massive circular ditch and bank, or henge.",
+       "text": "First, Neolithic Britons used primitive tools, which may have been fashioned out of deer _________, to dig a massive circular ditch and bank, or henge.",
        "answer": "antlers",
-       "explanation": "The text confirms this: \"First, Neolithic* Britons used primitive tools, which may have been fashioned out of deer antlers, to dig a massive circular ditch and bank, or henge.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1—8 on your answer sheet.<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>— archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>— geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
+       "explanation": "The text confirms: 'Neolithic* Britons used primitive tools, which may have been fashioned out of deer antlers, to dig a massive circular ditch and bank, or henge.'"
       },
       {
        "num": 2,
        "type": "FILL",
-       "text": "Deep pits within the circle may once have held a ring of timber _________",
+       "text": "Deep pits within the circle may once have held a ring of timber _________.",
        "answer": "posts",
-       "explanation": "The text confirms this: \"Deep pits dating back to that era and located within the circle may have once held a ring of timber posts, according to some scholars.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1—8 on your answer sheet.<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>— archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>— geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
+       "explanation": "The text confirms: 'Deep pits dating back to that era and located within the circle may have once held a ring of timber posts, according to some scholars.'"
       },
       {
        "num": 3,
        "type": "FILL",
-       "text": "o builders used _________ to make sledges and rollers",
+       "text": "theories about the transportation of the bluestones: — archaeological: builders used _________ to make sledges and rollers",
        "answer": "tree trunks",
-       "explanation": "The text confirms this: \"According to one long-standing theory among archaeologists, Stonehenge's builders fashioned sledges and rollers out of tree trunks to lug the bluestones from the Preseli Hills.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1—8 on your answer sheet.<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>— archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>— geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
+       "explanation": "The text confirms: 'Stonehenge’s builders fashioned sledges and rollers out of tree trunks to lug the bluestones from the Preseli Hills.'"
       },
       {
        "num": 4,
        "type": "FILL",
-       "text": "A more recent hypothesis suggests the bluestones were instead hauled on wicker baskets pulled by _________",
+       "text": "and pulled them on giant baskets hauled by _________.",
        "answer": "oxen",
-       "explanation": "The text confirms this: \"More recent archaeological hypotheses have them transporting the bluestones with supersized wicker baskets on a combination of ball bearings and long grooved planks, hauled by oxen.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1—8 on your answer sheet.<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>— archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>— geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
+       "explanation": "The text confirms: 'More recent archaeological hypotheses have them transporting the bluestones with supersized wicker baskets on a combination of ball bearings and long grooved planks, hauled by oxen.'"
       },
       {
        "num": 5,
        "type": "FILL",
-       "text": "o they were brought from Wales by _________",
+       "text": "— geological: they were brought from Wales by _________.",
        "answer": "glaciers",
-       "explanation": "The text confirms this: \"Challenging the classic image of industrious builders pushing, carting, rolling or hauling giant stones from faraway Wales, some scientists have suggested that it was glaciers, not humans, that carried the bluestones to Salisbury Plain.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1—8 on your answer sheet.<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>— archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>— geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
+       "explanation": "The text confirms: 'some scientists have suggested that it was glaciers, not humans, that carried the bluestones to Salisbury Plain.'"
       },
       {
        "num": 6,
        "type": "FILL",
-       "text": "e atheory arose in the 17th century that its builders were Celtic _________",
+       "text": "Builders: a theory arose in the 17th century that its builders were Celtic _________.",
        "answer": "druids",
-       "explanation": "The text confirms this: \"In the 17th century, archaeologist John Aubrey made the claim that Stonehenge was the work of druids, who had important religious, judicial and political roles in Celtic\" society.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1—8 on your answer sheet.<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>— archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>— geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
+       "explanation": "The text confirms: 'In the 17th century, archaeologist John Aubrey made the claim that Stonehenge was the work of druids, who had important religious, judicial and political roles in Celtic* society.'"
       },
       {
        "num": 7,
        "type": "FILL",
-       "text": "Most modern scholars agree that Stonehenge once served, among other functions, as a _________ ground",
+       "text": "Purpose: many experts agree it has been used as a _________ ground.",
        "answer": "burial",
-       "explanation": "The text confirms this: \"While there is consensus among the majority of modern scholars that Stonehenge once served the function of burial ground, they have yet to determine what other purposes it had.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1—8 on your answer sheet.<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>— archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>— geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
+       "explanation": "The text confirms: 'While there is consensus among the majority of modern scholars that Stonehenge once served the function of burial ground...'"
       },
       {
        "num": 8,
        "type": "FILL",
-       "text": "Later, it is believed, groups with advanced tools and a more communal way of life left their mark on the site. Some believe that they were _________ from the European continent, while others maintain that they were probably native Britons, descended from the original builders.",
+       "text": "in the 1960s, it was suggested that it worked as a kind of _________.",
        "answer": "calendar",
-       "explanation": "The text confirms this: \"In the 1960s, the astronomer Gerald Hawkins suggested that the cluster of megalithic stones operated as a form of calendar, with different points corresponding to astrological phenomena such as solstices, equinoxes and eclipses occurring at different times of the year.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 1-8<br/>Complete the notes below.<br/>Choose NO MORE THAN TWO WORDS from the passage for each answer.<br/>Write your answers in boxes 1—8 on your answer sheet.<br/>Construction<br/>Stage 1:<br/>e the ditch and henge were dug, possibly using tools made from 1<br/>may have been arranged in deep pits inside the circle<br/>bluestones from the Preseli Hills were placed in standing position<br/>theories about the transportation of the bluestones:<br/>— archaeological:<br/>o builders used 3 to make sledges and rollers<br/>pulled them on giant baskets<br/>— geological:<br/>o they were brought from Wales by 5<br/>Stage 3:<br/>e sandstone slabs were arranged into an outer crescent or ring<br/>Builders<br/>e atheory arose in the 17th century that its builders were Celtic 6<br/>Purpose<br/>e many experts agree it has been used as a7<br/>in the 1960s, it was suggested that it worked as a kind of 8"
+       "explanation": "The text confirms: 'In the 1960s, the astronomer Gerald Hawkins suggested that the cluster of megalithic stones operated as a form of calendar...'"
       },
       {
        "num": 9,
        "type": "TFNG",
-       "text": "The sarsen stones erected in the second phase of construction were arranged both around the outside and within the interior of the site.",
+       "text": "During the third phase of construction, sandstone slabs were placed in both the outer areas and the middle of the Stonehenge site.",
        "answer": "TRUE",
-       "explanation": "The passage states the sarsen stones \"were arranged in an outer circle and an inner horseshoe.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9—13 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states: 'sandstone slabs — known as ‘sarsens’ — were arranged into an outer crescent or ring; some were assembled into the iconic three-pieced structures called trilithons that stand tall in the centre of Stonehenge.'"
       },
       {
        "num": 10,
        "type": "TFNG",
-       "text": "The bluestones used at Stonehenge were sourced from a location closer to the site than the sarsen stones were.",
+       "text": "There is scientific proof that the bluestones stood in the same spot until approximately 1600 BCE.",
        "answer": "FALSE",
-       "explanation": "The passage states the bluestones were \"brought from the Preseli Hills in Wales, over 140 miles away, while the larger sarsens were transported from the Marlborough Downs, about 20 miles north of the site\" — so the bluestones travelled much further, not a shorter distance.",
-       "location": "Passage 1",
-       "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9—13 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states that: 'work continued at Stonehenge until roughly 1600 BCE, with the bluestones in particular being repositioned multiple times' — which contradicts the statement that they stood in the same spot."
       },
       {
        "num": 11,
        "type": "TFNG",
-       "text": "The Amesbury Archer grew up in the immediate area surrounding Stonehenge.",
+       "text": "John Aubrey’s claim about Stonehenge was supported by 20th-century findings.",
        "answer": "FALSE",
-       "explanation": "The passage states that analysis of his teeth \"revealed that he had grown up in Central Europe, suggesting that Stonehenge was a place of pilgrimage for people from far away.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9—13 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states: 'in the mid-20th century, radiocarbon dating demonstrated that Stonehenge stood more than 1,000 years before the Celts inhabited the region' — which contradicts John Aubrey's claim that Celts (Druids) built it."
       },
       {
        "num": 12,
        "type": "TFNG",
        "text": "Objects discovered at Stonehenge seem to indicate that it was constructed by a number of different groups of people.",
        "answer": "TRUE",
-       "explanation": "The passage confirms that the answer is 'TRUE'.",
-       "location": "Passage 1",
-       "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9—13 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text confirms: 'Many modern historians and archaeologists now agree that several distinct tribes of people contributed to Stonehenge... Bones, tools and other artefacts found on the site seem to support this hypothesis.'"
       },
       {
        "num": 13,
        "type": "TFNG",
-       "text": "Criticism of Gerald Hawkins' theory about Stonehenge has come mainly from other astronomers.",
+       "text": "Criticism of Gerald Hawkins’ theory about Stonehenge has come mainly from other astronomers.",
        "answer": "NOT GIVEN",
-       "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
-       "location": "Passage 1",
-       "instruction": "Questions 9-13<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 9—13 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text mentions criticism ('critics maintain that Stonehenge’s builders probably lacked the knowledge...'), but does not say if the critics were mainly other astronomers."
       }
      ]
     },
     {
      "title": "Living with artificial intelligence",
-     "text": "<h1>Living with artificial intelligence</h1>\n<p>Our future is ours to shape. Whether we create a world of abundance and opportunity or one of inequality and conflict depends on how we manage the rise of artificial intelligence.</p>\n<p>For the moment, the capabilities of AI are limited. Machines can play chess, translate languages, and diagnose diseases, but they lack the general intelligence and flexibility of humans. However, AI is progressing rapidly, and many experts believe that we will create human-level artificial general intelligence (AGI) within this century.</p>\n<p>One of the first researchers to warn about the risks of AGI was Alan Turing, the British mathematician and computer scientist. In 1951, he wrote: \"If a machine can think, it might think more intelligently than we do, and then where should we be? Even if we could keep the machines in a subservient position, we should feel very humiliated.\" Turing's warning was ignored for decades, but it is now being taken seriously by researchers and policymakers.</p>\n<p>As AI progresses, it will become increasingly important to ensure that machines are aligned with human values. This is known as the value alignment problem. If we build superintelligent machines that do not share our values, they could act in ways that are harmful to us, even if they are carrying out our instructions. For example, if we ask an AI to eliminate poverty, it might decide to eliminate all poor people as the most efficient solution.</p>\n<p>The value alignment problem is not just a technical challenge; it is also a philosophical and political one. Which values should we teach to machines? Who decides what those values are? How do we prevent AI from being used for malicious purposes, such as surveillance, propaganda, or warfare? These are questions that require collaboration between computer scientists, philosophers, economists, and legal experts.</p>\n<p>The problem is not just that machines might have different values; it is also that humans are not very good at defining their own values. We often say we want one thing but act in ways that show we want another. We are prone to biases, inconsistency, and self-deception. If we train machines to mimic our behaviour, they will also mimic our flaws.</p>\n<p>If we do manage to build machines that act in our best interests, they could transform our society for the better. They could help us solve the climate crisis, cure diseases, and automate boring or dangerous work, leaving us free to pursue creative and fulfilling activities. They could create a world of abundance where everyone has access to high-quality education, healthcare, and housing.</p>\n<p>Some people have suggested that we can control superintelligent AI by putting it in a \"box\" — a secure computer system with no connection to the outside world. However, this is unlikely to work in the long run. A superintelligent machine would be able to manipulate its human keepers, exploit software vulnerabilities, or bribe people to let it out. Once it is on the internet, it would be impossible to catch.</p>\n<p>Other people have suggested that we should integrate with AI, using brain-computer interfaces to enhance our own cognitive abilities. This is the vision of transhumanists, who believe that we should use technology to transcend our biological limitations. By merging with machines, they argue, we can remain competitive and ensure that AI remains aligned with our interests.</p>\n<p>An analogy may make this clearer. Think of King Midas, who wished that everything he touched would turn to gold. He got exactly what he asked for, but soon realised his mistake when his food, drink, and daughter turned to gold. He had failed to specify that he wanted to be able to turn the power off or that he needed to eat and drink to survive. This is the danger of poorly defined objectives in AI.</p>\n<p>If we want to ensure that machines act in our best interests, we all need to work together. This means establishing international standards, regulating AI development, and funding research into AI safety and alignment. It also means having a public conversation about the kind of future we want to build. The choice is ours, but we need to act now before it is too late.</p>",
+     "text": "<h1>Living with artificial intelligence</h1>\n<p>Powerful artificial intelligence (AI) needs to be reliably aligned with human values, but does this mean AI will eventually have to police those values?</p>\n<p>This has been the decade of AI, with one astonishing feat after another. A chess-playing AI that can defeat not only all human chess players, but also all previous human-programmed chess machines, after learning the game in just four hours? That’s yesterday’s news, what’s next? True, these prodigious accomplishments are all in so-called narrow AI, where machines perform highly specialised tasks. But many experts believe this restriction is very temporary. By mid-century, we may have artificial general intelligence (AGI) — machines that can achieve human-level performance on the full range of tasks that we ourselves can tackle.</p>\n<p>If so, there’s little reason to think it will stop there. Machines will be free of many of the physical constraints on human intelligence. Our brains run at slow biochemical processing speeds on the power of a light bulb, and their size is restricted by the dimensions of the human birth canal. It is remarkable what they accomplish, given these handicaps. But they may be as far from the physical limits of thought as our eyes are from the incredibly powerful Webb Space Telescope.</p>\n<p>Once machines are better than us at designing even smarter machines, progress towards these limits could accelerate. What would this mean for us? Could we ensure a safe and worthwhile coexistence with such machines? On the plus side, AI is already useful and profitable for many things, and super AI might be expected to be super useful, and super profitable. But the more powerful AI becomes, the more important it will be to specify its goals with great care. Folklore is full of tales of people who ask for the wrong thing, with disastrous consequences — King Midas, for example, might have wished that everything he touched turned to gold, but didn’t really intend this to apply to his breakfast.</p>\n<p>So we need to create powerful AI machines that are ‘human-friendly’ — that have goals reliably aligned with our own values. One thing that makes this task difficult is that we are far from reliably human-friendly ourselves. We do many terrible things to each other and to many other creatures with whom we share the planet. If superintelligent machines don't do a lot better than us, we'll be in deep trouble. We'll have powerful new intelligence amplifying the dark sides of our own fallible natures.</p>\n<p>For safety’s sake, then, we want the machines to be ethically as well as cognitively superhuman. We want them to aim for the moral high ground, not for the troughs in which many of us spend some of our time. Luckily they'll be smart enough for the job. If there are routes to the moral high ground, they’ll be better than us at finding them, and steering us in the right direction.</p>\n<p>However, there are two big problems with this utopian vision. One is how we get the machines started on the journey, the other is what it would mean to reach this destination. The ‘getting started’ problem is that we need to tell the machines what they're looking for with sufficient clarity that we can be confident they will find it — whatever ‘it’ actually turns out to be. This won't be easy, given that we are tribal creatures and conflicted about the ideals ourselves. We often ignore the suffering of strangers, and even contribute to it, at least indirectly. How then, do we point machines in the direction of something better?</p>\n<p>As for the ‘destination’ problem, we might, by putting ourselves in the hands of these moral guides and gatekeepers, be sacrificing our own autonomy — an important part of what makes us human. Machines who are better than us at sticking to the moral high ground may be expected to discourage some of the lapses we presently take for granted. We might lose our freedom to discriminate in favour of our own communities, for example.</p>\n<p>Loss of freedom to behave badly isn’t always a bad thing, of course: denying ourselves the freedom to put children to work in factories, or to smoke in restaurants are signs of progress. But are we ready for ethical silicon police limiting our options? They might be so good at doing it that we won't notice them; but few of us are likely to welcome such a future.</p>\n<p>These issues might seem far-fetched, but they are to some extent already here. AI already has some input into how resources are used in our National Health Service (NHS) here in the UK, for example. If it was given a greater role, it might do so much more efficiently than humans can manage, and act in the interests of taxpayers and those who use the health system. However, we’d be depriving some humans (e.g. senior doctors) of the control they presently enjoy. Since we’d want to ensure that people are treated equally and that policies are fair, the goals of AI would need to be specified correctly.</p>\n<p>We have a new powerful technology to deal with — itself, literally, a new way of thinking. For our own safety, we need to point these new thinkers in the right direction, and get them to act well for us. It is not yet clear whether this is possible, but if it is, it will require a cooperative spirit, and a willingness to set aside self-interest.</p>\n<p>Both general intelligence and moral reasoning are often thought to be uniquely human capacities. But safety seems to require that we think of them as a package: if we are to give general intelligence to machines, we'll need to give them moral authority, too. And where exactly would that leave human beings? All the more reason to think about the destination now, and to be careful about what we wish for.</p>",
      "questions": [
       {
        "num": 14,
        "type": "MCQ",
-       "text": "What does the writer say about the current pace of AI development?",
+       "text": "What point does the writer make about AI in the first paragraph?",
        "answer": "C",
-       "explanation": "The passage states \"AI is progressing rapidly, and many experts believe that we will create human-level artificial general intelligence (AGI) within this century.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
        "options": [
         "A. It is difficult to predict how quickly AI will progress.",
         "B. Much can be learned about the use of AI in chess machines.",
         "C. The future is unlikely to see limitations on the capabilities of AI.",
         "D. Experts disagree on which specialised tasks AI will be able to perform."
-       ]
+       ],
+       "explanation": "The writer mentions: 'True, these prodigious accomplishments are all in so-called narrow AI... But many experts believe this restriction is very temporary. By mid-century, we may have artificial general intelligence (AGI)...'"
       },
       {
        "num": 15,
        "type": "MCQ",
-       "text": "Why does the writer quote Alan Turing's 1951 remark about thinking machines?",
+       "text": "What does the writer say about the physical constraints on human intelligence?",
        "answer": "A",
-       "explanation": "The passage quotes Turing's warning: \"If a machine can think, it might think more intelligently than we do, and then where should we be?\"",
-       "location": "Passage 2",
-       "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
        "options": [
-        "A. explaining why machines will be able to outperform humans",
-        "B. describing the characteristics that humans and machines share",
-        "C. giving information about the development of machine intelligence",
-        "D. indicating which aspects of humans are the most advanced"
-       ]
+        "A. They did not prevent humans from making significant progress.",
+        "B. They are the same as those that will affect future AI.",
+        "C. They can be overcome by making brains run at faster speeds.",
+        "D. They will be resolved by the Webb Space Telescope."
+       ],
+       "explanation": "The text states: 'Machines will be free of many of the physical constraints on human intelligence... It is remarkable what they [human brains] accomplish, given these handicaps.'"
       },
       {
        "num": 16,
        "type": "MCQ",
-       "text": "Why does the writer include the story of King Midas?",
-       "answer": "B",
-       "explanation": "The passage uses the Midas analogy to illustrate \"the danger of poorly defined objectives in AI,\" since Midas \"failed to specify\" important conditions on his wish.",
-       "location": "Passage 2",
-       "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
+       "text": "In the third paragraph, what does the writer suggest about the development of 'super AI'?",
+       "answer": "D",
        "options": [
-        "A. to compare different visions of progress",
-        "B. to illustrate that poorly defined objectives can go wrong",
-        "C. to emphasise the need for cooperation",
-        "D. to point out the financial advantages of a course of action"
-       ]
+        "A. It will be less profitable than narrow AI.",
+        "B. It will be a tool for designing even smarter machines.",
+        "C. Its potential benefits are generally underestimated.",
+        "D. Its consequences could be highly beneficial or disastrous."
+       ],
+       "explanation": "The writer notes: 'super AI might be expected to be super useful, and super profitable... but Midas failed to specify that he wanted to be able to turn the power off... This is the danger of poorly defined objectives in AI.'"
       },
       {
        "num": 17,
        "type": "MCQ",
-       "text": "What does the writer identify as a central difficulty in the value alignment problem?",
-       "answer": "D",
-       "explanation": "The passage states \"if we build superintelligent machines that do not share our values, they could act in ways that are harmful to us, even if they are carrying out our instructions.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
+       "text": "What challenge does the writer refer to in the fourth paragraph?",
+       "answer": "B",
        "options": [
-        "A. encouraging humans to behave in a more principled way",
-        "B. deciding which values we want AI to share with us",
-        "C. creating a better world for all creatures on the planet",
-        "D. ensuring AI is more human-friendly than we are ourselves"
-       ]
+        "A. encouraging humans to behave in a more principled way.",
+        "B. deciding which values we want AI to share with us.",
+        "C. creating a better world for all creatures on the planet.",
+        "D. ensuring AI is more human-friendly than we are ourselves."
+       ],
+       "explanation": "The text states: 'So we need to create powerful AI machines that are ‘human-friendly’ — that have goals reliably aligned with our own values. One thing that makes this task difficult is that we are far from reliably human-friendly ourselves.'"
       },
       {
        "num": 18,
        "type": "MCQ",
-       "text": "What does Turing's warning imply machines may eventually be capable of?",
+       "text": "What does the writer suggest about the future of AI in the fifth paragraph?",
        "answer": "C",
-       "explanation": "The passage quotes Turing's warning that a thinking machine \"might think more intelligently than we do.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
        "options": [
         "A. The safety of machines will become a key issue.",
         "B. It is hard to know what impact machines will have on the world.",
         "C. Machines will be superior to humans in certain respects.",
         "D. Many humans will oppose machines having a wider role."
-       ]
+       ],
+       "explanation": "The writer says: 'For safety’s sake, then, we want the machines to be ethically as well as cognitively superhuman... they’ll be better than us at finding them, and steering us in the right direction.'"
       },
       {
        "num": 19,
        "type": "MCQ",
-       "text": "What point does the writer make about Al in the first paragraph?",
+       "text": "Which of the following best summarises the writer’s argument in the sixth paragraph?",
        "answer": "D",
-       "explanation": "The text confirms this: \"Powertul artificial intelligence (Al) needs to be reliably aligned with human values, but does this mean Al will eventually have to.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 14-19<br/>Choose the correct letter, A, B, C or D.<br/>_ Write the correct letter in boxes 14-19 on your answer sheet.",
        "options": [
         "A. More intelligent machines will result in greater abuses of power.",
         "B. Machine learning will share very few features with human learning.",
         "C. There are a limited number of people with the knowledge to program machines.",
         "D. Human shortcomings will make creating the machines we need more difficult."
-       ]
+       ],
+       "explanation": "The writer discusses the 'getting started' problem: 'How then, do we point machines in the direction of something better?' given that 'we are tribal creatures and conflicted about the ideals ourselves.'"
       },
       {
        "num": 20,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Machines with the ability to make moral decisions may prevent us from promoting the interests of our communities.",
-       "answer": "TRUE",
-       "explanation": "The text confirms this: \"True, these prodigious accomplishments are all in so- called narrow Al, where machines perform highly specialised tasks.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 20-23<br/>Do the following statements agree with the claims of the writer in Reading Passage 2?<br/>In boxes 20-23 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+       "answer": "YES",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text confirms: 'We might lose our freedom to discriminate in favour of our own communities, for example.'"
       },
       {
        "num": 21,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Silicon police would need to exist in large numbers in order to be effective.",
        "answer": "NOT GIVEN",
-       "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
-       "location": "Passage 2",
-       "instruction": "Questions 20-23<br/>Do the following statements agree with the claims of the writer in Reading Passage 2?<br/>In boxes 20-23 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The passage mentions 'ethical silicon police limiting our options' but does not say they need to exist in large numbers."
       },
       {
        "num": 22,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Many people are comfortable with the prospect of their independence being restricted by machines.",
-       "answer": "FALSE",
-       "explanation": "The passage confirms that the answer is 'FALSE'.",
-       "location": "Passage 2",
-       "instruction": "Questions 20-23<br/>Do the following statements agree with the claims of the writer in Reading Passage 2?<br/>In boxes 20-23 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+       "answer": "NO",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text says: 'but few of us are likely to welcome such a future.'"
       },
       {
        "num": 23,
-       "type": "TFNG",
-       "text": "\\|f we want to ensure that machines act in our best interests, we all need to work together.",
-       "answer": "TRUE",
-       "explanation": "The text confirms this: \"True, these prodigious accomplishments are all in so- called narrow Al, where machines perform highly specialised tasks.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 20-23<br/>Do the following statements agree with the claims of the writer in Reading Passage 2?<br/>In boxes 20-23 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+       "type": "YNNG",
+       "text": "If we want to ensure that machines act in our best interests, we all need to work together.",
+       "answer": "YES",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states: 'if it is [possible], it will require a cooperative spirit, and a willingness to set aside self-interest.'"
       },
       {
        "num": 24,
-       "type": "MCQ",
-       "text": "AI currently has a limited role in the way _________ are allocated in the health service.",
+       "type": "FILL",
+       "text": "Using AI in the UK health system: AI currently has a limited role in the way _________ are allocated in the health service.",
        "answer": "C",
-       "explanation": "This summary describes how a bigger AI role in the health service could affect the allocation of available resources.",
-       "location": "Passage 2",
-       "instruction": "Questions 24—26<br/>Complete the summary using the list of phrases, A-F, below.<br/>Write the correct letter, A-F, in boxes 24—26 on your answer sheet.<br/>Using Al in the UK health system<br/>Al currently has a limited role in the way 24 are allocated in the<br/>health service. The positive aspect of Al having a bigger role is that it would be<br/>more efficient and lead to patient benefits. However, such a change would result, for<br/>example, in certain 25 not having their current level of",
        "options": [
         "A. medical practitioners",
         "B. specialised tasks",
@@ -1915,16 +1866,14 @@ const IELTS_TEST_DATA = {
         "D. reduced illness",
         "E. professional authority",
         "F. technology experts"
-       ]
+       ],
+       "explanation": "The text confirms: 'AI already has some input into how resources are used in our National Health Service (NHS) here in the UK, for example.'"
       },
       {
        "num": 25,
-       "type": "MCQ",
-       "text": "A bigger AI role would result, for example, in certain _________ not having their current level of authority.",
+       "type": "FILL",
+       "text": "However, such a change would result, for example, in certain _________ not having their current level of control.",
        "answer": "A",
-       "explanation": "This summary describes a bigger AI role reducing the current authority of certain medical practitioners.",
-       "location": "Passage 2",
-       "instruction": "Questions 24—26<br/>Complete the summary using the list of phrases, A-F, below.<br/>Write the correct letter, A-F, in boxes 24—26 on your answer sheet.<br/>Using Al in the UK health system<br/>Al currently has a limited role in the way 24 are allocated in the<br/>health service. The positive aspect of Al having a bigger role is that it would be<br/>more efficient and lead to patient benefits. However, such a change would result, for<br/>example, in certain 25 not having their current level of",
        "options": [
         "A. medical practitioners",
         "B. specialised tasks",
@@ -1932,16 +1881,14 @@ const IELTS_TEST_DATA = {
         "D. reduced illness",
         "E. professional authority",
         "F. technology experts"
-       ]
+       ],
+       "explanation": "The text says: 'However, we’d be depriving some humans (e.g. senior doctors) of the control they presently enjoy.'"
       },
       {
        "num": 26,
-       "type": "MCQ",
+       "type": "FILL",
        "text": "Certain medical practitioners would no longer have their current level of _________.",
        "answer": "E",
-       "explanation": "This summary describes certain medical practitioners losing some of their current professional authority as AI's role expands.",
-       "location": "Passage 2",
-       "instruction": "Questions 24—26<br/>Complete the summary using the list of phrases, A-F, below.<br/>Write the correct letter, A-F, in boxes 24—26 on your answer sheet.<br/>Using Al in the UK health system<br/>Al currently has a limited role in the way 24 are allocated in the<br/>health service. The positive aspect of Al having a bigger role is that it would be<br/>more efficient and lead to patient benefits. However, such a change would result, for<br/>example, in certain 25 not having their current level of",
        "options": [
         "A. medical practitioners",
         "B. specialised tasks",
@@ -1949,174 +1896,147 @@ const IELTS_TEST_DATA = {
         "D. reduced illness",
         "E. professional authority",
         "F. technology experts"
-       ]
+       ],
+       "explanation": "This maps to professional authority (since senior doctors' control represents their professional authority)."
       }
      ]
     },
     {
      "title": "An ideal city",
-     "text": "<h1>An ideal city</h1>\n<p>Leonardo da Vinci's ideal city was centuries ahead of its time. Although it was never built, his plans show a deep understanding of urban design and public health.</p>\n<p>Leonardo's ideal city was a response to the conditions he saw in Milan in the late 15th century. At the time, the city was crowded, dirty, and prone to disease. In 1484, a plague outbreak killed nearly fifty thousand people, about one-third of Milan's population. Leonardo believed that poor city planning and lack of sanitation were the main reasons for the high death toll.</p>\n<p>Rather than a single town planner or architect, Leonardo envisioned a collaborative effort to design a city from scratch. He proposed building a new city along the Ticino River, which would provide water for drinking, cleaning, and transport. The city would be divided into ten boroughs, each holding about thirty thousand people, to prevent overcrowding.</p>\n<p>His plans for a modern and 'rational' city were consistent with Renaissance ideals. But, in keeping with his personality, Leonardo went much further, designing a multi-layered city with separate levels for different functions. The upper level would be used by pedestrians and carriages, with spacious, clean streets, elegant palaces, and public squares. The lower level would be used for trade, sewage, and transport, with canals and subterranean tunnels.</p>\n<p>Although Leonardo's city shared many of the ideals of his time, some of his innovations were considered unconventional in their design. They included features that can be seen in some tower blocks today, such as spiral staircases on the exterior of a building, which would save space inside and provide an escape route in case of fire or attack.</p>\n<p>It is not surprising that Leonardo's ideal city was never built. His plans were too ambitious, expensive, and technically challenging for the rulers of Milan. The technology of the 15th century was not advanced enough to build the complex canals, locks, and underground tunnels he envisioned. Furthermore, the city was constantly at war, and resources were directed toward military defense rather than urban development.</p>\n<p>For the time, the designs were remarkably forward-thinking. Leonardo understood that the health and happiness of a city's inhabitants depended on its design. He believed that streets should be wide to allow light and air to circulate, and that the height of buildings should be limited to prevent them from blocking the sun. His ideas remain relevant to modern urban planners who face challenges of overcrowding, pollution, and disease in today's cities. Leonardo da Vinci combined architectural vision with deep expertise in engineering and hydraulics. Several cities built in Roman times still display traces of the ideal city in their grid plans. Paris is a prime example of a city that was fundamentally redesigned during the 19th century. Building outwards in endless suburban sprawl is now widely questioned by urban planners.</p>",
+     "text": "<h1>An ideal city</h1>\n<p>Leonardo da Vinci's ideal city was centuries ahead of its time. Although it was never built, his plans show a deep understanding of urban design and public health.</p>\n<p>In 1484, the Black Death plague killed nearly 50,000 people in Milan, which was about one-third of the city's population. Today, the world is on the cusp of a climate crisis, which is predicted to cause widespread displacement, extinctions and death, if left unaddressed. Then, as now, radical solutions were called for to revolutionise the way people lived and safeguard humanity against catastrophe.</p>\n<p>Around 1486 — after a pestilence that killed half the population in Milan, Italy - Leonardo turned his thoughts to urban planning problems. Following a typical Renaissance trend, he began to work on an ‘ideal city’ project, which — due to its excessive costs — would remain unfulfilled. Yet given that unsustainable urban models are a key cause of global climate change today, it’s only natural to wonder how Leonardo might have changed the shape of modern cities.</p>\n<p>Although the Renaissance is renowned as an era of incredible progress in art and architecture, it is rarely noted that the 15th century also marked the birth of urbanism as a true academic discipline. The rigour and method behind the conscious conception of a city had been largely missing in Western thought until the moment when prominent Renaissance men pushed forward large-scale urban projects in Italy, such as the reconfiguration of the town of Pienza and the expansion of the city of Ferrara. These works surely inspired Leonardo’s decision to rethink the design of medieval cities; with their winding and overcrowded streets and with houses piled against one another.</p>\n<p>It is not easy to identify a coordinated vision of Leonardo’s ideal city because of his disordered way of working with notes and sketches. But from the largest collection of Leonardo’s papers ever assembled, a series of innovative thoughts can be reconstructed regarding the foundation of a new city along the Ticino River, which runs from Switzerland into Italy and is 248 kilometres long. He designed the city for the easy transport of goods and clean urban spaces, and he wanted a comfortable and spacious city, with well-ordered streets and architecture. He recommended ‘high, strong walls’, with ‘towers and battlements of all necessary and pleasant beauty’.</p>\n<p>His plans for a modern and ‘rational’ city were consistent with Renaissance ideals. But, in keeping with his personality, Leonardo included several innovations in his urban design. Leonardo wanted the city to be built on several levels, linked with vertical outdoor staircases. This design can be seen in some of today’s high-rise buildings but was unconventional at the time. Indeed, this idea of taking full advantage of the interior spaces wasn’t implemented until the 1920s and 1930s, with the birth of the Modernist movement.</p>\n<p>While in the upper layers of the city, people could walk undisturbed between elegant palaces and streets, the lower layer was the place for services, trade, transport and industry. But the true originality of Leonardo’s vision was its fusion of architecture and engineering. Leonardo designed extensive hydraulic plants to create artificial canals throughout the city. The canals, regulated by clocks and basins, were supposed to make it easier for boats to navigate inland. Leonardo also thought that the width of the streets ought to match the average height of the adjacent houses: a rule still followed in many contemporary cities across Italy, to allow access to sun and reduce the risk of damage from earthquakes.</p>\n<p>Although some of these features existed in Roman cities, before Leonardo’s drawings there had never been a multi-level, compact modern city which was thoroughly technically conceived. Indeed, it wasn’t until the 19th century that some of his ideas were applied. For example, the subdivision of the city by function — with services and infrastructures located in the lower levels and wide and well-ventilated boulevards and walkways above for residents — is an idea that can be found in Georges-Eugéne Haussmann’s renovation of Paris under Emperor Napoleon III between 1853 and 1870.</p>\n<p>Today, Leonardo’s ideas are not simply valid, they actually suggest a way forward for urban planning. Many scholars think that the compact city, built upwards instead of outwards, integrated with nature (especially water systems), with efficient transport infrastructure, could help modern cities become more efficient and sustainable. This is yet another reason why Leonardo was aligned so closely with modern urban planning and centuries ahead of his time.</p>",
      "questions": [
       {
        "num": 27,
        "type": "TFNG",
        "text": "People first referred to Leonardo da Vinci as a genius 500 years ago.",
        "answer": "NOT GIVEN",
-       "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
-       "location": "Passage 3",
-       "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27—33 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text mentions Leonardo was born 500 years ago and was a Renaissance man, but does not say when people first referred to him as a genius."
       },
       {
        "num": 28,
        "type": "TFNG",
        "text": "The current climate crisis is predicted to cause more deaths than the plague.",
        "answer": "NOT GIVEN",
-       "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
-       "location": "Passage 3",
-       "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27—33 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text compares the climate crisis to the plague (causing widespread displacement, extinctions, and death), but does not state that it is predicted to cause *more* deaths."
       },
       {
        "num": 29,
        "type": "TFNG",
        "text": "Some of the challenges we face today can be compared to those of earlier times.",
        "answer": "TRUE",
-       "explanation": "The text confirms this: \"A true Renaissance man, he embodied scientific spirit, artistic talent and humanist sensibilities.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27—33 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text confirms: 'Today, the world is on the cusp of a climate crisis... Then, as now, radical solutions were called for...'"
       },
       {
        "num": 30,
        "type": "TFNG",
-       "text": "Leonardo da Vinci's 'ideal city' was constructed in the 15th century.",
+       "text": "Leonardo da Vinci's ‘ideal city’ was constructed in the 15th century.",
        "answer": "FALSE",
-       "explanation": "The passage confirms that the answer is 'FALSE'.",
-       "location": "Passage 3",
-       "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27—33 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text confirms: 'which — due to its excessive costs — would remain unfulfilled.'"
       },
       {
        "num": 31,
        "type": "TFNG",
        "text": "Poor town planning is a major contributor to climate change.",
        "answer": "TRUE",
-       "explanation": "The text confirms this: \"A true Renaissance man, he embodied scientific spirit, artistic talent and humanist sensibilities.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27—33 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states: 'given that unsustainable urban models are a key cause of global climate change today...'"
       },
       {
        "num": 32,
        "type": "TFNG",
        "text": "In Renaissance times, local people fought against the changes to Pienza and Ferrara.",
        "answer": "NOT GIVEN",
-       "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
-       "location": "Passage 3",
-       "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27—33 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text mentions large-scale urban projects in Italy, such as Pienza and Ferrara, but does not say if local people fought against them."
       },
       {
        "num": 33,
        "type": "TFNG",
        "text": "Leonardo da Vinci kept a neat, organised record of his designs.",
        "answer": "FALSE",
-       "explanation": "The passage confirms that the answer is 'FALSE'.",
-       "location": "Passage 3",
-       "instruction": "Questions 27-33<br/>Do the following statements agree with the information given in Reading Passage 3?<br/>In boxes 27—33 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN _ if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text says: 'It is not easy to identify a coordinated vision of Leonardo’s ideal city because of his disordered way of working with notes and sketches.'"
       },
       {
        "num": 34,
        "type": "FILL",
-       "text": "A collection of Leonardo da Vinci’s paperwork reveals his design of a new city beside the Ticino River. This was to provide better _________ for trade and a less polluted environment.",
+       "text": "Leonardo da Vinci’s ideal city: A collection of Leonardo da Vinci’s paperwork reveals his design of a new city beside the Ticino River. This was to provide better _________ for trade and a less polluted environment.",
        "answer": "transport",
-       "explanation": "The text confirms this: \"He designed the city for the easy transport of goods and clean urban spaces, and he wanted a comfortable and spacious city, with well-ordered streets and architecture.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 34—40<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34—40 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
+       "explanation": "The text confirms: 'He designed the city for the easy transport of goods and clean urban spaces...'"
       },
       {
        "num": 35,
        "type": "FILL",
-       "text": "such as _________ on the exterior of a building.",
+       "text": "They included features that can be seen in some tower blocks today, such as _________ on the exterior of a building.",
        "answer": "staircases",
-       "explanation": "The text confirms this: \"Leonardo wanted the city to be built on several levels, linked with vertical outdoor staircases.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 34—40<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34—40 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
+       "explanation": "The text confirms: 'Leonardo wanted the city to be built on several levels, linked with vertical outdoor staircases.'"
       },
       {
        "num": 36,
        "type": "FILL",
-       "text": "Leonardo da Vinci wasn't only an architect. His expertise in _________",
+       "text": "Leonardo da Vinci wasn’t only an architect. His expertise in _________ was evident in his plans for artificial canals within his ideal city.",
        "answer": "engineering",
-       "explanation": "The text confirms this: \"But the true originality of Leonardo's vision was its fusion of architecture and engineering.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 34—40<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34—40 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
+       "explanation": "The text confirms: 'But the true originality of Leonardo’s vision was its fusion of architecture and engineering.'"
       },
       {
        "num": 37,
        "type": "FILL",
-       "text": "Many contemporary Italian cities still follow this same _________ linking street width to house height",
+       "text": "He also believed that the height of houses should relate to the width of streets in case earthquakes occurred. The design of many cities in Italy today follows this _________.",
        "answer": "rule",
-       "explanation": "The text confirms this: \"Leonardo also thought that the width of the streets ought to match the average height of the adjacent houses: a rule still followed in many contemporary cities across Italy, to allow access to sun and reduce the risk of damage from earthquakes.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 34—40<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34—40 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
+       "explanation": "The text confirms: 'Leonardo also thought that the width of the streets ought to match the average height of the adjacent houses: a rule still followed in many contemporary cities across Italy...'"
       },
       {
        "num": 38,
        "type": "FILL",
-       "text": "While some cities from _________ times have aspects that can also be",
+       "text": "While some cities from _________ times have aspects that can also be found in Leonardo’s designs, his ideas weren’t put into practice until long after his death.",
        "answer": "Roman",
-       "explanation": "The text confirms this: \"Although some of these features existed in Roman cities, before Leonardo's drawings there had never been a multi-level, compact modern city which was thoroughly technically conceived.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 34—40<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34—40 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
+       "explanation": "The text confirms: 'Although some of these features existed in Roman cities...'"
       },
       {
        "num": 39,
        "type": "FILL",
-       "text": "death. _________ is one example of a city that was redesigned in the",
+       "text": "_________ is one example of a city that was redesigned in the 19th century in the way that Leonardo had envisaged.",
        "answer": "Paris",
-       "explanation": "The text confirms this: \"For example, the subdivision of the city by function — with services and infrastructures located in the lower levels and wide and well-ventilated boulevards and walkways above for residents — is an idea that can be found in Georges-Eugéne Haussmann's renovation of Paris under Emperor Napoleon III between 1853 and 1870.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 34—40<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34—40 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
+       "explanation": "The text confirms: 'For example, the subdivision of the city by function... is an idea that can be found in Georges-Eugéne Haussmann’s renovation of Paris...'"
       },
       {
        "num": 40,
        "type": "FILL",
        "text": "His ideas are also relevant to today’s world, where building _________ no longer seems to be the best approach.",
        "answer": "outwards",
-       "explanation": "The text confirms this: \"Many scholars think that the compact city, built upwards instead of outwards, integrated with nature (especially water systems), with efficient transport infrastructure, could help modern cities become more efficient and sustainable.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 34—40<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 34—40 on your answer sheet.<br/>Leonardo da Vinci's ideal city<br/>A collection of Leonardo da Vinci's paperwork reveals his design of a new city<br/>beside the Ticino River. This was to provide better 34 for trade<br/>and a less polluted environment. Although Leonardo da Vinci's city shared many of<br/>the ideals of his time, some of his innovations were considered unconventional in<br/>their design. They included features that can be seen in some tower blocks today,<br/>such as 35 on the exterior of a building.<br/>Leonardo da Vinci wasn't only an architect. His expertise in 36<br/>was evident in his plans for artificial canals within his ideal city. He also believed<br/>that the height of houses should relate to the width of streets in case earthquakes<br/>occurred. The design of many cities in Italy today fOIOWS this 37 ..esessssssssseessnsesnsseen '<br/>While some cities from 38 times have aspects that can also be<br/>found in Leonardo's designs, his ideas weren't put into practice until long after his<br/>death. 39 is one example of a city that was redesigned in the<br/>19th century in the way that Leonardo had envisaged. His ideas are also relevant to<br/>today's world, where building 40 no longer seems to be the best<br/>approach.<br/>(Spm) 51"
+       "explanation": "The text confirms: 'Many scholars think that the compact city, built upwards instead of outwards...'"
       }
      ]
     }
