@@ -620,10 +620,11 @@
     }
     
     // ── FILL_GROUP: detect if a FILL question's instruction contains a
-    // static summary/table preview (has ..........  dot-run placeholders)
+    // static summary/table preview (has dots or underscores as placeholders)
     // and group all FILL questions sharing that instruction together.
     function isFillGroupInstruction(inst) {
-      return inst && /\.{5,}/.test(inst);
+      const r = /(?:<b>|<strong>)?\(?(\d+)\)?(?:<\/b>|<\/strong>)?\s*(?:<b>|<strong>)?[\._]{3,}(?:<\/b>|<\/strong>)?/;
+      return inst && r.test(inst);
     }
 
     function renderQuestionsAndNav() {
@@ -717,9 +718,10 @@
           const bodyLines = instLines.filter(l => !boilerplateRe.test(l.trim()));
           let bodyHtml = bodyLines.join('<br/>');
 
-          // Replace each `N ...........` placeholder with an inline input widget.
-          // Matches: digits followed by optional spaces then 5+ dots.
-          bodyHtml = bodyHtml.replace(/(\d+)\s*\.{5,}/g, (match, numStr) => {
+          // Replace each placeholder with an inline input widget.
+          // Supports: normal dots (24 ......), bold parenthesised underscores (<b>(4) _________</b>), etc.
+          const replaceRegex = /(?:<b>|<strong>)?\(?(\d+)\)?(?:<\/b>|<\/strong>)?\s*(?:<b>|<strong>)?[\._]{3,}(?:<\/b>|<\/strong>)?/g;
+          bodyHtml = bodyHtml.replace(replaceRegex, (match, numStr) => {
             const qNum = parseInt(numStr, 10);
             const gq = q.questions.find(x => x.num === qNum);
             if (!gq) return match; // leave unchanged if not in group
