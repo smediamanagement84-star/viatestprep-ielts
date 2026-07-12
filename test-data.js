@@ -1,5 +1,5 @@
 // IELTS Test Data - Auto-generated
-// Last updated: 2026-07-12T13:26:12.275Z
+// Last updated: 2026-07-12T13:44:20.659Z
 
 const IELTS_TEST_DATA = {
  "1": {
@@ -5206,7 +5206,7 @@ const IELTS_TEST_DATA = {
     },
     {
      "title": "The persistence and peril of misinformation",
-     "text": "<h1>The persistence and peril of misinformation</h1>\n<p>Brian Southwell looks at how human brains verify information and discusses some of the challenges of battling widespread misinformation in the modern world.</p>\n<p>Although people have frequent exposure to misinformation, there is debate about precisely how and when we label something as true or untrue. The philosophers Descartes and Spinoza had different ideas about how people engage with information. While Descartes believed that people accept or reject information after considering whether it is true or not, Spinoza argued that people accepted all information they encountered (and by default misinformation) and did not verify or reject it until afterwards.</p>\n<p>Spinoza believed that a distinct mental operation is involved in these stages. Recent research has provided additional evidence for Spinoza's theory and it would appear that people accept all encountered information as if it were true, even if this is for an extremely short period, and do not label the information as true or false until later. This is consistent with the fact that the resources for scepticism and the resources for perceiving and encoding are in different locations in the brain.</p>\n<p>This has major implications for campaigns designed to correct misinformation. If Spinoza's theory is correct, simply exposing people to correct information may not be enough to undo the damage, especially if the misinformation was encountered first and has already been encoded. Furthermore, campaigns designed to correct misinformation will fail to achieve their purpose if people are unable to understand them or if they find them untrustworthy.</p>\n<p>Attempts to teach elementary school students about misinformation have been opposed in some quarters, with critics arguing that children are too young to understand the complexities of media literacy. However, advocates argue that early education is crucial to help children develop critical thinking skills. It may be possible to overcome the problem of misinformation in a relatively short period, but it requires a coordinated effort from educators, technology companies, and policymakers.</p>\n<p>The need to keep up with new information is hugely exaggerated in today's world, leading to information overload and a breakdown in critical thinking. As we are bombarded with news, social media posts, and advertisements, our ability to verify information is stretched to its limits. To combat misinformation, we need to slow down, limit our exposure to unverified sources, and support quality journalism that prioritizes accuracy over speed.</p>",
+     "text": "<h1>The persistence and peril of misinformation</h1>\n<p>Brian Southwell looks at how human brains verify information and discusses some of the challenges of battling widespread falsehoods.</p>\n<p>Misinformation — both deliberately promoted and accidentally shared — is perhaps an inevitable part of the world in which we live, but it is not a new problem. People likely have lied to one another for roughly as long as verbal communication has existed. Deceiving others can offer an apparent opportunity to gain strategic advantage, to motivate others to action, or even to protect interpersonal bonds. Moreover, people inadvertently have been sharing inaccurate information with one another for thousands of years.</p>\n<p>However, we currently live in an era in which technology enables information to reach large audiences distributed across the globe, and thus the potential for immediate and widespread effects from misinformation now looms larger than in the past. Yet the means to correct misinformation might, over time, be found in those same patterns of mass communication and of the facilitated spread of information.</p>\n<p>The main worry regarding misinformation is its potential to unduly influence attitudes and behavior, leading people to think and act differently than they would if they were correctly informed, as suggested by the research teams of Stephan Lewandowsky of the University of Bristol and Elizabeth Marsh of Duke University, among others. In other words, we worry that misinformation might lead people to hold misperceptions (or false beliefs) and that these misperceptions, especially when they occur among large groups of people, may have detrimental, downstream consequences for health, social harmony, and the political climate.</p>\n<p>At least three observations related to misinformation in the contemporary mass-media environment warrant the attention of researchers, policy makers, and really everyone who watches television, listens to the radio, or reads information online. First of all, people who encounter misinformation tend to believe it, at least initially. Secondly, electronic and print media often do not block many types of misinformation before it appears in content available to large audiences. Thirdly, countering misinformation once it has enjoyed wide exposure can be a resource-intensive effort.</p>\n<p>Knowing what happens when people initially encounter misinformation holds tremendous importance for estimating the potential for subsequent problems. Although it is fairly routine for individuals to come across information that is false, the question of exactly how — and when — we mentally label information as true or false has garnered philosophical debate. The dilemma is neatly summarized by a contrast between how the 17th-century philosophers René Descartes and Baruch Spinoza described human information engagement, with conflicting predictions that only recently have been empirically tested in robust ways. Descartes argued that a person only accepts or rejects information after considering its truth or falsehood; Spinoza argued that people accept all encountered information (or misinformation) by default and then subsequently verify or reject it through a separate cognitive process. In recent decades, empirical evidence from the research teams of Erik Asp of the University of Chicago and Daniel Gilbert at Harvard University, among others, has supported Spinoza's account: people appear to encode all new information as if it were true, even if only momentarily, and later tag the information as being either true or false, a pattern that seems consistent with the observation that mental resources for skepticism physically reside in a different part of the brain than the resources used in perceiving and encoding.</p>\n<p>What about our second observation that misinformation often can appear in electronic or print media without being preemptively blocked? In support of this, one might consider the nature of regulatory structures in the United States: regulatory agencies here tend to focus on post hoc detection of broadcast information. Organizations such as the Food and Drug Administration (FDA) offer considerable monitoring and notification functions, but these roles typically do not involve preemptive censoring. The FDA oversees direct-to-consumer prescription drug advertising, for example, and has developed mechanisms such as the 'Bad Ad' program, through which people can report advertising in apparent violation of FDA guidelines on drug risks. Such programs, although laudable and useful, do not keep false advertising off the airwaves. In addition, even misinformation that is successfully corrected can continue to affect attitudes.</p>\n<p>This leads us to our third observation: a campaign to correct misinformation, even if rhetorically compelling, requires resources and planning to accomplish necessary reach and frequency. For corrective campaigns to be persuasive, audiences need to be able to comprehend them, which requires either effort to frame messages in ways that are accessible or effort to educate and sensitize audiences to the possibility of misinformation. That some audiences might be unaware of the potential for misinformation also suggests the utility of media literacy efforts as early as elementary school. Even with journalists and scholars pointing to the phenomenon of 'fake news', people do not distinguish between demonstrably false stories and those based in fact when scanning and processing written information.</p>\n<p>We live at a time when widespread misinformation is common. Yet at this time many people also are passionately developing potential solutions and remedies. The journey forward undoubtedly will be a long and arduous one. Future remedies will require not only continued theoretical consideration but also the development and maintenance of consistent monitoring tools — and a recognition among fellow members of society that claims which find prominence in the media that are insufficiently based in scientific consensus and social reality should be countered. Misinformation arises as a result of human fallibility and human information needs. To overcome the worst effects of the phenomenon, we will need coordinated efforts over time, rather than any singular one-time panacea we could hope to offer.</p>",
      "questions": [
       {
        "num": 27,
@@ -5396,57 +5396,57 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 37,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Campaigns designed to correct misinformation will fail to achieve their purpose if people are unable to understand them.",
-       "answer": "TRUE",
+       "answer": "YES",
        "explanation": "The text confirms this: \"In recent decades, empirical evidence from the research teams of Erik Asp of the University of Chicago and Daniel Gilbert at Harvard University, among others, has supported Spinoza's account: people appear to encode all new information as if it were true, even if only momentarily, and later tag the information as being either true or false, a pattern that seems consistent with the observation that mental resources for skepticism physically reside in a different part of the brain than the resources used in perceiving and encoding.\"",
        "location": "Passage 3",
        "instruction": "Questions 37-40<br/>Do the following statements agree with the claims of the writer in Reading Passage 3?<br/>In boxes 37-40 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
        ]
       },
       {
        "num": 38,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Attempts to teach elementary school students about misinformation have been opposed.",
        "answer": "NOT GIVEN",
        "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
        "location": "Passage 3",
        "instruction": "Questions 37-40<br/>Do the following statements agree with the claims of the writer in Reading Passage 3?<br/>In boxes 37-40 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
        ]
       },
       {
        "num": 39,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "It may be possible to overcome the problem of misinformation in a relatively short period.",
-       "answer": "FALSE",
+       "answer": "NO",
        "explanation": "The text confirms this: \"Descartes argued that a person only accepts or rejects information after considering its truth or falsehood; Spinoza argued that people accept all encountered information (or misinformation) by default and then subsequently verify or reject it through a separate cognitive process.\"",
        "location": "Passage 3",
        "instruction": "Questions 37-40<br/>Do the following statements agree with the claims of the writer in Reading Passage 3?<br/>In boxes 37-40 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
        ]
       },
       {
        "num": 40,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "The need to keep up with new information is hugely exaggerated in today's world.",
        "answer": "NOT GIVEN",
        "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
        "location": "Passage 3",
        "instruction": "Questions 37-40<br/>Do the following statements agree with the claims of the writer in Reading Passage 3?<br/>In boxes 37-40 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
        ]
       }
@@ -5951,7 +5951,7 @@ const IELTS_TEST_DATA = {
    "passages": [
     {
      "title": "The Industrial Revolution in Britain",
-     "text": "<h1>The Industrial Revolution in Britain</h1>\n<p>The Industrial Revolution began in Britain in the mid-1700s and by the 1830s and 1840s had spread to many other parts of the world. It was a period of rapid technological, economic, and social change, transforming Britain from an agricultural society into the world's leading industrial power. The revolution was driven by several key innovations in steam power, textile manufacture, and iron smelting.</p>\n<p>One of the defining innovations of the revolution was the steam engine. Originally developed by Thomas Newcomen in 1712 to pump water out of coal mines, the engine was significantly improved by James Watt in 1769. Watt's engine was more efficient and could produce rotary motion, allowing it to power machinery in workshops and factories. Newcomen's engine had a piston which moved up and down, but Watt's improvements allowed steam power to be applied to a wide range of industries.</p>\n<p>The growth of the steam engine was closely linked to the coal industry. A greater supply of coal was required to power steam engines, and the engines themselves were used to pump water and hoist coal in the mines. This created a positive feedback loop, driving the expansion of both industries. Britain's canal network grew rapidly so that more goods could be transported around the country, connecting coal fields with industrial towns and ports.</p>\n<p>Textile manufacture was another key driver of industrialisation. The invention of the spinning jenny by James Hargreaves in 1764 and the power loom by Edmund Cartwright in 1785 mechanised the production of cloth. Not as much labour was needed to produce cloth once these machines were invented, leading to the decline of traditional handloom weaving and the rise of the factory system. Small towns turned into cities very quickly as workers migrated to find jobs in the new mills.</p>\n<p>The British iron industry also underwent major change as it adopted new innovations. Chief among the new techniques was the smelting of iron ore with coke (a fuel derived from coal) rather than charcoal, a method developed by Abraham Darby in 1709. Smelting of iron ore with coke resulted in material that was better quality and cheaper to produce. Demand for iron increased with the growth of the railway industry, which required vast amounts of iron for tracks, bridges, and locomotives.</p>\n<p>The revolution also saw major advances in communication. William Cooke and Charles Wheatstone patented the first commercial electric telegraphy system in 1837. The telegraphy system was used to prevent locomotives colliding on the expanding railway network and allowed messages to be sent instantly over long distances. In the US, Samuel Morse developed a simpler and more reliable communication system, which became the global standard.</p>\n<p>The new cities were dirty, crowded and lacked sufficient sanitation. The rapid growth of urban populations outpaced the development of housing, water supply, and waste disposal systems, leading to outbreaks of diseases like cholera and typhus. The economic benefits of industrialisation were limited to certain sectors of society, with factory workers, including many women and children, facing long hours, low pay, and dangerous working conditions.</p>\n<p>These conditions led to social unrest and the emergence of protest movements. Some skilled weavers believed that the introduction of the new textile machines would lead to job losses and lower wages. They formed secret groups, known as Luddites, who attacked factories and broke machines. There was some sympathy among local people for the Luddites who were arrested near Huddersfield, reflecting the widespread anger at the social costs of industrialisation.</p>",
+     "text": "<h1>The Industrial Revolution in Britain</h1>\n<p>The Industrial Revolution began in Britain in the mid-1700s. It was a period of rapid technological and economic change that transformed Britain from an agricultural into an industrial society. By 1850, Britain was the world's leading industrial nation.</p>\n<p>One of the key inventions was the steam engine. Thomas Newcomen invented a steam-driven pump in 1712, which was used to pump water out of mines. The engine used a piston moving up and down inside a cylinder to generate power. In 1769, James Watt made improvements to the steam engine that made it far more efficient and versatile, enabling it to be used to power machinery in workshops and factories.</p>\n<p>The Industrial Revolution also brought about dramatic changes in the supply of power. The growing number of steam engines required a greater supply of coal to generate the steam, and this led to the rapid growth of the coal-mining industry. Britain's extensive network of rivers and canals meant that coal and other goods could be transported relatively easily around the country.</p>\n<p>One of the industries that changed most during this period was the textile industry. Previously, cloth had been made in people's homes using hand-powered equipment, but now it was made more quickly and cheaply in large factories. The invention of machines such as the spinning jenny, the spinning frame, and the power loom meant that far less labour was needed to produce cloth.</p>\n<p>The Industrial Revolution also had a dramatic impact on the iron industry. Using coke — rather than charcoal — to smelt iron ore proved far more efficient and produced better quality iron. This made the production of iron cheaper and faster, which encouraged its wider use in a variety of manufacturing and construction projects. In particular, the growth of the railway network created a huge demand for iron.</p>\n<p>The rapid growth of industry led to a dramatic increase in Britain's urban population. Cities such as Manchester, Birmingham, and Leeds grew enormously as people moved from the countryside to look for work in the new factories. However, the new cities were dirty, crowded and lacked sufficient sanitation — a situation that led to outbreaks of cholera and typhus.</p>\n<p>Industry may have made Britain wealthier overall, but the economic benefits were not shared equally. Factory owners and merchants prospered, but for many of those who worked in the new factories, conditions were harsh. In 1811 and 1812, skilled weavers in Nottingham, who believed that new machinery would mean the loss of their jobs, began to riot and destroy the machines in factories. These workers were known as Luddites. In 1812, a group of Luddites near Huddersfield attacked a factory and troops were sent in to restore order. Seventeen men were hanged and many more were transported to Australia.</p>",
      "questions": [
       {
        "num": 1,
@@ -5965,7 +5965,7 @@ const IELTS_TEST_DATA = {
       {
        "num": 2,
        "type": "FILL",
-       "text": "• A greater supply of _________ _________ was required to power steam engines.",
+       "text": "A greater supply of _________ was required to power steam engines.",
        "answer": "coal",
        "explanation": "The text confirms this: \"The demand for coal, which was a relatively cheap energy source, grew rapidly during the Industrial Revolution, as it was needed to run not only the factories used to produce manufactured goods, but also steam-powered transportation.\"",
        "location": "Passage 1",
@@ -5983,7 +5983,7 @@ const IELTS_TEST_DATA = {
       {
        "num": 4,
        "type": "FILL",
-       "text": "• Not as much _________ _________ was needed to produce cloth once the",
+       "text": "Not as much _________ was needed to produce cloth once the machines were introduced.",
        "answer": "labour",
        "explanation": "The text confirms this: \"With these machines, relatively little labour was required to produce cloth, and the new, mechanised textile factories that opened around the country were quickly able to meet customer demand for cloth both at home and abroad.\"",
        "location": "Passage 1",
@@ -6001,7 +6001,7 @@ const IELTS_TEST_DATA = {
       {
        "num": 6,
        "type": "FILL",
-       "text": "• Demand for iron increased with the growth of the _________ _________ .",
+       "text": "Demand for iron increased with the growth of the _________ industry.",
        "answer": "railway",
        "explanation": "The text confirms this: \"This method was cheaper and produced metals that were of a higher quality, enabling Britain's iron and steel production to expand in response to demand created by the Napoleonic Wars (1803-15) and the expansion of the railways from the 1830s.\"",
        "location": "Passage 1",
@@ -6104,7 +6104,7 @@ const IELTS_TEST_DATA = {
     },
     {
      "title": "Athletes and stress",
-     "text": "<h1>Athletes and stress</h1>\n<p><b>A</b> It isn't easy being a professional athlete. Not only are the physical demands greater than most people could handle, the psychological pressures are immense. Performance stress involves many demands on the athlete, for example, coping with high expectations from fans and sponsors, dealing with media scrutiny, and facing the possible risk of injury. How athletes handle this stress can determine their success or failure.</p>\n<p><b>B</b> Researchers have identified two chemical compounds which impact on performance: adrenaline and cortisol. During a 'challenge state', where athletes feel they have the resources to meet the demands, their bodies release adrenaline, which increases heart rate and blood flow, boosting energy and focus. However, during a 'threat state', where athletes feel overwhelmed, their bodies release cortisol. Cortisol can cause tennis players to produce fewer good serves and impairs decision-making and motor control.</p>\n<p><b>C</b> Each new demand or change in circumstances affects whether a person responds positively or negatively. Study results indicating links between stress responses and performance suggest that athletes who can view stress as a challenge perform better than those who view it as a threat. Psychologists can help athletes to view their physiological responses — such as a racing heart or sweaty palms — as the effect of a positive feeling such as excitement rather than fear.</p>\n<p><b>D</b> Our challenge and threat responses essentially influence how our body responds to stress. In a challenge state, the blood vessels dilate, allowing more oxygen-rich blood to reach the brain and muscles. In a threat state, the vessels constrict, restricting blood flow and reducing physical and cognitive performance. This was illustrated by the British tennis player Emma Raducanu, who withdrew from the 2021 Wimbledon tournament due to breathing difficulties caused by performance stress.</p>\n<p><b>E</b> That said, anxiety is also a common experience for athletes when they're under pressure. Facts about anxiety mentioned in Paragraph E of the text include the harm that can result if athletes experience it too often, such as chronic fatigue, burnout, and depression. Psychologists use techniques like cognitive restructuring and mindfulness to help athletes manage their anxiety, allowing them to remain focused and calm during competition.</p>\n<p><b>F</b> But there are many ways athletes can ensure they respond positively under pressure. Self-talk is an example of a psychological technique which can reduce an athlete's stress responses. By replacing negative thoughts with positive, action-oriented statements, athletes can maintain their confidence and focus. Other people, such as coaches, teammates, and family members, can also influence how athletes perceive their stress responses, providing crucial support. Visualisation is one well-established psychological technique that has been shown to reduce an athlete's stress responses before competition.</p>",
+     "text": "<h1>Athletes and stress</h1>\n<p><b>A</b> It isn't easy being a professional athlete. Not only are the physical demands greater than most people could handle, athletes also face intense psychological pressure during competition. This is something that British tennis player Emma Raducanu wrote about on social media following her withdrawal from the 2021 Wimbledon tournament. Though the young player had been doing well in the tournament, she began having difficulty regulating her breathing and heart rate during a match, which she later attributed to 'the accumulation of the excitement and the buzz'.</p>\n<p><b>B</b> For athletes, some level of performance stress is almost unavoidable. But there are many different factors that dictate just how people's minds and bodies respond to stressful events. Typically, stress is the result of an exchange between two factors: demands and resources. An athlete may feel stressed about an event if they feel the demands on them are greater than they can handle. These demands include the high level of physical and mental effort required to succeed, and also the athlete's concerns about the difficulty of the event, their chance of succeeding, and any potential dangers such as injury. Resources, on the other hand, are a person's ability to cope with these demands. These include factors such as the competitor's degree of confidence, how much they believe they can control the situation's outcome, and whether they're looking forward to the event or not.</p>\n<p><b>C</b> Each new demand or change in circumstances affects whether a person responds positively or negatively to stress. Typically, the more resources a person feels they have in handling the situation, the more positive their stress response. This positive stress response is called a challenge state. But should the person feel there are too many demands placed on them, the more likely they are to experience a negative stress response — known as a threat state. Research shows that the challenge states lead to good performance, while threat states lead to poorer performance. So, in Emma Raducanu's case, a much larger audience, higher expectations and facing a more skilful opponent, may all have led her to feel there were greater demands being placed on her at Wimbledon — but she didn't have the resources to tackle them. This led to her experiencing a threat response.</p>\n<p><b>D</b> Our challenge and threat responses essentially influence how our body responds to stressful situations, as both affect the production of adrenaline and cortisol — also known as 'stress hormones'. During a challenge state, adrenaline increases the amount of blood pumped from the heart and expands the blood vessels, which allows more energy to be delivered to the muscles and brain. This increase of blood and decrease of pressure in the blood vessels has been consistently related to superior sport performance in everything from cricket batting, to golf putting and football penalty taking. But during a threat state, cortisol inhibits the positive effect of adrenaline, resulting in tighter blood vessels, higher blood pressure, slower psychological responses, and a faster heart rate. In short, a threat state makes people more anxious — they make worse decisions and perform more poorly. In tennis players, cortisol has been associated with more unsuccessful serves and greater anxiety.</p>\n<p><b>E</b> That said, anxiety is also a common experience for athletes when they're under pressure. Anxiety can increase heart rate and perspiration, cause heart palpitations, muscle tremors and shortness of breath, as well as headaches, nausea, stomach pain, weakness and a desire to escape in more extreme cases. Anxiety can also reduce concentration and self-control and cause overthinking. The intensity with which a person experiences anxiety depends on the demands and resources they have. Anxiety may also manifest itself in the form of excitement or nervousness depending on the stress response. Negative stress responses can be damaging to both physical and mental health — and repeated episodes of anxiety coupled with negative responses can increase risk of heart disease and depression.</p>\n<p><b>F</b> But there are many ways athletes can ensure they respond positively under pressure. Positive stress responses can be promoted through the language that they and others — such as coaches or parents — use. Psychologists can also help athletes change how they see their physiological responses — such as helping them see a higher heart rate as excitement, rather than nerves. Developing psychological skills, such as visualisation, can also help decrease physiological responses to threat. Visualisation may involve the athlete recreating a mental picture of a time when they performed well, or picturing themselves doing well in the future. This can help create a feeling of control over the stressful event. Recreating competitive pressure during training can also help athletes learn how to deal with stress. An example of this might be scoring athletes against their peers to create a sense of competition. This would increase the demands which players experience compared to a normal training session, while still allowing them to practise coping with stress.</p>",
      "questions": [
       {
        "num": 14,
@@ -6262,7 +6262,7 @@ const IELTS_TEST_DATA = {
       {
        "num": 25,
        "type": "MCQ",
-       "text": "the correct letters in boxes 25 and 26 on your answer sheet.",
+       "text": "Which TWO facts about anxiety are mentioned in Paragraph E of the text? (Select first answer)",
        "answer": "A",
        "explanation": "The text confirms this: \"A It isn't easy being a professional athlete.\"",
        "location": "Passage 2",
@@ -6278,7 +6278,7 @@ const IELTS_TEST_DATA = {
       {
        "num": 26,
        "type": "MCQ",
-       "text": "the correct letters in boxes 25 and 26 on your answer sheet.",
+       "text": "Which TWO facts about anxiety are mentioned in Paragraph E of the text? (Select second answer)",
        "answer": "E",
        "explanation": "The text confirms this: \"A It isn't easy being a professional athlete.\"",
        "location": "Passage 2",
@@ -6295,7 +6295,7 @@ const IELTS_TEST_DATA = {
     },
     {
      "title": "An inquiry into the existence of the gifted child",
-     "text": "<h1>An inquiry into the existence of the gifted child</h1>\n<p>Let us start by looking at a modern 'genius', Maryam Mirzakhani, who died in 2017. Mirzakhani was the first female holder of the prestigious Fields Medal — a record that she retained at the time of her death. Maryam Mirzakhani is regarded as unique in the field of mathematics because of this achievement. However, maths held little appeal for her as a child, and in fact her performance was below average until she was intrigued by a difficult puzzle that one of her siblings showed her.</p>\n<p>Later, as a professional mathematician, she had an inquiring mind and proved herself to be determined when things did not go smoothly. She said she got the greatest satisfaction from making ground-breaking discoveries and in fact she was responsible for some extremely innovative mathematical studies. Her success has raised questions about the nature of talent: are some children born 'gifted', or is success the result of hard work and opportunity?</p>\n<p>Many people who ended up winning prestigious intellectual prizes only reached an average standard when young. In childhood, Einstein was slow to talk as a baby. He failed the general part of the entry test to Zurich Polytechnic — though he did pass the maths and physics section — and was not considered a particularly promising student. This suggests that early performance is not a reliable predictor of future success, and that some children develop their talents later in life.</p>\n<p>It is difficult to reach agreement on whether some children are actually born gifted. Some psychologists argue that certain children possess innate cognitive advantages, such as superior memory or spatial reasoning, that allow them to learn faster and perform at a higher level. Others, however, argue that environment and practice are the key factors, and that anyone can achieve high standards with the right support.</p>\n<p>Einstein's failures as a young man were not due to lack of ability or confidence but to his independent mind and dislike of authority. He preferred to study on his own, focusing on topics that interested him rather than the official curriculum. This independent approach allowed him to develop the radical ideas that would revolutionise physics, but it also made him an unpopular student and delayed his academic career.</p>\n<p>Einstein was not upset by the public's view of his life's work. In fact, he was amused by the fame and attention he received, and often used his public platform to advocate for peace, civil rights, and education. He did not put his success down to the speed at which he dealt with scientific questions. Instead, he attributed it to his curiosity and persistence: \"It's not that I'm so smart, it's just that I stay with problems longer.\"</p>\n<p>What does Eyre believe is needed for children to equal 'gifted' standards? Deborah Eyre, a former director of the National Academy for Gifted and Talented Youth, argues that most children can reach high levels of academic achievement if they are taught the cognitive characteristics of high performers — curiosity, persistence and hard work, for example — an approach Eyre calls 'high performance learning'. This requires the development of a spirit of inquiry towards their studies.</p>\n<p>What is the result of Ericsson's research? Anders Ericsson, a professor of psychology at Florida State University, conducted research showing that being born with a special gift is not the key factor in becoming an expert. Instead, he argued that 'deliberate practice' — structured, demanding work focused on improving performance — is the key. His research suggests that 10,000 hours of relevant and demanding work can create an expert in almost any field.</p>\n<p>In the penultimate paragraph, it is stated that the key to some deprived children's success is the guidance of someone who recognises the benefits of learning. This could be a teacher, a mentor, or a parent who encourages the child, provides resources, and helps them navigate the educational system. Without this guidance, even the most talented children from poor backgrounds are unlikely to succeed.</p>\n<p>Bloom's outstanding people had worked very hard and consistently at something they had become highly devoted to. Benjamin Bloom, an American educational psychologist, studied world-class pianists, athletes, and mathematicians, and found that they all had received strong support from their families and had engaged in years of intensive practice. This confirms that talent is not just an innate trait but a process that must be nurtured over time.</p>",
+     "text": "<h1>An inquiry into the existence of the gifted child</h1>\n<p>Let us start by looking at a modern 'genius', Maryam Mirzakhani, who died at the early age of 40. She was the only woman to win the Fields Medal — the mathematical equivalent of a Nobel prize. It would be easy to assume that someone as special as Mirzakhani must have been one of those 'gifted' children, those who have an extraordinary ability in a specific sphere of activity or knowledge. But look closer and a different story emerges.</p>\n<p>Mirzakhani was born in Tehran, Iran. She went to a highly selective girls' school but maths wasn't her interest — reading was. She loved novels and would read anything she could lay her hands on. As for maths, she did rather poorly at it for the first couple of years in her middle school, but became interested when her elder brother told her about what he'd learned. He shared a famous maths problem from a magazine that fascinated her — and she was hooked.</p>\n<p>In adult life it is clear that she was curious, excited by what she did and also resolute in the face of setbacks. One of her comments sums it up. 'Of course, the most rewarding part is the \"Aha\" moment, the excitement of discovery and enjoyment of understanding something new ... But most of the time, doing mathematics for me is like being on a long hike with no trail and no end in sight.' That trail took her to the heights of original research into mathematics.</p>\n<p>Is her background unusual? Apparently not. Most Nobel prize winners were unexceptional in childhood. Einstein was slow to talk as a baby. He failed the general part of the entry test to Zurich Polytechnic — though they let him in because of high physics and maths scores. He struggled at work initially, but he kept plugging away and eventually rewrote the laws of Newtonian mechanics with his theory of relativity.</p>\n<p>There has been a considerable amount of research on high performance over the last century that suggests it goes way beyond tested intelligence. On top of that, research is clear that brains are flexible, new neural pathways can be created, and IQ isn't fixed. For example, just because you can read stories with hundreds of pages at the age of five doesn't mean you will still be ahead of your contemporaries in your teens.</p>\n<p>While the jury is out on giftedness being innate and other factors potentially making the difference, what is certain is that the behaviours associated with high levels of performance are replicable and most can be taught — even traits such as curiosity. According to my colleague Prof Deborah Eyre, with whom I've collaborated on the book Great Minds and How to Grow Them, the latest neuroscience and psychological research suggests most individuals can reach levels of performance associated in school with the gifted and talented. However, they must be taught the right attitudes and approaches to their learning and develop the attributes of high performers — curiosity, persistence and hard work, for example — an approach Eyre calls 'high performance learning'. Critically, they need the right support in developing those approaches at home as well as at school.</p>\n<p>Prof Anders Ericsson, an eminent education psychologist at Florida State University, US, is the co-author of Peak: Secrets from the New Science of Expertise. After research going back to 1980 into diverse achievements, from music to memory to sport, he doesn't think unique and innate talents are at the heart of performance. Deliberate practice, that stretches you every step of the way, and around 10,000 hours of it, is what produces the goods. It's not a magic number — the highest performers move on to doing a whole lot more, of course. Ericsson's memory research is particularly interesting because random students, trained in memory techniques for the study, went on to outperform others thought to have innately superior memories — those who you might call gifted.</p>\n<p>But it is perhaps the work of Benjamin Bloom, another distinguished American educationist working in the 1980s, that gives the most pause for thought. Bloom's team looked at a group of extraordinarily high achieving people in disciplines as varied as ballet, swimming, piano, tennis, maths, sculpture and neurology. He found a pattern of parents encouraging and supporting their children, often in areas they enjoyed themselves. Bloom's outstanding people had worked very hard and consistently at something they had become hooked on when at a young age, and their parents all emerged as having strong work ethics themselves.</p>\n<p>Eyre says we know how high performers learn. From that she has developed a high performing learning approach. She is working on this with a group of schools, both in Britain and abroad. Some spin-off research, which looked in detail at 24 of the 3,000 children being studied who were succeeding despite difficult circumstances, found something remarkable. Half were getting free school meals because of poverty, more than half were living with a single parent, and four in five were living in disadvantaged areas. Interviews uncovered strong evidence of an adult or adults in the child's life who valued and supported education, either in the immediate or extended family or in the child's wider community. Children talked about the need to work hard at school, to listen in class and keep trying.</p>\n<p>Let us end with Einstein, the epitome of a genius. He clearly had curiosity, character and determination. He struggled against rejection in early life but was undeterred. Did he think he was a genius or even gifted? He once wrote: 'It's not that I'm so smart, it's just that I stay with problems longer. Most people say it is the intellect which makes a great scientist. They are wrong: it is character.'</p>",
      "questions": [
       {
        "num": 27,
@@ -6431,71 +6431,71 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 33,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Many people who ended up winning prestigious intellectual prizes only reached an average standard when young.",
-       "answer": "TRUE",
+       "answer": "YES",
        "explanation": "The passage confirms that the answer is 'TRUE'.",
        "location": "Passage 3",
        "instruction": "Questions 33-37<br/>Do the following statements agree with the claims of the writer in Reading Passage 3?<br/>In boxes 33-37 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
        ]
       },
       {
        "num": 34,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Einstein's failures as a young man were due to his lack of confidence.",
        "answer": "NOT GIVEN",
        "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
        "location": "Passage 3",
        "instruction": "Questions 33-37<br/>Do the following statements agree with the claims of the writer in Reading Passage 3?<br/>In boxes 33-37 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
        ]
       },
       {
        "num": 35,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "It is difficult to reach agreement on whether some children are actually born gifted.",
-       "answer": "TRUE",
+       "answer": "YES",
        "explanation": "The passage confirms that the answer is 'TRUE'.",
        "location": "Passage 3",
        "instruction": "Questions 33-37<br/>Do the following statements agree with the claims of the writer in Reading Passage 3?<br/>In boxes 33-37 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
        ]
       },
       {
        "num": 36,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Einstein was upset by the public's view of his life's work.",
        "answer": "NOT GIVEN",
        "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
        "location": "Passage 3",
        "instruction": "Questions 33-37<br/>Do the following statements agree with the claims of the writer in Reading Passage 3?<br/>In boxes 33-37 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
        ]
       },
       {
        "num": 37,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Einstein put his success down to the speed at which he dealt with scientific questions.",
-       "answer": "FALSE",
+       "answer": "NO",
        "explanation": "The passage confirms that the answer is 'FALSE'.",
        "location": "Passage 3",
        "instruction": "Questions 33-37<br/>Do the following statements agree with the claims of the writer in Reading Passage 3?<br/>In boxes 33-37 on your answer sheet, Write<br/>YES if the statement agrees with the claims of the writer<br/>NO if the statement contradicts the claims of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
        ]
       },
