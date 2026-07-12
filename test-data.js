@@ -1,5 +1,5 @@
 // IELTS Test Data - Auto-generated
-// Last updated: 2026-07-12T09:31:51.454Z
+// Last updated: 2026-07-12T09:58:31.739Z
 
 const IELTS_TEST_DATA = {
  "1": {
@@ -4869,159 +4869,133 @@ const IELTS_TEST_DATA = {
    "passages": [
     {
      "title": "How tennis rackets have changed",
-     "text": "<h1>How tennis rackets have changed</h1>\n<p>In 2016, the British professional tennis player Andy Murray was ranked as the world's number one. It was an incredible achievement, but it was also a testament to the technological changes that have transformed the game of tennis over the past few decades. One of the most important of these changes is the design and construction of the tennis racket.</p>\n<p>For most of the history of tennis, rackets were made of wood. They had small heads, heavy frames, and natural gut strings made from the intestines of sheep or cows. Wooden rackets required strength and precision to use, and the game was characterised by slow, tactical rallies. All this changed in the 1970s and 1980s with the introduction of new materials, such as metal and composite materials like graphite and carbon fibre.</p>\n<p>Racket modifications mainly date back to the 1970s, when the amateur German tennis player Werner Fischer started playing with a 'spaghetti-strung' racket. This racket had two layers of strings that were not interwoven, and plastic tubes and wooden rollers that allowed the strings to slide over one another. The result was a massive increase in spin, which made the ball bounce unpredictably and made it difficult for opponents to return. The International Tennis Federation (ITF) quickly banned the racket, arguing that it changed the nature of the game.</p>\n<p>However, the revolution could not be stopped. Racket manufacturers began producing oversized rackets made of lightweight materials. These rackets had larger 'sweet spots' — the area of the racket face that produces the most power and control — making it easier for players to hit the ball cleanly. The reduction in weight allowed players to swing the racket faster, generating more power and spin. This led to a faster, more aggressive style of play, dominated by powerful serves and baseline rallies.</p>\n<p>The changes to rackets were not limited to the frames. Strings also underwent a transformation. While natural gut is still preferred by many professional players for its feel and elasticity, most players now use synthetic strings made of nylon or polyester. These strings are more durable, resistant to moisture, and can be customized to produce more power or spin. The tension of the strings is also crucial, with players adjusting it depending on the court surface and weather conditions.</p>\n<p>Professional players are now extremely particular about their rackets. Many travel with their own professional racket stringer who can adjust the tension of their strings during a match. The American player Pete Sampras, famous for his powerful serve, had lead weights added to the frame of his racket to increase its mass and power. Other players, like the Bryan brothers, use rackets that are customized to their specific physical and playing characteristics.</p>\n<p>The changes to rackets have also had a major impact on the physical demands of the game. Modern tennis is faster and more powerful than ever before, requiring players to be in peak physical condition. The risk of injury has also increased, with 'tennis elbow' and other repetitive strain injuries becoming common among players who use stiff, powerful rackets. Racket manufacturers are now focusing on developing materials that can absorb shock and reduce the risk of injury.</p>\n<p>Today, the ITF regulates the design and size of tennis rackets to ensure that technology does not completely dominate the game. Rackets must conform to specific rules regarding length, width, and string pattern. Despite these rules, technology continues to play a major role in the game. Racket changes can be regarded as being as important as players' diets or the training they do, and the search for the perfect racket continues. The Bryan brothers experimented with different types of paint applied to their racket frames to improve performance. String pattern adjustments significantly increased the amount of topspin the racket could generate. Gonçalo Oliveira modified the grips on his racket handles to improve his feel and control.</p>",
+     "text": "<h1>How tennis rackets have changed</h1>\n<p>In 2016, the British professional tennis player Andy Murray was ranked as the world's number one. It was an incredible achievement by any standard, made even more remarkable by the fact that he did this during a period considered to be one of the strongest in the sport's history, competing against the likes of Rafael Nadal, Roger Federer and Novak Djokovic, to name just a few. Yet five years previously, he had been regarded as a talented outsider who entered but never won the major tournaments.</p>\n<p>Of the changes that account for this transformation, one was visible and widely publicised: in 2011, Murray invited former number one player Ivan Lendl onto his coaching team — a valuable addition that had a visible impact on the player's playing style. Another change was so subtle as to pass more or less unnoticed. Like many players, Murray has long preferred a racket that consists of two types of string: one for the mains (verticals) and another for the crosses (horizontals). While he continued to use natural string in the crosses, in 2012 he switched to a synthetic string for the mains. A small change, perhaps, but its importance should not be underestimated.</p>\n<p>The modification that Murray made is just one of a number of options available to players looking to tweak their rackets in order to improve their games. \"Touring professionals have their rackets customised to their specific needs,\" says Colin Triplow, a UK-based professional racket stringer. \"It's a highly important part of performance maximisation.\" Consequently, the specific rackets used by the world's elite are not actually readily available to the public; rather, each racket is individually made to suit the player who uses it. Take the US professional tennis players Mike and Bob Bryan, for example: \"We're very particular with our racket specifications,\" they say. \"All our rackets are sent from our manufacturer to Tampa, Florida, where our frames go through a... thorough customisation process.\" They explain how they have adjusted not only racket length, but even experimented with different kinds of paint. The rackets they use now weigh more than the average model and also have a denser string pattern (i.e. more crosses and mains).</p>\n<p>The primary reason for these modifications is simple: as the line between winning and losing becomes thinner and thinner, even these slight changes become more and more important. As a result, players and their teams are becoming increasingly creative with the modifications to their rackets as they look to maximise their competitive advantage.</p>\n<p>Racket modifications mainly date back to the 1970s, when the amateur German tennis player Werner Fischer started playing with the so-called spaghetti-strung racket. It created a string bed that generated so much topspin that it was quickly banned by the International Tennis Federation. However, within a decade or two, racket modification became a regularity. Today it is, in many ways, an aspect of the game that is equal in significance to nutrition or training.</p>\n<p>Modifications can be divided into two categories: those to the string bed and those to the racket frame. The former is far more common than the latter: the choice of the strings and the tension with which they are installed is something that nearly all professional players experiment with. They will continually change it depending on various factors including the court surface, climatic conditions, and game styles. Some will even change it depending on how they feel at the time.</p>\n<p>At one time, all tennis rackets were strung with natural gut made from the outer layer of sheep or cow intestines. This all changed in the early 1990s with the development of synthetic strings that were cheaper and more durable. They are made from three materials: nylon (relatively durable and affordable), Kevlar (too stiff to be used alone) or co-polyester (polyester combined with additives that enhance its performance). Even so, many professional players continue to use a \"hybrid set-up\", where a combination of both synthetic and natural strings are used.</p>\n<p>Of the synthetics, co-polyester is by far the most widely used. It's a perfect fit for the style of tennis now played, where players tend to battle it out from the back of the court rather than coming to the net. Studies indicate that the average spin from a co-polyester string is 25% greater than that from natural string or other synthetics. In a sense, the development of co-polyester strings has revolutionised the game.</p>\n<p>However, many players go beyond these basic adjustments to the strings and make changes to the racket frame itself. For example, much of the serving power of US professional player Pete Sampras was attributed to the addition of four to five lead weights onto his rackets, and today many professionals have the weight adjusted during the manufacturing process.</p>\n<p>Other changes to the frame involve the handle. Players have individual preferences for the shape of the handle and some will have the handle of one racket moulded onto the frame of a different racket. Other players make different changes. The professional Portuguese player Gonçalo Oliveira replaced the original grips of his rackets with something thinner because they had previously felt uncomfortable to hold.</p>\n<p>Racket customisation and modification have pushed the standards of the game to greater levels that few could have anticipated in the days of natural strings and heavy, wooden frames, and it's exciting to see what further developments there will be in the future.</p>",
      "questions": [
       {
        "num": 1,
        "type": "TFNG",
-       "text": "Wooden rackets allowed players to hit with greater power than modern rackets do.",
+       "text": "People had expected Andy Murray to become the world's top tennis player for at least five years before 2016.",
        "answer": "FALSE",
-       "explanation": "The passage states wooden-racket play \"was characterised by slow, tactical rallies,\" while lightweight modern rackets allow players to swing faster, \"generating more power and spin.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states that five years previously (before Murray reached number one in 2016), he was regarded as a 'talented outsider who entered but never won the major tournaments,' contradicting the statement."
       },
       {
        "num": 2,
        "type": "TFNG",
-       "text": "The International Tennis Federation still permits players to use spaghetti-strung rackets today.",
+       "text": "The change that Andy Murray made to his rackets attracted a lot of attention.",
        "answer": "FALSE",
-       "explanation": "The passage states the ITF \"quickly banned the racket, arguing that it changed the nature of the game.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states: 'Another change was so subtle as to pass more or less unnoticed,' referring to Murray's string modification. Therefore, it did not attract a lot of attention."
       },
       {
        "num": 3,
        "type": "TFNG",
-       "text": "Most of the world's top players travel with their own professional racket stringer.",
+       "text": "Most of the world's top players take a professional racket stringer on tour with them.",
        "answer": "NOT GIVEN",
-       "explanation": "The passage states \"many travel with their own professional racket stringer,\" but does not specify whether this applies to most top players.",
-       "location": "Passage 1",
-       "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "While the text quotes professional stringer Colin Triplow saying touring professionals have customized rackets, it does not state whether most top players actually take a stringer on tour with them."
       },
       {
        "num": 4,
        "type": "TFNG",
-       "text": "Pete Sampras added lead weights to his racket in order to reduce its overall mass.",
+       "text": "Mike and Bob Bryan use rackets that are light in comparison to the majority of rackets.",
        "answer": "FALSE",
-       "explanation": "The passage states Sampras \"had lead weights added to the frame of his racket to increase its mass and power,\" the opposite of reducing it.",
-       "location": "Passage 1",
-       "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states: 'The rackets they use now weigh more than the average model...'"
       },
       {
        "num": 5,
        "type": "TFNG",
-       "text": "Werner Fischer's spaghetti-strung racket was later approved for professional competition after further modifications.",
+       "text": "Werner Fischer played with a spaghetti-strung racket that he designed himself.",
        "answer": "NOT GIVEN",
-       "explanation": "The passage states the racket was banned but gives no information about any later approval or modification.",
-       "location": "Passage 1",
-       "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states Werner Fischer started playing with the 'so-called spaghetti-strung racket,' but it does not mention whether he designed it himself."
       },
       {
        "num": 6,
        "type": "TFNG",
        "text": "The weather can affect how professional players adjust the strings on their rackets.",
        "answer": "TRUE",
-       "explanation": "The passage states players adjust string tension \"depending on the court surface and weather conditions.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states: 'They will continually change it depending on various factors including... climatic conditions...'"
       },
       {
        "num": 7,
        "type": "TFNG",
        "text": "It was believed that the change Pete Sampras made to his rackets contributed to his strong serve.",
        "answer": "TRUE",
-       "explanation": "The passage describes Sampras as \"famous for his powerful serve\" and states he added lead weights to his racket's frame \"to increase its mass and power.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE<br/>FALSE<br/>if the statement agrees with the information<br/>if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states: 'much of the serving power of US professional player Pete Sampras was attributed to the addition of four to five lead weights onto his rackets.'"
       },
       {
        "num": 8,
        "type": "FILL",
        "text": "Mike and Bob Bryan made changes to the types of _________ used on their racket frames.",
        "answer": "paint",
-       "explanation": "The text confirms this: \"' They explain how they have adjusted not only racket length, but even experimented with di ITercnl kinds or paint.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>The tennis racket and how it has changed<br/>Reading<br/>• Mike and Bob Bryan made changes to the types of 8 ........................................... used on<br/>their racket frames.<br/>• Players were not allowed to use the spaghetti-strung racket because of the<br/>amount of 9 ........................................... it created.<br/>• Changes to rackets can be regarded as being as important as players' diets or<br/>the 10 ........................................... they do.<br/>• All rackets used to have natural strings made from the 11 ......................................... ..<br/>of animals.<br/>• Pete Sampras had metal 12 ........................................... put into the frames of<br/>his rackets.<br/>• Gon9alo Oliveira changed the 13 ........................................... on his racket handles."
+       "explanation": "The text states: 'experimented with different kinds of paint' applied to their racket frames."
       },
       {
        "num": 9,
        "type": "FILL",
-       "text": "amount of _________ _________ it created.",
+       "text": "Players were not allowed to use the spaghetti-strung racket because of the amount of _________ it created.",
        "answer": "topspin",
-       "explanation": "The text confirms this: \"It created a string bed that generated so much topspin that it was quickly banned by the International Tennis Federation.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>The tennis racket and how it has changed<br/>Reading<br/>• Mike and Bob Bryan made changes to the types of 8 ........................................... used on<br/>their racket frames.<br/>• Players were not allowed to use the spaghetti-strung racket because of the<br/>amount of 9 ........................................... it created.<br/>• Changes to rackets can be regarded as being as important as players' diets or<br/>the 10 ........................................... they do.<br/>• All rackets used to have natural strings made from the 11 ......................................... ..<br/>of animals.<br/>• Pete Sampras had metal 12 ........................................... put into the frames of<br/>his rackets.<br/>• Gon9alo Oliveira changed the 13 ........................................... on his racket handles."
+       "explanation": "The text states: 'It created a string bed that generated so much topspin that it was quickly banned...'"
       },
       {
        "num": 10,
        "type": "FILL",
-       "text": "the _________ _________ they do.",
+       "text": "Changes to rackets can be regarded as being as important as players' diets or the _________ they do.",
        "answer": "training",
-       "explanation": "The text confirms this: \"Today it is, in many ways, an aspect of the game that is equal in significance to nutrition or training.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>The tennis racket and how it has changed<br/>Reading<br/>• Mike and Bob Bryan made changes to the types of 8 ........................................... used on<br/>their racket frames.<br/>• Players were not allowed to use the spaghetti-strung racket because of the<br/>amount of 9 ........................................... it created.<br/>• Changes to rackets can be regarded as being as important as players' diets or<br/>the 10 ........................................... they do.<br/>• All rackets used to have natural strings made from the 11 ......................................... ..<br/>of animals.<br/>• Pete Sampras had metal 12 ........................................... put into the frames of<br/>his rackets.<br/>• Gon9alo Oliveira changed the 13 ........................................... on his racket handles."
+       "explanation": "The text states: 'Today it is... equal in significance to nutrition or training.'"
       },
       {
        "num": 11,
        "type": "FILL",
-       "text": "• All rackets used to have natural strings made from the _________ _________ ..",
-       "answer": "gut",
-       "explanation": "The text confirms this: \"At one time, all tennis rackets were strung with natural gut made from the outer layer of sheep or cow intestines.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>The tennis racket and how it has changed<br/>Reading<br/>• Mike and Bob Bryan made changes to the types of 8 ........................................... used on<br/>their racket frames.<br/>• Players were not allowed to use the spaghetti-strung racket because of the<br/>amount of 9 ........................................... it created.<br/>• Changes to rackets can be regarded as being as important as players' diets or<br/>the 10 ........................................... they do.<br/>• All rackets used to have natural strings made from the 11 ......................................... ..<br/>of animals.<br/>• Pete Sampras had metal 12 ........................................... put into the frames of<br/>his rackets.<br/>• Gon9alo Oliveira changed the 13 ........................................... on his racket handles."
+       "text": "All rackets used to have natural strings made from the _________ of animals.",
+       "answer": "intestines",
+       "explanation": "The text states: 'rackets were strung with natural gut made from the outer layer of sheep or cow intestines.'"
       },
       {
        "num": 12,
        "type": "FILL",
-       "text": "• Pete Sampras had metal _________ _________ put into the frames of",
+       "text": "Pete Sampras had metal _________ put into the frames of his rackets.",
        "answer": "weights",
-       "explanation": "The text confirms this: \"For example, much of the serving power of US professional player Pete Sampras was attributed to the addition of four to five lead weights onto his rackets, and today many professionals have the weight adjusted during the manufacturing process.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>The tennis racket and how it has changed<br/>Reading<br/>• Mike and Bob Bryan made changes to the types of 8 ........................................... used on<br/>their racket frames.<br/>• Players were not allowed to use the spaghetti-strung racket because of the<br/>amount of 9 ........................................... it created.<br/>• Changes to rackets can be regarded as being as important as players' diets or<br/>the 10 ........................................... they do.<br/>• All rackets used to have natural strings made from the 11 ......................................... ..<br/>of animals.<br/>• Pete Sampras had metal 12 ........................................... put into the frames of<br/>his rackets.<br/>• Gon9alo Oliveira changed the 13 ........................................... on his racket handles."
+       "explanation": "The text states Pete Sampras added 'four to five lead [metal] weights onto his rackets.'"
       },
       {
        "num": 13,
        "type": "FILL",
        "text": "Gonçalo Oliveira changed the _________ on his racket handles.",
        "answer": "grips",
-       "explanation": "The text confirms this: \"The professional Portuguese player Gon9alo Oliveira replaced the original grips of his rackets with something thinner because they had previously felt uncomfortable to hold.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>The tennis racket and how it has changed<br/>Reading<br/>• Mike and Bob Bryan made changes to the types of 8 ........................................... used on<br/>their racket frames.<br/>• Players were not allowed to use the spaghetti-strung racket because of the<br/>amount of 9 ........................................... it created.<br/>• Changes to rackets can be regarded as being as important as players' diets or<br/>the 10 ........................................... they do.<br/>• All rackets used to have natural strings made from the 11 ......................................... ..<br/>of animals.<br/>• Pete Sampras had metal 12 ........................................... put into the frames of<br/>his rackets.<br/>• Gon9alo Oliveira changed the 13 ........................................... on his racket handles."
+       "explanation": "The text states Gonçalo Oliveira 'replaced the original grips of his rackets' on their handles."
       }
      ]
     },
