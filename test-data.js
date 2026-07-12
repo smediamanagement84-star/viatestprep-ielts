@@ -1,5 +1,5 @@
 // IELTS Test Data - Auto-generated
-// Last updated: 2026-07-12T13:15:31.641Z
+// Last updated: 2026-07-12T13:26:12.275Z
 
 const IELTS_TEST_DATA = {
  "1": {
@@ -8091,154 +8091,128 @@ const IELTS_TEST_DATA = {
    "passages": [
     {
      "title": "The impact of climate change on butterflies in Britain",
-     "text": "<h1>The impact of climate change on butterflies in Britain</h1>\n<p>For more than three decades, scientists have been tracking the effects of climate change on butterflies in Britain. According to conservationists, populations of around two thirds of butterfly species have declined in Britain over the past forty years. The study, published in the journal Nature, analyzed data from thousands of sites across the country, providing the most detailed picture yet of how butterflies are responding to a warming climate.</p>\n<p>The researchers found that while some species have expanded their range northwards, many others are struggling to survive. Caterpillars are eaten by a number of different predators, including birds, wasps, and beetles, and changes in the timing of their emergence can leave them vulnerable. If caterpillars hatch before their food plants are ready, or after their predators have already active, their survival rates plummet.</p>\n<p>Analysing the trends in each variable, the researchers discovered that species with more flexible lifecycles were more likely to adapt better to the changing climate. For example, some butterflies can produce two generations in a single summer if the weather is warm, allowing them to rebuild their numbers after a poor spring. In contrast, species that only produce one generation a year are much more vulnerable to extreme weather events.</p>\n<p>The study also highlighted the importance of habitat conservation. Butterflies that live in diverse, well-connected habitats are much more resilient to climate change than those in isolated pockets of nature. By restoring wildflower meadows, planting hedgerows, and reducing pesticide use, landowners can help to create 'stepping stones' that allow butterflies to move across the landscape in response to changing temperatures.</p>\n<p>Ultimately, the researchers warn that unless greenhouse gas emissions are reduced and habitat conservation is scaled up, many of Britain's most iconic butterfly species could face extinction. The loss of butterflies would have a knock-on effect on the wider ecosystem, as they are important pollinators and a key food source for many birds and mammals. The study serves as a stark reminder of the urgent need to protect biodiversity in the face of climate change. Scientists have been closely tracking the effects of climate change on butterfly colonies across the UK for more than three decades. The species is now considered more endangered than many other British butterfly species due to rapid habitat loss. In warmer parts of Europe, this species is already able to reproduce twice a year. In England, populations are largely confined to southern areas where conditions remain suitable. Species with a more flexible diet proved better able to adapt to the shifting climate.</p>",
+     "text": "<h1>The impact of climate change on butterflies in Britain</h1>\n<p>According to conservationists, populations of around two thirds of butterfly species have declined in Britain over the past 40 years. If this trend continues, it might have unpredictable knock-on effects for other species in the ecosystem. Butterfly eggs develop into caterpillars and these insects, which are the second stage in a new butterfly's lifecycle, consume vast quantities of plant material, and in turn act as prey for birds as well as bats and other small mammals. Only by arming themselves with an understanding of why butterfly numbers are down can conservationists hope to halt or reverse the decline.</p>\n<p>Butterflies prefer outdoor conditions to be 'just right', which means neither too hot nor too cold. Under the conditions of climate change, the temperature at any given time in summer is generally getting warmer, leaving butterflies with the challenge of how to deal with this. One of the main ways in which species are ensuring conditions suit them is by changing the time of year at which they are active and reproduce. Scientists refer to the timing of such lifecycle events as 'phenology', so when an animal or plant starts to do something earlier in the year than it usually does, it is said to be 'advancing its phenology'.</p>\n<p>These advances have been observed already in a wide range of butterflies — indeed, most species are advancing their phenology to some extent. In Britain, as the average spring temperature has increased by roughly 0.5 °C over the past 20 years, species have advanced by between three days and a week on average, to keep in line with cooler temperatures. Is this a sign that butterflies are well equipped to cope with climate change, and readily adjust to new temperatures? Or are these populations under stress, being dragged along unwillingly by unnaturally fast changes? The answer is still unknown, but a new study is seeking to answer these questions.</p>\n<p>First, the researchers pulled together data from millions of records that had been submitted by butterfly enthusiasts — people who spend their free time observing the activities of different species. This provided information on 130 species of butterflies in Great Britain every year for a 20-year period. They then estimated the abundance and distribution of each species across this time, along with how far north in the country they had moved. The data also, crucially, allowed researchers to estimate subtle changes in what time of the year each species was changing into an adult butterfly.</p>\n<p>Analysing the trends in each variable, the researchers discovered that species with more flexible lifecycles were more likely to be able to benefit from an earlier emergence driven by climate change. Some species are able to go from caterpillar to butterfly twice or more per year, so that the individual butterflies you see flying in the spring are the grandchildren or great-grandchildren of the individuals seen a year previously.</p>\n<p>Among these species, researchers observed that those which have been advancing their phenology the most over the 20-year study period also had the most positive trends in abundance, distribution and northwards extent. For these species, such as Britain's tiniest butterfly, the dainty Small Blue, whose colonies are up to a hundred strong, some develop into butterflies early in spring, allowing their summer generations to complete another reproductive cycle by autumn so that more population growth occurs.</p>\n<p>Other species, however, are less flexible and restricted to a single reproductive cycle per year. For these species, there was no evidence of any benefit to emerging earlier. Indeed, worryingly, it was found that the species in this group that specialise in very specific habitat types, often related to the caterpillar's preferred diet, actually tended to be most at harm from advancing phenology. The beautiful High Brown Fritillary, often described as Britain's most endangered butterfly, is in this group. It is found only in coppiced woodland and limestone pavement habitats. It is also a single-generation butterfly that has advanced its phenology. This suggests that climate change, while undoubtedly not the sole cause, might have played a part in the downfall of this species.</p>\n<p>All is not lost, however. Many of Britain's single-generation species show the capacity, in continental Europe, to add a second generation in years that are sufficiently warm. Therefore, as the climate continues to warm, species like the Silver-studded Blue might be able to switch to multiple generations in the UK as well, and so begin to extract benefits from the additional warmth, potentially leading to population increases.</p>\n<p>More immediately, conservationists can arm themselves with all this knowledge to spot the warning signs of species that may be at risk. The White Admiral of southern England, a much sought-after butterfly, experienced a significant increase in numbers from the 1920s but has shown a considerable decline in the past 20 years. This may be because the caterpillar exists solely on a diet of a plant called honeysuckle. But it is also likely to be due to climate change.</p>",
      "questions": [
       {
        "num": 1,
        "type": "TFNG",
        "text": "Forty years ago, there were fewer butterflies in Britain than at present.",
        "answer": "FALSE",
-       "explanation": "The passage confirms that the answer is 'FALSE'.",
-       "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text says populations have 'declined' over the past 40 years, meaning there were MORE butterflies 40 years ago, not fewer."
       },
       {
        "num": 2,
        "type": "TFNG",
        "text": "Caterpillars are eaten by a number of different predators.",
        "answer": "TRUE",
-       "explanation": "The passage confirms that the answer is 'TRUE'.",
-       "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states caterpillars 'act as prey for birds as well as bats and other small mammals' — multiple predators."
       },
       {
        "num": 3,
        "type": "TFNG",
        "text": "'Phenology' is a term used to describe a creature's ability to alter the location of a lifecycle event.",
        "answer": "FALSE",
-       "explanation": "The passage confirms that the answer is 'FALSE'.",
-       "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text defines phenology as 'the timing of such lifecycle events' — about timing, not location."
       },
       {
        "num": 4,
        "type": "TFNG",
        "text": "Some species of butterfly have a reduced lifespan due to spring temperature increases.",
        "answer": "NOT GIVEN",
-       "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
-       "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The passage discusses phenology changes but never mentions any effect on lifespan of individual butterflies."
       },
       {
        "num": 5,
        "type": "TFNG",
        "text": "There is a clear reason for the adaptations that butterflies are making to climate change.",
        "answer": "FALSE",
-       "explanation": "The passage confirms that the answer is 'FALSE'.",
-       "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states: 'The answer is still unknown' regarding whether adaptations are voluntary or forced."
       },
       {
        "num": 6,
        "type": "TFNG",
        "text": "The data used in the study was taken from the work of amateur butterfly watchers.",
        "answer": "TRUE",
-       "explanation": "The passage confirms that the answer is 'TRUE'.",
-       "location": "Passage 1",
-       "instruction": "Questions 1-6<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-6 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states: 'data from millions of records that had been submitted by butterfly enthusiasts — people who spend their free time observing...'"
       },
       {
        "num": 7,
        "type": "FILL",
-       "text": "For more than three decades, scientists have been tracking the effects of climate change on butterflies in Britain. According to conservationists, populations of around two thirds of butterfly species have declined in Britain over the past _________ years.",
+       "text": "The Small Blue lives in large _________ .",
        "answer": "colonies",
-       "explanation": "The text confirms this: \"For these species, such as Britain's tiniest butterfly, the dainty Small Blue, whose colonies are up to a hundred strong, some develop into butterflies early in spring, allowing their summer generations to complete another reproductive cycle by autumn so that more population growth occurs.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>• lives in large 7 ......................................... ..<br/>• first appears at the start of 8 ......................................... ..<br/>• completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>• has one reproductive cycle<br/>Reading<br/>• is considered to be more 9 ........................................... than other species<br/>• its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>• is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>• is found in 12 ........................................... areas of England<br/>• both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>➔I� p. 1211 s1"
+       "explanation": "The text states: 'the dainty Small Blue, whose colonies are up to a hundred strong...'"
       },
       {
        "num": 8,
        "type": "FILL",
-       "text": "• first appears at the start of _________ _________ ..",
+       "text": "The Small Blue first appears at the start of _________ .",
        "answer": "spring",
-       "explanation": "The text confirms this: \"In Britain, as the average spring temperature has increased by roughly 0.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>• lives in large 7 ......................................... ..<br/>• first appears at the start of 8 ......................................... ..<br/>• completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>• has one reproductive cycle<br/>Reading<br/>• is considered to be more 9 ........................................... than other species<br/>• its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>• is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>• is found in 12 ........................................... areas of England<br/>• both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>➔I� p. 1211 s1"
+       "explanation": "The text states: 'some develop into butterflies early in spring, allowing their summer generations to complete another reproductive cycle by autumn...'"
       },
       {
        "num": 9,
        "type": "FILL",
-       "text": "• is considered to be more _________ _________ than other species",
+       "text": "The High Brown Fritillary is considered to be more _________ than other species.",
        "answer": "endangered",
-       "explanation": "The text confirms this: \"The beautiful High Brown Fritillary, often described as Britain's most endangered butterfly, is in this group.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>• lives in large 7 ......................................... ..<br/>• first appears at the start of 8 ......................................... ..<br/>• completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>• has one reproductive cycle<br/>Reading<br/>• is considered to be more 9 ........................................... than other species<br/>• its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>• is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>• is found in 12 ........................................... areas of England<br/>• both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>➔I� p. 1211 s1"
+       "explanation": "The text states: 'The beautiful High Brown Fritillary, often described as Britain's most endangered butterfly...'"
       },
       {
        "num": 10,
        "type": "FILL",
-       "text": "• its caterpillars occupy a limited range of _________ _________ .",
-       "answer": "habitat",
-       "explanation": "The text confirms this: \"Indeed, worryingly, it was found that the species in this group that specialise in very specific habitat types, often related to the caterpillar's preferred diet, actually tended to be most at harm from advancing phenology.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>• lives in large 7 ......................................... ..<br/>• first appears at the start of 8 ......................................... ..<br/>• completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>• has one reproductive cycle<br/>Reading<br/>• is considered to be more 9 ........................................... than other species<br/>• its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>• is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>• is found in 12 ........................................... areas of England<br/>• both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>➔I� p. 1211 s1"
+       "text": "The High Brown Fritillary's caterpillars occupy a limited range of _________ .",
+       "answer": "habitats",
+       "explanation": "The text states: 'species in this group that specialise in very specific habitat types...It is found only in coppiced woodland and limestone pavement habitats.'"
       },
       {
        "num": 11,
        "type": "FILL",
-       "text": "• is already able to reproduce twice a year in warm areas of _________ _________ .",
+       "text": "The Silver-studded Blue is already able to reproduce twice a year in warm areas of _________ .",
        "answer": "Europe",
-       "explanation": "The text confirms this: \"Many of Britain's single-generation species show the capacity, in continental Europe, to add a second generation in years that are sufficiently warm.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>• lives in large 7 ......................................... ..<br/>• first appears at the start of 8 ......................................... ..<br/>• completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>• has one reproductive cycle<br/>Reading<br/>• is considered to be more 9 ........................................... than other species<br/>• its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>• is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>• is found in 12 ........................................... areas of England<br/>• both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>➔I� p. 1211 s1"
+       "explanation": "The text states: 'Many of Britain's single-generation species show the capacity, in continental Europe, to add a second generation in years that are sufficiently warm.'"
       },
       {
        "num": 12,
        "type": "FILL",
-       "text": "• is found in _________ _________ areas of England",
+       "text": "The White Admiral is found in _________ areas of England.",
        "answer": "southern",
-       "explanation": "The text confirms this: \"The White Admiral of southern England, a much sought-after butterfly, experienced a significant increase in numbers from the 1920s but has shown a considerable decline in the past 20 years.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>• lives in large 7 ......................................... ..<br/>• first appears at the start of 8 ......................................... ..<br/>• completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>• has one reproductive cycle<br/>Reading<br/>• is considered to be more 9 ........................................... than other species<br/>• its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>• is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>• is found in 12 ........................................... areas of England<br/>• both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>➔I� p. 1211 s1"
+       "explanation": "The text states: 'The White Admiral of southern England...'"
       },
       {
        "num": 13,
        "type": "FILL",
-       "text": "In addition, species with more flexible _________ had been able to adapt better to the changing climate.",
+       "text": "Both climate change and the _________ of the caterpillar are possible reasons for the White Admiral's decline.",
        "answer": "diet",
-       "explanation": "The text confirms this: \"Indeed, worryingly, it was found that the species in this group that specialise in very specific habitat types, often related to the caterpillar's preferred diet, actually tended to be most at harm from advancing phenology.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 7-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 7-13 on your answer sheet.<br/>Butterflies in the UK<br/>The Small Blue<br/>• lives in large 7 ......................................... ..<br/>• first appears at the start of 8 ......................................... ..<br/>• completes more than one reproductive cycle per year<br/>The High Brown Fritillary<br/>• has one reproductive cycle<br/>Reading<br/>• is considered to be more 9 ........................................... than other species<br/>• its caterpillars occupy a limited range of 10 .......................................... .<br/>The Silver-studded Blue<br/>• is already able to reproduce twice a year in warm areas of 11 .......................................... .<br/>The White Admiral<br/>• is found in 12 ........................................... areas of England<br/>• both climate change and the 13 ........................................... of the caterpillar are possible<br/>reasons for decline<br/>➔I� p. 1211 s1"
+       "explanation": "The text states: 'This may be because the caterpillar exists solely on a diet of a plant called honeysuckle. But it is also likely to be due to climate change.'"
       }
      ]
     },
@@ -8422,7 +8396,7 @@ const IELTS_TEST_DATA = {
       {
        "num": 25,
        "type": "FILL",
-       "text": "The extraction is often done by adapting the _________ _________ that has already",
+       "text": "The extraction is often done by adapting the _________ that has already been used to work on land.",
        "answer": "machinery",
        "explanation": "The text confirms this: \"Different methods of extraction exist, bul most involve employing some form of converted machinery previously used in terrestrial mining to excavate materials fi·om the sea Aoor, al depths of up to 6,000 metres, then drawing a seawater slurry, containing rock and other solid particles, from the sea floor to ships on the surface.\"",
        "location": "Passage 2",
@@ -8441,182 +8415,154 @@ const IELTS_TEST_DATA = {
     },
     {
      "title": "The Unselfish Gene",
-     "text": "<h1>The Unselfish Gene</h1>\n<p>A psychologist gives his view on how humans became self-centred.</p>\n<p>There has long been a general assumption that human beings are essentially selfish. We are portrayed as relentlessly pursuing our own self-interest, driven by evolutionary pressures to survive and reproduce at the expense of others. This view was popularized by Richard Dawkins in his 1976 book The Selfish Gene, which argued that our genes are the primary drivers of our behaviour, and that altruism is merely an illusion. However, this view is increasingly being challenged by psychologists and anthropologists who argue that cooperation and empathy are just as natural to humans as selfishness.</p>\n<p>Prehistoric societies were likely far more egalitarian and cooperative than modern ones. For most of our evolutionary history, humans lived in small bands of hunter-gatherers. In these groups, survival depended on sharing resources, caring for the sick and injured, and working together to hunt and gather food. Those who developed warlike or selfish traits would have been at a disadvantage, as they would have been excluded from the group and left to survive on their own. Thus, evolutionary pressures may have actually favoured cooperative and peaceful traits.</p>\n<p>The !Kung people of southern Africa, for example, swap arrows before going hunting, and when an animal is killed, the credit for the success is shared among the group, rather than going to the individual hunter. This custom prevents status differences from developing and maintains the egalitarian structure of the society. Similar practices have been observed in other hunter-gatherer cultures worldwide, suggesting that cooperation was the norm for prehistoric humans.</p>\n<p>Bruce Knauft, an anthropologist at Emory University, has studied contemporary hunter-gatherer societies and concluded that they exhibit a high level of egalitarianism in all areas of life. In these cultures, sharing is a moral obligation, and anyone who behaves in a domineering or selfish manner is punished by being ridiculed, ignored, or excluded. Women also have a high degree of autonomy in decisions regarding work and marriage, further reinforcing the equality of the group.</p>\n<p>The transition from hunter-gatherer bands to agricultural societies, which began around ten thousand years ago, marked a major shift in human behaviour. The development of agriculture allowed for the accumulation of surplus food and wealth, leading to the emergence of private property, social hierarchies, and warfare. As societies became more complex and unequal, selfish and competitive traits became more advantageous, leading to the self-centred behaviour we see in modern cultures.</p>\n<p>Despite these changes, cooperation remains a fundamental part of human nature. Studies of infants and young children show that they are naturally helpful and empathetic, offering assistance to others without being asked or rewarded. This suggests that we are born with a predisposition to cooperate, and that selfishness is a learned behaviour, shaped by our culture and environment. By understanding this, we can design schools, workplaces, and communities that encourage our cooperative nature and help us build a more unselfish world.</p>",
+     "text": "<h1>The Unselfish Gene</h1>\n<p>A psychologist gives his view on how humans became self-centred.</p>\n<p>There has long been a general assumption that human beings are essentially selfish. We're apparently ruthless, with strong impulses to compete against each other for resources and to accumulate power and possessions. If we are kind to one another, it's usually because we have ulterior motives. If we are good, it's only because we have managed to control and transcend our innate selfishness and brutality.</p>\n<p>This bleak view of human nature is closely associated with the science writer Richard Dawkins, whose 1976 book The Selfish Gene became popular because it fitted so well with — and helped to justify — the competitive and individualistic ethos that was so prevalent in late 20th-century societies. Like many others, Dawkins justifies his views with reference to the field of evolutionary psychology. Evolutionary psychology theorises that present-day human traits developed in prehistoric times, during what is termed the 'environment of evolutionary adaptedness'.</p>\n<p>Prehistory is usually seen as a period of intense competition, when life was such a brutal battle that only those with traits such as selfishness, aggression and ruthlessness survived. And because survival depended on access to resources — such as rivers, forests and animals — there was bound to be conflict between rival groups, which led to the development of traits such as racism and warfare. This seems logical. But, in fact, the assumption on which this all rests — that prehistoric life was a desperate struggle for survival — is false.</p>\n<p>It's important to remember that in the prehistoric era, the world was very sparsely populated. According to some estimates, around 15,000 years ago, the population of Europe was only 29,000, and the population of the whole world was less than half a million. Humans at that time were hunter-gatherers: people who lived by hunting wild animals and collecting wild plants. With such small population densities, it seems unlikely that prehistoric hunter-gatherer groups had to compete against each other for resources or had any need to develop ruthlessness and competitiveness, or to go to war.</p>\n<p>There is significant evidence to back this notion from contemporary hunter-gatherer groups, who live in the same way as prehistoric humans did. As the anthropologist Bruce Knauft has remarked, hunter-gatherers are characterised by 'extreme political and sexual egalitarianism'. Knauft has observed that individuals in such groups don't accumulate property or possessions and have an ethical obligation to share everything. They also have methods of preserving egalitarianism by ensuring that disparities of status don't arise.</p>\n<p>The !Kung people of southern Africa, for example, swap arrows before going hunting and when an animal is killed, the acclaim does not go to the person who fired the arrow, but to the person the arrow belongs to. And if a person becomes too domineering, the other members of the group ostracise them, exiling the offender from society. Typically in such groups, men do not dictate what women do. Women in hunter-gatherer groups worldwide often benefit from a high level of autonomy, being able to select their own marriage partners, decide what work they do and work whenever they choose to. And if a marriage breaks down, they have custody rights over their children.</p>\n<p>Many anthropologists believe that societies such as the !Kung were normal until a few thousand years ago, when population growth led to the development of agriculture and a settled lifestyle. In view of the above, there seems little reason to assume that traits such as racism, warfare and male domination should have been selected by evolution — as they would have been of little benefit in the prehistoric era. Individuals who behaved selfishly and ruthlessly would be less likely to survive, since they would have been ostracised from their groups.</p>\n<p>It makes more sense, then, to see traits such as cooperation, egalitarianism, altruism and peacefulness as innate characteristics of human beings. These were the traits that were prevalent in human life for tens of thousands of years. So presumably these traits are still strong in us now.</p>\n<p>But if prehistoric life wasn't really as brutal as has often been assumed, why do modern humans behave so selfishly and ruthlessly? Perhaps these negative traits should be seen as a later development, the result of environmental and psychological factors. Research has shown repeatedly that when the natural habitats of primates such as apes and gorillas are disrupted, they tend to become more violent and hierarchical.</p>\n<p>So, it could well be that the same thing has happened to us. I believe that the end of the hunter-gatherer lifestyle and the advent of farming was connected to a psychological change that occurred in some groups of people. There was a new sense of individuality and separateness, which led to a new selfishness, and ultimately to hierarchical societies, patriarchy and warfare. At any rate, these negative traits appear to have developed so recently that it doesn't seem feasible to explain them in adaptive or evolutionary terms.</p>",
      "questions": [
       {
        "num": 27,
        "type": "MCQ",
        "text": "What is the writer doing in the first paragraph?",
        "answer": "C",
-       "explanation": "The text confirms this: \"A psychologist gives his view on how humans became self-centred There has long been a general assumption that human beings are essentially selfish.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 27-30<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 27-30 on your answer sheet.",
        "options": [
         "A. setting out two opposing views about human nature",
         "B. justifying his opinion about our tendency to be greedy",
         "C. describing a commonly held belief about people's behaviour",
         "D. explaining why he thinks that humans act in a selfish manner"
-       ]
+       ],
+       "explanation": "The first paragraph describes a widely-held 'general assumption' about human selfishness — it's describing a common belief, not the writer's own view."
       },
       {
        "num": 28,
        "type": "MCQ",
        "text": "What point is made about Richard Dawkins' book The Selfish Gene?",
        "answer": "C",
-       "explanation": "The text confirms this: \"A psychologist gives his view on how humans became self-centred There has long been a general assumption that human beings are essentially selfish.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 27-30<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 27-30 on your answer sheet.",
        "options": [
         "A. Its appeal lay in the radical nature of its ideas.",
         "B. Its success was due to the scientific support it offered.",
         "C. It presented a view that was in line with the attitudes of its time.",
         "D. It took an innovative approach to the analysis of human psychology."
-       ]
+       ],
+       "explanation": "The text says the book 'became popular because it fitted so well with — and helped to justify — the competitive and individualistic ethos that was so prevalent in late 20th-century societies.'"
       },
       {
        "num": 29,
        "type": "MCQ",
        "text": "What does the writer suggest about the prehistoric era in the fourth paragraph?",
        "answer": "B",
-       "explanation": "The text confirms this: \"A psychologist gives his view on how humans became self-centred There has long been a general assumption that human beings are essentially selfish.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 27-30<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 27-30 on your answer sheet.",
        "options": [
         "A. Societies were more complex than many people believe.",
         "B. Supplies of natural resources were probably relatively plentiful.",
         "C. Most estimates about population sizes are likely to be inaccurate.",
         "D. Humans moved across continents more than was previously thought."
-       ]
+       ],
+       "explanation": "Paragraph 4 argues that with extremely small population densities worldwide, it 'seems unlikely that prehistoric hunter-gatherer groups had to compete against each other for resources' — implying resources were plentiful relative to the population."
       },
       {
        "num": 30,
        "type": "MCQ",
        "text": "The writer refers to Bruce Knauft's work as support for the idea that",
        "answer": "A",
-       "explanation": "The text confirms this: \"A psychologist gives his view on how humans became self-centred There has long been a general assumption that human beings are essentially selfish.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 27-30<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 27-30 on your answer sheet.",
        "options": [
         "A. selfishness is a relatively recent development in human societies.",
         "B. only people in isolated communities can live in an unselfish manner.",
         "C. very few lifestyles have survived unchanged since prehistoric times.",
         "D. hunter-gatherer cultures worldwide are declining in number."
-       ]
+       ],
+       "explanation": "The writer uses Knauft's evidence of egalitarian contemporary hunter-gatherers to back the idea that prehistoric humans were cooperative, meaning selfishness is a later development."
       },
       {
        "num": 31,
        "type": "FILL",
        "text": "Bruce Knauft's research shows that contemporary hunter-gatherer societies tend to exhibit a high level of _________ in all areas of life.",
        "answer": "egalitarianism",
-       "explanation": "The text confirms this: \"As the anthropologist Bruce Knauft has remarked, hunter-gatherers are characterised by 'extreme political and sexual egalitarianism'.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 31-35<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 31-35 on your answer sheet.<br/>Contemporary hunter-gatherer societies<br/>Reading<br/>Bruce Knauft's research shows that contemporary hunter-gatherer societies tend<br/>to exhibit a high level of 31 ........................................... in all areas of life. In these cultures,<br/>distributing resources fairly among all members is a moral obligation. These societies<br/>also employ strategies to prevent differences in 32 ........................................... occurring: for<br/>example, the !Kung follow a custom whereby the credit for one person's success<br/>at 33 ........................................... is given to another member of the group. Individuals who<br/>behave in a 34 ........................................... manner are punished by being excluded from the<br/>group, and women have a considerable amount of 35 ........................................... in choices<br/>regarding work and marriage."
+       "explanation": "The text quotes Knauft: hunter-gatherers are characterised by 'extreme political and sexual egalitarianism'."
       },
       {
        "num": 32,
        "type": "FILL",
-       "text": "also employ strategies to prevent differences in _________ _________ occurring: for",
+       "text": "These societies also employ strategies to prevent differences in _________ occurring.",
        "answer": "status",
-       "explanation": "The text confirms this: \"They also have methods of preserving egalitarianism by ensuring that disparities of status don't arise.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 31-35<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 31-35 on your answer sheet.<br/>Contemporary hunter-gatherer societies<br/>Reading<br/>Bruce Knauft's research shows that contemporary hunter-gatherer societies tend<br/>to exhibit a high level of 31 ........................................... in all areas of life. In these cultures,<br/>distributing resources fairly among all members is a moral obligation. These societies<br/>also employ strategies to prevent differences in 32 ........................................... occurring: for<br/>example, the !Kung follow a custom whereby the credit for one person's success<br/>at 33 ........................................... is given to another member of the group. Individuals who<br/>behave in a 34 ........................................... manner are punished by being excluded from the<br/>group, and women have a considerable amount of 35 ........................................... in choices<br/>regarding work and marriage."
+       "explanation": "The text states: 'methods of preserving egalitarianism by ensuring that disparities of status don't arise.'"
       },
       {
        "num": 33,
        "type": "FILL",
-       "text": "at _________ _________ is given to another member of the group. Individuals who",
+       "text": "The !Kung follow a custom whereby the credit for one person's success at _________ is given to another member of the group.",
        "answer": "hunting",
-       "explanation": "The text confirms this: \"Humans at that time were hunter-gatherers: people who lived by hunting wild animals and collecting wild plants.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 31-35<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 31-35 on your answer sheet.<br/>Contemporary hunter-gatherer societies<br/>Reading<br/>Bruce Knauft's research shows that contemporary hunter-gatherer societies tend<br/>to exhibit a high level of 31 ........................................... in all areas of life. In these cultures,<br/>distributing resources fairly among all members is a moral obligation. These societies<br/>also employ strategies to prevent differences in 32 ........................................... occurring: for<br/>example, the !Kung follow a custom whereby the credit for one person's success<br/>at 33 ........................................... is given to another member of the group. Individuals who<br/>behave in a 34 ........................................... manner are punished by being excluded from the<br/>group, and women have a considerable amount of 35 ........................................... in choices<br/>regarding work and marriage."
+       "explanation": "The text says: 'when an animal is killed, the acclaim does not go to the person who fired the arrow, but to the person the arrow belongs to' — relating to a hunting custom."
       },
       {
        "num": 34,
        "type": "FILL",
-       "text": "behave in a _________ _________ manner are punished by being excluded from the",
+       "text": "Individuals who behave in a _________ manner are punished by being excluded from the group.",
        "answer": "domineering",
-       "explanation": "The text confirms this: \"And if a person becomes too domineering, the other members of the group ostracise them, exiling the offender from society.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 31-35<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 31-35 on your answer sheet.<br/>Contemporary hunter-gatherer societies<br/>Reading<br/>Bruce Knauft's research shows that contemporary hunter-gatherer societies tend<br/>to exhibit a high level of 31 ........................................... in all areas of life. In these cultures,<br/>distributing resources fairly among all members is a moral obligation. These societies<br/>also employ strategies to prevent differences in 32 ........................................... occurring: for<br/>example, the !Kung follow a custom whereby the credit for one person's success<br/>at 33 ........................................... is given to another member of the group. Individuals who<br/>behave in a 34 ........................................... manner are punished by being excluded from the<br/>group, and women have a considerable amount of 35 ........................................... in choices<br/>regarding work and marriage."
+       "explanation": "The text states: 'if a person becomes too domineering, the other members of the group ostracise them, exiling the offender from society.'"
       },
       {
        "num": 35,
        "type": "FILL",
-       "text": "and women have a considerable amount of _________ in choices regarding work and marriage.",
+       "text": "Women have a considerable amount of _________ in choices regarding work and marriage.",
        "answer": "autonomy",
-       "explanation": "The text confirms this: \"Women in hunter-gatherer groups worldwide often benefit from a high level of autonomy, being able to select their own marriage partners, decide what work they do and work whenever they choose to.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 31-35<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 31-35 on your answer sheet.<br/>Contemporary hunter-gatherer societies<br/>Reading<br/>Bruce Knauft's research shows that contemporary hunter-gatherer societies tend<br/>to exhibit a high level of 31 ........................................... in all areas of life. In these cultures,<br/>distributing resources fairly among all members is a moral obligation. These societies<br/>also employ strategies to prevent differences in 32 ........................................... occurring: for<br/>example, the !Kung follow a custom whereby the credit for one person's success<br/>at 33 ........................................... is given to another member of the group. Individuals who<br/>behave in a 34 ........................................... manner are punished by being excluded from the<br/>group, and women have a considerable amount of 35 ........................................... in choices<br/>regarding work and marriage."
+       "explanation": "The text states: 'Women in hunter-gatherer groups worldwide often benefit from a high level of autonomy, being able to select their own marriage partners, decide what work they do...'"
       },
       {
        "num": 36,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Some anthropologists are mistaken about the point when the number of societies such as the !Kung began to decline.",
        "answer": "NOT GIVEN",
-       "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
-       "location": "Passage 3",
-       "instruction": "Questions 36-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text mentions many anthropologists believe these societies were normal until a few thousand years ago, but it does not comment on whether this belief is accurate or mistaken."
       },
       {
        "num": 37,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Humans who developed warlike traits in prehistory would have had an advantage over those who did not.",
-       "answer": "FALSE",
-       "explanation": "The text confirms this: \"But, in fact, the assumption on which this all rests - that prehistoric life was a desperate struggle for survival - is false.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 36-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+       "answer": "NO",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text argues the opposite: 'Individuals who behaved selfishly and ruthlessly would be less likely to survive, since they would have been ostracised from their groups.'"
       },
       {
        "num": 38,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Being peaceful and cooperative is a natural way for people to behave.",
-       "answer": "TRUE",
-       "explanation": "The passage confirms that the answer is 'TRUE'.",
-       "location": "Passage 3",
-       "instruction": "Questions 36-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+       "answer": "YES",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states: 'It makes more sense, then, to see traits such as cooperation, egalitarianism, altruism and peacefulness as innate characteristics of human beings.'"
       },
       {
        "num": 39,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Negative traits are more apparent in some modern cultures than in others.",
        "answer": "NOT GIVEN",
-       "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
-       "location": "Passage 3",
-       "instruction": "Questions 36-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text acknowledges negative traits exist in modern humans but does not compare different modern cultures."
       },
       {
        "num": 40,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Animal research has failed to reveal a link between changes in the environment and the emergence of aggressive tendencies.",
-       "answer": "FALSE",
-       "explanation": "The text confirms this: \"But, in fact, the assumption on which this all rests - that prehistoric life was a desperate struggle for survival - is false.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 36-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+       "answer": "NO",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states the opposite: 'Research has shown repeatedly that when the natural habitats of primates such as apes and gorillas are disrupted, they tend to become more violent and hierarchical.'"
       }
      ]
     }
