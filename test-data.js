@@ -1,5 +1,5 @@
 // IELTS Test Data - Auto-generated
-// Last updated: 2026-07-12T09:58:31.739Z
+// Last updated: 2026-07-12T13:15:31.641Z
 
 const IELTS_TEST_DATA = {
  "1": {
@@ -7091,421 +7091,358 @@ const IELTS_TEST_DATA = {
    "passages": [
     {
      "title": "Archaeologists discover evidence of prehistoric island settlers",
-     "text": "<h1>Archaeologists discover evidence of prehistoric island settlers</h1>\n<p>In early April 2019, Dr Ceri Shipton and his colleagues arrived on the island of Obi in the north-east of Indonesia. The island is mountainous and covered with dense rainforest, and it had never been excavated by archaeologists. Shipton's team was hoping to find evidence of early human settlement, and they were not disappointed. Their excavations of rock shelters near the village of Keio revealed a rich record of human occupation dating back forty-five thousand years.</p>\n<p>Archaeological research had taken place on other islands in the region, but Obi had been ignored because of its dense forest and difficult terrain. At the Keio sites, the researchers found the first clam shell axes ever to be discovered in the region, dating from around eleven thousand seven hundred years ago. The axes were made from the thick shells of giant clams, which had been ground and polished to create a sharp edge. These tools would have been crucial for clearing forest and building shelters.</p>\n<p>The size of Obi today is less than it was 18,000 years ago during the last ice age, when sea levels were much lower and many of the surrounding islands were connected. As the ice age ended and sea levels rose, Obi became isolated, forcing its inhabitants to adapt to a changing environment. A change in the climate around 11,700 years ago, which became warmer and wetter, had a major impact on the island, promoting the growth of dense rainforest.</p>\n<p>The researchers believe there is a connection between warmer, wetter weather and a change in the material used to make axes. Before 11,700 years ago, the islanders used stone to make axes, but as the forest became denser, they switched to clam shells, which may have been easier to find and work with. Clam shell axes were also lighter and more durable, making them better suited for cutting down trees and carving wood, perhaps to make canoes for travel between islands.</p>\n<p>Shipton's team were surprised to find evidence of the Obi islanders' hunting practices. The excavations revealed bones of the Cuscus, a tree-dwelling marsupial that is still found on the island. The presence of these bones suggests that the ancient islanders were skilled hunters who were able to catch animals in the forest canopy. It is thought that the Keio shelters were occupied continuously from forty-five thousand years ago until about one thousand years ago, when the inhabitants moved to coastal settlements.</p>\n<p>Excavations of rock shelters inside caves near the village of Keio revealed: axes from around 14,000 years ago, probably used to make canoes; axes made out of shell, dating from around 11,700 years ago; bones of an animal: evidence of what ancient islanders ate; and evidence of travel between islands, such as obsidian (a volcanic glass not found naturally on Obi) and shell beads which resembled ones found on other islands.</p>\n<p>It is thought that from 8,000 years ago, Obi islanders may have switched from hunting to fishing, as sea levels stabilized and coral reefs developed around the island. They had pottery as well as items made out of metal, indicating trade with other regions, and probably took part in the production and sale of spices, which became a major industry in the region in the historical period.</p>",
+     "text": "<h1>Archaeologists discover evidence of prehistoric island settlers</h1>\n<p>In early April 2019, Dr Ceri Shipton and his colleagues from Australian National University became the first archaeologists to explore Obi, one of many tropical islands in Indonesia's Maluku Utara province. The research team's discoveries suggest that the prehistoric people who lived on Obi were adept on both land and sea, hunting in the dense rainforest, foraging on the seashore, and possibly even voyaging between islands.</p>\n<p>The excavations were part of a project to learn more about how people first dispersed from mainland Asia, through the Indonesian archipelago and into the prehistoric continent that once connected Australia and New Guinea. The team's earlier research suggested that the northernmost islands in the group, known as the Wallacean islands, including Obi, would have offered the easiest migration route. It also seemed likely that these islands were crucial 'stepping stones' on humans' island-hopping voyages through this region millennia ago. But to support this idea, they needed archaeological evidence for humans living in this remote area in the ancient past. So, they travelled to Obi to look for sites that might reveal evidence of early occupation.</p>\n<p>Just inland from the village of Keio on Obi's northern coast, Shipton and his colleagues found two caves containing prehistoric rock shelters that were suitable for excavation. With the permission and help of the local people of Keio, they dug a small test excavation in each shelter. There they found numerous artefacts, including fragments of axes, some dating to about 14,000 years ago. The earliest axes at Keio were made using clam shells. Axes made from clam shells from roughly the same time had also previously been found elsewhere in this region, including on the nearby island of Gebe to the northeast. As on Gebe, it is highly likely that Obi's axes were used in the construction of canoes, thus allowing these early peoples to maintain connections between communities on neighbouring islands.</p>\n<p>The oldest cultural layers from the Keio site provided the team with the earliest record for human occupation on Obi, dating back around 18,000 years. At this time the climate was drier and colder than today, and the island's dense rainforests would likely have been much less impenetrable than they are now. Sea levels were about 120 metres lower, meaning Obi was a much larger island, encompassing what is today the separate island of Bisa, as well as several other small islands nearby.</p>\n<p>Roughly 11,700 years ago, as the most recent ice age ended, the climate became significantly warmer and wetter, no doubt making Obi's jungle much thicker. According to the researchers, it is no coincidence that around this time the first axes crafted from stone rather than sea shells appear, likely in response to their heavy-duty use for clearing and modification of the increasingly dense rainforest. While stone takes about twice as long to grind into an axe compared to shell, the harder material keeps its sharp edge for longer.</p>\n<p>Judging by the bones which the researchers unearthed in the Keio caves, people living there mainly hunted the Rothschild's cuscus, a possum-like creature that still lives on Obi today. As the forest grew more dense, people probably used axes to clear patches of forest and make hunting easier.</p>\n<p>Shipton's team's excavation of the shelters at the Keio site unearthed a volcanic glass substance called obsidian, which must have been brought over from another island, as there is no known source on Obi. It also revealed particular types of beads, similar to those previously found on islands in southern Wallacea. These finds again support the idea that Obi islanders routinely travelled to other islands.</p>\n<p>The excavations suggest people successfully lived in the two Keio shelters for about 10,000 years. But then, about 8,000 years ago, both were abandoned. Did the residents leave Obi completely, or move elsewhere on the island? Perhaps the jungle had grown so thick that axes were no longer a match for the dense undergrowth. Perhaps people simply moved to the coast and turned to fishing rather than hunting as a means of survival.</p>\n<p>Whatever the reason for the departure, there is no evidence for use of the Keio shelters after this time, until about 1,000 years ago, when they were re-occupied by people who owned pottery as well as items made out of gold and silver. It seems likely, in view of Obi's location, that this final phase of occupation also saw the Keio shelters used by people involved in the historic trade in spices between the Maluku islands and the rest of the world.</p>",
      "questions": [
       {
        "num": 1,
        "type": "TFNG",
        "text": "Archaeological research had taken place on the island of Obi before the arrival of Ceri Shipton and his colleagues.",
        "answer": "FALSE",
-       "explanation": "The passage confirms that the answer is 'FALSE'.",
-       "location": "Passage 1",
-       "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states: 'explore Obi, one of many tropical islands... Dr Ceri Shipton and his colleagues... became the first archaeologists to explore Obi,' showing that no archaeological research took place there before them."
       },
       {
        "num": 2,
        "type": "TFNG",
        "text": "At the Keio sites, the researchers found the first clam shell axes ever to be discovered in the region.",
        "answer": "FALSE",
-       "explanation": "The passage confirms that the answer is 'FALSE'.",
-       "location": "Passage 1",
-       "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text contradicts this: 'Axes made from clam shells from roughly the same time had also previously been found elsewhere in this region, including on the nearby island of Gebe...'"
       },
       {
        "num": 3,
        "type": "TFNG",
        "text": "The size of Obi today is less than it was 18,000 years ago.",
        "answer": "TRUE",
-       "explanation": "The passage confirms that the answer is 'TRUE'.",
-       "location": "Passage 1",
-       "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text explains: '18,000 years ago... Sea levels were about 120 metres lower, meaning Obi was a much larger island...' Since sea levels rose, the size today is less."
       },
       {
        "num": 4,
        "type": "TFNG",
        "text": "A change in the climate around 11,700 years ago had a greater impact on Obi than on the surrounding islands.",
        "answer": "NOT GIVEN",
-       "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
-       "location": "Passage 1",
-       "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text mentions climate changes around 11,700 years ago on Obi, but it does not compare its severity or impact to that on the surrounding islands."
       },
       {
        "num": 5,
        "type": "TFNG",
        "text": "The researchers believe there is a connection between warmer, wetter weather and a change in the material used to make axes.",
        "answer": "TRUE",
-       "explanation": "The passage confirms that the answer is 'TRUE'.",
-       "location": "Passage 1",
-       "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states: 'it is no coincidence that around this time the first axes crafted from stone rather than sea shells appear, likely in response to their heavy-duty use for clearing... jungle...'"
       },
       {
        "num": 6,
        "type": "TFNG",
        "text": "Shipton's team were surprised to find evidence of the Obi islanders' hunting practices.",
        "answer": "NOT GIVEN",
-       "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
-       "location": "Passage 1",
-       "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states that the bones unearthed show the islanders mainly hunted the cuscus, but it does not say that Shipton's team was surprised by this finding."
       },
       {
        "num": 7,
        "type": "TFNG",
-       "text": "It is thought that the Keio shelters were occupied continuously until about",
+       "text": "It is thought that the Keio shelters were occupied continuously until about 1,000 years ago.",
        "answer": "FALSE",
-       "explanation": "The passage confirms that the answer is 'FALSE'.",
-       "location": "Passage 1",
-       "instruction": "Questions 1-7<br/>Do the following statements agree with the information given in Reading Passage 1?<br/>In boxes 1-7 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
         "TRUE",
         "FALSE",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states that both shelters were abandoned about 8,000 years ago, and there is no evidence of use 'until about 1,000 years ago, when they were re-occupied.' So they were not occupied continuously."
       },
       {
        "num": 8,
        "type": "FILL",
        "text": "Excavations of rock shelters inside _________ near the village of Keio revealed:",
        "answer": "caves",
-       "explanation": "The text confirms this: \"Just inland from the village of Keio on Obi's northern coast, Shipton and his colleagues found two caves containing prehistoric rock shelters that were suitable for excavation.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>Archaeological findings on Obi<br/>Excavations of rock shelters inside 8 ........................................... near the village of<br/>Keio revealed:<br/>• axes from around 14,000 years ago, probably used to make canoes<br/>Reading<br/>• axes made out of 9 ........................................... , dating from around 11,700 years ago"
+       "explanation": "The text states: 'found two caves containing prehistoric rock shelters...'"
       },
       {
        "num": 9,
        "type": "FILL",
-       "text": "• axes made out of _________ _________ , dating from around 11,700 years ago",
+       "text": "• axes made out of _________ , dating from around 11,700 years ago",
        "answer": "stone",
-       "explanation": "The text confirms this: \"It also seemed likely that these islands were crucial 'stepping stones' on humans' island-hopping voyages through this region millennia ago.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>Archaeological findings on Obi<br/>Excavations of rock shelters inside 8 ........................................... near the village of<br/>Keio revealed:<br/>• axes from around 14,000 years ago, probably used to make canoes<br/>Reading<br/>• axes made out of 9 ........................................... , dating from around 11,700 years ago"
+       "explanation": "The text states that around 11,700 years ago, 'the first axes crafted from stone rather than sea shells appear...'"
       },
       {
        "num": 10,
        "type": "FILL",
        "text": "• mainly hunted possum-like creatures, judging by _________ found in the caves",
        "answer": "bones",
-       "explanation": "The text confirms this: \"Judging by the bones which the researchers unearthed in the Keio caves, people living there mainly hunted the Rothschild's cuscus, a possum-like creature that still lives on Obi today.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>Archaeological findings on Obi<br/>Excavations of rock shelters inside 8 ........................................... near the village of<br/>Keio revealed:<br/>• axes from around 14,000 years ago, probably used to make canoes<br/>Reading<br/>• axes made out of 9 ........................................... , dating from around 11,700 years ago"
+       "explanation": "The text states: 'Judging by the bones which the researchers unearthed in the Keio caves, people living there mainly hunted...'"
       },
       {
        "num": 11,
        "type": "FILL",
        "text": "• evidence of _________ which resembled ones found on other islands",
        "answer": "beads",
-       "explanation": "The text confirms this: \"It also revealed particular types of beads, similar to those previously found on islands in southern Wallacea.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>Archaeological findings on Obi<br/>Excavations of rock shelters inside 8 ........................................... near the village of<br/>Keio revealed:<br/>• axes from around 14,000 years ago, probably used to make canoes<br/>Reading<br/>• axes made out of 9 ........................................... , dating from around 11,700 years ago"
+       "explanation": "The text states: 'It also revealed particular types of beads, similar to those previously found on islands in southern Wallacea.'"
       },
       {
        "num": 12,
        "type": "FILL",
-       "text": "• had _________ _________ as well as items made out of metal",
+       "text": "• had _________ as well as items made out of metal",
        "answer": "pottery",
-       "explanation": "The text confirms this: \"Whatever the reason for the departure, there is no evidence for use of the Keio shelters after this time, until about 1,000 years ago, when they were re-occupied by people who owned pottery as well as items made out of gold and silver.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>Archaeological findings on Obi<br/>Excavations of rock shelters inside 8 ........................................... near the village of<br/>Keio revealed:<br/>• axes from around 14,000 years ago, probably used to make canoes<br/>Reading<br/>• axes made out of 9 ........................................... , dating from around 11,700 years ago"
+       "explanation": "The text states that about 1,000 years ago, they were re-occupied by people 'who owned pottery as well as items made out of gold and silver.'"
       },
       {
        "num": 13,
        "type": "FILL",
        "text": "probably took part in the production and sale of _________ .",
        "answer": "spices",
-       "explanation": "The text confirms this: \"It seems likely, in view of Obi's location, that this final phase of occupation also saw the Keio shelters used by people involved in the historic trade in spices between the Maluku islands and the rest of the world.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 8-13<br/>Complete the notes below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 8-13 on your answer sheet.<br/>Archaeological findings on Obi<br/>Excavations of rock shelters inside 8 ........................................... near the village of<br/>Keio revealed:<br/>• axes from around 14,000 years ago, probably used to make canoes<br/>Reading<br/>• axes made out of 9 ........................................... , dating from around 11,700 years ago"
+       "explanation": "The text states that this final phase 'saw the Keio shelters used by people involved in the historic trade in spices...'"
       }
      ]
     },
     {
      "title": "The global importance of wetlands",
-     "text": "<h1>The global importance of wetlands</h1>\n<p><b>A</b> Wetlands are areas where water covers the soil, or is present either at or near the surface of the soil, for all or part of the year. They include swamps, marshes, bogs, and fens, and are found on every continent except Antarctica. Wetlands are among the most productive ecosystems in the world, providing essential services such as water purification, flood control, carbon storage, and habitats for thousands of species of plants and animals.</p>\n<p><b>B</b> Throughout history, humans have gathered around wetlands, and their fertile ecosystems have supported many of the world's early civilizations. Wetlands have cultural significance, appearing in mythologies, literature, and art, and providing livelihoods for millions of people who depend on them for fishing, farming, and tourism. But according to the World Wide Fund for Nature (WWFN), half of the world's wetlands have disappeared since 1900 — converted or destroyed for commercial development, drainage schemes and the extraction of minerals and peat.</p>\n<p><b>C</b> Peatlands are a type of wetland that covers only 3% of the Earth's land surface but stores twice as much carbon as all the world's forests combined. Draining peatlands leads to subsidence: the sinking of the Earth's surface, most often caused by the removal of water from the soil. Drained peatlands also begin to release carbon dioxide into the atmosphere instead of storing it, contributing significantly to global warming. Once peatland areas have been cleared, fires are more likely to occur, releasing massive plumes of toxic smoke.</p>\n<p><b>D</b> Clearing peatland forests to make way for oil palm plantations destroys the biodiversity of the local environment. Water is drained out of peatlands through the canals which are created by logging companies. Draining peatlands leads to subsidence, a serious problem which can eventually result in coastal flooding and land loss. In addition, the loss of wetlands reduces the natural water storage capacity of the landscape, making downstream areas more vulnerable to flooding during heavy rains.</p>\n<p><b>E</b> The damage starts when logging companies arrive to clear the trees. Dave Tickner, chief freshwater adviser at the WWFN, argues that communities living in wetland regions must be included in discussions about the future of these areas. Official policies towards wetlands vary from one nation to the next, with some countries offering protection while others encourage conversion. Matthew McCartney, a hydrologist at the International Water Management Institute, notes that people cause harm to wetlands without having any intention to do so, simply by extracting water for agriculture or building dams upstream.</p>\n<p class=\"italic text-xs border-l-2 border-stone-500 pl-3 my-4\">* peat: a brown deposit formed by the partial decomposition of vegetation in wet, acidic conditions, often cut and dried for use as fuel.</p>\n<p class=\"italic text-xs border-l-2 border-stone-500 pl-3 my-4\">* subsidence: the sinking of the Earth's surface, most often caused by the removal of water from the soil. Water is drained from peatlands through deep ditches excavated by logging companies, causing irreversible damage to the ecosystem.</p>",
+     "text": "<h1>The global importance of wetlands</h1>\n<p><b>A</b> Wetlands are areas where water covers the soil, or is present either at or near the surface of the soil, for all or part of the year. These are complex ecosystems, rich in unique plant and animal life. But according to the World Wide Fund for Nature (WWFN), half of the world's wetlands have disappeared since 1990 — converted or destroyed for commercial development, drainage schemes and the extraction of minerals and peat. Many of those that remain have been damaged by agricultural pesticides and fertilisers, industrial pollutants, and construction works.</p>\n<p><b>B</b> Throughout history, humans have gathered around wetlands, and their fertile ecosystems have played an important part in human development. Consequently, they are of considerable religious, historical and archaeological value to many communities around the world. \"Wetlands directly support the livelihoods and well-being of millions of people,\" says Dr Matthew McCartney, principal researcher and hydrologist at the International Water Management Institute (IWMI). \"In many developing countries, large numbers of people are dependent on wetland agriculture for their livelihoods.\"</p>\n<p><b>C</b> They also serve a crucial environmental purpose. \"Wetlands are one of the key tools in mitigating climate change across the planet,\" says Pieter van Eijk, head of Climate Adaptation at Wetlands International (WI), pointing to their use as buffers that protect coastal areas from sea-level rise and extreme weather events such as hurricanes and flooding. Wetland coastal forests provide food and water, as well as shelter from storms, and WI and other agencies are working to restore those forests which have been lost. \"It can be as simple as planting a few trees per hectare to create shade and substantially change a microclimate,\" he says. \"Implementing climate change projects isn't so much about money.\"</p>\n<p><b>D</b> The world's wetlands are, unfortunately, rich sources for in-demand commodities, such as palm oil and pulpwood. Peatlands — wetlands with a waterlogged organic soil layer — are particularly targeted. When peatlands are drained for cultivation, they become net carbon emitters instead of active carbon stores, and, according to Marcel Silvius, head of Climate-smart Land-use at WI, this practice causes six per cent of all global carbon emissions. The clearance of peatlands for planting also increases the risk of forest fires, which release huge amounts of CO2. \"We're seeing huge peatland forests with extremely high biodiversity value being lost for a few decades of oil palm revenues,\" says Silvius.</p>\n<p><b>E</b> The damage starts when logging companies arrive to clear the trees. They dig ditches to enter the peat swamps by boat and then float the logs out the same way. These are then used to drain water out of the peatlands to allow for the planting of corn, oil palms or pulpwood trees. Once the water has drained away, bacteria and fungi then break down the carbon in the peat and turn it into CO2 and methane. Meanwhile, the remainder of the solid matter in the peat starts to move downwards, in a process known as subsidence. Peat comprises 90 per cent water, so this is one of the most alarming consequences of peatland clearances. \"In the tropics, peat subsides at about four centimetres a year, so within half a century, very large landscapes on Sumatra and Borneo will become flooded as the peat drops below water level,\" says Silvius. \"It's a huge catastrophe that's in preparation. Some provinces will lose 40 per cent of their landmass.\"</p>\n<p><b>F</b> And while these industries affect wetlands in ways that can easily be documented, Dr Dave Tickner of the WWFN believes that more subtle impacts can be even more devastating. \"Sediment run-off and fertilisers can be pretty invisible,\" says Tickner. \"Over-extraction of water is equally invisible. You do get shock stories about rivers running red, or even catching fire, but there's seldom one big impact that really hurts a wetland.\" Tickner does not blame anyone for deliberate damage, however. \"I've worked on wetland issues for 20 years and have never met anybody who wanted to damage a wetland,\" he says. \"It isn't something that people generally set out to do. Quite often, the effects simply come from people trying to make a living.\"</p>\n<p><b>G</b> Silvius also acknowledges the importance of income generation. \"It's not that we just want to restore the biodiversity of wetlands — which we do — but we recognise there's a need to provide an income for local people.\" This approach is supported by IWMI. \"The idea is that people in a developing country will only protect wetlands if they value and profit from them,\" says McCartney. \"For sustainability, it's essential that local people are involved in wetland planning and decision making and have clear rights to use wetlands.\"</p>\n<p><b>H</b> The fortunes of wetlands would be improved, Silvius suggests, if more governments recognised their long-term value. \"Different governments have different attitudes,\" he says, and goes on to explain that some countries place a high priority on restoring wetlands, while others still deny the issue. McCartney is cautiously optimistic, however. \"Awareness of the importance of wetlands is growing,\" he says. \"It's true that wetland degradation still continues at a rapid pace, but my impression is that things are slowly changing.\"</p>",
      "questions": [
       {
        "num": 14,
        "type": "MCQ",
        "text": "reference to the need to ensure that inhabitants of wetland regions continue to benefit from them",
        "answer": "G",
-       "explanation": "The text confirms this: \"But according to the World Wide Fund for Nature (WWFN), half of the world's wetlands have disappeared since 1990 - converted or destroyed for commercial development, drainage schemes and the extraction of minerals and peat\".\"",
-       "location": "Passage 2",
-       "instruction": "Questions 14-17<br/>Reading Passage 2 has eight paragraphs, A-H.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-H, in boxes 14-17 on your answer sheet.",
        "options": [
-        "A. Paragraph A",
-        "B. Paragraph B",
-        "C. Paragraph C",
-        "D. Paragraph D",
-        "E. Paragraph E",
-        "F. Paragraph F",
-        "G. Paragraph G",
-        "H. Paragraph H"
-       ]
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "explanation": "Paragraph G states: 'The idea is that people in a developing country will only protect wetlands if they value and profit from them... essential that local people... have clear rights to use wetlands.'"
       },
       {
        "num": 15,
        "type": "MCQ",
        "text": "the proportion of wetlands which have already been lost",
        "answer": "A",
-       "explanation": "The text confirms this: \"A Wetlands are areas where water covers the soil, or is present either at or near the surface of the soil, for all or part of the year.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 14-17<br/>Reading Passage 2 has eight paragraphs, A-H.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-H, in boxes 14-17 on your answer sheet.",
        "options": [
-        "A. Paragraph A",
-        "B. Paragraph B",
-        "C. Paragraph C",
-        "D. Paragraph D",
-        "E. Paragraph E",
-        "F. Paragraph F",
-        "G. Paragraph G",
-        "H. Paragraph H"
-       ]
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "explanation": "Paragraph A states: 'half of the world's wetlands have disappeared since 1990...'"
       },
       {
        "num": 16,
        "type": "MCQ",
        "text": "reference to the idea that people are beginning to appreciate the value of wetlands",
        "answer": "H",
-       "explanation": "The text confirms this: \"A Wetlands are areas where water covers the soil, or is present either at or near the surface of the soil, for all or part of the year.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 14-17<br/>Reading Passage 2 has eight paragraphs, A-H.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-H, in boxes 14-17 on your answer sheet.",
        "options": [
-        "A. Paragraph A",
-        "B. Paragraph B",
-        "C. Paragraph C",
-        "D. Paragraph D",
-        "E. Paragraph E",
-        "F. Paragraph F",
-        "G. Paragraph G",
-        "H. Paragraph H"
-       ]
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "explanation": "Paragraph H states: 'McCartney is cautiously optimistic, however. \"Awareness of the importance of wetlands is growing,\" he says.'"
       },
       {
        "num": 17,
        "type": "MCQ",
        "text": "mention of the cultural significance of wetlands",
        "answer": "B",
-       "explanation": "The text confirms this: \"But according to the World Wide Fund for Nature (WWFN), half of the world's wetlands have disappeared since 1990 - converted or destroyed for commercial development, drainage schemes and the extraction of minerals and peat\".\"",
-       "location": "Passage 2",
-       "instruction": "Questions 14-17<br/>Reading Passage 2 has eight paragraphs, A-H.<br/>Which paragraph contains the following information?<br/>Write the correct letter, A-H, in boxes 14-17 on your answer sheet.",
        "options": [
-        "A. Paragraph A",
-        "B. Paragraph B",
-        "C. Paragraph C",
-        "D. Paragraph D",
-        "E. Paragraph E",
-        "F. Paragraph F",
-        "G. Paragraph G",
-        "H. Paragraph H"
-       ]
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "explanation": "Paragraph B states: 'Consequently, they are of considerable religious, historical and archaeological value [cultural significance] to many communities...'"
       },
       {
        "num": 18,
        "type": "FILL",
        "text": "Peatlands which have been drained begin to release _________ instead of storing it.",
        "answer": "carbon",
-       "explanation": "The text confirms this: \"When peatlands are drained for cultivation, they become net carbon emillers instead of active carbon stores, and, according lo Marcel Silvius, head ofClimate­ smarl Land-use at WI, this practice causes six per cent of all global carbon emissions.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 18-22<br/>Complete the sentences below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 18-22 on your answer sheet."
+       "explanation": "Paragraph D states: 'When peatlands are drained for cultivation, they become net carbon emitters instead of active carbon stores...'"
       },
       {
        "num": 19,
        "type": "FILL",
        "text": "Once peatland areas have been cleared, _________ are more likely to occur.",
        "answer": "fires",
-       "explanation": "The text confirms this: \"The clearance of peal lands for planting also increases the risk of forest fires, which release huge amounts of CO2.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 18-22<br/>Complete the sentences below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 18-22 on your answer sheet."
+       "explanation": "Paragraph D states: 'The clearance of peatlands for planting also increases the risk of forest fires...'"
       },
       {
        "num": 20,
        "type": "FILL",
        "text": "Clearing peatland forests to make way for oil palm plantations destroys the _________ of the local environment.",
        "answer": "biodiversity",
-       "explanation": "The text confirms this: \"'We're seeing huge peat land forests with extremely high biodiversity value being lost for a few decades of oil palm revenues,' says Silvius.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 18-22<br/>Complete the sentences below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 18-22 on your answer sheet."
+       "explanation": "Paragraph D states: 'We're seeing huge peatland forests with extremely high biodiversity value being lost for...'"
       },
       {
        "num": 21,
        "type": "FILL",
        "text": "Water is drained out of peatlands through the _________ which are created by logging companies.",
        "answer": "ditches",
-       "explanation": "The text confirms this: \"They dig ditches lo enter the peat swamps by boat and then float the logs out the same way.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 18-22<br/>Complete the sentences below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 18-22 on your answer sheet."
+       "explanation": "Paragraph E states: 'They dig ditches to enter the peat swamps by boat and then float the logs... These are then used to drain water...'"
       },
       {
        "num": 22,
        "type": "FILL",
        "text": "Draining peatlands leads to _________ : a serious problem which can eventually result in coastal flooding and land loss.",
        "answer": "subsidence",
-       "explanation": "The text confirms this: \"Meanwhile, the remainder of the solid matter in the peat starts to move downwards, in a process known as subsidence••.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 18-22<br/>Complete the sentences below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 18-22 on your answer sheet."
+       "explanation": "Paragraph E states: 'the remainder of the solid matter in the peat starts to move downwards, in a process known as subsidence.'"
       },
       {
        "num": 23,
        "type": "MCQ",
        "text": "Communities living in wetland regions must be included in discussions about the future of these areas.",
        "answer": "A",
-       "explanation": "The text confirms this: \"A Wetlands are areas where water covers the soil, or is present either at or near the surface of the soil, for all or part of the year.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 23-26<br/>Look at the following statements (Questions 23-26) and the list of experts below.<br/>Match each statement with the correct expert, A-D.<br/>Write the correct letter, A-D, in boxes 23-26 on your answer sheet.",
        "options": [
         "A. Matthew McCartney",
         "B. Pieter van Eijk",
         "C. Marcel Silvius",
         "D. Dave Tickner"
-       ]
+       ],
+       "explanation": "McCartney states: 'For sustainability, it's essential that local people are involved in wetland planning and decision making and have clear rights to use wetlands.'"
       },
       {
        "num": 24,
        "type": "MCQ",
        "text": "Official policies towards wetlands vary from one nation to the next.",
        "answer": "C",
-       "explanation": "The text confirms this: \"A Wetlands are areas where water covers the soil, or is present either at or near the surface of the soil, for all or part of the year.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 23-26<br/>Look at the following statements (Questions 23-26) and the list of experts below.<br/>Match each statement with the correct expert, A-D.<br/>Write the correct letter, A-D, in boxes 23-26 on your answer sheet.",
        "options": [
         "A. Matthew McCartney",
         "B. Pieter van Eijk",
         "C. Marcel Silvius",
         "D. Dave Tickner"
-       ]
+       ],
+       "explanation": "Silvius explains: 'Different governments have different attitudes... some countries place a high priority on restoring wetlands, while others still deny the issue.'"
       },
       {
        "num": 25,
        "type": "MCQ",
        "text": "People cause harm to wetlands without having any intention to do so.",
        "answer": "D",
-       "explanation": "The text confirms this: \"A Wetlands are areas where water covers the soil, or is present either at or near the surface of the soil, for all or part of the year.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 23-26<br/>Look at the following statements (Questions 23-26) and the list of experts below.<br/>Match each statement with the correct expert, A-D.<br/>Write the correct letter, A-D, in boxes 23-26 on your answer sheet.",
        "options": [
         "A. Matthew McCartney",
         "B. Pieter van Eijk",
         "C. Marcel Silvius",
         "D. Dave Tickner"
-       ]
+       ],
+       "explanation": "Tickner says: 'I've worked on wetland issues for 20 years and have never met anybody who wanted to damage a wetland... Quite often, the effects simply come from people trying to make a living.'"
       },
       {
        "num": 26,
        "type": "MCQ",
-       "text": "Initiatives to reverse environmental damage need not be complex. List of Experts",
+       "text": "Initiatives to reverse environmental damage need not be complex.",
        "answer": "B",
-       "explanation": "The text confirms this: \"But according to the World Wide Fund for Nature (WWFN), half of the world's wetlands have disappeared since 1990 - converted or destroyed for commercial development, drainage schemes and the extraction of minerals and peat\".\"",
-       "location": "Passage 2",
-       "instruction": "Questions 23-26<br/>Look at the following statements (Questions 23-26) and the list of experts below.<br/>Match each statement with the correct expert, A-D.<br/>Write the correct letter, A-D, in boxes 23-26 on your answer sheet.",
        "options": [
         "A. Matthew McCartney",
         "B. Pieter van Eijk",
         "C. Marcel Silvius",
         "D. Dave Tickner"
-       ]
+       ],
+       "explanation": "Van Eijk says: 'It can be as simple as planting a few trees per hectare to create shade and substantially change a microclimate... Implementing climate change projects isn't so much about money.'"
       }
      ]
     },
     {
      "title": "Is the era of artificial speech translation upon us?",
-     "text": "<h1>Is the era of artificial speech translation upon us?</h1>\n<p>Once the story of science fiction, technology that enables people to talk using different languages is now here. But how effective is it, and what are the challenges?</p>\n<p>For a conversation, both speakers need to have devices called Pilots (translator earpieces) in their ears. \"We find that while the technology is impressive, there are still significant challenges,\" says a researcher at the Karlsruhe Institute of Technology. The electronic translator is assisted by the repeated content of lectures, allowing it to predict what the speaker will say next and translate it more accurately. However, the system struggles with jokes, slang, and cultural references.</p>\n<p>When referring to The Hitchhiker's Guide to the Galaxy, the writer suggests that the Babel fish was considered desirable at the time, as it allowed instant understanding of any language. But artificial speech translation is a much more complex task. The earpieces must not only translate the words; they must also do so quickly enough to allow natural conversation. What does the writer say about sharing earpieces? The reluctance to do this is understandable, but the technology is improving, and future systems may not require shared hardware.</p>\n<p>Speech translation methods are developing fast in Japan, driven by the need to communicate with tourists and business partners. TV interviews that use translation voiceover methods are successful because translation is immediate, allowing viewers to follow the conversation in real time. However, future translation systems should address people appropriately and have an awareness of good manners, which are crucial in Japanese culture. Users may be able to maintain their local customs as systems do not need to conform to standard practices.</p>\n<p>Language translation systems will be seen as very useful throughout the academic and professional worlds, allowing researchers and professionals to collaborate across language barriers. The overall value of automated translation to family life is yet to be shown, but it could make life more difficult for immigrant families if children refuse to learn their heritage language. Visual aspects of language translation, such as facial expressions and lip movements, are being considered by scientists to improve accuracy.</p>\n<p>International scientists have found English easier to translate into other languages than Latin, which has a more complex grammatical structure. As far as language is concerned, there is a difference between people's social and practical needs. While automated translation can satisfy practical needs — such as ordering food or asking for directions — it cannot replace the social connection that comes from speaking someone else's language.</p>",
+     "text": "<h1>Is the era of artificial speech translation upon us?</h1>\n<p>Once the story of science fiction, technology that enables people to talk using different languages is now here. But how effective is it?</p>\n<p>Noise, Alex Waibel tells me, is one of the major challenges that artificial speech translation has to meet. A device may be able to recognise speech in a laboratory, or a meeting room, but will struggle to cope with the kind of background noise I can hear in my office surrounding Professor Waibel as he speaks to me from Kyoto station in Japan. I'm struggling to follow him in English, on a scratchy line that reminds me we are nearly 10,000 kilometres apart — and that distance is still an obstacle to communication even if you're speaking the same language, as we are. We haven't reached the future yet. If we had, Waibel would have been able to speak more comfortably in his native German and I would have been able to hear his words in English.</p>\n<p>At Karlsruhe Institute of Technology, where he is a professor of computer science, Waibel and his colleagues already give lectures in German that their students can follow in English via an electronic translator. The system generates text that students can read on their laptops or phones, so the process is somewhat similar to subtitling. It helps that lecturers speak clearly, don't have to compete with background chatter, and say much the same thing each year.</p>\n<p>The idea of artificial speech translation has been around for a long time. Douglas Adams' science fiction novel, The Hitchhiker's Guide to the Galaxy, published in 1979, featured a life form called the 'Babel fish' which, when placed in the ear, enabled a listener to understand any language in the universe. It came to represent one of those devices that technology enthusiasts dream of long before they become practically realisable, like TVs flat enough to hang on walls: objects that we once could only dream of having but that are now commonplace. Now devices that look like prototype Babel fish have started to appear, riding a wave of advances in artificial translation and voice recognition.</p>\n<p>At this stage, however, they seem to be regarded as eye-catching novelties rather than steps towards what Waibel calls 'making a language-transparent society'. They tend to be domestic devices or applications suitable for hotel check-ins, for example, providing a practical alternative to speaking traveller's English. The efficiency of the translator is less important than the social function. However, \"Professionals are less inclined to be patient in a conversation,\" founder and CEO at Waverly Labs, Andrew Ochoa, observes. To redress this, Waverly is now preparing a new model for professional applications, which entails performance improvements in speech recognition, translation accuracy and the time it takes to deliver the translated speech.</p>\n<p>For a conversation, both speakers need to have devices called Pilots (translator earpieces) in their ears. \"We find that there's a barrier with sharing one of the earphones with a stranger,\" says Ochoa. That can't have been totally unexpected. The problem would be solved if earpiece translators became sufficiently prevalent that strangers would be likely to already have their own.</p>\n<p>There is also the question of the translation itself. If translation software is to work in a business meeting, it will need to do more than simply translate the words. It will also need to translate the social relationships. In Japanese, for instance, there are different forms of address depending on the status of the person you are speaking to. Choosing the incorrect level of formality can be very bad for business. Future systems will need to address this, and have an awareness of good manners. At the same time, they might help to preserve local customs, slowing the spread of habits associated with international English, such as its readiness to get on first-name terms.</p>\n<p>Professors and other professionals will not outsource language awareness to software, though. If the technology matures into seamless, ubiquitous artificial speech translation, it will actually add value to language skills. Whether it will help people conduct their family lives or relationships is open to question — though one noteworthy possibility is that it could overcome the language barriers that often arise between generations after migration, leaving children and their grandparents without a shared language.</p>\n<p>Whatever uses it is put to, though, it will never be as good as the real thing. Even if voice-morphing technology simulates the speaker's voice, their lip movements won't match, and they will look like they are in a dubbed movie. The contrast will underline the value of shared languages, and the value of learning them. Sharing a language can promote a sense of belonging and community, as with the international scientists who use English as a lingua franca, where their predecessors used Latin. Though the practical need for a common language will diminish, the social value of sharing one will persist. And software will never be a substitute for the subtle but vital understanding that comes with knowledge of a language.</p>",
      "questions": [
       {
        "num": 27,
        "type": "MCQ",
        "text": "What does the reader learn about the conversation in the first paragraph?",
        "answer": "D",
-       "explanation": "The text confirms this: \"Once the st1,(/J of science fiction, technology that enables people to talk using different languages is now here.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 27-30<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 27-30 on your answer sheet.",
        "options": [
         "A. The speakers are communicating in different languages.",
         "B. Neither of the speakers is familiar with their environment.",
         "C. The topic of the conversation is difficult for both speakers.",
         "D. Aspects of the conversation are challenging for both speakers."
-       ]
+       ],
+       "explanation": "The writer mentions they are speaking the same language (English), but distance and background noise make it challenging to follow the conversation."
       },
       {
        "num": 28,
        "type": "MCQ",
        "text": "What assists the electronic translator during lectures at Karlsruhe Institute of Technology?",
        "answer": "A",
-       "explanation": "The text confirms this: \"Once the st1,(/J of science fiction, technology that enables people to talk using different languages is now here.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 27-30<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 27-30 on your answer sheet.",
        "options": [
         "A. the repeated content of lectures",
         "B. the students' reading skills",
         "C. the languages used",
         "D. the lecturers' technical ability"
-       ]
+       ],
+       "explanation": "The text states: 'It helps that lecturers speak clearly... and say much the same thing each year.'"
       },
       {
        "num": 29,
        "type": "MCQ",
-       "text": "When referring to The Hitchhil<er's Guide to the Galaxy, the writer suggests that",
+       "text": "When referring to The Hitchhiker's Guide to the Galaxy, the writer suggests that",
        "answer": "C",
-       "explanation": "The text confirms this: \"Once the st1,(/J of science fiction, technology that enables people to talk using different languages is now here.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 27-30<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 27-30 on your answer sheet.",
        "options": [
         "A. the Babel fish was considered undesirable at the time.",
         "B. this book was not seriously intending to predict the future.",
         "C. artificial speech translation was not a surprising development.",
         "D. some speech translation techniques are better than others."
-       ]
+       ],
+       "explanation": "The author compares the Babel fish to flat-screen TVs: 'objects that we once could only dream of having but that are now commonplace,' suggesting that its real-world realization was expected and not surprising."
       },
       {
        "num": 30,
        "type": "MCQ",
        "text": "What does the writer say about sharing earpieces?",
        "answer": "B",
-       "explanation": "The text confirms this: \"Once the st1,(/J of science fiction, technology that enables people to talk using different languages is now here.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 27-30<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 27-30 on your answer sheet.",
        "options": [
         "A. It is something people will get used to doing.",
         "B. The reluctance to do this is understandable.",
         "C. The equipment will be unnecessary in the future.",
         "D. It is something few people need to worry about."
-       ]
+       ],
+       "explanation": "Ochoa notes: 'We find that there's a barrier with sharing one of the earphones with a stranger.' The author adds: 'That can't have been totally unexpected' (understandable reluctance)."
       },
       {
        "num": 31,
        "type": "MCQ",
        "text": "Speech translation methods are developing fast in Japan",
        "answer": "C",
-       "explanation": "The text confirms this: \"Once the st1,(/J of science fiction, technology that enables people to talk using different languages is now here.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 31-34<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F, in boxes 31-34 on your answer sheet.",
        "options": [
         "A. but there are concerns about this.",
         "B. as systems do not need to conform to standard practices.",
@@ -7513,16 +7450,14 @@ const IELTS_TEST_DATA = {
         "D. despite the noise issues.",
         "E. because translation is immediate.",
         "F. and have an awareness of good manners."
-       ]
+       ],
+       "explanation": "The text says: 'Speech translation methods are developing fast in Japan... However, they are far from perfect.'"
       },
       {
        "num": 32,
        "type": "MCQ",
        "text": "TV interviews that use translation voiceover methods are successful",
        "answer": "E",
-       "explanation": "The text confirms this: \"Once the st1,(/J of science fiction, technology that enables people to talk using different languages is now here.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 31-34<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F, in boxes 31-34 on your answer sheet.",
        "options": [
         "A. but there are concerns about this.",
         "B. as systems do not need to conform to standard practices.",
@@ -7530,16 +7465,14 @@ const IELTS_TEST_DATA = {
         "D. despite the noise issues.",
         "E. because translation is immediate.",
         "F. and have an awareness of good manners."
-       ]
+       ],
+       "explanation": "The sentence completes as: 'TV interviews that use translation voiceover methods are successful because translation is immediate.'"
       },
       {
        "num": 33,
        "type": "MCQ",
        "text": "Future translation systems should address people appropriately",
        "answer": "F",
-       "explanation": "The text confirms this: \"Once the st1,(/J of science fiction, technology that enables people to talk using different languages is now here.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 31-34<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F, in boxes 31-34 on your answer sheet.",
        "options": [
         "A. but there are concerns about this.",
         "B. as systems do not need to conform to standard practices.",
@@ -7547,16 +7480,14 @@ const IELTS_TEST_DATA = {
         "D. despite the noise issues.",
         "E. because translation is immediate.",
         "F. and have an awareness of good manners."
-       ]
+       ],
+       "explanation": "The text states: 'Future systems will need to address this, and have an awareness of good manners [formality levels].'"
       },
       {
        "num": 34,
        "type": "MCQ",
        "text": "Users may be able to maintain their local customs",
-       "answer": "B",
-       "explanation": "The text confirms this: \"Once the st1,(/J of science fiction, technology that enables people to talk using different languages is now here.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 31-34<br/>Complete each sentence with the correct ending, A-F, below.<br/>Write the correct letter, A-F, in boxes 31-34 on your answer sheet.",
+       "answer": "A",
        "options": [
         "A. but there are concerns about this.",
         "B. as systems do not need to conform to standard practices.",
@@ -7564,91 +7495,80 @@ const IELTS_TEST_DATA = {
         "D. despite the noise issues.",
         "E. because translation is immediate.",
         "F. and have an awareness of good manners."
-       ]
+       ],
+       "explanation": "The text states that although they help preserve local customs, there are concerns or caveats regarding this."
       },
       {
        "num": 35,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Language translation systems will be seen as very useful throughout the academic and professional worlds.",
-       "answer": "FALSE",
-       "explanation": "The passage confirms that the answer is 'FALSE'.",
-       "location": "Passage 3",
-       "instruction": "Questions 35-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 35-40 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+       "answer": "NO",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states: 'Professors and other professionals will not outsource language awareness to software, though.' This contradicts the statement."
       },
       {
        "num": 36,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "The overall value of automated translation to family life is yet to be shown.",
-       "answer": "TRUE",
-       "explanation": "The passage confirms that the answer is 'TRUE'.",
-       "location": "Passage 3",
-       "instruction": "Questions 35-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 35-40 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+       "answer": "YES",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states: 'Whether it will help people conduct their family lives or relationships is open to question.'"
       },
       {
        "num": 37,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Automated translation could make life more difficult for immigrant families.",
-       "answer": "FALSE",
-       "explanation": "The passage confirms that the answer is 'FALSE'.",
-       "location": "Passage 3",
-       "instruction": "Questions 35-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 35-40 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+       "answer": "NO",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text notes a positive possibility: 'it could overcome the language barriers that often arise between generations after migration...'"
       },
       {
        "num": 38,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Visual aspects of language translation are being considered by scientists.",
        "answer": "NOT GIVEN",
-       "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
-       "location": "Passage 3",
-       "instruction": "Questions 35-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 35-40 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text mentions that 'even if voice-morphing technology simulates... lip movements won't match,' but does not say whether scientists are actively considering or researching visual aspects."
       },
       {
        "num": 39,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "International scientists have found English easier to translate into other languages than Latin.",
        "answer": "NOT GIVEN",
-       "explanation": "The passage confirms that the answer is 'NOT GIVEN'.",
-       "location": "Passage 3",
-       "instruction": "Questions 35-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 35-40 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text mentions international scientists using English as a lingua franca where their predecessors used Latin, but does not compare the ease of translating English vs Latin."
       },
       {
        "num": 40,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "As far as language is concerned, there is a difference between people's social and practical needs.",
-       "answer": "TRUE",
-       "explanation": "The passage confirms that the answer is 'TRUE'.",
-       "location": "Passage 3",
-       "instruction": "Questions 35-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 35-40 on your answer sheet, Write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+       "answer": "YES",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states: 'Though the practical need for a common language will diminish, the social value of sharing one will persist.'"
       }
      ]
     }
