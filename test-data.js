@@ -1,5 +1,5 @@
 // IELTS Test Data - Auto-generated
-// Last updated: 2026-07-12T09:01:29.236Z
+// Last updated: 2026-07-12T09:21:58.485Z
 
 const IELTS_TEST_DATA = {
  "1": {
@@ -2613,205 +2613,180 @@ const IELTS_TEST_DATA = {
    "passages": [
     {
      "title": "Materials to take us beyond concrete",
-     "text": "<h1>Materials to take us beyond concrete</h1>\n<p>Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon dioxide — alternatives are being developed.</p>\n<p><b>A</b> Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions. The chemical process by which cement, the key ingredient of concrete, is created results in large quantities of carbon dioxide. The UN estimates that there will be 9.8 billion people living on the planet by mid-century. They will need somewhere to live. If concrete is the only answer to the construction of new cities, then carbon emissions will soar, aggravating global warming. And so scientists have started innovating with other materials, in a scramble for alternatives to a universal commodity that has underpinned our modern life for many years.</p>\n<p><b>B</b> The problem with replacing concrete is that it is so very good at what it does. Chris Cheeseman, an engineering professor at Imperial College London, says the key thing to consider is the extent to which concrete is used around the world, and is likely to continue to be used. \"Concrete is not a high-carbon product. Cement is high carbon, but concrete is not. But it is the scale on which it is used that makes it high carbon. The sheer scale of manufacture is so huge, that is the issue.\"</p>\n<p><b>C</b> Not only are the ingredients of concrete relatively cheap and found in abundance in most places around the globe, the stuff itself has marvellous properties: Portland cement, the vital component of concrete, is mouldable and pourable, but quickly sets hard. Cheeseman also notes another advantage: concrete and steel have similar thermal expansion properties, so steel can be used to reinforce concrete, making it far stronger and more flexible as a building material than it could be on its own. According to Cheeseman, all these factors together make concrete hard to beat. \"Concrete is amazing stuff. Making anything with similar properties is going to be very difficult.\"</p>\n<p><b>D</b> A possible alternative to concrete is wood. Making buildings from wood may seem like a rather medieval idea, but climate change is driving architects to turn to treated timber as a possible resource. Recent years have seen the emergence of tall buildings constructed almost entirely from timber. Vancouver, Vienna and Brumunddal in Norway are all home to constructed tall, wooden buildings.</p>\n<p><b>E</b> Using wood to construct buildings, however, is not straightforward. Wood expands as it absorbs moisture from the air and is susceptible to pests, not to mention fire. But treating wood and combining it with other materials can improve its properties. Cross-laminated timber is engineered wood. An adhesive is used to stick layers of solid-sawn timber together, crosswise, to form building blocks. This material is light but has the strength of concrete and steel. Construction experts say that wooden buildings can be constructed at a greater speed than ones of concrete and steel and the process, it seems, is quieter. Stora Enso is Europe's biggest supplier of cross-laminated timber, and its vice-president Markus Mannström reports that the company is seeing increasing demand globally for building in wood, with climate change concerns the key driver. Finland, with its large forests, where Stora Enso is based, has been leading the way, but the company is seeing a rise in demand for its timber products across the world, including in Asia. Of course, using timber in a building also locks away the carbon that it absorbed as it grew. But even treated wood has its limitations and only when a wider range of construction projects has been proven in practice will it be possible to see wood as a real alternative to concrete in constructing tall buildings.</p>\n<p><b>F</b> Fly ash and slag from iron ore are possible alternatives to cement in a concrete mix. Fly ash, a byproduct of coal-burning power plants, can be incorporated into concrete mixes to make up as much as 15 to 30% of the cement, without harming the strength or durability of the resulting mix. Iron-ore slag, a byproduct of the iron-ore smelting process, can be used in a similar way. Their incorporation into concrete mixes has the potential to reduce greenhouse gas emissions.</p>\n<p><b>G</b> But Anna Surgenor, of the UK's Green Building Council, notes that although these waste products can save carbon in the concrete mix, their use is not always straightforward. \"It's possible to replace the cement content in concrete with waste products to lower the overall carbon impact. But there are several calculations that need to be considered across the entire life cycle of the building — these include factoring in where these materials are being shipped from. If they are transported over long distances, using fossil fuels, the use of alternative materials might not make sense from an overall carbon reduction perspective.\" While these technologies are all promising ideas, they are either unproven or based on materials that are not abundant. In their overview of innovation in the concrete industry, Felix Preston and Johanna Lehne of the UK's Royal Institute of International Affairs reached the conclusion that, \"Some novel cements have been discussed for more than a decade within the research community, without breaking through. At present, these alternatives are rarely as cost-effective as conventional cement, and they face raw-material shortages and resistance from customers.\"</p>",
+     "text": "<h1>Materials to take us beyond concrete</h1>\n<p>Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon dioxide — alternatives are being developed.</p>\n<p><b>A</b> Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions. The chemical process by which cement, the key ingredient of concrete, is created results in large quantities of carbon dioxide. The UN estimates that there will be 9.8 billion people living on the planet by mid-century. They will need somewhere to live. If concrete is the only answer to the construction of new cities, then carbon emissions will soar, aggravating global warming. And so scientists have started innovating with other materials, in a scramble for alternatives to a universal commodity that has underpinned our modern life for many years.</p>\n<p><b>B</b> The problem with replacing concrete is that it is so very good at what it does. Chris Cheeseman, an engineering professor at Imperial College London, says the key thing to consider is the extent to which concrete is used around the world, and is likely to continue to be used. 'Concrete is not a high-carbon product. Cement is high carbon, but concrete is not. But it is the scale on which it is used that makes it high carbon. The sheer scale of manufacture is so huge, that is the issue.'</p>\n<p><b>C</b> Not only are the ingredients of concrete relatively cheap and found in abundance in most places around the globe, the stuff itself has marvellous properties: Portland cement, the vital component of concrete, is mouldable and pourable, but quickly sets hard. Cheeseman also notes another advantage: concrete and steel have similar thermal expansion properties, so steel can be used to reinforce concrete, making it far stronger and more flexible as a building material than it could be on its own. According to Cheeseman, all these factors together make concrete hard to beat. 'Concrete is amazing stuff. Making anything with similar properties is going to be very difficult.'</p>\n<p><b>D</b> A possible alternative to concrete is wood. Making buildings from wood may seem like a rather medieval idea, but climate change is driving architects to turn to treated timber as a possible resource. Recent years have seen the emergence of tall buildings constructed almost entirely from timber. Vancouver, Vienna and Brumunddal in Norway are all home to constructed tall, wooden buildings.</p>\n<p><b>E</b> Using wood to construct buildings, however, is not straightforward. Wood expands as it absorbs moisture from the air and is susceptible to pests, not to mention fire. But treating wood and combining it with other materials can improve its properties. Cross-laminated timber is engineered wood. An adhesive is used to stick layers of solid-sawn timber together, crosswise, to form building blocks. This material is light but has the strength of concrete and steel. Construction experts say that wooden buildings can be constructed at a greater speed than ones of concrete and steel and the process, it seems, is quieter.</p>\n<p><b>F</b> Stora Enso is Europe's biggest supplier of cross-laminated timber, and its vice-president Markus Mannström reports that the company is seeing increasing demand globally for building in wood, with climate change concerns the key driver. Finland, with its large forests, where Stora Enso is based, has been leading the way, but the company is seeing a rise in demand for its timber products across the world, including in Asia. Of course, using timber in a building also locks away the carbon that it absorbed as it grew. But even treated wood has its limitations and only when a wider range of construction projects has been proven in practice will it be possible to see wood as a real alternative to concrete in constructing tall buildings.</p>\n<p><b>G</b> Fly ash and slag from iron ore are possible alternatives to cement in a concrete mix. Fly ash, a byproduct of coal-burning power plants, can be incorporated into concrete mixes to make up as much as 15 to 30% of the cement, without harming the strength or durability of the resulting mix. Iron-ore slag, a byproduct of the iron-ore smelting process, can be used in a similar way. Their incorporation into concrete mixes has the potential to reduce greenhouse gas emissions.</p>\n<p><b>H</b> But Anna Surgenor, of the UK's Green Building Council, notes that although these waste products can save carbon in the concrete mix, their use is not always straightforward. 'It's possible to replace the cement content in concrete with waste products to lower the overall carbon impact. But there are several calculations that need to be considered across the entire life cycle of the building — these include factoring in where these materials are being shipped from. If they are transported over long distances, using fossil fuels, the use of alternative materials might not make sense from an overall carbon reduction perspective.' While these technologies are all promising ideas, they are either unproven or based on materials that are not abundant. In their overview of innovation in the concrete industry, Felix Preston and Johanna Lehne of the UK's Royal Institute of International Affairs reached the conclusion that, 'Some novel cements have been discussed for more than a decade within the research community, without breaking through. At present, these alternatives are rarely as cost-effective as conventional cement, and they face raw-material shortages and resistance from customers.'</p>",
      "questions": [
       {
        "num": 1,
        "type": "MCQ",
-       "text": "Reading Passage 1 has eight sections, A-H.",
+       "text": "an explanation of the industrial processes that create potential raw materials for concrete",
        "answer": "G",
-       "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 1-4<br/>Reading Passage 1 has eight sections, A-H.<br/>Which section contains the following information?<br/>Write the correct letter, A-H, in boxes 1-4 on your answer sheet.",
        "options": [
-        "A. Paragraph A",
-        "B. Paragraph B",
-        "C. Paragraph C",
-        "D. Paragraph D",
-        "E. Paragraph E",
-        "F. Paragraph F",
-        "G. Paragraph G"
-       ]
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "explanation": "Section G explains: 'Fly ash and slag from iron ore are possible alternatives to cement in a concrete mix. Fly ash, a byproduct of coal-burning power plants... Iron-ore slag, a byproduct of the iron-ore smelting process...'"
       },
       {
        "num": 2,
        "type": "MCQ",
-       "text": "areference to the various locations where high-rise wooden buildings can be found an indication of how widely available the raw materials of concrete are",
+       "text": "a reference to the various locations where high-rise wooden buildings can be found",
        "answer": "D",
-       "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 1-4<br/>Reading Passage 1 has eight sections, A-H.<br/>Which section contains the following information?<br/>Write the correct letter, A-H, in boxes 1-4 on your answer sheet.",
        "options": [
-        "A. Paragraph A",
-        "B. Paragraph B",
-        "C. Paragraph C",
-        "D. Paragraph D",
-        "E. Paragraph E",
-        "F. Paragraph F",
-        "G. Paragraph G"
-       ]
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "explanation": "Section D mentions: 'Vancouver, Vienna and Brumunddal in Norway are all home to constructed tall, wooden buildings.'"
       },
       {
        "num": 3,
        "type": "MCQ",
-       "text": "an explanation of why concrete's particular properties make it difficult to find a comparable substitute",
+       "text": "an indication of how widely available the raw materials of concrete are",
        "answer": "C",
-       "explanation": "Paragraph C states \"concrete and steel have similar thermal expansion properties, so steel can be used to reinforce concrete, making it far stronger and more flexible as a building material than it could be on its own,\" concluding \"Making anything with similar properties is going to be very difficult.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 1-4<br/>Reading Passage 1 has eight sections, A-H.<br/>Which section contains the following information?<br/>Write the correct letter, A-H, in boxes 1-4 on your answer sheet.",
        "options": [
-        "A. Paragraph A",
-        "B. Paragraph B",
-        "C. Paragraph C",
-        "D. Paragraph D",
-        "E. Paragraph E",
-        "F. Paragraph F",
-        "G. Paragraph G"
-       ]
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "explanation": "Section C mentions: 'Not only are the ingredients of concrete relatively cheap and found in abundance in most places around the globe...'"
       },
       {
        "num": 4,
        "type": "MCQ",
-       "text": "an explanation of the industrial processes that create potential raw materials for concrete",
+       "text": "the belief that more high-rise wooden buildings are needed before wood can be regarded as a viable construction material",
        "answer": "F",
-       "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 1-4<br/>Reading Passage 1 has eight sections, A-H.<br/>Which section contains the following information?<br/>Write the correct letter, A-H, in boxes 1-4 on your answer sheet.",
        "options": [
-        "A. Paragraph A",
-        "B. Paragraph B",
-        "C. Paragraph C",
-        "D. Paragraph D",
-        "E. Paragraph E",
-        "F. Paragraph F",
-        "G. Paragraph G"
-       ]
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "explanation": "Section F explains: 'only when a wider range of construction projects has been proven in practice will it be possible to see wood as a real alternative to concrete in constructing tall buildings.'"
       },
       {
        "num": 5,
        "type": "FILL",
        "text": "Wood is a traditional building material, but current environmental concerns are encouraging _________ to use wood in modern construction projects.",
        "answer": "architects",
-       "explanation": "The text confirms this: \"Making buildings from wood may seem like a rather medieval idea, but climate change is driving architects to turn to treated timber as a possible resource.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 5—8<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 5—8 on your answer sheet.<br/>Making buildings with wood<br/>Wood is a traditional building material, but current environmental concerns are<br/>encouraging 5 to use wood in modern construction projects.<br/>Using wood, however, has its challenges. For example, as 6<br/>the atmosphere énters wood, it increases in size. In addition, wood is prone to pests<br/>and the risk of fire is greater. However, wood can be turned into a better construction<br/>material if it is treated and combined with other materials. In one process,<br/>of solid wood are glued together to create building blocks. These<br/>blocks are lighter than concrete and steel but equal them in strength. Experts say<br/>that wooden buildings are an improvement on those made of concrete and steel in<br/>terms of the 8 with which they can be constructed and how much<br/>noise is generated by the process."
+       "explanation": "The text confirms: 'but climate change is driving architects to turn to treated timber as a possible resource.'"
       },
       {
        "num": 6,
        "type": "FILL",
-       "text": "Using wood, however, has its challenges. For example, as _________",
+       "text": "Using wood, however, has its challenges. For example, as _________ the atmosphere enters wood, it increases in size.",
        "answer": "moisture",
-       "explanation": "The text confirms this: \"Wood expands as it absorbs moisture from the air and is susceptible to pests, not to mention fire.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 5—8<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 5—8 on your answer sheet.<br/>Making buildings with wood<br/>Wood is a traditional building material, but current environmental concerns are<br/>encouraging 5 to use wood in modern construction projects.<br/>Using wood, however, has its challenges. For example, as 6<br/>the atmosphere énters wood, it increases in size. In addition, wood is prone to pests<br/>and the risk of fire is greater. However, wood can be turned into a better construction<br/>material if it is treated and combined with other materials. In one process,<br/>of solid wood are glued together to create building blocks. These<br/>blocks are lighter than concrete and steel but equal them in strength. Experts say<br/>that wooden buildings are an improvement on those made of concrete and steel in<br/>terms of the 8 with which they can be constructed and how much<br/>noise is generated by the process."
+       "explanation": "The text confirms: 'Wood expands as it absorbs moisture from the air...'"
       },
       {
        "num": 7,
        "type": "FILL",
        "text": "In one process, _________ of solid wood are glued together crosswise to create building blocks.",
        "answer": "layers",
-       "explanation": "The text confirms this: \"An adhesive is used to stick layers of solid-sawn timber together, crosswise, to form building blocks.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 5—8<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 5—8 on your answer sheet.<br/>Making buildings with wood<br/>Wood is a traditional building material, but current environmental concerns are<br/>encouraging 5 to use wood in modern construction projects.<br/>Using wood, however, has its challenges. For example, as 6<br/>the atmosphere énters wood, it increases in size. In addition, wood is prone to pests<br/>and the risk of fire is greater. However, wood can be turned into a better construction<br/>material if it is treated and combined with other materials. In one process,<br/>of solid wood are glued together to create building blocks. These<br/>blocks are lighter than concrete and steel but equal them in strength. Experts say<br/>that wooden buildings are an improvement on those made of concrete and steel in<br/>terms of the 8 with which they can be constructed and how much<br/>noise is generated by the process."
+       "explanation": "The text confirms: 'An adhesive is used to stick layers of solid-sawn timber together...'"
       },
       {
        "num": 8,
        "type": "FILL",
        "text": "Experts say that wooden buildings are an improvement on those made of concrete and steel in terms of the _________ with which they can be constructed and how much noise is generated by the process.",
        "answer": "speed",
-       "explanation": "The text confirms this: \"Construction experts say that wooden buildings can be constructed at a greater speed than ones of concrete and steel and the process, it seems, is quieter.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 5—8<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 5—8 on your answer sheet.<br/>Making buildings with wood<br/>Wood is a traditional building material, but current environmental concerns are<br/>encouraging 5 to use wood in modern construction projects.<br/>Using wood, however, has its challenges. For example, as 6<br/>the atmosphere énters wood, it increases in size. In addition, wood is prone to pests<br/>and the risk of fire is greater. However, wood can be turned into a better construction<br/>material if it is treated and combined with other materials. In one process,<br/>of solid wood are glued together to create building blocks. These<br/>blocks are lighter than concrete and steel but equal them in strength. Experts say<br/>that wooden buildings are an improvement on those made of concrete and steel in<br/>terms of the 8 with which they can be constructed and how much<br/>noise is generated by the process."
+       "explanation": "The text confirms: 'Construction experts say that wooden buildings can be constructed at a greater speed than ones of concrete and steel...'"
       },
       {
        "num": 9,
        "type": "MCQ",
        "text": "The environmental advantage of cement alternatives may not be as great as initially assumed.",
        "answer": "C",
-       "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 9-13<br/>Look at the following statements (Questions 9-13) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 9-13 on your answer sheet.<br/>NB You may use any letter more than once.",
        "options": [
         "A. Chris Cheeseman",
         "B. Markus Mannström",
         "C. Anna Surgenor",
         "D. Felix Preston and Johanna Lehne"
-       ]
+       ],
+       "explanation": "Anna Surgenor notes that if materials are shipped long distances using fossil fuels, alternative materials might not make sense from an overall carbon reduction perspective."
       },
       {
        "num": 10,
        "type": "MCQ",
        "text": "It would be hard to create a construction alternative to concrete that offers so many comparable benefits.",
        "answer": "A",
-       "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 9-13<br/>Look at the following statements (Questions 9-13) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 9-13 on your answer sheet.<br/>NB You may use any letter more than once.",
        "options": [
         "A. Chris Cheeseman",
         "B. Markus Mannström",
         "C. Anna Surgenor",
         "D. Felix Preston and Johanna Lehne"
-       ]
+       ],
+       "explanation": "Chris Cheeseman states: 'Making anything with similar properties is going to be very difficult.'"
       },
       {
        "num": 11,
        "type": "MCQ",
        "text": "Worries about the environment have led to increased interest in wood as a construction material.",
        "answer": "B",
-       "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 9-13<br/>Look at the following statements (Questions 9-13) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 9-13 on your answer sheet.<br/>NB You may use any letter more than once.",
        "options": [
         "A. Chris Cheeseman",
         "B. Markus Mannström",
         "C. Anna Surgenor",
         "D. Felix Preston and Johanna Lehne"
-       ]
+       ],
+       "explanation": "Markus Mannström reports that the company is seeing increasing demand globally for building in wood, with climate change concerns the key driver."
       },
       {
        "num": 12,
        "type": "MCQ",
        "text": "Expense has been a factor in the negative response to the development of new cements.",
        "answer": "D",
-       "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 9-13<br/>Look at the following statements (Questions 9-13) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 9-13 on your answer sheet.<br/>NB You may use any letter more than once.",
        "options": [
         "A. Chris Cheeseman",
         "B. Markus Mannström",
         "C. Anna Surgenor",
         "D. Felix Preston and Johanna Lehne"
-       ]
+       ],
+       "explanation": "Felix Preston and Johanna Lehne concluded: 'At present, these alternatives are rarely as cost-effective as conventional cement...'"
       },
       {
        "num": 13,
        "type": "MCQ",
-       "text": "The environmental damage caused by concrete is due to it being produced in large quantities. List of People Chris Cheeseman Markus Mannstr6m Anna Surgenor",
+       "text": "The environmental damage caused by concrete is due to it being produced in large quantities.",
        "answer": "A",
-       "explanation": "The text confirms this: \"Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon A dioxide — alternatives are being developed Concrete is the second most used substance in the global economy, after water — and one of the world's biggest single sources of greenhouse gas emissions.\"",
-       "location": "Passage 1",
-       "instruction": "Questions 9-13<br/>Look at the following statements (Questions 9-13) and the list of people below.<br/>Match each statement with the correct person, A, B, C or D.<br/>Write the correct letter, A, B, C or D, in boxes 9-13 on your answer sheet.<br/>NB You may use any letter more than once.",
        "options": [
         "A. Chris Cheeseman",
         "B. Markus Mannström",
         "C. Anna Surgenor",
         "D. Felix Preston and Johanna Lehne"
-       ]
+       ],
+       "explanation": "Chris Cheeseman states: 'But it is the scale on which it is used that makes it high carbon. The sheer scale of manufacture is so huge, that is the issue.'"
       }
      ]
     },
     {
      "title": "The steam car",
-     "text": "<h1>The steam car</h1>\n<p>The successes and failures of the Doble brothers and their steam cars</p>\n<p><b>A</b> When primitive automobiles first began to appear in the late 19th century, their power sources were diverse. There were gasoline-powered engines, electric motors, and steam engines. At the time, steam was a mature and well-understood technology, widely used in locomotives, ships, and factories. Steam cars were quiet, smooth, and powerful, and they did not require a gear shift. However, they had a major drawback: they took a long time to start up, as the water in the boiler had to be heated to produce steam.</p>\n<p><b>B</b> But the glory days of steam cars were few. A new technology called the Internal Combustion Engine (ICE) was developing rapidly. ICE cars were cheaper, lighter, and started instantly. The introduction of the electric starter motor in 1912 eliminated the need to hand-crank ICE cars, making them far more convenient. As a result, steam cars quickly lost popularity and were mostly gone from the market by the 1920s.</p>\n<p><b>C</b> In 1912, the Doble brothers — Abner, John, and Warren — began building steam cars in their home town of Waltham, Massachusetts. They were determined to overcome the drawbacks of steam technology and build a competitive steam car. Their first model, the Model A, was built in their garage and used many parts from other cars. It was a success, but it was not commercially viable. The brothers realised they needed to make their designs more reliable and easier to manufacture.</p>\n<p><b>D</b> In 1914, the brothers built the Model B, which incorporated several innovations. The most important was a condenser that recycled steam back into water, allowing the car to travel much farther on a single tank of water. The Model B also featured a rapid startup system that could produce steam in less than two minutes. The car attracted positive publicity, and the brothers received several orders, but the outbreak of World War I prevented them from starting full-scale production.</p>\n<p><b>E</b> Doble's big breakthrough came with the Model C, which was introduced in 1916. The Model C featured a combustion chamber that burned kerosene cleanly and efficiently, and a steam generator that could start the car in less than forty seconds. The car was quiet, fast, and easy to drive. The Doble brothers raised financial capital and established the Doble Steam Motors Corporation in San Francisco to manufacture the car. However, production was slow, and only a few cars were built before the company faced financial difficulties.</p>\n<p><b>F</b> Later that year Abner Doble delivered unhappy news to those eagerly awaiting the delivery of their modern new cars. Those customers who had paid deposits were told that production had been suspended due to shortages of materials and skilled labour caused by the war. Many customers were disappointed, and some demanded refunds. The Doble brothers tried to keep the company afloat by offering repair services and selling parts, but they were eventually forced to close the factory.</p>\n<p><b>G</b> The brothers made one final attempt to produce a viable steam automobile. In early 1920, they began developing the Model E, which was road-tested in 1924 by the Automobile Club of America. They found it easy to drive, despite its weight, and it impressed the spectators. A later version of the Model E raised its speed, while keeping its emissions extremely low. However, the steam car was too expensive for many people and its design was constantly being altered. Under fifty cars were produced before the company went out of business.</p>\n<p>The steam car was too expensive for many people and its design was constantly being altered. Under 25 cars were produced before the company went out of business. However, even today, there are Model Es on the road in the US. They are straightforward to maintain, and they satisfy California's strict emissions laws. Perhaps today's technology and materials would help us revive the steam car. Fewer than 50 vehicles were produced before the company ceased operations.</p>",
+     "text": "<h1>The steam car</h1>\n<p>The successes and failures of the Doble brothers and their steam cars</p>\n<p><b>A</b> When primitive automobiles first began to appear in the 1800s, their engines were based on steam power. Steam had already enjoyed a long and successful career in the railways, so it was only natural that the technology evolved into a miniaturized version which was separate from the trains. But these early cars inherited steam’s weaknesses along with its strengths. The boilers had to be lit by hand, and they required about twenty minutes to build up pressure before they could be driven. Furthermore, their water reservoirs only lasted for about thirty miles before needing replenishment. Despite such shortcomings, these newly designed self-propelled carriages offered quick transportation, and by the early 1900s it was not uncommon to see such machines shuttling wealthy citizens around town.</p>\n<p><b>B</b> But the glory days of steam cars were few. A new technology called the Internal Combustion Engine soon appeared, which offered the ability to drive down the road just moments after starting up. At first, these noisy gasoline cars were unpopular because they were more complicated to operate and they had difficult hand-crank starters, which were known to break arms when the engines backfired. But in 1912 General Motors introduced the electric starter, and over the following few years steam power was gradually phased out.</p>\n<p><b>C</b> Even as the market was declining, four brothers made one last effort to rekindle the technology. Between 1906 and 1909, while still attending high school, Abner Doble and his three brothers built their first steam car in their parents’ basement. It comprised parts taken from a wrecked early steam car but reconfigured to drive an engine of their own design. Though it did not run well, the Doble brothers went on to build a second and third prototype in the following years.</p>\n<p><b>D</b> Though the Doble boys’ third prototype, nicknamed the Model B, still lacked the convenience of an internal combustion engine, it drew the attention of automobile trade magazines due to its numerous improvements over previous steam cars. The Model B proved to be superior to gasoline automobiles in many ways. Its high-pressure steam drove the engine pistons in virtual silence, in contrast to clattering gas engines which emitted the aroma of burned hydrocarbons. Perhaps most impressively, the Model B was amazingly swift. It could accelerate from zero to sixty miles per hour in just fifteen seconds, a feat described as ‘remarkable acceleration’ by Automobile magazine in 1914.</p>\n<p><b>E</b> The following year Abner Doble drove the Model B from Massachusetts to Detroit in order to seek investment in his automobile design, which he used to open the General Engineering Company. He and his brothers immediately began working on the Model C, which was intended to expand upon the innovations of the Model B. The brothers added features such as a key-based ignition in the cabin, eliminating the need for the operator to manually ignite the boiler. With these enhancements, the Dobles’ new car company promised a steam vehicle which would provide all of the convenience of a gasoline car, but with much greater speed, much simpler driving controls, and a virtually silent powerplant. By the following April, the General Engineering Company had received 5,390 deposits for Doble Detroits, which were scheduled for delivery in early 1918.</p>\n<p><b>F</b> Later that year Abner Doble delivered unhappy news to those eagerly awaiting the delivery of their modern new cars. Those buyers who received the handful of completed cars complained that the vehicles were sluggish and erratic, sometimes going in reverse when they should go forward. The new engine design, though innovative, was still plagued with serious glitches.</p>\n<p><b>G</b> The brothers made one final attempt to produce a viable steam automobile. In early 1924, the Doble brothers shipped a Model E to New York City to be road-tested by the Automobile Club of America. After sitting overnight in freezing temperatures, the car was pushed out into the road and left to sit for over an hour in the frosty morning air. At the turn of the key, the boiler lit and reached its operating pressure inside of forty seconds. As they drove the test vehicle further, they found that its evenly distributed weight lent it surprisingly good handling, even though it was so heavy. As the new Doble steamer was further developed and tested, its maximum speed was pushed to over a hundred miles per hour, and it achieved about fifteen miles per gallon of kerosene with negligible emissions.</p>\n<p>Sadly, the Dobles’ brilliant steam car never was a financial success. Priced at around $18,000 in 1924, it was popular only among the very wealthy. Plus, it is said that no two Model Es were quite the same, because Abner Doble tinkered endlessly with the design. By the time the company folded in 1931, fewer than fifty of the amazing Model E steam cars had been produced. For his whole career, until his death in 1961, Abner Doble remained adamant that steam-powered automobiles were at least equal to gasoline cars, if not superior. Given the evidence, he may have been right. Many of the Model E Dobles which have survived are still in good working condition, some having been driven over half a million miles with only normal maintenance. Astonishingly, an unmodified Doble Model E runs clean enough to pass the emissions laws in California today, and they are pretty strict. It is true that the technology poses some difficult problems, but you cannot help but wonder how efficient a steam car might be with the benefit of modern materials and computers. Under the current pressure to improve automotive performance and reduce emissions, it is not unthinkable that the steam car may rise again.</p>",
      "questions": [
       {
        "num": 14,
        "type": "HEADING",
        "text": "Paragraph A",
        "answer": "iii",
-       "explanation": "Paragraph A outlines both the appealing qualities of steam cars (quiet, smooth, powerful, no gear shift) and their major drawback (slow to start up).",
-       "location": "Passage 2",
-       "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
        "options": [
         "i",
         "ii",
@@ -2821,16 +2796,14 @@ const IELTS_TEST_DATA = {
         "vi",
         "vii",
         "viii"
-       ]
+       ],
+       "explanation": "Paragraph A introduces steam power's strengths and weaknesses being inherited (passed on) in early steam cars."
       },
       {
        "num": 15,
        "type": "HEADING",
        "text": "Paragraph B",
        "answer": "viii",
-       "explanation": "Paragraph B describes how the Internal Combustion Engine, cheaper and starting instantly, quickly overtook steam cars, which had mostly disappeared from the market by the 1920s.",
-       "location": "Passage 2",
-       "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
        "options": [
         "i",
         "ii",
@@ -2840,16 +2813,14 @@ const IELTS_TEST_DATA = {
         "vi",
         "vii",
         "viii"
-       ]
+       ],
+       "explanation": "Paragraph B describes how the Internal Combustion Engine (a better option) arose and phased out steam."
       },
       {
        "num": 16,
        "type": "HEADING",
        "text": "Paragraph C",
        "answer": "vi",
-       "explanation": "Paragraph C describes the Doble brothers' first steam car model, built in their garage from parts of other cars — a success, but not yet commercially viable.",
-       "location": "Passage 2",
-       "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
        "options": [
         "i",
         "ii",
@@ -2859,16 +2830,14 @@ const IELTS_TEST_DATA = {
         "vi",
         "vii",
         "viii"
-       ]
+       ],
+       "explanation": "Paragraph C describes the Doble brothers' first three prototypes (Model A and B), which drew positive publicity."
       },
       {
        "num": 17,
        "type": "HEADING",
        "text": "Paragraph D",
        "answer": "v",
-       "explanation": "Paragraph D describes the Model B's condenser innovation and rapid startup system, which attracted positive publicity and several customer orders.",
-       "location": "Passage 2",
-       "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
        "options": [
         "i",
         "ii",
@@ -2878,16 +2847,14 @@ const IELTS_TEST_DATA = {
         "vi",
         "vii",
         "viii"
-       ]
+       ],
+       "explanation": "Paragraph D describes the Model B superior performance and magazines praises (positive publicity)."
       },
       {
        "num": 18,
        "type": "HEADING",
        "text": "Paragraph E",
        "answer": "vii",
-       "explanation": "Paragraph E describes the Model C, which was \"quiet, fast, and easy to drive,\" prompting the Doble brothers to found the Doble Steam Motors Corporation.",
-       "location": "Passage 2",
-       "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
        "options": [
         "i",
         "ii",
@@ -2897,16 +2864,14 @@ const IELTS_TEST_DATA = {
         "vi",
         "vii",
         "viii"
-       ]
+       ],
+       "explanation": "Paragraph E describes how the Doble brothers sought investment (commercialization) and received 5,390 deposits (commercial orders)."
       },
       {
        "num": 19,
        "type": "HEADING",
        "text": "Paragraph F",
        "answer": "i",
-       "explanation": "Paragraph F describes how customers who had paid deposits were told production was suspended due to wartime shortages, leaving many disappointed and demanding refunds.",
-       "location": "Passage 2",
-       "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
        "options": [
         "i",
         "ii",
@@ -2916,16 +2881,14 @@ const IELTS_TEST_DATA = {
         "vi",
         "vii",
         "viii"
-       ]
+       ],
+       "explanation": "Paragraph F describes the sluggish cars and glitches that led to unhappy customers and suspended production."
       },
       {
        "num": 20,
        "type": "HEADING",
        "text": "Paragraph G",
        "answer": "iv",
-       "explanation": "Paragraph G notes that Model Es still run today, meeting California's strict emissions laws, suggesting modern technology and materials could help revive the steam car.",
-       "location": "Passage 2",
-       "instruction": "Questions 14-20<br/>Reading Passage 2 has seven paragraphs, A-G.<br/>Choose the correct heading for each paragraph from the list of headings below.<br/><br/><b>List of Headings</b><br/>i.&nbsp; A false start that delayed a fair trial of the technology<br/>ii.&nbsp; Marketing problems lead to the technology's failure<br/>iii.&nbsp; An early technology's mixed strengths and weaknesses are outlined<br/>iv.&nbsp; A possible answer to problems we face today<br/>v.&nbsp; Better engineering results in orders from customers<br/>vi.&nbsp; Positive attention at last for a quiet, clean, fast vehicle<br/>vii.&nbsp; Customers are left disappointed by the outcome<br/>viii.&nbsp; A rival technology proves to be the better option",
        "options": [
         "i",
         "ii",
@@ -2935,154 +2898,132 @@ const IELTS_TEST_DATA = {
         "vi",
         "vii",
         "viii"
-       ]
+       ],
+       "explanation": "Paragraph G describes the Model E testing (including a period in cold conditions before being assessed) and California emissions laws."
       },
       {
        "num": 21,
        "type": "MCQ",
        "text": "What point does the writer make about the steam car in Paragraph B?",
        "answer": "A",
-       "explanation": "The text confirms this: \"' Questions 14-20 Choose the correct heading for each paragraph from the list of headings below.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 21-23<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 21-23 on your answer sheet.",
        "options": [
-        "A. _ lts success was short-lived.",
+        "A. Its success was short-lived.",
         "B. Not enough cars were made.",
         "C. Car companies found them hard to sell.",
         "D. People found them hard to drive."
-       ]
+       ],
+       "explanation": "Paragraph B explains that steam cars quickly lost popularity and were phased out after a few years."
       },
       {
        "num": 22,
        "type": "MCQ",
        "text": "When building their first steam car, the Doble brothers",
        "answer": "C",
-       "explanation": "The text confirms this: \"' Questions 14-20 Choose the correct heading for each paragraph from the list of headings below.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 21-23<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 21-23 on your answer sheet.",
        "options": [
         "A. constructed all the parts themselves.",
         "B. made written notes at each stage of the construction.",
         "C. needed several attempts to achieve a competitive model.",
-        "D. __ sought the advice of experienced people in the car industry."
-       ]
+        "D. sought the advice of experienced people in the car industry."
+       ],
+       "explanation": "The text states they built a first, second, and third prototype over several years before finding a design that drew positive attention."
       },
       {
        "num": 23,
        "type": "MCQ",
-       "text": "In order to produce the Model C, the Doble brothers moved production to a different city. raised financial capital. employed an additional worker. abandoned their earlier designs. 0OWPY>",
+       "text": "In order to produce the Model C, the Doble brothers",
        "answer": "B",
-       "explanation": "The text confirms this: \"' Questions 14-20 Choose the correct heading for each paragraph from the list of headings below.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 21-23<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 21-23 on your answer sheet.",
        "options": [
         "A. moved production to a different city.",
         "B. raised financial capital.",
         "C. employed an additional worker.",
         "D. abandoned their earlier designs."
-       ]
+       ],
+       "explanation": "The text states Abner Doble drove the Model B to Detroit in order to seek investment (raise financial capital)."
       },
       {
        "num": 24,
        "type": "FILL",
        "text": "A later version of the Model E raised its _________ , while keeping its emissions extremely low.",
        "answer": "speed",
-       "explanation": "The text confirms this: \"With these enhancements, the Dobles' new car company promised a steam vehicle which would provide all of the convenience of a gasoline car, but with much greater speed, much simpler driving controls, and a virtually silent powerplant.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car."
+       "explanation": "The text confirms: 'its maximum speed was pushed to over a hundred miles per hour, and it achieved... negligible emissions.'"
       },
       {
        "num": 25,
        "type": "FILL",
-       "text": "being altered. Under _________ cars were produced before the company",
-       "answer": "50",
-       "explanation": "The passage confirms that the answer is '50'.",
-       "location": "Passage 2",
-       "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car."
+       "text": "The steam car was too expensive for many people and its design was constantly being altered. Under _________ cars were produced before the company went out of business.",
+       "answer": "fifty",
+       "explanation": "The text confirms: 'fewer than fifty of the amazing Model E steam cars had been produced.'"
       },
       {
        "num": 26,
        "type": "FILL",
        "text": "They are straightforward to maintain, and they satisfy California’s _________ emissions laws.",
        "answer": "strict",
-       "explanation": "The text confirms this: \"Astonishingly, an unmodified Doble Model E runs clean enough to pass the emissions laws in California today, and they are pretty strict.\"",
-       "location": "Passage 2",
-       "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.<br/>Write your answers in boxes 24—26 on your answer sheet.<br/>The Model E<br/>The Model E was road-tested in 1924 by the Automobile Club of America. They<br/>found it easy to drive, despite its weight, and it impressed the spectators. A later<br/>version of the Model E raised its 24 , while keeping its emissions<br/>extremely low. was too expensive for many people and its design was constantly<br/>being altered. Under 25 cars were produced before the company<br/>went out of business. However, even today, there are Model Es on the road in the<br/>US. They are straightforward to maintain, and they satisfy California's<br/>emissions laws. Perhaps today's technology and materials<br/>would help us revive the steam car."
+       "explanation": "The text confirms: 'runs clean enough to pass the emissions laws in California today, and they are pretty strict.'"
       }
      ]
     },
     {
      "title": "The case for mixed-ability classes",
-     "text": "<h1>The case for mixed-ability classes</h1>\n<p>Why grouping children by ability might not be the best way to help them learn.</p>\n<p>Picture this scene. It's an English literature lesson in a UK school, and the teacher has just read an extract from Shakespeare's Romeo and Juliet. The teacher asks a question, and several hands shoot up. One student gives a detailed and sophisticated answer, while another struggles to find the words. This is a mixed-ability class, where children of all levels of academic achievement study together.</p>\n<p>I have heard the mixed-ability model attacked by way of analogy: a group hike. The fittest in the group take the lead and set a fast pace, while the less fit struggle to keep up and are left behind. The solution, critics argue, is to group hikers by fitness level, so everyone can walk at their own pace. In education, this is known as streaming, setting, or tracking, where children are placed in classes based on their perceived academic ability.</p>\n<p>The main reason for the mixed-ability model is social. By grouping children together, regardless of their background or academic level, schools can promote social cohesion and reduce inequality. In streamed schools, children from disadvantaged backgrounds are disproportionately placed in lower sets, which can lead to low self-esteem and a sense of failure. In contrast, mixed-ability classes can foster a supportive environment where children learn from one another.</p>\n<p>So what are the alternatives? The most common alternative to mixed-ability classes is setting, where children are grouped by ability for specific subjects, like maths or English, but study in mixed groups for others. Another option is streaming, where children are placed in a class based on their general ability and remain in that class for all subjects. A third option is tracking, which is common in the US, where children follow different academic pathways or tracks.</p>\n<p>A third option is 'streaming'. In a streamed school, children are placed in classes based on their general ability and remain in that class for all subjects. The argument for streaming is that it allows teachers to tailor their lessons to the level of the class, making teaching more efficient. However, critics argue that streaming can be harmful, as it locks children into a specific level and makes it difficult for them to move up if their performance improves.</p>\n<p>In practice, streaming can have a negative impact on both students and teachers. According to Professor John Hattie, director of the Melbourne Education Research Institute, there is very little indication that streaming leads to higher achievements. He points out that, in schools which use streaming, the most significant impact is on those students placed in the bottom sets, especially where a large proportion of students are from disadvantaged backgrounds.</p>\n<p>Professor John Hattie, director of the Melbourne Education Research Institute, notes that there is very little indication that streaming leads to better outcomes for students. He points out that, in schools which use streaming, the most significant impact is on those students placed in the lower sets. Meanwhile, for the brightest pupils, there appears to be only minimal advantage. A further issue is that teachers tend to have lower expectations of students in streamed groups.</p>\n<p>Hattie's study also shows that the mixed-ability model can be highly effective if teachers use appropriate strategies. One key technique is differentiation, where teachers provide different tasks or support within the same class. This can include 'scaffolding' — providing temporary assistance to help a student complete a task they cannot yet do on their own. By using scaffolding, teachers can help all students reach their potential.</p>\n<p>So what does work? According to Hattie, the most effective factor in student achievement is 'collective teacher efficacy' — the belief by teachers that they can make a difference to student outcomes. When teachers work together, share best practices, and have high expectations of all students, the results can be outstanding. This suggests that the focus should be on teacher training and collaboration rather than class grouping.</p>\n<p>Finally, if we are to use the mixed-ability model effectively, we must also recognise the value of peer learning. The Vygotsky model of education supports the concept of a mixed-ability class, where students learn from more knowledgeable others (MKOs). These MKOs can be teachers, but they can also be other students in the class. By helping their peers, high-achieving students can consolidate their own learning and develop empathy and communication skills.</p>\n<p>the MKOs in classrooms, the value of knowledgeable student peers must not go unrecognised either. I find it amazing to watch a student explain a complex concept to a classmate. The explanation is often simpler and more relatable than the one I would give, and the classmate understands it instantly. This collaborative learning benefits both students and can improve outcomes for the entire class.</p>",
+     "text": "<h1>The case for mixed-ability classes</h1>\n<p>Why grouping children by ability might not be the best way to help them learn.</p>\n<p>Picture this scene. It’s an English literature lesson in a UK school, and the teacher has just read an extract from Shakespeare’s Romeo and Juliet with a class of 15-year-olds. He’s given some of the students copies of No Fear Shakespeare, a kid-friendly translation of the original. For three students, even these literacy demands are beyond them. Another girl simply can’t focus and he gives her pens and paper to draw with. The teacher can ask the No Fear group to identify the key characters and maybe provide a tentative plot summary. He can ask most of the class about character development, and five of them might be able to support their statements with textual evidence. Now two curious students are wondering whether Shakespeare advocates living a life of moderation or one of passionate engagement. As a teacher myself, I’d think my lesson would be going rather well if the discussion went as described above. But wouldn’t this kind of class work better if there weren’t such a huge gap between the top and the bottom? If we put all the kids who needed literacy support into one class, and all the students who want to discuss the virtue of moderation into another?</p>\n<p>The practice of ‘streaming’, or ‘tracking’, involves separating students into classes depending on their diagnosed levels of attainment. At a macro level, it requires the establishment of academically selective schools for the brightest students, and comprehensive schools for the rest. Within schools, it means selecting students into a ‘stream’ of general ability, or ‘sets’ of subject-specific ability. The practice is intuitively appealing to almost every stakeholder.</p>\n<p>I have heard the mixed-ability model attacked by way of analogy: a group hike. The fittest in the group take the lead and set a brisk pace, only to have to stop and wait every 20 minutes. This is frustrating, and their enthusiasm wanes. Meanwhile, the slowest ones are not only embarrassed but physically struggling to keep up. What’s worse, they never get a long enough break. They honestly just want to quit. Hiking, they feel, is not for them.</p>\n<p>Mixed-ability classes bore students, frustrate parents and burn out teachers. The brightest ones will never summit Mount Qomolangma, and the stragglers won’t enjoy the lovely stroll in the park they are perhaps more suited to. Individuals suffer at the demands of the collective, mediocrity prevails. So: is learning like hiking?</p>\n<p>The current pedagogical paradigm is arguably that of constructivism, which emerged out of the work of psychologist Lev Vygotsky. In the 1930s, Vygotsky emphasised the importance of targeting a student’s specific ‘zone of proximal development’ (ZPD). This is the gap between what they can achieve only with support — teachers, textbooks, worked examples, parents and so on — and what they can achieve independently. The purpose of teaching is to provide and then gradually remove this ‘scaffolding’ until they are autonomous. If we accept this model, it follows that streaming students with similar ZPDs would be an efficient and effective solution. And that forcing everyone on the same hike — regardless of aptitude — would be madness.</p>\n<p>Despite all this, there is limited empirical evidence to suggest that streaming results in better outcomes for students. Professor John Hattie, director of the Melbourne Education Research Institute, notes that ‘tracking has minimal effects on learning outcomes’. What is more, streaming appears to significantly — and negatively — affect those students assigned to the lowest sets. These students tend to have much higher representation of low socioeconomic class. Less significant is the small benefit for those lucky clever students in the higher sets. The overall result is that the smart stay smart and the dumb get dumber, further entrenching the social divide.</p>\n<p>In the latest update of Hattie’s influential meta-analysis of factors influencing student achievement, one of the most significant factors is the teachers’ estimate of achievement. Streaming students by diagnosed achievement automatically limits what the teacher feels the student is capable of. Meanwhile, in a mixed environment, teachers’ estimates need to be more diverse and flexible. While streaming might seem to help teachers effectively target a student’s ZPD, it can underestimate the importance of peer-to-peer learning. A crucial aspect of constructivist theory is the role of the MKO — ‘more-knowledgeable other’ — in knowledge construction. While teachers are traditionally the MKOs in classrooms, the value of knowledgeable student peers must not go unrecognised either.</p>\n<p>I find it amazing to watch students get over an idea to their peers in ways that I would never think of. They operate with different language tools and different social tools from teachers and, having just learnt it themselves, they possess similar cognitive structures to their struggling classmates. There is also something exciting about passing on skills and knowledge that you yourself have just mastered — a certain pride and zeal, a certain freshness to the interaction between ‘teacher’ and ‘learner’ that is often lost by the expert for whom the steps are obvious and the joy of discovery forgotten.</p>\n<p>Having a variety of different abilities in a collaborative learning environment provides valuable resources for helping students meet their learning needs, not to mention improving their communication and social skills. And today, more than ever, we need the many to flourish — not suffer at the expense of a few bright stars. Once a year, I go on a hike with my class, a mixed bunch of students. It is challenging. The fittest students realise they need to encourage the reluctant. There are lookouts who report back, and extra items to carry for others. We make it — together.</p>",
      "questions": [
       {
        "num": 27,
        "type": "MCQ",
        "text": "The writer describes the Romeo and Juliet lesson in order to demonstrate",
        "answer": "B",
-       "explanation": "The text confirms this: \"For three students, even these literacy demands are beyond them.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 27-30<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 27-30 on your answer sheet.",
        "options": [
-        "A. __ how few students are interested in literature.",
-        "B. howa teacher handles a range of learning needs.",
+        "A. how few students are interested in literature.",
+        "B. how a teacher handles a range of learning needs.",
         "C. how unsuitable Shakespeare is for most teenagers.",
         "D. how weaker students can disrupt their classmates' learning."
-       ]
+       ],
+       "explanation": "The writer describes a teacher handling a class where students are working at different levels (from No Fear Shakespeare to advanced discussion)."
       },
       {
        "num": 28,
        "type": "MCQ",
        "text": "What does the writer say about streaming in the third paragraph?",
        "answer": "A",
-       "explanation": "The text confirms this: \"It's an English literature lesson in a UK school, and the teacher has just read an extract from Shakespeare's Romeo and Juliet with a class of 15-year-olds.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 27-30<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 27-30 on your answer sheet.",
        "options": [
         "A. It has a very broad appeal.",
         "B. It favours cleverer students.",
         "C. It is relatively simple to implement.",
         "D. It works better in some schools than others."
-       ]
+       ],
+       "explanation": "The text says 'The practice is intuitively appealing to almost every stakeholder.'"
       },
       {
        "num": 29,
        "type": "MCQ",
        "text": "What idea is suggested by the reference to Mount Qomolangma in the fifth paragraph?",
        "answer": "C",
-       "explanation": "The text confirms this: \"Picture this scene.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 27-30<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 27-30 on your answer sheet.",
        "options": [
-        "A. _ students following unsuitable paths",
+        "A. students following unsuitable paths",
         "B. students attempting interesting tasks",
         "C. students not achieving their full potential",
         "D. students not being aware of their limitations"
-       ]
+       ],
+       "explanation": "The writer states 'The brightest ones will never summit Mount Qomolangma' under mixed-ability classes, meaning they won't reach their full potential."
       },
       {
        "num": 30,
        "type": "MCQ",
-       "text": "What does the word 'scaffolding' in the sixth paragraph refer to? the factors which prevent a student from learning effectively the environment where most of a student's learning takes place the assistance given to a student in their initial stages of learning the setting of appropriate learning targets for a student's aptitude 0OWPY T2",
+       "text": "What does the word ‘scaffolding’ in the sixth paragraph refer to?",
        "answer": "C",
-       "explanation": "The text confirms this: \"Picture this scene.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 27-30<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 27-30 on your answer sheet.",
        "options": [
-        "A. It has avery broad appeal.",
-        "B. students attempting interesting tasks",
-        "C. students not achieving their full potential",
-        "D. students not being aware of their limitations"
-       ]
+        "A. the factors which prevent a student from learning effectively",
+        "B. the environment where most of a student's learning takes place",
+        "C. the assistance given to a student in their initial stages of learning",
+        "D. the setting of appropriate learning targets for a student's aptitude"
+       ],
+       "explanation": "In constructivism, scaffolding is the 'support' (teachers, textbooks, etc.) provided to students that is gradually removed as they learn."
       },
       {
        "num": 31,
        "type": "MCQ",
-       "text": "According to Professor John Hattie, there is very little indication that streaming leads to _________",
+       "text": "According to Professor John Hattie, there is very little indication that streaming leads to _________.",
        "answer": "H",
-       "explanation": "The passage states: \"there is very little indication that streaming leads to higher achievements.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
        "options": [
         "A. wrong classes",
         "B. lower average learners",
@@ -3093,16 +3034,14 @@ const IELTS_TEST_DATA = {
         "G. weaker students",
         "H. higher achievements",
         "I. positive impressions"
-       ]
+       ],
+       "explanation": "Hattie notes that tracking has minimal effects on learning outcomes, meaning it doesn't lead to higher achievements."
       },
       {
        "num": 32,
        "type": "MCQ",
-       "text": "He points out that the most significant impact of streaming is on students placed in the _________",
+       "text": "He points out that, in schools which use streaming, the most significant impact is on those students placed in the _________.",
        "answer": "D",
-       "explanation": "The passage states: \"the most significant impact is on those students placed in the bottom sets.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
        "options": [
         "A. wrong classes",
         "B. lower average learners",
@@ -3113,16 +3052,14 @@ const IELTS_TEST_DATA = {
         "G. weaker students",
         "H. higher achievements",
         "I. positive impressions"
-       ]
+       ],
+       "explanation": "Hattie points out that streaming significantly affects those assigned to the lowest sets (bottom sets)."
       },
       {
        "num": 33,
        "type": "MCQ",
-       "text": "This impact is especially strong where a large proportion of these students come from _________",
+       "text": "This impact is especially strong where a large proportion of these students come from _________.",
        "answer": "F",
-       "explanation": "The passage states this impact is greatest \"especially where a large proportion of students are from disadvantaged backgrounds.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
        "options": [
         "A. wrong classes",
         "B. lower average learners",
@@ -3133,16 +3070,14 @@ const IELTS_TEST_DATA = {
         "G. weaker students",
         "H. higher achievements",
         "I. positive impressions"
-       ]
+       ],
+       "explanation": "These students tend to have much higher representation of low socioeconomic class (disadvantaged backgrounds)."
       },
       {
        "num": 34,
        "type": "MCQ",
-       "text": "Meanwhile, for the _________, streaming appears to offer only minimal advantage",
+       "text": "Meanwhile, for the _________, streaming appears to offer only minimal advantage.",
        "answer": "E",
-       "explanation": "The passage states \"for the brightest pupils, there appears to be only minimal advantage.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
        "options": [
         "A. wrong classes",
         "B. lower average learners",
@@ -3153,16 +3088,14 @@ const IELTS_TEST_DATA = {
         "G. weaker students",
         "H. higher achievements",
         "I. positive impressions"
-       ]
+       ],
+       "explanation": "Less significant is the small benefit for those lucky clever students (brightest pupils) in the higher sets."
       },
       {
        "num": 35,
        "type": "MCQ",
-       "text": "Critics also argue streaming systems can be particularly unfair to _________, who may be locked into a lower class based on early performance",
-       "answer": "B",
-       "explanation": "The passage states critics argue \"streaming can be harmful, as it locks children into a specific level and makes it difficult for them to move up if their performance improves.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 31-35<br/>Complete the summary using the list of phrases, A-I, below.<br/>Write the correct letter, A-I, in boxes 31-35 on your answer sheet.<br/>Is streaming effective?<br/>According to Professor John Hattie of the Melbourne Education Research Institute,<br/>there is very little indication that streaming leads 10 31 a esssssceeseeeeseneee . He points<br/>out that, in schools which use streaming, the most significant impact is on those<br/>students placed in the 32 , especially where a large proportion of<br/>Cece \\ . Meanwhile, for the 34<br/>appears to be only minimal advantage. A further issue is that teachers tend to<br/>have 35 of students in streamed groups.<br/>A wrong classes lower average learners<br/>expectations<br/>D bottom sets brightest pupils disadvantaged<br/>backgrounds<br/>G weaker students higher positive<br/>achievements impressions",
+       "text": "A further issue is that teachers tend to have _________ of students in streamed groups.",
+       "answer": "C",
        "options": [
         "A. wrong classes",
         "B. lower average learners",
@@ -3173,77 +3106,68 @@ const IELTS_TEST_DATA = {
         "G. weaker students",
         "H. higher achievements",
         "I. positive impressions"
-       ]
+       ],
+       "explanation": "Hattie's analysis shows one of the most significant factors is the teachers' estimate of achievement (expectations)."
       },
       {
        "num": 36,
-       "type": "TFNG",
-       "text": "According to Hattie, class grouping is a more important factor in student achievement than teacher collaboration.",
-       "answer": "FALSE",
-       "explanation": "The passage states Hattie identifies \"collective teacher efficacy\" as the most effective factor, suggesting \"the focus should be on teacher training and collaboration rather than class grouping.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+       "type": "YNNG",
+       "text": "The Vygotsky model of education supports the concept of a mixed-ability class.",
+       "answer": "YES",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text notes: 'A crucial aspect of constructivist theory is the role of the MKO — ‘more-knowledgeable other’ — in knowledge construction... having a variety of different abilities... provides valuable resources...'"
       },
       {
        "num": 37,
-       "type": "TFNG",
-       "text": "Scaffolding techniques were first developed specifically for use in mixed-ability classrooms.",
+       "type": "YNNG",
+       "text": "Some teachers are uncertain about allowing students to take on MKO roles in the classroom.",
        "answer": "NOT GIVEN",
-       "explanation": "The passage describes scaffolding as a differentiation technique but gives no information on where or when it was first developed.",
-       "location": "Passage 3",
-       "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states: 'While teachers are traditionally the MKOs in classrooms, the value of knowledgeable student peers must not go unrecognised either.' It does not say if teachers are uncertain about it."
       },
       {
        "num": 38,
-       "type": "TFNG",
-       "text": "High-achieving students who help their peers can strengthen their own understanding of the material.",
-       "answer": "TRUE",
-       "explanation": "The passage states that by helping their peers, \"high-achieving students can consolidate their own learning and develop empathy and communication skills.\"",
-       "location": "Passage 3",
-       "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+       "type": "YNNG",
+       "text": "It can be rewarding to teach knowledge which you have only recently acquired.",
+       "answer": "YES",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text mentions: 'There is also something exciting about passing on skills and knowledge that you yourself have just mastered — a certain pride and zeal...'"
       },
       {
        "num": 39,
-       "type": "TFNG",
-       "text": "According to the writer, peer explanations are usually less effective than a teacher's own explanation.",
-       "answer": "FALSE",
-       "explanation": "The writer states a classmate's explanation \"is often simpler and more relatable than the one I would give,\" the opposite of this claim.",
-       "location": "Passage 3",
-       "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
+       "type": "YNNG",
+       "text": "The priority should be to ensure that the highest-achieving students attain their goals.",
+       "answer": "NO",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text states: 'And today, more than ever, we need the many to flourish — not suffer at the expense of a few bright stars.'"
       },
       {
        "num": 40,
-       "type": "TFNG",
-       "text": "The writer cites specific test-score data measuring the benefits of peer learning.",
+       "type": "YNNG",
+       "text": "Taking part in collaborative outdoor activities with teachers and classmates can improve student outcomes in the classroom.",
        "answer": "NOT GIVEN",
-       "explanation": "The writer describes peer learning favourably but gives no specific test-score figures to quantify its benefits.",
-       "location": "Passage 3",
-       "instruction": "Questions 36—40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, Write<br/>TRUE if the statement agrees with the information<br/>FALSE if the statement contradicts the information<br/>NOT GIVEN if there is no information on this",
        "options": [
-        "TRUE",
-        "FALSE",
+        "YES",
+        "NO",
         "NOT GIVEN"
-       ]
+       ],
+       "explanation": "The text mentions the writer going on a hike with their class once a year, but does not provide scientific data that it improves classroom outcomes."
       }
      ]
     }
