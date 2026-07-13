@@ -245,6 +245,94 @@
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: rgba(168,121,47,.3); border-radius: 4px; }
+  
+    /* Inline fill inputs inside summary/notes/table preview blocks */
+    .fill-group-card {
+      border: 1px solid var(--rule-soft); background: var(--paper); border-radius: 10px;
+      padding: 18px 20px; margin-bottom: 12px;
+    }
+    .fill-group-card.has-flagged { border-color: var(--gold); background: #fdf8ee; }
+    .fill-group-body {
+      font-family: "Lora", serif; font-size: 14px; line-height: 2.1; color: var(--ink-soft);
+    }
+    .fill-group-body br { display: block; margin: 0; }
+    .inline-fill-wrap {
+      display: inline-flex; align-items: center; gap: 4px;
+      vertical-align: middle; margin: 0 2px;
+    }
+    .inline-q-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 20px; height: 20px; border-radius: 50%;
+      border: 1.5px solid var(--accent); font-family: "Fraunces", serif; font-weight: 800;
+      font-size: 10px; color: var(--accent); flex-shrink: 0; background: var(--paper);
+    }
+    .inline-fill {
+      display: inline-block; width: 130px; background: var(--paper);
+      border: none; border-bottom: 2px solid var(--ink); border-radius: 0;
+      padding: 1px 6px; color: var(--ink); outline: none;
+      font-family: "Inter", sans-serif; font-size: 13px; font-weight: 600;
+      transition: border-color 0.2s; vertical-align: middle;
+      text-align: center;
+    }
+    .inline-fill:focus { border-bottom-color: var(--accent); }
+    .inline-flag-label {
+      display: inline-flex; align-items: center; gap: 3px;
+      font-size: 10px; color: #9c9385; cursor: pointer; vertical-align: middle;
+      margin-left: 3px; user-select: none;
+    }
+    .inline-flag-label input { accent-color: var(--gold); width: 11px; height: 11px; }
+    .fill-group-footer {
+      display: flex; justify-content: flex-end; border-top: 1px solid var(--rule-soft);
+      margin-top: 14px; padding-top: 10px; gap: 8px;
+    }
+
+    /* Slate CSS Helper overrides for premium styled instructions (supports light & dark mode) */
+    .bg-slate-50 { background-color: var(--page-bg) !important; opacity: 0.9; }
+    .bg-slate-100 { background-color: var(--rule-soft) !important; }
+    .border-slate-200 { border-color: var(--rule) !important; }
+    .text-slate-700 { color: var(--ink-soft) !important; }
+    .text-slate-800 { color: var(--ink) !important; }
+    .text-indigo-600 { color: var(--accent) !important; }
+    .text-indigo-700 { color: var(--accent) !important; }
+    .bg-indigo-100 { background-color: var(--accent-soft) !important; }
+    .bg-emerald-100 { background-color: #eef6f0 !important; }
+    .text-emerald-700 { color: #245e3f !important; }
+    .divide-slate-200 > :not([hidden]) ~ :not([hidden]) { border-color: var(--rule-soft) !important; }
+    .list-disc { list-style-type: disc !important; }
+    .list-circle { list-style-type: circle !important; }
+    .pl-4 { padding-left: 1rem !important; }
+    .space-y-1 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.25rem !important; }
+    .space-y-2 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.5rem !important; }
+    .divide-y > :not([hidden]) ~ :not([hidden]) { border-top: 1px solid var(--rule-soft) !important; }
+    .uppercase { text-transform: uppercase !important; }
+    .tracking-wider { letter-spacing: 0.05em !important; }
+    .font-extrabold { font-weight: 800 !important; }
+    .font-bold { font-weight: 700 !important; }
+    .overflow-x-auto { overflow-x: auto !important; }
+    .min-w-full { min-width: 100% !important; }
+    .px-3 { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+    .py-2 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+    .w-full { width: 100% !important; }
+    .text-left { text-align: left !important; }
+    .border-collapse { border-collapse: collapse !important; }
+    .border { border: 1px solid var(--rule) !important; }
+    .border-white\/10 { border-color: var(--rule-soft) !important; }
+    .my-4 { margin-top: 1rem !important; margin-bottom: 1rem !important; }
+    .text-xs { font-size: 12px !important; }
+    .bg-white\/5 { background-color: var(--rule-soft) !important; }
+    .p-2 { padding: 8px !important; }
+    .font-semibold { font-weight: 600 !important; }
+    .italic { font-style: italic !important; }
+    .border-l-2 { border-left: 2px solid var(--gold) !important; }
+    .border-stone-500 { border-color: var(--gold) !important; }
+    .pl-3 { padding-left: 12px !important; }
+    .max-w-full { max-width: 100% !important; }
+    .h-auto { height: auto !important; }
+    .mx-auto { margin-left: auto !important; margin-right: auto !important; }
+    .rounded-xl { border-radius: 12px !important; }
+    .shadow-lg { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03) !important; }
+    .bg-white { background-color: var(--paper) !important; }
+
   </style>
   <script src="security.js"></script>
 </head>
@@ -592,13 +680,36 @@
       var section = testData.listening.sections[currentSectionIdx];
       var container = document.getElementById('questionsContainer');
       container.innerHTML = '';
-
-      // ── PRE-PROCESS MCQ_MULTI GROUPS ──
+      // ── PRE-PROCESS MCQ_MULTI GROUPS and FILL_GROUP ──
       var rawQuestions = section.questions;
       var displayQuestions = [];
+      var fillGroupAbsorbed = {};
       var i = 0;
       while (i < rawQuestions.length) {
         var q = rawQuestions[i];
+
+        // FILL_GROUP: Group consecutive FILL questions sharing the same instruction so they render in a unified layout
+        if (q.type === 'FILL') {
+          var matchInst = q.instruction || '';
+          var group = [q];
+          var j = i + 1;
+          while (j < rawQuestions.length && rawQuestions[j].type === 'FILL' && (rawQuestions[j].instruction || '') === matchInst) {
+            group.push(rawQuestions[j]);
+            j++;
+          }
+          group.forEach(function(gq) { fillGroupAbsorbed[gq.num] = true; });
+          displayQuestions.push({
+            isFillGroup: true,
+            questions: group,
+            instruction: matchInst,
+            num: group[0].num,
+            numEnd: group[group.length - 1].num,
+            type: 'FILL_GROUP'
+          });
+          i = j;
+          continue;
+        }
+
         var isChooseMulti = q.instruction && 
           (q.instruction.toLowerCase().includes('choose two') || q.instruction.toLowerCase().includes('choose three'));
         
@@ -636,6 +747,105 @@
       var diagramShown = false;
 
       displayQuestions.forEach(function(q, idx) {
+        if (q.type === 'FILL_GROUP') {
+          var hasFlagged = q.questions.some(function(gq) { return flaggedQuestions[gq.num]; });
+          var card = document.createElement('div');
+          card.className = 'fill-group-card' + (hasFlagged ? ' has-flagged' : '');
+          card.id = 'qcard-' + q.num;
+
+          // Strip the preamble lines (Questions N-M / Complete the ... / Choose ONE WORD...)
+          // while leaving the structured HTML notes/tables completely untouched.
+          var bodyHtml = q.instruction;
+          bodyHtml = bodyHtml.replace(/^(?:questions?\s+\d+(?:\s*-\s*\d+)?)/i, '');
+          bodyHtml = bodyHtml.replace(/^(?:\s*<br\s*\/?>\s*)*Complete\s+the\s+\w+\s+below\.?/i, '');
+          bodyHtml = bodyHtml.replace(/^(?:\s*<br\s*\/?>\s*)*Write\s+[^<]+for\s+(?:each\s+)?answer\.?/i, '');
+          bodyHtml = bodyHtml.replace(/^(?:\s*<br\s*\/?>|\s)+/i, '');
+
+          // Check if instruction actually contains structured notes/table placeholders.
+          var replaceRegex = /(?:<b>|<strong>)?\(?(\d+)\)?(?:<\/b>|<\/strong>)?\s*(?:<b>|<strong>)?[\._]{3,}(?:<\/b>|<\/strong>)?/g;
+          var hasPlaceholders = replaceRegex.test(bodyHtml);
+
+          if (!hasPlaceholders) {
+            // Build a structured notes block dynamically using the question texts!
+            var dynamicHtml = '<div class="border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs">';
+            dynamicHtml += '<ul class="list-disc pl-4 space-y-1.5">';
+            q.questions.forEach(function(gq) {
+              var text = gq.text;
+              var placeholder = '<strong>[' + gq.num + ']</strong> _________';
+              if (/________+/g.test(text)) {
+                text = text.replace(/________+/g, placeholder);
+              } else {
+                text = text + ' ' + placeholder;
+              }
+              dynamicHtml += '<li>' + text + '</li>';
+            });
+            dynamicHtml += '</ul></div>';
+            bodyHtml = dynamicHtml;
+          }
+
+          // Replace each placeholder with an inline input widget.
+          replaceRegex.lastIndex = 0;
+          bodyHtml = bodyHtml.replace(replaceRegex, function(match, numStr) {
+            var qNum = parseInt(numStr, 10);
+            var gq = q.questions.find(function(x) { return x.num === qNum; });
+            if (!gq) return match;
+            var val = escapeHtml(userAnswers[qNum] || '');
+            var isFlagged = !!flaggedQuestions[qNum];
+            return '<span class="inline-fill-wrap" id="qcard-anchor-' + qNum + '">' +
+              '<span class="inline-q-num">' + qNum + '</span>' +
+              '<input type="text" class="inline-fill" value="' + val + '" ' +
+                'oninput="handleInput(' + qNum + ', this.value)" ' +
+                'placeholder="..." />' +
+              '<label class="inline-flag-label" title="Mark for review">' +
+                '<input type="checkbox" onchange="toggleFlag(' + qNum + ')" ' +
+                  (isFlagged ? 'checked' : '') + ' />' +
+                ' Review' +
+              '</label>' +
+            '</span>';
+          });
+
+          // Build header row showing range (Q first – last) and correct task type
+          var rangeLabel = q.num === q.numEnd ? q.num : (q.num + ' – ' + q.numEnd);
+          var taskName = 'Notes Completion';
+          var lowerInst = (q.instruction || '').toLowerCase();
+          if (lowerInst.includes('table')) taskName = 'Table Completion';
+          else if (lowerInst.includes('form')) taskName = 'Form Completion';
+          else if (lowerInst.includes('flow-chart') || lowerInst.includes('flow chart')) taskName = 'Flow-chart Completion';
+          else if (lowerInst.includes('summary')) taskName = 'Summary Completion';
+
+          card.innerHTML = 
+            '<div class="q-header" style="margin-bottom:12px;">' +
+              '<span class="q-num-badge" style="border-radius:12px;padding:2px 8px;width:auto;height:auto;min-width:24px;">' + rangeLabel + '</span>' +
+              '<span style="font-size:11px;color:#9c9385;font-weight:600;">' + taskName + '</span>' +
+            '</div>' +
+            '<div class="fill-group-body">' + bodyHtml + '</div>';
+
+          // Practice mode: Check All button + combined feedback
+          if (currentTestMode === 'practice') {
+            var nums = q.questions.map(function(x) { return x.num; });
+            var footer = document.createElement('div');
+            footer.className = 'fill-group-footer';
+            footer.innerHTML = 
+              '<button onclick="checkFillGroup(' + JSON.stringify(nums) + ', \'' + q.num + '\')" class="check-btn">Check Answers</button>';
+            card.appendChild(footer);
+            var fb = document.createElement('div');
+            fb.id = 'pract-feedback-' + q.num;
+            card.appendChild(fb);
+          }
+
+          container.appendChild(card);
+          // Set up anchors for each sub-question so bottom nav scroll works
+          q.questions.forEach(function(gq) {
+            if (gq.num !== q.num) {
+              var sentinel = document.createElement('div');
+              sentinel.id = 'qcard-' + gq.num;
+              sentinel.style.cssText = 'position:absolute;pointer-events:none;height:0;overflow:hidden;';
+              card.appendChild(sentinel);
+            }
+          });
+          return;
+        }
+
         if (q.instruction && q.instruction.trim()) {
           if (q.instruction !== lastInstruction) {
             var banner = document.createElement('div');
@@ -1046,6 +1256,41 @@
 
     function escapeHtml(str) {
       return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    
+    function isFillGroupInstruction(inst) {
+      var r = /(?:<b>|<strong>)?\(?(\d+)\)?(?:<\/b>|<\/strong>)?\s*(?:<b>|<strong>)?[\._]{3,}(?:<\/b>|<\/strong>)?/;
+      return inst && r.test(inst);
+    }
+
+    function checkFillGroup(nums, firstNum) {
+      var section = testData.listening.sections[currentSectionIdx];
+      var allCorrect = true;
+      var feedbackLines = [];
+
+      nums.forEach(function(n) {
+        var q = section.questions.find(function(x) { return x.num === n; });
+        if (!q) return;
+        var uAns = (userAnswers[n] || '').trim().toLowerCase();
+        var cAns = q.answer.trim().toLowerCase();
+        var correct = uAns === cAns;
+        if (!correct) allCorrect = false;
+        feedbackLines.push(
+          '<div style="margin-bottom:4px;">' +
+            '<strong>Q' + n + ':</strong> ' +
+            (correct
+              ? '<span style="color:#245e3f;">✓ Correct — <em>' + escapeHtml(q.answer) + '</em></span>'
+              : '<span style="color:#8a2c1f;">✗ Your answer: <s>' + escapeHtml(userAnswers[n] || 'none') + '</s> &rarr; Correct: <strong>' + escapeHtml(q.answer) + '</strong></span>') +
+            (q.explanation ? '<br><span style="color:#6b6558;font-size:11px;">' + q.explanation + '</span>' : '') +
+          '</div>'
+        );
+      });
+
+      var fd = document.getElementById('pract-feedback-' + firstNum);
+      if (!fd) return;
+      fd.style.cssText = 'margin-top:10px; padding:10px 13px; border-radius:8px; border:1px solid ' + (allCorrect ? '#a9d4b8; background:#eef6f0; color:#245e3f;' : '#e3b4ab; background:#faeeec; color:#8a2c1f;');
+      fd.innerHTML = '<div style="font-weight:700;margin-bottom:8px;">' + (allCorrect ? '✓ All correct!' : 'Some answers need review') + '</div>' + feedbackLines.join('');
     }
 
     function toggleTranscriptDuringTest() {

@@ -219,6 +219,53 @@
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: rgba(168,121,47,.3); border-radius: 4px; }
+
+    /* Slate CSS Helper overrides for premium styled instructions (supports light & dark mode) */
+    .bg-slate-50 { background-color: var(--page-bg) !important; opacity: 0.9; }
+    .bg-slate-100 { background-color: var(--rule-soft) !important; }
+    .border-slate-200 { border-color: var(--rule) !important; }
+    .text-slate-700 { color: var(--ink-soft) !important; }
+    .text-slate-800 { color: var(--ink) !important; }
+    .text-indigo-600 { color: var(--accent) !important; }
+    .text-indigo-700 { color: var(--accent) !important; }
+    .bg-indigo-100 { background-color: var(--accent-soft) !important; }
+    .bg-emerald-100 { background-color: #eef6f0 !important; }
+    .text-emerald-700 { color: #245e3f !important; }
+    .divide-slate-200 > :not([hidden]) ~ :not([hidden]) { border-color: var(--rule-soft) !important; }
+    .list-disc { list-style-type: disc !important; }
+    .list-circle { list-style-type: circle !important; }
+    .pl-4 { padding-left: 1rem !important; }
+    .space-y-1 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.25rem !important; }
+    .space-y-2 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.5rem !important; }
+    .divide-y > :not([hidden]) ~ :not([hidden]) { border-top: 1px solid var(--rule-soft) !important; }
+    .uppercase { text-transform: uppercase !important; }
+    .tracking-wider { letter-spacing: 0.05em !important; }
+    .font-extrabold { font-weight: 800 !important; }
+    .font-bold { font-weight: 700 !important; }
+    .overflow-x-auto { overflow-x: auto !important; }
+    .min-w-full { min-width: 100% !important; }
+    .px-3 { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+    .py-2 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+    .w-full { width: 100% !important; }
+    .text-left { text-align: left !important; }
+    .border-collapse { border-collapse: collapse !important; }
+    .border { border: 1px solid var(--rule) !important; }
+    .border-white\/10 { border-color: var(--rule-soft) !important; }
+    .my-4 { margin-top: 1rem !important; margin-bottom: 1rem !important; }
+    .text-xs { font-size: 12px !important; }
+    .bg-white\/5 { background-color: var(--rule-soft) !important; }
+    .p-2 { padding: 8px !important; }
+    .font-semibold { font-weight: 600 !important; }
+    .italic { font-style: italic !important; }
+    .border-l-2 { border-left: 2px solid var(--gold) !important; }
+    .border-stone-500 { border-color: var(--gold) !important; }
+    .pl-3 { padding-left: 12px !important; }
+    .max-w-full { max-width: 100% !important; }
+    .h-auto { height: auto !important; }
+    .mx-auto { margin-left: auto !important; margin-right: auto !important; }
+    .rounded-xl { border-radius: 12px !important; }
+    .shadow-lg { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03) !important; }
+    .bg-white { background-color: var(--paper) !important; }
   </style>
   <script src="security.js"></script>
 </head>
@@ -641,13 +688,12 @@
       while (i < rawQuestions.length) {
         const q = rawQuestions[i];
 
-        // FILL_GROUP: multiple FILL questions sharing an instruction that contains
-        // the static summary/table preview (detected by ...... dots in inst text).
-        if (q.type === 'FILL' && isFillGroupInstruction(q.instruction)) {
-          const matchInst = q.instruction;
+        // FILL_GROUP: Group consecutive FILL questions sharing the same instruction so they render in a unified layout
+        if (q.type === 'FILL') {
+          const matchInst = q.instruction || '';
           const group = [q];
           let j = i + 1;
-          while (j < rawQuestions.length && rawQuestions[j].type === 'FILL' && rawQuestions[j].instruction === matchInst) {
+          while (j < rawQuestions.length && rawQuestions[j].type === 'FILL' && (rawQuestions[j].instruction || '') === matchInst) {
             group.push(rawQuestions[j]);
             j++;
           }
@@ -710,17 +756,37 @@
           card.id = `qbox-${q.num}`;
 
           // Strip the preamble lines (Questions N-M / Complete the ... / Choose ONE WORD...)
-          // to get just the body text of the summary/table, keeping title line(s).
-          // We split on <br/> variants, drop lines that are purely instructional boilerplate
-          // ("Questions", "Complete the", "Choose", "Write your"), then reassemble.
-          const instLines = q.instruction.replace(/<br\s*\/?>/gi, '\n').split('\n');
-          const boilerplateRe = /^(questions\s+\d|complete the|choose (one|two|three)|write your)/i;
-          const bodyLines = instLines.filter(l => !boilerplateRe.test(l.trim()));
-          let bodyHtml = bodyLines.join('<br/>');
+          // while leaving the structured HTML notes/tables completely untouched.
+          let bodyHtml = q.instruction;
+          bodyHtml = bodyHtml.replace(/^(?:questions?\s+\d+(?:\s*-\s*\d+)?)/i, '');
+          bodyHtml = bodyHtml.replace(/^(?:\s*<br\s*\/?>\s*)*Complete\s+the\s+\w+\s+below\.?/i, '');
+          bodyHtml = bodyHtml.replace(/^(?:\s*<br\s*\/?>\s*)*Write\s+[^<]+for\s+(?:each\s+)?answer\.?/i, '');
+          bodyHtml = bodyHtml.replace(/^(?:\s*<br\s*\/?>|\s)+/i, '');
+
+          // Check if instruction actually contains structured notes/table placeholders.
+          const replaceRegex = /(?:<b>|<strong>)?\(?(\d+)\)?(?:<\/b>|<\/strong>)?\s*(?:<b>|<strong>)?[\._]{3,}(?:<\/b>|<\/strong>)?/g;
+          const hasPlaceholders = replaceRegex.test(bodyHtml);
+
+          if (!hasPlaceholders) {
+            // Build a structured notes block dynamically using the question texts!
+            let dynamicHtml = '<div class="border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs">';
+            dynamicHtml += '<ul class="list-disc pl-4 space-y-1.5">';
+            q.questions.forEach(gq => {
+              let text = gq.text;
+              const placeholder = '<strong>[' + gq.num + ']</strong> _________';
+              if (/________+/g.test(text)) {
+                text = text.replace(/________+/g, placeholder);
+              } else {
+                text = text + ' ' + placeholder;
+              }
+              dynamicHtml += `<li>${text}</li>`;
+            });
+            dynamicHtml += '</ul></div>';
+            bodyHtml = dynamicHtml;
+          }
 
           // Replace each placeholder with an inline input widget.
-          // Supports: normal dots (24 ......), bold parenthesised underscores (<b>(4) _________</b>), etc.
-          const replaceRegex = /(?:<b>|<strong>)?\(?(\d+)\)?(?:<\/b>|<\/strong>)?\s*(?:<b>|<strong>)?[\._]{3,}(?:<\/b>|<\/strong>)?/g;
+          replaceRegex.lastIndex = 0;
           bodyHtml = bodyHtml.replace(replaceRegex, (match, numStr) => {
             const qNum = parseInt(numStr, 10);
             const gq = q.questions.find(x => x.num === qNum);
@@ -740,12 +806,19 @@
             </span>`;
           });
 
-          // Build header row showing range (Q first – last)
+          // Build header row showing range (Q first – last) and correct task type
           const rangeLabel = q.num === q.numEnd ? `${q.num}` : `${q.num} – ${q.numEnd}`;
+          let taskName = 'Notes Completion';
+          const lowerInst = (q.instruction || '').toLowerCase();
+          if (lowerInst.includes('table')) taskName = 'Table Completion';
+          else if (lowerInst.includes('form')) taskName = 'Form Completion';
+          else if (lowerInst.includes('flow-chart') || lowerInst.includes('flow chart')) taskName = 'Flow-chart Completion';
+          else if (lowerInst.includes('summary')) taskName = 'Summary Completion';
+
           card.innerHTML = `
-            <div class="q-header-row" style="margin-bottom:12px;">
+            <div class="q-header" style="margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:10px;">
               <span class="q-num-badge" style="border-radius:12px;padding:2px 8px;width:auto;height:auto;min-width:24px;">${rangeLabel}</span>
-              <span style="font-size:11px;color:#9c9385;font-weight:600;">Fill in the blanks</span>
+              <span style="font-size:11px;color:#9c9385;font-weight:600;">${taskName}</span>
             </div>
             <div class="fill-group-body">${bodyHtml}</div>
           `;
