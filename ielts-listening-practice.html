@@ -764,7 +764,7 @@
           // while leaving the structured HTML notes/tables completely untouched.
           var bodyHtml = q.instruction;
           bodyHtml = bodyHtml.replace(/^(?:questions?\s+\d+(?:\s*-\s*\d+)?)/i, '');
-          bodyHtml = bodyHtml.replace(/^(?:\s*<br\s*\/?>\s*)*Complete\s+the\s+\w+\s+below\.?/i, '');
+          bodyHtml = bodyHtml.replace(/^(?:\s*<br\s*\/?>\s*)*Complete\s+the\s+[\s\S]+?below\.?/i, '');
           bodyHtml = bodyHtml.replace(/^(?:\s*<br\s*\/?>\s*)*Write\s+[^<]+for\s+(?:each\s+)?answer\.?/i, '');
           bodyHtml = bodyHtml.replace(/^(?:\s*<br\s*\/?>|\s)+/i, '');
 

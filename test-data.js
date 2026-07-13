@@ -1855,7 +1855,7 @@ const IELTS_TEST_DATA = {
       {
        "num": 24,
        "type": "FILL",
-       "instruction": "Questions 24-26\nComplete the summary using the list of options, A-F, below.\n\n<b>Using AI in the UK health system</b>\nAI currently has a limited role in the way <b>(24) _________</b> are allocated in the health service. The positive aspect of AI having a bigger role is that it would be more efficient and lead to patient benefits. However, such a change would result, for example, in certain <b>(25) _________</b> not having their current level of <b>(26) _________</b>.",
+       "instruction": "Questions 24-26<br/>Complete the summary using the list of options, A-F, below.<br/><br/><div style=\"font-weight: 700; font-size: 14.5px; color: var(--accent); margin: 12px 0 14px 0; font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.03em;\">Using AI in the UK health system</div><p style=\"line-height: 2.1; font-family: 'Lora', serif; font-size: 14.5px;\">AI currently has a limited role in the way <b>(24) _________</b> are allocated in the health service. The positive aspect of AI having a bigger role is that it would be more efficient and lead to patient benefits. However, such a change would result, for example, in certain <b>(25) _________</b> not having their current level of <b>(26) _________</b>.</p>",
        "text": "AI currently has a limited role in the way _________ are allocated in the health service.",
        "answer": "C",
        "options": [
@@ -1871,7 +1871,7 @@ const IELTS_TEST_DATA = {
       {
        "num": 25,
        "type": "FILL",
-       "instruction": "Questions 24-26\nComplete the summary using the list of options, A-F, below.\n\n<b>Using AI in the UK health system</b>\nAI currently has a limited role in the way <b>(24) _________</b> are allocated in the health service. The positive aspect of AI having a bigger role is that it would be more efficient and lead to patient benefits. However, such a change would result, for example, in certain <b>(25) _________</b> not having their current level of <b>(26) _________</b>.",
+       "instruction": "Questions 24-26<br/>Complete the summary using the list of options, A-F, below.<br/><br/><div style=\"font-weight: 700; font-size: 14.5px; color: var(--accent); margin: 12px 0 14px 0; font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.03em;\">Using AI in the UK health system</div><p style=\"line-height: 2.1; font-family: 'Lora', serif; font-size: 14.5px;\">AI currently has a limited role in the way <b>(24) _________</b> are allocated in the health service. The positive aspect of AI having a bigger role is that it would be more efficient and lead to patient benefits. However, such a change would result, for example, in certain <b>(25) _________</b> not having their current level of <b>(26) _________</b>.</p>",
        "text": "However, such a change would result, for example, in certain _________ not having their current level of _________.",
        "answer": "A",
        "options": [
@@ -1887,7 +1887,7 @@ const IELTS_TEST_DATA = {
       {
        "num": 26,
        "type": "FILL",
-       "instruction": "Questions 24-26\nComplete the summary using the list of options, A-F, below.\n\n<b>Using AI in the UK health system</b>\nAI currently has a limited role in the way <b>(24) _________</b> are allocated in the health service. The positive aspect of AI having a bigger role is that it would be more efficient and lead to patient benefits. However, such a change would result, for example, in certain <b>(25) _________</b> not having their current level of <b>(26) _________</b>.",
+       "instruction": "Questions 24-26<br/>Complete the summary using the list of options, A-F, below.<br/><br/><div style=\"font-weight: 700; font-size: 14.5px; color: var(--accent); margin: 12px 0 14px 0; font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.03em;\">Using AI in the UK health system</div><p style=\"line-height: 2.1; font-family: 'Lora', serif; font-size: 14.5px;\">AI currently has a limited role in the way <b>(24) _________</b> are allocated in the health service. The positive aspect of AI having a bigger role is that it would be more efficient and lead to patient benefits. However, such a change would result, for example, in certain <b>(25) _________</b> not having their current level of <b>(26) _________</b>.</p>",
        "text": "However, such a change would result, for example, in certain _________ not having their current level of _________.",
        "answer": "E",
        "options": [
