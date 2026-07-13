@@ -931,10 +931,18 @@
           textEl.innerHTML = q.text;
           qBox.appendChild(textEl);
         } else {
-          const textEl = document.createElement('p');
+          let questionText = q.questions && q.questions[0] ? q.questions[0].text : (q.text || '');
+          questionText = questionText.replace(/\s*\(\s*Select\s+[^)]+\)/i, '');
+          const textEl = document.createElement('div');
           textEl.className = 'q-text';
-          textEl.innerHTML = `Choose <strong>${q.selectCount}</strong> letters, A-E.`;
+          textEl.style.cssText = 'font-weight: 600; margin-bottom: 8px; font-family: \'Lora\', serif; font-size: 15px; color: var(--ink);';
+          textEl.innerHTML = questionText;
           qBox.appendChild(textEl);
+
+          const instEl = document.createElement('p');
+          instEl.className = 'q-text';
+          instEl.innerHTML = `Choose <strong>${q.selectCount}</strong> letters, A-E.`;
+          qBox.appendChild(instEl);
         }
 
         let answerHtml = '';

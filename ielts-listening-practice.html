@@ -1032,7 +1032,10 @@
           });
           body.appendChild(optionsDiv);
         } else if (q.type === 'MCQ_MULTI') {
-          body.innerHTML = '<div style="margin-bottom:9px;">Choose <strong>' + q.selectCount + '</strong> letters, A-E.</div>';
+          var questionText = q.questions && q.questions[0] ? q.questions[0].text : (q.text || '');
+          questionText = questionText.replace(/\s*\(\s*Select\s+[^)]+\)/i, '');
+          body.innerHTML = '<div style="font-weight: 600; margin-bottom: 8px; font-family: \'Lora\', serif; font-size: 15px; color: var(--ink);">' + questionText + '</div>' +
+                           '<div style="margin-bottom:12px; font-size: 13px; color: var(--ink-soft); font-family: \'Inter\', sans-serif;">Choose <strong>' + q.selectCount + '</strong> letters, A-E.</div>';
           var optionsDiv = document.createElement('div');
           optionsDiv.className = 'mcq-options';
           var nums = q.questions.map(function(x) { return x.num; });
