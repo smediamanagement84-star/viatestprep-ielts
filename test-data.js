@@ -2352,16 +2352,14 @@ const IELTS_TEST_DATA = {
        "type": "MCQ",
        "text": "Which TWO opinions about the Luddites do the students express? (Select first opinion)",
        "answer": "A",
-       "explanation": "The transcript states: \"YOUNG MAN: That seminar yesterday on automation and the future of work was really good, wasn't it.\"",
+       "explanation": "The students discuss how the Luddites' actions in destroying weaving machinery ultimately did not achieve anything, making their actions ineffective.",
        "instruction": "Questions 21 and 22<br/>Choose TWO letters, A-E.",
        "options": [
-        "A. These jobs are likely to be at risk.",
-        "B. Their role will become more important.",
-        "C. They will be least affected by AI.",
-        "D. They will need significant retraining.",
-        "E. Their work will become more creative.",
-        "F. They will adapt but face initial challenges.",
-        "G. Their jobs may actually increase in number."
+        "A. Their actions were ineffective.",
+        "B. They are still influential today.",
+        "C. They have received unfair criticism.",
+        "D. They were proved right.",
+        "E. Their attitude is understandable."
        ]
       },
       {
@@ -2369,152 +2367,146 @@ const IELTS_TEST_DATA = {
        "type": "MCQ",
        "text": "Which TWO opinions about the Luddites do the students express? (Select second opinion)",
        "answer": "E",
-       "explanation": "The transcript states: \"YOUNG MAN: That seminar yesterday on automation and the future of work was really good, wasn't it.\"",
+       "explanation": "The students acknowledge that despite the industrialization that followed, one can understand why the Luddites felt threatened at the time.",
        "instruction": "Questions 21 and 22<br/>Choose TWO letters, A-E.",
        "options": [
-        "A. These jobs are likely to be at risk.",
-        "B. Their role will become more important.",
-        "C. They will be least affected by AI.",
-        "D. They will need significant retraining.",
-        "E. Their work will become more creative.",
-        "F. They will adapt but face initial challenges.",
-        "G. Their jobs may actually increase in number."
+        "A. Their actions were ineffective.",
+        "B. They are still influential today.",
+        "C. They have received unfair criticism.",
+        "D. They were proved right.",
+        "E. Their attitude is understandable."
        ]
       },
       {
        "num": 23,
        "type": "MCQ",
-       "text": "Which TWO predictions about the future of work do the students agree with? (Select first prediction)",
+       "text": "Which TWO predictions about the future of work are the students doubtful about? (Select first prediction)",
        "answer": "B",
-       "explanation": "The transcript states: \"Looking at the first industrial revolution in Britain in the 19th century and seeing how people reacted to massive change was a real eye-opener.\"",
+       "explanation": "The students are skeptical about lower unemployment (\\\"what about lower unemployment? I'm not so sure about that\\\").",
        "instruction": "Questions 23 and 24<br/>Choose TWO letters, A-E.",
        "options": [
-        "A. These jobs are likely to be at risk.",
-        "B. Their role will become more important.",
-        "C. They will be least affected by AI.",
-        "D. They will need significant retraining.",
-        "E. Their work will become more creative.",
-        "F. They will adapt but face initial challenges.",
-        "G. Their jobs may actually increase in number."
+        "A. Work will be more rewarding.",
+        "B. Unemployment will fall.",
+        "C. People will want to delay retiring.",
+        "D. Working hours will be shorter.",
+        "E. People will change jobs more frequently."
        ]
       },
       {
        "num": 24,
        "type": "MCQ",
-       "text": "Which TWO predictions about the future of work do the students agree with? (Select second prediction)",
+       "text": "Which TWO predictions about the future of work are the students doubtful about? (Select second prediction)",
        "answer": "D",
-       "explanation": "The transcript states: \"YOUNG MAN: That seminar yesterday on automation and the future of work was really good, wasn't it.\"",
+       "explanation": "The students are skeptical about having more leisure time (\\\"all the evidence shows people are spending longer than ever at work\\\").",
        "instruction": "Questions 23 and 24<br/>Choose TWO letters, A-E.",
        "options": [
-        "A. These jobs are likely to be at risk.",
-        "B. Their role will become more important.",
-        "C. They will be least affected by AI.",
-        "D. They will need significant retraining.",
-        "E. Their work will become more creative.",
-        "F. They will adapt but face initial challenges.",
-        "G. Their jobs may actually increase in number."
+        "A. Work will be more rewarding.",
+        "B. Unemployment will fall.",
+        "C. People will want to delay retiring.",
+        "D. Working hours will be shorter.",
+        "E. People will change jobs more frequently."
        ]
       },
       {
        "num": 25,
-       "type": "MCQ",
-       "text": "Comment about: Accountants",
+       "type": "MATCHING",
+       "text": "Accountants",
        "answer": "G",
-       "explanation": "The transcript states: \"YOUNG MAN: That seminar yesterday on automation and the future of work was really good, wasn't it.\"",
-       "instruction": "Questions 25-30<br/>What comment do the students make about each of the following jobs?",
+       "explanation": "The transcript notes there are more of them than ever (twenty times more accountants compared to the 19th century).",
+       "instruction": "Questions 25-30<br/>What comment do the students make about each of the following jobs?<br/><br/><div style=\\\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\\\"><div style=\\\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; font-family: 'Inter', sans-serif;\\\">Comments:</div><div style=\\\"display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px;\\\"><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>A</b>. These jobs are likely to be at risk.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>B</b>. Their role will become more important.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>C</b>. They will be least affected by AI.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>D</b>. They will need significant retraining.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>E</b>. Their work will become more creative.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>F</b>. They will adapt but face initial challenges.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>G</b>. Their jobs may actually increase in number.</div></div></div>",
        "options": [
-        "A. These jobs are likely to be at risk.",
-        "B. Their role will become more important.",
-        "C. They will be least affected by AI.",
-        "D. They will need significant retraining.",
-        "E. Their work will become more creative.",
-        "F. They will adapt but face initial challenges.",
-        "G. Their jobs may actually increase in number."
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
        ]
       },
       {
        "num": 26,
-       "type": "MCQ",
-       "text": "Comment about: Doctors",
-       "answer": "E",
-       "explanation": "The transcript states: \"YOUNG MAN: That seminar yesterday on automation and the future of work was really good, wasn't it.\"",
-       "instruction": "Questions 25-30<br/>What comment do the students make about each of the following jobs?",
+       "type": "MATCHING",
+       "text": "Hairdressers",
+       "answer": "C",
+       "explanation": "The transcript says hairdressing is \\\"one job where you don't depend on a computer,\\\" indicating they will be least affected by AI.",
+       "instruction": "Questions 25-30<br/>What comment do the students make about each of the following jobs?<br/><br/><div style=\\\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\\\"><div style=\\\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; font-family: 'Inter', sans-serif;\\\">Comments:</div><div style=\\\"display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px;\\\"><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>A</b>. These jobs are likely to be at risk.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>B</b>. Their role will become more important.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>C</b>. They will be least affected by AI.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>D</b>. They will need significant retraining.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>E</b>. Their work will become more creative.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>F</b>. They will adapt but face initial challenges.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>G</b>. Their jobs may actually increase in number.</div></div></div>",
        "options": [
-        "A. These jobs are likely to be at risk.",
-        "B. Their role will become more important.",
-        "C. They will be least affected by AI.",
-        "D. They will need significant retraining.",
-        "E. Their work will become more creative.",
-        "F. They will adapt but face initial challenges.",
-        "G. Their jobs may actually increase in number."
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
        ]
       },
       {
        "num": 27,
-       "type": "MCQ",
-       "text": "Comment about: Teachers",
-       "answer": "B",
-       "explanation": "The transcript states: \"Looking at the first industrial revolution in Britain in the 19th century and seeing how people reacted to massive change was a real eye-opener.\"",
-       "instruction": "Questions 25-30<br/>What comment do the students make about each of the following jobs?",
+       "type": "MATCHING",
+       "text": "Administrative staff",
+       "answer": "E",
+       "explanation": "The transcript mentions secretaries' work is now given much more responsibility and higher status compared to dictation/typing, which means their work will become more creative.",
+       "instruction": "Questions 25-30<br/>What comment do the students make about each of the following jobs?<br/><br/><div style=\\\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\\\"><div style=\\\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; font-family: 'Inter', sans-serif;\\\">Comments:</div><div style=\\\"display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px;\\\"><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>A</b>. These jobs are likely to be at risk.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>B</b>. Their role will become more important.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>C</b>. They will be least affected by AI.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>D</b>. They will need significant retraining.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>E</b>. Their work will become more creative.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>F</b>. They will adapt but face initial challenges.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>G</b>. Their jobs may actually increase in number.</div></div></div>",
        "options": [
-        "A. These jobs are likely to be at risk.",
-        "B. Their role will become more important.",
-        "C. They will be least affected by AI.",
-        "D. They will need significant retraining.",
-        "E. Their work will become more creative.",
-        "F. They will adapt but face initial challenges.",
-        "G. Their jobs may actually increase in number."
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
        ]
       },
       {
        "num": 28,
-       "type": "MCQ",
-       "text": "Comment about: Drivers",
-       "answer": "C",
-       "explanation": "The transcript states: \"Looking at the first industrial revolution in Britain in the 19th century and seeing how people reacted to massive change was a real eye-opener.\"",
-       "instruction": "Questions 25-30<br/>What comment do the students make about each of the following jobs?",
+       "type": "MATCHING",
+       "text": "Agricultural workers",
+       "answer": "D",
+       "explanation": "The transcript talks about agricultural workers in 1871 census being 25% and now less than 0.2%, which requires significant retraining/adaptation over time.",
+       "instruction": "Questions 25-30<br/>What comment do the students make about each of the following jobs?<br/><br/><div style=\\\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\\\"><div style=\\\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; font-family: 'Inter', sans-serif;\\\">Comments:</div><div style=\\\"display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px;\\\"><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>A</b>. These jobs are likely to be at risk.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>B</b>. Their role will become more important.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>C</b>. They will be least affected by AI.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>D</b>. They will need significant retraining.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>E</b>. Their work will become more creative.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>F</b>. They will adapt but face initial challenges.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>G</b>. Their jobs may actually increase in number.</div></div></div>",
        "options": [
-        "A. These jobs are likely to be at risk.",
-        "B. Their role will become more important.",
-        "C. They will be least affected by AI.",
-        "D. They will need significant retraining.",
-        "E. Their work will become more creative.",
-        "F. They will adapt but face initial challenges.",
-        "G. Their jobs may actually increase in number."
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
        ]
       },
       {
        "num": 29,
-       "type": "MCQ",
-       "text": "Comment about: Musicians",
-       "answer": "F",
-       "explanation": "The transcript states: \"YOUNG MAN: That seminar yesterday on automation and the future of work was really good, wasn't it.\"",
-       "instruction": "Questions 25-30<br/>What comment do the students make about each of the following jobs?",
+       "type": "MATCHING",
+       "text": "Care workers",
+       "answer": "B",
+       "explanation": "The transcript says care workers will see huge growth (their role will become more important).",
+       "instruction": "Questions 25-30<br/>What comment do the students make about each of the following jobs?<br/><br/><div style=\\\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\\\"><div style=\\\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; font-family: 'Inter', sans-serif;\\\">Comments:</div><div style=\\\"display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px;\\\"><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>A</b>. These jobs are likely to be at risk.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>B</b>. Their role will become more important.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>C</b>. They will be least affected by AI.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>D</b>. They will need significant retraining.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>E</b>. Their work will become more creative.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>F</b>. They will adapt but face initial challenges.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>G</b>. Their jobs may actually increase in number.</div></div></div>",
        "options": [
-        "A. These jobs are likely to be at risk.",
-        "B. Their role will become more important.",
-        "C. They will be least affected by AI.",
-        "D. They will need significant retraining.",
-        "E. Their work will become more creative.",
-        "F. They will adapt but face initial challenges.",
-        "G. Their jobs may actually increase in number."
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
        ]
       },
       {
        "num": 30,
-       "type": "MCQ",
-       "text": "Comment about: Artists",
+       "type": "MATCHING",
+       "text": "Bank clerks",
        "answer": "A",
-       "explanation": "The transcript states: \"YOUNG MAN: That seminar yesterday on automation and the future of work was really good, wasn't it.\"",
-       "instruction": "Questions 25-30<br/>What comment do the students make about each of the following jobs?",
+       "explanation": "The transcript says bank clerks have been in decline and technology will make most of their jobs redundant (they are likely to be at risk).",
+       "instruction": "Questions 25-30<br/>What comment do the students make about each of the following jobs?<br/><br/><div style=\\\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\\\"><div style=\\\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; font-family: 'Inter', sans-serif;\\\">Comments:</div><div style=\\\"display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px;\\\"><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>A</b>. These jobs are likely to be at risk.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>B</b>. Their role will become more important.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>C</b>. They will be least affected by AI.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>D</b>. They will need significant retraining.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>E</b>. Their work will become more creative.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>F</b>. They will adapt but face initial challenges.</div><div style=\\\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\\\"><b>G</b>. Their jobs may actually increase in number.</div></div></div>",
        "options": [
-        "A. These jobs are likely to be at risk.",
-        "B. Their role will become more important.",
-        "C. They will be least affected by AI.",
-        "D. They will need significant retraining.",
-        "E. Their work will become more creative.",
-        "F. They will adapt but face initial challenges.",
-        "G. Their jobs may actually increase in number."
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
        ]
       }
      ]

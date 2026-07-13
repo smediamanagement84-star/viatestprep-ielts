@@ -899,8 +899,21 @@
         const headerRow = document.createElement('div');
         headerRow.className = 'q-header-row';
         const displayNumStr = q.isGroup ? `${q.num} – ${q.numEnd}` : q.num;
-        headerRow.innerHTML = `<span class="q-num-badge" style="border-radius:12px; padding:2px 8px; width:auto; height:auto; min-width:24px;">${displayNumStr}</span>` +
-          (q.contentUnavailable ? '' : `<label class="q-review-label"><input type="checkbox" onchange="toggleFlag(${q.num})" ${flaggedQuestions[q.num] ? 'checked' : ''} /> Review</label>`);
+        let taskName = '';
+        if (q.type === 'TFNG') taskName = 'True / False / Not Given';
+        else if (q.type === 'YNNG') taskName = 'Yes / No / Not Given';
+        else if (q.type === 'MCQ') taskName = 'Multiple Choice';
+        else if (q.type === 'MCQ_MULTI') taskName = 'Multiple Choice';
+        else if (q.type === 'HEADING') taskName = 'Matching Headings';
+        else if (q.type === 'FILL') taskName = 'Short Answer';
+        else if (q.type === 'MATCHING') taskName = 'Matching';
+
+        headerRow.innerHTML = `
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="q-num-badge" style="border-radius:12px; padding:2px 8px; width:auto; height:auto; min-width:24px;">${displayNumStr}</span>
+            ${taskName ? `<span style="font-size:11px; color:#9c9385; font-weight:600; text-transform:uppercase; font-family:'Inter'; margin-left:6px;">${taskName}</span>` : ''}
+          </div>
+        ` + (q.contentUnavailable ? '' : `<label class="q-review-label"><input type="checkbox" onchange="toggleFlag(${q.num})" ${flaggedQuestions[q.num] ? 'checked' : ''} /> Review</label>`);
         qBox.appendChild(headerRow);
 
         if (q.contentUnavailable) {

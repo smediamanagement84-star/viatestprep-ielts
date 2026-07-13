@@ -990,7 +990,17 @@
         var header = document.createElement('div');
         header.className = 'q-header';
         var displayNumStr = q.isGroup ? (q.num + ' – ' + q.numEnd) : q.num;
-        header.innerHTML = '<span class="q-num-badge" style="border-radius:12px; padding:2px 8px; width:auto; height:auto; min-width:24px;">' + displayNumStr + '</span>' +
+        var taskName = '';
+        if (q.type === 'MCQ') taskName = 'Multiple Choice';
+        else if (q.type === 'MCQ_MULTI') taskName = 'Multiple Choice';
+        else if (q.type === 'FILL') taskName = 'Short Answer';
+        else if (q.type === 'MATCHING') taskName = 'Matching';
+
+        header.innerHTML = 
+          '<div style="display:flex; align-items:center; gap:8px;">' +
+            '<span class="q-num-badge" style="border-radius:12px; padding:2px 8px; width:auto; height:auto; min-width:24px;">' + displayNumStr + '</span>' +
+            (taskName ? '<span style="font-size:11px; color:#9c9385; font-weight:600; text-transform:uppercase; font-family:\'Inter\'; margin-left:6px;">' + taskName + '</span>' : '') +
+          '</div>' +
           (q.contentUnavailable ? '' : '<label class="q-review-label"><input type="checkbox" onchange="toggleFlag(' + q.num + ')" ' + (flaggedQuestions[q.num] ? 'checked' : '') + ' /> Review</label>');
         card.appendChild(header);
 
