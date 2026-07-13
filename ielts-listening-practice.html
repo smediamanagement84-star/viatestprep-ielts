@@ -680,6 +680,13 @@
       var section = testData.listening.sections[currentSectionIdx];
       var container = document.getElementById('questionsContainer');
       container.innerHTML = '';
+
+      if (section.diagram) {
+        var diagramDiv = document.createElement('div');
+        diagramDiv.className = 'diagram-panel';
+        diagramDiv.innerHTML = section.diagram;
+        container.appendChild(diagramDiv);
+      }
       // ── PRE-PROCESS MCQ_MULTI GROUPS and FILL_GROUP ──
       var rawQuestions = section.questions;
       var displayQuestions = [];
@@ -863,13 +870,6 @@
         }
 
         if (q.type === 'MATCHING' && !q.contentUnavailable) {
-          if (section.diagram && !diagramShown) {
-            var diagramDiv = document.createElement('div');
-            diagramDiv.className = 'diagram-panel';
-            diagramDiv.innerHTML = section.diagram;
-            container.appendChild(diagramDiv);
-            diagramShown = true;
-          }
           if (!matchPanel) {
             matchPanel = document.createElement('div');
             matchPanel.className = 'form-panel';
