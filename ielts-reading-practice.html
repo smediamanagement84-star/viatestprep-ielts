@@ -764,7 +764,7 @@
           bodyHtml = bodyHtml.replace(/^(?:\s*<br\s*\/?>|\s)+/i, '');
 
           // Check if instruction actually contains structured notes/table placeholders.
-          const replaceRegex = /(?:<b>|<strong>)?\(?(\d+)\)?(?:<\/b>|<\/strong>)?\s*(?:<b>|<strong>)?[\._]{3,}(?:<\/b>|<\/strong>)?/g;
+          const replaceRegex = /(?:<b>|<strong>)?[\(\[\{]?(\d+)[\)\]\}]?(?:<\/b>|<\/strong>)?\s*(?:<b>|<strong>)?[\._]{3,}(?:<\/b>|<\/strong>)?/g;
           const hasPlaceholders = replaceRegex.test(bodyHtml);
 
           if (!hasPlaceholders) {
