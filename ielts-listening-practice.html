@@ -455,6 +455,48 @@
     const timeline = document.getElementById('audioTimeline');
 
     let reviewTimerInterval;
+    let isReviewMode = false;
+
+    function checkAnswerCorrect(uAns, cAns) {
+      uAns = (uAns || '').trim().toLowerCase();
+      cAns = (cAns || '').trim().toLowerCase();
+      if (!uAns || !cAns) return false;
+      if (uAns === cAns) return true;
+
+      function normalize(str) {
+        str = str.replace(/^(a|an|the)\s+/i, '').replace(/[^a-z0-9\s]/g, '').trim();
+        return str;
+      }
+
+      const uNorm = normalize(uAns);
+      const cNorm = normalize(cAns);
+      if (uNorm === cNorm) return true;
+
+      function getSingulars(str) {
+        const res = [str];
+        if (str.endsWith('ies') && str.length > 3) {
+          res.push(str.slice(0, -3) + 'y');
+        }
+        if (str.endsWith('es') && str.length > 2) {
+          res.push(str.slice(0, -2));
+          res.push(str.slice(0, -1));
+        }
+        if (str.endsWith('s') && !str.endsWith('ss') && str.length > 1) {
+          res.push(str.slice(0, -1));
+        }
+        return res;
+      }
+
+      const uSings = getSingulars(uNorm);
+      const cSings = getSingulars(cNorm);
+
+      for (let u of uSings) {
+        for (let c of cSings) {
+          if (u === c && u.length > 2) return true;
+        }
+      }
+      return false;
+    }
     function initTest() {
       document.getElementById('testTitle').textContent = testData.title;
       document.getElementById('testSetTag').textContent = 'IELTS Academic — Test ' + formatTestId(testId);
@@ -497,6 +539,14 @@
 
       document.getElementById('scratchpadText').value = localStorage.getItem('scratchpad_listening_' + testId) || '';
       loadSection();
+
+      if (urlParams.get('review') === '1' || urlParams.get('review') === 'true') {
+        clearInterval(timerInterval);
+        isReviewMode = true;
+        userAnswers = JSON.parse(localStorage.getItem('answers_test_' + testId + '_listening') || '{}');
+        renderReviewMode();
+        switchSection(0, document.querySelectorAll('.section-tab')[0]);
+      }
     }
 
     function updateTimerDisplay(countUp) {
@@ -531,7 +581,19 @@
     function switchSection(idx, btnEl) {
       currentSectionIdx = idx;
       document.querySelectorAll('.section-tab').forEach(function(b) { b.classList.remove('active'); });
-      btnEl.classList.add('active');
+      if (btnEl) btnEl.classList.add('active');
+      if (isReviewMode) {
+        var transContent = document.getElementById('transcriptContent');
+        if (transContent) {
+          var chosenSec = testData.listening.sections[idx];
+          transContent.innerHTML = chosenSec.transcript || '<em>Transcript unavailable for this section.</em>';
+        }
+        var headerEl = document.getElementById('review-part-header-' + idx);
+        if (headerEl) {
+          headerEl.scrollIntoView({ behavior: 'smooth' });
+        }
+        return;
+      }
       loadSection();
       setTimeout(function() {
         var t = document.getElementById('qcard-' + currentQuestionNum);
@@ -662,7 +724,7 @@
         if (!q) return;
         var uAns = (userAnswers[n] || '').trim().toLowerCase();
         var cAns = q.answer.trim().toLowerCase();
-        if (uAns !== cAns) allCorrect = false;
+        if (!checkAnswerCorrect(uAns, cAns)) allCorrect = false;
         feedbackTexts.push('Question ' + n + ': Answer is <strong>' + q.answer + '</strong>. ' + q.explanation);
       });
       var fd = document.getElementById('pract-feedback-' + nums[0]);
@@ -1092,14 +1154,13 @@
             if (sIdx !== currentSectionIdx) {
               var tabBtn = document.querySelectorAll('.section-tab')[sIdx];
               switchSection(sIdx, tabBtn);
-            } else {
-              var targetBox = document.getElementById('qcard-' + q.num);
-              if (targetBox) targetBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              document.querySelectorAll('.q-nav-btn').forEach(function(b) {
-                b.classList.remove('current');
-                if (parseInt(b.textContent) === q.num) b.classList.add('current');
-              });
             }
+            var targetBox = document.getElementById('qcard-' + q.num);
+            if (targetBox) targetBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            document.querySelectorAll('.q-nav-btn').forEach(function(b) {
+              b.classList.remove('current');
+              if (parseInt(b.textContent) === q.num) b.classList.add('current');
+            });
           };
           tray.appendChild(btn);
         });
@@ -1132,7 +1193,7 @@
       var q = section.questions[idx];
       var uAns = (userAnswers[qNum] || '').trim().toLowerCase();
       var cAns = q.answer.trim().toLowerCase();
-      var isCorrect = uAns === cAns;
+      var isCorrect = checkAnswerCorrect(uAns, cAns);
       var fd = document.getElementById('pract-feedback-' + qNum);
       if (!fd) return;
       if (isCorrect) {
@@ -1179,11 +1240,6 @@
 
     function submitTest(autoSubmit) {
       if (!autoSubmit) {
-        // Real completion gate, not just a confirm() dialog - every question
-        // must be answered before a student can submit manually. Auto-submit
-        // (timer expiry) bypasses this since there's no more time left
-        // regardless. Same "answered" check already used for the
-        // question-nav button styling.
         var totalUnanswered = 0, totalAll = 0;
         testData.listening.sections.forEach(function(sec) {
           sec.questions.forEach(function(q) {
@@ -1193,10 +1249,12 @@
           });
         });
         if (totalUnanswered > 0) {
-          alert('You have ' + totalUnanswered + ' unanswered question' + (totalUnanswered === 1 ? '' : 's') + ' left (out of ' + totalAll + '). Please answer every question before submitting, or wait for the timer to run out to auto-submit as-is.');
-          return;
+          if (!confirm('You have ' + totalUnanswered + ' unanswered question' + (totalUnanswered === 1 ? '' : 's') + ' left (out of ' + totalAll + '). Are you sure you want to submit the test?')) {
+            return;
+          }
+        } else {
+          if (!confirm('Are you sure you want to submit the test?')) return;
         }
-        if (!confirm('Are you sure you want to submit the test?')) return;
       }
       var overlay = document.getElementById('listening-review-overlay');
       if (overlay) {
@@ -1210,7 +1268,9 @@
         sec.questions.forEach(function(q) {
           if (q.contentUnavailable) return;
           totalQs++;
-          if ((userAnswers[q.num] || '').trim().toLowerCase() === q.answer.trim().toLowerCase()) correctCount++;
+          var uAns = (userAnswers[q.num] || '').trim().toLowerCase();
+          var cAns = q.answer.trim().toLowerCase();
+          if (checkAnswerCorrect(uAns, cAns)) correctCount++;
         });
       });
       var pct = totalQs > 0 ? correctCount / totalQs : 0;
@@ -1222,15 +1282,8 @@
       else if (pct >= 0.30) band = 5.0;
 
       localStorage.setItem('score_test_' + testId + '_listening', band.toFixed(1));
+      localStorage.setItem('answers_test_' + testId + '_listening', JSON.stringify(userAnswers));
 
-      // Auto-syncs this result into the student's CRM profile - but only if
-      // this browser is logged in as a real roster student (i.e. they got
-      // here via their own private "?student=<token>" link on the portal,
-      // see attemptStudentTokenLogin in index.html). Same-origin localStorage
-      // makes viatestprep_active_student_id visible here without needing to
-      // pass anything through the URL. Anonymous "free trial" visitors have
-      // no active student id, so nothing gets recorded for them - same as
-      // before, they just see their score on this page.
       var activeStudentId = localStorage.getItem('viatestprep_active_student_id');
       if (activeStudentId) {
         fetch('/api/mock/submit', {
@@ -1246,6 +1299,7 @@
       }
 
       alert('Test Submitted!\nYour Score: ' + correctCount + '/' + totalQs + '\nEstimated IELTS Band: ' + band.toFixed(1));
+      isReviewMode = true;
       renderReviewMode();
     }
 
@@ -1296,12 +1350,14 @@
 
       testData.listening.sections.forEach(function(sec, sIdx) {
         var secHeader = document.createElement('h2');
+        secHeader.id = 'review-part-header-' + sIdx;
         secHeader.style.cssText = 'font-size:18px; font-weight:700; color:var(--accent); margin:28px 0 16px 0; font-family:"Inter",sans-serif; border-bottom: 2px solid var(--rule-soft); padding-bottom: 6px;';
         secHeader.textContent = 'Part ' + (sIdx + 1);
         container.appendChild(secHeader);
 
         sec.questions.forEach(function(q) {
           var card = document.createElement('div');
+          card.id = 'qcard-' + q.num;
 
           if (q.contentUnavailable) {
             card.className = 'review-card excluded';
@@ -1313,7 +1369,7 @@
 
           var uAns = (userAnswers[q.num] || '').trim();
           var cAns = q.answer.trim();
-          var isCorrect = uAns.toLowerCase() === cAns.toLowerCase();
+          var isCorrect = checkAnswerCorrect(uAns, cAns);
           card.className = 'review-card ' + (isCorrect ? 'correct' : 'wrong');
           card.innerHTML = '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;"><span style="font-size:11px;font-weight:800;text-transform:uppercase;color:' + (isCorrect ? '#245e3f' : '#8a2c1f') + ';">' + (isCorrect ? 'Correct' : 'Incorrect') + ' — Question ' + q.num + '</span></div>' +
             '<p style="font-size:14px;font-weight:600;margin:0 0 8px;font-family:\'Lora\',serif;">' + q.text + '</p>' +
@@ -1345,7 +1401,7 @@
         if (!q) return;
         var uAns = (userAnswers[n] || '').trim().toLowerCase();
         var cAns = q.answer.trim().toLowerCase();
-        var correct = uAns === cAns;
+        var correct = checkAnswerCorrect(uAns, cAns);
         if (!correct) allCorrect = false;
         feedbackLines.push(
           '<div style="margin-bottom:4px;">' +

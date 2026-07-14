@@ -352,6 +352,48 @@
     let timeRemaining = 60 * 60;
     let timerInterval;
     let selectedRange = null;
+    let isReviewMode = false;
+
+    function checkAnswerCorrect(uAns, cAns) {
+      uAns = (uAns || '').trim().toLowerCase();
+      cAns = (cAns || '').trim().toLowerCase();
+      if (!uAns || !cAns) return false;
+      if (uAns === cAns) return true;
+
+      function normalize(str) {
+        str = str.replace(/^(a|an|the)\s+/i, '').replace(/[^a-z0-9\s]/g, '').trim();
+        return str;
+      }
+
+      const uNorm = normalize(uAns);
+      const cNorm = normalize(cAns);
+      if (uNorm === cNorm) return true;
+
+      function getSingulars(str) {
+        const res = [str];
+        if (str.endsWith('ies') && str.length > 3) {
+          res.push(str.slice(0, -3) + 'y');
+        }
+        if (str.endsWith('es') && str.length > 2) {
+          res.push(str.slice(0, -2));
+          res.push(str.slice(0, -1));
+        }
+        if (str.endsWith('s') && !str.endsWith('ss') && str.length > 1) {
+          res.push(str.slice(0, -1));
+        }
+        return res;
+      }
+
+      const uSings = getSingulars(uNorm);
+      const cSings = getSingulars(cNorm);
+
+      for (let u of uSings) {
+        for (let c of cSings) {
+          if (u === c && u.length > 2) return true;
+        }
+      }
+      return false;
+    }
 
     function showComingSoon() {
       document.getElementById('testTitle').textContent = testData.title;
@@ -421,6 +463,14 @@
 
       renderPassage();
       renderQuestionsAndNav();
+
+      if (urlParams.get('review') === '1' || urlParams.get('review') === 'true') {
+        clearInterval(timerInterval);
+        isReviewMode = true;
+        userAnswers = JSON.parse(localStorage.getItem(`answers_test_${testId}_reading`) || '{}');
+        renderReviewMode();
+        switchPassage(0, document.querySelectorAll('.passage-tab')[0]);
+      }
     }
 
     function updateTimerDisplay(countUp) {
@@ -456,8 +506,17 @@
     function switchPassage(idx, btnEl) {
       currentPassageIdx = idx;
       document.querySelectorAll('.passage-tab').forEach(b => b.classList.remove('active'));
-      btnEl.classList.add('active');
+      if (btnEl) btnEl.classList.add('active');
       renderPassage();
+      if (isReviewMode) {
+        const headerEl = document.getElementById(`review-passage-header-${idx}`);
+        const pane = document.querySelector('.questions-pane');
+        if (headerEl && pane) {
+          const topPos = headerEl.offsetTop - pane.offsetTop;
+          pane.scrollTo({ top: topPos, behavior: 'smooth' });
+        }
+        return;
+      }
       renderQuestionsAndNav();
       setTimeout(() => scrollToQuestion(currentQuestionNum), 100);
     }
@@ -593,7 +652,7 @@
         if (!q) return;
         const uAns = (userAnswers[n] || '').trim().toLowerCase();
         const cAns = q.answer.trim().toLowerCase();
-        if (uAns !== cAns) allCorrect = false;
+        if (!checkAnswerCorrect(uAns, cAns)) allCorrect = false;
         feedbackTexts.push(`Question ${n}: Answer is <strong>${q.answer}</strong>. ${q.explanation}`);
       });
       
@@ -620,7 +679,7 @@
         if (!q) return;
         const uAns = (userAnswers[n] || '').trim().toLowerCase();
         const cAns = q.answer.trim().toLowerCase();
-        const correct = uAns === cAns;
+        const correct = checkAnswerCorrect(uAns, cAns);
         if (!correct) allCorrect = false;
         feedbackLines.push(
           `<div style="margin-bottom:4px;">
@@ -1064,13 +1123,12 @@
             if (pIdx !== currentPassageIdx) {
               const tabBtn = document.querySelectorAll('.passage-tab')[pIdx];
               switchPassage(pIdx, tabBtn);
-            } else {
-              scrollToQuestion(q.num);
-              document.querySelectorAll('.q-nav-btn').forEach(b => {
-                b.classList.remove('current');
-                if (parseInt(b.textContent) === q.num) b.classList.add('current');
-              });
             }
+            scrollToQuestion(q.num);
+            document.querySelectorAll('.q-nav-btn').forEach(b => {
+              b.classList.remove('current');
+              if (parseInt(b.textContent) === q.num) b.classList.add('current');
+            });
           };
           tray.appendChild(btn);
         });
@@ -1105,7 +1163,7 @@
       const cAns = q.answer.trim().toLowerCase();
 
       const fdContainer = document.getElementById(`pract-feedback-${qNum}`);
-      const isCorrect = uAns === cAns;
+      const isCorrect = checkAnswerCorrect(uAns, cAns);
 
       if (isCorrect) {
         fdContainer.className = 'feedback-box correct';
@@ -1127,11 +1185,6 @@
 
     function submitTest(autoSubmit = false) {
       if (!autoSubmit) {
-        // Real completion gate, not just a confirm() dialog - every question
-        // must be answered before a student can submit manually. Auto-submit
-        // (timer expiry) bypasses this since there's no more time left
-        // regardless. Same "answered" check already used for the
-        // question-nav button styling (line ~419).
         let totalQs = 0, answered = 0;
         testData.reading.passages.forEach(p => {
           p.questions.forEach(q => {
@@ -1142,10 +1195,12 @@
         });
         if (answered < totalQs) {
           const remaining = totalQs - answered;
-          alert(`You have ${remaining} unanswered question${remaining === 1 ? '' : 's'} left (out of ${totalQs}). Please answer every question before submitting, or wait for the timer to run out to auto-submit as-is.`);
-          return;
+          if (!confirm(`You have ${remaining} unanswered question${remaining === 1 ? '' : 's'} left (out of ${totalQs}). Are you sure you want to submit the test?`)) {
+            return;
+          }
+        } else {
+          if (!confirm('Are you sure you want to submit the test? You will see your total band score immediately.')) return;
         }
-        if (!confirm('Are you sure you want to submit the test? You will see your total band score immediately.')) return;
       }
 
       clearInterval(timerInterval);
@@ -1159,7 +1214,7 @@
           totalQs++;
           const uAns = (userAnswers[q.num] || '').trim().toLowerCase();
           const cAns = q.answer.trim().toLowerCase();
-          if (uAns === cAns) correctCount++;
+          if (checkAnswerCorrect(uAns, cAns)) correctCount++;
         });
       });
 
@@ -1177,12 +1232,8 @@
       else band = 4.0;
 
       localStorage.setItem(`score_test_${testId}_reading`, band.toFixed(1));
+      localStorage.setItem(`answers_test_${testId}_reading`, JSON.stringify(userAnswers));
 
-      // Auto-syncs this result into the student's CRM profile - but only if
-      // this browser is logged in as a real roster student (i.e. they got
-      // here via their own private "?student=<token>" link on the portal,
-      // see attemptStudentTokenLogin in index.html). Anonymous "free trial"
-      // visitors have no active student id, so nothing gets recorded for them.
       const activeStudentId = localStorage.getItem('viatestprep_active_student_id');
       if (activeStudentId) {
         fetch('/api/mock/submit', {
@@ -1199,6 +1250,7 @@
 
       alert(`Test Submitted Successfully!\nYour Score: ${correctCount}/${totalQs}\nEstimated IELTS Band: ${band.toFixed(1)}`);
 
+      isReviewMode = true;
       renderReviewMode();
     }
 
@@ -1242,12 +1294,14 @@
 
       testData.reading.passages.forEach((passage, pIdx) => {
         const pHeader = document.createElement('h2');
+        pHeader.id = 'review-passage-header-' + pIdx;
         pHeader.style.cssText = 'font-size:18px; font-weight:700; color:var(--accent); margin:28px 0 16px 0; font-family:"Inter",sans-serif; border-bottom: 2px solid var(--rule-soft); padding-bottom: 6px;';
         pHeader.textContent = 'Passage ' + (pIdx + 1);
         qContainer.appendChild(pHeader);
 
         passage.questions.forEach(q => {
           const qBox = document.createElement('div');
+          qBox.id = 'qbox-' + q.num;
 
           if (q.contentUnavailable) {
             qBox.className = 'review-box excluded';
@@ -1261,7 +1315,7 @@
 
           const uAns = (userAnswers[q.num] || '').trim();
           const cAns = q.answer.trim();
-          const isCorrect = uAns.toLowerCase() === cAns.toLowerCase();
+          const isCorrect = checkAnswerCorrect(uAns, cAns);
 
           qBox.className = `review-box ${isCorrect ? 'correct' : 'wrong'}`;
           qBox.innerHTML = `

@@ -2857,27 +2857,74 @@
             </div>
           </div>
           <div class="grid grid-cols-3 gap-2 mt-4 pt-3 border-t border-[#ece4d2] text-center text-xs">
-            ${hasListening ? `
-            <a href="ielts-listening-practice.html?test=${key}" class="p-2 rounded-xl bg-[#f3ecd8] border border-[#ece4d2] hover:border-[#7a2331] transition flex flex-col justify-between min-h-[60px]">
-              <span class="font-bold text-[10px]">Listening</span>
-              <span class="text-[9px] text-[#8a8171] mt-1 block">${lsScore ? '🟢 Band ' + lsScore : 'Not Started'}</span>
-            </a>` : `
+            ${hasListening ? (
+              lsScore ? `
+              <div class="p-2 rounded-xl bg-[#f3ecd8] border border-[#ece4d2] flex flex-col justify-between min-h-[60px] relative group">
+                <a href="ielts-listening-practice.html?test=${key}&review=1" class="font-bold text-[10px] text-[#245e3f] hover:underline flex flex-col justify-between h-full">
+                  <span>Listening</span>
+                  <span class="text-[9px] font-semibold mt-1 block">🟢 Band ${lsScore}</span>
+                </a>
+                <button onclick="retakeTest('${key}', 'listening')" class="absolute top-1 right-1 text-[8px] font-semibold text-red-700 bg-red-50 hover:bg-red-100 border border-red-200 px-1 rounded transition opacity-0 group-hover:opacity-100" title="Retake test">
+                  Retake
+                </button>
+              </div>
+              ` : `
+              <a href="ielts-listening-practice.html?test=${key}" class="p-2 rounded-xl bg-[#f3ecd8] border border-[#ece4d2] hover:border-[#7a2331] transition flex flex-col justify-between min-h-[60px]">
+                <span class="font-bold text-[10px]">Listening</span>
+                <span class="text-[9px] text-[#8a8171] mt-1 block">Not Started</span>
+              </a>
+              `
+            ) : `
             <div class="p-2 rounded-xl bg-[#f3ecd8]/50 border border-[#ece4d2] flex flex-col justify-between min-h-[60px] opacity-60 cursor-not-allowed">
               <span class="font-bold text-[10px]">Listening</span>
               <span class="text-[9px] text-[#8a8171] mt-1 block">Coming Soon</span>
             </div>`}
+            
+            ${rdScore ? `
+            <div class="p-2 rounded-xl bg-[#f3ecd8] border border-[#ece4d2] flex flex-col justify-between min-h-[60px] relative group">
+              <a href="ielts-reading-practice.html?test=${key}&review=1" class="font-bold text-[10px] text-[#245e3f] hover:underline flex flex-col justify-between h-full">
+                <span>Reading</span>
+                <span class="text-[9px] font-semibold mt-1 block">🟢 Band ${rdScore}</span>
+              </a>
+              <button onclick="retakeTest('${key}', 'reading')" class="absolute top-1 right-1 text-[8px] font-semibold text-red-700 bg-red-50 hover:bg-red-100 border border-red-200 px-1 rounded transition opacity-0 group-hover:opacity-100" title="Retake test">
+                Retake
+              </button>
+            </div>
+            ` : `
             <a href="ielts-reading-practice.html?test=${key}" class="p-2 rounded-xl bg-[#f3ecd8] border border-[#ece4d2] hover:border-[#7a2331] transition flex flex-col justify-between min-h-[60px]">
               <span class="font-bold text-[10px]">Reading</span>
-              <span class="text-[9px] text-[#8a8171] mt-1 block">${rdScore ? '🟢 Band ' + rdScore : 'Not Started'}</span>
+              <span class="text-[9px] text-[#8a8171] mt-1 block">Not Started</span>
             </a>
+            `}
+            
+            ${wrDone ? `
+            <div class="p-2 rounded-xl bg-[#f3ecd8] border border-[#ece4d2] flex flex-col justify-between min-h-[60px] relative group">
+              <a href="ielts-writing-practice.html?test=${key}" class="font-bold text-[10px] text-[#245e3f] hover:underline flex flex-col justify-between h-full">
+                <span>Writing</span>
+                <span class="text-[9px] font-semibold mt-1 block">🟢 Submitted</span>
+              </a>
+              <button onclick="retakeTest('${key}', 'writing')" class="absolute top-1 right-1 text-[8px] font-semibold text-red-700 bg-red-50 hover:bg-red-100 border border-red-200 px-1 rounded transition opacity-0 group-hover:opacity-100" title="Retake test">
+                Retake
+              </button>
+            </div>
+            ` : `
             <a href="ielts-writing-practice.html?test=${key}" class="p-2 rounded-xl bg-[#f3ecd8] border border-[#ece4d2] hover:border-[#7a2331] transition flex flex-col justify-between min-h-[60px]">
               <span class="font-bold text-[10px]">Writing</span>
-              <span class="text-[9px] text-[#8a8171] mt-1 block">${wrDone ? '🟢 Submitted' : 'Not Started'}</span>
+              <span class="text-[9px] text-[#8a8171] mt-1 block">Not Started</span>
             </a>
+            `}
           </div>
         `;
         cardGrid.appendChild(card);
       });
+    }
+
+    function retakeTest(testId, moduleType) {
+      if (confirm(`Are you sure you want to clear your previous score and retake this ${moduleType} test?`)) {
+        localStorage.removeItem(`score_test_${testId}_${moduleType}`);
+        localStorage.removeItem(`answers_test_${testId}_${moduleType}`);
+        window.location.href = `ielts-${moduleType}-practice.html?test=${testId}`;
+      }
     }
 
     // Student Tab 4 Grades
