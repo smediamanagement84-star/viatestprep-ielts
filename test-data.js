@@ -3367,109 +3367,109 @@ const IELTS_TEST_DATA = {
       {
        "num": 15,
        "type": "MCQ",
-       "text": "Identify location for: 15. The Cafe",
+       "text": "Four Seasons",
        "answer": "F",
        "explanation": "The transcript states: \"Good morning everyone, and welcome to the Museum of Farming Life.\"",
        "instruction": "Questions 15-20<br/>Label the map below.<br/>Write the correct letter, A-H, next to Questions 15-20.",
        "options": [
-        "A. Cafe",
-        "B. Picnic area",
-        "C. Herb garden",
-        "D. Fruit orchard",
-        "E. Demonstration path",
-        "F. Toy museum",
-        "G. Shop",
-        "H. Outdoor play area"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
        ]
       },
       {
        "num": 16,
        "type": "MCQ",
-       "text": "Identify location for: 16. The Picnic area",
+       "text": "Farmhouse Kitchen",
        "answer": "G",
        "explanation": "The transcript states: \"Good morning everyone, and welcome to the Museum of Farming Life.\"",
        "instruction": "Questions 15-20<br/>Label the map below.<br/>Write the correct letter, A-H, next to Questions 15-20.",
        "options": [
-        "A. Cafe",
-        "B. Picnic area",
-        "C. Herb garden",
-        "D. Fruit orchard",
-        "E. Demonstration path",
-        "F. Toy museum",
-        "G. Shop",
-        "H. Outdoor play area"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
        ]
       },
       {
        "num": 17,
        "type": "MCQ",
-       "text": "Identify location for: 17. The Herb garden",
+       "text": "A Year on the Farm",
        "answer": "E",
        "explanation": "The transcript states: \"Good morning everyone, and welcome to the Museum of Farming Life.\"",
        "instruction": "Questions 15-20<br/>Label the map below.<br/>Write the correct letter, A-H, next to Questions 15-20.",
        "options": [
-        "A. Cafe",
-        "B. Picnic area",
-        "C. Herb garden",
-        "D. Fruit orchard",
-        "E. Demonstration path",
-        "F. Toy museum",
-        "G. Shop",
-        "H. Outdoor play area"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
        ]
       },
       {
        "num": 18,
        "type": "MCQ",
-       "text": "Identify location for: 18. The Fruit orchard",
-       "answer": "A",
+       "text": "Wagon Walk",
+       "answer": "B",
        "explanation": "The transcript states: \"Good morning everyone, and welcome to the Museum of Farming Life.\"",
        "instruction": "Questions 15-20<br/>Label the map below.<br/>Write the correct letter, A-H, next to Questions 15-20.",
        "options": [
-        "A. Cafe",
-        "B. Picnic area",
-        "C. Herb garden",
-        "D. Fruit orchard",
-        "E. Demonstration path",
-        "F. Toy museum",
-        "G. Shop",
-        "H. Outdoor play area"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
        ]
       },
       {
        "num": 19,
        "type": "MCQ",
-       "text": "Identify location for: 19. The Shop",
-       "answer": "C",
+       "text": "Bees are Magic",
+       "answer": "D",
        "explanation": "The transcript states: \"Good morning everyone, and welcome to the Museum of Farming Life.\"",
        "instruction": "Questions 15-20<br/>Label the map below.<br/>Write the correct letter, A-H, next to Questions 15-20.",
        "options": [
-        "A. Cafe",
-        "B. Picnic area",
-        "C. Herb garden",
-        "D. Fruit orchard",
-        "E. Demonstration path",
-        "F. Toy museum",
-        "G. Shop",
-        "H. Outdoor play area"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
        ]
       },
       {
        "num": 20,
        "type": "MCQ",
-       "text": "Identify location for: 20. The Outdoor play area",
-       "answer": "B",
+       "text": "The Pond",
+       "answer": "A",
        "explanation": "The transcript states: \"| understand it's your first visit here, so I'd like to give you some background information about the museum and then explain a little about what you can see during your visit.\"",
        "instruction": "Questions 15-20<br/>Label the map below.<br/>Write the correct letter, A-H, next to Questions 15-20.",
        "options": [
-        "A. Cafe",
-        "B. Picnic area",
-        "C. Herb garden",
-        "D. Fruit orchard",
-        "E. Demonstration path",
-        "F. Toy museum",
-        "G. Shop",
-        "H. Outdoor play area"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
        ]
       }
      ],
@@ -4432,9 +4432,9 @@ const IELTS_TEST_DATA = {
        "explanation": "The transcript states: \"It's great to see so many members of the Twinning Association here tonight.\"",
        "instruction": "Questions 11-15<br/>Choose the correct letter, A, B or C.<br/>Stanthorpe Twinning Association",
        "options": [
-        "A.",
-        "B.",
-        "C."
+        "A. going to a theme park.",
+        "B. experiencing a river trip.",
+        "C. visiting a cheese factory."
        ]
       },
       {
@@ -4445,12 +4445,9 @@ const IELTS_TEST_DATA = {
        "explanation": "The transcript states: \"It's great to see so many members of the Twinning Association here tonight.\"",
        "instruction": "Questions 11-15<br/>Choose the correct letter, A, B or C.<br/>Stanthorpe Twinning Association",
        "options": [
-        "A.",
-        "B.",
-        "C.",
-        "A. tree will be planted.",
-        "A. garden seat will be bought.",
-        "A. footbridge will be built."
+        "A. A tree will be planted.",
+        "B. A garden seat will be bought.",
+        "C. A footbridge will be built."
        ]
       },
       {
@@ -4461,9 +4458,9 @@ const IELTS_TEST_DATA = {
        "explanation": "The transcript states: \"It's great to see so many members of the Twinning Association here tonight.\"",
        "instruction": "Questions 11-15<br/>Choose the correct letter, A, B or C.<br/>Stanthorpe Twinning Association",
        "options": [
-        "A.",
-        "B.",
-        "C."
+        "A. the film show",
+        "B. the pancake evening",
+        "C. the cookery demonstration"
        ]
       },
       {
@@ -4474,9 +4471,9 @@ const IELTS_TEST_DATA = {
        "explanation": "The transcript states: \"It's great to see so many members of the Twinning Association here tonight.\"",
        "instruction": "Questions 11-15<br/>Choose the correct letter, A, B or C.<br/>Stanthorpe Twinning Association",
        "options": [
-        "A.",
-        "B.",
-        "C."
+        "A. take them for a walk round the town.",
+        "B. go to a local restaurant.",
+        "C. have a meal at home."
        ]
       },
       {
@@ -4487,100 +4484,99 @@ const IELTS_TEST_DATA = {
        "explanation": "The transcript states: \"It's great to see so many members of the Twinning Association here tonight.\"",
        "instruction": "Questions 11-15<br/>Choose the correct letter, A, B or C.<br/>Stanthorpe Twinning Association",
        "options": [
-        "A.",
-        "B.",
-        "C.",
-        "I. Nstagram: @Ali.mirzaei.azad"
+        "A. listen to a concert.",
+        "B. watch a match.",
+        "C. take part in a competition."
        ]
       },
       {
        "num": 16,
        "type": "MCQ",
-       "text": "Identify location for: Farley House",
+       "text": "Farm shop",
        "answer": "G",
        "explanation": "The transcript states: \"It's great to see so many members of the Twinning Association here tonight.\"",
        "instruction": "Questions 16-20<br/>Label the map below.<br/>Write the correct letter, A-H, next to Questions 16-20.",
        "options": [
-        "A. Farley House",
-        "B. Old stables",
-        "C. Demonstration plot",
-        "D. Glasshouses",
-        "E. Play area",
-        "F. Cafe",
-        "G. Gift shop",
-        "H. Duck pond"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
        ]
       },
       {
        "num": 17,
        "type": "MCQ",
-       "text": "Identify location for: Old stables",
+       "text": "Disabled entry",
        "answer": "C",
        "explanation": "The transcript states: \"It's great to see so many members of the Twinning Association here tonight.\"",
        "instruction": "Questions 16-20<br/>Label the map below.<br/>Write the correct letter, A-H, next to Questions 16-20.",
        "options": [
-        "A. Farley House",
-        "B. Old stables",
-        "C. Demonstration plot",
-        "D. Glasshouses",
-        "E. Play area",
-        "F. Cafe",
-        "G. Gift shop",
-        "H. Duck pond"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
        ]
       },
       {
        "num": 18,
        "type": "MCQ",
-       "text": "Identify location for: Demonstration plot",
+       "text": "Adventure playground",
        "answer": "B",
        "explanation": "The transcript states: \"It's great to see so many members of the Twinning Association here tonight.\"",
        "instruction": "Questions 16-20<br/>Label the map below.<br/>Write the correct letter, A-H, next to Questions 16-20.",
        "options": [
-        "A. Farley House",
-        "B. Old stables",
-        "C. Demonstration plot",
-        "D. Glasshouses",
-        "E. Play area",
-        "F. Cafe",
-        "G. Gift shop",
-        "H. Duck pond"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
        ]
       },
       {
        "num": 19,
        "type": "MCQ",
-       "text": "Identify location for: Glasshouses",
+       "text": "Kitchen gardens",
        "answer": "D",
        "explanation": "The transcript states: \"Since the twinning link between our two towns, Stanthorpe here in England and Malatte in France, was established, the relationship between the towns has gone from strength to strength.\"",
        "instruction": "Questions 16-20<br/>Label the map below.<br/>Write the correct letter, A-H, next to Questions 16-20.",
        "options": [
-        "A. Farley House",
-        "B. Old stables",
-        "C. Demonstration plot",
-        "D. Glasshouses",
-        "E. Play area",
-        "F. Cafe",
-        "G. Gift shop",
-        "H. Duck pond"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
        ]
       },
       {
        "num": 20,
        "type": "MCQ",
-       "text": "Identify location for: Play area",
+       "text": "Temple of the Four Winds",
        "answer": "A",
        "explanation": "The transcript states: \"It's great to see so many members of the Twinning Association here tonight.\"",
        "instruction": "Questions 16-20<br/>Label the map below.<br/>Write the correct letter, A-H, next to Questions 16-20.",
        "options": [
-        "A. Farley House",
-        "B. Old stables",
-        "C. Demonstration plot",
-        "D. Glasshouses",
-        "E. Play area",
-        "F. Cafe",
-        "G. Gift shop",
-        "H. Duck pond"
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
        ]
       }
      ],
@@ -5778,11 +5774,12 @@ const IELTS_TEST_DATA = {
        "explanation": "The transcript states: \"BELLA: DON: BELLA: DON: Hi Don - did you get the copy of the article on recycling footwear that I emailed you.\"",
        "instruction": "Questions 25-28.<br/>Reasons<br/>A one shoe was missing<br/>Footwear<br/>B the colour of one shoe had faded<br/>C one shoe had a hole in it<br/>D the shoes were brand new<br/>E the shoes were too dirty<br/>F the stitching on the shoes was broken",
        "options": [
-        "A. Option A",
-        "B. Option B",
-        "C. Option C",
-        "D. Option D",
-        "E. Option E"
+        "A. one shoe was missing",
+        "B. the colour of one shoe had faded",
+        "C. one shoe had a hole in it",
+        "D. the shoes were brand new",
+        "E. the shoes were too dirty",
+        "F. the stitching on the shoes was broken"
        ]
       },
       {
@@ -5793,11 +5790,12 @@ const IELTS_TEST_DATA = {
        "explanation": "The transcript states: \"BELLA: DON: BELLA: DON: Hi Don - did you get the copy of the article on recycling footwear that I emailed you.\"",
        "instruction": "Questions 25-28.<br/>Reasons<br/>A one shoe was missing<br/>Footwear<br/>B the colour of one shoe had faded<br/>C one shoe had a hole in it<br/>D the shoes were brand new<br/>E the shoes were too dirty<br/>F the stitching on the shoes was broken",
        "options": [
-        "A. Option A",
-        "B. Option B",
-        "C. Option C",
-        "D. Option D",
-        "E. Option E"
+        "A. one shoe was missing",
+        "B. the colour of one shoe had faded",
+        "C. one shoe had a hole in it",
+        "D. the shoes were brand new",
+        "E. the shoes were too dirty",
+        "F. the stitching on the shoes was broken"
        ]
       },
       {
@@ -5808,11 +5806,12 @@ const IELTS_TEST_DATA = {
        "explanation": "The transcript states: \"BELLA: DON: BELLA: DON: Hi Don - did you get the copy of the article on recycling footwear that I emailed you.\"",
        "instruction": "Questions 25-28.<br/>Reasons<br/>A one shoe was missing<br/>Footwear<br/>B the colour of one shoe had faded<br/>C one shoe had a hole in it<br/>D the shoes were brand new<br/>E the shoes were too dirty<br/>F the stitching on the shoes was broken",
        "options": [
-        "A. Option A",
-        "B. Option B",
-        "C. Option C",
-        "D. Option D",
-        "E. Option E"
+        "A. one shoe was missing",
+        "B. the colour of one shoe had faded",
+        "C. one shoe had a hole in it",
+        "D. the shoes were brand new",
+        "E. the shoes were too dirty",
+        "F. the stitching on the shoes was broken"
        ]
       },
       {
@@ -5823,11 +5822,12 @@ const IELTS_TEST_DATA = {
        "explanation": "The transcript states: \"BELLA: DON: BELLA: DON: Hi Don - did you get the copy of the article on recycling footwear that I emailed you.\"",
        "instruction": "Questions 25-28.<br/>Reasons<br/>A one shoe was missing<br/>Footwear<br/>B the colour of one shoe had faded<br/>C one shoe had a hole in it<br/>D the shoes were brand new<br/>E the shoes were too dirty<br/>F the stitching on the shoes was broken",
        "options": [
-        "A. Option A",
-        "B. Option B",
-        "C. Option C",
-        "D. Option D",
-        "E. Option E"
+        "A. one shoe was missing",
+        "B. the colour of one shoe had faded",
+        "C. one shoe had a hole in it",
+        "D. the shoes were brand new",
+        "E. the shoes were too dirty",
+        "F. the stitching on the shoes was broken"
        ]
       },
       {
@@ -6914,14 +6914,14 @@ const IELTS_TEST_DATA = {
        "explanation": "The transcript states: \"I'd say about 12. And all young ones, not a mixture of old and young.\"",
        "instruction": "Questions 26-30<br/>Complete the notes below.<br/><br/><b>List of Answers</b><br/>A.&nbsp; size<br/>B.&nbsp; escape<br/>C.&nbsp; age<br/>D.&nbsp; water<br/>E.&nbsp; cereal<br/>F.&nbsp; calculations<br/>G.&nbsp; changes<br/>H.&nbsp; colour",
        "options": [
-        "A. Option A",
-        "B. Option B",
-        "C. Option C",
-        "D. Option D",
-        "E. Option E",
-        "F. Option F",
-        "G. Option G",
-        "H. Option H"
+        "A. size",
+        "B. escape",
+        "C. age",
+        "D. water",
+        "E. cereal",
+        "F. calculations",
+        "G. changes",
+        "H. colour"
        ]
       },
       {
@@ -6932,14 +6932,14 @@ const IELTS_TEST_DATA = {
        "explanation": "The transcript states: \"CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: Hi Jake.\"",
        "instruction": "Questions 26-30<br/>Complete the notes below.<br/><br/><b>List of Answers</b><br/>A.&nbsp; size<br/>B.&nbsp; escape<br/>C.&nbsp; age<br/>D.&nbsp; water<br/>E.&nbsp; cereal<br/>F.&nbsp; calculations<br/>G.&nbsp; changes<br/>H.&nbsp; colour",
        "options": [
-        "A. Option A",
-        "B. Option B",
-        "C. Option C",
-        "D. Option D",
-        "E. Option E",
-        "F. Option F",
-        "G. Option G",
-        "H. Option H"
+        "A. size",
+        "B. escape",
+        "C. age",
+        "D. water",
+        "E. cereal",
+        "F. calculations",
+        "G. changes",
+        "H. colour"
        ]
       },
       {
@@ -6950,14 +6950,14 @@ const IELTS_TEST_DATA = {
        "explanation": "The transcript states: \"CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: JAKE: CLARE: Hi Jake.\"",
        "instruction": "Questions 26-30<br/>Complete the notes below.<br/><br/><b>List of Answers</b><br/>A.&nbsp; size<br/>B.&nbsp; escape<br/>C.&nbsp; age<br/>D.&nbsp; water<br/>E.&nbsp; cereal<br/>F.&nbsp; calculations<br/>G.&nbsp; changes<br/>H.&nbsp; colour",
        "options": [
-        "A. Option A",
-        "B. Option B",
-        "C. Option C",
-        "D. Option D",
-        "E. Option E",
-        "F. Option F",
-        "G. Option G",
-        "H. Option H"
+        "A. size",
+        "B. escape",
+        "C. age",
+        "D. water",
+        "E. cereal",
+        "F. calculations",
+        "G. changes",
+        "H. colour"
        ]
       },
       {
@@ -6968,14 +6968,14 @@ const IELTS_TEST_DATA = {
        "explanation": "The transcript states: \"It's harder than I expected, but I've got some great classes.\"",
        "instruction": "Questions 26-30<br/>Complete the notes below.<br/><br/><b>List of Answers</b><br/>A.&nbsp; size<br/>B.&nbsp; escape<br/>C.&nbsp; age<br/>D.&nbsp; water<br/>E.&nbsp; cereal<br/>F.&nbsp; calculations<br/>G.&nbsp; changes<br/>H.&nbsp; colour",
        "options": [
-        "A. Option A",
-        "B. Option B",
-        "C. Option C",
-        "D. Option D",
-        "E. Option E",
-        "F. Option F",
-        "G. Option G",
-        "H. Option H"
+        "A. size",
+        "B. escape",
+        "C. age",
+        "D. water",
+        "E. cereal",
+        "F. calculations",
+        "G. changes",
+        "H. colour"
        ]
       },
       {
@@ -6986,14 +6986,14 @@ const IELTS_TEST_DATA = {
        "explanation": "The transcript states: \"once we've measured the weight gain of each mouse we can work out the average for each group, as well as the standard deviation.\"",
        "instruction": "Questions 26-30<br/>Complete the notes below.<br/><br/><b>List of Answers</b><br/>A.&nbsp; size<br/>B.&nbsp; escape<br/>C.&nbsp; age<br/>D.&nbsp; water<br/>E.&nbsp; cereal<br/>F.&nbsp; calculations<br/>G.&nbsp; changes<br/>H.&nbsp; colour",
        "options": [
-        "A. Option A",
-        "B. Option B",
-        "C. Option C",
-        "D. Option D",
-        "E. Option E",
-        "F. Option F",
-        "G. Option G",
-        "H. Option H"
+        "A. size",
+        "B. escape",
+        "C. age",
+        "D. water",
+        "E. cereal",
+        "F. calculations",
+        "G. changes",
+        "H. colour"
        ]
       }
      ]
@@ -7757,11 +7757,9 @@ const IELTS_TEST_DATA = {
        "explanation": "The transcript states: \"My name's Liz Fuller and I'm a running coach with Compton Park Runners Club.\"",
        "instruction": "Write the correct letter, A, B, or C next to Questions 15-18.<br/>Club members",
        "options": [
-        "A. Option A",
-        "B. Option B",
-        "C. Option C",
-        "D. Option D",
-        "E. Option E"
+        "A. a lack of confidence",
+        "B. a dislike of running",
+        "C. a lack of time"
        ]
       },
       {
@@ -7772,11 +7770,9 @@ const IELTS_TEST_DATA = {
        "explanation": "The transcript states: \"My name's Liz Fuller and I'm a running coach with Compton Park Runners Club.\"",
        "instruction": "Write the correct letter, A, B, or C next to Questions 15-18.<br/>Club members",
        "options": [
-        "A. Option A",
-        "B. Option B",
-        "C. Option C",
-        "D. Option D",
-        "E. Option E"
+        "A. a lack of confidence",
+        "B. a dislike of running",
+        "C. a lack of time"
        ]
       },
       {
@@ -7787,11 +7783,9 @@ const IELTS_TEST_DATA = {
        "explanation": "The transcript states: \"My name's Liz Fuller and I'm a running coach with Compton Park Runners Club.\"",
        "instruction": "Write the correct letter, A, B, or C next to Questions 15-18.<br/>Club members",
        "options": [
-        "A. Option A",
-        "B. Option B",
-        "C. Option C",
-        "D. Option D",
-        "E. Option E"
+        "A. a lack of confidence",
+        "B. a dislike of running",
+        "C. a lack of time"
        ]
       },
       {
@@ -7802,11 +7796,9 @@ const IELTS_TEST_DATA = {
        "explanation": "The transcript states: \"My name's Liz Fuller and I'm a running coach with Compton Park Runners Club.\"",
        "instruction": "Write the correct letter, A, B, or C next to Questions 15-18.<br/>Club members",
        "options": [
-        "A. Option A",
-        "B. Option B",
-        "C. Option C",
-        "D. Option D",
-        "E. Option E"
+        "A. a lack of confidence",
+        "B. a dislike of running",
+        "C. a lack of time"
        ]
       },
       {
@@ -11592,7 +11584,12 @@ const IELTS_TEST_DATA = {
        "answer": "A",
        "explanation": "The passage says that Martin Rees thinks we should make sure robots are not too smart and can't outsmart us. He wants to keep them safe for humans. The answer means that Martin Rees believes we should keep robots safe and not let them do everything. The correct answer is A because Martin Rees talks about how we should ensure that robots do not become too powerful and outsmart us. He wants robots to be useful but not a threat to humans.",
        "location": "Passage 3",
-       "instruction": "Questions 27-35<br/>Complete the summary using the list of phrases, A-G, below.<br/>Write the correct letter, A-G, in boxes 27-35 on your answer sheet."
+       "instruction": "Questions 27-33<br/>Look at the following statements (Questions 27-33) and the list of researchers below.<br/>Match each statement with the correct researcher, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 27-33 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">List of Researchers:</div>\n<div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>A</b>. Martin Rees</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>B</b>. Daniel Wolpert</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>C</b>. Kathleen Richardson</div>\n</div>\n</div>",
+       "options": [
+        "A",
+        "B",
+        "C"
+       ]
       },
       {
        "num": 28,
@@ -11601,7 +11598,12 @@ const IELTS_TEST_DATA = {
        "answer": "C",
        "explanation": "The passage says that Kathleen Richardson believes robots have never tried to hurt humans, so it looks like they will not do so in the future. The answer means that Kathleen Richardson thinks the fear of robots hurting us is not as big as people think. The correct answer is C because Kathleen Richardson said that robots have never actually been a threat to humans. She believes it is unlikely that robots will ever harm us. She suggests that many people actually appreciate what robots can do.",
        "location": "Passage 3",
-       "instruction": "Questions 27-35<br/>Complete the summary using the list of phrases, A-G, below.<br/>Write the correct letter, A-G, in boxes 27-35 on your answer sheet."
+       "instruction": "Questions 27-33<br/>Look at the following statements (Questions 27-33) and the list of researchers below.<br/>Match each statement with the correct researcher, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 27-33 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">List of Researchers:</div>\n<div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>A</b>. Martin Rees</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>B</b>. Daniel Wolpert</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>C</b>. Kathleen Richardson</div>\n</div>\n</div>",
+       "options": [
+        "A",
+        "B",
+        "C"
+       ]
       },
       {
        "num": 29,
@@ -11610,7 +11612,12 @@ const IELTS_TEST_DATA = {
        "answer": "B",
        "explanation": "The passage says we think it would be very difficult for a machine to be as creative as a human for a long time, maybe not for the next 50 years. The answer is 'B', which means the statement is related to Daniel Wolpert. The correct answer is B because Daniel Wolpert discusses that while machines have already surpassed humans in some tasks, expecting machines to have the same creative intelligence as humans in the next 50 years is very ambitious. The passage highlights that machines can be very good at certain tasks, but they still cannot match the creativity of humans.",
        "location": "Passage 3",
-       "instruction": "Questions 27-35<br/>Complete the summary using the list of phrases, A-G, below.<br/>Write the correct letter, A-G, in boxes 27-35 on your answer sheet."
+       "instruction": "Questions 27-33<br/>Look at the following statements (Questions 27-33) and the list of researchers below.<br/>Match each statement with the correct researcher, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 27-33 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">List of Researchers:</div>\n<div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>A</b>. Martin Rees</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>B</b>. Daniel Wolpert</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>C</b>. Kathleen Richardson</div>\n</div>\n</div>",
+       "options": [
+        "A",
+        "B",
+        "C"
+       ]
       },
       {
        "num": 30,
@@ -11619,7 +11626,12 @@ const IELTS_TEST_DATA = {
        "answer": "A",
        "explanation": "The passage says there are questions about morality regarding robots. It asks if we should feel bad about using advanced robots in ways that might not be fair. The answer is A, which means Martin Rees thinks we should think about how we treat robots fairly. The correct answer is A because Martin Rees talks about moral questions regarding robots. He asks if we should feel guilty about how we use sophisticated robots. This shows that he believes we need to think about treating robots fairly.",
        "location": "Passage 3",
-       "instruction": "Questions 27-35<br/>Complete the summary using the list of phrases, A-G, below.<br/>Write the correct letter, A-G, in boxes 27-35 on your answer sheet."
+       "instruction": "Questions 27-33<br/>Look at the following statements (Questions 27-33) and the list of researchers below.<br/>Match each statement with the correct researcher, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 27-33 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">List of Researchers:</div>\n<div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>A</b>. Martin Rees</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>B</b>. Daniel Wolpert</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>C</b>. Kathleen Richardson</div>\n</div>\n</div>",
+       "options": [
+        "A",
+        "B",
+        "C"
+       ]
       },
       {
        "num": 31,
@@ -11628,7 +11640,12 @@ const IELTS_TEST_DATA = {
        "answer": "B",
        "explanation": "The passage says that it is better to use robots to collect resources that are closer to us, like on Earth. This implies that robots are more helpful to us here rather than trying to send them far into space. The answer is B. This means that Daniel Wolpert thinks robots can be more useful to us here on Earth than in space. The correct answer is B because Daniel Wolpert said that there is a better use for robots. He believes it is more important to use robots to gather resources closer to Earth, instead of sending them to other planets. He mentioned that most of Earth is hard for us to access, so using robots to help us here makes more sense.",
        "location": "Passage 3",
-       "instruction": "Questions 27-35<br/>Complete the summary using the list of phrases, A-G, below.<br/>Write the correct letter, A-G, in boxes 27-35 on your answer sheet."
+       "instruction": "Questions 27-33<br/>Look at the following statements (Questions 27-33) and the list of researchers below.<br/>Match each statement with the correct researcher, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 27-33 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">List of Researchers:</div>\n<div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>A</b>. Martin Rees</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>B</b>. Daniel Wolpert</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>C</b>. Kathleen Richardson</div>\n</div>\n</div>",
+       "options": [
+        "A",
+        "B",
+        "C"
+       ]
       },
       {
        "num": 32,
@@ -11637,7 +11654,12 @@ const IELTS_TEST_DATA = {
        "answer": "A",
        "explanation": "The passage says that Martin Rees tells students to read really good science fiction instead of bad science. He thinks good science fiction is more interesting and could be just as accurate. The answer means that Martin Rees believes good science fiction can be just as good as the work done by lesser scientists. The correct answer is A because Martin Rees said it is better to read high-quality science fiction than second-rate science because it is more interesting and may not be any less likely to predict the future correctly.",
        "location": "Passage 3",
-       "instruction": "Questions 27-35<br/>Complete the summary using the list of phrases, A-G, below.<br/>Write the correct letter, A-G, in boxes 27-35 on your answer sheet."
+       "instruction": "Questions 27-33<br/>Look at the following statements (Questions 27-33) and the list of researchers below.<br/>Match each statement with the correct researcher, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 27-33 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">List of Researchers:</div>\n<div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>A</b>. Martin Rees</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>B</b>. Daniel Wolpert</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>C</b>. Kathleen Richardson</div>\n</div>\n</div>",
+       "options": [
+        "A",
+        "B",
+        "C"
+       ]
       },
       {
        "num": 33,
@@ -11646,61 +11668,56 @@ const IELTS_TEST_DATA = {
        "answer": "C",
        "explanation": "The passage says that not everyone is afraid of robots; in fact, many people are happy about the idea of machines becoming intelligent. The answer says that Kathleen Richardson is the expert who looks forward to robots developing greater intelligence. The correct answer is C because Kathleen Richardson mentions that many people welcome machine intelligence, which suggests a positive view on robots developing greater intelligence. She believes there is no threat from robots and that many people are excited about what robots can do.",
        "location": "Passage 3",
-       "instruction": "Questions 27-35<br/>Complete the summary using the list of phrases, A-G, below.<br/>Write the correct letter, A-G, in boxes 27-35 on your answer sheet.",
+       "instruction": "Questions 27-33<br/>Look at the following statements (Questions 27-33) and the list of researchers below.<br/>Match each statement with the correct researcher, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 27-33 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">List of Researchers:</div>\n<div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>A</b>. Martin Rees</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>B</b>. Daniel Wolpert</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>C</b>. Kathleen Richardson</div>\n</div>\n</div>",
        "options": [
         "A",
         "B",
-        "C",
-        "D",
-        "E"
+        "C"
        ]
       },
       {
        "num": 34,
        "type": "MCQ",
-       "text": "Drop answer here",
+       "text": "Richardson and Rees express similar views regarding the ethical aspect of",
        "answer": "C",
        "explanation": "The passage says that Rees believes we should take care of other planets like we care for Antarctica, and Richardson thinks we should be respectful and not force our own ideas on other places, whether on Earth or Mars. The answer means that Richardson and Rees both think it's wrong to change other planets for our own use. The correct answer is C because both Richardson and Rees talk about how we should respect other places, like other planets, instead of using them just for our own benefit. They believe that we should care for these places like we do for Antarctica on Earth.",
        "location": "Passage 3",
-       "instruction": "Questions 27-35<br/>Complete the summary using the list of phrases, A-G, below.<br/>Write the correct letter, A-G, in boxes 27-35 on your answer sheet.",
+       "instruction": "Questions 34-36<br/>Complete each sentence with the correct ending, A-D, below.<br/>Write the correct letter, A-D, in boxes 34-36 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">Sentence Endings:</div>\n<div style=\"display: flex; flex-direction: column; gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\"><b>A</b>. robots to explore outer space.</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\"><b>B</b>. advances made in machine intelligence so far.</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\"><b>C</b>. changes made to other planets for our own benefit.</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\"><b>D</b>. the harm already done by artificial intelligence.</div>\n</div>\n</div>",
        "options": [
         "A",
         "B",
         "C",
-        "D",
-        "E"
+        "D"
        ]
       },
       {
        "num": 35,
        "type": "MCQ",
-       "text": "Drop answer here",
+       "text": "Rees and Wolpert share an opinion about the extent of",
        "answer": "B",
        "explanation": "The passage explains that robots can do some things better than humans, like playing chess and remembering things. However, it also says that robots are not as good as humans in other areas. This shows that there have been many improvements in machine intelligence. The answer means that Rees and Wolpert both speak about how much progress has been made in machine intelligence up to now. The correct answer is B because both Rees and Wolpert discuss how machines have improved in their abilities compared to humans, particularly in areas like navigation and memory. Rees mentions that robots can beat humans in games while still having limits. Wolpert also talks about how machines can do some tasks better than humans but still lack certain abilities. This is about the advances made in machine intelligence.",
        "location": "Passage 3",
-       "instruction": "Questions 27-35<br/>Complete the summary using the list of phrases, A-G, below.<br/>Write the correct letter, A-G, in boxes 27-35 on your answer sheet.",
+       "instruction": "Questions 34-36<br/>Complete each sentence with the correct ending, A-D, below.<br/>Write the correct letter, A-D, in boxes 34-36 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">Sentence Endings:</div>\n<div style=\"display: flex; flex-direction: column; gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\"><b>A</b>. robots to explore outer space.</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\"><b>B</b>. advances made in machine intelligence so far.</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\"><b>C</b>. changes made to other planets for our own benefit.</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\"><b>D</b>. the harm already done by artificial intelligence.</div>\n</div>\n</div>",
        "options": [
         "A",
         "B",
         "C",
-        "D",
-        "E"
+        "D"
        ]
       },
       {
        "num": 36,
        "type": "MCQ",
-       "text": "Drop answer here",
+       "text": "Wolpert disagrees with Richardson on the question of",
        "answer": "D",
        "explanation": "The passage explains that Wolpert thinks artificial intelligence can cause problems when it is used in bad ways, like through computer viruses. He believes the real problem is not the machines, but the people who make them dangerous. The answer means that Wolpert does not agree with Richardson about the harmful effects caused by artificial intelligence. The correct answer is D because Wolpert acknowledges that there have been negative impacts from artificial intelligence, like computer viruses. However, he believes these problems are caused by the people who design the harmful software, not the machines themselves. This shows his disagreement with Richardson, who suggests there is no real threat from robots to humans.",
        "location": "Passage 3",
-       "instruction": "Questions 36-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+       "instruction": "Questions 34-36<br/>Complete each sentence with the correct ending, A-D, below.<br/>Write the correct letter, A-D, in boxes 34-36 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">Sentence Endings:</div>\n<div style=\"display: flex; flex-direction: column; gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\"><b>A</b>. robots to explore outer space.</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\"><b>B</b>. advances made in machine intelligence so far.</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\"><b>C</b>. changes made to other planets for our own benefit.</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-family: 'Lora', serif;\"><b>D</b>. the harm already done by artificial intelligence.</div>\n</div>\n</div>",
        "options": [
         "A",
         "B",
         "C",
-        "D",
-        "E"
+        "D"
        ]
       },
       {
@@ -11710,7 +11727,13 @@ const IELTS_TEST_DATA = {
        "answer": "B",
        "explanation": "The passage says that Richardson thinks our fear of machines is because we often treat machines like they are people. We create machines to look and act like us, which makes us believe that they can think and feel like humans, leading us to think they might be a danger. The answer means that we are afraid of machines because we think they are like people in some ways when they are not. The correct answer is B because Richardson explains that our fear of machines is connected to how humans think of machines as if they have human feelings and thoughts. She says this tendency to attribute human traits to machines makes us see them as a threat.",
        "location": "Passage 3",
-       "instruction": "Questions 36-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this"
+       "instruction": "Questions 37-40<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 37-40 on your answer sheet.",
+       "options": [
+        "A. It has grown alongside the development of ever more advanced robots.",
+        "B. It is the result of our inclination to attribute human characteristics to non-human entities.",
+        "C. It has its origins in basic misunderstandings about how inanimate objects function.",
+        "D. It demonstrates a key difference between human intelligence and machine intelligence."
+       ]
       },
       {
        "num": 38,
@@ -11719,7 +11742,13 @@ const IELTS_TEST_DATA = {
        "answer": "C",
        "explanation": "The passage talks about new ethical questions. It asks if we should feel bad about using smart robots and if we should worry if they are not given enough work or if they feel unhappy. The answer means that Rees is worried that artificial intelligence (AI) might learn to think and act on its own, like a human. The correct answer is C because Rees discusses how robots may become very advanced and could relate to their surroundings and people like humans do. This raises moral questions about whether we should be concerned if they start to think for themselves, which suggests they have independent thought.",
        "location": "Passage 3",
-       "instruction": "Questions 36-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this"
+       "instruction": "Questions 37-40<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 37-40 on your answer sheet.",
+       "options": [
+        "A. robots outnumbering people",
+        "B. robots having abilities which humans do not",
+        "C. artificial intelligence developing independent thought",
+        "D. artificial intelligence taking over every aspect of our lives"
+       ]
       },
       {
        "num": 39,
@@ -11728,7 +11757,13 @@ const IELTS_TEST_DATA = {
        "answer": "B",
        "explanation": "The passage says that most science fiction stories always include robots in their ideas about the future. This shows that robots are very important in science fiction. The answer is B. This means that Wolpert thinks robots are very important in science fiction stories. The correct answer is B because Wolpert talks about how science fiction often shows many different futures with robots. He says that almost no science fiction imagines a future without robots, meaning robots are a key part of these stories.",
        "location": "Passage 3",
-       "instruction": "Questions 36-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this"
+       "instruction": "Questions 37-40<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 37-40 on your answer sheet.",
+       "options": [
+        "A. how science fiction influences our attitudes to robots",
+        "B. how fundamental robots are to the science fiction genre",
+        "C. how the image of robots in science fiction has changed over time",
+        "D. how reactions to similar portrayals of robots in science fiction may vary"
+       ]
       },
       {
        "num": 40,
@@ -11737,7 +11772,13 @@ const IELTS_TEST_DATA = {
        "answer": "C",
        "explanation": "The passage explains that Richardson is saying there was not always a clear line between reality and fantasy. Scientists created this line, but she believes it is not so simple. This means she wants people to think differently about the two. The answer is recommending a change of approach in how people view reality and fantasy. The correct answer is C because Richardson talks about how people usually think of reality and fiction as separate things. She suggests that this separation should not be so clear. She believes that we should connect these ideas better to understand them fully, so we are not afraid of what we create, like robots. This shows she is suggesting a new way for people to think about reality and fantasy.",
        "location": "Passage 3",
-       "instruction": "Questions 36-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this"
+       "instruction": "Questions 37-40<br/>Choose the correct letter, A, B, C or D.<br/>Write the correct letter in boxes 37-40 on your answer sheet.",
+       "options": [
+        "A. warning people not to confuse one with the other",
+        "B. outlining ways in which one has impacted on the other",
+        "C. recommending a change of approach in how people view them",
+        "D. explaining why scientists have a different perspective on them from other people"
+       ]
       }
      ]
     }
@@ -12600,7 +12641,7 @@ const IELTS_TEST_DATA = {
        "answer": "B",
        "explanation": "The passage means that to be successful in the long run, we must change how we approach these issues. We should use different methods that work with nature and help local communities and their leaders. The answer is B, which means Susanna Tol is the person who talks about the importance of using strategies that include and help local people. The correct answer is B because Susanna Tol explains that traditional methods often focus on one solution. She says that for success, it is important to use approaches that engage and benefit communities and local decision-makers.",
        "location": "Passage 2",
-       "instruction": "Questions 19-23<br/>Look at the following statements (Questions 19-23) and the list of people below.<br/>Match each statement with the correct person, A, B or C.<br/>Write the correct letter, A, B or C, in boxes 19-23 on your answer sheet.",
+       "instruction": "Questions 23-26<br/>Look at the following statements (Questions 23-26) and the list of people below.<br/>Match each statement with the correct person, A-E.<br/>Write the correct letter, A-E, in boxes 23-26 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">List of People:</div>\n<div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>A</b>. Yanira Pineda</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>B</b>. Susanna Tol</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>C</b>. Elizabeth English</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>D</b>. Raisa Chowdhury</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>E</b>. Greg Spotts</div>\n</div>\n</div>",
        "options": [
         "A",
         "B",
@@ -12616,7 +12657,7 @@ const IELTS_TEST_DATA = {
        "answer": "E",
        "explanation": "The passage says that Greg Spotts believes making the city cooler is very important for the future. It is so important that he thinks it relates to life and death. The answer means that Greg Spotts believes that actions to lower heat are very important for living in Los Angeles. The correct answer is E because Greg Spotts talks about the importance of helping the city of Los Angeles become cooler. He believes that this cooling is essential for survival in the city.",
        "location": "Passage 2",
-       "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 24-26 on your answer sheet.",
+       "instruction": "Questions 23-26<br/>Look at the following statements (Questions 23-26) and the list of people below.<br/>Match each statement with the correct person, A-E.<br/>Write the correct letter, A-E, in boxes 23-26 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">List of People:</div>\n<div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>A</b>. Yanira Pineda</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>B</b>. Susanna Tol</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>C</b>. Elizabeth English</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>D</b>. Raisa Chowdhury</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>E</b>. Greg Spotts</div>\n</div>\n</div>",
        "options": [
         "A",
         "B",
@@ -12632,7 +12673,7 @@ const IELTS_TEST_DATA = {
        "answer": "A",
        "explanation": "The passage says that in the future, after many years, people will need to return to adjust their work because the environment is changing. The answer means that Yanira Pineda believes there will be more work needed in the future because of rising water levels. The correct answer is A because Yanira Pineda talks about needing to adjust to the changing environment in the future due to floods and rising water levels. She says it's important to continue the work that has started and that the job is not finished.",
        "location": "Passage 2",
-       "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 24-26 on your answer sheet.",
+       "instruction": "Questions 23-26<br/>Look at the following statements (Questions 23-26) and the list of people below.<br/>Match each statement with the correct person, A-E.<br/>Write the correct letter, A-E, in boxes 23-26 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">List of People:</div>\n<div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>A</b>. Yanira Pineda</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>B</b>. Susanna Tol</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>C</b>. Elizabeth English</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>D</b>. Raisa Chowdhury</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>E</b>. Greg Spotts</div>\n</div>\n</div>",
        "options": [
         "A",
         "B",
@@ -12648,7 +12689,7 @@ const IELTS_TEST_DATA = {
        "answer": "C",
        "explanation": "The passage says that when Elizabeth English started her project, many people were not talking about climate change. But now, her work with floating houses is important because more places have problems with flooding that didn't have them before. The answer means that Elizabeth English is the correct person who talked about the need for new technology to deal with flooding. The correct answer is C, Elizabeth English, because she mentioned that her project to create floating houses became important as climate change affected places that didn't need to adapt before. This shows that more places are now needing to take action against flooding.",
        "location": "Passage 2",
-       "instruction": "Questions 24-26<br/>Complete the summary below.<br/>Choose ONE WORD ONLY from the passage for each answer.<br/>Write your answers in boxes 24-26 on your answer sheet.",
+       "instruction": "Questions 23-26<br/>Look at the following statements (Questions 23-26) and the list of people below.<br/>Match each statement with the correct person, A-E.<br/>Write the correct letter, A-E, in boxes 23-26 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">List of People:</div>\n<div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>A</b>. Yanira Pineda</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>B</b>. Susanna Tol</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>C</b>. Elizabeth English</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>D</b>. Raisa Chowdhury</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>E</b>. Greg Spotts</div>\n</div>\n</div>",
        "options": [
         "A",
         "B",
@@ -12760,7 +12801,7 @@ const IELTS_TEST_DATA = {
        "answer": "D",
        "explanation": "The passage says that if farmers do not lose their cows, they will not ask for permission to kill wolves. This means that guard dogs help keep farm animals safe, which also helps protect wild animals like wolves. The answer means that Julie Young is the person who talked about how guard dogs help save both farm animals and wild animals. The correct answer is D, Julie Young, because she mentioned that if ranchers do not lose livestock to predators, they will not want to kill these predators. This shows that guard dogs help both livestock and wild animals by reducing attacks and allowing predators to live.",
        "location": "Passage 3",
-       "instruction": "Questions 27-35<br/>Complete the summary using the list of phrases, A-G, below.<br/>Write the correct letter, A-G, in boxes 27-35 on your answer sheet.",
+       "instruction": "Questions 32-36<br/>Look at the following statements (Questions 32-36) and the list of researchers below.<br/>Match each statement with the correct researcher, A-E.<br/>Write the correct letter, A-E, in boxes 32-36 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">List of Researchers:</div>\n<div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>A</b>. Dan Macon</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>B</b>. Silvia Ribeiro</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>C</b>. Linda van Bommel</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>D</b>. Julie Young</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>E</b>. Bethany Smith</div>\n</div>\n</div>",
        "options": [
         "A",
         "B",
@@ -12776,7 +12817,7 @@ const IELTS_TEST_DATA = {
        "answer": "E",
        "explanation": "The passage says that Bethany Smith looked at information from different farmers. She found that many of them said they stopped killing predators after getting guard dogs, but she also said we should be careful because these claims might not be completely correct. The answer means that Bethany Smith thinks that farmers might not be right when they say they stopped killing predators after using dogs. The correct answer is E because Bethany Smith said many farmers reported they no longer kill predators after using guard dogs, but she warned that these reports should be viewed with caution or skepticism. This indicates that claims about behavior changes may not be completely true.",
        "location": "Passage 3",
-       "instruction": "Questions 27-35<br/>Complete the summary using the list of phrases, A-G, below.<br/>Write the correct letter, A-G, in boxes 27-35 on your answer sheet.",
+       "instruction": "Questions 32-36<br/>Look at the following statements (Questions 32-36) and the list of researchers below.<br/>Match each statement with the correct researcher, A-E.<br/>Write the correct letter, A-E, in boxes 32-36 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">List of Researchers:</div>\n<div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>A</b>. Dan Macon</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>B</b>. Silvia Ribeiro</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>C</b>. Linda van Bommel</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>D</b>. Julie Young</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>E</b>. Bethany Smith</div>\n</div>\n</div>",
        "options": [
         "A",
         "B",
@@ -12792,7 +12833,7 @@ const IELTS_TEST_DATA = {
        "answer": "B",
        "explanation": "The passage means that if not all farmers use guard dogs, the wolves might go to farms next door, and those farmers could end up using poison to kill them. The answer means that Silvia Ribeiro said there could be bad effects if not many farmers use guard dogs. The correct answer is B because the passage says that Silvia Ribeiro mentioned how using guard dogs with only a few farmers may cause problems for neighboring farms as predators might just move there. This means that if there aren't enough farmers using guard dogs, it can lead to negative results.",
        "location": "Passage 3",
-       "instruction": "Questions 27-35<br/>Complete the summary using the list of phrases, A-G, below.<br/>Write the correct letter, A-G, in boxes 27-35 on your answer sheet.",
+       "instruction": "Questions 32-36<br/>Look at the following statements (Questions 32-36) and the list of researchers below.<br/>Match each statement with the correct researcher, A-E.<br/>Write the correct letter, A-E, in boxes 32-36 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">List of Researchers:</div>\n<div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>A</b>. Dan Macon</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>B</b>. Silvia Ribeiro</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>C</b>. Linda van Bommel</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>D</b>. Julie Young</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>E</b>. Bethany Smith</div>\n</div>\n</div>",
        "options": [
         "A",
         "B",
@@ -12808,7 +12849,7 @@ const IELTS_TEST_DATA = {
        "answer": "C",
        "explanation": "The passage explains that if guard dogs are taken care of correctly and used well, they are the best way to protect farm animals from being attacked. The answer means that Linda van Bommel says guard dogs are the best way to keep farm animals safe if they are taken care of properly. The correct answer is C because Linda van Bommel states that when livestock guard dogs are used in the right way, they are very effective at stopping attacks on farm animals. This shows that proper management of the dogs leads to good protection for livestock.",
        "location": "Passage 3",
-       "instruction": "Questions 27-35<br/>Complete the summary using the list of phrases, A-G, below.<br/>Write the correct letter, A-G, in boxes 27-35 on your answer sheet.",
+       "instruction": "Questions 32-36<br/>Look at the following statements (Questions 32-36) and the list of researchers below.<br/>Match each statement with the correct researcher, A-E.<br/>Write the correct letter, A-E, in boxes 32-36 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">List of Researchers:</div>\n<div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>A</b>. Dan Macon</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>B</b>. Silvia Ribeiro</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>C</b>. Linda van Bommel</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>D</b>. Julie Young</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>E</b>. Bethany Smith</div>\n</div>\n</div>",
        "options": [
         "A",
         "B",
@@ -12824,7 +12865,7 @@ const IELTS_TEST_DATA = {
        "answer": "A",
        "explanation": "The passage says that Dan Macon wants the dogs to understand that taking care of livestock is their main job. This means their training is very important and different from training a dog for a house. The answer is A, which means Dan Macon is the person who says that you need to focus differently when training a livestock guard dog compared to a house guard dog. The correct answer is A because Dan Macon explains in the passage that livestock guard dogs need specific training to become good at their job. He mentions that too much affection from humans can make a dog good for guarding houses but not good for guarding livestock. This shows that the training focus for livestock guard dogs is different.",
        "location": "Passage 3",
-       "instruction": "Questions 36-40<br/>Do the following statements agree with the views of the writer in Reading Passage 3?<br/>In boxes 36-40 on your answer sheet, write<br/>YES if the statement agrees with the views of the writer<br/>NO if the statement contradicts the views of the writer<br/>NOT GIVEN if it is impossible to say what the writer thinks about this",
+       "instruction": "Questions 32-36<br/>Look at the following statements (Questions 32-36) and the list of researchers below.<br/>Match each statement with the correct researcher, A-E.<br/>Write the correct letter, A-E, in boxes 32-36 on your answer sheet.<br/><br/>\n<div style=\"border: 1.5px solid var(--rule); padding: 12px 16px; border-radius: 8px; background: #fbfaf7; font-family: 'Inter', sans-serif; margin-bottom: 12px;\">\n<div style=\"font-size: 11px; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;\">List of Researchers:</div>\n<div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;\">\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>A</b>. Dan Macon</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>B</b>. Silvia Ribeiro</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>C</b>. Linda van Bommel</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>D</b>. Julie Young</div>\n<div style=\"font-size: 13px; color: var(--ink); padding: 5px 10px; background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 6px; font-weight: 600; font-family: 'Lora', serif;\"><b>E</b>. Bethany Smith</div>\n</div>\n</div>",
        "options": [
         "A",
         "B",
