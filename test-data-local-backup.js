@@ -2215,127 +2215,109 @@ const IELTS_TEST_DATA = {
       {
        "num": 13,
        "type": "MCQ",
-       "text": "Which TWO ideas about wild mushrooms does Dan share? (Select first idea)",
+       "text": "Which TWO ideas about wild mushrooms does Dan say are correct? (Select first idea)",
        "answer": "B",
        "explanation": "The transcript states: \"PRESENTER: This evening we're delighted to welcome Dan Beagle, who's just written a book DAN: 110 on looking for and finding food in the wild.\"",
        "instruction": "Questions 13 and 14<br/>Choose TWO letters, A-E.",
        "options": [
-        "A. They can be found in unexpected places.",
-        "B. They have high nutritional value.",
-        "C. They have a pleasant smell.",
-        "D. They are easy to cook.",
-        "E. They are best picked in autumn."
+        "A. Mushrooms should always be peeled before eating.",
+        "B. Mushrooms eaten by animals may be unsafe.",
+        "C. Cooking destroys toxins in mushrooms.",
+        "D. Brightly coloured mushrooms can be edible.",
+        "E. All poisonous mushrooms have a bad smell."
        ]
       },
       {
        "num": 14,
        "type": "MCQ",
-       "text": "Which TWO ideas about wild mushrooms does Dan share? (Select second idea)",
+       "text": "Which TWO ideas about wild mushrooms does Dan say are correct? (Select second idea)",
        "answer": "D",
        "explanation": "The transcript states: \"PRESENTER: This evening we're delighted to welcome Dan Beagle, who's just written a book DAN: 110 on looking for and finding food in the wild.\"",
        "instruction": "Questions 13 and 14<br/>Choose TWO letters, A-E.",
        "options": [
-        "A. They can be found in unexpected places.",
-        "B. They have high nutritional value.",
-        "C. They have a pleasant smell.",
-        "D. They are easy to cook.",
-        "E. They are best picked in autumn."
+        "A. Mushrooms should always be peeled before eating.",
+        "B. Mushrooms eaten by animals may be unsafe.",
+        "C. Cooking destroys toxins in mushrooms.",
+        "D. Brightly coloured mushrooms can be edible.",
+        "E. All poisonous mushrooms have a bad smell."
        ]
       },
       {
        "num": 15,
        "type": "MCQ",
-       "text": "What does Dan say about picking mushrooms in local parks?",
+       "text": "What advice does Dan give about picking mushrooms in parks?",
        "answer": "B",
        "explanation": "The transcript states: \"you need to be there first thing in the morning, as there's likely be a lot of competition — not just from people but wildlife too.\"",
        "instruction": "Questions 15-20<br/>Choose the correct letter, A, B or C.",
        "options": [
-        "A. Only search in wooded areas of the park.",
-        "B. Try to get there early in the morning.",
-        "C. Bring a mushroom identification guide."
+        "A. Choose wooded areas.",
+        "B. Don't disturb wildlife.",
+        "C. Get there early."
        ]
       },
       {
        "num": 16,
        "type": "MCQ",
-       "text": "What does Dan recommend for someone who is a complete beginner at mushroom picking?",
+       "text": "Dan says it is a good idea for beginners to",
        "answer": "B",
        "explanation": "The transcript states: \"If you're a complete beginner, I wouldn't recommend going alone or relying on photos in a book, even the one I've written! ... If possible, you should go with a group led by an expert — you'll stay safe and learn a lot that way.\"",
        "instruction": "Questions 15-20<br/>Choose the correct letter, A, B or C.",
        "options": [
-        "A. Rely on a mushroom identification app.",
-        "B. Join a group led by an expert.",
-        "C. Study photographs in a reference book."
+        "A. use a mushroom app.",
+        "B. join a group.",
+        "C. take a reference book."
        ]
       },
       {
        "num": 17,
        "type": "MCQ",
-       "text": "What advice does Dan give about picking mushrooms in parks?",
+       "text": "What does Dan say is important for conservation?",
        "answer": "B",
        "explanation": "The transcript states: \"PRESENTER: This evening we're delighted to welcome Dan Beagle, who's just written a book DAN: 110 on looking for and finding food in the wild.\"",
        "instruction": "Questions 15-20<br/>Choose the correct letter, A, B or C.",
        "options": [
-        "A. Choose wooded areas.",
-        "B. Don't disturb wildlife.",
-        "C. Get there early.",
-        "D. An says it is a good idea for beginners to",
-        "A. use a mushroom app.",
-        "B. join a group.",
-        "C. take a reference book.",
-        "A. _ selecting only fully gown mushrooms",
+        "A. selecting only fully grown mushrooms",
         "B. picking a limited amount of mushrooms",
-        "C. avoiding areas where rare mushroom species grow",
-        "A. Ccording to Dan, some varieties of wild mushrooms are in decline because there is",
-        "A. ahuge demand for them from restaurants.",
-        "B. alack of rain in this part of the country.",
-        "C. arise in building developments locally.",
-        "D. An says that when storing mushrooms, people should",
-        "A. __ keep them in the fridge for no more than two days.",
-        "B. keep them in a brown bag in a dark room.",
-        "C. leave them for a period after washing them.",
-        "A. Experiment with different recipes.",
-        "B. Expect some to have a strong taste.",
-        "C. Cook them for a long time."
+        "C. avoiding areas where rare mushroom species grow"
        ]
       },
       {
        "num": 18,
        "type": "MCQ",
-       "text": "Why have some varieties of wild mushroom declined in this part of the country, according to Dan?",
+       "text": "According to Dan, some varieties of wild mushrooms are in decline because there is",
        "answer": "C",
        "explanation": "The transcript states: \"the biggest problem is that so many new houses have been built in this area in the last ten years. And more water is being taken from rivers and reservoirs because of this, and mushroom habitats have been destroyed.\"",
        "instruction": "Questions 15-20<br/>Choose the correct letter, A, B or C.",
        "options": [
-        "A. There has been a huge rise in demand from restaurants.",
-        "B. There has been a lack of rainfall in the region.",
-        "C. There has been a rise in local building development."
+        "A. a huge demand for them from restaurants.",
+        "B. a lack of rain in this part of the country.",
+        "C. a rise in building developments locally."
        ]
       },
       {
        "num": 19,
        "type": "MCQ",
-       "text": "What does Dan advise about storing wild mushrooms once you get home?",
+       "text": "Dan says that when storing mushrooms, people should",
        "answer": "A",
        "explanation": "The transcript states: \"as soon as you get home, put them in the fridge. They'll be fine for a couple of days, but it's best to cook them as soon as possible.\"",
        "instruction": "Questions 15-20<br/>Choose the correct letter, A, B or C.",
        "options": [
-        "A. Keep them in the fridge for no more than a couple of days.",
-        "B. Store them in a brown paper bag in a dark room.",
-        "C. Leave them to rest for a while after washing."
+        "A. keep them in the fridge for no more than two days.",
+        "B. keep them in a brown bag in a dark room.",
+        "C. leave them for a period after washing them."
        ]
       },
       {
        "num": 20,
        "type": "MCQ",
-       "text": "What does Dan advise about trying new varieties of wild mushroom?",
+       "text": "What does Dan say about trying new varieties of mushrooms?",
        "answer": "A",
        "explanation": "The transcript states: \"just be aware that some people can react badly to certain varieties so it's a good idea not to eat huge quantities to begin with.\"",
        "instruction": "Questions 15-20<br/>Choose the correct letter, A, B or C.",
        "options": [
-        "A. Be adventurous, but avoid eating large quantities of a new variety at first.",
-        "B. Stick to only one variety of mushroom at a time.",
-        "C. Always cook new varieties for a long time before eating."
+        "A. Experiment with different recipes.",
+        "B. Expect some to have a strong taste.",
+        "C. Cook them for a long time."
        ]
       }
      ]
@@ -12984,7 +12966,3 @@ const IELTS_TEST_DATA = {
   }
  }
 };
-
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { IELTS_TEST_DATA };
-}
