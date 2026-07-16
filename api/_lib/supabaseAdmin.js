@@ -231,7 +231,7 @@ async function insertMockResult(result) {
 }
 
 // A student's own full attempt history (bands + per-question answer review),
-// newest first - backs /api/student/reports.js so a student can see their own
+// newest first - backs /api/student/index.js (?action=reports) so a student can see their own
 // past answers in the app instead of only in that browser's localStorage.
 async function getMockHistoryByStudentId(studentId) {
   return restRequest('mock_history', {

@@ -1818,13 +1818,15 @@
       }
     });
 
-    // Resolves a student's private ?student=<token> link via /api/student/login
-    // (looked up server-side, service-role-backed - see that file for why),
+    // Resolves a student's private ?student=<token> link via /api/student
+    // (?action=login - looked up server-side, service-role-backed; login/
+    // register/reports share one file to stay under Vercel Hobby's 12-
+    // Serverless-Function-per-deployment cap, see api/student/index.js),
     // then starts a real, tracked student session tied to their actual roster
     // row instead of a generic anonymous one.
     async function attemptStudentTokenLogin(token) {
       try {
-        const res = await fetch('/api/student/login?token=' + encodeURIComponent(token));
+        const res = await fetch('/api/student?action=login&token=' + encodeURIComponent(token));
         const data = await res.json();
         if (!data.ok) {
           alert('This access link is invalid or has been revoked. Contact your consultancy for a new one.');
@@ -2154,7 +2156,7 @@
       // Idempotent - safe to call on every login, not just signup, so a
       // student row always exists even if a prior registration call failed.
       try {
-        const regRes = await fetch('/api/student/register', {
+        const regRes = await fetch('/api/student?action=register', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ accessToken: session.access_token, name }),
@@ -2975,7 +2977,7 @@
     }
 
     // Student Tab 4 Grades - pulled live from Supabase (mock_history +
-    // speaking_grades) via /api/student/reports, keyed off the same
+    // speaking_grades) via /api/student?action=reports, keyed off the same
     // viatestprep_active_student_id every mock submission already writes
     // under. Replaces the old version, which only ever scanned this one
     // browser's localStorage (score_test_* keys) and a stale
@@ -2999,7 +3001,7 @@
 
       let data;
       try {
-        const res = await fetch('/api/student/reports?studentId=' + encodeURIComponent(activeStudentId));
+        const res = await fetch('/api/student?action=reports&studentId=' + encodeURIComponent(activeStudentId));
         data = await res.json();
       } catch (e) {
         console.error('Could not load test reports:', e);
@@ -3660,7 +3662,7 @@
 
     // The only way a specific roster student gets into their own tracked
     // portal session: this link carries their private access_token, which
-    // /api/student/login.js exchanges for a real session (see
+    // /api/student/index.js (?action=login) exchanges for a real session (see
     // attemptStudentTokenLogin in the DOMContentLoaded handler). Anyone
     // holding this exact link can log in as this student, so it's only ever
     // surfaced here, to CRM staff, on demand - never listed anywhere else.

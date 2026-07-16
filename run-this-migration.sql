@@ -43,7 +43,7 @@ ALTER TABLE consultancies ENABLE ROW LEVEL SECURITY;
 
 -- mock_history: per-question answer review, so students can see exactly what
 -- they answered on a past Reading/Listening attempt, not just the band -
--- required by /api/mock/submit.js and /api/student/reports.js.
+-- required by /api/mock/submit.js and /api/student/index.js (?action=reports).
 ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS correct_count INT;
 ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS total_questions INT;
 ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS answer_review JSONB;
