@@ -617,6 +617,7 @@
               <button onclick="filterVaultTag('all')" id="v-tag-all" class="v-tag-btn px-3 py-1.5 bg-[#7a2331] text-white text-xs font-bold rounded-lg transition">All</button>
               <button onclick="filterVaultTag('core')" id="v-tag-core" class="v-tag-btn px-3 py-1.5 bg-white hover:bg-[#f3ecd8] border border-[#e5ded0] text-xs font-bold rounded-lg text-[#5c5648] transition">Core</button>
               <button onclick="filterVaultTag('grammar')" id="v-tag-grammar" class="v-tag-btn px-3 py-1.5 bg-white hover:bg-[#f3ecd8] border border-[#e5ded0] text-xs font-bold rounded-lg text-[#5c5648] transition">Grammar</button>
+              <button onclick="filterVaultTag('ukvi')" id="v-tag-ukvi" class="v-tag-btn px-3 py-1.5 bg-white hover:bg-[#f3ecd8] border border-[#e5ded0] text-xs font-bold rounded-lg text-[#5c5648] transition">UKVI</button>
             </div>
           </div>
 
@@ -1695,7 +1696,7 @@
     }
     
     // Student module completion list
-    let studentTrack = 'ielts-7.5';
+    let studentTrack = localStorage.getItem('viatestprep_target_track') || 'ielts-7.5';
     let completedModules = [];
 
     // Modal Rates Database
@@ -1708,18 +1709,25 @@
     };
 
     // IELTS Modules list configuration
+    // `tracks` drives the Target Strategy selector: which modules count as
+    // "recommended" (and toward Vault Progress) for the student's chosen
+    // goal. `tags` is a separate concern - it drives the Core/Grammar/UKVI
+    // category grouping and filter pills, independent of track.
     const modulesConfig = [
-      { id: '00', title: 'Orientation', file: '00_IELTS_Orientation_Class_01.html', tags: 'core', desc: 'IELTS format, scoring, and myths.', time: '2 hrs', difficulty: 'Easy', badgeStyle: 'background:rgba(79,70,229,0.08);color:#4f46e5' },
-      { id: '01', title: 'Reading', file: '01_IELTS_Reading_Detective_Academy.html', tags: 'core,reading', desc: '14 question types and skimming strategies.', time: '8 hrs', difficulty: 'Hard', badgeStyle: 'background:rgba(13,138,122,0.08);color:#0d8a7a' },
-      { id: '02', title: 'Listening', file: '02_IELTS_Listening_Sound_Hunter.html', tags: 'core,listening', desc: 'Audio sections, predictive spelling traps.', time: '6 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(26,74,138,0.08);color:#1a4a8a' },
-      { id: '03', title: 'Writing', file: '03_IELTS_Writing_Architects_Blueprint_v2.html', tags: 'core,writing', desc: 'Task 1 charts, task 2 essays templates.', time: '10 hrs', difficulty: 'Hard', badgeStyle: 'background:rgba(91,42,134,0.08);color:#5b2a86' },
-      { id: '04', title: 'Speaking', file: '04_IELTS_Speaking_Confident_Performer.html', tags: 'core,speaking', desc: 'Part 1-3 fluency templates and cue cards.', time: '8 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(232,69,107,0.08);color:#e8456b' },
-      { id: '05', title: 'Cohesion & Linking', file: '05_IELTS_Cohesive_Devices_Weaver.html', tags: 'grammar', desc: 'Linking adverbs, paragraphs rewrite drills.', time: '4 hrs', difficulty: 'Easy', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
-      { id: '06', title: 'Tenses & Conditionals', file: '06_IELTS_Tenses_Conditionals.html', tags: 'grammar', desc: 'Grammar tenses, conditional worksheets.', time: '5 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
-      { id: '07', title: 'Punctuation', file: '07_IELTS_Punctuation_Signals.html', tags: 'grammar', desc: 'Punctuation marks, commas, semi-colons.', time: '3 hrs', difficulty: 'Easy', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
-      { id: '08', title: 'Voice & Speech', file: '08_IELTS_Voice_Speech.html', tags: 'grammar,speaking', desc: 'Active/passive, direct speech rules.', time: '4 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
-      { id: '09', title: 'Sentence Structure', file: '09_IELTS_Sentence_Mastery.html', tags: 'grammar', desc: 'Clause syntax, compound/complex drills.', time: '6 hrs', difficulty: 'Hard', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
-      { id: '10', title: 'Vocabulary', file: '10_IELTS_Vocabulary_Accelerator.html', tags: 'grammar', desc: 'The ultimate Band 7+ word bank — 15 topic packs, function-word swaps, and collocation drills.', time: '8 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' }
+      { id: '00', title: 'Orientation', file: '00_IELTS_Orientation_Class_01.html', tags: 'core', tracks: ['ielts-7.0','ielts-7.5','ukvi'], desc: 'IELTS format, scoring, and myths.', time: '2 hrs', difficulty: 'Easy', badgeStyle: 'background:rgba(79,70,229,0.08);color:#4f46e5' },
+      { id: '01', title: 'Reading', file: '01_IELTS_Reading_Detective_Academy.html', tags: 'core,reading', tracks: ['ielts-7.0','ielts-7.5'], desc: '14 question types and skimming strategies (Academic format).', time: '8 hrs', difficulty: 'Hard', badgeStyle: 'background:rgba(13,138,122,0.08);color:#0d8a7a' },
+      { id: '02', title: 'Listening', file: '02_IELTS_Listening_Sound_Hunter.html', tags: 'core,listening', tracks: ['ielts-7.0','ielts-7.5','ukvi'], desc: 'Audio sections, predictive spelling traps.', time: '6 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(26,74,138,0.08);color:#1a4a8a' },
+      { id: '03', title: 'Writing', file: '03_IELTS_Writing_Architects_Blueprint_v2.html', tags: 'core,writing', tracks: ['ielts-7.0','ielts-7.5'], desc: 'Task 1 charts, task 2 essays templates (Academic format).', time: '10 hrs', difficulty: 'Hard', badgeStyle: 'background:rgba(91,42,134,0.08);color:#5b2a86' },
+      { id: '04', title: 'Speaking', file: '04_IELTS_Speaking_Confident_Performer.html', tags: 'core,speaking', tracks: ['ielts-7.0','ielts-7.5','ukvi'], desc: 'Part 1-3 fluency templates and cue cards.', time: '8 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(232,69,107,0.08);color:#e8456b' },
+      { id: '05', title: 'Cohesion & Linking', file: '05_IELTS_Cohesive_Devices_Weaver.html', tags: 'grammar', tracks: ['ielts-7.5','ukvi'], desc: 'Linking adverbs, paragraphs rewrite drills.', time: '4 hrs', difficulty: 'Easy', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
+      { id: '06', title: 'Tenses & Conditionals', file: '06_IELTS_Tenses_Conditionals.html', tags: 'grammar', tracks: ['ielts-7.5','ukvi'], desc: 'Grammar tenses, conditional worksheets.', time: '5 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
+      { id: '07', title: 'Punctuation', file: '07_IELTS_Punctuation_Signals.html', tags: 'grammar', tracks: ['ielts-7.5','ukvi'], desc: 'Punctuation marks, commas, semi-colons.', time: '3 hrs', difficulty: 'Easy', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
+      { id: '08', title: 'Voice & Speech', file: '08_IELTS_Voice_Speech.html', tags: 'grammar,speaking', tracks: ['ielts-7.5','ukvi'], desc: 'Active/passive, direct speech rules.', time: '4 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
+      { id: '09', title: 'Sentence Structure', file: '09_IELTS_Sentence_Mastery.html', tags: 'grammar', tracks: ['ielts-7.5','ukvi'], desc: 'Clause syntax, compound/complex drills.', time: '6 hrs', difficulty: 'Hard', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
+      { id: '10', title: 'Vocabulary', file: '10_IELTS_Vocabulary_Accelerator.html', tags: 'grammar', tracks: ['ielts-7.5','ukvi'], desc: 'The ultimate Band 7+ word bank — 15 topic packs, function-word swaps, and collocation drills.', time: '8 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
+      { id: '11', title: 'GT Reading', file: 'UKVI_GT_Reading_Module.html', tags: 'ukvi', tracks: ['ukvi'], desc: 'General Training Reading: workplace notices, ads, and everyday texts (not Academic passages).', time: '5 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(13,138,122,0.08);color:#0d8a7a' },
+      { id: '12', title: 'GT Writing Task 1', file: 'UKVI_GT_Writing_Task1_Module.html', tags: 'ukvi,writing', tracks: ['ukvi'], desc: 'General Training letter-writing: formal, semi-formal, and informal registers.', time: '5 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(91,42,134,0.08);color:#5b2a86' },
+      { id: '13', title: 'GT Writing Task 2', file: 'UKVI_Writing_Task2_Essay_Module.html', tags: 'ukvi,writing', tracks: ['ukvi'], desc: 'The GT Task 2 essay - shared with Academic, built around defending a clear thesis.', time: '6 hrs', difficulty: 'Hard', badgeStyle: 'background:rgba(91,42,134,0.08);color:#5b2a86' }
     ];
 
     // ==========================================
@@ -2584,6 +2592,14 @@
         }
       }
 
+      document.querySelectorAll('#studentTrackOptions button').forEach(b => {
+        b.className = "px-3 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-xs font-bold rounded-lg transition";
+      });
+      const savedTrackBtn = document.getElementById('st-opt-' + studentTrack.replace('.', ''));
+      if (savedTrackBtn) {
+        savedTrackBtn.className = "px-3 py-1.5 bg-[#7a2331] text-white border border-[#7a2331] text-xs font-bold rounded-lg transition";
+      }
+
       renderStudentModules();
       renderStudentMockExams();
       renderStudentHistoryTable();
@@ -2650,10 +2666,11 @@
 
     function selectStudentTrack(track) {
       studentTrack = track;
+      localStorage.setItem('viatestprep_target_track', track);
       document.querySelectorAll('#studentTrackOptions button').forEach(b => {
         b.className = "px-3 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-xs font-bold rounded-lg transition";
       });
-      
+
       const activeBtnId = 'st-opt-' + track.replace('.', '');
       const activeBtn = document.getElementById(activeBtnId);
       if (activeBtn) {
@@ -2684,7 +2701,8 @@
 
       const moduleGroups = [
         { key: 'core', label: 'Core Modules', icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253', iconBg: 'bg-[#f3ecd8] text-[#7a2331]' },
-        { key: 'grammar', label: 'Grammar & Mechanics', icon: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z', iconBg: 'bg-amber-50 text-amber-600' }
+        { key: 'grammar', label: 'Grammar & Mechanics', icon: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z', iconBg: 'bg-amber-50 text-amber-600' },
+        { key: 'ukvi', label: 'UKVI / General Training', icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z', iconBg: 'bg-teal-50 text-teal-700' }
         // NOTE: PTE group intentionally removed - no PTE practice drills exist
         // yet, only strategy pages, so we don't surface them as a "module" to
         // avoid promising practice that isn't there. Re-add once built.
@@ -2717,17 +2735,17 @@
         const sectionGrid = section.querySelector(`[data-group="${group.key}"]`);
 
         groupModules.forEach(m => {
-          const recommendedList = m.tags.split(',');
-          const isRecommended = recommendedList.includes(studentTrack) || m.tags.includes('core');
+          const isRecommended = m.tracks.includes(studentTrack);
           if (isRecommended) totalRecCount++;
 
           const isCompleted = completedModules.includes(m.file);
           if (isRecommended && isCompleted) completedRecCount++;
 
           const card = document.createElement('div');
-          card.className = 'group relative bg-white border border-[#ece4d2] rounded-2xl p-4 shadow-sm hover:shadow-md hover:border-[#e5ded0] transition flex flex-col';
+          card.className = `group relative bg-white border rounded-2xl p-4 shadow-sm hover:shadow-md transition flex flex-col ${isRecommended ? 'border-[#c98a2c]' : 'border-[#ece4d2] hover:border-[#e5ded0]'}`;
 
           card.innerHTML = `
+            ${isRecommended ? `<span class="absolute -top-2 -right-2 text-[9px] font-black uppercase tracking-wide bg-[#c98a2c] text-white px-2 py-0.5 rounded-full shadow-sm">For your track</span>` : ''}
             <div class="flex items-start justify-between">
               <div class="w-9 h-9 rounded-xl ${group.iconBg} flex items-center justify-center shrink-0">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:18px;height:18px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="${group.icon}"></path></svg>
