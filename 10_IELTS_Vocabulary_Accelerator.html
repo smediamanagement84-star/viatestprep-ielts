@@ -71,8 +71,9 @@ img,svg{-webkit-user-drag:none!important}
       <span class="nav-step" data-jump="why">① Why</span>
       <span class="nav-step" data-jump="system">② System</span>
       <span class="nav-step" data-jump="topics">③ Topic Banks</span>
-      <span class="nav-step" data-jump="drills">④ Drills</span>
-      <span class="nav-step" data-jump="boss">⑤ Boss Upgrade</span>
+      <span class="nav-step" data-jump="functions">④ Function Bank</span>
+      <span class="nav-step" data-jump="drills">⑤ Drills</span>
+      <span class="nav-step" data-jump="boss">⑥ Boss Upgrade</span>
     </div>
     <div class="flex items-center gap-3">
       <div class="text-right hidden sm:block"><div class="text-[11px] uppercase tracking-widest text-stone-500">Lex XP</div><div class="font-bold timer-pill" style="color:var(--purple)" id="xpDisplay">0 XP</div></div>
@@ -129,13 +130,84 @@ img,svg{-webkit-user-drag:none!important}
   <!-- TOPIC BANKS -->
   <section id="topics" class="mb-14">
     <h2 class="text-3xl mb-2">③ Topic Vocabulary Banks</h2>
-    <p class="text-stone-700 max-w-3xl">IELTS recycles ~10 topics. Tap each for a Band 7+ phrase pack — synonyms, collocations, and a model sentence.</p>
+    <p class="text-stone-700 max-w-3xl">IELTS recycles roughly 15 topics across both Writing and Speaking. Tap each for a Band 7+ phrase pack — adjectives, verbs, collocations, and a model sentence you can adapt on test day.</p>
     <div class="gameboard mt-4" id="topicCards"></div>
+  </section>
+
+  <!-- FUNCTION WORD BANK -->
+  <section id="functions" class="mb-14">
+    <h2 class="text-3xl mb-2">④ The Function Word Bank</h2>
+    <p class="text-stone-700 max-w-3xl">Topic vocabulary tells you <em>what</em> to talk about. This section tells you <em>how</em> to talk about anything — the small set of jobs every sentence in a Task 2 essay or Speaking answer actually does: showing importance, change, cause, contrast, and opinion. Master these ten functions and you stop repeating "important", "big", "because", and "but" in every answer, on every topic, for the rest of the test.</p>
+
+    <div class="grid md:grid-cols-2 gap-4 mt-6" id="functionBank">
+      <div class="card p-5">
+        <div class="flex items-center justify-between mb-2"><h3 class="font-bold text-lg">Showing Importance</h3><span class="chip" style="background:var(--soft);color:var(--purple)">instead of "important"</span></div>
+        <p class="text-sm text-stone-700 mb-2"><strong>Adjectives:</strong> vital · crucial · paramount · indispensable · pivotal</p>
+        <p class="text-sm text-stone-700 mb-2"><strong>Phrases:</strong> plays a pivotal role in · cannot be overstated · of paramount importance</p>
+        <div class="p-2 rounded-lg text-sm" style="background:#fdf6e3"><em>"Access to clean water is of paramount importance to public health."</em></div>
+      </div>
+      <div class="card p-5">
+        <div class="flex items-center justify-between mb-2"><h3 class="font-bold text-lg">Showing Increase</h3><span class="chip" style="background:var(--soft);color:var(--purple)">instead of "go up"</span></div>
+        <p class="text-sm text-stone-700 mb-2"><strong>Verbs:</strong> rise · surge · soar · climb · escalate</p>
+        <p class="text-sm text-stone-700 mb-2"><strong>Nouns/adverbs:</strong> a sharp/steady/gradual rise · a dramatic surge</p>
+        <div class="p-2 rounded-lg text-sm" style="background:#fdf6e3"><em>"Obesity rates have soared over the past two decades, particularly among children."</em></div>
+      </div>
+      <div class="card p-5">
+        <div class="flex items-center justify-between mb-2"><h3 class="font-bold text-lg">Showing Decrease</h3><span class="chip" style="background:var(--soft);color:var(--purple)">instead of "go down"</span></div>
+        <p class="text-sm text-stone-700 mb-2"><strong>Verbs:</strong> decline · plummet · dwindle · diminish · taper off</p>
+        <p class="text-sm text-stone-700 mb-2"><strong>Nouns/adverbs:</strong> a steady decline · a sharp drop · dwindling resources</p>
+        <div class="p-2 rounded-lg text-sm" style="background:#fdf6e3"><em>"Fish stocks have dwindled sharply as a result of decades of overfishing."</em></div>
+      </div>
+      <div class="card p-5">
+        <div class="flex items-center justify-between mb-2"><h3 class="font-bold text-lg">Showing Cause</h3><span class="chip" style="background:var(--soft);color:var(--purple)">instead of "because"</span></div>
+        <p class="text-sm text-stone-700 mb-2"><strong>Phrases:</strong> owing to · stems from · is attributable to · a contributing factor is</p>
+        <p class="text-sm text-stone-700 mb-2"><strong>Verbs:</strong> trigger · give rise to · precipitate</p>
+        <div class="p-2 rounded-lg text-sm" style="background:#fdf6e3"><em>"The rise in remote work stems largely from advances in digital communication."</em></div>
+      </div>
+      <div class="card p-5">
+        <div class="flex items-center justify-between mb-2"><h3 class="font-bold text-lg">Showing Effect / Result</h3><span class="chip" style="background:var(--soft);color:var(--purple)">instead of "so"</span></div>
+        <p class="text-sm text-stone-700 mb-2"><strong>Phrases:</strong> as a consequence · this in turn · which ultimately leads to</p>
+        <p class="text-sm text-stone-700 mb-2"><strong>Verbs:</strong> result in · culminate in · exacerbate</p>
+        <div class="p-2 rounded-lg text-sm" style="background:#fdf6e3"><em>"Chronic underinvestment in public transport has, in turn, exacerbated traffic congestion."</em></div>
+      </div>
+      <div class="card p-5">
+        <div class="flex items-center justify-between mb-2"><h3 class="font-bold text-lg">Showing Contrast</h3><span class="chip" style="background:var(--soft);color:var(--purple)">instead of "but"</span></div>
+        <p class="text-sm text-stone-700 mb-2"><strong>Linkers:</strong> whereas · nevertheless · that said · on the other hand</p>
+        <p class="text-sm text-stone-700 mb-2"><strong>Phrases:</strong> in spite of this · despite these benefits</p>
+        <div class="p-2 rounded-lg text-sm" style="background:#fdf6e3"><em>"Renewable energy is becoming more affordable; that said, storage technology remains a major obstacle."</em></div>
+      </div>
+      <div class="card p-5">
+        <div class="flex items-center justify-between mb-2"><h3 class="font-bold text-lg">Giving Examples</h3><span class="chip" style="background:var(--soft);color:var(--purple)">instead of "for example"</span></div>
+        <p class="text-sm text-stone-700 mb-2"><strong>Phrases:</strong> a case in point is · this is exemplified by · to illustrate</p>
+        <p class="text-sm text-stone-700 mb-2"><strong>Verbs:</strong> exemplify · epitomise · illustrate</p>
+        <div class="p-2 rounded-lg text-sm" style="background:#fdf6e3"><em>"Singapore's public housing scheme exemplifies how government policy can directly reduce homelessness."</em></div>
+      </div>
+      <div class="card p-5">
+        <div class="flex items-center justify-between mb-2"><h3 class="font-bold text-lg">Expressing Opinion</h3><span class="chip" style="background:var(--soft);color:var(--purple)">instead of "I think"</span></div>
+        <p class="text-sm text-stone-700 mb-2"><strong>Phrases:</strong> it could be argued that · from my perspective · I am inclined to believe</p>
+        <p class="text-sm text-stone-700 mb-2"><strong>Verbs:</strong> contend · maintain · advocate</p>
+        <div class="p-2 rounded-lg text-sm" style="background:#fdf6e3"><em>"I am inclined to believe that the benefits of automation outweigh the risks to employment."</em></div>
+      </div>
+      <div class="card p-5">
+        <div class="flex items-center justify-between mb-2"><h3 class="font-bold text-lg">Describing General Change</h3><span class="chip" style="background:var(--soft);color:var(--purple)">instead of "change"</span></div>
+        <p class="text-sm text-stone-700 mb-2"><strong>Verbs:</strong> transform · shift · evolve · overhaul · revamp</p>
+        <p class="text-sm text-stone-700 mb-2"><strong>Nouns:</strong> a paradigm shift · a fundamental transformation</p>
+        <div class="p-2 rounded-lg text-sm" style="background:#fdf6e3"><em>"Streaming services have fundamentally transformed how audiences consume media."</em></div>
+      </div>
+      <div class="card p-5">
+        <div class="flex items-center justify-between mb-2"><h3 class="font-bold text-lg">Showing Degree / Extent</h3><span class="chip" style="background:var(--soft);color:var(--purple)">instead of "very"</span></div>
+        <p class="text-sm text-stone-700 mb-2"><strong>Adverbs:</strong> considerably · substantially · markedly · to a large extent</p>
+        <p class="text-sm text-stone-700 mb-2"><strong>Phrases:</strong> a significant proportion of · overwhelmingly</p>
+        <div class="p-2 rounded-lg text-sm" style="background:#fdf6e3"><em>"A substantial proportion of graduates now work in fields unrelated to their degree."</em></div>
+      </div>
+    </div>
+
+    <div class="feedback tip mt-5"><strong>How to actually use this:</strong> don't try to memorise all ten at once. Pick one function per essay you practise, force yourself to use two of its phrases, and move to the next. By the time you've cycled through all ten a few times, they stop being a list and start being your natural way of writing.</div>
   </section>
 
   <!-- DRILLS -->
   <section id="drills" class="mb-14">
-    <h2 class="text-3xl mb-2">④ Live Drills</h2>
+    <h2 class="text-3xl mb-2">⑤ Live Drills</h2>
 
     <div class="card p-6 mt-4">
       <div class="flex items-center gap-3 mb-3"><span class="chip" style="background:#fdf6e3;color:var(--gold)">Word Family</span><h3 class="text-xl">Pick the Right Form</h3></div>
@@ -150,7 +222,7 @@ img,svg{-webkit-user-drag:none!important}
 
   <!-- BOSS -->
   <section id="boss" class="mb-14">
-    <h2 class="text-3xl mb-2">⑤ Boss Upgrade — Band 6 → 7.5+</h2>
+    <h2 class="text-3xl mb-2">⑥ Boss Upgrade — Band 6 → 7.5+</h2>
     <p class="text-stone-700 max-w-3xl">Click each gap, choose the Band 7.5+ replacement. Score yourself.</p>
     <div class="card p-6 mt-4">
       <p class="text-base leading-relaxed" id="bossText"></p>
@@ -176,6 +248,10 @@ const colloc = [
   {q:"Excruciating ___", options:["pain","happiness"], a:"pain", why:"'Excruciating' = extreme pain only."},
   {q:"___ food (e.g., burger)", options:["fast","quick"], a:"fast", why:"'Fast food' — 'quick food' isn't natural English."},
   {q:"An ___ reader", options:["interested","avid"], a:"avid", why:"'Avid reader' — far stronger collocation than 'interested reader'."},
+  {q:"___ a decision", options:["make","take"], a:"make", why:"'Make a decision' — 'take a decision' is used in British English formal contexts but 'make' is the safer default."},
+  {q:"Strictly ___", options:["forbidden","banned"], a:"forbidden", why:"'Strictly forbidden' is the fixed intensifier; 'strictly banned' is not natural."},
+  {q:"___ an opportunity", options:["seize","catch"], a:"seize", why:"'Seize an opportunity' — 'catch' doesn't collocate with abstract nouns like this."},
+  {q:"___ attention", options:["pay","give"], a:"pay", why:"'Pay attention' is the fixed collocation; 'give attention' is understood but unnatural."},
 ];
 const cdEl = document.getElementById('collocDrill');
 colloc.forEach((it,i)=>{
@@ -265,6 +341,41 @@ const topics = [
      <div><strong>Collocations:</strong> family ties · domestic responsibilities · gender roles · ageing population · parental supervision</div>
      <div class='p-2 rounded-lg' style='background:#fdf6e3'><em>"In many countries, the rise of nuclear families has weakened traditional family ties between generations."</em></div>
    </div>`},
+  {n:"Crime / Law",icon:"⚖",
+   pack:`<div class='text-sm space-y-2'>
+     <div><strong>Adjectives:</strong> lenient · deterrent · rehabilitative · juvenile · repeat (offender) · custodial</div>
+     <div><strong>Verbs:</strong> deter · reoffend · commit an offence · impose a sentence · rehabilitate · convict</div>
+     <div><strong>Collocations:</strong> crime rate · custodial sentence · petty crime · white-collar crime · law-abiding citizen · a deterrent effect</div>
+     <div class='p-2 rounded-lg' style='background:#fdf6e3'><em>"Critics argue that lenient sentencing fails to act as a genuine deterrent, resulting in high rates of reoffending."</em></div>
+   </div>`},
+  {n:"Sport / Leisure",icon:"🏅",
+   pack:`<div class='text-sm space-y-2'>
+     <div><strong>Adjectives:</strong> competitive · sedentary · recreational · elite · amateur · physically demanding</div>
+     <div><strong>Verbs:</strong> compete · foster teamwork · promote fitness · sponsor · burn out · take up (a sport)</div>
+     <div><strong>Collocations:</strong> physical wellbeing · team spirit · a sedentary lifestyle · grassroots sport · professional athlete · leisure time</div>
+     <div class='p-2 rounded-lg' style='background:#fdf6e3'><em>"Participating in team sports from a young age fosters both physical wellbeing and a strong sense of team spirit."</em></div>
+   </div>`},
+  {n:"Money / Economy",icon:"💰",
+   pack:`<div class='text-sm space-y-2'>
+     <div><strong>Adjectives:</strong> lucrative · frugal · affluent · economically viable · cost-effective · disposable (income)</div>
+     <div><strong>Verbs:</strong> invest · accumulate wealth · subsidise · fluctuate · stimulate (the economy) · squander</div>
+     <div><strong>Collocations:</strong> economic growth · cost of living · disposable income · financial burden · a viable investment · income inequality</div>
+     <div class='p-2 rounded-lg' style='background:#fdf6e3'><em>"Rising costs of living have significantly reduced the disposable income of low- and middle-income households."</em></div>
+   </div>`},
+  {n:"Science / Innovation",icon:"🔬",
+   pack:`<div class='text-sm space-y-2'>
+     <div><strong>Adjectives:</strong> groundbreaking · empirical · hypothetical · inconclusive · peer-reviewed · rigorous</div>
+     <div><strong>Verbs:</strong> hypothesise · substantiate · corroborate · replicate (a study) · pioneer · refute</div>
+     <div><strong>Collocations:</strong> scientific breakthrough · empirical evidence · a rigorous methodology · funding for research · unintended consequences</div>
+     <div class='p-2 rounded-lg' style='background:#fdf6e3'><em>"Although the initial findings were promising, further empirical evidence is needed before the results can be substantiated."</em></div>
+   </div>`},
+  {n:"Globalisation",icon:"🌐",
+   pack:`<div class='text-sm space-y-2'>
+     <div><strong>Adjectives:</strong> interconnected · homogenised · multinational · protectionist · globalised</div>
+     <div><strong>Verbs:</strong> outsource · integrate · homogenise · liberalise (trade) · exploit (cheap labour)</div>
+     <div><strong>Collocations:</strong> global interdependence · cultural homogenisation · multinational corporation · trade liberalisation · a level playing field</div>
+     <div class='p-2 rounded-lg' style='background:#fdf6e3'><em>"While globalisation has fostered unprecedented economic interdependence, critics warn it risks the cultural homogenisation of smaller nations."</em></div>
+   </div>`},
 ];
 const tEl = document.getElementById('topicCards');
 topics.forEach(t=>{
@@ -306,6 +417,9 @@ const syns = [
   {sent:"The new policy will ___ the city.", weak:"change", options:["transform","modify","alter","switch"], a:"transform", why:"'Transform' implies dramatic change — fits a sweeping policy."},
   {sent:"It is very ___ to address climate change.", weak:"important", options:["vital","big","much","plenty"], a:"vital", why:"'Vital' is more precise and academic than 'important'."},
   {sent:"This has a ___ effect on wildlife.", weak:"bad", options:["detrimental","ugly","sad","cheap"], a:"detrimental", why:"'Detrimental effect' = standard academic collocation."},
+  {sent:"The population has ___ over the last decade.", weak:"gone up a lot", options:["surged","gone bigger","got much","risen quick"], a:"surged", why:"'Surged' is a precise, single-word academic verb for rapid increase."},
+  {sent:"Many people ___ that social media is harmful.", weak:"think", options:["contend","think so","say so","feel that"], a:"contend", why:"'Contend' is a formal reporting verb suited to academic argument."},
+  {sent:"The results were ___ different from what we expected.", weak:"very", options:["markedly","really","super","a lot"], a:"markedly", why:"'Markedly' is a precise academic intensifier; the others are informal."},
 ];
 const synEl = document.getElementById('synDrill');
 syns.forEach((it,i)=>{
