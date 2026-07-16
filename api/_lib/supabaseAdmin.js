@@ -230,6 +230,26 @@ async function insertMockResult(result) {
   return rows[0];
 }
 
+// A student's own full attempt history (bands + per-question answer review),
+// newest first - backs /api/student/reports.js so a student can see their own
+// past answers in the app instead of only in that browser's localStorage.
+async function getMockHistoryByStudentId(studentId) {
+  return restRequest('mock_history', {
+    method: 'GET',
+    query: `?student_id=eq.${encodeURIComponent(studentId)}&order=completed_at.desc`,
+  });
+}
+
+// A student's own logged speaking-interview grades - same "own reports in the
+// app" purpose as getMockHistoryByStudentId above, for the CRM's Live
+// Speaking Grader results instead of automated Reading/Listening/Writing.
+async function getSpeakingGradesByStudentId(studentId) {
+  return restRequest('speaking_grades', {
+    method: 'GET',
+    query: `?student_id=eq.${encodeURIComponent(studentId)}&order=created_at.desc`,
+  });
+}
+
 // Everything below backs the CRM's owner-bypass mode (index.html's
 // "?ownerkey=" link, consultancyId === '__owner__') now that RLS is enabled
 // on students/mock_history/speaking_grades (see security-rls.sql). That mode
@@ -298,6 +318,8 @@ module.exports = {
   getStudentByAuthUserId,
   insertSelfServeStudent,
   insertMockResult,
+  getMockHistoryByStudentId,
+  getSpeakingGradesByStudentId,
   friendlyDbError,
   listAllStudents,
   listAllMockHistory,

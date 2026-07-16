@@ -2974,79 +2974,147 @@
       }
     }
 
-    // Student Tab 4 Grades
-    function renderStudentHistoryTable() {
+    // Student Tab 4 Grades - pulled live from Supabase (mock_history +
+    // speaking_grades) via /api/student/reports, keyed off the same
+    // viatestprep_active_student_id every mock submission already writes
+    // under. Replaces the old version, which only ever scanned this one
+    // browser's localStorage (score_test_* keys) and a stale
+    // viatestprep_students blob - neither survives a new device or a cleared
+    // cache, and neither ever showed the real per-question answers a student
+    // submitted, only the band.
+    async function renderStudentHistoryTable() {
       const tbody = document.getElementById('studentHistoryBody');
       const noHist = document.getElementById('noStudentHistoryLabel');
       const table = document.getElementById('studentMockHistoryTable');
-      
+
       tbody.innerHTML = '';
-      let recordsFound = false;
 
-      // 1. Scan automated mock test scores
-      for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        if (key.startsWith('score_test_')) {
-          recordsFound = true;
-          const parts = key.split('_');
-          const testId = parts[2];
-          const module = parts[3];
-          const score = localStorage.getItem(key);
-          const testName = IELTS_TEST_DATA[testId] ? IELTS_TEST_DATA[testId].title : `Test ${testId}`;
-
-          const tr = document.createElement('tr');
-          tr.className = 'border-b border-[#ece4d2] hover:bg-[#f3ecd8] transition text-xs';
-          tr.innerHTML = `
-            <td class="py-3 font-bold">${testName}</td>
-            <td class="py-3 capitalize font-bold text-[#7a2331]">${module}</td>
-            <td class="py-3 text-[#8a8171]">Exam Mode</td>
-            <td class="py-3 text-[#766f62]">—</td>
-            <td class="py-3 font-extrabold text-[#7a2331]">${module === 'writing' ? 'Reviewed' : 'Band ' + score}</td>
-            <td class="py-3 text-[#8a8171] text-[10px]">Recently</td>
-          `;
-          tbody.appendChild(tr);
-        }
-      }
-
-      // 2. Scan CRM database for speaking evaluations logged under this student's email
-      const userEmail = localStorage.getItem('userEmail');
-      if (userEmail) {
-        const studentsData = localStorage.getItem('viatestprep_students');
-        if (studentsData) {
-          const allStudents = JSON.parse(studentsData);
-          const currentStudent = allStudents.find(s => s.email && s.email.toLowerCase() === userEmail.toLowerCase());
-          if (currentStudent && currentStudent.mockHistory && currentStudent.mockHistory.length > 0) {
-            recordsFound = true;
-            currentStudent.mockHistory.forEach(h => {
-              const tr = document.createElement('tr');
-              tr.className = 'border-b border-[#ece4d2] hover:bg-[#f3ecd8] transition bg-[#f3ecd8]/20 text-xs';
-              
-              let details = 'Speaking Graded Mock';
-              if (typeof h.speaking === 'object') {
-                details = `Fluency: ${h.speaking.fluency}, Vocab: ${h.speaking.vocab}, Grammar: ${h.speaking.grammar}, Pronunciation: ${h.speaking.pronunciation}`;
-              }
-              
-              tr.innerHTML = `
-                <td class="py-3 font-bold">${escapeHtml(h.test)}</td>
-                <td class="py-3 font-bold text-[#5b3b8a]">Speaking</td>
-                <td class="py-3 text-[#8a8171]">1-on-1 Interview</td>
-                <td class="py-3 text-[#766f62] max-w-[200px] truncate" title="${escapeHtml(h.notes || '')}">${escapeHtml(h.notes || '—')}</td>
-                <td class="py-3 font-extrabold text-emerald-600" title="${details}">Band ${h.overall}</td>
-                <td class="py-3 text-[#8a8171] text-[10px]">${h.date}</td>
-              `;
-              tbody.appendChild(tr);
-            });
-          }
-        }
-      }
-
-      if (recordsFound) {
-        table.classList.remove('hidden');
-        noHist.classList.add('hidden');
-      } else {
+      const activeStudentId = localStorage.getItem('viatestprep_active_student_id');
+      if (!activeStudentId) {
         table.classList.add('hidden');
         noHist.classList.remove('hidden');
+        noHist.textContent = 'Log in with your student access link or account to see your synced test reports here.';
+        return;
       }
+
+      let data;
+      try {
+        const res = await fetch('/api/student/reports?studentId=' + encodeURIComponent(activeStudentId));
+        data = await res.json();
+      } catch (e) {
+        console.error('Could not load test reports:', e);
+        data = null;
+      }
+
+      if (!data || !data.ok) {
+        table.classList.add('hidden');
+        noHist.classList.remove('hidden');
+        noHist.textContent = (data && data.error) || 'Could not load your test reports right now. Please refresh and try again.';
+        return;
+      }
+
+      const mockRows = data.results || [];
+      const speakingRows = data.speaking || [];
+
+      if (mockRows.length === 0 && speakingRows.length === 0) {
+        table.classList.add('hidden');
+        noHist.classList.remove('hidden');
+        noHist.textContent = 'No exams or evaluated scores logged yet. Start a mock test or complete live grading with your coach.';
+        return;
+      }
+
+      table.classList.remove('hidden');
+      noHist.classList.add('hidden');
+
+      mockRows.forEach(h => {
+        const tr = document.createElement('tr');
+        tr.className = 'border-b border-[#ece4d2] hover:bg-[#f3ecd8] transition text-xs';
+
+        const dateLabel = h.completed_at ? new Date(h.completed_at).toLocaleDateString() : '—';
+        let scoreLabel = '—';
+        let detailsLabel = '—';
+
+        if (h.module_type === 'writing') {
+          scoreLabel = h.writing_band != null ? `Band ${h.writing_band}` : 'Reviewed';
+          detailsLabel = h.writing_auto_graded === false ? 'Tutor-reviewed' : 'Auto-graded';
+        } else {
+          const band = h.module_type === 'reading' ? h.reading_band : h.listening_band;
+          scoreLabel = band != null ? `Band ${band}` : '—';
+          detailsLabel = (h.correct_count != null && h.total_questions != null) ? `${h.correct_count}/${h.total_questions} correct` : '—';
+        }
+
+        const canReviewAnswers = Array.isArray(h.answer_review) && h.answer_review.length > 0;
+        const canReviewWriting = h.module_type === 'writing' && (h.writing_task1 || h.writing_task2);
+        const detailId = 'history-detail-' + h.id;
+
+        tr.innerHTML = `
+          <td class="py-3 font-bold">${escapeHtml(h.test_name)}</td>
+          <td class="py-3 capitalize font-bold text-[#7a2331]">${escapeHtml(h.module_type)}</td>
+          <td class="py-3 text-[#8a8171]">Exam Mode</td>
+          <td class="py-3 text-[#766f62]">${escapeHtml(detailsLabel)}</td>
+          <td class="py-3 font-extrabold text-[#7a2331]">
+            ${escapeHtml(scoreLabel)}
+            ${(canReviewAnswers || canReviewWriting) ? `<button onclick="document.getElementById('${detailId}').classList.toggle('hidden')" class="block text-[9px] font-bold text-[#8a8171] hover:text-[#7a2331] hover:underline mt-0.5">View answers</button>` : ''}
+          </td>
+          <td class="py-3 text-[#8a8171] text-[10px]">${dateLabel}</td>
+        `;
+        tbody.appendChild(tr);
+
+        if (canReviewAnswers || canReviewWriting) {
+          const detailTr = document.createElement('tr');
+          detailTr.id = detailId;
+          detailTr.className = 'hidden border-b border-[#ece4d2] bg-[#faf6ec]';
+          detailTr.innerHTML = `<td colspan="6" class="p-4">${canReviewAnswers ? buildAnswerReviewHtml(h.answer_review) : buildWritingReviewHtml(h)}</td>`;
+          tbody.appendChild(detailTr);
+        }
+      });
+
+      speakingRows.forEach(h => {
+        const tr = document.createElement('tr');
+        tr.className = 'border-b border-[#ece4d2] hover:bg-[#f3ecd8] transition bg-[#f3ecd8]/20 text-xs';
+        const dateLabel = h.created_at ? new Date(h.created_at).toLocaleDateString() : '—';
+        tr.innerHTML = `
+          <td class="py-3 font-bold">${escapeHtml(h.cue_card_title)}</td>
+          <td class="py-3 font-bold text-[#5b3b8a]">Speaking</td>
+          <td class="py-3 text-[#8a8171]">1-on-1 Interview</td>
+          <td class="py-3 text-[#766f62] max-w-[200px] truncate" title="${escapeHtml(h.feedback || '')}">${escapeHtml(h.feedback || '—')}</td>
+          <td class="py-3 font-extrabold text-emerald-600">Band ${h.overall_band}</td>
+          <td class="py-3 text-[#8a8171] text-[10px]">${dateLabel}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Renders the Reading/Listening per-question grid inside a history row's
+    // expandable "View answers" detail - green for correct, rose for wrong,
+    // with the student's own submitted answer plus the correct one.
+    function buildAnswerReviewHtml(review) {
+      return `<div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-2">` +
+        review.map(item => `
+          <div class="px-2 py-1.5 rounded-lg border text-[10px] leading-snug ${item.isCorrect ? 'bg-emerald-50 border-emerald-200 text-emerald-800' : 'bg-rose-50 border-rose-200 text-rose-800'}">
+            <span class="font-black block">Q${item.num}</span>
+            <span class="block truncate" title="${escapeHtml(item.userAnswer || '')}">You: ${escapeHtml(item.userAnswer || '—')}</span>
+            ${item.isCorrect ? '' : `<span class="block truncate" title="${escapeHtml(item.correctAnswer || '')}">Correct: ${escapeHtml(item.correctAnswer || '')}</span>`}
+          </div>
+        `).join('') +
+      `</div>`;
+    }
+
+    // Renders a Writing attempt's stored essay text + auto-grader task bands
+    // inside its expandable "View answers" detail row.
+    function buildWritingReviewHtml(h) {
+      let feedbackHtml = '';
+      if (h.writing_feedback) {
+        try {
+          const fb = JSON.parse(h.writing_feedback);
+          feedbackHtml = `<div class="text-[10px] font-bold text-[#5c5648] mb-2">Task 1 Band: ${fb.task1 ? fb.task1.band : '—'} &middot; Task 2 Band: ${fb.task2 ? fb.task2.band : '—'}</div>`;
+        } catch (e) { /* malformed/legacy feedback - just skip the band line */ }
+      }
+      return `
+        ${feedbackHtml}
+        ${h.writing_task1 ? `<div class="text-[10px] mb-3"><strong class="text-[#1c1a17]">Task 1</strong><p class="whitespace-pre-wrap mt-1 text-[#4a453d] leading-relaxed">${escapeHtml(h.writing_task1)}</p></div>` : ''}
+        ${h.writing_task2 ? `<div class="text-[10px]"><strong class="text-[#1c1a17]">Task 2</strong><p class="whitespace-pre-wrap mt-1 text-[#4a453d] leading-relaxed">${escapeHtml(h.writing_task2)}</p></div>` : ''}
+      `;
     }
 
     // Student Speaking Self-Practice Recorder Timer & audio Capture

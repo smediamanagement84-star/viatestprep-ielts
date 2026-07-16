@@ -75,6 +75,15 @@ CREATE TABLE IF NOT EXISTS mock_history (
   writing_task2_band NUMERIC(2,1),
   writing_feedback TEXT,             -- JSON-encoded { task1, task2, overallBand, disclaimer } from writingGrader.js
   writing_auto_graded BOOLEAN DEFAULT true,
+  -- Reading/Listening only: the full question-by-question breakdown so a
+  -- student can review exactly what they answered, not just the band. Set by
+  -- /api/mock/submit.js from the userAnswers the practice page already
+  -- computes client-side for its own on-page review mode - this just persists
+  -- the same data server-side instead of leaving it stranded in localStorage.
+  -- JSON array of { num, type, userAnswer, correctAnswer, isCorrect }.
+  correct_count INT,                 -- e.g. 32 (out of total_questions)
+  total_questions INT,               -- e.g. 40
+  answer_review JSONB,
   completed_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
@@ -86,6 +95,9 @@ CREATE TABLE IF NOT EXISTS mock_history (
 -- ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS writing_task2_band NUMERIC(2,1);
 -- ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS writing_feedback TEXT;
 -- ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS writing_auto_graded BOOLEAN DEFAULT true;
+-- ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS correct_count INT;
+-- ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS total_questions INT;
+-- ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS answer_review JSONB;
 
 -- 4. Speaking Grades Table (Manual recordings and grades from 1-on-1 grader)
 CREATE TABLE IF NOT EXISTS speaking_grades (

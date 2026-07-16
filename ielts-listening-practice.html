@@ -1288,13 +1288,17 @@
       clearInterval(timerInterval);
       audio.pause();
       var correctCount = 0, totalQs = 0;
+      var answerReview = [];
       testData.listening.sections.forEach(function(sec) {
         sec.questions.forEach(function(q) {
           if (q.contentUnavailable) return;
           totalQs++;
-          var uAns = (userAnswers[q.num] || '').trim().toLowerCase();
+          var rawAns = (userAnswers[q.num] || '').trim();
+          var uAns = rawAns.toLowerCase();
           var cAns = q.answer.trim().toLowerCase();
-          if (checkAnswerCorrect(uAns, cAns)) correctCount++;
+          var isCorrect = checkAnswerCorrect(uAns, cAns);
+          if (isCorrect) correctCount++;
+          answerReview.push({ num: q.num, type: q.type || null, userAnswer: rawAns || null, correctAnswer: q.answer, isCorrect: isCorrect });
         });
       });
       var pct = totalQs > 0 ? correctCount / totalQs : 0;
@@ -1317,7 +1321,10 @@
             studentId: activeStudentId,
             testName: testData.title,
             moduleType: 'listening',
-            listeningBand: parseFloat(band.toFixed(1))
+            listeningBand: parseFloat(band.toFixed(1)),
+            correctCount: correctCount,
+            totalQuestions: totalQs,
+            answerReview: answerReview
           })
         }).catch(function(e) { console.error('Could not sync listening result to CRM:', e); });
       }

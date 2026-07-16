@@ -1207,14 +1207,18 @@
 
       let correctCount = 0;
       let totalQs = 0;
+      const answerReview = [];
 
       testData.reading.passages.forEach(p => {
         p.questions.forEach(q => {
           if (q.contentUnavailable) return;
           totalQs++;
-          const uAns = (userAnswers[q.num] || '').trim().toLowerCase();
+          const rawAns = (userAnswers[q.num] || '').trim();
+          const uAns = rawAns.toLowerCase();
           const cAns = q.answer.trim().toLowerCase();
-          if (checkAnswerCorrect(uAns, cAns)) correctCount++;
+          const isCorrect = checkAnswerCorrect(uAns, cAns);
+          if (isCorrect) correctCount++;
+          answerReview.push({ num: q.num, type: q.type || null, userAnswer: rawAns || null, correctAnswer: q.answer, isCorrect });
         });
       });
 
@@ -1243,7 +1247,10 @@
             studentId: activeStudentId,
             testName: testData.title,
             moduleType: 'reading',
-            readingBand: parseFloat(band.toFixed(1))
+            readingBand: parseFloat(band.toFixed(1)),
+            correctCount,
+            totalQuestions: totalQs,
+            answerReview
           })
         }).catch(e => console.error('Could not sync reading result to CRM:', e));
       }
