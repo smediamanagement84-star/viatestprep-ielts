@@ -3083,7 +3083,14 @@
 
       tbody.innerHTML = '';
 
-      const activeStudentId = localStorage.getItem('viatestprep_active_student_id');
+      let activeStudentId = localStorage.getItem('viatestprep_active_student_id');
+      const isBypass = localStorage.getItem('userEmail') === 'admin@viatestprep.local';
+
+      if (!activeStudentId && isBypass) {
+        activeStudentId = 'demo-bypass-student-id';
+        localStorage.setItem('viatestprep_active_student_id', 'demo-bypass-student-id');
+      }
+
       if (!activeStudentId) {
         table.classList.add('hidden');
         noHist.classList.remove('hidden');
