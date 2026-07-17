@@ -864,6 +864,7 @@
         <button onclick="switchCRMTab('crm')" id="c-tab-crm" class="crm-nav-btn active-tab"><span class="crm-nav-icon">👥</span>CRM Student Roster</button>
         <button onclick="switchCRMTab('grader')" id="c-tab-grader" class="crm-nav-btn"><span class="crm-nav-icon">🎤</span>Live Speaking Grader</button>
         <button onclick="switchCRMTab('vault')" id="c-tab-vault" class="crm-nav-btn"><span class="crm-nav-icon">📦</span>Material Vault</button>
+        <button onclick="switchCRMTab('mocks')" id="c-tab-mocks" class="crm-nav-btn"><span class="crm-nav-icon">⏱️</span>Mock Test Center</button>
         <button onclick="switchCRMTab('payments')" id="c-tab-payments" class="crm-nav-btn hidden"><span class="crm-nav-icon">🧾</span>Pending Payments</button>
       </aside>
 
@@ -1079,6 +1080,20 @@
           </div>
           <div id="pendingPaymentsList" class="space-y-3">
             <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- CRM Tab 5: Mock Test Center -->
+        <div id="crm-mocks-view" class="crm-subview hidden space-y-6">
+          <div>
+            <h2 class="text-2xl font-extrabold text-[#1c1a17]">Mock Test Center</h2>
+            <p class="text-xs text-[#766f62] mt-1">Review all active IELTS & PTE mock exam packages. Click any module to preview questions and instructions.</p>
+          </div>
+          
+          <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm space-y-4">
+            <div id="crmMockGridsContainer" class="space-y-8">
+              <!-- Populated by JS -->
+            </div>
           </div>
         </div>
         </div>
@@ -3321,6 +3336,83 @@
       }
     }
 
+    function renderCRMMockExams() {
+      const container = document.getElementById('crmMockGridsContainer');
+      if (!container) return;
+      container.innerHTML = '';
+
+      const bookTiers = {
+        'IELTS 18': { title: 'Cambridge IELTS 18', accent: 'bg-amber-500/10 text-amber-500 border-amber-500/20', gridId: 'crmGrid18' },
+        'IELTS 19': { title: 'Cambridge IELTS 19', accent: 'bg-cyan-500/10 text-cyan-500 border-cyan-500/20', gridId: 'crmGrid19' },
+        'IELTS 20': { title: 'Cambridge IELTS 20', accent: 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20', gridId: 'crmGrid20' },
+        'Unique Test': { title: 'ViaTestPrep Original Tests', accent: 'bg-violet-500/10 text-violet-500 border-violet-500/20', gridId: 'crmGridUnique' }
+      };
+
+      Object.keys(bookTiers).forEach(bKey => {
+        const book = bookTiers[bKey];
+        const section = document.createElement('div');
+        section.className = 'space-y-3';
+        section.innerHTML = `
+          <div class="flex items-center gap-3">
+            <span class="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full border ${book.accent}">${book.title}</span>
+            <div class="flex-1 h-px bg-[#e5ded0]"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="${book.gridId}"></div>
+        `;
+        container.appendChild(section);
+      });
+
+      const counters = {};
+      Object.keys(IELTS_TEST_DATA).forEach(key => {
+        const test = IELTS_TEST_DATA[key];
+        const book = test.book || 'IELTS 18';
+        counters[book] = (counters[book] || 0) + 1;
+        
+        const cardGrid = document.getElementById(bookTiers[book].gridId);
+        if (!cardGrid) return;
+
+        const hasListening = !!test.listening;
+
+        const card = document.createElement('div');
+        card.className = 'bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm hover:border-[#e5ded0] transition';
+        card.innerHTML = `
+          <div class="flex justify-between items-start">
+            <div>
+              <span class="text-[9px] font-bold text-[#8a8171]">Test ${counters[book]}</span>
+              <h4 class="font-extrabold text-sm text-[#1c1a17] mt-1">${escapeHtml(test.title)}</h4>
+              <div class="flex gap-2 text-[9px] text-[#8a8171] mt-1">
+                ${hasListening ? '<span>⏱️ 30m Listening</span><span>• 🎧 4 Audio Sections</span>' : '<span>📖 Reading &amp; ✍️ Writing</span>'}
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-2 mt-4 pt-3 border-t border-[#ece4d2] text-center text-xs">
+            ${hasListening ? `
+              <a href="ielts-listening-practice.html?test=${key}&preview=1" target="_blank" class="p-2 rounded-xl bg-[#fdfaf2] border border-[#ece4d2] hover:border-[#7a2331] transition flex flex-col justify-between min-h-[60px]">
+                <span class="font-bold text-[10px] text-[#7a2331]">Listening</span>
+                <span class="text-[9px] text-[#8a8171] mt-1 block font-semibold">Preview Qs</span>
+              </a>
+            ` : `
+              <div class="p-2 rounded-xl bg-[#f3ecd8]/50 border border-[#ece4d2] flex flex-col justify-between min-h-[60px] opacity-60 cursor-not-allowed">
+                <span class="font-bold text-[10px]">Listening</span>
+                <span class="text-[9px] text-[#8a8171] mt-1 block">Coming Soon</span>
+              </div>
+            `}
+            
+            <a href="ielts-reading-practice.html?test=${key}&preview=1" target="_blank" class="p-2 rounded-xl bg-[#fdfaf2] border border-[#ece4d2] hover:border-[#7a2331] transition flex flex-col justify-between min-h-[60px]">
+              <span class="font-bold text-[10px] text-[#7a2331]">Reading</span>
+              <span class="text-[9px] text-[#8a8171] mt-1 block font-semibold">Preview Qs</span>
+            </a>
+            
+            <a href="ielts-writing-practice.html?test=${key}&preview=1" target="_blank" class="p-2 rounded-xl bg-[#fdfaf2] border border-[#ece4d2] hover:border-[#7a2331] transition flex flex-col justify-between min-h-[60px]">
+              <span class="font-bold text-[10px] text-[#7a2331]">Writing</span>
+              <span class="text-[9px] text-[#8a8171] mt-1 block font-semibold">Preview Qs</span>
+            </a>
+          </div>
+        `;
+        cardGrid.appendChild(card);
+      });
+    }
+
     // Student Tab 4 Grades - pulled live from Supabase (mock_history +
     // speaking_grades) via /api/student?action=reports, keyed off the same
     // viatestprep_active_student_id every mock submission already writes
@@ -3763,6 +3855,7 @@
       renderCRMTable();
       populateCRMGraderSelect();
       renderCRMVaultModules();
+      renderCRMMockExams();
       updateCRMSliders();
       updateCRMCapacityWidget();
 
@@ -3841,6 +3934,7 @@
 
       currentCRMTab = tabId;
       if (tabId === 'payments') loadPendingPayments();
+      if (tabId === 'mocks') renderCRMMockExams();
     }
 
     // Owner-only: manual QR payment submissions awaiting a human to
