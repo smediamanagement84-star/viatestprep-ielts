@@ -2946,6 +2946,9 @@
     }
 
     function checkStudentPaywall() {
+      // Hiding paywall logic for now (will be enabled after live hosting)
+      return;
+
       const userRole = localStorage.getItem('viatestprep_user_role');
       const consultancyId = localStorage.getItem('viatestprep_consultancy_id');
       const studentAccess = localStorage.getItem('viatestprep_student_access');
