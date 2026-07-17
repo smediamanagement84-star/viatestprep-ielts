@@ -2430,7 +2430,7 @@
       localStorage.setItem('viatestprep_user_role', 'student');
       localStorage.setItem('userEmail', 'admin@viatestprep.local');
       localStorage.setItem('viatestprep_student_access', 'full');
-      localStorage.removeItem('viatestprep_active_student_id');
+      localStorage.setItem('viatestprep_active_student_id', 'demo-bypass-student-id');
       localStorage.removeItem('viatestprep_active_student_expires_at');
 
       ensureBypassStudentData();
@@ -3092,12 +3092,93 @@
       }
 
       let data;
-      try {
-        const res = await fetch('/api/student?action=reports&studentId=' + encodeURIComponent(activeStudentId));
-        data = await res.json();
-      } catch (e) {
-        console.error('Could not load test reports:', e);
-        data = null;
+      if (activeStudentId === 'demo-bypass-student-id' || localStorage.getItem('userEmail') === 'admin@viatestprep.local') {
+        data = {
+          ok: true,
+          results: [
+            {
+              id: 'mock-rd-1',
+              test_name: 'Cambridge IELTS 19 — Test 1',
+              module_type: 'reading',
+              reading_band: '8.0',
+              completed_at: new Date(Date.now() - 3 * 24 * 3600 * 1000).toISOString(),
+              correct_count: 34,
+              total_questions: 40,
+              answer_review: [
+                { num: 1, userAnswer: 'TRUE', correctAnswer: 'TRUE', isCorrect: true },
+                { num: 2, userAnswer: 'FALSE', correctAnswer: 'FALSE', isCorrect: true },
+                { num: 3, userAnswer: 'NOT GIVEN', correctAnswer: 'NOT GIVEN', isCorrect: true },
+                { num: 4, userAnswer: 'carbon dioxide', correctAnswer: 'carbon dioxide', isCorrect: true },
+                { num: 5, userAnswer: 'basalt', correctAnswer: 'basalt', isCorrect: true },
+                { num: 6, userAnswer: 'subsidies', correctAnswer: 'subsidies', isCorrect: true },
+                { num: 7, userAnswer: 'iron deficiency', correctAnswer: 'nitrogen deficiency', isCorrect: false }
+              ]
+            },
+            {
+              id: 'mock-li-1',
+              test_name: 'Cambridge IELTS 19 — Test 1',
+              module_type: 'listening',
+              listening_band: '8.5',
+              completed_at: new Date(Date.now() - 4 * 24 * 3600 * 1000).toISOString(),
+              correct_count: 36,
+              total_questions: 40,
+              answer_review: [
+                { num: 1, userAnswer: 'direct mail', correctAnswer: 'direct mail', isCorrect: true },
+                { num: 2, userAnswer: 'swimming pool', correctAnswer: 'swimming pool', isCorrect: true },
+                { num: 3, userAnswer: '180', correctAnswer: '180', isCorrect: true },
+                { num: 4, userAnswer: 'Tuesday', correctAnswer: 'Tuesday', isCorrect: true },
+                { num: 5, userAnswer: 'station', correctAnswer: 'station', isCorrect: true },
+                { num: 6, userAnswer: '8.30', correctAnswer: '8.30', isCorrect: true },
+                { num: 7, userAnswer: 'lake', correctAnswer: 'lake', isCorrect: true },
+                { num: 8, userAnswer: 'bridge', correctAnswer: 'bridge', isCorrect: true },
+                { num: 9, userAnswer: '097728492', correctAnswer: '079728492', isCorrect: false },
+                { num: 10, userAnswer: 'museum', correctAnswer: 'museum', isCorrect: true }
+              ]
+            },
+            {
+              id: 'mock-wr-1',
+              test_name: 'Cambridge IELTS 19 — Test 2',
+              module_type: 'writing',
+              writing_band: '7.5',
+              completed_at: new Date(Date.now() - 2 * 24 * 3600 * 1000).toISOString(),
+              writing_task1: 'The line graph details the fluctuations in international tourism across three regions over a ten-year span...',
+              writing_task2: 'In the modern era, the balance between economic development and environmental preservation remains a critical challenge. I firmly believe that governments must prioritize environmental preservation...',
+              writing_auto_graded: false
+            }
+          ],
+          speaking: [
+            {
+              id: 'mock-sp-1',
+              cue_card_title: 'Speaking Interview: Describe a skill you learned from an older relative.',
+              created_at: new Date(Date.now() - 1 * 24 * 3600 * 1000).toISOString(),
+              fluency_score: 8.0,
+              vocab_score: 8.0,
+              grammar_score: 7.5,
+              pronunciation_score: 8.0,
+              overall_band: 8.0,
+              feedback: 'Natural and coherent delivery. Spoke at length with very few hesitations. Used good idiomatic language. Needs to watch out for subject-verb agreement under stress.'
+            },
+            {
+              id: 'mock-sp-2',
+              cue_card_title: 'Speaking Interview: Part 3 Discussion Prompts',
+              created_at: new Date(Date.now() - 12 * 3600 * 1000).toISOString(),
+              fluency_score: 7.5,
+              vocab_score: 8.0,
+              grammar_score: 8.0,
+              pronunciation_score: 7.5,
+              overall_band: 7.5,
+              feedback: 'Handled complex abstract topics well. Excellent use of cohesive devices to link ideas.'
+            }
+          ]
+        };
+      } else {
+        try {
+          const res = await fetch('/api/student?action=reports&studentId=' + encodeURIComponent(activeStudentId));
+          data = await res.json();
+        } catch (e) {
+          console.error('Could not load test reports:', e);
+          data = null;
+        }
       }
 
       if (!data || !data.ok) {
