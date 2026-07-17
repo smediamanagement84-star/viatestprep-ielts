@@ -2713,11 +2713,18 @@
         savedTrackBtn.className = "px-3 py-1.5 bg-[#7a2331] text-white border border-[#7a2331] text-xs font-bold rounded-lg transition";
       }
 
+      setPracticeMode(localStorage.getItem('vietest_practice_mode') || 'exam');
       renderStudentModules();
       renderStudentMockExams();
       renderStudentHistoryTable();
       loadStudentSpeakingTopic();
       applyStudentAccessGate();
+
+      const params = new URLSearchParams(window.location.search);
+      const tabParam = params.get('tab');
+      if (tabParam) {
+        switchStudentTab(tabParam);
+      }
     }
 
     // "Just the Mock Tests" (vs "Whole Resource Packet") is a real access tier,
@@ -2928,6 +2935,7 @@
     let studentPracticeMode = 'exam';
     function setPracticeMode(mode) {
       studentPracticeMode = mode;
+      localStorage.setItem('vietest_practice_mode', mode);
       document.getElementById('s-mode-exam').className = mode === 'exam' ? 'px-3 py-1.5 bg-[#7a2331] text-white rounded-lg transition' : 'px-3 py-1.5 text-[#5c5648] rounded-lg transition';
       document.getElementById('s-mode-practice').className = mode === 'practice' ? 'px-3 py-1.5 bg-[#7a2331] text-white rounded-lg transition' : 'px-3 py-1.5 text-[#5c5648] rounded-lg transition';
       
