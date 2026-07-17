@@ -1422,12 +1422,11 @@
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhjbWh0eGZtdnV0eHRud2RidXVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMwNDEwMjYsImV4cCI6MjA5ODYxNzAyNn0.lSW6zw5lS59dZF2MWD7kFQCtuoFtibnyS0x2nyQfZbA';
     let supabaseClient = null;
 
-    // Owner-only CRM bypass secret - deliberately NOT linked or mentioned
-    // anywhere in the UI, the only way in is knowing this URL
-    // (index.html?ownerkey=<this>). Also doubles as the credential for the
-    // owner-only "Pending Payments" admin endpoints (see loadPendingPayments).
-    // Must match OWNER_BYPASS_KEY in api/_lib/ownerAuth.js.
-    const OWNER_BYPASS_KEY = 'JW99DMjLLV9KDC4E';
+    // Owner-only CRM bypass secret - dynamically verified and loaded.
+    // If a custom key is used, it is saved in localStorage and fetched on-the-fly.
+    function getOwnerKey() {
+      return localStorage.getItem('viatestprep_owner_key') || 'JW99DMjLLV9KDC4E';
+    }
 
     function initSupabase() {
       if (SUPABASE_URL && SUPABASE_ANON_KEY && typeof supabase !== 'undefined') {
@@ -1555,7 +1554,7 @@
           // security-rls.sql) - this goes through a service-role-backed
           // admin endpoint instead, one bulk fetch instead of per-student
           // queries.
-          const res = await fetch('/api/admin/roster', { headers: { 'X-Owner-Key': OWNER_BYPASS_KEY } });
+          const res = await fetch('/api/admin/roster', { headers: { 'X-Owner-Key': getOwnerKey() } });
           const data = await res.json();
           if (!data.ok) {
             console.error('Cloud load error:', data.error);
@@ -1775,25 +1774,57 @@
 
       const urlParams = new URLSearchParams(window.location.search);
 
-      // Owner-only CRM bypass (OWNER_BYPASS_KEY declared above with the
-      // Supabase constants). Deliberately NOT linked or mentioned anywhere in
-      // the UI - the only way in is knowing this URL. Visiting
-      // index.html?ownerkey=<the key> logs straight into the CRM with no
-      // payment step. Client-side secrets can technically be read from page
-      // source by anyone who goes looking, but this keeps it out of every menu,
-      // button, and modal a normal visitor would ever see.
-      if (urlParams.get('ownerkey') === OWNER_BYPASS_KEY) {
-        launchAdminBypass();
+      // Owner-only CRM bypass verification
+      const ownerKeyParam = urlParams.get('ownerkey');
+      if (ownerKeyParam) {
+        (async () => {
+          try {
+            const res = await fetch('/api/admin/roster', {
+              headers: { 'X-Owner-Key': ownerKeyParam }
+            });
+            const data = await res.json();
+            if (res.ok && data.ok) {
+              localStorage.setItem('viatestprep_owner_key', ownerKeyParam);
+              launchAdminBypass();
+            } else {
+              alert('Invalid owner key.');
+              window.history.replaceState({}, document.title, window.location.pathname);
+              renderAppView();
+            }
+          } catch (e) {
+            console.error('Owner key verification failed:', e);
+            alert('Could not verify owner key. Check connection.');
+            window.history.replaceState({}, document.title, window.location.pathname);
+            renderAppView();
+          }
+        })();
         return;
       }
 
-      // Same idea as ownerkey above, but for jumping straight into the
-      // student portal (Skill Vault included) instead of the CRM - for
-      // checking student-facing features without registering a real student
-      // or waiting on a confirmation email. Untracked (no active-student id),
-      // same as the old anonymous "Access the free student portal" flow.
-      if (urlParams.get('studentkey') === OWNER_BYPASS_KEY) {
-        launchStudentBypass();
+      // Same idea as ownerkey above, but for jumping straight into the student portal
+      const studentKeyParam = urlParams.get('studentkey');
+      if (studentKeyParam) {
+        (async () => {
+          try {
+            const res = await fetch('/api/admin/roster', {
+              headers: { 'X-Owner-Key': studentKeyParam }
+            });
+            const data = await res.json();
+            if (res.ok && data.ok) {
+              localStorage.setItem('viatestprep_owner_key', studentKeyParam);
+              launchStudentBypass();
+            } else {
+              alert('Invalid student key.');
+              window.history.replaceState({}, document.title, window.location.pathname);
+              renderAppView();
+            }
+          } catch (e) {
+            console.error('Student key verification failed:', e);
+            alert('Could not verify student key. Check connection.');
+            window.history.replaceState({}, document.title, window.location.pathname);
+            renderAppView();
+          }
+        })();
         return;
       }
 
@@ -1970,12 +2001,8 @@
         localStorage.removeItem('viatestprep_active_student_name');
         localStorage.removeItem('viatestprep_active_student_expires_at');
         localStorage.removeItem('viatestprep_consultancy_id');
-        // Ends the real Supabase Auth session too (self-serve students and
-        // consultancies both log in via supabaseClient.auth now) - otherwise
-        // it silently stays valid and the next login attempt on this browser
-        // could pick it back up.
+        localStorage.removeItem('viatestprep_owner_key');
         if (supabaseClient) supabaseClient.auth.signOut();
-        // keep student DB intact, just wipe active sessions
         renderAppView();
       }
     }
@@ -2759,6 +2786,7 @@
       localStorage.removeItem('viatestprep_active_student_id');
       localStorage.removeItem('viatestprep_active_student_name');
       localStorage.removeItem('viatestprep_active_student_expires_at');
+      localStorage.removeItem('viatestprep_owner_key');
     }
 
     function switchStudentTab(tabId) {
@@ -3607,7 +3635,7 @@
       if (!list) return;
       list.innerHTML = '<p class="text-xs text-[#8a8171]">Loading...</p>';
       try {
-        const res = await fetch('/api/admin/orders', { headers: { 'X-Owner-Key': OWNER_BYPASS_KEY } });
+        const res = await fetch('/api/admin/orders', { headers: { 'X-Owner-Key': getOwnerKey() } });
         const data = await res.json();
         if (!data.ok) throw new Error(data.error || 'Could not load pending payments');
 
@@ -3643,7 +3671,7 @@
       try {
         const res = await fetch('/api/admin/orders', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
+          headers: { 'Content-Type': 'application/json', 'X-Owner-Key': getOwnerKey() },
           body: JSON.stringify({ orderId, action }),
         });
         const data = await res.json();
@@ -3806,7 +3834,7 @@
           // goes through a service-role-backed admin endpoint instead.
           fetch('/api/admin/roster', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
+            headers: { 'Content-Type': 'application/json', 'X-Owner-Key': getOwnerKey() },
             body: JSON.stringify({ action: 'update_student', id, fields }),
           }).then(r => r.json()).then(d => { warnIfSupabaseWriteFailed(d.ok ? null : { message: d.error }, `Updating ${name}`); });
         } else if (supabaseClient) {
@@ -3844,7 +3872,7 @@
         if (isOwnerSession) {
           fetch('/api/admin/roster', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
+            headers: { 'Content-Type': 'application/json', 'X-Owner-Key': getOwnerKey() },
             body: JSON.stringify({ action: 'create_student', fields }),
           }).then(r => r.json()).then(d => { warnIfSupabaseWriteFailed(d.ok ? null : { message: d.error }, `Registering ${name}`); });
         } else if (supabaseClient) {
@@ -3912,7 +3940,7 @@
           // security-rls.sql) - goes through the service-role admin endpoint.
           fetch('/api/admin/roster', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
+            headers: { 'Content-Type': 'application/json', 'X-Owner-Key': getOwnerKey() },
             body: JSON.stringify({ action: 'delete_student', id }),
           }).then(r => r.json()).then(d => {
             if (!d.ok) console.error('Admin student delete error:', d.error);
@@ -3994,7 +4022,7 @@
         // security-rls.sql) - goes through the service-role admin endpoint.
         fetch('/api/admin/roster', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
+          headers: { 'Content-Type': 'application/json', 'X-Owner-Key': getOwnerKey() },
           body: JSON.stringify({ action: 'speaking_grade', fields: gradeFields }),
         }).then(r => r.json()).then(d => {
           if (!d.ok) console.error('Admin speaking grade error:', d.error);
@@ -4223,7 +4251,7 @@
         // security-rls.sql) - goes through the service-role admin endpoint.
         fetch('/api/admin/roster', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
+          headers: { 'Content-Type': 'application/json', 'X-Owner-Key': getOwnerKey() },
           body: JSON.stringify({ action: 'writing_grade', studentId, testName: testRecord.test, fields: gradeFields }),
         }).then(r => r.json()).then(d => {
           if (!d.ok) console.error('Admin grade update error:', d.error);
@@ -4346,7 +4374,7 @@
               insertPromises.push(
                 fetch('/api/admin/roster', {
                   method: 'POST',
-                  headers: { 'Content-Type': 'application/json', 'X-Owner-Key': OWNER_BYPASS_KEY },
+                  headers: { 'Content-Type': 'application/json', 'X-Owner-Key': getOwnerKey() },
                   body: JSON.stringify({ action: 'create_student', fields }),
                 }).then(r => r.json()).then(d => {
                   if (!d.ok) {
