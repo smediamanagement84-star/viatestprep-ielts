@@ -2105,6 +2105,25 @@
         return;
       }
 
+      // Check device rate limit for student signups (max 3 signups per 15 minutes)
+      if (studentAuthMode === 'signup') {
+        const now = Date.now();
+        const timeframe = 15 * 60 * 1000; // 15 minutes
+        let attempts = [];
+        try {
+          attempts = JSON.parse(localStorage.getItem('viatestprep_student_signup_attempts') || '[]');
+        } catch (e) {
+          attempts = [];
+        }
+        attempts = attempts.filter(t => now - t < timeframe);
+        if (attempts.length >= 3) {
+          setStudentAuthStatus('❌ Too many signup attempts from this device. Please try again in 15 minutes.');
+          return;
+        }
+        attempts.push(now);
+        localStorage.setItem('viatestprep_student_signup_attempts', JSON.stringify(attempts));
+      }
+
       const btn = document.getElementById('m-student-auth-btn');
       btn.disabled = true;
       const name = document.getElementById('m-student-name').value.trim();
@@ -2316,6 +2335,77 @@
       setConsultancyAuthStatus(error ? '❌ ' + error.message : '✅ Password reset email sent - check your inbox.');
     }
 
+    function ensureBypassStudentData() {
+      let crmStudents = [];
+      const savedCRM = localStorage.getItem('viatestprep_students');
+      if (savedCRM) {
+        try { crmStudents = JSON.parse(savedCRM); } catch(e) {}
+      }
+      
+      // Ensure we have a fresh copy of the demo student record
+      crmStudents = crmStudents.filter(s => s.email !== 'admin@viatestprep.local');
+      
+      crmStudents.push({
+        id: 'st-admin-bypass',
+        studentId: 'VTP-9999',
+        name: 'Demo Student (Admin Bypass)',
+        email: 'admin@viatestprep.local',
+        phone: '9801234567',
+        target: 8.0,
+        status: 'Active',
+        notes: 'Demo bypass account. Excellent verbal communication, minor structural errors in Writing Task 2. Showcases full historical progress.',
+        mockHistory: [
+          {
+            test: 'Speaking Interview: Describe a skill you learned from an older relative.',
+            date: '2026-07-15',
+            listening: '—',
+            reading: '—',
+            writing: '—',
+            speaking: { fluency: 8.0, vocab: 8.0, grammar: 7.5, pronunciation: 8.0 },
+            overall: 8.0,
+            notes: 'Natural and coherent delivery. Spoke at length with very few hesitations. Used good idiomatic language. Needs to watch out for subject-verb agreement under stress.'
+          },
+          {
+            test: 'Speaking Interview: Part 3 Discussion Prompts',
+            date: '2026-07-16',
+            listening: '—',
+            reading: '—',
+            writing: '—',
+            speaking: { fluency: 7.5, vocab: 8.0, grammar: 8.0, pronunciation: 7.5 },
+            overall: 7.5,
+            notes: 'Handled complex abstract topics well. Excellent use of cohesive devices to link ideas.'
+          },
+          {
+            test: 'Cambridge 19 - Test 1',
+            date: '2026-07-10',
+            listening: '8.5',
+            reading: '8.0',
+            writing: '7.5',
+            speaking: '8.0',
+            overall: '8.0'
+          },
+          {
+            test: 'Cambridge 19 - Test 2',
+            date: '2026-07-12',
+            listening: '9.0',
+            reading: '8.5',
+            writing: '7.0',
+            speaking: '8.5',
+            overall: '8.5'
+          }
+        ]
+      });
+      
+      localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
+      
+      // Also seed some automated mock test scores for student-side grade report
+      localStorage.setItem('score_test_1_listening', '8.5');
+      localStorage.setItem('score_test_1_reading', '8.0');
+      localStorage.setItem('score_test_1_writing', 'completed');
+      localStorage.setItem('score_test_2_listening', '7.5');
+      localStorage.setItem('score_test_2_reading', '8.5');
+    }
+
     function launchAdminBypass() {
       // Set developer/tutor bypass credentials
       localStorage.setItem('viatestprep_unlocked', 'true');
@@ -2328,6 +2418,7 @@
       localStorage.setItem('viatestprep_consultancy_id', '__owner__');
       localStorage.removeItem('viatestprep_consultancy_expires_at');
 
+      ensureBypassStudentData();
       closeAccessModal();
       renderAppView();
     }
@@ -2342,6 +2433,7 @@
       localStorage.removeItem('viatestprep_active_student_id');
       localStorage.removeItem('viatestprep_active_student_expires_at');
 
+      ensureBypassStudentData();
       closeAccessModal();
       renderAppView();
     }
@@ -3226,23 +3318,33 @@
             s_audioChunks = [];
 
             s_mediaRecorder.ondataavailable = event => {
-              s_audioChunks.push(event.data);
+              if (event.data && event.data.size > 0) {
+                s_audioChunks.push(event.data);
+              }
             };
 
             s_mediaRecorder.onstop = () => {
-              const audioBlob = new Blob(s_audioChunks, { type: 'audio/wav' });
+              const mimeType = s_mediaRecorder.mimeType || 'audio/webm';
+              const audioBlob = new Blob(s_audioChunks, { type: mimeType });
               const audioUrl = URL.createObjectURL(audioBlob);
               
               player.src = audioUrl;
               player.classList.remove('hidden');
               
+              let ext = 'webm';
+              if (mimeType.includes('mp4')) ext = 'mp4';
+              else if (mimeType.includes('ogg')) ext = 'ogg';
+              else if (mimeType.includes('aac')) ext = 'aac';
+              else if (mimeType.includes('wav')) ext = 'wav';
+
               dLink.href = audioUrl;
-              dLink.download = `viatestprep_speaking_practice_${Date.now()}.wav`;
+              dLink.download = `viatestprep_speaking_practice_${Date.now()}.${ext}`;
+              dLink.textContent = `⬇ Save Recording (.${ext})`;
               dLink.classList.remove('hidden');
               noAudio.classList.add('hidden');
             };
 
-            s_mediaRecorder.start();
+            s_mediaRecorder.start(1000); // 1s timeslice for better browser compatibility
             s_isRecording = true;
             recIcon.textContent = '⏹️';
             pulse.classList.remove('hidden');

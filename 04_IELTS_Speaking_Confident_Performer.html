@@ -683,6 +683,7 @@ img,svg{-webkit-user-drag:none!important}
             <button class="btn btn-primary" id="recStart">🎙 Record</button>
             <button class="btn btn-ghost" id="recStop" disabled>⏹ Stop</button>
             <button class="btn btn-ghost" id="recPlay" disabled>▶ Play</button>
+            <button class="btn btn-ghost" id="recDownload" disabled>⬇ Download</button>
           </div>
           <div class="mt-2 text-sm" id="recStatus">Microphone idle.</div>
           <div class="mt-2 text-xs timer-pill" style="color:var(--burgundy)" id="recTimer">00:00</div>
@@ -1383,18 +1384,27 @@ document.getElementById('recStart').addEventListener('click', async ()=>{
     recStream = await navigator.mediaDevices.getUserMedia({audio:true});
     mediaRecorder = new MediaRecorder(recStream);
     recChunks = [];
-    mediaRecorder.ondataavailable = e=>{ if (e.data.size>0) recChunks.push(e.data); };
+    mediaRecorder.ondataavailable = e=>{ if (e.data && e.data.size>0) recChunks.push(e.data); };
     mediaRecorder.onstop = ()=>{
-      const blob = new Blob(recChunks, {type:'audio/webm'});
+      const mimeType = mediaRecorder.mimeType || 'audio/webm';
+      const blob = new Blob(recChunks, {type: mimeType});
       if (recBlobUrl) URL.revokeObjectURL(recBlobUrl);
       recBlobUrl = URL.createObjectURL(blob);
       recPlayer.src = recBlobUrl;
       recPlayer.style.display = 'block';
       document.getElementById('recPlay').disabled = false;
+      document.getElementById('recDownload').disabled = false;
       recStream.getTracks().forEach(t=>t.stop());
-      recStatus.innerHTML = `<span style="color:var(--teal)">✓ Saved.</span> Click ▶ Play to listen back.`;
+
+      let ext = 'webm';
+      if (mimeType.includes('mp4')) ext = 'mp4';
+      else if (mimeType.includes('ogg')) ext = 'ogg';
+      else if (mimeType.includes('aac')) ext = 'aac';
+      else if (mimeType.includes('wav')) ext = 'wav';
+
+      recStatus.innerHTML = `<span style="color:var(--teal)">✓ Saved.</span> Click ▶ Play to listen back. <a href="${recBlobUrl}" download="viatestprep_speaking_${Date.now()}.${ext}" style="color:var(--burgundy);text-decoration:underline;margin-left:8px;font-weight:bold;">⬇ Save Audio (.${ext})</a>`;
     };
-    mediaRecorder.start();
+    mediaRecorder.start(1000); // 1s timeslice for better browser compatibility
     document.getElementById('recStart').disabled = true;
     document.getElementById('recStop').disabled = false;
     recStatus.innerHTML = `<span style="color:var(--burgundy)">● Recording…</span>`;
@@ -1414,6 +1424,20 @@ document.getElementById('recStop').addEventListener('click',()=>{
 });
 document.getElementById('recPlay').addEventListener('click',()=>{
   if (recBlobUrl){ recPlayer.play(); }
+});
+document.getElementById('recDownload').addEventListener('click',()=>{
+  if (!recBlobUrl) return;
+  const mimeType = mediaRecorder ? mediaRecorder.mimeType : 'audio/webm';
+  let ext = 'webm';
+  if (mimeType.includes('mp4')) ext = 'mp4';
+  else if (mimeType.includes('ogg')) ext = 'ogg';
+  else if (mimeType.includes('aac')) ext = 'aac';
+  else if (mimeType.includes('wav')) ext = 'wav';
+
+  const a = document.createElement('a');
+  a.href = recBlobUrl;
+  a.download = `viatestprep_speaking_${Date.now()}.${ext}`;
+  a.click();
 });
 
 // ====== RAPID FIRE ======
