@@ -943,7 +943,7 @@
         <div id="crm-roster-view" class="crm-subview space-y-4">
           <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
             <input type="text" id="rosterSearch" oninput="renderCRMTable()" placeholder="🔍 Search by name, email, or Student ID..." class="w-full sm:w-72 px-4 py-2 border border-[#e5ded0] rounded-xl text-xs focus:outline-none focus:border-[#7a2331] bg-white" />
-            <div class="flex gap-2 w-full sm:w-auto">
+            <div class="flex flex-wrap gap-2 w-full sm:w-auto">
               <select id="rosterStatusFilter" onchange="renderCRMTable()" class="select-elegant px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none">
                 <option value="all">All Statuses</option>
                 <option value="Active">Active</option>
@@ -971,8 +971,14 @@
                 <!-- Populated by JS -->
               </tbody>
             </table>
-            <div id="noRosterLabel" class="hidden text-center text-xs text-[#8a8171] py-12">
-              No students enrolled. Click "Register Student" or seed demo records.
+            
+            <div id="noRosterLabel" class="hidden text-center py-16 px-4 space-y-4">
+              <span class="text-4xl block">👥</span>
+              <div>
+                <h4 class="font-extrabold text-[#1c1a17] text-sm">No Enrolled Students</h4>
+                <p class="text-xs text-[#8a8171] mt-1 max-w-sm mx-auto">Enroll your classroom students to assign mock exams, record speaking interviews, and evaluate performance.</p>
+              </div>
+              <button onclick="openCRMAddModal()" class="px-5 py-2.5 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-extrabold rounded-xl text-xs transition shadow-sm">+ Register Student</button>
             </div>
           </div>
         </div>
