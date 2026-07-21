@@ -3469,7 +3469,7 @@ const IELTS_TEST_DATA = {
        "type": "MCQ",
        "text": "Which TWO educational skills were shown in the video of children doing origami? (Select first skill)",
        "answer": "B",
-       "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
+       "explanation": "Lia mentions they could see the children really listening hard to make sure they did all the steps in the right order to make the bird, which refers to following instructions.",
        "instruction": "Questions 21 and 22<br/>Choose TWO letters, A-E.",
        "options": [
         "A. solving problems",
@@ -3484,7 +3484,7 @@ const IELTS_TEST_DATA = {
        "type": "MCQ",
        "text": "Which TWO educational skills were shown in the video of children doing origami? (Select second skill)",
        "answer": "D",
-       "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
+       "explanation": "Lia notes that one thing that really stood out for her was that the children were all having fun while being taught something new, which refers to learning through play.",
        "instruction": "Questions 21 and 22<br/>Choose TWO letters, A-E.",
        "options": [
         "A. solving problems",
@@ -3497,105 +3497,110 @@ const IELTS_TEST_DATA = {
       {
        "num": 23,
        "type": "MCQ",
-       "text": "Student opinion on: Child 1",
-       "answer": "A",
-       "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
-       "instruction": "Questions 23-27<br/>What did the students think about each child in the video?",
+       "text": "Sid",
+       "answer": "D",
+       "explanation": "Lia says that Sid really benefited from having to use his hands - it helped him to settle down and start concentrating, which refers to finding the activity calming.",
+       "instruction": "Questions 23-27<br/>What did the students think about each child in the video?<br/>Choose FIVE answers from the box and write the correct letter, A-G, next to Questions 23-27.",
        "options": [
         "A. demonstrated independence",
         "B. asked for teacher support",
-        "C. developed a new idea"
+        "C. developed a competitive attitude",
+        "D. seemed to find the activity calming",
+        "E. seemed pleased with the results",
+        "F. seemed confused",
+        "G. seemed to find the activity easy"
        ]
       },
       {
        "num": 24,
        "type": "MCQ",
-       "text": "Student opinion on: Child 2",
-       "answer": "F",
-       "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
-       "instruction": "Questions 23-27<br/>What did the students think about each child in the video?",
+       "text": "Jack",
+       "answer": "A",
+       "explanation": "Seb noticed that Jack seemed to want to work things out for himself, trying out different things rather than asking the teacher for help, which refers to demonstrating independence.",
+       "instruction": "Questions 23-27<br/>What did the students think about each child in the video?<br/>Choose FIVE answers from the box and write the correct letter, A-G, next to Questions 23-27.",
        "options": [
         "A. demonstrated independence",
         "B. asked for teacher support",
-        "C. developed a new idea",
-        "D. showed empathy",
-        "E. showed enthusiasm",
-        "F. made a creative choice"
+        "C. developed a competitive attitude",
+        "D. seemed to find the activity calming",
+        "E. seemed pleased with the results",
+        "F. seemed confused",
+        "G. seemed to find the activity easy"
        ]
       },
       {
        "num": 25,
        "type": "MCQ",
-       "text": "Student opinion on: Child 3",
-       "answer": "E",
-       "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
-       "instruction": "Questions 23-27<br/>What did the students think about each child in the video?",
+       "text": "Naomi",
+       "answer": "C",
+       "explanation": "Seb mentions that Naomi seemed to be losing interest at one point but then she decided she wanted her mouse to be the best, and that motivated her to try harder, which refers to developing a competitive attitude.",
+       "instruction": "Questions 23-27<br/>What did the students think about each child in the video?<br/>Choose FIVE answers from the box and write the correct letter, A-G, next to Questions 23-27.",
        "options": [
         "A. demonstrated independence",
         "B. asked for teacher support",
-        "C. developed a new idea",
-        "D. showed empathy",
-        "E. showed enthusiasm",
-        "F. made a creative choice"
+        "C. developed a competitive attitude",
+        "D. seemed to find the activity calming",
+        "E. seemed pleased with the results",
+        "F. seemed confused",
+        "G. seemed to find the activity easy"
        ]
       },
       {
        "num": 26,
        "type": "MCQ",
-       "text": "Student opinion on: Child 4",
-       "answer": "B",
-       "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
-       "instruction": "Questions 23-27<br/>What did the students think about each child in the video?",
+       "text": "Anya",
+       "answer": "G",
+       "explanation": "Lia says that Anya was such a star, listening so carefully and then producing the perfect bird with very little effort, which refers to finding the activity easy.",
+       "instruction": "Questions 23-27<br/>What did the students think about each child in the video?<br/>Choose FIVE answers from the box and write the correct letter, A-G, next to Questions 23-27.",
        "options": [
         "A. demonstrated independence",
         "B. asked for teacher support",
-        "C. developed a new idea",
-        "D. showed empathy",
-        "E. showed enthusiasm",
-        "F. made a creative choice"
+        "C. developed a competitive attitude",
+        "D. seemed to find the activity calming",
+        "E. seemed pleased with the results",
+        "F. seemed confused",
+        "G. seemed to find the activity easy"
        ]
       },
       {
        "num": 27,
        "type": "MCQ",
-       "text": "Student opinion on: Child 5",
-       "answer": "D",
-       "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
-       "instruction": "Questions 23-27<br/>What did the students think about each child in the video?",
+       "text": "Zara",
+       "answer": "F",
+       "explanation": "Lia says that Zara seemed unsure about what she was supposed to do, and Seb notes she looked as if she didn't really get what was going on, which refers to seeming confused.",
+       "instruction": "Questions 23-27<br/>What did the students think about each child in the video?<br/>Choose FIVE answers from the box and write the correct letter, A-G, next to Questions 23-27.",
        "options": [
         "A. demonstrated independence",
         "B. asked for teacher support",
-        "C. developed a new idea",
-        "D. showed empathy",
-        "E. showed enthusiasm",
-        "F. made a creative choice"
+        "C. developed a competitive attitude",
+        "D. seemed to find the activity calming",
+        "E. seemed pleased with the results",
+        "F. seemed confused",
+        "G. seemed to find the activity easy"
        ]
       },
       {
        "num": 28,
        "type": "MCQ",
        "text": "Before starting an origami activity in class, the students think it is important for the teacher to",
-       "answer": "B",
-       "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
+       "answer": "A",
+       "explanation": "Seb notes that it would have taken him ages to prepare examples showing each of the steps involved in making the bird, but that was a really good idea so children could see what they were aiming for, which refers to making models that demonstrate the different stages.",
        "instruction": "Questions 28-30<br/>Choose the correct letter, A, B or C.",
        "options": [
-        "A. demonstrated independence",
-        "B. asked for teacher support",
-        "C. developed a new idea",
-        "D. showed empathy",
-        "E. showed enthusiasm",
-        "F. made a creative choice"
+        "A. make models that demonstrate the different stages.",
+        "B. check children understand the terminology involved.",
+        "C. tell children not to worry if they find the activity difficult."
        ]
       },
       {
        "num": 29,
        "type": "MCQ",
        "text": "The students agree that some teachers might be unwilling to use origami in class because",
-       "answer": "C",
-       "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
+       "answer": "B",
+       "explanation": "Seb suggests that so many teachers are clumsy like him, and Lia agrees that too much effort is required if you are not good with your hands, which refers to them not having the necessary skills.",
        "instruction": "Questions 28-30<br/>Choose the correct letter, A, B or C.",
        "options": [
-        "A. __ they may not think that crafts are important.",
+        "A. they may not think that crafts are important.",
         "B. they may not have the necessary skills.",
         "C. they may worry that it will take up too much time."
        ]
@@ -3605,11 +3610,11 @@ const IELTS_TEST_DATA = {
        "type": "MCQ",
        "text": "Why do the students decide to use origami in their maths teaching practice?",
        "answer": "C",
-       "explanation": "The transcript states: \"TUTOR: So now | want you to discuss the lesson we've just been watching on the video and think about the ways in which origami can be a useful educational tool.\"",
+       "explanation": "Seb suggests that using origami would also work really well for presenting fractions, which refers to introducing a new concept.",
        "instruction": "Questions 28-30<br/>Choose the correct letter, A, B or C.",
        "options": [
-        "A. _ tocorrect a particular misunderstanding",
-        "B. toseta challenge",
+        "A. to correct a particular misunderstanding",
+        "B. to set a challenge",
         "C. to introduce a new concept"
        ]
       }
@@ -4574,181 +4579,169 @@ const IELTS_TEST_DATA = {
       {
        "num": 21,
        "type": "MCQ",
-       "text": "Which TWO things did Colin find most satisfying about his project? (Select first thing)",
+       "text": "Which TWO things did Colin find most satisfying about his bread reuse project? (Select first thing)",
        "answer": "B",
-       "explanation": "The transcript states: \"COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: I haven't seen you for a bit, Marie.\"",
+       "explanation": "Colin mentions that it was a great feeling to make something appetising out of bits of old bread that would have been thrown away otherwise, which refers to preventing waste.",
        "instruction": "Questions 21 and 22<br/>Choose TWO letters, A-E.",
        "options": [
-        "A. This is only relevant to young people.",
-        "B. This may have unexpected benefits.",
-        "C. This is already widely accepted.",
-        "D. This needs more funding to develop.",
-        "E. This has been overestimated in importance.",
-        "F. This raises serious privacy concerns.",
-        "G. This is likely to improve with time.",
-        "H. This has both positive and negative effects."
+        "A. receiving support from local restaurants.",
+        "B. finding a good way to prevent waste.",
+        "C. overcoming problems in a basic process.",
+        "D. experimenting with designs and colours.",
+        "E. learning how to apply 3-D printing."
        ]
       },
       {
        "num": 22,
        "type": "MCQ",
-       "text": "Which TWO things did Colin find most satisfying about his project? (Select second thing)",
+       "text": "Which TWO things did Colin find most satisfying about his bread reuse project? (Select second thing)",
        "answer": "D",
-       "explanation": "The transcript states: \"Something that doesn't use animal products.\"",
+       "explanation": "Colin explains that he had time to play around with different patterns for the biscuits and find how he could add fruit and vegetables to make them a more appetising colour, which refers to experimenting with designs and colours.",
        "instruction": "Questions 21 and 22<br/>Choose TWO letters, A-E.",
        "options": [
-        "A. This is only relevant to young people.",
-        "B. This may have unexpected benefits.",
-        "C. This is already widely accepted.",
-        "D. This needs more funding to develop.",
-        "E. This has been overestimated in importance.",
-        "F. This raises serious privacy concerns.",
-        "G. This is likely to improve with time.",
-        "H. This has both positive and negative effects."
+        "A. receiving support from local restaurants.",
+        "B. finding a good way to prevent waste.",
+        "C. overcoming problems in a basic process.",
+        "D. experimenting with designs and colours.",
+        "E. learning how to apply 3-D printing."
        ]
       },
       {
        "num": 23,
        "type": "MCQ",
-       "text": "Which TWO ways do the students agree that touchscreens affect children? (Select first way)",
+       "text": "Which TWO ways do the students agree that touch-sensitive sensors for food labels could be developed in future? (Select first way)",
        "answer": "A",
-       "explanation": "The transcript states: \"COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: I haven't seen you for a bit, Marie.\"",
+       "explanation": "Colin suggests that touch-sensitive sensors might be really good for drug storage in hospitals and pharmacies, which refers to use on medical products.",
        "instruction": "Questions 23 and 24<br/>Choose TWO letters, A-E.",
        "options": [
-        "A. This is only relevant to young people.",
-        "B. This may have unexpected benefits.",
-        "C. This is already widely accepted.",
-        "D. This needs more funding to develop.",
-        "E. This has been overestimated in importance.",
-        "F. This raises serious privacy concerns.",
-        "G. This is likely to improve with time.",
-        "H. This has both positive and negative effects."
+        "A. for use on medical products.",
+        "B. to show that food is no longer fit to eat.",
+        "C. for use with drinks as well as foods.",
+        "D. to provide applications for blind people.",
+        "E. to indicate the weight of certain foods."
        ]
       },
       {
        "num": 24,
        "type": "MCQ",
-       "text": "Which TWO ways do the students agree that touchscreens affect children? (Select second way)",
+       "text": "Which TWO ways do the students agree that touch-sensitive sensors for food labels could be developed in future? (Select second way)",
        "answer": "E",
-       "explanation": "The transcript states: \"COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: I haven't seen you for a bit, Marie.\"",
+       "explanation": "Marie mentions that it might be possible to use it for other things besides freshness, like how many kilograms a joint of meat is, which refers to indicating the weight of certain foods.",
        "instruction": "Questions 23 and 24<br/>Choose TWO letters, A-E.",
        "options": [
-        "A. This is only relevant to young people.",
-        "B. This may have unexpected benefits.",
-        "C. This is already widely accepted.",
-        "D. This needs more funding to develop.",
-        "E. This has been overestimated in importance.",
-        "F. This raises serious privacy concerns.",
-        "G. This is likely to improve with time.",
-        "H. This has both positive and negative effects."
+        "A. for use on medical products.",
+        "B. to show that food is no longer fit to eat.",
+        "C. for use with drinks as well as foods.",
+        "D. to provide applications for blind people.",
+        "E. to indicate the weight of certain foods."
        ]
       },
       {
        "num": 25,
        "type": "MCQ",
-       "text": "Student opinion on: Brain training games",
+       "text": "Use of local products",
        "answer": "D",
-       "explanation": "The transcript states: \"Something that doesn't use animal products.\"",
-       "instruction": "Questions 25-30<br/>What opinions do the students express about each of the following technologies?",
+       "explanation": "Marie says they need to be more proactive to address that the shops are still full of imported foods, meaning retailers should do more to encourage the use of local products.",
+       "instruction": "Questions 25-30<br/>What opinion do the students express about each of the following food trends?",
        "options": [
         "A. This is only relevant to young people.",
-        "B. This may have unexpected benefits.",
-        "C. This is already widely accepted.",
-        "D. This needs more funding to develop.",
-        "E. This has been overestimated in importance.",
-        "F. This raises serious privacy concerns.",
-        "G. This is likely to improve with time.",
-        "H. This has both positive and negative effects."
+        "B. This may have disappointing results.",
+        "C. This already seems to be widespread.",
+        "D. Retailers should do more to encourage this.",
+        "E. More financial support is needed for this.",
+        "F. Most people know little about this.",
+        "G. There should be stricter regulations about this.",
+        "H. This could be dangerous."
        ]
       },
       {
        "num": 26,
        "type": "MCQ",
-       "text": "Student opinion on: Virtual reality",
+       "text": "Reduction in unnecessary packaging",
        "answer": "G",
-       "explanation": "The transcript states: \"You're making a vegan alternative to eggs, aren't you.\"",
-       "instruction": "Questions 25-30<br/>What opinions do the students express about each of the following technologies?",
+       "explanation": "Colin mentions that supermarket food is still covered in plastic and that the government needs to do something about it, which refers to stricter regulations.",
+       "instruction": "Questions 25-30<br/>What opinion do the students express about each of the following food trends?",
        "options": [
         "A. This is only relevant to young people.",
-        "B. This may have unexpected benefits.",
-        "C. This is already widely accepted.",
-        "D. This needs more funding to develop.",
-        "E. This has been overestimated in importance.",
-        "F. This raises serious privacy concerns.",
-        "G. This is likely to improve with time.",
-        "H. This has both positive and negative effects."
+        "B. This may have disappointing results.",
+        "C. This already seems to be widespread.",
+        "D. Retailers should do more to encourage this.",
+        "E. More financial support is needed for this.",
+        "F. Most people know little about this.",
+        "G. There should be stricter regulations about this.",
+        "H. This could be dangerous."
        ]
       },
       {
        "num": 27,
        "type": "MCQ",
-       "text": "Student opinion on: Social media",
+       "text": "Gluten-free and lactose-free food",
        "answer": "C",
-       "explanation": "The transcript states: \"COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: I haven't seen you for a bit, Marie.\"",
-       "instruction": "Questions 25-30<br/>What opinions do the students express about each of the following technologies?",
+       "explanation": "Colin says lots of people he knows have been buying gluten- and lactose-free food for years now, which means this already seems to be widespread.",
+       "instruction": "Questions 25-30<br/>What opinion do the students express about each of the following food trends?",
        "options": [
         "A. This is only relevant to young people.",
-        "B. This may have unexpected benefits.",
-        "C. This is already widely accepted.",
-        "D. This needs more funding to develop.",
-        "E. This has been overestimated in importance.",
-        "F. This raises serious privacy concerns.",
-        "G. This is likely to improve with time.",
-        "H. This has both positive and negative effects."
+        "B. This may have disappointing results.",
+        "C. This already seems to be widespread.",
+        "D. Retailers should do more to encourage this.",
+        "E. More financial support is needed for this.",
+        "F. Most people know little about this.",
+        "G. There should be stricter regulations about this.",
+        "H. This could be dangerous."
        ]
       },
       {
        "num": 28,
        "type": "MCQ",
-       "text": "Student opinion on: Online shopping",
+       "text": "Use of branded products related to celebrity chefs",
        "answer": "B",
-       "explanation": "The transcript states: \"COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: I haven't seen you for a bit, Marie.\"",
-       "instruction": "Questions 25-30<br/>What opinions do the students express about each of the following technologies?",
+       "explanation": "Marie says she bought a ready-made spice mix related to a celebrity chef and it didn't actually taste of anything, which refers to disappointing results.",
+       "instruction": "Questions 25-30<br/>What opinion do the students express about each of the following food trends?",
        "options": [
         "A. This is only relevant to young people.",
-        "B. This may have unexpected benefits.",
-        "C. This is already widely accepted.",
-        "D. This needs more funding to develop.",
-        "E. This has been overestimated in importance.",
-        "F. This raises serious privacy concerns.",
-        "G. This is likely to improve with time.",
-        "H. This has both positive and negative effects."
+        "B. This may have disappointing results.",
+        "C. This already seems to be widespread.",
+        "D. Retailers should do more to encourage this.",
+        "E. More financial support is needed for this.",
+        "F. Most people know little about this.",
+        "G. There should be stricter regulations about this.",
+        "H. This could be dangerous."
        ]
       },
       {
        "num": 29,
        "type": "MCQ",
-       "text": "Student opinion on: Streaming services",
+       "text": "Development of 'ghost kitchens' for takeaway food",
        "answer": "F",
-       "explanation": "The transcript states: \"COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: I haven't seen you for a bit, Marie.\"",
-       "instruction": "Questions 25-30<br/>What opinions do the students express about each of the following technologies?",
+       "explanation": "Colin mentions that people aren't aware of ghost kitchens and it's all kept very quiet, which means most people know little about this.",
+       "instruction": "Questions 25-30<br/>What opinion do the students express about each of the following food trends?",
        "options": [
         "A. This is only relevant to young people.",
-        "B. This may have unexpected benefits.",
-        "C. This is already widely accepted.",
-        "D. This needs more funding to develop.",
-        "E. This has been overestimated in importance.",
-        "F. This raises serious privacy concerns.",
-        "G. This is likely to improve with time.",
-        "H. This has both positive and negative effects."
+        "B. This may have disappointing results.",
+        "C. This already seems to be widespread.",
+        "D. Retailers should do more to encourage this.",
+        "E. More financial support is needed for this.",
+        "F. Most people know little about this.",
+        "G. There should be stricter regulations about this.",
+        "H. This could be dangerous."
        ]
       },
       {
        "num": 30,
        "type": "MCQ",
-       "text": "Student opinion on: Fitness trackers",
+       "text": "Use of mushrooms for common health concerns",
        "answer": "H",
-       "explanation": "The transcript states: \"COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: COLIN: MARIE: I haven't seen you for a bit, Marie.\"",
-       "instruction": "Questions 25-30<br/>What opinions do the students express about each of the following technologies?",
+       "explanation": "Marie says people might be taking a big risk using mushrooms to treat health concerns, and Colin agrees it is hard to know which varieties are safe to eat, meaning this could be dangerous.",
+       "instruction": "Questions 25-30<br/>What opinion do the students express about each of the following food trends?",
        "options": [
         "A. This is only relevant to young people.",
-        "B. This may have unexpected benefits.",
-        "C. This is already widely accepted.",
-        "D. This needs more funding to develop.",
-        "E. This has been overestimated in importance.",
-        "F. This raises serious privacy concerns.",
-        "G. This is likely to improve with time.",
-        "H. This has both positive and negative effects."
+        "B. This may have disappointing results.",
+        "C. This already seems to be widespread.",
+        "D. Retailers should do more to encourage this.",
+        "E. More financial support is needed for this.",
+        "F. Most people know little about this.",
+        "G. There should be stricter regulations about this.",
+        "H. This could be dangerous."
        ]
       }
      ]
@@ -5622,8 +5615,7 @@ const IELTS_TEST_DATA = {
        "options": [
         "A. gives talks on safety at sea.",
         "B. helps with fundraising.",
-        "C. recruits new volunteers.",
-        "I. Nstagram: @Ali.mirzaei.azad"
+        "C. recruits new volunteers."
        ]
       },
       {
@@ -5744,8 +5736,7 @@ const IELTS_TEST_DATA = {
        "options": [
         "A. Public consumption of footwear has risen.",
         "B. Less footwear is recycled now than in the past.",
-        "C. People dispose of more footwear than they used to.",
-        "I. Nstagram: @Ali.mirzaei.azad"
+        "C. People dispose of more footwear than they used to."
        ]
       },
       {
@@ -6884,8 +6875,7 @@ const IELTS_TEST_DATA = {
        "options": [
         "A. other types of food supplement.",
         "B. different genetic strains of mice.",
-        "C. varying amounts of exercise.",
-        "I. Nstagram: @Ali.mirzaei.azad"
+        "C. varying amounts of exercise."
        ]
       },
       {
@@ -7806,8 +7796,7 @@ const IELTS_TEST_DATA = {
        "options": [
         "A. every six months.",
         "B. within a few weeks of taking up running.",
-        "C. after completing several practice runs.",
-        "I. Nstagram: @Ali.mirzaei.azad"
+        "C. after completing several practice runs."
        ]
       }
      ]
@@ -7881,8 +7870,7 @@ const IELTS_TEST_DATA = {
        "options": [
         "A. Their parents liked buying them as presents.",
         "B. They would like to buy more of them.",
-        "C. Not everyone can afford them.",
-        "I. Nstagram: @Ali.mirzaei.azad"
+        "C. Not everyone can afford them."
        ]
       },
       {

@@ -486,6 +486,36 @@ function renderWritingResults(graded) {
     return;
   }
 
+  // Generate actionable suggestions based on criteria scores
+  function getSuggestions(task, isTask1) {
+    if (!task) return '';
+    const suggs = [];
+    const crit = task.criteria;
+    
+    if (crit.taskAchievement < 7.0) {
+      if (isTask1) {
+        suggs.push("<strong>Task Achievement:</strong> Write a clear overview paragraph summarizing the main trend or stage. Make sure to back up all comparisons with specific numbers/data points from the chart.");
+      } else {
+        suggs.push("<strong>Task Response:</strong> State your position clearly in the introduction and summarize it in the conclusion. Make sure to address all parts of the essay prompt and extend your body paragraphs with supporting examples.");
+      }
+    }
+    if (crit.coherenceCohesion < 7.0) {
+      suggs.push(`<strong>Coherence & Cohesion:</strong> Organize your writing into ${isTask1 ? '3-4' : '4-5'} clear paragraphs. Connect sentences smoothly using a variety of cohesive devices (e.g. 'consequently', 'on the other hand') and reference pronouns.`);
+    }
+    if (crit.lexicalResource < 7.0) {
+      suggs.push("<strong>Lexical Resource:</strong> Avoid informal vocabulary and contractions (e.g. write 'do not' instead of 'don't'). Try to incorporate more precise academic terminology and varied synonyms to reduce repetition.");
+    }
+    if (crit.grammaticalRange < 7.0) {
+      suggs.push("<strong>Grammatical Range:</strong> Use a mix of simple, compound, and complex sentence structures. Incorporate relative clauses ('which', 'who'), conditional clauses ('if', 'unless'), and passive constructions to demonstrate range.");
+    }
+    
+    if (suggs.length === 0) {
+      suggs.push("Excellent performance across all IELTS criteria! Maintain this standard by continuing to produce error-free, varied responses.");
+    }
+    
+    return `<ul class="wr-notes" style="padding-left:18px;">${suggs.map(s => `<li style="margin-bottom:8px;">${s}</li>`).join('')}</ul>`;
+  }
+
   const criterionLabel = { taskAchievement: 'Task Achievement', coherenceCohesion: 'Coherence &amp; Cohesion', lexicalResource: 'Lexical Resource', grammaticalRange: 'Grammatical Range &amp; Accuracy' };
 
   function taskBlock(task, title) {
@@ -506,17 +536,57 @@ function renderWritingResults(graded) {
   }
 
   box.innerHTML = `
-    <div class="wr-overall">
-      <span class="wr-overall-band">${graded.overallBand != null ? graded.overallBand.toFixed(1) : '—'}</span>
-      <span class="wr-overall-label">Automated Writing Band Estimate</span>
+    <div class="wr-overall" style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--rule-soft); padding-bottom:12px; margin-bottom:12px;">
+      <div style="display:flex; align-items:baseline; gap:10px;">
+        <span class="wr-overall-band" style="font-family: 'Fraunces', serif; font-size: 32px; font-weight: 800; color: var(--accent); line-height: 1;">${graded.overallBand != null ? graded.overallBand.toFixed(1) : '—'}</span>
+        <span class="wr-overall-label" style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft);">Automated Writing Band</span>
+      </div>
+      <div class="wr-result-tabs" style="display:flex; gap:6px;">
+        <button id="btnScoreTab" class="task-tab active" style="padding: 4px 10px; font-size: 10.5px; border-radius: 6px;" onclick="switchResultTab('score')">Score Details</button>
+        <button id="btnSuggTab" class="task-tab" style="padding: 4px 10px; font-size: 10.5px; border-radius: 6px;" onclick="switchResultTab('sugg')">Suggestions &amp; Feedback</button>
+      </div>
     </div>
-    <div class="wr-disclaimer">${escapeHtml(graded.disclaimer)}</div>
-    ${taskBlock(graded.task1, 'Task 1')}
-    ${taskBlock(graded.task2, 'Task 2')}
+    <div class="wr-disclaimer" style="font-size: 11px; color: var(--ink-soft); line-height: 1.6; padding: 10px 12px; background: var(--accent-soft); border-radius: 8px; margin-bottom: 14px;">${escapeHtml(graded.disclaimer)}</div>
+    
+    <div id="wrTabScoreContent">
+      ${taskBlock(graded.task1, 'Task 1')}
+      ${taskBlock(graded.task2, 'Task 2')}
+    </div>
+    
+    <div id="wrTabSuggContent" style="display:none; padding-top:10px;">
+      ${graded.task1 ? `<div class="wr-task" style="border-top: none; margin-top: 0; padding-top: 0; border-bottom: 1px solid var(--rule-soft); padding-bottom: 12px; margin-bottom: 12px;">
+        <div class="wr-task-header"><span class="wr-task-title">Task 1 Key Suggestions</span></div>
+        ${getSuggestions(graded.task1, true)}
+      </div>` : ''}
+      ${graded.task2 ? `<div class="wr-task" style="${graded.task1 ? '' : 'border-top: none; margin-top: 0; padding-top: 0;'}">
+        <div class="wr-task-header"><span class="wr-task-title">Task 2 Key Suggestions</span></div>
+        ${getSuggestions(graded.task2, false)}
+      </div>` : ''}
+    </div>
   `;
   box.style.display = 'block';
   box.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
+window.switchResultTab = function(tabName) {
+  const btnScore = document.getElementById('btnScoreTab');
+  const btnSugg = document.getElementById('btnSuggTab');
+  const contentScore = document.getElementById('wrTabScoreContent');
+  const contentSugg = document.getElementById('wrTabSuggContent');
+  
+  if (tabName === 'score') {
+    btnScore.classList.add('active');
+    btnSugg.classList.remove('active');
+    contentScore.style.display = 'block';
+    contentSugg.style.display = 'none';
+  } else {
+    btnScore.classList.remove('active');
+    btnSugg.classList.add('active');
+    contentScore.style.display = 'none';
+    contentSugg.style.display = 'block';
+  }
+}
+
 
 initTest();
 </script>
