@@ -4295,11 +4295,25 @@
     function copyStudentAccessLink(id) {
       const stud = crmStudents.find(s => s.id === id);
       if (!stud) return;
-      if (!stud.accessToken) {
-        alert("This student doesn't have an access link yet. Try refreshing the CRM.");
-        return;
+      let token = stud.accessToken || stud.access_token;
+      if (!token) {
+        token = (typeof crypto !== 'undefined' && crypto.randomUUID) ? crypto.randomUUID() : 'st-tok-' + Date.now() + '-' + Math.random().toString(36).substring(2, 9);
+        stud.accessToken = token;
+        stud.access_token = token;
+        localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
+        const consultancyId = localStorage.getItem('viatestprep_consultancy_id');
+        const isOwnerSession = consultancyId === '__owner__';
+        if (isOwnerSession) {
+          fetch('/api/admin/roster', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'X-Owner-Key': getOwnerKey() },
+            body: JSON.stringify({ action: 'update_student', id: stud.id, fields: { access_token: token } }),
+          }).catch(e => console.warn('Could not update access token on backend:', e));
+        } else if (typeof supabaseClient !== 'undefined' && supabaseClient) {
+          supabaseClient.from('students').update({ access_token: token }).eq('id', stud.id).then(({ error }) => { if (error) console.warn('Could not update access token on Supabase:', error); });
+        }
       }
-      const link = `${window.location.origin}${window.location.pathname}?student=${stud.accessToken}`;
+      const link = `${window.location.origin}${window.location.pathname}?student=${token}`;
       const done = () => alert(`Access link copied for ${stud.name}!\n\nSend this to them directly - it logs them straight into their own portal, and everything they do there (mock scores, speaking practice) will show up in this roster automatically.`);
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(link).then(done).catch(() => prompt('Copy this link:', link));
