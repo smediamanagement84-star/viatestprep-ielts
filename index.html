@@ -3281,13 +3281,10 @@
             ${hasListening ? (
               lsScore ? `
               <div class="p-2 rounded-xl bg-[#f3ecd8] border border-[#ece4d2] flex flex-col justify-between min-h-[60px] relative group">
-                <a href="ielts-listening-practice.html?test=${key}&review=1" class="font-bold text-[10px] text-[#245e3f] hover:underline flex flex-col justify-between h-full">
+                <a href="ielts-listening-practice.html?test=${key}" class="font-bold text-[10px] text-[#245e3f] hover:underline flex flex-col justify-between h-full">
                   <span>Listening</span>
-                  <span class="text-[9px] font-semibold mt-1 block">🟢 Band ${lsScore}</span>
+                  <span class="text-[9px] font-semibold mt-1 block text-emerald-700">🟢 Band ${lsScore}</span>
                 </a>
-                <button onclick="retakeTest('${key}', 'listening')" class="absolute top-1 right-1 text-[8px] font-semibold text-red-700 bg-red-50 hover:bg-red-100 border border-red-200 px-1 rounded transition opacity-0 group-hover:opacity-100" title="Retake test">
-                  Retake
-                </button>
               </div>
               ` : `
               <a href="ielts-listening-practice.html?test=${key}" class="p-2 rounded-xl bg-[#f3ecd8] border border-[#ece4d2] hover:border-[#7a2331] transition flex flex-col justify-between min-h-[60px]">
@@ -3303,13 +3300,10 @@
             
             ${rdScore ? `
             <div class="p-2 rounded-xl bg-[#f3ecd8] border border-[#ece4d2] flex flex-col justify-between min-h-[60px] relative group">
-              <a href="ielts-reading-practice.html?test=${key}&review=1" class="font-bold text-[10px] text-[#245e3f] hover:underline flex flex-col justify-between h-full">
+              <a href="ielts-reading-practice.html?test=${key}" class="font-bold text-[10px] text-[#245e3f] hover:underline flex flex-col justify-between h-full">
                 <span>Reading</span>
-                <span class="text-[9px] font-semibold mt-1 block">🟢 Band ${rdScore}</span>
+                <span class="text-[9px] font-semibold mt-1 block text-emerald-700">🟢 Band ${rdScore}</span>
               </a>
-              <button onclick="retakeTest('${key}', 'reading')" class="absolute top-1 right-1 text-[8px] font-semibold text-red-700 bg-red-50 hover:bg-red-100 border border-red-200 px-1 rounded transition opacity-0 group-hover:opacity-100" title="Retake test">
-                Retake
-              </button>
             </div>
             ` : `
             <a href="ielts-reading-practice.html?test=${key}" class="p-2 rounded-xl bg-[#f3ecd8] border border-[#ece4d2] hover:border-[#7a2331] transition flex flex-col justify-between min-h-[60px]">
@@ -3322,11 +3316,8 @@
             <div class="p-2 rounded-xl bg-[#f3ecd8] border border-[#ece4d2] flex flex-col justify-between min-h-[60px] relative group">
               <a href="ielts-writing-practice.html?test=${key}" class="font-bold text-[10px] text-[#245e3f] hover:underline flex flex-col justify-between h-full">
                 <span>Writing</span>
-                <span class="text-[9px] font-semibold mt-1 block">🟢 Submitted</span>
+                <span class="text-[9px] font-semibold mt-1 block text-emerald-700">🟢 Submitted</span>
               </a>
-              <button onclick="retakeTest('${key}', 'writing')" class="absolute top-1 right-1 text-[8px] font-semibold text-red-700 bg-red-50 hover:bg-red-100 border border-red-200 px-1 rounded transition opacity-0 group-hover:opacity-100" title="Retake test">
-                Retake
-              </button>
             </div>
             ` : `
             <a href="ielts-writing-practice.html?test=${key}" class="p-2 rounded-xl bg-[#f3ecd8] border border-[#ece4d2] hover:border-[#7a2331] transition flex flex-col justify-between min-h-[60px]">
