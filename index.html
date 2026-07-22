@@ -750,6 +750,12 @@
             <p class="text-xs text-[#766f62] mt-1">Review grades, scores, and custom recommendations logged under your profile.</p>
           </div>
 
+          <!-- Band Trend Sparkline -->
+          <div id="bandTrendSection" class="hidden bg-white border border-[#ece4d2] rounded-2xl shadow-sm p-6">
+            <h3 class="font-extrabold text-sm text-[#766f62] uppercase tracking-wider mb-4">Band Score Trend (Last 5 Attempts)</h3>
+            <div id="bandTrendChart" class="flex gap-6 flex-wrap"></div>
+          </div>
+
           <div class="bg-white border border-[#ece4d2] rounded-2xl shadow-sm p-6 overflow-x-auto">
             <h3 class="font-extrabold text-sm text-[#766f62] uppercase tracking-wider mb-4">Completed Mock Exams History</h3>
             <table class="w-full text-sm text-left border-collapse" id="studentMockHistoryTable">
@@ -760,7 +766,7 @@
                   <th class="py-2.5">Testing Mode</th>
                   <th class="py-2.5">Score Details</th>
                   <th class="py-2.5">Band Score</th>
-                  <th class="py-2.5">Date Completed</th>
+                  <th class="py-2.5">Date</th>
                 </tr>
               </thead>
               <tbody id="studentHistoryBody" class="divide-y divide-[#ece4d2] text-[#4a453d]">
@@ -3577,7 +3583,7 @@
         }
 
         const canReviewAnswers = Array.isArray(h.answer_review) && h.answer_review.length > 0;
-        const canReviewWriting = h.module_type === 'writing' && (h.writing_task1 || h.writing_task2);
+        const canReviewWriting = h.module_type === 'writing' && (h.writing_task1 || h.writing_task2 || h.writing_feedback);
         const detailId = 'history-detail-' + h.id;
 
         tr.innerHTML = `
@@ -3585,11 +3591,11 @@
           <td class="py-3 capitalize font-bold text-[#7a2331]">${escapeHtml(h.module_type)}</td>
           <td class="py-3 text-[#8a8171]">Exam Mode</td>
           <td class="py-3 text-[#766f62]">${escapeHtml(detailsLabel)}</td>
-          <td class="py-3 font-extrabold text-[#7a2331]">
-            ${escapeHtml(scoreLabel)}
-            ${(canReviewAnswers || canReviewWriting) ? `<button onclick="document.getElementById('${detailId}').classList.toggle('hidden')" class="block text-[9px] font-bold text-[#8a8171] hover:text-[#7a2331] hover:underline mt-0.5">View answers</button>` : ''}
+          <td class="py-3 font-extrabold text-[#7a2331]">${escapeHtml(scoreLabel)}</td>
+          <td class="py-3 text-[#8a8171] text-[10px]">
+            ${dateLabel}
+            ${(canReviewAnswers || canReviewWriting) ? `<button onclick="document.getElementById('${detailId}').classList.toggle('hidden')" class="mt-1.5 block w-full text-left px-2 py-1 rounded-md text-[10px] font-bold bg-[#f3ecd8] hover:bg-[#ece4d2] text-[#7a2331] transition">📋 View Answers</button>` : ''}
           </td>
-          <td class="py-3 text-[#8a8171] text-[10px]">${dateLabel}</td>
         `;
         tbody.appendChild(tr);
 
@@ -3616,38 +3622,124 @@
         `;
         tbody.appendChild(tr);
       });
+
+      // ── Band Trend Sparkline ────────────────────────────────────────────────
+      // Groups all attempts by module, takes last 5 per module, draws a simple
+      // CSS bar chart showing the student's band score progression over time.
+      const trendSection = document.getElementById('bandTrendSection');
+      const trendChart = document.getElementById('bandTrendChart');
+      if (trendSection && trendChart) {
+        const allAttempts = [
+          ...mockRows.map(h => ({
+            module: h.module_type,
+            band: parseFloat(h.module_type === 'reading' ? h.reading_band : h.module_type === 'listening' ? h.listening_band : h.writing_band) || null,
+            date: h.completed_at ? new Date(h.completed_at).toLocaleDateString('en', { month: 'short', day: 'numeric' }) : '—'
+          })),
+          ...speakingRows.map(h => ({ module: 'speaking', band: parseFloat(h.overall_band) || null, date: h.created_at ? new Date(h.created_at).toLocaleDateString('en', { month: 'short', day: 'numeric' }) : '—' }))
+        ].filter(a => a.band != null && !isNaN(a.band));
+
+        const modules = ['listening', 'reading', 'writing', 'speaking'];
+        const modColors = { listening: '#7a2331', reading: '#1a5c8a', writing: '#4a267a', speaking: '#1a5c38' };
+        const modLabels = { listening: 'Listening', reading: 'Reading', writing: 'Writing', speaking: 'Speaking' };
+
+        let hasAny = false;
+        trendChart.innerHTML = '';
+        modules.forEach(mod => {
+          const attempts = allAttempts.filter(a => a.module === mod).slice(-5);
+          if (!attempts.length) return;
+          hasAny = true;
+          const color = modColors[mod];
+          const maxBand = 9.0;
+
+          const bars = attempts.map(a => {
+            const pct = Math.round((a.band / maxBand) * 100);
+            const bandColor = a.band >= 7.0 ? '#2f7a52' : a.band >= 6.0 ? '#a8792f' : '#7a2331';
+            return `<div style="display:flex;flex-direction:column;align-items:center;gap:3px;min-width:36px;">
+              <div style="font-size:10px;font-weight:800;color:${bandColor};">${a.band.toFixed(1)}</div>
+              <div style="width:28px;background:#ece4d2;border-radius:4px;height:60px;display:flex;align-items:flex-end;overflow:hidden;">
+                <div style="width:100%;height:${pct}%;background:${color};border-radius:4px;transition:height .3s;"></div>
+              </div>
+              <div style="font-size:9px;color:#8a8171;text-align:center;line-height:1.2;">${a.date}</div>
+            </div>`;
+          }).join('');
+
+          const group = document.createElement('div');
+          group.style.cssText = 'flex:0 0 auto;';
+          group.innerHTML = `
+            <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:${color};margin-bottom:8px;">${modLabels[mod]}</div>
+            <div style="display:flex;align-items:flex-end;gap:6px;">${bars}</div>
+          `;
+          trendChart.appendChild(group);
+        });
+
+        trendSection.classList.toggle('hidden', !hasAny);
+      }
+      // ────────────────────────────────────────────────────────────────────────
     }
 
     // Renders the Reading/Listening per-question grid inside a history row's
-    // expandable "View answers" detail - green for correct, rose for wrong,
-    // with the student's own submitted answer plus the correct one.
+    // expandable detail - green for correct, rose for wrong, with the
+    // student's submitted answer + the correct one. Always shows correct
+    // answer even when right (subtle green check), plus a question type badge.
     function buildAnswerReviewHtml(review) {
-      return `<div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-2">` +
+      const typeLabel = t => {
+        if (!t) return '';
+        const map = { 'tfng': 'T/F/NG', 'yn_ng': 'Y/N/NG', 'mcq': 'MCQ', 'mcq_multi': 'MCQ', 'fill': 'Fill', 'note_completion': 'Note', 'form_completion': 'Form', 'matching': 'Match', 'heading': 'Heading', 'short_answer': 'Short Ans.' };
+        return map[t.toLowerCase()] ? `<span style="display:inline-block;padding:1px 5px;border-radius:4px;background:rgba(0,0,0,.06);font-size:8px;font-weight:700;text-transform:uppercase;margin-bottom:3px;">${map[t.toLowerCase()]}</span>` : '';
+      };
+      return `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px;">` +
         review.map(item => `
-          <div class="px-2 py-1.5 rounded-lg border text-[10px] leading-snug ${item.isCorrect ? 'bg-emerald-50 border-emerald-200 text-emerald-800' : 'bg-rose-50 border-rose-200 text-rose-800'}">
-            <span class="font-black block">Q${item.num}</span>
-            <span class="block truncate" title="${escapeHtml(item.userAnswer || '')}">You: ${escapeHtml(item.userAnswer || '—')}</span>
-            ${item.isCorrect ? '' : `<span class="block truncate" title="${escapeHtml(item.correctAnswer || '')}">Correct: ${escapeHtml(item.correctAnswer || '')}</span>`}
+          <div style="padding:8px 10px;border-radius:10px;border:1.5px solid ${item.isCorrect ? '#a7d8ba' : '#f0baba'};background:${item.isCorrect ? '#f0faf4' : '#fff5f5'};">
+            ${typeLabel(item.type)}
+            <div style="font-size:11px;font-weight:900;color:${item.isCorrect ? '#1a5c38' : '#8a1f1f'};margin-bottom:3px;">Q${item.num} ${item.isCorrect ? '✓' : '✗'}</div>
+            <div style="font-size:10px;color:#4a453d;"><span style="font-weight:600;">You:</span> ${escapeHtml(item.userAnswer || '—')}</div>
+            <div style="font-size:10px;color:${item.isCorrect ? '#1a5c38' : '#8a1f1f'};margin-top:2px;"><span style="font-weight:600;">Ans:</span> ${escapeHtml(item.correctAnswer || '')}</div>
           </div>
         `).join('') +
       `</div>`;
     }
 
-    // Renders a Writing attempt's stored essay text + auto-grader task bands
-    // inside its expandable "View answers" detail row.
+    // Renders a Writing attempt's stored essay text + full auto-grader
+    // per-criterion feedback inside its expandable detail row.
     function buildWritingReviewHtml(h) {
-      let feedbackHtml = '';
+      let criteriaHtml = '';
+      let notesHtml = '';
       if (h.writing_feedback) {
         try {
           const fb = JSON.parse(h.writing_feedback);
-          feedbackHtml = `<div class="text-[10px] font-bold text-[#5c5648] mb-2">Task 1 Band: ${fb.task1 ? fb.task1.band : '—'} &middot; Task 2 Band: ${fb.task2 ? fb.task2.band : '—'}</div>`;
-        } catch (e) { /* malformed/legacy feedback - just skip the band line */ }
+          const critLabels = { taskAchievement: 'Task Achievement', coherenceCohesion: 'Coherence & Cohesion', lexicalResource: 'Lexical Resource', grammaticalRange: 'Grammatical Range & Accuracy' };
+          const renderTask = (task, label) => {
+            if (!task) return '';
+            const critGrid = Object.entries(task.criteria).map(([k, v]) =>
+              `<div style="padding:6px 10px;border-radius:8px;background:#faf6ec;border:1px solid #ece4d2;">
+                <div style="font-size:9px;font-weight:800;text-transform:uppercase;color:#766f62;margin-bottom:2px;">${critLabels[k] || k}</div>
+                <div style="font-size:15px;font-weight:900;color:${v >= 7 ? '#1a5c38' : v >= 6 ? '#a8792f' : '#7a2331'};">${parseFloat(v).toFixed(1)}</div>
+              </div>`
+            ).join('');
+            const allNotes = Object.values(task.notes).flat();
+            const notesList = allNotes.length
+              ? `<ul style="margin:8px 0 0;padding-left:16px;">${allNotes.map(n => `<li style="margin-bottom:4px;font-size:11px;color:#4a453d;">${escapeHtml(n)}</li>`).join('')}</ul>`
+              : '<p style="font-size:11px;color:#2f7a52;margin:6px 0 0;">✓ No specific issues flagged.</p>';
+            return `
+              <div style="margin-bottom:14px;">
+                <div style="font-size:11px;font-weight:800;color:#1c1a17;margin-bottom:6px;">${label} — Band ${parseFloat(task.band).toFixed(1)} · ${task.wordCount} words</div>
+                <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:8px;">${critGrid}</div>
+                ${notesList}
+              </div>`;
+          };
+          criteriaHtml = renderTask(fb.task1, 'Task 1') + renderTask(fb.task2, 'Task 2');
+        } catch(e) { /* malformed legacy feedback */ }
       }
-      return `
-        ${feedbackHtml}
-        ${h.writing_task1 ? `<div class="text-[10px] mb-3"><strong class="text-[#1c1a17]">Task 1</strong><p class="whitespace-pre-wrap mt-1 text-[#4a453d] leading-relaxed">${escapeHtml(h.writing_task1)}</p></div>` : ''}
-        ${h.writing_task2 ? `<div class="text-[10px]"><strong class="text-[#1c1a17]">Task 2</strong><p class="whitespace-pre-wrap mt-1 text-[#4a453d] leading-relaxed">${escapeHtml(h.writing_task2)}</p></div>` : ''}
-      `;
+      const essaysHtml =
+        (h.writing_task1 ? `<div style="margin-top:12px;">
+          <div style="font-size:11px;font-weight:800;color:#1c1a17;border-bottom:1px solid #ece4d2;padding-bottom:4px;margin-bottom:6px;">Task 1 Essay</div>
+          <p style="font-size:12px;line-height:1.75;color:#4a453d;white-space:pre-wrap;font-family:'Lora',serif;">${escapeHtml(h.writing_task1)}</p>
+        </div>` : '') +
+        (h.writing_task2 ? `<div style="margin-top:12px;">
+          <div style="font-size:11px;font-weight:800;color:#1c1a17;border-bottom:1px solid #ece4d2;padding-bottom:4px;margin-bottom:6px;">Task 2 Essay</div>
+          <p style="font-size:12px;line-height:1.75;color:#4a453d;white-space:pre-wrap;font-family:'Lora',serif;">${escapeHtml(h.writing_task2)}</p>
+        </div>` : '');
+      return `<div>${criteriaHtml}${essaysHtml}</div>`;
     }
 
     // Student Speaking Self-Practice Recorder Timer & audio Capture
