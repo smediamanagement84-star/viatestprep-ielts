@@ -704,11 +704,29 @@
                   <span>📌</span> Select IELTS Speaking Prompt / Cue Card
                 </label>
                 <select id="s-topic-select" onchange="loadStudentSpeakingTopic()" class="w-full px-3.5 py-2.5 border-2 border-[#e5ded0] rounded-xl text-xs font-bold text-[#1c1a17] bg-[#faf8f2] focus:outline-none focus:border-[#7a2331] transition">
-                  <option value="Describe a skill you learned from an older relative.">Cue Card 1: Skill Learned from Relative (Part 2)</option>
-                  <option value="Describe a time you had to resolve a conflict in a team.">Cue Card 2: Team Conflict Resolution (Part 2)</option>
-                  <option value="Describe a website or app you use daily and why it helps you.">Cue Card 3: Daily Website or App (Part 2)</option>
-                  <option value="Part 1: Hometown & Leisure activities.">Part 1: Hometown &amp; Free Time Prompts</option>
-                  <option value="Part 3: The impact of technology and AI on future career choices.">Part 3: Future of Technology &amp; Careers</option>
+                  <optgroup label="PART 1: WARM-UP & GENERAL QUESTIONS (4-5 MINS)">
+                    <option value="Part 1: Hometown & Neighborhood">Part 1: Hometown &amp; Neighborhood</option>
+                    <option value="Part 1: Work or Study Routine">Part 1: Work or Study Routine</option>
+                    <option value="Part 1: Free Time & Hobbies">Part 1: Free Time &amp; Hobbies</option>
+                    <option value="Part 1: Music, Movies & Entertainment">Part 1: Music, Movies &amp; Entertainment</option>
+                    <option value="Part 1: Smartphones & Digital Habits">Part 1: Smartphones &amp; Digital Habits</option>
+                  </optgroup>
+                  <optgroup label="PART 2: CANDIDATE CUE CARDS (INDIVIDUAL LONG TURN)">
+                    <option value="Describe a skill you learned from an older relative.">Cue Card 1: Skill Learned from Relative</option>
+                    <option value="Describe a time you had to resolve a conflict in a team.">Cue Card 2: Team Conflict Resolution</option>
+                    <option value="Describe a website or app you use daily and why it helps you.">Cue Card 3: Daily Website or App</option>
+                    <option value="Describe a memorable journey or trip you took.">Cue Card 4: Memorable Journey or Trip</option>
+                    <option value="Describe an influential person who inspires you.">Cue Card 5: Person Who Inspires You</option>
+                    <option value="Describe a challenging goal you set and achieved.">Cue Card 6: Challenging Goal Achieved</option>
+                    <option value="Describe an environmental or community project.">Cue Card 7: Environmental / Community Project</option>
+                  </optgroup>
+                  <optgroup label="PART 3: TWO-WAY DISCUSSION & ANALYSIS (4-5 MINS)">
+                    <option value="Part 3: Artificial Intelligence & Future Careers">Part 3: AI &amp; Future Careers</option>
+                    <option value="Part 3: Globalization & Cultural Identity">Part 3: Globalization &amp; Cultural Identity</option>
+                    <option value="Part 3: Environmental Responsibility & Policy">Part 3: Environmental Policy</option>
+                    <option value="Part 3: Social Media & Modern Communication">Part 3: Social Media &amp; Communication</option>
+                    <option value="Part 3: Education Reform & Lifelong Learning">Part 3: Education Reform &amp; Lifelong Learning</option>
+                  </optgroup>
                 </select>
               </div>
 
@@ -3922,11 +3940,28 @@
     let s_recStartTime;
 
     const speakingCueCards = {
-      'Describe a skill you learned from an older relative.': 'Describe a skill you learned from an older relative. You should say: who you learned it from, what the skill is, how long it took, and explain how it has helped you in life.',
-      'Describe a time you had to resolve a conflict in a team.': 'Describe a time you had to resolve a conflict in a team. You should say: what the conflict was, who was involved, how you resolved it, and what you learned from this experience.',
-      'Describe a website or app you use daily and why it helps you.': 'Describe a website or app you use daily and why it helps you. You should say: what it is, how often you use it, what its features are, and explain why it is important to you.',
-      'Part 1: Hometown & Leisure activities.': 'Part 1 Interview Questions:\n- Where is your hometown?\n- What do you like about it?\n- What do you do in your free time?\n- Do you prefer spending leisure time alone or with friends?',
-      'Part 3: The impact of technology and AI on future career choices.': 'Part 3 Discussion Prompts:\n- How has technology changed the job market in your country?\n- Do you think robots will replace humans in most professions?\n- What skills will be most valuable for future generations?'
+      // PART 1: WARM-UP & GENERAL QUESTIONS
+      'Part 1: Hometown & Neighborhood': 'Part 1 Interview Questions:\n- Where is your hometown located?\n- What do you like most about living in your neighborhood?\n- Has your hometown changed much over recent years?\n- Would you recommend tourists to visit your hometown?',
+      'Part 1: Work or Study Routine': 'Part 1 Interview Questions:\n- Are you currently working or studying?\n- What is your favorite aspect of your daily work or studies?\n- What key skills are essential for your field?\n- What would you like to achieve in your career over the next five years?',
+      'Part 1: Free Time & Hobbies': 'Part 1 Interview Questions:\n- What do you enjoy doing during your leisure time?\n- Do you prefer outdoor activities or relaxing indoors?\n- How do your weekend routines differ from weekdays?\n- Did you have different hobbies when you were younger?',
+      'Part 1: Music, Movies & Entertainment': 'Part 1 Interview Questions:\n- What genre of music do you listen to most frequently?\n- Did your taste in music change as you grew older?\n- Do you prefer watching movies in cinemas or streaming at home?\n- How often do you attend live concerts or theater events?',
+      'Part 1: Smartphones & Digital Habits': 'Part 1 Interview Questions:\n- How many hours a day do you spend using your smartphone?\n- What mobile applications do you rely on most for daily tasks?\n- Do you think people rely too much on mobile technology today?\n- How do you manage digital distractions when focusing on work or study?',
+
+      // PART 2: CANDIDATE CUE CARDS
+      'Describe a skill you learned from an older relative.': 'Describe a skill you learned from an older relative. You should say: Who you learned it from, What the skill is, How long it took to learn, And explain how it has helped you in your life.',
+      'Describe a time you had to resolve a conflict in a team.': 'Describe a time you had to resolve a conflict in a team. You should say: What the conflict was, Who was involved, How you resolved it, And what you learned from this experience.',
+      'Describe a website or app you use daily and why it helps you.': 'Describe a website or app you use daily and why it helps you. You should say: What it is, How often you use it, What its main features are, And explain why it is important to you.',
+      'Describe a memorable journey or trip you took.': 'Describe a memorable journey or trip you took. You should say: Where you went, Who you traveled with, What activities you did there, And explain why this trip remains memorable to you.',
+      'Describe an influential person who inspires you.': 'Describe an influential person who inspires you. You should say: Who this person is, How you first learned about them, What qualities make them special, And explain how they have influenced your life goals.',
+      'Describe a challenging goal you set and achieved.': 'Describe a challenging goal you set and achieved. You should say: What the goal was, Why it was challenging, What steps you took to achieve it, And explain how you felt when you succeeded.',
+      'Describe an environmental or community project.': 'Describe an environmental or community project you know about. You should say: What the project involves, Where it takes place, Who benefits from it, And explain your opinion on its overall impact.',
+
+      // PART 3: TWO-WAY DISCUSSION PROMPTS
+      'Part 3: Artificial Intelligence & Future Careers': 'Part 3 Discussion Prompts:\n- How will artificial intelligence transform traditional career paths over the next decade?\n- Will automation cause widespread job loss or create new specialized professions?\n- What key skills must young professionals develop to remain competitive in an automated economy?',
+      'Part 3: Globalization & Cultural Identity': 'Part 3 Discussion Prompts:\n- Does rapid globalization pose a threat to local traditional cultures and heritage?\n- How can developing nations preserve their unique customs while engaging in global trade?\n- What role does native language preservation play in maintaining cultural identity?',
+      'Part 3: Environmental Responsibility & Policy': 'Part 3 Discussion Prompts:\n- Should environmental protection be the primary duty of national governments or individual citizens?\n- Are eco-friendly products accessible and affordable for average income families?\n- How can international bodies enforce strict carbon standards across developing and developed nations?',
+      'Part 3: Social Media & Modern Communication': 'Part 3 Discussion Prompts:\n- Has social media strengthened genuine human relationships or made them more superficial?\n- How does the spread of online misinformation impact public perception and democratic processes?\n- What measures should social media platforms take to safeguard young users from cyberbullying?',
+      'Part 3: Education Reform & Lifelong Learning': 'Part 3 Discussion Prompts:\n- Is traditional classroom education still adequate for preparing students for the 21st-century workforce?\n- Should higher education institutions prioritize practical vocational skills over theoretical academic knowledge?\n- Why has lifelong learning become indispensable for professional success in modern industries?'
     };
 
     function loadStudentSpeakingTopic() {
