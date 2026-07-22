@@ -673,70 +673,144 @@
           </div>
         </div>
 
-        <!-- Student Tab 3: Speaking Practice Room -->
+        <!-- Student Tab 3: Speaking Practice Studio -->
         <div id="student-speaking-view" class="student-subview hidden space-y-6">
-          <div>
-            <h2 class="text-2xl font-extrabold">IELTS speaking self-practice recorder</h2>
-            <p class="text-xs text-[#766f62] mt-1">Pick custom IELTS cue card prompts, time your preparation, record your audio answer, and save/evaluate playbacks.</p>
+          <!-- Header Studio Banner -->
+          <div class="bg-gradient-to-r from-[#1c1a17] via-[#2d2924] to-[#7a2331] text-white rounded-3xl p-6 shadow-md flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-400/20 text-amber-300 border border-amber-400/30">🎙️ Official IELTS Studio</span>
+                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-white/10 text-stone-200">Parts 1, 2 &amp; 3</span>
+              </div>
+              <h2 class="text-2xl font-black font-serif tracking-tight text-amber-50">IELTS Speaking Self-Practice Studio</h2>
+              <p class="text-xs text-stone-300 mt-1 max-w-xl">Time your 1-minute cue card prep, record high-fidelity audio responses under strict 2-minute limits, and review your practice recordings.</p>
+            </div>
+            <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-white/10">
+              <div class="text-right">
+                <span class="block text-[10px] font-bold text-stone-300 uppercase tracking-wider">Practice Mode</span>
+                <span class="text-xs font-extrabold text-amber-300">Self-Timed Recorder</span>
+              </div>
+              <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-lg">⏱️</div>
+            </div>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <!-- Selector -->
-            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
-              <label class="block text-xs font-bold text-[#766f62] uppercase tracking-wider mb-2">Select prompt Card</label>
-              <select id="s-topic-select" onchange="loadStudentSpeakingTopic()" class="select-elegant w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none focus:border-[#7a2331]">
-                <option value="Describe a skill you learned from an older relative.">Cue Card 1: Skill Learned from Relative (Part 2)</option>
-                <option value="Describe a time you had to resolve a conflict in a team.">Cue Card 2: Team Conflict Resolution (Part 2)</option>
-                <option value="Describe a website or app you use daily and why it helps you.">Cue Card 3: Daily Website or App (Part 2)</option>
-                <option value="Part 1: Hometown & Leisure activities.">Part 1: Hometown & Free Time Prompts</option>
-                <option value="Part 3: The impact of technology and AI on future career choices.">Part 3: Future of Technology & Careers</option>
-              </select>
-              <div class="mt-4 p-4 bg-[#f3ecd8] border border-[#ece4d2] rounded-xl min-h-[140px]">
-                <span class="text-[9px] uppercase font-bold text-[#8a8171]">Selected Prompt</span>
-                <p id="s-topic-prompt" class="text-xs font-medium text-[#4a453d] leading-relaxed mt-1">Describe a skill you learned from an older relative. You should say: who you learned it from, what the skill is, how long it took, and explain how it has helped you in life.</p>
+          <!-- Studio Grid (Asymmetric 7 / 5) -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- Left Side (7 Cols): Official IELTS Cue Card Booklet -->
+            <div class="lg:col-span-7 space-y-4">
+              <!-- Topic Selector Card -->
+              <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
+                <label class="block text-xs font-bold text-[#766f62] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                  <span>📌</span> Select IELTS Speaking Prompt / Cue Card
+                </label>
+                <select id="s-topic-select" onchange="loadStudentSpeakingTopic()" class="w-full px-3.5 py-2.5 border-2 border-[#e5ded0] rounded-xl text-xs font-bold text-[#1c1a17] bg-[#faf8f2] focus:outline-none focus:border-[#7a2331] transition">
+                  <option value="Describe a skill you learned from an older relative.">Cue Card 1: Skill Learned from Relative (Part 2)</option>
+                  <option value="Describe a time you had to resolve a conflict in a team.">Cue Card 2: Team Conflict Resolution (Part 2)</option>
+                  <option value="Describe a website or app you use daily and why it helps you.">Cue Card 3: Daily Website or App (Part 2)</option>
+                  <option value="Part 1: Hometown & Leisure activities.">Part 1: Hometown &amp; Free Time Prompts</option>
+                  <option value="Part 3: The impact of technology and AI on future career choices.">Part 3: Future of Technology &amp; Careers</option>
+                </select>
+              </div>
+
+              <!-- IELTS Booklet Cue Card View -->
+              <div class="bg-[#faf6ec] border-2 border-[#e5ded0] rounded-2xl p-6 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-[#7a2331] text-white px-4 py-1 rounded-bl-2xl text-[9px] font-black uppercase tracking-widest">
+                  Candidate Booklet
+                </div>
+                <div class="text-[10px] font-extrabold uppercase tracking-widest text-[#8a8171] mb-2">
+                  IELTS Speaking Test — Task Card
+                </div>
+                <h3 id="s-topic-title" class="font-serif text-xl font-bold text-[#1c1a17] mb-3 leading-snug">
+                  Describe a skill you learned from an older relative.
+                </h3>
+                
+                <div class="bg-white border border-[#ece4d2] rounded-xl p-4 space-y-2 mb-4">
+                  <span class="text-xs font-extrabold text-[#7a2331] block mb-1">You should say:</span>
+                  <div id="s-topic-bullets" class="space-y-1.5 text-xs text-[#4a453d] font-medium leading-relaxed">
+                    <p>• Who you learned it from</p>
+                    <p>• What the skill is</p>
+                    <p>• How long it took to learn</p>
+                    <p>• And explain how it has helped you in your life.</p>
+                  </div>
+                </div>
+
+                <!-- Vocabulary & Tips Banner -->
+                <div class="bg-[#f3ecd8] border border-[#ece4d2] rounded-xl p-3.5 flex items-start gap-3">
+                  <span class="text-lg">💡</span>
+                  <div class="text-xs">
+                    <span class="font-bold text-[#7a2331] block mb-0.5">Examiner Strategy &amp; Vocabulary Tips</span>
+                    <p class="text-[11px] text-[#5c5648] leading-normal">
+                      Use cohesive discourse markers (*"Looking back...", "What stands out to me...", "In hindsight..."*). Aim to speak continuously for the full 2 minutes.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- Timers -->
-            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm flex flex-col justify-between">
-              <div>
-                <label class="block text-xs font-bold text-[#766f62] uppercase tracking-wider mb-3">Preparation & Response Clocks</label>
+            <!-- Right Side (5 Cols): Recording Console & Clocks -->
+            <div class="lg:col-span-5 space-y-4">
+              <!-- Clocks Card -->
+              <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm space-y-4">
+                <div class="flex items-center justify-between">
+                  <label class="text-xs font-bold text-[#766f62] uppercase tracking-wider flex items-center gap-1.5">
+                    <span>⏱️</span> Prep &amp; Response Clocks
+                  </label>
+                  <span id="s-timer-status" class="text-[10px] font-bold text-[#8a8171] italic">Ready</span>
+                </div>
+
                 <div class="grid grid-cols-2 gap-3 text-center">
-                  <div class="bg-[#f3ecd8] border border-[#ece4d2] p-3 rounded-xl">
-                    <span class="text-[9px] uppercase text-[#8a8171] block mb-1">Prep Time</span>
-                    <span id="s-prep-display" class="text-2xl font-extrabold font-mono text-amber-500">01:00</span>
-                    <button onclick="startStudentPrepTimer()" class="w-full mt-2 py-1 bg-amber-500 text-white font-bold text-[10px] rounded-lg">Start Prep</button>
+                  <!-- Prep Clock -->
+                  <div class="bg-[#faf8f2] border-2 border-amber-200 p-3.5 rounded-2xl flex flex-col justify-between items-center shadow-xs">
+                    <span class="text-[9px] font-black uppercase text-amber-700 tracking-wider">1-Min Prep</span>
+                    <span id="s-prep-display" class="text-3xl font-black font-mono text-amber-600 my-1">01:00</span>
+                    <button onclick="startStudentPrepTimer()" class="w-full mt-1 py-1.5 bg-amber-500 hover:bg-amber-600 text-white font-extrabold text-[10px] rounded-xl shadow-xs transition">Start Prep (1m)</button>
                   </div>
-                  <div class="bg-[#f3ecd8] border border-[#ece4d2] p-3 rounded-xl">
-                    <span class="text-[9px] uppercase text-[#8a8171] block mb-1">Talk Time</span>
-                    <span id="s-talk-display" class="text-2xl font-extrabold font-mono text-[#7a2331]">02:00</span>
-                    <button onclick="startStudentTalkTimer()" class="w-full mt-2 py-1 bg-[#7a2331] text-white font-bold text-[10px] rounded-lg">Start Talk</button>
+                  <!-- Talk Clock -->
+                  <div class="bg-[#faf8f2] border-2 border-[#7a2331]/20 p-3.5 rounded-2xl flex flex-col justify-between items-center shadow-xs">
+                    <span class="text-[9px] font-black uppercase text-[#7a2331] tracking-wider">2-Min Talk</span>
+                    <span id="s-talk-display" class="text-3xl font-black font-mono text-[#7a2331] my-1">02:00</span>
+                    <button onclick="startStudentTalkTimer()" class="w-full mt-1 py-1.5 bg-[#7a2331] hover:bg-[#5c1a24] text-white font-extrabold text-[10px] rounded-xl shadow-xs transition">Start Talk (2m)</button>
                   </div>
                 </div>
               </div>
-              <span id="s-timer-status" class="text-center text-[10px] text-[#8a8171] font-semibold italic mt-4">Select a timer to begin.</span>
-            </div>
 
-            <!-- Voice Recorder -->
-            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm flex flex-col justify-between items-center text-center">
-              <div class="w-full">
-                <label class="block text-xs font-bold text-[#766f62] uppercase tracking-wider mb-3">Browser Audio Capture</label>
-                <div class="flex justify-center items-center gap-4 py-2">
-                  <button id="s-btn-record" onclick="toggleStudentAudioRecording()" class="w-14 h-14 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center text-lg relative">
-                    <span id="s-rec-icon">🔴</span>
-                    <span id="s-rec-pulse" class="hidden absolute inset-0 rounded-full border-4 border-red-500 animate-ping"></span>
+              <!-- Studio Audio Recorder Console -->
+              <div class="bg-white border border-[#ece4d2] rounded-2xl p-6 shadow-sm flex flex-col items-center text-center space-y-4">
+                <div class="flex items-center justify-between w-full">
+                  <label class="text-xs font-bold text-[#766f62] uppercase tracking-wider flex items-center gap-1.5">
+                    <span>🎙️</span> Voice Audio Capture
+                  </label>
+                  <span id="s-rec-status" class="px-2.5 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider bg-stone-100 text-stone-600 border border-stone-200">Idle</span>
+                </div>
+
+                <!-- Record Button & Sound Wave Visualizer -->
+                <div class="relative py-2 flex flex-col items-center gap-3">
+                  <button id="s-btn-record" onclick="toggleStudentAudioRecording()" class="w-20 h-20 rounded-full bg-gradient-to-br from-rose-500 to-rose-700 hover:from-rose-600 hover:to-rose-800 text-white flex items-center justify-center shadow-lg relative transition transform active:scale-95 group">
+                    <span id="s-rec-icon" class="text-2xl transition">🔴</span>
+                    <span id="s-rec-pulse" class="hidden absolute inset-0 rounded-full border-4 border-rose-500 animate-ping"></span>
                   </button>
-                  <div class="text-left">
-                    <span id="s-rec-status" class="text-xs font-bold text-[#4a453d] block">Idle</span>
-                    <span id="s-rec-time" class="text-[10px] font-mono text-[#8a8171]">00:00</span>
+                  
+                  <div class="flex items-center gap-1.5 h-6">
+                    <span class="text-[10px] font-mono font-bold text-[#8a8171]" id="s-rec-time">00:00</span>
+                    <!-- Animated waveform bars when recording -->
+                    <div id="s-wave-bars" class="hidden flex items-center gap-1 h-4 ml-2">
+                      <span class="w-1 bg-rose-500 rounded-full animate-bounce h-2" style="animation-delay: 0.1s"></span>
+                      <span class="w-1 bg-rose-500 rounded-full animate-bounce h-4" style="animation-delay: 0.2s"></span>
+                      <span class="w-1 bg-rose-500 rounded-full animate-bounce h-3" style="animation-delay: 0.3s"></span>
+                      <span class="w-1 bg-rose-500 rounded-full animate-bounce h-5" style="animation-delay: 0.4s"></span>
+                      <span class="w-1 bg-rose-500 rounded-full animate-bounce h-2" style="animation-delay: 0.1s"></span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="w-full mt-4 bg-[#f3ecd8] border border-[#ece4d2] p-3 rounded-xl flex flex-col items-center gap-2">
-                <audio id="s-audio-player" controls class="w-full max-w-[200px] h-8 hidden"></audio>
-                <span id="s-no-audio-label" class="text-xs text-[#8a8171] py-1">No audio file captured.</span>
-                <a id="s-download-link" class="hidden w-full py-1 text-center bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold text-[10px] rounded-lg transition">⬇ Save Recording (.wav)</a>
+                <!-- Audio Player Widget -->
+                <div class="w-full bg-[#faf8f2] border border-[#ece4d2] p-4 rounded-2xl flex flex-col items-center gap-3">
+                  <audio id="s-audio-player" controls class="w-full h-9 hidden"></audio>
+                  <span id="s-no-audio-label" class="text-xs text-[#8a8171] py-1 font-medium">Click the microphone above to start recording your response.</span>
+                  <a id="s-download-link" class="hidden w-full py-2 text-center bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-xl shadow-xs transition flex items-center justify-center gap-1.5">
+                    <span>⬇</span> Download Audio (.wav)
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -3846,14 +3920,27 @@
 
     function loadStudentSpeakingTopic() {
       const select = document.getElementById('s-topic-select');
-      const prompt = document.getElementById('s-topic-prompt');
-      prompt.textContent = speakingCueCards[select.value] || select.value;
-      
+      const fullText = speakingCueCards[select.value] || select.value;
+      const titleEl = document.getElementById('s-topic-title');
+      const bulletsEl = document.getElementById('s-topic-bullets');
+
+      if (titleEl && bulletsEl) {
+        let parts = fullText.split(/You should say:|Part 1 Interview Questions:|Part 3 Discussion Prompts:/i);
+        if (parts.length > 1) {
+          titleEl.textContent = parts[0].replace(/^Part \d+:\s*/i, '').trim();
+          let bullets = parts[1].split(/\n|•|-/).map(b => b.trim()).filter(b => b.length > 0);
+          bulletsEl.innerHTML = bullets.map(b => `<p>• ${escapeHtml(b)}</p>`).join('');
+        } else {
+          titleEl.textContent = select.value;
+          bulletsEl.innerHTML = `<p class="whitespace-pre-line">${escapeHtml(fullText)}</p>`;
+        }
+      }
+
       clearInterval(s_prepInterval);
       clearInterval(s_talkInterval);
       document.getElementById('s-prep-display').textContent = '01:00';
       document.getElementById('s-talk-display').textContent = '02:00';
-      document.getElementById('s-timer-status').textContent = 'Select a timer to begin.';
+      document.getElementById('s-timer-status').textContent = 'Ready';
     }
 
     function startStudentPrepTimer() {
@@ -3861,7 +3948,7 @@
       const display = document.getElementById('s-prep-display');
       const status = document.getElementById('s-timer-status');
       let time = 60;
-      status.textContent = 'Preparation Clock running...';
+      status.textContent = '1-Min Prep Running...';
 
       s_prepInterval = setInterval(() => {
         time--;
@@ -3883,7 +3970,7 @@
       const display = document.getElementById('s-talk-display');
       const status = document.getElementById('s-timer-status');
       let time = 120;
-      status.textContent = 'Response timer active! Speak now...';
+      status.textContent = '2-Min Response Active!';
 
       s_talkInterval = setInterval(() => {
         time--;
@@ -3893,7 +3980,7 @@
 
         if (time <= 0) {
           clearInterval(s_talkInterval);
-          status.textContent = 'Response Time Limit reached!';
+          status.textContent = 'Response limit reached!';
           display.textContent = '00:00';
           playAudioBeepAlert();
         }
@@ -3926,6 +4013,7 @@
       const player = document.getElementById('s-audio-player');
       const dLink = document.getElementById('s-download-link');
       const noAudio = document.getElementById('s-no-audio-label');
+      const waveBars = document.getElementById('s-wave-bars');
 
       if (!s_isRecording) {
         navigator.mediaDevices.getUserMedia({ audio: true })
@@ -3943,10 +4031,10 @@
               const mimeType = s_mediaRecorder.mimeType || 'audio/webm';
               const audioBlob = new Blob(s_audioChunks, { type: mimeType });
               const audioUrl = URL.createObjectURL(audioBlob);
-              
+
               player.src = audioUrl;
               player.classList.remove('hidden');
-              
+
               let ext = 'webm';
               if (mimeType.includes('mp4')) ext = 'mp4';
               else if (mimeType.includes('ogg')) ext = 'ogg';
@@ -3958,15 +4046,22 @@
               dLink.textContent = `⬇ Save Recording (.${ext})`;
               dLink.classList.remove('hidden');
               noAudio.classList.add('hidden');
+              if (status) {
+                status.textContent = 'Audio Captured';
+                status.className = 'px-2.5 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider bg-emerald-100 text-emerald-700 border border-emerald-200';
+              }
             };
 
             s_mediaRecorder.start(1000); // 1s timeslice for better browser compatibility
             s_isRecording = true;
             recIcon.textContent = '⏹️';
             pulse.classList.remove('hidden');
-            status.textContent = 'Recording Voice...';
-            status.className = 'text-xs font-bold text-red-600 block animate-pulse';
-            
+            if (waveBars) waveBars.classList.remove('hidden');
+            if (status) {
+              status.textContent = 'Recording...';
+              status.className = 'px-2.5 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider bg-rose-500 text-white animate-pulse';
+            }
+
             player.classList.add('hidden');
             dLink.classList.add('hidden');
             noAudio.classList.remove('hidden');
@@ -3990,8 +4085,7 @@
         s_isRecording = false;
         recIcon.textContent = '🔴';
         pulse.classList.add('hidden');
-        status.textContent = 'Idle';
-        status.className = 'text-xs font-bold text-[#4a453d] block';
+        if (waveBars) waveBars.classList.add('hidden');
         clearInterval(s_recTimerInterval);
       }
     }
