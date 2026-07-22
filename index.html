@@ -4016,9 +4016,28 @@
       const waveBars = document.getElementById('s-wave-bars');
 
       if (!s_isRecording) {
-        navigator.mediaDevices.getUserMedia({ audio: true })
+        const constraints = {
+          audio: {
+            echoCancellation: true,
+            noiseSuppression: true,
+            autoGainControl: true
+          }
+        };
+
+        navigator.mediaDevices.getUserMedia(constraints)
           .then(stream => {
-            s_mediaRecorder = new MediaRecorder(stream);
+            let options = {};
+            if (typeof MediaRecorder.isTypeSupported === 'function') {
+              if (MediaRecorder.isTypeSupported('audio/webm;codecs=opus')) {
+                options = { mimeType: 'audio/webm;codecs=opus' };
+              } else if (MediaRecorder.isTypeSupported('audio/webm')) {
+                options = { mimeType: 'audio/webm' };
+              } else if (MediaRecorder.isTypeSupported('audio/mp4')) {
+                options = { mimeType: 'audio/mp4' };
+              }
+            }
+
+            s_mediaRecorder = new MediaRecorder(stream, options);
             s_audioChunks = [];
 
             s_mediaRecorder.ondataavailable = event => {
@@ -4028,31 +4047,36 @@
             };
 
             s_mediaRecorder.onstop = () => {
-              const mimeType = s_mediaRecorder.mimeType || 'audio/webm';
-              const audioBlob = new Blob(s_audioChunks, { type: mimeType });
+              // Safely stop stream tracks inside onstop after chunks flush
+              stream.getTracks().forEach(track => track.stop());
+
+              const actualType = s_mediaRecorder.mimeType || options.mimeType || 'audio/webm';
+              const audioBlob = new Blob(s_audioChunks, { type: actualType });
               const audioUrl = URL.createObjectURL(audioBlob);
 
               player.src = audioUrl;
+              player.type = actualType;
+              player.load();
               player.classList.remove('hidden');
 
               let ext = 'webm';
-              if (mimeType.includes('mp4')) ext = 'mp4';
-              else if (mimeType.includes('ogg')) ext = 'ogg';
-              else if (mimeType.includes('aac')) ext = 'aac';
-              else if (mimeType.includes('wav')) ext = 'wav';
+              if (actualType.includes('mp4')) ext = 'mp4';
+              else if (actualType.includes('ogg')) ext = 'ogg';
+              else if (actualType.includes('wav')) ext = 'wav';
 
               dLink.href = audioUrl;
               dLink.download = `viatestprep_speaking_practice_${Date.now()}.${ext}`;
               dLink.textContent = `⬇ Save Recording (.${ext})`;
               dLink.classList.remove('hidden');
               noAudio.classList.add('hidden');
+
               if (status) {
                 status.textContent = 'Audio Captured';
                 status.className = 'px-2.5 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider bg-emerald-100 text-emerald-700 border border-emerald-200';
               }
             };
 
-            s_mediaRecorder.start(1000); // 1s timeslice for better browser compatibility
+            s_mediaRecorder.start(250); // 250ms timeslice to ensure frequent chunk flushing
             s_isRecording = true;
             recIcon.textContent = '⏹️';
             pulse.classList.remove('hidden');
@@ -4079,8 +4103,10 @@
           });
       } else {
         if (s_mediaRecorder && s_mediaRecorder.state !== 'inactive') {
+          if (typeof s_mediaRecorder.requestData === 'function') {
+            try { s_mediaRecorder.requestData(); } catch(e) {}
+          }
           s_mediaRecorder.stop();
-          s_mediaRecorder.stream.getTracks().forEach(track => track.stop());
         }
         s_isRecording = false;
         recIcon.textContent = '🔴';
