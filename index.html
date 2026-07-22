@@ -801,6 +801,17 @@
                       <span class="w-1 bg-rose-500 rounded-full animate-bounce h-2" style="animation-delay: 0.1s"></span>
                     </div>
                   </div>
+
+                  <!-- Real-Time Mic Input VU Meter -->
+                  <div id="s-vu-container" class="hidden w-full max-w-[220px] mt-1 space-y-1 bg-[#faf8f2] p-2 rounded-xl border border-[#ece4d2]">
+                    <div class="flex justify-between items-center text-[9px] font-bold text-[#766f62]">
+                      <span>🎙️ MIC LEVEL</span>
+                      <span id="s-vu-pct" class="font-mono text-rose-600 font-extrabold">0%</span>
+                    </div>
+                    <div class="w-full bg-stone-200 h-2 rounded-full overflow-hidden p-0.5 border border-stone-300">
+                      <div id="s-vu-bar" class="bg-gradient-to-r from-emerald-500 via-amber-500 to-rose-600 h-full rounded-full transition-all duration-75" style="width: 0%"></div>
+                    </div>
+                  </div>
                 </div>
 
                 <!-- Audio Player Widget -->
@@ -4004,6 +4015,61 @@
       }
     }
 
+    let s_audioCtx = null;
+    let s_analyser = null;
+    let s_animFrame = null;
+    let s_activeStream = null;
+
+    function startVolumeMeter(stream) {
+      try {
+        s_activeStream = stream;
+        s_audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const source = s_audioCtx.createMediaStreamSource(stream);
+        s_analyser = s_audioCtx.createAnalyser();
+        s_analyser.fftSize = 256;
+        source.connect(s_analyser);
+
+        const dataArray = new Uint8Array(s_analyser.frequencyBinCount);
+        const vuContainer = document.getElementById('s-vu-container');
+        const vuBar = document.getElementById('s-vu-bar');
+        const vuPct = document.getElementById('s-vu-pct');
+        if (vuContainer) vuContainer.classList.remove('hidden');
+
+        function updateMeter() {
+          if (!s_isRecording || !s_analyser) return;
+          s_analyser.getByteFrequencyData(dataArray);
+          let sum = 0;
+          for (let i = 0; i < dataArray.length; i++) {
+            sum += dataArray[i];
+          }
+          const average = sum / dataArray.length;
+          const pct = Math.min(100, Math.round((average / 128) * 100));
+
+          if (vuBar) vuBar.style.width = pct + '%';
+          if (vuPct) vuPct.textContent = pct + '%';
+
+          s_animFrame = requestAnimationFrame(updateMeter);
+        }
+        updateMeter();
+      } catch (e) {
+        console.warn('Volume meter could not initialize:', e);
+      }
+    }
+
+    function stopVolumeMeter() {
+      if (s_animFrame) cancelAnimationFrame(s_animFrame);
+      if (s_audioCtx) {
+        try { s_audioCtx.close(); } catch(e) {}
+        s_audioCtx = null;
+      }
+      const vuContainer = document.getElementById('s-vu-container');
+      const vuBar = document.getElementById('s-vu-bar');
+      const vuPct = document.getElementById('s-vu-pct');
+      if (vuContainer) vuContainer.classList.add('hidden');
+      if (vuBar) vuBar.style.width = '0%';
+      if (vuPct) vuPct.textContent = '0%';
+    }
+
     function toggleStudentAudioRecording() {
       const btn = document.getElementById('s-btn-record');
       const recIcon = document.getElementById('s-rec-icon');
@@ -4016,29 +4082,26 @@
       const waveBars = document.getElementById('s-wave-bars');
 
       if (!s_isRecording) {
-        const constraints = {
-          audio: {
-            echoCancellation: true,
-            noiseSuppression: true,
-            autoGainControl: true
-          }
-        };
-
-        navigator.mediaDevices.getUserMedia(constraints)
+        // Simple, highly compatible microphone request
+        navigator.mediaDevices.getUserMedia({ audio: true })
           .then(stream => {
+            s_audioChunks = [];
+            
+            // Prefer standard MediaRecorder constructor
             let options = {};
             if (typeof MediaRecorder.isTypeSupported === 'function') {
               if (MediaRecorder.isTypeSupported('audio/webm;codecs=opus')) {
                 options = { mimeType: 'audio/webm;codecs=opus' };
               } else if (MediaRecorder.isTypeSupported('audio/webm')) {
                 options = { mimeType: 'audio/webm' };
-              } else if (MediaRecorder.isTypeSupported('audio/mp4')) {
-                options = { mimeType: 'audio/mp4' };
               }
             }
 
-            s_mediaRecorder = new MediaRecorder(stream, options);
-            s_audioChunks = [];
+            try {
+              s_mediaRecorder = new MediaRecorder(stream, options);
+            } catch(e) {
+              s_mediaRecorder = new MediaRecorder(stream);
+            }
 
             s_mediaRecorder.ondataavailable = event => {
               if (event.data && event.data.size > 0) {
@@ -4047,21 +4110,20 @@
             };
 
             s_mediaRecorder.onstop = () => {
-              // Safely stop stream tracks inside onstop after chunks flush
+              stopVolumeMeter();
+              // Stop tracks inside onstop callback to avoid cutting off stream headers
               stream.getTracks().forEach(track => track.stop());
 
-              const actualType = s_mediaRecorder.mimeType || options.mimeType || 'audio/webm';
+              const actualType = s_mediaRecorder.mimeType || 'audio/webm';
               const audioBlob = new Blob(s_audioChunks, { type: actualType });
               const audioUrl = URL.createObjectURL(audioBlob);
 
               player.src = audioUrl;
-              player.type = actualType;
               player.load();
               player.classList.remove('hidden');
 
               let ext = 'webm';
               if (actualType.includes('mp4')) ext = 'mp4';
-              else if (actualType.includes('ogg')) ext = 'ogg';
               else if (actualType.includes('wav')) ext = 'wav';
 
               dLink.href = audioUrl;
@@ -4076,7 +4138,8 @@
               }
             };
 
-            s_mediaRecorder.start(250); // 250ms timeslice to ensure frequent chunk flushing
+            startVolumeMeter(stream);
+            s_mediaRecorder.start(100); // 100ms timeslice guarantees immediate data chunking
             s_isRecording = true;
             recIcon.textContent = '⏹️';
             pulse.classList.remove('hidden');
