@@ -750,12 +750,19 @@
       while (i < rawQuestions.length) {
         const q = rawQuestions[i];
 
-        // FILL_GROUP: Group consecutive FILL questions sharing the same instruction so they render in a unified layout
-        if (q.type === 'FILL') {
+        // FILL_GROUP: Group summary, notes, table, or fill-in-blank questions sharing an instruction so they render in a unified layout
+        const isSummaryOrFill = q.type === 'FILL' || 
+          (q.instruction && (
+            q.instruction.toLowerCase().includes('complete the summary') ||
+            q.instruction.toLowerCase().includes('complete the notes') ||
+            q.instruction.toLowerCase().includes('complete the table') ||
+            q.instruction.toLowerCase().includes('complete the flow-chart')
+          ));
+        if (isSummaryOrFill) {
           const matchInst = q.instruction || '';
           const group = [q];
           let j = i + 1;
-          while (j < rawQuestions.length && rawQuestions[j].type === 'FILL' && (rawQuestions[j].instruction || '') === matchInst) {
+          while (j < rawQuestions.length && (rawQuestions[j].instruction || '') === matchInst) {
             group.push(rawQuestions[j]);
             j++;
           }
