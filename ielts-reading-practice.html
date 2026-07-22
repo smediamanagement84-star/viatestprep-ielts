@@ -1015,14 +1015,15 @@
           `).join('')}</div>`;
         } else if (q.type === 'MCQ') {
           const selected = userAnswers[q.num] || '';
-          answerHtml = `<div class="mcq-options">${q.options.map(opt => {
+          const isLargeList = q.options.length > 5;
+          answerHtml = `<div class="mcq-options${isLargeList ? '' : ''}" style="${isLargeList ? 'display:grid;grid-template-columns:1fr 1fr;gap:6px;' : ''}">${q.options.map(opt => {
             const dotIdx = opt.indexOf('.');
             const letter = dotIdx !== -1 ? opt.slice(0, dotIdx).trim() : opt.trim();
-            const text = dotIdx !== -1 ? opt.slice(dotIdx + 1) : '';
+            const text = dotIdx !== -1 ? opt.slice(dotIdx + 1).trim() : '';
             const displayLetter = dotIdx !== -1 ? opt.slice(0, dotIdx + 1) : opt;
             return `
               <button onclick="selectOption(${q.num}, '${letter}')" class="mcq-option ${selected === letter ? 'selected' : ''}">
-                <span class="opt-letter">${displayLetter}</span><span>${text}</span>
+                <span class="opt-letter">${displayLetter}</span>${text ? `<span> ${text}</span>` : ''}
               </button>
             `;
           }).join('')}</div>`;
@@ -1087,8 +1088,14 @@
           // question here just needs its own bare answer buttons, not the
           // full text repeated per question.
           const selected = userAnswers[q.num] || '';
-          answerHtml = `<div class="tfng-row">${q.options.map(opt => `
-            <button onclick="selectOption(${q.num}, '${opt}')" class="tfng-btn ${selected === opt ? 'selected' : ''}">${opt}</button>
+          // Normalise options: extract just the leading letter from formats like
+          // "A. Paragraph A", "A. some text", or bare "A" — store & compare by letter.
+          const normOpts = q.options.map(opt => {
+            const m = String(opt).trim().match(/^([A-Z])\.?/);
+            return m ? m[1] : String(opt).trim();
+          });
+          answerHtml = `<div class="tfng-row" style="flex-wrap:wrap;">${normOpts.map(letter => `
+            <button onclick="selectOption(${q.num}, '${letter}')" class="tfng-btn ${selected === letter ? 'selected' : ''}">${letter}</button>
           `).join('')}</div>`;
         }
         

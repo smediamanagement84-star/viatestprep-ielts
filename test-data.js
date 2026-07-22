@@ -655,7 +655,7 @@ const IELTS_TEST_DATA = {
      "questions": [
       {
        "num": 14,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "bad outcomes for a forest when people focus only on its financial reward",
        "answer": "B",
        "explanation": "The text confirms this: \"How managing low-quality wood (also known as low-use wood) for bioenergy can encourage sustainable forest management A Atree's 'value' depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest.\"",
@@ -673,7 +673,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 15,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "reference to the aspects of any tree that contribute to its worth",
        "answer": "A",
        "explanation": "The text confirms this: \"How managing low-quality wood (also known as low-use wood) for bioenergy can encourage sustainable forest management A Atree's 'value' depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest.\"",
@@ -691,7 +691,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 16,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "mention of the potential use of wood to help run vehicles",
        "answer": "C",
        "explanation": "The text confirms this: \"How managing low-quality wood (also known as low-use wood) for bioenergy can encourage sustainable forest management A Atree's 'value' depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest.\"",
@@ -709,7 +709,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 17,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "examples of insects that attack trees",
        "answer": "E",
        "explanation": "The text confirms this: \"How managing low-quality wood (also known as low-use wood) for bioenergy can encourage sustainable forest management A Atree's 'value' depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest.\"",
@@ -727,7 +727,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 18,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "an alternative name for trees that produce low-use wood",
        "answer": "B",
        "explanation": "The text confirms this: \"How managing low-quality wood (also known as low-use wood) for bioenergy can encourage sustainable forest management A Atree's 'value' depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest.\"",
@@ -838,7 +838,7 @@ const IELTS_TEST_DATA = {
      "questions": [
       {
        "num": 27,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "areference to the cooperation that takes place to try and minimise risk",
        "answer": "C",
        "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\"",
@@ -855,7 +855,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 28,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "an explanation of a person's aims",
        "answer": "F",
        "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\"",
@@ -872,7 +872,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 29,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "adescription of a major collision that occurred in space",
        "answer": "A",
        "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\"",
@@ -889,7 +889,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 30,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "acomparison between tracking objects in space and the efficiency of a . transportation system",
        "answer": "E",
        "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\"",
@@ -906,7 +906,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 31,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "areference to efforts to classify space junk",
        "answer": "B",
        "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\"",
@@ -1854,7 +1854,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 24,
-       "type": "FILL",
+       "type": "MATCHING_INFO",
        "instruction": "Questions 24-26<br/>Complete the summary using the list of options, A-F, below.<br/><br/><div style=\"font-weight: 700; font-size: 14.5px; color: var(--accent); margin: 12px 0 14px 0; font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.03em;\">Using AI in the UK health system</div><p style=\"line-height: 2.1; font-family: 'Lora', serif; font-size: 14.5px;\">AI currently has a limited role in the way <b>(24) _________</b> are allocated in the health service. The positive aspect of AI having a bigger role is that it would be more efficient and lead to patient benefits. However, such a change would result, for example, in certain <b>(25) _________</b> not having their current level of <b>(26) _________</b>.</p>",
        "text": "AI currently has a limited role in the way _________ are allocated in the health service.",
        "answer": "C",
@@ -1870,7 +1870,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 25,
-       "type": "FILL",
+       "type": "MATCHING_INFO",
        "instruction": "Questions 24-26<br/>Complete the summary using the list of options, A-F, below.<br/><br/><div style=\"font-weight: 700; font-size: 14.5px; color: var(--accent); margin: 12px 0 14px 0; font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.03em;\">Using AI in the UK health system</div><p style=\"line-height: 2.1; font-family: 'Lora', serif; font-size: 14.5px;\">AI currently has a limited role in the way <b>(24) _________</b> are allocated in the health service. The positive aspect of AI having a bigger role is that it would be more efficient and lead to patient benefits. However, such a change would result, for example, in certain <b>(25) _________</b> not having their current level of <b>(26) _________</b>.</p>",
        "text": "However, such a change would result, for example, in certain _________ not having their current level of _________.",
        "answer": "A",
@@ -1886,7 +1886,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 26,
-       "type": "FILL",
+       "type": "MATCHING_INFO",
        "instruction": "Questions 24-26<br/>Complete the summary using the list of options, A-F, below.<br/><br/><div style=\"font-weight: 700; font-size: 14.5px; color: var(--accent); margin: 12px 0 14px 0; font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.03em;\">Using AI in the UK health system</div><p style=\"line-height: 2.1; font-family: 'Lora', serif; font-size: 14.5px;\">AI currently has a limited role in the way <b>(24) _________</b> are allocated in the health service. The positive aspect of AI having a bigger role is that it would be more efficient and lead to patient benefits. However, such a change would result, for example, in certain <b>(25) _________</b> not having their current level of <b>(26) _________</b>.</p>",
        "text": "However, such a change would result, for example, in certain _________ not having their current level of _________.",
        "answer": "E",
@@ -4978,7 +4978,7 @@ const IELTS_TEST_DATA = {
      "questions": [
       {
        "num": 14,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "a reference to a denial of involvement in piracy",
        "answer": "D",
        "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\"",
@@ -4996,7 +4996,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 15,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "details of how a campaign to eradicate piracy was carried out",
        "answer": "G",
        "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\"",
@@ -5014,7 +5014,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 16,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "a mention of the circumstances in which states in the ancient world would make use of pirates",
        "answer": "C",
        "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\"",
@@ -5032,7 +5032,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 17,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "a reference to how people today commonly view pirates",
        "answer": "A",
        "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\"",
@@ -5050,7 +5050,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 18,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "an explanation of how some people were encouraged not to return to piracy",
        "answer": "G",
        "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\"",
@@ -5068,7 +5068,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 19,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "a mention of the need for many sailing vessels to stay relatively close to land",
        "answer": "B",
        "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\"",
@@ -6083,7 +6083,7 @@ const IELTS_TEST_DATA = {
      "questions": [
       {
        "num": 14,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "reference to two chemical compounds which impact on performance",
        "answer": "D",
        "explanation": "The text confirms this: \"Not only are the physical demands greater than most people could handle, athletes also face intense psychological pressure during competition.\"",
@@ -6100,7 +6100,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 15,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "examples of strategies for minimising the effects of stress",
        "answer": "F",
        "explanation": "The text confirms this: \"A It isn't easy being a professional athlete.\"",
@@ -6117,7 +6117,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 16,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "how a sportsperson accounted for their own experience of stress",
        "answer": "A",
        "explanation": "The text confirms this: \"A It isn't easy being a professional athlete.\"",
@@ -6134,7 +6134,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 17,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "study results indicating links between stress responses and performance",
        "answer": "C",
        "explanation": "The text confirms this: \"Not only are the physical demands greater than most people could handle, athletes also face intense psychological pressure during competition.\"",
@@ -6151,7 +6151,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 18,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "mention of people who can influence how athletes perceive their stress responses",
        "answer": "F",
        "explanation": "The text confirms this: \"A It isn't easy being a professional athlete.\"",
@@ -7414,7 +7414,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 31,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "Speech translation methods are developing fast in Japan",
        "answer": "C",
        "options": [
@@ -7429,7 +7429,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 32,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "TV interviews that use translation voiceover methods are successful",
        "answer": "E",
        "options": [
@@ -7444,7 +7444,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 33,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "Future translation systems should address people appropriately",
        "answer": "F",
        "options": [
@@ -7459,7 +7459,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 34,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "Users may be able to maintain their local customs",
        "answer": "A",
        "options": [
@@ -8186,7 +8186,7 @@ const IELTS_TEST_DATA = {
      "questions": [
       {
        "num": 14,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "reference to the rapidly increasing need for one raw material in the transport industry",
        "answer": "C",
        "explanation": "The text confirms this: \"Bacteria from the ocean floor can beat superbugs and cancer.\"",
@@ -8203,7 +8203,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 15,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "a rough estimate of the area of the Earth covered by the oceans",
        "answer": "F",
        "explanation": "The text confirms this: \"Bacteria from the ocean floor can beat superbugs and cancer.\"",
@@ -8220,7 +8220,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 16,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "how a particular underwater habitat, where minerals and organisms co-exist, is formed",
        "answer": "E",
        "explanation": "The text confirms this: \"Bacteria from the ocean floor can beat superbugs and cancer.\"",
@@ -8237,7 +8237,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 17,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "reference to the fact that the countries of the world have yet to agree on rules for the exploration of the seabed",
        "answer": "D",
        "explanation": "The text confirms this: \"Bacteria from the ocean floor can beat superbugs and cancer.\"",
@@ -9392,7 +9392,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 36,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "The tone of the content we post on social media tends to reflect the nature of the posts in our feeds.",
        "answer": "YES",
        "explanation": "The passage states that the cost of reaching orbit would fall dramatically.",
@@ -9420,7 +9420,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 38,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "The more we read about a stressful public event on social media, the less able we are to take the information in.",
        "answer": "NO",
        "explanation": "The text says the elevator is clean and doesn't pollute, unlike rockets.",
@@ -9434,7 +9434,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 39,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Stress created by social media posts can lead us to take unnecessary precautions.",
        "answer": "YES",
        "explanation": "Space law and international agreements will be essential to establish territory rights.",
@@ -9448,7 +9448,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 40,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "Our tendency to be affected by other people&rsquo;s moods can be used in a positive way.",
        "answer": "YES",
        "explanation": "It suggests a global consortium will be needed to fund the project.",
@@ -10218,7 +10218,7 @@ const IELTS_TEST_DATA = {
      "questions": [
       {
        "num": 14,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "mention of false assumptions about why people procrastinate",
        "answer": "B",
        "explanation": "The passage says that many people wrongly think procrastination is because someone is lazy or can't manage their time well. Instead, studies show that it actually happens because of how we feel. The answer is B. This means that in paragraph B, the writer talks about wrong ideas people have about why procrastination happens. The correct answer is B because this paragraph says that many people think procrastination is due to laziness or bad time management. But the psychologist explains that it is really due to problems with managing feelings. This information helps us understand that there are common false beliefs about procrastination.",
@@ -10236,7 +10236,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 15,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "reference to the realisation that others also procrastinate",
        "answer": "F",
        "explanation": "The passage says that we should accept our bad feelings when we procrastinate but not be too hard on ourselves. It reminds us that many people procrastinate, just like us. The answer is F. This means that in paragraph F, there is information about realizing that other people also procrastinate. The correct answer is F because this paragraph talks about managing our feelings when we procrastinate and mentions that we should remember we are not the only ones who procrastinate.",
@@ -10254,7 +10254,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 16,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "neurological evidence of a link between procrastination and emotion",
        "answer": "B",
        "explanation": "The passage says that scientists used special pictures of the brain to see how it acts when people put off tasks. They found that people who often procrastinate have differences in areas of the brain that help with emotions and feeling safe. The answer is B. This means that paragraph B talks about how our feelings and the way our brain works can make us procrastinate. The correct answer is B because it explains that procrastination is not just about being lazy, but it is connected to how we feel and manage our emotions. The paragraph mentions that scientific studies found differences in the brain of people who procrastinate often compared to those who do not, showing a direct link between our emotions and procrastination.",
@@ -10396,7 +10396,7 @@ const IELTS_TEST_DATA = {
      "questions": [
       {
        "num": 27,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "When DeJesus first used ABS, he shared decision-making about strikes with it.",
        "answer": "NO",
        "explanation": "The passage says that DeJesus did not decide what was a strike. He only received the decisions through an earpiece. The answer is NO. This means that DeJesus did not share decision-making about strikes with the ABS. The correct answer is NO because the passage explains that DeJesus did not make decisions himself. Instead, he received the strike calls through an earpiece connected to the ABS system. This shows he was not sharing decision-making; he was just announcing what the system told him.",
@@ -10410,7 +10410,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 28,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "MLB considered it necessary to amend the size of the strike zone when criticisms were received from players.",
        "answer": "YES",
        "explanation": "The passage says that MLB changed the size of the strike zone after hearing complaints from players. This means they listened to the players and believed the changes were necessary. The answer means that the MLB agreed to change the size of the strike zone because players complained about it. The correct answer is YES because the passage states that when players complained about strange calls, MLB decided to change the dimensions of the strike zone. This shows that they took the players' criticisms seriously and made changes.",
@@ -10438,7 +10438,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 30,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "The hundred-mile-an-hour fastball led to a more exciting style of play.",
        "answer": "NO",
        "explanation": "The passage says that this kind of play does not have a lot of action. This means that it is not exciting. The answer is NO. This means that the writer does not think that the fastball made the game more exciting. The correct answer is NO because the passage explains that the fastball led to fewer exciting moments, resulting in more strikeouts, walks, and home runs. This lack of action is seen as not exciting. The writer mentions that after fastballs became common, baseball changed into a style lacking excitement, which does not agree with the statement.",
@@ -10466,7 +10466,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 32,
-       "type": "TFNG",
+       "type": "YNNG",
        "text": "ABS makes changes to the shape of the strike zone feasible.",
        "answer": "YES",
        "explanation": "The passage says that if the technology works well, ABS can create any type of strike zone shape, like a triangle or even a shape like Texas. This means that ABS can change the strike zone whenever baseball changes. The answer means that the writer believes ABS can change the shape of the strike zone. The correct answer is YES because the passage explains that once the technology for ABS is right, it can allow the strike zone to change in different shapes. This shows that ABS makes changes to the shape of the strike zone possible.",
@@ -11549,7 +11549,7 @@ const IELTS_TEST_DATA = {
      "questions": [
       {
        "num": 27,
-       "type": "FILL",
+       "type": "MCQ",
        "text": "For our own safety, humans will need to restrict the abilities of robots.",
        "answer": "A",
        "explanation": "The passage says that Martin Rees thinks we should make sure robots are not too smart and can't outsmart us. He wants to keep them safe for humans. The answer means that Martin Rees believes we should keep robots safe and not let them do everything. The correct answer is A because Martin Rees talks about how we should ensure that robots do not become too powerful and outsmart us. He wants robots to be useful but not a threat to humans.",
@@ -11563,7 +11563,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 28,
-       "type": "FILL",
+       "type": "MCQ",
        "text": "The risk of robots harming us is less serious than humans believe it to be.",
        "answer": "C",
        "explanation": "The passage says that Kathleen Richardson believes robots have never tried to hurt humans, so it looks like they will not do so in the future. The answer means that Kathleen Richardson thinks the fear of robots hurting us is not as big as people think. The correct answer is C because Kathleen Richardson said that robots have never actually been a threat to humans. She believes it is unlikely that robots will ever harm us. She suggests that many people actually appreciate what robots can do.",
@@ -11577,7 +11577,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 29,
-       "type": "FILL",
+       "type": "MCQ",
        "text": "It will take many decades for robot intelligence to be as imaginative as human intelligence.",
        "answer": "B",
        "explanation": "The passage says we think it would be very difficult for a machine to be as creative as a human for a long time, maybe not for the next 50 years. The answer is 'B', which means the statement is related to Daniel Wolpert. The correct answer is B because Daniel Wolpert discusses that while machines have already surpassed humans in some tasks, expecting machines to have the same creative intelligence as humans in the next 50 years is very ambitious. The passage highlights that machines can be very good at certain tasks, but they still cannot match the creativity of humans.",
@@ -11591,7 +11591,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 30,
-       "type": "FILL",
+       "type": "MCQ",
        "text": "We may have to start considering whether we are treating robots fairly.",
        "answer": "A",
        "explanation": "The passage says there are questions about morality regarding robots. It asks if we should feel bad about using advanced robots in ways that might not be fair. The answer is A, which means Martin Rees thinks we should think about how we treat robots fairly. The correct answer is A because Martin Rees talks about moral questions regarding robots. He asks if we should feel guilty about how we use sophisticated robots. This shows that he believes we need to think about treating robots fairly.",
@@ -11605,7 +11605,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 31,
-       "type": "FILL",
+       "type": "MCQ",
        "text": "Robots are probably of more help to us on Earth than in space.",
        "answer": "B",
        "explanation": "The passage says that it is better to use robots to collect resources that are closer to us, like on Earth. This implies that robots are more helpful to us here rather than trying to send them far into space. The answer is B. This means that Daniel Wolpert thinks robots can be more useful to us here on Earth than in space. The correct answer is B because Daniel Wolpert said that there is a better use for robots. He believes it is more important to use robots to gather resources closer to Earth, instead of sending them to other planets. He mentioned that most of Earth is hard for us to access, so using robots to help us here makes more sense.",
@@ -11619,7 +11619,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 32,
-       "type": "FILL",
+       "type": "MCQ",
        "text": "The ideas in high-quality science fiction may prove to be just as accurate as those found in the work of mediocre scientists.",
        "answer": "A",
        "explanation": "The passage says that Martin Rees tells students to read really good science fiction instead of bad science. He thinks good science fiction is more interesting and could be just as accurate. The answer means that Martin Rees believes good science fiction can be just as good as the work done by lesser scientists. The correct answer is A because Martin Rees said it is better to read high-quality science fiction than second-rate science because it is more interesting and may not be any less likely to predict the future correctly.",
@@ -11692,7 +11692,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 37,
-       "type": "FILL",
+       "type": "MCQ",
        "text": "What point does Richardson make about fear of machines?",
        "answer": "B",
        "explanation": "The passage says that Richardson thinks our fear of machines is because we often treat machines like they are people. We create machines to look and act like us, which makes us believe that they can think and feel like humans, leading us to think they might be a danger. The answer means that we are afraid of machines because we think they are like people in some ways when they are not. The correct answer is B because Richardson explains that our fear of machines is connected to how humans think of machines as if they have human feelings and thoughts. She says this tendency to attribute human traits to machines makes us see them as a threat.",
@@ -11707,7 +11707,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 38,
-       "type": "FILL",
+       "type": "MCQ",
        "text": "What potential advance does Rees see as a cause for concern?",
        "answer": "C",
        "explanation": "The passage talks about new ethical questions. It asks if we should feel bad about using smart robots and if we should worry if they are not given enough work or if they feel unhappy. The answer means that Rees is worried that artificial intelligence (AI) might learn to think and act on its own, like a human. The correct answer is C because Rees discusses how robots may become very advanced and could relate to their surroundings and people like humans do. This raises moral questions about whether we should be concerned if they start to think for themselves, which suggests they have independent thought.",
@@ -11722,7 +11722,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 39,
-       "type": "FILL",
+       "type": "MCQ",
        "text": "What does Wolpert emphasize in his response to the question about science fiction?",
        "answer": "B",
        "explanation": "The passage says that most science fiction stories always include robots in their ideas about the future. This shows that robots are very important in science fiction. The answer is B. This means that Wolpert thinks robots are very important in science fiction stories. The correct answer is B because Wolpert talks about how science fiction often shows many different futures with robots. He says that almost no science fiction imagines a future without robots, meaning robots are a key part of these stories.",
@@ -11737,7 +11737,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 40,
-       "type": "FILL",
+       "type": "MCQ",
        "text": "What is Richardson doing in her comment about reality and fantasy?",
        "answer": "C",
        "explanation": "The passage explains that Richardson is saying there was not always a clear line between reality and fantasy. Scientists created this line, but she believes it is not so simple. This means she wants people to think differently about the two. The answer is recommending a change of approach in how people view reality and fantasy. The correct answer is C because Richardson talks about how people usually think of reality and fiction as separate things. She suggests that this separation should not be so clear. She believes that we should connect these ideas better to understand them fully, so we are not afraid of what we create, like robots. This shows she is suggesting a new way for people to think about reality and fantasy.",
@@ -12493,7 +12493,7 @@ const IELTS_TEST_DATA = {
      "questions": [
       {
        "num": 14,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "how a type of plant functions as a natural protection for coastlines",
        "answer": "C",
        "explanation": "The passage says that people are trying to bring back mangroves, which are groups of trees and bushes. These plants protect the coast by catching dirt in their roots and making the area safer from strong waves. The answer is C. This means that paragraph C talks about how a kind of plant, called mangroves, helps protect coastlines. The correct answer is C because this paragraph explains about mangroves, which are special plants that protect coastal areas by trapping sediment with their roots. They also help by raising the sea bed and reducing the energy of waves. This explains how plants can be natural protection for coastlines.",
@@ -12510,7 +12510,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 15,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "a prediction about how long it could take to stop noticing the effects of climate change",
        "answer": "A",
        "explanation": "The passage says that if we stop putting CO2 into the air now, we will still feel changes in the world for about 40 years because of the CO2 that was put in before. The answer is A. This means that paragraph A talks about how long we might still see effects from climate change, even if we stop polluting the air now. The correct answer is A because this paragraph explains that even if all CO2 emissions stop today, the effects of CO2 released in the past will still continue for about 40 years. It talks about how global warming will still be happening and ice caps will keep melting and sea levels will keep rising during that time.",
@@ -12527,7 +12527,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 16,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "a reference to the fact that a solution is particularly cost-effective",
        "answer": "D",
        "explanation": "The passage says that making floating houses costs less money than making houses taller and that it costs about one-third of replacing the whole foundation. The answer is D because it says that the floating houses are cheaper than other solutions. The correct answer is D because it talks about the Buoyant Foundation Project, which makes floating houses. The founder explains that this method is much cheaper than raising houses permanently.",
@@ -12544,7 +12544,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 17,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "a mention of a technology used to locate areas most in need of intervention",
        "answer": "F",
        "explanation": "The passage is saying that they use a special technology called GIS to find streets in Los Angeles that do not have enough trees. This helps them know where to put more trees to cool the city. The answer is 'F'. This means that paragraph F talks about a technology that helps find places that need help. The correct answer is 'F' because it explains how Greg Spotts uses a Geographic Information System (GIS) data mapping tool to identify areas in Los Angeles that need tree planting and other cooling efforts. The technology helps him figure out where the streets have low tree cover, showing it is essential for finding where to assist with urban cooling.",
@@ -12676,7 +12676,7 @@ const IELTS_TEST_DATA = {
      "questions": [
       {
        "num": 27,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "An example of how one predator has been protected by the introduction of livestock guard dogs",
        "answer": "D",
        "explanation": "The passage says that after guard dogs were used, many farmers lost fewer animals. Because of this, they were less likely to kill the predators that would normally attack their livestock. The answer is 'D'. This means that paragraph D talks about how the introduction of guard dogs has helped protect predators like cheetahs. The correct answer is 'D' because this paragraph explains how guard dogs have reduced livestock losses, which in turn makes farmers less likely to kill predators such as cheetahs. It shows that the presence of guard dogs allows farmers to coexist with these animals instead of harming them.",
@@ -12694,7 +12694,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 28,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "An optimistic suggestion about the possible positive developments in the use of livestock guard dogs",
        "answer": "G",
        "explanation": "The passage means that if we use guard dogs correctly, they can help people and animals live together peacefully in the future. The answer is G. This means that in paragraph G, there is a happy idea about how livestock guard dogs might help wildlife and humans live together better. The correct answer is G because this paragraph talks about how guard dogs can protect wildlife from predators and help with biodiversity. It suggests that if we use guard dogs properly, there can be good results for both animals and humans.",
@@ -12712,7 +12712,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 29,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "A description of how the methods used by livestock guard dogs help to keep predators away",
        "answer": "B",
        "explanation": "The passage says that the dogs stand between the farm animals and any danger, and they bark loudly to warn off the predators. Sometimes, just having the dogs around is enough to keep the predators away. The answer is B. This part explains how guard dogs work with farm animals. The correct answer is B because it describes how livestock guard dogs are trained from a young age to protect their animals. It explains that these dogs become a family with the livestock and act as a barrier against threats like predators, barking to warn them away. This shows how their methods help keep predators away from the livestock.",
@@ -12730,7 +12730,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 30,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "Claims by different academics that the use of livestock guard dogs is a successful way of protecting farmers&rsquo; herds",
        "answer": "C",
        "explanation": "The passage says that scientists have found that guard dogs are very good at keeping farmers' animals safe. It talks about a study in Portugal where many farmers say the dogs work well against wolves. The answer means that paragraph C talks about how different scientists say that using dogs helps keep farmers' animals safe. The correct answer is C because it provides evidence about the effectiveness of guard dogs in protecting herds, mentioning that many farmers rate the performance of these dogs as very good or excellent. This support from different academics shows that using guard dogs is seen as successful.",
@@ -12748,7 +12748,7 @@ const IELTS_TEST_DATA = {
       },
       {
        "num": 31,
-       "type": "MCQ",
+       "type": "MATCHING_INFO",
        "text": "A reference to how livestock guard dogs gain their skills",
        "answer": "B",
        "explanation": "The passage says that guard dogs are brought up with the animals they protect, and this makes the animals like a family to the dogs. The answer is B. This means that the paragraph talks about how guard dogs learn to protect livestock. The correct answer is B because it explains that guard dogs are raised with the animals they will protect, and their training helps them understand that those animals are their family. This teaching process is important for them to gain their skills.",
