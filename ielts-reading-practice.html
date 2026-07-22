@@ -903,20 +903,6 @@
             <div class="fill-group-body">${bodyHtml}</div>
           `;
 
-          // Practice mode: Check All button + combined feedback
-          if (currentTestMode === 'practice') {
-            const nums = q.questions.map(x => x.num);
-            const footer = document.createElement('div');
-            footer.className = 'fill-group-footer';
-            footer.innerHTML = `
-              <button onclick="checkFillGroup(${JSON.stringify(nums)}, '${q.num}')" class="check-btn">Check Answers</button>
-            `;
-            card.appendChild(footer);
-            const fb = document.createElement('div');
-            fb.id = `pract-feedback-${q.num}`;
-            card.appendChild(fb);
-          }
-
           qContainer.appendChild(card);
           // Set up anchors for each sub-question so bottom nav scroll works
           q.questions.forEach(gq => {

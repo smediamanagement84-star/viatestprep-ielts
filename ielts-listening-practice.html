@@ -912,18 +912,7 @@
             optionsHtml +
             '<div class="fill-group-body">' + bodyHtml + '</div>';
 
-          // Practice mode: Check All button + combined feedback
-          if (currentTestMode === 'practice') {
-            var nums = q.questions.map(function(x) { return x.num; });
-            var footer = document.createElement('div');
-            footer.className = 'fill-group-footer';
-            footer.innerHTML = 
-              '<button onclick="checkFillGroup(' + JSON.stringify(nums) + ', \'' + q.num + '\')" class="check-btn">Check Answers</button>';
-            card.appendChild(footer);
-            var fb = document.createElement('div');
-            fb.id = 'pract-feedback-' + q.num;
-            card.appendChild(fb);
-          }
+
 
           container.appendChild(card);
           // Set up anchors for each sub-question so bottom nav scroll works
@@ -995,16 +984,6 @@
 
           matchPanel.appendChild(mRow);
 
-          if (currentTestMode === 'practice') {
-            var mPractRow = document.createElement('div');
-            mPractRow.style.cssText = 'padding:0 16px 11px;display:flex;justify-content:flex-end;';
-            mPractRow.innerHTML = '<button class="check-btn" onclick="checkPracticeAnswer(' + q.num + ', ' + idx + ')">Check Answer</button>';
-            matchPanel.appendChild(mPractRow);
-            var mFeedback = document.createElement('div');
-            mFeedback.id = 'pract-feedback-' + q.num;
-            mFeedback.style.cssText = 'padding:0 16px 11px;';
-            matchPanel.appendChild(mFeedback);
-          }
           return;
         }
 
@@ -1033,17 +1012,7 @@
             '<label class="q-review-label form-row-review"><input type="checkbox" onchange="toggleFlag(' + q.num + ')" ' + (flaggedQuestions[q.num] ? 'checked' : '') + ' /> Review</label>';
           row.appendChild(main);
 
-          if (currentTestMode === 'practice') {
-            var practRow = document.createElement('div');
-            practRow.className = 'form-row-practice';
-            practRow.id = 'pract-actions-' + q.num;
-            practRow.innerHTML = '<button class="check-btn" onclick="checkPracticeAnswer(' + q.num + ', ' + idx + ')">Check Answer</button>';
-            row.appendChild(practRow);
-            var feedbackDiv = document.createElement('div');
-            feedbackDiv.id = 'pract-feedback-' + q.num;
-            feedbackDiv.style.marginLeft = '34px';
-            row.appendChild(feedbackDiv);
-          }
+
 
           formPanel.appendChild(row);
           return;
@@ -1136,21 +1105,7 @@
         }
         card.appendChild(body);
 
-        if (currentTestMode === 'practice') {
-          var practRow = document.createElement('div');
-          practRow.style.cssText = 'display:flex;justify-content:flex-end;border-top:1px solid var(--rule-soft);margin-top:12px;padding-top:10px;';
-          practRow.id = 'pract-actions-' + q.num;
-          
-          var buttonHtml = q.isGroup 
-            ? '<button class="check-btn" onclick="checkPracticeAnswerGroup(' + JSON.stringify(q.questions.map(function(x){return x.num;})) + ', ' + idx + ')">Check Answers</button>'
-            : '<button class="check-btn" onclick="checkPracticeAnswer(' + q.num + ', ' + idx + ')">Check Answer</button>';
-          
-          practRow.innerHTML = buttonHtml;
-          card.appendChild(practRow);
-          var feedbackDiv = document.createElement('div');
-          feedbackDiv.id = 'pract-feedback-' + q.num;
-          card.appendChild(feedbackDiv);
-        }
+
 
         container.appendChild(card);
       });
