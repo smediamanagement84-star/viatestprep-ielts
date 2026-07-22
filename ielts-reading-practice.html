@@ -1287,27 +1287,29 @@
 
       // ── Rich result panel (injected into the right questions pane) ──────────
       const qContainer = document.getElementById('questionsContainer');
-      const pct = totalQs > 0 ? Math.round((correctCount / totalQs) * 100) : 0;
-      const bandColor = band >= 7.0 ? '#2f7a52' : band >= 6.0 ? '#a8792f' : '#7a2331';
-      let saveHtml;
-      if (isLoggedIn && cloudSaved) {
-        saveHtml = '<div style="margin-top:10px;display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#2f7a52;"><span>✅</span> Results saved to your profile</div>';
-      } else if (isLoggedIn && !cloudSaved) {
-        saveHtml = '<div style="margin-top:10px;display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#a8792f;"><span>⚠️</span> Could not save to cloud — stored locally only</div>';
-      } else {
-        saveHtml = '<div style="margin-top:10px;font-size:11px;color:#8a8171;">Results saved locally. <a href="index.html" style="color:#7a2331;font-weight:700;text-decoration:underline;">Log in</a> to sync across devices.</div>';
+      if (band !== undefined && qContainer) {
+        const pct = totalQs > 0 ? Math.round((correctCount / totalQs) * 100) : 0;
+        const bandColor = band >= 7.0 ? '#2f7a52' : band >= 6.0 ? '#a8792f' : '#7a2331';
+        let saveHtml;
+        if (isLoggedIn && cloudSaved) {
+          saveHtml = '<div style="margin-top:10px;display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#2f7a52;"><span>✅</span> Results saved to your profile</div>';
+        } else if (isLoggedIn && !cloudSaved) {
+          saveHtml = '<div style="margin-top:10px;display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#a8792f;"><span>⚠️</span> Could not save to cloud — stored locally only</div>';
+        } else {
+          saveHtml = '<div style="margin-top:10px;font-size:11px;color:#8a8171;">Results saved locally. <a href="index.html" style="color:#7a2331;font-weight:700;text-decoration:underline;">Log in</a> to sync across devices.</div>';
+        }
+        const resultBanner = document.createElement('div');
+        resultBanner.style.cssText = 'background:var(--paper);border:1.5px solid var(--rule);border-radius:14px;padding:16px 18px;margin-bottom:20px;';
+        resultBanner.innerHTML =
+          '<div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft);margin-bottom:8px;">Reading Result</div>' +
+          '<div style="display:flex;align-items:baseline;gap:10px;margin-bottom:4px;">' +
+            `<span style="font-family:'Fraunces',serif;font-size:36px;font-weight:800;line-height:1;color:${bandColor};">${parseFloat(band).toFixed(1)}</span>` +
+            '<span style="font-size:12px;font-weight:700;color:var(--ink-soft);">Estimated Band</span>' +
+          '</div>' +
+          `<div style="font-size:12px;color:var(--ink-soft);">${correctCount} / ${totalQs} correct <span style="font-weight:700;color:${bandColor};">(${pct}%)</span></div>` +
+          saveHtml;
+        qContainer.parentNode.insertBefore(resultBanner, qContainer);
       }
-      const resultBanner = document.createElement('div');
-      resultBanner.style.cssText = 'background:var(--paper);border:1.5px solid var(--rule);border-radius:14px;padding:16px 18px;margin-bottom:20px;';
-      resultBanner.innerHTML =
-        '<div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft);margin-bottom:8px;">Reading Result</div>' +
-        '<div style="display:flex;align-items:baseline;gap:10px;margin-bottom:4px;">' +
-          `<span style="font-family:'Fraunces',serif;font-size:36px;font-weight:800;line-height:1;color:${bandColor};">${band.toFixed(1)}</span>` +
-          '<span style="font-size:12px;font-weight:700;color:var(--ink-soft);">Estimated Band</span>' +
-        '</div>' +
-        `<div style="font-size:12px;color:var(--ink-soft);">${correctCount} / ${totalQs} correct <span style="font-weight:700;color:${bandColor};">(${pct}%)</span></div>` +
-        saveHtml;
-      qContainer.parentNode.insertBefore(resultBanner, qContainer);
       // ────────────────────────────────────────────────────────────────────────
 
       const leftPane = document.querySelector('.split-pane-left');
@@ -1334,7 +1336,6 @@
         leftPane.insertBefore(selectHeader, document.getElementById('passageContent'));
       }
 
-      const qContainer = document.getElementById('questionsContainer');
       qContainer.innerHTML = '';
 
       testData.reading.passages.forEach((passage, pIdx) => {

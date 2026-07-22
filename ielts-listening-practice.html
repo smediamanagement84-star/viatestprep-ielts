@@ -1352,7 +1352,7 @@
 
       // ── Rich result panel ───────────────────────────────────────────────────
       var audioPanel = document.querySelector('.audio-panel');
-      if (audioPanel) {
+      if (audioPanel && band !== undefined) {
         var pct = totalQs > 0 ? Math.round((correctCount / totalQs) * 100) : 0;
         var bandColor = band >= 7.0 ? '#2f7a52' : band >= 6.0 ? '#a8792f' : '#7a2331';
         var saveHtml;
