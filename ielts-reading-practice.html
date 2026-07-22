@@ -1103,20 +1103,6 @@
         }
         
         qBox.appendChild(document.createRange().createContextualFragment(answerHtml));
-
-        if (currentTestMode === 'practice') {
-          const actionHtml = q.isGroup 
-            ? `<button onclick="checkPracticeAnswerGroup(${JSON.stringify(q.questions.map(x=>x.num))}, ${idx})" class="check-btn">Check Answers</button>`
-            : `<button onclick="checkPracticeAnswer(${q.num}, ${idx})" class="check-btn">Check Answer</button>`;
-          
-          qBox.insertAdjacentHTML('beforeend', `
-            <div style="display:flex;justify-content:flex-end;border-top:1px solid var(--rule-soft);margin-top:10px;padding-top:10px;" id="pract-actions-${q.num}">
-              ${actionHtml}
-            </div>
-            <div id="pract-feedback-${q.num}"></div>
-          `);
-        }
-
         qContainer.appendChild(qBox);
       });
 
