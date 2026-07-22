@@ -294,7 +294,7 @@
         <span class="timer-text" id="timerText">60:00</span>
       </div>
     </div>
-    <button onclick="submitTest()" id="submitBtn" class="submit-btn">Submit Test</button>
+    <button onclick="submitTest()" id="submitBtn" class="submit-btn">Submit & Check Answers</button>
   </header>
 
   <div id="testBody" class="test-container">
@@ -1191,11 +1191,11 @@
         });
         if (answered < totalQs) {
           const remaining = totalQs - answered;
-          if (!confirm(`You have ${remaining} unanswered question${remaining === 1 ? '' : 's'} left (out of ${totalQs}). Are you sure you want to submit the test?`)) {
+          if (!confirm(`You have ${remaining} unanswered question${remaining === 1 ? '' : 's'} remaining (out of ${totalQs}). Do you really want to make a submission?`)) {
             return;
           }
         } else {
-          if (!confirm('Are you sure you want to submit the test? You will see your total band score immediately.')) return;
+          if (!confirm('All questions answered! Are you sure you want to submit and check your final band score & answers?')) return;
         }
       }
 

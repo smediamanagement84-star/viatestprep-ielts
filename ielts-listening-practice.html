@@ -355,7 +355,7 @@
         <span class="timer-text" id="timerText">30:00</span>
       </div>
     </div>
-    <button onclick="submitTest()" id="submitBtn" class="submit-btn">Submit Test</button>
+    <button onclick="submitTest()" id="submitBtn" class="submit-btn">Submit & Check Answers</button>
   </header>
 
   <!-- MAIN -->
@@ -1273,11 +1273,11 @@
           });
         });
         if (totalUnanswered > 0) {
-          if (!confirm('You have ' + totalUnanswered + ' unanswered question' + (totalUnanswered === 1 ? '' : 's') + ' left (out of ' + totalAll + '). Are you sure you want to submit the test?')) {
+          if (!confirm('You have ' + totalUnanswered + ' unanswered question' + (totalUnanswered === 1 ? '' : 's') + ' remaining (out of ' + totalAll + '). Do you really want to make a submission?')) {
             return;
           }
         } else {
-          if (!confirm('Are you sure you want to submit the test?')) return;
+          if (!confirm('All questions answered! Are you sure you want to submit and check your final band score & answers?')) return;
         }
       }
       var overlay = document.getElementById('listening-review-overlay');
