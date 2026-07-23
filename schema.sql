@@ -44,6 +44,12 @@ CREATE TABLE IF NOT EXISTS students (
   -- consultancy_id (consultancy-managed) or auth_user_id (self-serve) as its
   -- real "owner", never both.
   auth_user_id UUID REFERENCES auth.users(id),
+  -- CRM pipeline stage: 'Inquiry', 'Enrolled', 'Mock Testing', 'Exam Ready',
+  -- 'Completed'. Orthogonal to `status`, which is just Active/Paused.
+  stage TEXT DEFAULT 'Enrolled',
+  next_follow_up DATE,               -- when the consultancy should next contact this student
+  activity_log JSONB DEFAULT '[]'::jsonb, -- dated CRM entries: [{ date, type: 'note'|'stage'|'followup', text }]
+  notes TEXT,                        -- free-form academic notes from the CRM profile
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 

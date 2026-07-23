@@ -991,45 +991,42 @@
         </div>
 
         <div id="crm-active-views-container">
-        <!-- Subscription & Seat Capacity -->
-        <section id="crm-capacity-card" class="rounded-2xl shadow-sm p-5 mb-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-5" style="background:linear-gradient(135deg,#fffefb,#f9f2df);border:1px solid #ece0c4">
-          <div class="shrink-0 flex items-center gap-3">
-            <div class="w-11 h-11 rounded-xl flex items-center justify-center text-lg shrink-0" style="background:rgba(122,35,49,.1);color:#7a2331">👑</div>
-            <div>
-              <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider block">Current Plan</span>
-              <span id="c-cap-plan" class="text-sm font-extrabold text-[#7a2331]">Growth Plan</span>
-              <span id="c-cap-renewal" class="text-[10px] text-[#8a8171] block mt-0.5">Renews in — days</span>
-            </div>
+        <!-- Subscription & Seat Capacity: one slim strip, not a hero card -
+             the roster is the main event, not the billing state. -->
+        <section id="crm-capacity-card" class="rounded-xl p-2.5 px-4 mb-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs" style="background:linear-gradient(135deg,#fffefb,#f9f2df);border:1px solid #ece0c4">
+          <span class="font-extrabold text-[#7a2331] flex items-center gap-1.5">👑 <span id="c-cap-plan">Growth Plan</span></span>
+          <span class="text-[#c9c0ac]">|</span>
+          <span id="c-cap-count" class="font-bold text-[#1c1a17]">0 / 25 students</span>
+          <div class="flex-1 min-w-[100px] max-w-[220px] h-2 bg-white border border-[#ece0c4] rounded-full overflow-hidden shadow-inner">
+            <div id="c-cap-bar" class="h-full rounded-full transition-all duration-300" style="width:0%;background:#1f7a4d"></div>
           </div>
-          <div class="flex-1 min-w-[180px]">
-            <div class="flex justify-between items-baseline mb-1">
-              <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider">Seats Used</span>
-              <span id="c-cap-count" class="text-xs font-extrabold text-[#1c1a17]">0 / 25 students</span>
-            </div>
-            <div class="w-full h-3 bg-white border border-[#ece0c4] rounded-full overflow-hidden shadow-inner">
-              <div id="c-cap-bar" class="h-full rounded-full transition-all duration-300" style="width:0%;background:#1f7a4d"></div>
-            </div>
-          </div>
-          <div class="shrink-0 flex items-center">
-            <button onclick="openUpgradeFlow()" id="c-cap-upgrade-btn" class="hidden px-4 py-2 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-xl text-xs transition whitespace-nowrap">⬆ Upgrade Plan</button>
-            <button onclick="openUpgradeFlow()" id="c-cap-manage-btn" class="px-4 py-2 border border-[#e5ded0] hover:border-[#7a2331] text-[#5c5648] font-bold rounded-xl text-xs transition whitespace-nowrap">Manage Plan</button>
-          </div>
+          <span id="c-cap-renewal" class="text-[10px] text-[#8a8171]">Renews in — days</span>
+          <span class="flex-1"></span>
+          <button onclick="openUpgradeFlow()" id="c-cap-upgrade-btn" class="hidden px-3 py-1.5 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-lg text-[10px] transition whitespace-nowrap">⬆ Upgrade Plan</button>
+          <button onclick="openUpgradeFlow()" id="c-cap-manage-btn" class="px-3 py-1.5 border border-[#e5ded0] hover:border-[#7a2331] text-[#5c5648] font-bold rounded-lg text-[10px] transition whitespace-nowrap">Manage Plan</button>
         </section>
 
-        <!-- KPI Row -->
-        <section class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          <div class="crm-kpi-card">
+        <!-- KPI Row: the counting cards double as one-click roster filters -->
+        <section class="grid grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
+          <div class="crm-kpi-card cursor-pointer hover:shadow-md transition" onclick="applyCRMQuickFilter('all')" title="Show every student">
             <div class="crm-kpi-icon" style="background:rgba(122,35,49,.08);color:#7a2331">👥</div>
             <div>
               <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider">Total Enrolled</span>
               <span id="c-kpi-total" class="text-2xl font-extrabold text-[#1c1a17] block leading-tight">0</span>
             </div>
           </div>
-          <div class="crm-kpi-card">
+          <div class="crm-kpi-card cursor-pointer hover:shadow-md transition" onclick="applyCRMQuickFilter('active')" title="Filter roster to Active students">
             <div class="crm-kpi-icon" style="background:rgba(31,122,77,.1);color:#1f7a4d">✓</div>
             <div>
               <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider">Active Status</span>
               <span id="c-kpi-active" class="text-2xl font-extrabold text-[#1c1a17] block leading-tight">0</span>
+            </div>
+          </div>
+          <div class="crm-kpi-card cursor-pointer hover:shadow-md transition" onclick="applyCRMQuickFilter('followups')" title="Students whose follow-up is due or overdue">
+            <div class="crm-kpi-icon" style="background:rgba(185,28,28,.08);color:#b91c1c">📞</div>
+            <div>
+              <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider">Follow-ups Due</span>
+              <span id="c-kpi-followups" class="text-2xl font-extrabold text-rose-700 block leading-tight">0</span>
             </div>
           </div>
           <div class="crm-kpi-card">
@@ -1039,7 +1036,7 @@
               <span id="c-kpi-avg" class="text-2xl font-extrabold text-[#7a2331] block leading-tight">—</span>
             </div>
           </div>
-          <div class="crm-kpi-card">
+          <div class="crm-kpi-card cursor-pointer hover:shadow-md transition" onclick="switchCRMTab('grader')" title="Open the Live Speaking Grader">
             <div class="crm-kpi-icon" style="background:rgba(16,185,129,.1);color:#059669">🎤</div>
             <div>
               <span class="text-[9px] uppercase font-bold text-[#8a8171] tracking-wider">Speaking Graded</span>
@@ -1049,18 +1046,23 @@
         </section>
 
         <!-- CRM Tab 1: Roster -->
-        <div id="crm-roster-view" class="crm-subview space-y-4">
-          <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
-            <input type="text" id="rosterSearch" oninput="renderCRMTable()" placeholder="🔍 Search by name, email, or Student ID..." class="w-full sm:w-72 px-4 py-2 border border-[#e5ded0] rounded-xl text-xs focus:outline-none focus:border-[#7a2331] bg-white" />
-            <div class="flex flex-wrap gap-2 w-full sm:w-auto">
-              <select id="rosterStatusFilter" onchange="renderCRMTable()" class="select-elegant px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none">
-                <option value="all">All Statuses</option>
-                <option value="Active">Active</option>
-                <option value="Completed">Completed</option>
-                <option value="Paused">Paused</option>
-              </select>
-              <button onclick="loadCRMDemoData()" class="px-3.5 py-2 bg-[#efe6d0] hover:bg-[#e5ded0] text-[#4a453d] font-bold rounded-xl text-xs transition">Seed Demo Students</button>
-              <button onclick="openCRMAddModal()" class="px-3.5 py-2 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-xl text-xs transition">+ Register Student</button>
+        <div id="crm-crm-view" class="crm-subview space-y-4">
+          <div class="sticky top-0 z-10 bg-[#f3ecd8] pb-1 space-y-3">
+            <!-- Pipeline stage chips: filter + live counts, populated by JS -->
+            <div id="crmStageChips" class="flex flex-wrap gap-1.5">
+              <!-- Populated by renderCRMStageChips() -->
+            </div>
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+              <input type="text" id="rosterSearch" oninput="renderCRMTable()" placeholder="🔍 Search by name, email, or Student ID..." class="w-full sm:w-72 px-4 py-2 border border-[#e5ded0] rounded-xl text-xs focus:outline-none focus:border-[#7a2331] bg-white" />
+              <div class="flex flex-wrap gap-2 w-full sm:w-auto">
+                <select id="rosterStatusFilter" onchange="renderCRMTable()" class="select-elegant px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none">
+                  <option value="all">All Statuses</option>
+                  <option value="Active">Active</option>
+                  <option value="Paused">Paused</option>
+                </select>
+                <button onclick="loadCRMDemoData()" class="px-3.5 py-2 bg-[#efe6d0] hover:bg-[#e5ded0] text-[#4a453d] font-bold rounded-xl text-xs transition">Seed Demo Students</button>
+                <button onclick="openCRMAddModal()" class="px-3.5 py-2 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-xl text-xs transition">+ Register Student</button>
+              </div>
             </div>
           </div>
 
@@ -1071,7 +1073,8 @@
                   <th class="p-4">Student</th>
                   <th class="p-4">Contacts</th>
                   <th class="p-4 text-center">Target Band</th>
-                  <th class="p-4 text-center">Status</th>
+                  <th class="p-4 text-center">Stage</th>
+                  <th class="p-4 text-center">Follow-up</th>
                   <th class="p-4 text-center">Avg Score</th>
                   <th class="p-4 text-right">Actions</th>
                 </tr>
@@ -1503,9 +1506,24 @@
             <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Status</label>
             <select id="crmStudStatus" class="select-elegant px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none">
               <option value="Active">Active</option>
-              <option value="Completed">Completed</option>
               <option value="Paused">Paused</option>
             </select>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="flex flex-col gap-1">
+            <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Pipeline Stage</label>
+            <select id="crmStudStage" class="select-elegant px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none">
+              <option value="Inquiry">Inquiry</option>
+              <option value="Enrolled" selected>Enrolled</option>
+              <option value="Mock Testing">Mock Testing</option>
+              <option value="Exam Ready">Exam Ready</option>
+              <option value="Completed">Completed</option>
+            </select>
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Next Follow-up</label>
+            <input type="date" id="crmStudFollowUp" class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-[#f3ecd8] focus:bg-white outline-none focus:border-[#7a2331]" />
           </div>
         </div>
         <div class="flex flex-col gap-1">
@@ -1557,10 +1575,44 @@
           </div>
         </div>
 
+        <!-- Pipeline stage stepper -->
+        <div class="bg-white border border-[#ece4d2] rounded-xl p-4">
+          <div class="flex justify-between items-center mb-2.5">
+            <strong class="text-[#1c1a17] uppercase tracking-wider text-[9px]">Pipeline Stage</strong>
+            <button id="drawerAdvanceBtn" onclick="advanceStudentStage()" class="px-2.5 py-1 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-lg text-[10px] transition">Advance →</button>
+          </div>
+          <div id="drawerStageSteps" class="flex items-center gap-1">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Follow-up + note logging -->
+        <div class="bg-white border border-[#ece4d2] rounded-xl p-4 space-y-3">
+          <div class="flex items-center justify-between gap-3">
+            <strong class="text-[#1c1a17] uppercase tracking-wider text-[9px]">Next Follow-up</strong>
+            <div class="flex items-center gap-2">
+              <input type="date" id="drawerFollowUpInput" class="px-2 py-1 border border-[#e5ded0] rounded-lg text-[10px] bg-[#f3ecd8] focus:bg-white outline-none focus:border-[#7a2331]" />
+              <button onclick="saveStudentFollowUp()" class="px-2.5 py-1 border border-[#e5ded0] hover:border-[#7a2331] text-[#5c5648] font-bold rounded-lg text-[10px] transition">Save</button>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <input type="text" id="drawerNoteInput" placeholder="Log a note... (call outcome, doc received, weak area)" class="flex-1 px-3 py-2 border border-[#e5ded0] rounded-lg text-[10px] bg-[#f3ecd8] focus:bg-white outline-none focus:border-[#7a2331]" onkeydown="if(event.key==='Enter'){event.preventDefault();saveStudentNote();}" />
+            <button onclick="saveStudentNote()" class="px-3 py-2 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-lg text-[10px] transition">+ Note</button>
+          </div>
+        </div>
+
         <!-- Academic notes -->
         <div class="bg-[#f3ecd8] border border-[#ece4d2] rounded-xl p-4 text-xs text-[#5c5648]">
           <strong class="text-[#1c1a17] uppercase tracking-wider text-[9px] block mb-1">Academic Notes &amp; Weaknesses</strong>
           <p id="drawerNotes" class="leading-relaxed">Applying for Masters in Australia. Weak in spelling.</p>
+        </div>
+
+        <!-- CRM activity feed (notes, stage moves, follow-up changes) -->
+        <div class="space-y-3">
+          <h4 class="font-extrabold text-xs text-[#8a8171] uppercase tracking-wider">Activity &amp; Notes</h4>
+          <div id="drawerActivity" class="space-y-2">
+            <!-- Populated by JS -->
+          </div>
         </div>
 
         <!-- Scores History Timeline -->
@@ -1585,6 +1637,41 @@
     let crmStudents = [];
     let currentStudentTab = 'vault';
     let currentCRMTab = 'crm';
+
+    // CRM enrollment pipeline. `stage` (this ordered list) tracks progress
+    // through the consultancy's process; `status` is only Active/Paused.
+    // Legacy records that used status 'Completed' are folded into the
+    // pipeline by getStudentStage() below.
+    const CRM_STAGES = ['Inquiry', 'Enrolled', 'Mock Testing', 'Exam Ready', 'Completed'];
+    let crmStageFilter = 'all';      // 'all' or one of CRM_STAGES
+    let crmFollowupOnly = false;     // true = only students whose follow-up is due/overdue
+    let drawerActiveStudentId = null;
+
+    function getStudentStage(s) {
+      if (s.stage && CRM_STAGES.includes(s.stage)) return s.stage;
+      if (s.status === 'Completed') return 'Completed';
+      return 'Enrolled';
+    }
+
+    // 'overdue' | 'today' | 'future' | 'none' for a student's next_follow_up.
+    function followUpState(s) {
+      if (!s.followUp) return 'none';
+      const today = new Date(); today.setHours(0, 0, 0, 0);
+      const due = new Date(s.followUp + 'T00:00:00');
+      if (isNaN(due)) return 'none';
+      if (due < today) return 'overdue';
+      if (due.getTime() === today.getTime()) return 'today';
+      return 'future';
+    }
+
+    // Numeric-only band average - mockHistory rows can carry overall '—'
+    // (e.g. a writing submission with no band yet), and parseFloat('—') is
+    // NaN, which used to poison the whole average into displaying "NaN".
+    function avgBand(history) {
+      const nums = (history || []).map(h => parseFloat(h.overall)).filter(n => !isNaN(n));
+      if (nums.length === 0) return null;
+      return (nums.reduce((a, b) => a + b, 0) / nums.length);
+    }
 
     // Human-readable, sequential Student IDs (VTP-0001, VTP-0002, ...) - distinct
     // from each student's internal `id` (which stays an opaque unique key). Backed
@@ -1819,15 +1906,19 @@
         if (cloudStudents) {
           crmStudents = cloudStudents.map(cs => ({
             id: cs.id,
+            studentId: cs.student_id || '',
             name: cs.name,
             email: cs.email,
             phone: cs.phone || '',
             target: parseFloat(cs.target_band) || 7.0,
-            status: cs.status || 'Active',
+            status: cs.status === 'Paused' ? 'Paused' : 'Active',
+            stage: cs.stage || (cs.status === 'Completed' ? 'Completed' : 'Enrolled'),
+            followUp: cs.next_follow_up || null,
+            activityLog: Array.isArray(cs.activity_log) ? cs.activity_log : [],
             access_expires_at: cs.access_expires_at || new Date(Date.now() + 30*24*60*60*1000).toISOString(),
             accessToken: cs.access_token || '',
             accessLevel: cs.access_level || 'full',
-            notes: '',
+            notes: cs.notes || '',
             mockHistory: []
           }));
           
@@ -2264,7 +2355,13 @@
           phone: '9841398745',
           target: 7.5,
           status: 'Active',
+          stage: 'Mock Testing',
+          followUp: new Date(Date.now() - 2*24*60*60*1000).toISOString().split('T')[0], // overdue, for demo
           notes: 'Wants to apply for University of Toronto. Strong vocabulary, struggles with writing structures and spelling.',
+          activityLog: [
+            { date: new Date(Date.now() - 3*24*60*60*1000).toISOString(), type: 'stage', text: 'Moved from Enrolled to Mock Testing' },
+            { date: new Date(Date.now() - 6*24*60*60*1000).toISOString(), type: 'note', text: 'Called re: Writing Task 2 structure - sent template.' }
+          ],
           mockHistory: [
             { test: 'Cambridge 18 - Test 1', date: '2026-06-12', listening: '7.5', reading: '7.0', writing: '6.5', speaking: '7.0', overall: '7.0' },
             { test: 'Cambridge 18 - Test 2', date: '2026-06-19', listening: '8.0', reading: '7.5', writing: '7.0', speaking: '7.5', overall: '7.5' }
@@ -2278,7 +2375,10 @@
           phone: '9851088746',
           target: 7.0,
           status: 'Active',
+          stage: 'Enrolled',
+          followUp: new Date(Date.now() + 3*24*60*60*1000).toISOString().split('T')[0],
           notes: 'Focusing on UKVI academic. Needs to practice coherent weaving and punctuation signals.',
+          activityLog: [],
           mockHistory: [
             { test: 'Cambridge 18 - Test 1', date: '2026-06-15', listening: '6.5', reading: '6.5', writing: '6.0', speaking: '6.5', overall: '6.5' }
           ]
@@ -2290,8 +2390,13 @@
           email: 'ramesh.thapa@gmail.com',
           phone: '9813958742',
           target: 6.5,
-          status: 'Completed',
+          status: 'Active',
+          stage: 'Completed',
+          followUp: null,
           notes: 'Already sat for official exam. Achieved target band 7.0.',
+          activityLog: [
+            { date: '2026-05-28T10:00:00.000Z', type: 'stage', text: 'Moved from Exam Ready to Completed' }
+          ],
           mockHistory: [
             { test: 'Cambridge 18 - Test 1', date: '2026-05-14', listening: '6.5', reading: '6.0', writing: '6.5', speaking: '6.5', overall: '6.5' },
             { test: 'Cambridge 19 - Test 1', date: '2026-05-28', listening: '7.0', reading: '7.0', writing: '6.5', speaking: '7.5', overall: '7.0' }
@@ -4304,11 +4409,11 @@
       const expiresAt = localStorage.getItem('viatestprep_consultancy_expires_at');
       if (isUnlimited) {
         renewalEl.textContent = 'Unlimited admin access';
-        renewalEl.className = 'text-[10px] text-[#8a8171] block mt-0.5';
+        renewalEl.className = 'text-[10px] text-[#8a8171]';
       } else if (expiresAt) {
         const daysLeft = Math.ceil((new Date(expiresAt) - new Date()) / 86400000);
         renewalEl.textContent = daysLeft > 0 ? ('Renews in ' + daysLeft + ' day' + (daysLeft === 1 ? '' : 's')) : 'Subscription expired - renew now';
-        renewalEl.className = daysLeft <= 5 ? 'text-[10px] text-rose-600 font-bold block mt-0.5' : 'text-[10px] text-[#8a8171] block mt-0.5';
+        renewalEl.className = daysLeft <= 5 ? 'text-[10px] text-rose-600 font-bold' : 'text-[10px] text-[#8a8171]';
       } else {
         renewalEl.textContent = '';
       }
@@ -4394,67 +4499,147 @@
       }
     }
 
+    // KPI cards double as one-click roster filters.
+    function applyCRMQuickFilter(mode) {
+      switchCRMTab('crm');
+      if (mode === 'all') {
+        crmStageFilter = 'all';
+        crmFollowupOnly = false;
+        document.getElementById('rosterStatusFilter').value = 'all';
+        document.getElementById('rosterSearch').value = '';
+      } else if (mode === 'active') {
+        crmFollowupOnly = false;
+        document.getElementById('rosterStatusFilter').value = 'Active';
+      } else if (mode === 'followups') {
+        crmFollowupOnly = true;
+        crmStageFilter = 'all';
+        document.getElementById('rosterStatusFilter').value = 'all';
+      }
+      renderCRMTable();
+    }
+
+    function setCRMStageFilter(stage) {
+      crmStageFilter = stage;
+      crmFollowupOnly = false;
+      renderCRMTable();
+    }
+
+    // Pipeline chips above the roster: each stage with a live count, acting
+    // as a filter. The "Due follow-ups" chip appears only when there are any.
+    function renderCRMStageChips() {
+      const wrap = document.getElementById('crmStageChips');
+      if (!wrap) return;
+
+      const counts = {};
+      CRM_STAGES.forEach(st => counts[st] = 0);
+      let dueCount = 0;
+      crmStudents.forEach(s => {
+        counts[getStudentStage(s)]++;
+        const fs = followUpState(s);
+        if (fs === 'overdue' || fs === 'today') dueCount++;
+      });
+
+      const chip = (label, count, active, onclick, extraCls) => `
+        <button onclick="${onclick}" class="px-3 py-1.5 rounded-lg text-[10px] font-bold border transition ${active
+          ? 'bg-[#7a2331] text-white border-[#7a2331]'
+          : (extraCls || 'bg-white text-[#5c5648] border-[#e5ded0] hover:border-[#7a2331]')}">
+          ${label} <span class="${active ? 'text-white/70' : 'text-[#c9c0ac]'} font-black ml-0.5">${count}</span>
+        </button>`;
+
+      let html = chip('All', crmStudents.length, crmStageFilter === 'all' && !crmFollowupOnly, "setCRMStageFilter('all')");
+      CRM_STAGES.forEach(st => {
+        html += chip(st, counts[st], crmStageFilter === st && !crmFollowupOnly, `setCRMStageFilter('${st}')`);
+      });
+      if (dueCount > 0) {
+        html += chip('📞 Due follow-ups', dueCount, crmFollowupOnly, "applyCRMQuickFilter('followups')", 'bg-rose-50 text-rose-700 border-rose-200 hover:border-rose-400');
+      }
+      wrap.innerHTML = html;
+    }
+
     function renderCRMTable() {
       const search = document.getElementById('rosterSearch').value.toLowerCase();
       const statusFilter = document.getElementById('rosterStatusFilter').value;
       const tbody = document.getElementById('crmTableBody');
       const noRoster = document.getElementById('noRosterLabel');
-      
+
       tbody.innerHTML = '';
-      
+
       const filtered = crmStudents.filter(s => {
-        const matchesSearch = s.name.toLowerCase().includes(search) || s.email.toLowerCase().includes(search) || (s.studentId || '').toLowerCase().includes(search);
+        const name = String(s.name || '').toLowerCase();
+        const email = String(s.email || '').toLowerCase();
+        const matchesSearch = name.includes(search) || email.includes(search) || String(s.studentId || '').toLowerCase().includes(search);
         const matchesStatus = statusFilter === 'all' || s.status === statusFilter;
-        return matchesSearch && matchesStatus;
+        const matchesStage = crmStageFilter === 'all' || getStudentStage(s) === crmStageFilter;
+        const fs = followUpState(s);
+        const matchesFollowup = !crmFollowupOnly || fs === 'overdue' || fs === 'today';
+        return matchesSearch && matchesStatus && matchesStage && matchesFollowup;
       });
 
       if (filtered.length === 0) {
         noRoster.classList.remove('hidden');
       } else {
         noRoster.classList.add('hidden');
-        
-        filtered.forEach(s => {
-          let avgMock = '—';
-          if (s.mockHistory && s.mockHistory.length > 0) {
-            const sum = s.mockHistory.reduce((acc, curr) => acc + parseFloat(curr.overall), 0);
-            avgMock = (sum / s.mockHistory.length).toFixed(1);
-          }
 
-          const initials = s.name.trim().split(/\s+/).slice(0, 2).map(w => w[0]).join('').toUpperCase();
-          const tr = document.createElement('tr');
-          tr.className = 'hover:bg-[#f3ecd8] transition cursor-pointer';
-          tr.onclick = () => openCRMProfileDrawer(s.id);
-          tr.innerHTML = `
-            <td class="p-4 font-bold text-[#1c1a17]">
-              <div class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-full flex items-center justify-center text-xs font-black shrink-0" style="background:rgba(122,35,49,.08);color:#7a2331">${escapeHtml(initials)}</div>
-                <div>
-                  ${escapeHtml(s.name)}
-                  <span class="block text-[9px] font-mono font-bold text-[#a8792f] mt-0.5">${escapeHtml(s.studentId || '—')}</span>
+        filtered.forEach(s => {
+          // Per-row isolation: one malformed student record (bad name, odd
+          // history shape, missing field from an older schema) must never
+          // blank the entire roster - that failure mode is exactly what made
+          // the whole CRM look empty and broken.
+          try {
+            const avg = avgBand(s.mockHistory);
+            const avgMock = avg === null ? '—' : avg.toFixed(1);
+            const stage = getStudentStage(s);
+            const stageStyles = {
+              'Inquiry': 'bg-sky-50 text-sky-700 border-sky-200',
+              'Enrolled': 'bg-emerald-50 text-emerald-700 border-emerald-100',
+              'Mock Testing': 'bg-amber-50 text-amber-700 border-amber-200',
+              'Exam Ready': 'bg-violet-50 text-violet-700 border-violet-200',
+              'Completed': 'bg-[#f3ecd8] text-[#7a2331] border-[#e5ded0]',
+            };
+            const fs = followUpState(s);
+            const fuLabel = s.followUp
+              ? `<span class="text-[10px] font-bold ${fs === 'overdue' ? 'text-rose-600' : (fs === 'today' ? 'text-amber-600' : 'text-[#8a8171]')}">${fs === 'overdue' ? '⚠ ' : ''}${escapeHtml(s.followUp)}${fs === 'today' ? ' (today)' : ''}</span>`
+              : '<span class="text-[10px] text-[#c9c0ac]">—</span>';
+
+            const initials = String(s.name || '?').trim().split(/\s+/).slice(0, 2).map(w => w[0] || '').join('').toUpperCase() || '?';
+            const tr = document.createElement('tr');
+            tr.className = 'hover:bg-[#f3ecd8] transition cursor-pointer';
+            tr.onclick = () => openCRMProfileDrawer(s.id);
+            tr.innerHTML = `
+              <td class="p-4 font-bold text-[#1c1a17]">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-full flex items-center justify-center text-xs font-black shrink-0" style="background:rgba(122,35,49,.08);color:#7a2331">${escapeHtml(initials)}</div>
+                  <div>
+                    ${escapeHtml(s.name || '(unnamed)')}
+                    ${s.status === 'Paused' ? '<span class="ml-1 px-1.5 py-0.5 rounded text-[8px] font-black uppercase bg-[#efe6d0] text-[#8a8171] border border-[#e5ded0]">Paused</span>' : ''}
+                    <span class="block text-[9px] font-mono font-bold text-[#a8792f] mt-0.5">${escapeHtml(s.studentId || '—')}</span>
+                  </div>
                 </div>
-              </div>
-            </td>
-            <td class="p-4 text-xs">
-              <span class="text-[#766f62] block">${escapeHtml(s.email)}</span>
-              <span class="text-[#4a453d] font-bold block mt-0.5">${escapeHtml(s.phone)}</span>
-            </td>
-            <td class="p-4 text-center font-extrabold text-[#1c1a17]">${s.target}</td>
-            <td class="p-4 text-center">
-              <span class="px-2 py-0.5 rounded-full text-[9px] font-black uppercase border ${s.status === 'Active' ? 'bg-emerald-50 text-emerald-700 border-emerald-100' : (s.status === 'Completed' ? 'bg-[#f3ecd8] text-[#7a2331] border-[#e5ded0]' : 'bg-[#efe6d0] text-[#5c5648] border-[#e5ded0]')}">
-                ${s.status}
-              </span>
-            </td>
-            <td class="p-4 text-center font-extrabold text-[#7a2331]">${avgMock}</td>
-            <td class="p-4 text-right flex justify-end gap-1.5" onclick="event.stopPropagation()">
-              <button onclick="copyStudentAccessLink('${s.id}')" title="Copy this student's personal login link" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-xs font-bold bg-[#f3ecd8] hover:bg-[#f3ecd8] hover:text-[#7a2331] hover:border-[#e5ded0] transition">🔗 Access Link</button>
-              <button onclick="editCRMStudent('${s.id}')" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-xs font-bold bg-[#f3ecd8] hover:bg-[#f3ecd8] hover:text-[#7a2331] hover:border-[#e5ded0] transition">Edit</button>
-              <button onclick="deleteCRMStudent('${s.id}')" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-xs font-bold bg-[#f3ecd8] hover:bg-rose-50 hover:text-rose-600 hover:border-rose-200 transition">Delete</button>
-            </td>
-          `;
-          tbody.appendChild(tr);
+              </td>
+              <td class="p-4 text-xs">
+                <span class="text-[#766f62] block">${escapeHtml(s.email || '—')}</span>
+                <span class="text-[#4a453d] font-bold block mt-0.5">${escapeHtml(s.phone || '—')}</span>
+              </td>
+              <td class="p-4 text-center font-extrabold text-[#1c1a17]">${s.target || '—'}</td>
+              <td class="p-4 text-center">
+                <span class="px-2 py-0.5 rounded-full text-[9px] font-black uppercase border whitespace-nowrap ${stageStyles[stage]}">${stage}</span>
+              </td>
+              <td class="p-4 text-center">${fuLabel}</td>
+              <td class="p-4 text-center font-extrabold text-[#7a2331]">${avgMock}</td>
+              <td class="p-4 text-right flex justify-end gap-1.5" onclick="event.stopPropagation()">
+                <button onclick="copyStudentAccessLink('${s.id}')" title="Copy this student's personal login link" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-xs font-bold bg-[#f3ecd8] hover:bg-[#f3ecd8] hover:text-[#7a2331] hover:border-[#e5ded0] transition">🔗 Access Link</button>
+                <button onclick="editCRMStudent('${s.id}')" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-xs font-bold bg-[#f3ecd8] hover:bg-[#f3ecd8] hover:text-[#7a2331] hover:border-[#e5ded0] transition">Edit</button>
+                <button onclick="deleteCRMStudent('${s.id}')" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-xs font-bold bg-[#f3ecd8] hover:bg-rose-50 hover:text-rose-600 hover:border-rose-200 transition">Delete</button>
+              </td>
+            `;
+            tbody.appendChild(tr);
+          } catch (rowErr) {
+            console.error('Could not render roster row for student', s && s.id, rowErr);
+          }
         });
       }
 
+      renderCRMStageChips();
       updateCRMKPIs();
     }
 
@@ -4462,25 +4647,30 @@
       document.getElementById('c-kpi-total').textContent = crmStudents.length;
       document.getElementById('c-kpi-active').textContent = crmStudents.filter(s => s.status === 'Active').length;
       updateCRMCapacityWidget();
-      
+
       let sum = 0;
       let count = 0;
       let gradedSpeaking = 0;
-      
+      let followupsDue = 0;
+
       crmStudents.forEach(s => {
+        const fs = followUpState(s);
+        if (fs === 'overdue' || fs === 'today') followupsDue++;
         if (s.mockHistory) {
           s.mockHistory.forEach(h => {
-            sum += parseFloat(h.overall);
-            count++;
-            if (h.test.includes('Speaking') || typeof h.speaking === 'object') {
+            const band = parseFloat(h.overall);
+            if (!isNaN(band)) { sum += band; count++; }
+            if (String(h.test || '').includes('Speaking') || typeof h.speaking === 'object') {
               gradedSpeaking++;
             }
           });
         }
       });
-      
+
       document.getElementById('c-kpi-avg').textContent = count > 0 ? (sum / count).toFixed(1) : '—';
       document.getElementById('c-kpi-speaking').textContent = gradedSpeaking;
+      const fuEl = document.getElementById('c-kpi-followups');
+      if (fuEl) fuEl.textContent = followupsDue;
     }
 
     function openCRMAddModal() {
@@ -4500,6 +4690,8 @@
       document.getElementById('crmStudPhone').value = '';
       document.getElementById('crmStudTarget').value = '7.0';
       document.getElementById('crmStudStatus').value = 'Active';
+      document.getElementById('crmStudStage').value = 'Enrolled';
+      document.getElementById('crmStudFollowUp').value = '';
       document.getElementById('crmStudAccessLevel').value = 'full';
       document.getElementById('crmStudNotes').value = '';
 
@@ -4520,8 +4712,19 @@
       const phone = document.getElementById('crmStudPhone').value.trim();
       const target = parseFloat(document.getElementById('crmStudTarget').value);
       const status = document.getElementById('crmStudStatus').value;
+      const stage = document.getElementById('crmStudStage').value;
+      const followUp = document.getElementById('crmStudFollowUp').value || null;
       const accessLevel = document.getElementById('crmStudAccessLevel').value;
       const notes = document.getElementById('crmStudNotes').value.trim();
+
+      // Duplicate-email guard - the DB's UNIQUE constraint would reject the
+      // row anyway, but silently (the insert is fire-and-forget), leaving a
+      // local-only student that vanishes on the next cloud sync.
+      const dupe = crmStudents.find(s => s.id !== id && String(s.email || '').toLowerCase() === email.toLowerCase());
+      if (dupe) {
+        alert(`A student with the email ${email} is already registered (${dupe.name}). Edit that profile instead of creating a duplicate.`);
+        return;
+      }
 
       const consultancyId = localStorage.getItem('viatestprep_consultancy_id');
       const isOwnerSession = consultancyId === '__owner__';
@@ -4536,10 +4739,12 @@
           stud.phone = phone;
           stud.target = target;
           stud.status = status;
+          stud.stage = stage;
+          stud.followUp = followUp;
           stud.accessLevel = accessLevel;
           stud.notes = notes;
         }
-        const fields = { name, phone, target_band: target, status, access_level: accessLevel };
+        const fields = { name, phone, target_band: target, status, stage, next_follow_up: followUp, notes, access_level: accessLevel };
         if (isOwnerSession) {
           // The owner bypass has no real Supabase Auth session, so its
           // anon-key writes are blocked by RLS (see security-rls.sql) - this
@@ -4572,12 +4777,13 @@
         const accessToken = crypto.randomUUID();
         crmStudents.push({
           id: newId, studentId, accessToken,
-          name, email, phone, target, status, accessLevel, notes, access_expires_at,
+          name, email, phone, target, status, stage, followUp, accessLevel, notes, access_expires_at,
+          activityLog: [],
           mockHistory: []
         });
         const fields = {
           id: newId, student_id: studentId, name, email, phone,
-          target_band: target, status, access_expires_at,
+          target_band: target, status, stage, next_follow_up: followUp, notes, access_expires_at,
           access_token: accessToken, access_level: accessLevel,
           ...(isRealConsultancy ? { consultancy_id: consultancyId } : {}),
         };
@@ -4643,7 +4849,9 @@
       document.getElementById('crmStudEmail').value = stud.email;
       document.getElementById('crmStudPhone').value = stud.phone;
       document.getElementById('crmStudTarget').value = stud.target;
-      document.getElementById('crmStudStatus').value = stud.status;
+      document.getElementById('crmStudStatus').value = stud.status === 'Paused' ? 'Paused' : 'Active';
+      document.getElementById('crmStudStage').value = getStudentStage(stud);
+      document.getElementById('crmStudFollowUp').value = stud.followUp || '';
       document.getElementById('crmStudAccessLevel').value = stud.accessLevel || 'full';
       document.getElementById('crmStudNotes').value = stud.notes || '';
 
@@ -4804,21 +5012,22 @@
     function openCRMProfileDrawer(studentId) {
       const stud = crmStudents.find(s => s.id === studentId);
       if (!stud) return;
+      drawerActiveStudentId = studentId;
 
       document.getElementById('drawerName').textContent = stud.name;
       document.getElementById('drawerStudentId').textContent = stud.studentId || '—';
       document.getElementById('drawerEmail').textContent = stud.email;
       document.getElementById('drawerPhone').textContent = stud.phone;
-      document.getElementById('drawerTarget').textContent = stud.target.toFixed(1);
+      document.getElementById('drawerTarget').textContent = (stud.target || 0).toFixed(1);
       document.getElementById('drawerNotes').textContent = stud.notes || 'No academic notes logged.';
-      
-      // Calculate average
-      let avg = '—';
-      if (stud.mockHistory && stud.mockHistory.length > 0) {
-        const sum = stud.mockHistory.reduce((acc, curr) => acc + parseFloat(curr.overall), 0);
-        avg = (sum / stud.mockHistory.length).toFixed(1);
-      }
-      document.getElementById('drawerAvg').textContent = avg;
+
+      const avg = avgBand(stud.mockHistory);
+      document.getElementById('drawerAvg').textContent = avg === null ? '—' : avg.toFixed(1);
+
+      renderDrawerStageSteps(stud);
+      document.getElementById('drawerFollowUpInput').value = stud.followUp || '';
+      document.getElementById('drawerNoteInput').value = '';
+      renderDrawerActivity(stud);
 
       // Populate Timeline
       const timeline = document.getElementById('drawerTimeline');
@@ -4859,6 +5068,110 @@
       }
 
       document.getElementById('crmProfileDrawer').classList.remove('hidden');
+    }
+
+    // Shared write path for drawer edits (stage/follow-up/notes) - same
+    // owner-bypass-vs-real-consultancy branching used everywhere else in the
+    // CRM (see handleCRMStudentSubmit), pulled out once here since the
+    // drawer now has three separate small edits that all need it.
+    function patchStudentCloud(studentId, fields, label) {
+      const consultancyId = localStorage.getItem('viatestprep_consultancy_id');
+      if (consultancyId === '__owner__') {
+        fetch('/api/admin/roster', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-Owner-Key': getOwnerKey() },
+          body: JSON.stringify({ action: 'update_student', id: studentId, fields }),
+        }).then(r => r.json()).then(d => { warnIfSupabaseWriteFailed(d.ok ? null : { message: d.error }, label); });
+      } else if (supabaseClient) {
+        supabaseClient.from('students').update(fields).eq('id', studentId).then(({ error }) => { warnIfSupabaseWriteFailed(error, label); });
+      }
+      localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
+    }
+
+    function renderDrawerStageSteps(stud) {
+      const wrap = document.getElementById('drawerStageSteps');
+      const currentIdx = CRM_STAGES.indexOf(getStudentStage(stud));
+      wrap.innerHTML = CRM_STAGES.map((st, i) => `
+        <div class="flex-1 flex flex-col items-center gap-1 cursor-pointer" onclick="setStudentStage('${st}')" title="Move to ${st}">
+          <div class="w-full h-1.5 rounded-full ${i <= currentIdx ? 'bg-[#7a2331]' : 'bg-[#ece4d2]'}"></div>
+          <span class="text-[8px] font-bold uppercase text-center ${i === currentIdx ? 'text-[#7a2331]' : 'text-[#c9c0ac]'}">${st}</span>
+        </div>
+      `).join('');
+      const advanceBtn = document.getElementById('drawerAdvanceBtn');
+      const isLast = currentIdx >= CRM_STAGES.length - 1;
+      advanceBtn.disabled = isLast;
+      advanceBtn.classList.toggle('opacity-40', isLast);
+      advanceBtn.textContent = isLast ? 'Completed' : `Advance to ${CRM_STAGES[currentIdx + 1]} →`;
+    }
+
+    function logStudentActivity(stud, type, text) {
+      if (!Array.isArray(stud.activityLog)) stud.activityLog = [];
+      stud.activityLog.unshift({ date: new Date().toISOString(), type, text });
+      stud.activityLog = stud.activityLog.slice(0, 50); // keep the feed bounded
+    }
+
+    function setStudentStage(stage) {
+      const stud = crmStudents.find(s => s.id === drawerActiveStudentId);
+      if (!stud) return;
+      const from = getStudentStage(stud);
+      if (from === stage) return;
+      stud.stage = stage;
+      logStudentActivity(stud, 'stage', `Moved from ${from} to ${stage}`);
+      patchStudentCloud(stud.id, { stage, activity_log: stud.activityLog }, `Updating ${stud.name}'s stage`);
+      renderDrawerStageSteps(stud);
+      renderDrawerActivity(stud);
+      renderCRMTable();
+    }
+
+    function advanceStudentStage() {
+      const stud = crmStudents.find(s => s.id === drawerActiveStudentId);
+      if (!stud) return;
+      const idx = CRM_STAGES.indexOf(getStudentStage(stud));
+      if (idx >= CRM_STAGES.length - 1) return;
+      setStudentStage(CRM_STAGES[idx + 1]);
+    }
+
+    function saveStudentFollowUp() {
+      const stud = crmStudents.find(s => s.id === drawerActiveStudentId);
+      if (!stud) return;
+      const val = document.getElementById('drawerFollowUpInput').value || null;
+      stud.followUp = val;
+      logStudentActivity(stud, 'followup', val ? `Follow-up set for ${val}` : 'Follow-up cleared');
+      patchStudentCloud(stud.id, { next_follow_up: val, activity_log: stud.activityLog }, `Updating ${stud.name}'s follow-up`);
+      renderDrawerActivity(stud);
+      renderCRMTable();
+    }
+
+    function saveStudentNote() {
+      const stud = crmStudents.find(s => s.id === drawerActiveStudentId);
+      if (!stud) return;
+      const input = document.getElementById('drawerNoteInput');
+      const text = input.value.trim();
+      if (!text) return;
+      logStudentActivity(stud, 'note', text);
+      input.value = '';
+      patchStudentCloud(stud.id, { activity_log: stud.activityLog }, `Logging note for ${stud.name}`);
+      renderDrawerActivity(stud);
+    }
+
+    const ACTIVITY_ICONS = { note: '📝', stage: '➡️', followup: '📞' };
+
+    function renderDrawerActivity(stud) {
+      const wrap = document.getElementById('drawerActivity');
+      const log = Array.isArray(stud.activityLog) ? stud.activityLog : [];
+      if (log.length === 0) {
+        wrap.innerHTML = '<div class="text-[10px] text-[#8a8171] italic text-center py-3">No activity logged yet.</div>';
+        return;
+      }
+      wrap.innerHTML = log.map(a => `
+        <div class="flex items-start gap-2 text-[10px] text-[#5c5648] border-b border-[#f3ecd8] pb-2 last:border-0">
+          <span class="shrink-0">${ACTIVITY_ICONS[a.type] || '•'}</span>
+          <div class="flex-1">
+            <span>${escapeHtml(a.text)}</span>
+            <span class="block text-[9px] text-[#c9c0ac] mt-0.5">${new Date(a.date).toLocaleString()}</span>
+          </div>
+        </div>
+      `).join('');
     }
 
     function openWritingGrader(studentId, testIndex) {
@@ -5016,9 +5329,9 @@
         alert('No students to export.');
         return;
       }
-      let csv = 'ID,Name,Email,Phone,TargetBand,Status,Notes\n';
+      let csv = 'ID,Name,Email,Phone,TargetBand,Status,Stage,FollowUp,Notes\n';
       crmStudents.forEach(s => {
-        const cells = [s.id, s.name, s.email, s.phone, s.target, s.status, s.notes || ''];
+        const cells = [s.id, s.name, s.email, s.phone, s.target, s.status, getStudentStage(s), s.followUp || '', s.notes || ''];
         csv += cells.map(c => `"${sanitizeCsvCell(c).replace(/"/g, '""')}"`).join(',') + '\n';
       });
       const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
@@ -5050,7 +5363,7 @@
         const isOwnerSession = consultancyId === '__owner__';
         const isRealConsultancy = consultancyId && !isOwnerSession;
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        const validStatuses = ['Active', 'Completed', 'Paused'];
+        const validStatuses = ['Active', 'Paused'];
 
         let added = 0, skippedCapacity = 0, skippedInvalid = 0, skippedDuplicate = 0, cloudSyncFailures = 0, lastCloudError = '';
         const insertPromises = [];
@@ -5068,8 +5381,23 @@
             const email = clean[2].trim();
             const phone = clean[3].trim();
             const target = parseFloat(clean[4]) || 7.0;
-            const status = validStatuses.includes(clean[5]) ? clean[5] : 'Active';
-            const notes = clean[6] || '';
+            const rawStatus = clean[5];
+            const status = validStatuses.includes(rawStatus) ? rawStatus : 'Active';
+
+            // New export format (9 cols) has Stage/FollowUp/Notes at 6/7/8.
+            // A CSV from before that split (7 cols: ...,Status,Notes) may
+            // still say Status=Completed - read that as the pipeline stage,
+            // not a status, rather than silently downgrading it to Active.
+            let stage, followUp, notes;
+            if (clean.length >= 9 && CRM_STAGES.includes(clean[6])) {
+              stage = clean[6];
+              followUp = clean[7] && /^\d{4}-\d{2}-\d{2}$/.test(clean[7]) ? clean[7] : null;
+              notes = clean[8] || '';
+            } else {
+              stage = rawStatus === 'Completed' ? 'Completed' : 'Enrolled';
+              followUp = null;
+              notes = clean[6] || '';
+            }
 
             if (!name || !emailPattern.test(email)) { skippedInvalid++; continue; }
 
@@ -5083,14 +5411,15 @@
 
             crmStudents.push({
               id: newId, studentId, accessToken,
-              name, email, phone, target, status, accessLevel: 'full', notes, access_expires_at,
+              name, email, phone, target, status, stage, followUp, accessLevel: 'full', notes, access_expires_at,
+              activityLog: [],
               mockHistory: []
             });
             added++;
 
             const fields = {
               id: newId, student_id: studentId, name, email, phone,
-              target_band: target, status, access_expires_at,
+              target_band: target, status, stage, next_follow_up: followUp, notes, access_expires_at,
               access_token: accessToken, access_level: 'full',
               ...(isRealConsultancy ? { consultancy_id: consultancyId } : {}),
             };

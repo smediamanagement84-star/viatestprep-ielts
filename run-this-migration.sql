@@ -47,3 +47,16 @@ ALTER TABLE consultancies ENABLE ROW LEVEL SECURITY;
 ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS correct_count INT;
 ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS total_questions INT;
 ALTER TABLE mock_history ADD COLUMN IF NOT EXISTS answer_review JSONB;
+
+-- students: CRM pipeline + follow-up work-queue fields.
+-- `stage` is the enrollment pipeline (Inquiry / Enrolled / Mock Testing /
+-- Exam Ready / Completed); `status` shrinks to just Active/Paused.
+-- `notes` finally gets a real column - the CRM has always had a notes box,
+-- but the value only ever lived in each browser's localStorage and was
+-- silently wiped on every cloud sync.
+ALTER TABLE students ADD COLUMN IF NOT EXISTS stage TEXT DEFAULT 'Enrolled';
+ALTER TABLE students ADD COLUMN IF NOT EXISTS next_follow_up DATE;
+ALTER TABLE students ADD COLUMN IF NOT EXISTS activity_log JSONB DEFAULT '[]'::jsonb;
+ALTER TABLE students ADD COLUMN IF NOT EXISTS notes TEXT;
+-- Legacy rows that used status='Completed' move into the pipeline properly.
+UPDATE students SET stage = 'Completed' WHERE status = 'Completed' AND stage = 'Enrolled';
