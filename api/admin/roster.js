@@ -19,6 +19,8 @@ const {
   insertSpeakingGradeAdmin, updateWritingGradeAdmin,
 } = require('../_lib/supabaseAdmin');
 
+const { friendlyDbError } = require('../_lib/supabaseAdmin');
+
 module.exports = async (req, res) => {
   const ownerKey = req.headers['x-owner-key'];
   if (!isOwner(ownerKey)) {
@@ -36,7 +38,7 @@ module.exports = async (req, res) => {
       res.status(200).json({ ok: true, students, mockHistory, speakingGrades });
     } catch (err) {
       console.error('admin/roster GET error:', err);
-      res.status(500).json({ ok: false, error: 'Could not load roster. Please try again in a moment.' });
+      res.status(500).json({ ok: false, error: friendlyDbError(err) || (err && err.message) || 'Could not load roster. Please try again in a moment.' });
     }
     return;
   }
@@ -79,7 +81,7 @@ module.exports = async (req, res) => {
       res.status(400).json({ ok: false, error: 'Invalid action' });
     } catch (err) {
       console.error('admin/roster POST error:', err);
-      res.status(500).json({ ok: false, error: 'Could not save. Please try again in a moment.' });
+      res.status(500).json({ ok: false, error: friendlyDbError(err) || (err && err.message) || 'Could not save. Please try again in a moment.' });
     }
     return;
   }

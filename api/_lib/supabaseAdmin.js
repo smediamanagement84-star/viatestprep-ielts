@@ -279,7 +279,19 @@ async function updateStudentAdmin(id, fields) {
     query: `?id=eq.${encodeURIComponent(id)}`,
     body: fields,
   });
-  return rows[0];
+  if (rows && rows.length > 0) {
+    return rows[0];
+  }
+  // Auto-upsert fallback if row didn't exist in Supabase DB yet
+  const insertPayload = { id, ...fields };
+  if (!insertPayload.name) insertPayload.name = 'Student';
+  if (!insertPayload.email) insertPayload.email = `${id}@student.local`;
+  const inserted = await restRequest('students', {
+    method: 'POST',
+    headers: { Prefer: 'resolution=merge-duplicates,return=representation' },
+    body: insertPayload,
+  });
+  return inserted ? inserted[0] : null;
 }
 
 async function deleteStudentAdmin(id) {

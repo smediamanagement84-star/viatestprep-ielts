@@ -5087,7 +5087,32 @@
           body: JSON.stringify({ action: 'update_student', id: studentId, fields }),
         }).then(r => r.json()).then(d => { warnIfSupabaseWriteFailed(d.ok ? null : { message: d.error }, label); });
       } else if (supabaseClient) {
-        supabaseClient.from('students').update(fields).eq('id', studentId).then(({ error }) => { warnIfSupabaseWriteFailed(error, label); });
+        const stud = crmStudents.find(s => s.id === studentId);
+        supabaseClient.from('students').update(fields).eq('id', studentId).then(({ error, data }) => {
+          if (error) {
+            warnIfSupabaseWriteFailed(error, label);
+          } else if (stud && (!data || data.length === 0)) {
+            const insertPayload = {
+              id: stud.id,
+              student_id: stud.studentId,
+              name: stud.name,
+              email: stud.email,
+              phone: stud.phone,
+              target_band: stud.target,
+              status: stud.status,
+              stage: stud.stage,
+              next_follow_up: stud.followUp,
+              notes: stud.notes,
+              access_expires_at: stud.access_expires_at,
+              access_token: stud.accessToken,
+              access_level: stud.accessLevel,
+              ...fields
+            };
+            supabaseClient.from('students').upsert([insertPayload]).then(({ error: upsertErr }) => {
+              warnIfSupabaseWriteFailed(upsertErr, label);
+            });
+          }
+        });
       }
       localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
     }
