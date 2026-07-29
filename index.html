@@ -5027,6 +5027,7 @@
       document.getElementById('crmStudStage').value = 'Enrolled';
       document.getElementById('crmStudFollowUp').value = '';
       document.getElementById('crmStudAccessLevel').value = 'full';
+      if (document.getElementById('crmStudTuitionFee')) document.getElementById('crmStudTuitionFee').value = '';
       document.getElementById('crmStudNotes').value = '';
 
       document.getElementById('crmModalTitle').textContent = 'Register New Student';
@@ -5049,6 +5050,8 @@
       const stage = document.getElementById('crmStudStage').value;
       const followUp = document.getElementById('crmStudFollowUp').value || null;
       const accessLevel = document.getElementById('crmStudAccessLevel').value;
+      const tuitionFeeInput = document.getElementById('crmStudTuitionFee');
+      const tuitionFee = tuitionFeeInput && tuitionFeeInput.value ? parseInt(tuitionFeeInput.value) : null;
       const notes = document.getElementById('crmStudNotes').value.trim();
 
       // Duplicate-email guard - the DB's UNIQUE constraint would reject the
@@ -5076,6 +5079,7 @@
           stud.stage = stage;
           stud.followUp = followUp;
           stud.accessLevel = accessLevel;
+          stud.tuitionFee = tuitionFee;
           stud.notes = notes;
         }
         const fields = { name, phone, target_band: target, status, stage, next_follow_up: followUp, notes, access_level: accessLevel };
@@ -5187,6 +5191,7 @@
       document.getElementById('crmStudStage').value = getStudentStage(stud);
       document.getElementById('crmStudFollowUp').value = stud.followUp || '';
       document.getElementById('crmStudAccessLevel').value = stud.accessLevel || 'full';
+      if (document.getElementById('crmStudTuitionFee')) document.getElementById('crmStudTuitionFee').value = stud.tuitionFee || '';
       document.getElementById('crmStudNotes').value = stud.notes || '';
 
       document.getElementById('crmModalTitle').textContent = 'Modify Student Profile';
