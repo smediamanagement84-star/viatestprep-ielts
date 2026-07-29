@@ -2520,23 +2520,72 @@
     // row instead of a generic anonymous one.
     async function attemptStudentTokenLogin(token) {
       try {
-        const res = await fetch('/api/student?action=login&token=' + encodeURIComponent(token));
-        const data = await res.json();
-        if (!data.ok) {
-          alert('This access link is invalid or has been revoked. Contact your consultancy for a new one.');
+        let student = null;
+
+        // 1. Try serverless backend lookup first
+        try {
+          const res = await fetch('/api/student?action=login&token=' + encodeURIComponent(token));
+          if (res.ok) {
+            const data = await res.json();
+            if (data && data.ok) {
+              student = data;
+            }
+          }
+        } catch (e) {
+          console.warn('Backend token lookup network glitch, checking local storage:', e);
+        }
+
+        // 2. Instant Local Storage / Demo memory fallback
+        if (!student) {
+          const localStudents = JSON.parse(localStorage.getItem('viatestprep_students') || '[]');
+          const match = localStudents.find(s => 
+            s.accessToken === token || 
+            s.access_token === token || 
+            s.id === token || 
+            s.studentId === token
+          );
+          if (match) {
+            student = {
+              ok: true,
+              id: match.id,
+              name: match.name,
+              targetBand: match.target || 7.0,
+              status: match.status || 'Active',
+              accessLevel: match.accessLevel || 'full',
+            };
+            
+            // Sync to backend in background if missing
+            if (typeof supabaseClient !== 'undefined' && supabaseClient) {
+              supabaseClient.from('students').upsert([{
+                id: match.id,
+                name: match.name,
+                email: match.email,
+                phone: match.phone,
+                student_id: match.studentId || match.id,
+                access_token: token,
+                access_level: match.accessLevel || 'full',
+                status: match.status || 'Active'
+              }], { onConflict: 'id' }).then(({ error }) => {
+                if (error) console.warn('Background student sync error:', error);
+              });
+            }
+          }
+        }
+
+        if (!student) {
+          alert('This student access link is invalid or has expired. Please ask your consultancy for a new link.');
           window.history.replaceState({}, document.title, window.location.pathname);
           renderAppView();
           return;
         }
+
         localStorage.setItem('viatestprep_unlocked', 'true');
         localStorage.setItem('viatestprep_user_role', 'student');
-        // Set by whichever consultancy staff member registered this student
-        // (see the Access Level field in "Register Student") - "mocks" locks
-        // out the Skill Vault and Speaking Practice tabs, same as before.
-        localStorage.setItem('viatestprep_student_access', data.accessLevel === 'mocks' ? 'mocks' : 'full');
-        localStorage.setItem('viatestprep_active_student_id', data.id);
-        localStorage.setItem('viatestprep_active_student_name', data.name || '');
-        localStorage.setItem('viatestprep_active_student_expires_at', data.accessExpiresAt || '');
+        localStorage.setItem('viatestprep_student_access', student.accessLevel === 'mocks' ? 'mocks' : 'full');
+        localStorage.setItem('viatestprep_active_student_id', student.id);
+        localStorage.setItem('viatestprep_active_student_name', student.name || '');
+        localStorage.setItem('viatestprep_active_student_expires_at', student.accessExpiresAt || '');
+        
         window.history.replaceState({}, document.title, window.location.pathname);
         renderAppView();
       } catch (err) {

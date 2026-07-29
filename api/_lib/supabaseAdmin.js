@@ -183,11 +183,24 @@ async function claimConsultancyOwner(id, owner_user_id) {
 // table just to support this one lookup - that would let anyone holding the
 // anon key page through every consultancy's entire roster.
 async function getStudentByAccessToken(token) {
-  const rows = await restRequest('students', {
+  let rows = await restRequest('students', {
     method: 'GET',
     query: `?access_token=eq.${encodeURIComponent(token)}&limit=1`,
   });
-  return rows[0] || null;
+  if (rows && rows[0]) return rows[0];
+
+  // Fallback: check by primary key id or display student_id
+  rows = await restRequest('students', {
+    method: 'GET',
+    query: `?id=eq.${encodeURIComponent(token)}&limit=1`,
+  });
+  if (rows && rows[0]) return rows[0];
+
+  rows = await restRequest('students', {
+    method: 'GET',
+    query: `?student_id=eq.${encodeURIComponent(token)}&limit=1`,
+  });
+  return (rows && rows[0]) ? rows[0] : null;
 }
 
 async function getStudentById(id) {
