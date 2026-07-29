@@ -1389,9 +1389,21 @@
             </div>
           </div>
         </div>
-<!-- CRM Tab 3: Material Vault -->
-        <div id="crm-vault-view" class="crm-subview hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <!-- Populated by JS -->
+        <!-- CRM Tab 3: Material Vault -->
+        <div id="crm-vault-view" class="crm-subview hidden space-y-4">
+          <div class="bg-[#faf8f3] border border-[#e3dbc9] rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div>
+              <span class="px-2 py-0.5 rounded text-[10px] font-black uppercase bg-[#efe6d0] text-[#7a2331]">📦 Academic Material Vault</span>
+              <h4 class="font-extrabold text-sm text-[#1c1a17] mt-1">Interactive Practice Modules &amp; Topic Exercises</h4>
+              <p class="text-xs text-[#766f62]">Access live interactive practice modules. Printable PDF worksheets and physical handouts will be added in Phase 2.</p>
+            </div>
+            <span class="px-3 py-1 bg-amber-50 text-amber-800 border border-amber-300 rounded-xl text-[10px] font-bold whitespace-nowrap">
+              📑 Printable Worksheets: Phase 2
+            </span>
+          </div>
+          <div id="crm-vault-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Populated by JS -->
+          </div>
         </div>
 
         <!-- CRM Tab 4 (owner-only): manual QR payments awaiting review -->
@@ -5591,7 +5603,8 @@
 
     // CRM Tab 3: Materials Vault for Tutors
     function renderCRMVaultModules() {
-      const grid = document.getElementById('crm-vault-view');
+      const grid = document.getElementById('crm-vault-grid') || document.getElementById('crm-vault-view');
+      if (!grid) return;
       grid.innerHTML = '';
 
       modulesConfig.forEach(m => {
