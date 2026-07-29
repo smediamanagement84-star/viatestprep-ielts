@@ -5762,10 +5762,10 @@
       const g = parseFloat(document.getElementById('g-val-grammar').value);
       const p = parseFloat(document.getElementById('g-val-pronunciation').value);
       
-      document.getElementById('g-lbl-fluency').textContent = f.toFixed(1);
-      document.getElementById('g-lbl-vocab').textContent = v.toFixed(1);
-      document.getElementById('g-lbl-grammar').textContent = g.toFixed(1);
-      document.getElementById('g-lbl-pronunciation').textContent = p.toFixed(1);
+      if (document.getElementById('g-lbl-fluency')) document.getElementById('g-lbl-fluency').textContent = f.toFixed(1);
+      if (document.getElementById('g-lbl-vocab')) document.getElementById('g-lbl-vocab').textContent = v.toFixed(1);
+      if (document.getElementById('g-lbl-grammar')) document.getElementById('g-lbl-grammar').textContent = g.toFixed(1);
+      if (document.getElementById('g-lbl-pronunciation')) document.getElementById('g-lbl-pronunciation').textContent = p.toFixed(1);
       
       const avg = (f + v + g + p) / 4;
       const rounded = Math.round(avg * 2) / 2;
@@ -6556,6 +6556,23 @@
 
     function closeReceiptModal() {
       document.getElementById('crm-receipt-modal').classList.add('hidden');
+    }
+
+    function printReceiptVoucher() {
+      window.print();
+    }
+
+    function copyReceiptHash() {
+      const stud = crmStudents.find(s => s.id === activeReceiptStudentId);
+      const studentName = stud ? stud.name : 'Student';
+      const hash = `https://viatestprep-ielts.vercel.app/verify-receipt?id=${activeReceiptStudentId || 'vtp'}`;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(hash).then(() => {
+          alert(`✓ Official digital receipt hash link for ${studentName} copied to clipboard!`);
+        });
+      } else {
+        alert(`✓ Official digital receipt hash link: ${hash}`);
+      }
     }
 
     function openRecordFeeModal() {
