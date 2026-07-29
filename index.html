@@ -1436,9 +1436,9 @@
             </div>
 
             <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
-              <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Total Tuition Collected</span>
-              <span id="b-stat-revenue" class="text-lg font-black text-[#1c1a17] mt-1 block">Rs. 135,000</span>
-              <span class="text-[10px] text-emerald-600 font-bold mt-1 block">✓ All Active Enrolled</span>
+              <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Active Roster Capacity</span>
+              <span id="b-stat-revenue" class="text-lg font-black text-[#1c1a17] mt-1 block">9 / 25 Seats</span>
+              <span class="text-[10px] text-emerald-600 font-bold mt-1 block">✓ Active Consultancy Roster</span>
             </div>
 
             <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
@@ -1852,9 +1852,9 @@
           <div class="flex flex-col gap-1">
             <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Access Package</label>
             <select id="crmStudAccessLevel" class="select-elegant px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none">
-              <option value="full">Full Course &amp; Mocks (Rs. 15,000)</option>
-              <option value="mocks">Mock Test Pack (Rs. 4,500)</option>
-              <option value="speaking">Speaking Practice (Rs. 3,000)</option>
+              <option value="full">Full Course &amp; Resource Packet</option>
+              <option value="mocks">Mock Test Pack Only</option>
+              <option value="speaking">Live Speaking Grader Only</option>
             </select>
           </div>
           <div class="flex flex-col gap-1">
@@ -6264,7 +6264,6 @@
       if (!tbody) return;
       tbody.innerHTML = '';
 
-      let totalCollected = 0;
       let paidCount = 0;
       let pendingCount = 0;
 
@@ -6274,17 +6273,18 @@
       }
 
       crmStudents.forEach((s, idx) => {
-        const feeAmount = s.tuitionFee || 15000;
         const isPaid = (s.tuitionStatus || (idx % 4 !== 0 ? 'Paid' : 'Pending')) === 'Paid';
         const method = s.tuitionMethod || (idx % 2 === 0 ? 'eSewa QR' : 'Khalti QR');
         const updatedDate = s.tuitionDate || new Date().toISOString().split('T')[0];
+        
+        let pkgName = 'Full Resource Packet';
+        if (s.accessLevel === 'mocks') pkgName = 'Mock Test Pack';
+        else if (s.accessLevel === 'speaking') pkgName = 'Speaking Evaluation';
 
-        if (isPaid) {
-          totalCollected += feeAmount;
-          paidCount++;
-        } else {
-          pendingCount++;
-        }
+        const feeDisplay = s.tuitionFee ? `Rs. ${parseInt(s.tuitionFee).toLocaleString()}` : pkgName;
+
+        if (isPaid) paidCount++;
+        else pendingCount++;
 
         const initials = String(s.name || '?').trim().split(/\s+/).slice(0, 2).map(w => w[0] || '').join('').toUpperCase();
 
@@ -6300,17 +6300,17 @@
               </div>
             </div>
           </td>
-          <td class="p-4 font-extrabold text-[#7a2331]">Rs. ${feeAmount.toLocaleString()}</td>
+          <td class="p-4 font-extrabold text-[#7a2331]">${escapeHtml(feeDisplay)}</td>
           <td class="p-4 text-center">
             <span class="px-2.5 py-0.5 rounded-full text-[9px] font-black uppercase border ${isPaid ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-amber-50 text-amber-700 border-amber-200'}">
-              ${isPaid ? '✓ Paid' : '⏳ Pending'}
+              ${isPaid ? '✓ Verified' : '⏳ Pending'}
             </span>
           </td>
           <td class="p-4 text-center font-bold text-[#5c5648]">${escapeHtml(method)}</td>
           <td class="p-4 text-center text-[#8a8171]">${escapeHtml(updatedDate)}</td>
           <td class="p-4 text-right flex justify-end gap-1.5">
             <button onclick="toggleStudentTuitionStatus('${s.id}')" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-[10px] font-bold ${isPaid ? 'bg-[#f3ecd8] text-[#5c5648] hover:bg-amber-50 hover:text-amber-700' : 'bg-[#7a2331] text-white hover:bg-[#5e1a25]'} transition">
-              ${isPaid ? 'Mark Pending' : 'Mark Paid ✓'}
+              ${isPaid ? 'Mark Pending' : 'Mark Verified ✓'}
             </button>
             <button onclick="issueStudentReceipt('${s.id}')" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-[10px] font-bold bg-[#f3ecd8] hover:bg-[#efe6d0] text-[#7a2331] transition">
               🧾 Receipt
@@ -6325,9 +6325,9 @@
       const paidEl = document.getElementById('b-stat-paid-count');
       const pendEl = document.getElementById('b-stat-pending-count');
 
-      if (revEl) revEl.textContent = 'Rs. ' + totalCollected.toLocaleString();
-      if (paidEl) paidEl.textContent = `${paidCount} / ${crmStudents.length} Students`;
-      if (pendEl) pendEl.textContent = `${pendingCount} Invoice${pendingCount === 1 ? '' : 's'} Due`;
+      if (revEl) revEl.textContent = `${crmStudents.length} / ${capacity} Seats`;
+      if (paidEl) paidEl.textContent = `${paidCount} / ${crmStudents.length} Verified`;
+      if (pendEl) pendEl.textContent = `${pendingCount} Pending Review`;
     }
 
     function toggleStudentTuitionStatus(studentId) {
@@ -6339,7 +6339,6 @@
       renderCRMBillingView();
     }
 
-    
     let activeReceiptStudentId = null;
     let billingSearchQuery = '';
     let billingStatusFilter = 'all';
@@ -6354,18 +6353,11 @@
       if (!stud) return;
       activeReceiptStudentId = studentId;
 
-      // Determine package title and default fee based on access level
-      let packageName = 'IELTS Master Class & 22 Full Mock Packet';
-      let defaultFee = 15000;
-      if (stud.accessLevel === 'mocks') {
-        packageName = 'IELTS 22 Full Mock Exam Packet';
-        defaultFee = 4500;
-      } else if (stud.accessLevel === 'speaking') {
-        packageName = '1-on-1 IELTS Speaking Examiner Evaluation';
-        defaultFee = 3000;
-      }
+      let packageName = 'Full IELTS Course & Resource Packet';
+      if (stud.accessLevel === 'mocks') packageName = 'IELTS 22 Full Mock Exam Packet';
+      else if (stud.accessLevel === 'speaking') packageName = '1-on-1 IELTS Speaking Examiner Practice';
 
-      const fee = parseInt(stud.tuitionFee) || defaultFee;
+      const feeDisplay = stud.tuitionFee ? `Rs. ${parseInt(stud.tuitionFee).toLocaleString()}` : 'Consultancy Package Access';
       const isPaid = (stud.tuitionStatus || 'Paid') === 'Paid';
       const method = stud.tuitionMethod || 'eSewa Merchant QR';
       const date = stud.tuitionDate || new Date().toISOString().split('T')[0];
@@ -6406,49 +6398,29 @@
             </div>
           </div>
 
-          <!-- Course & Fee Breakdown -->
+          <!-- Course Package Breakdown -->
           <div class="border-t border-[#ece4d2] pt-3 space-y-2">
             <div class="flex justify-between text-xs font-bold text-[#1c1a17]">
               <span>${escapeHtml(packageName)}</span>
-              <span>Rs. ${fee.toLocaleString()}</span>
+              <span class="font-extrabold text-[#7a2331]">${escapeHtml(feeDisplay)}</span>
             </div>
             <div class="flex justify-between text-[11px] text-[#8a8171]">
               <span>Digital Resource &amp; Speaking Grader Access</span>
-              <span>Included</span>
+              <span>Enabled</span>
             </div>
-
-            ${isPaid ? `
-            <div class="flex justify-between items-center border-t border-dashed border-[#e5ded0] pt-2">
-              <span class="text-xs font-black text-emerald-800 uppercase">Total Paid</span>
-              <span class="text-base font-black text-emerald-700">Rs. ${fee.toLocaleString()}</span>
-            </div>
-            <div class="flex justify-between items-center text-[10px] text-emerald-700 font-bold">
-              <span>Outstanding Due</span>
-              <span>Rs. 0</span>
-            </div>
-            ` : `
-            <div class="flex justify-between items-center border-t border-dashed border-[#e5ded0] pt-2">
-              <span class="text-xs font-black text-[#766f62] uppercase">Amount Received</span>
-              <span class="text-sm font-bold text-[#766f62]">Rs. 0</span>
-            </div>
-            <div class="flex justify-between items-center text-xs font-black text-[#7a2331]">
-              <span class="uppercase">Outstanding Amount Due</span>
-              <span class="text-base font-extrabold text-[#7a2331]">Rs. ${fee.toLocaleString()}</span>
-            </div>
-            `}
           </div>
 
           <!-- Status & Verification Badge -->
           <div class="p-3 ${isPaid ? 'bg-emerald-50 border-emerald-200' : 'bg-amber-50 border-amber-200'} border rounded-xl flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full ${isPaid ? 'bg-emerald-500' : 'bg-amber-500'} animate-pulse"></span>
-              <span class="text-xs font-black uppercase ${isPaid ? 'text-emerald-800' : 'text-amber-800'}">${isPaid ? '✓ Payment Verified &amp; Paid' : '⏳ Pending Payment Invoice'}</span>
+              <span class="text-xs font-black uppercase ${isPaid ? 'text-emerald-800' : 'text-amber-800'}">${isPaid ? '✓ Student Account Verified' : '⏳ Pending Consultancy Review'}</span>
             </div>
             <span class="text-[10px] font-mono ${isPaid ? 'text-emerald-800' : 'text-amber-800'} font-bold">${escapeHtml(method)}</span>
           </div>
 
           <div class="text-[9px] text-center text-[#8a8171]">
-            Digital Receipt Hash: <span class="font-mono font-bold text-[#a8792f]">${hash}</span>
+            Digital Verification Hash: <span class="font-mono font-bold text-[#a8792f]">${hash}</span>
           </div>
         </div>
       `;
@@ -6458,19 +6430,6 @@
 
     function closeReceiptModal() {
       document.getElementById('crm-receipt-modal').classList.add('hidden');
-    }
-
-    function printReceiptVoucher() {
-      window.print();
-    }
-
-    function copyReceiptHash() {
-      const stud = crmStudents.find(s => s.id === activeReceiptStudentId);
-      if (!stud) return;
-      const hash = `https://viatestprep-ielts.vercel.app/verify-receipt?id=${stud.id}&voucher=VTP-2026`;
-      navigator.clipboard.writeText(hash).then(() => {
-        alert("✓ Receipt verification link copied to clipboard!");
-      });
     }
 
     function openRecordFeeModal() {
@@ -6749,7 +6708,7 @@
         <div class="grid grid-cols-2 gap-3">
           <div class="form-group flex flex-col gap-1">
             <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Fee Amount (Rs.)</label>
-            <input type="number" id="recFeeAmount" value="15000" required class="w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs font-bold text-[#7a2331] outline-none focus:border-[#7a2331]" />
+            <input type="number" id="recFeeAmount" placeholder="Optional custom fee..." class="w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs font-bold text-[#7a2331] outline-none focus:border-[#7a2331]" />
           </div>
           <div class="form-group flex flex-col gap-1">
             <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Payment Status</label>
