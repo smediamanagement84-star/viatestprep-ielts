@@ -1848,12 +1848,19 @@
             <input type="date" id="crmStudFollowUp" class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-[#f3ecd8] focus:bg-white outline-none focus:border-[#7a2331]" />
           </div>
         </div>
-        <div class="flex flex-col gap-1">
-          <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Access Level</label>
-          <select id="crmStudAccessLevel" class="select-elegant px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none">
-            <option value="full">Whole Resource Packet</option>
-            <option value="mocks">Just the Mock Tests</option>
-          </select>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="flex flex-col gap-1">
+            <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Access Package</label>
+            <select id="crmStudAccessLevel" class="select-elegant px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none">
+              <option value="full">Full Course &amp; Mocks (Rs. 15,000)</option>
+              <option value="mocks">Mock Test Pack (Rs. 4,500)</option>
+              <option value="speaking">Speaking Practice (Rs. 3,000)</option>
+            </select>
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Tuition Fee (Rs.)</label>
+            <input type="number" id="crmStudTuitionFee" placeholder="15000" class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-[#f3ecd8] focus:bg-white outline-none focus:border-[#7a2331]" />
+          </div>
         </div>
         <div class="flex flex-col gap-1">
           <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Academic Notes</label>
@@ -6347,7 +6354,18 @@
       if (!stud) return;
       activeReceiptStudentId = studentId;
 
-      const fee = stud.tuitionFee || 15000;
+      // Determine package title and default fee based on access level
+      let packageName = 'IELTS Master Class & 22 Full Mock Packet';
+      let defaultFee = 15000;
+      if (stud.accessLevel === 'mocks') {
+        packageName = 'IELTS 22 Full Mock Exam Packet';
+        defaultFee = 4500;
+      } else if (stud.accessLevel === 'speaking') {
+        packageName = '1-on-1 IELTS Speaking Examiner Evaluation';
+        defaultFee = 3000;
+      }
+
+      const fee = parseInt(stud.tuitionFee) || defaultFee;
       const isPaid = (stud.tuitionStatus || 'Paid') === 'Paid';
       const method = stud.tuitionMethod || 'eSewa Merchant QR';
       const date = stud.tuitionDate || new Date().toISOString().split('T')[0];
@@ -6391,26 +6409,42 @@
           <!-- Course & Fee Breakdown -->
           <div class="border-t border-[#ece4d2] pt-3 space-y-2">
             <div class="flex justify-between text-xs font-bold text-[#1c1a17]">
-              <span>IELTS Master Class &amp; 22 Full Mock Packet</span>
+              <span>${escapeHtml(packageName)}</span>
               <span>Rs. ${fee.toLocaleString()}</span>
             </div>
             <div class="flex justify-between text-[11px] text-[#8a8171]">
               <span>Digital Resource &amp; Speaking Grader Access</span>
               <span>Included</span>
             </div>
+
+            ${isPaid ? `
             <div class="flex justify-between items-center border-t border-dashed border-[#e5ded0] pt-2">
-              <span class="text-xs font-black text-[#7a2331] uppercase">Total Paid</span>
-              <span class="text-base font-black text-[#7a2331]">Rs. ${fee.toLocaleString()}</span>
+              <span class="text-xs font-black text-emerald-800 uppercase">Total Paid</span>
+              <span class="text-base font-black text-emerald-700">Rs. ${fee.toLocaleString()}</span>
             </div>
+            <div class="flex justify-between items-center text-[10px] text-emerald-700 font-bold">
+              <span>Outstanding Due</span>
+              <span>Rs. 0</span>
+            </div>
+            ` : `
+            <div class="flex justify-between items-center border-t border-dashed border-[#e5ded0] pt-2">
+              <span class="text-xs font-black text-[#766f62] uppercase">Amount Received</span>
+              <span class="text-sm font-bold text-[#766f62]">Rs. 0</span>
+            </div>
+            <div class="flex justify-between items-center text-xs font-black text-[#7a2331]">
+              <span class="uppercase">Outstanding Amount Due</span>
+              <span class="text-base font-extrabold text-[#7a2331]">Rs. ${fee.toLocaleString()}</span>
+            </div>
+            `}
           </div>
 
           <!-- Status & Verification Badge -->
-          <div class="p-3 bg-[#f3ecd8] border border-[#e5ded0] rounded-xl flex items-center justify-between">
+          <div class="p-3 ${isPaid ? 'bg-emerald-50 border-emerald-200' : 'bg-amber-50 border-amber-200'} border rounded-xl flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full ${isPaid ? 'bg-emerald-500' : 'bg-amber-500'} animate-pulse"></span>
-              <span class="text-xs font-black uppercase ${isPaid ? 'text-emerald-800' : 'text-amber-800'}">${isPaid ? '✓ Payment Verified' : '⏳ Pending Payment'}</span>
+              <span class="text-xs font-black uppercase ${isPaid ? 'text-emerald-800' : 'text-amber-800'}">${isPaid ? '✓ Payment Verified &amp; Paid' : '⏳ Pending Payment Invoice'}</span>
             </div>
-            <span class="text-[10px] font-mono text-[#8a8171] font-bold">${escapeHtml(method)}</span>
+            <span class="text-[10px] font-mono ${isPaid ? 'text-emerald-800' : 'text-amber-800'} font-bold">${escapeHtml(method)}</span>
           </div>
 
           <div class="text-[9px] text-center text-[#8a8171]">
