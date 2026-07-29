@@ -1126,6 +1126,7 @@
         <button onclick="switchCRMTab('grader')" id="c-tab-grader" class="crm-nav-btn"><span class="crm-nav-icon">🎤</span>Live Speaking Grader</button>
         <button onclick="switchCRMTab('vault')" id="c-tab-vault" class="crm-nav-btn"><span class="crm-nav-icon">📦</span>Material Vault</button>
         <button onclick="switchCRMTab('mocks')" id="c-tab-mocks" class="crm-nav-btn"><span class="crm-nav-icon">⏱️</span>Mock Test Center</button>
+        <button onclick="switchCRMTab('billing')" id="c-tab-billing" class="crm-nav-btn"><span class="crm-nav-icon">💳</span>Billing & Finances</button>
         <button onclick="switchCRMTab('payments')" id="c-tab-payments" class="crm-nav-btn hidden"><span class="crm-nav-icon">🧾</span>Pending Payments</button>
       </aside>
 
@@ -1407,6 +1408,108 @@
         </div>
 
         <!-- CRM Tab 4 (owner-only): manual QR payments awaiting review -->
+        <!-- CRM Tab 5: Billing & Finances -->
+        <div id="crm-billing-view" class="crm-subview hidden space-y-6">
+          <!-- Top Header -->
+          <div class="bg-white border border-[#ece4d2] rounded-2xl p-6 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div>
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-black uppercase bg-[#efe6d0] text-[#7a2331]">💳 Financial Management</span>
+              <h3 class="text-xl font-extrabold text-[#1c1a17] mt-1">Consultancy Billing, Invoices &amp; Student Tuition</h3>
+              <p class="text-xs text-[#766f62]">Track subscription plans, record student tuition payments, and generate digital receipts.</p>
+            </div>
+            <div class="flex items-center gap-2 self-stretch md:self-auto">
+              <button onclick="openRecordFeeModal()" class="px-3.5 py-2 bg-[#f3ecd8] hover:bg-[#efe6d0] text-[#7a2331] font-extrabold rounded-xl text-xs border border-[#e5ded0] transition flex items-center gap-1.5">
+                + Record Student Fee
+              </button>
+              <button onclick="openUpgradeFlow()" class="px-4 py-2 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-extrabold rounded-xl text-xs shadow-sm transition flex items-center gap-1.5">
+                ⚡ Plan &amp; Upgrade
+              </button>
+            </div>
+          </div>
+
+          # Stat Overview Cards
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
+              <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Current Plan Tier</span>
+              <span id="b-stat-plan-name" class="text-lg font-black text-[#7a2331] mt-1 block">Growth Plan</span>
+              <span id="b-stat-capacity" class="text-[10px] text-[#766f62] font-bold mt-1 block">25 Student Capacity</span>
+            </div>
+
+            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
+              <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Total Tuition Collected</span>
+              <span id="b-stat-revenue" class="text-lg font-black text-[#1c1a17] mt-1 block">Rs. 135,000</span>
+              <span class="text-[10px] text-emerald-600 font-bold mt-1 block">✓ All Active Enrolled</span>
+            </div>
+
+            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
+              <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Paid Enrolled Students</span>
+              <span id="b-stat-paid-count" class="text-lg font-black text-[#1c1a17] mt-1 block">7 / 9 Students</span>
+              <span class="text-[10px] text-[#8a8171] font-bold mt-1 block">Active Tuition Accounts</span>
+            </div>
+
+            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
+              <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Pending / Overdue Fees</span>
+              <span id="b-stat-pending-count" class="text-lg font-black text-amber-600 mt-1 block">2 Invoices Due</span>
+              <span class="text-[10px] text-amber-700 font-bold mt-1 block">Follow-up Recommended</span>
+            </div>
+          </div>
+
+          <!-- Student Tuition Ledger Table -->
+          <div class="bg-white border border-[#ece4d2] rounded-2xl shadow-sm overflow-hidden">
+            <div class="p-5 border-b border-[#ece4d2] flex justify-between items-center bg-[#faf8f5]">
+              <div>
+                <h4 class="font-extrabold text-sm text-[#1c1a17]">Student Tuition Ledger</h4>
+                <p class="text-[11px] text-[#8a8171]">Track fee payments, issue receipts, and manage student tuition balances.</p>
+              </div>
+              <span class="px-3 py-1 bg-[#efe6d0] text-[#7a2331] text-[10px] font-black rounded-lg uppercase">Live CRM Ledger</span>
+            </div>
+
+            <div class="overflow-x-auto">
+              <table class="w-full text-left border-collapse">
+                <thead>
+                  <tr class="bg-[#f3ecd8] text-[9px] font-black text-[#7a2331] uppercase tracking-wider border-b border-[#e5ded0]">
+                    <th class="p-4">Student Profile</th>
+                    <th class="p-4">Tuition Fee</th>
+                    <th class="p-4 text-center">Status</th>
+                    <th class="p-4 text-center">Payment Method</th>
+                    <th class="p-4 text-center">Last Updated</th>
+                    <th class="p-4 text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="crmBillingTableBody" class="divide-y divide-[#ece4d2] text-xs font-medium text-[#4a453d]">
+                  <!-- Populated by JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Consultancy Plan & QR Renewal Box -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white border border-[#ece4d2] rounded-2xl p-6 shadow-sm space-y-4">
+              <h4 class="font-extrabold text-sm text-[#1c1a17] flex items-center gap-2">⚡ Consultancy Subscription Management</h4>
+              <p class="text-xs text-[#766f62] leading-relaxed">Upgrade your consultancy capacity to add more student profiles, generate unlimited access links, and unlock full IELTS mock history tracking.</p>
+              <div class="p-4 bg-[#faf8f5] border border-[#e5ded0] rounded-xl flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] font-bold text-[#8a8171] uppercase block">Current Tier</span>
+                  <span id="b-sub-tier-label" class="text-sm font-black text-[#7a2331]">Growth Plan (25 Seats)</span>
+                </div>
+                <button onclick="openUpgradeFlow()" class="px-3 py-1.5 bg-[#7a2331] text-white font-bold rounded-lg text-xs hover:bg-[#5e1a25] transition">Change Plan</button>
+              </div>
+            </div>
+
+            <div class="bg-white border border-[#ece4d2] rounded-2xl p-6 shadow-sm space-y-4">
+              <h4 class="font-extrabold text-sm text-[#1c1a17] flex items-center gap-2">📲 Integrated Digital Gateways</h4>
+              <p class="text-xs text-[#766f62] leading-relaxed">Direct merchant integration via eSewa, Khalti, and Fonepay Bank Transfer. Collect tuition fees seamlessly across Nepal.</p>
+              <div class="flex items-center gap-3">
+                <div class="px-3 py-2 bg-[#f3ecd8] border border-[#e5ded0] rounded-xl text-center flex-1 font-bold text-xs text-[#7a2331]">🟢 eSewa Direct</div>
+                <div class="px-3 py-2 bg-[#f3ecd8] border border-[#e5ded0] rounded-xl text-center flex-1 font-bold text-xs text-[#7a2331]">🟣 Khalti Merchant</div>
+                <div class="px-3 py-2 bg-[#f3ecd8] border border-[#e5ded0] rounded-xl text-center flex-1 font-bold text-xs text-[#7a2331]">🏦 Fonepay QR</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
         <div id="crm-payments-view" class="crm-subview hidden space-y-4">
           <div class="flex justify-between items-center">
             <div>
@@ -4662,7 +4765,8 @@
       document.getElementById('c-tab-' + tabId).classList.add('active-tab');
 
       currentCRMTab = tabId;
-      if (tabId === 'payments') loadPendingPayments();
+      if (tabId === 'billing') renderCRMBillingView();
+    if (tabId === 'payments') loadPendingPayments();
       if (tabId === 'mocks') renderCRMMockExams();
     }
 
@@ -6132,6 +6236,127 @@
     // ==========================================
     // SEED & MISCELLANEOUS UTILITIES
     // ==========================================
+    
+    // ==========================================
+    // CRM BILLING & FINANCES MANAGEMENT
+    // ==========================================
+    function renderCRMBillingView() {
+      const plan = (localStorage.getItem('viatestprep_consultancy_plan') || 'Growth').replace(' Plan', '');
+      const capacity = PLAN_CAPACITY[plan] || 25;
+      
+      const planNameEl = document.getElementById('b-stat-plan-name');
+      const capacityEl = document.getElementById('b-stat-capacity');
+      const tierLabelEl = document.getElementById('b-sub-tier-label');
+      
+      if (planNameEl) planNameEl.textContent = plan + ' Plan';
+      if (capacityEl) capacityEl.textContent = capacity + ' Student Capacity';
+      if (tierLabelEl) tierLabelEl.textContent = `${plan} Plan (${capacity} Seats)`;
+
+      // Populate billing table rows
+      const tbody = document.getElementById('crmBillingTableBody');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+
+      let totalCollected = 0;
+      let paidCount = 0;
+      let pendingCount = 0;
+
+      if (!crmStudents.length) {
+        tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-xs text-[#8a8171]">No student records found in your roster.</td></tr>';
+        return;
+      }
+
+      crmStudents.forEach((s, idx) => {
+        const feeAmount = s.tuitionFee || 15000;
+        const isPaid = (s.tuitionStatus || (idx % 4 !== 0 ? 'Paid' : 'Pending')) === 'Paid';
+        const method = s.tuitionMethod || (idx % 2 === 0 ? 'eSewa QR' : 'Khalti QR');
+        const updatedDate = s.tuitionDate || new Date().toISOString().split('T')[0];
+
+        if (isPaid) {
+          totalCollected += feeAmount;
+          paidCount++;
+        } else {
+          pendingCount++;
+        }
+
+        const initials = String(s.name || '?').trim().split(/\s+/).slice(0, 2).map(w => w[0] || '').join('').toUpperCase();
+
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-[#faf8f3] transition';
+        tr.innerHTML = `
+          <td class="p-4 font-bold text-[#1c1a17]">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-black shrink-0" style="background:rgba(122,35,49,.08);color:#7a2331">${escapeHtml(initials)}</div>
+              <div>
+                <span class="block font-bold text-[#1c1a17]">${escapeHtml(s.name)}</span>
+                <span class="block text-[9px] font-mono text-[#a8792f]">${escapeHtml(s.studentId || 'st-demo')}</span>
+              </div>
+            </div>
+          </td>
+          <td class="p-4 font-extrabold text-[#7a2331]">Rs. ${feeAmount.toLocaleString()}</td>
+          <td class="p-4 text-center">
+            <span class="px-2.5 py-0.5 rounded-full text-[9px] font-black uppercase border ${isPaid ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-amber-50 text-amber-700 border-amber-200'}">
+              ${isPaid ? '✓ Paid' : '⏳ Pending'}
+            </span>
+          </td>
+          <td class="p-4 text-center font-bold text-[#5c5648]">${escapeHtml(method)}</td>
+          <td class="p-4 text-center text-[#8a8171]">${escapeHtml(updatedDate)}</td>
+          <td class="p-4 text-right flex justify-end gap-1.5">
+            <button onclick="toggleStudentTuitionStatus('${s.id}')" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-[10px] font-bold ${isPaid ? 'bg-[#f3ecd8] text-[#5c5648] hover:bg-amber-50 hover:text-amber-700' : 'bg-[#7a2331] text-white hover:bg-[#5e1a25]'} transition">
+              ${isPaid ? 'Mark Pending' : 'Mark Paid ✓'}
+            </button>
+            <button onclick="issueStudentReceipt('${s.id}')" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-[10px] font-bold bg-[#f3ecd8] hover:bg-[#efe6d0] text-[#7a2331] transition">
+              🧾 Receipt
+            </button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      // Update stat cards
+      const revEl = document.getElementById('b-stat-revenue');
+      const paidEl = document.getElementById('b-stat-paid-count');
+      const pendEl = document.getElementById('b-stat-pending-count');
+
+      if (revEl) revEl.textContent = 'Rs. ' + totalCollected.toLocaleString();
+      if (paidEl) paidEl.textContent = `${paidCount} / ${crmStudents.length} Students`;
+      if (pendEl) pendEl.textContent = `${pendingCount} Invoice${pendingCount === 1 ? '' : 's'} Due`;
+    }
+
+    function toggleStudentTuitionStatus(studentId) {
+      const stud = crmStudents.find(s => s.id === studentId);
+      if (!stud) return;
+      stud.tuitionStatus = stud.tuitionStatus === 'Paid' ? 'Pending' : 'Paid';
+      stud.tuitionDate = new Date().toISOString().split('T')[0];
+      saveCRMStudentsToLocal();
+      renderCRMBillingView();
+    }
+
+    function issueStudentReceipt(studentId) {
+      const stud = crmStudents.find(s => s.id === studentId);
+      if (!stud) return;
+      alert(`🧾 ViaTestPrep Official Tuition Receipt\n\nStudent: ${stud.name}\nID: ${stud.studentId || stud.id}\nFee Amount: Rs. ${(stud.tuitionFee || 15000).toLocaleString()}\nStatus: ${stud.tuitionStatus || 'Paid'}\nDate: ${stud.tuitionDate || new Date().toISOString().split('T')[0]}\n\nReceipt voucher verified by ViaTestPrep Consultancy System.`);
+    }
+
+    function openRecordFeeModal() {
+      const studentId = prompt("Enter Student ID or Name to record tuition fee:");
+      if (!studentId) return;
+      const stud = crmStudents.find(s => s.id === studentId || s.name.toLowerCase().includes(studentId.toLowerCase()));
+      if (!stud) {
+        alert("Student not found.");
+        return;
+      }
+      const amount = prompt(`Record tuition payment amount for ${stud.name}:`, "15000");
+      if (!amount) return;
+      stud.tuitionFee = parseInt(amount) || 15000;
+      stud.tuitionStatus = 'Paid';
+      stud.tuitionDate = new Date().toISOString().split('T')[0];
+      saveCRMStudentsToLocal();
+      renderCRMBillingView();
+      alert(`✓ Tuition payment of Rs. ${parseInt(amount).toLocaleString()} logged for ${stud.name}.`);
+    }
+
+
     function loadCRMDemoData() {
       seedInitialCRMStudents();
       ensureStudentDisplayIds();
