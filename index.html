@@ -2872,7 +2872,8 @@
       if (!form) return;
       const esewaBtn = document.getElementById('m-pay-esewa-btn');
       const khaltiBtn = document.getElementById('m-pay-khalti-btn');
-      esewaBtn.disabled = true; khaltiBtn.disabled = true;
+      if (esewaBtn) esewaBtn.disabled = true;
+      if (khaltiBtn) khaltiBtn.disabled = true;
       setCheckoutStatus('Contacting eSewa...');
 
       try {
@@ -2903,7 +2904,8 @@
       } catch (err) {
         console.error(err);
         setCheckoutStatus('❌ ' + err.message);
-        esewaBtn.disabled = false; khaltiBtn.disabled = false;
+        if (esewaBtn) esewaBtn.disabled = false;
+        if (khaltiBtn) khaltiBtn.disabled = false;
       }
     }
 
@@ -2912,7 +2914,8 @@
       if (!form) return;
       const esewaBtn = document.getElementById('m-pay-esewa-btn');
       const khaltiBtn = document.getElementById('m-pay-khalti-btn');
-      esewaBtn.disabled = true; khaltiBtn.disabled = true;
+      if (esewaBtn) esewaBtn.disabled = true;
+      if (khaltiBtn) khaltiBtn.disabled = true;
       setCheckoutStatus('Contacting Khalti...');
 
       try {
@@ -2932,7 +2935,8 @@
       } catch (err) {
         console.error(err);
         setCheckoutStatus('❌ ' + err.message);
-        esewaBtn.disabled = false; khaltiBtn.disabled = false;
+        if (esewaBtn) esewaBtn.disabled = false;
+        if (khaltiBtn) khaltiBtn.disabled = false;
       }
     }
 
