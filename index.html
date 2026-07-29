@@ -148,7 +148,7 @@
      full keyboard/accessibility/form behavior, just without the default browser
      chrome that reads as "basic" against the rest of the paper-themed UI. */
   /* -------------------------------------------------------------
-     PREMIUM LUXURY DROPDOWN UI SYSTEM
+     UN-GODLY BEAUTIFUL CUSTOM DROPDOWN POPOVER SYSTEM
      ------------------------------------------------------------- */
   select, .select-elegant {
     appearance: none !important;
@@ -198,6 +198,126 @@
     color: #ffffff !important;
     font-weight: 700 !important;
   }
+
+  .vtp-dropdown-container {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    user-select: none;
+  }
+  .vtp-dropdown-container.w-full {
+    display: block;
+    width: 100%;
+  }
+  .vtp-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    padding: 0.55rem 0.95rem;
+    background: linear-gradient(180deg, #ffffff 0%, #faf8f5 100%);
+    border: 1.5px solid #dfd5c4;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 5px rgba(28, 26, 23, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #1c1a17;
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .vtp-dropdown-trigger:hover {
+    border-color: #a8792f;
+    background: linear-gradient(180deg, #ffffff 0%, #f6f0e4 100%);
+    box-shadow: 0 4px 14px rgba(122, 35, 49, 0.1), 0 1px 3px rgba(0, 0, 0, 0.04);
+    transform: translateY(-1px);
+  }
+  .vtp-dropdown-container.open .vtp-dropdown-trigger {
+    border-color: #7a2331;
+    box-shadow: 0 0 0 4px rgba(122, 35, 49, 0.15), 0 6px 16px rgba(122, 35, 49, 0.12);
+    background: #ffffff;
+    transform: translateY(0);
+  }
+  .vtp-dropdown-trigger .vtp-chevron {
+    width: 12px;
+    height: 8px;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    stroke: #7a2331;
+  }
+  .vtp-dropdown-container.open .vtp-chevron {
+    transform: rotate(180deg);
+    stroke: #a8792f;
+  }
+  .vtp-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    min-width: 100%;
+    max-height: 260px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(20px);
+    border: 1.5px solid #e3dbc9;
+    border-radius: 0.9rem;
+    box-shadow: 0 16px 36px -6px rgba(122, 35, 49, 0.16), 0 6px 16px -4px rgba(28, 26, 23, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    padding: 0.4rem;
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px) scale(0.97);
+    transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.2s;
+  }
+  .vtp-dropdown-container.open .vtp-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+  .vtp-dropdown-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    padding: 0.55rem 0.8rem;
+    border-radius: 0.55rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #4a453d;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .vtp-dropdown-option:hover {
+    background: linear-gradient(90deg, rgba(122, 35, 49, 0.08) 0%, rgba(168, 121, 47, 0.04) 100%);
+    color: #7a2331;
+    font-weight: 700;
+    padding-left: 0.95rem;
+  }
+  .vtp-dropdown-option.selected {
+    background: rgba(122, 35, 49, 0.09);
+    color: #7a2331;
+    font-weight: 800;
+    border-left: 3px solid #7a2331;
+  }
+  .vtp-dropdown-option .vtp-check {
+    opacity: 0;
+    color: #7a2331;
+    font-weight: 900;
+    font-size: 0.85rem;
+    transition: opacity 0.15s ease;
+  }
+  .vtp-dropdown-option.selected .vtp-check {
+    opacity: 1;
+  }
+  .vtp-dropdown-badge {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .vtp-dropdown-badge-amber { background-color: #f59e0b; box-shadow: 0 0 6px rgba(245, 158, 11, 0.4); }
+  .vtp-dropdown-badge-blue { background-color: #3b82f6; box-shadow: 0 0 6px rgba(59, 130, 246, 0.4); }
+  .vtp-dropdown-badge-purple { background-color: #a855f7; box-shadow: 0 0 6px rgba(168, 85, 247, 0.4); }
+  .vtp-dropdown-badge-emerald { background-color: #10b981; box-shadow: 0 0 6px rgba(16, 185, 129, 0.4); }
+  .vtp-dropdown-badge-rose { background-color: #e11d48; box-shadow: 0 0 6px rgba(225, 29, 72, 0.4); }
 
   /* CRM sidebar nav - icon chip + label, clearer active/hover states than a
      plain text row with a thin border. */
@@ -4934,6 +5054,7 @@
         option.textContent = `${s.name} (${s.email})`;
         select.appendChild(option);
       });
+      setTimeout(initVTPCustomDropdowns, 50);
     }
 
     function updateCRMSliders() {
@@ -5581,6 +5702,145 @@
         : '';
       alert(`⚠️ ${context} saved locally, but the cloud sync failed:\n\n${msg}${schemaHint}\n\nAccess links / cross-device sync won't work for this record until it's fixed.`);
     }
+
+    // ==========================================
+    // UNGODLY BEAUTIFUL CUSTOM DROPDOWN ENGINE
+    // ==========================================
+    function initVTPCustomDropdowns() {
+      const selects = document.querySelectorAll('select.select-elegant, select.vtp-custom-select, select#rosterStatusFilter, select#graderStudentSelect, select#crmStudStatus, select#crmStudStage, select#crmStudAccessLevel, select#gradeTask1Band, select#gradeTask2Band, select#s-topic-select');
+      
+      selects.forEach(select => {
+        if (select.dataset.vtpEnhanced) {
+          const container = document.getElementById('vtp-container-' + (select.id || select.dataset.vtpId));
+          if (container) {
+            const labelSpan = container.querySelector('.vtp-dropdown-label');
+            const selectedOpt = select.options[select.selectedIndex] || select.options[0];
+            if (selectedOpt && labelSpan) {
+              const txt = selectedOpt.textContent.trim();
+              let badgeColor = '';
+              if (/inquiry/i.test(txt)) badgeColor = 'amber';
+              else if (/enrolled/i.test(txt)) badgeColor = 'blue';
+              else if (/mock/i.test(txt)) badgeColor = 'purple';
+              else if (/ready/i.test(txt)) badgeColor = 'emerald';
+              else if (/completed/i.test(txt)) badgeColor = 'rose';
+              else if (/active/i.test(txt)) badgeColor = 'emerald';
+              else if (/paused/i.test(txt)) badgeColor = 'amber';
+              labelSpan.innerHTML = (badgeColor ? `<span class="vtp-dropdown-badge vtp-dropdown-badge-${badgeColor}"></span>` : '') + `<span>${escapeHtml(txt)}</span>`;
+            }
+          }
+          return;
+        }
+
+        select.dataset.vtpEnhanced = 'true';
+        if (!select.id) select.dataset.vtpId = 'vtp-sel-' + Math.random().toString(36).substr(2, 9);
+        const elementId = select.id || select.dataset.vtpId;
+
+        select.style.setProperty('display', 'none', 'important');
+        
+        const container = document.createElement('div');
+        container.className = 'vtp-dropdown-container ' + (select.classList.contains('w-full') ? 'w-full' : '');
+        container.id = 'vtp-container-' + elementId;
+        
+        const trigger = document.createElement('div');
+        trigger.className = 'vtp-dropdown-trigger';
+        
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'vtp-dropdown-label flex items-center gap-2';
+        
+        const chevron = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        chevron.setAttribute('class', 'vtp-chevron');
+        chevron.setAttribute('viewBox', '0 0 12 8');
+        chevron.setAttribute('fill', 'none');
+        chevron.innerHTML = '<path d="M1 1.5L6 6L11 1.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+        
+        trigger.appendChild(labelSpan);
+        trigger.appendChild(chevron);
+        
+        const menu = document.createElement('div');
+        menu.className = 'vtp-dropdown-menu';
+        
+        const updateTriggerText = () => {
+          const selectedOpt = select.options[select.selectedIndex] || select.options[0];
+          if (!selectedOpt) return;
+          const txt = selectedOpt.textContent.trim();
+          let badgeColor = '';
+          if (/inquiry/i.test(txt)) badgeColor = 'amber';
+          else if (/enrolled/i.test(txt)) badgeColor = 'blue';
+          else if (/mock/i.test(txt)) badgeColor = 'purple';
+          else if (/ready/i.test(txt)) badgeColor = 'emerald';
+          else if (/completed/i.test(txt)) badgeColor = 'rose';
+          else if (/active/i.test(txt)) badgeColor = 'emerald';
+          else if (/paused/i.test(txt)) badgeColor = 'amber';
+          
+          labelSpan.innerHTML = (badgeColor ? `<span class="vtp-dropdown-badge vtp-dropdown-badge-${badgeColor}"></span>` : '') + `<span>${escapeHtml(txt)}</span>`;
+        };
+        
+        const populateMenu = () => {
+          menu.innerHTML = '';
+          Array.from(select.options).forEach((opt, idx) => {
+            const item = document.createElement('div');
+            item.className = 'vtp-dropdown-option ' + (opt.selected ? 'selected' : '');
+            const txt = opt.textContent.trim();
+            
+            let badgeColor = '';
+            if (/inquiry/i.test(txt)) badgeColor = 'amber';
+            else if (/enrolled/i.test(txt)) badgeColor = 'blue';
+            else if (/mock/i.test(txt)) badgeColor = 'purple';
+            else if (/ready/i.test(txt)) badgeColor = 'emerald';
+            else if (/completed/i.test(txt)) badgeColor = 'rose';
+            else if (/active/i.test(txt)) badgeColor = 'emerald';
+            else if (/paused/i.test(txt)) badgeColor = 'amber';
+
+            item.innerHTML = `
+              <div class="flex items-center gap-2">
+                ${badgeColor ? `<span class="vtp-dropdown-badge vtp-dropdown-badge-${badgeColor}"></span>` : ''}
+                <span>${escapeHtml(txt)}</span>
+              </div>
+              <span class="vtp-check">✓</span>
+            `;
+            
+            item.onclick = (e) => {
+              e.stopPropagation();
+              select.selectedIndex = idx;
+              select.dispatchEvent(new Event('change', { bubbles: true }));
+              updateTriggerText();
+              container.classList.remove('open');
+              populateMenu();
+            };
+            
+            menu.appendChild(item);
+          });
+        };
+        
+        updateTriggerText();
+        populateMenu();
+        
+        trigger.onclick = (e) => {
+          e.stopPropagation();
+          document.querySelectorAll('.vtp-dropdown-container.open').forEach(c => {
+            if (c !== container) c.classList.remove('open');
+          });
+          populateMenu();
+          container.classList.toggle('open');
+        };
+        
+        select.addEventListener('change', () => {
+          updateTriggerText();
+          populateMenu();
+        });
+        
+        container.appendChild(trigger);
+        container.appendChild(menu);
+        select.parentNode.insertBefore(container, select.nextSibling);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(initVTPCustomDropdowns, 100);
+    });
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.vtp-dropdown-container.open').forEach(c => c.classList.remove('open'));
+    });
   </script>
 </body>
 </html>
