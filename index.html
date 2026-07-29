@@ -1249,18 +1249,41 @@
 
         <!-- CRM Tab 2: Grader Form -->
         <div id="crm-grader-view" class="crm-subview hidden grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div class="lg:col-span-2 bg-white border border-[#ece4d2] rounded-2xl shadow-sm p-6">
-            <h3 class="text-lg font-bold mb-1">🎤 Live 1-on-1 IELTS Speaking Grader</h3>
-            <p class="text-xs text-[#8a8171] mb-6">Conduct Speaking mock interviews and record grades across the official descriptors.</p>
-            
-            <form onsubmit="handleCRMGraderSubmit(event)" class="space-y-4">
-              <div class="form-group flex flex-col gap-1">
-                <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Select Student Profile</label>
-                <select id="graderStudentSelect" required class="select-elegant w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none focus:border-[#7a2331]">
-                  <!-- Populated by JS -->
-                </select>
+          <div class="lg:col-span-2 bg-white border border-[#ece4d2] rounded-2xl shadow-sm p-6 space-y-5">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#ece4d2] pb-4">
+              <div>
+                <h3 class="text-lg font-bold text-[#1c1a17]">🎤 Live 1-on-1 IELTS Speaking Grader</h3>
+                <p class="text-xs text-[#8a8171]">Conduct Speaking mock interviews with live Part 1–3 question banks & scoring sliders.</p>
+              </div>
+              <button type="button" onclick="shuffleRandomSpeakingTopic()" class="px-3.5 py-2 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold text-xs rounded-xl shadow-xs transition flex items-center gap-1.5 self-start sm:self-auto">
+                🎲 Random Topic
+              </button>
+            </div>
+
+            <!-- Topic Selector & Question Bank Display -->
+            <div class="space-y-3 bg-[#faf8f3] border border-[#e3dbc9] rounded-2xl p-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="form-group flex flex-col gap-1">
+                  <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Select Student Profile</label>
+                  <select id="graderStudentSelect" required class="select-elegant w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none focus:border-[#7a2331]">
+                    <!-- Populated by JS -->
+                  </select>
+                </div>
+                <div class="form-group flex flex-col gap-1">
+                  <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Select Speaking Question Topic (Part 1-3)</label>
+                  <select id="graderTopicSelect" onchange="loadSpeakingTopicQuestions(this.value)" class="select-elegant w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white focus:outline-none focus:border-[#7a2331]">
+                    <!-- Populated by JS -->
+                  </select>
+                </div>
               </div>
 
+              <!-- Question Bank Card Container -->
+              <div id="graderQuestionsBox" class="mt-3">
+                <!-- Populated dynamically by loadSpeakingTopicQuestions() -->
+              </div>
+            </div>
+            
+            <form onsubmit="handleCRMGraderSubmit(event)" class="space-y-4 pt-2">
               <div class="form-group flex flex-col gap-1">
                 <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Cue Card Topic Prompt</label>
                 <input type="text" id="graderCueCard" placeholder="e.g. Describe a journey that was delayed..." required class="w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs focus:outline-none focus:border-[#7a2331]" />
@@ -1286,7 +1309,7 @@
                   <div>
                     <div class="flex justify-between text-xs font-bold mb-1">
                       <span>Grammatical Range</span>
-                      <span id="g-lbl-grammar" class="text-[#7a2331]">6.0</span>
+                      <span id="g-lbl-[#7a2331]" class="text-[#7a2331]">6.0</span>
                     </div>
                     <input type="range" id="g-val-grammar" min="0" max="9" step="0.5" value="6.0" oninput="updateCRMSliders()" class="w-full accent-[#7a2331]" />
                   </div>
@@ -1308,33 +1331,65 @@
                 <span id="graderOverallLabel" class="text-2xl font-extrabold text-[#7a2331]">6.0</span>
               </div>
 
-              <div class="form-group flex flex-col gap-1">
-                <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Teacher Comments &amp; Recommendations</label>
+              <div class="form-group flex flex-col gap-1.5">
+                <div class="flex items-center justify-between">
+                  <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Teacher Comments &amp; Recommendations</label>
+                  <span class="text-[9px] text-[#a8792f] font-bold">Quick Shortcuts</span>
+                </div>
+                <!-- Quick Feedback Chips -->
+                <div class="flex flex-wrap gap-1.5 mb-1">
+                  <button type="button" onclick="appendQuickFeedback('Self-correction & hesitations noted')" class="px-2 py-0.5 bg-[#faf8f5] hover:bg-[#efe6d0] border border-[#e5ded0] text-[9px] font-bold text-[#5c5648] rounded-md transition">+ Hesitations</button>
+                  <button type="button" onclick="appendQuickFeedback('Good lexical resource & paraphrasing')" class="px-2 py-0.5 bg-[#faf8f5] hover:bg-[#efe6d0] border border-[#e5ded0] text-[9px] font-bold text-[#5c5648] rounded-md transition">+ Good Vocab</button>
+                  <button type="button" onclick="appendQuickFeedback('Complex grammatical clauses used accurately')" class="px-2 py-0.5 bg-[#faf8f5] hover:bg-[#efe6d0] border border-[#e5ded0] text-[9px] font-bold text-[#5c5648] rounded-md transition">+ Good Grammar</button>
+                  <button type="button" onclick="appendQuickFeedback('Monotone intonation; needs natural stress')" class="px-2 py-0.5 bg-[#faf8f5] hover:bg-[#efe6d0] border border-[#e5ded0] text-[9px] font-bold text-[#5c5648] rounded-md transition">+ Intonation</button>
+                  <button type="button" onclick="appendQuickFeedback('Minor phoneme mispronunciation on key words')" class="px-2 py-0.5 bg-[#faf8f5] hover:bg-[#efe6d0] border border-[#e5ded0] text-[9px] font-bold text-[#5c5648] rounded-md transition">+ Mispronunciation</button>
+                </div>
                 <textarea id="graderNotes" rows="3" placeholder="Log speaking hesitations, vocab suggestions, grammatical error fixes, etc..." required class="w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs focus:outline-none focus:border-[#7a2331]"></textarea>
               </div>
 
-              <button type="submit" class="w-full py-2.5 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-xl text-xs transition">Submit Graded Mock Score</button>
+              <button type="submit" class="w-full py-2.5 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-xl text-xs transition shadow-sm">Submit Graded Mock Score</button>
             </form>
           </div>
 
-          <div class="bg-white border border-[#ece4d2] rounded-2xl shadow-sm p-5 text-xs text-[#5c5648] space-y-4">
-            <h4 class="font-extrabold text-[#4a453d] uppercase">Descriptor Guide</h4>
-            <div>
-              <strong class="text-[#1c1a17]">Fluency (FC):</strong> Focuses on speech rate, logical connectors, and hesitations.
+          <!-- Right Column: Timer & Descriptor Guide -->
+          <div class="space-y-4">
+            <!-- Built-in Live Exam Timer Card -->
+            <div class="bg-white border border-[#ece4d2] rounded-2xl shadow-sm p-5 text-xs text-[#5c5648] space-y-3">
+              <div class="flex items-center justify-between border-b border-[#ece4d2] pb-2">
+                <h4 class="font-extrabold text-[#7a2331] uppercase tracking-wider flex items-center gap-1.5">⏱️ Live Test Timer</h4>
+                <span id="graderTimerDisplay" class="font-mono text-xl font-black text-[#7a2331]">0:00</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <button type="button" onclick="startGraderTimer(60)" class="py-2 bg-[#f3ecd8] hover:bg-[#efe6d0] text-[#7a2331] font-bold rounded-xl text-[10px] border border-[#e5ded0] transition text-center">
+                  ⏳ 1-Min Prep
+                </button>
+                <button type="button" onclick="startGraderTimer(120)" class="py-2 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-xl text-[10px] transition text-center">
+                  🗣️ 2-Min Speech
+                </button>
+              </div>
+              <button type="button" onclick="resetGraderTimer()" class="w-full py-1 text-[10px] text-[#8a8171] hover:text-[#7a2331] font-bold text-center transition">
+                Reset Timer
+              </button>
             </div>
-            <div>
-              <strong class="text-[#1c1a17]">Lexical Resource (LR):</strong> Focuses on vocabulary flexibility, paraphrasing, and idioms.
-            </div>
-            <div>
-              <strong class="text-[#1c1a17]">Grammar (GRA):</strong> Focuses on sentence complexity, structure diversity, and error frequency.
-            </div>
-            <div>
-              <strong class="text-[#1c1a17]">Pronunciation (PR):</strong> Focuses on phoneme clarity, stress patterns, and ease of understanding.
+
+            <div class="bg-white border border-[#ece4d2] rounded-2xl shadow-sm p-5 text-xs text-[#5c5648] space-y-4">
+              <h4 class="font-extrabold text-[#4a453d] uppercase tracking-wider">Descriptor Guide</h4>
+              <div>
+                <strong class="text-[#1c1a17]">Fluency (FC):</strong> Focuses on speech rate, logical connectors, and hesitations.
+              </div>
+              <div>
+                <strong class="text-[#1c1a17]">Lexical Resource (LR):</strong> Focuses on vocabulary flexibility, paraphrasing, and idioms.
+              </div>
+              <div>
+                <strong class="text-[#1c1a17]">Grammar (GRA):</strong> Focuses on sentence complexity, structure diversity, and error frequency.
+              </div>
+              <div>
+                <strong class="text-[#1c1a17]">Pronunciation (PR):</strong> Focuses on phoneme clarity, stress patterns, and ease of understanding.
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- CRM Tab 3: Material Vault -->
+<!-- CRM Tab 3: Material Vault -->
         <div id="crm-vault-view" class="crm-subview hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <!-- Populated by JS -->
         </div>
@@ -5043,8 +5098,403 @@
       }
     }
 
+
+    // ==========================================
+    // EXTENSIVE IELTS SPEAKING QUESTION BANK (PART 1-3)
+    // ==========================================
+    const IELTS_SPEAKING_BANK = [
+      {
+        id: "travel",
+        title: "✈️ Holidays, Travel & Exploration",
+        cueCardTitle: "Describe a memorable journey you took that was delayed.",
+        part1: [
+          "1. Do you enjoy traveling in your free time?",
+          "2. What is your favorite mode of transportation when taking a trip?",
+          "3. Have you ever been on a long-distance journey?",
+          "4. Do you prefer traveling alone or with family/friends?"
+        ],
+        part2: {
+          prompt: "Describe a memorable journey you took that was delayed.",
+          bullets: [
+            "Where you were traveling to",
+            "Why the journey was delayed or interrupted",
+            "What you did while waiting during the delay",
+            "And explain how you felt about the experience."
+          ]
+        },
+        part3: [
+          "1. Why do many people prefer air travel over land transportation nowadays?",
+          "2. How has modern technology changed the way people plan their vacations?",
+          "3. What impact does mass tourism have on local cultures and environments?",
+          "4. Do you think people will travel more or less in the future?"
+        ]
+      },
+      {
+        id: "technology",
+        title: "💻 Technology, AI & Digital Life",
+        cueCardTitle: "Describe a piece of technology or software you use daily.",
+        part1: [
+          "1. What electronic gadgets do you use most frequently?",
+          "2. Did you use computers or smartphones when you were a child?",
+          "3. How much time do you spend online every day?",
+          "4. Is there any technology item you would like to buy in the future?"
+        ],
+        part2: {
+          prompt: "Describe a piece of technology or software you use daily.",
+          bullets: [
+            "What this technology or application is",
+            "How long you have been using it",
+            "What tasks or activities you use it for",
+            "And explain why it is essential or useful in your daily routine."
+          ]
+        },
+        part3: [
+          "1. How has artificial intelligence influenced modern workplaces?",
+          "2. Do you think children spend too much time on smartphones?",
+          "3. What are the privacy risks associated with social media platforms?",
+          "4. Will traditional books and paper documents completely disappear in the future?"
+        ]
+      },
+      {
+        id: "work_career",
+        title: "💼 Work, Ambition & Career Development",
+        cueCardTitle: "Describe a job or career path you find fascinating.",
+        part1: [
+          "1. Do you currently work or are you a student?",
+          "2. What do you enjoy most about your current daily routine?",
+          "3. Would you like to change your job or field of study in the future?",
+          "4. What skills do you think are important for your chosen career?"
+        ],
+        part2: {
+          prompt: "Describe a job or career path you find fascinating.",
+          bullets: [
+            "What this job or profession involves",
+            "What skills and qualifications are required for it",
+            "How you first learned about this line of work",
+            "And explain why you find this career path interesting or rewarding."
+          ]
+        },
+        part3: [
+          "1. What factors should people consider when choosing a career?",
+          "2. Is job satisfaction more important than earning a high salary?",
+          "3. How are working conditions today different from those 30 years ago?",
+          "4. Should companies offer flexible remote working options to their employees?"
+        ]
+      },
+      {
+        id: "environment",
+        title: "🌿 Environment, Nature & Climate",
+        cueCardTitle: "Describe a natural spot or park you enjoy visiting.",
+        part1: [
+          "1. Do you like spending time in outdoor natural spaces?",
+          "2. Are there many public parks or green areas near where you live?",
+          "3. What outdoor activities do you enjoy doing in nice weather?",
+          "4. Did you play outside often when you were younger?"
+        ],
+        part2: {
+          prompt: "Describe a natural spot or park you enjoy visiting.",
+          bullets: [
+            "Where this natural area or park is located",
+            "How often you go there and who you go with",
+            "What features or scenery make this place special",
+            "And explain why you feel relaxed or inspired when visiting it."
+          ]
+        },
+        part3: [
+          "1. What can individuals do to reduce environmental pollution in their city?",
+          "2. Should governments spend more money on protecting natural wildlife habitats?",
+          "3. How can schools educate children about climate change and conservation?",
+          "4. Are renewable energy sources like solar and wind power practical solutions?"
+        ]
+      },
+      {
+        id: "education",
+        title: "🎓 Education, Schools & Lifelong Learning",
+        cueCardTitle: "Describe a subject or skill you learned outside of formal school.",
+        part1: [
+          "1. What was your favorite subject when you were at school?",
+          "2. Did you enjoy taking exams or doing group projects?",
+          "3. Do you think learning a foreign language is important?",
+          "4. Are you currently taking any online courses or self-study modules?"
+        ],
+        part2: {
+          prompt: "Describe a subject or skill you learned outside of formal school.",
+          bullets: [
+            "What skill or subject you decided to learn",
+            "How and where you learned it",
+            "What challenges you faced while mastering it",
+            "And explain how learning this skill has benefited your life."
+          ]
+        },
+        part3: [
+          "1. How has online learning impacted traditional classroom education?",
+          "2. Do you think university degrees are still necessary for career success?",
+          "3. What qualities make a truly effective teacher or instructor?",
+          "4. Should practical life skills like personal finance be taught in schools?"
+        ]
+      },
+      {
+        id: "music_art",
+        title: "🎵 Music, Art & Entertainment",
+        cueCardTitle: "Describe a musical piece, song, or live concert you love.",
+        part1: [
+          "1. What kind of music do you like listening to?",
+          "2. Can you play any musical instrument?",
+          "3. Did you learn music or drawing classes at school?",
+          "4. Do you prefer listening to recorded music or attending live performances?"
+        ],
+        part2: {
+          prompt: "Describe a musical piece, song, or live concert you love.",
+          bullets: [
+            "What song or musical performance it is",
+            "When and where you first heard it",
+            "What the music or lyrics are about",
+            "And explain why this music has a strong emotional impact on you."
+          ]
+        },
+        part3: [
+          "1. Why is music such an integral part of human culture across the world?",
+          "2. Should governments allocate public funding to support local artists and museums?",
+          "3. How has digital music streaming changed the entertainment industry?",
+          "4. Do traditional folk music and traditional arts still hold value for young people?"
+        ]
+      },
+      {
+        id: "health_routine",
+        title: "🍎 Health, Habits & Daily Routine",
+        cueCardTitle: "Describe a healthy habit or activity you adopted recently.",
+        part1: [
+          "1. What time do you usually wake up and start your day?",
+          "2. Do you have a regular daily schedule or routine?",
+          "3. What do you do to relax after a busy or stressful day?",
+          "4. How do you stay active and maintain physical health?"
+        ],
+        part2: {
+          prompt: "Describe a healthy habit or activity you adopted recently.",
+          bullets: [
+            "What habit or healthy activity you started doing",
+            "Why you decided to adopt this lifestyle change",
+            "How easy or difficult it was to keep up regularly",
+            "And explain how this habit has improved your physical or mental well-being."
+          ]
+        },
+        part3: [
+          "1. What are the main causes of stress among young professionals today?",
+          "2. How can modern cities encourage citizens to lead healthier lifestyles?",
+          "3. Do you think fast food consumption is a major public health concern?",
+          "4. How important is maintaining a healthy work-life balance?"
+        ]
+      },
+      {
+        id: "social_media",
+        title: "📱 Social Media & Communication",
+        cueCardTitle: "Describe an interesting news story or post you saw online.",
+        part1: [
+          "1. How do you usually communicate with your close friends?",
+          "2. Do you prefer texting or making phone calls?",
+          "3. Which social networking apps do you use most often?",
+          "4. Do you get your daily news from television, newspapers, or the internet?"
+        ],
+        part2: {
+          prompt: "Describe an interesting news story or post you saw online.",
+          bullets: [
+            "What the news story or post was about",
+            "Where and when you read or watched it",
+            "Why it caught your attention",
+            "And explain what you learned or thought about the story."
+          ]
+        },
+        part3: [
+          "1. How has social media transformed interpersonal communication?",
+          "2. What are the dangers of unverified rumors or misinformation spreading online?",
+          "3. Do you think traditional print journalism will survive in the digital era?",
+          "4. Should social media platforms be regulated by international laws?"
+        ]
+      },
+      {
+        id: "cities_architecture",
+        title: "🏛️ Cities, Architecture & Urban Life",
+        cueCardTitle: "Describe a city or town you would like to live in or visit.",
+        part1: [
+          "1. Do you live in a big city or a small town?",
+          "2. What do you like most about your hometown?",
+          "3. How has your local city changed in recent years?",
+          "4. Would you prefer to live in the countryside or an urban city center?"
+        ],
+        part2: {
+          prompt: "Describe a city or town you would like to live in or visit.",
+          bullets: [
+            "Where this city or town is located",
+            "What the architecture and atmosphere are like",
+            "What historic or modern attractions it is famous for",
+            "And explain why you find this city appealing to explore or inhabit."
+          ]
+        },
+        part3: [
+          "1. What challenges do major metropolitan areas face with rapid urbanization?",
+          "2. How does city architecture influence the lifestyle and mood of its residents?",
+          "3. What features make a city 'smart' and environmentally sustainable?",
+          "4. Should governments preserve historic buildings instead of building modern skyscrapers?"
+        ]
+      },
+      {
+        id: "food_culture",
+        title: "🍲 Food, Cooking & Culinary Habits",
+        cueCardTitle: "Describe a special meal or dish you enjoyed eating.",
+        part1: [
+          "1. What is your favorite dish or type of cuisine?",
+          "2. Do you enjoy cooking meals at home or eating out at restaurants?",
+          "3. What food did you love eating when you were a child?",
+          "4. Have your eating habits changed in recent years?"
+        ],
+        part2: {
+          prompt: "Describe a special meal or dish you enjoyed eating.",
+          bullets: [
+            "What the dish or meal was and where you ate it",
+            "Who prepared the meal or who you shared it with",
+            "What special ingredients or flavors made it delicious",
+            "And explain why this dining experience was memorable to you."
+          ]
+        },
+        part3: [
+          "1. How has globalization affected local food traditions and eating habits?",
+          "2. Why are international cuisines becoming increasingly popular worldwide?",
+          "3. Do family meals play an important role in strengthening relationships?",
+          "4. What measures can be taken to reduce global food waste?"
+        ]
+      }
+    ];
+
+    function populateGraderSpeakingTopics() {
+      const select = document.getElementById('graderTopicSelect');
+      if (!select) return;
+      select.innerHTML = '<option value="" disabled selected>-- Select an official Speaking topic --</option>';
+      IELTS_SPEAKING_BANK.forEach(t => {
+        const opt = document.createElement('option');
+        opt.value = t.id;
+        opt.textContent = t.title;
+        select.appendChild(opt);
+      });
+      setTimeout(initVTPCustomDropdowns, 50);
+    }
+
+    function loadSpeakingTopicQuestions(topicId) {
+      const topic = IELTS_SPEAKING_BANK.find(t => t.id === topicId) || IELTS_SPEAKING_BANK[0];
+      if (!topic) return;
+
+      // Populate cue card text input
+      const cueInput = document.getElementById('graderCueCard');
+      if (cueInput) cueInput.value = topic.cueCardTitle;
+
+      // Render full questions in question bank display box
+      const box = document.getElementById('graderQuestionsBox');
+      if (!box) return;
+
+      box.innerHTML = `
+        <div class="space-y-4">
+          <!-- Part 1 -->
+          <div class="p-3.5 bg-[#faf8f5] border border-[#e5ded0] rounded-xl">
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2 py-0.5 rounded text-[10px] font-black uppercase bg-[#efe6d0] text-[#7a2331]">Part 1 • Introduction & Warm-up</span>
+              <span class="text-[10px] text-[#8a8171] font-bold">4-5 mins</span>
+            </div>
+            <ul class="space-y-1.5 text-xs text-[#1c1a17] font-medium">
+              ${topic.part1.map(q => `<li class="flex items-start gap-1.5"><span class="text-[#7a2331] font-bold">▸</span>${escapeHtml(q)}</li>`).join('')}
+            </ul>
+          </div>
+
+          <!-- Part 2 Cue Card -->
+          <div class="p-4 bg-gradient-to-b from-[#fdfaf2] to-[#f5eedc] border-2 border-[#a8792f] rounded-xl shadow-xs">
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2 py-0.5 rounded text-[10px] font-black uppercase bg-[#7a2331] text-white">Part 2 • Cue Card Task</span>
+              <span class="text-[10px] text-[#7a2331] font-bold">3-4 mins</span>
+            </div>
+            <h5 class="font-extrabold text-sm text-[#1c1a17] mb-2">"${escapeHtml(topic.part2.prompt)}"</h5>
+            <p class="text-[10px] font-bold text-[#8a8171] uppercase mb-1">You should say:</p>
+            <ul class="space-y-1 text-xs text-[#4a453d] font-medium pl-3 list-disc">
+              ${topic.part2.bullets.map(b => `<li>${escapeHtml(b)}</li>`).join('')}
+            </ul>
+          </div>
+
+          <!-- Part 3 -->
+          <div class="p-3.5 bg-[#faf8f5] border border-[#e5ded0] rounded-xl">
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2 py-0.5 rounded text-[10px] font-black uppercase bg-[#efe6d0] text-[#7a2331]">Part 3 • Analytical Discussion</span>
+              <span class="text-[10px] text-[#8a8171] font-bold">4-5 mins</span>
+            </div>
+            <ul class="space-y-1.5 text-xs text-[#1c1a17] font-medium">
+              ${topic.part3.map(q => `<li class="flex items-start gap-1.5"><span class="text-[#a8792f] font-bold">▸</span>${escapeHtml(q)}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      `;
+    }
+
+    function shuffleRandomSpeakingTopic() {
+      const idx = Math.floor(Math.random() * IELTS_SPEAKING_BANK.length);
+      const topic = IELTS_SPEAKING_BANK[idx];
+      const select = document.getElementById('graderTopicSelect');
+      if (select) {
+        select.value = topic.id;
+        select.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+      loadSpeakingTopicQuestions(topic.id);
+    }
+
+    // Interactive Examiner Timer logic
+    let graderTimerInterval = null;
+    let graderTimerSeconds = 0;
+
+    function startGraderTimer(duration) {
+      clearInterval(graderTimerInterval);
+      graderTimerSeconds = duration;
+      updateGraderTimerDisplay();
+      
+      graderTimerInterval = setInterval(() => {
+        if (graderTimerSeconds > 0) {
+          graderTimerSeconds--;
+          updateGraderTimerDisplay();
+        } else {
+          clearInterval(graderTimerInterval);
+          // Play audio beep
+          try {
+            const ctx = new (window.AudioContext || window.webkitAudioContext)();
+            const osc = ctx.createOscillator();
+            osc.connect(ctx.destination);
+            osc.frequency.value = 880;
+            osc.start();
+            setTimeout(() => osc.stop(), 300);
+          } catch(e) {}
+        }
+      }, 1000);
+    }
+
+    function resetGraderTimer() {
+      clearInterval(graderTimerInterval);
+      graderTimerSeconds = 0;
+      updateGraderTimerDisplay();
+    }
+
+    function updateGraderTimerDisplay() {
+      const el = document.getElementById('graderTimerDisplay');
+      if (!el) return;
+      const m = Math.floor(graderTimerSeconds / 60);
+      const s = graderTimerSeconds % 60;
+      el.textContent = `${m}:${s < 10 ? '0' : ''}${s}`;
+    }
+
+    function appendQuickFeedback(phrase) {
+      const textarea = document.getElementById('graderNotes');
+      if (!textarea) return;
+      const cur = textarea.value.trim();
+      textarea.value = cur ? `${cur}\n• ${phrase}` : `• ${phrase}`;
+      textarea.focus();
+    }
+
+
     // CRM Tab 2 Grader
     function populateCRMGraderSelect() {
+      populateGraderSpeakingTopics();
       const select = document.getElementById('graderStudentSelect');
       select.innerHTML = '<option value="" disabled selected>-- Select an enrolled student --</option>';
       
