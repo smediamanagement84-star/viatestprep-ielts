@@ -6332,30 +6332,153 @@
       renderCRMBillingView();
     }
 
+    
+    let activeReceiptStudentId = null;
+    let billingSearchQuery = '';
+    let billingStatusFilter = 'all';
+
+    function setBillingFilter(filter) {
+      billingStatusFilter = filter;
+      renderCRMBillingView();
+    }
+
     function issueStudentReceipt(studentId) {
       const stud = crmStudents.find(s => s.id === studentId);
       if (!stud) return;
-      alert(`🧾 ViaTestPrep Official Tuition Receipt\n\nStudent: ${stud.name}\nID: ${stud.studentId || stud.id}\nFee Amount: Rs. ${(stud.tuitionFee || 15000).toLocaleString()}\nStatus: ${stud.tuitionStatus || 'Paid'}\nDate: ${stud.tuitionDate || new Date().toISOString().split('T')[0]}\n\nReceipt voucher verified by ViaTestPrep Consultancy System.`);
+      activeReceiptStudentId = studentId;
+
+      const fee = stud.tuitionFee || 15000;
+      const isPaid = (stud.tuitionStatus || 'Paid') === 'Paid';
+      const method = stud.tuitionMethod || 'eSewa Merchant QR';
+      const date = stud.tuitionDate || new Date().toISOString().split('T')[0];
+      const voucherNo = 'VTP-2026-' + (stud.studentId || stud.id).replace('st-', '').toUpperCase();
+      const hash = '0x' + Math.random().toString(36).substring(2, 12).toUpperCase();
+
+      const body = document.getElementById('receiptModalBody');
+      body.innerHTML = `
+        <div class="bg-white border border-[#e5ded0] rounded-2xl p-5 shadow-xs space-y-4">
+          <div class="flex justify-between items-center border-b border-[#ece4d2] pb-3">
+            <div>
+              <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Voucher Number</span>
+              <span class="font-mono font-black text-sm text-[#7a2331]">${escapeHtml(voucherNo)}</span>
+            </div>
+            <div class="text-right">
+              <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Issued Date</span>
+              <span class="font-mono text-xs font-bold text-[#1c1a17]">${escapeHtml(date)}</span>
+            </div>
+          </div>
+
+          <!-- Student Profile Details -->
+          <div class="grid grid-cols-2 gap-3 text-xs">
+            <div>
+              <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Student Name</span>
+              <span class="font-extrabold text-[#1c1a17]">${escapeHtml(stud.name)}</span>
+            </div>
+            <div>
+              <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Student ID</span>
+              <span class="font-mono font-bold text-[#a8792f]">${escapeHtml(stud.studentId || stud.id)}</span>
+            </div>
+            <div>
+              <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Email Address</span>
+              <span class="text-[#5c5648]">${escapeHtml(stud.email || '—')}</span>
+            </div>
+            <div>
+              <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Phone Contact</span>
+              <span class="text-[#5c5648]">${escapeHtml(stud.phone || '—')}</span>
+            </div>
+          </div>
+
+          <!-- Course & Fee Breakdown -->
+          <div class="border-t border-[#ece4d2] pt-3 space-y-2">
+            <div class="flex justify-between text-xs font-bold text-[#1c1a17]">
+              <span>IELTS Master Class &amp; 22 Full Mock Packet</span>
+              <span>Rs. ${fee.toLocaleString()}</span>
+            </div>
+            <div class="flex justify-between text-[11px] text-[#8a8171]">
+              <span>Digital Resource &amp; Speaking Grader Access</span>
+              <span>Included</span>
+            </div>
+            <div class="flex justify-between items-center border-t border-dashed border-[#e5ded0] pt-2">
+              <span class="text-xs font-black text-[#7a2331] uppercase">Total Paid</span>
+              <span class="text-base font-black text-[#7a2331]">Rs. ${fee.toLocaleString()}</span>
+            </div>
+          </div>
+
+          <!-- Status & Verification Badge -->
+          <div class="p-3 bg-[#f3ecd8] border border-[#e5ded0] rounded-xl flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full ${isPaid ? 'bg-emerald-500' : 'bg-amber-500'} animate-pulse"></span>
+              <span class="text-xs font-black uppercase ${isPaid ? 'text-emerald-800' : 'text-amber-800'}">${isPaid ? '✓ Payment Verified' : '⏳ Pending Payment'}</span>
+            </div>
+            <span class="text-[10px] font-mono text-[#8a8171] font-bold">${escapeHtml(method)}</span>
+          </div>
+
+          <div class="text-[9px] text-center text-[#8a8171]">
+            Digital Receipt Hash: <span class="font-mono font-bold text-[#a8792f]">${hash}</span>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('crm-receipt-modal').classList.remove('hidden');
+    }
+
+    function closeReceiptModal() {
+      document.getElementById('crm-receipt-modal').classList.add('hidden');
+    }
+
+    function printReceiptVoucher() {
+      window.print();
+    }
+
+    function copyReceiptHash() {
+      const stud = crmStudents.find(s => s.id === activeReceiptStudentId);
+      if (!stud) return;
+      const hash = `https://viatestprep-ielts.vercel.app/verify-receipt?id=${stud.id}&voucher=VTP-2026`;
+      navigator.clipboard.writeText(hash).then(() => {
+        alert("✓ Receipt verification link copied to clipboard!");
+      });
     }
 
     function openRecordFeeModal() {
-      const studentId = prompt("Enter Student ID or Name to record tuition fee:");
-      if (!studentId) return;
-      const stud = crmStudents.find(s => s.id === studentId || s.name.toLowerCase().includes(studentId.toLowerCase()));
-      if (!stud) {
-        alert("Student not found.");
-        return;
-      }
-      const amount = prompt(`Record tuition payment amount for ${stud.name}:`, "15000");
-      if (!amount) return;
-      stud.tuitionFee = parseInt(amount) || 15000;
-      stud.tuitionStatus = 'Paid';
-      stud.tuitionDate = new Date().toISOString().split('T')[0];
-      saveCRMStudentsToLocal();
-      renderCRMBillingView();
-      alert(`✓ Tuition payment of Rs. ${parseInt(amount).toLocaleString()} logged for ${stud.name}.`);
+      const select = document.getElementById('recFeeStudentSelect');
+      if (!select) return;
+      select.innerHTML = '<option value="" disabled selected>-- Select a student --</option>';
+      crmStudents.forEach(s => {
+        const opt = document.createElement('option');
+        opt.value = s.id;
+        opt.textContent = `${s.name} (${s.studentId || s.id})`;
+        select.appendChild(opt);
+      });
+      document.getElementById('recFeeDate').value = new Date().toISOString().split('T')[0];
+      setTimeout(initVTPCustomDropdowns, 50);
+      document.getElementById('crm-record-fee-modal').classList.remove('hidden');
     }
 
+    function closeRecordFeeModal() {
+      document.getElementById('crm-record-fee-modal').classList.add('hidden');
+    }
+
+    function handleRecordFeeSubmit(e) {
+      e.preventDefault();
+      const id = document.getElementById('recFeeStudentSelect').value;
+      const amount = parseInt(document.getElementById('recFeeAmount').value) || 15000;
+      const status = document.getElementById('recFeeStatus').value;
+      const method = document.getElementById('recFeeMethod').value;
+      const date = document.getElementById('recFeeDate').value;
+
+      const stud = crmStudents.find(s => s.id === id);
+      if (!stud) return;
+
+      stud.tuitionFee = amount;
+      stud.tuitionStatus = status;
+      stud.tuitionMethod = method;
+      stud.tuitionDate = date;
+
+      saveCRMStudentsToLocal();
+      closeRecordFeeModal();
+      renderCRMBillingView();
+      alert(`✓ Tuition payment record of Rs. ${amount.toLocaleString()} saved for ${stud.name}!`);
+    }
 
     function loadCRMDemoData() {
       seedInitialCRMStudents();
@@ -6530,5 +6653,99 @@
       document.querySelectorAll('.vtp-dropdown-container.open').forEach(c => c.classList.remove('open'));
     });
   </script>
+
+  <!-- ========================================== -->
+  <!-- LUXURY OFFICIAL TUITION RECEIPT MODAL -->
+  <!-- ========================================== -->
+  <div id="crm-receipt-modal" class="hidden fixed inset-0 z-50 bg-[#1c1a17]/70 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-white border-2 border-[#a8792f] rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden transition transform scale-100">
+      <!-- Receipt Header -->
+      <div class="bg-gradient-to-r from-[#7a2331] via-[#5e1a25] to-[#4a141d] p-6 text-white relative">
+        <div class="flex justify-between items-start">
+          <div>
+            <span class="px-2.5 py-0.5 rounded-full text-[9px] font-black uppercase tracking-widest bg-[#a8792f]/30 border border-[#a8792f]/40 text-[#f3ecd8]">Official Voucher</span>
+            <h3 class="text-xl font-black mt-1 tracking-tight">ViaTestPrep Consultancy</h3>
+            <p class="text-[10px] text-[#e5ded0] font-medium">Academic HQ • Tuition &amp; Mock Exam Portal</p>
+          </div>
+          <button onclick="closeReceiptModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center font-bold text-sm transition">✕</button>
+        </div>
+      </div>
+
+      <!-- Receipt Voucher Body -->
+      <div id="receiptModalBody" class="p-6 space-y-5 bg-[#faf8f3]">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- Receipt Footer Actions -->
+      <div class="p-4 bg-[#f3ecd8] border-t border-[#e5ded0] flex items-center justify-between gap-3">
+        <button onclick="copyReceiptHash()" class="px-3.5 py-2 bg-white hover:bg-[#faf8f5] text-[#7a2331] font-bold text-xs rounded-xl border border-[#e5ded0] transition flex items-center gap-1.5">
+          📋 Copy Hash
+        </button>
+        <div class="flex items-center gap-2">
+          <button onclick="closeReceiptModal()" class="px-4 py-2 bg-[#e5ded0] hover:bg-[#dfd5c4] text-[#5c5648] font-bold text-xs rounded-xl transition">Close</button>
+          <button onclick="printReceiptVoucher()" class="px-4 py-2 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-black text-xs rounded-xl shadow-xs transition flex items-center gap-1.5">
+            🖨️ Print / Download PDF
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- RECORD STUDENT TUITION FEE MODAL -->
+  <!-- ========================================== -->
+  <div id="crm-record-fee-modal" class="hidden fixed inset-0 z-50 bg-[#1c1a17]/70 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-white border border-[#ece4d2] rounded-3xl shadow-2xl max-w-md w-full p-6 space-y-4">
+      <div class="flex justify-between items-center border-b border-[#ece4d2] pb-3">
+        <div>
+          <h3 class="text-base font-extrabold text-[#1c1a17]">💰 Record Student Tuition Fee</h3>
+          <p class="text-xs text-[#8a8171]">Log fee payment details and update student tuition status.</p>
+        </div>
+        <button onclick="closeRecordFeeModal()" class="text-[#8a8171] hover:text-[#7a2331] font-bold">✕</button>
+      </div>
+
+      <form onsubmit="handleRecordFeeSubmit(event)" class="space-y-3.5">
+        <div class="form-group flex flex-col gap-1">
+          <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Select Student</label>
+          <select id="recFeeStudentSelect" required class="select-elegant w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white">
+            <!-- Populated by JS -->
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="form-group flex flex-col gap-1">
+            <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Fee Amount (Rs.)</label>
+            <input type="number" id="recFeeAmount" value="15000" required class="w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs font-bold text-[#7a2331] outline-none focus:border-[#7a2331]" />
+          </div>
+          <div class="form-group flex flex-col gap-1">
+            <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Payment Status</label>
+            <select id="recFeeStatus" class="select-elegant w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white">
+              <option value="Paid">✓ Paid</option>
+              <option value="Pending">⏳ Pending</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="form-group flex flex-col gap-1">
+            <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Payment Method</label>
+            <select id="recFeeMethod" class="select-elegant w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-white">
+              <option value="eSewa QR">eSewa Merchant QR</option>
+              <option value="Khalti QR">Khalti Wallet</option>
+              <option value="Bank Transfer">Fonepay Bank Transfer</option>
+              <option value="Cash">Cash at Counter</option>
+            </select>
+          </div>
+          <div class="form-group flex flex-col gap-1">
+            <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Payment Date</label>
+            <input type="date" id="recFeeDate" class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-[#faf8f3] outline-none focus:border-[#7a2331]" />
+          </div>
+        </div>
+
+        <button type="submit" class="w-full py-2.5 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-extrabold rounded-xl text-xs shadow-sm transition">Save Tuition Record ✓</button>
+      </form>
+    </div>
+  </div>
+
 </body>
 </html>
