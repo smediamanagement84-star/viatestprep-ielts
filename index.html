@@ -5169,13 +5169,85 @@
           supabaseClient.from('students').update({ access_token: token }).eq('id', stud.id).then(({ error }) => { if (error) console.warn('Could not update access token on Supabase:', error); });
         }
       }
+      
       const link = `${window.location.origin}${window.location.pathname}?student=${token}`;
-      const done = () => alert(`Access link copied for ${stud.name}!\n\nSend this to them directly - it logs them straight into their own portal, and everything they do there (mock scores, speaking practice) will show up in this roster automatically.`);
+      
+      // Copy link to clipboard automatically
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(link).then(done).catch(() => prompt('Copy this link:', link));
-      } else {
-        prompt('Copy this link:', link);
+        navigator.clipboard.writeText(link).catch(() => {});
       }
+
+      let pkgTitle = 'Full Resource Packet';
+      if (stud.accessLevel === 'mocks') pkgTitle = 'Mock Test Pack Only';
+      else if (stud.accessLevel === 'speaking') pkgTitle = 'Live Speaking Grader Only';
+
+      const body = document.getElementById('accessModalBody');
+      body.innerHTML = `
+        <div class="bg-white border border-[#e5ded0] rounded-2xl p-5 shadow-xs space-y-4">
+          <div class="flex justify-between items-center border-b border-[#ece4d2] pb-3">
+            <div>
+              <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Student Name</span>
+              <span class="font-extrabold text-sm text-[#1c1a17]">${escapeHtml(stud.name)}</span>
+            </div>
+            <div class="text-right">
+              <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Student ID</span>
+              <span class="font-mono text-xs font-bold text-[#a8792f]">${escapeHtml(stud.studentId || stud.id)}</span>
+            </div>
+          </div>
+
+          <!-- Link Box -->
+          <div class="space-y-1.5">
+            <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider block">Personal Login Link (Copied to Clipboard ✓)</label>
+            <div class="flex items-center gap-2">
+              <input type="text" id="modalAccessLinkInput" readonly value="${escapeHtml(link)}" class="w-full px-3 py-2 border border-[#e5ded0] rounded-xl text-xs font-mono bg-[#faf8f5] text-[#7a2331] font-bold select-all focus:outline-none" />
+              <button onclick="copyModalAccessLinkText()" id="btnCopyModalLink" class="px-3.5 py-2 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold text-xs rounded-xl shrink-0 transition flex items-center gap-1">
+                📋 Copy
+              </button>
+            </div>
+          </div>
+
+          <!-- Social Sharing Buttons -->
+          <div class="grid grid-cols-2 gap-2 pt-1">
+            <a href="https://wa.me/?text=${encodeURIComponent('Hello ' + stud.name + ', here is your personal ViaTestPrep IELTS Portal access link: ' + link)}" target="_blank" class="py-2 px-3 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-extrabold text-xs rounded-xl transition flex items-center justify-center gap-1.5">
+              💬 Share WhatsApp
+            </a>
+            <a href="mailto:${encodeURIComponent(stud.email || '')}?subject=${encodeURIComponent('Your ViaTestPrep IELTS Access Link')}&body=${encodeURIComponent('Hello ' + stud.name + ',\n\nHere is your personal login link to access your IELTS mock tests and speaking practice:\n' + link)}" class="py-2 px-3 bg-sky-50 hover:bg-sky-100 text-sky-800 border border-sky-200 font-extrabold text-xs rounded-xl transition flex items-center justify-center gap-1.5">
+              ✉️ Email Student
+            </a>
+          </div>
+
+          <!-- Explanatory Banner -->
+          <div class="p-3 bg-[#f3ecd8] border border-[#e5ded0] rounded-xl text-xs text-[#5c5648] space-y-1">
+            <div class="font-extrabold text-[#7a2331] flex items-center gap-1">
+              <span>💡 How this link works</span>
+            </div>
+            <p class="text-[11px] text-[#766f62] leading-relaxed">Sending this link logs ${escapeHtml(stud.name)} straight into their portal without passwords. All mock scores and speaking grades will automatically sync to your roster.</p>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('crm-access-modal').classList.remove('hidden');
+    }
+
+    function closeAccessLinkModal() {
+      document.getElementById('crm-access-modal').classList.add('hidden');
+    }
+
+    function copyModalAccessLinkText() {
+      const input = document.getElementById('modalAccessLinkInput');
+      if (!input) return;
+      input.select();
+      navigator.clipboard.writeText(input.value).then(() => {
+        const btn = document.getElementById('btnCopyModalLink');
+        if (btn) {
+          btn.textContent = '✓ Copied!';
+          btn.classList.replace('bg-[#7a2331]', 'bg-emerald-700');
+          setTimeout(() => {
+            btn.textContent = '📋 Copy';
+            btn.classList.replace('bg-emerald-700', 'bg-[#7a2331]');
+          }, 2000);
+        }
+      });
     }
 
     function editCRMStudent(id) {
@@ -6742,6 +6814,37 @@
 
         <button type="submit" class="w-full py-2.5 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-extrabold rounded-xl text-xs shadow-sm transition">Save Tuition Record ✓</button>
       </form>
+    </div>
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- LUXURY STUDENT ACCESS LINK MODAL -->
+  <!-- ========================================== -->
+  <div id="crm-access-modal" class="hidden fixed inset-0 z-50 bg-[#1c1a17]/70 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-white border-2 border-[#a8792f] rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden transition transform scale-100">
+      <!-- Modal Header -->
+      <div class="bg-gradient-to-r from-[#7a2331] via-[#5e1a25] to-[#4a141d] p-6 text-white relative">
+        <div class="flex justify-between items-start">
+          <div>
+            <span class="px-2.5 py-0.5 rounded-full text-[9px] font-black uppercase tracking-widest bg-[#a8792f]/30 border border-[#a8792f]/40 text-[#f3ecd8]">Direct Portal Access</span>
+            <h3 class="text-xl font-black mt-1 tracking-tight">Student Access Credentials</h3>
+            <p id="accessModalSubtitle" class="text-xs text-[#e5ded0] font-medium mt-0.5">Zero-password login link for student roster profile.</p>
+          </div>
+          <button onclick="closeAccessLinkModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center font-bold text-sm transition">✕</button>
+        </div>
+      </div>
+
+      <!-- Modal Body -->
+      <div id="accessModalBody" class="p-6 space-y-5 bg-[#faf8f3]">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- Footer Actions -->
+      <div class="p-4 bg-[#f3ecd8] border-t border-[#e5ded0] flex items-center justify-between gap-3">
+        <span class="text-[10px] text-[#8a8171] font-bold">🔒 Secure 1-Click Authentication</span>
+        <button onclick="closeAccessLinkModal()" class="px-5 py-2 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-extrabold text-xs rounded-xl shadow-xs transition">Done</button>
+      </div>
     </div>
   </div>
 
