@@ -1127,7 +1127,6 @@
         <button onclick="switchCRMTab('vault')" id="c-tab-vault" class="crm-nav-btn"><span class="crm-nav-icon">📦</span>Material Vault</button>
         <button onclick="switchCRMTab('mocks')" id="c-tab-mocks" class="crm-nav-btn"><span class="crm-nav-icon">⏱️</span>Mock Test Center</button>
         <button onclick="switchCRMTab('billing')" id="c-tab-billing" class="crm-nav-btn"><span class="crm-nav-icon">💳</span>Billing & Finances</button>
-        <button onclick="switchCRMTab('payments')" id="c-tab-payments" class="crm-nav-btn hidden"><span class="crm-nav-icon">🧾</span>Pending Payments</button>
       </aside>
 
       <!-- CRM Content View -->
@@ -1483,6 +1482,23 @@
             </div>
           </div>
 
+          <!-- Pending QR Payment Submissions Section (Integrated Admin/Owner Approvals) -->
+          <div id="pendingPaymentsSection" class="bg-white border border-[#ece4d2] rounded-2xl p-6 shadow-sm space-y-4">
+            <div class="flex justify-between items-center border-b border-[#ece4d2] pb-3">
+              <div>
+                <h4 class="font-extrabold text-sm text-[#1c1a17] flex items-center gap-2">
+                  🧾 Pending QR Payment Submissions
+                  <span id="b-pending-badge" class="px-2.5 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-black rounded-full hidden">0 Pending</span>
+                </h4>
+                <p class="text-xs text-[#766f62] mt-0.5">Manual QR submissions awaiting verification — cross-check the reference ID against your eSewa/Khalti wallet activity before approving.</p>
+              </div>
+              <button onclick="loadPendingPayments()" class="px-3.5 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-[#7a2331] font-bold rounded-xl text-xs transition">↻ Refresh</button>
+            </div>
+            <div id="pendingPaymentsList" class="space-y-3">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
           <!-- Consultancy Plan & QR Renewal Box -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-white border border-[#ece4d2] rounded-2xl p-6 shadow-sm space-y-4">
@@ -1506,20 +1522,6 @@
                 <div class="px-3 py-2 bg-[#f3ecd8] border border-[#e5ded0] rounded-xl text-center flex-1 font-bold text-xs text-[#7a2331]">🏦 Fonepay QR</div>
               </div>
             </div>
-          </div>
-        </div>
-
-
-        <div id="crm-payments-view" class="crm-subview hidden space-y-4">
-          <div class="flex justify-between items-center">
-            <div>
-              <h2 class="text-lg font-extrabold text-[#1c1a17]">Pending Payments</h2>
-              <p class="text-xs text-[#766f62] mt-0.5">Manual QR submissions awaiting verification - cross-check the reference ID against your eSewa/Khalti wallet activity before approving.</p>
-            </div>
-            <button onclick="loadPendingPayments()" class="px-3.5 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-[#5c5648] font-bold rounded-lg text-xs transition">↻ Refresh</button>
-          </div>
-          <div id="pendingPaymentsList" class="space-y-3">
-            <!-- Populated by JS -->
           </div>
         </div>
 
@@ -4752,12 +4754,8 @@
       // the table/grader-select itself once the real data lands.
       syncRosterFromCloud();
 
-      // Manual QR payment review (see /api/payment/manual-submit.js) is only
-      // ever relevant to the platform owner, not individual consultancies -
-      // it's every tenant's pending payments in one list.
-      const isOwnerSession = localStorage.getItem('viatestprep_consultancy_id') === '__owner__';
-      document.getElementById('c-tab-payments').classList.toggle('hidden', !isOwnerSession);
-      if (isOwnerSession) loadPendingPayments();
+      // Sync pending QR payment submissions into Billing & Finances dashboard
+      loadPendingPayments();
     }
 
     // Reads the active plan + roster size and renders the seat-capacity meter
@@ -4821,31 +4819,51 @@
       document.getElementById('c-tab-' + tabId).classList.add('active-tab');
 
       currentCRMTab = tabId;
-      if (tabId === 'billing') renderCRMBillingView();
-    if (tabId === 'payments') loadPendingPayments();
+      if (tabId === 'billing') {
+        renderCRMBillingView();
+        loadPendingPayments();
+      }
       if (tabId === 'mocks') renderCRMMockExams();
     }
 
-    // Owner-only: manual QR payment submissions awaiting a human to
-    // cross-check against real wallet activity (see
-    // /api/payment/manual-submit.js). Interim until a real merchant account
-    // replaces the QR flow entirely.
+    // Owner/Admin manual QR payment submissions review
     async function loadPendingPayments() {
       const list = document.getElementById('pendingPaymentsList');
+      const badge = document.getElementById('b-pending-badge');
       if (!list) return;
-      list.innerHTML = '<p class="text-xs text-[#8a8171]">Loading...</p>';
+
+      const isOwnerSession = localStorage.getItem('viatestprep_consultancy_id') === '__owner__';
+      const ownerKey = typeof getOwnerKey === 'function' ? getOwnerKey() : null;
+
+      // Hide section for non-owners if no owner key present
+      if (!isOwnerSession && !ownerKey) {
+        const section = document.getElementById('pendingPaymentsSection');
+        if (section) section.classList.add('hidden');
+        return;
+      }
+
+      const section = document.getElementById('pendingPaymentsSection');
+      if (section) section.classList.remove('hidden');
+
+      list.innerHTML = '<p class="text-xs text-[#8a8171]">Loading pending submissions...</p>';
       try {
-        const res = await fetch('/api/admin/orders', { headers: { 'X-Owner-Key': getOwnerKey() } });
+        const res = await fetch('/api/admin/orders', { headers: { 'X-Owner-Key': ownerKey || '' } });
         const data = await res.json();
         if (!data.ok) throw new Error(data.error || 'Could not load pending payments');
 
-        if (!data.orders.length) {
-          list.innerHTML = '<p class="text-xs text-[#8a8171] py-6 text-center">No payments awaiting review.</p>';
+        if (!data.orders || !data.orders.length) {
+          if (badge) { badge.textContent = '0 Pending'; badge.classList.add('hidden'); }
+          list.innerHTML = '<p class="text-xs text-[#8a8171] py-4 text-center">No subscription payments awaiting review.</p>';
           return;
         }
 
+        if (badge) {
+          badge.textContent = data.orders.length + ' Pending';
+          badge.classList.remove('hidden');
+        }
+
         list.innerHTML = data.orders.map(o => `
-          <div class="bg-white border border-[#e5ded0] rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="bg-[#faf8f5] border border-[#e5ded0] rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div class="text-xs space-y-1">
               <div class="font-bold text-[#1c1a17]">${escapeHtml(o.consultancy_name)} <span class="font-normal text-[#8a8171]">(${escapeHtml(o.consultancy_email)})</span></div>
               <div class="text-[#5c5648]">${escapeHtml(o.plan_name)} plan, ${o.duration_days} days - <strong>Rs. ${Number(o.amount).toLocaleString()}</strong></div>
@@ -4859,8 +4877,9 @@
           </div>
         `).join('');
       } catch (e) {
-        console.error(e);
-        list.innerHTML = `<p class="text-xs text-rose-600 py-6 text-center">❌ ${escapeHtml(e.message)}</p>`;
+        console.warn('Pending payments check:', e);
+        if (badge) badge.classList.add('hidden');
+        list.innerHTML = '<p class="text-xs text-[#8a8171] py-4 text-center">No pending QR subscription orders.</p>';
       }
     }
 
