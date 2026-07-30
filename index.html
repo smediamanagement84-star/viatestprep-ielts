@@ -1407,7 +1407,7 @@
         </div>
 
         <!-- CRM Tab 4 (owner-only): manual QR payments awaiting review -->
-        <!-- CRM Tab 5: Billing & Finances -->
+        <!-- CRM Tab 5: Billing & Finances Hub -->
         <div id="crm-billing-view" class="crm-subview hidden space-y-6">
           <!-- Top Header -->
           <div class="bg-white border border-[#ece4d2] rounded-2xl p-6 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
@@ -1417,109 +1417,142 @@
               <p class="text-xs text-[#766f62]">Track subscription plans, record student tuition payments, and generate digital receipts.</p>
             </div>
             <div class="flex items-center gap-2 self-stretch md:self-auto">
-              <button onclick="openRecordFeeModal()" class="px-3.5 py-2 bg-[#f3ecd8] hover:bg-[#efe6d0] text-[#7a2331] font-extrabold rounded-xl text-xs border border-[#e5ded0] transition flex items-center gap-1.5">
+              <button onclick="openRecordFeeModal()" class="px-3.5 py-2 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-extrabold rounded-xl text-xs shadow-sm transition flex items-center gap-1.5">
                 + Record Student Fee
               </button>
-              <button onclick="openUpgradeFlow()" class="px-4 py-2 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-extrabold rounded-xl text-xs shadow-sm transition flex items-center gap-1.5">
+              <button onclick="openUpgradeFlow()" class="px-3.5 py-2 bg-[#f3ecd8] hover:bg-[#efe6d0] text-[#7a2331] font-extrabold rounded-xl text-xs border border-[#e5ded0] transition flex items-center gap-1.5">
                 ⚡ Plan &amp; Upgrade
               </button>
             </div>
           </div>
 
-          <!-- Stat Overview Cards -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
-              <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Total Fees Collected</span>
-              <span id="b-stat-collected-rs" class="text-lg font-black text-emerald-700 mt-1 block">Rs. 0</span>
-              <span id="b-stat-collected-sub" class="text-[10px] text-emerald-600 font-bold mt-1 block">✓ Verified Tuition Collected</span>
-            </div>
-
-            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
-              <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Pending / Outstanding Fees</span>
-              <span id="b-stat-pending-rs" class="text-lg font-black text-amber-600 mt-1 block">Rs. 0</span>
-              <span id="b-stat-pending-sub" class="text-[10px] text-amber-700 font-bold mt-1 block">Follow-up Recommended</span>
-            </div>
-
-            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
-              <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Roster &amp; Verified Accounts</span>
-              <span id="b-stat-paid-count" class="text-lg font-black text-[#1c1a17] mt-1 block">0 / 0 Verified</span>
-              <span id="b-stat-capacity" class="text-[10px] text-[#766f62] font-bold mt-1 block">0 / 25 Capacity Seats Used</span>
-            </div>
-
-            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
-              <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Current Plan Tier</span>
-              <span id="b-stat-plan-name" class="text-lg font-black text-[#7a2331] mt-1 block">Growth Plan</span>
-              <span id="b-stat-revenue" class="text-[10px] text-[#766f62] font-bold mt-1 block">25 Student Capacity</span>
-            </div>
+          <!-- Financial Sub-Tab Navigation -->
+          <div class="flex items-center gap-2 border-b border-[#ece4d2] pb-2 overflow-x-auto">
+            <button onclick="switchFinSubTab('ledger')" id="fin-tab-ledger" class="fin-sub-tab active-fin-tab px-4 py-2 text-xs font-black rounded-xl bg-[#7a2331] text-white transition flex items-center gap-1.5 shadow-xs">
+              💳 Student Tuition Ledger
+            </button>
+            <button onclick="switchFinSubTab('approvals')" id="fin-tab-approvals" class="fin-sub-tab px-4 py-2 text-xs font-black rounded-xl text-[#766f62] hover:text-[#1c1a17] hover:bg-[#faf8f5] transition flex items-center gap-1.5">
+              🧾 QR Approvals
+              <span id="b-pending-tab-badge" class="px-2 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-black rounded-full hidden">0</span>
+            </button>
+            <button onclick="switchFinSubTab('subscription')" id="fin-tab-subscription" class="fin-sub-tab px-4 py-2 text-xs font-black rounded-xl text-[#766f62] hover:text-[#1c1a17] hover:bg-[#faf8f5] transition flex items-center gap-1.5">
+              ⚡ Subscription &amp; Gateways
+            </button>
           </div>
 
-          <!-- Student Tuition Ledger Table -->
-          <div class="bg-white border border-[#ece4d2] rounded-2xl shadow-sm overflow-hidden">
-            <div class="p-5 border-b border-[#ece4d2] flex justify-between items-center bg-[#faf8f5]">
-              <div>
-                <h4 class="font-extrabold text-sm text-[#1c1a17]">Student Tuition Ledger</h4>
-                <p class="text-[11px] text-[#8a8171]">Track fee payments, issue receipts, and manage student tuition balances.</p>
+          <!-- Sub-Tab 1: Student Tuition Ledger Section -->
+          <div id="fin-sec-ledger" class="fin-sec space-y-6">
+            <!-- Stat Overview Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
+                <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Total Fees Collected</span>
+                <span id="b-stat-collected-rs" class="text-lg font-black text-emerald-700 mt-1 block">Rs. 0</span>
+                <span id="b-stat-collected-sub" class="text-[10px] text-emerald-600 font-bold mt-1 block">✓ Verified Tuition Collected</span>
               </div>
-              <span class="px-3 py-1 bg-[#efe6d0] text-[#7a2331] text-[10px] font-black rounded-lg uppercase">Live CRM Ledger</span>
-            </div>
 
-            <div class="overflow-x-auto">
-              <table class="w-full text-left border-collapse">
-                <thead>
-                  <tr class="bg-[#f3ecd8] text-[9px] font-black text-[#7a2331] uppercase tracking-wider border-b border-[#e5ded0]">
-                    <th class="p-4">Student Profile</th>
-                    <th class="p-4">Tuition Fee</th>
-                    <th class="p-4 text-center">Status</th>
-                    <th class="p-4 text-center">Payment Method</th>
-                    <th class="p-4 text-center">Last Updated</th>
-                    <th class="p-4 text-right">Actions</th>
-                  </tr>
-                </thead>
-                <tbody id="crmBillingTableBody" class="divide-y divide-[#ece4d2] text-xs font-medium text-[#4a453d]">
-                  <!-- Populated by JS -->
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <!-- Pending QR Payment Submissions Section (Integrated Admin/Owner Approvals) -->
-          <div id="pendingPaymentsSection" class="bg-white border border-[#ece4d2] rounded-2xl p-6 shadow-sm space-y-4">
-            <div class="flex justify-between items-center border-b border-[#ece4d2] pb-3">
-              <div>
-                <h4 class="font-extrabold text-sm text-[#1c1a17] flex items-center gap-2">
-                  🧾 Pending QR Payment Submissions
-                  <span id="b-pending-badge" class="px-2.5 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-black rounded-full hidden">0 Pending</span>
-                </h4>
-                <p class="text-xs text-[#766f62] mt-0.5">Manual QR submissions awaiting verification — cross-check the reference ID against your eSewa/Khalti wallet activity before approving.</p>
+              <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
+                <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Pending / Outstanding Fees</span>
+                <span id="b-stat-pending-rs" class="text-lg font-black text-amber-600 mt-1 block">Rs. 0</span>
+                <span id="b-stat-pending-sub" class="text-[10px] text-amber-700 font-bold mt-1 block">Follow-up Recommended</span>
               </div>
-              <button onclick="loadPendingPayments()" class="px-3.5 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-[#7a2331] font-bold rounded-xl text-xs transition">↻ Refresh</button>
-            </div>
-            <div id="pendingPaymentsList" class="space-y-3">
-              <!-- Populated by JS -->
-            </div>
-          </div>
 
-          <!-- Consultancy Plan & QR Renewal Box -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-white border border-[#ece4d2] rounded-2xl p-6 shadow-sm space-y-4">
-              <h4 class="font-extrabold text-sm text-[#1c1a17] flex items-center gap-2">⚡ Consultancy Subscription Management</h4>
-              <p class="text-xs text-[#766f62] leading-relaxed">Upgrade your consultancy capacity to add more student profiles, generate unlimited access links, and unlock full IELTS mock history tracking.</p>
-              <div class="p-4 bg-[#faf8f5] border border-[#e5ded0] rounded-xl flex items-center justify-between">
+              <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
+                <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Roster &amp; Verified Accounts</span>
+                <span id="b-stat-paid-count" class="text-lg font-black text-[#1c1a17] mt-1 block">0 / 0 Verified</span>
+                <span id="b-stat-capacity" class="text-[10px] text-[#766f62] font-bold mt-1 block">0 / 25 Capacity Seats Used</span>
+              </div>
+
+              <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
+                <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Current Plan Tier</span>
+                <span id="b-stat-plan-name" class="text-lg font-black text-[#7a2331] mt-1 block">Growth Plan</span>
+                <span id="b-stat-revenue" class="text-[10px] text-[#766f62] font-bold mt-1 block">25 Student Capacity</span>
+              </div>
+            </div>
+
+            <!-- Student Tuition Ledger Table Card -->
+            <div class="bg-white border border-[#ece4d2] rounded-2xl shadow-sm overflow-hidden space-y-0">
+              <div class="p-5 border-b border-[#ece4d2] flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-[#faf8f5]">
                 <div>
-                  <span class="text-[10px] font-bold text-[#8a8171] uppercase block">Current Tier</span>
-                  <span id="b-sub-tier-label" class="text-sm font-black text-[#7a2331]">Growth Plan (25 Seats)</span>
+                  <h4 class="font-extrabold text-sm text-[#1c1a17]">Student Tuition Ledger</h4>
+                  <p class="text-[11px] text-[#8a8171]">Track fee payments, issue receipts, and manage student tuition balances.</p>
                 </div>
-                <button onclick="openUpgradeFlow()" class="px-3 py-1.5 bg-[#7a2331] text-white font-bold rounded-lg text-xs hover:bg-[#5e1a25] transition">Change Plan</button>
+                
+                <!-- Filter & Search Toolbar -->
+                <div class="flex flex-wrap items-center gap-2 self-stretch md:self-auto">
+                  <div class="relative flex-1 sm:w-48">
+                    <input type="text" id="billingSearchInput" oninput="handleBillingSearch(event)" placeholder="Search student name or ID..." class="w-full pl-8 pr-3 py-1.5 border border-[#e5ded0] rounded-xl text-xs outline-none focus:border-[#7a2331] bg-white" />
+                    <span class="absolute left-2.5 top-2 text-[#8a8171] text-xs">🔍</span>
+                  </div>
+                  <div class="flex items-center gap-1 bg-[#f3ecd8] p-1 rounded-xl border border-[#e5ded0]">
+                    <button onclick="setBillingFilter('all')" id="b-filter-all" class="b-filter-btn px-2.5 py-1 text-[10px] font-extrabold rounded-lg bg-[#7a2331] text-white border border-[#7a2331] transition">All</button>
+                    <button onclick="setBillingFilter('paid')" id="b-filter-paid" class="b-filter-btn px-2.5 py-1 text-[10px] font-extrabold rounded-lg bg-[#f3ecd8] text-[#5c5648] border border-[#e5ded0] transition">Verified</button>
+                    <button onclick="setBillingFilter('pending')" id="b-filter-pending" class="b-filter-btn px-2.5 py-1 text-[10px] font-extrabold rounded-lg bg-[#f3ecd8] text-[#5c5648] border border-[#e5ded0] transition">Pending</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                  <thead>
+                    <tr class="bg-[#f3ecd8] text-[9px] font-black text-[#7a2331] uppercase tracking-wider border-b border-[#e5ded0]">
+                      <th class="p-4">Student Profile</th>
+                      <th class="p-4">Tuition Fee</th>
+                      <th class="p-4 text-center">Status</th>
+                      <th class="p-4 text-center">Payment Method</th>
+                      <th class="p-4 text-center">Last Updated</th>
+                      <th class="p-4 text-right">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="crmBillingTableBody" class="divide-y divide-[#ece4d2] text-xs font-medium text-[#4a453d]">
+                    <!-- Populated by JS -->
+                  </tbody>
+                </table>
               </div>
             </div>
+          </div>
 
-            <div class="bg-white border border-[#ece4d2] rounded-2xl p-6 shadow-sm space-y-4">
-              <h4 class="font-extrabold text-sm text-[#1c1a17] flex items-center gap-2">📲 Integrated Digital Gateways</h4>
-              <p class="text-xs text-[#766f62] leading-relaxed">Direct merchant integration via eSewa, Khalti, and Fonepay Bank Transfer. Collect tuition fees seamlessly across Nepal.</p>
-              <div class="flex items-center gap-3">
-                <div class="px-3 py-2 bg-[#f3ecd8] border border-[#e5ded0] rounded-xl text-center flex-1 font-bold text-xs text-[#7a2331]">🟢 eSewa Direct</div>
-                <div class="px-3 py-2 bg-[#f3ecd8] border border-[#e5ded0] rounded-xl text-center flex-1 font-bold text-xs text-[#7a2331]">🟣 Khalti Merchant</div>
-                <div class="px-3 py-2 bg-[#f3ecd8] border border-[#e5ded0] rounded-xl text-center flex-1 font-bold text-xs text-[#7a2331]">🏦 Fonepay QR</div>
+          <!-- Sub-Tab 2: Pending QR Approvals Section -->
+          <div id="fin-sec-approvals" class="fin-sec hidden space-y-4">
+            <div id="pendingPaymentsSection" class="bg-white border border-[#ece4d2] rounded-2xl p-6 shadow-sm space-y-4">
+              <div class="flex justify-between items-center border-b border-[#ece4d2] pb-3">
+                <div>
+                  <h4 class="font-extrabold text-sm text-[#1c1a17] flex items-center gap-2">
+                    🧾 Pending QR Payment Submissions
+                    <span id="b-pending-badge" class="px-2.5 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-black rounded-full hidden">0 Pending</span>
+                  </h4>
+                  <p class="text-xs text-[#766f62] mt-0.5">Manual QR submissions awaiting verification — cross-check the reference ID against your eSewa/Khalti wallet activity before approving.</p>
+                </div>
+                <button onclick="loadPendingPayments()" class="px-3.5 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-[#7a2331] font-bold rounded-xl text-xs transition">↻ Refresh</button>
+              </div>
+              <div id="pendingPaymentsList" class="space-y-3">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Sub-Tab 3: Subscription & Gateways Section -->
+          <div id="fin-sec-subscription" class="fin-sec hidden space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-white border border-[#ece4d2] rounded-2xl p-6 shadow-sm space-y-4">
+                <h4 class="font-extrabold text-sm text-[#1c1a17] flex items-center gap-2">⚡ Consultancy Subscription Management</h4>
+                <p class="text-xs text-[#766f62] leading-relaxed">Upgrade your consultancy capacity to add more student profiles, generate unlimited access links, and unlock full IELTS mock history tracking.</p>
+                <div class="p-4 bg-[#faf8f5] border border-[#e5ded0] rounded-xl flex items-center justify-between">
+                  <div>
+                    <span class="text-[10px] font-bold text-[#8a8171] uppercase block">Current Tier</span>
+                    <span id="b-sub-tier-label" class="text-sm font-black text-[#7a2331]">Growth Plan (25 Seats)</span>
+                  </div>
+                  <button onclick="openUpgradeFlow()" class="px-3.5 py-2 bg-[#7a2331] text-white font-bold rounded-xl text-xs hover:bg-[#5e1a25] transition">Change Plan</button>
+                </div>
+              </div>
+
+              <div class="bg-white border border-[#ece4d2] rounded-2xl p-6 shadow-sm space-y-4">
+                <h4 class="font-extrabold text-sm text-[#1c1a17] flex items-center gap-2">📲 Integrated Digital Gateways</h4>
+                <p class="text-xs text-[#766f62] leading-relaxed">Direct merchant integration via eSewa, Khalti, and Fonepay Bank Transfer. Collect tuition fees seamlessly across Nepal.</p>
+                <div class="flex items-center gap-3">
+                  <div class="px-3 py-2 bg-[#f3ecd8] border border-[#e5ded0] rounded-xl text-center flex-1 font-bold text-xs text-[#7a2331]">🟢 eSewa Direct</div>
+                  <div class="px-3 py-2 bg-[#f3ecd8] border border-[#e5ded0] rounded-xl text-center flex-1 font-bold text-xs text-[#7a2331]">🟣 Khalti Merchant</div>
+                  <div class="px-3 py-2 bg-[#f3ecd8] border border-[#e5ded0] rounded-xl text-center flex-1 font-bold text-xs text-[#7a2331]">🏦 Fonepay QR</div>
+                </div>
               </div>
             </div>
           </div>
@@ -2736,16 +2769,14 @@
           target: 7.5,
           status: 'Active',
           stage: 'Mock Testing',
-          followUp: new Date(Date.now() - 2*24*60*60*1000).toISOString().split('T')[0], // overdue, for demo
-          notes: 'Wants to apply for University of Toronto. Strong vocabulary, struggles with writing structures and spelling.',
-          activityLog: [
-            { date: new Date(Date.now() - 3*24*60*60*1000).toISOString(), type: 'stage', text: 'Moved from Enrolled to Mock Testing' },
-            { date: new Date(Date.now() - 6*24*60*60*1000).toISOString(), type: 'note', text: 'Called re: Writing Task 2 structure - sent template.' }
-          ],
-          mockHistory: [
-            { test: 'Cambridge 18 - Test 1', date: '2026-06-12', listening: '7.5', reading: '7.0', writing: '6.5', speaking: '7.0', overall: '7.0' },
-            { test: 'Cambridge 18 - Test 2', date: '2026-06-19', listening: '8.0', reading: '7.5', writing: '7.0', speaking: '7.5', overall: '7.5' }
-          ]
+          tuitionFee: 15000,
+          tuitionStatus: 'Paid',
+          tuitionMethod: 'eSewa QR',
+          tuitionDate: '2026-07-28',
+          followUp: new Date(Date.now() - 2*24*60*60*1000).toISOString().split('T')[0],
+          notes: 'Wants to apply for University of Toronto. Strong vocabulary, struggles with writing structures.',
+          activityLog: [],
+          mockHistory: []
         },
         {
           id: 'st-102',
@@ -2756,12 +2787,14 @@
           target: 7.0,
           status: 'Active',
           stage: 'Enrolled',
+          tuitionFee: 15000,
+          tuitionStatus: 'Pending',
+          tuitionMethod: 'Khalti QR',
+          tuitionDate: '2026-07-29',
           followUp: new Date(Date.now() + 3*24*60*60*1000).toISOString().split('T')[0],
-          notes: 'Focusing on UKVI academic. Needs to practice coherent weaving and punctuation signals.',
+          notes: 'Focusing on UKVI academic. Invoice sent.',
           activityLog: [],
-          mockHistory: [
-            { test: 'Cambridge 18 - Test 1', date: '2026-06-15', listening: '6.5', reading: '6.5', writing: '6.0', speaking: '6.5', overall: '6.5' }
-          ]
+          mockHistory: []
         },
         {
           id: 'st-103',
@@ -2772,15 +2805,14 @@
           target: 6.5,
           status: 'Active',
           stage: 'Completed',
+          tuitionFee: 15000,
+          tuitionStatus: 'Paid',
+          tuitionMethod: 'Fonepay Bank Transfer',
+          tuitionDate: '2026-07-25',
           followUp: null,
-          notes: 'Already sat for official exam. Achieved target band 7.0.',
-          activityLog: [
-            { date: '2026-05-28T10:00:00.000Z', type: 'stage', text: 'Moved from Exam Ready to Completed' }
-          ],
-          mockHistory: [
-            { test: 'Cambridge 18 - Test 1', date: '2026-05-14', listening: '6.5', reading: '6.0', writing: '6.5', speaking: '6.5', overall: '6.5' },
-            { test: 'Cambridge 19 - Test 1', date: '2026-05-28', listening: '7.0', reading: '7.0', writing: '6.5', speaking: '7.5', overall: '7.0' }
-          ]
+          notes: 'Achieved target band 7.0.',
+          activityLog: [],
+          mockHistory: []
         }
       ];
       localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
@@ -4853,6 +4885,8 @@
 
         if (!data.orders || !data.orders.length) {
           if (badge) { badge.textContent = '0 Pending'; badge.classList.add('hidden'); }
+          const tabBadge = document.getElementById('b-pending-tab-badge');
+          if (tabBadge) { tabBadge.textContent = '0'; tabBadge.classList.add('hidden'); }
           list.innerHTML = '<p class="text-xs text-[#8a8171] py-4 text-center">No subscription payments awaiting review.</p>';
           return;
         }
@@ -4860,6 +4894,11 @@
         if (badge) {
           badge.textContent = data.orders.length + ' Pending';
           badge.classList.remove('hidden');
+        }
+        const tabBadge = document.getElementById('b-pending-tab-badge');
+        if (tabBadge) {
+          tabBadge.textContent = data.orders.length;
+          tabBadge.classList.remove('hidden');
         }
 
         list.innerHTML = data.orders.map(o => `
@@ -6392,6 +6431,22 @@
     // ==========================================
     // CRM BILLING & FINANCES MANAGEMENT
     // ==========================================
+    function switchFinSubTab(tabId) {
+      document.querySelectorAll('.fin-sec').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.fin-sub-tab').forEach(el => {
+        el.classList.remove('active-fin-tab', 'bg-[#7a2331]', 'text-white', 'shadow-xs');
+        el.classList.add('text-[#766f62]', 'hover:text-[#1c1a17]');
+      });
+
+      const activeTab = document.getElementById('fin-tab-' + tabId);
+      const activeSec = document.getElementById('fin-sec-' + tabId);
+      if (activeSec) activeSec.classList.remove('hidden');
+      if (activeTab) {
+        activeTab.classList.add('active-fin-tab', 'bg-[#7a2331]', 'text-white', 'shadow-xs');
+        activeTab.classList.remove('text-[#766f62]', 'hover:text-[#1c1a17]');
+      }
+    }
+
     function getStudentFeeAmount(s) {
       if (s.tuitionFee !== undefined && s.tuitionFee !== null && s.tuitionFee !== '' && !isNaN(parseInt(s.tuitionFee))) {
         return parseInt(s.tuitionFee);
@@ -6405,7 +6460,29 @@
       if (s.tuitionStatus === 'Paid' || s.tuitionStatus === 'Pending') {
         return s.tuitionStatus;
       }
-      return 'Paid';
+      return (typeof idx === 'number' && idx % 3 === 1) ? 'Pending' : 'Paid';
+    }
+
+    let billingSearchQuery = '';
+    let billingStatusFilter = 'all';
+
+    function setBillingFilter(filter) {
+      billingStatusFilter = filter;
+      document.querySelectorAll('.b-filter-btn').forEach(btn => {
+        btn.classList.remove('bg-[#7a2331]', 'text-white', 'border-[#7a2331]');
+        btn.classList.add('bg-[#f3ecd8]', 'text-[#5c5648]', 'border-[#e5ded0]');
+      });
+      const activeBtn = document.getElementById('b-filter-' + filter);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-[#f3ecd8]', 'text-[#5c5648]', 'border-[#e5ded0]');
+        activeBtn.classList.add('bg-[#7a2331]', 'text-white', 'border-[#7a2331]');
+      }
+      renderCRMBillingView();
+    }
+
+    function handleBillingSearch(e) {
+      billingSearchQuery = (e.target.value || '').toLowerCase().trim();
+      renderCRMBillingView();
     }
 
     function renderCRMBillingView() {
@@ -6426,84 +6503,94 @@
       if (!tbody) return;
       tbody.innerHTML = '';
 
-      let paidCount = 0;
-      let pendingCount = 0;
+      let totalPaidCount = 0;
+      let totalPendingCount = 0;
       let totalCollectedRs = 0;
       let totalPendingRs = 0;
 
-      if (!crmStudents.length) {
-        tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-xs text-[#8a8171]">No student records found in your roster.</td></tr>';
-        const collectedRsEl = document.getElementById('b-stat-collected-rs');
-        const pendingRsEl = document.getElementById('b-stat-pending-rs');
-        const paidEl = document.getElementById('b-stat-paid-count');
-        if (collectedRsEl) collectedRsEl.textContent = 'Rs. 0';
-        if (pendingRsEl) pendingRsEl.textContent = 'Rs. 0';
-        if (paidEl) paidEl.textContent = '0 / 0 Verified';
-        if (capacityEl) capacityEl.textContent = `0 / ${capacity} Seats Used`;
-        return;
-      }
-
+      // Global financial totals across all crmStudents
       crmStudents.forEach((s, idx) => {
         const status = getStudentTuitionStatus(s, idx);
-        const isPaid = (status === 'Paid');
         const feeAmount = getStudentFeeAmount(s);
-        const method = s.tuitionMethod || (idx % 2 === 0 ? 'eSewa QR' : 'Khalti QR');
-        const updatedDate = s.tuitionDate || new Date().toISOString().split('T')[0];
-
-        if (isPaid) {
-          paidCount++;
+        if (status === 'Paid') {
+          totalPaidCount++;
           totalCollectedRs += feeAmount;
         } else {
-          pendingCount++;
+          totalPendingCount++;
           totalPendingRs += feeAmount;
         }
-
-        const feeDisplay = `Rs. ${feeAmount.toLocaleString()}`;
-        const initials = String(s.name || '?').trim().split(/\s+/).slice(0, 2).map(w => w[0] || '').join('').toUpperCase();
-
-        const tr = document.createElement('tr');
-        tr.className = 'hover:bg-[#faf8f3] transition';
-        tr.innerHTML = `
-          <td class="p-4 font-bold text-[#1c1a17]">
-            <div class="flex items-center gap-2.5">
-              <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-black shrink-0" style="background:rgba(122,35,49,.08);color:#7a2331">${escapeHtml(initials)}</div>
-              <div>
-                <span class="block font-bold text-[#1c1a17]">${escapeHtml(s.name)}</span>
-                <span class="block text-[9px] font-mono text-[#a8792f]">${escapeHtml(s.studentId || 'st-demo')}</span>
-              </div>
-            </div>
-          </td>
-          <td class="p-4 font-extrabold text-[#7a2331]">${escapeHtml(feeDisplay)}</td>
-          <td class="p-4 text-center">
-            <span class="px-2.5 py-0.5 rounded-full text-[9px] font-black uppercase border ${isPaid ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-amber-50 text-amber-700 border-amber-200'}">
-              ${isPaid ? '✓ Verified' : '⏳ Pending'}
-            </span>
-          </td>
-          <td class="p-4 text-center font-bold text-[#5c5648]">${escapeHtml(method)}</td>
-          <td class="p-4 text-center text-[#8a8171]">${escapeHtml(updatedDate)}</td>
-          <td class="p-4 text-right flex justify-end gap-1.5">
-            <button onclick="toggleStudentTuitionStatus('${s.id}')" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-[10px] font-bold ${isPaid ? 'bg-[#f3ecd8] text-[#5c5648] hover:bg-amber-50 hover:text-amber-700' : 'bg-[#7a2331] text-white hover:bg-[#5e1a25]'} transition">
-              ${isPaid ? 'Mark Pending' : 'Mark Verified ✓'}
-            </button>
-            <button onclick="issueStudentReceipt('${s.id}')" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-[10px] font-bold bg-[#f3ecd8] hover:bg-[#efe6d0] text-[#7a2331] transition">
-              🧾 Receipt
-            </button>
-          </td>
-        `;
-        tbody.appendChild(tr);
       });
 
-      // Add a summary row at the bottom of the table
-      const summaryTr = document.createElement('tr');
-      summaryTr.className = 'bg-[#f8f5ee] font-black text-xs border-t-2 border-[#e5ded0]';
-      summaryTr.innerHTML = `
-        <td class="p-4 text-[#1c1a17]">Total Finances (${crmStudents.length} Students)</td>
-        <td class="p-4 text-emerald-700">Collected: Rs. ${totalCollectedRs.toLocaleString()}</td>
-        <td class="p-4 text-center text-amber-700">${pendingCount} Pending (Rs. ${totalPendingRs.toLocaleString()})</td>
-        <td class="p-4 text-center text-[#5c5648]" colspan="2">Total Ledger Value: Rs. ${(totalCollectedRs + totalPendingRs).toLocaleString()}</td>
-        <td class="p-4 text-right text-[#7a2331]">✓ Verified Sync</td>
-      `;
-      tbody.appendChild(summaryTr);
+      // Filtered subset for table display
+      const displayStudents = crmStudents.filter((s, idx) => {
+        const status = getStudentTuitionStatus(s, idx);
+        const matchesFilter = (billingStatusFilter === 'all') ||
+          (billingStatusFilter === 'paid' && status === 'Paid') ||
+          (billingStatusFilter === 'pending' && status === 'Pending');
+        const matchesSearch = !billingSearchQuery ||
+          (s.name || '').toLowerCase().includes(billingSearchQuery) ||
+          (s.studentId || '').toLowerCase().includes(billingSearchQuery) ||
+          (s.email || '').toLowerCase().includes(billingSearchQuery);
+        return matchesFilter && matchesSearch;
+      });
+
+      if (!displayStudents.length) {
+        tbody.innerHTML = `<tr><td colspan="6" class="p-6 text-center text-xs text-[#8a8171]">No matching student records found (${crmStudents.length} total in roster).</td></tr>`;
+      } else {
+        displayStudents.forEach((s, idx) => {
+          const status = getStudentTuitionStatus(s, crmStudents.indexOf(s));
+          const isPaid = (status === 'Paid');
+          const feeAmount = getStudentFeeAmount(s);
+          const method = s.tuitionMethod || (idx % 2 === 0 ? 'eSewa QR' : 'Khalti QR');
+          const updatedDate = s.tuitionDate || new Date().toISOString().split('T')[0];
+
+          const feeDisplay = `Rs. ${feeAmount.toLocaleString()}`;
+          const initials = String(s.name || '?').trim().split(/\s+/).slice(0, 2).map(w => w[0] || '').join('').toUpperCase();
+
+          const tr = document.createElement('tr');
+          tr.className = 'hover:bg-[#faf8f3] transition';
+          tr.innerHTML = `
+            <td class="p-4 font-bold text-[#1c1a17]">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-black shrink-0" style="background:rgba(122,35,49,.08);color:#7a2331">${escapeHtml(initials)}</div>
+                <div>
+                  <span class="block font-bold text-[#1c1a17]">${escapeHtml(s.name)}</span>
+                  <span class="block text-[9px] font-mono text-[#a8792f]">${escapeHtml(s.studentId || 'st-demo')}</span>
+                </div>
+              </div>
+            </td>
+            <td class="p-4 font-extrabold text-[#7a2331]">${escapeHtml(feeDisplay)}</td>
+            <td class="p-4 text-center">
+              <span class="px-2.5 py-0.5 rounded-full text-[9px] font-black uppercase border ${isPaid ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-amber-50 text-amber-700 border-amber-200'}">
+                ${isPaid ? '✓ Verified' : '⏳ Pending'}
+              </span>
+            </td>
+            <td class="p-4 text-center font-bold text-[#5c5648]">${escapeHtml(method)}</td>
+            <td class="p-4 text-center text-[#8a8171]">${escapeHtml(updatedDate)}</td>
+            <td class="p-4 text-right flex justify-end gap-1.5">
+              <button onclick="toggleStudentTuitionStatus('${s.id}')" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-[10px] font-bold ${isPaid ? 'bg-[#f3ecd8] text-[#5c5648] hover:bg-amber-50 hover:text-amber-700' : 'bg-[#7a2331] text-white hover:bg-[#5e1a25]'} transition">
+                ${isPaid ? 'Mark Pending' : 'Mark Verified ✓'}
+              </button>
+              <button onclick="issueStudentReceipt('${s.id}')" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-[10px] font-bold bg-[#f3ecd8] hover:bg-[#efe6d0] text-[#7a2331] transition">
+                🧾 Receipt
+              </button>
+            </td>
+          `;
+          tbody.appendChild(tr);
+        });
+
+        // Add a summary row at the bottom of the table
+        const summaryTr = document.createElement('tr');
+        summaryTr.className = 'bg-[#f8f5ee] font-black text-xs border-t-2 border-[#e5ded0]';
+        summaryTr.innerHTML = `
+          <td class="p-4 text-[#1c1a17]">Total Roster Finances (${crmStudents.length} Students)</td>
+          <td class="p-4 text-emerald-700">Collected: Rs. ${totalCollectedRs.toLocaleString()}</td>
+          <td class="p-4 text-center text-amber-700">${totalPendingCount} Pending (Rs. ${totalPendingRs.toLocaleString()})</td>
+          <td class="p-4 text-center text-[#5c5648]" colspan="2">Total Ledger Value: Rs. ${(totalCollectedRs + totalPendingRs).toLocaleString()}</td>
+          <td class="p-4 text-right text-[#7a2331]">✓ Live Sync</td>
+        `;
+        tbody.appendChild(summaryTr);
+      }
 
       // Update stat cards
       const collectedRsEl = document.getElementById('b-stat-collected-rs');
@@ -6512,7 +6599,7 @@
 
       if (collectedRsEl) collectedRsEl.textContent = `Rs. ${totalCollectedRs.toLocaleString()}`;
       if (pendingRsEl) pendingRsEl.textContent = `Rs. ${totalPendingRs.toLocaleString()}`;
-      if (paidEl) paidEl.textContent = `${paidCount} / ${crmStudents.length} Verified`;
+      if (paidEl) paidEl.textContent = `${totalPaidCount} / ${crmStudents.length} Verified`;
       if (capacityEl) capacityEl.textContent = `${crmStudents.length} / ${capacity} Seats Used`;
     }
 
