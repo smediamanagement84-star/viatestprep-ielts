@@ -2885,60 +2885,79 @@
       if (el) el.textContent = msg;
     }
 
-    async function signInWithGoogle(role) {
-      if (role === 'consultancy') {
-        const name = (document.getElementById('m-consultancy-name').value || '').trim() || 'My Consultancy HQ';
-        const email = (document.getElementById('m-consultancy-auth-email').value || '').trim() || 'admin@consultancy.local';
-        setConsultancyAuthStatus('🚀 Launching Consultancy Portal...');
-        setTimeout(() => { launchCustomConsultancySession(email, name); }, 300);
-      } else {
-        setStudentAuthStatus('🚀 Launching Student Portal...');
-        setTimeout(() => { launchStudentBypass(); }, 300);
-      }
-    }
-
     async function handleStudentAuthSubmit() {
+      if (!supabaseClient) { setStudentAuthStatus('❌ Service unavailable right now - this usually means a network/ad-blocker issue stopped a required script from loading. Please reload the page and try again.'); return; }
       const email = document.getElementById('m-student-auth-email').value.trim();
       const password = document.getElementById('m-student-auth-password').value;
-      const name = (document.getElementById('m-student-name').value || '').trim() || 'Student';
       if (!email || !password) { setStudentAuthStatus('Please enter your email and password.'); return; }
 
-      // Demo/Testing Student Bypass
-      if (email.toLowerCase() === 'student@viatestprep.com' && password === 'Password123!') {
-        launchStudentBypass();
-        return;
+      // Check device rate limit for student signups (max 3 signups per 15 minutes)
+      if (studentAuthMode === 'signup') {
+        const now = Date.now();
+        const timeframe = 15 * 60 * 1000; // 15 minutes
+        let attempts = [];
+        try {
+          attempts = JSON.parse(localStorage.getItem('viatestprep_student_signup_attempts') || '[]');
+        } catch (e) {
+          attempts = [];
+        }
+        attempts = attempts.filter(t => now - t < timeframe);
+        if (attempts.length >= 3) {
+          setStudentAuthStatus('❌ Too many signup attempts from this device. Please try again in 15 minutes.');
+          return;
+        }
+        attempts.push(now);
+        localStorage.setItem('viatestprep_student_signup_attempts', JSON.stringify(attempts));
       }
 
       const btn = document.getElementById('m-student-auth-btn');
       btn.disabled = true;
-      setStudentAuthStatus('Creating your account...');
-
+      const name = document.getElementById('m-student-name').value.trim();
       try {
-        if (supabaseClient) {
-          if (studentAuthMode === 'signup') {
-            const { data, error } = await supabaseClient.auth.signUp({
-              email, password,
-              options: { data: { role: 'student', name }, emailRedirectTo: window.location.origin + window.location.pathname },
-            });
-            if (data && data.session) {
-              await finishStudentSession(data.session, name);
-              return;
-            }
-          } else {
-            const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
-            if (data && data.session) {
-              await finishStudentSession(data.session, name);
-              return;
-            }
+        let session;
+        if (studentAuthMode === 'signup') {
+          setStudentAuthStatus('Creating your account...');
+          // user_metadata.role survives even if the confirmation-email path
+          // is taken (see the onAuthStateChange listener in initSupabase) -
+          // that's a separate page load with no memory of studentAuthMode.
+          // emailRedirectTo makes sure the confirmation link brings them back
+          // here rather than whatever default Site URL is set in the
+          // Supabase dashboard (must also be added to that project's
+          // Redirect URLs allowlist, or Supabase will ignore it).
+          const { data, error } = await supabaseClient.auth.signUp({
+            email, password,
+            options: { data: { role: 'student', name }, emailRedirectTo: window.location.origin + window.location.pathname },
+          });
+          if (error) throw error;
+          if (!data.session) {
+            setStudentAuthStatus('✅ Check your email to confirm your account, then log in.');
+            setStudentAuthMode('login');
+            btn.disabled = false;
+            return;
           }
+          session = data.session;
+        } else {
+          setStudentAuthStatus('Logging in...');
+          const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+          if (error) throw error;
+          session = data.session;
         }
-      } catch (err) {
-        console.warn('Supabase auth fallback:', err);
-      }
 
-      // Fallback local session activation so signup never blocks
-      localStorage.setItem('userEmail', email);
-      launchStudentBypass();
+        await finishStudentSession(session, name);
+      } catch (err) {
+        console.error(err);
+        // Same idea as the consultancy form: a second signup attempt on an
+        // already-registered email (e.g. after an earlier request created
+        // the auth account but failed before finishStudentSession finished)
+        // shouldn't just show a raw Supabase error - point them at Log In.
+        if (studentAuthMode === 'signup' && /already registered|already exists|user already/i.test(err.message || '')) {
+          setStudentAuthStatus('This email is already registered - log in instead.');
+          setStudentAuthMode('login');
+        } else {
+          setStudentAuthStatus('❌ ' + (err.message || 'Something went wrong.'));
+        }
+        btn.disabled = false;
+      }
     }
 
     // Shared by the manual login/signup form above and the onAuthStateChange
@@ -3001,48 +3020,64 @@
     }
 
     async function handleConsultancyAuthSubmit() {
+      if (!supabaseClient) { setConsultancyAuthStatus('❌ Service unavailable right now - this usually means a network/ad-blocker issue stopped a required script from loading. Please reload the page and try again.'); return; }
       const email = document.getElementById('m-consultancy-auth-email').value.trim();
       const password = document.getElementById('m-consultancy-auth-password').value;
-      const name = (document.getElementById('m-consultancy-name').value || '').trim() || 'My Consultancy';
+      const name = document.getElementById('m-consultancy-name').value.trim();
       if (!email || !password) { setConsultancyAuthStatus('Please enter your email and password.'); return; }
-
-      // Demo/Testing Consultancy Bypass
-      if (email.toLowerCase() === 'consultancy@viatestprep.com' && password === 'Password123!') {
-        launchAdminBypass();
-        return;
-      }
 
       if (consultancyAuthMode === 'signup' && !name) { setConsultancyAuthStatus('Please enter your consultancy name.'); return; }
 
       const btn = document.getElementById('m-consultancy-auth-btn');
       btn.disabled = true;
-      setConsultancyAuthStatus(consultancyAuthMode === 'signup' ? 'Creating your account...' : 'Logging in...');
-
       try {
-        if (supabaseClient) {
-          if (consultancyAuthMode === 'signup') {
-            const { data, error } = await supabaseClient.auth.signUp({
-              email, password,
-              options: { data: { role: 'consultancy', name }, emailRedirectTo: window.location.origin + window.location.pathname },
-            });
-            if (data && data.session) {
-              await finishConsultancySession(data.session, name);
-              return;
-            }
-          } else {
-            const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
-            if (data && data.session) {
-              await finishConsultancySession(data.session, name);
-              return;
-            }
+        let session;
+        if (consultancyAuthMode === 'signup') {
+          setConsultancyAuthStatus('Creating your account...');
+          // user_metadata.role/name survive even if the confirmation-email
+          // path is taken (see the onAuthStateChange listener in
+          // initSupabase) - that's a separate page load with no memory of
+          // consultancyAuthMode. emailRedirectTo makes sure the confirmation
+          // link brings them back here rather than whatever default Site URL
+          // is set in the Supabase dashboard (must also be added to that
+          // project's Redirect URLs allowlist, or Supabase will ignore it).
+          const { data, error } = await supabaseClient.auth.signUp({
+            email, password,
+            options: { data: { role: 'consultancy', name }, emailRedirectTo: window.location.origin + window.location.pathname },
+          });
+          if (error) throw error;
+          if (!data.session) {
+            setConsultancyAuthStatus('✅ Check your email to confirm your account, then log in.');
+            setConsultancyAuthMode('login');
+            btn.disabled = false;
+            return;
           }
+          session = data.session;
+        } else {
+          setConsultancyAuthStatus('Logging in...');
+          const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+          if (error) throw error;
+          session = data.session;
         }
-      } catch (err) {
-        console.warn('Supabase auth fallback:', err);
-      }
 
-      // Launch custom consultancy account workspace for this user's email & name!
-      launchCustomConsultancySession(email, name);
+        await finishConsultancySession(session, name);
+      } catch (err) {
+        console.error(err);
+        // A retried signup on an already-registered email (e.g. after an
+        // earlier attempt created the Supabase Auth account but failed
+        // before finishConsultancySession finished provisioning the
+        // consultancy row) comes back as a raw, unhelpful Supabase error
+        // otherwise - point them at Log In instead, where the same
+        // finishConsultancySession call just re-provisions/re-reads the row
+        // idempotently.
+        if (consultancyAuthMode === 'signup' && /already registered|already exists|user already/i.test(err.message || '')) {
+          setConsultancyAuthStatus('This email is already registered - log in instead.');
+          setConsultancyAuthMode('login');
+        } else {
+          setConsultancyAuthStatus('❌ ' + (err.message || 'Something went wrong.'));
+        }
+        btn.disabled = false;
+      }
     }
 
     // Shared by the manual login/signup form above and the onAuthStateChange
@@ -3168,21 +3203,6 @@
       localStorage.setItem('score_test_1_writing', 'completed');
       localStorage.setItem('score_test_2_listening', '7.5');
       localStorage.setItem('score_test_2_reading', '8.5');
-    }
-
-    function launchCustomConsultancySession(email, consultancyName, planName = 'Growth') {
-      const cid = 'c-' + Math.random().toString(36).substring(2, 9);
-      localStorage.setItem('viatestprep_unlocked', 'true');
-      localStorage.setItem('viatestprep_user_role', 'consultancy');
-      localStorage.setItem('userEmail', email || 'consultancy@local.host');
-      localStorage.setItem('viatestprep_consultancy_name', consultancyName || 'Consultancy Portal');
-      localStorage.setItem('viatestprep_consultancy_plan', planName);
-      localStorage.setItem('viatestprep_consultancy_id', cid);
-      localStorage.removeItem('viatestprep_owner_key');
-      localStorage.removeItem('viatestprep_consultancy_expires_at');
-
-      closeAccessModal();
-      renderAppView();
     }
 
     function launchAdminBypass() {
