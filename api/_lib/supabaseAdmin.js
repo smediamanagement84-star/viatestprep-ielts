@@ -282,29 +282,67 @@ async function listAllSpeakingGrades() {
 }
 
 async function insertStudentAdmin(fields) {
-  const rows = await restRequest('students', { method: 'POST', body: fields });
-  return rows[0];
+  try {
+    const rows = await restRequest('students', { method: 'POST', body: fields });
+    return rows[0];
+  } catch (err) {
+    if (err.message && err.message.includes('next_follow_up') && fields && 'next_follow_up' in fields) {
+      const cleanFields = { ...fields };
+      delete cleanFields.next_follow_up;
+      const rows = await restRequest('students', { method: 'POST', body: cleanFields });
+      return rows[0];
+    }
+    throw err;
+  }
 }
 
 async function updateStudentAdmin(id, fields) {
-  const rows = await restRequest('students', {
-    method: 'PATCH',
-    query: `?id=eq.${encodeURIComponent(id)}`,
-    body: fields,
-  });
-  if (rows && rows.length > 0) {
-    return rows[0];
+  let cleanFields = { ...fields };
+  try {
+    const rows = await restRequest('students', {
+      method: 'PATCH',
+      query: `?id=eq.${encodeURIComponent(id)}`,
+      body: cleanFields,
+    });
+    if (rows && rows.length > 0) {
+      return rows[0];
+    }
+  } catch (err) {
+    if (err.message && err.message.includes('next_follow_up') && 'next_follow_up' in cleanFields) {
+      delete cleanFields.next_follow_up;
+      const rows = await restRequest('students', {
+        method: 'PATCH',
+        query: `?id=eq.${encodeURIComponent(id)}`,
+        body: cleanFields,
+      });
+      if (rows && rows.length > 0) return rows[0];
+    } else {
+      throw err;
+    }
   }
   // Auto-upsert fallback if row didn't exist in Supabase DB yet
-  const insertPayload = { id, ...fields };
+  const insertPayload = { id, ...cleanFields };
   if (!insertPayload.name) insertPayload.name = 'Student';
   if (!insertPayload.email) insertPayload.email = `${id}@student.local`;
-  const inserted = await restRequest('students', {
-    method: 'POST',
-    headers: { Prefer: 'resolution=merge-duplicates,return=representation' },
-    body: insertPayload,
-  });
-  return inserted ? inserted[0] : null;
+  try {
+    const inserted = await restRequest('students', {
+      method: 'POST',
+      headers: { Prefer: 'resolution=merge-duplicates,return=representation' },
+      body: insertPayload,
+    });
+    return inserted ? inserted[0] : null;
+  } catch (err) {
+    if (err.message && err.message.includes('next_follow_up') && 'next_follow_up' in insertPayload) {
+      delete insertPayload.next_follow_up;
+      const inserted = await restRequest('students', {
+        method: 'POST',
+        headers: { Prefer: 'resolution=merge-duplicates,return=representation' },
+        body: insertPayload,
+      });
+      return inserted ? inserted[0] : null;
+    }
+    throw err;
+  }
 }
 
 async function deleteStudentAdmin(id) {

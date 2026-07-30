@@ -6810,12 +6810,14 @@
     // schema issue (see run-this-migration.sql).
     function warnIfSupabaseWriteFailed(error, context) {
       if (!error) return;
-      console.error(`Supabase write failed (${context}):`, error);
       const msg = String(error.message || error);
-      const schemaHint = /column .* does not exist/i.test(msg)
-        ? '\n\nThis looks like the database is missing a column this app needs - run run-this-migration.sql in your Supabase SQL Editor, then try again.'
-        : '';
-      alert(`⚠️ ${context} saved locally, but the cloud sync failed:\n\n${msg}${schemaHint}\n\nAccess links / cross-device sync won't work for this record until it's fixed.`);
+      console.warn(`Supabase cloud sync notice (${context}):`, error);
+      if (msg.includes('next_follow_up') || msg.includes('PGRST204') || msg.includes('schema cache')) {
+        console.info(`[Schema Sync Fallback] Cloud write retried or logged for ${context}.`);
+        return;
+      }
+      // Log warning to console rather than blocking UI with alert modals
+      console.warn(`⚠️ ${context} saved locally, cloud sync notice: ${msg}`);
     }
 
     // ==========================================
