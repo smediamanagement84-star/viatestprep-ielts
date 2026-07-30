@@ -1485,8 +1485,9 @@
                   </div>
                   <div class="flex items-center gap-1 bg-[#f3ecd8] p-1 rounded-xl border border-[#e5ded0]">
                     <button onclick="setBillingFilter('all')" id="b-filter-all" class="b-filter-btn px-2.5 py-1 text-[10px] font-extrabold rounded-lg bg-[#7a2331] text-white border border-[#7a2331] transition">All</button>
-                    <button onclick="setBillingFilter('paid')" id="b-filter-paid" class="b-filter-btn px-2.5 py-1 text-[10px] font-extrabold rounded-lg bg-[#f3ecd8] text-[#5c5648] border border-[#e5ded0] transition">Verified</button>
-                    <button onclick="setBillingFilter('pending')" id="b-filter-pending" class="b-filter-btn px-2.5 py-1 text-[10px] font-extrabold rounded-lg bg-[#f3ecd8] text-[#5c5648] border border-[#e5ded0] transition">Pending</button>
+                    <button onclick="setBillingFilter('paid')" id="b-filter-paid" class="b-filter-btn px-2.5 py-1 text-[10px] font-extrabold rounded-lg bg-[#f3ecd8] text-[#5c5648] border border-[#e5ded0] transition">✓ Paid</button>
+                    <button onclick="setBillingFilter('partial')" id="b-filter-partial" class="b-filter-btn px-2.5 py-1 text-[10px] font-extrabold rounded-lg bg-[#f3ecd8] text-[#5c5648] border border-[#e5ded0] transition">🌓 Partially Paid</button>
+                    <button onclick="setBillingFilter('pending')" id="b-filter-pending" class="b-filter-btn px-2.5 py-1 text-[10px] font-extrabold rounded-lg bg-[#f3ecd8] text-[#5c5648] border border-[#e5ded0] transition">⏳ Pending</button>
                   </div>
                 </div>
               </div>
@@ -1496,10 +1497,9 @@
                   <thead>
                     <tr class="bg-[#f3ecd8] text-[9px] font-black text-[#7a2331] uppercase tracking-wider border-b border-[#e5ded0]">
                       <th class="p-4">Student Profile</th>
-                      <th class="p-4">Tuition Fee</th>
-                      <th class="p-4 text-center">Status</th>
-                      <th class="p-4 text-center">Payment Method</th>
-                      <th class="p-4 text-center">Last Updated</th>
+                      <th class="p-4">Custom Fee (Rs.)</th>
+                      <th class="p-4 text-center">Tuition Status</th>
+                      <th class="p-4 text-center">Paid Amount (Rs.)</th>
                       <th class="p-4 text-right">Actions</th>
                     </tr>
                   </thead>
@@ -6451,16 +6451,74 @@
       if (s.tuitionFee !== undefined && s.tuitionFee !== null && s.tuitionFee !== '' && !isNaN(parseInt(s.tuitionFee))) {
         return parseInt(s.tuitionFee);
       }
-      if (s.accessLevel === 'mocks') return 5000;
-      if (s.accessLevel === 'speaking') return 8000;
       return 15000;
     }
 
     function getStudentTuitionStatus(s, idx) {
-      if (s.tuitionStatus === 'Paid' || s.tuitionStatus === 'Pending') {
+      if (s.tuitionStatus === 'Paid' || s.tuitionStatus === 'Partially Paid' || s.tuitionStatus === 'Pending') {
         return s.tuitionStatus;
       }
-      return (typeof idx === 'number' && idx % 3 === 1) ? 'Pending' : 'Paid';
+      if (typeof idx === 'number') {
+        if (idx % 3 === 0) return 'Paid';
+        if (idx % 3 === 1) return 'Partially Paid';
+        return 'Pending';
+      }
+      return 'Paid';
+    }
+
+    function getStudentPaidAmount(s) {
+      const fee = getStudentFeeAmount(s);
+      const status = getStudentTuitionStatus(s);
+      if (s.tuitionPaidAmount !== undefined && s.tuitionPaidAmount !== null && s.tuitionPaidAmount !== '' && !isNaN(parseInt(s.tuitionPaidAmount))) {
+        return parseInt(s.tuitionPaidAmount);
+      }
+      if (status === 'Paid') return fee;
+      if (status === 'Partially Paid') return Math.round(fee / 2);
+      return 0;
+    }
+
+    function updateStudentFeeAmount(studentId, amount) {
+      const stud = crmStudents.find(s => String(s.id) === String(studentId));
+      if (!stud) return;
+      const val = parseInt(amount);
+      stud.tuitionFee = isNaN(val) ? 0 : val;
+      localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
+      renderCRMBillingView();
+    }
+
+    function updateStudentStatus(studentId, newStatus) {
+      const stud = crmStudents.find(s => String(s.id) === String(studentId));
+      if (!stud) return;
+      stud.tuitionStatus = newStatus;
+      const fee = getStudentFeeAmount(stud);
+      if (newStatus === 'Paid') {
+        stud.tuitionPaidAmount = fee;
+      } else if (newStatus === 'Pending') {
+        stud.tuitionPaidAmount = 0;
+      } else if (newStatus === 'Partially Paid' && (!stud.tuitionPaidAmount || stud.tuitionPaidAmount >= fee)) {
+        stud.tuitionPaidAmount = Math.round(fee / 2);
+      }
+      stud.tuitionDate = new Date().toISOString().split('T')[0];
+      localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
+      renderCRMBillingView();
+    }
+
+    function updateStudentPaidAmount(studentId, amount) {
+      const stud = crmStudents.find(s => String(s.id) === String(studentId));
+      if (!stud) return;
+      const val = parseInt(amount);
+      const fee = getStudentFeeAmount(stud);
+      const paidVal = isNaN(val) ? 0 : val;
+      stud.tuitionPaidAmount = paidVal;
+      if (paidVal >= fee && fee > 0) {
+        stud.tuitionStatus = 'Paid';
+      } else if (paidVal > 0) {
+        stud.tuitionStatus = 'Partially Paid';
+      } else {
+        stud.tuitionStatus = 'Pending';
+      }
+      localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
+      renderCRMBillingView();
     }
 
     let billingSearchQuery = '';
@@ -6504,6 +6562,7 @@
       tbody.innerHTML = '';
 
       let totalPaidCount = 0;
+      let totalPartialCount = 0;
       let totalPendingCount = 0;
       let totalCollectedRs = 0;
       let totalPendingRs = 0;
@@ -6512,13 +6571,14 @@
       crmStudents.forEach((s, idx) => {
         const status = getStudentTuitionStatus(s, idx);
         const feeAmount = getStudentFeeAmount(s);
-        if (status === 'Paid') {
-          totalPaidCount++;
-          totalCollectedRs += feeAmount;
-        } else {
-          totalPendingCount++;
-          totalPendingRs += feeAmount;
-        }
+        const paidAmount = getStudentPaidAmount(s);
+
+        totalCollectedRs += paidAmount;
+        totalPendingRs += Math.max(0, feeAmount - paidAmount);
+
+        if (status === 'Paid') totalPaidCount++;
+        else if (status === 'Partially Paid') totalPartialCount++;
+        else totalPendingCount++;
       });
 
       // Filtered subset for table display
@@ -6526,6 +6586,7 @@
         const status = getStudentTuitionStatus(s, idx);
         const matchesFilter = (billingStatusFilter === 'all') ||
           (billingStatusFilter === 'paid' && status === 'Paid') ||
+          (billingStatusFilter === 'partial' && status === 'Partially Paid') ||
           (billingStatusFilter === 'pending' && status === 'Pending');
         const matchesSearch = !billingSearchQuery ||
           (s.name || '').toLowerCase().includes(billingSearchQuery) ||
@@ -6535,16 +6596,12 @@
       });
 
       if (!displayStudents.length) {
-        tbody.innerHTML = `<tr><td colspan="6" class="p-6 text-center text-xs text-[#8a8171]">No matching student records found (${crmStudents.length} total in roster).</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="5" class="p-6 text-center text-xs text-[#8a8171]">No matching student records found (${crmStudents.length} total in roster).</td></tr>`;
       } else {
         displayStudents.forEach((s, idx) => {
           const status = getStudentTuitionStatus(s, crmStudents.indexOf(s));
-          const isPaid = (status === 'Paid');
           const feeAmount = getStudentFeeAmount(s);
-          const method = s.tuitionMethod || (idx % 2 === 0 ? 'eSewa QR' : 'Khalti QR');
-          const updatedDate = s.tuitionDate || new Date().toISOString().split('T')[0];
-
-          const feeDisplay = `Rs. ${feeAmount.toLocaleString()}`;
+          const paidAmount = getStudentPaidAmount(s);
           const initials = String(s.name || '?').trim().split(/\s+/).slice(0, 2).map(w => w[0] || '').join('').toUpperCase();
 
           const tr = document.createElement('tr');
@@ -6559,19 +6616,29 @@
                 </div>
               </div>
             </td>
-            <td class="p-4 font-extrabold text-[#7a2331]">${escapeHtml(feeDisplay)}</td>
-            <td class="p-4 text-center">
-              <span class="px-2.5 py-0.5 rounded-full text-[9px] font-black uppercase border ${isPaid ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-amber-50 text-amber-700 border-amber-200'}">
-                ${isPaid ? '✓ Verified' : '⏳ Pending'}
-              </span>
+            <td class="p-4">
+              <div class="flex items-center gap-1">
+                <span class="text-xs font-extrabold text-[#7a2331]">Rs.</span>
+                <input type="number" value="${feeAmount}" onchange="updateStudentFeeAmount('${s.id}', this.value)" class="w-24 px-2 py-1 border border-[#e5ded0] rounded-lg text-xs font-extrabold text-[#7a2331] outline-none focus:border-[#7a2331] bg-white" title="Click to edit custom fee amount" />
+              </div>
             </td>
-            <td class="p-4 text-center font-bold text-[#5c5648]">${escapeHtml(method)}</td>
-            <td class="p-4 text-center text-[#8a8171]">${escapeHtml(updatedDate)}</td>
-            <td class="p-4 text-right flex justify-end gap-1.5">
-              <button onclick="toggleStudentTuitionStatus('${s.id}')" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-[10px] font-bold ${isPaid ? 'bg-[#f3ecd8] text-[#5c5648] hover:bg-amber-50 hover:text-amber-700' : 'bg-[#7a2331] text-white hover:bg-[#5e1a25]'} transition">
-                ${isPaid ? 'Mark Pending' : 'Mark Verified ✓'}
-              </button>
-              <button onclick="issueStudentReceipt('${s.id}')" class="px-2.5 py-1 border border-[#e5ded0] rounded-lg text-[10px] font-bold bg-[#f3ecd8] hover:bg-[#efe6d0] text-[#7a2331] transition">
+            <td class="p-4 text-center">
+              <select onchange="updateStudentStatus('${s.id}', this.value)" class="px-2.5 py-1 rounded-lg text-xs font-black uppercase border outline-none cursor-pointer transition ${
+                status === 'Paid' ? 'bg-emerald-50 text-emerald-700 border-emerald-300' : (status === 'Partially Paid' ? 'bg-blue-50 text-blue-700 border-blue-300' : 'bg-amber-50 text-amber-700 border-amber-300')
+              }">
+                <option value="Paid" ${status === 'Paid' ? 'selected' : ''}>✓ Paid</option>
+                <option value="Partially Paid" ${status === 'Partially Paid' ? 'selected' : ''}>🌓 Partially Paid</option>
+                <option value="Pending" ${status === 'Pending' ? 'selected' : ''}>⏳ Pending</option>
+              </select>
+            </td>
+            <td class="p-4 text-center">
+              <div class="flex items-center justify-center gap-1">
+                <span class="text-xs font-bold text-[#5c5648]">Rs.</span>
+                <input type="number" value="${paidAmount}" onchange="updateStudentPaidAmount('${s.id}', this.value)" class="w-24 px-2 py-1 border border-[#e5ded0] rounded-lg text-xs font-bold text-[#1c1a17] outline-none focus:border-[#7a2331] bg-white" title="Click to edit paid amount" />
+              </div>
+            </td>
+            <td class="p-4 text-right">
+              <button onclick="issueStudentReceipt('${s.id}')" class="px-3 py-1.5 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-bold rounded-xl text-xs transition shadow-xs">
                 🧾 Receipt
               </button>
             </td>
@@ -6585,8 +6652,8 @@
         summaryTr.innerHTML = `
           <td class="p-4 text-[#1c1a17]">Total Roster Finances (${crmStudents.length} Students)</td>
           <td class="p-4 text-emerald-700">Collected: Rs. ${totalCollectedRs.toLocaleString()}</td>
-          <td class="p-4 text-center text-amber-700">${totalPendingCount} Pending (Rs. ${totalPendingRs.toLocaleString()})</td>
-          <td class="p-4 text-center text-[#5c5648]" colspan="2">Total Ledger Value: Rs. ${(totalCollectedRs + totalPendingRs).toLocaleString()}</td>
+          <td class="p-4 text-center text-blue-700">${totalPaidCount} Paid | ${totalPartialCount} Partial | ${totalPendingCount} Pending</td>
+          <td class="p-4 text-center text-amber-700">Outstanding Due: Rs. ${totalPendingRs.toLocaleString()}</td>
           <td class="p-4 text-right text-[#7a2331]">✓ Live Sync</td>
         `;
         tbody.appendChild(summaryTr);
@@ -6599,24 +6666,14 @@
 
       if (collectedRsEl) collectedRsEl.textContent = `Rs. ${totalCollectedRs.toLocaleString()}`;
       if (pendingRsEl) pendingRsEl.textContent = `Rs. ${totalPendingRs.toLocaleString()}`;
-      if (paidEl) paidEl.textContent = `${totalPaidCount} / ${crmStudents.length} Verified`;
+      if (paidEl) paidEl.textContent = `${totalPaidCount} / ${crmStudents.length} Fully Paid`;
       if (capacityEl) capacityEl.textContent = `${crmStudents.length} / ${capacity} Seats Used`;
-    }
-
-    function toggleStudentTuitionStatus(studentId) {
-      const stud = crmStudents.find(s => s.id === studentId);
-      if (!stud) return;
-      const currentStatus = getStudentTuitionStatus(stud);
-      stud.tuitionStatus = currentStatus === 'Paid' ? 'Pending' : 'Paid';
-      stud.tuitionDate = new Date().toISOString().split('T')[0];
-      saveCRMStudentsToLocal();
-      renderCRMBillingView();
     }
 
     let activeReceiptStudentId = null;
 
     function issueStudentReceipt(studentId) {
-      const stud = crmStudents.find(s => s.id === studentId);
+      const stud = crmStudents.find(s => String(s.id) === String(studentId));
       if (!stud) return;
       activeReceiptStudentId = studentId;
 
@@ -6625,73 +6682,85 @@
       else if (stud.accessLevel === 'speaking') packageName = '1-on-1 IELTS Speaking Examiner Practice';
 
       const feeAmount = getStudentFeeAmount(stud);
-      const isPaid = getStudentTuitionStatus(stud) === 'Paid';
-      const feeDisplay = `Rs. ${feeAmount.toLocaleString()}`;
-      const method = stud.tuitionMethod || 'eSewa Merchant QR';
+      const status = getStudentTuitionStatus(stud, crmStudents.indexOf(stud));
+      const paidAmount = getStudentPaidAmount(stud);
+      const remainingDue = Math.max(0, feeAmount - paidAmount);
+
+      const method = stud.tuitionMethod || 'Direct Consultancy Payment';
       const date = stud.tuitionDate || new Date().toISOString().split('T')[0];
-      const voucherNo = 'VTP-2026-' + (stud.studentId || stud.id).replace('st-', '').toUpperCase();
+      const voucherNo = 'VTP-2026-' + String(stud.studentId || stud.id).replace('st-', '').toUpperCase();
       const hash = '0x' + Math.random().toString(36).substring(2, 12).toUpperCase();
 
       const body = document.getElementById('receiptModalBody');
-      body.innerHTML = `
-        <div class="bg-white border border-[#e5ded0] rounded-2xl p-5 shadow-xs space-y-4">
-          <div class="flex justify-between items-center border-b border-[#ece4d2] pb-3">
-            <div>
-              <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Voucher Number</span>
-              <span class="font-mono font-black text-sm text-[#7a2331]">${escapeHtml(voucherNo)}</span>
+      if (body) {
+        body.innerHTML = `
+          <div class="bg-white border border-[#e5ded0] rounded-2xl p-5 shadow-xs space-y-4">
+            <div class="flex justify-between items-center border-b border-[#ece4d2] pb-3">
+              <div>
+                <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Official Receipt Voucher</span>
+                <span class="font-mono font-black text-sm text-[#7a2331]">${escapeHtml(voucherNo)}</span>
+              </div>
+              <div class="text-right">
+                <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Issued Date</span>
+                <span class="font-mono text-xs font-bold text-[#1c1a17]">${escapeHtml(date)}</span>
+              </div>
             </div>
-            <div class="text-right">
-              <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Issued Date</span>
-              <span class="font-mono text-xs font-bold text-[#1c1a17]">${escapeHtml(date)}</span>
-            </div>
-          </div>
 
-          <!-- Student Profile Details -->
-          <div class="grid grid-cols-2 gap-3 text-xs">
-            <div>
-              <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Student Name</span>
-              <span class="font-extrabold text-[#1c1a17]">${escapeHtml(stud.name)}</span>
+            <!-- Student Profile Details -->
+            <div class="grid grid-cols-2 gap-3 text-xs">
+              <div>
+                <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Student Name</span>
+                <span class="font-extrabold text-[#1c1a17]">${escapeHtml(stud.name)}</span>
+              </div>
+              <div>
+                <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Student ID</span>
+                <span class="font-mono font-bold text-[#a8792f]">${escapeHtml(stud.studentId || stud.id)}</span>
+              </div>
+              <div>
+                <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Email Address</span>
+                <span class="text-[#5c5648]">${escapeHtml(stud.email || '—')}</span>
+              </div>
+              <div>
+                <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Phone Contact</span>
+                <span class="text-[#5c5648]">${escapeHtml(stud.phone || '—')}</span>
+              </div>
             </div>
-            <div>
-              <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Student ID</span>
-              <span class="font-mono font-bold text-[#a8792f]">${escapeHtml(stud.studentId || stud.id)}</span>
-            </div>
-            <div>
-              <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Email Address</span>
-              <span class="text-[#5c5648]">${escapeHtml(stud.email || '—')}</span>
-            </div>
-            <div>
-              <span class="text-[9px] font-bold text-[#8a8171] uppercase block">Phone Contact</span>
-              <span class="text-[#5c5648]">${escapeHtml(stud.phone || '—')}</span>
-            </div>
-          </div>
 
-          <!-- Course Package Breakdown -->
-          <div class="border-t border-[#ece4d2] pt-3 space-y-2">
-            <div class="flex justify-between text-xs font-bold text-[#1c1a17]">
-              <span>${escapeHtml(packageName)}</span>
-              <span class="font-extrabold text-[#7a2331]">${escapeHtml(feeDisplay)}</span>
+            <!-- Course Package & Financial Breakdown -->
+            <div class="border-t border-[#ece4d2] pt-3 space-y-2 text-xs">
+              <div class="flex justify-between font-bold text-[#1c1a17]">
+                <span>${escapeHtml(packageName)}</span>
+                <span class="font-extrabold text-[#7a2331]">Rs. ${feeAmount.toLocaleString()}</span>
+              </div>
+              <div class="flex justify-between text-[#5c5648]">
+                <span>Amount Paid</span>
+                <span class="font-extrabold text-emerald-700">Rs. ${paidAmount.toLocaleString()}</span>
+              </div>
+              <div class="flex justify-between text-[#5c5648]">
+                <span>Remaining Balance Due</span>
+                <span class="font-extrabold ${remainingDue > 0 ? 'text-amber-700' : 'text-emerald-700'}">Rs. ${remainingDue.toLocaleString()}</span>
+              </div>
             </div>
-            <div class="flex justify-between text-[11px] text-[#8a8171]">
-              <span>Digital Resource &amp; Speaking Grader Access</span>
-              <span>Enabled</span>
-            </div>
-          </div>
 
-          <!-- Status & Verification Badge -->
-          <div class="p-3 ${isPaid ? 'bg-emerald-50 border-emerald-200' : 'bg-amber-50 border-amber-200'} border rounded-xl flex items-center justify-between">
-            <div class="flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full ${isPaid ? 'bg-emerald-500' : 'bg-amber-500'} animate-pulse"></span>
-              <span class="text-xs font-black uppercase ${isPaid ? 'text-emerald-800' : 'text-amber-800'}">${isPaid ? '✓ Student Account Verified' : '⏳ Pending Consultancy Review'}</span>
+            <!-- Status Badge -->
+            <div class="p-3 ${
+              status === 'Paid' ? 'bg-emerald-50 border-emerald-200 text-emerald-800' : (status === 'Partially Paid' ? 'bg-blue-50 border-blue-200 text-blue-800' : 'bg-amber-50 border-amber-200 text-amber-800')
+            } border rounded-xl flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full ${status === 'Paid' ? 'bg-emerald-500' : (status === 'Partially Paid' ? 'bg-blue-500' : 'bg-amber-500')} animate-pulse"></span>
+                <span class="text-xs font-black uppercase">${
+                  status === 'Paid' ? '✓ FULLY PAID' : (status === 'Partially Paid' ? '🌓 PARTIALLY PAID' : '⏳ PAYMENT PENDING')
+                }</span>
+              </div>
+              <span class="text-[10px] font-mono font-bold">${escapeHtml(method)}</span>
             </div>
-            <span class="text-[10px] font-mono ${isPaid ? 'text-emerald-800' : 'text-amber-800'} font-bold">${escapeHtml(method)}</span>
-          </div>
 
-          <div class="text-[9px] text-center text-[#8a8171]">
-            Digital Verification Hash: <span class="font-mono font-bold text-[#a8792f]">${hash}</span>
+            <div class="text-[9px] text-center text-[#8a8171]">
+              Digital Verification Hash: <span class="font-mono font-bold text-[#a8792f]">${hash}</span>
+            </div>
           </div>
-        </div>
-      `;
+        `;
+      }
 
       document.getElementById('crm-receipt-modal').classList.remove('hidden');
     }
