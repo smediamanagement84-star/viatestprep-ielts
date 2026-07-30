@@ -644,63 +644,6 @@
       renderQuestionsAndNav();
     }
 
-    // Practice mode group check handler (for MCQ_MULTI choose-two/three)
-    function checkPracticeAnswerGroup(nums, idx) {
-      const passage = testData.reading.passages[currentPassageIdx];
-      let allCorrect = true;
-      const feedbackTexts = [];
-      
-      nums.forEach(n => {
-        const q = passage.questions.find(x => x.num === n);
-        if (!q) return;
-        const uAns = (userAnswers[n] || '').trim().toLowerCase();
-        const cAns = q.answer.trim().toLowerCase();
-        if (!checkAnswerCorrect(uAns, cAns)) allCorrect = false;
-        feedbackTexts.push(`Question ${n}: Answer is <strong>${q.answer}</strong>. ${q.explanation}`);
-      });
-      
-      const fd = document.getElementById(`pract-feedback-${nums[0]}`);
-      if (!fd) return;
-      
-      if (allCorrect) {
-        fd.className = 'feedback-correct';
-        fd.innerHTML = `<strong>Correct!</strong><br>${feedbackTexts.join('<br>')}`;
-      } else {
-        fd.className = 'feedback-wrong';
-        fd.innerHTML = `<strong>Some answers are incorrect.</strong><br>${feedbackTexts.join('<br>')}`;
-      }
-    }
-
-    // Practice mode check handler for FILL_GROUP cards
-    function checkFillGroup(nums, firstNum) {
-      const passage = testData.reading.passages[currentPassageIdx];
-      let allCorrect = true;
-      const feedbackLines = [];
-
-      nums.forEach(n => {
-        const q = passage.questions.find(x => x.num === n);
-        if (!q) return;
-        const uAns = (userAnswers[n] || '').trim().toLowerCase();
-        const cAns = q.answer.trim().toLowerCase();
-        const correct = checkAnswerCorrect(uAns, cAns);
-        if (!correct) allCorrect = false;
-        feedbackLines.push(
-          `<div style="margin-bottom:4px;">
-            <strong>Q${n}:</strong> ` +
-            (correct
-              ? `<span style="color:#245e3f;">✓ Correct — <em>${q.answer}</em></span>`
-              : `<span style="color:#8a2c1f;">✗ Your answer: <s>${q.answer ? (userAnswers[n] || 'none') : 'none'}</s> → Correct: <strong>${q.answer}</strong></span>`) +
-            (q.explanation ? `<br><span style="color:#6b6558;font-size:11px;">${q.explanation}</span>` : '') +
-          `</div>`
-        );
-      });
-
-      const fd = document.getElementById(`pract-feedback-${firstNum}`);
-      if (!fd) return;
-      fd.className = `feedback-box ${allCorrect ? 'correct' : 'wrong'}`;
-      fd.innerHTML = `<div style="font-weight:700;margin-bottom:8px;">${allCorrect ? '✓ All correct!' : 'Some answers need review'}</div>` + feedbackLines.join('');
-    }
-
     // Drag-and-Drop Matching Headings helpers
     function dragHeading(ev) {
       ev.dataTransfer.setData("text/plain", ev.target.getAttribute("data-val"));
@@ -1145,33 +1088,6 @@
       renderQuestionsAndNav();
     }
 
-    function checkPracticeAnswer(qNum, idx) {
-      const passage = testData.reading.passages[currentPassageIdx];
-      const q = passage.questions[idx];
-      const uAns = (userAnswers[qNum] || '').trim().toLowerCase();
-      const cAns = q.answer.trim().toLowerCase();
-
-      const fdContainer = document.getElementById(`pract-feedback-${qNum}`);
-      const isCorrect = checkAnswerCorrect(uAns, cAns);
-
-      if (isCorrect) {
-        fdContainer.className = 'feedback-box correct';
-        fdContainer.innerHTML = `
-          <div style="font-weight:700;margin-bottom:4px;">Correct Answer</div>
-          <p style="margin:0 0 6px;">Locating sentence: ${q.location || 'Within the passage.'}</p>
-          <div><strong>Explanation:</strong> ${q.explanation}</div>
-        `;
-      } else {
-        fdContainer.className = 'feedback-box wrong';
-        fdContainer.innerHTML = `
-          <div style="font-weight:700;margin-bottom:4px;">Incorrect</div>
-          <p style="margin:0;">Your answer: <span style="text-decoration:line-through;">${escapeHtml(userAnswers[qNum] || 'None')}</span></p>
-          <p style="margin:4px 0 6px;">Correct answer: <strong>${q.answer}</strong></p>
-          <div><strong>Explanation:</strong> ${q.explanation}</div>
-        `;
-      }
-    }
-
     async function submitTest(autoSubmit = false) {
       if (!autoSubmit) {
         let totalQs = 0, answered = 0;
@@ -1193,6 +1109,33 @@
       }
 
       clearInterval(timerInterval);
+
+      // The public test-data.js no longer ships correct answers/explanations
+      // at all (see api/_lib/testAnswers.js) - fetch the real answer key now,
+      // right at submission, and merge it back onto testData so the scoring
+      // loop and renderReviewMode() below both keep working unchanged. This
+      // is also why per-question "Practice Mode" answer checking has no live
+      // callers left in this file - real answers genuinely don't exist
+      // client-side until this exact point.
+      const activeStudentId = localStorage.getItem('viatestprep_active_student_id');
+      let realAnswers = null;
+      try {
+        const ansRes = await fetch(`/api/test-answers?testId=${encodeURIComponent(testId)}&module=reading&studentId=${encodeURIComponent(activeStudentId || '')}`);
+        const ansData = await ansRes.json();
+        if (ansData.ok) realAnswers = ansData.answers;
+      } catch (e) {
+        console.error('Could not fetch answer key:', e);
+      }
+      if (!realAnswers) {
+        alert('Could not load your results. Please log in (or check that your access hasn\'t expired) and try submitting again.');
+        return;
+      }
+      testData.reading.passages.forEach(p => {
+        p.questions.forEach(q => {
+          const rec = realAnswers[q.num];
+          if (rec) { q.answer = rec.answer; q.explanation = rec.explanation; }
+        });
+      });
 
       let correctCount = 0;
       let totalQs = 0;
@@ -1228,7 +1171,6 @@
       localStorage.setItem(`answers_test_${testId}_reading`, JSON.stringify(userAnswers));
 
       // Await the save so we can confirm success/failure in the UI
-      const activeStudentId = localStorage.getItem('viatestprep_active_student_id');
       let cloudSaved = false;
       if (activeStudentId) {
         try {

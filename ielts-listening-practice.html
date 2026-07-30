@@ -727,30 +727,6 @@
       renderQuestions();
     }
 
-    // MCQ_MULTI practice check handler for Listening
-    function checkPracticeAnswerGroup(nums, idx) {
-      var section = testData.listening.sections[currentSectionIdx];
-      var allCorrect = true;
-      var feedbackTexts = [];
-      nums.forEach(function(n) {
-        var q = section.questions.find(function(x) { return x.num === n; });
-        if (!q) return;
-        var uAns = (userAnswers[n] || '').trim().toLowerCase();
-        var cAns = q.answer.trim().toLowerCase();
-        if (!checkAnswerCorrect(uAns, cAns)) allCorrect = false;
-        feedbackTexts.push('Question ' + n + ': Answer is <strong>' + q.answer + '</strong>. ' + q.explanation);
-      });
-      var fd = document.getElementById('pract-feedback-' + nums[0]);
-      if (!fd) return;
-      if (allCorrect) {
-        fd.className = 'feedback-correct';
-        fd.innerHTML = '<strong>Correct!</strong><br>' + feedbackTexts.join('<br>');
-      } else {
-        fd.className = 'feedback-wrong';
-        fd.innerHTML = '<strong>Incorrect</strong><br>' + feedbackTexts.join('<br>');
-      }
-    }
-
     function renderQuestions() {
       var section = testData.listening.sections[currentSectionIdx];
       var container = document.getElementById('questionsContainer');
@@ -1180,23 +1156,6 @@
       renderQuestions();
     }
 
-    function checkPracticeAnswer(qNum, idx) {
-      var section = testData.listening.sections[currentSectionIdx];
-      var q = section.questions[idx];
-      var uAns = (userAnswers[qNum] || '').trim().toLowerCase();
-      var cAns = q.answer.trim().toLowerCase();
-      var isCorrect = checkAnswerCorrect(uAns, cAns);
-      var fd = document.getElementById('pract-feedback-' + qNum);
-      if (!fd) return;
-      if (isCorrect) {
-        fd.className = 'feedback-correct';
-        fd.innerHTML = '<strong>Correct!</strong> ' + q.explanation;
-      } else {
-        fd.className = 'feedback-wrong';
-        fd.innerHTML = '<strong>Incorrect</strong><br>Your answer: <span style="text-decoration:line-through;">' + escapeHtml(userAnswers[qNum] || 'None') + '</span><br>Correct: <strong style="color:#245e3f;">' + escapeHtml(q.answer) + '</strong><br><span style="color:#6b6558;display:block;margin-top:4px;">' + q.explanation + '</span>';
-      }
-    }
-
     function toggleScratchpad() {
       var sp = document.getElementById('scratchpad');
       sp.style.display = sp.style.display === 'none' ? 'block' : 'none';
@@ -1255,6 +1214,32 @@
       }
       clearInterval(timerInterval);
       audio.pause();
+
+      // The public test-data.js/unique-test-data.js no longer ship correct
+      // answers/explanations at all (see api/_lib/testAnswers.js) - fetch
+      // the real answer key now, right at submission, and merge it back
+      // onto testData so the scoring loop and renderReviewMode() below both
+      // keep working unchanged.
+      var activeStudentId = localStorage.getItem('viatestprep_active_student_id');
+      var realAnswers = null;
+      try {
+        var ansRes = await fetch('/api/test-answers?testId=' + encodeURIComponent(testId) + '&module=listening&studentId=' + encodeURIComponent(activeStudentId || ''));
+        var ansData = await ansRes.json();
+        if (ansData.ok) realAnswers = ansData.answers;
+      } catch (e) {
+        console.error('Could not fetch answer key:', e);
+      }
+      if (!realAnswers) {
+        alert("Could not load your results. Please log in (or check that your access hasn't expired) and try submitting again.");
+        return;
+      }
+      testData.listening.sections.forEach(function(sec) {
+        sec.questions.forEach(function(q) {
+          var rec = realAnswers[q.num];
+          if (rec) { q.answer = rec.answer; q.explanation = rec.explanation; }
+        });
+      });
+
       var correctCount = 0, totalQs = 0;
       var answerReview = [];
       testData.listening.sections.forEach(function(sec) {
@@ -1281,7 +1266,6 @@
       localStorage.setItem('answers_test_' + testId + '_listening', JSON.stringify(userAnswers));
 
       // Await the save so we can confirm success/failure in the UI
-      var activeStudentId = localStorage.getItem('viatestprep_active_student_id');
       var cloudSaved = false;
       if (activeStudentId) {
         try {
@@ -1444,34 +1428,6 @@
       return inst && r.test(inst);
     }
 
-    function checkFillGroup(nums, firstNum) {
-      var section = testData.listening.sections[currentSectionIdx];
-      var allCorrect = true;
-      var feedbackLines = [];
-
-      nums.forEach(function(n) {
-        var q = section.questions.find(function(x) { return x.num === n; });
-        if (!q) return;
-        var uAns = (userAnswers[n] || '').trim().toLowerCase();
-        var cAns = q.answer.trim().toLowerCase();
-        var correct = checkAnswerCorrect(uAns, cAns);
-        if (!correct) allCorrect = false;
-        feedbackLines.push(
-          '<div style="margin-bottom:4px;">' +
-            '<strong>Q' + n + ':</strong> ' +
-            (correct
-              ? '<span style="color:#245e3f;">✓ Correct — <em>' + escapeHtml(q.answer) + '</em></span>'
-              : '<span style="color:#8a2c1f;">✗ Your answer: <s>' + escapeHtml(userAnswers[n] || 'none') + '</s> &rarr; Correct: <strong>' + escapeHtml(q.answer) + '</strong></span>') +
-            (q.explanation ? '<br><span style="color:#6b6558;font-size:11px;">' + q.explanation + '</span>' : '') +
-          '</div>'
-        );
-      });
-
-      var fd = document.getElementById('pract-feedback-' + firstNum);
-      if (!fd) return;
-      fd.style.cssText = 'margin-top:10px; padding:10px 13px; border-radius:8px; border:1px solid ' + (allCorrect ? '#a9d4b8; background:#eef6f0; color:#245e3f;' : '#e3b4ab; background:#faeeec; color:#8a2c1f;');
-      fd.innerHTML = '<div style="font-weight:700;margin-bottom:8px;">' + (allCorrect ? '✓ All correct!' : 'Some answers need review') + '</div>' + feedbackLines.join('');
-    }
 
     function toggleTranscriptDuringTest() {
       var transBox = document.getElementById('transcriptBox');
