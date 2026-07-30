@@ -1426,30 +1426,30 @@
             </div>
           </div>
 
-          # Stat Overview Cards
+          <!-- Stat Overview Cards -->
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
+              <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Total Fees Collected</span>
+              <span id="b-stat-collected-rs" class="text-lg font-black text-emerald-700 mt-1 block">Rs. 0</span>
+              <span id="b-stat-collected-sub" class="text-[10px] text-emerald-600 font-bold mt-1 block">✓ Verified Tuition Collected</span>
+            </div>
+
+            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
+              <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Pending / Outstanding Fees</span>
+              <span id="b-stat-pending-rs" class="text-lg font-black text-amber-600 mt-1 block">Rs. 0</span>
+              <span id="b-stat-pending-sub" class="text-[10px] text-amber-700 font-bold mt-1 block">Follow-up Recommended</span>
+            </div>
+
+            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
+              <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Roster &amp; Verified Accounts</span>
+              <span id="b-stat-paid-count" class="text-lg font-black text-[#1c1a17] mt-1 block">0 / 0 Verified</span>
+              <span id="b-stat-capacity" class="text-[10px] text-[#766f62] font-bold mt-1 block">0 / 25 Capacity Seats Used</span>
+            </div>
+
             <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
               <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Current Plan Tier</span>
               <span id="b-stat-plan-name" class="text-lg font-black text-[#7a2331] mt-1 block">Growth Plan</span>
-              <span id="b-stat-capacity" class="text-[10px] text-[#766f62] font-bold mt-1 block">25 Student Capacity</span>
-            </div>
-
-            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
-              <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Active Roster Capacity</span>
-              <span id="b-stat-revenue" class="text-lg font-black text-[#1c1a17] mt-1 block">9 / 25 Seats</span>
-              <span class="text-[10px] text-emerald-600 font-bold mt-1 block">✓ Active Consultancy Roster</span>
-            </div>
-
-            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
-              <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Paid Enrolled Students</span>
-              <span id="b-stat-paid-count" class="text-lg font-black text-[#1c1a17] mt-1 block">7 / 9 Students</span>
-              <span class="text-[10px] text-[#8a8171] font-bold mt-1 block">Active Tuition Accounts</span>
-            </div>
-
-            <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-sm">
-              <span class="text-[9px] font-extrabold text-[#8a8171] uppercase tracking-wider block">Pending / Overdue Fees</span>
-              <span id="b-stat-pending-count" class="text-lg font-black text-amber-600 mt-1 block">2 Invoices Due</span>
-              <span class="text-[10px] text-amber-700 font-bold mt-1 block">Follow-up Recommended</span>
+              <span id="b-stat-revenue" class="text-[10px] text-[#766f62] font-bold mt-1 block">25 Student Capacity</span>
             </div>
           </div>
 
@@ -6392,16 +6392,33 @@
     // ==========================================
     // CRM BILLING & FINANCES MANAGEMENT
     // ==========================================
+    function getStudentFeeAmount(s) {
+      if (s.tuitionFee !== undefined && s.tuitionFee !== null && s.tuitionFee !== '' && !isNaN(parseInt(s.tuitionFee))) {
+        return parseInt(s.tuitionFee);
+      }
+      if (s.accessLevel === 'mocks') return 5000;
+      if (s.accessLevel === 'speaking') return 8000;
+      return 15000;
+    }
+
+    function getStudentTuitionStatus(s, idx) {
+      if (s.tuitionStatus === 'Paid' || s.tuitionStatus === 'Pending') {
+        return s.tuitionStatus;
+      }
+      return 'Paid';
+    }
+
     function renderCRMBillingView() {
       const plan = (localStorage.getItem('viatestprep_consultancy_plan') || 'Growth').replace(' Plan', '');
       const capacity = PLAN_CAPACITY[plan] || 25;
       
       const planNameEl = document.getElementById('b-stat-plan-name');
       const capacityEl = document.getElementById('b-stat-capacity');
+      const revEl = document.getElementById('b-stat-revenue');
       const tierLabelEl = document.getElementById('b-sub-tier-label');
       
       if (planNameEl) planNameEl.textContent = plan + ' Plan';
-      if (capacityEl) capacityEl.textContent = capacity + ' Student Capacity';
+      if (revEl) revEl.textContent = capacity + ' Student Capacity';
       if (tierLabelEl) tierLabelEl.textContent = `${plan} Plan (${capacity} Seats)`;
 
       // Populate billing table rows
@@ -6411,26 +6428,37 @@
 
       let paidCount = 0;
       let pendingCount = 0;
+      let totalCollectedRs = 0;
+      let totalPendingRs = 0;
 
       if (!crmStudents.length) {
         tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-xs text-[#8a8171]">No student records found in your roster.</td></tr>';
+        const collectedRsEl = document.getElementById('b-stat-collected-rs');
+        const pendingRsEl = document.getElementById('b-stat-pending-rs');
+        const paidEl = document.getElementById('b-stat-paid-count');
+        if (collectedRsEl) collectedRsEl.textContent = 'Rs. 0';
+        if (pendingRsEl) pendingRsEl.textContent = 'Rs. 0';
+        if (paidEl) paidEl.textContent = '0 / 0 Verified';
+        if (capacityEl) capacityEl.textContent = `0 / ${capacity} Seats Used`;
         return;
       }
 
       crmStudents.forEach((s, idx) => {
-        const isPaid = (s.tuitionStatus || (idx % 4 !== 0 ? 'Paid' : 'Pending')) === 'Paid';
+        const status = getStudentTuitionStatus(s, idx);
+        const isPaid = (status === 'Paid');
+        const feeAmount = getStudentFeeAmount(s);
         const method = s.tuitionMethod || (idx % 2 === 0 ? 'eSewa QR' : 'Khalti QR');
         const updatedDate = s.tuitionDate || new Date().toISOString().split('T')[0];
-        
-        let pkgName = 'Full Resource Packet';
-        if (s.accessLevel === 'mocks') pkgName = 'Mock Test Pack';
-        else if (s.accessLevel === 'speaking') pkgName = 'Speaking Evaluation';
 
-        const feeDisplay = s.tuitionFee ? `Rs. ${parseInt(s.tuitionFee).toLocaleString()}` : pkgName;
+        if (isPaid) {
+          paidCount++;
+          totalCollectedRs += feeAmount;
+        } else {
+          pendingCount++;
+          totalPendingRs += feeAmount;
+        }
 
-        if (isPaid) paidCount++;
-        else pendingCount++;
-
+        const feeDisplay = `Rs. ${feeAmount.toLocaleString()}`;
         const initials = String(s.name || '?').trim().split(/\s+/).slice(0, 2).map(w => w[0] || '').join('').toUpperCase();
 
         const tr = document.createElement('tr');
@@ -6465,20 +6493,34 @@
         tbody.appendChild(tr);
       });
 
-      // Update stat cards
-      const revEl = document.getElementById('b-stat-revenue');
-      const paidEl = document.getElementById('b-stat-paid-count');
-      const pendEl = document.getElementById('b-stat-pending-count');
+      // Add a summary row at the bottom of the table
+      const summaryTr = document.createElement('tr');
+      summaryTr.className = 'bg-[#f8f5ee] font-black text-xs border-t-2 border-[#e5ded0]';
+      summaryTr.innerHTML = `
+        <td class="p-4 text-[#1c1a17]">Total Finances (${crmStudents.length} Students)</td>
+        <td class="p-4 text-emerald-700">Collected: Rs. ${totalCollectedRs.toLocaleString()}</td>
+        <td class="p-4 text-center text-amber-700">${pendingCount} Pending (Rs. ${totalPendingRs.toLocaleString()})</td>
+        <td class="p-4 text-center text-[#5c5648]" colspan="2">Total Ledger Value: Rs. ${(totalCollectedRs + totalPendingRs).toLocaleString()}</td>
+        <td class="p-4 text-right text-[#7a2331]">✓ Verified Sync</td>
+      `;
+      tbody.appendChild(summaryTr);
 
-      if (revEl) revEl.textContent = `${crmStudents.length} / ${capacity} Seats`;
+      // Update stat cards
+      const collectedRsEl = document.getElementById('b-stat-collected-rs');
+      const pendingRsEl = document.getElementById('b-stat-pending-rs');
+      const paidEl = document.getElementById('b-stat-paid-count');
+
+      if (collectedRsEl) collectedRsEl.textContent = `Rs. ${totalCollectedRs.toLocaleString()}`;
+      if (pendingRsEl) pendingRsEl.textContent = `Rs. ${totalPendingRs.toLocaleString()}`;
       if (paidEl) paidEl.textContent = `${paidCount} / ${crmStudents.length} Verified`;
-      if (pendEl) pendEl.textContent = `${pendingCount} Pending Review`;
+      if (capacityEl) capacityEl.textContent = `${crmStudents.length} / ${capacity} Seats Used`;
     }
 
     function toggleStudentTuitionStatus(studentId) {
       const stud = crmStudents.find(s => s.id === studentId);
       if (!stud) return;
-      stud.tuitionStatus = stud.tuitionStatus === 'Paid' ? 'Pending' : 'Paid';
+      const currentStatus = getStudentTuitionStatus(stud);
+      stud.tuitionStatus = currentStatus === 'Paid' ? 'Pending' : 'Paid';
       stud.tuitionDate = new Date().toISOString().split('T')[0];
       saveCRMStudentsToLocal();
       renderCRMBillingView();
@@ -6502,8 +6544,9 @@
       if (stud.accessLevel === 'mocks') packageName = 'IELTS 22 Full Mock Exam Packet';
       else if (stud.accessLevel === 'speaking') packageName = '1-on-1 IELTS Speaking Examiner Practice';
 
-      const feeDisplay = stud.tuitionFee ? `Rs. ${parseInt(stud.tuitionFee).toLocaleString()}` : 'Consultancy Package Access';
-      const isPaid = (stud.tuitionStatus || 'Paid') === 'Paid';
+      const feeAmount = getStudentFeeAmount(stud);
+      const isPaid = getStudentTuitionStatus(stud) === 'Paid';
+      const feeDisplay = `Rs. ${feeAmount.toLocaleString()}`;
       const method = stud.tuitionMethod || 'eSewa Merchant QR';
       const date = stud.tuitionDate || new Date().toISOString().split('T')[0];
       const voucherNo = 'VTP-2026-' + (stud.studentId || stud.id).replace('st-', '').toUpperCase();
@@ -6597,6 +6640,13 @@
     function openRecordFeeModal() {
       const select = document.getElementById('recFeeStudentSelect');
       if (!select) return;
+
+      // Clean up previous custom dropdown enhancement so option items rebuild fresh
+      delete select.dataset.vtpEnhanced;
+      const oldContainer = document.getElementById('vtp-container-recFeeStudentSelect');
+      if (oldContainer) oldContainer.remove();
+      select.style.display = '';
+
       select.innerHTML = '<option value="" disabled selected>-- Select a student --</option>';
       crmStudents.forEach(s => {
         const opt = document.createElement('option');
@@ -6605,6 +6655,8 @@
         select.appendChild(opt);
       });
       document.getElementById('recFeeDate').value = new Date().toISOString().split('T')[0];
+      document.getElementById('recFeeAmount').value = '';
+
       setTimeout(initVTPCustomDropdowns, 50);
       document.getElementById('crm-record-fee-modal').classList.remove('hidden');
     }
@@ -6616,13 +6668,23 @@
     function handleRecordFeeSubmit(e) {
       e.preventDefault();
       const id = document.getElementById('recFeeStudentSelect').value;
-      const amount = parseInt(document.getElementById('recFeeAmount').value) || 15000;
+      const amountInput = document.getElementById('recFeeAmount').value;
       const status = document.getElementById('recFeeStatus').value;
       const method = document.getElementById('recFeeMethod').value;
       const date = document.getElementById('recFeeDate').value;
 
+      if (!id) {
+        alert('Please select a student from the dropdown list.');
+        return;
+      }
+
       const stud = crmStudents.find(s => s.id === id);
-      if (!stud) return;
+      if (!stud) {
+        alert('Selected student profile was not found.');
+        return;
+      }
+
+      const amount = (amountInput !== '' && !isNaN(parseInt(amountInput))) ? parseInt(amountInput) : getStudentFeeAmount(stud);
 
       stud.tuitionFee = amount;
       stud.tuitionStatus = status;
