@@ -2887,10 +2887,12 @@
 
     async function signInWithGoogle(role) {
       if (role === 'consultancy') {
-        setConsultancyAuthStatus('🚀 Authenticating session...');
-        setTimeout(() => { launchAdminBypass(); }, 300);
+        const name = (document.getElementById('m-consultancy-name').value || '').trim() || 'My Consultancy HQ';
+        const email = (document.getElementById('m-consultancy-auth-email').value || '').trim() || 'admin@consultancy.local';
+        setConsultancyAuthStatus('🚀 Launching Consultancy Portal...');
+        setTimeout(() => { launchCustomConsultancySession(email, name); }, 300);
       } else {
-        setStudentAuthStatus('🚀 Authenticating session...');
+        setStudentAuthStatus('🚀 Launching Student Portal...');
         setTimeout(() => { launchStudentBypass(); }, 300);
       }
     }
@@ -3001,7 +3003,7 @@
     async function handleConsultancyAuthSubmit() {
       const email = document.getElementById('m-consultancy-auth-email').value.trim();
       const password = document.getElementById('m-consultancy-auth-password').value;
-      const name = (document.getElementById('m-consultancy-name').value || '').trim() || 'Kathmandu Consultancy';
+      const name = (document.getElementById('m-consultancy-name').value || '').trim() || 'My Consultancy';
       if (!email || !password) { setConsultancyAuthStatus('Please enter your email and password.'); return; }
 
       // Demo/Testing Consultancy Bypass
@@ -3039,10 +3041,8 @@
         console.warn('Supabase auth fallback:', err);
       }
 
-      // Fallback local session activation so signup never blocks
-      localStorage.setItem('userEmail', email);
-      localStorage.setItem('viatestprep_consultancy_name', name);
-      launchAdminBypass();
+      // Launch custom consultancy account workspace for this user's email & name!
+      launchCustomConsultancySession(email, name);
     }
 
     // Shared by the manual login/signup form above and the onAuthStateChange
@@ -3168,6 +3168,21 @@
       localStorage.setItem('score_test_1_writing', 'completed');
       localStorage.setItem('score_test_2_listening', '7.5');
       localStorage.setItem('score_test_2_reading', '8.5');
+    }
+
+    function launchCustomConsultancySession(email, consultancyName, planName = 'Growth') {
+      const cid = 'c-' + Math.random().toString(36).substring(2, 9);
+      localStorage.setItem('viatestprep_unlocked', 'true');
+      localStorage.setItem('viatestprep_user_role', 'consultancy');
+      localStorage.setItem('userEmail', email || 'consultancy@local.host');
+      localStorage.setItem('viatestprep_consultancy_name', consultancyName || 'Consultancy Portal');
+      localStorage.setItem('viatestprep_consultancy_plan', planName);
+      localStorage.setItem('viatestprep_consultancy_id', cid);
+      localStorage.removeItem('viatestprep_owner_key');
+      localStorage.removeItem('viatestprep_consultancy_expires_at');
+
+      closeAccessModal();
+      renderAppView();
     }
 
     function launchAdminBypass() {
