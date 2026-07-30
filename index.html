@@ -1894,7 +1894,7 @@
           </div>
           <div class="flex flex-col gap-1">
             <label class="text-[9px] font-bold text-[#8a8171] uppercase tracking-wider">Tuition Fee (Rs.)</label>
-            <input type="number" id="crmStudTuitionFee" placeholder="15000" class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-[#f3ecd8] focus:bg-white outline-none focus:border-[#7a2331]" />
+            <input type="number" id="crmStudTuitionFee" placeholder="1500" class="px-3 py-2 border border-[#e5ded0] rounded-xl text-xs bg-[#f3ecd8] focus:bg-white outline-none focus:border-[#7a2331]" />
           </div>
         </div>
         <div class="flex flex-col gap-1">
@@ -2769,7 +2769,8 @@
           target: 7.5,
           status: 'Active',
           stage: 'Mock Testing',
-          tuitionFee: 15000,
+          tuitionFee: 1500,
+          tuitionPaidAmount: 1500,
           tuitionStatus: 'Paid',
           tuitionMethod: 'eSewa QR',
           tuitionDate: '2026-07-28',
@@ -2787,8 +2788,9 @@
           target: 7.0,
           status: 'Active',
           stage: 'Enrolled',
-          tuitionFee: 15000,
-          tuitionStatus: 'Pending',
+          tuitionFee: 1200,
+          tuitionPaidAmount: 600,
+          tuitionStatus: 'Partially Paid',
           tuitionMethod: 'Khalti QR',
           tuitionDate: '2026-07-29',
           followUp: new Date(Date.now() + 3*24*60*60*1000).toISOString().split('T')[0],
@@ -2805,8 +2807,9 @@
           target: 6.5,
           status: 'Active',
           stage: 'Completed',
-          tuitionFee: 15000,
-          tuitionStatus: 'Paid',
+          tuitionFee: 1000,
+          tuitionPaidAmount: 0,
+          tuitionStatus: 'Pending',
           tuitionMethod: 'Fonepay Bank Transfer',
           tuitionDate: '2026-07-25',
           followUp: null,
@@ -6451,7 +6454,7 @@
       if (s.tuitionFee !== undefined && s.tuitionFee !== null && s.tuitionFee !== '' && !isNaN(parseInt(s.tuitionFee))) {
         return parseInt(s.tuitionFee);
       }
-      return 15000;
+      return 1500;
     }
 
     function getStudentTuitionStatus(s, idx) {
