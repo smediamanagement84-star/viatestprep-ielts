@@ -6614,13 +6614,6 @@
     }
 
     let activeReceiptStudentId = null;
-    let billingSearchQuery = '';
-    let billingStatusFilter = 'all';
-
-    function setBillingFilter(filter) {
-      billingStatusFilter = filter;
-      renderCRMBillingView();
-    }
 
     function issueStudentReceipt(studentId) {
       const stud = crmStudents.find(s => s.id === studentId);
