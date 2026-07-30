@@ -2741,17 +2741,19 @@
     }
 
     function handleLogout() {
-      if (confirm('Are you sure you want to log out of your session?')) {
-        localStorage.removeItem('viatestprep_unlocked');
-        localStorage.removeItem('viatestprep_user_role');
-        localStorage.removeItem('viatestprep_active_student_id');
-        localStorage.removeItem('viatestprep_active_student_name');
-        localStorage.removeItem('viatestprep_active_student_expires_at');
-        localStorage.removeItem('viatestprep_consultancy_id');
-        localStorage.removeItem('viatestprep_owner_key');
-        if (supabaseClient) supabaseClient.auth.signOut();
-        renderAppView();
+      localStorage.removeItem('viatestprep_unlocked');
+      localStorage.removeItem('viatestprep_user_role');
+      localStorage.removeItem('viatestprep_active_student_id');
+      localStorage.removeItem('viatestprep_active_student_name');
+      localStorage.removeItem('viatestprep_active_student_expires_at');
+      localStorage.removeItem('viatestprep_consultancy_id');
+      localStorage.removeItem('viatestprep_consultancy_name');
+      localStorage.removeItem('viatestprep_owner_key');
+      sessionStorage.clear();
+      if (typeof supabaseClient !== 'undefined' && supabaseClient && supabaseClient.auth) {
+        try { supabaseClient.auth.signOut(); } catch(e) {}
       }
+      window.location.href = window.location.origin + window.location.pathname;
     }
 
     // ==========================================
