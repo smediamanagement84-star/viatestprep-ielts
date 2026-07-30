@@ -281,67 +281,79 @@ async function listAllSpeakingGrades() {
   return restRequest('speaking_grades', { method: 'GET' });
 }
 
+function stripMissingColumnFromPayload(payload, errMessage) {
+  if (!payload || typeof payload !== 'object') return { clean: null, strippedField: null };
+  const clean = { ...payload };
+  const match = String(errMessage).match(/column (?:students\.)?([a-z0-9_]+) does not exist/i) ||
+                String(errMessage).match(/Could not find the '([a-z0-9_]+)' column/i);
+  if (match && match[1] && match[1] in clean) {
+    console.warn(`[Supabase Schema Fallback] Stripping unmigrated column '${match[1]}' from REST write.`);
+    delete clean[match[1]];
+    return { clean, strippedField: match[1] };
+  }
+  return { clean: null, strippedField: null };
+}
+
 async function insertStudentAdmin(fields) {
-  try {
-    const rows = await restRequest('students', { method: 'POST', body: fields });
-    return rows[0];
-  } catch (err) {
-    if (err.message && err.message.includes('next_follow_up') && fields && 'next_follow_up' in fields) {
-      const cleanFields = { ...fields };
-      delete cleanFields.next_follow_up;
-      const rows = await restRequest('students', { method: 'POST', body: cleanFields });
+  let currentFields = { ...fields };
+  for (let attempt = 0; attempt < 5; attempt++) {
+    try {
+      const rows = await restRequest('students', { method: 'POST', body: currentFields });
       return rows[0];
+    } catch (err) {
+      const { clean, strippedField } = stripMissingColumnFromPayload(currentFields, err.message);
+      if (clean && strippedField) {
+        currentFields = clean;
+      } else {
+        throw err;
+      }
     }
-    throw err;
   }
 }
 
 async function updateStudentAdmin(id, fields) {
-  let cleanFields = { ...fields };
-  try {
-    const rows = await restRequest('students', {
-      method: 'PATCH',
-      query: `?id=eq.${encodeURIComponent(id)}`,
-      body: cleanFields,
-    });
-    if (rows && rows.length > 0) {
-      return rows[0];
-    }
-  } catch (err) {
-    if (err.message && err.message.includes('next_follow_up') && 'next_follow_up' in cleanFields) {
-      delete cleanFields.next_follow_up;
+  let currentFields = { ...fields };
+  for (let attempt = 0; attempt < 5; attempt++) {
+    try {
       const rows = await restRequest('students', {
         method: 'PATCH',
         query: `?id=eq.${encodeURIComponent(id)}`,
-        body: cleanFields,
+        body: currentFields,
       });
-      if (rows && rows.length > 0) return rows[0];
-    } else {
-      throw err;
+      if (rows && rows.length > 0) {
+        return rows[0];
+      }
+      break;
+    } catch (err) {
+      const { clean, strippedField } = stripMissingColumnFromPayload(currentFields, err.message);
+      if (clean && strippedField) {
+        currentFields = clean;
+      } else {
+        throw err;
+      }
     }
   }
+
   // Auto-upsert fallback if row didn't exist in Supabase DB yet
-  const insertPayload = { id, ...cleanFields };
+  let insertPayload = { id, ...currentFields };
   if (!insertPayload.name) insertPayload.name = 'Student';
   if (!insertPayload.email) insertPayload.email = `${id}@student.local`;
-  try {
-    const inserted = await restRequest('students', {
-      method: 'POST',
-      headers: { Prefer: 'resolution=merge-duplicates,return=representation' },
-      body: insertPayload,
-    });
-    return inserted ? inserted[0] : null;
-  } catch (err) {
-    if (err.message && err.message.includes('next_follow_up') && 'next_follow_up' in insertPayload) {
-      delete insertPayload.next_follow_up;
+  for (let attempt = 0; attempt < 5; attempt++) {
+    try {
       const inserted = await restRequest('students', {
         method: 'POST',
         headers: { Prefer: 'resolution=merge-duplicates,return=representation' },
         body: insertPayload,
       });
       return inserted ? inserted[0] : null;
+    } catch (err) {
+      const { clean, strippedField } = stripMissingColumnFromPayload(insertPayload, err.message);
+      if (clean && strippedField) {
+        insertPayload = clean;
+      } else {
+        throw err;
+      }
     }
-    throw err;
   }
 }
 
