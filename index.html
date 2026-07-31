@@ -1662,6 +1662,7 @@
           Continue with Google
         </button>
         <p id="m-student-auth-status" class="text-[11px] text-center min-h-[14px] lp-accent font-bold"></p>
+        <p id="m-student-resend-row" class="text-center text-[10px] lp-muted hidden"><button type="button" onclick="resendStudentConfirmation()" class="underline hover:no-underline">Didn't get a confirmation email? Resend it</button></p>
         <p class="text-center text-[10px] lp-muted"><button type="button" onclick="handleStudentForgotPassword()" class="underline hover:no-underline">Forgot password?</button></p>
 
         <div class="text-center pt-1">
@@ -1705,6 +1706,7 @@
           Continue with Google
         </button>
         <p id="m-consultancy-auth-status" class="text-[11px] text-center min-h-[14px] lp-accent font-bold"></p>
+        <p id="m-consultancy-resend-row" class="text-center text-[10px] lp-muted hidden"><button type="button" onclick="resendConsultancyConfirmation()" class="underline hover:no-underline">Didn't get a confirmation email? Resend it</button></p>
         <p class="text-center text-[10px] lp-muted"><button type="button" onclick="handleConsultancyForgotPassword()" class="underline hover:no-underline">Forgot password?</button></p>
 
         <div class="text-center pt-1">
@@ -2878,6 +2880,7 @@
       document.getElementById('m-student-tab-login').classList.toggle('active-tab', mode === 'login');
       document.getElementById('m-student-auth-btn').textContent = mode === 'login' ? 'Log In' : 'Create Free Account';
       setStudentAuthStatus('');
+      document.getElementById('m-student-resend-row').classList.add('hidden');
     }
 
     function setStudentAuthStatus(msg) {
@@ -2955,9 +2958,24 @@
           setStudentAuthMode('login');
         } else {
           setStudentAuthStatus('❌ ' + (err.message || 'Something went wrong.'));
+          // A login failure could genuinely be a wrong password, but Supabase
+          // returns the same generic "Invalid login credentials" for an
+          // account that exists but was never email-confirmed - surface a
+          // way to fix that instead of leaving them stuck on a dead end.
+          if (studentAuthMode === 'login') {
+            document.getElementById('m-student-resend-row').classList.remove('hidden');
+          }
         }
         btn.disabled = false;
       }
+    }
+
+    async function resendStudentConfirmation() {
+      const email = document.getElementById('m-student-auth-email').value.trim();
+      if (!email) { setStudentAuthStatus('Enter your email above first, then tap resend.'); return; }
+      if (!supabaseClient) return;
+      const { error } = await supabaseClient.auth.resend({ type: 'signup', email });
+      setStudentAuthStatus(error ? '❌ ' + error.message : '✅ Confirmation email sent - check your inbox (and spam folder), then log in.');
     }
 
     // Shared by the manual login/signup form above and the onAuthStateChange
@@ -3012,6 +3030,7 @@
       document.getElementById('m-consultancy-tab-login').classList.toggle('active-tab', mode === 'login');
       document.getElementById('m-consultancy-auth-btn').textContent = mode === 'login' ? 'Log In' : 'Create Account';
       setConsultancyAuthStatus('');
+      document.getElementById('m-consultancy-resend-row').classList.add('hidden');
     }
 
     function setConsultancyAuthStatus(msg) {
@@ -3075,9 +3094,20 @@
           setConsultancyAuthMode('login');
         } else {
           setConsultancyAuthStatus('❌ ' + (err.message || 'Something went wrong.'));
+          if (consultancyAuthMode === 'login') {
+            document.getElementById('m-consultancy-resend-row').classList.remove('hidden');
+          }
         }
         btn.disabled = false;
       }
+    }
+
+    async function resendConsultancyConfirmation() {
+      const email = document.getElementById('m-consultancy-auth-email').value.trim();
+      if (!email) { setConsultancyAuthStatus('Enter your email above first, then tap resend.'); return; }
+      if (!supabaseClient) return;
+      const { error } = await supabaseClient.auth.resend({ type: 'signup', email });
+      setConsultancyAuthStatus(error ? '❌ ' + error.message : '✅ Confirmation email sent - check your inbox (and spam folder), then log in.');
     }
 
     // Shared by the manual login/signup form above and the onAuthStateChange
