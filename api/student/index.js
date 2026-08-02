@@ -61,18 +61,28 @@ async function handleRegister(req, res) {
   // Idempotent - signUp's confirmation-email redirect (or a retried request)
   // can call this more than once for the same account.
   const existing = await getStudentByAuthUserId(user.id);
-  if (existing) {
-    res.status(200).json({ ok: true, id: existing.id, name: existing.name });
-    return;
-  }
-
-  const row = await insertSelfServeStudent({
+  const row = existing || await insertSelfServeStudent({
     name: (name || '').trim() || user.email,
     email: user.email,
     auth_user_id: user.id,
   });
 
-  res.status(200).json({ ok: true, id: row.id, name: row.name });
+  // Same shape as handleLogin - a self-serve student can later be attached
+  // to a consultancy or have their access_level/expiry changed by staff, so
+  // the client needs the real current row here too, not just an id/name it
+  // then has to guess the access status for.
+  const expired = !!row.access_expires_at && new Date() > new Date(row.access_expires_at);
+  res.status(200).json({
+    ok: true,
+    id: row.id,
+    name: row.name,
+    targetBand: row.target_band,
+    status: row.status,
+    accessExpiresAt: row.access_expires_at,
+    accessLevel: row.access_level || 'full',
+    consultancyId: row.consultancy_id,
+    expired,
+  });
 }
 
 async function handleReports(req, res) {

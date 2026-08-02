@@ -2997,13 +2997,21 @@
         if (regData.ok) {
           localStorage.setItem('viatestprep_active_student_id', regData.id);
           localStorage.setItem('viatestprep_active_student_name', regData.name || '');
+          // Real access status from their students row - a consultancy may
+          // have attached/limited this account since last login, so this
+          // must come from the server, not just default to full every time.
+          localStorage.setItem('viatestprep_student_access', regData.accessLevel === 'mocks' ? 'mocks' : 'full');
+          localStorage.setItem('viatestprep_active_student_expires_at', regData.accessExpiresAt || '');
+        } else {
+          localStorage.removeItem('viatestprep_active_student_expires_at');
+          localStorage.removeItem('viatestprep_student_access');
         }
       } catch (e) {
         console.error('Could not register student account:', e);
+        localStorage.removeItem('viatestprep_active_student_expires_at');
+        localStorage.removeItem('viatestprep_student_access');
       }
 
-      localStorage.removeItem('viatestprep_active_student_expires_at');
-      localStorage.removeItem('viatestprep_student_access');
       localStorage.setItem('viatestprep_unlocked', 'true');
       localStorage.setItem('viatestprep_user_role', 'student');
       localStorage.setItem('userEmail', session.user.email);
