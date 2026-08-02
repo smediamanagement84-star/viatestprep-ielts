@@ -1657,6 +1657,11 @@
         <p id="m-student-resend-row" class="text-center text-[10px] lp-muted hidden"><button type="button" onclick="resendStudentConfirmation()" class="underline hover:no-underline">Didn't get a confirmation email? Resend it</button></p>
         <p class="text-center text-[10px] lp-muted"><button type="button" onclick="handleStudentForgotPassword()" class="underline hover:no-underline">Forgot password?</button></p>
 
+        <div class="pt-3 border-t border-[#ece4d2] text-center">
+          <span class="text-[9px] font-black uppercase tracking-widest text-[#a8792f] block mb-1.5">Dev / QA only</span>
+          <button onclick="launchStudentBypass()" class="px-3.5 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-[10px] font-extrabold rounded-lg text-[#5c5648] transition">🔑 Student Bypass</button>
+        </div>
+
         <div class="text-center pt-1">
           <button onclick="goBackToStep('role')" class="text-xs font-bold lp-accent hover:underline">← Back to selection</button>
         </div>
@@ -1700,6 +1705,11 @@
         <p id="m-consultancy-auth-status" class="text-[11px] text-center min-h-[14px] lp-accent font-bold"></p>
         <p id="m-consultancy-resend-row" class="text-center text-[10px] lp-muted hidden"><button type="button" onclick="resendConsultancyConfirmation()" class="underline hover:no-underline">Didn't get a confirmation email? Resend it</button></p>
         <p class="text-center text-[10px] lp-muted"><button type="button" onclick="handleConsultancyForgotPassword()" class="underline hover:no-underline">Forgot password?</button></p>
+
+        <div class="pt-3 border-t border-[#ece4d2] text-center">
+          <span class="text-[9px] font-black uppercase tracking-widest text-[#a8792f] block mb-1.5">Dev / QA only</span>
+          <button onclick="launchAdminBypass()" class="px-3.5 py-1.5 bg-[#7a2331] hover:bg-[#5e1a25] text-[10px] font-extrabold rounded-lg text-white transition">🔑 Admin / Consultancy Bypass</button>
+        </div>
 
         <div class="text-center pt-1">
           <button onclick="goBackToStep('role')" class="text-xs font-bold lp-accent hover:underline">← Back to selection</button>
