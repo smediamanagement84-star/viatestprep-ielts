@@ -826,20 +826,24 @@ function render(filter='all'){
     const card=document.createElement('div');
     card.className='card p-4';
     card.dataset.type=p.type;
+    const saved = localStorage.getItem('pw_ans_' + p.n) || '';
+    const hasSaved = !!saved;
     card.innerHTML=`
       <div class="flex items-start gap-3 mb-2 flex-wrap">
         <div class="num-circle" style="background:${typeColors[p.type]}">${p.n}</div>
-        <div class="flex-1 min-w-0">
+        <div class="flex-1 min-w-0 flex items-center justify-between">
           <span class="badge type-tag-${p.type}">${typeLabels[p.type]}</span>
+          <span class="save-badge badge ${hasSaved ? '' : 'hidden'}" style="background:#eef9f3;color:var(--green)">✓ Saved</span>
         </div>
       </div>
       <div class="text-sm font-medium italic mb-3" style="line-height:1.5"><strong>Prompt:</strong> ${p.prompt}</div>
       <div class="text-xs uppercase tracking-widest text-stone-500 mb-1">Your paraphrase</div>
-      <textarea data-paraphrase placeholder="Rewrite the prompt in your own words..."></textarea>
+      <textarea data-paraphrase placeholder="Rewrite the prompt in your own words...">${saved}</textarea>
       <div class="flex flex-wrap gap-2 mt-2 no-print">
         <button class="btn btn-ghost text-xs" data-action="hint">💡 Hint</button>
         <button class="btn btn-ghost text-xs" data-action="check" style="border-color:var(--green);color:var(--green)">🔍 Check Answer</button>
         <button class="btn btn-gold text-xs" data-action="reveal">👁 Reveal samples</button>
+        <button class="btn btn-ghost text-xs" data-action="save" style="border-color:#3b82f6;color:#2563eb">💾 Save Answer</button>
         <button class="btn btn-ghost text-xs" data-action="done">✓ Mark done</button>
       </div>
       <div class="hidden hint-content">
@@ -860,6 +864,28 @@ function render(filter='all'){
       s.classList.toggle('hidden');
       const btn=card.querySelector('[data-action="reveal"]');
       btn.textContent = s.classList.contains('hidden')?'👁 Reveal samples':'🙈 Hide samples';
+    });
+    card.querySelector('[data-action="save"]').addEventListener('click',()=>{
+      const text = card.querySelector('textarea').value.trim();
+      const btn = card.querySelector('[data-action="save"]');
+      const badge = card.querySelector('.save-badge');
+      if (text) {
+        localStorage.setItem('pw_ans_' + p.n, text);
+        if (badge) badge.classList.remove('hidden');
+        btn.textContent = '✓ Saved!';
+        btn.style.background = '#eef9f3';
+        btn.style.borderColor = 'var(--green)';
+        btn.style.color = 'var(--green)';
+        setTimeout(() => {
+          btn.textContent = '💾 Save Answer';
+          btn.style.background = '';
+          btn.style.borderColor = '#3b82f6';
+          btn.style.color = '#2563eb';
+        }, 2000);
+      } else {
+        localStorage.removeItem('pw_ans_' + p.n);
+        if (badge) badge.classList.add('hidden');
+      }
     });
     card.querySelector('[data-action="check"]').addEventListener('click',()=>{
       const text = card.querySelector('textarea').value.trim();

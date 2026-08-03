@@ -973,31 +973,63 @@ function checkParaphraseText(inputText, promptText) {
 let pwFilter='all';
 function renderPW(){
   const visible=pwFilter==='all'?pwPrompts:pwPrompts.filter(p=>p.type===pwFilter);
-  document.getElementById('pwSheet').innerHTML=visible.map(p=>`
+  document.getElementById('pwSheet').innerHTML=visible.map(p=>{
+    const saved = localStorage.getItem('pw_ans_' + p.n) || '';
+    const hasSaved = !!saved;
+    return `
 <div class="pw-card" id="pwcard${p.n}" data-type="${p.type}">
   <div class="flex items-start gap-3 mb-2">
     <div class="num-circle" style="background:${typeColors[p.type]}">${p.n}</div>
     <div class="flex-1">
       <div class="flex items-center gap-2 mb-1 flex-wrap">
         <span class="text-xs font-bold px-2 py-0.5 rounded-full" style="background:${typeColors[p.type]}22;color:${typeColors[p.type]}">${typeLabels[p.type]}</span>
+        <span id="pwSavedBadge${p.n}" class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 ${hasSaved ? '' : 'hidden'}">✓ Saved</span>
       </div>
       <p class="text-sm font-medium leading-snug">${p.prompt}</p>
     </div>
   </div>
-  <textarea class="pw-textarea" id="pwtxt${p.n}" placeholder="Write your paraphrase here…" oninput="pwCheck(${p.n})"></textarea>
+  <textarea class="pw-textarea" id="pwtxt${p.n}" placeholder="Write your paraphrase here…" oninput="pwCheck(${p.n})">${saved}</textarea>
   <div class="flex gap-2 mt-2 flex-wrap">
     <button class="btn btn-ghost text-xs py-1.5" onclick="toggleHint(${p.n})">💡 Hint</button>
     <button class="btn btn-ghost text-xs py-1.5" style="border-color:var(--green);color:var(--green)" id="pwChkBtn${p.n}" onclick="runChecker(${p.n})">🔍 Check Answer</button>
     <button class="btn btn-gold text-xs py-1.5" id="pwRevBtn${p.n}" onclick="revealSamples(${p.n})">👁 Reveal samples</button>
+    <button class="btn btn-ghost text-xs py-1.5" style="border-color:#3b82f6;color:#2563eb" id="pwSaveBtn${p.n}" onclick="savePW(${p.n})">💾 Save Answer</button>
     <button class="btn btn-ghost text-xs py-1.5" onclick="clearPW(${p.n})">✕ Clear</button>
   </div>
   <div class="hint-box" id="hint${p.n}">💡 <strong>Hint:</strong> ${p.hint}</div>
   <div id="checker${p.n}"></div>
   <div id="samples${p.n}"></div>
-</div>`).join('');
+</div>`;
+  }).join('');
 }
 function pwCheck(n){
   // No longer locking/unlocking the reveal button
+}
+function savePW(n){
+  const txt = document.getElementById('pwtxt' + n);
+  if (!txt) return;
+  const val = txt.value.trim();
+  const btn = document.getElementById('pwSaveBtn' + n);
+  const badge = document.getElementById('pwSavedBadge' + n);
+  if (val) {
+    localStorage.setItem('pw_ans_' + n, val);
+    if (badge) badge.classList.remove('hidden');
+    if (btn) {
+      btn.innerHTML = '✓ Saved!';
+      btn.style.background = '#eef9f3';
+      btn.style.borderColor = 'var(--green)';
+      btn.style.color = 'var(--green)';
+      setTimeout(() => {
+        btn.innerHTML = '💾 Save Answer';
+        btn.style.background = '';
+        btn.style.borderColor = '#3b82f6';
+        btn.style.color = '#2563eb';
+      }, 2000);
+    }
+  } else {
+    localStorage.removeItem('pw_ans_' + n);
+    if (badge) badge.classList.add('hidden');
+  }
 }
 function runChecker(n){
   const p=pwPrompts.find(x=>x.n===n);
@@ -1047,6 +1079,9 @@ function clearPW(n){
   document.getElementById('pwtxt'+n).value='';
   document.getElementById('hint'+n).style.display='none';
   document.getElementById('samples'+n).innerHTML='';
+  localStorage.removeItem('pw_ans_' + n);
+  const badge = document.getElementById('pwSavedBadge' + n);
+  if (badge) badge.classList.add('hidden');
   const ch = document.getElementById('checker'+n);
   if (ch) {
     ch.innerHTML='';
