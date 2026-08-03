@@ -784,7 +784,7 @@ function checkParaphraseText(inputText, promptText) {
   };
 
   const cleanText = (str) => {
-    return str
+    return (str || "")
       .toLowerCase()
       .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "")
       .replace(/\s+/g, " ")
@@ -794,15 +794,16 @@ function checkParaphraseText(inputText, promptText) {
   const userClean = cleanText(inputText);
   const promptClean = cleanText(promptText);
 
-  if (!userClean || userClean.length < 15) {
+  if (!userClean || userClean.length < 12) {
     result.isValid = false;
-    result.tips.push("Your paraphrase is too short. Try to write a complete sentence of at least 15-20 characters.");
+    result.tips.push("Your paraphrase is too short. Please write a complete sentence of at least 12-15 characters.");
     return result;
   }
 
   const userWords = userClean.split(" ");
   const promptWords = promptClean.split(" ");
 
+  // Extended stop words & common prompt meta-words to avoid false positive copying flags
   const stopWords = new Set([
     "the", "a", "an", "is", "are", "was", "were", "be", "been", "being",
     "to", "of", "in", "on", "at", "for", "with", "by", "about", "against",
@@ -812,10 +813,12 @@ function checkParaphraseText(inputText, promptText) {
     "other", "some", "such", "no", "nor", "not", "only", "own", "same", "so",
     "than", "too", "very", "s", "t", "can", "will", "just", "should", "now",
     "i", "you", "he", "she", "it", "we", "they", "them", "their", "his", "her",
-    "us", "our", "agree", "disagree", "extent"
+    "us", "our", "agree", "disagree", "extent", "what", "think", "think that",
+    "believe", "believe that", "say", "say that", "argue", "argue that", "people",
+    "do", "does", "done", "would", "could", "many", "give", "opinion"
   ]);
 
-  const promptContentWords = promptWords.filter(w => w.length > 2 && !stopWords.has(w));
+  const promptContentWords = promptWords.filter(w => w.length > 3 && !stopWords.has(w));
   const uniquePromptContentWords = Array.from(new Set(promptContentWords));
 
   const copiedWords = [];
@@ -829,70 +832,75 @@ function checkParaphraseText(inputText, promptText) {
     ? (copiedWords.length / uniquePromptContentWords.length) * 100 
     : 0;
 
-  const structureWords = [
-    "while", "although", "whereas", "despite", "however", "though", "compared",
-    "in contrast", "nevertheless", "on the other hand", "conversely", "meanwhile",
-    "even though", "but", "yet", "by comparison"
+  // Comprehensive Academic Structure & Grammar Features
+  const structureFeatures = [
+    { name: "subordinate clause", patterns: ["while", "although", "whereas", "despite", "however", "though", "even though", "in contrast", "conversely", "nevertheless", "on the other hand", "rather than", "instead of", "provided that", "given that", "as long as"] },
+    { name: "reporting passive", patterns: ["it is often argued", "it is sometimes argued", "it is widely believed", "it is frequently argued", "it is generally believed", "it is claimed", "it is asserted", "it is maintained", "it is contended", "it is suggested", "it is held", "it is widely accepted", "there is a view", "there is an argument", "opinion is divided", "is viewed as", "is considered", "is seen as", "is deemed", "is regarded as", "is thought to be", "ought to be", "should be made", "should be given"] },
+    { name: "academic stance", patterns: ["many maintain", "many argue", "some argue", "some believe", "proponents claim", "advocates argue", "critics suggest", "opponents contend", "some hold the view", "growing consensus"] },
+    { name: "relative clause", patterns: ["who", "which", "that", "whereby", "wherein"] }
   ];
-  let hasStructureWord = false;
-  let matchedStructureWord = "";
-  for (let word of structureWords) {
-    if (userClean.includes(word)) {
-      hasStructureWord = true;
-      matchedStructureWord = word;
-      break;
+
+  let detectedStructure = null;
+  for (let feat of structureFeatures) {
+    for (let pat of feat.patterns) {
+      if (userClean.includes(pat)) {
+        detectedStructure = { type: feat.name, match: pat };
+        break;
+      }
     }
+    if (detectedStructure) break;
   }
 
-  const reportingPhrases = [
-    "it is often argued", "it is sometimes argued", "it is widely believed",
-    "many maintain", "many argue", "some argue", "some believe", "proponents claim",
-    "critics suggest", "it is claimed", "there is a view that", "opinion is divided"
-  ];
-  let hasReportingPhrase = false;
-  let matchedReportingPhrase = "";
-  for (let phrase of reportingPhrases) {
-    if (userClean.includes(phrase)) {
-      hasReportingPhrase = true;
-      matchedReportingPhrase = phrase;
-      break;
-    }
-  }
+  const firstWord = userWords[0] || "";
+  const isGerundSubject = firstWord.endsWith("ing") && firstWord.length > 4 && !["during", "bring", "thing"].includes(firstWord);
 
-  let score = 30; // base score for writing something
+  let score = 10; // base score for writing a valid sentence
 
-  // 1. Length feedback
-  if (userWords.length >= 10 && userWords.length <= 35) {
-    score += 20;
-    result.lengthFeedback = "✅ Optimal length (about " + userWords.length + " words).";
+  // 1. Length Evaluation (up to 25 pts)
+  if (userWords.length >= 10 && userWords.length <= 40) {
+    score += 25;
+    result.lengthFeedback = "✅ Optimal length (" + userWords.length + " words).";
   } else if (userWords.length < 10) {
-    score += 5;
-    result.lengthFeedback = "⚠️ A bit short. Try to write a full introduction sentence (~15-25 words).";
+    score += 15;
+    result.lengthFeedback = "⚠️ A bit short (" + userWords.length + " words). Aim for a complete introductory sentence (~15-25 words).";
+  } else {
+    score += 20;
+    result.lengthFeedback = "⚠️ A bit long (" + userWords.length + " words). Keep your paraphrase concise (~15-25 words).";
+  }
+
+  // 2. Vocabulary Transformation Evaluation (up to 35 pts)
+  if (overlapPct <= 35) {
+    score += 35;
+    result.vocabFeedback = "✅ Excellent vocabulary transformation! You replaced key prompt words with precise synonyms.";
+  } else if (overlapPct <= 55) {
+    score += 30;
+    result.vocabFeedback = "✅ Good vocabulary variation. Most key terms were successfully rephrased.";
+    if (copiedWords.length > 0) {
+      result.tips.push("Optional synonyms to consider for further elevation: " + copiedWords.map(w => `'${w}'`).join(", "));
+    }
+  } else if (overlapPct <= 75) {
+    score += 20;
+    result.vocabFeedback = "⚠️ Moderate vocabulary overlap. You reused several prompt words.";
+    result.tips.push("Try swapping these prompt words for synonyms: " + copiedWords.map(w => `'${w}'`).join(", "));
   } else {
     score += 10;
-    result.lengthFeedback = "⚠️ A bit long. Aim for a concise paraphrase of 15-25 words.";
+    result.vocabFeedback = "❌ Heavy keyword copying from the prompt.";
+    result.tips.push("Rephrase these copied words: " + copiedWords.map(w => `'${w}'`).join(", "));
   }
 
-  // 2. Vocabulary feedback
-  if (overlapPct > 65) {
-    result.vocabFeedback = "❌ Too similar to the prompt (copied key words).";
-    result.tips.push("Try to use synonyms for: " + copiedWords.map(w => `'${w}'`).join(", "));
-  } else if (overlapPct > 45) {
-    score += 15;
-    result.vocabFeedback = "⚠️ Moderate vocabulary change. Some prompt words were reused.";
-    result.tips.push("Can you swap these words for synonyms? " + copiedWords.map(w => `'${w}'`).join(", "));
-  } else {
+  // 3. Grammatical & Structural Variety (up to 30 pts)
+  if (detectedStructure) {
     score += 30;
-    result.vocabFeedback = "✅ Excellent vocabulary change! You replaced most key words.";
-  }
-
-  // 3. Structure feedback
-  if (hasStructureWord || hasReportingPhrase) {
-    score += 20;
-    let match = matchedStructureWord || matchedReportingPhrase;
-    result.structureFeedback = "✅ Good sentence structure! You used a complex transition or reporting phrase ('" + match + "').";
+    result.structureFeedback = "✅ Band 7+ sentence structure! Detected " + detectedStructure.type + " ('" + detectedStructure.match + "').";
+  } else if (isGerundSubject) {
+    score += 30;
+    result.structureFeedback = "✅ Band 7+ sentence structure! Excellent use of nominalization/gerund subject ('" + firstWord + "').";
+  } else if (userWords.length >= 12 && (userClean.includes(",") || userClean.includes("and") || userClean.includes("but"))) {
+    score += 25;
+    result.structureFeedback = "✅ Good compound/complex structure.";
   } else {
-    result.structureFeedback = "⚠️ Simple sentence structure. Try starting with a subordinate clause (e.g. 'While some people argue that...') or a reporting passive (e.g. 'It is often argued that...').";
+    score += 15;
+    result.structureFeedback = "⚠️ Simple sentence structure. Elevate your score by starting with a subordinate clause (e.g. 'While some argue that...') or a reporting passive (e.g. 'It is often argued that...').";
   }
 
   result.score = Math.min(100, score);
