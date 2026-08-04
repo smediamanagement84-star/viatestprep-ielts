@@ -7239,109 +7239,205 @@
     let currentSelectedPromptId = null;
 
     function evaluateIELTSEssay(text, prompt) {
-      const clean = (str) => (str || "").trim();
-      const rawText = clean(text);
+      const rawText = (text || '').trim();
       const words = rawText ? rawText.split(/\s+/).filter(w => w.length > 0) : [];
       const wordCount = words.length;
 
       if (wordCount < 10) {
         return {
           isValid: false,
-          error: "Essay response is too short to evaluate. Please write a complete essay of at least 250 words."
+          error: 'Essay is too short to evaluate. Please write at least 250 words for a proper Task 2 response.'
         };
       }
 
-      // 1. TASK RESPONSE (TR)
-      let tr = 6.0;
-      if (wordCount >= 250) tr += 1.0;
-      else if (wordCount >= 200) tr += 0.5;
-      else if (wordCount < 150) tr -= 1.5;
-
       const essayLower = rawText.toLowerCase();
-      const promptWords = (prompt || "").toLowerCase().replace(/[^a-z0-9\s]/g, "").split(/\s+/).filter(w => w.length > 4);
-      let matchedKeywords = 0;
-      promptWords.forEach(w => { if (essayLower.includes(w)) matchedKeywords++; });
-      if (promptWords.length > 0 && (matchedKeywords / promptWords.length) >= 0.4) tr += 0.5;
 
-      if (/in conclusion|to conclude|overall|to summarize|in summary|to sum up/i.test(essayLower)) tr += 0.5;
+      // ── 1. TASK RESPONSE (TR) ──────────────────────────────────────────────
+      // Base: 5.0. Word count is the biggest lever for TR in real IELTS marking.
+      let tr = 5.0;
+
+      if (wordCount >= 280)      tr += 2.0;   // ≥280: full credit
+      else if (wordCount >= 250) tr += 1.5;   // 250–279: solid
+      else if (wordCount >= 200) tr += 0.5;   // 200–249: below minimum
+      else if (wordCount >= 150) tr -= 0.0;   // 150–199: short, stays at 5
+      else                       tr -= 1.5;   // <150: severe penalty
+
+      // Prompt keyword relevance (topic coverage)
+      const promptWords = (prompt || '').toLowerCase()
+        .replace(/[^a-z0-9\s]/g, '').split(/\s+/)
+        .filter(w => w.length > 4 && !['should','would','could','people','think','believe','agree','disagree','discuss','extent'].includes(w));
+      let matchedKw = 0;
+      promptWords.forEach(w => { if (essayLower.includes(w)) matchedKw++; });
+      const kwRatio = promptWords.length > 0 ? matchedKw / promptWords.length : 0;
+      if (kwRatio >= 0.5) tr += 1.0;
+      else if (kwRatio >= 0.3) tr += 0.5;
+
+      // Conclusion / position signal
+      if (/in conclusion|to conclude|to sum up|in summary|overall, |on balance/i.test(essayLower)) tr += 0.5;
+      // Clear thesis
+      if (/i (strongly |firmly |completely )?(agree|disagree|believe|think|argue|contend)/i.test(essayLower)) tr += 0.5;
+
       tr = Math.min(9.0, Math.max(3.0, Math.round(tr * 2) / 2));
 
-      // 2. COHERENCE & COHESION (CC)
-      let cc = 6.0;
-      const paragraphs = rawText.split(/\n\s*\n/).filter(p => p.trim().length > 20);
-      if (paragraphs.length >= 3 && paragraphs.length <= 5) cc += 1.0;
-      else if (paragraphs.length < 2) cc -= 1.0;
+      // ── 2. COHERENCE & COHESION (CC) ──────────────────────────────────────
+      // Paragraphs: textarea uses \n (single), double-\n OR ≥3 blank chars
+      let tr_cc = 5.0;
+      const paraBlocks = rawText
+        .split(/\n{2,}|\r\n\r\n/)
+        .map(b => b.trim())
+        .filter(b => b.length > 40);
+      // Fallback: count sentence groups separated by single newlines
+      const singleNewlineBlocks = rawText
+        .split(/\n/)
+        .map(b => b.trim())
+        .filter(b => b.length > 40);
+      const paraCount = paraBlocks.length >= 2 ? paraBlocks.length : Math.ceil(singleNewlineBlocks.length / 3);
 
-      const cohesivePatterns = [
-        "however", "furthermore", "moreover", "on the other hand", "consequently",
-        "nevertheless", "in contrast", "for instance", "for example", "as a result",
-        "on the one hand", "in addition", "therefore", "nonetheless", "whereas",
-        "although", "despite", "firstly", "secondly", "finally"
+      if (paraCount >= 4 && paraCount <= 6)       tr_cc += 2.0;
+      else if (paraCount >= 3)                     tr_cc += 1.5;
+      else if (paraCount === 2)                    tr_cc += 0.5;
+      else                                         tr_cc -= 1.0;  // wall of text
+
+      // Cohesive devices
+      const cohesiveDevices = [
+        'however', 'furthermore', 'moreover', 'on the other hand', 'consequently',
+        'nevertheless', 'in contrast', 'for instance', 'for example', 'as a result',
+        'on the one hand', 'in addition', 'therefore', 'nonetheless', 'whereas',
+        'although', 'despite', 'firstly', 'secondly', 'thirdly', 'finally',
+        'in particular', 'to illustrate', 'by contrast', 'as a consequence',
+        'to begin with', 'in other words', 'that said', 'having said that'
       ];
-      let linkersFound = 0;
-      cohesivePatterns.forEach(pat => { if (essayLower.includes(pat)) linkersFound++; });
-      if (linkersFound >= 5) cc += 1.0;
-      else if (linkersFound >= 3) cc += 0.5;
-      cc = Math.min(9.0, Math.max(3.0, Math.round(cc * 2) / 2));
+      let linkerCount = 0;
+      cohesiveDevices.forEach(d => { if (essayLower.includes(d)) linkerCount++; });
 
-      // 3. LEXICAL RESOURCE (LR)
-      let lr = 6.0;
+      if (linkerCount >= 7)      tr_cc += 1.5;
+      else if (linkerCount >= 5) tr_cc += 1.0;
+      else if (linkerCount >= 3) tr_cc += 0.5;
+      else if (linkerCount <= 1) tr_cc -= 0.5;
+
+      const cc = Math.min(9.0, Math.max(3.0, Math.round(tr_cc * 2) / 2));
+
+      // ── 3. LEXICAL RESOURCE (LR) ───────────────────────────────────────────
+      let lr_raw = 4.5;
+
+      // Academic / sophisticated vocabulary (unique, no duplicates)
       const academicVocab = [
-        "substantial", "inevitable", "fundamental", "paramount", "mitigate", "exacerbate",
-        "advocate", "indispensable", "profound", "allocation", "phenomenon", "imperative",
-        "detrimental", "beneficial", "prevalent", "prospective", "implementation",
-        "considerable", "predominantly", "subsequently", "conducive", "unprecedented"
+        'substantial', 'inevitable', 'fundamental', 'paramount', 'mitigate', 'exacerbate',
+        'advocate', 'indispensable', 'profound', 'allocation', 'phenomenon', 'imperative',
+        'detrimental', 'prevalent', 'implementation', 'considerable', 'predominantly',
+        'subsequently', 'conducive', 'unprecedented', 'facilitate', 'undermine',
+        'alleviate', 'perpetuate', 'scrutinize', 'contentious', 'tangible', 'lucrative',
+        'deleterious', 'ubiquitous', 'ameliorate', 'disparate', 'trajectory',
+        'ramification', 'holistic', 'intrinsic', 'nuanced', 'viable', 'proliferate',
+        'exacerbated', 'prospective', 'detract', 'propagate', 'socioeconomic'
       ];
-      let academicCount = 0;
-      academicVocab.forEach(v => { if (essayLower.includes(v)) academicCount++; });
-      if (academicCount >= 4) lr += 1.5;
-      else if (academicCount >= 2) lr += 1.0;
+      let acadCount = 0;
+      academicVocab.forEach(v => { if (essayLower.includes(v)) acadCount++; });
 
-      const uniqueWords = new Set(words.map(w => w.toLowerCase()));
-      const lexicalDiversity = uniqueWords.size / wordCount;
-      if (lexicalDiversity > 0.45) lr += 0.5;
-      lr = Math.min(9.0, Math.max(3.0, Math.round(lr * 2) / 2));
+      // Scale: max +3.0 for exceptional vocab (Band 8.5 LR ceiling from vocab alone)
+      if (acadCount >= 8)      lr_raw += 3.0;
+      else if (acadCount >= 5) lr_raw += 2.0;
+      else if (acadCount >= 3) lr_raw += 1.0;
+      else if (acadCount >= 1) lr_raw += 0.5;
 
-      // 4. GRAMMATICAL RANGE & ACCURACY (GRA)
-      let gra = 6.0;
-      const complexStructures = [
-        /while|although|whereas|despite|provided that|given that/i,
-        /is viewed as|is considered|is deemed|should be|is regarded as/i,
-        /which|who|that|whereby|wherein/i,
-        /if|would|could|might/i
+      // Lexical diversity (type-token ratio) — penalise repetition
+      const uniqueWords = new Set(words.map(w => w.toLowerCase().replace(/[^a-z]/g, '')).filter(w => w.length > 2));
+      const ttr = uniqueWords.size / wordCount;
+      if (ttr > 0.55)      lr_raw += 1.0;
+      else if (ttr > 0.45) lr_raw += 0.5;
+      else if (ttr < 0.30) lr_raw -= 0.5;
+
+      // Word form variety (nominalization / suffixation signals)
+      if (/\b\w+(ization|isation|ment|ness|ity|ance|ence)\b/i.test(essayLower)) lr_raw += 0.5;
+
+      const lr = Math.min(9.0, Math.max(3.0, Math.round(lr_raw * 2) / 2));
+
+      // ── 4. GRAMMATICAL RANGE & ACCURACY (GRA) ─────────────────────────────
+      let gra_raw = 4.5;
+
+      // Complex clause structures (genuinely complex, not trivially common)
+      const complexPatterns = [
+        { re: /\b(although|even though|whereas|while)\b.{15,}/i,         label: 'concession clause' },
+        { re: /\b(which|who|whom|that)\b.{8,}(,|\.|;)/i,                  label: 'relative clause' },
+        { re: /\b(having|being)\s+\w+ed\b/i,                              label: 'participial phrase' },
+        { re: /\bit (is|was|has been|can be) (argued|suggested|claimed|believed|noted)/i, label: 'impersonal passive' },
+        { re: /\b(if|unless|provided that|given that).{10,}(would|could|might)/i, label: 'conditional' },
+        { re: /\b(not only).{5,}(but also)/i,                             label: 'correlative conjunction' },
+        { re: /\b(due to|owing to|because of)\s+\w+ing\b/i,              label: 'gerund phrase' },
+        { re: /\b\w+(ing|tion|ness|ity|ment)\b.{5,}\b(is|are|was|were)\b/i, label: 'noun phrase subject' },
       ];
-      let structCount = 0;
-      complexStructures.forEach(regex => { if (regex.test(essayLower)) structCount++; });
-      if (structCount >= 3) gra += 1.5;
-      else if (structCount >= 2) gra += 1.0;
-      gra = Math.min(9.0, Math.max(3.0, Math.round(gra * 2) / 2));
 
+      let complexCount = 0;
+      const foundStructures = [];
+      complexPatterns.forEach(({ re, label }) => {
+        if (re.test(essayLower)) {
+          complexCount++;
+          foundStructures.push(label);
+        }
+      });
+
+      if (complexCount >= 6)      gra_raw += 4.0;
+      else if (complexCount >= 4) gra_raw += 3.0;
+      else if (complexCount >= 2) gra_raw += 2.0;
+      else if (complexCount === 1) gra_raw += 1.0;
+
+      // Sentence variety: check for varied sentence lengths
+      const sentences = rawText.split(/[.!?]+/).filter(s => s.trim().length > 10);
+      const avgSentLen = sentences.length > 0 ? wordCount / sentences.length : 0;
+      if (avgSentLen >= 15 && avgSentLen <= 30) gra_raw += 0.5;
+
+      const gra = Math.min(9.0, Math.max(3.0, Math.round(gra_raw * 2) / 2));
+
+      // ── OVERALL BAND ───────────────────────────────────────────────────────
       const overallRaw = (tr + cc + lr + gra) / 4;
       const overallBand = Math.round(overallRaw * 2) / 2;
 
+      // ── FEEDBACK GENERATION ─────────────────────────────────────────────────
       const feedback = [];
-      if (wordCount < 250) {
-        feedback.push(`⚠️ Word count (${wordCount} words) is below the 250-word minimum for Task 2. Expand your arguments.`);
+
+      // Word count feedback
+      if (wordCount >= 280) {
+        feedback.push(`✅ Excellent essay length (${wordCount} words) — well above the 250-word minimum.`);
+      } else if (wordCount >= 250) {
+        feedback.push(`✅ Adequate essay length (${wordCount} words) — meets the 250-word minimum.`);
       } else {
-        feedback.push(`✅ Good essay length (${wordCount} words).`);
+        feedback.push(`❌ Word count (${wordCount} words) is below the 250-word IELTS Task 2 requirement. This will significantly lower your Task Response score.`);
       }
 
-      if (paragraphs.length >= 3 && paragraphs.length <= 5) {
-        feedback.push(`✅ Well-structured paragraphing (${paragraphs.length} paragraphs).`);
+      // Paragraph structure feedback
+      if (paraCount >= 4) {
+        feedback.push(`✅ Good essay structure — ${paraCount} paragraphs detected (Introduction + Body × ${paraCount - 2} + Conclusion).`);
+      } else if (paraCount === 3) {
+        feedback.push(`⚠️ Acceptable structure (${paraCount} paragraphs), but aim for 4 paragraphs: Intro, Body 1, Body 2, Conclusion.`);
       } else {
-        feedback.push(`⚠️ Organize your essay into 4 distinct paragraphs: Introduction, Body 1, Body 2, Conclusion.`);
+        feedback.push(`❌ Poor paragraph structure — essay appears as a single block. Use double line breaks to separate paragraphs clearly.`);
       }
 
-      if (linkersFound >= 4) {
-        feedback.push(`✅ Effective use of cohesive transition devices (${linkersFound} detected).`);
+      // Cohesive devices feedback
+      if (linkerCount >= 7) {
+        feedback.push(`✅ Strong cohesion — ${linkerCount} linking devices used effectively (e.g., however, furthermore, consequently).`);
+      } else if (linkerCount >= 4) {
+        feedback.push(`✅ Adequate cohesion (${linkerCount} linking devices). Keep using transition signals between paragraphs.`);
       } else {
-        feedback.push(`💡 Use more cohesive linkers (e.g. 'Furthermore', 'On the other hand', 'Consequently').`);
+        feedback.push(`💡 Improve cohesion — only ${linkerCount} transition devices found. Use: 'Furthermore', 'On the other hand', 'As a consequence', 'To illustrate'.`);
       }
 
-      if (academicCount >= 2) {
-        feedback.push(`✅ Good academic vocabulary range (${academicCount} Band 7+ words detected).`);
+      // Lexical feedback
+      if (acadCount >= 4) {
+        feedback.push(`✅ Impressive academic vocabulary (${acadCount} advanced words detected). Strong Lexical Resource.`);
+      } else if (acadCount >= 2) {
+        feedback.push(`⚠️ Some academic vocabulary (${acadCount} words). Try to use more: 'inevitable', 'exacerbate', 'mitigate', 'conducive', 'unprecedented'.`);
       } else {
-        feedback.push(`💡 Incorporate advanced academic vocabulary (e.g., 'paramount', 'detrimental', 'mitigate').`);
+        feedback.push(`❌ Very limited academic vocabulary. Replace basic words with academic alternatives. E.g. 'bad' → 'detrimental', 'big' → 'substantial', 'help' → 'facilitate'.`);
+      }
+
+      // Grammar feedback
+      if (complexCount >= 4) {
+        feedback.push(`✅ Good grammatical range — ${complexCount} complex structures detected (${foundStructures.slice(0,3).join(', ')}).`);
+      } else if (complexCount >= 2) {
+        feedback.push(`⚠️ Limited grammatical range (${complexCount} complex patterns). Use more: relative clauses, conditionals, impersonal passives, participial phrases.`);
+      } else {
+        feedback.push(`❌ Mostly simple sentences detected. Vary your grammar: try 'It is argued that...', 'While X, Y...', 'Having considered both views...'`);
       }
 
       return {
@@ -7350,7 +7446,11 @@
         overallBand,
         scores: { tr, cc, lr, gra },
         feedback,
-        paragraphsCount: paragraphs.length,
+        paragraphsCount: paraCount,
+        linkersFound: linkerCount,
+        academicWordCount: acadCount,
+        complexStructuresCount: complexCount,
+        lexicalDiversity: Math.round(ttr * 100),
         submittedAt: new Date().toISOString()
       };
     }
