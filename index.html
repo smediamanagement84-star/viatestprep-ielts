@@ -707,6 +707,7 @@
       <!-- Student Sidebar Tabs -->
       <aside class="w-full md:w-60 bg-white border-b md:border-r border-[#ece4d2] p-4 flex flex-col gap-1 shrink-0">
         <button onclick="switchStudentTab('vault')" id="s-tab-vault" class="student-active-tab w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">📚 Skill Vault</button>
+        <button onclick="switchStudentTab('writing')" id="s-tab-writing" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">✍️ Writing Practice</button>
         <button onclick="switchStudentTab('mocks')" id="s-tab-mocks" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">⏱️ Cambridge Mock Exams</button>
         <button onclick="switchStudentTab('speaking')" id="s-tab-speaking" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">🎤 Speaking practice</button>
         <button onclick="switchStudentTab('grades')" id="s-tab-grades" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">📊 Grade Sheet &amp; Comments</button>
@@ -995,6 +996,50 @@
               </div>
             </div>
           </div>
+        <!-- Student Tab: Writing Practice Section -->
+        <div id="student-writing-view" class="student-subview hidden space-y-6">
+          <!-- Header Banner -->
+          <div class="bg-white border border-[#ece4d2] rounded-2xl p-6 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div>
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-black uppercase bg-[#efe6d0] text-[#7a2331]">✍️ IELTS Writing Practice Section</span>
+              <h2 class="text-2xl font-extrabold text-[#1c1a17] mt-1">50 Real Task 2 Essay Prompts</h2>
+              <p class="text-xs text-[#766f62] mt-1">Select an essay prompt, write your 250+ word response, and click Submit for real-time 4-pillar IELTS Band evaluation stored to your cloud profile.</p>
+            </div>
+            <!-- Stats Badge Strip -->
+            <div class="flex items-center gap-3 bg-[#faf8f3] border border-[#ece4d2] p-3 rounded-xl">
+              <div class="text-center px-3 border-r border-[#ece4d2]">
+                <span id="st-writing-count" class="block text-lg font-black text-[#7a2331]">0</span>
+                <span class="text-[9px] font-bold text-[#8a8171] uppercase">Submitted</span>
+              </div>
+              <div class="text-center px-3">
+                <span id="st-writing-highband" class="block text-lg font-black text-emerald-700">—</span>
+                <span class="text-[9px] font-bold text-[#8a8171] uppercase">Best Band</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Filter Buttons -->
+          <div class="flex items-center gap-2 flex-wrap" id="studentWritingFilters">
+            <button onclick="filterStudentWritingCategory('all')" id="sw-cat-all" class="px-3.5 py-1.5 bg-[#7a2331] text-white text-xs font-bold rounded-xl shadow-xs transition">All (50)</button>
+            <button onclick="filterStudentWritingCategory('opinion')" id="sw-cat-opinion" class="px-3.5 py-1.5 bg-white border border-[#e5ded0] text-[#5c5648] hover:bg-[#f3ecd8] text-xs font-bold rounded-xl transition">Opinion (10)</button>
+            <button onclick="filterStudentWritingCategory('discussion')" id="sw-cat-discussion" class="px-3.5 py-1.5 bg-white border border-[#e5ded0] text-[#5c5648] hover:bg-[#f3ecd8] text-xs font-bold rounded-xl transition">Discussion (10)</button>
+            <button onclick="filterStudentWritingCategory('advantage')" id="sw-cat-advantage" class="px-3.5 py-1.5 bg-white border border-[#e5ded0] text-[#5c5648] hover:bg-[#f3ecd8] text-xs font-bold rounded-xl transition">Advantage/Disadvantage (10)</button>
+            <button onclick="filterStudentWritingCategory('problem')" id="sw-cat-problem" class="px-3.5 py-1.5 bg-white border border-[#e5ded0] text-[#5c5648] hover:bg-[#f3ecd8] text-xs font-bold rounded-xl transition">Problem &amp; Solution (10)</button>
+            <button onclick="filterStudentWritingCategory('twopart')" id="sw-cat-twopart" class="px-3.5 py-1.5 bg-white border border-[#e5ded0] text-[#5c5648] hover:bg-[#f3ecd8] text-xs font-bold rounded-xl transition">Two-Part (10)</button>
+          </div>
+
+          <!-- Prompts Grid -->
+          <div id="studentWritingPromptsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Populated by JS -->
+          </div>
+
+          <!-- Past Submissions History Table -->
+          <div class="bg-white border border-[#ece4d2] rounded-2xl p-6 shadow-sm space-y-4">
+            <h3 class="font-extrabold text-sm text-[#766f62] uppercase tracking-wider">Your Submitted Essays &amp; Score Cards</h3>
+            <div id="studentWritingHistoryContainer" class="space-y-4 divide-y divide-[#ece4d2]">
+              <!-- Populated by JS -->
+            </div>
+          </div>
         </div>
 
         </div> <!-- end of student-active-views-container -->
@@ -1123,6 +1168,7 @@
       <aside class="w-full md:w-64 bg-white border-b md:border-r border-[#ece4d2] p-4 flex flex-col gap-1 shrink-0">
         <span class="text-[9px] font-black uppercase tracking-widest text-[#c9c0ac] px-2 mb-1">Workspace</span>
         <button onclick="switchCRMTab('crm')" id="c-tab-crm" class="crm-nav-btn active-tab"><span class="crm-nav-icon">👥</span>CRM Student Roster</button>
+        <button onclick="switchCRMTab('writing')" id="c-tab-writing" class="crm-nav-btn"><span class="crm-nav-icon">✍️</span>Writing Practice</button>
         <button onclick="switchCRMTab('grader')" id="c-tab-grader" class="crm-nav-btn"><span class="crm-nav-icon">🎤</span>Live Speaking Grader</button>
         <button onclick="switchCRMTab('vault')" id="c-tab-vault" class="crm-nav-btn"><span class="crm-nav-icon">📦</span>Material Vault</button>
         <button onclick="switchCRMTab('mocks')" id="c-tab-mocks" class="crm-nav-btn"><span class="crm-nav-icon">⏱️</span>Mock Test Center</button>
@@ -1388,7 +1434,54 @@
               </div>
             </div>
           </div>
+        <!-- CRM Tab: Writing Practice Submissions Hub -->
+        <div id="crm-writing-view" class="crm-subview hidden space-y-6">
+          <!-- Header Banner -->
+          <div class="bg-white border border-[#ece4d2] rounded-2xl p-6 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div>
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-black uppercase bg-[#efe6d0] text-[#7a2331]">✍️ Student Writing Practice Roster</span>
+              <h3 class="text-xl font-extrabold text-[#1c1a17] mt-1">Review Student Essays &amp; Automated IELTS Band Scores</h3>
+              <p class="text-xs text-[#766f62]">Inspect full Task 2 essay submissions from consultancy students, review TR/CC/LR/GRA breakdown, and issue teacher feedback &amp; grade overrides.</p>
+            </div>
+            <div class="flex items-center gap-3 bg-[#faf8f3] border border-[#ece4d2] p-3 rounded-xl">
+              <div class="text-center px-3 border-r border-[#ece4d2]">
+                <span id="crm-writing-total" class="block text-lg font-black text-[#7a2331]">0</span>
+                <span class="text-[9px] font-bold text-[#8a8171] uppercase">Essays Submitted</span>
+              </div>
+              <div class="text-center px-3">
+                <span id="crm-writing-avgband" class="block text-lg font-black text-emerald-700">—</span>
+                <span class="text-[9px] font-bold text-[#8a8171] uppercase">Avg Band</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filters Row -->
+          <div class="bg-white border border-[#ece4d2] rounded-2xl p-4 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-3 w-full sm:w-auto">
+              <label class="text-xs font-bold text-[#8a8171]">Filter Student:</label>
+              <select id="crmWritingStudentFilter" onchange="renderCRMWritingPracticeView()" class="px-3 py-1.5 border border-[#e5ded0] rounded-xl text-xs bg-[#faf8f3] text-[#1c1a17] font-bold outline-none focus:border-[#7a2331]">
+                <option value="all">All Consultancy Students</option>
+              </select>
+            </div>
+            <div class="flex items-center gap-3 w-full sm:w-auto">
+              <label class="text-xs font-bold text-[#8a8171]">Essay Type:</label>
+              <select id="crmWritingCategoryFilter" onchange="renderCRMWritingPracticeView()" class="px-3 py-1.5 border border-[#e5ded0] rounded-xl text-xs bg-[#faf8f3] text-[#1c1a17] font-bold outline-none focus:border-[#7a2331]">
+                <option value="all">All Essay Categories</option>
+                <option value="opinion">Opinion</option>
+                <option value="discussion">Discussion</option>
+                <option value="advantage">Advantage / Disadvantage</option>
+                <option value="problem">Problem &amp; Solution</option>
+                <option value="twopart">Two-Part</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Submissions Feed Container -->
+          <div id="crmWritingSubmissionsFeed" class="space-y-4">
+            <!-- Populated by JS -->
+          </div>
         </div>
+
         <!-- CRM Tab 3: Material Vault -->
         <div id="crm-vault-view" class="crm-subview hidden space-y-4">
           <div class="bg-[#faf8f3] border border-[#e3dbc9] rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
@@ -3711,7 +3804,7 @@
 
     function switchStudentTab(tabId) {
       const access = localStorage.getItem('viatestprep_student_access') || 'full';
-      if (access === 'mocks' && (tabId === 'vault' || tabId === 'speaking')) {
+      if (access === 'mocks' && (tabId === 'vault' || tabId === 'speaking' || tabId === 'writing')) {
         tabId = 'mocks';
       }
 
@@ -3721,12 +3814,18 @@
         el.classList.add('text-[#5c5648]');
       });
 
-      document.getElementById('student-' + tabId + '-view').classList.remove('hidden');
+      const targetEl = document.getElementById('student-' + tabId + '-view');
+      if (targetEl) targetEl.classList.remove('hidden');
       const btn = document.getElementById('s-tab-' + tabId);
-      btn.classList.add('student-active-tab');
-      btn.classList.remove('text-[#5c5648]');
+      if (btn) {
+        btn.classList.add('student-active-tab');
+        btn.classList.remove('text-[#5c5648]');
+      }
       
       currentStudentTab = tabId;
+      if (tabId === 'writing') {
+        renderStudentWritingPractice();
+      }
       if (tabId === 'grades') {
         renderStudentHistoryTable();
       }
@@ -4899,10 +4998,13 @@
         el.classList.remove('active-tab');
       });
 
-      document.getElementById('crm-' + tabId + '-view').classList.remove('hidden');
-      document.getElementById('c-tab-' + tabId).classList.add('active-tab');
+      const targetEl = document.getElementById('crm-' + tabId + '-view');
+      if (targetEl) targetEl.classList.remove('hidden');
+      const tabBtn = document.getElementById('c-tab-' + tabId);
+      if (tabBtn) tabBtn.classList.add('active-tab');
 
       currentCRMTab = tabId;
+      if (tabId === 'writing') renderCRMWritingPracticeView();
       if (tabId === 'billing') {
         renderCRMBillingView();
         loadPendingPayments();
@@ -7066,6 +7168,577 @@
       });
     }
 
+    // =========================================================
+    // ✍️ 50-QUESTION IELTS TASK 2 WRITING PRACTICE & GRADING ENGINE
+    // =========================================================
+    const IELTS_50_ESSAY_PROMPTS = [
+      // 1. OPINION ESSAYS (1 - 10)
+      { id: 1, category: "opinion", categoryLabel: "Opinion", type: "Agree / Disagree", prompt: "Some people believe that governments should provide free university education for all students. To what extent do you agree or disagree?" },
+      { id: 2, category: "opinion", categoryLabel: "Opinion", type: "Agree / Disagree", prompt: "With the increase in international tensions, military service should be compulsory for all young adults. Do you agree or disagree?" },
+      { id: 3, category: "opinion", categoryLabel: "Opinion", type: "Agree / Disagree", prompt: "Unpaid community service should be a mandatory part of high school programmes. To what extent do you agree or disagree?" },
+      { id: 4, category: "opinion", categoryLabel: "Opinion", type: "Agree / Disagree", prompt: "In the future, artificial intelligence will replace human teachers in schools. Do you agree or disagree?" },
+      { id: 5, category: "opinion", categoryLabel: "Opinion", type: "Agree / Disagree", prompt: "Governments should place heavy taxes on junk food to encourage healthier eating habits. To what extent do you agree or disagree?" },
+      { id: 6, category: "opinion", categoryLabel: "Opinion", type: "Agree / Disagree", prompt: "Physical books are obsolete and all reading materials should be digitized in schools and libraries. Do you agree or disagree?" },
+      { id: 7, category: "opinion", categoryLabel: "Opinion", type: "Agree / Disagree", prompt: "Public transport should be completely free of charge for all citizens funded by taxpayers. To what extent do you agree or disagree?" },
+      { id: 8, category: "opinion", categoryLabel: "Opinion", type: "Agree / Disagree", prompt: "Children should be taught how to manage money and budget at primary school. Do you agree or disagree?" },
+      { id: 9, category: "opinion", categoryLabel: "Opinion", type: "Agree / Disagree", prompt: "Space exploration is a waste of public funds and money should be spent on urgent earthly problems instead. To what extent do you agree or disagree?" },
+      { id: 10, category: "opinion", categoryLabel: "Opinion", type: "Agree / Disagree", prompt: "The best way to reduce crime is to increase the length of prison sentences. Do you agree or disagree?" },
+
+      // 2. DISCUSSION ESSAYS (11 - 20)
+      { id: 11, category: "discussion", categoryLabel: "Discussion", type: "Discuss Both Views", prompt: "Some people think universities should focus on workplace skills, while others believe education should be pursued for its own sake. Discuss both views and give your opinion." },
+      { id: 12, category: "discussion", categoryLabel: "Discussion", type: "Discuss Both Views", prompt: "Some people believe children should be allowed to make their own choices, while others argue parents should strictly control them. Discuss both views and give your opinion." },
+      { id: 13, category: "discussion", categoryLabel: "Discussion", type: "Discuss Both Views", prompt: "Some argue that news media has a negative impact on people's lives, while others believe it keeps society informed and connected. Discuss both views and give your opinion." },
+      { id: 14, category: "discussion", categoryLabel: "Discussion", type: "Discuss Both Views", prompt: "Some people prefer living in big modern cities, while others prefer living in small towns or rural areas. Discuss both views and give your opinion." },
+      { id: 15, category: "discussion", categoryLabel: "Discussion", type: "Discuss Both Views", prompt: "Some people think that international sports events promote peace, while others believe they encourage aggressive nationalism. Discuss both views and give your opinion." },
+      { id: 16, category: "discussion", categoryLabel: "Discussion", type: "Discuss Both Views", prompt: "Some believe that technology makes life easier, while others argue it creates more complexity and stress. Discuss both views and give your opinion." },
+      { id: 17, category: "discussion", categoryLabel: "Discussion", type: "Discuss Both Views", prompt: "Some people think extreme sports should be banned, while others believe people should have the freedom to choose risky activities. Discuss both views and give your opinion." },
+      { id: 18, category: "discussion", categoryLabel: "Discussion", type: "Discuss Both Views", prompt: "Some argue that history is the most important school subject, while others believe science and technology are more relevant. Discuss both views and give your opinion." },
+      { id: 19, category: "discussion", categoryLabel: "Discussion", type: "Discuss Both Views", prompt: "Some people think salary is the most important factor when choosing a career, while others value job satisfaction more. Discuss both views and give your opinion." },
+      { id: 20, category: "discussion", categoryLabel: "Discussion", type: "Discuss Both Views", prompt: "Some believe that celebrity culture has a toxic effect on young people, while others see celebrities as positive role models. Discuss both views and give your opinion." },
+
+      // 3. ADVANTAGES & DISADVANTAGES (21 - 30)
+      { id: 21, category: "advantage", categoryLabel: "Advantage / Disadvantage", type: "Outweigh Essay", prompt: "In many countries, more and more people are choosing to live alone. Do the advantages of this trend outweigh the disadvantages?" },
+      { id: 22, category: "advantage", categoryLabel: "Advantage / Disadvantage", type: "Direct Advantages", prompt: "Nowadays, many people choose to work remotely from home using digital technology. What are the advantages and disadvantages of remote working?" },
+      { id: 23, category: "advantage", categoryLabel: "Advantage / Disadvantage", type: "Outweigh Essay", prompt: "Many consumer goods are transported internationally by ship and plane. Do the advantages of global trade outweigh the disadvantages?" },
+      { id: 24, category: "advantage", categoryLabel: "Advantage / Disadvantage", type: "Outweigh Essay", prompt: "In some nations, young people are encouraged to take a gap year after high school before starting university. Do the advantages of a gap year outweigh the disadvantages?" },
+      { id: 25, category: "advantage", categoryLabel: "Advantage / Disadvantage", type: "Direct Advantages", prompt: "The use of cash is declining rapidly as digital cashless payments become dominant. What are the advantages and disadvantages of a cashless society?" },
+      { id: 26, category: "advantage", categoryLabel: "Advantage / Disadvantage", type: "Outweigh Essay", prompt: "More people are moving away from traditional markets to shop online for daily necessities. Do the advantages outweigh the disadvantages?" },
+      { id: 27, category: "advantage", categoryLabel: "Advantage / Disadvantage", type: "Outweigh Essay", prompt: "Many tourism destinations rely heavily on international visitors for revenue. Do the advantages of international tourism outweigh the disadvantages?" },
+      { id: 28, category: "advantage", categoryLabel: "Advantage / Disadvantage", type: "Direct Advantages", prompt: "Fast food consumption has risen dramatically around the world. What are the advantages and disadvantages of fast food culture?" },
+      { id: 29, category: "advantage", categoryLabel: "Advantage / Disadvantage", type: "Outweigh Essay", prompt: "In many workplaces, open-plan office layouts have replaced private offices. Do the advantages outweigh the disadvantages?" },
+      { id: 30, category: "advantage", categoryLabel: "Advantage / Disadvantage", type: "Direct Advantages", prompt: "University courses are increasingly taught through online video lectures rather than face-to-face classes. What are the advantages and disadvantages of online higher education?" },
+
+      // 4. PROBLEM & SOLUTION (31 - 40)
+      { id: 31, category: "problem", categoryLabel: "Problem & Solution", type: "Cause & Measures", prompt: "In many cities, traffic congestion is worsening every year. What are the causes of this problem, and what measures can be taken by governments to solve it?" },
+      { id: 32, category: "problem", categoryLabel: "Problem & Solution", type: "Effects & Solutions", prompt: "Many young people today spend a significant amount of time on social media. What problems can this cause for individuals and society, and how can these issues be addressed?" },
+      { id: 33, category: "problem", categoryLabel: "Problem & Solution", type: "Cause & Solutions", prompt: "Plastic pollution in oceans and rivers has reached alarming levels. What are the main causes of this environmental crisis, and how can it be mitigated?" },
+      { id: 34, category: "problem", categoryLabel: "Problem & Solution", type: "Aging Population", prompt: "In many developed countries, the proportion of elderly people is increasing rapidly. What problems does an aging population create, and what solutions can governments implement?" },
+      { id: 35, category: "problem", categoryLabel: "Problem & Solution", type: "Housing Crisis", prompt: "Housing prices in major cities have become unaffordable for average working families. What are the reasons for this, and what solutions can be proposed?" },
+      { id: 36, category: "problem", categoryLabel: "Problem & Solution", type: "Childhood Health", prompt: "Obesity rates among school children have increased significantly over the past decade. What factors contribute to this trend, and what steps can schools and parents take to solve it?" },
+      { id: 37, category: "problem", categoryLabel: "Problem & Solution", type: "Graduate Unemployment", prompt: "Many university graduates struggle to find employment in their field of study. What are the primary causes of this issue, and what solutions can universities offer?" },
+      { id: 38, category: "problem", categoryLabel: "Problem & Solution", type: "Resource Scarcity", prompt: "Freshwater shortages are becoming a major threat in several regions worldwide. What factors lead to water scarcity, and what measures can be taken to conserve water?" },
+      { id: 39, category: "problem", categoryLabel: "Problem & Solution", type: "Language Loss", prompt: "Traditional languages are disappearing as global communication expands. Why is this happening, and what can be done to preserve minority languages?" },
+      { id: 40, category: "problem", categoryLabel: "Problem & Solution", type: "Urban Pollution", prompt: "Light and noise pollution in urban areas are impacting citizens' health and quality of life. What are the causes, and what actions can municipal authorities take?" },
+
+      // 5. TWO-PART QUESTIONS (41 - 50)
+      { id: 41, category: "twopart", categoryLabel: "Two-Part Question", type: "Why & Development", prompt: "In some countries, a growing number of people are choosing to adopt a vegetarian or vegan diet. Why is this the case, and do you think it is a positive or negative development?" },
+      { id: 42, category: "twopart", categoryLabel: "Two-Part Question", type: "Why & Measures", prompt: "Today, many historical sites are being damaged by the increasing number of tourists. Why is this happening, and what can be done to protect these sites?" },
+      { id: 43, category: "twopart", categoryLabel: "Two-Part Question", type: "Why & Solutions", prompt: "Many people feel that modern life lacks a sense of local community spirit. Why has community spirit declined, and how can people rebuild local community bonds?" },
+      { id: 44, category: "twopart", categoryLabel: "Two-Part Question", type: "Why & Trend", prompt: "Art subjects like music and painting are often removed from school curricula to make room for STEM subjects. Why is this happening, and do you think this is a positive or negative trend?" },
+      { id: 45, category: "twopart", categoryLabel: "Two-Part Question", type: "Why & Impact", prompt: "In many nations, people are living longer lives than ever before. Why are life expectancies increasing, and what impact does this have on healthcare systems?" },
+      { id: 46, category: "twopart", categoryLabel: "Two-Part Question", type: "Why & Future", prompt: "Many people now prefer watching movies at home via streaming services rather than going to cinema halls. Why is this trend growing, and do you think cinemas will become extinct?" },
+      { id: 47, category: "twopart", categoryLabel: "Two-Part Question", type: "Why & Development", prompt: "Shopping has become a popular leisure activity for many young adults. Why is shopping viewed as entertainment, and is this a positive or negative trend?" },
+      { id: 48, category: "twopart", categoryLabel: "Two-Part Question", type: "Ideal Age & Reasons", prompt: "In some countries, children start formal schooling at age 4 or 5, while in others they start at age 7. What is the ideal age for children to start school, and why?" },
+      { id: 49, category: "twopart", categoryLabel: "Two-Part Question", type: "Why & Career Impact", prompt: "A large number of employees now change jobs frequently throughout their careers rather than staying with one employer. Why do people change jobs often, and is this beneficial for their career?" },
+      { id: 50, category: "twopart", categoryLabel: "Two-Part Question", type: "Why & Public Spending", prompt: "Governments are spending large sums of money constructing modern sports stadiums. Why do governments invest in sports infrastructure, and is this a positive or negative use of public money?" }
+    ];
+
+    let currentStudentWritingCategory = 'all';
+    let currentSelectedPromptId = null;
+
+    function evaluateIELTSEssay(text, prompt) {
+      const clean = (str) => (str || "").trim();
+      const rawText = clean(text);
+      const words = rawText ? rawText.split(/\s+/).filter(w => w.length > 0) : [];
+      const wordCount = words.length;
+
+      if (wordCount < 10) {
+        return {
+          isValid: false,
+          error: "Essay response is too short to evaluate. Please write a complete essay of at least 250 words."
+        };
+      }
+
+      // 1. TASK RESPONSE (TR)
+      let tr = 6.0;
+      if (wordCount >= 250) tr += 1.0;
+      else if (wordCount >= 200) tr += 0.5;
+      else if (wordCount < 150) tr -= 1.5;
+
+      const essayLower = rawText.toLowerCase();
+      const promptWords = (prompt || "").toLowerCase().replace(/[^a-z0-9\s]/g, "").split(/\s+/).filter(w => w.length > 4);
+      let matchedKeywords = 0;
+      promptWords.forEach(w => { if (essayLower.includes(w)) matchedKeywords++; });
+      if (promptWords.length > 0 && (matchedKeywords / promptWords.length) >= 0.4) tr += 0.5;
+
+      if (/in conclusion|to conclude|overall|to summarize|in summary|to sum up/i.test(essayLower)) tr += 0.5;
+      tr = Math.min(9.0, Math.max(3.0, Math.round(tr * 2) / 2));
+
+      // 2. COHERENCE & COHESION (CC)
+      let cc = 6.0;
+      const paragraphs = rawText.split(/\n\s*\n/).filter(p => p.trim().length > 20);
+      if (paragraphs.length >= 3 && paragraphs.length <= 5) cc += 1.0;
+      else if (paragraphs.length < 2) cc -= 1.0;
+
+      const cohesivePatterns = [
+        "however", "furthermore", "moreover", "on the other hand", "consequently",
+        "nevertheless", "in contrast", "for instance", "for example", "as a result",
+        "on the one hand", "in addition", "therefore", "nonetheless", "whereas",
+        "although", "despite", "firstly", "secondly", "finally"
+      ];
+      let linkersFound = 0;
+      cohesivePatterns.forEach(pat => { if (essayLower.includes(pat)) linkersFound++; });
+      if (linkersFound >= 5) cc += 1.0;
+      else if (linkersFound >= 3) cc += 0.5;
+      cc = Math.min(9.0, Math.max(3.0, Math.round(cc * 2) / 2));
+
+      // 3. LEXICAL RESOURCE (LR)
+      let lr = 6.0;
+      const academicVocab = [
+        "substantial", "inevitable", "fundamental", "paramount", "mitigate", "exacerbate",
+        "advocate", "indispensable", "profound", "allocation", "phenomenon", "imperative",
+        "detrimental", "beneficial", "prevalent", "prospective", "implementation",
+        "considerable", "predominantly", "subsequently", "conducive", "unprecedented"
+      ];
+      let academicCount = 0;
+      academicVocab.forEach(v => { if (essayLower.includes(v)) academicCount++; });
+      if (academicCount >= 4) lr += 1.5;
+      else if (academicCount >= 2) lr += 1.0;
+
+      const uniqueWords = new Set(words.map(w => w.toLowerCase()));
+      const lexicalDiversity = uniqueWords.size / wordCount;
+      if (lexicalDiversity > 0.45) lr += 0.5;
+      lr = Math.min(9.0, Math.max(3.0, Math.round(lr * 2) / 2));
+
+      // 4. GRAMMATICAL RANGE & ACCURACY (GRA)
+      let gra = 6.0;
+      const complexStructures = [
+        /while|although|whereas|despite|provided that|given that/i,
+        /is viewed as|is considered|is deemed|should be|is regarded as/i,
+        /which|who|that|whereby|wherein/i,
+        /if|would|could|might/i
+      ];
+      let structCount = 0;
+      complexStructures.forEach(regex => { if (regex.test(essayLower)) structCount++; });
+      if (structCount >= 3) gra += 1.5;
+      else if (structCount >= 2) gra += 1.0;
+      gra = Math.min(9.0, Math.max(3.0, Math.round(gra * 2) / 2));
+
+      const overallRaw = (tr + cc + lr + gra) / 4;
+      const overallBand = Math.round(overallRaw * 2) / 2;
+
+      const feedback = [];
+      if (wordCount < 250) {
+        feedback.push(`⚠️ Word count (${wordCount} words) is below the 250-word minimum for Task 2. Expand your arguments.`);
+      } else {
+        feedback.push(`✅ Good essay length (${wordCount} words).`);
+      }
+
+      if (paragraphs.length >= 3 && paragraphs.length <= 5) {
+        feedback.push(`✅ Well-structured paragraphing (${paragraphs.length} paragraphs).`);
+      } else {
+        feedback.push(`⚠️ Organize your essay into 4 distinct paragraphs: Introduction, Body 1, Body 2, Conclusion.`);
+      }
+
+      if (linkersFound >= 4) {
+        feedback.push(`✅ Effective use of cohesive transition devices (${linkersFound} detected).`);
+      } else {
+        feedback.push(`💡 Use more cohesive linkers (e.g. 'Furthermore', 'On the other hand', 'Consequently').`);
+      }
+
+      if (academicCount >= 2) {
+        feedback.push(`✅ Good academic vocabulary range (${academicCount} Band 7+ words detected).`);
+      } else {
+        feedback.push(`💡 Incorporate advanced academic vocabulary (e.g., 'paramount', 'detrimental', 'mitigate').`);
+      }
+
+      return {
+        isValid: true,
+        wordCount,
+        overallBand,
+        scores: { tr, cc, lr, gra },
+        feedback,
+        paragraphsCount: paragraphs.length,
+        submittedAt: new Date().toISOString()
+      };
+    }
+
+    function getAllWritingSubmissions() {
+      try {
+        return JSON.parse(localStorage.getItem('viatestprep_writing_submissions') || '[]');
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function filterStudentWritingCategory(cat) {
+      currentStudentWritingCategory = cat;
+      const filterBtns = ['all', 'opinion', 'discussion', 'advantage', 'problem', 'twopart'];
+      filterBtns.forEach(b => {
+        const btn = document.getElementById('sw-cat-' + b);
+        if (btn) {
+          if (b === cat) {
+            btn.className = "px-3.5 py-1.5 bg-[#7a2331] text-white text-xs font-bold rounded-xl shadow-xs transition";
+          } else {
+            btn.className = "px-3.5 py-1.5 bg-white border border-[#e5ded0] text-[#5c5648] hover:bg-[#f3ecd8] text-xs font-bold rounded-xl transition";
+          }
+        }
+      });
+      renderStudentWritingPractice();
+    }
+
+    function renderStudentWritingPractice() {
+      const grid = document.getElementById('studentWritingPromptsGrid');
+      if (!grid) return;
+
+      const submissions = getAllWritingSubmissions();
+      const currentStudentId = localStorage.getItem('viatestprep_student_id') || 'demo_student';
+      const mySubmissions = submissions.filter(s => s.studentId === currentStudentId);
+
+      // Update Header Stats
+      const countEl = document.getElementById('st-writing-count');
+      if (countEl) countEl.textContent = mySubmissions.length;
+      const highEl = document.getElementById('st-writing-highband');
+      if (highEl) {
+        if (mySubmissions.length > 0) {
+          const bestBand = Math.max(...mySubmissions.map(s => s.evaluation ? (s.teacherBandOverride || s.evaluation.overallBand || 0) : 0));
+          highEl.textContent = 'Band ' + (bestBand.toFixed(1));
+        } else {
+          highEl.textContent = '—';
+        }
+      }
+
+      // Filter prompts
+      let visible = IELTS_50_ESSAY_PROMPTS;
+      if (currentStudentWritingCategory !== 'all') {
+        visible = visible.filter(p => p.category === currentStudentWritingCategory);
+      }
+
+      grid.innerHTML = visible.map(p => {
+        const past = mySubmissions.find(s => s.promptId === p.id);
+        const hasPast = !!past;
+        const bandVal = hasPast && past.evaluation ? (past.teacherBandOverride || past.evaluation.overallBand) : null;
+
+        return `
+          <div class="bg-white border border-[#ece4d2] rounded-2xl p-5 shadow-xs flex flex-col justify-between space-y-4 hover:border-[#7a2331] transition">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="px-2.5 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider bg-[#f3ecd8] text-[#7a2331]">Q${p.id} · ${p.categoryLabel}</span>
+                ${hasPast ? `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 border border-emerald-300">✓ Band ${bandVal.toFixed(1)}</span>` : `<span class="text-[10px] font-bold text-[#8a8171]">Not Attempted</span>`}
+              </div>
+              <h4 class="text-sm font-bold text-[#1c1a17] leading-snug">${p.prompt}</h4>
+            </div>
+            <div class="pt-3 border-t border-[#ece4d2] flex items-center justify-between">
+              <span class="text-[10px] font-bold text-[#8a8171]">Target: 250+ Words</span>
+              <button onclick="openStudentEssayModal(${p.id})" class="px-4 py-1.5 ${hasPast ? 'bg-[#f3ecd8] text-[#7a2331] hover:bg-[#efe0c3]' : 'bg-[#7a2331] text-white hover:bg-[#5e1a25]'} font-extrabold text-xs rounded-xl transition shadow-xs">
+                ${hasPast ? '✏️ Rewrite Essay' : '✍️ Write Essay'}
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Render History Table
+      const historyContainer = document.getElementById('studentWritingHistoryContainer');
+      if (historyContainer) {
+        if (mySubmissions.length === 0) {
+          historyContainer.innerHTML = `<div class="text-center text-xs text-[#8a8171] py-8">No essay submissions recorded yet. Select any prompt above to start practice.</div>`;
+        } else {
+          historyContainer.innerHTML = mySubmissions.map(s => {
+            const ev = s.evaluation || {};
+            const finalBand = s.teacherBandOverride || ev.overallBand || 6.0;
+            return `
+              <div class="pt-4 first:pt-0 space-y-2">
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <span class="text-[10px] font-bold text-[#8a8171] uppercase">Q${s.promptId} · ${new Date(s.submittedAt).toLocaleDateString()}</span>
+                    <h5 class="text-xs font-bold text-[#1c1a17] mt-0.5">${s.promptText}</h5>
+                  </div>
+                  <span class="px-3 py-1 bg-[#7a2331] text-white font-extrabold text-xs rounded-xl shrink-0">Band ${finalBand.toFixed(1)}</span>
+                </div>
+                <div class="flex gap-4 text-[11px] text-[#5c5648] font-mono font-bold bg-[#faf8f3] p-2 rounded-xl border border-[#ece4d2]">
+                  <span>TR: ${ev.scores?.tr || '—'}</span>
+                  <span>CC: ${ev.scores?.cc || '—'}</span>
+                  <span>LR: ${ev.scores?.lr || '—'}</span>
+                  <span>GRA: ${ev.scores?.gra || '—'}</span>
+                  <span class="text-stone-400">|</span>
+                  <span>${s.essayText ? s.essayText.split(/\s+/).length : 0} Words</span>
+                </div>
+                ${s.teacherNotes ? `<div class="p-2.5 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-900"><strong>👨‍🏫 Teacher Feedback:</strong> ${s.teacherNotes}</div>` : ''}
+              </div>
+            `;
+          }).join('');
+        }
+      }
+    }
+
+    function openStudentEssayModal(promptId) {
+      currentSelectedPromptId = promptId;
+      const p = IELTS_50_ESSAY_PROMPTS.find(x => x.id === promptId);
+      if (!p) return;
+
+      document.getElementById('sem-category').textContent = p.categoryLabel + ' (' + p.type + ')';
+      document.getElementById('sem-prompt').textContent = p.prompt;
+
+      const submissions = getAllWritingSubmissions();
+      const currentStudentId = localStorage.getItem('viatestprep_student_id') || 'demo_student';
+      const existing = submissions.find(s => s.promptId === promptId && s.studentId === currentStudentId);
+
+      const textarea = document.getElementById('sem-textarea');
+      textarea.value = existing ? existing.essayText : '';
+      updateStudentEssayWordCount();
+
+      document.getElementById('sem-result-box').classList.add('hidden');
+      document.getElementById('student-essay-modal').classList.remove('hidden');
+    }
+
+    function closeStudentEssayModal() {
+      document.getElementById('student-essay-modal').classList.add('hidden');
+    }
+
+    function updateStudentEssayWordCount() {
+      const textarea = document.getElementById('sem-textarea');
+      if (!textarea) return;
+      const val = textarea.value.trim();
+      const words = val ? val.split(/\s+/).filter(w => w.length > 0) : [];
+      const badge = document.getElementById('sem-wordcount-badge');
+      if (badge) {
+        badge.textContent = words.length + ' words';
+        if (words.length >= 250) {
+          badge.className = "text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300";
+        } else {
+          badge.className = "text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300";
+        }
+      }
+    }
+
+    function submitStudentEssay() {
+      const promptId = currentSelectedPromptId;
+      const p = IELTS_50_ESSAY_PROMPTS.find(x => x.id === promptId);
+      if (!p) return;
+
+      const text = document.getElementById('sem-textarea').value.trim();
+      const ev = evaluateIELTSEssay(text, p.prompt);
+
+      if (!ev.isValid) {
+        alert(ev.error);
+        return;
+      }
+
+      const studentId = localStorage.getItem('viatestprep_student_id') || 'demo_student';
+      const studentName = localStorage.getItem('viatestprep_student_name') || 'Current Student';
+      const consultancyId = localStorage.getItem('viatestprep_consultancy_id') || 'default_consultancy';
+
+      const submission = {
+        id: 'sub_' + Date.now(),
+        studentId,
+        studentName,
+        consultancyId,
+        promptId: p.id,
+        promptText: p.prompt,
+        essayText: text,
+        evaluation: ev,
+        teacherNotes: '',
+        teacherBandOverride: null,
+        submittedAt: new Date().toISOString()
+      };
+
+      // Save locally
+      const existing = getAllWritingSubmissions();
+      const idx = existing.findIndex(s => s.promptId === p.id && s.studentId === studentId);
+      if (idx >= 0) {
+        existing[idx] = submission;
+      } else {
+        existing.unshift(submission);
+      }
+      localStorage.setItem('viatestprep_writing_submissions', JSON.stringify(existing));
+
+      // Sync to Supabase profile
+      if (typeof supabaseClient !== 'undefined' && studentId && studentId !== 'demo_student') {
+        supabaseClient.from('students').select('activity_log').eq('id', studentId).single().then(({ data }) => {
+          let logs = data && Array.isArray(data.activity_log) ? data.activity_log : [];
+          logs.unshift({ type: 'writing_essay', submission: submission, timestamp: new Date().toISOString() });
+          supabaseClient.from('students').update({ activity_log: logs }).eq('id', studentId).then();
+        });
+      }
+
+      // Render Result Card
+      const resBox = document.getElementById('sem-result-box');
+      if (resBox) {
+        resBox.className = "space-y-4 p-5 bg-white border border-emerald-200 rounded-2xl shadow-xs";
+        resBox.innerHTML = `
+          <div class="flex items-center justify-between border-b border-emerald-100 pb-3">
+            <div>
+              <span class="text-[10px] font-bold text-emerald-700 uppercase tracking-wider">Automated IELTS Evaluation</span>
+              <h4 class="text-xl font-black text-emerald-900">Overall Score: Band ${ev.overallBand.toFixed(1)}</h4>
+            </div>
+            <span class="px-3 py-1 bg-emerald-600 text-white font-extrabold text-xs rounded-xl shadow-xs">✓ Saved to Profile</span>
+          </div>
+          <div class="grid grid-cols-4 gap-2 text-center text-xs font-mono">
+            <div class="p-2 bg-emerald-50 rounded-xl border border-emerald-200">
+              <span class="block text-[9px] text-emerald-700 uppercase">TR</span>
+              <span class="font-black text-emerald-900 text-sm">${ev.scores.tr}</span>
+            </div>
+            <div class="p-2 bg-emerald-50 rounded-xl border border-emerald-200">
+              <span class="block text-[9px] text-emerald-700 uppercase">CC</span>
+              <span class="font-black text-emerald-900 text-sm">${ev.scores.cc}</span>
+            </div>
+            <div class="p-2 bg-emerald-50 rounded-xl border border-emerald-200">
+              <span class="block text-[9px] text-emerald-700 uppercase">LR</span>
+              <span class="font-black text-emerald-900 text-sm">${ev.scores.lr}</span>
+            </div>
+            <div class="p-2 bg-emerald-50 rounded-xl border border-emerald-200">
+              <span class="block text-[9px] text-emerald-700 uppercase">GRA</span>
+              <span class="font-black text-emerald-900 text-sm">${ev.scores.gra}</span>
+            </div>
+          </div>
+          <div class="space-y-1.5 text-xs text-stone-700">
+            ${ev.feedback.map(f => `<div class="flex items-center gap-1.5"><span>${f}</span></div>`).join('')}
+          </div>
+        `;
+        resBox.classList.remove('hidden');
+      }
+
+      renderStudentWritingPractice();
+    }
+
+    // =========================================================
+    // ✍️ CONSULTANCY CRM WRITING PRACTICE HUB
+    // =========================================================
+    function renderCRMWritingPracticeView() {
+      const feed = document.getElementById('crmWritingSubmissionsFeed');
+      if (!feed) return;
+
+      const submissions = getAllWritingSubmissions();
+
+      // Populate student filter dropdown
+      const studentFilter = document.getElementById('crmWritingStudentFilter');
+      if (studentFilter && studentFilter.options.length <= 1) {
+        const uniqueStudents = Array.from(new Set(submissions.map(s => JSON.stringify({ id: s.studentId, name: s.studentName }))));
+        uniqueStudents.forEach(stStr => {
+          try {
+            const st = JSON.parse(stStr);
+            const opt = document.createElement('option');
+            opt.value = st.id;
+            opt.textContent = st.name;
+            studentFilter.appendChild(opt);
+          } catch(e) {}
+        });
+      }
+
+      const selectedStudent = studentFilter ? studentFilter.value : 'all';
+      const selectedCategory = document.getElementById('crmWritingCategoryFilter') ? document.getElementById('crmWritingCategoryFilter').value : 'all';
+
+      let filtered = submissions;
+      if (selectedStudent !== 'all') filtered = filtered.filter(s => s.studentId === selectedStudent);
+      if (selectedCategory !== 'all') {
+        filtered = filtered.filter(s => {
+          const p = IELTS_50_ESSAY_PROMPTS.find(x => x.id === s.promptId);
+          return p && p.category === selectedCategory;
+        });
+      }
+
+      // Stats
+      const totEl = document.getElementById('crm-writing-total');
+      if (totEl) totEl.textContent = filtered.length;
+      const avgEl = document.getElementById('crm-writing-avgband');
+      if (avgEl) {
+        if (filtered.length > 0) {
+          const totalBands = filtered.reduce((acc, s) => acc + (s.teacherBandOverride || s.evaluation?.overallBand || 6.0), 0);
+          avgEl.textContent = 'Band ' + (totalBands / filtered.length).toFixed(1);
+        } else {
+          avgEl.textContent = '—';
+        }
+      }
+
+      if (filtered.length === 0) {
+        feed.innerHTML = `<div class="bg-white border border-[#ece4d2] rounded-2xl p-8 text-center text-xs text-[#8a8171]">No student writing submissions match the selected filter.</div>`;
+        return;
+      }
+
+      feed.innerHTML = filtered.map(s => {
+        const ev = s.evaluation || {};
+        const finalBand = s.teacherBandOverride || ev.overallBand || 6.0;
+        const p = IELTS_50_ESSAY_PROMPTS.find(x => x.id === s.promptId);
+
+        return `
+          <div class="bg-white border border-[#ece4d2] rounded-2xl p-6 shadow-sm space-y-4">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-[#ece4d2] pb-3">
+              <div>
+                <span class="px-2 py-0.5 bg-[#efe6d0] text-[#7a2331] text-[10px] font-black uppercase rounded">Q${s.promptId} · ${p ? p.categoryLabel : 'Task 2'}</span>
+                <h4 class="text-sm font-bold text-[#1c1a17] mt-1">${s.studentName || 'Student'} <span class="text-xs font-normal text-[#8a8171]">(${new Date(s.submittedAt).toLocaleDateString()})</span></h4>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-[#7a2331] text-white font-extrabold text-xs rounded-xl">Band ${finalBand.toFixed(1)}</span>
+              </div>
+            </div>
+
+            <div class="p-3 bg-[#faf8f3] border border-[#ece4d2] rounded-xl text-xs font-serif leading-relaxed text-[#1c1a17]">
+              <strong class="font-sans text-[10px] uppercase text-[#8a8171] block mb-1">Prompt:</strong>
+              ${s.promptText}
+            </div>
+
+            <div class="p-4 bg-white border border-[#e5ded0] rounded-xl text-xs font-sans leading-relaxed text-stone-800 max-h-48 overflow-y-auto whitespace-pre-wrap">
+              ${s.essayText}
+            </div>
+
+            <!-- IELTS 4-Pillar Breakdown Bar -->
+            <div class="grid grid-cols-4 gap-2 text-center text-xs font-mono bg-[#faf8f3] p-3 rounded-xl border border-[#ece4d2]">
+              <div><span class="text-[9px] text-[#8a8171] uppercase block">TR</span><span class="font-bold text-[#1c1a17]">${ev.scores?.tr || '—'}</span></div>
+              <div><span class="text-[9px] text-[#8a8171] uppercase block">CC</span><span class="font-bold text-[#1c1a17]">${ev.scores?.cc || '—'}</span></div>
+              <div><span class="text-[9px] text-[#8a8171] uppercase block">LR</span><span class="font-bold text-[#1c1a17]">${ev.scores?.lr || '—'}</span></div>
+              <div><span class="text-[9px] text-[#8a8171] uppercase block">GRA</span><span class="font-bold text-[#1c1a17]">${ev.scores?.gra || '—'}</span></div>
+            </div>
+
+            <!-- Teacher Feedback & Override Form -->
+            <div class="pt-3 border-t border-[#ece4d2] space-y-3">
+              <div class="grid grid-cols-1 sm:grid-cols-4 gap-3">
+                <div class="sm:col-span-1">
+                  <label class="text-[10px] font-bold text-[#8a8171] uppercase block mb-1">Grade Override</label>
+                  <select id="crm-override-${s.id}" class="w-full px-3 py-1.5 border border-[#e5ded0] rounded-xl text-xs bg-white font-bold text-[#7a2331]">
+                    <option value="">Auto (${ev.overallBand ? ev.overallBand.toFixed(1) : '6.0'})</option>
+                    ${[5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0].map(b => `<option value="${b}" ${s.teacherBandOverride == b ? 'selected' : ''}>Band ${b.toFixed(1)}</option>`).join('')}
+                  </select>
+                </div>
+                <div class="sm:col-span-3">
+                  <label class="text-[10px] font-bold text-[#8a8171] uppercase block mb-1">Teacher Feedback Notes</label>
+                  <input type="text" id="crm-notes-${s.id}" value="${s.teacherNotes || ''}" placeholder="Type teacher advice & key areas for improvement..." class="w-full px-3 py-1.5 border border-[#e5ded0] rounded-xl text-xs bg-white outline-none focus:border-[#7a2331]" />
+                </div>
+              </div>
+              <div class="flex justify-end">
+                <button onclick="saveTeacherWritingReview('${s.id}')" class="px-4 py-1.5 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-extrabold text-xs rounded-xl shadow-xs transition">
+                  💾 Save Teacher Review
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function saveTeacherWritingReview(subId) {
+      const submissions = getAllWritingSubmissions();
+      const sub = submissions.find(s => s.id === subId);
+      if (!sub) return;
+
+      const overrideVal = document.getElementById('crm-override-' + subId).value;
+      const notesVal = document.getElementById('crm-notes-' + subId).value.trim();
+
+      sub.teacherBandOverride = overrideVal ? parseFloat(overrideVal) : null;
+      sub.teacherNotes = notesVal;
+
+      localStorage.setItem('viatestprep_writing_submissions', JSON.stringify(submissions));
+
+      // Sync to Supabase
+      if (typeof supabaseClient !== 'undefined' && sub.studentId) {
+        supabaseClient.from('students').select('activity_log').eq('id', sub.studentId).single().then(({ data }) => {
+          if (data && Array.isArray(data.activity_log)) {
+            const logs = data.activity_log.map(l => {
+              if (l.submission && l.submission.id === subId) {
+                l.submission.teacherBandOverride = sub.teacherBandOverride;
+                l.submission.teacherNotes = sub.teacherNotes;
+              }
+              return l;
+            });
+            supabaseClient.from('students').update({ activity_log: logs }).eq('id', sub.studentId).then();
+          }
+        });
+      }
+
+      alert('Teacher feedback & score saved ✓');
+      renderCRMWritingPracticeView();
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       setTimeout(initVTPCustomDropdowns, 100);
     });
@@ -7194,6 +7867,48 @@
       <div class="p-4 bg-[#f3ecd8] border-t border-[#e5ded0] flex items-center justify-between gap-3">
         <span class="text-[10px] text-[#8a8171] font-bold">🔒 Secure 1-Click Authentication</span>
         <button onclick="closeAccessLinkModal()" class="px-5 py-2 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-extrabold text-xs rounded-xl shadow-xs transition">Done</button>
+  <!-- Modal: Student Interactive Essay Editor -->
+  <div id="student-essay-modal" class="hidden fixed inset-0 z-50 bg-[#1c1a17]/70 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-white border-2 border-[#7a2331] rounded-3xl shadow-2xl max-w-3xl w-full max-h-[90vh] flex flex-col overflow-hidden">
+      <!-- Header -->
+      <div class="bg-gradient-to-r from-[#7a2331] to-[#5e1a25] p-5 text-white flex justify-between items-center shrink-0">
+        <div>
+          <span id="sem-category" class="px-2.5 py-0.5 rounded-full text-[9px] font-black uppercase tracking-widest bg-white/20 text-white">Opinion Essay</span>
+          <h3 id="sem-title" class="text-lg font-bold mt-1">Practice Task 2 Essay</h3>
+        </div>
+        <button onclick="closeStudentEssayModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center font-bold text-sm transition">✕</button>
+      </div>
+      
+      <!-- Body -->
+      <div class="p-6 overflow-y-auto space-y-5 flex-1 bg-[#faf8f3]">
+        <div class="p-4 bg-white border border-[#ece4d2] rounded-2xl shadow-xs">
+          <span class="text-[10px] font-extrabold text-[#8a8171] uppercase tracking-wider">Official Prompt</span>
+          <p id="sem-prompt" class="text-sm font-bold text-[#1c1a17] mt-1 leading-relaxed"></p>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center mb-1.5">
+            <label class="text-xs font-extrabold text-[#5c5648]">Your Essay Response (Minimum 250 Words)</label>
+            <span id="sem-wordcount-badge" class="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300">0 words</span>
+          </div>
+          <textarea id="sem-textarea" oninput="updateStudentEssayWordCount()" rows="10" class="w-full p-4 border border-[#e5ded0] rounded-2xl text-sm font-sans focus:outline-none focus:border-[#7a2331] bg-white leading-relaxed" placeholder="Write your full essay introduction, body paragraphs, and conclusion here..."></textarea>
+        </div>
+
+        <!-- Evaluation Result Container -->
+        <div id="sem-result-box" class="hidden space-y-4 p-5 bg-white border border-emerald-200 rounded-2xl shadow-xs">
+          <!-- JS populates score cards -->
+        </div>
+      </div>
+
+      <!-- Footer Actions -->
+      <div class="p-4 bg-[#f3ecd8] border-t border-[#e5ded0] flex items-center justify-between gap-3 shrink-0">
+        <span class="text-xs text-[#8a8171] font-medium">Auto-saved to profile cloud</span>
+        <div class="flex gap-2">
+          <button onclick="closeStudentEssayModal()" class="px-4 py-2 bg-white border border-[#e5ded0] text-[#5c5648] hover:bg-[#efe6d0] font-bold text-xs rounded-xl transition">Cancel</button>
+          <button onclick="submitStudentEssay()" id="sem-submit-btn" class="px-6 py-2 bg-[#7a2331] hover:bg-[#5e1a25] text-white font-extrabold text-xs rounded-xl shadow-md transition flex items-center gap-2">
+            <span>📤</span> Submit Essay for Cloud Grading
+          </button>
+        </div>
       </div>
     </div>
   </div>
