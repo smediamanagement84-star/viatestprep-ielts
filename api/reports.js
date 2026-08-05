@@ -39,7 +39,22 @@ module.exports = async function handler(req, res) {
         dbResult = reportData;
       }
 
-      // Developer Webhook Notification (Discord / Slack / Custom Webhook)
+      // Permanent Backend System Notification Log for Developers
+      try {
+        const sysNotif = {
+          id: 'notif_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6),
+          type: 'error_report',
+          title: `🚨 DEV ALERT: ${errorType || 'App Error'} in ${section || 'General'}`,
+          message: `${description} ${questionRef ? '(Ref: ' + questionRef + ')' : ''}`,
+          meta: reportData,
+          dev_status: 'UNREAD',
+          priority: 'HIGH',
+          created_at: new Date().toISOString()
+        };
+        await restRequest('system_notifications', { method: 'POST', body: sysNotif }).catch(() => {});
+      } catch (sysErr) {}
+
+      // Developer Webhook Notification (Optional extra push if URL configured)
       const targetWebhook = devWebhookUrl || process.env.DEV_DISCORD_WEBHOOK_URL || process.env.DEV_WEBHOOK_URL;
       if (targetWebhook && targetWebhook.startsWith('http')) {
         try {

@@ -67,3 +67,17 @@ CREATE TABLE IF NOT EXISTS error_reports (
   resolved_at TIMESTAMPTZ
 );
 
+-- 8. SYSTEM NOTIFICATIONS TABLE (BACKEND DEV ALERTS)
+CREATE TABLE IF NOT EXISTS system_notifications (
+  id TEXT PRIMARY KEY,
+  type TEXT DEFAULT 'error_report',
+  title TEXT,
+  message TEXT,
+  meta JSONB,
+  dev_status TEXT DEFAULT 'UNREAD',
+  priority TEXT DEFAULT 'HIGH',
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  read_at TIMESTAMPTZ
+);
+
+

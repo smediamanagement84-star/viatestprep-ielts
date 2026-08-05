@@ -1494,6 +1494,10 @@
         </div>
       </div>
       <div class="flex items-center gap-3">
+        <button onclick="toggleDevConsoleDrawer()" class="px-3.5 py-1.5 bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/40 text-amber-300 font-extrabold rounded-lg text-xs transition flex items-center gap-1.5 relative">
+          <span>🔔 Dev Alerts</span>
+          <span id="dev-header-badge" class="hidden px-1.5 py-0.5 rounded-full text-[9px] font-black bg-rose-600 text-white animate-pulse">0</span>
+        </button>
         <button onclick="exportCRMToCSV()" class="px-3.5 py-1.5 bg-white/10 hover:bg-white/20 border border-white/10 text-white font-bold rounded-lg text-xs transition flex items-center gap-1.5">⬇ Export CSV</button>
         <label class="px-3.5 py-1.5 bg-white/10 hover:bg-white/20 border border-white/10 text-white font-bold rounded-lg text-xs transition cursor-pointer flex items-center gap-1.5">
           ⬆ Import CSV
@@ -9202,10 +9206,114 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
         }
 
         checkCRMErrorAlerts();
+        fetchDevNotifications();
         setInterval(checkCRMErrorAlerts, 10000);
+        setInterval(fetchDevNotifications, 15000);
       }, 800);
     });
+
+    // ============================================================
+    // 🛠 PURE BACKEND DEVELOPER NOTIFICATION SYSTEM
+    // ============================================================
+    async function fetchDevNotifications() {
+      try {
+        const res = await fetch('/api/dev-notifications?status=UNREAD');
+        if (res.ok) {
+          const data = await res.json();
+          if (data && Array.isArray(data.notifications)) {
+            const unread = data.notifications;
+            const badge = document.getElementById('dev-header-badge');
+            const countEl = document.getElementById('dev-console-count');
+            
+            if (badge) {
+              if (unread.length > 0) {
+                badge.textContent = unread.length;
+                badge.classList.remove('hidden');
+              } else {
+                badge.classList.add('hidden');
+              }
+            }
+            if (countEl) countEl.textContent = `${unread.length} Unread Dev Alerts`;
+
+            const feed = document.getElementById('devConsoleFeed');
+            if (feed) {
+              if (unread.length === 0) {
+                feed.innerHTML = `<p class="text-center text-stone-500 text-xs py-10">No unread developer system notifications. All systems clean ✓</p>`;
+              } else {
+                feed.innerHTML = unread.map(n => `
+                  <div class="p-3.5 bg-stone-900 border border-stone-800 rounded-xl space-y-2">
+                    <div class="flex items-start justify-between gap-2">
+                      <span class="px-2 py-0.5 rounded text-[9px] font-black uppercase bg-rose-950 text-rose-300 border border-rose-800">${n.priority || 'HIGH'}</span>
+                      <span class="text-[9px] text-stone-500">${new Date(n.created_at).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}</span>
+                    </div>
+                    <strong class="text-amber-300 text-xs block">${escapeHtml(n.title)}</strong>
+                    <p class="text-[11px] text-stone-300 leading-relaxed whitespace-pre-wrap">${escapeHtml(n.message)}</p>
+                    <div class="pt-2 flex justify-end border-t border-stone-800/80">
+                      <button onclick="markDevNotificationRead('${n.id}')" class="px-3 py-1 bg-emerald-950 hover:bg-emerald-900 border border-emerald-700 text-emerald-300 text-[10px] font-black rounded-lg transition shadow-xs">✓ Mark Fixed in Code</button>
+                    </div>
+                  </div>
+                `).join('');
+              }
+            }
+          }
+        }
+      } catch (e) {
+        console.error('Dev notifications fetch error:', e);
+      }
+    }
+
+    function toggleDevConsoleDrawer() {
+      const drawer = document.getElementById('dev-console-drawer');
+      if (!drawer) return;
+      drawer.classList.toggle('hidden');
+      if (!drawer.classList.contains('hidden')) {
+        fetchDevNotifications();
+      }
+    }
+
+    async function markDevNotificationRead(id) {
+      try {
+        await fetch('/api/dev-notifications', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id, devStatus: 'READ' })
+        });
+        fetchDevNotifications();
+      } catch (e) {}
+    }
   </script>
+
+  <!-- ============================================ -->
+  <!-- DRAWER: DEVELOPER SYSTEM ALERTS CONSOLE     -->
+  <!-- ============================================ -->
+  <div id="dev-console-drawer" class="hidden fixed inset-0 z-[80] bg-[#1c1a17]/70 backdrop-blur-md flex justify-end">
+    <div class="bg-[#1c1a17] text-white w-full max-w-md h-full shadow-2xl flex flex-col border-l border-stone-800 overflow-hidden">
+      <!-- Header -->
+      <div class="p-5 border-b border-stone-800 flex items-center justify-between bg-stone-950">
+        <div class="flex items-center gap-2.5">
+          <span class="text-xl">🛠</span>
+          <div>
+            <h3 class="text-xs font-black text-amber-400 uppercase tracking-widest">Backend Dev Alert Console</h3>
+            <p class="text-[10px] text-stone-400">Database system alerts &amp; student app error logs</p>
+          </div>
+        </div>
+        <button onclick="toggleDevConsoleDrawer()" class="w-8 h-8 rounded-full bg-stone-800 hover:bg-stone-700 text-stone-300 font-bold text-sm flex items-center justify-center transition">✕</button>
+      </div>
+
+      <!-- Dev Controls -->
+      <div class="p-3.5 bg-stone-900 border-b border-stone-800 flex items-center justify-between text-xs">
+        <span class="text-stone-300 font-mono text-[10px] font-bold" id="dev-console-count">0 Unread Dev Alerts</span>
+        <button onclick="fetchDevNotifications()" class="px-3 py-1 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/30 rounded-lg text-[10px] font-bold transition flex items-center gap-1">
+          <span>🔄</span> Refresh Logs
+        </button>
+      </div>
+
+      <!-- Dev Feed -->
+      <div id="devConsoleFeed" class="p-4 space-y-3 overflow-y-auto flex-1 font-mono text-xs">
+        <p class="text-center text-stone-500 text-xs py-10">No unread developer system notifications. All systems clean ✓</p>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
