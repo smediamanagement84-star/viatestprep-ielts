@@ -49,3 +49,21 @@ ALTER TABLE consultancies ENABLE ROW LEVEL SECURITY;
 
 -- 6. DATA MIGRATION CLEANUP
 UPDATE students SET stage = 'Completed' WHERE status = 'Completed' AND stage = 'Enrolled';
+
+-- 7. ERROR REPORTS TABLE (COMMERCIAL GRADE)
+CREATE TABLE IF NOT EXISTS error_reports (
+  id TEXT PRIMARY KEY,
+  student_id TEXT,
+  student_name TEXT,
+  consultancy_id TEXT,
+  section TEXT,
+  label TEXT,
+  error_type TEXT,
+  description TEXT,
+  question_ref TEXT,
+  status TEXT DEFAULT 'open',
+  resolution_note TEXT,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  resolved_at TIMESTAMPTZ
+);
+

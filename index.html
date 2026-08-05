@@ -1503,6 +1503,17 @@
       </div>
     </header>
 
+    <!-- Real-Time Error Alert Sticky Bar -->
+    <div id="crm-error-alert-banner" class="hidden bg-rose-700 text-white px-6 py-2.5 shadow-md flex items-center justify-between gap-3 text-xs font-bold animate-pulse">
+      <div class="flex items-center gap-2">
+        <span class="text-base">🚨</span>
+        <span><strong class="uppercase text-amber-200">Attention Teacher:</strong> <span id="crm-alert-text">Student error reports need your review!</span></span>
+      </div>
+      <button onclick="switchCRMTab('reports')" class="px-3.5 py-1 bg-white text-rose-900 rounded-lg text-xs font-black hover:bg-rose-50 transition shadow-sm">
+        View &amp; Fix Now →
+      </button>
+    </div>
+
     <div class="flex-1 flex flex-col md:flex-row overflow-hidden">
       <!-- CRM Sidebar -->
       <aside class="w-full md:w-64 bg-white border-b md:border-r border-[#ece4d2] p-4 flex flex-col gap-1 shrink-0">
@@ -8775,6 +8786,26 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
     // ============================================================
     let _ermCurrentContext = {};
     let _crmReportFilter = 'all';
+    let _lastKnownOpenReportCount = 0;
+
+    function playAlertChime() {
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) return;
+        const ctx = new AudioContext();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(880, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(1320, ctx.currentTime + 0.15);
+        gain.gain.setValueAtTime(0.3, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.3);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.3);
+      } catch (e) {}
+    }
 
     function openErrorReportModal(section, label, extraMeta) {
       _ermCurrentContext = { section, label, extraMeta: extraMeta || '' };
@@ -8816,7 +8847,7 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
       localStorage.setItem('viatestprep_error_reports', JSON.stringify(reports));
     }
 
-    function submitErrorReport() {
+    async function submitErrorReport() {
       const typeVal = document.getElementById('erm-type-value').value;
       const desc = (document.getElementById('erm-description').value || '').trim();
       const qnum = (document.getElementById('erm-qnum').value || '').trim();
@@ -8828,7 +8859,7 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
       const studentName = localStorage.getItem('viatestprep_student_name')  || 'Student';
       const consultancyId = localStorage.getItem('viatestprep_consultancy_id') || 'default';
 
-      const report = {
+      const reportPayload = {
         id: 'rpt_' + Date.now(),
         studentId,
         studentName,
@@ -8845,29 +8876,107 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
         resolvedNote:''
       };
 
+      // Save locally immediately
       const reports = getAllErrorReports();
-      reports.unshift(report);
+      reports.unshift(reportPayload);
       saveAllErrorReports(reports);
 
-      // Supabase sync (optional — store in consultancy_reports table or activity log)
+      // POST to Commercial Backend API /api/reports
+      try {
+        fetch('/api/reports', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(reportPayload)
+        }).catch(err => console.log('Backend API sync pending: ', err));
+      } catch (e) {}
+
+      // Supabase direct sync backup
       if (typeof supabaseClient !== 'undefined' && studentId !== 'demo_student') {
         supabaseClient.from('students')
           .select('activity_log').eq('id', studentId).single()
           .then(({ data }) => {
             let logs = data && Array.isArray(data.activity_log) ? data.activity_log : [];
-            logs.unshift({ type: 'error_report', report, timestamp: new Date().toISOString() });
+            logs.unshift({ type: 'error_report', report: reportPayload, timestamp: new Date().toISOString() });
             supabaseClient.from('students').update({ activity_log: logs }).eq('id', studentId).then();
           });
       }
 
       closeErrorReportModal();
 
+      // Trigger immediate alert check for local/admin views
+      checkCRMErrorAlerts();
+
       // Success toast
       const toast = document.createElement('div');
       toast.className = 'fixed bottom-24 left-1/2 -translate-x-1/2 z-[70] bg-[#1c1a17] text-white text-xs font-bold px-5 py-3 rounded-2xl shadow-xl flex items-center gap-2 transition';
-      toast.innerHTML = '<span>🚩</span> Report submitted — your teacher will review it.';
+      toast.innerHTML = '<span>🚩</span> Report submitted — teachers have been alerted to review it.';
       document.body.appendChild(toast);
       setTimeout(() => toast.remove(), 3500);
+    }
+
+    async function checkCRMErrorAlerts() {
+      const consultancyId = localStorage.getItem('viatestprep_consultancy_id') || 'default';
+      let all = getAllErrorReports().filter(r => r.consultancyId === consultancyId || r.consultancyId === 'default');
+
+      // Attempt live sync from backend API
+      try {
+        const res = await fetch(`/api/reports?consultancyId=${encodeURIComponent(consultancyId)}`);
+        if (res.ok) {
+          const data = await res.json();
+          if (data && Array.isArray(data.reports) && data.reports.length > 0) {
+            // merge API reports
+            const apiReports = data.reports.map(r => ({
+              id: r.id,
+              studentId: r.student_id,
+              studentName: r.student_name,
+              consultancyId: r.consultancy_id,
+              section: r.section,
+              label: r.label,
+              errorType: r.error_type,
+              description: r.description,
+              questionRef: r.question_ref,
+              status: r.status,
+              submittedAt: r.created_at,
+              resolvedAt: r.resolved_at,
+              resolvedNote: r.resolution_note
+            }));
+            const map = new Map();
+            all.forEach(x => map.set(x.id, x));
+            apiReports.forEach(x => map.set(x.id, x));
+            all = Array.from(map.values());
+            saveAllErrorReports(all);
+          }
+        }
+      } catch (e) {}
+
+      const openReports = all.filter(r => r.status === 'open');
+      const openCount = openReports.length;
+
+      // Update Top Sticky Banner & Audio Alerts
+      const banner = document.getElementById('crm-error-alert-banner');
+      const bannerText = document.getElementById('crm-alert-text');
+      const badge = document.getElementById('crm-reports-badge');
+
+      if (openCount > 0) {
+        if (banner) {
+          banner.classList.remove('hidden');
+          if (bannerText) bannerText.textContent = `You have ${openCount} unresolved student error report${openCount > 1 ? 's' : ''}! Fix reported questions now.`;
+        }
+        if (badge) {
+          badge.textContent = openCount;
+          badge.classList.remove('hidden');
+        }
+
+        // Play chime if new unhandled reports arrived
+        if (openCount > _lastKnownOpenReportCount) {
+          playAlertChime();
+        }
+      } else {
+        if (banner) banner.classList.add('hidden');
+        if (badge) badge.classList.add('hidden');
+      }
+
+      _lastKnownOpenReportCount = openCount;
     }
 
     // ── CRM: Render Error Reports ──────────────────────────────
@@ -8886,12 +8995,8 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
       if (el('crm-rpt-open')) el('crm-rpt-open').textContent = open;
       if (el('crm-rpt-resolved')) el('crm-rpt-resolved').textContent = resolved;
 
-      // Update badge on sidebar
-      const badge = el('crm-reports-badge');
-      if (badge) {
-        if (open > 0) { badge.textContent = open; badge.classList.remove('hidden'); }
-        else badge.classList.add('hidden');
-      }
+      // Update badge & banner
+      checkCRMErrorAlerts();
 
       // Filter
       let visible = all;
@@ -8916,7 +9021,7 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
         const isOpen = r.status === 'open';
         const date = new Date(r.submittedAt).toLocaleDateString('en-GB', { day:'2-digit', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit' });
         return `
-          <div class="bg-white border ${isOpen ? 'border-rose-200' : 'border-emerald-200'} rounded-2xl p-4 shadow-sm space-y-3">
+          <div class="bg-white border ${isOpen ? 'border-rose-200 shadow-sm' : 'border-emerald-200'} rounded-2xl p-4 space-y-3">
             <div class="flex items-start justify-between gap-2">
               <div class="flex-1 min-w-0">
                 <div class="flex items-center gap-2 flex-wrap">
@@ -8962,7 +9067,7 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
       renderCRMErrorReports();
     }
 
-    function resolveReport(id) {
+    async function resolveReport(id) {
       const note = (document.getElementById('rpt-note-' + id) || {}).value || '';
       const reports = getAllErrorReports();
       const idx = reports.findIndex(r => r.id === id);
@@ -8971,12 +9076,22 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
         reports[idx].resolvedAt = new Date().toISOString();
         reports[idx].resolvedNote = note;
         saveAllErrorReports(reports);
+
+        // Update backend API
+        try {
+          fetch('/api/reports', {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ reportId: id, status: 'resolved', resolutionNote: note })
+          }).catch(err => console.log('PATCH API sync pending: ', err));
+        } catch (e) {}
+
         renderCRMErrorReports();
       }
     }
 
     function dismissReport(id) {
-      if (!confirm('Dismiss this report? It will be marked as resolved without a note.')) return;
+      if (!confirm('Dismiss this report? It will be marked as resolved.')) return;
       resolveReport(id);
     }
 
