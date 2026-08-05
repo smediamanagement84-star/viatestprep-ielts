@@ -2041,6 +2041,25 @@
             <div class="bg-white border border-emerald-200 rounded-2xl p-4 text-center shadow-sm">
               <span id="crm-rpt-resolved" class="block text-2xl font-black text-emerald-600">0</span>
               <span class="text-[10px] font-bold text-[#8a8171] uppercase">Resolved</span>
+          <!-- Developer Instant Webhook Alert Config Card -->
+          <div class="bg-gradient-to-r from-[#1c1a17] to-[#2d2924] text-white border border-stone-800 rounded-2xl p-5 shadow-sm space-y-3">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="text-base">🔔</span>
+                <div>
+                  <h4 class="text-xs font-black uppercase tracking-wider text-amber-300">Developer Instant Push Notifications</h4>
+                  <p class="text-[11px] text-stone-300 mt-0.5">Receive immediate Discord, Slack, or Telegram push alerts on your phone whenever a student flags an app error.</p>
+                </div>
+              </div>
+              <span class="px-2.5 py-0.5 bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[9px] font-bold rounded-full shrink-0">Dev Alerts Active</span>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-2 pt-1">
+              <input type="text" id="devWebhookUrlInput" placeholder="Enter Discord / Slack / Telegram Webhook URL (https://...)" class="flex-1 px-3 py-2 bg-stone-900 border border-stone-700 rounded-xl text-xs text-white placeholder-stone-500 outline-none focus:border-amber-400 font-mono">
+              <div class="flex gap-2">
+                <button onclick="saveDevWebhookUrl()" class="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-stone-950 font-black text-xs rounded-xl shadow transition whitespace-nowrap">Save Webhook</button>
+                <button onclick="testDevWebhookUrl()" class="px-3.5 py-2 bg-stone-800 hover:bg-stone-700 border border-stone-600 text-stone-200 font-bold text-xs rounded-xl transition whitespace-nowrap">🧪 Test Phone Ping</button>
+              </div>
             </div>
           </div>
 
@@ -8847,6 +8866,50 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
       localStorage.setItem('viatestprep_error_reports', JSON.stringify(reports));
     }
 
+    function saveDevWebhookUrl() {
+      const url = (document.getElementById('devWebhookUrlInput') ? document.getElementById('devWebhookUrlInput').value : '').trim();
+      if (!url) {
+        localStorage.removeItem('viatestprep_dev_webhook');
+        alert('Developer push alert webhook URL cleared.');
+        return;
+      }
+      localStorage.setItem('viatestprep_dev_webhook', url);
+      alert('Developer push alert webhook saved! ✓ You will get phone notifications for app error reports.');
+    }
+
+    async function testDevWebhookUrl() {
+      const url = localStorage.getItem('viatestprep_dev_webhook') || (document.getElementById('devWebhookUrlInput') ? document.getElementById('devWebhookUrlInput').value : '').trim();
+      if (!url) {
+        alert('Please enter your Discord/Slack/Telegram Webhook URL first.');
+        return;
+      }
+      try {
+        const testPayload = {
+          studentId: 'dev_test',
+          studentName: 'Developer Test Ping',
+          consultancyId: 'dev_suite',
+          section: 'Developer Verification',
+          label: 'Test Push Notification',
+          errorType: 'other',
+          description: 'This is a test notification from ViaTestPrep Developer Error Alert System! If you see this on your phone, push alerts are 100% working.',
+          questionRef: 'Dev System',
+          devWebhookUrl: url
+        };
+        const res = await fetch('/api/reports', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(testPayload)
+        });
+        if (res.ok) {
+          alert('Test alert dispatched! Check your phone/desktop app for the notification ping. 🔔');
+        } else {
+          alert('API responded with error: ' + res.status);
+        }
+      } catch (e) {
+        alert('Error sending test webhook: ' + e.message);
+      }
+    }
+
     async function submitErrorReport() {
       const typeVal = document.getElementById('erm-type-value').value;
       const desc = (document.getElementById('erm-description').value || '').trim();
@@ -8858,6 +8921,7 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
       const studentId   = localStorage.getItem('viatestprep_student_id')   || 'demo_student';
       const studentName = localStorage.getItem('viatestprep_student_name')  || 'Student';
       const consultancyId = localStorage.getItem('viatestprep_consultancy_id') || 'default';
+      const devWebhookUrl = localStorage.getItem('viatestprep_dev_webhook') || '';
 
       const reportPayload = {
         id: 'rpt_' + Date.now(),
@@ -8870,6 +8934,7 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
         errorType:   typeVal,
         description: desc,
         questionRef: qnum,
+        devWebhookUrl: devWebhookUrl,
         status:      'open',
         submittedAt: new Date().toISOString(),
         resolvedAt:  null,
@@ -9123,8 +9188,11 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
 
     // Update badge on load for consultancy portal
     document.addEventListener('DOMContentLoaded', () => {
-      // Show open report badge on sidebar if any open
       setTimeout(() => {
+        const savedWebhook = localStorage.getItem('viatestprep_dev_webhook');
+        const webhookInput = document.getElementById('devWebhookUrlInput');
+        if (savedWebhook && webhookInput) webhookInput.value = savedWebhook;
+
         const consultancyId = localStorage.getItem('viatestprep_consultancy_id');
         if (consultancyId) {
           const all = getAllErrorReports().filter(r => r.consultancyId === consultancyId || r.consultancyId === 'default');
@@ -9132,6 +9200,9 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
           const badge = document.getElementById('crm-reports-badge');
           if (badge && open > 0) { badge.textContent = open; badge.classList.remove('hidden'); }
         }
+
+        checkCRMErrorAlerts();
+        setInterval(checkCRMErrorAlerts, 10000);
       }, 800);
     });
   </script>

@@ -13,7 +13,7 @@ module.exports = async function handler(req, res) {
   try {
     // 1. POST: Student Submits Error Report
     if (req.method === 'POST') {
-      const { studentId, studentName, consultancyId, section, label, errorType, description, questionRef } = req.body || {};
+      const { studentId, studentName, consultancyId, section, label, errorType, description, questionRef, devWebhookUrl } = req.body || {};
       
       const reportData = {
         id: 'rep_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7),
@@ -30,16 +30,50 @@ module.exports = async function handler(req, res) {
         created_at: new Date().toISOString()
       };
 
+      // Direct Database persistence in Supabase
+      let dbResult = null;
       try {
         const rows = await restRequest('error_reports', { method: 'POST', body: reportData });
-        return res.status(200).json({ success: true, report: rows && rows.length ? rows[0] : reportData });
+        dbResult = rows && rows.length ? rows[0] : reportData;
       } catch (dbErr) {
-        // Fallback response if table not yet created in SQL Editor
-        return res.status(200).json({ success: true, report: reportData, note: 'Saved client side & queued for DB' });
+        dbResult = reportData;
       }
+
+      // Developer Webhook Notification (Discord / Slack / Custom Webhook)
+      const targetWebhook = devWebhookUrl || process.env.DEV_DISCORD_WEBHOOK_URL || process.env.DEV_WEBHOOK_URL;
+      if (targetWebhook && targetWebhook.startsWith('http')) {
+        try {
+          const discordEmbed = {
+            embeds: [{
+              title: "🚨 DEV ALERT: New Student App Error Report",
+              color: 15158332, // Red
+              fields: [
+                { name: "👤 Student", value: `${studentName} (${studentId})`, inline: true },
+                { name: "🏢 Consultancy", value: consultancyId, inline: true },
+                { name: "📌 Section / Context", value: `${section} · ${label}`, inline: false },
+                { name: "🏷 Error Type", value: errorType, inline: true },
+                { name: "📍 Question Ref", value: questionRef || 'N/A', inline: true },
+                { name: "💬 Issue Description", value: description, inline: false }
+              ],
+              footer: { text: "ViaTestPrep Developer Push Alert Engine" },
+              timestamp: new Date().toISOString()
+            }]
+          };
+          
+          await fetch(targetWebhook, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(discordEmbed)
+          }).catch(wErr => console.error('Dev webhook send error:', wErr));
+        } catch (wErr) {
+          console.error('Dev webhook dispatch exception:', wErr);
+        }
+      }
+
+      return res.status(200).json({ success: true, report: dbResult });
     }
 
-    // 2. GET: Admin/Teacher Fetches Reports
+    // 2. GET: Admin/Teacher/Dev Fetches Reports
     if (req.method === 'GET') {
       const consultancyId = req.query.consultancyId || 'all';
       let query = '?order=created_at.desc';
@@ -54,7 +88,7 @@ module.exports = async function handler(req, res) {
       }
     }
 
-    // 3. PATCH: Admin Resolves Report
+    // 3. PATCH: Admin/Dev Resolves Report
     if (req.method === 'PATCH') {
       const { reportId, status, resolutionNote } = req.body || {};
       if (!reportId) return res.status(400).json({ error: 'reportId is required.' });
