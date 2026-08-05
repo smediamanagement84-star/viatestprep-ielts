@@ -132,7 +132,10 @@
         <button onclick="switchTask(2)" id="tab2" class="task-tab">Task 2 (Essay)</button>
       </div>
 
-      <h1 class="task-title" id="taskTitle">Writing Task 1</h1>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px;margin-bottom:12px;">
+        <h1 class="task-title" id="taskTitle" style="margin:0;">Writing Task 1</h1>
+        <button type="button" onclick="openErrorReportModal('Writing Task', (typeof testData !== 'undefined' && testData ? testData.title : 'Writing Practice') + ' - Task ' + currentTask, 'Task ' + currentTask)" style="background:none;border:none;color:#e11d48;font-size:12px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:4px;" title="Report issue with this writing task">🚩 Report Task Issue</button>
+      </div>
 
       <div class="info-banner">
         <span id="taskTimeRecommendation">Recommended time: 20 minutes</span>

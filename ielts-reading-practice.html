@@ -912,7 +912,11 @@
             <span class="q-num-badge" style="border-radius:12px; padding:2px 8px; width:auto; height:auto; min-width:24px;">${displayNumStr}</span>
             ${taskName ? `<span style="font-size:11px; color:#9c9385; font-weight:600; text-transform:uppercase; font-family:'Inter'; margin-left:6px;">${taskName}</span>` : ''}
           </div>
-        ` + (q.contentUnavailable ? '' : `<label class="q-review-label"><input type="checkbox" onchange="toggleFlag(${q.num})" ${flaggedQuestions[q.num] ? 'checked' : ''} /> Review</label>`);
+          <div style="display:flex; align-items:center; gap:10px;">
+            <button type="button" onclick="openErrorReportModal('Reading Question', '${escapeHtml(testData.title || '')}', 'Q${displayNumStr}')" style="background:none;border:none;color:#e11d48;font-size:11px;font-weight:700;cursor:pointer;padding:0;display:inline-flex;align-items:center;gap:3px;" title="Report issue with Q${displayNumStr}">🚩 Report</button>
+            ${q.contentUnavailable ? '' : `<label class="q-review-label"><input type="checkbox" onchange="toggleFlag(${q.num})" ${flaggedQuestions[q.num] ? 'checked' : ''} /> Review</label>`}
+          </div>
+        `;
         qBox.appendChild(headerRow);
 
         if (q.contentUnavailable) {
