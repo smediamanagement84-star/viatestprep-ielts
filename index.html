@@ -426,6 +426,319 @@
   #accessModal .lp-panel { box-shadow: 0 25px 60px rgba(28,26,23,.18); }
   .lp-role-card { background: var(--paper); border: 2px solid var(--rule); transition: all .25s; cursor: pointer; }
   .lp-role-card:hover { border-color: var(--lp-accent); box-shadow: 0 14px 30px rgba(122,35,49,.1); transform: translateY(-2px); }
+
+  /* ═══════════════════════════════════════════════
+     MOBILE-FIRST RESPONSIVE SYSTEM
+     Target: clean & professional on 375px+ phones
+     ═══════════════════════════════════════════════ */
+
+  /* ── Global touch improvements ────────────────── */
+  * { -webkit-tap-highlight-color: transparent; }
+  button, a { touch-action: manipulation; }
+
+  /* ── Student Portal: bottom tab bar on mobile ── */
+  @media (max-width: 767px) {
+    /* Student portal overall layout */
+    #view-student {
+      padding-bottom: 72px; /* space for bottom nav */
+    }
+
+    /* Header compaction on mobile */
+    #view-student > header {
+      height: 56px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    #view-student > header span.font-serif {
+      font-size: 1rem;
+    }
+
+    /* Sidebar becomes bottom tab bar */
+    #view-student aside {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0.35rem 0.25rem 0.55rem;
+      border-top: 1px solid #ece4d2;
+      border-right: none;
+      border-bottom: none;
+      z-index: 40;
+      background: #fff;
+      box-shadow: 0 -4px 16px rgba(28,26,23,.08);
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    #view-student aside::-webkit-scrollbar { display: none; }
+
+    /* Each tab button in bottom bar */
+    #view-student aside button {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      min-width: 56px;
+      padding: 0.4rem 0.2rem;
+      border-radius: 0.6rem;
+      gap: 0.2rem;
+      text-align: center;
+      font-size: 0.55rem;
+      line-height: 1.1;
+      border-left: none !important;
+    }
+
+    /* Icon emoji sizing in bottom bar */
+    #view-student aside button::before {
+      font-size: 1.25rem;
+    }
+
+    /* student-active-tab in bottom bar */
+    .student-active-tab {
+      border-left: none !important;
+      border-bottom: 2px solid #7a2331 !important;
+      background: rgba(122,35,49,0.07) !important;
+    }
+
+    /* Main content area: tighter padding on mobile */
+    #view-student main {
+      padding: 1rem;
+    }
+
+    /* Writing practice category filters: horizontal scroll */
+    #studentWritingFilters {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 4px;
+    }
+    #studentWritingFilters::-webkit-scrollbar { display: none; }
+    #studentWritingFilters button {
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    /* Writing prompts: single column on mobile */
+    #studentWritingPromptsGrid {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* Score badge strip in writing header: column on small screens */
+    #student-writing-view .flex.items-center.gap-3.bg-\[#faf8f3\] {
+      flex-direction: row;
+      padding: 0.75rem;
+    }
+
+    /* Essay modal: full screen on mobile */
+    #student-essay-modal {
+      padding: 0 !important;
+      align-items: flex-end !important;
+    }
+    #student-essay-modal > div {
+      max-width: 100% !important;
+      max-height: 96vh !important;
+      border-radius: 1.5rem 1.5rem 0 0 !important;
+      border-width: 1px !important;
+    }
+    #sem-textarea {
+      font-size: 16px; /* prevent iOS zoom on focus */
+    }
+
+    /* KPI cards: 2 per row on mobile */
+    .crm-kpi-grid, [id^="c-kpi"] {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Tables: horizontal scroll wrapper */
+    table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  /* ── Consultancy CRM: bottom tab bar on mobile ── */
+  @media (max-width: 767px) {
+    #view-consultancy {
+      padding-bottom: 72px;
+    }
+
+    #view-consultancy > header,
+    [id="crm-header"] {
+      height: 56px !important;
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
+    /* CRM sidebar → bottom tab bar */
+    #view-consultancy > div > aside {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0.35rem 0.1rem 0.55rem;
+      border-top: 1px solid #ece4d2;
+      border-right: none;
+      z-index: 40;
+      background: #fff;
+      box-shadow: 0 -4px 16px rgba(28,26,23,.08);
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    #view-consultancy > div > aside::-webkit-scrollbar { display: none; }
+
+    /* CRM nav buttons: compact column layout */
+    .crm-nav-btn {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      min-width: 50px;
+      padding: 0.35rem 0.1rem;
+      border-radius: 0.6rem;
+      gap: 0.15rem;
+      text-align: center;
+      font-size: 0.5rem;
+      line-height: 1.1;
+      box-shadow: none !important;
+    }
+    .crm-nav-btn .crm-nav-icon {
+      width: 28px; height: 28px;
+      font-size: 0.85rem;
+      border-radius: 0.5rem;
+    }
+    .crm-nav-btn.active-tab {
+      box-shadow: none !important;
+      border-bottom: 2px solid #7a2331;
+    }
+
+    /* CRM main content */
+    #view-consultancy > div > main,
+    #view-consultancy .flex-1.p-6,
+    #view-consultancy .flex-1.p-8 {
+      padding: 1rem !important;
+    }
+
+    /* CRM writing submissions: single column */
+    #crmWritingSubmissionsFeed > div {
+      padding: 1rem;
+    }
+    #crmWritingSubmissionsFeed .grid-cols-4 {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+
+  /* ── Landing page mobile tweaks ─────────────────  */
+  @media (max-width: 767px) {
+    /* Landing header */
+    .lp-header {
+      height: 60px !important;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    /* Landing hero: better mobile hero sizing */
+    #view-landing .hero-in:first-of-type {
+      font-size: clamp(1.8rem, 8vw, 3rem);
+    }
+
+    /* Feature section: single column */
+    #view-landing .grid-cols-3,
+    #view-landing .md\:grid-cols-3 {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* Pricing cards: single column */
+    #view-landing .md\:grid-cols-3[class*="pricing"],
+    #view-landing .grid.md\:grid-cols-3 {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  /* ── Modal improvements ─────────────────────────── */
+  @media (max-width: 767px) {
+    #accessModal .lp-panel,
+    #accessModal > div {
+      max-width: 100% !important;
+      width: 100% !important;
+      margin: 0.5rem !important;
+      border-radius: 1.25rem !important;
+    }
+
+    /* Access modal body: reduce padding */
+    #accessModalBody {
+      padding: 1.25rem !important;
+    }
+
+    /* CRM record fee modal */
+    #crm-record-fee-modal > div,
+    #crm-receipt-modal > div {
+      margin: 0.75rem !important;
+      max-width: calc(100% - 1.5rem) !important;
+      border-radius: 1.25rem !important;
+    }
+  }
+
+  /* ── Utility: tap target min size ──────────────── */
+  @media (max-width: 767px) {
+    button, [role="button"] {
+      min-height: 36px;
+    }
+    input, textarea, select {
+      font-size: 16px !important; /* prevent iOS zoom */
+    }
+  }
+
+  /* ── Student portal main content: add bottom spacing ── */
+  @media (max-width: 767px) {
+    #view-student main .space-y-6 > *:last-child,
+    #view-consultancy .space-y-6 > *:last-child {
+      margin-bottom: 1.5rem;
+    }
+
+    /* Bottom tab: icon is shown as block, label below */
+    #view-student aside button {
+      flex-direction: column !important;
+    }
+    #view-student aside button .s-tab-icon {
+      display: block;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+    #view-student aside button .s-tab-label {
+      display: block;
+      font-size: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 56px;
+      color: #5c5648;
+    }
+    .student-active-tab .s-tab-label {
+      color: #7a2331 !important;
+    }
+
+    /* CRM bottom bar label styling */
+    #view-consultancy > div > aside .crm-nav-btn span:not(.crm-nav-icon) {
+      display: block;
+      font-size: 0.48rem;
+      font-weight: 700;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 52px;
+      margin-top: 1px;
+    }
+  }
 </style>
 </head>
 <body class="relative overflow-x-hidden">
@@ -703,18 +1016,28 @@
       </div>
     </header>
 
-    <div class="flex-1 flex flex-col md:flex-row overflow-hidden">
+    <div class="flex-1 flex flex-col md:flex-row overflow-y-auto md:overflow-hidden">
       <!-- Student Sidebar Tabs -->
       <aside class="w-full md:w-60 bg-white border-b md:border-r border-[#ece4d2] p-4 flex flex-col gap-1 shrink-0">
-        <button onclick="switchStudentTab('vault')" id="s-tab-vault" class="student-active-tab w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">📚 Skill Vault</button>
-        <button onclick="switchStudentTab('writing')" id="s-tab-writing" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">✍️ Writing Practice</button>
-        <button onclick="switchStudentTab('mocks')" id="s-tab-mocks" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">⏱️ Cambridge Mock Exams</button>
-        <button onclick="switchStudentTab('speaking')" id="s-tab-speaking" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">🎤 Speaking practice</button>
-        <button onclick="switchStudentTab('grades')" id="s-tab-grades" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">📊 Grade Sheet &amp; Comments</button>
+        <button onclick="switchStudentTab('vault')" id="s-tab-vault" class="student-active-tab w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">
+          <span class="s-tab-icon text-base">📚</span><span class="s-tab-label">Skill Vault</span>
+        </button>
+        <button onclick="switchStudentTab('writing')" id="s-tab-writing" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">
+          <span class="s-tab-icon text-base">✍️</span><span class="s-tab-label">Writing</span>
+        </button>
+        <button onclick="switchStudentTab('mocks')" id="s-tab-mocks" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">
+          <span class="s-tab-icon text-base">⏱️</span><span class="s-tab-label">Mock Exams</span>
+        </button>
+        <button onclick="switchStudentTab('speaking')" id="s-tab-speaking" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">
+          <span class="s-tab-icon text-base">🎤</span><span class="s-tab-label">Speaking</span>
+        </button>
+        <button onclick="switchStudentTab('grades')" id="s-tab-grades" class="w-full text-left px-4 py-3 rounded-lg text-xs font-bold text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-2">
+          <span class="s-tab-icon text-base">📊</span><span class="s-tab-label">Grades</span>
+        </button>
       </aside>
 
       <!-- Student Views Content -->
-      <main class="flex-1 p-6 md:p-8 overflow-y-auto">
+      <main class="flex-1 p-4 md:p-8 overflow-y-auto">
         <!-- Expiration Lock Card Overlay -->
         <div id="student-expiry-overlay" class="hidden flex flex-col items-center justify-center p-12 bg-white rounded-3xl border border-rose-100 text-center max-w-md mx-auto mt-16 shadow-lg shadow-rose-500/5">
           <span class="text-4xl">⚠️</span>
