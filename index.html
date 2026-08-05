@@ -1343,7 +1343,17 @@
             </div>
           </div>
 
-          <!-- Category Filter Buttons -->
+          <!-- Main Mode Switcher: 50 Prompts vs Sample Essays & Templates -->
+          <div class="flex items-center gap-2 border-b border-[#ece4d2] pb-3">
+            <button onclick="switchWritingViewMode('prompts')" id="sw-mode-prompts" class="px-4 py-2 text-xs font-extrabold rounded-xl bg-[#7a2331] text-white shadow-xs transition">
+              ✍️ 50 Essay Prompts &amp; Practice
+            </button>
+            <button onclick="switchWritingViewMode('samples')" id="sw-mode-samples" class="px-4 py-2 text-xs font-extrabold rounded-xl bg-white border border-[#e5ded0] text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-1.5">
+              <span>📘</span> Sample Essays &amp; Templates (5 Essay Types)
+            </button>
+          </div>
+
+          <!-- Category Filter Buttons (for 50 Prompts) -->
           <div class="flex items-center gap-2 flex-wrap" id="studentWritingFilters">
             <button onclick="filterStudentWritingCategory('all')" id="sw-cat-all" class="px-3.5 py-1.5 bg-[#7a2331] text-white text-xs font-bold rounded-xl shadow-xs transition">All (50)</button>
             <button onclick="filterStudentWritingCategory('opinion')" id="sw-cat-opinion" class="px-3.5 py-1.5 bg-white border border-[#e5ded0] text-[#5c5648] hover:bg-[#f3ecd8] text-xs font-bold rounded-xl transition">Opinion (10)</button>
@@ -1355,6 +1365,11 @@
 
           <!-- Prompts Grid -->
           <div id="studentWritingPromptsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Populated by JS -->
+          </div>
+
+          <!-- Sample Essays & Templates View -->
+          <div id="studentWritingSamplesView" class="hidden space-y-6">
             <!-- Populated by JS -->
           </div>
 
@@ -7606,6 +7621,157 @@
       { id: 50, category: "twopart", categoryLabel: "Two-Part Question", type: "Why & Public Spending", prompt: "Governments are spending large sums of money constructing modern sports stadiums. Why do governments invest in sports infrastructure, and is this a positive or negative use of public money?" }
     ];
 
+    // =========================================================
+    // 📘 IELTS BAND 8 SAMPLE ESSAYS & TEMPLATES (BY ESSAY TYPE)
+    // =========================================================
+    const IELTS_SAMPLE_ESSAYS_DATA = {
+      opinion: {
+        title: "Opinion Essay (Agree / Disagree)",
+        categoryLabel: "Agree / Disagree",
+        questionPrompt: "Some people believe that governments should provide free university education for all students. To what extent do you agree or disagree?",
+        structure: [
+          { para: "Paragraph 1: Introduction", details: "• Paraphrase the prompt in simple words.\n• State your clear opinion (e.g., 'I completely agree with this view because...')." },
+          { para: "Paragraph 2: Body 1 (First Main Reason)", details: "• Topic sentence stating your first main point (Equal Opportunities).\n• Explain why this is true.\n• Give a simple real-world example." },
+          { para: "Paragraph 3: Body 2 (Second Main Reason)", details: "• Topic sentence stating your second main point (Economic Growth).\n• Explain how skilled workers help businesses grow.\n• Conclude the paragraph with the positive outcome." },
+          { para: "Paragraph 4: Conclusion", details: "• Restate your opinion in different words.\n• Summarize your two main points." }
+        ],
+        template: `[Paragraph 1: Introduction]
+It is often argued that [Paraphrase prompt statement]. I completely agree with this view because [Reason 1] and [Reason 2].
+
+[Paragraph 2: Body 1]
+To begin with, [Topic sentence for Reason 1]. This is because [Explanation]. For instance, [Real-world example]. As a result, [Positive outcome].
+
+[Paragraph 3: Body 2]
+Furthermore, [Topic sentence for Reason 2]. In other words, [Explanation]. For example, [Real-world example]. Consequently, [Positive outcome].
+
+[Paragraph 4: Conclusion]
+In conclusion, I firmly believe that [Restate Opinion]. Providing [Reason 1 Summary] and [Reason 2 Summary] ultimately creates a better society for everyone.`,
+        sampleEssay: `It is often argued that higher education should be provided free of cost to all students. I completely agree with this view because free university education eliminates financial barriers for low-income families and significantly boosts national economic growth.
+
+To begin with, making university free creates equal opportunities for all students regardless of their background. Many talented young people from poor families cannot afford high tuition fees, which prevents them from getting higher degrees and securing well-paying jobs. For instance, in countries like Germany where university tuition is free, more students from low-income homes complete higher education. As a result, social inequality is reduced.
+
+Furthermore, a well-educated population directly benefits a country's economy. When more young adults graduate from university, companies have access to skilled professionals such as doctors, engineers, computer programmers, and teachers. For example, modern technology industries require advanced knowledge that can only be gained at university. Consequently, businesses grow faster, creating more jobs and higher tax revenues for the government.
+
+In conclusion, I firmly believe that higher education should be free for everyone. Removing tuition fees gives talented students equal life chances and builds a stronger economy for the future.`
+      },
+      discussion: {
+        title: "Discussion Essay (Discuss Both Views & Give Opinion)",
+        categoryLabel: "Discuss Both Views",
+        questionPrompt: "Some people think that children should spend their free time doing educational activities. Others believe children should be free to play whatever they want. Discuss both views and give your opinion.",
+        structure: [
+          { para: "Paragraph 1: Introduction", details: "• Paraphrase both viewpoints.\n• State your clear opinion (e.g., 'While study is helpful, I believe free play is more essential...')." },
+          { para: "Paragraph 2: Body 1 (View 1 - Educational Activities)", details: "• Topic sentence explaining View 1.\n• Explain how academic tasks help at school.\n• Give a simple example." },
+          { para: "Paragraph 3: Body 2 (View 2 & Your Opinion - Free Play)", details: "• Topic sentence explaining View 2.\n• Explain why free play builds creativity, friendships, and stress relief.\n• Give a simple example." },
+          { para: "Paragraph 4: Conclusion", details: "• Summarize both viewpoints.\n• Restate your personal conclusion." }
+        ],
+        template: `[Paragraph 1: Introduction]
+People hold conflicting views regarding whether [Paraphrase View 1] or [Paraphrase View 2]. While [View 1] has certain benefits, I believe that [View 2 & My Opinion].
+
+[Paragraph 2: Body 1 - View 1]
+On the one hand, proponents of [View 1] argue that [Main Reason]. This is because [Explanation]. For example, [Example].
+
+[Paragraph 3: Body 2 - View 2 & My Opinion]
+On the other hand, advocates of [View 2] emphasize that [Main Reason]. In my view, [Explanation]. For instance, [Example]. Therefore, [Outcome].
+
+[Paragraph 4: Conclusion]
+In conclusion, although [Summary of View 1], I firmly believe that [Summary of View 2 & Final Opinion].`,
+        sampleEssay: `People hold conflicting views regarding whether children should spend their leisure time on educational tasks or be free to play whatever they choose. While structured learning has academic benefits, I believe that unstructured free play is essential for a child's healthy emotional and social development.
+
+On the one hand, proponents of educational activities argue that academic practice during free time helps children succeed at school. Practicing reading, solving math puzzles, or learning foreign languages outside the classroom reinforces what students learn during school hours. For example, children who read books daily at home usually develop better vocabulary and perform better in language exams.
+
+On the other hand, advocates of free play emphasize that children need time to relax and explore their own interests. Unstructured play allows children to use their imagination, make friends, and learn how to share and resolve conflict independently. In my view, forcing children to study constantly creates unnecessary stress and anxiety at a young age. For instance, playing sports or outdoor games with friends helps children stay physically active and mentally refreshed.
+
+In conclusion, although educational activities can boost academic performance, I firmly believe that children should be allowed to play freely during their leisure time to ensure a balanced and happy childhood.`
+      },
+      advantage: {
+        title: "Advantage & Disadvantage Essay",
+        categoryLabel: "Advantage / Disadvantage",
+        questionPrompt: "In many countries, more and more people are shopping online instead of visiting physical stores. Do the advantages of this trend outweigh the disadvantages?",
+        structure: [
+          { para: "Paragraph 1: Introduction", details: "• Paraphrase the prompt trend.\n• State your position (e.g., 'Although it harms physical shops, the advantages far outweigh disadvantages.')." },
+          { para: "Paragraph 2: Body 1 (Disadvantages)", details: "• Topic sentence stating main drawback (harm to physical stores).\n• Explain job losses and quiet high streets." },
+          { para: "Paragraph 3: Body 2 (Advantages - Heavier Weight)", details: "• Topic sentence stating main benefits (convenience & lower prices).\n• Explain 24/7 access and direct home delivery.\n• Give a simple real-world example." },
+          { para: "Paragraph 4: Conclusion", details: "• Summarize drawbacks vs advantages.\n• Conclude with your final stance." }
+        ],
+        template: `[Paragraph 1: Introduction]
+In recent years, [Paraphrase Trend] has become increasingly common. Although this movement presents some drawbacks, I believe the benefits of [Advantage 1] and [Advantage 2] far outweigh the disadvantages.
+
+[Paragraph 2: Body 1 - Disadvantages]
+On the one hand, the main drawback of [Trend] is [Disadvantage]. This is because [Explanation]. As a result, [Consequence].
+
+[Paragraph 3: Body 2 - Advantages]
+On the other hand, [Trend] offers significant advantages, primarily in terms of [Advantage 1] and [Advantage 2]. Firstly, [Explanation of Advantage 1]. Secondly, [Explanation of Advantage 2]. For example, [Example].
+
+[Paragraph 4: Conclusion]
+In conclusion, while [Summary of Disadvantage], the convenience and savings provided by [Trend] make it a positive development overall.`,
+        sampleEssay: `In recent years, shopping on the internet has become increasingly popular around the world. Although this trend presents some drawbacks for physical shopkeepers, I believe the advantages of convenience and lower prices far outweigh the disadvantages.
+
+On the one hand, the main drawback of online shopping is the negative impact on local physical stores. When customers order products from home, traditional high-street shops lose customers and may be forced to close down. As a result, shop employees lose their jobs, and city centers become empty and quiet.
+
+On the other hand, online shopping offers unmatched convenience and financial savings for consumers. Firstly, people can purchase clothes, electronics, and groceries 24 hours a day from the comfort of their homes without traveling or waiting in long checkout queues. Secondly, online retailers usually offer lower prices because they do not have to pay expensive shop rent or high utility bills. For example, popular online platforms frequently provide discount codes and free home delivery, making products much more affordable.
+
+In conclusion, while online shopping creates challenges for traditional brick-and-mortar stores, the convenience, time savings, and lower prices for everyday consumers make this trend a largely positive development.`
+      },
+      problem: {
+        title: "Problem & Solution Essay",
+        categoryLabel: "Problem & Solution",
+        questionPrompt: "Traffic congestion is becoming a major problem in many large cities. What are the main causes of this issue, and what measures can be taken to solve it?",
+        structure: [
+          { para: "Paragraph 1: Introduction", details: "• Paraphrase the problem.\n• State the primary cause and the key solutions." },
+          { para: "Paragraph 2: Body 1 (Causes)", details: "• Topic sentence stating main cause (overuse of private cars).\n• Explain unreliable public transport.\n• Describe resulting gridlock during peak hours." },
+          { para: "Paragraph 3: Body 2 (Solutions)", details: "• Topic sentence introducing solutions.\n• Solution 1: Upgrade public transport (buses & subways).\n• Solution 2: Introduce congestion charges in downtown areas." },
+          { para: "Paragraph 4: Conclusion", details: "• Summarize cause & solutions.\n• Final positive statement." }
+        ],
+        template: `[Paragraph 1: Introduction]
+[Problem] has become a major challenge in many modern societies. The primary cause of this problem is [Main Cause], but it can be effectively resolved through [Solution 1] and [Solution 2].
+
+[Paragraph 2: Body 1 - Causes]
+To begin with, the main reason for [Problem] is [Cause 1]. This occurs because [Explanation]. For example, [Example]. Consequently, [Result].
+
+[Paragraph 3: Body 2 - Solutions]
+To address this issue, governments and authorities must take concrete steps. Firstly, [Solution 1]. This would encourage people to [Benefit]. Secondly, [Solution 2]. For instance, [Example of Solution 2].
+
+[Paragraph 4: Conclusion]
+In conclusion, although [Problem] is a serious issue caused by [Main Cause], it can be tackled if governments invest in [Solution 1] and enforce [Solution 2].`,
+        sampleEssay: `Traffic congestion has become a major challenge in almost every large city today. The primary cause of this problem is the overreliance on private cars, but it can be effectively resolved through government investment in public transport and congestion pricing.
+
+To begin with, the main reason for severe traffic jams is that too many people rely on personal cars for daily commuting. In many cities, public transportation such as buses and trains is unreliable, uncomfortable, or slow. As a result, commuters prefer driving their own vehicles. For example, during morning and evening peak hours, thousands of private cars flood the main roads, resulting in gridlock, long travel delays, and high air pollution.
+
+To address this issue, governments must take concrete action. Firstly, authorities should upgrade public transport systems by building modern subways and dedicated bus lanes. When public transport is fast, affordable, and clean, people will naturally leave their cars at home. Secondly, city councils can introduce congestion charges for private cars entering downtown areas during peak hours. For instance, cities like London and Singapore have successfully reduced traffic by charging drivers a fee to enter busy business districts.
+
+In conclusion, traffic congestion is primarily caused by excessive private vehicle use. However, this problem can be controlled if governments provide reliable public transportation and restrict car access in congested areas.`
+      },
+      twopart: {
+        title: "Two-Part Question Essay",
+        categoryLabel: "Two-Part Direct Question",
+        questionPrompt: "Many people prefer to live in big cities. Why do people choose to live in cities, and what challenges do city dwellers face?",
+        structure: [
+          { para: "Paragraph 1: Introduction", details: "• Paraphrase the trend.\n• Directly answer Question 1 (job/education opportunities) and Question 2 (high living costs & pollution)." },
+          { para: "Paragraph 2: Body 1 (Question 1 Answer)", details: "• Topic sentence giving reasons for moving to cities.\n• Explain better career growth and salaries.\n• Explain better healthcare, universities, and entertainment." },
+          { para: "Paragraph 3: Body 2 (Question 2 Answer)", details: "• Topic sentence stating challenges faced.\n• Explain high rent and daily expenses.\n• Explain air/noise pollution and daily stress." },
+          { para: "Paragraph 4: Conclusion", details: "• Summarize answers to both questions in 1-2 sentences." }
+        ],
+        template: `[Paragraph 1: Introduction]
+Nowadays, [Paraphrase Trend]. People choose to [Answer Question 1], but they often face challenges such as [Answer Question 2].
+
+[Paragraph 2: Body 1 - Question 1]
+There are two main reasons why people [Question 1 Topic]. Firstly, [Reason 1]. This is because [Explanation]. Secondly, [Reason 2]. For example, [Example].
+
+[Paragraph 3: Body 2 - Question 2]
+However, living in [Topic] brings significant challenges. The primary difficulty is [Challenge 1]. In addition, [Challenge 2]. For instance, [Example].
+
+[Paragraph 4: Conclusion]
+In conclusion, while people [Summary of Q1 Answers], they must deal with [Summary of Q2 Challenges].`,
+        sampleEssay: `Nowadays, an increasing number of people choose to move to major cities. People relocate to urban areas primarily for better job and education opportunities, but they often face challenges such as high living costs and environmental pollution.
+
+There are two main reasons why people prefer living in big cities. Firstly, major cities offer superior career opportunities and higher salaries compared to rural towns. Global companies and major businesses are concentrated in urban centers, giving job seekers better career growth. Secondly, cities provide higher-quality public services, including top-ranked universities, specialized hospitals, and modern entertainment facilities like museums and shopping malls. For example, young adults often move to capital cities to attend university and build professional networks.
+
+However, city dwellers face significant daily challenges. The primary difficulty is the high cost of living, especially expensive apartment rent and daily food prices. Many young professionals spend more than half of their income on housing alone. In addition, urban residents suffer from severe air and noise pollution caused by heavy traffic and factories. For instance, breathing polluted city air daily can lead to health problems such as asthma and stress.
+
+In conclusion, while people move to big cities to secure better jobs and enjoy modern amenities, they must contend with expensive housing and environmental pollution.`
+      }
+    };
+
     let currentStudentWritingCategory = 'all';
     let currentSelectedPromptId = null;
 
@@ -7938,6 +8104,117 @@
       }
     }
 
+    let currentWritingViewMode = 'prompts';
+
+    function switchWritingViewMode(mode) {
+      currentWritingViewMode = mode;
+      const btnPrompts = document.getElementById('sw-mode-prompts');
+      const btnSamples = document.getElementById('sw-mode-samples');
+      const grid = document.getElementById('studentWritingPromptsGrid');
+      const filters = document.getElementById('studentWritingFilters');
+      const samplesView = document.getElementById('studentWritingSamplesView');
+
+      if (mode === 'prompts') {
+        if (btnPrompts) btnPrompts.className = "px-4 py-2 text-xs font-extrabold rounded-xl bg-[#7a2331] text-white shadow-xs transition";
+        if (btnSamples) btnSamples.className = "px-4 py-2 text-xs font-extrabold rounded-xl bg-white border border-[#e5ded0] text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-1.5";
+        if (grid) grid.classList.remove('hidden');
+        if (filters) filters.classList.remove('hidden');
+        if (samplesView) samplesView.classList.add('hidden');
+      } else {
+        if (btnPrompts) btnPrompts.className = "px-4 py-2 text-xs font-extrabold rounded-xl bg-white border border-[#e5ded0] text-[#5c5648] hover:bg-[#f3ecd8] transition flex items-center gap-1.5";
+        if (btnSamples) btnSamples.className = "px-4 py-2 text-xs font-extrabold rounded-xl bg-[#7a2331] text-white shadow-xs transition";
+        if (grid) grid.classList.add('hidden');
+        if (filters) filters.classList.add('hidden');
+        if (samplesView) {
+          samplesView.classList.remove('hidden');
+          renderWritingSampleEssays();
+        }
+      }
+    }
+
+    function renderWritingSampleEssays() {
+      const samplesView = document.getElementById('studentWritingSamplesView');
+      if (!samplesView) return;
+
+      const keys = Object.keys(IELTS_SAMPLE_ESSAYS_DATA);
+      samplesView.innerHTML = `
+        <div class="bg-[#f3ecd8] border border-[#e5ded0] rounded-2xl p-4 text-xs text-[#7a2331] flex items-center justify-between gap-3">
+          <div class="flex items-center gap-2">
+            <span class="text-base">📘</span>
+            <div>
+              <strong>Band 8 Sample Essays &amp; 4-Paragraph Templates</strong>
+              <p class="text-[11px] text-[#766f62] mt-0.5">Written in simple, clear, easy-to-understand English. Study the paragraph structures and adapt the templates for your practice.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          ${keys.map(k => {
+            const d = IELTS_SAMPLE_ESSAYS_DATA[k];
+            return `
+              <div class="bg-white border border-[#ece4d2] rounded-2xl p-6 shadow-sm space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#ece4d2] pb-3">
+                  <div>
+                    <span class="px-2.5 py-0.5 rounded text-[9px] font-black uppercase bg-[#efe6d0] text-[#7a2331]">${d.categoryLabel}</span>
+                    <h3 class="text-lg font-black text-[#1c1a17] mt-1">${d.title}</h3>
+                  </div>
+                  <span class="px-3 py-1 bg-emerald-700 text-white font-extrabold text-xs rounded-xl shadow-xs shrink-0">Band 8.0 Model</span>
+                </div>
+
+                <div class="p-3 bg-[#faf8f3] border border-[#ece4d2] rounded-xl text-xs">
+                  <strong class="text-[10px] font-extrabold text-[#8a8171] uppercase block mb-1">Official Sample Prompt:</strong>
+                  <p class="font-bold text-[#1c1a17]">${d.questionPrompt}</p>
+                </div>
+
+                <!-- 4-Paragraph Blueprint -->
+                <div class="bg-white border border-[#e5ded0] rounded-xl p-4 space-y-2">
+                  <h4 class="text-xs font-extrabold text-[#7a2331] uppercase tracking-wider">🧱 4-Paragraph Structure Blueprint</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                    ${d.structure.map(s => `
+                      <div class="p-3 bg-[#faf8f2] rounded-xl border border-[#ece4d2]">
+                        <strong class="text-[#1c1a17] font-bold block mb-1">${s.para}</strong>
+                        <p class="text-[11px] text-[#766f62] whitespace-pre-line leading-relaxed">${s.details}</p>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+
+                <!-- Template Sentences -->
+                <div class="bg-white border border-[#e5ded0] rounded-xl p-4 space-y-2">
+                  <div class="flex items-center justify-between">
+                    <h4 class="text-xs font-extrabold text-[#7a2331] uppercase tracking-wider">📋 Fill-in-the-Blank Sentence Template</h4>
+                    <button onclick="navigator.clipboard.writeText(\`${d.template.replace(/`/g, '\\`')}\`); alert('Template copied to clipboard! ✓');" class="text-[10px] font-bold text-[#7a2331] hover:underline">📋 Copy Template</button>
+                  </div>
+                  <pre class="p-3 bg-[#1c1a17] text-amber-200 rounded-xl text-[11px] font-mono whitespace-pre-wrap leading-relaxed overflow-x-auto">${d.template}</pre>
+                </div>
+
+                <!-- Full Band 8 Model Essay -->
+                <div class="bg-white border border-[#e5ded0] rounded-xl p-4 space-y-2">
+                  <h4 class="text-xs font-extrabold text-emerald-800 uppercase tracking-wider">📝 Complete Band 8 Sample Essay (Simple Language)</h4>
+                  <div class="p-4 bg-[#eef9f3] border border-emerald-200 rounded-xl text-xs font-sans leading-relaxed text-emerald-950 whitespace-pre-wrap">
+                    ${d.sampleEssay}
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
+    }
+
+    function toggleModalSampleGuide() {
+      const content = document.getElementById('modal-sample-guide-content');
+      const chevron = document.getElementById('modal-sample-chevron');
+      if (!content) return;
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        if (chevron) chevron.textContent = '▲ Hide Guide';
+      } else {
+        content.classList.add('hidden');
+        if (chevron) chevron.textContent = '▼ Show Guide';
+      }
+    }
+
     function openStudentEssayModal(promptId) {
       currentSelectedPromptId = promptId;
       const p = IELTS_50_ESSAY_PROMPTS.find(x => x.id === promptId);
@@ -7945,6 +8222,30 @@
 
       document.getElementById('sem-category').textContent = p.categoryLabel + ' (' + p.type + ')';
       document.getElementById('sem-prompt').textContent = p.prompt;
+
+      // Populate collapsible sample essay & template guide inside modal
+      const guideBox = document.getElementById('modal-sample-guide-content');
+      if (guideBox && p.category && IELTS_SAMPLE_ESSAYS_DATA[p.category]) {
+        const sampleData = IELTS_SAMPLE_ESSAYS_DATA[p.category];
+        guideBox.innerHTML = `
+          <div class="space-y-3">
+            <div class="flex items-center justify-between border-b border-[#ece4d2] pb-2">
+              <span class="text-xs font-black text-[#7a2331] uppercase">${sampleData.title}</span>
+              <span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[10px] font-bold rounded">Band 8.0 Model Essay</span>
+            </div>
+
+            <div class="p-3 bg-white rounded-xl border border-[#ece4d2]">
+              <strong class="text-[10px] font-extrabold text-[#8a8171] uppercase block mb-1">Fill-in-the-Blank Sentence Template:</strong>
+              <pre class="text-[10px] font-mono text-amber-950 whitespace-pre-wrap bg-[#fffdf5] p-2.5 rounded-lg border border-[#e5ded0] leading-relaxed">${sampleData.template}</pre>
+            </div>
+
+            <div class="p-3 bg-[#eef9f3] rounded-xl border border-emerald-200">
+              <strong class="text-[10px] font-extrabold text-emerald-800 uppercase block mb-1">Simple Band 8 Model Essay:</strong>
+              <div class="text-xs text-emerald-950 whitespace-pre-wrap leading-relaxed">${sampleData.sampleEssay}</div>
+            </div>
+          </div>
+        `;
+      }
 
       const submissions = getAllWritingSubmissions();
       const currentStudentId = localStorage.getItem('viatestprep_student_id') || 'demo_student';
@@ -8366,6 +8667,17 @@
         <div class="p-4 bg-white border border-[#ece4d2] rounded-2xl shadow-xs">
           <span class="text-[10px] font-extrabold text-[#8a8171] uppercase tracking-wider">Official Prompt</span>
           <p id="sem-prompt" class="text-sm font-bold text-[#1c1a17] mt-1 leading-relaxed"></p>
+        </div>
+
+        <!-- Collapsible Band 8 Sample Essay & Template Guide Accordion -->
+        <div class="border border-[#e5ded0] rounded-2xl bg-white overflow-hidden shadow-xs">
+          <button type="button" onclick="toggleModalSampleGuide()" class="w-full p-3.5 bg-[#f8f5ee] hover:bg-[#efe6d0] text-left text-xs font-bold text-[#7a2331] flex items-center justify-between transition">
+            <span class="flex items-center gap-2"><span>💡</span> <strong>Need Help? View Simple Template &amp; Band 8 Sample Essay</strong></span>
+            <span id="modal-sample-chevron" class="text-xs font-black">▼ Show Guide</span>
+          </button>
+          <div id="modal-sample-guide-content" class="hidden p-4 space-y-4 text-xs border-t border-[#ece4d2] bg-[#faf8f3]">
+            <!-- JS populates sample essay & template -->
+          </div>
         </div>
 
         <div>
