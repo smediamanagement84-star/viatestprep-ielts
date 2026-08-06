@@ -1011,8 +1011,16 @@
         <span class="font-serif text-lg font-bold">ViATestPrep Student Hub</span>
       </div>
       <div class="flex items-center gap-3">
-        <span class="text-xs font-bold text-[#8a8171]">Bypass Lock Active</span>
-        <button onclick="handleLogout()" class="text-xs font-bold text-[#7a2331] bg-[#f3ecd8] px-3 py-1.5 rounded-lg hover:bg-[#efe0c3]">Logout</button>
+        <div id="studentHeaderProfileBadge" class="flex items-center gap-2.5 bg-[#f8f5ee] border border-[#e5ded0] px-3 py-1.5 rounded-xl shadow-xs">
+          <div id="studentHeaderAvatar" class="w-7 h-7 rounded-full bg-[#7a2331] text-white flex items-center justify-center text-xs font-black font-serif shadow-inner">
+            S
+          </div>
+          <div class="flex flex-col text-left">
+            <span id="studentHeaderName" class="text-xs font-extrabold text-[#1c1a17]">Student Account</span>
+            <span id="studentHeaderMeta" class="text-[9px] font-bold text-[#7a2331]">Active Student</span>
+          </div>
+        </div>
+        <button onclick="handleLogout()" class="text-xs font-bold text-[#7a2331] bg-[#f3ecd8] hover:bg-[#efe0c3] border border-[#e5ded0] px-3.5 py-1.5 rounded-xl transition">Logout</button>
       </div>
     </header>
 
@@ -1060,7 +1068,7 @@
         <!-- Student Tab 1: Skill Builder Vault -->
         <div id="student-vault-view" class="student-subview space-y-6">
           <div>
-            <h2 class="text-2xl font-extrabold">Skill-Builder Vault</h2>
+            <h2 id="studentWelcomeHeroHeading" class="text-2xl font-extrabold text-[#1c1a17]">Skill-Builder Vault</h2>
             <p class="text-xs text-[#766f62] mt-1">Review core lessons, worksheets, and templates. Mark items complete to track your target-score readiness.</p>
           </div>
 
@@ -4015,10 +4023,74 @@
       window.history.replaceState({}, document.title, window.location.pathname);
     }
 
+    function updateStudentHeaderProfileUI() {
+      const activeName = (localStorage.getItem('viatestprep_active_student_name') || '').trim();
+      const userEmail = (localStorage.getItem('userEmail') || '').trim();
+      const studentId = (localStorage.getItem('viatestprep_active_student_id') || '').trim();
+      const accessLevel = localStorage.getItem('viatestprep_student_access') || 'full';
+
+      let displayName = '';
+      let displayMeta = '';
+      let initials = '';
+
+      if (studentId === 'demo-bypass-student-id' || userEmail === 'admin@viatestprep.local') {
+        displayName = activeName || 'Demo Student';
+        displayMeta = '🔑 Dev QA Bypass Mode';
+        initials = 'DS';
+      } else {
+        if (activeName) {
+          displayName = activeName;
+        } else if (userEmail) {
+          const parts = userEmail.split('@')[0].split(/[._-]/);
+          displayName = parts.map(p => p.charAt(0).toUpperCase() + p.slice(1)).join(' ');
+        } else {
+          displayName = 'Student Account';
+        }
+
+        // Match student profile in local crmStudents roster if available
+        try {
+          const crmStudents = JSON.parse(localStorage.getItem('viatestprep_students') || '[]');
+          const match = crmStudents.find(s => s.id === studentId || (s.email && s.email.toLowerCase() === userEmail.toLowerCase()));
+          if (match) {
+            if (match.name) displayName = match.name;
+            const pkgLabel = accessLevel === 'mocks' ? 'Mock Pack' : 'Full Packet';
+            displayMeta = match.target ? `Target Band ${match.target}+ · ${pkgLabel}` : `Enrolled Student · ${pkgLabel}`;
+          } else {
+            displayMeta = `Enrolled Student · ${accessLevel === 'mocks' ? 'Mock Pack' : 'Full Packet'}`;
+          }
+        } catch (e) {
+          displayMeta = `Enrolled Student · ${accessLevel === 'mocks' ? 'Mock Pack' : 'Full Packet'}`;
+        }
+
+        const words = displayName.split(' ').filter(Boolean);
+        if (words.length >= 2) {
+          initials = (words[0][0] + words[1][0]).toUpperCase();
+        } else if (words.length === 1) {
+          initials = words[0].substring(0, 2).toUpperCase();
+        } else {
+          initials = 'ST';
+        }
+      }
+
+      const nameEl = document.getElementById('studentHeaderName');
+      const metaEl = document.getElementById('studentHeaderMeta');
+      const avatarEl = document.getElementById('studentHeaderAvatar');
+      const welcomeHeading = document.getElementById('studentWelcomeHeroHeading');
+
+      if (nameEl) nameEl.textContent = displayName;
+      if (metaEl) metaEl.textContent = displayMeta;
+      if (avatarEl) avatarEl.textContent = initials;
+      if (welcomeHeading) {
+        const firstName = displayName.split(' ')[0] || 'Student';
+        welcomeHeading.textContent = `Welcome back, ${firstName}! 👋`;
+      }
+    }
+
     // ==========================================
     // VIEW 2: STUDENT PORTAL RENDER ENGINE
     // ==========================================
     function initStudentPortal() {
+      updateStudentHeaderProfileUI();
       // Identity comes from viatestprep_active_student_id, set once by
       // attemptStudentTokenLogin() when the student opened their own private
       // "?student=<token>" link (see DOMContentLoaded). This used to try to
