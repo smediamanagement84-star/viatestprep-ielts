@@ -283,6 +283,19 @@
   .w-ok { color: var(--green); font-weight: 700; text-decoration: underline; text-decoration-color: rgba(22, 163, 74, 0.4); }
   .w-warn { color: var(--amber); font-weight: 700; }
   .w-err { color: var(--red); font-weight: 700; text-decoration: line-through; }
+
+  /* ── PTE MODULE NAV + SKILL MAP ── */
+  .pte-modnav { display:flex; gap:8px; flex-wrap:wrap; margin: 0 0 16px; }
+  .pte-modnav a { font-size:12px; font-weight:700; text-decoration:none; color:var(--text-2); border:1px solid var(--border); background:var(--surface); padding:6px 14px; border-radius:20px; transition:all .2s ease; }
+  .pte-modnav a:hover { border-color:var(--border-hi); }
+  .pte-modnav a.cur { background:var(--text-1); color:#fff; border-color:var(--text-1); }
+  .skillmap { background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:16px 18px; margin:0 0 18px; }
+  .skillmap h3 { font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--text-3); margin-bottom:4px; }
+  .skillmap p { font-size:12px; color:var(--text-3); margin-bottom:10px; line-height:1.5; }
+  .sm-row { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:7px 0; border-top:1px solid var(--border); font-size:13px; color:var(--text-1); flex-wrap:wrap; }
+  .sm-tags { display:flex; gap:6px; flex-wrap:wrap; }
+  .sm-tag { font-size:10px; font-weight:800; letter-spacing:.04em; text-transform:uppercase; padding:3px 9px; border-radius:20px; border:1px solid var(--border); color:var(--text-2); background:var(--bg); }
+  .sm-tag.main { background:var(--amber-dim); color:var(--amber); border-color:rgba(217,119,6,.35); }
 </style>
   <script src="theme-loader.js"></script>
 </head>
@@ -297,6 +310,19 @@
   </div>
 
   <!-- NAVIGATION TABS -->
+  <div class="pte-modnav"><a href="pte-reading.html">Reading</a><a href="pte-listening.html">Listening</a><a href="pte-writing.html">Writing</a><a href="pte-speaking.html" class="cur">Speaking</a></div>
+  <div class="skillmap">
+    <h3>Where each task scores</h3>
+    <p>Seven Speaking task types, marked on content, oral fluency and pronunciation. Four of them also feed your Listening score, so Speaking and Listening should be practised together.</p>
+    <div class="sm-row"><span>Read Aloud</span><div class="sm-tags"><span class="sm-tag main">Speaking</span><span class="sm-tag">+ Reading</span></div></div>
+    <div class="sm-row"><span>Repeat Sentence</span><div class="sm-tags"><span class="sm-tag main">Speaking</span><span class="sm-tag">+ Listening</span></div></div>
+    <div class="sm-row"><span>Describe Image</span><div class="sm-tags"><span class="sm-tag main">Speaking</span></div></div>
+    <div class="sm-row"><span>Re-tell Lecture</span><div class="sm-tags"><span class="sm-tag main">Speaking</span><span class="sm-tag">+ Listening</span></div></div>
+    <div class="sm-row"><span>Answer Short Question</span><div class="sm-tags"><span class="sm-tag main">Speaking</span><span class="sm-tag">+ Listening</span></div></div>
+    <div class="sm-row"><span>Summarise Group Discussion</span><div class="sm-tags"><span class="sm-tag main">Speaking</span><span class="sm-tag">+ Listening</span></div></div>
+    <div class="sm-row"><span>Respond to a Situation</span><div class="sm-tags"><span class="sm-tag main">Speaking</span></div></div>
+  </div>
+
   <div class="tabs" id="speakingTabs">
     <button class="tab-btn active" onclick="switchTab('ra')">Read Aloud</button>
     <button class="tab-btn" onclick="switchTab('rs')">Repeat Sentence</button>

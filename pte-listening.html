@@ -179,6 +179,19 @@
   .word-highlight-text { font-size: 15px; line-height: 1.8; color: var(--text-2); background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 16px; }
   .w-ok { color: var(--green); font-weight: 700; text-decoration: underline; text-decoration-color: rgba(22, 163, 74, 0.4); }
   .w-err { color: var(--red); font-weight: 700; text-decoration: line-through; }
+
+  /* ── PTE MODULE NAV + SKILL MAP ── */
+  .pte-modnav { display:flex; gap:8px; flex-wrap:wrap; margin: 0 0 16px; }
+  .pte-modnav a { font-size:12px; font-weight:700; text-decoration:none; color:var(--text-2); border:1px solid var(--border); background:var(--surface); padding:6px 14px; border-radius:20px; transition:all .2s ease; }
+  .pte-modnav a:hover { border-color:var(--border-hi); }
+  .pte-modnav a.cur { background:var(--text-1); color:#fff; border-color:var(--text-1); }
+  .skillmap { background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:16px 18px; margin:0 0 18px; }
+  .skillmap h3 { font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--text-3); margin-bottom:4px; }
+  .skillmap p { font-size:12px; color:var(--text-3); margin-bottom:10px; line-height:1.5; }
+  .sm-row { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:7px 0; border-top:1px solid var(--border); font-size:13px; color:var(--text-1); flex-wrap:wrap; }
+  .sm-tags { display:flex; gap:6px; flex-wrap:wrap; }
+  .sm-tag { font-size:10px; font-weight:800; letter-spacing:.04em; text-transform:uppercase; padding:3px 9px; border-radius:20px; border:1px solid var(--border); color:var(--text-2); background:var(--bg); }
+  .sm-tag.main { background:var(--amber-dim); color:var(--amber); border-color:rgba(217,119,6,.35); }
 </style>
   <script src="theme-loader.js"></script>
 </head>
@@ -193,6 +206,20 @@
   </div>
 
   <!-- NAVIGATION TABS -->
+  <div class="pte-modnav"><a href="pte-reading.html">Reading</a><a href="pte-listening.html" class="cur">Listening</a><a href="pte-writing.html">Writing</a><a href="pte-speaking.html">Speaking</a></div>
+  <div class="skillmap">
+    <h3>Where each task scores</h3>
+    <p>Eight Listening task types. Four of them also lift your Writing or Reading score, so Listening practice pays off twice. Repeat Sentence, Re-tell Lecture, Answer Short Question and Summarise Group Discussion feed Listening from the Speaking module.</p>
+    <div class="sm-row"><span>Summarise Spoken Text</span><div class="sm-tags"><span class="sm-tag main">Listening</span><span class="sm-tag">+ Writing</span></div></div>
+    <div class="sm-row"><span>Multiple Choice, Multiple Answers</span><div class="sm-tags"><span class="sm-tag main">Listening</span></div></div>
+    <div class="sm-row"><span>Fill in the Blanks</span><div class="sm-tags"><span class="sm-tag main">Listening</span><span class="sm-tag">+ Writing</span></div></div>
+    <div class="sm-row"><span>Highlight Correct Summary</span><div class="sm-tags"><span class="sm-tag main">Listening</span><span class="sm-tag">+ Reading</span></div></div>
+    <div class="sm-row"><span>Multiple Choice, Single Answer</span><div class="sm-tags"><span class="sm-tag main">Listening</span></div></div>
+    <div class="sm-row"><span>Select Missing Word</span><div class="sm-tags"><span class="sm-tag main">Listening</span></div></div>
+    <div class="sm-row"><span>Highlight Incorrect Words</span><div class="sm-tags"><span class="sm-tag main">Listening</span><span class="sm-tag">+ Reading</span></div></div>
+    <div class="sm-row"><span>Write from Dictation</span><div class="sm-tags"><span class="sm-tag main">Listening</span><span class="sm-tag">+ Writing</span></div></div>
+  </div>
+
   <div class="tabs" id="listeningTabs">
     <button class="tab-btn active" onclick="switchTab('sst')">Summarise Spoken</button>
     <button class="tab-btn" onclick="switchTab('mcqm')">MCQ Multiple</button>
@@ -201,6 +228,7 @@
     <button class="tab-btn" onclick="switchTab('hiw')">Highlight Wrong</button>
     <button class="tab-btn" onclick="switchTab('wfd')">Write Dictation</button>
     <button class="tab-btn" onclick="switchTab('mcqs')">MCQ Single</button>
+    <button class="tab-btn" onclick="switchTab('smw')">Select Missing Word</button>
   </div>
 
   <!-- 1. SUMMARISE SPOKEN TEXT -->
@@ -571,6 +599,46 @@
         <div class="avoid-item"><div class="avoid-x">✗</div><div>Answering based on general knowledge — the answer must come from the audio itself.</div></div>
         <div class="avoid-item"><div class="avoid-x">✗</div><div>Selecting the most "detailed" or "interesting" option — correct answers are usually clearly stated.</div></div>
         <div class="avoid-item"><div class="avoid-x">✗</div><div>Leaving blank — no negative marking, so always select your best option.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. SELECT MISSING WORD -->
+  <div id="panel-smw" class="panel">
+    <div class="card-block">
+      <div class="info-row">
+        <span class="info-pill teal">2–3 items</span>
+        <span class="info-pill teal">Audio 20–70 sec</span>
+        <span class="info-pill green">No negative marking</span>
+        <span class="info-pill teal">Scores: Listening</span>
+      </div>
+      <p>A recording plays once and ends with the last word or phrase replaced by a beep. You choose the option that best completes the recording. The task tests whether you can follow the topic, the speaker's logic and the tone right up to the final beat.</p>
+
+      <span class="label green">How To Attempt — Step By Step</span>
+      <div class="step-list">
+        <div class="step-item"><div class="step-num">1</div><div class="step-body"><div class="step-title">Read ALL options before the audio starts</div><div class="step-desc">The options show the topic and the possible directions. Notice how they differ: meaning, tone (positive or negative) or grammar form.</div></div></div>
+        <div class="step-item"><div class="step-num">2</div><div class="step-body"><div class="step-title">Track the argument, not the details</div><div class="step-desc">Listen for the speaker's direction: problem leading to solution, cause leading to effect, or a list that is about to finish. The last idea is the one you need to complete.</div></div></div>
+        <div class="step-item"><div class="step-num">3</div><div class="step-body"><div class="step-title">Predict the missing word at the beep</div><div class="step-desc">Before you look at the options again, decide what kind of word fits: a noun, a result, a contrast. Then match it to the closest option.</div></div></div>
+        <div class="step-item"><div class="step-num">4</div><div class="step-body"><div class="step-title">Eliminate and commit</div><div class="step-desc">Remove options that repeat an earlier idea, contradict the speaker's tone, or break the grammar of the last sentence. Pick the best remaining option.</div></div></div>
+      </div>
+
+      <span class="label teal">What The Ending Usually Looks Like</span>
+      <div class="score-table">
+        <div class="st-row"><div class="st-cell head field">ENDING TYPE</div><div class="st-cell head">HOW TO SPOT IT</div></div>
+        <div class="st-row"><div class="st-cell field">Conclusion</div><div class="st-cell">Signals like "therefore", "as a result", "in conclusion": the missing words close the argument</div></div>
+        <div class="st-row"><div class="st-cell field">Contrast</div><div class="st-cell">"However", "on the other hand", "but": the missing words go against the previous point</div></div>
+        <div class="st-row"><div class="st-cell field">List</div><div class="st-cell">Two items already given: the missing word is the third item of the same type</div></div>
+        <div class="st-row"><div class="st-cell field">Collocation</div><div class="st-cell">The beep follows a verb or adjective that needs a natural partner (make a ___ / heavily ___)</div></div>
+      </div>
+
+      <div class="callout teal"><strong>No negative marking = always answer.</strong> If you missed the ending, choose the option that matches the topic and tone of the whole recording.</div>
+
+      <span class="label red">What To Avoid</span>
+      <div class="avoid-box">
+        <div class="avoid-label">MISTAKES</div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Choosing an option that only repeats a word you heard recently: it fits the sound but not the meaning.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Ignoring the tone: a positive speaker will not end on a negative option.</div></div>
+        <div class="avoid-item"><div class="avoid-x">✗</div><div>Still thinking about the previous question when the next audio starts: reset after every item.</div></div>
       </div>
     </div>
   </div>

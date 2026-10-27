@@ -321,6 +321,19 @@
     font-weight: 700;
     border: 1px solid rgba(217,119,6,0.15);
   }
+
+  /* ── PTE MODULE NAV + SKILL MAP ── */
+  .pte-modnav { display:flex; gap:8px; flex-wrap:wrap; margin: 0 0 16px; }
+  .pte-modnav a { font-size:12px; font-weight:700; text-decoration:none; color:var(--text-2); border:1px solid var(--border); background:var(--surface); padding:6px 14px; border-radius:20px; transition:all .2s ease; }
+  .pte-modnav a:hover { border-color:var(--border-hi); }
+  .pte-modnav a.cur { background:var(--text-1); color:#fff; border-color:var(--text-1); }
+  .skillmap { background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:16px 18px; margin:0 0 18px; }
+  .skillmap h3 { font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--text-3); margin-bottom:4px; }
+  .skillmap p { font-size:12px; color:var(--text-3); margin-bottom:10px; line-height:1.5; }
+  .sm-row { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:7px 0; border-top:1px solid var(--border); font-size:13px; color:var(--text-1); flex-wrap:wrap; }
+  .sm-tags { display:flex; gap:6px; flex-wrap:wrap; }
+  .sm-tag { font-size:10px; font-weight:800; letter-spacing:.04em; text-transform:uppercase; padding:3px 9px; border-radius:20px; border:1px solid var(--border); color:var(--text-2); background:var(--bg); }
+  .sm-tag.main { background:var(--amber-dim); color:var(--amber); border-color:rgba(217,119,6,.35); }
 </style>
   <script src="theme-loader.js"></script>
 </head>
@@ -335,6 +348,14 @@
   </div>
 
   <!-- NAVIGATION TABS -->
+  <div class="pte-modnav"><a href="pte-reading.html">Reading</a><a href="pte-listening.html">Listening</a><a href="pte-writing.html" class="cur">Writing</a><a href="pte-speaking.html">Speaking</a></div>
+  <div class="skillmap">
+    <h3>Where each task scores</h3>
+    <p>Two scored Writing tasks in PTE Academic. Write Email is a PTE Core task and is kept here as optional practice only. Write from Dictation, Summarise Spoken Text and Listening Fill in the Blanks feed Writing from the Listening module.</p>
+    <div class="sm-row"><span>Summarise Written Text</span><div class="sm-tags"><span class="sm-tag main">Writing</span><span class="sm-tag">+ Reading</span></div></div>
+    <div class="sm-row"><span>Write Essay</span><div class="sm-tags"><span class="sm-tag main">Writing</span></div></div>
+  </div>
+
   <div class="tabs" id="writingTabs">
     <button class="tab-btn active" onclick="switchTab('swt')">Summarise Written Text</button>
     <button class="tab-btn" onclick="switchTab('we')">Write Essay</button>

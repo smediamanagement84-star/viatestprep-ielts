@@ -1080,6 +1080,7 @@
                 <button onclick="selectStudentTrack('ielts-7.0')" id="st-opt-ielts70" class="px-3 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-xs font-bold rounded-lg transition">IELTS 7.0</button>
                 <button onclick="selectStudentTrack('ielts-7.5')" id="st-opt-ielts75" class="px-3 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-xs font-bold rounded-lg transition">IELTS 7.5+</button>
                 <button onclick="selectStudentTrack('ukvi')" id="st-opt-ukvi" class="px-3 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-xs font-bold rounded-lg transition">UKVI GT Track</button>
+                <button onclick="selectStudentTrack('pte')" id="st-opt-pte" class="px-3 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-xs font-bold rounded-lg transition">PTE Academic</button>
               </div>
             </div>
 
@@ -1121,6 +1122,7 @@
               <button onclick="filterVaultTag('core')" id="v-tag-core" class="v-tag-btn px-3 py-1.5 bg-white hover:bg-[#f3ecd8] border border-[#e5ded0] text-xs font-bold rounded-lg text-[#5c5648] transition">Core</button>
               <button onclick="filterVaultTag('grammar')" id="v-tag-grammar" class="v-tag-btn px-3 py-1.5 bg-white hover:bg-[#f3ecd8] border border-[#e5ded0] text-xs font-bold rounded-lg text-[#5c5648] transition">Grammar</button>
               <button onclick="filterVaultTag('ukvi')" id="v-tag-ukvi" class="v-tag-btn px-3 py-1.5 bg-white hover:bg-[#f3ecd8] border border-[#e5ded0] text-xs font-bold rounded-lg text-[#5c5648] transition">UKVI</button>
+              <button onclick="filterVaultTag('pte')" id="v-tag-pte" class="v-tag-btn px-3 py-1.5 bg-white hover:bg-[#f3ecd8] border border-[#e5ded0] text-xs font-bold rounded-lg text-[#5c5648] transition">PTE</button>
             </div>
           </div>
 
@@ -2962,7 +2964,11 @@
       { id: '10', title: 'Vocabulary', file: '10_IELTS_Vocabulary_Accelerator.html', tags: 'grammar', tracks: ['ielts-7.5','ukvi'], desc: 'The ultimate Band 7+ word bank — 15 topic packs, function-word swaps, and collocation drills.', time: '8 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(217,119,6,0.08);color:#d97706' },
       { id: '11', title: 'GT Reading', file: 'UKVI_GT_Reading_Module.html', tags: 'ukvi', tracks: ['ukvi'], desc: 'General Training Reading: workplace notices, ads, and everyday texts (not Academic passages).', time: '5 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(13,138,122,0.08);color:#0d8a7a' },
       { id: '12', title: 'GT Writing Task 1', file: 'UKVI_GT_Writing_Task1_Module.html', tags: 'ukvi,writing', tracks: ['ukvi'], desc: 'General Training letter-writing: formal, semi-formal, and informal registers.', time: '5 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(91,42,134,0.08);color:#5b2a86' },
-      { id: '13', title: 'GT Writing Task 2', file: 'UKVI_Writing_Task2_Essay_Module.html', tags: 'ukvi,writing', tracks: ['ukvi'], desc: 'The GT Task 2 essay - shared with Academic, built around defending a clear thesis.', time: '6 hrs', difficulty: 'Hard', badgeStyle: 'background:rgba(91,42,134,0.08);color:#5b2a86' }
+      { id: '13', title: 'GT Writing Task 2', file: 'UKVI_Writing_Task2_Essay_Module.html', tags: 'ukvi,writing', tracks: ['ukvi'], desc: 'The GT Task 2 essay - shared with Academic, built around defending a clear thesis.', time: '6 hrs', difficulty: 'Hard', badgeStyle: 'background:rgba(91,42,134,0.08);color:#5b2a86' },
+      { id: 'P1', title: 'PTE Reading', file: 'pte-reading.html', tags: 'pte,reading', tracks: ['pte'], desc: '5 task types: R&W Fill in the Blanks, MCQ Multiple, Re-order Paragraphs, Reading FIB, MCQ Single - with a live Re-order drill.', time: '6 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(124,58,237,0.08);color:#7c3aed;border:1px solid rgba(124,58,237,0.2);' },
+      { id: 'P2', title: 'PTE Listening', file: 'pte-listening.html', tags: 'pte,listening', tracks: ['pte'], desc: 'All 8 task types incl. Summarise Spoken Text, Select Missing Word and Write from Dictation - with a dictation simulator.', time: '7 hrs', difficulty: 'Hard', badgeStyle: 'background:rgba(124,58,237,0.08);color:#7c3aed;border:1px solid rgba(124,58,237,0.2);' },
+      { id: 'P3', title: 'PTE Writing', file: 'pte-writing.html', tags: 'pte,writing', tracks: ['pte'], desc: 'Summarise Written Text and Write Essay (plus optional PTE Core Write Email) - with a structure validator.', time: '6 hrs', difficulty: 'Medium', badgeStyle: 'background:rgba(124,58,237,0.08);color:#7c3aed;border:1px solid rgba(124,58,237,0.2);' },
+      { id: 'P4', title: 'PTE Speaking', file: 'pte-speaking.html', tags: 'pte,speaking', tracks: ['pte'], desc: '7 task types from Read Aloud to Respond to a Situation and Summarise Group Discussion - with a Read Aloud simulator.', time: '9 hrs', difficulty: 'Hard', badgeStyle: 'background:rgba(124,58,237,0.08);color:#7c3aed;border:1px solid rgba(124,58,237,0.2);' },
     ];
 
     // ==========================================
@@ -4355,10 +4361,8 @@
       const moduleGroups = [
         { key: 'core', label: 'Core Modules', icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253', iconBg: 'bg-[#f3ecd8] text-[#7a2331]' },
         { key: 'grammar', label: 'Grammar & Mechanics', icon: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z', iconBg: 'bg-amber-50 text-amber-600' },
-        { key: 'ukvi', label: 'UKVI / General Training', icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z', iconBg: 'bg-teal-50 text-teal-700' }
-        // NOTE: PTE group intentionally removed - no PTE practice drills exist
-        // yet, only strategy pages, so we don't surface them as a "module" to
-        // avoid promising practice that isn't there. Re-add once built.
+        { key: 'ukvi', label: 'UKVI / General Training', icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z', iconBg: 'bg-teal-50 text-teal-700' },
+        { key: 'pte', label: 'PTE Academic', icon: 'M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z', iconBg: 'bg-violet-50 text-violet-700' }
       ];
 
       grid.innerHTML = '';
