@@ -2095,6 +2095,28 @@
   </div>
 
   <!-- ========================================== -->
+  <!-- MODAL: SET NEW PASSWORD (password-reset link) -->
+  <!-- ========================================== -->
+  <div class="fixed inset-0 modal-overlay z-[60] flex items-center justify-center p-4 hidden" id="recoveryModal" role="dialog" aria-modal="true" aria-labelledby="recovery-title">
+    <div class="lp-panel rounded-3xl max-w-md w-full p-8 space-y-4" style="background:var(--paper);">
+      <div>
+        <h3 id="recovery-title" class="lp-serif text-xl font-bold" style="color:var(--ink)">Set a new password</h3>
+        <p class="text-xs lp-muted mt-1 lp-reading">Choose a new password for your account. You'll be signed in right after.</p>
+      </div>
+      <form class="space-y-3" novalidate onsubmit="event.preventDefault(); handleRecoverySubmit();">
+        <div class="relative">
+          <input type="password" id="recovery-password" name="new-password" autocomplete="new-password" placeholder="New password (min. 6 characters)" class="w-full pl-3 pr-16 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+          <button type="button" tabindex="-1" aria-label="Show password" onclick="togglePasswordVisibility('recovery-password', this)" class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] font-black uppercase lp-accent px-2 py-1">Show</button>
+        </div>
+        <input type="password" id="recovery-confirm" name="confirm-password" autocomplete="new-password" placeholder="Repeat new password" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+        <button type="submit" id="recovery-btn" class="lp-btn-primary w-full py-3 font-extrabold rounded-full text-sm transition">Save new password</button>
+      </form>
+      <p id="recovery-status" role="status" aria-live="polite" class="text-[11px] text-center min-h-[14px] lp-accent font-bold"></p>
+      <div class="text-center"><button type="button" onclick="cancelRecovery()" class="text-xs font-bold lp-accent hover:underline">Cancel</button></div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
   <!-- MODAL: ACCESS PLATFORM (ROLE SELECTION)    -->
   <!-- ========================================== -->
   <div class="fixed inset-0 modal-overlay z-50 flex items-center justify-center p-4 hidden" id="accessModal">
@@ -2136,32 +2158,14 @@
       </div>
 
       <!-- Step 2 (Student): Real account login/signup -->
-      <div class="p-8 space-y-5 hidden" id="m-step-student">
+      <div class="p-8 space-y-4 hidden" id="m-step-student">
         <div>
           <h3 class="lp-serif text-xl font-bold" style="color:var(--ink)">Student Account</h3>
-          <p class="text-xs lp-muted mt-1 lp-reading">Free for now — sign up once and your progress saves for good, across devices.</p>
+          <p class="text-xs lp-muted mt-1 lp-reading">Free for now &mdash; sign up once and your progress saves for good, across devices.</p>
         </div>
 
-        <div class="flex p-1 rounded-xl gap-1" style="background:var(--lp-gold-soft)">
-          <button type="button" onclick="setStudentAuthMode('signup')" id="m-student-tab-signup" class="flex-1 py-2 text-xs font-black rounded-lg transition">Create Free Account</button>
-          <button type="button" onclick="setStudentAuthMode('login')" id="m-student-tab-login" class="flex-1 py-2 text-xs font-black rounded-lg transition">Log In</button>
-        </div>
-
-        <div class="space-y-3">
-          <input type="text" id="m-student-name" placeholder="Full name" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
-          <input type="email" id="m-student-auth-email" required placeholder="Email address" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
-          <input type="password" id="m-student-auth-password" required placeholder="Password (min. 6 characters)" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
-        </div>
-
-        <button onclick="handleStudentAuthSubmit()" id="m-student-auth-btn" class="lp-btn-primary w-full py-3 font-extrabold rounded-full text-sm transition">Create Free Account</button>
-
-        <div class="flex items-center my-3">
-          <div class="flex-grow border-t border-[#ece4d2]"></div>
-          <span class="px-3 text-[10px] uppercase font-bold text-[#8a8171]">or</span>
-          <div class="flex-grow border-t border-[#ece4d2]"></div>
-        </div>
-
-        <button onclick="signInWithGoogle('student')" class="w-full py-2.5 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-xs font-bold rounded-full transition flex items-center justify-center gap-2 text-[#1c1a17] shadow-sm">
+        <div id="m-student-main" class="space-y-4">
+          <button type="button" onclick="signInWithGoogle('student')" class="w-full py-3 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-sm font-bold rounded-full transition flex items-center justify-center gap-2 text-[#1c1a17] shadow-sm">
           <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
             <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
             <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -2170,47 +2174,68 @@
           </svg>
           Continue with Google
         </button>
-        <p id="m-student-auth-status" class="text-[11px] text-center min-h-[14px] lp-accent font-bold"></p>
+        <p id="m-student-inapp" class="hidden text-[10px] text-center lp-muted">Opened from Facebook or Instagram? Google sign-in only works in your normal browser - tap &#8943; and choose "Open in browser", or use the email option.</p>
+
+        <div class="flex items-center">
+          <div class="flex-grow border-t border-[#ece4d2]"></div>
+          <span class="px-3 text-[10px] uppercase font-bold text-[#8a8171]">or use your email</span>
+          <div class="flex-grow border-t border-[#ece4d2]"></div>
+        </div>
+
+        <div class="flex p-1 rounded-xl gap-1" style="background:var(--lp-gold-soft)">
+          <button type="button" onclick="setAuthMode('student','signup')" id="m-student-tab-signup" class="flex-1 py-2 text-xs font-black rounded-lg transition">Create Free Account</button>
+          <button type="button" onclick="setAuthMode('student','login')" id="m-student-tab-login" class="flex-1 py-2 text-xs font-black rounded-lg transition">Log In</button>
+        </div>
+
+        <form id="m-student-form" class="space-y-3" novalidate onsubmit="event.preventDefault(); handleStudentAuthSubmit();">
+          <input type="text" id="m-student-name" name="name" autocomplete="name" autocapitalize="words" placeholder="Full name (optional)" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+          <input type="email" id="m-student-auth-email" name="email" inputmode="email" autocomplete="email" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="Email address" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+          <div class="relative">
+            <input type="password" id="m-student-auth-password" name="password" autocomplete="new-password" placeholder="Password" class="w-full pl-3 pr-16 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+            <button type="button" tabindex="-1" aria-label="Show password" onclick="togglePasswordVisibility('m-student-auth-password', this)" class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] font-black uppercase lp-accent px-2 py-1">Show</button>
+          </div>
+          <p id="m-student-pw-hint" class="text-[10px] lp-muted -mt-1">At least 6 characters.</p>
+          <button type="submit" id="m-student-auth-btn" class="lp-btn-primary w-full py-3 font-extrabold rounded-full text-sm transition">Create Free Account</button>
+        </form>
+
+        <button type="button" onclick="sendMagicLink('student')" class="w-full py-2.5 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-xs font-bold rounded-full transition text-[#1c1a17]">&#9993;&#65039; Email me a login link instead &mdash; no password</button>
+
+        <p id="m-student-auth-status" role="status" aria-live="polite" class="text-[11px] text-center min-h-[14px] lp-accent font-bold"></p>
         <p id="m-student-resend-row" class="text-center text-[10px] lp-muted hidden"><button type="button" onclick="resendStudentConfirmation()" class="underline hover:no-underline">Didn't get a confirmation email? Resend it</button></p>
         <p class="text-center text-[10px] lp-muted"><button type="button" onclick="handleStudentForgotPassword()" class="underline hover:no-underline">Forgot password?</button></p>
 
-        <div class="pt-3 border-t border-[#ece4d2] text-center">
-          <span class="text-[9px] font-black uppercase tracking-widest text-[#a8792f] block mb-1.5">Dev / QA only</span>
-          <button onclick="launchStudentBypass()" class="px-3.5 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-[10px] font-extrabold rounded-lg text-[#5c5648] transition">🔑 Student Bypass</button>
+        <div class="dev-bypass-block hidden pt-3 border-t border-[#ece4d2] text-center">
+          <span class="text-[9px] font-black uppercase tracking-widest text-[#a8792f] block mb-1.5">Owner device only</span>
+          <button type="button" onclick="launchStudentBypass()" class="px-3.5 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-[10px] font-extrabold rounded-lg text-[#5c5648] transition">&#128273; Student Bypass</button>
+        </div>
+        </div>
+
+        <div id="m-student-sent" class="hidden space-y-4 text-center py-2">
+          <div class="text-4xl">&#128236;</div>
+          <h4 id="m-student-sent-title" class="lp-serif text-lg font-bold" style="color:var(--ink)">Check your inbox</h4>
+          <p id="m-student-sent-body" class="text-xs lp-muted lp-reading"></p>
+          <p class="text-[11px] lp-muted">Can't see it? Check your spam or promotions folder.</p>
+          <div class="flex flex-col gap-2">
+            <a id="m-student-sent-mail" href="https://mail.google.com" target="_blank" rel="noopener" class="hidden w-full py-2.5 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-xs font-bold rounded-full transition text-[#1c1a17]">Open Gmail</a>
+            <button type="button" id="m-student-sent-resend" onclick="resendAuthEmail('student')" class="w-full py-2.5 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-xs font-bold rounded-full transition text-[#1c1a17]">Resend email</button>
+            <button type="button" onclick="hideAuthSent('student')" class="text-xs font-bold lp-accent hover:underline">&larr; Use a different email</button>
+          </div>
         </div>
 
         <div class="text-center pt-1">
-          <button onclick="goBackToStep('role')" class="text-xs font-bold lp-accent hover:underline">← Back to selection</button>
+          <button type="button" onclick="goBackToStep('role')" class="text-xs font-bold lp-accent hover:underline">&larr; Back to selection</button>
         </div>
       </div>
 
-      <!-- Step 2 (Consultancy): Real account login/signup, before pricing -->
-      <div class="p-8 space-y-5 hidden" id="m-step-consultancy-auth">
+      <!-- Step 2 (Consultancy): Real account login/signup -->
+      <div class="p-8 space-y-4 hidden" id="m-step-consultancy-auth">
         <div>
           <h3 class="lp-serif text-xl font-bold" style="color:var(--ink)">Consultancy Account</h3>
           <p class="text-xs lp-muted mt-1 lp-reading">Log in to manage your roster, or create an account to get started.</p>
         </div>
 
-        <div class="flex p-1 rounded-xl gap-1" style="background:var(--lp-gold-soft)">
-          <button type="button" onclick="setConsultancyAuthMode('signup')" id="m-consultancy-tab-signup" class="flex-1 py-2 text-xs font-black rounded-lg transition">Create Account</button>
-          <button type="button" onclick="setConsultancyAuthMode('login')" id="m-consultancy-tab-login" class="flex-1 py-2 text-xs font-black rounded-lg transition">Log In</button>
-        </div>
-
-        <div class="space-y-3">
-          <input type="text" id="m-consultancy-name" placeholder="Consultancy name" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
-          <input type="email" id="m-consultancy-auth-email" required placeholder="Admin email address" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
-          <input type="password" id="m-consultancy-auth-password" required placeholder="Password (min. 6 characters)" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
-        </div>
-
-        <button onclick="handleConsultancyAuthSubmit()" id="m-consultancy-auth-btn" class="lp-btn-primary w-full py-3 font-extrabold rounded-full text-sm transition">Create Account</button>
-
-        <div class="flex items-center my-3">
-          <div class="flex-grow border-t border-[#ece4d2]"></div>
-          <span class="px-3 text-[10px] uppercase font-bold text-[#8a8171]">or</span>
-          <div class="flex-grow border-t border-[#ece4d2]"></div>
-        </div>
-
-        <button onclick="signInWithGoogle('consultancy')" class="w-full py-2.5 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-xs font-bold rounded-full transition flex items-center justify-center gap-2 text-[#1c1a17] shadow-sm">
+        <div id="m-consultancy-main" class="space-y-4">
+          <button type="button" onclick="signInWithGoogle('consultancy')" class="w-full py-3 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-sm font-bold rounded-full transition flex items-center justify-center gap-2 text-[#1c1a17] shadow-sm">
           <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
             <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
             <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -2219,17 +2244,56 @@
           </svg>
           Continue with Google
         </button>
-        <p id="m-consultancy-auth-status" class="text-[11px] text-center min-h-[14px] lp-accent font-bold"></p>
+        <p id="m-consultancy-inapp" class="hidden text-[10px] text-center lp-muted">Opened from Facebook or Instagram? Google sign-in only works in your normal browser - tap &#8943; and choose "Open in browser", or use the email option.</p>
+
+        <div class="flex items-center">
+          <div class="flex-grow border-t border-[#ece4d2]"></div>
+          <span class="px-3 text-[10px] uppercase font-bold text-[#8a8171]">or use your email</span>
+          <div class="flex-grow border-t border-[#ece4d2]"></div>
+        </div>
+
+        <div class="flex p-1 rounded-xl gap-1" style="background:var(--lp-gold-soft)">
+          <button type="button" onclick="setAuthMode('consultancy','signup')" id="m-consultancy-tab-signup" class="flex-1 py-2 text-xs font-black rounded-lg transition">Create Account</button>
+          <button type="button" onclick="setAuthMode('consultancy','login')" id="m-consultancy-tab-login" class="flex-1 py-2 text-xs font-black rounded-lg transition">Log In</button>
+        </div>
+
+        <form id="m-consultancy-form" class="space-y-3" novalidate onsubmit="event.preventDefault(); handleConsultancyAuthSubmit();">
+          <input type="text" id="m-consultancy-name" name="name" autocomplete="organization" autocapitalize="words" placeholder="Consultancy name" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+          <input type="email" id="m-consultancy-auth-email" name="email" inputmode="email" autocomplete="email" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="Admin email address" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+          <div class="relative">
+            <input type="password" id="m-consultancy-auth-password" name="password" autocomplete="new-password" placeholder="Password" class="w-full pl-3 pr-16 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+            <button type="button" tabindex="-1" aria-label="Show password" onclick="togglePasswordVisibility('m-consultancy-auth-password', this)" class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] font-black uppercase lp-accent px-2 py-1">Show</button>
+          </div>
+          <p id="m-consultancy-pw-hint" class="text-[10px] lp-muted -mt-1">At least 6 characters.</p>
+          <button type="submit" id="m-consultancy-auth-btn" class="lp-btn-primary w-full py-3 font-extrabold rounded-full text-sm transition">Create Account</button>
+        </form>
+
+        <button type="button" onclick="sendMagicLink('consultancy')" class="w-full py-2.5 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-xs font-bold rounded-full transition text-[#1c1a17]">&#9993;&#65039; Email me a login link instead &mdash; no password</button>
+
+        <p id="m-consultancy-auth-status" role="status" aria-live="polite" class="text-[11px] text-center min-h-[14px] lp-accent font-bold"></p>
         <p id="m-consultancy-resend-row" class="text-center text-[10px] lp-muted hidden"><button type="button" onclick="resendConsultancyConfirmation()" class="underline hover:no-underline">Didn't get a confirmation email? Resend it</button></p>
         <p class="text-center text-[10px] lp-muted"><button type="button" onclick="handleConsultancyForgotPassword()" class="underline hover:no-underline">Forgot password?</button></p>
 
-        <div class="pt-3 border-t border-[#ece4d2] text-center">
-          <span class="text-[9px] font-black uppercase tracking-widest text-[#a8792f] block mb-1.5">Dev / QA only</span>
-          <button onclick="launchAdminBypass()" class="px-3.5 py-1.5 bg-[#7a2331] hover:bg-[#5e1a25] text-[10px] font-extrabold rounded-lg text-white transition">🔑 Admin / Consultancy Bypass</button>
+        <div class="dev-bypass-block hidden pt-3 border-t border-[#ece4d2] text-center">
+          <span class="text-[9px] font-black uppercase tracking-widest text-[#a8792f] block mb-1.5">Owner device only</span>
+          <button type="button" onclick="launchAdminBypass()" class="px-3.5 py-1.5 bg-[#7a2331] hover:bg-[#5e1a25] text-[10px] font-extrabold rounded-lg text-white transition">&#128273; Admin / Consultancy Bypass</button>
+        </div>
+        </div>
+
+        <div id="m-consultancy-sent" class="hidden space-y-4 text-center py-2">
+          <div class="text-4xl">&#128236;</div>
+          <h4 id="m-consultancy-sent-title" class="lp-serif text-lg font-bold" style="color:var(--ink)">Check your inbox</h4>
+          <p id="m-consultancy-sent-body" class="text-xs lp-muted lp-reading"></p>
+          <p class="text-[11px] lp-muted">Can't see it? Check your spam or promotions folder.</p>
+          <div class="flex flex-col gap-2">
+            <a id="m-consultancy-sent-mail" href="https://mail.google.com" target="_blank" rel="noopener" class="hidden w-full py-2.5 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-xs font-bold rounded-full transition text-[#1c1a17]">Open Gmail</a>
+            <button type="button" id="m-consultancy-sent-resend" onclick="resendAuthEmail('consultancy')" class="w-full py-2.5 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-xs font-bold rounded-full transition text-[#1c1a17]">Resend email</button>
+            <button type="button" onclick="hideAuthSent('consultancy')" class="text-xs font-bold lp-accent hover:underline">&larr; Use a different email</button>
+          </div>
         </div>
 
         <div class="text-center pt-1">
-          <button onclick="goBackToStep('role')" class="text-xs font-bold lp-accent hover:underline">← Back to selection</button>
+          <button type="button" onclick="goBackToStep('role')" class="text-xs font-bold lp-accent hover:underline">&larr; Back to selection</button>
         </div>
       </div>
 
@@ -2616,27 +2680,250 @@
     let supabaseClient = null;
 
     function getOwnerKey() {
-      return localStorage.getItem('viatestprep_owner_key') || 'JW99DMjLLV9KDC4E';
+      // No built-in fallback: a key baked into public source would hand every
+      // visitor owner access. The owner's device gets its key once via
+      // ?ownerkey=... (verified server-side, then stored below).
+      return localStorage.getItem('viatestprep_owner_key') || '';
     }
 
+    // ------------------------------------------------------------------
+    // Shared auth state + helpers (student + consultancy flows)
+    // ------------------------------------------------------------------
+    // True when this page load came from a password-recovery email link.
+    // Read synchronously here, before supabase-js consumes and strips the
+    // URL hash, so the SIGNED_IN event that accompanies a recovery link can
+    // be told apart from a normal login: a recovery link must send the
+    // person to "set a new password", not silently log them in.
+    const AUTH_URL_IS_RECOVERY = /[#&?]type=recovery(&|$)/.test(window.location.hash + '&' + window.location.search);
+    let recoveryInProgress = AUTH_URL_IS_RECOVERY;
+    // Role the visitor explicitly picked during this page load. Beats any
+    // stored/guessed role, so a student-tab login never ends up as consultancy.
+    let authIntentRole = null;
+    // A valid Supabase session that has no known role yet (e.g. a login link
+    // opened on a different device). Held until the visitor picks a role.
+    let pendingAuthSession = null;
+    let lastFinishedUserId = null;
+    const emailCooldowns = {};
+    const sentState = { student: null, consultancy: null };
+
+    function authRedirectUrl() {
+      return window.location.origin + window.location.pathname;
+    }
+
+    function normalizeEmail(v) {
+      return (v || '').trim().toLowerCase();
+    }
+
+    function isValidEmail(v) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+    }
+
+    // Google refuses OAuth inside embedded webviews (Facebook, Instagram,
+    // TikTok...), which is where a lot of social-media traffic lands.
+    function isInAppBrowser() {
+      return /FBAN|FBAV|FB_IAB|Instagram|Line\/|MicroMessenger|Snapchat|TikTok|musical_ly|; wv\)/i.test(navigator.userAgent || '');
+    }
+
+    // Turns raw Supabase/network errors into something a student can act on.
+    function authFriendlyError(err) {
+      const raw = (err && (err.message || err.error_description)) || '';
+      const msg = raw.toLowerCase();
+      const code = (err && err.code) || '';
+      if (/failed to fetch|networkerror|network request failed|load failed/.test(msg)) {
+        return "Can't reach the server. Check your internet connection and try again.";
+      }
+      const secs = msg.match(/after (\d+) seconds?/);
+      if (secs) return 'Please wait ' + secs[1] + ' seconds before requesting another email.';
+      if (code === 'over_email_send_rate_limit' || /rate limit|too many requests/.test(msg)) {
+        return 'Too many emails were requested. Please wait a few minutes and try again, or continue with Google.';
+      }
+      if (/invalid login credentials/.test(msg)) {
+        return "That email and password don't match. Double-check them, or use Forgot password, a login link, or Google.";
+      }
+      if (/email not confirmed/.test(msg)) return 'Please confirm your email first - we can resend the link.';
+      if (/different from the old password|same as the old password/.test(msg)) {
+        return 'Please choose a password you have not used before.';
+      }
+      if (/password should be at least|weak password/.test(msg)) return 'Password must be at least 6 characters.';
+      if (/already registered|already been registered/.test(msg)) return 'This email is already registered - log in instead.';
+      if (/signups? not allowed|signup is disabled/.test(msg)) return 'New sign-ups are paused right now. Please contact ViaTestPrep.';
+      if (/unable to validate email|invalid email/.test(msg)) return 'That email address does not look right. Please check it.';
+      return raw || 'Something went wrong. Please try again.';
+    }
+
+    function togglePasswordVisibility(inputId, btn) {
+      const el = document.getElementById(inputId);
+      if (!el) return;
+      const show = el.type === 'password';
+      el.type = show ? 'text' : 'password';
+      if (btn) {
+        btn.textContent = show ? 'Hide' : 'Show';
+        btn.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+      }
+    }
+
+    function emailCooldownLeft(key) {
+      return Math.max(0, Math.ceil(((emailCooldowns[key] || 0) - Date.now()) / 1000));
+    }
+    function startEmailCooldown(key, secs) {
+      emailCooldowns[key] = Date.now() + (secs || 60) * 1000;
+    }
+
+    // Shows owner-only dev shortcuts (the QA bypass buttons) only on a device
+    // that has already proven it holds the owner key (via ?ownerkey=...).
+    function revealDevToolsIfAllowed() {
+      let hasKey = false;
+      try { hasKey = !!localStorage.getItem('viatestprep_owner_key'); } catch (e) {}
+      document.querySelectorAll('.dev-bypass-block').forEach(el => el.classList.toggle('hidden', !hasKey));
+    }
+
+    // ------------------------------------------------------------------
+    // "Check your inbox" panel (confirmation / login link / password reset)
+    // ------------------------------------------------------------------
+    const AUTH_SENT_COPY = {
+      confirm: {
+        title: 'Confirm your email',
+        body: (e) => 'We sent a confirmation link to ' + e + '. Open it on this device and you will be signed in automatically.',
+      },
+      link: {
+        title: 'Check your inbox',
+        body: (e) => 'We sent a login link to ' + e + '. Tap it and you will be signed in - no password needed.',
+      },
+      reset: {
+        title: 'Reset link sent',
+        body: (e) => 'If ' + e + ' has an account, a password reset link is on its way. Open it on this device to choose a new password.',
+      },
+    };
+
+    function showAuthSent(role, kind, email) {
+      sentState[role] = { kind: kind, email: email };
+      const copy = AUTH_SENT_COPY[kind];
+      const p = 'm-' + role + '-';
+      document.getElementById(p + 'sent-title').textContent = copy.title;
+      document.getElementById(p + 'sent-body').textContent = copy.body(email);
+      const mail = document.getElementById(p + 'sent-mail');
+      if (mail) mail.classList.toggle('hidden', !/@(gmail|googlemail)\.com$/i.test(email));
+      document.getElementById(p + 'main').classList.add('hidden');
+      document.getElementById(p + 'sent').classList.remove('hidden');
+      tickResendButton(role);
+    }
+
+    function hideAuthSent(role) {
+      sentState[role] = null;
+      const btn = document.getElementById('m-' + role + '-sent-resend');
+      if (btn) clearInterval(btn._t);
+      const sent = document.getElementById('m-' + role + '-sent');
+      const main = document.getElementById('m-' + role + '-main');
+      if (sent) sent.classList.add('hidden');
+      if (main) main.classList.remove('hidden');
+    }
+
+    function tickResendButton(role) {
+      const btn = document.getElementById('m-' + role + '-sent-resend');
+      const s = sentState[role];
+      if (!btn || !s) return;
+      clearInterval(btn._t);
+      const key = s.kind + ':' + s.email;
+      const update = () => {
+        const left = emailCooldownLeft(key);
+        btn.disabled = left > 0;
+        btn.textContent = left > 0 ? 'Resend in ' + left + 's' : 'Resend email';
+        if (left <= 0) clearInterval(btn._t);
+      };
+      update();
+      btn._t = setInterval(update, 1000);
+    }
+
+    async function resendAuthEmail(role) {
+      const s = sentState[role];
+      if (!s || !supabaseClient) return;
+      const key = s.kind + ':' + s.email;
+      if (emailCooldownLeft(key) > 0) return;
+      const redirectTo = authRedirectUrl();
+      let error = null;
+      try {
+        if (s.kind === 'confirm') {
+          ({ error } = await supabaseClient.auth.resend({ type: 'signup', email: s.email, options: { emailRedirectTo: redirectTo } }));
+        } else if (s.kind === 'link') {
+          ({ error } = await supabaseClient.auth.signInWithOtp({ email: s.email, options: { emailRedirectTo: redirectTo, shouldCreateUser: true, data: { role: role } } }));
+        } else {
+          ({ error } = await supabaseClient.auth.resetPasswordForEmail(s.email, { redirectTo: redirectTo }));
+        }
+      } catch (e) { error = e; }
+      if (error) {
+        showAuthNotice(authFriendlyError(error), true);
+        return;
+      }
+      startEmailCooldown(key, 60);
+      tickResendButton(role);
+      showAuthNotice('Email sent again - check your inbox and spam folder.', false);
+    }
+
+    // ------------------------------------------------------------------
+    // Google sign-in
+    // ------------------------------------------------------------------
     async function signInWithGoogle(role) {
       if (!supabaseClient) {
-        alert('Authentication service is currently offline. Please try again later.');
+        setAuthStatus(role, '❌ Sign-in service is offline. Please reload the page and try again.');
+        return;
+      }
+      if (isInAppBrowser()) {
+        setAuthStatus(role, 'Google sign-in does not work inside Facebook/Instagram. Tap ⋯ and choose "Open in browser", or use the email option below.');
         return;
       }
       try {
+        authIntentRole = role;
         localStorage.setItem('oauth_pending_role', role);
-        const { data, error } = await supabaseClient.auth.signInWithOAuth({
+        setAuthStatus(role, 'Opening Google...');
+        const { error } = await supabaseClient.auth.signInWithOAuth({
           provider: 'google',
           options: {
-            redirectTo: window.location.origin + window.location.pathname
+            redirectTo: authRedirectUrl(),
+            // Phones are often signed into several Google accounts - make
+            // sure the student picks the right one instead of auto-using
+            // whichever happens to be the default.
+            queryParams: { prompt: 'select_account' }
           }
         });
         if (error) throw error;
       } catch (err) {
         console.error('Google sign in error:', err);
-        alert('Could not initiate Google login: ' + (err.message || err));
+        setAuthStatus(role, '❌ Could not start Google sign-in: ' + authFriendlyError(err));
       }
+    }
+
+    // ------------------------------------------------------------------
+    // Session routing
+    // ------------------------------------------------------------------
+    // Decides which portal a freshly established Supabase session belongs
+    // to. Priority: what the visitor explicitly chose this page load > the
+    // portal they are already in > the role remembered across a redirect
+    // (Google / email links) > the role stored on the account itself.
+    function routeSession(session, explicitRole) {
+      const meta = (session.user && session.user.user_metadata) || {};
+      const name = meta.full_name || meta.name || '';
+      const unlocked = localStorage.getItem('viatestprep_unlocked') === 'true';
+      const storedRole = unlocked ? localStorage.getItem('viatestprep_user_role') : null;
+      const role = explicitRole || authIntentRole || storedRole || localStorage.getItem('oauth_pending_role') || meta.role || null;
+
+      const guard = (p) => Promise.resolve(p).catch(e => console.error('Sign-in could not be completed:', e));
+      if (role === 'consultancy') {
+        guard(finishConsultancySession(session, name, !!explicitRole));
+      } else if (role === 'student') {
+        guard(finishStudentSession(session, name, !!explicitRole));
+      } else if (!unlocked) {
+        askRoleForSession(session);
+      }
+      localStorage.removeItem('oauth_pending_role');
+    }
+
+    // Signed in, but we cannot tell whether this is a student or a
+    // consultancy (e.g. a login link opened on a different device than the
+    // one it was requested from). Ask once instead of guessing wrong.
+    function askRoleForSession(session) {
+      pendingAuthSession = session;
+      openAccessModal();
+      showAuthNotice('You are signed in as ' + session.user.email + '. Choose who you are to continue.', false);
     }
 
     function initSupabase() {
@@ -2644,35 +2931,87 @@
         supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
         console.log('Supabase backend client initialized.');
 
-        // Catches the case a manual signUp()/signInWithPassword() call in
-        // handleStudentAuthSubmit/handleConsultancyAuthSubmit doesn't cover:
-        // a student clicking the "confirm your email" link. That link lands
-        // the browser back on this page with an access token in the URL
-        // hash - supabase-js parses it automatically and fires SIGNED_IN
-        // here, but nothing used to listen for it, so confirming never
-        // actually created the student's row or unlocked the portal. This
-        // also acts as a general safety net for the manual-login path.
+        // Catches every way of landing back here already authenticated:
+        // confirmation links, login links, Google redirects, and password
+        // resets. Calls are deferred with setTimeout so nothing inside this
+        // callback ever awaits another supabase-js call (which can deadlock).
         supabaseClient.auth.onAuthStateChange((event, session) => {
+          if (event === 'PASSWORD_RECOVERY') {
+            setTimeout(openRecoveryModal, 0);
+            return;
+          }
+          if (event === 'SIGNED_OUT') {
+            lastFinishedUserId = null;
+            lastFinishedAuthToken = null;
+            return;
+          }
           if (event === 'SIGNED_IN' && session) {
-            let role = session.user.user_metadata && session.user.user_metadata.role;
-            if (!role) {
-              role = localStorage.getItem('oauth_pending_role');
-            }
-            
-            const name = (session.user.user_metadata && (session.user.user_metadata.full_name || session.user.user_metadata.name)) || '';
-            
-            if (role === 'consultancy') {
-              finishConsultancySession(session, name);
-            } else if (role === 'student') {
-              finishStudentSession(session, name);
-            }
-            localStorage.removeItem('oauth_pending_role');
+            // A recovery link also fires SIGNED_IN, immediately followed by
+            // PASSWORD_RECOVERY. Hold off until a new password is saved.
+            if (recoveryInProgress) return;
+            setTimeout(() => routeSession(session, null), 0);
           }
         });
       } else {
         supabaseClient = null;
         console.log('Supabase offline fallback active.');
       }
+    }
+
+    // ------------------------------------------------------------------
+    // Password recovery ("set a new password" screen)
+    // ------------------------------------------------------------------
+    function setRecoveryStatus(msg) {
+      const el = document.getElementById('recovery-status');
+      if (el) el.textContent = msg || '';
+    }
+
+    function openRecoveryModal() {
+      const m = document.getElementById('recoveryModal');
+      if (!m) return;
+      recoveryInProgress = true;
+      document.getElementById('recovery-password').value = '';
+      document.getElementById('recovery-confirm').value = '';
+      setRecoveryStatus('');
+      hideAuthNotice();
+      m.classList.remove('hidden');
+      setTimeout(() => { const f = document.getElementById('recovery-password'); if (f) f.focus(); }, 50);
+    }
+
+    async function handleRecoverySubmit() {
+      const btn = document.getElementById('recovery-btn');
+      if (btn.disabled) return;
+      const pw = document.getElementById('recovery-password').value;
+      const pw2 = document.getElementById('recovery-confirm').value;
+      if (pw.length < 6) { setRecoveryStatus('Password must be at least 6 characters.'); return; }
+      if (pw !== pw2) { setRecoveryStatus('The two passwords do not match.'); return; }
+      if (!supabaseClient) { setRecoveryStatus('❌ Service unavailable. Please reload the page.'); return; }
+      btn.disabled = true;
+      setRecoveryStatus('Saving...');
+      try {
+        const { error } = await supabaseClient.auth.updateUser({ password: pw });
+        if (error) throw error;
+        recoveryInProgress = false;
+        document.getElementById('recoveryModal').classList.add('hidden');
+        window.history.replaceState({}, document.title, window.location.pathname);
+        showAuthNotice('Password updated. You are now signed in.', false);
+        const { data } = await supabaseClient.auth.getSession();
+        if (data && data.session) routeSession(data.session, null);
+      } catch (err) {
+        console.error('Password update failed:', err);
+        setRecoveryStatus('❌ ' + authFriendlyError(err));
+      } finally {
+        btn.disabled = false;
+      }
+    }
+
+    // Backing out of a recovery link: the link already created a live
+    // session, so end it rather than leave someone half signed in.
+    async function cancelRecovery() {
+      recoveryInProgress = false;
+      document.getElementById('recoveryModal').classList.add('hidden');
+      window.history.replaceState({}, document.title, window.location.pathname);
+      try { if (supabaseClient) await supabaseClient.auth.signOut({ scope: 'local' }); } catch (e) {}
     }
 
     // Fixed top banner used to surface the outcome of an email-link landing
@@ -2714,16 +3053,21 @@
       const hashParams = new URLSearchParams(window.location.hash.replace(/^#/, ''));
       const error = hashParams.get('error') || new URLSearchParams(window.location.search).get('error');
       if (error) {
+        const expired = /otp_expired|expired|invalid/i.test((hashParams.get('error_code') || '') + ' ' + (hashParams.get('error_description') || ''));
         const description = (hashParams.get('error_description') || '').replace(/\+/g, ' ');
         showAuthNotice(
-          (description || 'That link is invalid or has expired.') + ' Please try logging in, or sign up again to get a new link.',
+          expired
+            ? 'That link has expired or was already used. Request a fresh one with "Email me a login link" or "Forgot password?".'
+            : (description || 'That link is invalid.') + ' Please try logging in, or request a new link.',
           true
         );
         window.history.replaceState({}, document.title, window.location.pathname);
         return;
       }
-      if (hashParams.has('access_token')) {
-        showAuthNotice('Confirming your account...', false);
+      // A recovery link opens the "set a new password" screen instead (see
+      // openRecoveryModal) - no "confirming" banner for it.
+      if (hashParams.has('access_token') && !AUTH_URL_IS_RECOVERY) {
+        showAuthNotice('Signing you in...', false);
       }
     }
 
@@ -2976,6 +3320,7 @@
     // ==========================================
     window.addEventListener('DOMContentLoaded', () => {
       initSupabase();
+      revealDevToolsIfAllowed();
       handleAuthRedirectFeedback();
       // NOTE: cloud roster sync intentionally does NOT run here anymore. It
       // used to run unconditionally for every single visitor (including
@@ -3265,19 +3610,33 @@
       }
     }
 
-    function handleLogout() {
-      localStorage.removeItem('viatestprep_unlocked');
-      localStorage.removeItem('viatestprep_user_role');
-      localStorage.removeItem('viatestprep_active_student_id');
-      localStorage.removeItem('viatestprep_active_student_name');
-      localStorage.removeItem('viatestprep_active_student_expires_at');
-      localStorage.removeItem('viatestprep_consultancy_id');
-      localStorage.removeItem('viatestprep_consultancy_name');
-      localStorage.removeItem('viatestprep_owner_key');
+    async function handleLogout() {
+      [
+        'viatestprep_unlocked', 'viatestprep_user_role',
+        'viatestprep_active_student_id', 'viatestprep_active_student_name',
+        'viatestprep_active_student_expires_at', 'viatestprep_student_access',
+        'viatestprep_consultancy_id', 'viatestprep_consultancy_name',
+        'viatestprep_consultancy_plan', 'viatestprep_consultancy_expires_at',
+        'viatestprep_owner_key', 'oauth_pending_role', 'userEmail'
+      ].forEach(k => localStorage.removeItem(k));
       sessionStorage.clear();
-      if (typeof supabaseClient !== 'undefined' && supabaseClient && supabaseClient.auth) {
-        try { supabaseClient.auth.signOut(); } catch(e) {}
-      }
+      // Wait for the sign-out before leaving the page. Navigating away first
+      // can abort the request, leaving the Supabase session in storage - and
+      // the next page load would simply sign the person straight back in.
+      // scope:'local' ends this device only; their other devices stay signed in.
+      try {
+        if (supabaseClient && supabaseClient.auth) {
+          await Promise.race([
+            supabaseClient.auth.signOut({ scope: 'local' }),
+            new Promise(resolve => setTimeout(resolve, 2000))
+          ]);
+        }
+      } catch (e) {}
+      try {
+        Object.keys(localStorage)
+          .filter(k => /^sb-.*-auth-token/.test(k))
+          .forEach(k => localStorage.removeItem(k));
+      } catch (e) {}
       window.location.href = window.location.origin + window.location.pathname;
     }
 
@@ -3367,12 +3726,38 @@
     }
 
     function selectModalRole(role) {
+      // A visitor who is already signed in (e.g. via a login link opened on
+      // another device) just needs to say which portal they belong to.
+      if (pendingAuthSession) {
+        const s = pendingAuthSession;
+        pendingAuthSession = null;
+        authIntentRole = role;
+        hideAuthNotice();
+        // Remember the choice on the account itself so it is never asked again.
+        try { if (supabaseClient) supabaseClient.auth.updateUser({ data: { role: role } }); } catch (e) {}
+        const meta = s.user.user_metadata || {};
+        const nm = meta.full_name || meta.name || '';
+        const done = role === 'consultancy' ? finishConsultancySession(s, nm, true) : finishStudentSession(s, nm, true);
+        Promise.resolve(done).catch(e => console.error('Sign-in could not be completed:', e));
+        return;
+      }
+
+      let returning = false;
+      try { returning = localStorage.getItem('viatestprep_returning_' + role) === '1'; } catch (e) {}
+      const mode = returning ? 'login' : 'signup';
       if (role === 'student') {
         showModalStep('m-step-role', 'm-step-student');
-        setStudentAuthMode('signup');
+        setAuthMode('student', mode);
       } else {
         showModalStep('m-step-role', 'm-step-consultancy-auth');
-        setConsultancyAuthMode('signup');
+        setAuthMode('consultancy', mode);
+      }
+      // Don't pop the keyboard on phones - it would cover the Google button.
+      if (window.matchMedia && window.matchMedia('(pointer: fine)').matches) {
+        setTimeout(() => {
+          const f = document.getElementById('m-' + role + '-auth-email');
+          if (f) f.focus();
+        }, 60);
       }
     }
 
@@ -3393,271 +3778,321 @@
     }
 
     // ==========================================
-    // STUDENT AUTH (self-serve, real Supabase Auth account)
+    // STUDENT + CONSULTANCY AUTH (real Supabase Auth accounts)
     // ==========================================
     let studentAuthMode = 'signup';
-    function setStudentAuthMode(mode) {
-      studentAuthMode = mode;
-      document.getElementById('m-student-name').classList.toggle('hidden', mode === 'login');
-      document.getElementById('m-student-tab-signup').classList.toggle('active-tab', mode === 'signup');
-      document.getElementById('m-student-tab-login').classList.toggle('active-tab', mode === 'login');
-      document.getElementById('m-student-auth-btn').textContent = mode === 'login' ? 'Log In' : 'Create Free Account';
-      setStudentAuthStatus('');
-      document.getElementById('m-student-resend-row').classList.add('hidden');
+    let consultancyAuthMode = 'signup';
+
+    function setAuthStatus(role, msg) {
+      const el = document.getElementById('m-' + role + '-auth-status');
+      if (el) el.textContent = msg || '';
     }
+    function setStudentAuthStatus(msg) { setAuthStatus('student', msg); }
+    function setConsultancyAuthStatus(msg) { setAuthStatus('consultancy', msg); }
 
-    function setStudentAuthStatus(msg) {
-      const el = document.getElementById('m-student-auth-status');
-      if (el) el.textContent = msg;
+    function setAuthMode(role, mode, keepStatus) {
+      if (role === 'student') studentAuthMode = mode; else consultancyAuthMode = mode;
+      const p = 'm-' + role + '-';
+      document.getElementById(p + 'name').classList.toggle('hidden', mode === 'login');
+      document.getElementById(p + 'tab-signup').classList.toggle('active-tab', mode === 'signup');
+      document.getElementById(p + 'tab-login').classList.toggle('active-tab', mode === 'login');
+      document.getElementById(p + 'auth-btn').textContent =
+        mode === 'login' ? 'Log In' : (role === 'student' ? 'Create Free Account' : 'Create Account');
+      // Lets password managers offer to save (signup) or fill (login).
+      document.getElementById(p + 'auth-password').setAttribute('autocomplete', mode === 'login' ? 'current-password' : 'new-password');
+      const hint = document.getElementById(p + 'pw-hint');
+      if (hint) hint.classList.toggle('hidden', mode === 'login');
+      if (!keepStatus) setAuthStatus(role, '');
+      document.getElementById(p + 'resend-row').classList.add('hidden');
+      const inapp = document.getElementById(p + 'inapp');
+      if (inapp) inapp.classList.toggle('hidden', !isInAppBrowser());
+      hideAuthSent(role);
+      // Returning visitors shouldn't have to retype their email.
+      const emailEl = document.getElementById(p + 'auth-email');
+      if (emailEl && !emailEl.value) {
+        try { emailEl.value = localStorage.getItem('viatestprep_last_email') || ''; } catch (e) {}
+      }
     }
+    function setStudentAuthMode(mode) { setAuthMode('student', mode); }
+    function setConsultancyAuthMode(mode) { setAuthMode('consultancy', mode); }
 
-    async function handleStudentAuthSubmit() {
-      if (!supabaseClient) { setStudentAuthStatus('❌ Service unavailable right now - this usually means a network/ad-blocker issue stopped a required script from loading. Please reload the page and try again.'); return; }
-      const email = document.getElementById('m-student-auth-email').value.trim();
-      const password = document.getElementById('m-student-auth-password').value;
-      if (!email || !password) { setStudentAuthStatus('Please enter your email and password.'); return; }
-
-      // Check device rate limit for student signups (max 3 signups per 15 minutes)
-      if (studentAuthMode === 'signup') {
+    // Device-level signup throttle (max 3 per 15 minutes). Only signups that
+    // actually succeed count - typos and validation errors must not burn the
+    // allowance and lock a real student out.
+    const SIGNUP_LIMIT_KEY = 'viatestprep_student_signup_attempts';
+    function recentSignups() {
+      try {
         const now = Date.now();
-        const timeframe = 15 * 60 * 1000; // 15 minutes
-        let attempts = [];
-        try {
-          attempts = JSON.parse(localStorage.getItem('viatestprep_student_signup_attempts') || '[]');
-        } catch (e) {
-          attempts = [];
-        }
-        attempts = attempts.filter(t => now - t < timeframe);
-        if (attempts.length >= 3) {
-          setStudentAuthStatus('❌ Too many signup attempts from this device. Please try again in 15 minutes.');
+        return JSON.parse(localStorage.getItem(SIGNUP_LIMIT_KEY) || '[]').filter(t => now - t < 15 * 60 * 1000);
+      } catch (e) { return []; }
+    }
+    function recordSignup() {
+      try {
+        const a = recentSignups();
+        a.push(Date.now());
+        localStorage.setItem(SIGNUP_LIMIT_KEY, JSON.stringify(a));
+      } catch (e) {}
+    }
+
+    function finishSession(role, session, name) {
+      return role === 'consultancy'
+        ? finishConsultancySession(session, name, true)
+        : finishStudentSession(session, name, true);
+    }
+
+    async function handleStudentAuthSubmit() { return handleAuthSubmit('student'); }
+    async function handleConsultancyAuthSubmit() { return handleAuthSubmit('consultancy'); }
+
+    async function handleAuthSubmit(role) {
+      const p = 'm-' + role + '-';
+      const btn = document.getElementById(p + 'auth-btn');
+      if (btn.disabled) return;
+      const mode = role === 'student' ? studentAuthMode : consultancyAuthMode;
+      if (!supabaseClient) {
+        setAuthStatus(role, '❌ Service unavailable right now - this usually means a network/ad-blocker issue stopped a required script from loading. Please reload the page and try again.');
+        return;
+      }
+      const email = normalizeEmail(document.getElementById(p + 'auth-email').value);
+      const password = document.getElementById(p + 'auth-password').value;
+      const name = (document.getElementById(p + 'name').value || '').trim();
+
+      if (!email) { setAuthStatus(role, 'Please enter your email address.'); return; }
+      if (!isValidEmail(email)) { setAuthStatus(role, 'That email address does not look right. Please check it.'); return; }
+      if (!password) { setAuthStatus(role, 'Please enter your password.'); return; }
+      if (mode === 'signup') {
+        if (password.length < 6) { setAuthStatus(role, 'Password must be at least 6 characters.'); return; }
+        if (role === 'consultancy' && !name) { setAuthStatus(role, 'Please enter your consultancy name.'); return; }
+        if (role === 'student' && recentSignups().length >= 3) {
+          setAuthStatus(role, '❌ Too many sign-ups from this device. Please try again in a few minutes - or log in if you already have an account.');
           return;
         }
-        attempts.push(now);
-        localStorage.setItem('viatestprep_student_signup_attempts', JSON.stringify(attempts));
       }
 
-      const btn = document.getElementById('m-student-auth-btn');
+      authIntentRole = role;
       btn.disabled = true;
-      const name = document.getElementById('m-student-name').value.trim();
       try {
         let session;
-        if (studentAuthMode === 'signup') {
-          setStudentAuthStatus('Creating your account...');
-          // user_metadata.role survives even if the confirmation-email path
-          // is taken (see the onAuthStateChange listener in initSupabase) -
-          // that's a separate page load with no memory of studentAuthMode.
-          // emailRedirectTo makes sure the confirmation link brings them back
-          // here rather than whatever default Site URL is set in the
-          // Supabase dashboard (must also be added to that project's
-          // Redirect URLs allowlist, or Supabase will ignore it).
+        if (mode === 'signup') {
+          setAuthStatus(role, 'Creating your account...');
+          // user_metadata.role/name survive the confirmation-email path (a
+          // separate page load with no memory of this form). emailRedirectTo
+          // brings the confirmation link back here; it must also be in the
+          // Supabase project's Redirect URLs allowlist.
           const { data, error } = await supabaseClient.auth.signUp({
             email, password,
-            options: { data: { role: 'student', name }, emailRedirectTo: window.location.origin + window.location.pathname },
+            options: { data: { role, name }, emailRedirectTo: authRedirectUrl() },
           });
           if (error) throw error;
+          if (role === 'student') recordSignup();
+          // With email confirmation on, Supabase does NOT error for an
+          // already-registered address - it returns a user with no
+          // identities and sends nothing. Without this check the person
+          // would wait forever for an email that is never coming.
+          if (data.user && Array.isArray(data.user.identities) && data.user.identities.length === 0) {
+            setAuthMode(role, 'login', true);
+            setAuthStatus(role, 'This email is already registered - log in instead, or use "Forgot password?".');
+            return;
+          }
           if (!data.session) {
-            setStudentAuthStatus('✅ Check your email to confirm your account, then log in.');
-            setStudentAuthMode('login');
-            btn.disabled = false;
+            startEmailCooldown('confirm:' + email, 60);
+            setAuthStatus(role, '');
+            showAuthSent(role, 'confirm', email);
             return;
           }
           session = data.session;
         } else {
-          setStudentAuthStatus('Logging in...');
+          setAuthStatus(role, 'Logging in...');
           const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
           if (error) throw error;
           session = data.session;
         }
 
-        await finishStudentSession(session, name);
+        await finishSession(role, session, name);
       } catch (err) {
         console.error(err);
-        // Same idea as the consultancy form: a second signup attempt on an
-        // already-registered email (e.g. after an earlier request created
-        // the auth account but failed before finishStudentSession finished)
-        // shouldn't just show a raw Supabase error - point them at Log In.
-        if (studentAuthMode === 'signup' && /already registered|already exists|user already/i.test(err.message || '')) {
-          setStudentAuthStatus('This email is already registered - log in instead.');
-          setStudentAuthMode('login');
+        const raw = (err && err.message) || '';
+        if (mode === 'login' && /email not confirmed/i.test(raw)) {
+          await resendConfirmation(role);
+        } else if (mode === 'signup' && /already registered|already exists|user already/i.test(raw)) {
+          setAuthMode(role, 'login', true);
+          setAuthStatus(role, 'This email is already registered - log in instead, or use "Forgot password?".');
         } else {
-          setStudentAuthStatus('❌ ' + (err.message || 'Something went wrong.'));
-          // A login failure could genuinely be a wrong password, but Supabase
-          // returns the same generic "Invalid login credentials" for an
-          // account that exists but was never email-confirmed - surface a
-          // way to fix that instead of leaving them stuck on a dead end.
-          if (studentAuthMode === 'login') {
-            document.getElementById('m-student-resend-row').classList.remove('hidden');
-          }
+          setAuthStatus(role, '❌ ' + authFriendlyError(err));
+          if (mode === 'login') document.getElementById(p + 'resend-row').classList.remove('hidden');
         }
+      } finally {
         btn.disabled = false;
       }
     }
 
-    async function resendStudentConfirmation() {
-      const email = document.getElementById('m-student-auth-email').value.trim();
-      if (!email) { setStudentAuthStatus('Enter your email above first, then tap resend.'); return; }
+    // Sends (or, inside the cooldown window, re-shows) the confirmation panel.
+    async function resendConfirmation(role) {
+      const email = normalizeEmail(document.getElementById('m-' + role + '-auth-email').value);
+      if (!isValidEmail(email)) { setAuthStatus(role, 'Enter your email above first, then tap resend.'); return; }
       if (!supabaseClient) return;
-      const { error } = await supabaseClient.auth.resend({ type: 'signup', email });
-      setStudentAuthStatus(error ? '❌ ' + error.message : '✅ Confirmation email sent - check your inbox (and spam folder), then log in.');
+      const key = 'confirm:' + email;
+      if (emailCooldownLeft(key) <= 0) {
+        const { error } = await supabaseClient.auth.resend({ type: 'signup', email, options: { emailRedirectTo: authRedirectUrl() } });
+        if (error) { setAuthStatus(role, '❌ ' + authFriendlyError(error)); return; }
+        startEmailCooldown(key, 60);
+      }
+      setAuthStatus(role, '');
+      showAuthSent(role, 'confirm', email);
+    }
+    function resendStudentConfirmation() { return resendConfirmation('student'); }
+    function resendConsultancyConfirmation() { return resendConfirmation('consultancy'); }
+
+    // Passwordless: one email link signs the person in (or creates the
+    // account). Works with Supabase's default templates, needs no password,
+    // and sidesteps "forgot password" entirely.
+    async function sendMagicLink(role) {
+      const p = 'm-' + role + '-';
+      if (!supabaseClient) { setAuthStatus(role, '❌ Service unavailable right now. Please reload the page and try again.'); return; }
+      const email = normalizeEmail(document.getElementById(p + 'auth-email').value);
+      if (!isValidEmail(email)) {
+        setAuthStatus(role, 'Enter your email address above first, then tap the login link button.');
+        document.getElementById(p + 'auth-email').focus();
+        return;
+      }
+      const mode = role === 'student' ? studentAuthMode : consultancyAuthMode;
+      const name = (document.getElementById(p + 'name').value || '').trim();
+      if (role === 'consultancy' && mode === 'signup' && !name) { setAuthStatus(role, 'Please enter your consultancy name.'); return; }
+
+      const key = 'link:' + email;
+      if (emailCooldownLeft(key) > 0) { showAuthSent(role, 'link', email); return; }
+
+      authIntentRole = role;
+      localStorage.setItem('oauth_pending_role', role);
+      setAuthStatus(role, 'Sending your login link...');
+      try {
+        const { error } = await supabaseClient.auth.signInWithOtp({
+          email,
+          options: { emailRedirectTo: authRedirectUrl(), shouldCreateUser: true, data: { role, name } },
+        });
+        if (error) throw error;
+        startEmailCooldown(key, 60);
+        setAuthStatus(role, '');
+        showAuthSent(role, 'link', email);
+      } catch (err) {
+        console.error(err);
+        setAuthStatus(role, '❌ ' + authFriendlyError(err));
+      }
     }
 
-    // Shared by the manual login/signup form above and the onAuthStateChange
-    // listener in initSupabase (which catches the "clicked the confirmation
-    // email link" case, where there's no form submit to hang this off of).
-    async function finishStudentSession(session, name) {
-      if (lastFinishedAuthToken === session.access_token) return;
-      lastFinishedAuthToken = session.access_token;
-
+    async function handleForgotPassword(role) {
+      const p = 'm-' + role + '-';
+      if (!supabaseClient) { setAuthStatus(role, '❌ Service unavailable right now. Please reload the page and try again.'); return; }
+      const email = normalizeEmail(document.getElementById(p + 'auth-email').value);
+      if (!isValidEmail(email)) {
+        setAuthStatus(role, 'Enter your email above first, then tap "Forgot password?" again.');
+        document.getElementById(p + 'auth-email').focus();
+        return;
+      }
+      const key = 'reset:' + email;
+      if (emailCooldownLeft(key) > 0) { showAuthSent(role, 'reset', email); return; }
+      localStorage.setItem('oauth_pending_role', role);
+      setAuthStatus(role, 'Sending reset link...');
       try {
-        const regRes = await fetch('/api/student?action=register', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ accessToken: session.access_token, name }),
-        });
-        const regData = await regRes.json();
-        if (regData.ok) {
-          localStorage.setItem('viatestprep_active_student_id', regData.id);
-          localStorage.setItem('viatestprep_active_student_name', regData.name || '');
-          // Real access status from their students row - a consultancy may
-          // have attached/limited this account since last login, so this
-          // must come from the server, not just default to full every time.
-          localStorage.setItem('viatestprep_student_access', regData.accessLevel === 'mocks' ? 'mocks' : 'full');
-          localStorage.setItem('viatestprep_active_student_expires_at', regData.accessExpiresAt || '');
-        } else {
-          localStorage.removeItem('viatestprep_active_student_expires_at');
-          localStorage.removeItem('viatestprep_student_access');
+        // redirectTo matters: without it the link lands on whatever Site URL
+        // the Supabase dashboard has, not necessarily this page.
+        const { error } = await supabaseClient.auth.resetPasswordForEmail(email, { redirectTo: authRedirectUrl() });
+        if (error) throw error;
+        startEmailCooldown(key, 60);
+        setAuthStatus(role, '');
+        showAuthSent(role, 'reset', email);
+      } catch (err) {
+        console.error(err);
+        setAuthStatus(role, '❌ ' + authFriendlyError(err));
+      }
+    }
+    function handleStudentForgotPassword() { return handleForgotPassword('student'); }
+    function handleConsultancyForgotPassword() { return handleForgotPassword('consultancy'); }
+
+    function rememberReturningVisitor(role, email) {
+      try {
+        localStorage.setItem('viatestprep_returning_' + role, '1');
+        if (email) localStorage.setItem('viatestprep_last_email', email);
+      } catch (e) {}
+    }
+
+    // Shared by the manual form, Google, login links and the confirmation
+    // link (the latter has no form submit to hang this off of). `force` is
+    // set when the person just explicitly signed in; otherwise a repeat
+    // SIGNED_IN for the same user (tab refocus, token refresh) is ignored so
+    // it can never re-render the portal in the middle of a test.
+    async function finishStudentSession(session, name, force) {
+      if (lastFinishedAuthToken === session.access_token) return;
+      if (!force && lastFinishedUserId === session.user.id) return;
+      lastFinishedAuthToken = session.access_token;
+      lastFinishedUserId = session.user.id;
+
+      let regData = null;
+      for (let attempt = 0; attempt < 2 && !(regData && regData.ok); attempt++) {
+        try {
+          const regRes = await fetch('/api/student?action=register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ accessToken: session.access_token, name }),
+          });
+          regData = await regRes.json();
+        } catch (e) {
+          console.error('Could not register student account:', e);
+          regData = null;
         }
-      } catch (e) {
-        console.error('Could not register student account:', e);
+        if (!(regData && regData.ok) && attempt === 0) await new Promise(r => setTimeout(r, 700));
+      }
+
+      hideAuthNotice();
+      if (regData && regData.ok) {
+        localStorage.setItem('viatestprep_active_student_id', regData.id);
+        localStorage.setItem('viatestprep_active_student_name', regData.name || '');
+        // Real access status from their students row - a consultancy may
+        // have attached/limited this account since last login, so this
+        // must come from the server, not just default to full every time.
+        localStorage.setItem('viatestprep_student_access', regData.accessLevel === 'mocks' ? 'mocks' : 'full');
+        localStorage.setItem('viatestprep_active_student_expires_at', regData.accessExpiresAt || '');
+      } else {
+        // Never leave a previous person's student id behind.
+        localStorage.removeItem('viatestprep_active_student_id');
+        localStorage.removeItem('viatestprep_active_student_name');
         localStorage.removeItem('viatestprep_active_student_expires_at');
         localStorage.removeItem('viatestprep_student_access');
+        showAuthNotice('You are signed in, but your profile could not be loaded yet. Refresh the page if your progress does not appear.', true);
       }
 
       localStorage.setItem('viatestprep_unlocked', 'true');
       localStorage.setItem('viatestprep_user_role', 'student');
       localStorage.setItem('userEmail', session.user.email);
+      rememberReturningVisitor('student', session.user.email);
 
-      hideAuthNotice();
       closeAccessModal();
       renderAppView();
     }
 
-    async function handleStudentForgotPassword() {
-      const email = document.getElementById('m-student-auth-email').value.trim();
-      if (!email) { setStudentAuthStatus('Enter your email above first, then tap "Forgot password?" again.'); return; }
-      if (!supabaseClient) return;
-      const { error } = await supabaseClient.auth.resetPasswordForEmail(email);
-      setStudentAuthStatus(error ? '❌ ' + error.message : '✅ Password reset email sent - check your inbox.');
-    }
-
-    // ==========================================
-    // CONSULTANCY AUTH (real Supabase Auth account, required before checkout)
-    // ==========================================
-    let consultancyAuthMode = 'signup';
-    function setConsultancyAuthMode(mode) {
-      consultancyAuthMode = mode;
-      document.getElementById('m-consultancy-name').classList.toggle('hidden', mode === 'login');
-      document.getElementById('m-consultancy-tab-signup').classList.toggle('active-tab', mode === 'signup');
-      document.getElementById('m-consultancy-tab-login').classList.toggle('active-tab', mode === 'login');
-      document.getElementById('m-consultancy-auth-btn').textContent = mode === 'login' ? 'Log In' : 'Create Account';
-      setConsultancyAuthStatus('');
-      document.getElementById('m-consultancy-resend-row').classList.add('hidden');
-    }
-
-    function setConsultancyAuthStatus(msg) {
-      const el = document.getElementById('m-consultancy-auth-status');
-      if (el) el.textContent = msg;
-    }
-
-    async function handleConsultancyAuthSubmit() {
-      if (!supabaseClient) { setConsultancyAuthStatus('❌ Service unavailable right now - this usually means a network/ad-blocker issue stopped a required script from loading. Please reload the page and try again.'); return; }
-      const email = document.getElementById('m-consultancy-auth-email').value.trim();
-      const password = document.getElementById('m-consultancy-auth-password').value;
-      const name = document.getElementById('m-consultancy-name').value.trim();
-      if (!email || !password) { setConsultancyAuthStatus('Please enter your email and password.'); return; }
-
-      if (consultancyAuthMode === 'signup' && !name) { setConsultancyAuthStatus('Please enter your consultancy name.'); return; }
-
-      const btn = document.getElementById('m-consultancy-auth-btn');
-      btn.disabled = true;
-      try {
-        let session;
-        if (consultancyAuthMode === 'signup') {
-          setConsultancyAuthStatus('Creating your account...');
-          // user_metadata.role/name survive even if the confirmation-email
-          // path is taken (see the onAuthStateChange listener in
-          // initSupabase) - that's a separate page load with no memory of
-          // consultancyAuthMode. emailRedirectTo makes sure the confirmation
-          // link brings them back here rather than whatever default Site URL
-          // is set in the Supabase dashboard (must also be added to that
-          // project's Redirect URLs allowlist, or Supabase will ignore it).
-          const { data, error } = await supabaseClient.auth.signUp({
-            email, password,
-            options: { data: { role: 'consultancy', name }, emailRedirectTo: window.location.origin + window.location.pathname },
-          });
-          if (error) throw error;
-          if (!data.session) {
-            setConsultancyAuthStatus('✅ Check your email to confirm your account, then log in.');
-            setConsultancyAuthMode('login');
-            btn.disabled = false;
-            return;
-          }
-          session = data.session;
-        } else {
-          setConsultancyAuthStatus('Logging in...');
-          const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
-          if (error) throw error;
-          session = data.session;
-        }
-
-        await finishConsultancySession(session, name);
-      } catch (err) {
-        console.error(err);
-        // A retried signup on an already-registered email (e.g. after an
-        // earlier attempt created the Supabase Auth account but failed
-        // before finishConsultancySession finished provisioning the
-        // consultancy row) comes back as a raw, unhelpful Supabase error
-        // otherwise - point them at Log In instead, where the same
-        // finishConsultancySession call just re-provisions/re-reads the row
-        // idempotently.
-        if (consultancyAuthMode === 'signup' && /already registered|already exists|user already/i.test(err.message || '')) {
-          setConsultancyAuthStatus('This email is already registered - log in instead.');
-          setConsultancyAuthMode('login');
-        } else {
-          setConsultancyAuthStatus('❌ ' + (err.message || 'Something went wrong.'));
-          if (consultancyAuthMode === 'login') {
-            document.getElementById('m-consultancy-resend-row').classList.remove('hidden');
-          }
-        }
-        btn.disabled = false;
-      }
-    }
-
-    async function resendConsultancyConfirmation() {
-      const email = document.getElementById('m-consultancy-auth-email').value.trim();
-      if (!email) { setConsultancyAuthStatus('Enter your email above first, then tap resend.'); return; }
-      if (!supabaseClient) return;
-      const { error } = await supabaseClient.auth.resend({ type: 'signup', email });
-      setConsultancyAuthStatus(error ? '❌ ' + error.message : '✅ Confirmation email sent - check your inbox (and spam folder), then log in.');
-    }
-
-    // Shared by the manual login/signup form above and the onAuthStateChange
-    // listener in initSupabase (which catches the "clicked the confirmation
-    // email link" case, where there's no form submit to hang this off of).
-    async function finishConsultancySession(session, name) {
+    async function finishConsultancySession(session, name, force) {
       if (lastFinishedAuthToken === session.access_token) return;
+      if (!force && lastFinishedUserId === session.user.id) return;
       lastFinishedAuthToken = session.access_token;
+      lastFinishedUserId = session.user.id;
 
       try {
         // Idempotent (see /api/consultancy/account.js) - creates a fresh
         // unactivated row on first signup, or just claims/re-reads an
         // existing one on login.
-        const regRes = await fetch('/api/consultancy/account', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ accessToken: session.access_token, name }),
-        });
-        const regData = await regRes.json();
+        let regData = null;
+        for (let attempt = 0; attempt < 2 && !(regData && regData.ok); attempt++) {
+          try {
+            const regRes = await fetch('/api/consultancy/account', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ accessToken: session.access_token, name }),
+            });
+            regData = await regRes.json();
+          } catch (e) {
+            regData = { ok: false, error: "Can't reach the server. Check your internet connection and try again." };
+          }
+          if (!regData.ok && attempt === 0) await new Promise(r => setTimeout(r, 700));
+        }
         if (!regData.ok) throw new Error(regData.error || 'Could not load your consultancy account.');
 
         localStorage.setItem('viatestprep_unlocked', 'true');
@@ -3667,32 +4102,25 @@
         localStorage.setItem('viatestprep_consultancy_name', regData.name);
         localStorage.setItem('viatestprep_consultancy_plan', regData.planName);
         localStorage.setItem('viatestprep_consultancy_expires_at', regData.expiresAt);
+        rememberReturningVisitor('consultancy', session.user.email);
 
         hideAuthNotice();
         closeAccessModal();
         // renderAppView() -> initConsultancyDashboard() shows the CRM if the
         // plan is active, or its own "choose a plan" / "renew" lock screen if
-        // not - no need to branch on that here too (see initConsultancyDashboard).
+        // not - no need to branch on that here too.
         renderAppView();
       } catch (e) {
         console.error('Could not finish consultancy sign-in:', e);
+        // Allow an immediate retry instead of being deduped away.
+        lastFinishedAuthToken = null;
+        lastFinishedUserId = null;
         const message = e.message || 'Could not load your consultancy account.';
-        setConsultancyAuthStatus('❌ ' + message);
-        // Also shown as a banner - this runs after clicking the email
-        // confirmation link too, where the modal (and its status line) was
-        // never opened, so setConsultancyAuthStatus above is invisible.
+        setAuthStatus('consultancy', '❌ ' + message);
+        // Also shown as a banner - this also runs after an email link, where
+        // the modal (and its status line) was never opened.
         showAuthNotice(message, true);
-        const btn = document.getElementById('m-consultancy-auth-btn');
-        if (btn) btn.disabled = false;
       }
-    }
-
-    async function handleConsultancyForgotPassword() {
-      const email = document.getElementById('m-consultancy-auth-email').value.trim();
-      if (!email) { setConsultancyAuthStatus('Enter your email above first, then tap "Forgot password?" again.'); return; }
-      if (!supabaseClient) return;
-      const { error } = await supabaseClient.auth.resetPasswordForEmail(email);
-      setConsultancyAuthStatus(error ? '❌ ' + error.message : '✅ Password reset email sent - check your inbox.');
     }
 
     function ensureBypassStudentData() {
@@ -3767,6 +4195,11 @@
     }
 
     function launchAdminBypass() {
+      // Owner-only: requires the owner key this device stored via ?ownerkey=...
+      if (!localStorage.getItem('viatestprep_owner_key')) {
+        showAuthNotice('Owner access needs the private owner link.', true);
+        return;
+      }
       // Set developer/tutor bypass credentials
       localStorage.setItem('viatestprep_unlocked', 'true');
       localStorage.setItem('viatestprep_user_role', 'consultancy');
@@ -3784,6 +4217,10 @@
     }
 
     function launchStudentBypass() {
+      if (!localStorage.getItem('viatestprep_owner_key')) {
+        showAuthNotice('Owner access needs the private owner link.', true);
+        return;
+      }
       // Set developer bypass credentials - full access, no expiry, no roster
       // row (see initStudentPortal - it's fine without an active-student id).
       localStorage.setItem('viatestprep_unlocked', 'true');

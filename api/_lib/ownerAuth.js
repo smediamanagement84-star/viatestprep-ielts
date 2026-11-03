@@ -1,14 +1,19 @@
-// Shared gate for the owner-only admin endpoints (pending payment review).
-// Uses the same secret as the client-side "?ownerkey=" bypass in index.html
-// (JW99DMjLLV9KDC4E) so there's exactly one owner credential to remember,
-// consistent with that bypass's existing trust model - a client-visible
-// secret string, deliberately not linked or shown anywhere in the UI other
-// than the CRM tab it unlocks. Override via OWNER_BYPASS_KEY if this is ever
-// rotated.
-const OWNER_BYPASS_KEY = process.env.OWNER_BYPASS_KEY || 'JW99DMjLLV9KDC4E';
+// Shared gate for the owner-only admin endpoints (pending payment review,
+// roster, dev notifications). The owner key now comes ONLY from the
+// OWNER_BYPASS_KEY environment variable (Vercel > Settings > Environment
+// Variables). There is deliberately no built-in default: a default in
+// public source code is a password everyone can read. If the variable is
+// unset, every owner request is refused.
+const crypto = require('crypto');
+
+const OWNER_BYPASS_KEY = process.env.OWNER_BYPASS_KEY || '';
 
 function isOwner(candidateKey) {
-  return !!candidateKey && candidateKey === OWNER_BYPASS_KEY;
+  if (!OWNER_BYPASS_KEY || !candidateKey || typeof candidateKey !== 'string') return false;
+  const a = Buffer.from(candidateKey);
+  const b = Buffer.from(OWNER_BYPASS_KEY);
+  // Constant-time comparison so response timing can't leak the key.
+  return a.length === b.length && crypto.timingSafeEqual(a, b);
 }
 
 module.exports = { isOwner };
