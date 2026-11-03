@@ -3,5 +3,10 @@
   "private": true,
   "engines": {
     "node": ">=18"
+  },
+  "scripts": {
+    "test": "node scripts/audit.js",
+    "audit": "node scripts/audit.js",
+    "verify": "node scratch/verify_deployment.js && node scripts/audit.js"
   }
 }

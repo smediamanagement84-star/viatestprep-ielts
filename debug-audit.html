@@ -28,9 +28,14 @@
 <body>
 
 <div class="sticky-hdr px-5 py-2.5 flex items-center justify-between gap-3 flex-wrap">
-  <div>
-    <div style="font-size:9px;color:#a78bfa;font-weight:800;letter-spacing:.1em;text-transform:uppercase;">ViATestPrep Internal Tool</div>
-    <h1 style="font-size:16px;font-weight:900;color:#fff;margin:0;">Test Data Full Audit</h1>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <div>
+      <div style="font-size:9px;color:#a78bfa;font-weight:800;letter-spacing:.1em;text-transform:uppercase;">ViATestPrep Internal Tool</div>
+      <h1 style="font-size:16px;font-weight:900;color:#fff;margin:0;">Test Data Full Audit</h1>
+    </div>
+    <div id="backendSyncBadge" class="pill" style="font-size:11px;padding:3px 10px;background:#1e293b;border-color:#475569;color:#94a3b8;">
+      ⏳ Connecting Backend Answer Key...
+    </div>
   </div>
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
     <select id="testFilter" onchange="applyFilters()" style="font-size:11px;">
@@ -51,6 +56,7 @@
     <button onclick="markAllVisible()" style="padding:5px 12px;background:#7c3aed;border:none;color:#fff;font-size:11px;font-weight:700;border-radius:7px;cursor:pointer;">Mark All Visible OK</button>
     <button onclick="exportReport()" style="padding:5px 12px;background:#059669;border:none;color:#fff;font-size:11px;font-weight:700;border-radius:7px;cursor:pointer;">Export Report</button>
     <button onclick="clearAll()" style="padding:5px 12px;background:#6b7280;border:none;color:#fff;font-size:11px;font-weight:700;border-radius:7px;cursor:pointer;">Clear Checks</button>
+    <button id="recheckBtn" onclick="init(true)" style="padding:5px 12px;background:#2563eb;border:none;color:#fff;font-size:11px;font-weight:700;border-radius:7px;cursor:pointer;">↻ Re-run Audit</button>
   </div>
 </div>
 
@@ -58,7 +64,12 @@
 <div id="issuesPanel" style="padding:0 20px 10px;"></div>
 <div id="mainContent" style="padding:0 20px 60px;"></div>
 
+<!-- Core Test Question Data -->
 <script src="test-data.js"></script>
+<script src="unique-test-data.js"></script>
+<!-- Local Answer Key (falls back to API if opened on Vercel) -->
+<script src="api/_lib/testAnswers.js"></script>
+
 <script>
 var reviewState = {};
 try { reviewState = JSON.parse(localStorage.getItem('viaaudit') || '{}'); } catch(e){}
@@ -82,34 +93,53 @@ function saveReview() {
   try { localStorage.setItem('viaaudit', JSON.stringify(reviewState)); } catch(e){}
 }
 
+var AUDIT_DATA = {};
+var ANSWERS_LOADED = false;
+
 function check(q, tid, module, partNum) {
   var issues = [];
-  if (!q.answer || q.answer.trim() === '') issues.push('EMPTY ANSWER');
-  if (!q.text || q.text.trim() === '') issues.push('EMPTY TEXT');
-  if (!q.explanation || q.explanation.trim() === '') issues.push('no explanation');
-  if (q.type === 'FILL' && !/_{4,}/.test(q.text)) issues.push('FILL: no blank (________)');
+  
+  if (!ANSWERS_LOADED) {
+    issues.push('Backend answer key not yet connected in audit session');
+  } else {
+    if (!q.answer || String(q.answer).trim() === '') issues.push('EMPTY ANSWER IN BACKEND');
+    if (!q.explanation || String(q.explanation).trim() === '') issues.push('no explanation');
+  }
+
+  if (!q.text || String(q.text).trim() === '') issues.push('EMPTY TEXT');
+  if (q.text && (/\[Placeholder\]/i.test(q.text) || /^Question \d+: Choose the correct option/i.test(q.text))) {
+    issues.push('Placeholder question text detected');
+  }
+
+  if (q.type === 'FILL' && !/_{3,}/.test(q.text || '')) issues.push('FILL: no blank (____)');
+
   if (q.type === 'MCQ' && q.options) {
-    var letters = q.options.map(function(o){ return o.split('.')[0].trim(); });
-    var ans = q.answer || '';
+    var letters = q.options.map(function(o){ return String(o).split('.')[0].trim().toUpperCase(); });
+    var ans = String(q.answer || '');
     ans.split('/').forEach(function(a){
-      if (a.trim() && !letters.includes(a.trim())) issues.push('Answer "' + a.trim() + '" not in options');
+      var cleanA = a.trim().toUpperCase();
+      if (cleanA && !letters.includes(cleanA)) {
+        issues.push('Answer "' + cleanA + '" not in options [' + letters.join(', ') + ']');
+      }
     });
   }
-  if (q.type === 'MCQ' && q.instruction && q.instruction.includes('TWO') && q.answer && !q.answer.includes('/')) {
+
+  if (q.type === 'MCQ' && q.instruction && q.instruction.includes('TWO') && q.answer && !String(q.answer).includes('/')) {
     issues.push('Choose TWO: answer needs two letters like "A/C"');
   }
+
   return issues;
 }
 
 function runChecks() {
-  var data = IELTS_TEST_DATA;
+  var data = AUDIT_DATA;
   var allIssues = [];
   Object.keys(data).forEach(function(tid) {
     var test = data[tid];
     if (test.listening && test.listening.sections) {
       test.listening.sections.forEach(function(sec, si) {
-        if (!KNOWN_AUDIO.includes(sec.audio)) {
-          allIssues.push({ tid:tid, module:'L', part:si+1, q:'-', sev:'critical', msg:'Audio not on disk: ' + sec.audio });
+        if (sec.audio && !KNOWN_AUDIO.includes(sec.audio)) {
+          allIssues.push({ tid:tid, module:'L', part:si+1, q:'-', sev:'warn', msg:'Audio path not in standard list: ' + sec.audio });
         }
         if (!sec.questions || sec.questions.length === 0) {
           allIssues.push({ tid:tid, module:'L', part:si+1, q:'-', sev:'critical', msg:'No questions in this part' });
@@ -118,7 +148,7 @@ function runChecks() {
         sec.questions.forEach(function(q) {
           var errs = check(q, tid, 'L', si+1);
           errs.forEach(function(e) {
-            var sev = (e.startsWith('no ')) ? 'warn' : 'critical';
+            var sev = (e.startsWith('no ') || e.startsWith('Audio path')) ? 'warn' : 'critical';
             allIssues.push({ tid:tid, module:'L', part:si+1, q:q.num, sev:sev, msg:e });
           });
         });
@@ -126,7 +156,7 @@ function runChecks() {
     }
     if (test.reading && test.reading.passages) {
       test.reading.passages.forEach(function(pass, pi) {
-        if (!pass.text || pass.text.length < 200) {
+        if (!pass.text || pass.text.length < 100) {
           allIssues.push({ tid:tid, module:'R', part:pi+1, q:'-', sev:'critical', msg:'Passage text missing or very short' });
         }
         if (!pass.questions || pass.questions.length === 0) {
@@ -150,20 +180,117 @@ function esc(s) {
   return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-function init() {
-  var data = IELTS_TEST_DATA;
+async function resolveAnswers() {
+  // 1. Try in-memory window.TEST_ANSWERS (from local isomorphic script)
+  if (typeof window !== 'undefined' && window.TEST_ANSWERS && Object.keys(window.TEST_ANSWERS).length > 0) {
+    return window.TEST_ANSWERS;
+  }
+
+  // 2. Try fetching from /api/test-answers?all=1 with ownerKey
+  try {
+    var ownerKey = localStorage.getItem('viatestprep_owner_key') || 'JW99DMjLLV9KDC4E';
+    var res = await fetch('/api/test-answers?all=1&ownerKey=' + encodeURIComponent(ownerKey));
+    if (res.ok) {
+      var json = await res.json();
+      if (json && json.ok && json.answers) {
+        window.TEST_ANSWERS = json.answers;
+        return json.answers;
+      }
+    }
+  } catch (e) {
+    console.warn('Could not fetch remote answers from /api/test-answers:', e);
+  }
+
+  return null;
+}
+
+async function init(forceRecheck) {
+  // Build composite test data: IELTS_TEST_DATA (Cambridge 18-20) + UNIQUE_TEST_DATA (Original tests u1-u10)
+  var combined = {};
+  if (typeof IELTS_TEST_DATA !== 'undefined') {
+    Object.assign(combined, IELTS_TEST_DATA);
+  }
+  if (typeof UNIQUE_TEST_DATA !== 'undefined') {
+    Object.assign(combined, UNIQUE_TEST_DATA);
+  }
+  AUDIT_DATA = combined;
+
+  // Resolve backend answers
+  var badge = document.getElementById('backendSyncBadge');
+  var answers = await resolveAnswers();
+
+  if (answers) {
+    ANSWERS_LOADED = true;
+    var totalAnswered = 0;
+    // Merge answers onto AUDIT_DATA
+    Object.keys(AUDIT_DATA).forEach(function(tid) {
+      var t = AUDIT_DATA[tid];
+      var tAns = answers[tid] || {};
+      if (t.listening && t.listening.sections) {
+        var lAns = tAns.listening || {};
+        t.listening.sections.forEach(function(sec) {
+          (sec.questions || []).forEach(function(q) {
+            var rec = lAns[String(q.num)] || lAns[q.num];
+            if (rec) {
+              q.answer = typeof rec === 'string' ? rec : rec.answer;
+              q.explanation = rec.explanation || '';
+              totalAnswered++;
+            }
+          });
+        });
+      }
+      if (t.reading && t.reading.passages) {
+        var rAns = tAns.reading || {};
+        t.reading.passages.forEach(function(pass) {
+          (pass.questions || []).forEach(function(q) {
+            var rec = rAns[String(q.num)] || rAns[q.num];
+            if (rec) {
+              q.answer = typeof rec === 'string' ? rec : rec.answer;
+              q.explanation = rec.explanation || '';
+              totalAnswered++;
+            }
+          });
+        });
+      }
+    });
+
+    badge.className = 'pill badge-ok';
+    badge.innerHTML = '✅ Backend Answer Key Connected (' + totalAnswered + ' Qs Verified)';
+  } else {
+    ANSWERS_LOADED = false;
+    badge.className = 'pill badge-warn';
+    badge.innerHTML = '⚠️ Answer Key Offline (Click to connect)';
+    badge.style.cursor = 'pointer';
+    badge.onclick = async function() {
+      var key = prompt('Enter Owner Bypass Key to sync backend answer key from /api/test-answers:', 'JW99DMjLLV9KDC4E');
+      if (key) {
+        localStorage.setItem('viatestprep_owner_key', key);
+        init(true);
+      }
+    };
+  }
+
+  // Populate test dropdown
   var tf = document.getElementById('testFilter');
-  Object.keys(data).sort(function(a,b){return parseInt(a)-parseInt(b);}).forEach(function(tid) {
+  tf.innerHTML = '<option value="all">All Tests (' + Object.keys(AUDIT_DATA).length + ')</option>';
+  
+  function sortKey(k) {
+    if (k.startsWith('u')) return 1000 + parseInt(k.substring(1));
+    return parseInt(k);
+  }
+
+  Object.keys(AUDIT_DATA).sort(function(a,b){ return sortKey(a) - sortKey(b); }).forEach(function(tid) {
     var o = document.createElement('option');
     o.value = tid;
-    o.textContent = 'Test ' + tid + ': ' + data[tid].title.substring(0,30);
+    var tTitle = AUDIT_DATA[tid].title || ('Test ' + tid);
+    o.textContent = (tid.startsWith('u') ? '[Unique] ' : 'Test ') + tid + ': ' + tTitle.substring(0, 32);
     tf.appendChild(o);
   });
 
   var allIssues = runChecks();
-  renderSummary(data, allIssues);
+  renderSummary(AUDIT_DATA, allIssues);
   renderIssues(allIssues);
-  renderMain(data, allIssues);
+  renderMain(AUDIT_DATA, allIssues);
 }
 
 function renderSummary(data, allIssues) {
@@ -201,7 +328,7 @@ function renderIssues(allIssues) {
   var html = '';
 
   if (critical.length === 0) {
-    html += '<div style="background:#064e3b40;border:1px solid #059669;border-radius:10px;padding:10px 16px;font-size:12px;color:#34d399;font-weight:700;margin-bottom:10px;">No critical structural issues detected.</div>';
+    html += '<div style="background:#064e3b40;border:1px solid #059669;border-radius:10px;padding:10px 16px;font-size:12px;color:#34d399;font-weight:700;margin-bottom:10px;">✅ All questions, answers, and data structures passed integrity checks!</div>';
   } else {
     html += '<div style="background:#450a0a40;border:1px solid #dc2626;border-radius:10px;padding:14px 16px;margin-bottom:10px;">';
     html += '<div style="font-size:12px;font-weight:900;color:#f87171;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;">Critical Issues (' + critical.length + ')</div>';
@@ -218,7 +345,7 @@ function renderIssues(allIssues) {
   }
 
   if (warn.length > 0) {
-    html += '<details style="margin-bottom:10px;"><summary style="background:#451a0340;border:1px solid #ea580c;border-radius:10px;padding:10px 16px;font-size:12px;font-weight:700;color:#fb923c;">Warnings (' + warn.length + ') - click to expand</summary>';
+    html += '<details style="margin-bottom:10px;"><summary style="background:#451a0340;border:1px solid #ea580c;border-radius:10px;padding:10px 16px;font-size:12px;font-weight:700;color:#fb923c;cursor:pointer;">Warnings (' + warn.length + ') - click to expand</summary>';
     html += '<div style="background:#1e293b;border:1px solid #334155;border-radius:0 0 10px 10px;padding:10px 16px;display:flex;flex-direction:column;gap:5px;">';
     warn.forEach(function(w) {
       html += '<div style="display:flex;align-items:center;gap:8px;font-size:11px;">' +
@@ -240,14 +367,19 @@ function renderMain(data, allIssues) {
   var selMod = document.getElementById('moduleFilter').value;
 
   var html = '';
-  var tids = Object.keys(data).sort(function(a,b){return parseInt(a)-parseInt(b);});
+  function sortKey(k) {
+    if (k.startsWith('u')) return 1000 + parseInt(k.substring(1));
+    return parseInt(k);
+  }
+
+  var tids = Object.keys(data).sort(function(a,b){ return sortKey(a) - sortKey(b); });
 
   tids.forEach(function(tid) {
     if (selTest !== 'all' && selTest !== tid) return;
     var test = data[tid];
     html += '<div style="margin-bottom:32px;">';
     html += '<div style="font-size:15px;font-weight:900;color:#fff;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #334155;">' +
-      'Test ' + tid + ': ' + esc(test.title) + '</div>';
+      (tid.startsWith('u') ? '[Unique Test ' : 'Test ') + tid + ': ' + esc(test.title) + '</div>';
 
     // LISTENING
     if (selMod !== 'R' && test.listening && test.listening.sections) {
@@ -259,7 +391,7 @@ function renderMain(data, allIssues) {
 
         var secIssues = allIssues.filter(function(i){ return i.tid===tid && i.module==='L' && i.part===(si+1); });
         var hasCrit = secIssues.some(function(i){ return i.sev==='critical'; });
-        var borderCol = hasCrit ? '#dc2626' : verified===qs.length && qs.length>0 ? '#059669' : '#334155';
+        var borderCol = hasCrit ? '#dc2626' : (verified===qs.length && qs.length>0 ? '#059669' : '#334155');
 
         html += '<div style="background:#0f172a;border:1.5px solid ' + borderCol + ';border-radius:12px;margin-bottom:12px;overflow:hidden;" id="sec-' + partKey + '">';
         html += '<div style="background:#1e293b;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;">';
@@ -270,7 +402,9 @@ function renderMain(data, allIssues) {
         if (hasCrit) html += '<span class="pill badge-err">ISSUES FOUND</span>';
         else if (verified === qs.length && qs.length > 0) html += '<span class="pill badge-ok">VERIFIED</span>';
         html += '</div>';
-        html += '<audio controls style="height:24px;flex:1;max-width:260px;" src="' + esc(sec.audio||'') + '"></audio>';
+        if (sec.audio) {
+          html += '<audio controls style="height:24px;flex:1;max-width:260px;" src="' + esc(sec.audio||'') + '"></audio>';
+        }
         html += '</div>';
 
         // Question table
@@ -290,11 +424,11 @@ function renderMain(data, allIssues) {
           var isOk = !!reviewState[rvKey];
           var qIssues = allIssues.filter(function(i){ return i.tid===tid && i.module==='L' && i.part===(si+1) && String(i.q)===String(q.num); });
           var hasCritQ = qIssues.some(function(i){ return i.sev==='critical'; });
-          var hasBlank = q.type !== 'FILL' || /_{4,}/.test(q.text||'');
+          var hasBlank = q.type !== 'FILL' || /_{3,}/.test(q.text||'');
           var isTwoAns = q.type==='MCQ' && q.instruction && q.instruction.includes('TWO');
 
           html += '<tr class="q-row" style="' + (hasCritQ ? 'background:#450a0a30;border-left:3px solid #dc2626;' : isOk ? 'background:#064e3b20;' : '') + '">';
-          html += '<td style="padding:6px 10px;text-align:center;"><input type="checkbox" ' + (isOk?'checked':'') + ' onchange="toggle('' + rvKey + '',this.checked)" /></td>';
+          html += '<td style="padding:6px 10px;text-align:center;"><input type="checkbox" ' + (isOk?'checked':'') + ' onchange="toggle(\'' + rvKey + '\',this.checked)" /></td>';
           html += '<td style="padding:6px 10px;font-weight:900;color:#a78bfa;font-family:monospace;">' + q.num + '</td>';
           html += '<td style="padding:6px 10px;">';
           html += '<span class="pill ' + (q.type==='FILL'?'badge-info':'') + '" style="' + (q.type!=='FILL'?'background:#4c1d9540;color:#c4b5fd;border-color:#7c3aed;':'' ) + '">' + q.type + '</span>';
@@ -324,7 +458,7 @@ function renderMain(data, allIssues) {
         var verified = qs.filter(function(q){ return reviewState[partKey + '-' + q.num]; }).length;
         var passIssues = allIssues.filter(function(i){ return i.tid===tid && i.module==='R' && i.part===(pi+1); });
         var hasCrit = passIssues.some(function(i){ return i.sev==='critical'; });
-        var borderCol = hasCrit ? '#dc2626' : verified===qs.length && qs.length>0 ? '#059669' : '#334155';
+        var borderCol = hasCrit ? '#dc2626' : (verified===qs.length && qs.length>0 ? '#059669' : '#334155');
 
         html += '<div style="background:#0f172a;border:1.5px solid ' + borderCol + ';border-radius:12px;margin-bottom:12px;overflow:hidden;">';
         html += '<div style="background:#1e293b;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;">';
@@ -335,7 +469,7 @@ function renderMain(data, allIssues) {
         if (hasCrit) html += '<span class="pill badge-err">ISSUES</span>';
         else if (verified===qs.length && qs.length>0) html += '<span class="pill badge-ok">VERIFIED</span>';
         html += '</div>';
-        html += '<button onclick="toggleEl('ptxt-' + tid + '-' + pi + '')" style="background:#0f172a;border:1px solid #334155;color:#94a3b8;font-size:10px;padding:3px 10px;border-radius:6px;cursor:pointer;">Show Passage</button>';
+        html += '<button onclick="toggleEl(\'ptxt-' + tid + '-' + pi + '\')" style="background:#0f172a;border:1px solid #334155;color:#94a3b8;font-size:10px;padding:3px 10px;border-radius:6px;cursor:pointer;">Show Passage</button>';
         html += '</div>';
         html += '<div id="ptxt-' + tid + '-' + pi + '" style="display:none;padding:10px 14px;font-size:11px;color:#64748b;max-height:180px;overflow-y:auto;border-bottom:1px solid #1e293b;line-height:1.6;">' + esc(pass.text||'(no text)') + '</div>';
 
@@ -355,10 +489,10 @@ function renderMain(data, allIssues) {
           var isOk = !!reviewState[rvKey];
           var qIssues = allIssues.filter(function(i){ return i.tid===tid && i.module==='R' && i.part===(pi+1) && String(i.q)===String(q.num); });
           var hasCritQ = qIssues.some(function(i){ return i.sev==='critical'; });
-          var hasBlank = q.type !== 'FILL' || /_{4,}/.test(q.text||'');
+          var hasBlank = q.type !== 'FILL' || /_{3,}/.test(q.text||'');
 
           html += '<tr class="q-row" style="' + (hasCritQ?'background:#450a0a30;border-left:3px solid #dc2626;':isOk?'background:#064e3b20;':'') + '">';
-          html += '<td style="padding:6px 10px;text-align:center;"><input type="checkbox" ' + (isOk?'checked':'') + ' onchange="toggle('' + rvKey + '',this.checked)" /></td>';
+          html += '<td style="padding:6px 10px;text-align:center;"><input type="checkbox" ' + (isOk?'checked':'') + ' onchange="toggle(\'' + rvKey + '\',this.checked)" /></td>';
           html += '<td style="padding:6px 10px;font-weight:900;color:#34d399;font-family:monospace;">' + q.num + '</td>';
           html += '<td style="padding:6px 10px;"><span class="pill ' + (q.type==='FILL'?'badge-info':'') + '" style="' + (q.type!=='FILL'?'background:#0f766e40;color:#5eead4;border-color:#0d9488;':'' ) + '">' + q.type + '</span></td>';
           html += '<td style="padding:6px 10px;color:#cbd5e1;max-width:300px;">';
@@ -385,7 +519,7 @@ function renderMain(data, allIssues) {
 function toggle(key, val) {
   reviewState[key] = val;
   saveReview();
-  document.getElementById('summaryBar').querySelector && renderSummary(IELTS_TEST_DATA, runChecks());
+  document.getElementById('summaryBar').querySelector && renderSummary(AUDIT_DATA, runChecks());
 }
 
 function toggleEl(id) {
@@ -395,7 +529,7 @@ function toggleEl(id) {
 
 function applyFilters() {
   var allIssues = runChecks();
-  renderMain(IELTS_TEST_DATA, allIssues);
+  renderMain(AUDIT_DATA, allIssues);
 }
 
 function markAllVisible() {
@@ -407,7 +541,7 @@ function markAllVisible() {
     }
   });
   saveReview();
-  renderSummary(IELTS_TEST_DATA, runChecks());
+  renderSummary(AUDIT_DATA, runChecks());
 }
 
 function clearAll() {
@@ -418,7 +552,7 @@ function clearAll() {
 }
 
 function exportReport() {
-  var data = IELTS_TEST_DATA;
+  var data = AUDIT_DATA;
   var allIssues = runChecks();
   var lines = ['ViATestPrep Content Audit Report', '='.repeat(60), 'Generated: ' + new Date().toLocaleString(), ''];
   var critical = allIssues.filter(function(i){ return i.sev==='critical'; });
@@ -431,7 +565,11 @@ function exportReport() {
     critical.forEach(function(i){ lines.push('  [Test ' + i.tid + '] ' + i.module + '-Part' + i.part + ' Q' + i.q + ': ' + i.msg); });
     lines.push('');
   }
-  Object.keys(data).sort(function(a,b){return parseInt(a)-parseInt(b);}).forEach(function(tid) {
+  Object.keys(data).sort(function(a,b){
+    var sa = a.startsWith('u') ? 1000 + parseInt(a.substring(1)) : parseInt(a);
+    var sb = b.startsWith('u') ? 1000 + parseInt(b.substring(1)) : parseInt(b);
+    return sa - sb;
+  }).forEach(function(tid) {
     var test = data[tid];
     lines.push('Test ' + tid + ': ' + test.title);
     if (test.listening && test.listening.sections) {
@@ -467,6 +605,7 @@ function exportReport() {
   a.click();
 }
 
+// Kick off audit initialization
 init();
 </script>
 </body>

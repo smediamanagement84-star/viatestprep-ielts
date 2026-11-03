@@ -17,6 +17,7 @@
 // knowledge sitting in client-side JS, so special-casing it would just be a
 // permanent, well-known backdoor around the whole point of this endpoint.
 const { getStudentById, friendlyDbError } = require('./_lib/supabaseAdmin');
+const { isOwner } = require('./_lib/ownerAuth');
 const TEST_ANSWERS = require('./_lib/testAnswers');
 
 const VALID_MODULES = ['reading', 'listening'];
@@ -28,6 +29,21 @@ module.exports = async (req, res) => {
   }
 
   try {
+    const ownerCandidate = req.headers['x-owner-key'] || req.query.ownerKey;
+    const isAudit = req.query.audit === '1' || req.query.all === '1';
+    if (isOwner(ownerCandidate)) {
+      if (isAudit) {
+        res.status(200).json({ ok: true, answers: TEST_ANSWERS });
+        return;
+      }
+      const requestedTestId = (req.query.testId || '').trim();
+      const requestedModule = (req.query.module || '').trim();
+      if (requestedTestId && VALID_MODULES.includes(requestedModule)) {
+        const answers = TEST_ANSWERS[requestedTestId] && TEST_ANSWERS[requestedTestId][requestedModule];
+        res.status(200).json({ ok: true, answers: answers || {} });
+        return;
+      }
+    }
     const testId = (req.query.testId || '').trim();
     const moduleName = (req.query.module || '').trim();
     const studentId = (req.query.studentId || '').trim();

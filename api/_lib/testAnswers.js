@@ -4,7 +4,7 @@
 // original test-data.js/unique-test-data.js by scripts this session ran
 // once; if test content changes, the answer key must be regenerated the
 // same way, not hand-edited out of sync with the public files.
-module.exports = {
+const TEST_ANSWERS = {
  "1": {
   "reading": {
    "1": {
@@ -5719,4 +5719,11 @@ module.exports = {
    }
   }
  }
-};
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = TEST_ANSWERS;
+}
+if (typeof window !== 'undefined') {
+  window.TEST_ANSWERS = TEST_ANSWERS;
+}
