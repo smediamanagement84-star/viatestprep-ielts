@@ -188,7 +188,7 @@ async function resolveAnswers() {
 
   // 2. Try fetching from /api/test-answers?all=1 with ownerKey
   try {
-    var ownerKey = localStorage.getItem('viatestprep_owner_key') || 'JW99DMjLLV9KDC4E';
+    var ownerKey = localStorage.getItem('viatestprep_owner_key') || '';
     var res = await fetch('/api/test-answers?all=1&ownerKey=' + encodeURIComponent(ownerKey));
     if (res.ok) {
       var json = await res.json();
@@ -262,7 +262,7 @@ async function init(forceRecheck) {
     badge.innerHTML = '⚠️ Answer Key Offline (Click to connect)';
     badge.style.cursor = 'pointer';
     badge.onclick = async function() {
-      var key = prompt('Enter Owner Bypass Key to sync backend answer key from /api/test-answers:', 'JW99DMjLLV9KDC4E');
+      var key = prompt('Enter Owner Bypass Key to sync backend answer key from /api/test-answers:', '');
       if (key) {
         localStorage.setItem('viatestprep_owner_key', key);
         init(true);
