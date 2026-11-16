@@ -33,9 +33,11 @@ If login ever breaks and the tests are green, it is almost always one of these.
 - At login the server hands out a signed session token; the app sends it as `X-Session-Token`.
   Student results, mock-test saving, error reports and developer notifications all check it.
   Knowing someone's ID is not enough. Tokens last 30 days; after that people simply log in again.
+- A student's private link (`?student=...`) only works with the secret random code in it. A student's
+  plain ID or display ID (e.g. `VTP-0007`) can never be used to log in.
 
 ## Before every release
-1. `cd tests && npm install && npm test` (149 checks: login flows, API limits, access rules).
+1. `cd tests && npm install && npm test` (184 checks: login flows, API limits, access rules, and the real API code run against a pretend database).
    To run it automatically on every GitHub push: on github.com open the repo > Add file > Create new file,
    name it `.github/workflows/auth-tests.yml` and paste in the contents of `tests/auth-tests.workflow.yml`.
 2. Open the preview and test: log in, sign up, forgot password, login link, Google, log out.

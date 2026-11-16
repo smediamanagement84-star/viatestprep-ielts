@@ -183,22 +183,15 @@ async function claimConsultancyOwner(id, owner_user_id) {
 // table just to support this one lookup - that would let anyone holding the
 // anon key page through every consultancy's entire roster.
 async function getStudentByAccessToken(token) {
-  let rows = await restRequest('students', {
+  // ONLY the secret, random access_token counts as a login credential. A
+  // student's id ("st-<timestamp>") or display id ("VTP-0001") is guessable
+  // and must never work here - anyone could otherwise enumerate them and log
+  // in as someone else. Real tokens are UUIDs, so very short values are
+  // rejected outright.
+  if (typeof token !== 'string' || token.length < 16) return null;
+  const rows = await restRequest('students', {
     method: 'GET',
     query: `?access_token=eq.${encodeURIComponent(token)}&limit=1`,
-  });
-  if (rows && rows[0]) return rows[0];
-
-  // Fallback: check by primary key id or display student_id
-  rows = await restRequest('students', {
-    method: 'GET',
-    query: `?id=eq.${encodeURIComponent(token)}&limit=1`,
-  });
-  if (rows && rows[0]) return rows[0];
-
-  rows = await restRequest('students', {
-    method: 'GET',
-    query: `?student_id=eq.${encodeURIComponent(token)}&limit=1`,
   });
   return (rows && rows[0]) ? rows[0] : null;
 }
@@ -376,6 +369,9 @@ async function updateWritingGradeAdmin(studentId, testName, fields) {
 }
 
 module.exports = {
+  // Exported because api/reports.js, api/dev-notifications.js and api/keepalive.js
+  // import it - it was missing, so those endpoints failed on every call.
+  restRequest,
   insertOrder,
   getOrderByTransactionUuid,
   getOrderById,

@@ -11,7 +11,7 @@ function ok(cond, label) {
 }
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
-function boot({ hash = '', storage = {}, auth = {}, fetchImpl } = {}) {
+function boot({ hash = '', search = '', storage = {}, auth = {}, fetchImpl } = {}) {
   const calls = { signUp: [], signIn: [], otp: [], reset: [], resend: [], update: [], signOut: [], fetch: [], oauth: [] };
   let listener = null;
   const client = {
@@ -34,7 +34,7 @@ function boot({ hash = '', storage = {}, auth = {}, fetchImpl } = {}) {
   const errors = [];
   vc.on('jsdomError', (e) => { if (!/Not implemented/.test(e.message)) errors.push(e.message); });
   const dom = new JSDOM(html, {
-    url: 'https://viatestprep.test/' + (hash ? '#' + hash : ''),
+    url: 'https://viatestprep.test/' + search + (hash ? '#' + hash : ''),
     runScripts: 'dangerously',
     pretendToBeVisual: true,
     virtualConsole: vc,
@@ -384,6 +384,34 @@ const session = (extra = {}) => ({ access_token: 'tok-' + Math.random(), user: {
     let m, total = 0, missing = [];
     while ((m = re.exec(html))) { total++; if (!html.slice(m.index, m.index + 500).includes('apiAuthHeaders')) missing.push(m[0].slice(0, 40)); }
     ok(total >= 7 && missing.length === 0, total + ' calls to reports / dev-notifications / student-results all attach credentials ' + missing.join(' | '));
+  }
+
+
+  console.log('19. Student private link (?student=...)');
+  {
+    const LINK = 'a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d';
+    const good = boot({
+      search: '?student=' + LINK,
+      fetchImpl: async (url) => url.includes('action=login')
+        ? { ok: true, status: 200, json: async () => ({ ok: true, id: 'st-1', name: 'Anu', accessLevel: 'full', accessExpiresAt: null, sessionToken: 'link-token-1' }) }
+        : { ok: true, status: 200, json: async () => ({ ok: true }) },
+    });
+    await sleep(400);
+    ok(good.calls.fetch.some(c => c[0].includes('action=login') && c[0].includes(LINK)), 'the link code is sent to the server for checking');
+    const ls = good.w.localStorage;
+    ok(ls.getItem('viatestprep_unlocked') === 'true' && ls.getItem('viatestprep_active_student_id') === 'st-1', 'student is logged in');
+    ok(ls.getItem('viatestprep_session_token') === 'link-token-1', 'the server-issued token is saved (so results can be saved)');
+    ok(!good.w.location.search.includes('student='), 'the secret is removed from the address bar');
+    ok(!hidden(good.d, 'view-student'), 'student portal is shown');
+
+    const bad = boot({
+      search: '?student=nope',
+      fetchImpl: async (url) => url.includes('action=login')
+        ? { ok: false, status: 404, json: async () => ({ ok: false, error: 'Invalid or unknown access link' }) }
+        : { ok: true, status: 200, json: async () => ({ ok: true }) },
+    });
+    await sleep(400);
+    ok(bad.w.localStorage.getItem('viatestprep_unlocked') !== 'true' && bad.w.localStorage.getItem('viatestprep_session_token') === null, 'an invalid link logs nobody in and leaves no token');
   }
 
   console.log('\n' + pass + ' passed, ' + fail + ' failed');
