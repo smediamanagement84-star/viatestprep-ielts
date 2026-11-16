@@ -2679,6 +2679,25 @@
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhjbWh0eGZtdnV0eHRud2RidXVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMwNDEwMjYsImV4cCI6MjA5ODYxNzAyNn0.lSW6zw5lS59dZF2MWD7kFQCtuoFtibnyS0x2nyQfZbA';
     let supabaseClient = null;
 
+    // Headers that prove who is calling to the backend: the signed session
+    // token the server issued at login, plus the owner key on an owner device.
+    function apiAuthHeaders(extra) {
+      const h = Object.assign({}, extra || {});
+      try {
+        const t = localStorage.getItem('viatestprep_session_token');
+        if (t) h['X-Session-Token'] = t;
+        const k = localStorage.getItem('viatestprep_owner_key');
+        if (k) h['X-Owner-Key'] = k;
+      } catch (e) {}
+      return h;
+    }
+    function storeSessionToken(token) {
+      try {
+        if (token) localStorage.setItem('viatestprep_session_token', token);
+        else localStorage.removeItem('viatestprep_session_token');
+      } catch (e) {}
+    }
+
     function getOwnerKey() {
       // No built-in fallback: a key baked into public source would hand every
       // visitor owner access. The owner's device gets its key once via
@@ -2926,6 +2945,25 @@
       showAuthNotice('You are signed in as ' + session.user.email + '. Choose who you are to continue.', false);
     }
 
+    // Google sign-in only works if the Google provider is switched on in the
+    // Supabase project; when it is off, the button leads to a raw error page.
+    // Ask the project once and hide the button instead of sending people into
+    // a dead end. If the check itself fails, the button is left as it is.
+    async function hideGoogleIfDisabled() {
+      try {
+        if (!SUPABASE_URL || !SUPABASE_ANON_KEY) return;
+        const res = await fetch(SUPABASE_URL + '/auth/v1/settings', { headers: { apikey: SUPABASE_ANON_KEY } });
+        if (!res.ok) return;
+        const s = await res.json();
+        if (!s || !s.external || s.external.google !== false) return;
+        document.querySelectorAll('button[onclick^="signInWithGoogle"]').forEach(b => b.classList.add('hidden'));
+        document.querySelectorAll('[id$="-inapp"]').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('#accessModal span').forEach(sp => {
+          if (/or use your email/i.test(sp.textContent) && sp.parentElement) sp.parentElement.classList.add('hidden');
+        });
+      } catch (e) {}
+    }
+
     function initSupabase() {
       if (SUPABASE_URL && SUPABASE_ANON_KEY && typeof supabase !== 'undefined') {
         supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -2938,6 +2976,16 @@
         supabaseClient.auth.onAuthStateChange((event, session) => {
           if (event === 'PASSWORD_RECOVERY') {
             setTimeout(openRecoveryModal, 0);
+            return;
+          }
+          // A login made before signed session tokens existed has no token yet;
+          // quietly get one so saving results keeps working without a re-login.
+          if (event === 'INITIAL_SESSION') {
+            if (session && !recoveryInProgress &&
+                localStorage.getItem('viatestprep_unlocked') === 'true' &&
+                !localStorage.getItem('viatestprep_session_token')) {
+              setTimeout(() => routeSession(session, null), 0);
+            }
             return;
           }
           if (event === 'SIGNED_OUT') {
@@ -3321,6 +3369,7 @@
     window.addEventListener('DOMContentLoaded', () => {
       initSupabase();
       revealDevToolsIfAllowed();
+      hideGoogleIfDisabled();
       handleAuthRedirectFeedback();
       // NOTE: cloud roster sync intentionally does NOT run here anymore. It
       // used to run unconditionally for every single visitor (including
@@ -3490,6 +3539,7 @@
         localStorage.setItem('viatestprep_active_student_id', student.id);
         localStorage.setItem('viatestprep_active_student_name', student.name || '');
         localStorage.setItem('viatestprep_active_student_expires_at', student.accessExpiresAt || '');
+        storeSessionToken(student.sessionToken);
         
         window.history.replaceState({}, document.title, window.location.pathname);
         renderAppView();
@@ -3617,7 +3667,7 @@
         'viatestprep_active_student_expires_at', 'viatestprep_student_access',
         'viatestprep_consultancy_id', 'viatestprep_consultancy_name',
         'viatestprep_consultancy_plan', 'viatestprep_consultancy_expires_at',
-        'viatestprep_owner_key', 'oauth_pending_role', 'userEmail'
+        'viatestprep_owner_key', 'viatestprep_session_token', 'oauth_pending_role', 'userEmail'
       ].forEach(k => localStorage.removeItem(k));
       sessionStorage.clear();
       // Wait for the sign-out before leaving the page. Navigating away first
@@ -4051,12 +4101,14 @@
         // must come from the server, not just default to full every time.
         localStorage.setItem('viatestprep_student_access', regData.accessLevel === 'mocks' ? 'mocks' : 'full');
         localStorage.setItem('viatestprep_active_student_expires_at', regData.accessExpiresAt || '');
+        storeSessionToken(regData.sessionToken);
       } else {
         // Never leave a previous person's student id behind.
         localStorage.removeItem('viatestprep_active_student_id');
         localStorage.removeItem('viatestprep_active_student_name');
         localStorage.removeItem('viatestprep_active_student_expires_at');
         localStorage.removeItem('viatestprep_student_access');
+        storeSessionToken(null);
         showAuthNotice('You are signed in, but your profile could not be loaded yet. Refresh the page if your progress does not appear.', true);
       }
 
@@ -4102,6 +4154,7 @@
         localStorage.setItem('viatestprep_consultancy_name', regData.name);
         localStorage.setItem('viatestprep_consultancy_plan', regData.planName);
         localStorage.setItem('viatestprep_consultancy_expires_at', regData.expiresAt);
+        storeSessionToken(regData.sessionToken);
         rememberReturningVisitor('consultancy', session.user.email);
 
         hideAuthNotice();
@@ -4729,6 +4782,7 @@
       localStorage.removeItem('viatestprep_active_student_name');
       localStorage.removeItem('viatestprep_active_student_expires_at');
       localStorage.removeItem('viatestprep_owner_key');
+      localStorage.removeItem('viatestprep_session_token');
     }
 
     function switchStudentTab(tabId) {
@@ -5301,7 +5355,7 @@
         };
       } else {
         try {
-          const res = await fetch('/api/student?action=reports&studentId=' + encodeURIComponent(activeStudentId));
+          const res = await fetch('/api/student?action=reports&studentId=' + encodeURIComponent(activeStudentId), { headers: apiAuthHeaders() });
           data = await res.json();
         } catch (e) {
           console.error('Could not load test reports:', e);
@@ -9414,7 +9468,7 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
         };
         const res = await fetch('/api/reports', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: apiAuthHeaders({ 'Content-Type': 'application/json' }),
           body: JSON.stringify(testPayload)
         });
         if (res.ok) {
@@ -9467,7 +9521,7 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
       try {
         fetch('/api/reports', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: apiAuthHeaders({ 'Content-Type': 'application/json' }),
           body: JSON.stringify(reportPayload)
         }).catch(err => console.log('Backend API sync pending: ', err));
       } catch (e) {}
@@ -9502,7 +9556,7 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
 
       // Attempt live sync from backend API
       try {
-        const res = await fetch(`/api/reports?consultancyId=${encodeURIComponent(consultancyId)}`);
+        const res = await fetch(`/api/reports?consultancyId=${encodeURIComponent(consultancyId)}`, { headers: apiAuthHeaders() });
         if (res.ok) {
           const data = await res.json();
           if (data && Array.isArray(data.reports) && data.reports.length > 0) {
@@ -9663,7 +9717,7 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
         try {
           fetch('/api/reports', {
             method: 'PATCH',
-            headers: { 'Content-Type': 'application/json' },
+            headers: apiAuthHeaders({ 'Content-Type': 'application/json' }),
             body: JSON.stringify({ reportId: id, status: 'resolved', resolutionNote: note })
           }).catch(err => console.log('PATCH API sync pending: ', err));
         } catch (e) {}
@@ -9730,7 +9784,7 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
     // ============================================================
     async function fetchDevNotifications() {
       try {
-        const res = await fetch('/api/dev-notifications?status=UNREAD');
+        const res = await fetch('/api/dev-notifications?status=UNREAD', { headers: apiAuthHeaders() });
         if (res.ok) {
           const data = await res.json();
           if (data && Array.isArray(data.notifications)) {
@@ -9788,7 +9842,7 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
       try {
         await fetch('/api/dev-notifications', {
           method: 'PATCH',
-          headers: { 'Content-Type': 'application/json' },
+          headers: apiAuthHeaders({ 'Content-Type': 'application/json' }),
           body: JSON.stringify({ id, devStatus: 'READ' })
         });
         fetchDevNotifications();

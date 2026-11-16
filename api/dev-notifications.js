@@ -1,13 +1,19 @@
 const { restRequest } = require('./_lib/supabaseAdmin');
+const { isOwner } = require('./_lib/ownerAuth');
 
 module.exports = async function handler(req, res) {
   // Enable CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, PATCH, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Owner-Key, X-Session-Token');
 
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
+  }
+
+  // Developer-only: internal system notifications.
+  if (!isOwner(req.headers['x-owner-key'])) {
+    return res.status(401).json({ error: 'Owner access required.' });
   }
 
   try {

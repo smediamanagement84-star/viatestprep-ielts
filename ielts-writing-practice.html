@@ -438,7 +438,7 @@ async function submitTest(autoSubmit = false) {
     if (activeStudentId) {
       const res = await fetch('/api/mock/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'X-Session-Token': localStorage.getItem('viatestprep_session_token') || '', 'X-Owner-Key': localStorage.getItem('viatestprep_owner_key') || '' },
         body: JSON.stringify({
           studentId: activeStudentId,
           testName: testData.title,
@@ -449,6 +449,17 @@ async function submitTest(autoSubmit = false) {
       });
       const data = await res.json();
       graded = data.graded;
+      if (!graded) {
+        // Could not save to the student's record (for example a login from before the
+      // last update) - still grade the essay so they always get their result.
+      const res2 = await fetch('/api/writing/grade', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ writingTask1: essayContent[1], writingTask2: essayContent[2] })
+      });
+      const data2 = await res2.json();
+      if (data2.ok) graded = data2.graded;
+    }
     } else {
       const res = await fetch('/api/writing/grade', {
         method: 'POST',

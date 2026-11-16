@@ -1278,7 +1278,7 @@
         try {
           var saveRes = await fetch('/api/mock/submit', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json', 'X-Session-Token': localStorage.getItem('viatestprep_session_token') || '', 'X-Owner-Key': localStorage.getItem('viatestprep_owner_key') || '' },
             body: JSON.stringify({
               studentId: activeStudentId,
               testName: testData.title,

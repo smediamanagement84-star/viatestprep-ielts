@@ -12,6 +12,8 @@
 // POST /api/student?action=register  { accessToken, name } (was /api/student/register)
 // GET  /api/student?action=reports&studentId=...          (was /api/student/reports)
 const { verifyAuthUser } = require('../_lib/authUser');
+const { signSession } = require('../_lib/sessionToken');
+const { getCaller, canActAsStudent } = require('../_lib/callerAuth');
 const {
   getStudentByAccessToken,
   getStudentByAuthUserId,
@@ -47,6 +49,9 @@ async function handleLogin(req, res) {
     accessLevel: student.access_level || 'full',
     consultancyId: student.consultancy_id,
     expired,
+    // Proof for later requests that the server verified this login. Not
+    // issued once access has expired.
+    sessionToken: expired ? null : signSession('student', student.id),
   });
 }
 
@@ -82,6 +87,7 @@ async function handleRegister(req, res) {
     accessLevel: row.access_level || 'full',
     consultancyId: row.consultancy_id,
     expired,
+    sessionToken: expired ? null : signSession('student', row.id),
   });
 }
 
@@ -89,6 +95,13 @@ async function handleReports(req, res) {
   const studentId = (req.query.studentId || '').trim();
   if (!studentId) {
     res.status(400).json({ ok: false, error: 'Missing studentId' });
+    return;
+  }
+
+  // A student id alone proves nothing - only that student (or the owner)
+  // may read their results.
+  if (!canActAsStudent(getCaller(req), studentId)) {
+    res.status(401).json({ ok: false, error: 'Please log in again to view your results.' });
     return;
   }
 

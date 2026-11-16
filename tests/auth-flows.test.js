@@ -50,7 +50,7 @@ function boot({ hash = '', storage = {}, auth = {}, fetchImpl } = {}) {
       w.fetch = async (url, opts) => {
         calls.fetch.push([String(url), opts]);
         if (fetchImpl) return fetchImpl(String(url), opts);
-        return { ok: true, status: 200, json: async () => ({ ok: true, id: 'stu-1', name: 'Test Student', accessLevel: 'full', accessExpiresAt: '' }) };
+        return { ok: true, status: 200, json: async () => ({ ok: true, id: 'stu-1', name: 'Test Student', accessLevel: 'full', accessExpiresAt: '', sessionToken: 'signed-token-1' }) };
       };
     },
   });
@@ -264,12 +264,12 @@ const session = (extra = {}) => ({ access_token: 'tok-' + Math.random(), user: {
   console.log('13. Logout really signs out');
   {
     const s = session({ user_metadata: { role: 'student' } });
-    const t = boot({ storage: { viatestprep_unlocked: 'true', viatestprep_user_role: 'student', viatestprep_student_access: 'mocks', userEmail: 'a@b.com', 'sb-xyz-auth-token': '{}' } });
+    const t = boot({ storage: { viatestprep_unlocked: 'true', viatestprep_user_role: 'student', viatestprep_student_access: 'mocks', userEmail: 'a@b.com', 'sb-xyz-auth-token': '{}', viatestprep_session_token: 'signed-token-1' } });
     await sleep(150);
     await t.w.handleLogout();
     ok(t.calls.signOut.length === 1 && t.calls.signOut[0].scope === 'local', 'awaited local signOut before leaving page');
     ok(t.w.localStorage.getItem('sb-xyz-auth-token') === null, 'stored Supabase session removed');
-    ok(['viatestprep_unlocked', 'viatestprep_user_role', 'viatestprep_student_access', 'userEmail'].every(k => t.w.localStorage.getItem(k) === null), 'all auth flags cleared');
+    ok(['viatestprep_unlocked', 'viatestprep_user_role', 'viatestprep_student_access', 'userEmail', 'viatestprep_session_token'].every(k => t.w.localStorage.getItem(k) === null), 'all auth flags cleared');
   }
 
   console.log('14. Consultancy signup needs a name; profile load failure is retryable');
@@ -321,6 +321,69 @@ const session = (extra = {}) => ({ access_token: 'tok-' + Math.random(), user: {
     delete require.cache[require.resolve(path.join(ROOT, 'api/_lib/ownerAuth'))];
     gate = require(path.join(ROOT, 'api/_lib/ownerAuth'));
     ok(gate.isOwner('unit-test-key') === true && gate.isOwner('unit-test-kez') === false, 'owner gate accepts only the exact key');
+  }
+
+
+  console.log('16. Google button hides itself when the provider is off');
+  {
+    const settings = (google) => async (url) => url.includes('/auth/v1/settings')
+      ? { ok: true, status: 200, json: async () => ({ external: { email: true, google } }) }
+      : { ok: true, status: 200, json: async () => ({ ok: true }) };
+    const off = boot({ fetchImpl: settings(false) });
+    await sleep(250);
+    const gBtns = [...off.d.querySelectorAll('button[onclick^="signInWithGoogle"]')];
+    ok(gBtns.length === 2 && gBtns.every(b => b.classList.contains('hidden')), 'Google disabled in Supabase -> both Google buttons hidden');
+    const divider = [...off.d.querySelectorAll('#accessModal span')].find(sp => /or use your email/i.test(sp.textContent));
+    ok(divider && divider.parentElement.classList.contains('hidden'), '"or use your email" divider hidden too');
+    const on = boot({ fetchImpl: settings(true) });
+    await sleep(250);
+    ok([...on.d.querySelectorAll('button[onclick^="signInWithGoogle"]')].every(b => !b.classList.contains('hidden')), 'Google enabled -> buttons stay');
+    const broken = boot({ fetchImpl: async (url) => { if (url.includes('/auth/v1/settings')) throw new Error('offline'); return { ok: true, status: 200, json: async () => ({ ok: true }) }; } });
+    await sleep(250);
+    ok([...broken.d.querySelectorAll('button[onclick^="signInWithGoogle"]')].every(b => !b.classList.contains('hidden')), 'settings check fails -> buttons stay (never hidden by mistake)');
+  }
+
+  console.log('17. Session tokens');
+  {
+    const s = session({ user_metadata: { role: 'student' } });
+    const t = boot({ auth: { signIn: () => ({ data: { session: s }, error: null }) } });
+    await sleep(150);
+    t.w.openAccessModal(); t.w.selectModalRole('student'); t.w.setAuthMode('student', 'login');
+    $(t.d, 'm-student-auth-email').value = 'a@b.com'; $(t.d, 'm-student-auth-password').value = 'secret1';
+    await t.w.handleStudentAuthSubmit(); await sleep(60);
+    ok(t.w.localStorage.getItem('viatestprep_session_token') === 'signed-token-1', 'token saved at login');
+    const h = t.w.apiAuthHeaders({ A: 1 });
+    ok(h['X-Session-Token'] === 'signed-token-1' && h.A === 1, 'token is attached to API calls (and other headers kept)');
+    t.w.localStorage.setItem('viatestprep_owner_key', 'okey');
+    ok(t.w.apiAuthHeaders()['X-Owner-Key'] === 'okey', 'owner key attached on owner devices');
+
+    const bad = boot({ storage: { viatestprep_session_token: 'stale' }, fetchImpl: async () => ({ ok: true, status: 500, json: async () => ({ ok: false }) }) });
+    await sleep(150);
+    await bad.w.finishStudentSession(s, 'x', true);
+    ok(bad.w.localStorage.getItem('viatestprep_session_token') === null, 'a failed profile load never leaves a stale token behind');
+
+    const old = boot({ storage: { viatestprep_unlocked: 'true', viatestprep_user_role: 'student' } });
+    await sleep(150);
+    old.fire('INITIAL_SESSION', s); await sleep(120);
+    ok(old.calls.fetch.some(c => c[0].includes('action=register')) && old.w.localStorage.getItem('viatestprep_session_token') === 'signed-token-1', 'a login from before this update quietly gets a token (no re-login needed)');
+    const have = boot({ storage: { viatestprep_unlocked: 'true', viatestprep_user_role: 'student', viatestprep_session_token: 'have-one' } });
+    await sleep(150);
+    have.fire('INITIAL_SESSION', s); await sleep(80);
+    ok(!have.calls.fetch.some(c => c[0].includes('action=register')), 'no extra work when a token already exists');
+  }
+
+  console.log('18. Every private request carries the token');
+  {
+    for (const f of ['ielts-listening-practice.html', 'ielts-reading-practice.html', 'ielts-writing-practice.html']) {
+      const src = fs.readFileSync(path.join(ROOT, f), 'utf8');
+      ok(/X-Session-Token/.test(src), f + ' sends the token when saving a result');
+    }
+    const writing = fs.readFileSync(path.join(ROOT, 'ielts-writing-practice.html'), 'utf8');
+    ok(/if \(!graded\)/.test(writing), 'writing page still grades the essay if saving is refused');
+    const re = /fetch\(\s*(?:'\/api\/(?:reports|dev-notifications)[^']*'|`\/api\/reports[^`]*`|'\/api\/student\?action=reports[^']*')/g;
+    let m, total = 0, missing = [];
+    while ((m = re.exec(html))) { total++; if (!html.slice(m.index, m.index + 500).includes('apiAuthHeaders')) missing.push(m[0].slice(0, 40)); }
+    ok(total >= 7 && missing.length === 0, total + ' calls to reports / dev-notifications / student-results all attach credentials ' + missing.join(' | '));
   }
 
   console.log('\n' + pass + ' passed, ' + fail + ' failed');

@@ -12,6 +12,7 @@
 // this app's client-side-secret design. Genuine per-request auth would need
 // real Supabase Auth + RLS, which is a larger change than this pass covers.
 const { getStudentById, insertMockResult, friendlyDbError } = require('../_lib/supabaseAdmin');
+const { getCaller, canActAsStudent } = require('../_lib/callerAuth');
 const { gradeWritingSubmission } = require('../_lib/writingGrader');
 
 const VALID_MODULES = ['listening', 'reading', 'writing'];
@@ -30,6 +31,13 @@ module.exports = async (req, res) => {
 
     if (!studentId || !testName || !VALID_MODULES.includes(moduleType)) {
       res.status(400).json({ ok: false, error: 'Missing or invalid studentId, testName, or moduleType' });
+      return;
+    }
+
+    // Only that student (or the owner) may write to their record - a bare
+    // studentId in the request body proves nothing.
+    if (!canActAsStudent(getCaller(req), studentId)) {
+      res.status(401).json({ ok: false, error: 'Please log in again to save your results.' });
       return;
     }
 

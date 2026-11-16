@@ -12,6 +12,7 @@
 // so `consultancies` never needs a public RLS SELECT/INSERT policy for the
 // anon key.
 const { verifyAuthUser } = require('../_lib/authUser');
+const { signSession } = require('../_lib/sessionToken');
 const {
   getConsultancyByEmail, insertConsultancyShell, claimConsultancyOwner, friendlyDbError,
 } = require('../_lib/supabaseAdmin');
@@ -31,7 +32,7 @@ module.exports = async (req, res) => {
         return;
       }
 
-      res.status(200).json({ ok: true, id: data.id, name: data.name, planName: data.plan_name, expiresAt: data.expires_at });
+      res.status(200).json({ ok: true, id: data.id, name: data.name, planName: data.plan_name, expiresAt: data.expires_at, sessionToken: signSession('consultancy', data.id) });
     } catch (err) {
       console.error('consultancy/account GET error:', err);
       res.status(500).json({ ok: false, error: friendlyDbError(err) || 'Could not look up consultancy. Please try again in a moment.' });
@@ -65,7 +66,7 @@ module.exports = async (req, res) => {
         });
       }
 
-      res.status(200).json({ ok: true, id: row.id, name: row.name, planName: row.plan_name, expiresAt: row.expires_at });
+      res.status(200).json({ ok: true, id: row.id, name: row.name, planName: row.plan_name, expiresAt: row.expires_at, sessionToken: signSession('consultancy', row.id) });
     } catch (err) {
       console.error('consultancy/account POST error:', err);
       res.status(500).json({ ok: false, error: friendlyDbError(err) || 'Could not set up your consultancy account. Please try again in a moment.' });

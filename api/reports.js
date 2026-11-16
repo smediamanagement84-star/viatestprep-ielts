@@ -1,10 +1,11 @@
-const { restRequest } = require('./_lib/supabaseAdmin');
+const { restRequest, getStudentById } = require('./_lib/supabaseAdmin');
+const { getCaller } = require('./_lib/callerAuth');
 
 module.exports = async function handler(req, res) {
   // Enable CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Owner-Key, X-Session-Token');
 
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
@@ -13,7 +14,25 @@ module.exports = async function handler(req, res) {
   try {
     // 1. POST: Student Submits Error Report
     if (req.method === 'POST') {
-      const { studentId, studentName, consultancyId, section, label, errorType, description, questionRef, devWebhookUrl } = req.body || {};
+      let { studentId, studentName, consultancyId, section, label, errorType, description, questionRef, devWebhookUrl } = req.body || {};
+      const caller = getCaller(req);
+      // Who a report is "from" comes from the verified session, never from
+      // the request body - otherwise anyone could file reports as any
+      // student into any consultancy's inbox.
+      if (caller && caller.role === 'student') {
+        studentId = caller.id;
+        consultancyId = 'default_consultancy';
+        try {
+          const st = await getStudentById(caller.id);
+          if (st) { studentName = st.name || studentName; consultancyId = st.consultancy_id || 'default_consultancy'; }
+        } catch (e) {}
+      } else if (!caller || caller.role !== 'owner') {
+        studentId = 'demo_student';
+        consultancyId = 'default_consultancy';
+      }
+      const clip = (v, n) => String(v == null ? '' : v).slice(0, n);
+      studentName = clip(studentName, 120); section = clip(section, 120); label = clip(label, 200);
+      errorType = clip(errorType, 80); description = clip(description, 2000); questionRef = clip(questionRef, 300);
       
       const reportData = {
         id: 'rep_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7),
@@ -55,7 +74,9 @@ module.exports = async function handler(req, res) {
       } catch (sysErr) {}
 
       // Developer Webhook Notification (Optional extra push if URL configured)
-      const targetWebhook = devWebhookUrl || process.env.DEV_DISCORD_WEBHOOK_URL || process.env.DEV_WEBHOOK_URL;
+      // A custom webhook URL is honoured only from the owner. Taking one from
+      // anyone would let strangers make this server send requests anywhere.
+      const targetWebhook = (caller && caller.role === 'owner' && devWebhookUrl) || process.env.DEV_DISCORD_WEBHOOK_URL || process.env.DEV_WEBHOOK_URL;
       if (targetWebhook && targetWebhook.startsWith('http')) {
         try {
           const discordEmbed = {
@@ -90,7 +111,11 @@ module.exports = async function handler(req, res) {
 
     // 2. GET: Admin/Teacher/Dev Fetches Reports
     if (req.method === 'GET') {
-      const consultancyId = req.query.consultancyId || 'all';
+      const caller = getCaller(req);
+      if (!caller) return res.status(401).json({ error: 'Please log in to view reports.' });
+      if (caller.role !== 'owner' && caller.role !== 'consultancy') return res.status(403).json({ error: 'Not allowed.' });
+      // A consultancy only ever sees its own reports; only the owner may ask for "all".
+      const consultancyId = caller.role === 'owner' ? (req.query.consultancyId || 'all') : caller.id;
       let query = '?order=created_at.desc';
       if (consultancyId !== 'all') {
         query = `?consultancy_id=eq.${encodeURIComponent(consultancyId)}&order=created_at.desc`;
@@ -107,6 +132,17 @@ module.exports = async function handler(req, res) {
     if (req.method === 'PATCH') {
       const { reportId, status, resolutionNote } = req.body || {};
       if (!reportId) return res.status(400).json({ error: 'reportId is required.' });
+      const caller = getCaller(req);
+      if (!caller) return res.status(401).json({ error: 'Please log in to update reports.' });
+      if (caller.role !== 'owner') {
+        if (caller.role !== 'consultancy') return res.status(403).json({ error: 'Not allowed.' });
+        let owned = false;
+        try {
+          const found = await restRequest('error_reports', { method: 'GET', query: `?id=eq.${encodeURIComponent(reportId)}&select=consultancy_id` });
+          owned = !!(found && found.length && String(found[0].consultancy_id) === String(caller.id));
+        } catch (e) {}
+        if (!owned) return res.status(403).json({ error: 'Not allowed.' });
+      }
 
       try {
         const rows = await restRequest('error_reports', {
