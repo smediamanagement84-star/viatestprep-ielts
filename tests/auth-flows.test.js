@@ -414,6 +414,34 @@ const session = (extra = {}) => ({ access_token: 'tok-' + Math.random(), user: {
     ok(bad.w.localStorage.getItem('viatestprep_unlocked') !== 'true' && bad.w.localStorage.getItem('viatestprep_session_token') === null, 'an invalid link logs nobody in and leaves no token');
   }
 
+
+  console.log('20. Secret owner / teacher links');
+  {
+    const KEY = 'owner-secret-key-123';
+    const roster = async (url, opts) => {
+      if (!url.includes('/api/admin/roster')) return { ok: true, status: 200, json: async () => ({ ok: true }) };
+      const good = opts && opts.headers && opts.headers['X-Owner-Key'] === KEY;
+      return { ok: good, status: good ? 200 : 401, json: async () => ({ ok: good }) };
+    };
+    const stu = boot({ search: '?studentkey=' + KEY, fetchImpl: roster });
+    await sleep(400);
+    let ls = stu.w.localStorage;
+    ok(ls.getItem('viatestprep_unlocked') === 'true' && ls.getItem('viatestprep_user_role') === 'student' && ls.getItem('viatestprep_student_access') === 'full', 'teacher link opens the full student portal');
+    ok(ls.getItem('viatestprep_owner_key') === KEY, 'device remembers the key (so the teacher stays in)');
+    ok(!stu.w.location.search.includes('studentkey') && !stu.w.location.href.includes(KEY), 'the key is removed from the address bar (safe on a projector)');
+    ok(!hidden(stu.d, 'view-student'), 'student portal is visible');
+
+    const own = boot({ search: '?ownerkey=' + KEY, fetchImpl: roster });
+    await sleep(400);
+    ls = own.w.localStorage;
+    ok(ls.getItem('viatestprep_unlocked') === 'true' && ls.getItem('viatestprep_consultancy_id') === '__owner__', 'owner link opens the admin dashboard');
+    ok(!own.w.location.href.includes(KEY), 'the key is removed from the address bar here too');
+
+    const wrong = boot({ search: '?studentkey=WRONG-KEY', fetchImpl: roster });
+    await sleep(400);
+    ok(wrong.w.localStorage.getItem('viatestprep_unlocked') !== 'true' && wrong.w.localStorage.getItem('viatestprep_owner_key') === null, 'a wrong key opens nothing and stores nothing');
+  }
+
   console.log('\n' + pass + ' passed, ' + fail + ' failed');
   process.exit(fail ? 1 : 0);
 })();

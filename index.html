@@ -3402,6 +3402,9 @@
             const data = await res.json();
             if (res.ok && data.ok) {
               localStorage.setItem('viatestprep_owner_key', ownerKeyParam);
+              // Take the secret out of the address bar right away - otherwise it
+              // is visible on a projector, in screenshots and in browser history.
+              window.history.replaceState({}, document.title, window.location.pathname);
               launchAdminBypass();
             } else {
               alert('Invalid owner key.');
@@ -3429,6 +3432,9 @@
             const data = await res.json();
             if (res.ok && data.ok) {
               localStorage.setItem('viatestprep_owner_key', studentKeyParam);
+              // Take the secret out of the address bar right away - otherwise it
+              // is visible on a projector, in screenshots and in browser history.
+              window.history.replaceState({}, document.title, window.location.pathname);
               launchStudentBypass();
             } else {
               alert('Invalid student key.');
