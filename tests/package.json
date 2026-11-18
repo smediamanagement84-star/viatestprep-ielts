@@ -2,6 +2,11 @@
   "name": "viatestprep-auth-tests",
   "private": true,
   "description": "Regression tests for login / signup / password reset / logout. Kept separate so Vercel never installs it.",
-  "scripts": { "test": "node auth-flows.test.js && node api-checks.test.js && node server-auth.test.js && node integration.test.js" },
-  "dependencies": { "jsdom": "30.1.3" }
+  "scripts": {
+    "test": "node auth-flows.test.js && node api-checks.test.js && node server-auth.test.js && node integration.test.js && node real-supabase.test.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.119.0",
+    "jsdom": "30.1.3"
+  }
 }

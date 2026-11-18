@@ -37,7 +37,7 @@ If login ever breaks and the tests are green, it is almost always one of these.
   plain ID or display ID (e.g. `VTP-0007`) can never be used to log in.
 
 ## Before every release
-1. `cd tests && npm install && npm test` (184 checks: login flows, API limits, access rules, and the real API code run against a pretend database).
+1. `cd tests && npm install && npm test` (228 checks: login flows, API limits, access rules, the real API code against a pretend database, and the real Supabase login library against a pretend Supabase server).
    To run it automatically on every GitHub push: on github.com open the repo > Add file > Create new file,
    name it `.github/workflows/auth-tests.yml` and paste in the contents of `tests/auth-tests.workflow.yml`.
 2. Open the preview and test: log in, sign up, forgot password, login link, Google, log out.
