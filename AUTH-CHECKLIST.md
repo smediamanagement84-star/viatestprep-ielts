@@ -11,14 +11,22 @@ If login ever breaks and the tests are green, it is almost always one of these.
   (Credentials > OAuth client ID > Web application). Authorized redirect URI in Google Cloud:
   `https://hcmhtxfmvutxtnwdbuur.supabase.co/auth/v1/callback`.
   If Google is off, the app hides the Google button automatically (no error page).
+- **Phone sign-up with an SMS code** (Authentication > Providers > **Phone**): turn it ON and pick an SMS
+  provider (Twilio is the most common; MessageBird, Vonage, TextLocal also work), then paste its credentials.
+  In Twilio also enable **Nepal** (Messaging > Settings > Geo permissions) - SMS to Nepal is charged per message.
+  Keep "Enable phone confirmations" ON. Until this is done the app does NOT show the phone button
+  (it checks Supabase), so students never hit a dead end. Use Supabase's "test phone numbers" while trying it.
+  Phone-only students are stored with a placeholder email (`<digits>@phone.viatestprep.invalid`) because the
+  students table requires one. Phone sign-up is for students only; consultancy accounts use email or Google.
 - **Authentication > URL Configuration > Site URL**: your live site address.
 - **Redirect URLs** must include the live site and any preview you test on
   (wildcards work, e.g. `https://resourcesvia-*-jarus-projects-079a93e4.vercel.app/**`).
   Missing = login-link, Google and password-reset emails send people to the wrong place.
 - **Email sending**: the built-in sender allows only a few emails per hour. Use your own SMTP
   (Resend / Brevo) or login links and resets will start failing with "too many emails".
-- **Confirm email**: currently OFF (signups log in instantly). Turn ON to verify email addresses;
-  the app already handles that (shows a "check your inbox" screen).
+- **Confirm email** (Authentication > Sign In / Providers > Email): currently OFF (signups log in instantly).
+  Turn ON to make people verify their address: the app then shows a "Check your inbox" screen with Resend,
+  and the link brings them back signed in. Turn it on together with your own SMTP (above) or emails will be rate-limited.
 
 ## Vercel
 - `OWNER_BYPASS_KEY` (Production AND Preview): unset = owner/admin endpoints refuse everyone.
@@ -37,7 +45,7 @@ If login ever breaks and the tests are green, it is almost always one of these.
   plain ID or display ID (e.g. `VTP-0007`) can never be used to log in.
 
 ## Before every release
-1. `cd tests && npm install && npm test` (228 checks: login flows, API limits, access rules, the real API code against a pretend database, and the real Supabase login library against a pretend Supabase server).
+1. `cd tests && npm install && npm test` (272 checks: login flows, API limits, access rules, the real API code against a pretend database, and the real Supabase login library against a pretend Supabase server).
    To run it automatically on every GitHub push: on github.com open the repo > Add file > Create new file,
    name it `.github/workflows/auth-tests.yml` and paste in the contents of `tests/auth-tests.workflow.yml`.
 2. Open the preview and test: log in, sign up, forgot password, login link, Google, log out.

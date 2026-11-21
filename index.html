@@ -2157,68 +2157,124 @@
 
       </div>
 
-      <!-- Step 2 (Student): Real account login/signup -->
-      <div class="p-8 space-y-4 hidden" id="m-step-student">
-        <div>
-          <h3 class="lp-serif text-xl font-bold" style="color:var(--ink)">Student Account</h3>
-          <p class="text-xs lp-muted mt-1 lp-reading">Free for now &mdash; sign up once and your progress saves for good, across devices.</p>
+      <!-- Step 2 (Student): sign up / log in -->
+      <div class="p-6 sm:p-8 space-y-5 hidden" id="m-step-student">
+        <div class="pr-8">
+          <h3 class="lp-serif text-2xl font-bold" style="color:var(--ink)">Student account</h3>
+          <p class="text-sm lp-muted mt-1 lp-reading">Free for now. Sign up once and your progress saves across all your devices.</p>
         </div>
 
         <div id="m-student-main" class="space-y-4">
-          <button type="button" onclick="signInWithGoogle('student')" class="w-full py-3 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-sm font-bold rounded-full transition flex items-center justify-center gap-2 text-[#1c1a17] shadow-sm">
-          <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
-            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
-            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
-          </svg>
-          Continue with Google
-        </button>
-        <p id="m-student-inapp" class="hidden text-[10px] text-center lp-muted">Opened from Facebook or Instagram? Google sign-in only works in your normal browser - tap &#8943; and choose "Open in browser", or use the email option.</p>
-
-        <div class="flex items-center">
-          <div class="flex-grow border-t border-[#ece4d2]"></div>
-          <span class="px-3 text-[10px] uppercase font-bold text-[#8a8171]">or use your email</span>
-          <div class="flex-grow border-t border-[#ece4d2]"></div>
-        </div>
-
-        <div class="flex p-1 rounded-xl gap-1" style="background:var(--lp-gold-soft)">
-          <button type="button" onclick="setAuthMode('student','signup')" id="m-student-tab-signup" class="flex-1 py-2 text-xs font-black rounded-lg transition">Create Free Account</button>
-          <button type="button" onclick="setAuthMode('student','login')" id="m-student-tab-login" class="flex-1 py-2 text-xs font-black rounded-lg transition">Log In</button>
-        </div>
-
-        <form id="m-student-form" class="space-y-3" novalidate onsubmit="event.preventDefault(); handleStudentAuthSubmit();">
-          <input type="text" id="m-student-name" name="name" autocomplete="name" autocapitalize="words" placeholder="Full name (optional)" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
-          <input type="email" id="m-student-auth-email" name="email" inputmode="email" autocomplete="email" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="Email address" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
-          <div class="relative">
-            <input type="password" id="m-student-auth-password" name="password" autocomplete="new-password" placeholder="Password" class="w-full pl-3 pr-16 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
-            <button type="button" tabindex="-1" aria-label="Show password" onclick="togglePasswordVisibility('m-student-auth-password', this)" class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] font-black uppercase lp-accent px-2 py-1">Show</button>
+          <div id="m-student-providers" class="space-y-2.5">
+            <button type="button" data-provider="google" onclick="signInWithGoogle('student')" class="w-full py-3 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-sm font-bold rounded-full transition flex items-center justify-center gap-2.5 text-[#1c1a17] shadow-sm">
+              <svg class="w-[18px] h-[18px] shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+            </svg><span>Continue with Google</span>
+            </button>
+            <button type="button" data-provider="phone" onclick="showPhonePanel('student')" class="hidden w-full py-3 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-sm font-bold rounded-full transition flex items-center justify-center gap-2.5 text-[#1c1a17] shadow-sm">
+              <svg class="w-[18px] h-[18px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg><span>Continue with phone</span>
+            </button>
+            <p id="m-student-inapp" class="hidden text-xs text-center lp-muted">Opened from Facebook or Instagram? Google sign-in only works in your normal browser - tap &#8943; and choose "Open in browser", or use another option.</p>
+            <div id="m-student-or" class="flex items-center pt-1">
+              <div class="flex-grow border-t border-[#ece4d2]"></div>
+              <span class="px-3 text-[11px] uppercase font-bold tracking-wide text-[#8a8171]">or continue with email</span>
+              <div class="flex-grow border-t border-[#ece4d2]"></div>
+            </div>
           </div>
-          <p id="m-student-pw-hint" class="text-[10px] lp-muted -mt-1">At least 6 characters.</p>
-          <button type="submit" id="m-student-auth-btn" class="lp-btn-primary w-full py-3 font-extrabold rounded-full text-sm transition">Create Free Account</button>
-        </form>
 
-        <button type="button" onclick="sendMagicLink('student')" class="w-full py-2.5 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-xs font-bold rounded-full transition text-[#1c1a17]">&#9993;&#65039; Email me a login link instead &mdash; no password</button>
+          <form id="m-student-form" class="space-y-3" novalidate onsubmit="event.preventDefault(); handleStudentAuthSubmit();">
+            <p id="m-student-heading" class="text-base font-extrabold" style="color:var(--ink)">Welcome back</p>
+            <input type="text" id="m-student-name" name="name" autocomplete="name" autocapitalize="words" placeholder="Your name (optional)" class="w-full px-3.5 py-3 rounded-xl text-base font-semibold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+            <input type="email" id="m-student-auth-email" name="email" inputmode="email" autocomplete="email" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="Email address" class="w-full px-3.5 py-3 rounded-xl text-base font-semibold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+            <div class="relative">
+              <input type="password" id="m-student-auth-password" name="password" autocomplete="new-password" placeholder="Password" class="w-full pl-3.5 pr-16 py-3 rounded-xl text-base font-semibold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+              <button type="button" tabindex="-1" aria-label="Show password" onclick="togglePasswordVisibility('m-student-auth-password', this)" class="absolute right-2 top-1/2 -translate-y-1/2 text-[11px] font-black uppercase lp-accent px-2 py-1">Show</button>
+            </div>
+            <p id="m-student-pw-hint" class="text-xs lp-muted -mt-1">At least 6 characters.</p>
+            <button type="submit" id="m-student-auth-btn" class="lp-btn-primary w-full py-3 font-extrabold rounded-full text-sm transition">Log in</button>
+          </form>
 
-        <p id="m-student-auth-status" role="status" aria-live="polite" class="text-[11px] text-center min-h-[14px] lp-accent font-bold"></p>
-        <p id="m-student-resend-row" class="text-center text-[10px] lp-muted hidden"><button type="button" onclick="resendStudentConfirmation()" class="underline hover:no-underline">Didn't get a confirmation email? Resend it</button></p>
-        <p class="text-center text-[10px] lp-muted"><button type="button" onclick="handleStudentForgotPassword()" class="underline hover:no-underline">Forgot password?</button></p>
+          <p id="m-student-auth-status" role="status" aria-live="polite" class="text-xs text-center lp-accent font-bold empty:hidden"></p>
+          <p id="m-student-resend-row" class="text-center text-xs lp-muted hidden"><button type="button" onclick="resendStudentConfirmation()" class="underline hover:no-underline">Didn't get a confirmation email? Resend it</button></p>
+          <p class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs lp-muted">
+            <button type="button" id="m-student-forgot" onclick="handleStudentForgotPassword()" class="underline hover:no-underline">Forgot password?</button>
+            <span id="m-student-sep" aria-hidden="true">&middot;</span>
+            <button type="button" onclick="sendMagicLink('student')" class="underline hover:no-underline">Email me a login link</button>
+          </p>
+          <div class="text-center pt-1">
+            <button type="button" id="m-student-mode-toggle" onclick="toggleAuthMode('student')" class="text-sm font-bold lp-accent hover:underline">New here? Create a free account</button>
+          </div>
 
-        <div class="dev-bypass-block hidden pt-3 border-t border-[#ece4d2] text-center">
-          <span class="text-[9px] font-black uppercase tracking-widest text-[#a8792f] block mb-1.5">Owner device only</span>
-          <button type="button" onclick="launchStudentBypass()" class="px-3.5 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-[10px] font-extrabold rounded-lg text-[#5c5648] transition">&#128273; Student Bypass</button>
-        </div>
+          <div class="dev-bypass-block hidden pt-3 border-t border-[#ece4d2] text-center">
+            <span class="text-[9px] font-black uppercase tracking-widest text-[#a8792f] block mb-1.5">Owner device only</span>
+            <button type="button" onclick="launchStudentBypass()" class="px-3.5 py-1.5 bg-[#f3ecd8] hover:bg-[#efe6d0] border border-[#e5ded0] text-[10px] font-extrabold rounded-lg text-[#5c5648] transition">&#128273; Student Bypass</button>
+          </div>
         </div>
 
         <div id="m-student-sent" class="hidden space-y-4 text-center py-2">
           <div class="text-4xl">&#128236;</div>
           <h4 id="m-student-sent-title" class="lp-serif text-lg font-bold" style="color:var(--ink)">Check your inbox</h4>
-          <p id="m-student-sent-body" class="text-xs lp-muted lp-reading"></p>
-          <p class="text-[11px] lp-muted">Can't see it? Check your spam or promotions folder.</p>
+          <p id="m-student-sent-body" class="text-sm lp-muted lp-reading"></p>
+          <p class="text-xs lp-muted">Can't see it? Check your spam or promotions folder.</p>
           <div class="flex flex-col gap-2">
-            <a id="m-student-sent-mail" href="https://mail.google.com" target="_blank" rel="noopener" class="hidden w-full py-2.5 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-xs font-bold rounded-full transition text-[#1c1a17]">Open Gmail</a>
-            <button type="button" id="m-student-sent-resend" onclick="resendAuthEmail('student')" class="w-full py-2.5 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-xs font-bold rounded-full transition text-[#1c1a17]">Resend email</button>
+            <a id="m-student-sent-mail" href="https://mail.google.com" target="_blank" rel="noopener" class="hidden text-center w-full py-3 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-sm font-bold rounded-full transition text-[#1c1a17]">Open Gmail</a>
+            <button type="button" id="m-student-sent-resend" onclick="resendAuthEmail('student')" class="w-full py-3 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-sm font-bold rounded-full transition text-[#1c1a17]">Resend email</button>
             <button type="button" onclick="hideAuthSent('student')" class="text-xs font-bold lp-accent hover:underline">&larr; Use a different email</button>
+          </div>
+        </div>
+
+        <div id="m-student-phone" class="hidden space-y-4">
+          <div>
+            <h4 class="lp-serif text-lg font-bold" style="color:var(--ink)">Continue with phone</h4>
+            <p class="text-sm lp-muted mt-1">We'll text you a code. New here? We'll create your account.</p>
+          </div>
+
+          <div id="m-student-phone-step1" class="space-y-3">
+            <input type="text" id="m-student-phone-name" name="name" autocomplete="name" autocapitalize="words" placeholder="Your name (optional)" class="w-full px-3.5 py-3 rounded-xl text-base font-semibold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+            <div class="flex gap-2">
+              <select id="m-student-phone-cc" aria-label="Country code" class="w-[8rem] shrink-0 px-2 py-3 rounded-xl text-base font-semibold outline-none bg-white" style="border:1px solid var(--rule);color:var(--ink);">
+              <option value="+977" selected>NP +977</option>
+              <option value="+91">IN +91</option>
+              <option value="+880">BD +880</option>
+              <option value="+92">PK +92</option>
+              <option value="+94">LK +94</option>
+              <option value="+975">BT +975</option>
+              <option value="+971">AE +971</option>
+              <option value="+974">QA +974</option>
+              <option value="+966">SA +966</option>
+              <option value="+965">KW +965</option>
+              <option value="+968">OM +968</option>
+              <option value="+973">BH +973</option>
+              <option value="+60">MY +60</option>
+              <option value="+65">SG +65</option>
+              <option value="+61">AU +61</option>
+              <option value="+64">NZ +64</option>
+              <option value="+44">GB +44</option>
+              <option value="+1">US/CA +1</option>
+              <option value="+81">JP +81</option>
+              <option value="+82">KR +82</option>
+              </select>
+              <input type="tel" id="m-student-phone-number" name="phone" inputmode="tel" autocomplete="tel-national" placeholder="98XXXXXXXX" class="min-w-0 flex-1 px-3.5 py-3 rounded-xl text-base font-semibold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+            </div>
+            <button type="button" id="m-student-phone-send" onclick="sendPhoneCode('student')" class="lp-btn-primary w-full py-3 font-extrabold rounded-full text-sm transition">Send code</button>
+          </div>
+
+          <div id="m-student-phone-step2" class="hidden space-y-3">
+            <p id="m-student-phone-sent-to" class="text-sm lp-muted text-center"></p>
+            <input type="text" id="m-student-phone-code" name="one-time-code" inputmode="numeric" autocomplete="one-time-code" maxlength="10" placeholder="Enter code" aria-label="SMS code" class="w-full px-3.5 py-3 rounded-xl text-2xl font-black text-center tracking-[0.35em] outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" oninput="this.value=this.value.replace(/\D/g,'')" />
+            <button type="button" id="m-student-phone-verify" onclick="verifyPhoneCode('student')" class="lp-btn-primary w-full py-3 font-extrabold rounded-full text-sm transition">Verify and continue</button>
+            <div class="flex items-center justify-between text-xs">
+              <button type="button" id="m-student-phone-resend" onclick="resendPhoneCode('student')" class="font-bold lp-accent hover:underline disabled:opacity-50 disabled:no-underline">Resend code</button>
+              <button type="button" onclick="phoneChangeNumber('student')" class="font-bold lp-accent hover:underline">Change number</button>
+            </div>
+          </div>
+
+          <p id="m-student-phone-status" role="status" aria-live="polite" class="text-xs text-center lp-accent font-bold empty:hidden"></p>
+          <div class="text-center">
+            <button type="button" onclick="hidePhonePanel('student')" class="text-xs font-bold lp-accent hover:underline">&larr; Other ways to continue</button>
           </div>
         </div>
 
@@ -2227,67 +2283,68 @@
         </div>
       </div>
 
-      <!-- Step 2 (Consultancy): Real account login/signup -->
-      <div class="p-8 space-y-4 hidden" id="m-step-consultancy-auth">
-        <div>
-          <h3 class="lp-serif text-xl font-bold" style="color:var(--ink)">Consultancy Account</h3>
-          <p class="text-xs lp-muted mt-1 lp-reading">Log in to manage your roster, or create an account to get started.</p>
+      <!-- Step 2 (Consultancy): sign up / log in -->
+      <div class="p-6 sm:p-8 space-y-5 hidden" id="m-step-consultancy-auth">
+        <div class="pr-8">
+          <h3 class="lp-serif text-2xl font-bold" style="color:var(--ink)">Consultancy account</h3>
+          <p class="text-sm lp-muted mt-1 lp-reading">Log in to manage your students, or create an account to get started.</p>
         </div>
 
         <div id="m-consultancy-main" class="space-y-4">
-          <button type="button" onclick="signInWithGoogle('consultancy')" class="w-full py-3 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-sm font-bold rounded-full transition flex items-center justify-center gap-2 text-[#1c1a17] shadow-sm">
-          <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
-            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
-            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
-          </svg>
-          Continue with Google
-        </button>
-        <p id="m-consultancy-inapp" class="hidden text-[10px] text-center lp-muted">Opened from Facebook or Instagram? Google sign-in only works in your normal browser - tap &#8943; and choose "Open in browser", or use the email option.</p>
-
-        <div class="flex items-center">
-          <div class="flex-grow border-t border-[#ece4d2]"></div>
-          <span class="px-3 text-[10px] uppercase font-bold text-[#8a8171]">or use your email</span>
-          <div class="flex-grow border-t border-[#ece4d2]"></div>
-        </div>
-
-        <div class="flex p-1 rounded-xl gap-1" style="background:var(--lp-gold-soft)">
-          <button type="button" onclick="setAuthMode('consultancy','signup')" id="m-consultancy-tab-signup" class="flex-1 py-2 text-xs font-black rounded-lg transition">Create Account</button>
-          <button type="button" onclick="setAuthMode('consultancy','login')" id="m-consultancy-tab-login" class="flex-1 py-2 text-xs font-black rounded-lg transition">Log In</button>
-        </div>
-
-        <form id="m-consultancy-form" class="space-y-3" novalidate onsubmit="event.preventDefault(); handleConsultancyAuthSubmit();">
-          <input type="text" id="m-consultancy-name" name="name" autocomplete="organization" autocapitalize="words" placeholder="Consultancy name" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
-          <input type="email" id="m-consultancy-auth-email" name="email" inputmode="email" autocomplete="email" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="Admin email address" class="w-full px-3 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
-          <div class="relative">
-            <input type="password" id="m-consultancy-auth-password" name="password" autocomplete="new-password" placeholder="Password" class="w-full pl-3 pr-16 py-2.5 rounded-xl text-xs font-bold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
-            <button type="button" tabindex="-1" aria-label="Show password" onclick="togglePasswordVisibility('m-consultancy-auth-password', this)" class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] font-black uppercase lp-accent px-2 py-1">Show</button>
+          <div id="m-consultancy-providers" class="space-y-2.5">
+            <button type="button" data-provider="google" onclick="signInWithGoogle('consultancy')" class="w-full py-3 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-sm font-bold rounded-full transition flex items-center justify-center gap-2.5 text-[#1c1a17] shadow-sm">
+              <svg class="w-[18px] h-[18px] shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+            </svg><span>Continue with Google</span>
+            </button>
+            <p id="m-consultancy-inapp" class="hidden text-xs text-center lp-muted">Opened from Facebook or Instagram? Google sign-in only works in your normal browser - tap &#8943; and choose "Open in browser", or use another option.</p>
+            <div id="m-consultancy-or" class="flex items-center pt-1">
+              <div class="flex-grow border-t border-[#ece4d2]"></div>
+              <span class="px-3 text-[11px] uppercase font-bold tracking-wide text-[#8a8171]">or continue with email</span>
+              <div class="flex-grow border-t border-[#ece4d2]"></div>
+            </div>
           </div>
-          <p id="m-consultancy-pw-hint" class="text-[10px] lp-muted -mt-1">At least 6 characters.</p>
-          <button type="submit" id="m-consultancy-auth-btn" class="lp-btn-primary w-full py-3 font-extrabold rounded-full text-sm transition">Create Account</button>
-        </form>
 
-        <button type="button" onclick="sendMagicLink('consultancy')" class="w-full py-2.5 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-xs font-bold rounded-full transition text-[#1c1a17]">&#9993;&#65039; Email me a login link instead &mdash; no password</button>
+          <form id="m-consultancy-form" class="space-y-3" novalidate onsubmit="event.preventDefault(); handleConsultancyAuthSubmit();">
+            <p id="m-consultancy-heading" class="text-base font-extrabold" style="color:var(--ink)">Welcome back</p>
+            <input type="text" id="m-consultancy-name" name="name" autocomplete="organization" autocapitalize="words" placeholder="Consultancy name" class="w-full px-3.5 py-3 rounded-xl text-base font-semibold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+            <input type="email" id="m-consultancy-auth-email" name="email" inputmode="email" autocomplete="email" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="Admin email address" class="w-full px-3.5 py-3 rounded-xl text-base font-semibold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+            <div class="relative">
+              <input type="password" id="m-consultancy-auth-password" name="password" autocomplete="new-password" placeholder="Password" class="w-full pl-3.5 pr-16 py-3 rounded-xl text-base font-semibold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
+              <button type="button" tabindex="-1" aria-label="Show password" onclick="togglePasswordVisibility('m-consultancy-auth-password', this)" class="absolute right-2 top-1/2 -translate-y-1/2 text-[11px] font-black uppercase lp-accent px-2 py-1">Show</button>
+            </div>
+            <p id="m-consultancy-pw-hint" class="text-xs lp-muted -mt-1">At least 6 characters.</p>
+            <button type="submit" id="m-consultancy-auth-btn" class="lp-btn-primary w-full py-3 font-extrabold rounded-full text-sm transition">Log in</button>
+          </form>
 
-        <p id="m-consultancy-auth-status" role="status" aria-live="polite" class="text-[11px] text-center min-h-[14px] lp-accent font-bold"></p>
-        <p id="m-consultancy-resend-row" class="text-center text-[10px] lp-muted hidden"><button type="button" onclick="resendConsultancyConfirmation()" class="underline hover:no-underline">Didn't get a confirmation email? Resend it</button></p>
-        <p class="text-center text-[10px] lp-muted"><button type="button" onclick="handleConsultancyForgotPassword()" class="underline hover:no-underline">Forgot password?</button></p>
+          <p id="m-consultancy-auth-status" role="status" aria-live="polite" class="text-xs text-center lp-accent font-bold empty:hidden"></p>
+          <p id="m-consultancy-resend-row" class="text-center text-xs lp-muted hidden"><button type="button" onclick="resendConsultancyConfirmation()" class="underline hover:no-underline">Didn't get a confirmation email? Resend it</button></p>
+          <p class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs lp-muted">
+            <button type="button" id="m-consultancy-forgot" onclick="handleConsultancyForgotPassword()" class="underline hover:no-underline">Forgot password?</button>
+            <span id="m-consultancy-sep" aria-hidden="true">&middot;</span>
+            <button type="button" onclick="sendMagicLink('consultancy')" class="underline hover:no-underline">Email me a login link</button>
+          </p>
+          <div class="text-center pt-1">
+            <button type="button" id="m-consultancy-mode-toggle" onclick="toggleAuthMode('consultancy')" class="text-sm font-bold lp-accent hover:underline">New here? Create a free account</button>
+          </div>
 
-        <div class="dev-bypass-block hidden pt-3 border-t border-[#ece4d2] text-center">
-          <span class="text-[9px] font-black uppercase tracking-widest text-[#a8792f] block mb-1.5">Owner device only</span>
-          <button type="button" onclick="launchAdminBypass()" class="px-3.5 py-1.5 bg-[#7a2331] hover:bg-[#5e1a25] text-[10px] font-extrabold rounded-lg text-white transition">&#128273; Admin / Consultancy Bypass</button>
-        </div>
+          <div class="dev-bypass-block hidden pt-3 border-t border-[#ece4d2] text-center">
+            <span class="text-[9px] font-black uppercase tracking-widest text-[#a8792f] block mb-1.5">Owner device only</span>
+            <button type="button" onclick="launchAdminBypass()" class="px-3.5 py-1.5 bg-[#7a2331] hover:bg-[#5e1a25] text-[10px] font-extrabold rounded-lg text-white transition">&#128273; Admin / Consultancy Bypass</button>
+          </div>
         </div>
 
         <div id="m-consultancy-sent" class="hidden space-y-4 text-center py-2">
           <div class="text-4xl">&#128236;</div>
           <h4 id="m-consultancy-sent-title" class="lp-serif text-lg font-bold" style="color:var(--ink)">Check your inbox</h4>
-          <p id="m-consultancy-sent-body" class="text-xs lp-muted lp-reading"></p>
-          <p class="text-[11px] lp-muted">Can't see it? Check your spam or promotions folder.</p>
+          <p id="m-consultancy-sent-body" class="text-sm lp-muted lp-reading"></p>
+          <p class="text-xs lp-muted">Can't see it? Check your spam or promotions folder.</p>
           <div class="flex flex-col gap-2">
-            <a id="m-consultancy-sent-mail" href="https://mail.google.com" target="_blank" rel="noopener" class="hidden w-full py-2.5 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-xs font-bold rounded-full transition text-[#1c1a17]">Open Gmail</a>
-            <button type="button" id="m-consultancy-sent-resend" onclick="resendAuthEmail('consultancy')" class="w-full py-2.5 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-xs font-bold rounded-full transition text-[#1c1a17]">Resend email</button>
+            <a id="m-consultancy-sent-mail" href="https://mail.google.com" target="_blank" rel="noopener" class="hidden text-center w-full py-3 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-sm font-bold rounded-full transition text-[#1c1a17]">Open Gmail</a>
+            <button type="button" id="m-consultancy-sent-resend" onclick="resendAuthEmail('consultancy')" class="w-full py-3 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-sm font-bold rounded-full transition text-[#1c1a17]">Resend email</button>
             <button type="button" onclick="hideAuthSent('consultancy')" class="text-xs font-bold lp-accent hover:underline">&larr; Use a different email</button>
           </div>
         </div>
@@ -2756,6 +2813,19 @@
       if (code === 'over_email_send_rate_limit' || /rate limit|too many requests/.test(msg)) {
         return 'Too many emails were requested. Please wait a few minutes and try again, or continue with Google.';
       }
+      if (code === 'otp_expired' || /token has expired or is invalid|invalid (otp|token|code)|otp.*(expired|invalid)/.test(msg)) {
+        return 'That code is wrong or has expired. Check it, or tap Resend code.';
+      }
+      if (code === 'over_sms_send_rate_limit' || /sms rate limit/.test(msg)) {
+        return 'Too many codes were requested. Please wait a few minutes and try again, or use email instead.';
+      }
+      if (code === 'phone_provider_disabled' || /unsupported phone provider|phone.*(provider|signups?).*(disabled|not enabled)/.test(msg)) {
+        return 'Phone sign-in is not available right now. Please use email instead.';
+      }
+      if (code === 'sms_send_failed' || /error sending (confirmation|sms|otp)|unable to send (sms|otp)/.test(msg)) {
+        return 'We could not send the SMS. Check the number, or use email instead.';
+      }
+      if (/invalid phone|phone number.*(invalid|not valid)/.test(msg)) return 'That phone number does not look right.';
       if (/invalid login credentials/.test(msg)) {
         return "That email and password don't match. Double-check them, or use Forgot password, a login link, or Google.";
       }
@@ -2942,26 +3012,44 @@
     function askRoleForSession(session) {
       pendingAuthSession = session;
       openAccessModal();
-      showAuthNotice('You are signed in as ' + session.user.email + '. Choose who you are to continue.', false);
+      showAuthNotice('You are signed in as ' + (session.user.email || session.user.phone) + '. Choose who you are to continue.', false);
     }
 
-    // Google sign-in only works if the Google provider is switched on in the
-    // Supabase project; when it is off, the button leads to a raw error page.
-    // Ask the project once and hide the button instead of sending people into
-    // a dead end. If the check itself fails, the button is left as it is.
-    async function hideGoogleIfDisabled() {
+    // Which sign-in methods are switched on is decided in the Supabase
+    // dashboard. A button for a method that is off leads to a raw error page,
+    // so ask the project once and show only what really works:
+    //  - Google: shown unless Supabase says it is off (if the check itself
+    //    fails, it is left alone).
+    //  - Phone (SMS code): shown only when Supabase says it is on.
+    async function applyProviderAvailability() {
       try {
         if (!SUPABASE_URL || !SUPABASE_ANON_KEY) return;
         const res = await fetch(SUPABASE_URL + '/auth/v1/settings', { headers: { apikey: SUPABASE_ANON_KEY } });
         if (!res.ok) return;
         const s = await res.json();
-        if (!s || !s.external || s.external.google !== false) return;
-        document.querySelectorAll('button[onclick^="signInWithGoogle"]').forEach(b => b.classList.add('hidden'));
-        document.querySelectorAll('[id$="-inapp"]').forEach(el => el.classList.add('hidden'));
-        document.querySelectorAll('#accessModal span').forEach(sp => {
-          if (/or use your email/i.test(sp.textContent) && sp.parentElement) sp.parentElement.classList.add('hidden');
-        });
+        const ext = (s && s.external) || {};
+        if (ext.google === false) {
+          document.querySelectorAll('[data-provider="google"]').forEach(b => b.classList.add('hidden'));
+        }
+        if (ext.phone === true) {
+          document.querySelectorAll('[data-provider="phone"]').forEach(b => b.classList.remove('hidden'));
+        }
+        refreshProviderLayout();
       } catch (e) {}
+    }
+
+    // Hides the "or continue with email" divider (and the in-app-browser note)
+    // when there are no provider buttons above it.
+    function refreshProviderLayout() {
+      ['student', 'consultancy'].forEach(role => {
+        const box = document.getElementById('m-' + role + '-providers');
+        if (!box) return;
+        const visible = [...box.querySelectorAll('[data-provider]')].filter(b => !b.classList.contains('hidden'));
+        const or = document.getElementById('m-' + role + '-or');
+        if (or) or.classList.toggle('hidden', visible.length === 0);
+        const inapp = document.getElementById('m-' + role + '-inapp');
+        if (inapp && !visible.some(b => b.dataset.provider === 'google')) inapp.classList.add('hidden');
+      });
     }
 
     function initSupabase() {
@@ -3369,7 +3457,7 @@
     window.addEventListener('DOMContentLoaded', () => {
       initSupabase();
       revealDevToolsIfAllowed();
-      hideGoogleIfDisabled();
+      applyProviderAvailability();
       handleAuthRedirectFeedback();
       // NOTE: cloud roster sync intentionally does NOT run here anymore. It
       // used to run unconditionally for every single visitor (including
@@ -3849,25 +3937,36 @@
     function setAuthMode(role, mode, keepStatus) {
       if (role === 'student') studentAuthMode = mode; else consultancyAuthMode = mode;
       const p = 'm-' + role + '-';
-      document.getElementById(p + 'name').classList.toggle('hidden', mode === 'login');
-      document.getElementById(p + 'tab-signup').classList.toggle('active-tab', mode === 'signup');
-      document.getElementById(p + 'tab-login').classList.toggle('active-tab', mode === 'login');
+      const signup = mode === 'signup';
+      document.getElementById(p + 'name').classList.toggle('hidden', !signup);
+      document.getElementById(p + 'heading').textContent =
+        signup ? (role === 'student' ? 'Create your free account' : 'Create your consultancy account') : 'Welcome back';
       document.getElementById(p + 'auth-btn').textContent =
-        mode === 'login' ? 'Log In' : (role === 'student' ? 'Create Free Account' : 'Create Account');
+        signup ? (role === 'student' ? 'Create free account' : 'Create account') : 'Log in';
+      document.getElementById(p + 'mode-toggle').textContent =
+        signup ? 'Already have an account? Log in' : (role === 'student' ? 'New here? Create a free account' : 'New here? Create an account');
       // Lets password managers offer to save (signup) or fill (login).
-      document.getElementById(p + 'auth-password').setAttribute('autocomplete', mode === 'login' ? 'current-password' : 'new-password');
+      document.getElementById(p + 'auth-password').setAttribute('autocomplete', signup ? 'new-password' : 'current-password');
       const hint = document.getElementById(p + 'pw-hint');
-      if (hint) hint.classList.toggle('hidden', mode === 'login');
+      if (hint) hint.classList.toggle('hidden', !signup);
+      // "Forgot password?" only makes sense when logging in.
+      ['forgot', 'sep'].forEach(x => { const el = document.getElementById(p + x); if (el) el.classList.toggle('hidden', signup); });
       if (!keepStatus) setAuthStatus(role, '');
       document.getElementById(p + 'resend-row').classList.add('hidden');
       const inapp = document.getElementById(p + 'inapp');
       if (inapp) inapp.classList.toggle('hidden', !isInAppBrowser());
+      hidePhonePanel(role);
       hideAuthSent(role);
+      refreshProviderLayout();
       // Returning visitors shouldn't have to retype their email.
       const emailEl = document.getElementById(p + 'auth-email');
       if (emailEl && !emailEl.value) {
         try { emailEl.value = localStorage.getItem('viatestprep_last_email') || ''; } catch (e) {}
       }
+    }
+    function toggleAuthMode(role) {
+      const cur = role === 'student' ? studentAuthMode : consultancyAuthMode;
+      setAuthMode(role, cur === 'login' ? 'signup' : 'login');
     }
     function setStudentAuthMode(mode) { setAuthMode('student', mode); }
     function setConsultancyAuthMode(mode) { setAuthMode('consultancy', mode); }
@@ -4064,6 +4163,150 @@
     function handleStudentForgotPassword() { return handleForgotPassword('student'); }
     function handleConsultancyForgotPassword() { return handleForgotPassword('consultancy'); }
 
+    // ------------------------------------------------------------------
+    // Phone sign-in with an SMS code (students)
+    // ------------------------------------------------------------------
+    const phoneState = { phone: '', busy: false };
+
+    function setPhoneStatus(role, msg) {
+      const el = document.getElementById('m-' + role + '-phone-status');
+      if (el) el.textContent = msg || '';
+    }
+
+    // Builds an international number (+9779812345678) from the country picker
+    // and what was typed. Returns { phone } or { error }.
+    function readPhoneNumber(role) {
+      const p = 'm-' + role + '-phone-';
+      const cc = document.getElementById(p + 'cc').value;
+      const raw = (document.getElementById(p + 'number').value || '').trim();
+      const digits = raw.replace(/\D/g, '');
+      // Typed a full international number (+977...)? use it as is. Otherwise
+      // prefix the chosen country and drop the leading 0s people type locally.
+      const phone = raw.startsWith('+') ? '+' + digits : cc + digits.replace(/^0+/, '');
+      if (!/^\+[1-9]\d{7,14}$/.test(phone)) return { error: 'Enter a valid mobile number (digits only).' };
+      if (phone.startsWith('+977') && !/^\+977\d{10}$/.test(phone)) {
+        return { error: 'Nepal mobile numbers have 10 digits (like 98XXXXXXXX).' };
+      }
+      return { phone: phone };
+    }
+
+    function phoneShowStep(role, step) {
+      const p = 'm-' + role + '-phone-';
+      document.getElementById(p + 'step1').classList.toggle('hidden', step !== 1);
+      document.getElementById(p + 'step2').classList.toggle('hidden', step !== 2);
+    }
+
+    function showPhonePanel(role) {
+      const p = 'm-' + role + '-';
+      const panel = document.getElementById(p + 'phone');
+      if (!panel) return;
+      document.getElementById(p + 'main').classList.add('hidden');
+      panel.classList.remove('hidden');
+      phoneShowStep(role, 1);
+      setPhoneStatus(role, '');
+      if (window.matchMedia && window.matchMedia('(pointer: fine)').matches) {
+        setTimeout(() => { const f = document.getElementById(p + 'phone-number'); if (f) f.focus(); }, 60);
+      }
+    }
+
+    function hidePhonePanel(role) {
+      const p = 'm-' + role + '-';
+      const panel = document.getElementById(p + 'phone');
+      if (!panel) return;
+      panel.classList.add('hidden');
+      const btn = document.getElementById(p + 'phone-resend');
+      if (btn) clearInterval(btn._t);
+      document.getElementById(p + 'main').classList.remove('hidden');
+    }
+
+    function phoneChangeNumber(role) {
+      const btn = document.getElementById('m-' + role + '-phone-resend');
+      if (btn) clearInterval(btn._t);
+      document.getElementById('m-' + role + '-phone-code').value = '';
+      phoneShowStep(role, 1);
+      setPhoneStatus(role, '');
+    }
+
+    function tickPhoneResend(role) {
+      const btn = document.getElementById('m-' + role + '-phone-resend');
+      if (!btn || !phoneState.phone) return;
+      clearInterval(btn._t);
+      const key = 'sms:' + phoneState.phone;
+      const update = () => {
+        const left = emailCooldownLeft(key);
+        btn.disabled = left > 0;
+        btn.textContent = left > 0 ? 'Resend code in ' + left + 's' : 'Resend code';
+        if (left <= 0) clearInterval(btn._t);
+      };
+      update();
+      btn._t = setInterval(update, 1000);
+    }
+
+    function enterPhoneStep2(role, phone) {
+      phoneState.phone = phone;
+      const p = 'm-' + role + '-phone-';
+      document.getElementById(p + 'sent-to').textContent = 'We sent a code to ' + phone;
+      document.getElementById(p + 'code').value = '';
+      phoneShowStep(role, 2);
+      tickPhoneResend(role);
+      if (window.matchMedia && window.matchMedia('(pointer: fine)').matches) {
+        setTimeout(() => { const f = document.getElementById(p + 'code'); if (f) f.focus(); }, 60);
+      }
+    }
+
+    async function sendPhoneCode(role, isResend) {
+      if (phoneState.busy) return;
+      if (!supabaseClient) { setPhoneStatus(role, '❌ Service unavailable right now. Please reload the page and try again.'); return; }
+      const parsed = (isResend && phoneState.phone) ? { phone: phoneState.phone } : readPhoneNumber(role);
+      if (parsed.error) { setPhoneStatus(role, parsed.error); return; }
+      const phone = parsed.phone;
+      const key = 'sms:' + phone;
+      // A code went out moments ago: just take them to the code box.
+      if (emailCooldownLeft(key) > 0) { enterPhoneStep2(role, phone); return; }
+      const name = (document.getElementById('m-' + role + '-phone-name').value || '').trim();
+      phoneState.busy = true;
+      authIntentRole = role;
+      setPhoneStatus(role, 'Sending your code...');
+      try {
+        const { error } = await supabaseClient.auth.signInWithOtp({ phone: phone, options: { channel: 'sms', data: { role: role, name: name } } });
+        if (error) throw error;
+        startEmailCooldown(key, 60);
+        setPhoneStatus(role, '');
+        enterPhoneStep2(role, phone);
+      } catch (err) {
+        console.error(err);
+        setPhoneStatus(role, '❌ ' + authFriendlyError(err));
+      } finally {
+        phoneState.busy = false;
+      }
+    }
+    function resendPhoneCode(role) { return sendPhoneCode(role, true); }
+
+    async function verifyPhoneCode(role) {
+      if (phoneState.busy) return;
+      const code = (document.getElementById('m-' + role + '-phone-code').value || '').replace(/\D/g, '');
+      if (code.length < 6) { setPhoneStatus(role, 'Enter the 6-digit code from the SMS.'); return; }
+      if (!supabaseClient || !phoneState.phone) { setPhoneStatus(role, '❌ Something went wrong. Please start again.'); return; }
+      const btn = document.getElementById('m-' + role + '-phone-verify');
+      phoneState.busy = true;
+      authIntentRole = role;
+      btn.disabled = true;
+      setPhoneStatus(role, 'Checking your code...');
+      try {
+        const { data, error } = await supabaseClient.auth.verifyOtp({ phone: phoneState.phone, token: code, type: 'sms' });
+        if (error) throw error;
+        const name = (document.getElementById('m-' + role + '-phone-name').value || '').trim();
+        await finishSession(role, data.session, name);
+        setPhoneStatus(role, '');
+      } catch (err) {
+        console.error(err);
+        setPhoneStatus(role, '❌ ' + authFriendlyError(err));
+      } finally {
+        phoneState.busy = false;
+        btn.disabled = false;
+      }
+    }
+
     function rememberReturningVisitor(role, email) {
       try {
         localStorage.setItem('viatestprep_returning_' + role, '1');
@@ -4120,8 +4363,8 @@
 
       localStorage.setItem('viatestprep_unlocked', 'true');
       localStorage.setItem('viatestprep_user_role', 'student');
-      localStorage.setItem('userEmail', session.user.email);
-      rememberReturningVisitor('student', session.user.email);
+      localStorage.setItem('userEmail', session.user.email || session.user.phone || '');
+      rememberReturningVisitor('student', session.user.email || '');
 
       closeAccessModal();
       renderAppView();

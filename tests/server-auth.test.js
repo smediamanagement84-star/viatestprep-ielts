@@ -37,7 +37,7 @@ const fakeAdmin = {
     : t === 'link-expired' ? { id: 'S1', name: 'Sara', access_expires_at: '2020-01-01T00:00:00Z' } : null),
   getStudentByAuthUserId: async (uid) => (uid === 'u1' ? { id: 'S1', name: 'Sara', consultancy_id: 'C1', access_level: 'full' }
     : uid === 'u-exp' ? { id: 'S9', name: 'Old', access_expires_at: '2020-01-01T00:00:00Z' } : null),
-  insertSelfServeStudent: async (r) => ({ id: 'S-new', name: r.name }),
+  insertSelfServeStudent: async (r) => { inserted.push(r); return { id: 'S-new', name: r.name }; },
   getMockHistoryByStudentId: async () => [],
   getSpeakingGradesByStudentId: async () => [],
   insertMockResult: async (r) => r,
@@ -46,7 +46,11 @@ const fakeAdmin = {
   claimConsultancyOwner: async (id) => ({ id, name: 'Agency' }),
   friendlyDbError: () => null,
 };
+const inserted = [];
 const fakeAuthUser = {
+  verifyAuthIdentity: async (t) => (t === 'jwt-student' ? { id: 'u1', email: 's@x.com', phone: null }
+    : t === 'jwt-phone' ? { id: 'u-ph', email: null, phone: '+9779812345678' }
+    : t === 'jwt-expired' ? { id: 'u-exp', email: 'o@x.com', phone: null } : null),
   verifyAuthUser: async (t) => (t === 'jwt-student' ? { id: 'u1', email: 's@x.com' }
     : t === 'jwt-expired' ? { id: 'u-exp', email: 'o@x.com' }
     : t === 'jwt-agency' ? { id: 'u9', email: 'agency@x.com' } : null),
@@ -240,6 +244,17 @@ const owner = { 'x-owner-key': 'owner-test-key' };
     r = await call(keepalive, {});
     ok(r.code === 500, 'reports failure if Supabase is unreachable');
     dbDown = false;
+  }
+
+
+  console.log('I. Phone-only students');
+  {
+    let r = await call(studentApi, { method: 'POST', query: { action: 'register' }, body: { accessToken: 'jwt-phone' } });
+    ok(r.code === 200 && r.body.ok && verifySession(r.body.sessionToken).id === 'S-new', 'a phone-only student can register and gets a token');
+    const row = inserted[inserted.length - 1];
+    ok(row.name === '+9779812345678' && row.email === '9779812345678@phone.viatestprep.invalid' && row.auth_user_id === 'u-ph', 'stored with their number as the name and a placeholder email (the table requires one)');
+    r = await call(studentApi, { method: 'POST', query: { action: 'register' }, body: { accessToken: 'jwt-phone', name: '  Sita  ' } });
+    ok(inserted[inserted.length - 1].name === 'Sita', 'a typed name is used (trimmed)');
   }
 
   console.log('\n' + pass + ' passed, ' + fail + ' failed');

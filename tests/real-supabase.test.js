@@ -24,17 +24,19 @@ const users = new Map();   // email -> user record
 const log = [];            // every auth request the page made
 let uid = 0;
 
+let settingsNow = { external: { email: true, google: false } };
+const smsSent = [];
 function userJson(u) {
   return {
-    id: u.id, aud: 'authenticated', role: 'authenticated', email: u.email,
-    email_confirmed_at: '2026-01-01T00:00:00Z', phone: '', confirmed_at: '2026-01-01T00:00:00Z',
+    id: u.id, aud: 'authenticated', role: 'authenticated', email: u.email || '', phone: u.phone || '',
+    email_confirmed_at: '2026-01-01T00:00:00Z', confirmed_at: '2026-01-01T00:00:00Z',
     app_metadata: { provider: 'email', providers: ['email'] }, user_metadata: u.user_metadata || {},
     identities: [{ id: u.id, user_id: u.id, identity_data: { email: u.email }, provider: 'email' }],
     created_at: '2026-01-01T00:00:00Z', updated_at: '2026-01-01T00:00:00Z',
   };
 }
 function jwtFor(u) {
-  return [b64u({ alg: 'HS256', typ: 'JWT' }), b64u({ sub: u.id, email: u.email, role: 'authenticated', aud: 'authenticated', exp: Math.floor(Date.now() / 1000) + 3600 }), 'sig'].join('.');
+  return [b64u({ alg: 'HS256', typ: 'JWT' }), b64u({ sub: u.id, email: u.email || '', role: 'authenticated', aud: 'authenticated', exp: Math.floor(Date.now() / 1000) + 3600 }), 'sig'].join('.');
 }
 function sessionJson(u) {
   return { access_token: jwtFor(u), token_type: 'bearer', expires_in: 3600, expires_at: Math.floor(Date.now() / 1000) + 3600, refresh_token: 'refresh-' + u.id, user: userJson(u) };
@@ -45,9 +47,9 @@ const userFromBearer = (auth) => {
 };
 const json = (code, body) => new Response(code === 204 ? null : JSON.stringify(body), { status: code, headers: { 'Content-Type': 'application/json' } });
 
-function addUser(email, password, meta) {
-  const u = { id: 'user-' + (++uid), email, password, user_metadata: meta || {} };
-  users.set(email, u);
+function addUser(email, password, meta, phone) {
+  const u = { id: 'user-' + (++uid), email, phone, password, user_metadata: meta || {} };
+  users.set(email || phone, u);
   return u;
 }
 
@@ -58,7 +60,7 @@ async function fakeSupabase(urlStr, opts = {}) {
   const p = url.pathname.replace('/auth/v1', '');
   log.push({ method: opts.method || 'GET', path: p, query: Object.fromEntries(url.searchParams), body });
 
-  if (p === '/settings') return json(200, { external: { email: true, google: false }, mailer_autoconfirm: true, disable_signup: false });
+  if (p === '/settings') return json(200, { ...settingsNow, mailer_autoconfirm: true, disable_signup: false });
   if (p === '/signup') {
     if (users.has(body.email)) return json(422, { code: 422, error_code: 'user_already_exists', msg: 'User already registered' });
     return json(200, sessionJson(addUser(body.email, body.password, body.data)));
@@ -70,6 +72,14 @@ async function fakeSupabase(urlStr, opts = {}) {
   if (p === '/token' && url.searchParams.get('grant_type') === 'refresh_token') {
     const u = [...users.values()].find(x => 'refresh-' + x.id === body.refresh_token);
     return u ? json(200, sessionJson(u)) : json(400, { code: 400, error_code: 'refresh_token_not_found', msg: 'Invalid Refresh Token' });
+  }
+  if (p === '/otp' && body.phone) { smsSent.push(body.phone); return json(200, { message_id: 'sms-1' }); }
+  if (p === '/verify') {
+    // pretend SMS: the code is always 123456; creating the account on first use
+    if (body.type !== 'sms' || body.token !== '123456' || !smsSent.includes(body.phone)) return json(403, { code: 403, error_code: 'otp_expired', msg: 'Token has expired or is invalid' });
+    const digits = body.phone.replace(/\D/g, '');
+    const u = users.get(digits) || addUser('', 'unused', { role: 'student' }, digits);
+    return json(200, sessionJson(u));
   }
   if (p === '/otp' || p === '/recover') return json(200, {});
   if (p === '/user' && (opts.method || 'GET') === 'GET') {
@@ -180,7 +190,7 @@ const lastLog = (p) => [...log].reverse().find(l => l.path === p);
     open(d, 'student', 'signup');
     fill(d, 'student', 'anu@example.com', 'secret123', 'Anu');
     await d.w.handleStudentAuthSubmit(); await sleep(200);
-    ok(/already registered/.test($(d.d, 'm-student-auth-status').textContent) && $(d.d, 'm-student-tab-login').classList.contains('active-tab'), 'signing up with an existing email says so and switches to Log In');
+    ok(/already registered/.test($(d.d, 'm-student-auth-status').textContent) && $(d.d, 'm-student-auth-btn').textContent === 'Log in', 'signing up with an existing email says so and switches to Log In');
   }
 
   console.log('4. Login link and password reset emails');
@@ -277,6 +287,41 @@ const lastLog = (p) => [...log].reverse().find(l => l.path === p);
     await t.w.handleLogout();
     ok(t.ls.getItem(STORAGE_KEY) === null, "the library's saved login is gone");
     ok(['viatestprep_unlocked', 'viatestprep_user_role', 'viatestprep_session_token', 'viatestprep_active_student_id'].every(k => t.ls.getItem(k) === null), 'every app login flag is cleared');
+  }
+
+
+  console.log('11. Phone sign-up with an SMS code (real library)');
+  {
+    settingsNow = { external: { email: true, google: false, phone: true } };
+    const t = boot();
+    await sleep(400);
+    ok(!t.d.querySelector('#m-step-student [data-provider="phone"]').classList.contains('hidden'), 'phone option shows because Supabase reports phone sign-in is on');
+    ok(t.d.querySelector('#m-step-student [data-provider="google"]').classList.contains('hidden'), 'Google stays hidden because Supabase reports it is off');
+    t.w.openAccessModal(); t.w.selectModalRole('student'); t.w.showPhonePanel('student');
+    $(t.d, 'm-student-phone-name').value = 'Sita';
+    $(t.d, 'm-student-phone-number').value = '9812345678';
+    await t.w.sendPhoneCode('student'); await sleep(250);
+    const o = [...log].reverse().find(l => l.path === '/otp' && l.body.phone);
+    ok(o && o.body.phone === '+9779812345678' && o.body.channel === 'sms' && o.body.data.role === 'student' && o.body.data.name === 'Sita', 'real library asks Supabase to text +9779812345678');
+    ok(!$(t.d, 'm-student-phone-step2').classList.contains('hidden'), 'code box is shown');
+
+    $(t.d, 'm-student-phone-code').value = '999999';
+    await t.w.verifyPhoneCode('student'); await sleep(250);
+    ok(/wrong or has expired/.test($(t.d, 'm-student-phone-status').textContent) && t.ls.getItem('viatestprep_unlocked') !== 'true', 'a wrong code is refused with a friendly message');
+    $(t.d, 'm-student-phone-code').value = '123456';
+    await t.w.verifyPhoneCode('student'); await sleep(400);
+    ok(t.ls.getItem('viatestprep_unlocked') === 'true' && t.ls.getItem('viatestprep_user_role') === 'student' && !hidden(t.d, 'view-student'), 'the right code creates the account and logs in');
+    ok(t.appCalls.filter(u => u.includes('action=register')).length === 1, 'profile registered once');
+    const saved = t.ls.getItem(STORAGE_KEY);
+    ok(!!saved && JSON.parse(saved).user.phone === '9779812345678', 'the library saved the phone login in the browser');
+
+    const again = boot({ storage: { [STORAGE_KEY]: saved, viatestprep_unlocked: 'true', viatestprep_user_role: 'student', viatestprep_active_student_id: 'stu-1', viatestprep_session_token: 'signed-student' } });
+    await sleep(400);
+    ok(again.ls.getItem('viatestprep_unlocked') === 'true' && !hidden(again.d, 'view-student'), 'reopening the site keeps the phone login');
+    settingsNow = { external: { email: true, google: false } };
+    const off = boot();
+    await sleep(400);
+    ok(off.d.querySelector('#m-step-student [data-provider="phone"]').classList.contains('hidden'), 'when Supabase turns phone sign-in off, the option disappears again');
   }
 
   console.log('\n' + pass + ' passed, ' + fail + ' failed');
