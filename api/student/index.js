@@ -11,7 +11,7 @@
 // GET  /api/student?action=login&token=...              (was /api/student/login)
 // POST /api/student?action=register  { accessToken, name } (was /api/student/register)
 // GET  /api/student?action=reports&studentId=...          (was /api/student/reports)
-const { verifyAuthIdentity } = require('../_lib/authUser');
+const { verifyAuthUser } = require('../_lib/authUser');
 const { signSession } = require('../_lib/sessionToken');
 const { getCaller, canActAsStudent } = require('../_lib/callerAuth');
 const {
@@ -57,7 +57,7 @@ async function handleLogin(req, res) {
 
 async function handleRegister(req, res) {
   const { accessToken, name } = req.body || {};
-  const user = await verifyAuthIdentity(accessToken);
+  const user = await verifyAuthUser(accessToken);
   if (!user) {
     res.status(401).json({ ok: false, error: 'Could not verify your login session. Please log in again.' });
     return;
@@ -66,12 +66,9 @@ async function handleRegister(req, res) {
   // Idempotent - signUp's confirmation-email redirect (or a retried request)
   // can call this more than once for the same account.
   const existing = await getStudentByAuthUserId(user.id);
-  // The students table requires an email, so a phone-only student gets a
-  // placeholder one (".invalid" is reserved and can never receive mail).
-  const rowEmail = user.email || (user.phone.replace(/\D/g, '') + '@phone.viatestprep.invalid');
   const row = existing || await insertSelfServeStudent({
-    name: (name || '').trim() || user.email || user.phone,
-    email: rowEmail,
+    name: (name || '').trim() || user.email,
+    email: user.email,
     auth_user_id: user.id,
   });
 

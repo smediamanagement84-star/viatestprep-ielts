@@ -2174,9 +2174,6 @@
               <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
             </svg><span>Continue with Google</span>
             </button>
-            <button type="button" data-provider="phone" onclick="showPhonePanel('student')" class="hidden w-full py-3 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-sm font-bold rounded-full transition flex items-center justify-center gap-2.5 text-[#1c1a17] shadow-sm">
-              <svg class="w-[18px] h-[18px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg><span>Continue with phone</span>
-            </button>
             <p id="m-student-inapp" class="hidden text-xs text-center lp-muted">Opened from Facebook or Instagram? Google sign-in only works in your normal browser - tap &#8943; and choose "Open in browser", or use another option.</p>
             <div id="m-student-or" class="flex items-center pt-1">
               <div class="flex-grow border-t border-[#ece4d2]"></div>
@@ -2223,58 +2220,6 @@
             <a id="m-student-sent-mail" href="https://mail.google.com" target="_blank" rel="noopener" class="hidden text-center w-full py-3 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-sm font-bold rounded-full transition text-[#1c1a17]">Open Gmail</a>
             <button type="button" id="m-student-sent-resend" onclick="resendAuthEmail('student')" class="w-full py-3 px-4 bg-white hover:bg-[#faf8f5] border border-[#ece4d2] text-sm font-bold rounded-full transition text-[#1c1a17]">Resend email</button>
             <button type="button" onclick="hideAuthSent('student')" class="text-xs font-bold lp-accent hover:underline">&larr; Use a different email</button>
-          </div>
-        </div>
-
-        <div id="m-student-phone" class="hidden space-y-4">
-          <div>
-            <h4 class="lp-serif text-lg font-bold" style="color:var(--ink)">Continue with phone</h4>
-            <p class="text-sm lp-muted mt-1">We'll text you a code. New here? We'll create your account.</p>
-          </div>
-
-          <div id="m-student-phone-step1" class="space-y-3">
-            <input type="text" id="m-student-phone-name" name="name" autocomplete="name" autocapitalize="words" placeholder="Your name (optional)" class="w-full px-3.5 py-3 rounded-xl text-base font-semibold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
-            <div class="flex gap-2">
-              <select id="m-student-phone-cc" aria-label="Country code" class="w-[8rem] shrink-0 px-2 py-3 rounded-xl text-base font-semibold outline-none bg-white" style="border:1px solid var(--rule);color:var(--ink);">
-              <option value="+977" selected>NP +977</option>
-              <option value="+91">IN +91</option>
-              <option value="+880">BD +880</option>
-              <option value="+92">PK +92</option>
-              <option value="+94">LK +94</option>
-              <option value="+975">BT +975</option>
-              <option value="+971">AE +971</option>
-              <option value="+974">QA +974</option>
-              <option value="+966">SA +966</option>
-              <option value="+965">KW +965</option>
-              <option value="+968">OM +968</option>
-              <option value="+973">BH +973</option>
-              <option value="+60">MY +60</option>
-              <option value="+65">SG +65</option>
-              <option value="+61">AU +61</option>
-              <option value="+64">NZ +64</option>
-              <option value="+44">GB +44</option>
-              <option value="+1">US/CA +1</option>
-              <option value="+81">JP +81</option>
-              <option value="+82">KR +82</option>
-              </select>
-              <input type="tel" id="m-student-phone-number" name="phone" inputmode="tel" autocomplete="tel-national" placeholder="98XXXXXXXX" class="min-w-0 flex-1 px-3.5 py-3 rounded-xl text-base font-semibold outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" />
-            </div>
-            <button type="button" id="m-student-phone-send" onclick="sendPhoneCode('student')" class="lp-btn-primary w-full py-3 font-extrabold rounded-full text-sm transition">Send code</button>
-          </div>
-
-          <div id="m-student-phone-step2" class="hidden space-y-3">
-            <p id="m-student-phone-sent-to" class="text-sm lp-muted text-center"></p>
-            <input type="text" id="m-student-phone-code" name="one-time-code" inputmode="numeric" autocomplete="one-time-code" maxlength="10" placeholder="Enter code" aria-label="SMS code" class="w-full px-3.5 py-3 rounded-xl text-2xl font-black text-center tracking-[0.35em] outline-none transition" style="border:1px solid var(--rule);color:var(--ink);" oninput="this.value=this.value.replace(/\D/g,'')" />
-            <button type="button" id="m-student-phone-verify" onclick="verifyPhoneCode('student')" class="lp-btn-primary w-full py-3 font-extrabold rounded-full text-sm transition">Verify and continue</button>
-            <div class="flex items-center justify-between text-xs">
-              <button type="button" id="m-student-phone-resend" onclick="resendPhoneCode('student')" class="font-bold lp-accent hover:underline disabled:opacity-50 disabled:no-underline">Resend code</button>
-              <button type="button" onclick="phoneChangeNumber('student')" class="font-bold lp-accent hover:underline">Change number</button>
-            </div>
-          </div>
-
-          <p id="m-student-phone-status" role="status" aria-live="polite" class="text-xs text-center lp-accent font-bold empty:hidden"></p>
-          <div class="text-center">
-            <button type="button" onclick="hidePhonePanel('student')" class="text-xs font-bold lp-accent hover:underline">&larr; Other ways to continue</button>
           </div>
         </div>
 
@@ -2813,19 +2758,6 @@
       if (code === 'over_email_send_rate_limit' || /rate limit|too many requests/.test(msg)) {
         return 'Too many emails were requested. Please wait a few minutes and try again, or continue with Google.';
       }
-      if (code === 'otp_expired' || /token has expired or is invalid|invalid (otp|token|code)|otp.*(expired|invalid)/.test(msg)) {
-        return 'That code is wrong or has expired. Check it, or tap Resend code.';
-      }
-      if (code === 'over_sms_send_rate_limit' || /sms rate limit/.test(msg)) {
-        return 'Too many codes were requested. Please wait a few minutes and try again, or use email instead.';
-      }
-      if (code === 'phone_provider_disabled' || /unsupported phone provider|phone.*(provider|signups?).*(disabled|not enabled)/.test(msg)) {
-        return 'Phone sign-in is not available right now. Please use email instead.';
-      }
-      if (code === 'sms_send_failed' || /error sending (confirmation|sms|otp)|unable to send (sms|otp)/.test(msg)) {
-        return 'We could not send the SMS. Check the number, or use email instead.';
-      }
-      if (/invalid phone|phone number.*(invalid|not valid)/.test(msg)) return 'That phone number does not look right.';
       if (/invalid login credentials/.test(msg)) {
         return "That email and password don't match. Double-check them, or use Forgot password, a login link, or Google.";
       }
@@ -3012,15 +2944,13 @@
     function askRoleForSession(session) {
       pendingAuthSession = session;
       openAccessModal();
-      showAuthNotice('You are signed in as ' + (session.user.email || session.user.phone) + '. Choose who you are to continue.', false);
+      showAuthNotice('You are signed in as ' + session.user.email + '. Choose who you are to continue.', false);
     }
 
-    // Which sign-in methods are switched on is decided in the Supabase
-    // dashboard. A button for a method that is off leads to a raw error page,
-    // so ask the project once and show only what really works:
-    //  - Google: shown unless Supabase says it is off (if the check itself
-    //    fails, it is left alone).
-    //  - Phone (SMS code): shown only when Supabase says it is on.
+    // Whether Google sign-in is switched on is decided in the Supabase
+    // dashboard. If it is off, the Google button leads to a raw error page,
+    // so ask the project once and hide the button instead of sending people
+    // into a dead end. (If the check itself fails, the button is left alone.)
     async function applyProviderAvailability() {
       try {
         if (!SUPABASE_URL || !SUPABASE_ANON_KEY) return;
@@ -3030,9 +2960,6 @@
         const ext = (s && s.external) || {};
         if (ext.google === false) {
           document.querySelectorAll('[data-provider="google"]').forEach(b => b.classList.add('hidden'));
-        }
-        if (ext.phone === true) {
-          document.querySelectorAll('[data-provider="phone"]').forEach(b => b.classList.remove('hidden'));
         }
         refreshProviderLayout();
       } catch (e) {}
@@ -3194,7 +3121,7 @@
         showAuthNotice(
           expired
             ? 'That link has expired or was already used. Request a fresh one with "Email me a login link" or "Forgot password?".'
-            : (description || 'That link is invalid.') + ' Please try logging in, or request a new link.',
+            : (description || 'That link is invalid').replace(/[.!?\s]+$/, '') + '. Please try again, or sign in another way.',
           true
         );
         window.history.replaceState({}, document.title, window.location.pathname);
@@ -3955,7 +3882,6 @@
       document.getElementById(p + 'resend-row').classList.add('hidden');
       const inapp = document.getElementById(p + 'inapp');
       if (inapp) inapp.classList.toggle('hidden', !isInAppBrowser());
-      hidePhonePanel(role);
       hideAuthSent(role);
       refreshProviderLayout();
       // Returning visitors shouldn't have to retype their email.
@@ -4163,150 +4089,6 @@
     function handleStudentForgotPassword() { return handleForgotPassword('student'); }
     function handleConsultancyForgotPassword() { return handleForgotPassword('consultancy'); }
 
-    // ------------------------------------------------------------------
-    // Phone sign-in with an SMS code (students)
-    // ------------------------------------------------------------------
-    const phoneState = { phone: '', busy: false };
-
-    function setPhoneStatus(role, msg) {
-      const el = document.getElementById('m-' + role + '-phone-status');
-      if (el) el.textContent = msg || '';
-    }
-
-    // Builds an international number (+9779812345678) from the country picker
-    // and what was typed. Returns { phone } or { error }.
-    function readPhoneNumber(role) {
-      const p = 'm-' + role + '-phone-';
-      const cc = document.getElementById(p + 'cc').value;
-      const raw = (document.getElementById(p + 'number').value || '').trim();
-      const digits = raw.replace(/\D/g, '');
-      // Typed a full international number (+977...)? use it as is. Otherwise
-      // prefix the chosen country and drop the leading 0s people type locally.
-      const phone = raw.startsWith('+') ? '+' + digits : cc + digits.replace(/^0+/, '');
-      if (!/^\+[1-9]\d{7,14}$/.test(phone)) return { error: 'Enter a valid mobile number (digits only).' };
-      if (phone.startsWith('+977') && !/^\+977\d{10}$/.test(phone)) {
-        return { error: 'Nepal mobile numbers have 10 digits (like 98XXXXXXXX).' };
-      }
-      return { phone: phone };
-    }
-
-    function phoneShowStep(role, step) {
-      const p = 'm-' + role + '-phone-';
-      document.getElementById(p + 'step1').classList.toggle('hidden', step !== 1);
-      document.getElementById(p + 'step2').classList.toggle('hidden', step !== 2);
-    }
-
-    function showPhonePanel(role) {
-      const p = 'm-' + role + '-';
-      const panel = document.getElementById(p + 'phone');
-      if (!panel) return;
-      document.getElementById(p + 'main').classList.add('hidden');
-      panel.classList.remove('hidden');
-      phoneShowStep(role, 1);
-      setPhoneStatus(role, '');
-      if (window.matchMedia && window.matchMedia('(pointer: fine)').matches) {
-        setTimeout(() => { const f = document.getElementById(p + 'phone-number'); if (f) f.focus(); }, 60);
-      }
-    }
-
-    function hidePhonePanel(role) {
-      const p = 'm-' + role + '-';
-      const panel = document.getElementById(p + 'phone');
-      if (!panel) return;
-      panel.classList.add('hidden');
-      const btn = document.getElementById(p + 'phone-resend');
-      if (btn) clearInterval(btn._t);
-      document.getElementById(p + 'main').classList.remove('hidden');
-    }
-
-    function phoneChangeNumber(role) {
-      const btn = document.getElementById('m-' + role + '-phone-resend');
-      if (btn) clearInterval(btn._t);
-      document.getElementById('m-' + role + '-phone-code').value = '';
-      phoneShowStep(role, 1);
-      setPhoneStatus(role, '');
-    }
-
-    function tickPhoneResend(role) {
-      const btn = document.getElementById('m-' + role + '-phone-resend');
-      if (!btn || !phoneState.phone) return;
-      clearInterval(btn._t);
-      const key = 'sms:' + phoneState.phone;
-      const update = () => {
-        const left = emailCooldownLeft(key);
-        btn.disabled = left > 0;
-        btn.textContent = left > 0 ? 'Resend code in ' + left + 's' : 'Resend code';
-        if (left <= 0) clearInterval(btn._t);
-      };
-      update();
-      btn._t = setInterval(update, 1000);
-    }
-
-    function enterPhoneStep2(role, phone) {
-      phoneState.phone = phone;
-      const p = 'm-' + role + '-phone-';
-      document.getElementById(p + 'sent-to').textContent = 'We sent a code to ' + phone;
-      document.getElementById(p + 'code').value = '';
-      phoneShowStep(role, 2);
-      tickPhoneResend(role);
-      if (window.matchMedia && window.matchMedia('(pointer: fine)').matches) {
-        setTimeout(() => { const f = document.getElementById(p + 'code'); if (f) f.focus(); }, 60);
-      }
-    }
-
-    async function sendPhoneCode(role, isResend) {
-      if (phoneState.busy) return;
-      if (!supabaseClient) { setPhoneStatus(role, '❌ Service unavailable right now. Please reload the page and try again.'); return; }
-      const parsed = (isResend && phoneState.phone) ? { phone: phoneState.phone } : readPhoneNumber(role);
-      if (parsed.error) { setPhoneStatus(role, parsed.error); return; }
-      const phone = parsed.phone;
-      const key = 'sms:' + phone;
-      // A code went out moments ago: just take them to the code box.
-      if (emailCooldownLeft(key) > 0) { enterPhoneStep2(role, phone); return; }
-      const name = (document.getElementById('m-' + role + '-phone-name').value || '').trim();
-      phoneState.busy = true;
-      authIntentRole = role;
-      setPhoneStatus(role, 'Sending your code...');
-      try {
-        const { error } = await supabaseClient.auth.signInWithOtp({ phone: phone, options: { channel: 'sms', data: { role: role, name: name } } });
-        if (error) throw error;
-        startEmailCooldown(key, 60);
-        setPhoneStatus(role, '');
-        enterPhoneStep2(role, phone);
-      } catch (err) {
-        console.error(err);
-        setPhoneStatus(role, '❌ ' + authFriendlyError(err));
-      } finally {
-        phoneState.busy = false;
-      }
-    }
-    function resendPhoneCode(role) { return sendPhoneCode(role, true); }
-
-    async function verifyPhoneCode(role) {
-      if (phoneState.busy) return;
-      const code = (document.getElementById('m-' + role + '-phone-code').value || '').replace(/\D/g, '');
-      if (code.length < 6) { setPhoneStatus(role, 'Enter the 6-digit code from the SMS.'); return; }
-      if (!supabaseClient || !phoneState.phone) { setPhoneStatus(role, '❌ Something went wrong. Please start again.'); return; }
-      const btn = document.getElementById('m-' + role + '-phone-verify');
-      phoneState.busy = true;
-      authIntentRole = role;
-      btn.disabled = true;
-      setPhoneStatus(role, 'Checking your code...');
-      try {
-        const { data, error } = await supabaseClient.auth.verifyOtp({ phone: phoneState.phone, token: code, type: 'sms' });
-        if (error) throw error;
-        const name = (document.getElementById('m-' + role + '-phone-name').value || '').trim();
-        await finishSession(role, data.session, name);
-        setPhoneStatus(role, '');
-      } catch (err) {
-        console.error(err);
-        setPhoneStatus(role, '❌ ' + authFriendlyError(err));
-      } finally {
-        phoneState.busy = false;
-        btn.disabled = false;
-      }
-    }
-
     function rememberReturningVisitor(role, email) {
       try {
         localStorage.setItem('viatestprep_returning_' + role, '1');
@@ -4363,8 +4145,8 @@
 
       localStorage.setItem('viatestprep_unlocked', 'true');
       localStorage.setItem('viatestprep_user_role', 'student');
-      localStorage.setItem('userEmail', session.user.email || session.user.phone || '');
-      rememberReturningVisitor('student', session.user.email || '');
+      localStorage.setItem('userEmail', session.user.email);
+      rememberReturningVisitor('student', session.user.email);
 
       closeAccessModal();
       renderAppView();

@@ -33,30 +33,4 @@ async function verifyAuthUser(accessToken) {
   }
 }
 
-// Like verifyAuthUser, but also accepts people who signed up with just a phone
-// number (SMS code). Returns { id, email, phone } - email OR phone may be null,
-// never both. Only for student sign-in: everything tied to an email address
-// (consultancy accounts, payments) keeps using verifyAuthUser above.
-async function verifyAuthIdentity(accessToken) {
-  if (!accessToken) return null;
-  try {
-    const res = await fetch(`${SUPABASE_URL}/auth/v1/user`, {
-      headers: {
-        apikey: SUPABASE_ANON_KEY,
-        Authorization: `Bearer ${accessToken}`,
-      },
-    });
-    if (!res.ok) return null;
-    const user = await res.json();
-    // Supabase reports a missing email/phone as an empty string.
-    const email = user && user.email ? String(user.email) : null;
-    const phone = user && user.phone ? String(user.phone).replace(/\D/g, '') : null;
-    if (!user || !user.id || (!email && !phone)) return null;
-    return { id: user.id, email, phone: phone ? '+' + phone : null };
-  } catch (err) {
-    console.error('verifyAuthIdentity error:', err);
-    return null;
-  }
-}
-
-module.exports = { verifyAuthUser, verifyAuthIdentity };
+module.exports = { verifyAuthUser };

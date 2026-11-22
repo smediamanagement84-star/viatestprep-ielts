@@ -25,7 +25,6 @@ const log = [];            // every auth request the page made
 let uid = 0;
 
 let settingsNow = { external: { email: true, google: false } };
-const smsSent = [];
 function userJson(u) {
   return {
     id: u.id, aud: 'authenticated', role: 'authenticated', email: u.email || '', phone: u.phone || '',
@@ -73,14 +72,6 @@ async function fakeSupabase(urlStr, opts = {}) {
     const u = [...users.values()].find(x => 'refresh-' + x.id === body.refresh_token);
     return u ? json(200, sessionJson(u)) : json(400, { code: 400, error_code: 'refresh_token_not_found', msg: 'Invalid Refresh Token' });
   }
-  if (p === '/otp' && body.phone) { smsSent.push(body.phone); return json(200, { message_id: 'sms-1' }); }
-  if (p === '/verify') {
-    // pretend SMS: the code is always 123456; creating the account on first use
-    if (body.type !== 'sms' || body.token !== '123456' || !smsSent.includes(body.phone)) return json(403, { code: 403, error_code: 'otp_expired', msg: 'Token has expired or is invalid' });
-    const digits = body.phone.replace(/\D/g, '');
-    const u = users.get(digits) || addUser('', 'unused', { role: 'student' }, digits);
-    return json(200, sessionJson(u));
-  }
   if (p === '/otp' || p === '/recover') return json(200, {});
   if (p === '/user' && (opts.method || 'GET') === 'GET') {
     const u = userFromBearer(headers.authorization);
@@ -101,6 +92,7 @@ async function fakeSupabase(urlStr, opts = {}) {
 const doms = [];
 function boot({ hash = '', storage = {} } = {}) {
   const appCalls = [];
+  const appBodies = [];
   const vc = new VirtualConsole();
   const errors = [];
   vc.on('jsdomError', (e) => { if (!/Not implemented/.test(e.message)) errors.push(e.message); });
@@ -120,15 +112,30 @@ function boot({ hash = '', storage = {} } = {}) {
         if (u.startsWith(SUPA_URL + '/auth/v1')) return fakeSupabase(u, opts);
         if (u.startsWith(SUPA_URL)) return json(200, []);
         appCalls.push(u);
+        appBodies.push({ url: u, body: opts && opts.body ? JSON.parse(opts.body) : null });
         if (u.includes('action=register')) return json(200, { ok: true, id: 'stu-1', name: 'Test', accessLevel: 'full', accessExpiresAt: '', sessionToken: 'signed-student' });
         if (u.includes('/api/consultancy/account')) return json(200, { ok: true, id: 'C1', name: 'Agency', planName: 'Free', expiresAt: '2099-01-01', sessionToken: 'signed-consultancy' });
         return json(200, { ok: true });
       };
       w.eval(supabaseUmd); // the REAL library, exposed as window.supabase
+      // Same real library, but remember the Google address it builds instead of navigating there.
+      const realSupabase = w.supabase;
+      w.supabase = {
+        createClient: (...a) => {
+          const c = realSupabase.createClient(...a);
+          const orig = c.auth.signInWithOAuth.bind(c.auth);
+          c.auth.signInWithOAuth = async (args) => {
+            const r = await orig({ ...args, options: { ...(args.options || {}), skipBrowserRedirect: true } });
+            w.__oauthUrl = r && r.data && r.data.url;
+            return r;
+          };
+          return c;
+        },
+      };
     },
   });
   doms.push(dom);
-  return { dom, w: dom.window, d: dom.window.document, appCalls, errors, ls: dom.window.localStorage };
+  return { dom, w: dom.window, d: dom.window.document, appCalls, appBodies, errors, ls: dom.window.localStorage };
 }
 const $ = (d, id) => d.getElementById(id);
 const hidden = (d, id) => $(d, id).classList.contains('hidden');
@@ -290,38 +297,51 @@ const lastLog = (p) => [...log].reverse().find(l => l.path === p);
   }
 
 
-  console.log('11. Phone sign-up with an SMS code (real library)');
+
+  console.log('11. Google sign-in (real library)');
   {
-    settingsNow = { external: { email: true, google: false, phone: true } };
+    settingsNow = { external: { email: true, google: true } };
     const t = boot();
     await sleep(400);
-    ok(!t.d.querySelector('#m-step-student [data-provider="phone"]').classList.contains('hidden'), 'phone option shows because Supabase reports phone sign-in is on');
-    ok(t.d.querySelector('#m-step-student [data-provider="google"]').classList.contains('hidden'), 'Google stays hidden because Supabase reports it is off');
-    t.w.openAccessModal(); t.w.selectModalRole('student'); t.w.showPhonePanel('student');
-    $(t.d, 'm-student-phone-name').value = 'Sita';
-    $(t.d, 'm-student-phone-number').value = '9812345678';
-    await t.w.sendPhoneCode('student'); await sleep(250);
-    const o = [...log].reverse().find(l => l.path === '/otp' && l.body.phone);
-    ok(o && o.body.phone === '+9779812345678' && o.body.channel === 'sms' && o.body.data.role === 'student' && o.body.data.name === 'Sita', 'real library asks Supabase to text +9779812345678');
-    ok(!$(t.d, 'm-student-phone-step2').classList.contains('hidden'), 'code box is shown');
+    const g = t.d.querySelector('#m-step-student [data-provider="google"]');
+    ok(!g.classList.contains('hidden') && !hidden(t.d, 'm-student-or'), 'Google button and the "or continue with email" divider show when Supabase has Google on');
+    t.w.openAccessModal(); t.w.selectModalRole('student');
+    await t.w.signInWithGoogle('student'); await sleep(200);
+    const u = new URL(t.w.__oauthUrl);
+    ok(u.origin === SUPA_URL && u.pathname === '/auth/v1/authorize' && u.searchParams.get('provider') === 'google', "the real library sends the person to Supabase's Google login address");
+    ok(u.searchParams.get('redirect_to') === 'https://viatestprep.test/', 'and asks to be sent back to the site afterwards');
+    ok(u.searchParams.get('prompt') === 'select_account', 'with the Google account chooser (phones often have several accounts)');
+    ok(t.ls.getItem('oauth_pending_role') === 'student', 'remembers they chose "student" across the trip to Google');
 
-    $(t.d, 'm-student-phone-code').value = '999999';
-    await t.w.verifyPhoneCode('student'); await sleep(250);
-    ok(/wrong or has expired/.test($(t.d, 'm-student-phone-status').textContent) && t.ls.getItem('viatestprep_unlocked') !== 'true', 'a wrong code is refused with a friendly message');
-    $(t.d, 'm-student-phone-code').value = '123456';
-    await t.w.verifyPhoneCode('student'); await sleep(400);
-    ok(t.ls.getItem('viatestprep_unlocked') === 'true' && t.ls.getItem('viatestprep_user_role') === 'student' && !hidden(t.d, 'view-student'), 'the right code creates the account and logs in');
-    ok(t.appCalls.filter(u => u.includes('action=register')).length === 1, 'profile registered once');
-    const saved = t.ls.getItem(STORAGE_KEY);
-    ok(!!saved && JSON.parse(saved).user.phone === '9779812345678', 'the library saved the phone login in the browser');
+    // coming back from Google
+    const gu = addUser('gita.sharma@gmail.com', 'unused', { full_name: 'Gita Sharma', name: 'Gita Sharma', email_verified: true });
+    const hash = (extra) => 'access_token=' + jwtFor(gu) + '&expires_in=3600&refresh_token=refresh-' + gu.id + '&token_type=bearer&provider_token=google-token&provider_refresh_token=google-refresh' + (extra || '');
+    const back = boot({ hash: hash(), storage: { oauth_pending_role: 'student' } });
+    await sleep(500);
+    ok(back.ls.getItem('viatestprep_unlocked') === 'true' && back.ls.getItem('viatestprep_user_role') === 'student' && !hidden(back.d, 'view-student'), 'returning from Google logs the student in');
+    const reg = back.appBodies.find(b => b.url.includes('action=register'));
+    ok(reg && reg.body.name === 'Gita Sharma' && !!reg.body.accessToken, 'their Google name is used for the new account');
+    ok(!back.w.location.hash.includes('access_token') && back.ls.getItem('oauth_pending_role') === null, 'the secret is removed from the address bar and the leftover note is cleared');
+    ok(!!back.ls.getItem(STORAGE_KEY), 'the library saved the login');
 
-    const again = boot({ storage: { [STORAGE_KEY]: saved, viatestprep_unlocked: 'true', viatestprep_user_role: 'student', viatestprep_active_student_id: 'stu-1', viatestprep_session_token: 'signed-student' } });
-    await sleep(400);
-    ok(again.ls.getItem('viatestprep_unlocked') === 'true' && !hidden(again.d, 'view-student'), 'reopening the site keeps the phone login');
+    const cons = boot({ hash: hash(), storage: { oauth_pending_role: 'consultancy' } });
+    await sleep(500);
+    const acc = cons.appBodies.find(b => b.url.includes('/api/consultancy/account'));
+    ok(cons.ls.getItem('viatestprep_user_role') === 'consultancy' && acc && acc.body.name === 'Gita Sharma', 'Google also works for consultancy accounts');
+
+    const again = boot({ hash: hash(), storage: { viatestprep_unlocked: 'true', viatestprep_user_role: 'student', viatestprep_active_student_id: 'stu-1', viatestprep_session_token: 'signed-student' } });
+    await sleep(500);
+    ok(again.ls.getItem('viatestprep_user_role') === 'student', 'a student who is already in is not flipped to another portal');
+
+    const cancelled = boot({ hash: 'error=access_denied&error_code=access_denied&error_description=The+user+denied+access' });
+    await sleep(300);
+    const banner = cancelled.d.getElementById('auth-notice-banner');
+    ok(banner && /denied access\. Please try again/.test(banner.textContent) && cancelled.ls.getItem('viatestprep_unlocked') !== 'true', 'cancelling on the Google screen: friendly message, nobody logged in');
+
     settingsNow = { external: { email: true, google: false } };
     const off = boot();
     await sleep(400);
-    ok(off.d.querySelector('#m-step-student [data-provider="phone"]').classList.contains('hidden'), 'when Supabase turns phone sign-in off, the option disappears again');
+    ok(off.d.querySelector('#m-step-student [data-provider="google"]').classList.contains('hidden') && hidden(off.d, 'm-student-or'), 'and with Google off in Supabase, the button and divider are hidden');
   }
 
   console.log('\n' + pass + ' passed, ' + fail + ' failed');

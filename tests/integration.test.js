@@ -21,7 +21,6 @@ const jwts = {
   'jwt-selfserve': { id: 'u-self', email: 'self@x.com' },
   'jwt-agency1': { id: 'u-a1', email: 'agency1@x.com' },
   'jwt-newagency': { id: 'u-new', email: 'brandnew@x.com' },
-  'jwt-phone': { id: 'u-ph', email: '', phone: '9779812345678' },
 };
 let seq = 0;
 const requestLog = [];
@@ -187,20 +186,6 @@ server.listen(0, '127.0.0.1', async () => {
     ok(r.code === 401, 'closed to the public');
     r = await call(devNotifApi, { query: { status: 'UNREAD' }, headers: owner });
     ok(r.code === 200, 'owner can read them (status ' + r.code + ')');
-
-
-    console.log('8. Phone-only student (real code, real queries)');
-    const beforePhone = tables.students.length;
-    r = await call(studentApi, { method: 'POST', query: { action: 'register' }, body: { accessToken: 'jwt-phone', name: '' } });
-    ok(r.code === 200 && r.body.ok && tables.students.length === beforePhone + 1, 'a student with only a phone number can sign up');
-    const ph = tables.students[tables.students.length - 1];
-    ok(ph.email === '9779812345678@phone.viatestprep.invalid' && ph.name === '+9779812345678' && ph.auth_user_id === 'u-ph', 'row has the placeholder email, the number as name, and the login id');
-    ok(verifySession(r.body.sessionToken).id === r.body.id, 'and gets a token for their own record');
-    const phoneId = r.body.id;
-    r = await call(studentApi, { method: 'POST', query: { action: 'register' }, body: { accessToken: 'jwt-phone' } });
-    ok(r.body.id === phoneId && tables.students.length === beforePhone + 1, 'logging in again by phone does not create a duplicate');
-    r = await call(consultancyApi, { query: { accessToken: 'jwt-phone' } });
-    ok(r.code === 401, 'a phone-only login can NOT be used for email-based consultancy accounts');
 
     console.log('7. Keep-alive');
     const n = requestLog.length;

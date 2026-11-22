@@ -12,7 +12,7 @@ function ok(cond, label) {
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
 function boot({ hash = '', search = '', storage = {}, auth = {}, fetchImpl } = {}) {
-  const calls = { signUp: [], signIn: [], otp: [], reset: [], resend: [], update: [], signOut: [], fetch: [], oauth: [], verifyOtp: [] };
+  const calls = { signUp: [], signIn: [], otp: [], reset: [], resend: [], update: [], signOut: [], fetch: [], oauth: [] };
   let listener = null;
   const client = {
     auth: {
@@ -25,7 +25,6 @@ function boot({ hash = '', search = '', storage = {}, auth = {}, fetchImpl } = {
       async updateUser(a) { calls.update.push(a); return auth.updateUser ? auth.updateUser(a) : { data: {}, error: null }; },
       async signOut(a) { calls.signOut.push(a); return { error: null }; },
       async signInWithOAuth(a) { calls.oauth.push(a); return { data: {}, error: null }; },
-      async verifyOtp(a) { calls.verifyOtp.push(a); return auth.verifyOtp ? auth.verifyOtp(a) : { data: { session: null }, error: { message: 'Token has expired or is invalid', code: 'otp_expired' } }; },
       async getSession() { return { data: { session: auth.currentSession || null } }; },
     },
     from() { const q = { select: () => q, eq: () => q, upsert: () => Promise.resolve({ error: null }), then: (r) => r({ data: [], error: null }) }; return q; },
@@ -455,74 +454,9 @@ const session = (extra = {}) => ({ access_token: 'tok-' + Math.random(), user: {
     t.w.toggleAuthMode('student');
     ok(hidden(t.d, 'm-student-name') && $(t.d, 'm-student-auth-btn').textContent === 'Log in' && !hidden(t.d, 'm-student-forgot') && /New here/.test($(t.d, 'm-student-mode-toggle').textContent), 'the one link toggles back to log-in mode');
     ok($(t.d, 'm-student-heading').textContent === 'Welcome back', 'friendly heading in log-in mode');
-    ok(t.d.querySelector('#m-step-student [data-provider="phone"]').classList.contains('hidden'), 'phone option stays hidden until Supabase says phone sign-in is on');
-    ok(!t.d.querySelector('#m-step-consultancy-auth [data-provider="phone"]'), 'consultancy screen has no phone option');
+    ok(!/phone/i.test(t.d.getElementById('m-step-student').textContent) && !/phone/i.test(t.d.getElementById('m-step-consultancy-auth').textContent), 'the sign-in screens only offer Google and email');
     ok(!/&#9993;/.test(html), 'no more broken-looking envelope icon');
     ok([...t.d.querySelectorAll('#m-step-student input, #m-step-consultancy-auth input')].every(i => /text-base|text-2xl/.test(i.className)), 'all inputs are 16px+ (stops the phone browser zooming in)');
-  }
-
-  console.log('22. Phone sign-in (SMS code)');
-  {
-    const settings = async (url) => url.includes('/auth/v1/settings')
-      ? { ok: true, status: 200, json: async () => ({ external: { email: true, google: true, phone: true } }) }
-      : { ok: true, status: 200, json: async () => ({ ok: true, id: 'stu-1', name: 'Test Student', accessLevel: 'full', accessExpiresAt: '', sessionToken: 'signed-token-1' }) };
-    const s = session({ user_metadata: { role: 'student' }, email: '', phone: '9779812345678' });
-    const t = boot({ fetchImpl: settings, auth: { verifyOtp: () => ({ data: { session: s }, error: null }) } });
-    await sleep(300);
-    const phoneBtn = t.d.querySelector('#m-step-student [data-provider="phone"]');
-    ok(!phoneBtn.classList.contains('hidden'), 'phone option appears when Supabase has phone sign-in on');
-    ok(!hidden(t.d, 'm-student-or'), 'the "or continue with email" divider is shown');
-    t.w.openAccessModal(); t.w.selectModalRole('student'); t.w.showPhonePanel('student');
-    ok(!hidden(t.d, 'm-student-phone') && hidden(t.d, 'm-student-main'), 'phone screen opens');
-
-    $(t.d, 'm-student-phone-number').value = '12345';
-    await t.w.sendPhoneCode('student');
-    ok(/Nepal mobile numbers have 10 digits/.test($(t.d, 'm-student-phone-status').textContent) && t.calls.otp.length === 0, 'a too-short Nepal number is caught before any SMS is sent');
-    $(t.d, 'm-student-phone-number').value = '(098) 12-345678';
-    $(t.d, 'm-student-phone-name').value = 'Anu';
-    await t.w.sendPhoneCode('student');
-    const o = t.calls.otp[0];
-    ok(t.calls.otp.length === 1 && o.phone === '+9779812345678' && o.options.channel === 'sms' && o.options.data.role === 'student' && o.options.data.name === 'Anu', 'code requested for +9779812345678 (spaces, brackets and leading 0 cleaned up), with role and name');
-    ok(!hidden(t.d, 'm-student-phone-step2') && /\+9779812345678/.test($(t.d, 'm-student-phone-sent-to').textContent), 'code box shown, naming the number');
-    ok($(t.d, 'm-student-phone-resend').disabled === true && /Resend code in/.test($(t.d, 'm-student-phone-resend').textContent), 'resend is on a countdown');
-    await t.w.sendPhoneCode('student');
-    ok(t.calls.otp.length === 1, 'tapping send again during the countdown does not send another SMS');
-
-    await t.w.verifyPhoneCode('student');
-    ok(/6-digit/.test($(t.d, 'm-student-phone-status').textContent) && t.calls.verifyOtp.length === 0, 'an empty code is caught before asking the server');
-    $(t.d, 'm-student-phone-code').value = '482913';
-    await t.w.verifyPhoneCode('student'); await sleep(120);
-    ok(t.calls.verifyOtp.length === 1 && t.calls.verifyOtp[0].phone === '+9779812345678' && t.calls.verifyOtp[0].token === '482913' && t.calls.verifyOtp[0].type === 'sms', 'the code is checked with the right number and type');
-    const ls = t.w.localStorage;
-    ok(ls.getItem('viatestprep_unlocked') === 'true' && ls.getItem('viatestprep_user_role') === 'student' && !hidden(t.d, 'view-student'), 'correct code logs the student in');
-    ok(ls.getItem('viatestprep_session_token') === 'signed-token-1' && ls.getItem('userEmail') === '9779812345678', 'token saved; no email needed');
-    ok(t.calls.fetch.filter(c => c[0].includes('action=register')).length === 1, 'profile registered exactly once');
-
-    const bad = boot({ fetchImpl: settings });
-    await sleep(300);
-    bad.w.openAccessModal(); bad.w.selectModalRole('student'); bad.w.showPhonePanel('student');
-    $(bad.d, 'm-student-phone-number').value = '9812345678';
-    await bad.w.sendPhoneCode('student');
-    $(bad.d, 'm-student-phone-code').value = '000000';
-    await bad.w.verifyPhoneCode('student'); await sleep(100);
-    ok(/wrong or has expired/.test($(bad.d, 'm-student-phone-status').textContent) && bad.w.localStorage.getItem('viatestprep_unlocked') !== 'true', 'wrong code: friendly message, not logged in');
-    ok(!$(bad.d, 'm-student-phone-verify').disabled, 'verify button is usable again');
-    bad.w.phoneChangeNumber('student');
-    ok(!hidden(bad.d, 'm-student-phone-step1') && hidden(bad.d, 'm-student-phone-step2'), '"Change number" goes back to the number box');
-
-    const intl = boot({ fetchImpl: settings });
-    await sleep(300);
-    intl.w.openAccessModal(); intl.w.selectModalRole('student'); intl.w.showPhonePanel('student');
-    $(intl.d, 'm-student-phone-cc').value = '+91';
-    $(intl.d, 'm-student-phone-number').value = '98765 43210';
-    await intl.w.sendPhoneCode('student');
-    ok(intl.calls.otp[0].phone === '+919876543210', 'another country code is used correctly');
-    const full = boot({ fetchImpl: settings });
-    await sleep(300);
-    full.w.openAccessModal(); full.w.selectModalRole('student'); full.w.showPhonePanel('student');
-    $(full.d, 'm-student-phone-number').value = '+61 412 345 678';
-    await full.w.sendPhoneCode('student');
-    ok(full.calls.otp[0].phone === '+61412345678', 'a number typed with its own +country code is used as typed');
   }
 
   console.log('\n' + pass + ' passed, ' + fail + ' failed');
