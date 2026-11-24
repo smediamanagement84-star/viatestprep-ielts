@@ -459,6 +459,32 @@ const session = (extra = {}) => ({ access_token: 'tok-' + Math.random(), user: {
     ok([...t.d.querySelectorAll('#m-step-student input, #m-step-consultancy-auth input')].every(i => /text-base|text-2xl/.test(i.className)), 'all inputs are 16px+ (stops the phone browser zooming in)');
   }
 
+
+  console.log('22. Clear messages when Supabase cannot send email');
+  {
+    const t = boot();
+    await sleep(150);
+    const f = (e) => t.w.authFriendlyError(e);
+    ok(/can't send emails to this address yet/.test(f({ code: 'email_address_not_authorized', message: 'Email address "x@y.com" cannot be used as it is not authorized' })), 'built-in email sender refusing an address -> plain explanation');
+    ok(/couldn't send the email right now/.test(f({ message: 'Error sending recovery email' })), 'email sending failure -> plain explanation');
+    ok(/Too many emails/.test(f({ code: 'over_email_send_rate_limit', message: 'email rate limit exceeded' })), 'hourly email limit -> plain explanation');
+    ok(!/Google/.test(f({ message: 'email rate limit exceeded' })) || t.w.googleAvailable(), 'Google is only suggested when its button is actually available');
+    t.d.querySelectorAll('[data-provider="google"]').forEach(b => b.classList.add('hidden'));
+    ok(!/Google/.test(f({ message: 'email rate limit exceeded' })) && !/Google/.test(f({ message: 'Invalid login credentials' })) && !/Google/.test(f({ code: 'email_address_not_authorized', message: 'not authorized' })), 'with Google off, no message mentions it');
+    t.d.querySelectorAll('[data-provider="google"]').forEach(b => b.classList.remove('hidden'));
+    ok(/Google/.test(f({ message: 'Invalid login credentials' })), 'with Google on, it is offered');
+    ok(/don't match/.test(f({ message: 'Invalid login credentials' })), 'wrong password message unchanged');
+
+    // end to end through the screen
+    const r = boot({ auth: {} });
+    await sleep(150);
+    r.w.openAccessModal(); r.w.selectModalRole('student'); r.w.setAuthMode('student', 'login');
+    $(r.d, 'm-student-auth-email').value = 'a@b.com';
+    r.dom.window.eval("supabaseClient.auth.resetPasswordForEmail = async () => ({ data: null, error: { code: 'over_email_send_rate_limit', message: 'email rate limit exceeded' } });");
+    await r.w.handleStudentForgotPassword(); await sleep(100);
+    ok(/Too many emails/.test($(r.d, 'm-student-auth-status').textContent) && hidden(r.d, 'm-student-sent'), 'forgot password while emails are blocked: clear message on the screen, no fake "email sent" panel');
+  }
+
   console.log('\n' + pass + ' passed, ' + fail + ' failed');
   process.exit(fail ? 1 : 0);
 })();

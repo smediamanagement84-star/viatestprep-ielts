@@ -2745,6 +2745,12 @@
       return /FBAN|FBAV|FB_IAB|Instagram|Line\/|MicroMessenger|Snapchat|TikTok|musical_ly|; wv\)/i.test(navigator.userAgent || '');
     }
 
+    // True when a visible "Continue with Google" button exists, so messages
+    // only suggest Google when it can actually be used.
+    function googleAvailable() {
+      return !!document.querySelector('[data-provider="google"]:not(.hidden)');
+    }
+
     // Turns raw Supabase/network errors into something a student can act on.
     function authFriendlyError(err) {
       const raw = (err && (err.message || err.error_description)) || '';
@@ -2753,13 +2759,22 @@
       if (/failed to fetch|networkerror|network request failed|load failed/.test(msg)) {
         return "Can't reach the server. Check your internet connection and try again.";
       }
+      // Supabase's built-in email sender only emails the project's own team
+      // and is heavily limited; these show up until real email sending
+      // (custom SMTP) is set up in the Supabase dashboard.
+      if (code === 'email_address_not_authorized' || /email address .*not authorized/.test(msg)) {
+        return "We can't send emails to this address yet. " + (googleAvailable() ? 'Please continue with Google instead.' : 'Please ask your teacher for help signing in.');
+      }
+      if (/error sending (recovery|confirmation|magic ?link|invite|email|reauthentication)/.test(msg)) {
+        return "We couldn't send the email right now. Please try again in a few minutes.";
+      }
       const secs = msg.match(/after (\d+) seconds?/);
       if (secs) return 'Please wait ' + secs[1] + ' seconds before requesting another email.';
       if (code === 'over_email_send_rate_limit' || /rate limit|too many requests/.test(msg)) {
-        return 'Too many emails were requested. Please wait a few minutes and try again, or continue with Google.';
+        return 'Too many emails were requested. Please wait a few minutes and try again' + (googleAvailable() ? ', or continue with Google.' : '.');
       }
       if (/invalid login credentials/.test(msg)) {
-        return "That email and password don't match. Double-check them, or use Forgot password, a login link, or Google.";
+        return "That email and password don't match. Double-check them, or use Forgot password or a login link" + (googleAvailable() ? ', or Google.' : '.');
       }
       if (/email not confirmed/.test(msg)) return 'Please confirm your email first - we can resend the link.';
       if (/different from the old password|same as the old password/.test(msg)) {
