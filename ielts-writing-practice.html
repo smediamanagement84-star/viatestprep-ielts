@@ -8,44 +8,44 @@
 <style>
   * { box-sizing: border-box; }
   :root {
-    --paper: #fffefb;
-    --page-bg: #eae6dc;
-    --ink: #1c1a17;
-    --ink-soft: #4a453d;
-    --rule: rgba(28, 26, 23, 0.14);
-    --rule-soft: rgba(28, 26, 23, 0.08);
-    --accent: #7a2331;
-    --accent-soft: #f6e9ea;
-    --gold: #a8792f;
+    --paper: #ffffff;
+    --page-bg: #fafafa;
+    --ink: #111827;
+    --ink-soft: #4b5563;
+    --rule: rgba(17, 24, 39, 0.12);
+    --rule-soft: rgba(17, 24, 39, 0.06);
+    --accent: #111827;
+    --accent-soft: #fef9c3;
+    --gold: #eab308;
   }
   body { background: var(--page-bg); color: var(--ink); font-family: "Inter", sans-serif; margin: 0; height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
 
   .site-header { background: var(--paper); border-bottom: 1px solid var(--rule); height: 62px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; }
   .exit-link { padding: 6px 14px; border-radius: 8px; border: 1px solid var(--rule); font-size: 12px; font-weight: 700; color: var(--ink-soft); text-decoration: none; }
   .exit-link:hover { background: var(--rule-soft); }
-  .book-badge { font-size: 9px; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: .1em; }
+  .book-badge { font-size: 9px; font-weight: 800; color: #a16207; text-transform: uppercase; letter-spacing: .1em; }
   .test-title { font-size: 14px; font-weight: 700; color: var(--ink); font-family: "Fraunces", serif; }
   .mode-tag { font-size: 11px; color: var(--ink-soft); font-weight: 600; }
-  .timer-pill { display: flex; align-items: center; gap: 6px; background: var(--accent-soft); border: 1px solid rgba(122,35,49,.18); border-radius: 20px; padding: 5px 14px; }
-  .timer-text { font-size: 13px; font-weight: 800; font-family: "JetBrains Mono", monospace; color: var(--accent); }
-  .submit-btn { padding: 7px 18px; border-radius: 9px; background: var(--accent); color: #fff; border: none; font-size: 12px; font-weight: 700; cursor: pointer; box-shadow: 0 2px 8px rgba(122,35,49,.25); }
-  .submit-btn:hover { background: #5e1a25; }
+  .timer-pill { display: flex; align-items: center; gap: 6px; background: var(--accent-soft); border: 1px solid #fde047; border-radius: 20px; padding: 5px 14px; }
+  .timer-text { font-size: 13px; font-weight: 800; font-family: "JetBrains Mono", monospace; color: #854d0e; }
+  .submit-btn { padding: 7px 18px; border-radius: 9px; background: #facc15; color: #111827; border: 1px solid #eab308; font-size: 12px; font-weight: 800; cursor: pointer; box-shadow: 0 2px 8px rgba(234,179,8,.22); }
+  .submit-btn:hover { background: #eab308; }
 
   .test-container { flex: 1; display: flex; overflow: hidden; }
 
   .prompt-pane { width: 50%; height: 100%; overflow-y: auto; border-right: 1px solid var(--rule); background: var(--page-bg); padding: 28px 30px; }
-  .prompt-sheet { max-width: 560px; margin: 0 auto; background: var(--paper); border: 1px solid var(--rule); border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 12px 32px rgba(28,26,23,.05); padding: 30px 34px 36px; }
+  .prompt-sheet { max-width: 560px; margin: 0 auto; background: var(--paper); border: 1px solid var(--rule); border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 12px 32px rgba(17,24,39,.05); padding: 30px 34px 36px; }
 
   .task-tabs { display: flex; gap: 6px; border-bottom: 1px solid var(--rule); padding-bottom: 12px; margin-bottom: 20px; }
   .task-tab { padding: 6px 14px; border-radius: 7px; font-size: 11.5px; font-weight: 700; cursor: pointer; border: 1px solid var(--rule); color: var(--ink-soft); background: var(--paper); transition: all .18s; }
   .task-tab:hover { background: var(--rule-soft); }
-  .task-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .task-tab.active { background: #111827; color: #facc15; border-color: #111827; }
 
   .task-title { font-family: "Fraunces", serif; font-size: 20px; font-weight: 800; color: var(--ink); margin: 0 0 14px; border-bottom: 2px solid var(--ink); padding-bottom: 10px; }
-  .info-banner { padding: 9px 13px; background: #f6f1e4; border: 1px solid rgba(168,121,47,.25); border-radius: 9px; font-size: 11.5px; color: #4a4530; display: flex; justify-content: space-between; margin-bottom: 16px; }
-  .prompt-text { padding: 16px 18px; border-radius: 10px; border: 1px solid var(--rule); background: #faf8f2; font-family: "Lora", serif; font-size: 14px; line-height: 1.8; color: var(--ink-soft); }
-  .prompt-text .prompt-kicker { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); font-family: "Inter", sans-serif; display: block; margin-bottom: 8px; }
-  .prompt-text .prompt-statement { font-size: 15px; font-weight: 600; color: var(--ink); border-left: 3px solid var(--accent); padding-left: 12px; margin: 10px 0; }
+  .info-banner { padding: 9px 13px; background: #fefce8; border: 1px solid #fde047; border-radius: 9px; font-size: 11.5px; color: #854d0e; display: flex; justify-content: space-between; margin-bottom: 16px; }
+  .prompt-text { padding: 16px 18px; border-radius: 10px; border: 1px solid var(--rule); background: #fafafa; font-family: "Lora", serif; font-size: 14px; line-height: 1.8; color: var(--ink-soft); }
+  .prompt-text .prompt-kicker { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: #a16207; font-family: "Inter", sans-serif; display: block; margin-bottom: 8px; }
+  .prompt-text .prompt-statement { font-size: 15px; font-weight: 600; color: var(--ink); border-left: 3px solid var(--gold); padding-left: 12px; margin: 10px 0; }
   .prompt-text .prompt-note { font-size: 12.5px; color: var(--ink-soft); margin-top: 10px; }
   .prompt-text .prompt-req { font-size: 12px; font-weight: 700; color: var(--ink); margin-top: 12px; }
 
@@ -58,48 +58,49 @@
 
   #writingResultsBox { display: none; margin-bottom: 18px; padding: 18px 20px; border-radius: 12px; border: 1px solid var(--rule); background: var(--paper); }
   #writingResultsBox .wr-overall { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
-  #writingResultsBox .wr-overall-band { font-family: "Fraunces", serif; font-size: 32px; font-weight: 800; color: var(--accent); }
+  #writingResultsBox .wr-overall-band { font-family: "Fraunces", serif; font-size: 32px; font-weight: 800; color: var(--ink); }
   #writingResultsBox .wr-overall-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); }
-  #writingResultsBox .wr-disclaimer { font-size: 11px; color: var(--ink-soft); line-height: 1.6; padding: 10px 12px; background: var(--accent-soft); border-radius: 8px; margin-bottom: 14px; }
+  #writingResultsBox .wr-disclaimer { font-size: 11px; color: #854d0e; line-height: 1.6; padding: 10px 12px; background: #fefce8; border: 1px solid #fde047; border-radius: 8px; margin-bottom: 14px; }
   #writingResultsBox .wr-task { border-top: 1px solid var(--rule-soft); padding-top: 12px; margin-top: 12px; }
   #writingResultsBox .wr-task-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
   #writingResultsBox .wr-task-title { font-size: 13px; font-weight: 800; color: var(--ink); }
-  #writingResultsBox .wr-task-band { font-size: 13px; font-weight: 800; color: var(--accent); }
+  #writingResultsBox .wr-task-band { font-size: 13px; font-weight: 800; color: #a16207; }
   #writingResultsBox .wr-criteria { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; font-size: 11.5px; color: var(--ink-soft); margin-bottom: 8px; }
   #writingResultsBox .wr-criteria span.name { color: var(--ink); font-weight: 600; }
   #writingResultsBox .wr-notes { font-size: 11.5px; color: var(--ink-soft); line-height: 1.6; margin: 0; padding-left: 18px; }
   #writingResultsBox .wr-notes li { margin-bottom: 4px; }
 
   .editor-pane { width: 50%; height: 100%; overflow-y: auto; background: var(--page-bg); padding: 28px 30px; display: flex; flex-direction: column; }
-  .editor-sheet { max-width: 560px; margin: 0 auto; background: var(--paper); border: 1px solid var(--rule); border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 12px 32px rgba(28,26,23,.05); padding: 26px 30px 30px; flex: 1; display: flex; flex-direction: column; width: 100%; }
+  .editor-sheet { max-width: 560px; margin: 0 auto; background: var(--paper); border: 1px solid var(--rule); border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 12px 32px rgba(17,24,39,.05); padding: 26px 30px 30px; flex: 1; display: flex; flex-direction: column; width: 100%; }
 
   .editor-label { font-size: 11px; font-weight: 800; color: var(--ink-soft); text-transform: uppercase; letter-spacing: .07em; }
-  .clear-link { font-size: 10.5px; color: var(--accent); text-decoration: underline; background: none; border: none; cursor: pointer; }
+  .clear-link { font-size: 10.5px; color: #a16207; font-weight: 700; text-decoration: underline; background: none; border: none; cursor: pointer; }
 
   .essay-textarea {
-    flex: 1; width: 100%; margin-top: 12px; background: #faf8f2; border: 1px solid var(--rule); border-radius: 10px;
+    flex: 1; width: 100%; margin-top: 12px; background: #fafafa; border: 1px solid var(--rule); border-radius: 10px;
     padding: 18px; outline: none; resize: none; color: var(--ink); font-family: "Lora", serif; font-size: 14.5px; line-height: 1.8; transition: all 0.2s;
   }
-  .essay-textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(122,35,49,.08); background: var(--paper); }
+  .essay-textarea:focus { border-color: #eab308; box-shadow: 0 0 0 2px rgba(250,204,21,.22); background: var(--paper); }
 
   .editor-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--rule); padding-top: 14px; margin-top: 16px; }
   .word-count-label { font-size: 12px; color: var(--ink-soft); }
   .word-count-num { font-weight: 800; }
   .word-req-status { font-size: 10px; text-transform: uppercase; font-weight: 800; margin-top: 2px; }
   .export-btn { padding: 7px 14px; border-radius: 8px; border: 1px solid var(--rule); background: var(--paper); font-size: 11.5px; font-weight: 700; cursor: pointer; color: var(--ink-soft); }
-  .export-btn:hover { background: var(--rule-soft); }
+  .export-btn:hover { background: #fefce8; border-color: #eab308; color: var(--ink); }
 
   .bottom-nav { height: 62px; background: var(--paper); border-top: 1px solid var(--rule); flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; }
-  .autosave-note { font-size: 11.5px; color: #9c9385; }
+  .autosave-note { font-size: 11.5px; color: #6b7280; }
   .nav-arrow { padding: 7px 15px; border-radius: 9px; border: 1.5px solid var(--rule); background: var(--paper); font-size: 12px; font-weight: 700; color: var(--ink-soft); cursor: pointer; transition: all .15s; }
-  .nav-arrow:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+  .nav-arrow:hover:not(:disabled) { border-color: #eab308; color: #111827; background: #fefce8; }
   .nav-arrow:disabled { opacity: .4; cursor: not-allowed; }
 
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: transparent; }
-  ::-webkit-scrollbar-thumb { background: rgba(168,121,47,.3); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb { background: rgba(17,24,39,.18); border-radius: 4px; }
 </style>
 <script src="security.js"></script>
+<script src="vtp-ui.js"></script>
 </head>
 
 <body>
@@ -199,8 +200,8 @@ const testId = urlParams.get('test') || '1';
 const testData = IELTS_TEST_DATA[testId];
 
 if (!testData) {
-  alert('Test Set not found! Redirecting to Test 1.');
-  window.location.search = '?test=1';
+  if (window.vtpToast) vtpToast('Test Set not found! Redirecting to Test 1.', 'warning');
+  setTimeout(() => { window.location.search = '?test=1'; }, 900);
 }
 
 const currentTestMode = localStorage.getItem('vietest_practice_mode') || 'exam';
@@ -220,10 +221,10 @@ function showComingSoon() {
   document.getElementById('modeIndicator').textContent = '';
   document.querySelector('.bottom-nav').style.display = 'none';
   document.getElementById('testBody').innerHTML = `
-    <div style="max-width:480px;margin:80px auto;text-align:center;background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:40px 34px;box-shadow:0 12px 32px rgba(28,26,23,.06);">
+    <div style="max-width:480px;margin:80px auto;text-align:center;background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:40px 34px;box-shadow:0 12px 32px rgba(17,24,39,.06);">
       <h2 style="font-family:'Fraunces',serif;font-size:22px;margin:0 0 10px;color:var(--ink);">Writing module coming soon</h2>
       <p style="font-size:13.5px;color:var(--ink-soft);line-height:1.6;margin:0 0 20px;">The official Writing tasks for <strong>${testData.title}</strong> are still being added to the platform. This won't affect your Listening practice for this test.</p>
-      <a href="index.html" style="display:inline-block;padding:9px 20px;border-radius:9px;background:var(--accent);color:#fff;text-decoration:none;font-size:12.5px;font-weight:700;">Return to Lobby</a>
+      <a href="index.html" style="display:inline-block;padding:9px 20px;border-radius:9px;background:#facc15;color:#111827;text-decoration:none;font-size:12.5px;font-weight:800;">Return to Lobby</a>
     </div>
   `;
 }
@@ -261,7 +262,7 @@ function initTest() {
       if (timeRemaining <= 0) {
         clearInterval(timerInterval);
         document.getElementById('essayInput').disabled = true;
-        alert('Time is up! Submitting writing responses automatically.');
+        vtpToast('Time is up! Submitting writing responses automatically.', 'info');
         submitTest(true);
       }
     }, 1000);
@@ -364,10 +365,11 @@ function wordCountOf(text) {
   return t === '' ? 0 : t.split(/\s+/).length;
 }
 
-function clearEssay() {
-  if (confirm("Clear all text inside the editor for this task? This cannot be undone.")) {
+async function clearEssay() {
+  if (await vtpConfirm({ title: 'Clear Task Draft?', message: 'Clear all text inside the editor for this task? This cannot be undone.', confirmText: 'Clear Draft', cancelText: 'Keep Writing', danger: true })) {
     document.getElementById('essayInput').value = '';
     handleTyping();
+    vtpToast('Editor cleared for this task.', 'info');
   }
 }
 
@@ -412,10 +414,10 @@ async function submitTest(autoSubmit = false) {
     if (t1Words < 150) missing.push(`Task 1: ${t1Words}/150 words`);
     if (t2Words < 250) missing.push(`Task 2: ${t2Words}/250 words`);
     if (missing.length) {
-      alert('You cannot submit yet - both tasks need to reach their minimum word count first:\n\n' + missing.join('\n') + '\n\nKeep writing, or wait for the timer to run out to auto-submit as-is.');
+      vtpToast('Minimum words required — ' + missing.join(' · ') + '. Keep writing or wait for auto-submit.', 'warning', 5000);
       return;
     }
-    if (!confirm("Are you sure you want to submit your writing exam? This will freeze your drafts and grade your responses.")) return;
+    if (!(await vtpConfirm({ title: 'Submit Writing Exam?', message: 'Are you sure you want to submit your writing exam? This will freeze your drafts and grade your responses.', confirmText: 'Submit & Grade', cancelText: 'Keep Editing' }))) return;
   }
 
   clearInterval(timerInterval);
@@ -433,6 +435,8 @@ async function submitTest(autoSubmit = false) {
   // still get graded (see the /api/writing/grade fallback below), just
   // nothing is recorded for them since there's no student row to attach it to.
   const activeStudentId = localStorage.getItem('viatestprep_active_student_id');
+  const task1Prompt = (testData && testData.writing && testData.writing.task1 && testData.writing.task1.prompt) || '';
+  const task2Prompt = (testData && testData.writing && testData.writing.task2 && testData.writing.task2.prompt) || '';
   let graded = null;
   try {
     if (activeStudentId) {
@@ -444,7 +448,9 @@ async function submitTest(autoSubmit = false) {
           testName: testData.title,
           moduleType: 'writing',
           writingTask1: essayContent[1],
-          writingTask2: essayContent[2]
+          writingTask2: essayContent[2],
+          task1Prompt,
+          task2Prompt
         })
       });
       const data = await res.json();
@@ -455,7 +461,7 @@ async function submitTest(autoSubmit = false) {
       const res2 = await fetch('/api/writing/grade', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ writingTask1: essayContent[1], writingTask2: essayContent[2] })
+        body: JSON.stringify({ writingTask1: essayContent[1], writingTask2: essayContent[2], task1Prompt, task2Prompt })
       });
       const data2 = await res2.json();
       if (data2.ok) graded = data2.graded;
@@ -464,7 +470,7 @@ async function submitTest(autoSubmit = false) {
       const res = await fetch('/api/writing/grade', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ writingTask1: essayContent[1], writingTask2: essayContent[2] })
+        body: JSON.stringify({ writingTask1: essayContent[1], writingTask2: essayContent[2], task1Prompt, task2Prompt })
       });
       const data = await res.json();
       if (data.ok) graded = data.graded;
@@ -481,7 +487,7 @@ async function submitTest(autoSubmit = false) {
   const header = document.querySelector('.site-header');
   const returnBtn = document.createElement('a');
   returnBtn.href = "index.html";
-  returnBtn.style.cssText = 'padding:7px 16px;border-radius:9px;background:#2f7a52;color:#fff;font-size:12px;font-weight:700;text-decoration:none;';
+  returnBtn.style.cssText = 'padding:7px 16px;border-radius:9px;background:#111827;color:#facc15;font-size:12px;font-weight:800;text-decoration:none;';
   returnBtn.textContent = "Return to Lobby";
   header.appendChild(returnBtn);
 }
@@ -501,34 +507,48 @@ function renderWritingResults(graded) {
     return;
   }
 
-  // Generate actionable suggestions based on criteria scores
+  // Render essay-specific strengths + targeted suggestions returned by the server grader
   function getSuggestions(task, isTask1) {
     if (!task) return '';
+    const strengths = Array.isArray(task.strengths) ? task.strengths : [];
+    const serverSuggestions = Array.isArray(task.suggestions) ? task.suggestions : [];
+
+    let html = '';
+    if (strengths.length) {
+      html += `<div style="margin-bottom:10px;padding:8px 10px;background:#ecfdf5;border:1px solid #a7f3d0;border-radius:8px;">
+        <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#065f46;margin-bottom:4px;">What Worked Well</div>
+        <ul class="wr-notes" style="padding-left:16px;margin:0;color:#064e3b;">${strengths.map(s => `<li style="margin-bottom:4px;">${escapeHtml(s)}</li>`).join('')}</ul>
+      </div>`;
+    }
+
+    if (serverSuggestions.length) {
+      html += `<div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#854d0e;margin-bottom:4px;">Targeted Next Steps</div>
+        <ul class="wr-notes" style="padding-left:18px;margin:0;">${serverSuggestions.map(s => `<li style="margin-bottom:6px;">${escapeHtml(s)}</li>`).join('')}</ul>`;
+      return html;
+    }
+
+    // Legacy fallback if an older graded payload lacks task.suggestions
     const suggs = [];
     const crit = task.criteria;
-    
     if (crit.taskAchievement < 7.0) {
-      if (isTask1) {
-        suggs.push("<strong>Task Achievement:</strong> Write a clear overview paragraph summarizing the main trend or stage. Make sure to back up all comparisons with specific numbers/data points from the chart.");
-      } else {
-        suggs.push("<strong>Task Response:</strong> State your position clearly in the introduction and summarize it in the conclusion. Make sure to address all parts of the essay prompt and extend your body paragraphs with supporting examples.");
-      }
+      suggs.push(isTask1
+        ? 'Task Achievement: Write a clear overview paragraph summarizing the main trend and support comparisons with specific figures.'
+        : 'Task Response: State your position clearly in the introduction, answer all parts of the prompt, and extend body paragraphs with examples.');
     }
     if (crit.coherenceCohesion < 7.0) {
-      suggs.push(`<strong>Coherence & Cohesion:</strong> Organize your writing into ${isTask1 ? '3-4' : '4-5'} clear paragraphs. Connect sentences smoothly using a variety of cohesive devices (e.g. 'consequently', 'on the other hand') and reference pronouns.`);
+      suggs.push(`Coherence & Cohesion: Organize your writing into ${isTask1 ? '3–4' : '4–5'} balanced paragraphs using varied linking phrases.`);
     }
     if (crit.lexicalResource < 7.0) {
-      suggs.push("<strong>Lexical Resource:</strong> Avoid informal vocabulary and contractions (e.g. write 'do not' instead of 'don't'). Try to incorporate more precise academic terminology and varied synonyms to reduce repetition.");
+      suggs.push('Lexical Resource: Avoid contractions or informal phrases and replace repeated words with precise synonyms.');
     }
     if (crit.grammaticalRange < 7.0) {
-      suggs.push("<strong>Grammatical Range:</strong> Use a mix of simple, compound, and complex sentence structures. Incorporate relative clauses ('which', 'who'), conditional clauses ('if', 'unless'), and passive constructions to demonstrate range.");
+      suggs.push('Grammatical Range: Mix simple, compound, and complex structures (relative clauses, conditionals, passive voice).');
     }
-    
     if (suggs.length === 0) {
-      suggs.push("Excellent performance across all IELTS criteria! Maintain this standard by continuing to produce error-free, varied responses.");
+      suggs.push('Strong performance across all four IELTS criteria — refine subtle collocations and sentence openings to aim for Band 8.5+.');
     }
-    
-    return `<ul class="wr-notes" style="padding-left:18px;">${suggs.map(s => `<li style="margin-bottom:8px;">${s}</li>`).join('')}</ul>`;
+
+    return html + `<ul class="wr-notes" style="padding-left:18px;">${suggs.map(s => `<li style="margin-bottom:8px;">${escapeHtml(s)}</li>`).join('')}</ul>`;
   }
 
   const criterionLabel = { taskAchievement: 'Task Achievement', coherenceCohesion: 'Coherence &amp; Cohesion', lexicalResource: 'Lexical Resource', grammaticalRange: 'Grammatical Range &amp; Accuracy' };
@@ -538,10 +558,13 @@ function renderWritingResults(graded) {
     const criteriaHtml = Object.entries(task.criteria).map(([key, band]) =>
       `<div><span class="name">${criterionLabel[key]}:</span> Band ${band.toFixed(1)}</div>`
     ).join('');
-    const allNotes = Object.values(task.notes).flat();
+    const allNotes = Object.values(task.notes || {}).flat();
+    const strengths = Array.isArray(task.strengths) ? task.strengths : [];
     const notesHtml = allNotes.length
       ? `<ul class="wr-notes">${allNotes.map(n => `<li>${escapeHtml(n)}</li>`).join('')}</ul>`
-      : `<p class="wr-notes" style="padding-left:0;">No specific issues flagged for this task.</p>`;
+      : (strengths.length
+          ? `<ul class="wr-notes" style="color:#065f46;">${strengths.map(s => `<li>✓ ${escapeHtml(s)}</li>`).join('')}</ul>`
+          : `<p class="wr-notes" style="padding-left:0;">No specific issues flagged for this task.</p>`);
     return `
       <div class="wr-task">
         <div class="wr-task-header"><span class="wr-task-title">${title} (${task.wordCount} words)</span><span class="wr-task-band">Band ${task.band.toFixed(1)}</span></div>
@@ -607,54 +630,54 @@ initTest();
 </script>
 
   <!-- MODAL: STUDENT REPORT ERROR -->
-  <div id="error-report-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(28,26,23,0.7);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:16px;">
-    <div style="background:#fff;border:1px solid #ece4d2;box-shadow:0 20px 40px rgba(0,0,0,0.25);width:100%;max-width:480px;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;font-family:'Inter',sans-serif;">
+  <div id="error-report-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(17,24,39,0.7);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:16px;">
+    <div style="background:#fff;border:1px solid #e5e7eb;box-shadow:0 20px 40px rgba(0,0,0,0.25);width:100%;max-width:480px;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;font-family:'Inter',sans-serif;">
       <!-- Header -->
-      <div style="background:linear-gradient(135deg, #9f1239, #e11d48);padding:16px 20px;color:#fff;display:flex;align-items:center;justify-content:space-between;">
+      <div style="background:linear-gradient(135deg, #111827, #1f2937);padding:16px 20px;color:#fff;display:flex;align-items:center;justify-content:space-between;">
         <div>
-          <span style="font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;background:rgba(255,255,255,0.2);padding:2px 8px;border-radius:10px;">🚩 Flag an Issue</span>
-          <h3 style="font-size:15px;font-weight:800;margin:4px 0 0;">Report an Error</h3>
+          <span style="font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;background:#facc15;color:#111827;padding:2px 8px;border-radius:10px;">🚩 Flag an Issue</span>
+          <h3 style="font-size:15px;font-weight:800;margin:6px 0 0;">Report an Error</h3>
         </div>
         <button onclick="closeErrorReportModal()" style="width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,0.15);border:none;color:#fff;font-weight:700;cursor:pointer;">✕</button>
       </div>
 
       <!-- Body -->
-      <div style="padding:20px;background:#faf8f3;display:flex;flex-direction:column;gap:14px;max-height:75vh;overflow-y:auto;">
-        <div style="background:#fff;border:1px solid #ece4d2;border-radius:12px;padding:10px 14px;font-size:12px;">
-          <span style="font-size:9px;font-weight:800;color:#8a8171;text-transform:uppercase;display:block;margin-bottom:2px;">Reporting Error In</span>
-          <span id="erm-context" style="font-weight:700;color:#1c1a17;">—</span>
+      <div style="padding:20px;background:#fafafa;display:flex;flex-direction:column;gap:14px;max-height:75vh;overflow-y:auto;">
+        <div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:10px 14px;font-size:12px;">
+          <span style="font-size:9px;font-weight:800;color:#6b7280;text-transform:uppercase;display:block;margin-bottom:2px;">Reporting Error In</span>
+          <span id="erm-context" style="font-weight:700;color:#111827;">—</span>
         </div>
 
         <div>
-          <label style="font-size:12px;font-weight:700;color:#5c5648;display:block;margin-bottom:6px;">Error Type <span style="color:#e11d48;">*</span></label>
+          <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">Error Type <span style="color:#e11d48;">*</span></label>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;" id="erm-type-grid">
-            <button type="button" onclick="selectReportType(this,'wrong_answer')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:11.5px;font-weight:700;color:#5c5648;background:#fff;cursor:pointer;text-align:left;">❌ Wrong Answer</button>
-            <button type="button" onclick="selectReportType(this,'typo')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:11.5px;font-weight:700;color:#5c5648;background:#fff;cursor:pointer;text-align:left;">🔤 Typo / Grammar</button>
-            <button type="button" onclick="selectReportType(this,'broken_audio')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:11.5px;font-weight:700;color:#5c5648;background:#fff;cursor:pointer;text-align:left;">🔇 Broken Audio</button>
-            <button type="button" onclick="selectReportType(this,'unclear_question')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:11.5px;font-weight:700;color:#5c5648;background:#fff;cursor:pointer;text-align:left;">❓ Unclear Question</button>
-            <button type="button" onclick="selectReportType(this,'missing_content')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:11.5px;font-weight:700;color:#5c5648;background:#fff;cursor:pointer;text-align:left;">📭 Missing Content</button>
-            <button type="button" onclick="selectReportType(this,'other')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:11.5px;font-weight:700;color:#5c5648;background:#fff;cursor:pointer;text-align:left;">📝 Other</button>
+            <button type="button" onclick="selectReportType(this,'wrong_answer')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:11.5px;font-weight:700;color:#374151;background:#fff;cursor:pointer;text-align:left;">❌ Wrong Answer</button>
+            <button type="button" onclick="selectReportType(this,'typo')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:11.5px;font-weight:700;color:#374151;background:#fff;cursor:pointer;text-align:left;">🔤 Typo / Grammar</button>
+            <button type="button" onclick="selectReportType(this,'broken_audio')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:11.5px;font-weight:700;color:#374151;background:#fff;cursor:pointer;text-align:left;">🔇 Broken Audio</button>
+            <button type="button" onclick="selectReportType(this,'unclear_question')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:11.5px;font-weight:700;color:#374151;background:#fff;cursor:pointer;text-align:left;">❓ Unclear Question</button>
+            <button type="button" onclick="selectReportType(this,'missing_content')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:11.5px;font-weight:700;color:#374151;background:#fff;cursor:pointer;text-align:left;">📭 Missing Content</button>
+            <button type="button" onclick="selectReportType(this,'other')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:11.5px;font-weight:700;color:#374151;background:#fff;cursor:pointer;text-align:left;">📝 Other</button>
           </div>
           <input type="hidden" id="erm-type-value">
         </div>
 
         <div>
-          <label style="font-size:12px;font-weight:700;color:#5c5648;display:block;margin-bottom:6px;">Describe the Issue <span style="color:#e11d48;">*</span></label>
-          <textarea id="erm-description" rows="3" style="width:100%;padding:10px;border:1px solid #e5ded0;border-radius:10px;font-size:13px;background:#fff;resize:none;box-sizing:border-box;" placeholder="e.g. Question 3 answer key is wrong, audio cuts off at 1:20..."></textarea>
+          <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">Describe the Issue <span style="color:#e11d48;">*</span></label>
+          <textarea id="erm-description" rows="3" style="width:100%;padding:10px;border:1px solid #d1d5db;border-radius:10px;font-size:13px;background:#fff;resize:none;box-sizing:border-box;color:#111827;" placeholder="e.g. Task 1 chart image or prompt seems mismatched..."></textarea>
         </div>
 
         <div>
-          <label style="font-size:12px;font-weight:700;color:#5c5648;display:block;margin-bottom:6px;">Question Number <span style="color:#8a8171;font-weight:400;">(optional)</span></label>
-          <input type="text" id="erm-qnum" style="width:100%;padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:13px;background:#fff;box-sizing:border-box;" placeholder="e.g. Q4, Section 2...">
+          <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">Question Number <span style="color:#6b7280;font-weight:400;">(optional)</span></label>
+          <input type="text" id="erm-qnum" style="width:100%;padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:13px;background:#fff;box-sizing:border-box;color:#111827;" placeholder="e.g. Task 1, Task 2...">
         </div>
       </div>
 
       <!-- Footer -->
-      <div style="padding:12px 16px;background:#f3ecd8;border-top:1px solid #e5ded0;display:flex;align-items:center;justify-content:space-between;">
-        <span style="font-size:10px;color:#8a8171;">Reports sent to teacher CRM</span>
+      <div style="padding:12px 16px;background:#ffffff;border-top:1px solid #e5e7eb;display:flex;align-items:center;justify-content:space-between;">
+        <span style="font-size:10px;color:#6b7280;">Reports sent to teacher CRM</span>
         <div style="display:flex;gap:8px;">
-          <button type="button" onclick="closeErrorReportModal()" style="padding:6px 14px;background:#fff;border:1px solid #e5ded0;color:#5c5648;font-weight:700;font-size:12px;border-radius:8px;cursor:pointer;">Cancel</button>
-          <button type="button" onclick="submitErrorReportModal()" style="padding:6px 16px;background:#e11d48;color:#fff;border:none;font-weight:800;font-size:12px;border-radius:8px;cursor:pointer;">Submit Report</button>
+          <button type="button" onclick="closeErrorReportModal()" style="padding:6px 14px;background:#f3f4f6;border:1px solid #e5e7eb;color:#374151;font-weight:700;font-size:12px;border-radius:8px;cursor:pointer;">Cancel</button>
+          <button type="button" onclick="submitErrorReportModal()" style="padding:6px 16px;background:#facc15;color:#111827;border:none;font-weight:800;font-size:12px;border-radius:8px;cursor:pointer;">Submit Report</button>
         </div>
       </div>
     </div>
@@ -670,8 +693,8 @@ initTest();
       document.getElementById('erm-qnum').value = '';
       document.querySelectorAll('.erm-type-btn').forEach(b => {
         b.style.background = '#fff';
-        b.style.borderColor = '#e5ded0';
-        b.style.color = '#5c5648';
+        b.style.borderColor = '#d1d5db';
+        b.style.color = '#374151';
       });
       document.getElementById('error-report-modal').style.display = 'flex';
     }
@@ -681,20 +704,20 @@ initTest();
     function selectReportType(btn, val) {
       document.querySelectorAll('.erm-type-btn').forEach(b => {
         b.style.background = '#fff';
-        b.style.borderColor = '#e5ded0';
-        b.style.color = '#5c5648';
+        b.style.borderColor = '#d1d5db';
+        b.style.color = '#374151';
       });
-      btn.style.background = '#ffe4e6';
-      btn.style.borderColor = '#e11d48';
-      btn.style.color = '#9f1239';
+      btn.style.background = '#fef9c3';
+      btn.style.borderColor = '#eab308';
+      btn.style.color = '#111827';
       document.getElementById('erm-type-value').value = val;
     }
     function submitErrorReportModal() {
       const typeVal = document.getElementById('erm-type-value').value;
       const desc = (document.getElementById('erm-description').value || '').trim();
       const qnum = (document.getElementById('erm-qnum').value || '').trim();
-      if (!typeVal) { alert('Please select an error type.'); return; }
-      if (!desc) { alert('Please describe the issue.'); return; }
+      if (!typeVal) { vtpToast('Please select an error type.', 'warning'); return; }
+      if (!desc) { vtpToast('Please describe the issue.', 'warning'); return; }
       const studentId = localStorage.getItem('viatestprep_student_id') || 'demo_student';
       const studentName = localStorage.getItem('viatestprep_student_name') || 'Student';
       const consultancyId = localStorage.getItem('viatestprep_consultancy_id') || 'default';
@@ -712,7 +735,7 @@ initTest();
       reports.unshift(report);
       localStorage.setItem('viatestprep_error_reports', JSON.stringify(reports));
       closeErrorReportModal();
-      alert('🚩 Error report submitted! Your teacher will review and fix this issue.');
+      vtpToast('🚩 Error report submitted! Your teacher will review and fix this issue.', 'success');
     }
   </script>
 </body>

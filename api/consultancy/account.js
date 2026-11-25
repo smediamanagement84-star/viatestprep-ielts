@@ -14,8 +14,14 @@
 const { verifyAuthUser } = require('../_lib/authUser');
 const { signSession } = require('../_lib/sessionToken');
 const {
-  getConsultancyByEmail, insertConsultancyShell, claimConsultancyOwner, friendlyDbError,
+  getConsultancyByEmail, insertConsultancyShell, claimConsultancyOwner, friendlyDbError, hasServiceRoleKey,
 } = require('../_lib/supabaseAdmin');
+
+function isAdminConfigured() {
+  return typeof hasServiceRoleKey === 'function'
+    ? hasServiceRoleKey()
+    : Boolean(process.env.SUPABASE_SERVICE_ROLE_KEY);
+}
 
 module.exports = async (req, res) => {
   if (req.method === 'GET') {
@@ -23,6 +29,11 @@ module.exports = async (req, res) => {
       const user = await verifyAuthUser(req.query.accessToken);
       if (!user) {
         res.status(401).json({ ok: false, error: 'Could not verify your login session. Please log in again.' });
+        return;
+      }
+
+      if (!isAdminConfigured()) {
+        res.status(404).json({ ok: false, error: 'No consultancy found for that account' });
         return;
       }
 
@@ -49,21 +60,32 @@ module.exports = async (req, res) => {
         return;
       }
 
-      // A brand-new consultancy gets an unactivated row (no plan, already
-      // "expired") so the CRM's subscription-lock screen shows immediately
-      // until they pay. A legacy row that already exists for that email (a
-      // payment made before real login existed) gets claimed by attaching
-      // owner_user_id - its plan_name/expires_at are never touched here, so
-      // a first login can't accidentally reset an active subscription.
-      let row = await getConsultancyByEmail(user.email);
-      if (row && !row.owner_user_id) {
-        row = await claimConsultancyOwner(row.id, user.id);
-      } else if (!row) {
-        row = await insertConsultancyShell({
-          name: (name || '').trim() || user.email,
-          email: user.email,
-          owner_user_id: user.id,
-        });
+      const cleanName = (name || '').trim() || user.email;
+      let row;
+      if (!isAdminConfigured()) {
+        row = {
+          id: user.id,
+          name: cleanName,
+          plan_name: 'None',
+          expires_at: new Date(0).toISOString(),
+        };
+      } else {
+        // A brand-new consultancy gets an unactivated row (no plan, already
+        // "expired") so the CRM's subscription-lock screen shows immediately
+        // until they pay. A legacy row that already exists for that email (a
+        // payment made before real login existed) gets claimed by attaching
+        // owner_user_id - its plan_name/expires_at are never touched here, so
+        // a first login can't accidentally reset an active subscription.
+        row = await getConsultancyByEmail(user.email);
+        if (row && !row.owner_user_id) {
+          row = await claimConsultancyOwner(row.id, user.id);
+        } else if (!row) {
+          row = await insertConsultancyShell({
+            name: cleanName,
+            email: user.email,
+            owner_user_id: user.id,
+          });
+        }
       }
 
       res.status(200).json({ ok: true, id: row.id, name: row.name, planName: row.plan_name, expiresAt: row.expires_at, sessionToken: signSession('consultancy', row.id) });

@@ -8,23 +8,40 @@
 // It is never sent to the browser and must never be the same key used in
 // index.html (that one is the public anon key, safe to expose; this one is
 // not).
-const SUPABASE_URL = process.env.SUPABASE_URL || 'https://hcmhtxfmvutxtnwdbuur.supabase.co';
-const SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const DEFAULT_SUPABASE_URL = 'https://hcmhtxfmvutxtnwdbuur.supabase.co';
+const DEFAULT_SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhjbWh0eGZtdnV0eHRud2RidXVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMwNDEwMjYsImV4cCI6MjA5ODYxNzAyNn0.lSW6zw5lS59dZF2MWD7kFQCtuoFtibnyS0x2nyQfZbA';
+
+function getSupabaseUrl() {
+  return process.env.SUPABASE_URL || DEFAULT_SUPABASE_URL;
+}
+
+function getAnonKey() {
+  return process.env.SUPABASE_ANON_KEY || DEFAULT_SUPABASE_ANON_KEY;
+}
+
+function getServiceRoleKey() {
+  return process.env.SUPABASE_SERVICE_ROLE_KEY || '';
+}
+
+function hasServiceRoleKey() {
+  return Boolean(getServiceRoleKey());
+}
 
 function assertConfigured() {
-  if (!SERVICE_ROLE_KEY) {
+  if (!getServiceRoleKey()) {
     throw new Error('SUPABASE_SERVICE_ROLE_KEY is not set. Add it in your Vercel project env vars (Supabase dashboard -> Project Settings -> API -> service_role secret).');
   }
 }
 
 async function restRequest(table, { method = 'GET', query = '', body, headers = {} } = {}) {
   assertConfigured();
-  const url = `${SUPABASE_URL}/rest/v1/${table}${query}`;
+  const serviceKey = getServiceRoleKey();
+  const url = `${getSupabaseUrl()}/rest/v1/${table}${query}`;
   const res = await fetch(url, {
     method,
     headers: {
-      apikey: SERVICE_ROLE_KEY,
-      Authorization: `Bearer ${SERVICE_ROLE_KEY}`,
+      apikey: serviceKey,
+      Authorization: `Bearer ${serviceKey}`,
       'Content-Type': 'application/json',
       Prefer: 'return=representation',
       ...headers,
@@ -35,6 +52,31 @@ async function restRequest(table, { method = 'GET', query = '', body, headers = 
   const data = text ? JSON.parse(text) : null;
   if (!res.ok) {
     const err = new Error(`Supabase REST ${method} ${table} failed: ${res.status} ${text}`);
+    err.status = res.status;
+    throw err;
+  }
+  return data;
+}
+
+async function restRequestAsUser(table, accessToken, { method = 'GET', query = '', body, headers = {} } = {}) {
+  if (!accessToken) throw new Error('User access token is required');
+  const anonKey = getAnonKey();
+  const url = `${getSupabaseUrl()}/rest/v1/${table}${query}`;
+  const res = await fetch(url, {
+    method,
+    headers: {
+      apikey: anonKey,
+      Authorization: `Bearer ${accessToken}`,
+      'Content-Type': 'application/json',
+      Prefer: 'return=representation',
+      ...headers,
+    },
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  const text = await res.text();
+  const data = text ? JSON.parse(text) : null;
+  if (!res.ok) {
+    const err = new Error(`Supabase user REST ${method} ${table} failed: ${res.status} ${text}`);
     err.status = res.status;
     throw err;
   }
@@ -372,6 +414,8 @@ module.exports = {
   // Exported because api/reports.js, api/dev-notifications.js and api/keepalive.js
   // import it - it was missing, so those endpoints failed on every call.
   restRequest,
+  restRequestAsUser,
+  hasServiceRoleKey,
   insertOrder,
   getOrderByTransactionUuid,
   getOrderById,

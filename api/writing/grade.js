@@ -13,13 +13,13 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const { writingTask1, writingTask2 } = req.body || {};
+    const { writingTask1, writingTask2, task1Prompt, task2Prompt, task2Type } = req.body || {};
     if (!writingTask1 && !writingTask2) {
       res.status(400).json({ ok: false, error: 'Nothing to grade - both tasks are empty' });
       return;
     }
 
-    const graded = gradeWritingSubmission(writingTask1, writingTask2);
+    const graded = gradeWritingSubmission(writingTask1, writingTask2, { task1Prompt, task2Prompt, task2Type });
     res.status(200).json({ ok: true, graded });
   } catch (err) {
     console.error('writing/grade error:', err);

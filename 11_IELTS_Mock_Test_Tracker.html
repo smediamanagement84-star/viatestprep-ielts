@@ -4,7 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>IELTS Mock Test Tracker — Teacher's Dashboard</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="vtp.css" />
+<script src="vtp-ui.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
   :root{--ink:#1c1a17;--paper:#fffefb;--navy:#7a2331;--navy-d:#5e1a25;--coral:#d24d4d;--gold:#a8792f;--green:#1c7a4f;--amber:#e0931c;--line:#e5ded0;--soft:#dde5f0}
@@ -223,8 +224,8 @@ document.getElementById('addRow').addEventListener('click',()=>{
   rows.push({name:'',date:new Date().toISOString().slice(0,10),form:'Academic',L:'',R:'',W:'',S:''});
   render();
 });
-document.getElementById('clearAll').addEventListener('click',()=>{
-  if (confirm('Clear all rows?')){rows=[];render();}
+document.getElementById('clearAll').addEventListener('click', async ()=>{
+  if (await vtpConfirm({ title: 'Clear all rows?', message: 'Remove all student mock test rows from the table?', confirmText: 'Clear All', danger: true })){rows=[];render();}
 });
 document.getElementById('seedDemo').addEventListener('click',()=>{
   rows = [
@@ -289,7 +290,7 @@ document.getElementById('importCsv').addEventListener('click',()=>document.getEl
 document.getElementById('fileImport').addEventListener('change',e=>{
   const f = e.target.files[0]; if (!f) return;
   const reader = new FileReader();
-  reader.onload = ev=>{
+  reader.onload = async ev=>{
     const text = ev.target.result;
     const lines = text.split(/\r?\n/).filter(Boolean);
     const head = lines.shift();
@@ -303,7 +304,7 @@ document.getElementById('fileImport').addEventListener('change',e=>{
       });
     });
     if (newRows.length>0){
-      if (confirm(`Import ${newRows.length} rows? (replaces existing)`)){
+      if (await vtpConfirm({ title: 'Import CSV rows?', message: `Import ${newRows.length} rows? This replaces existing rows.`, confirmText: 'Import' })){
         rows = newRows; render();
       }
     }

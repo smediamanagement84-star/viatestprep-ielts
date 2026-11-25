@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IELTS GT Reading: Field Agent — UKVI Band 7+ — ViATestPrep</title>
+<script src="vtp-ui.js"></script>
 <style>
   :root {
     --bg: #f3ecd8;
@@ -803,7 +804,7 @@
     const q4 = document.getElementById('gt-skim-q4').value;
 
     if (!q1 || !q2 || !q3 || !q4) {
-      alert('Please answer all questions!');
+      vtpToast('Please answer all questions!', 'warning');
       return;
     }
 

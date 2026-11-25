@@ -4,7 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>IELTS Reading — Band 7+</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="vtp.css" />
+<script src="vtp-ui.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -1990,7 +1991,7 @@ function submitSkimmingDrill() {
   const q5 = document.getElementById('skim-q5').value;
   
   if (!q1 || !q2 || !q3 || !q4 || !q5) {
-    alert('Please answer all questions!');
+    vtpToast('Please answer all questions!', 'warning');
     return;
   }
   

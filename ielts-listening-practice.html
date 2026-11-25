@@ -9,15 +9,15 @@
   <style>
     * { box-sizing: border-box; }
     :root {
-      --paper: #fffefb;
-      --page-bg: #eae6dc;
-      --ink: #1c1a17;
-      --ink-soft: #4a453d;
-      --rule: rgba(28, 26, 23, 0.14);
-      --rule-soft: rgba(28, 26, 23, 0.08);
-      --accent: #7a2331;
-      --accent-soft: #f6e9ea;
-      --gold: #a8792f;
+      --paper: #ffffff;
+      --page-bg: #fafafa;
+      --ink: #111827;
+      --ink-soft: #4b5563;
+      --rule: rgba(17, 24, 39, 0.12);
+      --rule-soft: rgba(17, 24, 39, 0.06);
+      --accent: #111827;
+      --accent-soft: #fef9c3;
+      --gold: #eab308;
     }
     body { background: var(--page-bg); color: var(--ink); font-family: "Inter", sans-serif; margin: 0; }
 
@@ -29,13 +29,13 @@
     }
     .exit-link { padding: 6px 14px; border-radius: 8px; border: 1px solid var(--rule); font-size: 12px; font-weight: 700; color: var(--ink-soft); text-decoration: none; font-family: "Inter", sans-serif; transition: background .15s; }
     .exit-link:hover { background: var(--rule-soft); }
-    .book-badge { font-size: 9px; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: .1em; }
+    .book-badge { font-size: 9px; font-weight: 800; color: #a16207; text-transform: uppercase; letter-spacing: .1em; }
     .test-title { font-size: 14px; font-weight: 700; color: var(--ink); font-family: "Fraunces", serif; }
     .mode-tag { font-size: 11px; color: var(--ink-soft); font-weight: 600; }
-    .timer-pill { display: flex; align-items: center; gap: 6px; background: var(--accent-soft); border: 1px solid rgba(122,35,49,.18); border-radius: 20px; padding: 5px 14px; }
-    .timer-text { font-size: 13px; font-weight: 800; font-family: "JetBrains Mono", monospace; color: var(--accent); }
-    .submit-btn { padding: 7px 18px; border-radius: 9px; background: var(--accent); color: #fff; border: none; font-size: 12px; font-weight: 700; cursor: pointer; box-shadow: 0 2px 8px rgba(122,35,49,.25); font-family: "Inter", sans-serif; transition: background .15s; }
-    .submit-btn:hover { background: #5e1a25; }
+    .timer-pill { display: flex; align-items: center; gap: 6px; background: var(--accent-soft); border: 1px solid #fde047; border-radius: 20px; padding: 5px 14px; }
+    .timer-text { font-size: 13px; font-weight: 800; font-family: "JetBrains Mono", monospace; color: #854d0e; }
+    .submit-btn { padding: 7px 18px; border-radius: 9px; background: #facc15; color: #111827; border: 1px solid #eab308; font-size: 12px; font-weight: 800; cursor: pointer; box-shadow: 0 2px 8px rgba(234,179,8,.22); font-family: "Inter", sans-serif; transition: background .15s; }
+    .submit-btn:hover { background: #eab308; }
 
     .main-layout { display: flex; height: calc(100vh - 62px - 62px); overflow: hidden; }
 
@@ -50,32 +50,32 @@
       cursor: pointer; border: 1px solid var(--rule); color: var(--ink-soft); background: var(--paper); transition: all .18s; font-family: "Inter", sans-serif;
     }
     .section-tab:hover { background: var(--rule-soft); }
-    .section-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .section-tab.active { background: #111827; color: #facc15; border-color: #111827; }
 
     .audio-card {
-      background: linear-gradient(180deg, #fbf7ee 0%, #f6f1e4 100%);
-      border: 1px solid rgba(168,121,47,.25); border-radius: 14px; padding: 18px;
+      background: linear-gradient(180deg, #ffffff 0%, #fefce8 100%);
+      border: 1px solid #fde047; border-radius: 14px; padding: 18px;
     }
-    .audio-card .sec-label { font-size: 10px; font-weight: 800; color: var(--gold); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 3px; }
+    .audio-card .sec-label { font-size: 10px; font-weight: 800; color: #a16207; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 3px; }
     .audio-card h3 { font-size: 15px; font-weight: 700; color: var(--ink); margin: 0 0 14px; font-family: "Fraunces", serif; }
 
     .timeline-bar {
       -webkit-appearance: none; width: 100%; height: 4px; border-radius: 4px;
-      background: rgba(168,121,47,.25); cursor: pointer; margin-bottom: 4px; display: block;
+      background: rgba(234,179,8,.3); cursor: pointer; margin-bottom: 4px; display: block;
     }
     .timeline-bar::-webkit-slider-thumb {
       -webkit-appearance: none; width: 13px; height: 13px; border-radius: 50%;
-      background: var(--gold); cursor: pointer; box-shadow: 0 0 0 3px rgba(168,121,47,.2);
+      background: #111827; cursor: pointer; box-shadow: 0 0 0 3px rgba(250,204,21,.45);
     }
     .time-labels { display: flex; justify-content: space-between; font-size: 10px; font-family: "JetBrains Mono", monospace; color: var(--ink-soft); margin-bottom: 12px; }
 
     .controls-row { display: flex; align-items: center; justify-content: space-between; }
     .play-btn {
-      width: 42px; height: 42px; border-radius: 50%; background: var(--accent); color: #fff;
-      border: none; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 3px 10px rgba(122,35,49,.3); transition: background .15s, transform .1s;
+      width: 42px; height: 42px; border-radius: 50%; background: #facc15; color: #111827;
+      border: 1px solid #eab308; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 3px 10px rgba(234,179,8,.3); transition: background .15s, transform .1s;
     }
-    .play-btn:hover { background: #5e1a25; transform: scale(1.05); }
+    .play-btn:hover { background: #eab308; transform: scale(1.05); }
     .stop-btn {
       width: 30px; height: 30px; border-radius: 50%; background: var(--paper); border: 1px solid var(--rule);
       color: var(--ink-soft); cursor: pointer; font-size: 12px; display: flex; align-items: center; justify-content: center; transition: background .15s;
@@ -84,34 +84,34 @@
     .speed-select {
       appearance: none;
       -webkit-appearance: none;
-      background: #ffffff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%237a2331' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 8px center;
+      background: #ffffff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23111827' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 8px center;
       border: 1.5px solid var(--rule); border-radius: 8px;
-      padding: 5px 24px 5px 10px; font-size: 11px; font-weight: 700; color: var(--accent); cursor: pointer; outline: none; font-family: "Inter", sans-serif;
+      padding: 5px 24px 5px 10px; font-size: 11px; font-weight: 700; color: var(--ink); cursor: pointer; outline: none; font-family: "Inter", sans-serif;
       box-shadow: 0 1px 3px rgba(0,0,0,0.04);
       transition: all 0.15s ease;
     }
     .speed-select:hover {
-      border-color: #a8792f;
-      box-shadow: 0 2px 6px rgba(122, 35, 49, 0.1);
+      border-color: #eab308;
+      box-shadow: 0 2px 6px rgba(234, 179, 8, 0.16);
     }
     .speed-select:focus {
-      border-color: #7a2331;
-      box-shadow: 0 0 0 3px rgba(122, 35, 49, 0.15);
+      border-color: #eab308;
+      box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.28);
     }
     .notice-box {
-      font-size: 11px; color: #4a4530; background: #f6f1e4;
-      border: 1px solid rgba(168,121,47,.25); border-radius: 10px; padding: 11px 13px; line-height: 1.55;
+      font-size: 11px; color: #854d0e; background: #fefce8;
+      border: 1px solid #fde047; border-radius: 10px; padding: 11px 13px; line-height: 1.55;
     }
     .transcript-box {
       background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: 14px;
       font-size: 12px; color: var(--ink-soft); max-height: 220px; overflow-y: auto; line-height: 1.7; font-family: "Lora", serif;
     }
-    .transcript-box .transcript-gap { color: #a8792f; font-style: italic; border-top: 1px dashed rgba(168,121,47,.4); padding-top: 8px; margin-top: 8px; }
+    .transcript-box .transcript-gap { color: #a16207; font-style: italic; border-top: 1px dashed rgba(234,179,8,.5); padding-top: 8px; margin-top: 8px; }
 
     .questions-panel { flex: 1; overflow-y: auto; padding: 28px 30px 60px; background: var(--page-bg); }
     .paper-sheet {
       max-width: 720px; margin: 0 auto; background: var(--paper); border: 1px solid var(--rule);
-      border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 12px 32px rgba(28,26,23,.05);
+      border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 12px 32px rgba(17,24,39,.05);
       padding: 34px 40px 44px;
     }
     .part-heading {
@@ -130,10 +130,10 @@
       background: var(--paper); border: 1px solid var(--rule-soft); border-radius: 10px;
       padding: 16px 18px; margin-bottom: 12px; transition: border-color .2s, box-shadow .2s;
     }
-    .q-card:hover { border-color: rgba(122,35,49,.25); }
-    .q-card.flagged { border-color: var(--gold) !important; background: #fdf8ee; }
-    .q-card.answered { border-color: rgba(122,35,49,.2); }
-    .q-card.unavailable { border-color: rgba(28,26,23,.12); background: #f4f2ec; }
+    .q-card:hover { border-color: #eab308; }
+    .q-card.flagged { border-color: var(--gold) !important; background: #fefce8; }
+    .q-card.answered { border-color: #eab308; }
+    .q-card.unavailable { border-color: rgba(17,24,39,.1); background: #f3f4f6; }
 
     .q-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; gap: 10px; }
     .q-num-badge {
@@ -141,11 +141,11 @@
       border-radius: 50%; border: 1.5px solid var(--ink); font-family: "Fraunces", serif; font-weight: 800;
       font-size: 12px; color: var(--ink); flex-shrink: 0;
     }
-    .q-review-label { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #9c9385; cursor: pointer; user-select: none; }
+    .q-review-label { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #6b7280; cursor: pointer; user-select: none; }
     .q-review-label input[type="checkbox"] { accent-color: var(--gold); width: 13px; height: 13px; }
 
     .q-body { font-size: 14.5px; font-weight: 500; color: var(--ink); line-height: 1.85; font-family: "Lora", serif; }
-    .q-unavailable-note { font-size: 12.5px; color: #8a8375; font-style: italic; font-family: "Lora", serif; }
+    .q-unavailable-note { font-size: 12.5px; color: #6b7280; font-style: italic; font-family: "Lora", serif; }
 
     .form-panel {
       background: var(--paper); border: 1.5px solid var(--rule-soft); border-radius: 10px;
@@ -153,8 +153,8 @@
     }
     .form-row { padding: 11px 18px; border-bottom: 1px solid var(--rule-soft); transition: background .15s; }
     .form-row:last-child { border-bottom: none; }
-    .form-row:hover { background: var(--accent-soft); }
-    .form-row.flagged { background: #fdf8ee; }
+    .form-row:hover { background: #fefce8; }
+    .form-row.flagged { background: #fefce8; }
     .form-row-main { display: flex; align-items: baseline; gap: 12px; }
     .form-row-num {
       display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px;
@@ -167,13 +167,13 @@
 
     .q-blank-input {
       display: inline-block; min-width: 130px; border: none;
-      border-bottom: 2px solid var(--accent); background: transparent;
+      border-bottom: 2px solid var(--ink); background: transparent;
       color: var(--ink); font-weight: 700; font-size: 14px; font-family: "Inter", sans-serif;
       padding: 0 4px 2px; outline: none; vertical-align: middle;
       transition: border-color .2s; text-align: center;
     }
-    .q-blank-input:focus { border-color: var(--gold); background: #f6f1e4; border-radius: 4px 4px 0 0; }
-    .q-blank-input::placeholder { color: #c9b98a; font-weight: 400; font-size: 12px; }
+    .q-blank-input:focus { border-color: var(--gold); background: #fefce8; border-radius: 4px 4px 0 0; }
+    .q-blank-input::placeholder { color: #9ca3af; font-weight: 400; font-size: 12px; }
 
     .diagram-panel {
       background: var(--paper); border: 1px solid var(--rule); border-radius: 10px;
@@ -186,7 +186,7 @@
       padding: 11px 16px; border-bottom: 1px solid var(--rule-soft);
     }
     .matching-row:last-child { border-bottom: none; }
-    .matching-row.flagged { background: #fdf8ee; }
+    .matching-row.flagged { background: #fefce8; }
     .matching-row-label { display: flex; align-items: baseline; gap: 12px; flex: 1; }
     .matching-row-body { font-size: 14.5px; font-weight: 500; color: var(--ink); font-family: "Lora", serif; }
     .letter-choice-row { display: flex; gap: 6px; flex-shrink: 0; }
@@ -195,8 +195,8 @@
       background: var(--paper); font-size: 12.5px; font-weight: 800; color: var(--ink-soft);
       cursor: pointer; font-family: "Inter", sans-serif; transition: all .15s;
     }
-    .letter-btn:hover { border-color: var(--accent); color: var(--accent); }
-    .letter-btn.selected { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .letter-btn:hover { border-color: #eab308; color: #111827; background: #fefce8; }
+    .letter-btn.selected { background: #facc15; border-color: #eab308; color: #111827; }
 
     .mcq-options { display: flex; flex-direction: column; gap: 7px; margin-top: 11px; }
     .mcq-option {
@@ -204,16 +204,16 @@
       border-radius: 8px; border: 1.5px solid var(--rule); cursor: pointer;
       font-size: 13.5px; color: var(--ink-soft); font-family: "Lora", serif; transition: all .15s;
     }
-    .mcq-option:hover { background: var(--accent-soft); border-color: rgba(122,35,49,.3); }
-    .mcq-option.selected { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 700; }
-    .mcq-option .opt-letter { font-weight: 800; color: var(--accent); min-width: 16px; font-family: "Inter", sans-serif; }
-    .mcq-option.selected .opt-letter { color: var(--accent); }
+    .mcq-option:hover { background: #fefce8; border-color: #eab308; }
+    .mcq-option.selected { background: #fef9c3; border-color: #eab308; color: #111827; font-weight: 700; }
+    .mcq-option .opt-letter { font-weight: 800; color: #854d0e; min-width: 16px; font-family: "Inter", sans-serif; }
+    .mcq-option.selected .opt-letter { color: #111827; }
 
     .check-btn {
-      padding: 6px 14px; background: #2f7a52; color: #fff; border: none;
+      padding: 6px 14px; background: #16a34a; color: #fff; border: none;
       border-radius: 7px; font-size: 11px; font-weight: 700; cursor: pointer; transition: background .15s; font-family: "Inter", sans-serif;
     }
-    .check-btn:hover { background: #245e3f; }
+    .check-btn:hover { background: #15803d; }
     .feedback-correct { margin-top: 10px; padding: 10px 13px; border-radius: 8px; background: #eef6f0; border: 1px solid #a9d4b8; font-size: 12px; color: #245e3f; font-family: "Inter", sans-serif; }
     .feedback-wrong { margin-top: 10px; padding: 10px 13px; border-radius: 8px; background: #faeeec; border: 1px solid #e3b4ab; font-size: 12px; color: #8a2c1f; font-family: "Inter", sans-serif; }
 
@@ -223,24 +223,24 @@
     }
     .q-tray { display: flex; align-items: center; gap: 4px; overflow-x: auto; flex: 1; padding: 4px 0; }
     .q-tray::-webkit-scrollbar { height: 3px; }
-    .q-tray::-webkit-scrollbar-thumb { background: rgba(168,121,47,.35); border-radius: 4px; }
+    .q-tray::-webkit-scrollbar-thumb { background: rgba(234,179,8,.45); border-radius: 4px; }
     .q-nav-btn {
       width: 28px; height: 28px; border-radius: 6px; border: 1.5px solid var(--rule); background: var(--paper);
       font-size: 11px; font-weight: 700; color: var(--ink-soft); cursor: pointer; font-family: "Inter", sans-serif;
       display: flex; align-items: center; justify-content: center; transition: all .15s; flex-shrink: 0; position: relative;
     }
-    .q-nav-btn:hover { border-color: var(--gold); background: #f6f1e4; color: var(--ink); }
-    .q-nav-btn.answered { background: var(--accent); border-color: var(--accent); color: #fff; }
-    .q-nav-btn.current { box-shadow: 0 0 0 2.5px var(--gold); }
-    .q-nav-btn.flagged::after { content: "\25CF"; font-size: 7px; color: var(--gold); position: absolute; top: -4px; right: -4px; }
+    .q-nav-btn:hover { border-color: var(--gold); background: #fefce8; color: var(--ink); }
+    .q-nav-btn.answered { background: #facc15; border-color: #eab308; color: #111827; font-weight: 800; }
+    .q-nav-btn.current { box-shadow: 0 0 0 2.5px #111827; }
+    .q-nav-btn.flagged::after { content: "\25CF"; font-size: 7px; color: #ea580c; position: absolute; top: -4px; right: -4px; }
 
     /* IELTS Mirror Enhancement Styles */
     .timer-pill.timer-flash {
       animation: ielts-flash-red 1s infinite !important;
     }
     @keyframes ielts-flash-red {
-      0%, 100% { background-color: #f6e9ea; border-color: rgba(122,35,49,.18); color: #7a2331; }
-      50% { background-color: #7a2331; border-color: #7a2331; color: #ffffff; }
+      0%, 100% { background-color: #fef9c3; border-color: #fde047; color: #854d0e; }
+      50% { background-color: #dc2626; border-color: #dc2626; color: #ffffff; }
     }
 
     .nav-btns { display: flex; gap: 7px; }
@@ -248,16 +248,16 @@
       padding: 7px 15px; border-radius: 9px; border: 1.5px solid var(--rule); background: var(--paper);
       font-size: 12px; font-weight: 700; color: var(--ink-soft); cursor: pointer; transition: all .15s; display: flex; align-items: center; gap: 4px; font-family: "Inter", sans-serif;
     }
-    .nav-arrow:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+    .nav-arrow:hover { border-color: #eab308; color: #111827; background: #fefce8; }
 
     .review-card { background: var(--paper); border-radius: 10px; border: 1.5px solid; padding: 16px 18px; margin-bottom: 12px; }
     .review-card.correct { border-color: #a9d4b8; background: #f6faf7; }
     .review-card.wrong { border-color: #e3b4ab; background: #fdf6f5; }
-    .review-card.excluded { border-color: var(--rule); background: #f4f2ec; }
+    .review-card.excluded { border-color: var(--rule); background: #f3f4f6; }
 
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: rgba(168,121,47,.3); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb { background: rgba(17,24,39,.18); border-radius: 4px; }
   
     /* Inline fill inputs inside summary/notes/table preview blocks */
     .fill-group-card {
@@ -348,6 +348,7 @@
 
   </style>
   <script src="security.js"></script>
+  <script src="vtp-ui.js"></script>
 </head>
 
 <body>
@@ -415,7 +416,7 @@
           <button id="toggleTranscriptBtn" onclick="toggleTranscriptDuringTest()" style="font-size:11px;color:var(--accent);background:none;border:none;cursor:pointer;font-weight:700;padding:0;font-family:'Inter',sans-serif;">🔍 Show Transcript</button>
         </div>
         <div id="scratchpad" style="display:none;margin-top:8px;background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:10px;">
-          <textarea id="scratchpadText" oninput="saveScratchpad()" placeholder="Write notes, spellings, guesses..." style="width:100%;height:70px;border:1px solid var(--rule);border-radius:7px;padding:7px;font-size:12px;resize:none;background:#faf8f2;color:var(--ink-soft);outline:none;font-family:'Inter',sans-serif;"></textarea>
+          <textarea id="scratchpadText" oninput="saveScratchpad()" placeholder="Write notes, spellings, guesses..." style="width:100%;height:70px;border:1px solid var(--rule);border-radius:7px;padding:7px;font-size:12px;resize:none;background:#fafafa;color:var(--ink-soft);outline:none;font-family:'Inter',sans-serif;"></textarea>
         </div>
       </div>
 
@@ -454,7 +455,10 @@
     const urlParams = new URLSearchParams(window.location.search);
     const testId = urlParams.get('test') || '1';
     const testData = IELTS_TEST_DATA[testId];
-    if (!testData) { alert('Test not found! Redirecting to Test 1.'); window.location.search = '?test=1'; }
+    if (!testData) {
+      if (window.vtpToast) vtpToast('Test not found! Redirecting to Test 1.', 'warning');
+      setTimeout(function() { window.location.search = '?test=1'; }, 900);
+    }
 
     const currentTestMode = localStorage.getItem('vietest_practice_mode') || 'exam';
     let currentSectionIdx = 0;
@@ -525,7 +529,7 @@
         timerInterval = setInterval(function() {
           timeRemaining--;
           updateTimerDisplay(false);
-          if (timeRemaining <= 0) { clearInterval(timerInterval); alert('Time is up!'); submitTest(true); }
+          if (timeRemaining <= 0) { clearInterval(timerInterval); vtpToast('Time is up! Submitting test...', 'info'); submitTest(true); }
         }, 1000);
 
         // Hide controls in Exam Mode
@@ -648,13 +652,13 @@
       
       let reviewTimeLeft = 120; // 2 minutes
       overlay.innerHTML = `
-        <div style="background:var(--paper); border:2px solid var(--accent); border-radius:12px; padding:30px; max-width:480px; width:90%; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.25);">
-          <h2 style="font-family:\'Fraunces\', serif; font-size:24px; color:var(--accent); margin-top:0;">Listening Review Time</h2>
+        <div style="background:var(--paper);border:2px solid #facc15;border-radius:16px;padding:30px;max-width:480px;width:90%;text-align:center;box-shadow:0 20px 40px rgba(17,24,39,0.25);">
+          <h2 style="font-family:\'Fraunces\', serif; font-size:24px; color:var(--ink); margin-top:0;">Listening Review Time</h2>
           <p style="font-size:14px; color:var(--ink-soft); line-height:1.6; margin-bottom:20px;">
             The audio playback has finished. You now have <strong>2 minutes</strong> to review and finalize your answers before the Listening test is automatically submitted.
           </p>
-          <div id="review-countdown-clock" style="font-family:\'JetBrains Mono\', monospace; font-size:36px; font-weight:800; color:var(--gold); margin-bottom:25px;">02:00</div>
-          <button onclick="submitTest(true)" class="submit-btn" style="width:100%; padding:12px; font-size:14px; background:var(--accent); color:#fff; border:none; border-radius:8px; cursor:pointer;">Submit Test Now</button>
+          <div id="review-countdown-clock" style="font-family:\'JetBrains Mono\', monospace; font-size:36px; font-weight:800; color:#a16207; margin-bottom:25px;">02:00</div>
+          <button onclick="submitTest(true)" class="submit-btn" style="width:100%; padding:12px; font-size:14px;">Submit Test Now</button>
         </div>
       `;
       document.body.appendChild(overlay);
@@ -669,7 +673,7 @@
         if (reviewTimeLeft <= 0) {
           clearInterval(reviewTimerInterval);
           document.body.removeChild(overlay);
-          alert('Review period has ended. Submitting test.');
+          vtpToast('Review period has ended. Submitting test.', 'info');
           submitTest(true);
         }
       }, 1000);
@@ -713,7 +717,7 @@
       const checkedBoxes = Array.from(document.querySelectorAll(`input[name="group-${nums[0]}"]:checked`));
       if (checkedBoxes.length > maxCount) {
         checkbox.checked = false;
-        alert(`You can only select up to ${maxCount} options for this question.`);
+        vtpToast(`You can only select up to ${maxCount} options for this question.`, 'warning');
         return;
       }
       
@@ -1207,11 +1211,11 @@
           });
         });
         if (totalUnanswered > 0) {
-          if (!confirm('You have ' + totalUnanswered + ' unanswered question' + (totalUnanswered === 1 ? '' : 's') + ' remaining (out of ' + totalAll + '). Do you really want to make a submission?')) {
+          if (!(await vtpConfirm({ title: 'Submit Incomplete Test?', message: 'You have ' + totalUnanswered + ' unanswered question' + (totalUnanswered === 1 ? '' : 's') + ' remaining (out of ' + totalAll + '). Do you really want to submit?', confirmText: 'Submit Anyway', cancelText: 'Continue Test' }))) {
             return;
           }
         } else {
-          if (!confirm('All questions answered! Are you sure you want to submit and check your final band score & answers?')) return;
+          if (!(await vtpConfirm({ title: 'Submit Listening Test?', message: 'All questions answered! Are you ready to submit and view your band score and answer review?', confirmText: 'Submit Test', cancelText: 'Review Answers' }))) return;
         }
       }
       var overlay = document.getElementById('listening-review-overlay');
@@ -1230,14 +1234,16 @@
       var activeStudentId = localStorage.getItem('viatestprep_active_student_id');
       var realAnswers = null;
       try {
-        var ansRes = await fetch('/api/test-answers?testId=' + encodeURIComponent(testId) + '&module=listening&studentId=' + encodeURIComponent(activeStudentId || ''));
+        var ansRes = await fetch('/api/test-answers?testId=' + encodeURIComponent(testId) + '&module=listening&studentId=' + encodeURIComponent(activeStudentId || ''), {
+          headers: { 'X-Session-Token': localStorage.getItem('viatestprep_session_token') || '', 'X-Owner-Key': localStorage.getItem('viatestprep_owner_key') || '' }
+        });
         var ansData = await ansRes.json();
         if (ansData.ok) realAnswers = ansData.answers;
       } catch (e) {
         console.error('Could not fetch answer key:', e);
       }
       if (!realAnswers) {
-        alert("Could not load your results. Please log in (or check that your access hasn't expired) and try submitting again.");
+        vtpToast("Could not load your results. Please log in (or check that your access hasn't expired) and try submitting again.", 'error');
         return;
       }
       testData.listening.sections.forEach(function(sec) {
@@ -1305,7 +1311,7 @@
       var sb = document.getElementById('submitBtn'); if (sb) sb.remove();
       var returnBtn = document.createElement('a');
       returnBtn.href = 'index.html';
-      returnBtn.style.cssText = 'padding:7px 16px;border-radius:9px;background:#2f7a52;color:#fff;font-size:12px;font-weight:700;text-decoration:none;font-family:"Inter",sans-serif;';
+      returnBtn.style.cssText = 'padding:7px 16px;border-radius:9px;background:#111827;color:#facc15;font-size:12px;font-weight:800;text-decoration:none;font-family:"Inter",sans-serif;';
       returnBtn.textContent = 'Return to Lobby';
       document.querySelector('.site-header').appendChild(returnBtn);
 
@@ -1313,14 +1319,14 @@
       var audioPanel = document.querySelector('.audio-panel');
       if (audioPanel && band !== undefined) {
         var pct = totalQs > 0 ? Math.round((correctCount / totalQs) * 100) : 0;
-        var bandColor = band >= 7.0 ? '#2f7a52' : band >= 6.0 ? '#a8792f' : '#7a2331';
+        var bandColor = band >= 7.0 ? '#16a34a' : band >= 6.0 ? '#a16207' : '#dc2626';
         var saveHtml;
         if (isLoggedIn && cloudSaved) {
-          saveHtml = '<div style="margin-top:10px;display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#2f7a52;"><span>✅</span> Results saved to your profile</div>';
+          saveHtml = '<div style="margin-top:10px;display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#16a34a;"><span>✅</span> Results saved to your profile</div>';
         } else if (isLoggedIn && !cloudSaved) {
-          saveHtml = '<div style="margin-top:10px;display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#a8792f;"><span>⚠️</span> Could not save to cloud — stored locally only</div>';
+          saveHtml = '<div style="margin-top:10px;display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#a16207;"><span>⚠️</span> Could not save to cloud — stored locally only</div>';
         } else {
-          saveHtml = '<div style="margin-top:10px;font-size:11px;color:#8a8171;">Results saved locally. <a href="index.html" style="color:#7a2331;font-weight:700;text-decoration:underline;">Log in</a> to sync across devices.</div>';
+          saveHtml = '<div style="margin-top:10px;font-size:11px;color:#6b7280;">Results saved locally. <a href="index.html" style="color:#111827;font-weight:700;text-decoration:underline;">Log in</a> to sync across devices.</div>';
         }
         var resultBanner = document.createElement('div');
         resultBanner.style.cssText = 'background:var(--paper);border:1.5px solid var(--rule);border-radius:14px;padding:16px 18px;margin-bottom:16px;';
@@ -1455,54 +1461,54 @@
   </script>
 
   <!-- MODAL: STUDENT REPORT ERROR -->
-  <div id="error-report-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(28,26,23,0.7);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:16px;">
-    <div style="background:#fff;border:1px solid #ece4d2;box-shadow:0 20px 40px rgba(0,0,0,0.25);width:100%;max-width:480px;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;font-family:'Inter',sans-serif;">
+  <div id="error-report-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(17,24,39,0.7);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:16px;">
+    <div style="background:#fff;border:1px solid #e5e7eb;box-shadow:0 20px 40px rgba(0,0,0,0.25);width:100%;max-width:480px;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;font-family:'Inter',sans-serif;">
       <!-- Header -->
-      <div style="background:linear-gradient(135deg, #9f1239, #e11d48);padding:16px 20px;color:#fff;display:flex;align-items:center;justify-content:space-between;">
+      <div style="background:linear-gradient(135deg, #111827, #1f2937);padding:16px 20px;color:#fff;display:flex;align-items:center;justify-content:space-between;">
         <div>
-          <span style="font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;background:rgba(255,255,255,0.2);padding:2px 8px;border-radius:10px;">🚩 Flag an Issue</span>
-          <h3 style="font-size:15px;font-weight:800;margin:4px 0 0;">Report an Error</h3>
+          <span style="font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;background:#facc15;color:#111827;padding:2px 8px;border-radius:10px;">🚩 Flag an Issue</span>
+          <h3 style="font-size:15px;font-weight:800;margin:6px 0 0;">Report an Error</h3>
         </div>
         <button onclick="closeErrorReportModal()" style="width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,0.15);border:none;color:#fff;font-weight:700;cursor:pointer;">✕</button>
       </div>
 
       <!-- Body -->
-      <div style="padding:20px;background:#faf8f3;display:flex;flex-direction:column;gap:14px;max-height:75vh;overflow-y:auto;">
-        <div style="background:#fff;border:1px solid #ece4d2;border-radius:12px;padding:10px 14px;font-size:12px;">
-          <span style="font-size:9px;font-weight:800;color:#8a8171;text-transform:uppercase;display:block;margin-bottom:2px;">Reporting Error In</span>
-          <span id="erm-context" style="font-weight:700;color:#1c1a17;">—</span>
+      <div style="padding:20px;background:#fafafa;display:flex;flex-direction:column;gap:14px;max-height:75vh;overflow-y:auto;">
+        <div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:10px 14px;font-size:12px;">
+          <span style="font-size:9px;font-weight:800;color:#6b7280;text-transform:uppercase;display:block;margin-bottom:2px;">Reporting Error In</span>
+          <span id="erm-context" style="font-weight:700;color:#111827;">—</span>
         </div>
 
         <div>
-          <label style="font-size:12px;font-weight:700;color:#5c5648;display:block;margin-bottom:6px;">Error Type <span style="color:#e11d48;">*</span></label>
+          <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">Error Type <span style="color:#e11d48;">*</span></label>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;" id="erm-type-grid">
-            <button type="button" onclick="selectReportType(this,'wrong_answer')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:11.5px;font-weight:700;color:#5c5648;background:#fff;cursor:pointer;text-align:left;">❌ Wrong Answer</button>
-            <button type="button" onclick="selectReportType(this,'typo')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:11.5px;font-weight:700;color:#5c5648;background:#fff;cursor:pointer;text-align:left;">🔤 Typo / Grammar</button>
-            <button type="button" onclick="selectReportType(this,'broken_audio')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:11.5px;font-weight:700;color:#5c5648;background:#fff;cursor:pointer;text-align:left;">🔇 Broken Audio</button>
-            <button type="button" onclick="selectReportType(this,'unclear_question')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:11.5px;font-weight:700;color:#5c5648;background:#fff;cursor:pointer;text-align:left;">❓ Unclear Question</button>
-            <button type="button" onclick="selectReportType(this,'missing_content')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:11.5px;font-weight:700;color:#5c5648;background:#fff;cursor:pointer;text-align:left;">📭 Missing Content</button>
-            <button type="button" onclick="selectReportType(this,'other')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:11.5px;font-weight:700;color:#5c5648;background:#fff;cursor:pointer;text-align:left;">📝 Other</button>
+            <button type="button" onclick="selectReportType(this,'wrong_answer')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:11.5px;font-weight:700;color:#374151;background:#fff;cursor:pointer;text-align:left;">❌ Wrong Answer</button>
+            <button type="button" onclick="selectReportType(this,'typo')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:11.5px;font-weight:700;color:#374151;background:#fff;cursor:pointer;text-align:left;">🔤 Typo / Grammar</button>
+            <button type="button" onclick="selectReportType(this,'broken_audio')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:11.5px;font-weight:700;color:#374151;background:#fff;cursor:pointer;text-align:left;">🔇 Broken Audio</button>
+            <button type="button" onclick="selectReportType(this,'unclear_question')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:11.5px;font-weight:700;color:#374151;background:#fff;cursor:pointer;text-align:left;">❓ Unclear Question</button>
+            <button type="button" onclick="selectReportType(this,'missing_content')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:11.5px;font-weight:700;color:#374151;background:#fff;cursor:pointer;text-align:left;">📭 Missing Content</button>
+            <button type="button" onclick="selectReportType(this,'other')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:11.5px;font-weight:700;color:#374151;background:#fff;cursor:pointer;text-align:left;">📝 Other</button>
           </div>
           <input type="hidden" id="erm-type-value">
         </div>
 
         <div>
-          <label style="font-size:12px;font-weight:700;color:#5c5648;display:block;margin-bottom:6px;">Describe the Issue <span style="color:#e11d48;">*</span></label>
-          <textarea id="erm-description" rows="3" style="width:100%;padding:10px;border:1px solid #e5ded0;border-radius:10px;font-size:13px;background:#fff;resize:none;box-sizing:border-box;" placeholder="e.g. Question 3 answer key is wrong, audio cuts off at 1:20..."></textarea>
+          <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">Describe the Issue <span style="color:#e11d48;">*</span></label>
+          <textarea id="erm-description" rows="3" style="width:100%;padding:10px;border:1px solid #d1d5db;border-radius:10px;font-size:13px;background:#fff;resize:none;box-sizing:border-box;color:#111827;" placeholder="e.g. Question 3 answer key is wrong, audio cuts off at 1:20..."></textarea>
         </div>
 
         <div>
-          <label style="font-size:12px;font-weight:700;color:#5c5648;display:block;margin-bottom:6px;">Question Number <span style="color:#8a8171;font-weight:400;">(optional)</span></label>
-          <input type="text" id="erm-qnum" style="width:100%;padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:13px;background:#fff;box-sizing:border-box;" placeholder="e.g. Q4, Section 2...">
+          <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">Question Number <span style="color:#6b7280;font-weight:400;">(optional)</span></label>
+          <input type="text" id="erm-qnum" style="width:100%;padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:13px;background:#fff;box-sizing:border-box;color:#111827;" placeholder="e.g. Q4, Section 2...">
         </div>
       </div>
 
       <!-- Footer -->
-      <div style="padding:12px 16px;background:#f3ecd8;border-top:1px solid #e5ded0;display:flex;align-items:center;justify-content:space-between;">
-        <span style="font-size:10px;color:#8a8171;">Reports sent to teacher CRM</span>
+      <div style="padding:12px 16px;background:#ffffff;border-top:1px solid #e5e7eb;display:flex;align-items:center;justify-content:space-between;">
+        <span style="font-size:10px;color:#6b7280;">Reports sent to teacher CRM</span>
         <div style="display:flex;gap:8px;">
-          <button type="button" onclick="closeErrorReportModal()" style="padding:6px 14px;background:#fff;border:1px solid #e5ded0;color:#5c5648;font-weight:700;font-size:12px;border-radius:8px;cursor:pointer;">Cancel</button>
-          <button type="button" onclick="submitErrorReportModal()" style="padding:6px 16px;background:#e11d48;color:#fff;border:none;font-weight:800;font-size:12px;border-radius:8px;cursor:pointer;">Submit Report</button>
+          <button type="button" onclick="closeErrorReportModal()" style="padding:6px 14px;background:#f3f4f6;border:1px solid #e5e7eb;color:#374151;font-weight:700;font-size:12px;border-radius:8px;cursor:pointer;">Cancel</button>
+          <button type="button" onclick="submitErrorReportModal()" style="padding:6px 16px;background:#facc15;color:#111827;border:none;font-weight:800;font-size:12px;border-radius:8px;cursor:pointer;">Submit Report</button>
         </div>
       </div>
     </div>
@@ -1518,8 +1524,8 @@
       document.getElementById('erm-qnum').value = '';
       document.querySelectorAll('.erm-type-btn').forEach(b => {
         b.style.background = '#fff';
-        b.style.borderColor = '#e5ded0';
-        b.style.color = '#5c5648';
+        b.style.borderColor = '#d1d5db';
+        b.style.color = '#374151';
       });
       document.getElementById('error-report-modal').style.display = 'flex';
     }
@@ -1529,20 +1535,20 @@
     function selectReportType(btn, val) {
       document.querySelectorAll('.erm-type-btn').forEach(b => {
         b.style.background = '#fff';
-        b.style.borderColor = '#e5ded0';
-        b.style.color = '#5c5648';
+        b.style.borderColor = '#d1d5db';
+        b.style.color = '#374151';
       });
-      btn.style.background = '#ffe4e6';
-      btn.style.borderColor = '#e11d48';
-      btn.style.color = '#9f1239';
+      btn.style.background = '#fef9c3';
+      btn.style.borderColor = '#eab308';
+      btn.style.color = '#111827';
       document.getElementById('erm-type-value').value = val;
     }
     function submitErrorReportModal() {
       const typeVal = document.getElementById('erm-type-value').value;
       const desc = (document.getElementById('erm-description').value || '').trim();
       const qnum = (document.getElementById('erm-qnum').value || '').trim();
-      if (!typeVal) { alert('Please select an error type.'); return; }
-      if (!desc) { alert('Please describe the issue.'); return; }
+      if (!typeVal) { vtpToast('Please select an error type.', 'warning'); return; }
+      if (!desc) { vtpToast('Please describe the issue.', 'warning'); return; }
       const studentId = localStorage.getItem('viatestprep_student_id') || 'demo_student';
       const studentName = localStorage.getItem('viatestprep_student_name') || 'Student';
       const consultancyId = localStorage.getItem('viatestprep_consultancy_id') || 'default';
@@ -1560,7 +1566,7 @@
       reports.unshift(report);
       localStorage.setItem('viatestprep_error_reports', JSON.stringify(reports));
       closeErrorReportModal();
-      alert('🚩 Error report submitted! Your teacher will review and fix this issue.');
+      vtpToast('🚩 Error report submitted! Your teacher will review and fix this issue.', 'success');
     }
   </script>
 </body>

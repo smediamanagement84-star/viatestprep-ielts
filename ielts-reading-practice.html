@@ -9,15 +9,15 @@
   <style>
     * { box-sizing: border-box; }
     :root {
-      --paper: #fffefb;
-      --page-bg: #eae6dc;
-      --ink: #1c1a17;
-      --ink-soft: #4a453d;
-      --rule: rgba(28, 26, 23, 0.14);
-      --rule-soft: rgba(28, 26, 23, 0.08);
-      --accent: #7a2331;
-      --accent-soft: #f6e9ea;
-      --gold: #a8792f;
+      --paper: #ffffff;
+      --page-bg: #fafafa;
+      --ink: #111827;
+      --ink-soft: #4b5563;
+      --rule: rgba(17, 24, 39, 0.12);
+      --rule-soft: rgba(17, 24, 39, 0.06);
+      --accent: #111827;
+      --accent-soft: #fef9c3;
+      --gold: #eab308;
     }
     body { background: var(--page-bg); color: var(--ink); font-family: "Inter", sans-serif; margin: 0; height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
 
@@ -28,13 +28,13 @@
     }
     .exit-link { padding: 6px 14px; border-radius: 8px; border: 1px solid var(--rule); font-size: 12px; font-weight: 700; color: var(--ink-soft); text-decoration: none; }
     .exit-link:hover { background: var(--rule-soft); }
-    .book-badge { font-size: 9px; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: .1em; }
+    .book-badge { font-size: 9px; font-weight: 800; color: #a16207; text-transform: uppercase; letter-spacing: .1em; }
     .test-title { font-size: 14px; font-weight: 700; color: var(--ink); font-family: "Fraunces", serif; }
     .mode-tag { font-size: 11px; color: var(--ink-soft); font-weight: 600; }
-    .timer-pill { display: flex; align-items: center; gap: 6px; background: var(--accent-soft); border: 1px solid rgba(122,35,49,.18); border-radius: 20px; padding: 5px 14px; }
-    .timer-text { font-size: 13px; font-weight: 800; font-family: "JetBrains Mono", monospace; color: var(--accent); }
-    .submit-btn { padding: 7px 18px; border-radius: 9px; background: var(--accent); color: #fff; border: none; font-size: 12px; font-weight: 700; cursor: pointer; box-shadow: 0 2px 8px rgba(122,35,49,.25); transition: background .15s; }
-    .submit-btn:hover { background: #5e1a25; }
+    .timer-pill { display: flex; align-items: center; gap: 6px; background: var(--accent-soft); border: 1px solid #fde047; border-radius: 20px; padding: 5px 14px; }
+    .timer-text { font-size: 13px; font-weight: 800; font-family: "JetBrains Mono", monospace; color: #854d0e; }
+    .submit-btn { padding: 7px 18px; border-radius: 9px; background: #facc15; color: #111827; border: 1px solid #eab308; font-size: 12px; font-weight: 800; cursor: pointer; box-shadow: 0 2px 8px rgba(234,179,8,.22); transition: background .15s; }
+    .submit-btn:hover { background: #eab308; }
 
     .test-container { flex: 1; display: flex; overflow: hidden; }
 
@@ -44,7 +44,7 @@
     }
     .passage-sheet {
       max-width: 620px; margin: 0 auto; background: var(--paper); border: 1px solid var(--rule);
-      border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 12px 32px rgba(28,26,23,.05);
+      border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 12px 32px rgba(17,24,39,.05);
       padding: 32px 36px 40px;
     }
     .passage-tabs { display: flex; gap: 6px; border-bottom: 1px solid var(--rule); padding-bottom: 12px; margin-bottom: 20px; flex-wrap: wrap; }
@@ -53,7 +53,7 @@
       cursor: pointer; border: 1px solid var(--rule); color: var(--ink-soft); background: var(--paper); transition: all .18s;
     }
     .passage-tab:hover { background: var(--rule-soft); }
-    .passage-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .passage-tab.active { background: #111827; color: #facc15; border-color: #111827; }
 
     #passageContent { font-family: "Lora", serif; font-size: 14.5px; line-height: 1.9; color: var(--ink-soft); }
     #passageContent h1 { font-family: "Fraunces", serif; font-size: 21px; font-weight: 800; color: var(--ink); margin: 0 0 16px; border-bottom: 2px solid var(--ink); padding-bottom: 10px; }
@@ -63,12 +63,12 @@
     .questions-pane { width: 50%; height: 100%; overflow-y: auto; background: var(--page-bg); padding: 28px 30px 60px; }
     .answer-sheet {
       max-width: 560px; margin: 0 auto; background: var(--paper); border: 1px solid var(--rule);
-      border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 12px 32px rgba(28,26,23,.05);
+      border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 12px 32px rgba(17,24,39,.05);
       padding: 30px 34px 40px;
     }
     .answer-sheet-heading { font-family: "Fraunces", serif; font-size: 18px; font-weight: 800; color: var(--ink); border-bottom: 2px solid var(--ink); padding-bottom: 10px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center; }
-    .scratchpad-toggle { font-size: 11px; color: var(--accent); background: none; border: none; cursor: pointer; font-weight: 700; padding: 0; font-family: "Inter", sans-serif; }
-    #scratchpad { margin: 14px 0; padding: 12px; border-radius: 10px; border: 1px solid var(--rule); background: #faf8f2; }
+    .scratchpad-toggle { font-size: 11px; color: #a16207; background: none; border: none; cursor: pointer; font-weight: 700; padding: 0; font-family: "Inter", sans-serif; }
+    #scratchpad { margin: 14px 0; padding: 12px; border-radius: 10px; border: 1px solid var(--rule); background: #fafafa; }
     #scratchpadText { width: 100%; height: 70px; border: 1px solid var(--rule); border-radius: 7px; padding: 8px; font-size: 12px; resize: none; background: var(--paper); color: var(--ink-soft); outline: none; font-family: "Inter", sans-serif; }
 
     .instruction-box {
@@ -81,35 +81,35 @@
       border: 1px solid var(--rule-soft); background: var(--paper); border-radius: 10px;
       padding: 15px 17px; margin-bottom: 12px; transition: all .2s;
     }
-    .q-box.flagged { border-color: var(--gold) !important; background: #fdf8ee; }
-    .q-box.unavailable { border-color: var(--rule); background: #f4f2ec; }
+    .q-box.flagged { border-color: var(--gold) !important; background: #fefce8; }
+    .q-box.unavailable { border-color: var(--rule); background: #f3f4f6; }
     .q-header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 9px; gap: 10px; }
     .q-num-badge {
       display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px;
       border-radius: 50%; border: 1.5px solid var(--ink); font-family: "Fraunces", serif; font-weight: 800;
       font-size: 12px; color: var(--ink); flex-shrink: 0;
     }
-    .q-review-label { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #9c9385; cursor: pointer; user-select: none; }
+    .q-review-label { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #6b7280; cursor: pointer; user-select: none; }
     .q-review-label input[type="checkbox"] { accent-color: var(--gold); width: 13px; height: 13px; }
     .q-text { font-size: 14px; font-weight: 500; color: var(--ink); font-family: "Lora", serif; line-height: 1.7; margin: 0 0 10px; }
-    .q-unavailable-note { font-size: 12.5px; color: #8a8375; font-style: italic; font-family: "Lora", serif; }
+    .q-unavailable-note { font-size: 12.5px; color: #6b7280; font-style: italic; font-family: "Lora", serif; }
 
     .tfng-row { display: flex; gap: 8px; }
     .tfng-btn { flex: 1; padding: 8px; border-radius: 8px; border: 1.5px solid var(--rule); font-size: 11.5px; font-weight: 700; cursor: pointer; background: var(--paper); color: var(--ink-soft); transition: all .15s; font-family: "Inter", sans-serif; }
-    .tfng-btn:hover { border-color: var(--accent); }
-    .tfng-btn.selected { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .tfng-btn:hover { border-color: #eab308; background: #fefce8; }
+    .tfng-btn.selected { background: #facc15; border-color: #eab308; color: #111827; font-weight: 800; }
 
     /* IELTS Mirror Enhancement Styles */
     .timer-pill.timer-flash {
       animation: ielts-flash-red 1s infinite !important;
     }
     @keyframes ielts-flash-red {
-      0%, 100% { background-color: #f6e9ea; border-color: rgba(122,35,49,.18); color: #7a2331; }
-      50% { background-color: #7a2331; border-color: #7a2331; color: #ffffff; }
+      0%, 100% { background-color: #fef9c3; border-color: #fde047; color: #854d0e; }
+      50% { background-color: #dc2626; border-color: #dc2626; color: #ffffff; }
     }
     mark.ielts-highlight {
-      background-color: #fff59d !important;
-      color: #000000 !important;
+      background-color: #fef08a !important;
+      color: #111827 !important;
       border-radius: 2px;
       cursor: pointer;
     }
@@ -126,29 +126,29 @@
       transition: background-color 0.2s, border-color 0.2s;
     }
     .heading-drop-slot.drag-over {
-      background-color: #e0f2f1 !important;
-      border-color: #00796b !important;
-      color: #00796b !important;
+      background-color: #fef9c3 !important;
+      border-color: #eab308 !important;
+      color: #111827 !important;
     }
 
     .mcq-options { display: flex; flex-direction: column; gap: 7px; }
     .mcq-option { display: flex; align-items: flex-start; gap: 10px; padding: 9px 12px; border-radius: 8px; border: 1.5px solid var(--rule); cursor: pointer; font-size: 13px; color: var(--ink-soft); font-family: "Lora", serif; transition: all .15s; }
-    .mcq-option:hover { background: var(--accent-soft); border-color: rgba(122,35,49,.3); }
-    .mcq-option.selected { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 700; }
-    .mcq-option .opt-letter { font-weight: 800; color: var(--accent); min-width: 16px; font-family: "Inter", sans-serif; }
+    .mcq-option:hover { background: #fefce8; border-color: #eab308; }
+    .mcq-option.selected { background: #fef9c3; border-color: #eab308; color: #111827; font-weight: 700; }
+    .mcq-option .opt-letter { font-weight: 800; color: #854d0e; min-width: 16px; font-family: "Inter", sans-serif; }
 
     .input-fill {
       width: 100%; background: var(--paper); border: 1px solid var(--rule); border-radius: 7px;
       padding: 8px 11px; color: var(--ink); outline: none; font-family: "Inter", sans-serif; font-size: 13px; transition: all 0.2s;
     }
-    .input-fill:focus { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(122,35,49,.1); }
+    .input-fill:focus { border-color: #eab308; box-shadow: 0 0 0 2px rgba(250,204,21,.25); }
 
     /* Inline fill inputs inside summary/notes/table preview blocks */
     .fill-group-card {
       border: 1px solid var(--rule-soft); background: var(--paper); border-radius: 10px;
       padding: 18px 20px; margin-bottom: 12px;
     }
-    .fill-group-card.has-flagged { border-color: var(--gold); background: #fdf8ee; }
+    .fill-group-card.has-flagged { border-color: var(--gold); background: #fefce8; }
     .fill-group-body {
       font-family: "Lora", serif; font-size: 14px; line-height: 2.1; color: var(--ink-soft);
     }
@@ -160,8 +160,8 @@
     .inline-q-num {
       display: inline-flex; align-items: center; justify-content: center;
       width: 20px; height: 20px; border-radius: 50%;
-      border: 1.5px solid var(--accent); font-family: "Fraunces", serif; font-weight: 800;
-      font-size: 10px; color: var(--accent); flex-shrink: 0; background: var(--paper);
+      border: 1.5px solid var(--ink); font-family: "Fraunces", serif; font-weight: 800;
+      font-size: 10px; color: var(--ink); flex-shrink: 0; background: var(--paper);
     }
     .inline-fill {
       display: inline-block; width: 130px; background: var(--paper);
@@ -170,10 +170,10 @@
       font-family: "Inter", sans-serif; font-size: 13px; font-weight: 600;
       transition: border-color 0.2s; vertical-align: middle;
     }
-    .inline-fill:focus { border-bottom-color: var(--accent); }
+    .inline-fill:focus { border-bottom-color: #eab308; }
     .inline-flag-label {
       display: inline-flex; align-items: center; gap: 3px;
-      font-size: 10px; color: #9c9385; cursor: pointer; vertical-align: middle;
+      font-size: 10px; color: #6b7280; cursor: pointer; vertical-align: middle;
       margin-left: 3px; user-select: none;
     }
     .inline-flag-label input { accent-color: var(--gold); width: 11px; height: 11px; }
@@ -182,28 +182,28 @@
       margin-top: 14px; padding-top: 10px; gap: 8px;
     }
 
-    .check-btn { padding: 6px 14px; background: #2f7a52; color: #fff; border: none; border-radius: 7px; font-size: 11px; font-weight: 700; cursor: pointer; font-family: "Inter", sans-serif; }
-    .check-btn:hover { background: #245e3f; }
+    .check-btn { padding: 6px 14px; background: #16a34a; color: #fff; border: none; border-radius: 7px; font-size: 11px; font-weight: 700; cursor: pointer; font-family: "Inter", sans-serif; }
+    .check-btn:hover { background: #15803d; }
     .feedback-box { margin-top: 10px; padding: 11px 13px; border-radius: 8px; font-size: 12px; font-family: "Inter", sans-serif; }
     .feedback-box.correct { background: #eef6f0; border: 1px solid #a9d4b8; color: #245e3f; }
-    .feedback-box.wrong { background: #faeeec; border: 1px solid #e3b4ab; color: #8a2c1f; }
+    .feedback-box.wrong { background: #faeeec; border: 1px solid #e3b4ab; font-size: 12px; color: #8a2c1f; }
 
     .review-box { border-radius: 10px; border: 1.5px solid; padding: 15px 17px; margin-bottom: 12px; }
     .review-box.correct { border-color: #a9d4b8; background: #f6faf7; }
     .review-box.wrong { border-color: #e3b4ab; background: #fdf6f5; }
-    .review-box.excluded { border-color: var(--rule); background: #f4f2ec; }
+    .review-box.excluded { border-color: var(--rule); background: #f3f4f6; }
 
     .bottom-nav { height: 62px; background: var(--paper); border-top: 1px solid var(--rule); flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; gap: 10px; }
     .q-tray { display: flex; align-items: center; gap: 4px; overflow-x: auto; flex: 1; padding: 4px 0; }
     .q-tray::-webkit-scrollbar { height: 3px; }
-    .q-tray::-webkit-scrollbar-thumb { background: rgba(168,121,47,.35); border-radius: 4px; }
+    .q-tray::-webkit-scrollbar-thumb { background: rgba(234,179,8,.45); border-radius: 4px; }
     .q-nav-btn { width: 26px; height: 26px; border-radius: 6px; border: 1.5px solid var(--rule); background: var(--paper); font-size: 10.5px; font-weight: 700; color: var(--ink-soft); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .15s; flex-shrink: 0; position: relative; font-family: "Inter", sans-serif; }
-    .q-nav-btn:hover { border-color: var(--gold); background: #f6f1e4; }
-    .q-nav-btn.answered { background: var(--accent); border-color: var(--accent); color: #fff; }
-    .q-nav-btn.current { box-shadow: 0 0 0 2.5px var(--gold); }
-    .q-nav-btn.flagged::after { content: "\25CF"; font-size: 7px; color: var(--gold); position: absolute; top: -4px; right: -4px; }
+    .q-nav-btn:hover { border-color: var(--gold); background: #fefce8; }
+    .q-nav-btn.answered { background: #facc15; border-color: #eab308; color: #111827; font-weight: 800; }
+    .q-nav-btn.current { box-shadow: 0 0 0 2.5px #111827; }
+    .q-nav-btn.flagged::after { content: "\25CF"; font-size: 7px; color: #ea580c; position: absolute; top: -4px; right: -4px; }
     .nav-arrow { padding: 7px 15px; border-radius: 9px; border: 1.5px solid var(--rule); background: var(--paper); font-size: 12px; font-weight: 700; color: var(--ink-soft); cursor: pointer; transition: all .15s; font-family: "Inter", sans-serif; }
-    .nav-arrow:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+    .nav-arrow:hover { border-color: #eab308; color: #111827; background: #fefce8; }
 
     .highlight-yellow { background: rgba(253, 224, 71, 0.45); }
     .highlight-pink { background: rgba(244, 114, 182, 0.35); }
@@ -211,14 +211,14 @@
     #highlightTooltip { display: none; position: absolute; z-index: 1000; background: var(--ink); border-radius: 8px; padding: 5px; box-shadow: 0 10px 20px rgba(0,0,0,.25); gap: 6px; }
     #highlightTooltip button { width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); cursor: pointer; }
 
-    .coming-soon { max-width: 480px; margin: 80px auto; text-align: center; background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; padding: 40px 34px; box-shadow: 0 12px 32px rgba(28,26,23,.06); }
+    .coming-soon { max-width: 480px; margin: 80px auto; text-align: center; background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; padding: 40px 34px; box-shadow: 0 12px 32px rgba(17,24,39,.06); }
     .coming-soon h2 { font-family: "Fraunces", serif; font-size: 22px; margin: 0 0 10px; color: var(--ink); }
     .coming-soon p { font-size: 13.5px; color: var(--ink-soft); line-height: 1.6; margin: 0 0 20px; }
-    .coming-soon a { display: inline-block; padding: 9px 20px; border-radius: 9px; background: var(--accent); color: #fff; text-decoration: none; font-size: 12.5px; font-weight: 700; }
+    .coming-soon a { display: inline-block; padding: 9px 20px; border-radius: 9px; background: #facc15; color: #111827; text-decoration: none; font-size: 12.5px; font-weight: 800; }
 
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: rgba(168,121,47,.3); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb { background: rgba(17,24,39,.18); border-radius: 4px; }
 
     /* Slate CSS Helper overrides for premium styled instructions (supports light & dark mode) */
     .bg-slate-50 { background-color: var(--page-bg) !important; opacity: 0.9; }
@@ -268,6 +268,7 @@
     .bg-white { background-color: var(--paper) !important; }
   </style>
   <script src="security.js"></script>
+  <script src="vtp-ui.js"></script>
 </head>
 
 <body>
@@ -341,8 +342,8 @@
     const testData = IELTS_TEST_DATA[testId];
 
     if (!testData) {
-      alert('Test Set not found! Redirecting to Test 1.');
-      window.location.search = '?test=1';
+      if (window.vtpToast) vtpToast('Test Set not found! Redirecting to Test 1.', 'warning');
+      setTimeout(() => { window.location.search = '?test=1'; }, 900);
     }
 
     const currentTestMode = localStorage.getItem('vietest_practice_mode') || 'exam';
@@ -444,7 +445,7 @@
           updateTimerDisplay(false);
           if (timeRemaining <= 0) {
             clearInterval(timerInterval);
-            alert('Time is up! Submitting your test automatically.');
+            vtpToast('Time is up! Submitting your test automatically.', 'info');
             submitTest(true);
           }
         }, 1000);
@@ -628,7 +629,7 @@
       const checkedBoxes = Array.from(document.querySelectorAll(`input[name="group-${nums[0]}"]:checked`));
       if (checkedBoxes.length > maxCount) {
         checkbox.checked = false;
-        alert(`You can only select up to ${maxCount} options for this question.`);
+        vtpToast(`You can only select up to ${maxCount} options for this question.`, 'warning');
         return;
       }
       
@@ -1105,11 +1106,11 @@
         });
         if (answered < totalQs) {
           const remaining = totalQs - answered;
-          if (!confirm(`You have ${remaining} unanswered question${remaining === 1 ? '' : 's'} remaining (out of ${totalQs}). Do you really want to make a submission?`)) {
+          if (!(await vtpConfirm({ title: 'Submit Incomplete Test?', message: `You have ${remaining} unanswered question${remaining === 1 ? '' : 's'} remaining (out of ${totalQs}). Do you really want to submit?`, confirmText: 'Submit Anyway', cancelText: 'Continue Test' }))) {
             return;
           }
         } else {
-          if (!confirm('All questions answered! Are you sure you want to submit and check your final band score & answers?')) return;
+          if (!(await vtpConfirm({ title: 'Submit Reading Test?', message: 'All questions answered! Are you ready to submit and check your final band score & answers?', confirmText: 'Submit Test', cancelText: 'Review Answers' }))) return;
         }
       }
 
@@ -1125,14 +1126,16 @@
       const activeStudentId = localStorage.getItem('viatestprep_active_student_id');
       let realAnswers = null;
       try {
-        const ansRes = await fetch(`/api/test-answers?testId=${encodeURIComponent(testId)}&module=reading&studentId=${encodeURIComponent(activeStudentId || '')}`);
+        const ansRes = await fetch(`/api/test-answers?testId=${encodeURIComponent(testId)}&module=reading&studentId=${encodeURIComponent(activeStudentId || '')}`, {
+          headers: { 'X-Session-Token': localStorage.getItem('viatestprep_session_token') || '', 'X-Owner-Key': localStorage.getItem('viatestprep_owner_key') || '' }
+        });
         const ansData = await ansRes.json();
         if (ansData.ok) realAnswers = ansData.answers;
       } catch (e) {
         console.error('Could not fetch answer key:', e);
       }
       if (!realAnswers) {
-        alert('Could not load your results. Please log in (or check that your access hasn\'t expired) and try submitting again.');
+        vtpToast('Could not load your results. Please log in (or check that your access hasn\'t expired) and try submitting again.', 'error');
         return;
       }
       testData.reading.passages.forEach(p => {
@@ -1210,7 +1213,7 @@
       const header = document.querySelector('.site-header');
       const returnBtn = document.createElement('a');
       returnBtn.href = "index.html";
-      returnBtn.style.cssText = 'padding:7px 16px;border-radius:9px;background:#2f7a52;color:#fff;font-size:12px;font-weight:700;text-decoration:none;';
+      returnBtn.style.cssText = 'padding:7px 16px;border-radius:9px;background:#111827;color:#facc15;font-size:12px;font-weight:800;text-decoration:none;';
       returnBtn.textContent = "Return to Lobby";
       header.appendChild(returnBtn);
 
@@ -1218,14 +1221,14 @@
       const qContainer = document.getElementById('questionsContainer');
       if (band !== undefined && qContainer) {
         const pct = totalQs > 0 ? Math.round((correctCount / totalQs) * 100) : 0;
-        const bandColor = band >= 7.0 ? '#2f7a52' : band >= 6.0 ? '#a8792f' : '#7a2331';
+        const bandColor = band >= 7.0 ? '#16a34a' : band >= 6.0 ? '#a16207' : '#dc2626';
         let saveHtml;
         if (isLoggedIn && cloudSaved) {
-          saveHtml = '<div style="margin-top:10px;display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#2f7a52;"><span>✅</span> Results saved to your profile</div>';
+          saveHtml = '<div style="margin-top:10px;display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#16a34a;"><span>✅</span> Results saved to your profile</div>';
         } else if (isLoggedIn && !cloudSaved) {
-          saveHtml = '<div style="margin-top:10px;display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#a8792f;"><span>⚠️</span> Could not save to cloud — stored locally only</div>';
+          saveHtml = '<div style="margin-top:10px;display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#a16207;"><span>⚠️</span> Could not save to cloud — stored locally only</div>';
         } else {
-          saveHtml = '<div style="margin-top:10px;font-size:11px;color:#8a8171;">Results saved locally. <a href="index.html" style="color:#7a2331;font-weight:700;text-decoration:underline;">Log in</a> to sync across devices.</div>';
+          saveHtml = '<div style="margin-top:10px;font-size:11px;color:#6b7280;">Results saved locally. <a href="index.html" style="color:#111827;font-weight:700;text-decoration:underline;">Log in</a> to sync across devices.</div>';
         }
         const resultBanner = document.createElement('div');
         resultBanner.style.cssText = 'background:var(--paper);border:1.5px solid var(--rule);border-radius:14px;padding:16px 18px;margin-bottom:20px;';
@@ -1301,10 +1304,10 @@
               <div>Your choice: <strong style="color:${isCorrect ? '#245e3f' : '#8a2c1f'};">${uAns || 'None'}</strong></div>
               ${!isCorrect ? `<div>Correct answer: <strong style="color:#245e3f;">${cAns}</strong></div>` : ''}
             </div>
-            <div style="padding:10px 12px;background:#faf8f2;border:1px solid var(--rule);border-radius:8px;margin-top:10px;font-size:12px;color:#6b6558;">
+            <div style="padding:10px 12px;background:#fafafa;border:1px solid var(--rule);border-radius:8px;margin-top:10px;font-size:12px;color:#4b5563;">
               <div style="font-weight:700;color:var(--ink);margin-bottom:3px;">Explanation</div>
               <p style="margin:0;">${q.explanation}</p>
-              ${q.location ? `<p style="margin:6px 0 0;color:#8a8375;font-style:italic;">${q.location}</p>` : ''}
+              ${q.location ? `<p style="margin:6px 0 0;color:#6b7280;font-style:italic;">${q.location}</p>` : ''}
             </div>
           `;
           qContainer.appendChild(qBox);
@@ -1395,54 +1398,54 @@
   </script>
 
   <!-- MODAL: STUDENT REPORT ERROR -->
-  <div id="error-report-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(28,26,23,0.7);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:16px;">
-    <div style="background:#fff;border:1px solid #ece4d2;box-shadow:0 20px 40px rgba(0,0,0,0.25);width:100%;max-width:480px;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;font-family:'Inter',sans-serif;">
+  <div id="error-report-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(17,24,39,0.7);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:16px;">
+    <div style="background:#fff;border:1px solid #e5e7eb;box-shadow:0 20px 40px rgba(0,0,0,0.25);width:100%;max-width:480px;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;font-family:'Inter',sans-serif;">
       <!-- Header -->
-      <div style="background:linear-gradient(135deg, #9f1239, #e11d48);padding:16px 20px;color:#fff;display:flex;align-items:center;justify-content:space-between;">
+      <div style="background:linear-gradient(135deg, #111827, #1f2937);padding:16px 20px;color:#fff;display:flex;align-items:center;justify-content:space-between;">
         <div>
-          <span style="font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;background:rgba(255,255,255,0.2);padding:2px 8px;border-radius:10px;">🚩 Flag an Issue</span>
-          <h3 style="font-size:15px;font-weight:800;margin:4px 0 0;">Report an Error</h3>
+          <span style="font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;background:#facc15;color:#111827;padding:2px 8px;border-radius:10px;">🚩 Flag an Issue</span>
+          <h3 style="font-size:15px;font-weight:800;margin:6px 0 0;">Report an Error</h3>
         </div>
         <button onclick="closeErrorReportModal()" style="width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,0.15);border:none;color:#fff;font-weight:700;cursor:pointer;">✕</button>
       </div>
 
       <!-- Body -->
-      <div style="padding:20px;background:#faf8f3;display:flex;flex-direction:column;gap:14px;max-height:75vh;overflow-y:auto;">
-        <div style="background:#fff;border:1px solid #ece4d2;border-radius:12px;padding:10px 14px;font-size:12px;">
-          <span style="font-size:9px;font-weight:800;color:#8a8171;text-transform:uppercase;display:block;margin-bottom:2px;">Reporting Error In</span>
-          <span id="erm-context" style="font-weight:700;color:#1c1a17;">—</span>
+      <div style="padding:20px;background:#fafafa;display:flex;flex-direction:column;gap:14px;max-height:75vh;overflow-y:auto;">
+        <div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:10px 14px;font-size:12px;">
+          <span style="font-size:9px;font-weight:800;color:#6b7280;text-transform:uppercase;display:block;margin-bottom:2px;">Reporting Error In</span>
+          <span id="erm-context" style="font-weight:700;color:#111827;">—</span>
         </div>
 
         <div>
-          <label style="font-size:12px;font-weight:700;color:#5c5648;display:block;margin-bottom:6px;">Error Type <span style="color:#e11d48;">*</span></label>
+          <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">Error Type <span style="color:#e11d48;">*</span></label>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;" id="erm-type-grid">
-            <button type="button" onclick="selectReportType(this,'wrong_answer')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:11.5px;font-weight:700;color:#5c5648;background:#fff;cursor:pointer;text-align:left;">❌ Wrong Answer</button>
-            <button type="button" onclick="selectReportType(this,'typo')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:11.5px;font-weight:700;color:#5c5648;background:#fff;cursor:pointer;text-align:left;">🔤 Typo / Grammar</button>
-            <button type="button" onclick="selectReportType(this,'broken_audio')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:11.5px;font-weight:700;color:#5c5648;background:#fff;cursor:pointer;text-align:left;">🔇 Broken Audio</button>
-            <button type="button" onclick="selectReportType(this,'unclear_question')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:11.5px;font-weight:700;color:#5c5648;background:#fff;cursor:pointer;text-align:left;">❓ Unclear Question</button>
-            <button type="button" onclick="selectReportType(this,'missing_content')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:11.5px;font-weight:700;color:#5c5648;background:#fff;cursor:pointer;text-align:left;">📭 Missing Content</button>
-            <button type="button" onclick="selectReportType(this,'other')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:11.5px;font-weight:700;color:#5c5648;background:#fff;cursor:pointer;text-align:left;">📝 Other</button>
+            <button type="button" onclick="selectReportType(this,'wrong_answer')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:11.5px;font-weight:700;color:#374151;background:#fff;cursor:pointer;text-align:left;">❌ Wrong Answer</button>
+            <button type="button" onclick="selectReportType(this,'typo')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:11.5px;font-weight:700;color:#374151;background:#fff;cursor:pointer;text-align:left;">🔤 Typo / Grammar</button>
+            <button type="button" onclick="selectReportType(this,'broken_audio')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:11.5px;font-weight:700;color:#374151;background:#fff;cursor:pointer;text-align:left;">🔇 Broken Audio</button>
+            <button type="button" onclick="selectReportType(this,'unclear_question')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:11.5px;font-weight:700;color:#374151;background:#fff;cursor:pointer;text-align:left;">❓ Unclear Question</button>
+            <button type="button" onclick="selectReportType(this,'missing_content')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:11.5px;font-weight:700;color:#374151;background:#fff;cursor:pointer;text-align:left;">📭 Missing Content</button>
+            <button type="button" onclick="selectReportType(this,'other')" class="erm-type-btn" style="padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:11.5px;font-weight:700;color:#374151;background:#fff;cursor:pointer;text-align:left;">📝 Other</button>
           </div>
           <input type="hidden" id="erm-type-value">
         </div>
 
         <div>
-          <label style="font-size:12px;font-weight:700;color:#5c5648;display:block;margin-bottom:6px;">Describe the Issue <span style="color:#e11d48;">*</span></label>
-          <textarea id="erm-description" rows="3" style="width:100%;padding:10px;border:1px solid #e5ded0;border-radius:10px;font-size:13px;background:#fff;resize:none;box-sizing:border-box;" placeholder="e.g. Question 3 answer key is wrong, audio cuts off at 1:20..."></textarea>
+          <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">Describe the Issue <span style="color:#e11d48;">*</span></label>
+          <textarea id="erm-description" rows="3" style="width:100%;padding:10px;border:1px solid #d1d5db;border-radius:10px;font-size:13px;background:#fff;resize:none;box-sizing:border-box;color:#111827;" placeholder="e.g. Question 3 answer key is wrong, passage paragraph is missing..."></textarea>
         </div>
 
         <div>
-          <label style="font-size:12px;font-weight:700;color:#5c5648;display:block;margin-bottom:6px;">Question Number <span style="color:#8a8171;font-weight:400;">(optional)</span></label>
-          <input type="text" id="erm-qnum" style="width:100%;padding:8px 10px;border:1px solid #e5ded0;border-radius:10px;font-size:13px;background:#fff;box-sizing:border-box;" placeholder="e.g. Q4, Section 2...">
+          <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">Question Number <span style="color:#6b7280;font-weight:400;">(optional)</span></label>
+          <input type="text" id="erm-qnum" style="width:100%;padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font-size:13px;background:#fff;box-sizing:border-box;color:#111827;" placeholder="e.g. Q4, Passage 2...">
         </div>
       </div>
 
       <!-- Footer -->
-      <div style="padding:12px 16px;background:#f3ecd8;border-top:1px solid #e5ded0;display:flex;align-items:center;justify-content:space-between;">
-        <span style="font-size:10px;color:#8a8171;">Reports sent to teacher CRM</span>
+      <div style="padding:12px 16px;background:#ffffff;border-top:1px solid #e5e7eb;display:flex;align-items:center;justify-content:space-between;">
+        <span style="font-size:10px;color:#6b7280;">Reports sent to teacher CRM</span>
         <div style="display:flex;gap:8px;">
-          <button type="button" onclick="closeErrorReportModal()" style="padding:6px 14px;background:#fff;border:1px solid #e5ded0;color:#5c5648;font-weight:700;font-size:12px;border-radius:8px;cursor:pointer;">Cancel</button>
-          <button type="button" onclick="submitErrorReportModal()" style="padding:6px 16px;background:#e11d48;color:#fff;border:none;font-weight:800;font-size:12px;border-radius:8px;cursor:pointer;">Submit Report</button>
+          <button type="button" onclick="closeErrorReportModal()" style="padding:6px 14px;background:#f3f4f6;border:1px solid #e5e7eb;color:#374151;font-weight:700;font-size:12px;border-radius:8px;cursor:pointer;">Cancel</button>
+          <button type="button" onclick="submitErrorReportModal()" style="padding:6px 16px;background:#facc15;color:#111827;border:none;font-weight:800;font-size:12px;border-radius:8px;cursor:pointer;">Submit Report</button>
         </div>
       </div>
     </div>
@@ -1458,8 +1461,8 @@
       document.getElementById('erm-qnum').value = '';
       document.querySelectorAll('.erm-type-btn').forEach(b => {
         b.style.background = '#fff';
-        b.style.borderColor = '#e5ded0';
-        b.style.color = '#5c5648';
+        b.style.borderColor = '#d1d5db';
+        b.style.color = '#374151';
       });
       document.getElementById('error-report-modal').style.display = 'flex';
     }
@@ -1469,20 +1472,20 @@
     function selectReportType(btn, val) {
       document.querySelectorAll('.erm-type-btn').forEach(b => {
         b.style.background = '#fff';
-        b.style.borderColor = '#e5ded0';
-        b.style.color = '#5c5648';
+        b.style.borderColor = '#d1d5db';
+        b.style.color = '#374151';
       });
-      btn.style.background = '#ffe4e6';
-      btn.style.borderColor = '#e11d48';
-      btn.style.color = '#9f1239';
+      btn.style.background = '#fef9c3';
+      btn.style.borderColor = '#eab308';
+      btn.style.color = '#111827';
       document.getElementById('erm-type-value').value = val;
     }
     function submitErrorReportModal() {
       const typeVal = document.getElementById('erm-type-value').value;
       const desc = (document.getElementById('erm-description').value || '').trim();
       const qnum = (document.getElementById('erm-qnum').value || '').trim();
-      if (!typeVal) { alert('Please select an error type.'); return; }
-      if (!desc) { alert('Please describe the issue.'); return; }
+      if (!typeVal) { vtpToast('Please select an error type.', 'warning'); return; }
+      if (!desc) { vtpToast('Please describe the issue.', 'warning'); return; }
       const studentId = localStorage.getItem('viatestprep_student_id') || 'demo_student';
       const studentName = localStorage.getItem('viatestprep_student_name') || 'Student';
       const consultancyId = localStorage.getItem('viatestprep_consultancy_id') || 'default';
@@ -1500,7 +1503,7 @@
       reports.unshift(report);
       localStorage.setItem('viatestprep_error_reports', JSON.stringify(reports));
       closeErrorReportModal();
-      alert('🚩 Error report submitted! Your teacher will review and fix this issue.');
+      vtpToast('🚩 Error report submitted! Your teacher will review and fix this issue.', 'success');
     }
   </script>
 </body>

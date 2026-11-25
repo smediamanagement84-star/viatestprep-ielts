@@ -4,7 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>IELTS Listening — Band 7+</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="vtp.css" />
+<script src="vtp-ui.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
   :root{--ink:#1c1a17;--paper:#fffefb;--signal:#0d8a7a;--alert:#e8580d;--deep:#7a2331;--deep2:#5e1a25;--soft:#cfe7e2;--line:#e5ded0;--gold:#a8792f;--purple:#5b3b8a}
@@ -544,7 +545,7 @@ let activePlayBtn=null;
 
 // Speak ONE chunk of text — used internally
 function speakRaw(text){
-  if(!('speechSynthesis' in window)){alert('Audio needs a modern browser.');return;}
+  if(!('speechSynthesis' in window)){vtpToast('Audio needs a modern browser.', 'warning');return;}
   speechSynthesis.cancel();
   const u=new SpeechSynthesisUtterance(text);
   u.rate=tts.rate;u.pitch=tts.pitch;u.volume=1;
@@ -554,7 +555,7 @@ function speakRaw(text){
 
 // Speak a long passage broken into sentences with pauses for clarity
 function speak(text,onEnd){
-  if(!('speechSynthesis' in window)){alert('Audio needs a modern browser.');return;}
+  if(!('speechSynthesis' in window)){vtpToast('Audio needs a modern browser.', 'warning');return;}
   speechSynthesis.cancel();
   // Break into sentences AND clauses for maximum clarity
   const sentences=text.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[text];

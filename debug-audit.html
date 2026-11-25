@@ -4,7 +4,8 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>ViATestPrep - Test Data Audit Tool</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="vtp.css" />
+<script src="vtp-ui.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   body { font-family: "Inter", sans-serif; background: #0f172a; color: #e2e8f0; margin: 0; }
@@ -544,8 +545,8 @@ function markAllVisible() {
   renderSummary(AUDIT_DATA, runChecks());
 }
 
-function clearAll() {
-  if (!confirm('Clear all verification checks?')) return;
+async function clearAll() {
+  if (!(await vtpConfirm({ title: 'Clear checks?', message: 'Clear all verification checks?', confirmText: 'Clear All', danger: true }))) return;
   reviewState = {};
   saveReview();
   init();

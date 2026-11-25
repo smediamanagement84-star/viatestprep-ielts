@@ -4,7 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>IELTS Writing: The Architect's Blueprint — Band 7+</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="vtp.css" />
+<script src="vtp-ui.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
   :root{--ink:#0c1828;--paper:#f4f1ea;--blue:#1e3a8a;--blue-d:#0f1f4a;--terra:#c0531c;--gold:#b58a2c;--line:#d6cdb6;--soft:#e8e0c8;--green:#1f7a4d}
@@ -1052,8 +1053,8 @@ function renderTplCard() {
   });
 }
 
-function clearTpl() {
-  if (!confirm('Clear all your text for this template?')) return;
+async function clearTpl() {
+  if (!(await vtpConfirm({ title: 'Clear template text?', message: 'Clear all your text for this template?', confirmText: 'Clear', danger: true }))) return;
   document.querySelectorAll('.tpl-input').forEach(el => el.value = '');
   delete tplInputValues[tplData[activeTpl].id];
   countTplWords();
@@ -1075,7 +1076,7 @@ function copyTplAsText() {
     const orig = btn.textContent;
     btn.textContent = '✅ Copied!';
     setTimeout(() => btn.textContent = orig, 1800);
-  }).catch(() => alert('Copy failed — try selecting the text manually.'));
+  }).catch(() => vtpToast('Copy failed — try selecting the text manually.', 'error'));
 }
 
 function printTpl() {

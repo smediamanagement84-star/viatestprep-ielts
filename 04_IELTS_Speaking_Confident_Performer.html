@@ -4,7 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>IELTS Speaking — Band 7+</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="vtp.css" />
+<script src="vtp-ui.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -770,7 +771,7 @@ function pickVoice(){
 }
 if (typeof speechSynthesis !== 'undefined'){ speechSynthesis.onvoiceschanged = pickVoice; pickVoice(); }
 function speak(text, rate=0.92, onEnd){
-  if (!('speechSynthesis' in window)){ alert('Audio needs a modern browser.'); return; }
+  if (!('speechSynthesis' in window)){ vtpToast('Audio needs a modern browser.', 'warning'); return; }
   speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
   u.rate = rate; u.pitch = 1.0;

@@ -7,17 +7,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f3ecd8;
-    --surface: #fffefb;
-    --card: #fffefb;
-    --border: rgba(28, 26, 23, 0.12);
-    --border-hi: rgba(28, 26, 23, 0.22);
-    --text-1: #1c1a17;
-    --text-2: #4a453d;
-    --text-3: #766f62;
-    --blue: #7a2331;
-    --blue-dim: rgba(122, 35, 49, 0.08);
-    --blue-glow: rgba(122, 35, 49, 0.04);
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --card: #ffffff;
+    --border: rgba(17, 24, 39, 0.1);
+    --border-hi: rgba(17, 24, 39, 0.2);
+    --text-1: #111827;
+    --text-2: #374151;
+    --text-3: #6b7280;
+    --blue: #a16207;
+    --blue-dim: rgba(250, 204, 21, 0.22);
+    --blue-glow: #fefce8;
     --orange: #ea580c;
     --orange-dim: rgba(234, 88, 12, 0.08);
     --orange-glow: rgba(234, 88, 12, 0.04);
@@ -25,12 +25,12 @@
     --green-dim: rgba(22, 163, 74, 0.08);
     --red: #dc2626;
     --red-dim: rgba(220, 38, 38, 0.08);
-    --purple: #7c3aed;
-    --purple-dim: rgba(124, 58, 237, 0.08);
-    --amber: #d97706;
-    --amber-dim: rgba(217, 119, 6, 0.08);
-    --teal: #0d9488;
-    --teal-dim: rgba(13, 148, 136, 0.08);
+    --purple: #a16207;
+    --purple-dim: rgba(250, 204, 21, 0.22);
+    --amber: #854d0e;
+    --amber-dim: #fef9c3;
+    --teal: #a16207;
+    --teal-dim: rgba(250, 204, 21, 0.22);
     --r: 16px;
     --r-sm: 8px;
   }
@@ -171,9 +171,9 @@
   .step-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
   .step-item { display: flex; gap: 14px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 14px; }
   .step-num {
-    width: 28px; height: 28px; border-radius: 50%; color: #fff;
-    font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0; background: var(--blue);
+    width: 28px; height: 28px; border-radius: 50%; color: #111827;
+    font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; background: #facc15; border: 1px solid #eab308;
   }
   .step-body { flex: 1; }
   .step-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--text-1); }
@@ -206,11 +206,11 @@
 
   /* ── INTERACTIVE DRILL WIDGET ── */
   .drill-container {
-    border: 2px solid var(--blue-dim);
+    border: 2px solid #fde047;
     border-radius: var(--r);
     padding: 24px;
     background: #ffffff;
-    box-shadow: 0 10px 30px rgba(37,99,235,0.03);
+    box-shadow: 0 10px 30px rgba(17,24,39,0.04);
     margin-top: 30px;
   }
   .drill-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px; }
@@ -231,22 +231,22 @@
   
   .drill-controls { display: flex; gap: 12px; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }
   .btn-drill {
-    background: var(--blue);
-    color: #fff;
-    border: none;
+    background: #facc15;
+    color: #111827;
+    border: 1px solid #eab308;
     padding: 10px 22px;
     border-radius: 24px;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 800;
     cursor: pointer;
     transition: all 0.2s;
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    box-shadow: 0 4px 12px rgba(37,99,235,0.15);
+    box-shadow: 0 4px 12px rgba(234,179,8,0.22);
   }
-  .btn-drill:hover { background: #1d4ed8; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(37,99,235,0.25); }
-  .btn-drill:disabled { background: var(--text-3); cursor: not-allowed; transform: none; box-shadow: none; }
+  .btn-drill:hover { background: #eab308; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(234,179,8,0.3); }
+  .btn-drill:disabled { background: #e5e7eb; border-color: #d1d5db; color: #9ca3af; cursor: not-allowed; transform: none; box-shadow: none; }
   .btn-drill-secondary {
     background: var(--surface);
     color: var(--text-2);
@@ -288,14 +288,14 @@
   .pte-modnav { display:flex; gap:8px; flex-wrap:wrap; margin: 0 0 16px; }
   .pte-modnav a { font-size:12px; font-weight:700; text-decoration:none; color:var(--text-2); border:1px solid var(--border); background:var(--surface); padding:6px 14px; border-radius:20px; transition:all .2s ease; }
   .pte-modnav a:hover { border-color:var(--border-hi); }
-  .pte-modnav a.cur { background:var(--text-1); color:#fff; border-color:var(--text-1); }
+  .pte-modnav a.cur { background:#facc15; color:#111827; border-color:#eab308; font-weight:800; }
   .skillmap { background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:16px 18px; margin:0 0 18px; }
   .skillmap h3 { font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--text-3); margin-bottom:4px; }
   .skillmap p { font-size:12px; color:var(--text-3); margin-bottom:10px; line-height:1.5; }
   .sm-row { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:7px 0; border-top:1px solid var(--border); font-size:13px; color:var(--text-1); flex-wrap:wrap; }
   .sm-tags { display:flex; gap:6px; flex-wrap:wrap; }
   .sm-tag { font-size:10px; font-weight:800; letter-spacing:.04em; text-transform:uppercase; padding:3px 9px; border-radius:20px; border:1px solid var(--border); color:var(--text-2); background:var(--bg); }
-  .sm-tag.main { background:var(--amber-dim); color:var(--amber); border-color:rgba(217,119,6,.35); }
+  .sm-tag.main { background:var(--amber-dim); color:#854d0e; border-color:#fde047; }
 </style>
   <script src="theme-loader.js"></script>
 </head>

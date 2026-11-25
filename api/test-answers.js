@@ -16,8 +16,9 @@
 // deliberately NOT special-cased here - that sentinel id is public
 // knowledge sitting in client-side JS, so special-casing it would just be a
 // permanent, well-known backdoor around the whole point of this endpoint.
-const { getStudentById, friendlyDbError } = require('./_lib/supabaseAdmin');
+const { getStudentById, friendlyDbError, hasServiceRoleKey } = require('./_lib/supabaseAdmin');
 const { isOwner } = require('./_lib/ownerAuth');
+const { getCaller, canActAsStudent } = require('./_lib/callerAuth');
 const TEST_ANSWERS = require('./_lib/testAnswers');
 
 const VALID_MODULES = ['reading', 'listening'];
@@ -57,15 +58,24 @@ module.exports = async (req, res) => {
       return;
     }
 
-    const student = await getStudentById(studentId);
-    if (!student) {
-      res.status(401).json({ ok: false, error: 'Log in to see your results.' });
-      return;
-    }
+    const adminConfigured = typeof hasServiceRoleKey === 'function'
+      ? hasServiceRoleKey()
+      : Boolean(process.env.SUPABASE_SERVICE_ROLE_KEY);
 
-    const expired = !!student.access_expires_at && new Date() > new Date(student.access_expires_at);
-    if (expired) {
-      res.status(403).json({ ok: false, error: 'Your access has expired. Renew to see full scoring and explanations.' });
+    if (adminConfigured) {
+      const student = await getStudentById(studentId);
+      if (!student) {
+        res.status(401).json({ ok: false, error: 'Log in to see your results.' });
+        return;
+      }
+
+      const expired = !!student.access_expires_at && new Date() > new Date(student.access_expires_at);
+      if (expired) {
+        res.status(403).json({ ok: false, error: 'Your access has expired. Renew to see full scoring and explanations.' });
+        return;
+      }
+    } else if (!canActAsStudent(getCaller(req), studentId)) {
+      res.status(401).json({ ok: false, error: 'Log in to see your results.' });
       return;
     }
 

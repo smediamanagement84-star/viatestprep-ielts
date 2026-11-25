@@ -11,7 +11,7 @@
 // signed session token, so it inherits the same trust model as the rest of
 // this app's client-side-secret design. Genuine per-request auth would need
 // real Supabase Auth + RLS, which is a larger change than this pass covers.
-const { getStudentById, insertMockResult, friendlyDbError } = require('../_lib/supabaseAdmin');
+const { getStudentById, insertMockResult, friendlyDbError, hasServiceRoleKey } = require('../_lib/supabaseAdmin');
 const { getCaller, canActAsStudent } = require('../_lib/callerAuth');
 const { gradeWritingSubmission } = require('../_lib/writingGrader');
 
@@ -26,6 +26,7 @@ module.exports = async (req, res) => {
   try {
     const {
       studentId, testName, moduleType, listeningBand, readingBand, writingTask1, writingTask2,
+      task1Prompt, task2Prompt, task2Type,
       correctCount, totalQuestions, answerReview,
     } = req.body || {};
 
@@ -41,10 +42,16 @@ module.exports = async (req, res) => {
       return;
     }
 
-    const student = await getStudentById(studentId);
-    if (!student) {
-      res.status(404).json({ ok: false, error: 'Unknown student' });
-      return;
+    const adminConfigured = typeof hasServiceRoleKey === 'function'
+      ? hasServiceRoleKey()
+      : Boolean(process.env.SUPABASE_SERVICE_ROLE_KEY);
+
+    if (adminConfigured) {
+      const student = await getStudentById(studentId);
+      if (!student) {
+        res.status(404).json({ ok: false, error: 'Unknown student' });
+        return;
+      }
     }
 
     // Writing is graded here, server-side, so the score is consistent
@@ -53,7 +60,12 @@ module.exports = async (req, res) => {
     // rule-based) scoring method.
     let graded = null;
     if (moduleType === 'writing') {
-      graded = gradeWritingSubmission(writingTask1, writingTask2);
+      graded = gradeWritingSubmission(writingTask1, writingTask2, { task1Prompt, task2Prompt, task2Type });
+    }
+
+    if (!adminConfigured) {
+      res.status(200).json({ ok: true, id: 'preview-' + Date.now(), graded, previewMode: true });
+      return;
     }
 
     // Reading/Listening only: the per-question breakdown the practice page
