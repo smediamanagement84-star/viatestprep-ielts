@@ -9,8 +9,9 @@
     "start": "node server.js",
     "build": "npx @tailwindcss/cli -i src/input.css -o vtp.css --minify && node scripts/audit.js",
     "lint": "node -c server.js",
-    "test": "node scripts/audit.js",
-    "audit": "node scripts/audit.js",
+    "test": "node scripts/audit.js && node scripts/deep-audit.js --strict",
+    "audit": "node scripts/audit.js && node scripts/deep-audit.js --strict",
+    "audit:deep": "node scripts/deep-audit.js --strict",
     "verify": "node scratch/verify_deployment.js && node scripts/audit.js"
   },
   "dependencies": {

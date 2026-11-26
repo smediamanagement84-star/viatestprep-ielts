@@ -15,7 +15,7 @@ function ok(cond, label) {
 const SERVICE_KEY = 'test-service-key';
 const tables = {
   students: [], consultancies: [], mock_history: [], speaking_grades: [],
-  error_reports: [], system_notifications: [], orders: [],
+  error_reports: [], system_notifications: [], orders: [], writing_practice_submissions: [],
 };
 const jwts = {
   'jwt-selfserve': { id: 'u-self', email: 'self@x.com' },
@@ -55,7 +55,16 @@ const server = http.createServer(async (req, res) => {
   }
   if (req.method === 'POST') {
     const items = Array.isArray(body) ? body : [body];
-    const created = items.map(it => { const r = { id: 'row-' + (++seq), created_at: new Date(Date.now() + seq).toISOString(), ...it }; rows.push(r); return r; });
+    const onConflict = url.searchParams.get('on_conflict');
+    const created = items.map(it => {
+      if (onConflict && it && it[onConflict]) {
+        const existing = rows.find(r => r[onConflict] === it[onConflict]);
+        if (existing) { Object.assign(existing, it); return existing; }
+      }
+      const r = { id: 'row-' + (++seq), created_at: new Date(Date.now() + seq).toISOString(), ...it };
+      rows.push(r);
+      return r;
+    });
     return send(201, created);
   }
   if (req.method === 'PATCH') {
@@ -191,6 +200,33 @@ server.listen(0, '127.0.0.1', async () => {
     const n = requestLog.length;
     r = await call(keepalive, {});
     ok(r.code === 200 && requestLog.slice(n).some(l => l === 'GET /rest/v1/students'), 'pings the database (this counts as activity for Supabase)');
+
+    console.log('8. Student cloud progress & Task 2 essay sync');
+    r = await call(studentApi, { method: 'POST', query: { action: 'progress' }, body: { studentId: 'st-1731742345123', completedModules: ['01_test.html'] } });
+    ok(r.code === 401, 'saving study progress without a token is refused');
+    r = await call(studentApi, { method: 'POST', query: { action: 'progress' }, headers: tok(tokB), body: { studentId: 'st-1731742345123', completedModules: ['01_test.html'] } });
+    ok(r.code === 401, "another student cannot modify Anu's Skill Vault progress");
+    r = await call(studentApi, { method: 'POST', query: { action: 'progress' }, headers: tok(tokA), body: { studentId: 'st-1731742345123', completedModules: ['01_test.html', '03_writing.html'], targetTrack: '7.5' } });
+    ok(r.code === 200 && r.body.completedModules.length === 2, 'Anu saves Skill Vault progress to cloud');
+
+    const sampleEssay = 'Higher education benefits society in multiple ways. While some argue universities should focus on workplace training, others maintain that academic discovery is equally vital. In my view, both dimensions strengthen modern economies.\n\nOn the one hand, practical career skills help graduates secure employment quickly. For example, internships bridge theoretical knowledge and real industry work.\n\nOn the other hand, pure research drives innovation over the long term. Although vocational courses yield immediate returns, foundational science underpins future progress.\n\nIn conclusion, universities should combine academic rigor with workplace readiness.';
+    r = await call(studentApi, { method: 'POST', query: { action: 'essay' }, headers: tok(tokB), body: { studentId: 'st-1731742345123', promptId: 11, promptText: 'Discuss both views', essayText: sampleEssay } });
+    ok(r.code === 401, "another student cannot submit an essay into Anu's cloud profile");
+    r = await call(studentApi, { method: 'POST', query: { action: 'essay' }, headers: tok(tokA), body: { studentId: 'st-1731742345123', promptId: 11, promptText: 'Discuss both views', promptType: 'Discuss Both Views', essayText: sampleEssay } });
+    ok(r.code === 200 && r.body.persisted && tables.writing_practice_submissions.length === 1 && tables.writing_practice_submissions[0].consultancy_id === 'C1', 'Anu submits Task 2 essay graded server-side and saved under Agency One');
+
+    const subId = r.body.submission.id;
+    r = await call(studentApi, { query: { action: 'crm-essays', consultancyId: 'C1' }, headers: tok(c1Token) });
+    ok(r.code === 200 && r.body.submissions.length === 1 && r.body.submissions[0].id === subId, 'Agency One sees Anu essay submission in CRM');
+    r = await call(studentApi, { query: { action: 'crm-essays', consultancyId: 'C1' }, headers: tok(c2Token) });
+    ok(r.code === 200 && r.body.submissions.length === 0, 'Another consultancy cannot read Agency One student essays');
+    r = await call(studentApi, { method: 'POST', query: { action: 'essay-review' }, headers: tok(c2Token), body: { submissionId: subId, teacherBandOverride: 8.0, teacherNotes: 'hijack' } });
+    ok(r.code === 403, 'Another consultancy cannot review Agency One essay submission');
+    r = await call(studentApi, { method: 'POST', query: { action: 'essay-review' }, headers: tok(c1Token), body: { submissionId: subId, teacherBandOverride: 7.5, teacherNotes: 'Strong balance, expand body 1.' } });
+    ok(r.code === 200 && r.body.submission.teacherBandOverride === 7.5, 'Agency One can save teacher review and band override');
+
+    r = await call(studentApi, { query: { action: 'reports', studentId: 'st-1731742345123' }, headers: tok(tokA) });
+    ok(r.code === 200 && r.body.completedModules.length === 2 && r.body.targetTrack === '7.5' && r.body.writingSubmissions.length === 1 && r.body.writingSubmissions[0].teacherBandOverride === 7.5, 'Anu reads synced Skill Vault modules, track, essays, and teacher feedback on any device');
   } catch (e) {
     fail++; console.log('  FAIL  test crashed: ' + (e && e.stack || e));
   }

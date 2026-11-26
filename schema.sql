@@ -50,6 +50,8 @@ CREATE TABLE IF NOT EXISTS students (
   next_follow_up DATE,               -- when the consultancy should next contact this student
   activity_log JSONB DEFAULT '[]'::jsonb, -- dated CRM entries: [{ date, type: 'note'|'stage'|'followup', text }]
   notes TEXT,                        -- free-form academic notes from the CRM profile
+  completed_modules JSONB DEFAULT '[]'::jsonb,
+  target_track TEXT DEFAULT '7.0',
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
@@ -59,6 +61,8 @@ CREATE TABLE IF NOT EXISTS students (
 -- ALTER TABLE students ADD COLUMN IF NOT EXISTS access_level TEXT DEFAULT 'full';
 -- ALTER TABLE students ADD COLUMN IF NOT EXISTS auth_user_id UUID REFERENCES auth.users(id);
 -- ALTER TABLE students ALTER COLUMN access_expires_at DROP NOT NULL;
+-- ALTER TABLE students ADD COLUMN IF NOT EXISTS completed_modules JSONB DEFAULT '[]'::jsonb;
+-- ALTER TABLE students ADD COLUMN IF NOT EXISTS target_track TEXT DEFAULT '7.0';
 
 -- 3. Mock Test History Table (Reading / Listening / Writing scores and essays)
 CREATE TABLE IF NOT EXISTS mock_history (
@@ -152,3 +156,19 @@ CREATE TABLE IF NOT EXISTS orders (
 -- ALTER TABLE orders ADD COLUMN IF NOT EXISTS gateway_ref TEXT;
 -- ALTER TABLE orders ADD COLUMN IF NOT EXISTS reference_id TEXT;
 -- ALTER TABLE orders ADD COLUMN IF NOT EXISTS payer_phone TEXT;
+
+-- 6. Standalone Task 2 Writing Practice Submissions
+CREATE TABLE IF NOT EXISTS writing_practice_submissions (
+  id TEXT PRIMARY KEY,
+  student_id UUID REFERENCES students(id) ON DELETE CASCADE,
+  student_name TEXT,
+  consultancy_id UUID REFERENCES consultancies(id) ON DELETE CASCADE,
+  prompt_id INT NOT NULL,
+  prompt_text TEXT,
+  essay_text TEXT NOT NULL,
+  evaluation JSONB NOT NULL,
+  teacher_notes TEXT DEFAULT '',
+  teacher_band_override NUMERIC(2,1),
+  submitted_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);

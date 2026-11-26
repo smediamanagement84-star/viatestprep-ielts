@@ -40,6 +40,8 @@ CREATE TABLE IF NOT EXISTS students (
   tuition_status TEXT DEFAULT 'Pending',
   tuition_method TEXT,
   tuition_date DATE,
+  completed_modules JSONB DEFAULT '[]'::jsonb,
+  target_track TEXT DEFAULT '7.0',
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
@@ -56,6 +58,8 @@ ALTER TABLE students ADD COLUMN IF NOT EXISTS tuition_fee INT;
 ALTER TABLE students ADD COLUMN IF NOT EXISTS tuition_status TEXT DEFAULT 'Pending';
 ALTER TABLE students ADD COLUMN IF NOT EXISTS tuition_method TEXT;
 ALTER TABLE students ADD COLUMN IF NOT EXISTS tuition_date DATE;
+ALTER TABLE students ADD COLUMN IF NOT EXISTS completed_modules JSONB DEFAULT '[]'::jsonb;
+ALTER TABLE students ADD COLUMN IF NOT EXISTS target_track TEXT DEFAULT '7.0';
 
 -- 3. MOCK TEST HISTORY TABLE
 CREATE TABLE IF NOT EXISTS mock_history (
@@ -161,12 +165,30 @@ CREATE TABLE IF NOT EXISTS system_notifications (
   read_at TIMESTAMPTZ
 );
 
--- 8. PERFORMANCE INDEXES FOR PRODUCTION QUERY SPEED
+-- 8. STANDALONE TASK 2 WRITING PRACTICE SUBMISSIONS
+CREATE TABLE IF NOT EXISTS writing_practice_submissions (
+  id TEXT PRIMARY KEY,
+  student_id UUID REFERENCES students(id) ON DELETE CASCADE,
+  student_name TEXT,
+  consultancy_id UUID REFERENCES consultancies(id) ON DELETE CASCADE,
+  prompt_id INT NOT NULL,
+  prompt_text TEXT,
+  essay_text TEXT NOT NULL,
+  evaluation JSONB NOT NULL,
+  teacher_notes TEXT DEFAULT '',
+  teacher_band_override NUMERIC(2,1),
+  submitted_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- 9. PERFORMANCE INDEXES FOR PRODUCTION QUERY SPEED
 CREATE INDEX IF NOT EXISTS idx_students_consultancy ON students(consultancy_id);
 CREATE INDEX IF NOT EXISTS idx_students_email ON students(email);
 CREATE INDEX IF NOT EXISTS idx_mock_history_student ON mock_history(student_id);
 CREATE INDEX IF NOT EXISTS idx_error_reports_consultancy ON error_reports(consultancy_id);
 CREATE INDEX IF NOT EXISTS idx_dev_notifications_status ON system_notifications(dev_status);
+CREATE INDEX IF NOT EXISTS idx_writing_practice_student ON writing_practice_submissions(student_id);
+CREATE INDEX IF NOT EXISTS idx_writing_practice_consultancy ON writing_practice_submissions(consultancy_id);
 
--- 9. DATA MIGRATION CLEANUP
+-- 10. DATA MIGRATION CLEANUP
 UPDATE students SET stage = 'Completed' WHERE status = 'Completed' AND stage = 'Enrolled';

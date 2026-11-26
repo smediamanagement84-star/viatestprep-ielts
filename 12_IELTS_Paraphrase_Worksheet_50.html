@@ -1054,8 +1054,8 @@ render('all');
       const qnum = (document.getElementById('erm-qnum').value || '').trim();
       if (!typeVal) { vtpToast('Please select an error type.', 'warning'); return; }
       if (!desc) { vtpToast('Please describe the issue.', 'warning'); return; }
-      const studentId = localStorage.getItem('viatestprep_student_id') || 'demo_student';
-      const studentName = localStorage.getItem('viatestprep_student_name') || 'Student';
+      const studentId = localStorage.getItem('viatestprep_active_student_id') || localStorage.getItem('viatestprep_student_id') || 'demo_student';
+      const studentName = localStorage.getItem('viatestprep_active_student_name') || localStorage.getItem('viatestprep_student_name') || 'Student';
       const consultancyId = localStorage.getItem('viatestprep_consultancy_id') || 'default';
       const report = {
         id: 'rpt_' + Date.now(),
@@ -1070,6 +1070,16 @@ render('all');
       try { reports = JSON.parse(localStorage.getItem('viatestprep_error_reports') || '[]'); } catch(e){}
       reports.unshift(report);
       localStorage.setItem('viatestprep_error_reports', JSON.stringify(reports));
+
+      try {
+        const headers = { 'Content-Type': 'application/json' };
+        const st = localStorage.getItem('viatestprep_session_token');
+        const ok = localStorage.getItem('viatestprep_owner_key');
+        if (st) headers['X-Session-Token'] = st;
+        if (ok) headers['X-Owner-Key'] = ok;
+        fetch('/api/reports', { method: 'POST', headers, body: JSON.stringify(report) }).catch(() => {});
+      } catch (e) {}
+
       closeErrorReportModal();
       vtpToast('🚩 Error report submitted! Your teacher will review and fix this issue.', 'success');
     }

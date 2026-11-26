@@ -89,9 +89,14 @@ async function restRequestAsUser(table, accessToken, { method = 'GET', query = '
 // actionable message instead of a generic "something went wrong" - this is
 // purely an operational hint (which migration to run), not sensitive, so
 // it's safe to send to the client rather than only logging it server-side.
+function isMissingTableError(err) {
+  const msg = String((err && err.message) || err);
+  return msg.includes('42P01') || msg.includes('PGRST205') || /relation .* does not exist/i.test(msg) || /Could not find the table/i.test(msg);
+}
+
 function friendlyDbError(err) {
   const msg = String((err && err.message) || err);
-  if (msg.includes('42703') || /column .* does not exist/i.test(msg)) {
+  if (msg.includes('42703') || /column .* does not exist/i.test(msg) || isMissingTableError(err)) {
     return 'Database schema is out of date - run run-this-migration.sql in your Supabase SQL Editor (see the repo root), then try again.';
   }
   return null;
@@ -410,12 +415,76 @@ async function updateWritingGradeAdmin(studentId, testName, fields) {
   return rows[0];
 }
 
+async function getWritingPracticeByStudentId(studentId) {
+  try {
+    return await restRequest('writing_practice_submissions', {
+      method: 'GET',
+      query: `?student_id=eq.${encodeURIComponent(studentId)}&order=submitted_at.desc`,
+    });
+  } catch (err) {
+    if (isMissingTableError(err)) return [];
+    throw err;
+  }
+}
+
+async function listWritingPracticeByConsultancy(consultancyId) {
+  try {
+    return await restRequest('writing_practice_submissions', {
+      method: 'GET',
+      query: `?consultancy_id=eq.${encodeURIComponent(consultancyId)}&order=submitted_at.desc`,
+    });
+  } catch (err) {
+    if (isMissingTableError(err)) return [];
+    throw err;
+  }
+}
+
+async function listAllWritingPractice() {
+  try {
+    return await restRequest('writing_practice_submissions', {
+      method: 'GET',
+      query: '?order=submitted_at.desc',
+    });
+  } catch (err) {
+    if (isMissingTableError(err)) return [];
+    throw err;
+  }
+}
+
+async function getWritingPracticeById(id) {
+  const rows = await restRequest('writing_practice_submissions', {
+    method: 'GET',
+    query: `?id=eq.${encodeURIComponent(id)}&limit=1`,
+  });
+  return rows[0] || null;
+}
+
+async function upsertWritingPracticeSubmission(sub) {
+  const rows = await restRequest('writing_practice_submissions', {
+    method: 'POST',
+    headers: { Prefer: 'resolution=merge-duplicates,return=representation' },
+    query: '?on_conflict=id',
+    body: sub,
+  });
+  return rows[0];
+}
+
+async function updateWritingPracticeReview(id, fields) {
+  const rows = await restRequest('writing_practice_submissions', {
+    method: 'PATCH',
+    query: `?id=eq.${encodeURIComponent(id)}`,
+    body: { ...fields, updated_at: new Date().toISOString() },
+  });
+  return rows[0] || null;
+}
+
 module.exports = {
   // Exported because api/reports.js, api/dev-notifications.js and api/keepalive.js
   // import it - it was missing, so those endpoints failed on every call.
   restRequest,
   restRequestAsUser,
   hasServiceRoleKey,
+  isMissingTableError,
   insertOrder,
   getOrderByTransactionUuid,
   getOrderById,
@@ -444,4 +513,10 @@ module.exports = {
   deleteStudentAdmin,
   insertSpeakingGradeAdmin,
   updateWritingGradeAdmin,
+  getWritingPracticeByStudentId,
+  listWritingPracticeByConsultancy,
+  listAllWritingPractice,
+  getWritingPracticeById,
+  upsertWritingPracticeSubmission,
+  updateWritingPracticeReview,
 };

@@ -95,3 +95,19 @@ CREATE POLICY "scoped to owning student's consultancy" ON speaking_grades
       )
     )
   );
+
+ALTER TABLE writing_practice_submissions ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "scoped writing practice reads" ON writing_practice_submissions
+  FOR SELECT USING (
+    student_id IN (
+      SELECT id FROM students WHERE consultancy_id IN (
+        SELECT id FROM consultancies WHERE owner_user_id = auth.uid()
+      ) OR auth_user_id = auth.uid()
+    )
+  );
+CREATE POLICY "consultancy updates own student writing practice" ON writing_practice_submissions
+  FOR UPDATE USING (
+    consultancy_id IN (
+      SELECT id FROM consultancies WHERE owner_user_id = auth.uid()
+    )
+  );

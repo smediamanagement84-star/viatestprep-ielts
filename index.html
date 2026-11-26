@@ -1189,7 +1189,7 @@
           <span class="s-tab-icon text-base">📚</span><span class="s-tab-label">Skill Vault</span>
         </button>
         <button onclick="switchStudentTab('writing')" id="s-tab-writing" class="w-full text-left px-4 py-3 rounded-xl text-xs font-bold text-[#4B5563] hover:bg-[#FEFCE8] hover:text-[#111827] transition flex items-center gap-2.5">
-          <span class="s-tab-icon text-base">✍️</span><span class="s-tab-label">Writing</span>
+          <span class="s-tab-icon text-base">✍️</span><span class="s-tab-label">Essay 7+</span>
         </button>
         <button onclick="switchStudentTab('mocks')" id="s-tab-mocks" class="w-full text-left px-4 py-3 rounded-xl text-xs font-bold text-[#4B5563] hover:bg-[#FEFCE8] hover:text-[#111827] transition flex items-center gap-2.5">
           <span class="s-tab-icon text-base">⏱️</span><span class="s-tab-label">Mock Exams</span>
@@ -1494,9 +1494,9 @@
           <!-- Header Banner -->
           <div class="bg-white border border-[#E5E7EB] rounded-3xl p-6 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-black uppercase bg-[#FEF9C3] text-[#854D0E] border border-[#FDE047]">✍️ IELTS Writing Practice</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-black uppercase bg-[#FEF9C3] text-[#854D0E] border border-[#FDE047]">✍️ IELTS Essay 7+</span>
               <h2 class="text-2xl font-extrabold text-[#111827] mt-2">50 Real Task 2 Essay Prompts</h2>
-              <p class="text-xs sm:text-sm text-[#6B7280] mt-1">Select an essay prompt, write your 250+ word response, and click Submit for real-time 4-pillar IELTS Band evaluation stored to your cloud profile.</p>
+              <p class="text-xs sm:text-sm text-[#6B7280] mt-1">Select a Task 2 essay prompt, write your 250+ word response, and click Submit for real-time 4-pillar IELTS Band evaluation stored to your cloud profile. Task 1 Report Writing is covered in Mock Exams &amp; Skill Vault.</p>
             </div>
             <!-- Stats Badge Strip -->
             <div class="vtp-writing-stats flex items-center gap-3 bg-[#FEFCE8] border border-[#FDE047] p-3.5 rounded-2xl shrink-0">
@@ -1691,7 +1691,7 @@
       <aside class="w-full md:w-64 bg-white border-b md:border-r border-[#E5E7EB] p-4 flex flex-col gap-1 shrink-0">
         <span class="text-[9px] font-black uppercase tracking-widest text-[#9CA3AF] px-2 mb-1">Workspace</span>
         <button onclick="switchCRMTab('crm')" id="c-tab-crm" class="crm-nav-btn active-tab"><span class="crm-nav-icon">👥</span>CRM Student Roster</button>
-        <button onclick="switchCRMTab('writing')" id="c-tab-writing" class="crm-nav-btn"><span class="crm-nav-icon">✍️</span>Writing Practice</button>
+        <button onclick="switchCRMTab('writing')" id="c-tab-writing" class="crm-nav-btn"><span class="crm-nav-icon">✍️</span>Essay 7+ Review</button>
         <button onclick="switchCRMTab('grader')" id="c-tab-grader" class="crm-nav-btn"><span class="crm-nav-icon">🎤</span>Live Speaking Grader</button>
         <button onclick="switchCRMTab('vault')" id="c-tab-vault" class="crm-nav-btn"><span class="crm-nav-icon">📦</span>Material Vault</button>
         <button onclick="switchCRMTab('mocks')" id="c-tab-mocks" class="crm-nav-btn"><span class="crm-nav-icon">⏱️</span>Mock Test Center</button>
@@ -1963,7 +1963,7 @@
           <!-- Header Banner -->
           <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div>
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase bg-[#FEF9C3] text-[#854D0E] border border-[#FDE047]">✍️ Student Writing Practice Roster</span>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase bg-[#FEF9C3] text-[#854D0E] border border-[#FDE047]">✍️ Student Essay 7+ Roster</span>
               <h3 class="text-xl font-extrabold text-[#111827] mt-1.5">Review Student Essays &amp; Automated IELTS Band Scores</h3>
               <p class="text-xs text-[#6B7280]">Inspect full Task 2 essay submissions from consultancy students, review TR/CC/LR/GRA breakdown, and issue teacher feedback &amp; grade overrides.</p>
             </div>
@@ -3597,6 +3597,7 @@
           localStorage.setItem('viatestprep_students', JSON.stringify(crmStudents));
           renderCRMTable();
           populateCRMGraderSelect();
+          if (typeof syncCRMWritingFromCloud === 'function') syncCRMWritingFromCloud();
         }
       } catch (e) {
         console.error(e);
@@ -3878,6 +3879,13 @@
         localStorage.setItem('viatestprep_active_student_id', student.id);
         localStorage.setItem('viatestprep_active_student_name', student.name || '');
         localStorage.setItem('viatestprep_active_student_expires_at', student.accessExpiresAt || '');
+        if (Array.isArray(student.completedModules)) {
+          hydrateCompletedModulesCache(student.completedModules);
+        }
+        if (student.targetTrack) {
+          studentTrack = student.targetTrack;
+          localStorage.setItem('viatestprep_target_track', student.targetTrack);
+        }
         storeSessionToken(student.sessionToken);
         
         window.history.replaceState({}, document.title, window.location.pathname);
@@ -4450,6 +4458,13 @@
         // must come from the server, not just default to full every time.
         localStorage.setItem('viatestprep_student_access', regData.accessLevel === 'mocks' ? 'mocks' : 'full');
         localStorage.setItem('viatestprep_active_student_expires_at', regData.accessExpiresAt || '');
+        if (Array.isArray(regData.completedModules)) {
+          hydrateCompletedModulesCache(regData.completedModules);
+        }
+        if (regData.targetTrack) {
+          studentTrack = regData.targetTrack;
+          localStorage.setItem('viatestprep_target_track', regData.targetTrack);
+        }
         storeSessionToken(regData.sessionToken);
       } else {
         // Never leave a previous person's student id behind.
@@ -4994,6 +5009,82 @@
       }
 
       checkStudentPaywall();
+      syncStudentCloudProgress();
+    }
+
+    function hydrateCompletedModulesCache(cloudModules) {
+      if (!Array.isArray(cloudModules)) return;
+      const toRemove = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k && k.startsWith('viatestprep_completed_')) toRemove.push(k);
+      }
+      toRemove.forEach(k => localStorage.removeItem(k));
+      cloudModules.forEach(file => localStorage.setItem('viatestprep_completed_' + file, 'true'));
+      completedModules = [...cloudModules];
+    }
+
+    function mergeWritingSubmissionsCache(cloudSubs) {
+      if (!Array.isArray(cloudSubs) || cloudSubs.length === 0) return;
+      const localSubs = getAllWritingSubmissions();
+      const map = new Map();
+      localSubs.forEach(s => map.set(`${s.studentId}_${s.promptId}`, s));
+      cloudSubs.forEach(s => map.set(`${s.studentId}_${s.promptId}`, s));
+      const merged = Array.from(map.values()).sort((a, b) => new Date(b.submittedAt || 0) - new Date(a.submittedAt || 0));
+      localStorage.setItem('viatestprep_writing_submissions', JSON.stringify(merged));
+    }
+
+    let _studentCloudSyncPending = false;
+    async function syncStudentCloudProgress() {
+      const activeId = (localStorage.getItem('viatestprep_active_student_id') || '').trim();
+      const sessionToken = localStorage.getItem('viatestprep_session_token');
+      if (!activeId || activeId === 'demo-bypass-student-id' || activeId === 'demo_student' || !sessionToken || _studentCloudSyncPending) return;
+      _studentCloudSyncPending = true;
+      try {
+        const res = await fetch('/api/student?action=reports&studentId=' + encodeURIComponent(activeId), { headers: apiAuthHeaders() });
+        const data = await res.json();
+        if (!res.ok || !data || !data.ok || data.previewMode) return;
+        if (Array.isArray(data.completedModules)) {
+          hydrateCompletedModulesCache(data.completedModules);
+        }
+        if (data.targetTrack && data.targetTrack !== studentTrack) {
+          studentTrack = data.targetTrack;
+          localStorage.setItem('viatestprep_target_track', data.targetTrack);
+          document.querySelectorAll('#studentTrackOptions button').forEach(b => {
+            b.className = "px-3.5 py-2 bg-[#FAFAFA] hover:bg-[#FEF9C3] border border-[#E5E7EB] text-xs font-bold rounded-xl text-[#374151] transition";
+          });
+          const btn = document.getElementById('st-opt-' + studentTrack.replace('.', ''));
+          if (btn) btn.className = "px-3.5 py-2 bg-[#FACC15] text-[#111827] border border-[#EAB308] text-xs font-extrabold rounded-xl transition shadow-xs";
+        }
+        renderStudentModules();
+        if (Array.isArray(data.writingSubmissions)) {
+          mergeWritingSubmissionsCache(data.writingSubmissions);
+          if (typeof renderStudentWritingPractice === 'function') renderStudentWritingPractice();
+        }
+      } catch (e) {
+        console.warn('Cloud progress sync skipped:', e);
+      } finally {
+        _studentCloudSyncPending = false;
+      }
+    }
+
+    async function syncStudentProgressToCloud() {
+      const activeId = (localStorage.getItem('viatestprep_active_student_id') || '').trim();
+      const sessionToken = localStorage.getItem('viatestprep_session_token');
+      if (!activeId || activeId === 'demo-bypass-student-id' || activeId === 'demo_student' || !sessionToken) return;
+      try {
+        await fetch('/api/student?action=progress', {
+          method: 'POST',
+          headers: apiAuthHeaders({ 'Content-Type': 'application/json' }),
+          body: JSON.stringify({
+            studentId: activeId,
+            completedModules,
+            targetTrack: studentTrack,
+          }),
+        });
+      } catch (e) {
+        console.warn('Could not sync study progress to cloud:', e);
+      }
     }
 
     let paywallManualGateway = 'esewa';
@@ -5177,6 +5268,7 @@
       }
 
       renderStudentModules();
+      syncStudentProgressToCloud();
     }
 
     function filterVaultTag(tag) {
@@ -5297,18 +5389,17 @@
     function toggleStudentModuleComplete(file, button) {
       const key = 'viatestprep_completed_' + file;
       const isCurrentlyCompleted = localStorage.getItem(key) === 'true';
-      
+
       if (isCurrentlyCompleted) {
         localStorage.setItem(key, 'false');
-        button.textContent = 'Complete';
-        button.className = "px-2.5 py-1 text-[10px] font-bold border rounded-lg transition bg-[#F8FAFC] text-[#475569] border-[#E2E8F0]";
+        completedModules = completedModules.filter(f => f !== file);
       } else {
         localStorage.setItem(key, 'true');
-        button.textContent = '✓ Done';
-        button.className = "px-2.5 py-1 text-[10px] font-bold border rounded-lg transition bg-emerald-50 text-emerald-700 border-emerald-200";
+        if (!completedModules.includes(file)) completedModules.push(file);
       }
 
-      initStudentPortal();
+      renderStudentModules();
+      syncStudentProgressToCloud();
     }
 
     // Tab 2 Mocks
@@ -6379,7 +6470,10 @@
       if (tabBtn) tabBtn.classList.add('active-tab');
 
       currentCRMTab = tabId;
-      if (tabId === 'writing') renderCRMWritingPracticeView();
+      if (tabId === 'writing') {
+        renderCRMWritingPracticeView();
+        if (typeof syncCRMWritingFromCloud === 'function') syncCRMWritingFromCloud();
+      }
       if (tabId === 'billing') {
         renderCRMBillingView();
         loadPendingPayments();
@@ -9053,7 +9147,7 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
             <div class="pt-3 border-t border-[#E5E7EB] flex items-center justify-between">
               <div class="flex items-center gap-2">
                 <span class="text-[11px] font-semibold text-[#6B7280]">Target: 250+ Words</span>
-                <button onclick="openErrorReportModal('Writing Practice', 'Q${p.id}: ${escapeHtml(p.prompt.substring(0, 40))}...', 'Q${p.id}')" class="text-[10px] font-bold text-[#9CA3AF] hover:text-rose-600 flex items-center gap-0.5 transition" title="Report issue with prompt">🚩</button>
+                <button onclick="openErrorReportModal('Essay 7+', 'Q${p.id}: ${escapeHtml(p.prompt.substring(0, 40))}...', 'Q${p.id}')" class="text-[10px] font-bold text-[#9CA3AF] hover:text-rose-600 flex items-center gap-0.5 transition" title="Report issue with prompt">🚩</button>
               </div>
               <button onclick="openStudentEssayModal(${p.id})" class="px-4 py-2 ${hasPast ? 'bg-[#FEFCE8] text-[#854D0E] border border-[#FDE047] hover:bg-[#FEF9C3]' : 'bg-[#FACC15] text-[#111827] hover:bg-[#EAB308]'} font-extrabold text-xs rounded-xl transition">
                 ${hasPast ? '✏️ Rewrite Essay' : '✍️ Write Essay'}
@@ -9288,49 +9382,81 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
       const prevBtnHtml = submitBtn ? submitBtn.innerHTML : '';
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = '<span>⏳</span> Grading essay...';
+        submitBtn.innerHTML = '<span>⏳</span> Grading &amp; saving...';
       }
 
+      const studentId = localStorage.getItem('viatestprep_active_student_id') || localStorage.getItem('viatestprep_student_id') || 'demo_student';
+      const studentName = localStorage.getItem('viatestprep_active_student_name') || localStorage.getItem('viatestprep_student_name') || 'Current Student';
+      const consultancyId = localStorage.getItem('viatestprep_consultancy_id') || 'default_consultancy';
+
       let ev = null;
+      let serverSubmission = null;
+      let persistedToCloud = false;
+
       try {
-        const res = await fetch('/api/writing/grade', {
+        // Primary: grade server-side and persist directly to Supabase writing_practice_submissions
+        const res = await fetch('/api/student?action=essay', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: apiAuthHeaders({ 'Content-Type': 'application/json' }),
           body: JSON.stringify({
-            writingTask2: text,
-            task2Prompt: p.prompt,
-            task2Type: p.type || p.category
+            studentId,
+            promptId: p.id,
+            promptText: p.prompt,
+            promptType: p.type || p.category,
+            essayText: text,
           })
         });
         const data = await res.json();
-        if (res.ok && data && data.ok && data.graded && data.graded.task2) {
-          const t2 = data.graded.task2;
-          const allNotes = Object.values(t2.notes || {}).flat();
-          const suggestions = Array.isArray(t2.suggestions) ? t2.suggestions : [];
-          const strengths = Array.isArray(t2.strengths) ? t2.strengths : [];
-          const mergedTips = [...allNotes];
-          suggestions.forEach(s => { if (!mergedTips.includes(s)) mergedTips.push(s); });
-          ev = {
-            isValid: true,
-            overallBand: t2.band,
-            scores: {
-              tr: t2.criteria.taskAchievement,
-              cc: t2.criteria.coherenceCohesion,
-              lr: t2.criteria.lexicalResource,
-              gra: t2.criteria.grammaticalRange,
-            },
-            strengths,
-            feedback: mergedTips,
-            stats: t2.stats || null,
-          };
+        if (res.ok && data && data.ok && data.submission && data.submission.evaluation) {
+          serverSubmission = data.submission;
+          ev = data.submission.evaluation;
+          persistedToCloud = !!data.persisted;
         }
       } catch (err) {
-        console.warn('Server writing grader unreachable, falling back locally:', err);
-      } finally {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = prevBtnHtml;
+        console.warn('Cloud essay sync unreachable, trying stateless grader:', err);
+      }
+
+      if (!ev) {
+        try {
+          const res = await fetch('/api/writing/grade', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              writingTask2: text,
+              task2Prompt: p.prompt,
+              task2Type: p.type || p.category
+            })
+          });
+          const data = await res.json();
+          if (res.ok && data && data.ok && data.graded && data.graded.task2) {
+            const t2 = data.graded.task2;
+            const allNotes = Object.values(t2.notes || {}).flat();
+            const suggestions = Array.isArray(t2.suggestions) ? t2.suggestions : [];
+            const strengths = Array.isArray(t2.strengths) ? t2.strengths : [];
+            const mergedTips = [...allNotes];
+            suggestions.forEach(s => { if (!mergedTips.includes(s)) mergedTips.push(s); });
+            ev = {
+              isValid: true,
+              overallBand: t2.band,
+              scores: {
+                tr: t2.criteria.taskAchievement,
+                cc: t2.criteria.coherenceCohesion,
+                lr: t2.criteria.lexicalResource,
+                gra: t2.criteria.grammaticalRange,
+              },
+              strengths,
+              feedback: mergedTips,
+              stats: t2.stats || null,
+            };
+          }
+        } catch (err2) {
+          console.warn('Stateless grader unreachable, falling back locally:', err2);
         }
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = prevBtnHtml;
       }
 
       if (!ev) {
@@ -9341,11 +9467,7 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
         }
       }
 
-      const studentId = localStorage.getItem('viatestprep_active_student_id') || localStorage.getItem('viatestprep_student_id') || 'demo_student';
-      const studentName = localStorage.getItem('viatestprep_student_name') || 'Current Student';
-      const consultancyId = localStorage.getItem('viatestprep_consultancy_id') || 'default_consultancy';
-
-      const submission = {
+      const submission = serverSubmission || {
         id: 'sub_' + Date.now(),
         studentId,
         studentName,
@@ -9359,9 +9481,9 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
         submittedAt: new Date().toISOString()
       };
 
-      // Save locally
+      // Update local write-through cache
       const existing = getAllWritingSubmissions();
-      const idx = existing.findIndex(s => s.promptId === p.id && s.studentId === studentId);
+      const idx = existing.findIndex(s => s.promptId === p.id && s.studentId === submission.studentId);
       if (idx >= 0) {
         existing[idx] = submission;
       } else {
@@ -9393,7 +9515,7 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
               <span class="text-[10px] font-bold text-emerald-700 uppercase tracking-wider">Automated IELTS Evaluation</span>
               <h4 class="text-xl font-black text-emerald-900 tabular-nums">Overall Score: Band ${ev.overallBand.toFixed(1)}</h4>
             </div>
-            <span class="px-3 py-1 bg-emerald-600 text-white font-extrabold text-xs rounded-xl shadow-xs">✓ Graded</span>
+            <span class="px-3 py-1 bg-emerald-600 text-white font-extrabold text-xs rounded-xl shadow-xs">${persistedToCloud ? '✓ Saved to Cloud' : '✓ Graded'}</span>
           </div>
           <div class="grid grid-cols-4 gap-2 text-center text-xs font-mono tabular-nums">
             <div class="p-2 bg-emerald-50 rounded-xl border border-emerald-200">
@@ -9536,7 +9658,24 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
       }).join('');
     }
 
-    function saveTeacherWritingReview(subId) {
+    async function syncCRMWritingFromCloud() {
+      const consultancyId = localStorage.getItem('viatestprep_consultancy_id');
+      if (!consultancyId) return;
+      try {
+        const res = await fetch('/api/student?action=crm-essays&consultancyId=' + encodeURIComponent(consultancyId), { headers: apiAuthHeaders() });
+        const data = await res.json();
+        if (res.ok && data && data.ok && Array.isArray(data.submissions)) {
+          mergeWritingSubmissionsCache(data.submissions);
+          if (currentCRMTab === 'writing' || window.currentCRMTab === 'writing') {
+            renderCRMWritingPracticeView();
+          }
+        }
+      } catch (e) {
+        console.warn('Could not sync CRM writing practice from cloud:', e);
+      }
+    }
+
+    async function saveTeacherWritingReview(subId) {
       const submissions = getAllWritingSubmissions();
       const sub = submissions.find(s => s.id === subId);
       if (!sub) return;
@@ -9549,20 +9688,18 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
 
       localStorage.setItem('viatestprep_writing_submissions', JSON.stringify(submissions));
 
-      // Sync to Supabase
-      if (typeof supabaseClient !== 'undefined' && sub.studentId) {
-        supabaseClient.from('students').select('activity_log').eq('id', sub.studentId).single().then(({ data }) => {
-          if (data && Array.isArray(data.activity_log)) {
-            const logs = data.activity_log.map(l => {
-              if (l.submission && l.submission.id === subId) {
-                l.submission.teacherBandOverride = sub.teacherBandOverride;
-                l.submission.teacherNotes = sub.teacherNotes;
-              }
-              return l;
-            });
-            supabaseClient.from('students').update({ activity_log: logs }).eq('id', sub.studentId).then();
-          }
+      try {
+        await fetch('/api/student?action=essay-review', {
+          method: 'POST',
+          headers: apiAuthHeaders({ 'Content-Type': 'application/json' }),
+          body: JSON.stringify({
+            submissionId: subId,
+            teacherBandOverride: sub.teacherBandOverride,
+            teacherNotes: sub.teacherNotes,
+          }),
         });
+      } catch (e) {
+        console.warn('Could not sync teacher review to cloud:', e);
       }
 
       vtpToast('Teacher feedback & score saved ✓', 'success');
@@ -9940,8 +10077,8 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
       if (!typeVal) { vtpToast('Please select an error type.', 'warning'); return; }
       if (!desc) { vtpToast('Please describe the issue.', 'warning'); return; }
 
-      const studentId   = localStorage.getItem('viatestprep_student_id')   || 'demo_student';
-      const studentName = localStorage.getItem('viatestprep_student_name')  || 'Student';
+      const studentId   = localStorage.getItem('viatestprep_active_student_id') || localStorage.getItem('viatestprep_student_id') || 'demo_student';
+      const studentName = localStorage.getItem('viatestprep_active_student_name') || localStorage.getItem('viatestprep_student_name') || 'Student';
       const consultancyId = localStorage.getItem('viatestprep_consultancy_id') || 'default';
       const devWebhookUrl = localStorage.getItem('viatestprep_dev_webhook') || '';
 
@@ -9968,7 +10105,7 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
       reports.unshift(reportPayload);
       saveAllErrorReports(reports);
 
-      // POST to Commercial Backend API /api/reports
+      // POST to Backend API /api/reports (persists to Supabase via service role)
       try {
         fetch('/api/reports', {
           method: 'POST',
@@ -9976,17 +10113,6 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
           body: JSON.stringify(reportPayload)
         }).catch(err => console.log('Backend API sync pending: ', err));
       } catch (e) {}
-
-      // Supabase direct sync backup
-      if (typeof supabaseClient !== 'undefined' && studentId !== 'demo_student') {
-        supabaseClient.from('students')
-          .select('activity_log').eq('id', studentId).single()
-          .then(({ data }) => {
-            let logs = data && Array.isArray(data.activity_log) ? data.activity_log : [];
-            logs.unshift({ type: 'error_report', report: reportPayload, timestamp: new Date().toISOString() });
-            supabaseClient.from('students').update({ activity_log: logs }).eq('id', studentId).then();
-          });
-      }
 
       closeErrorReportModal();
 
@@ -10196,7 +10322,10 @@ In conclusion, while people move to big cities to secure better jobs and enjoy m
       const tabBtn = document.getElementById('c-tab-' + tabId);
       if (tabBtn) tabBtn.classList.add('active-tab');
       window.currentCRMTab = tabId;
-      if (tabId === 'writing') renderCRMWritingPracticeView();
+      if (tabId === 'writing') {
+        renderCRMWritingPracticeView();
+        if (typeof syncCRMWritingFromCloud === 'function') syncCRMWritingFromCloud();
+      }
       if (tabId === 'billing') { renderCRMBillingView(); loadPendingPayments(); }
       if (tabId === 'mocks') renderCRMMockExams();
       if (tabId === 'reports') renderCRMErrorReports();

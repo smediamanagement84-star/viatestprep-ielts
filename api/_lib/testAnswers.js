@@ -61,35 +61,35 @@ const TEST_ANSWERS = {
    },
    "14": {
     "answer": "B",
-    "explanation": "The text confirms this: \"How managing low-quality wood (also known as low-use wood) for bioenergy can encourage sustainable forest management A Atree's 'value' depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest.\""
+    "explanation": "Paragraph B states: \"The norm was to remove the stems of highest quality and leave behind poorly formed trees that were not as well suited to the site where they grew.\" This practice left stands \"more vulnerable to poor weather and disease.\""
    },
    "15": {
     "answer": "A",
-    "explanation": "The text confirms this: \"How managing low-quality wood (also known as low-use wood) for bioenergy can encourage sustainable forest management A Atree's 'value' depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest.\""
+    "explanation": "Paragraph A states: \"A tree's 'value' depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest.\""
    },
    "16": {
     "answer": "C",
-    "explanation": "The text confirms this: \"How managing low-quality wood (also known as low-use wood) for bioenergy can encourage sustainable forest management A Atree's 'value' depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest.\""
+    "explanation": "Paragraph C states: \"Wood can also be gasified for electrical generation and can even be made into liquid fuels like ethanol and gasoline for lorries and cars.\""
    },
    "17": {
     "answer": "E",
-    "explanation": "The text confirms this: \"How managing low-quality wood (also known as low-use wood) for bioenergy can encourage sustainable forest management A Atree's 'value' depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest.\""
+    "explanation": "Paragraph E states: \"With the many pests and pathogens visiting forests including hemlock wooly adelgid, Asian longhorned beetle, emerald ash borer, and gypsy moth, to name just a few\""
    },
    "18": {
     "answer": "B",
-    "explanation": "The text confirms this: \"How managing low-quality wood (also known as low-use wood) for bioenergy can encourage sustainable forest management A Atree's 'value' depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest.\""
+    "explanation": "Paragraph B states: \"This practice, called 'high-grading', has left a legacy of 'low-use wood' in the forests. Some people even call these 'junk trees', and they are abundant in Pennsylvania.\""
    },
    "19": {
     "answer": "B",
-    "explanation": "The text confirms this: \"How managing low-quality wood (also known as low-use wood) for bioenergy can encourage sustainable forest management A Atree's 'value' depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest.\""
+    "explanation": "Paragraph E explains that a Salvage Cut handles diseased/infested trees: \"These types of cut reduce the number of sick trees and seek to manage the future spread of a pest problem.\""
    },
    "20": {
     "answer": "C",
-    "explanation": "The text confirms this: \"How managing low-quality wood (also known as low-use wood) for bioenergy can encourage sustainable forest management A Atree's 'value' depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest.\""
+    "explanation": "Paragraph F explains that a Shelterwood Cut \"can also be used to develop a two-tier forest so that there are two harvests and the money that comes in is spread out over a decade or more.\""
    },
    "21": {
     "answer": "C",
-    "explanation": "The text confirms this: \"How managing low-quality wood (also known as low-use wood) for bioenergy can encourage sustainable forest management A Atree's 'value' depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest.\""
+    "explanation": "Paragraph F states that a Shelterwood Cut \"leaves a young forest where all trees are at a similar point in their growth.\""
    },
    "22": {
     "answer": "fire",
@@ -113,23 +113,23 @@ const TEST_ANSWERS = {
    },
    "27": {
     "answer": "C",
-    "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\""
+    "explanation": "Section C states: \"companies, governments and other players in space are collaborating in new ways to avoid a shared threat.\""
    },
    "28": {
     "answer": "F",
-    "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\""
+    "explanation": "Section F quotes Moriba Jah explaining his aim: \"I want to make space a place that is safe to operate, that is free and useful for generations to come.\""
    },
    "29": {
     "answer": "A",
-    "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\""
+    "explanation": "Section A describes the collision: \"a US commercial Iridium satellite smashed into an inactive Russian communications satellite called Cosmos-2251, creating thousands of new pieces of space shrapnel\"."
    },
    "30": {
     "answer": "E",
-    "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\""
+    "explanation": "Section E compares it to air traffic: \"The field is called space traffic management, because it's similar to managing traffic on the roads or in the air. Think about a busy day at an airport\"."
    },
    "31": {
     "answer": "B",
-    "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\""
+    "explanation": "Section B notes: \"Others are developing taxonomies of space debris — working on measuring properties such as the shape and size of an object\"."
    },
    "32": {
     "answer": "sustainability",
@@ -149,23 +149,23 @@ const TEST_ANSWERS = {
    },
    "36": {
     "answer": "C",
-    "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\""
+    "explanation": "Section D quotes Marlon Sorge: \"If you knew precisely where everything was, you would almost never have a problem,\" says Marlon Sorge."
    },
    "37": {
     "answer": "D",
-    "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\""
+    "explanation": "Section F quotes Moriba Jah: \"I want to make space a place that is safe to operate, that is free and useful for generations to come.\""
    },
    "38": {
     "answer": "B",
-    "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\""
+    "explanation": "Section C quotes Holger Krag: \"only about half of all missions have abided by this 25-year goal, says Holger Krag\"."
    },
    "39": {
     "answer": "D",
-    "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\""
+    "explanation": "Section F notes Moriba Jah's finding: \"the US and Russian sources contain two completely different orbits for the same object. Jah says that it is almost impossible to tell which is correct\"."
    },
    "40": {
     "answer": "A",
-    "explanation": "The text confirms this: \"Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet.\""
+    "explanation": "Section B quotes Carolin Frueh: \"If we go on like this, we will reach a point of no return,\" says Carolin Frueh."
    }
   },
   "listening": {
@@ -1365,55 +1365,55 @@ const TEST_ANSWERS = {
    },
    "14": {
     "answer": "D",
-    "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\""
+    "explanation": "Paragraph D states: \"When confronted over these raids, the Lukka issued a formal denial of involvement in piracy, insisting that they had merely been peaceful traders and merchants.\""
    },
    "15": {
     "answer": "G",
-    "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\""
+    "explanation": "Paragraph G states: \"Pompey executed a sweeping, methodical campaign by dividing the entire Mediterranean Sea into thirteen districts, each placed under the command of an experienced lieutenant with a dedicated fleet.\""
    },
    "16": {
     "answer": "C",
-    "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\""
+    "explanation": "Paragraph C states: \"In times of war, ancient kingdoms and city-states frequently made use of pirates as naval mercenaries, granting them freedom to raid enemy shipping, disrupt a rival's supply lines, and weaken competing fleets without bearing the cost of maintaining a permanent navy.\""
    },
    "17": {
     "answer": "A",
-    "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\""
+    "explanation": "Paragraph A states: \"When one mentions pirates, an image springs to most people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea, spreading fear across the waters in search of treasure.\""
    },
    "18": {
     "answer": "G",
-    "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\""
+    "explanation": "Paragraph G states: \"he therefore resettled thousands of former pirates on fertile farmland and in inland cities far from the coast, giving them peaceful livelihoods and encouraging them not to return to piracy.\""
    },
    "19": {
     "answer": "B",
-    "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\""
+    "explanation": "Paragraph B states: \"At the same time, ancient sailing vessels lacked advanced open-water navigational tools and were forced to stay relatively close to land, following predictable coastal routes.\""
    },
    "20": {
     "answer": "B",
-    "explanation": "Paragraph B states pirates hid \"in coves and bays,\" evading vessels that had to stay close to land, suggesting local knowledge helped them escape capture."
+    "explanation": "Paragraph B states: \"Whenever state warships gave chase, local pirates routinely managed to escape capture by the authorities because they knew the intricate coastline, shallow reefs, and shifting winds of their home waters so well.\""
    },
    "21": {
     "answer": "D",
-    "explanation": "Paragraph E states piracy was a legitimate livelihood \"particularly for inhabitants of poor or isolated regions who depended more on the sea than on farming.\""
+    "explanation": "Paragraph B states: \"many inhabitants of poor or isolated coastal regions depended more on the sea for their livelihood than on farming.\""
    },
    "22": {
     "answer": "C",
-    "explanation": "Paragraph C states \"Important officials and even kings were known to occasionally take part in piracy or profit from it.\""
+    "explanation": "Paragraph E states: \"In several Greek regions, important officials and even kings were known to occasionally take part in piracy or profit directly from raiding expeditions.\""
    },
    "23": {
     "answer": "E",
-    "explanation": "The text confirms this: \"In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers A When one mentions pirates, an image springs to mosl people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea.\""
+    "explanation": "Paragraph E states: \"A favourable view of piracy is evident in certain early Greek texts, such as Homer's Iliad and Odyssey, where sea-raiding is portrayed as an adventurous, even heroic enterprise rather than a shameful crime\"."
    },
    "24": {
     "answer": "grain",
-    "explanation": "The text confirms this: \"Pirate attacks on grain ships, which were essential to Roman citizens, led to angry voices in the Senate, demanding punishment of the culprits.\""
+    "explanation": "Paragraph F states: \"Attacks on vessels transporting grain to Rome caused food shortages and resulted in urgent calls for severe punishment for the pirates responsible.\""
    },
    "25": {
     "answer": "punishment",
-    "explanation": "The text confirms this: \"Pirate attacks on grain ships, which were essential to Roman citizens, led to angry voices in the Senate, demanding punishment of the culprits.\""
+    "explanation": "Paragraph F states: \"Attacks on vessels transporting grain to Rome caused food shortages and resulted in urgent calls for severe punishment for the pirates responsible.\""
    },
    "26": {
     "answer": "ransom",
-    "explanation": "The text confirms this: \"By the 1st centu,y BCE, emboldened pirates kidnapped prominent Roman dignitaries, asking for a large ransom to be paid.\""
+    "explanation": "Paragraph F states: \"pirates raided Italian ports and kidnapped prominent Roman citizens — famously including the young Julius Caesar in 75 BCE — holding their captives until a substantial ransom was paid for their return.\""
    },
    "27": {
     "answer": "D",
@@ -1425,7 +1425,7 @@ const TEST_ANSWERS = {
    },
    "29": {
     "answer": "C",
-    "explanation": "The text confirms this: \"com recently have been empirically tested in robust ways.\""
+    "explanation": "Paragraph 4 states: \"with conflicting predictions that only recently have been empirically tested in robust ways.\""
    },
    "30": {
     "answer": "D",
@@ -1639,55 +1639,55 @@ const TEST_ANSWERS = {
   "reading": {
    "1": {
     "answer": "piston",
-    "explanation": "The text confirms this: \"Watt later worked with the English manufacturer Matthew Boulton to invent a new steam engine driven by both the forward and backward strokes of the piston, while the gear mechanism it was connected to produced rotary motion.\""
+    "explanation": "The passage states: \"Newcomen's machine relied on a piston moving up and down inside a vertical cylinder, driven by condensing steam.\""
    },
    "2": {
     "answer": "coal",
-    "explanation": "The text confirms this: \"The demand for coal, which was a relatively cheap energy source, grew rapidly during the Industrial Revolution, as it was needed to run not only the factories used to produce manufactured goods, but also steam-powered transportation.\""
+    "explanation": "The passage states: \"As steam engines proliferated across mines and manufacturing centres, demand surged for coal to fire their boilers.\""
    },
    "3": {
     "answer": "workshops",
-    "explanation": "The text confirms this: \"Britain had produced textiles like wool, linen and cotton, for hundreds of years, but prior to the Industrial Revolution, the British textile business was a true 'cottage industry', with the work performed in small workshops or even homes by individual spinners, weavers and dyers.\""
+    "explanation": "The passage states: \"This innovation enabled steam engines to power heavy machinery in workshops and factories far away from rivers.\""
    },
    "4": {
     "answer": "labour",
-    "explanation": "The text confirms this: \"With these machines, relatively little labour was required to produce cloth, and the new, mechanised textile factories that opened around the country were quickly able to meet customer demand for cloth both at home and abroad.\""
+    "explanation": "The passage states: \"Production shifted rapidly into large water- and steam-powered mills, meaning far less labour was needed to produce cloth while output soared to meet both domestic and overseas demand.\""
    },
    "5": {
     "answer": "quality",
-    "explanation": "The text confirms this: \"This method was cheaper and produced metals that were of a higher quality, enabling Britain's iron and steel production to expand in response to demand created by the Napoleonic Wars (1803-15) and the expansion of the railways from the 1830s.\""
+    "explanation": "The passage states: \"Smelting with coke proved far cheaper and more efficient, driving down production costs while yielding iron of higher quality and strength.\""
    },
    "6": {
     "answer": "railway",
-    "explanation": "The text confirms this: \"This method was cheaper and produced metals that were of a higher quality, enabling Britain's iron and steel production to expand in response to demand created by the Napoleonic Wars (1803-15) and the expansion of the railways from the 1830s.\""
+    "explanation": "The passage states: \"Following the opening of the Liverpool and Manchester Railway in 1830, passenger and freight lines expanded rapidly across Britain, turning the railway industry into a major driver of iron demand and commercial integration\"."
    },
    "7": {
     "answer": "sanitation",
-    "explanation": "The text confirms this: \"This rapid urbanisation brought significant challenges, as overcrowded cities suffered from pollution and inadequate sanitation.\""
+    "explanation": "The passage states: \"Working-class neighbourhoods became overcrowded, polluted by coal smoke, and lacked sufficient sanitation or clean drinking water\"."
    },
    "8": {
     "answer": "NOT GIVEN",
-    "explanation": "The passage confirms that the answer is 'NOT GIVEN'."
+    "explanation": "The passage notes that boats on inland waterways and canals already transported coal and stone, without stating whether Britain's canal network grew rapidly to carry more goods."
    },
    "9": {
     "answer": "FALSE",
-    "explanation": "The passage confirms that the answer is 'FALSE'."
+    "explanation": "The passage contradicts this: \"Smelting with coke proved far cheaper and more efficient, driving down production costs\"."
    },
    "10": {
     "answer": "NOT GIVEN",
-    "explanation": "The passage confirms that the answer is 'NOT GIVEN'."
+    "explanation": "The passage describes William Cooke and Charles Wheatstone's 1837 railway telegraph and Samuel Morse's system in the United States, without comparing which was more reliable."
    },
    "11": {
     "answer": "TRUE",
-    "explanation": "The text confirms this: \"Britain had produced textiles like wool, linen and cotton, for hundreds of years, but prior to the Industrial Revolution, the British textile business was a true 'cottage industry', with the work performed in small workshops or even homes by individual spinners, weavers and dyers.\""
+    "explanation": "The passage states: \"Although industrialisation generated immense national wealth, its economic benefits were not shared equally across society.\""
    },
    "12": {
     "answer": "TRUE",
-    "explanation": "The text confirms this: \"Britain had produced textiles like wool, linen and cotton, for hundreds of years, but prior to the Industrial Revolution, the British textile business was a true 'cottage industry', with the work performed in small workshops or even homes by individual spinners, weavers and dyers.\""
+    "explanation": "The passage states: \"skilled weavers and textile workers in Nottinghamshire and Yorkshire who believed that new textile machines would mean the loss of their jobs organised nocturnal raids to smash factory equipment.\""
    },
    "13": {
     "answer": "NOT GIVEN",
-    "explanation": "The passage confirms that the answer is 'NOT GIVEN'."
+    "explanation": "The passage states that troops suppressed the Huddersfield attack and seventeen men were hanged or transported, without mentioning whether local people felt sympathy for those arrested."
    },
    "14": {
     "answer": "D",
@@ -1727,7 +1727,7 @@ const TEST_ANSWERS = {
    },
    "23": {
     "answer": "B",
-    "explanation": "The passage states Raducanu \"withdrew from the 2021 Wimbledon tournament due to breathing difficulties caused by performance stress,\" a direct symptom of her stress response."
+    "explanation": "Paragraph A states Raducanu \"began having difficulty regulating her breathing and heart rate during a match\" \"following her withdrawal from the 2021 Wimbledon tournament\", showing a physical symptom of stress."
    },
    "24": {
     "answer": "D",
@@ -1743,7 +1743,7 @@ const TEST_ANSWERS = {
    },
    "27": {
     "answer": "H",
-    "explanation": "The passage states \"Maryam Mirzakhani is regarded as unique in the field of mathematics because of this achievement.\""
+    "explanation": "The passage states: \"She was the only woman to win the Fields Medal — the mathematical equivalent of a Nobel prize.\""
    },
    "28": {
     "answer": "A",
@@ -1759,11 +1759,11 @@ const TEST_ANSWERS = {
    },
    "31": {
     "answer": "J",
-    "explanation": "The text confirms this: \"'Of course, the most rewarding part is the \"Aha\" moment, the excitement or discovery and enjoyment of understanding something new.\""
+    "explanation": "The text confirms this: \"'Of course, the most rewarding part is the \"Aha\" moment, the excitement of discovery and enjoyment of understanding something new ...'\""
    },
    "32": {
     "answer": "I",
-    "explanation": "The passage states \"she was responsible for some extremely innovative mathematical studies.\""
+    "explanation": "The passage states: \"That trail took her to the heights of original research into mathematics.\""
    },
    "33": {
     "answer": "YES",
@@ -2387,11 +2387,11 @@ const TEST_ANSWERS = {
    },
    "25": {
     "answer": "machinery",
-    "explanation": "The text confirms this: \"Different methods of extraction exist, bul most involve employing some form of converted machinery previously used in terrestrial mining to excavate materials fi·om the sea Aoor, al depths of up to 6,000 metres, then drawing a seawater slurry, containing rock and other solid particles, from the sea floor to ships on the surface.\""
+    "explanation": "Paragraph C states: \"Different methods of extraction exist, but most involve employing some form of converted machinery previously used in terrestrial mining to excavate materials from the sea floor, at depths of up to 6,000 metres, then drawing a seawater slurry, containing rock and other solid particles, from the sea floor to ships on the surface.\""
    },
    "26": {
     "answer": "caution",
-    "explanation": "The text confirms this: \"com D But environmental and legal groups have urged caution, arguing there are potentially massive and unknown ramificalions for the environment and for nearby communities, and that the global regulatory framework is not yet drafted.\""
+    "explanation": "Paragraph D states: \"But environmental and legal groups have urged caution, arguing there are potentially massive and unknown ramifications for the environment and for nearby communities, and that the global regulatory framework is not yet drafted.\""
    },
    "27": {
     "answer": "C",
@@ -2533,43 +2533,43 @@ const TEST_ANSWERS = {
    },
    "21": {
     "answer": "A",
-    "explanation": "The transcript states: \"l JANE: l(IERAN: JANE: l JANE: l JANE: 116 So Jane - you'll be off to Denmark soon to do your work placement.\""
+    "explanation": "Kieran agrees with the packing advice as obvious: \"Well, it's pretty clear that ruins them, but a lot of people just can't be bothered to protect their books.\""
    },
    "22": {
     "answer": "C",
-    "explanation": "The transcript states: \"l JANE: l(IERAN: JANE: l JANE: l JANE: 116 So Jane - you'll be off to Denmark soon to do your work placement.\""
+    "explanation": "Jane says of the old books her grandfather gave her: \"They'll always remind me of him... I'd regret just throwing them away.\""
    },
    "23": {
     "answer": "A",
-    "explanation": "The transcript states: \"l JANE: l(IERAN: JANE: l JANE: l JANE: 116 So Jane - you'll be off to Denmark soon to do your work placement.\""
+    "explanation": "Jane notes that a colourful book on a table catches her eye, and Kieran agrees that \"book covers can be a work of art in themselves.\""
    },
    "24": {
     "answer": "B",
-    "explanation": "The transcript states: \"l JANE: l(IERAN: JANE: l JANE: l JANE: 116 So Jane - you'll be off to Denmark soon to do your work placement.\""
+    "explanation": "Jane explains she learned how to remove books properly after watching a heavy book fall off the shelf and break apart when she was small."
    },
    "25": {
     "answer": "C",
-    "explanation": "The transcript states: \"l JANE: l(IERAN: JANE: l JANE: l JANE: 116 So Jane - you'll be off to Denmark soon to do your work placement.\""
+    "explanation": "Kieran remarks \"New books aren't cheap, though, are they?\" and Jane replies \"I guess we're lucky we can buy them.\""
    },
    "26": {
     "answer": "D",
-    "explanation": "The transcript states: \"l JANE: l(IERAN: JANE: l JANE: l JANE: 116 So Jane - you'll be off to Denmark soon to do your work placement.\""
+    "explanation": "Rare books and first editions are kept where \"you need a ladder to get them\" (D. on a high shelf)."
    },
    "27": {
     "answer": "F",
-    "explanation": "The transcript states: \"l JANE: l(IERAN: JANE: l JANE: l JANE: 116 So Jane - you'll be off to Denmark soon to do your work placement.\""
+    "explanation": "Children's books are in \"a dedicated area on the ground floor with cushions\" (F. in a specially designed space)."
    },
    "28": {
     "answer": "A",
-    "explanation": "The transcript states: \"l JANE: l(IERAN: JANE: l JANE: l JANE: 116 So Jane - you'll be off to Denmark soon to do your work placement.\""
+    "explanation": "Unwanted books are left \"by the front door for customers to take\" (A. near the entrance)."
    },
    "29": {
     "answer": "C",
-    "explanation": "The transcript states: \"l JANE: l(IERAN: JANE: l JANE: l JANE: 116 So Jane - you'll be off to Denmark soon to do your work placement.\""
+    "explanation": "Books people or institutions have requested \"all go at the far end\" (C. at the back of the shop)."
    },
    "30": {
     "answer": "G",
-    "explanation": "The transcript states: \"Yes, I'm really looking forward to it and I've just started packing up all my books to put in storage.\""
+    "explanation": "Coursebooks are kept \"part of the coffee shop, on low shelves all around it\" (G. within the cafe)."
    },
    "31": {
     "answer": "competition",
@@ -2709,7 +2709,7 @@ const TEST_ANSWERS = {
    },
    "24": {
     "answer": "oak",
-    "explanation": "The passage says that for a long time, elm was almost as popular as oak, which was the most preferred hardwood tree in Britain. The answer is \"oak.\" This means that oak was the tree that was more popular than elm in Britain. The correct answer is \"oak\" because the passage says that for many years, elm was almost the most popular tree in Britain, but oak was slightly more popular. This is important because it shows the history and significance of these trees in British culture."
+    "explanation": "The passage says that for a long time, elm was almost as popular as oak, which was the most preferred hardwood tree in Britain. The answer is 'oak'."
    },
    "25": {
     "answer": "flooring",
@@ -5719,11 +5719,6 @@ const TEST_ANSWERS = {
    }
   }
  }
-}
+};
 
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = TEST_ANSWERS;
-}
-if (typeof window !== 'undefined') {
-  window.TEST_ANSWERS = TEST_ANSWERS;
-}
+module.exports = TEST_ANSWERS;

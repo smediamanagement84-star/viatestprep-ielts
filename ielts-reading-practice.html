@@ -695,19 +695,12 @@
       while (i < rawQuestions.length) {
         const q = rawQuestions[i];
 
-        // FILL_GROUP: Group summary, notes, table, or fill-in-blank questions sharing an instruction so they render in a unified layout
-        const isSummaryOrFill = q.type === 'FILL' || 
-          (q.instruction && (
-            q.instruction.toLowerCase().includes('complete the summary') ||
-            q.instruction.toLowerCase().includes('complete the notes') ||
-            q.instruction.toLowerCase().includes('complete the table') ||
-            q.instruction.toLowerCase().includes('complete the flow-chart')
-          ));
-        if (isSummaryOrFill) {
+        // FILL_GROUP: Group consecutive FILL questions sharing the same instruction so they render in a unified layout
+        if (q.type === 'FILL') {
           const matchInst = q.instruction || '';
           const group = [q];
           let j = i + 1;
-          while (j < rawQuestions.length && (rawQuestions[j].instruction || '') === matchInst) {
+          while (j < rawQuestions.length && rawQuestions[j].type === 'FILL' && (rawQuestions[j].instruction || '') === matchInst) {
             group.push(rawQuestions[j]);
             j++;
           }
@@ -799,12 +792,14 @@
             bodyHtml = dynamicHtml;
           }
 
-          // Replace each placeholder with an inline input widget.
+          // Replace each placeholder with an inline input widget and track matched numbers.
+          const matchedNums = new Set();
           replaceRegex.lastIndex = 0;
           bodyHtml = bodyHtml.replace(replaceRegex, (match, numStr) => {
             const qNum = parseInt(numStr, 10);
             const gq = q.questions.find(x => x.num === qNum);
             if (!gq) return match; // leave unchanged if not in group
+            matchedNums.add(qNum);
             const val = escapeHtml(userAnswers[qNum] || '');
             const isFlagged = !!flaggedQuestions[qNum];
             return `<span class="inline-fill-wrap" id="qbox-anchor-${qNum}">
@@ -819,6 +814,37 @@
               </label>
             </span>`;
           });
+
+          // Ensure any FILL question in the group missing from bodyHtml still gets a live input box.
+          const missingQs = q.questions.filter(gq => !matchedNums.has(gq.num));
+          if (missingQs.length > 0) {
+            let extraHtml = '<div class="border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-slate-700 text-xs" style="margin-top:12px;">';
+            extraHtml += '<ul class="list-disc pl-4 space-y-1.5">';
+            missingQs.forEach(gq => {
+              const val = escapeHtml(userAnswers[gq.num] || '');
+              const isFlagged = !!flaggedQuestions[gq.num];
+              const widget = `<span class="inline-fill-wrap" id="qbox-anchor-${gq.num}">
+                <span class="inline-q-num">${gq.num}</span>
+                <input type="text" class="inline-fill" value="${val}"
+                  oninput="handleInput(${gq.num}, this.value)"
+                  placeholder="..." />
+                <label class="inline-flag-label" title="Mark for review">
+                  <input type="checkbox" onchange="toggleFlag(${gq.num})"
+                    ${isFlagged ? 'checked' : ''} />
+                  Review
+                </label>
+              </span>`;
+              let text = gq.text || '';
+              if (/________+/g.test(text)) {
+                text = text.replace(/________+/g, widget);
+              } else {
+                text = text + ' ' + widget;
+              }
+              extraHtml += `<li>${text}</li>`;
+            });
+            extraHtml += '</ul></div>';
+            bodyHtml += extraHtml;
+          }
 
           // Build header row showing range (Q first – last) and correct task type
           const rangeLabel = q.num === q.numEnd ? `${q.num}` : `${q.num} – ${q.numEnd}`;
@@ -907,6 +933,11 @@
         else if (q.type === 'HEADING') taskName = 'Matching Headings';
         else if (q.type === 'FILL') taskName = 'Short Answer';
         else if (q.type === 'MATCHING') taskName = 'Matching';
+        else if (q.type === 'MATCHING_PEOPLE') taskName = 'Matching People';
+        else if (q.type === 'MATCHING_ENDINGS') taskName = 'Matching Sentence Endings';
+        else if (q.type === 'MATCHING_INFO') taskName = 'Matching Information';
+        else if (q.type === 'MATCHING_FEATURES') taskName = 'Matching Features';
+        else if (q.type === 'ENDINGS') taskName = 'Matching Endings';
 
         headerRow.innerHTML = `
           <div style="display:flex; align-items:center; gap:8px;">
@@ -960,18 +991,27 @@
           `).join('')}</div>`;
         } else if (q.type === 'MCQ') {
           const selected = userAnswers[q.num] || '';
-          const isLargeList = q.options.length > 5;
-          answerHtml = `<div class="mcq-options${isLargeList ? '' : ''}" style="${isLargeList ? 'display:grid;grid-template-columns:1fr 1fr;gap:6px;' : ''}">${q.options.map(opt => {
-            const dotIdx = opt.indexOf('.');
-            const letter = dotIdx !== -1 ? opt.slice(0, dotIdx).trim() : opt.trim();
-            const text = dotIdx !== -1 ? opt.slice(dotIdx + 1).trim() : '';
-            const displayLetter = dotIdx !== -1 ? opt.slice(0, dotIdx + 1) : opt;
-            return `
-              <button onclick="selectOption(${q.num}, '${letter}')" class="mcq-option ${selected === letter ? 'selected' : ''}">
-                <span class="opt-letter">${displayLetter}</span>${text ? `<span> ${text}</span>` : ''}
-              </button>
-            `;
-          }).join('')}</div>`;
+          const opts = Array.isArray(q.options) ? q.options : [];
+          const isBareLetters = opts.length > 0 && opts.every(opt => /^[A-Z]$/i.test(String(opt).trim()));
+          if (isBareLetters) {
+            answerHtml = `<div class="tfng-row" style="flex-wrap:wrap;">${opts.map(opt => {
+              const letter = String(opt).trim();
+              return `<button onclick="selectOption(${q.num}, '${escapeHtml(letter)}')" class="tfng-btn ${selected === letter ? 'selected' : ''}">${escapeHtml(letter)}</button>`;
+            }).join('')}</div>`;
+          } else {
+            const isLargeList = opts.length > 5;
+            answerHtml = `<div class="mcq-options" style="${isLargeList ? 'display:grid;grid-template-columns:1fr 1fr;gap:6px;' : ''}">${opts.map(opt => {
+              const dotIdx = opt.indexOf('.');
+              const letter = dotIdx !== -1 ? opt.slice(0, dotIdx).trim() : opt.trim();
+              const text = dotIdx !== -1 ? opt.slice(dotIdx + 1).trim() : '';
+              const displayLetter = dotIdx !== -1 ? opt.slice(0, dotIdx + 1) : opt;
+              return `
+                <button onclick="selectOption(${q.num}, '${escapeHtml(letter)}')" class="mcq-option ${selected === letter ? 'selected' : ''}">
+                  <span class="opt-letter">${escapeHtml(displayLetter)}</span>${text ? `<span> ${text}</span>` : ''}
+                </button>
+              `;
+            }).join('')}</div>`;
+          }
         } else if (q.type === 'MCQ_MULTI') {
           const nums = q.questions.map(x => x.num);
           const currentAnswers = nums.map(n => userAnswers[n]).filter(Boolean);
@@ -1023,25 +1063,48 @@
               </div>
             </div>
           `;
-        } else if (q.type === 'MATCHING_INFO' || q.type === 'MATCHING_FEATURES' || q.type === 'ENDINGS') {
-          // These three share one bare-letter-button UI: Matching Information
-          // uses paragraph letters (A-G), Matching Features uses a short fixed
-          // list of feature letters (A-E), and Matching Sentence Endings uses
-          // letters for a bank of possible endings (A-F) - in every case the
-          // full option list (features / endings) is shown once via the shared
-          // instruction box (see lastInstruction dedup above), and each
-          // question here just needs its own bare answer buttons, not the
-          // full text repeated per question.
+        } else if (
+          q.type === 'MATCHING_INFO' ||
+          q.type === 'MATCHING_FEATURES' ||
+          q.type === 'MATCHING_PEOPLE' ||
+          q.type === 'ENDINGS' ||
+          q.type === 'MATCHING_ENDINGS'
+        ) {
           const selected = userAnswers[q.num] || '';
-          // Normalise options: extract just the leading letter from formats like
-          // "A. Paragraph A", "A. some text", or bare "A" — store & compare by letter.
-          const normOpts = q.options.map(opt => {
-            const m = String(opt).trim().match(/^([A-Z])\.?/);
-            return m ? m[1] : String(opt).trim();
+          const opts = Array.isArray(q.options) ? q.options : [];
+          // Check if options carry full descriptive text (beyond "A. Paragraph A" / "A. Section A")
+          // that is NOT already displayed in the instruction box.
+          const hasDescriptiveOpts = opts.some(opt => {
+            const cleaned = String(opt).trim().replace(/^[A-Z]\.\s*/, '').trim();
+            return cleaned.length > 2 && !/^(Paragraph|Section)\s+[A-Z]$/i.test(cleaned);
           });
-          answerHtml = `<div class="tfng-row" style="flex-wrap:wrap;">${normOpts.map(letter => `
-            <button onclick="selectOption(${q.num}, '${letter}')" class="tfng-btn ${selected === letter ? 'selected' : ''}">${letter}</button>
-          `).join('')}</div>`;
+          const instText = q.instruction || '';
+          const instHasDescriptions = hasDescriptiveOpts && opts.every(opt => {
+            const m = String(opt).trim().match(/^([A-Z])\.?\s*(.+)$/);
+            return !m || instText.includes(m[2].slice(0, 15));
+          });
+
+          if (hasDescriptiveOpts && !instHasDescriptions) {
+            answerHtml = `<div class="mcq-options">${opts.map(opt => {
+              const dotIdx = String(opt).indexOf('.');
+              const letter = dotIdx !== -1 ? String(opt).slice(0, dotIdx).trim() : String(opt).trim();
+              const text = dotIdx !== -1 ? String(opt).slice(dotIdx + 1).trim() : '';
+              const displayLetter = dotIdx !== -1 ? String(opt).slice(0, dotIdx + 1) : String(opt);
+              return `
+                <button onclick="selectOption(${q.num}, '${escapeHtml(letter)}')" class="mcq-option ${selected === letter ? 'selected' : ''}">
+                  <span class="opt-letter">${escapeHtml(displayLetter)}</span>${text ? `<span> ${text}</span>` : ''}
+                </button>
+              `;
+            }).join('')}</div>`;
+          } else {
+            const normOpts = opts.map(opt => {
+              const m = String(opt).trim().match(/^([A-Z])\.?/);
+              return m ? m[1] : String(opt).trim();
+            });
+            answerHtml = `<div class="tfng-row" style="flex-wrap:wrap;">${normOpts.map(letter => `
+              <button onclick="selectOption(${q.num}, '${escapeHtml(letter)}')" class="tfng-btn ${selected === letter ? 'selected' : ''}">${escapeHtml(letter)}</button>
+            `).join('')}</div>`;
+          }
         }
         
         qBox.appendChild(document.createRange().createContextualFragment(answerHtml));
